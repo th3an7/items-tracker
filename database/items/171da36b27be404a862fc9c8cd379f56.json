@@ -1,0 +1,521 @@
+{
+  "id": "171da36b27be404a862fc9c8cd379f56",
+  "title": "Log Viewer Pro",
+  "description": "Tool to analyze Unreal logs with the color-coding and convenient category management",
+  "longDescription": "<p>Questions, feature requests and bug reports: <a href=\"https://discord.gg/aYFGHpb2pa\" rel=\"nofollow\">Discord</a>.</p><p><br /></p><p>NEW! Blueprint node allowing developers to log into custom categories is included in the plugin. &#34;Log BP Pro&#34; node allows you to create your own log categories and send log messages to it right from your blueprint script!</p><p><br /></p><p>This is an improved version of my previous well-met plugin, Log Viewer (check it to get free improved blueprint logging nodes).</p><p><br /></p><p>Now, it is a professional tool designed for developers who understand the importance of logging and need more functionality than the default Log Output provides, or who rely on standalone log analyzers.</p><p><br /></p><ul><li>Log Viewer is drastically improving UX around debugging with logs</li><li>Activate/Deactivate log categories in one click, assign specific colors to categories</li><li>Named Tabs, Default configurations, Save/Load logs allows you to preserve your debugging session between engine restarts</li><li>Log lines are now displayed in a table format, with the ability to show/hide specific columns and collapse log lines into a compact view.</li><li>The dynamic Log Minimap will assist you with navigation and with locating error areas in large files.</li><li>Sharing log data with your colleagues is now more convenient, as the filtered output can be saved or copied.</li><li>If log message contains vector coordinates, Log Viewer will highlight those vectors in your EditorViewport.</li></ul><p><br /></p><p>Say goodbye to notepad, regular expressions, or manual file editing.</p><p>Happy logging!</p><p><br /></p><p><br /></p><p><br /></p><p>Note: Source code is provided with the plugin, and I am trying to keep architecture logical and easy to expand with your own functionality if you need so.</p><p>If you have any questions about the implementation, I will be happy to answer you in discord!</p><p><br /></p><p>ChangeLog:</p><p>Update 14/05/2024 (v920 pending for UE 5.4)</p><ul><li>HotFix for menu entry points after migration to 5.4 - New Plugin Location <strong>Tools-&gt;Debug-&gt;LogViewerPro </strong></li><li>Minimize Categories Panel in Settings menu to gain more horizontal space</li></ul><p><br /></p><p>Update 31/01/2023 (v619 available for UE 5.3)</p><ul><li>Log BP Pro node introduced to allow people who are using blueprints to log into custom categories</li></ul><p><br /></p><p>Update 20/01/2024 (v619 available for UE 5.3)</p><ul><li>Named tabs are introduced!</li><li>Named tabs allow you to preserve different categories configuration between engine restarts on different tabs</li><li>File menu introduced to clean up the top bar. Please Note that Open and Save log options are now in File menu</li><li>To access named tab functionality use File-&gt;Save as Named Tab</li><li>Resave option is added to Top Bar to make UX around named tabs more comfortable and make them visually different from regular tabs</li><li>Name tab functionality will be expanded further in the next iterations to include filtering and verbosity levels</li></ul><p><br /></p><p>Update 02/10/2023 (v239 available for UE 5.3)</p><ul><li>Migration to 5.3</li><li>Text Highlight behavior improved for Clean On PIE (community request)</li><li>Fixed deprecation warnings (Vector2f migration)</li></ul><p><br /></p><p>Update 21/08/2023 (Update v1.112 available for 5.2):</p><ul><li>Added support for multiline log files (by default)</li><li>If log message contains more than one line, it will be correctly shown in the list view</li><li>To change to compact mode, where each message takes one line - use &#34;Compact rows&#34; option in Settings</li><li>Log Viewer button added to editor toolbar to provide faster access with the mouse</li><li>Fastest way to open Log Viewer Pro is to use hotkey - Alt &#43; Shift &#43; L</li></ul><p><br /></p><p>Update 17/08/2023 (Update v1.105 available for 5.2):</p><ul><li>Fixed crash when newly created tab is closed</li><li>Fixed bug when Clean Up Log On PIE, was cleaning up Logs opened in Read Mode</li><li>Shortcut to join official Discord server added to settings menu</li></ul><p><br /></p><p>Update 12/08/2023 (Update v1.91 available for 5.2):</p><ul><li>Context menu created for log messages</li><li>Ability to open Actor Blueprint for edit directly from logs</li><li>Ability to highlight vectors in editor viewport from multiple selected logs messages</li><li>Ability to clean up logs, for each time PIE start (see Settings)</li><li>Improved visualization for selected categories</li></ul><p><br /></p><p>Update 30/07/2023 (Update v1.78 Available for 5.2):</p><ul><li>Context menu created for Categories View</li><li>Ability to assign custom log colors</li><li>&#34;Make Default&#34; button for log categories supports custom log colors</li><li>Categories Data Save file format changed (!) Old files will be migrated automatically when opened and resaved.</li></ul><p><br /></p><p>Update 10/07/2023 (Available for 5.2):</p><ul><li>Added logs colorcoding - each category will be assigned a color to make your navigation easier</li><li>Colorcoding option can be disabled in the settings menu</li><li>Don&#39;t miss Minimap Colorcoding option in the settings menu, it can make your global navigation easier</li><li>Special thanks to community member Cyrille Paulhiac for the idea</li><li>Settings menu extended and moved to corresponding button</li><li>Ability to save settings as default</li></ul><p><br /></p><p><br /></p><p>Updates 21/05/2022 - 15/06/2023 (Available for 5.0, 5.1, 5.2):</p><ul><li>Migration to UE5, minor style changes to comply with new design and changes in Slate architecture</li></ul><p><br /></p><p>Update 2/12/2021 (Available in 4.27):</p><ul><li>Default Categories shortcut - in one click you can remember and keep your favorite categories even if you restart the engine. Default categories will be applied to new tabs and opened documents. Helps if you focused on one area of your game for multiple days</li></ul><p><br /></p><p>Update 28/12/2020 (Available for 4.25, 4.26, 4.27): Based on community feedback:</p><ul><li>Improved multiline logging and parsing</li><li>&#34;Clear Output&#34; button keeps Categories intact (second click will clean them)</li><li>You can delete log messages now</li><li>Support for Blueprint Errors and Warnings as in Default Output (For instance add &#34;Error:&#34; to your PrintString node and that message will have a proper &#34;Error&#34; verbosity level)</li></ul><p><br /></p><p>Update 28/10/2020 (Available for 4.25, 4.26, 4.27): Based on community feedback:</p><ul><li>Search results highlighted on the minimap</li><li>More hotkeys were added (see Technical Information)</li></ul><p><br /></p><p>Update 20/09/2020 (Available for 4.25, 4.26, 4.27): Based on community feedback:</p><ul><li>Save and Load your log categories into *.ini file</li><li>Detailed message view for long messages at the bottom</li></ul><p><br /></p><p>Update 31/05/2020 (Available for 4.25, 4.26, 4.27)</p><ul><li>Right click on category to select (and highlight) all items in this category. You can toggle selection by pressing right mouse button again. You also can select multiple log categories.</li></ul>",
+  "technicalDetails": "<p>Hotkeys:</p><ul><li>Ctrl&#43;C - Copy selected Log Entry</li><li>Ctrl&#43;O - Open Log File</li><li>Ctrl&#43;S - Save Log File</li><li>Alt&#43;C - Jump to Categories Filter</li><li>Alt&#43;F - Jump to Log Filter</li><li>Ctrl&#43;F - Jump to Log Search</li><li>Ctrl&#43;A - Select All</li><li>F3/Shift&#43;F3 - Jump to Next/Previous search entry</li><li>Delete - Delete log message</li><li>Escape - Clear selection</li></ul><p><br /></p><p>Features:</p><ul><li> Log Minimap for faster navigation and overview.</li><li>Open your saved log files to analyze</li><li>Save filtered output or copy selected lines to the bffer</li><li>Tabs support to open multiple files</li><li>Listening for PIE events as usual LogOutput does</li><li>Keyword highlight.</li><li>Vector coordinates highlight in the Level Viewport.</li></ul><p><br /></p><p>Code Modules:</p><ul><li> LogViewerPro plugin (Editor)</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 9</p><p>Network Replicated: N/A, editor only</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p><br /></p><p>Tutorial video:</p><p>https://youtu.be/lAdH3GYn_ws</p><p><br /></p><p>For feature requests or bug reports you can contact me via my</p><p>LinkedIn: https://www.linkedin.com/in/labadin/ (preferable)</p><p>or email: dimalabad&#64;gmail.com</p><p><br /></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EXPORT Main Screenshot-1920x1080-a6f7bf16f7a01a95f4b9d9081c0bdf6e.png",
+      "md5": "a6f7bf16f7a01a95f4b9d9081c0bdf6e",
+      "width": 1920,
+      "height": 1080,
+      "size": 493654,
+      "uploadedDate": "2023-08-20T17:52:51.688Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Logging in bp nodes PRO-1920x1080-8e9ec52c7556146aa2064d2233554dc8.png",
+      "md5": "8e9ec52c7556146aa2064d2233554dc8",
+      "width": 1920,
+      "height": 1080,
+      "size": 314266,
+      "uploadedDate": "2024-01-31T09:04:48.552Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EXPORT Filter Categories In One Click-1920x1080-304f45ad63a3967d7ef7a9492fcb1a9e.png",
+      "md5": "304f45ad63a3967d7ef7a9492fcb1a9e",
+      "width": 1920,
+      "height": 1080,
+      "size": 377096,
+      "uploadedDate": "2023-08-20T17:52:51.979Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EXPORT Extended Categories Menu-1920x1080-69d6ca8baafaa0e0344077dac3bc1ef3.png",
+      "md5": "69d6ca8baafaa0e0344077dac3bc1ef3",
+      "width": 1920,
+      "height": 1080,
+      "size": 379188,
+      "uploadedDate": "2023-08-20T17:52:52.272Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EXPORT Default Configuration Save Load-1920x1080-d62c39547663b9e48ca8b63e2f8a8511.png",
+      "md5": "d62c39547663b9e48ca8b63e2f8a8511",
+      "width": 1920,
+      "height": 1080,
+      "size": 602242,
+      "uploadedDate": "2023-08-20T17:52:52.595Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EXPORT Context Menus-1920x1080-e126f195634c3288252950d5ad69140c.png",
+      "md5": "e126f195634c3288252950d5ad69140c",
+      "width": 1920,
+      "height": 1080,
+      "size": 504999,
+      "uploadedDate": "2023-08-20T17:52:52.870Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EXPORT Preference System-1920x1080-fe09a60e2c9388c32ede25d96f5d28b2.png",
+      "md5": "fe09a60e2c9388c32ede25d96f5d28b2",
+      "width": 1920,
+      "height": 1080,
+      "size": 477148,
+      "uploadedDate": "2023-08-20T17:52:53.141Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EXPORT Filter Logs-1920x1080-28f419304ea57f60b5ab86e27803be5c.png",
+      "md5": "28f419304ea57f60b5ab86e27803be5c",
+      "width": 1920,
+      "height": 1080,
+      "size": 433924,
+      "uploadedDate": "2023-08-20T17:52:53.444Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EXPORT Save Logs-1920x1080-87e870a1386ec141fffd7eb0fdffbaa7.png",
+      "md5": "87e870a1386ec141fffd7eb0fdffbaa7",
+      "width": 1920,
+      "height": 1080,
+      "size": 244138,
+      "uploadedDate": "2023-08-20T17:52:53.756Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EXPORT Compare logs-1920x1080-e0b1c10529cce7da11cd24ba2ce58318.png",
+      "md5": "e0b1c10529cce7da11cd24ba2ce58318",
+      "width": 1920,
+      "height": 1080,
+      "size": 392873,
+      "uploadedDate": "2023-08-20T17:52:54.033Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/LogViewerPro_thumb-284x284-e02eb7dcaf0385a0f2525c97b9670790.png",
+      "md5": "e02eb7dcaf0385a0f2525c97b9670790",
+      "width": 284,
+      "height": 284,
+      "size": 80789,
+      "uploadedDate": "2023-08-18T10:46:26.848Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/LogViewerPro_featured-894x488-99d422db2aa1583734009e3485014bed.png",
+      "md5": "99d422db2aa1583734009e3485014bed",
+      "width": 894,
+      "height": 488,
+      "size": 269991,
+      "uploadedDate": "2023-08-20T19:57:59.160Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Logging in bp nodes PRO-1920x1080-8e9ec52c7556146aa2064d2233554dc8_Snapshot.png",
+      "md5": "c9b76eb032e99f7d145080c776171765",
+      "width": 150,
+      "height": 74,
+      "size": 5223,
+      "uploadedDate": "2024-01-31T09:04:48.792Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EXPORT Main Screenshot-1920x1080-a6f7bf16f7a01a95f4b9d9081c0bdf6e_Snapshot.png",
+      "md5": "39085cb46853f134aa0a60bd0f326087",
+      "width": 150,
+      "height": 74,
+      "size": 5847,
+      "uploadedDate": "2023-08-20T17:52:51.865Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EXPORT Filter Categories In One Click-1920x1080-304f45ad63a3967d7ef7a9492fcb1a9e_Snapshot.png",
+      "md5": "2e55310656d651ebaba9cbab75245f21",
+      "width": 150,
+      "height": 74,
+      "size": 4788,
+      "uploadedDate": "2023-08-20T17:52:52.144Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EXPORT Extended Categories Menu-1920x1080-69d6ca8baafaa0e0344077dac3bc1ef3_Snapshot.png",
+      "md5": "8fdc32479cbb72b37fad9fdb5dd48b75",
+      "width": 150,
+      "height": 74,
+      "size": 4967,
+      "uploadedDate": "2023-08-20T17:52:52.459Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EXPORT Default Configuration Save Load-1920x1080-d62c39547663b9e48ca8b63e2f8a8511_Snapshot.png",
+      "md5": "b354cba8f57a4f1b569fe66cfbbe257b",
+      "width": 150,
+      "height": 74,
+      "size": 5659,
+      "uploadedDate": "2023-08-20T17:52:52.762Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EXPORT Context Menus-1920x1080-e126f195634c3288252950d5ad69140c_Snapshot.png",
+      "md5": "43c4ea9dba73ff265501747e72dd3a09",
+      "width": 150,
+      "height": 74,
+      "size": 5637,
+      "uploadedDate": "2023-08-20T17:52:53.073Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EXPORT Preference System-1920x1080-fe09a60e2c9388c32ede25d96f5d28b2_Snapshot.png",
+      "md5": "cea38196436d8d55ca2de8eeed947925",
+      "width": 150,
+      "height": 74,
+      "size": 5667,
+      "uploadedDate": "2023-08-20T17:52:53.305Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EXPORT Filter Logs-1920x1080-28f419304ea57f60b5ab86e27803be5c_Snapshot.png",
+      "md5": "10c2bd6fbf135d2d10adfcdc57bbaece",
+      "width": 150,
+      "height": 74,
+      "size": 5018,
+      "uploadedDate": "2023-08-20T17:52:53.619Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EXPORT Save Logs-1920x1080-87e870a1386ec141fffd7eb0fdffbaa7_Snapshot.png",
+      "md5": "368e891d481553225dc9509fafb77e9e",
+      "width": 150,
+      "height": 74,
+      "size": 4756,
+      "uploadedDate": "2023-08-20T17:52:53.920Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EXPORT Compare logs-1920x1080-e0b1c10529cce7da11cd24ba2ce58318_Snapshot.png",
+      "md5": "aaebbc02aa2c6d1f04ed119497751930",
+      "width": 150,
+      "height": 74,
+      "size": 5208,
+      "uploadedDate": "2023-08-20T17:52:54.202Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Filter And Search-1920x1080-238a7a4e147214a08ca1213f43ce394f_Snapshot.png",
+      "md5": "885e9ba149f1e98ae0a177d47970cc15",
+      "width": 150,
+      "height": 74,
+      "size": 3718,
+      "uploadedDate": "2023-07-17T19:20:23.305Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Main-1920x1080-0bc45992747e566458e28a7fa0a948d1_Snapshot.png",
+      "md5": "6a56db734f52ffa5d7c5e925993f8781",
+      "width": 150,
+      "height": 74,
+      "size": 5420,
+      "uploadedDate": "2023-07-17T19:16:43.130Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Categories-1920x1080-5f322885601f2b994ca0bb44942dcd6e_Snapshot.png",
+      "md5": "5ba1a7386c1c4f88085d811f608d2f75",
+      "width": 150,
+      "height": 74,
+      "size": 3444,
+      "uploadedDate": "2023-07-17T19:16:43.504Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings-1920x1080-5a9f5e0d2c37c7b8f31867fd92a5c90d_Snapshot.png",
+      "md5": "84467a870aed85380affc938dbd23276",
+      "width": 150,
+      "height": 74,
+      "size": 4861,
+      "uploadedDate": "2023-07-17T19:16:43.889Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Compare Log Categories-1920x1080-d9c20094e35229fa9c2a7cfd37bcc7ec_Snapshot.png",
+      "md5": "cee0a6cf0d00c0f1bf99a6005a1bec85",
+      "width": 150,
+      "height": 74,
+      "size": 4786,
+      "uploadedDate": "2023-07-17T19:16:44.293Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Filter And Search-1920x1080-59db3286e2cfaf662bdd3e257d7e9edd_Snapshot.png",
+      "md5": "0064c20a014eda6d3f6cb2169f12c8ec",
+      "width": 150,
+      "height": 74,
+      "size": 3713,
+      "uploadedDate": "2023-07-17T19:16:44.676Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Log Viewer Pro Default Categories-1920x1080-38f0f76d85028c6cec1721b2cea14d06_Snapshot.png",
+      "md5": "7d15247b8c30641edb91d56321451bbe",
+      "width": 150,
+      "height": 74,
+      "size": 4994,
+      "uploadedDate": "2021-11-30T20:25:43.758Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Log Viewer Update October-1920x1080-3739fca0553078f7852464ec9f223ac0_Snapshot.png",
+      "md5": "c03c4bab56a435e6c0799d70f38bc1f6",
+      "width": 150,
+      "height": 74,
+      "size": 6583,
+      "uploadedDate": "2020-11-02T15:58:57.838Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/log viewer update-1920x1080-d7c616469eacd3b64eb3ab7d13cf6544_Snapshot.png",
+      "md5": "17837483d49c052f57284d326d14bba2",
+      "width": 150,
+      "height": 74,
+      "size": 6110,
+      "uploadedDate": "2020-09-20T16:30:25.761Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LogViewerNewFeature-1920x1080-11d3df8b9e7fc7b491133f25a93ec8b8_Snapshot.png",
+      "md5": "72dabbfdeb2127ef402f6cae09cb1c1e",
+      "width": 150,
+      "height": 74,
+      "size": 5562,
+      "uploadedDate": "2020-05-31T19:29:07.196Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen1-1920x1080-d07b783b788d5e77441d72780c29f9e4_Snapshot.png",
+      "md5": "b5a78d8cf7c65fb0d7fca98a8e7527b9",
+      "width": 150,
+      "height": 74,
+      "size": 5547,
+      "uploadedDate": "2019-12-16T17:47:37.045Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen2-1920x1080-ae42f02ed2b40255d533e4be26b85bb4_Snapshot.png",
+      "md5": "8cb16d68ab3c71cf2f91b5d60129ae30",
+      "width": 150,
+      "height": 74,
+      "size": 5375,
+      "uploadedDate": "2019-12-16T17:47:37.486Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen3-1920x1080-8e50496241ea3667a07ee646c43b3746_Snapshot.png",
+      "md5": "260c7dba5634083f63f80c316e357533",
+      "width": 150,
+      "height": 74,
+      "size": 3183,
+      "uploadedDate": "2019-12-16T17:47:37.914Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen4-1920x1080-fe7577c91efc83509d1442ecbc0f185f_Snapshot.png",
+      "md5": "e25f3241c4c2584f54a10c60e1c318db",
+      "width": 150,
+      "height": 74,
+      "size": 5814,
+      "uploadedDate": "2019-12-16T17:47:38.245Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen5-1920x1080-eece58801e46e27989e5bc624cc3e69a_Snapshot.png",
+      "md5": "e7359403bfddcf0add5aa9a9e2ee66e2",
+      "width": 150,
+      "height": 74,
+      "size": 6340,
+      "uploadedDate": "2019-12-16T17:47:38.657Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen6-1920x1080-cc44f904ecc3adf65edcd912424cb130_Snapshot.png",
+      "md5": "e0137aa6cbbd78024759cfc3703d8e51",
+      "width": 150,
+      "height": 74,
+      "size": 6877,
+      "uploadedDate": "2019-12-16T17:47:39.061Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen9-1920x1080-7ce4a78bb766d4998292cc4bc9381dc3_Snapshot.png",
+      "md5": "0caaf5b07d8373ac41aeb48ec995a184",
+      "width": 150,
+      "height": 74,
+      "size": 5651,
+      "uploadedDate": "2019-12-16T17:47:39.612Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen10-1920x1080-b216cbdda5a132f9ee82a19024330f8b_Snapshot.png",
+      "md5": "2884610cf4b8b078ea0702ef06a57c04",
+      "width": 150,
+      "height": 74,
+      "size": 6736,
+      "uploadedDate": "2019-12-16T17:47:40.008Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-01-13T20:14:59.942Z",
+  "lastModifiedDate": "2025-02-28T13:11:36.498Z",
+  "customAttributes": {},
+  "entitlementName": "171da36b27be404a862fc9c8cd379f56",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "0734128376eb46738bf8a9fbd909ade1",
+      "appId": "LogViewerPro_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-01-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LVP 4_23"
+    },
+    {
+      "id": "6893277210944732ba86860f96acab9f",
+      "appId": "LogViewerPro_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-01-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LVP ver 2 4_24"
+    },
+    {
+      "id": "d6100ef243c14d0fb3c0f09c99c72b6f",
+      "appId": "LogViewerPro_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-05-31T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LVP ver 4_425"
+    },
+    {
+      "id": "0b20347f4ba54494aac787ed9e689ab7",
+      "appId": "LogViewerPro_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-12-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LVP ver 4_426"
+    },
+    {
+      "id": "90adeb2d4ae64e109c3c7aa4e33d23fd",
+      "appId": "LogViewerPro_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LVP 427_3_hotfix"
+    },
+    {
+      "id": "bd778170f4f14fc38a4653062386abe8",
+      "appId": "LogViewerPro_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-05-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LVP 5_0_v_01"
+    },
+    {
+      "id": "23a69b79499d4749a02b91ddefb2b389",
+      "appId": "LogViewerPro_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LVP UE5.1 v2"
+    },
+    {
+      "id": "52dd95b51a2e44ddba3cf9b274f47a37",
+      "appId": "LogViewerPro_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-06-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LVP v112 MULTILINE"
+    },
+    {
+      "id": "3c28c53cb02042de9ac4ae227fc58f5c",
+      "appId": "LogViewerPro_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-10-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LV 5.3 V638 LogBpPro"
+    },
+    {
+      "id": "b0db0814c1804a1a9d0cce22b2282953",
+      "appId": "LogViewerPro_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LVP_54_920_Minimize"
+    }
+  ],
+  "developer": "Dmitry Labadin",
+  "developerId": "o-5f39ad6193403d91f6f44da9463adc",
+  "endOfSupport": false,
+  "unsearchable": false
+}

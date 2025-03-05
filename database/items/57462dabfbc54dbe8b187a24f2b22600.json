@@ -1,0 +1,275 @@
+{
+  "id": "57462dabfbc54dbe8b187a24f2b22600",
+  "title": "Multi window",
+  "description": "Multi-window plug-in,Multiple windows, different views, simultaneous display.",
+  "longDescription": "<p>Demo&#xff1a;<a href=\"https://www.youtube.com/watch?v&#61;GfrzXmJbFXE\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;GfrzXmJbFXE</a></p><p>Multi-window plug-in supports multiple windows with different views to be displayed simultaneously.</p><p>It supports blueprint nodes and is very easy to use.</p><p><br /></p><blockquote>Open the Content Browser window, in the upper right corner of the Content Browser, click the Settings button, This will open a menu where you can adjust various settings for the current instance of the Content Browser, Under the View category, check the Show Plugin Content option, Find the Multi window-&gt;Content-&gt;Multi window directory, There are sample levels and related assets inside.</blockquote><p><br /></p><p>Change log : (2024/09)</p><p>Support 5.2-5.4 version</p><p>Added SetWindowMode function (tested and found WindowedFullscreen to be more effective)</p><p><br /></p><p>Change log : (2024/07)</p><p>Support 5.2-5.4 version</p><p>Increased support for Linux</p><p>Added OnWindowMoved callback event for window movement</p><p>Added the parameter ForceFocusToGameViewport to force the focus to the main viewport (After selecting this parameter, keyboard events will still work normally when other windows are selected.)</p><p><br /></p><p>Change log : (2024/05)</p><p>Support 5.2-5.4 version</p><p>Rename PrintToLog to MW_PrintToLog.</p><p>Add GetWindowTitle function.</p><p>Added SetDPIScaleFactor function.</p><p>Add the GetDPIScaleFactor function and remove the GetWindowDPI function.</p><p>Modify the logic. After turning on the bIsAutoContentDPIScale switch, use the new SetDPIScaleFactor function after calculating the DPI.</p><p>Fixed an error message for sample levels when packaging.</p><p>Modify the WBP_MW_Template template and change the custom TitleBar to a WindowTitleBarArea control, so that it will be smoother when dragging the window.</p><p><br /></p><p>Change log : (2024/03)</p><p>Support 5.1-5.3 version</p><p>Fixed the bug that the OnWindowClose callback event was not triggered when the SetWindowClose function was manually called.</p><p><br /></p><p>Change log : (2024/01)</p><p>Support 5.2-5.3 version</p><p>Add the &#34;<strong>CreateRelativeMultiWindow</strong>&#34; function is added to calculate the &#34;WindowPositon&#34; coordinate position relative to the display based on the &#34;MonitorIndex&#34; parameter.</p><p>Add the &#34;<strong>CreateMultiWindowByMonitor</strong>&#34; function is added, and the window is directly set to the corresponding monitor and full screen according to the &#34;MonitorIndex&#34;.</p><p>Add the “<strong>GetMonitorCount</strong>” function to get the current number of monitors.</p><p>Add the “<strong>GetPrimaryMonitorIndex</strong>” function to get the subscript of the current main monitor.</p><p>Add the &#34;<strong>PrintToLog</strong>&#34; function to print the display information.</p><p><br /></p><p>Change log : (2023/06)</p><p>Support 5.2 version</p><p>5.2&#xff1a;</p><p>Increase the IsTopmostWindow parameter when creating a window.</p><p>In the content of the plug-in, a template is added, and the title bar is customized (so that the Icon can be customized). And display the button name in the window when in the window.</p><p><br /></p><p>Change log : (2022/11)</p><p>Support 5.1 version</p><p><br /></p><p>Change log : (2022/04)</p><p>Support 5.0 version</p><p>5.0&#xff1a;</p><p>Added set\\get window position function.</p><p>Now in ContentWidget you can respond to key events (OnKeyChar, OnPreviewKeyDown, OnKeyDown, OnKeyUp).</p><p><br /></p><p>Change log : (2021/03)</p><p>4.26&#xff1a;Try to increase support for MacOS. If there is a problem with the test, please contact me in time.</p><p><br /></p><p>Change log : (2021/01)</p><p>4.26&#xff1a;</p><p>Add &#34;GetWindowSize&#34; function --- Get window size</p><p>Add &#34;GetWindowDPI&#34; function --- Get window DPI</p><p>The CreateMultiWindow function adds the &#34;bIsAutoContentDPIScale&#34; parameter to automatically scale the content according to DPI. (The default is False)</p><p><br /></p><p>Change log : (2020/12)</p><p>Support 4.26 version</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Support for creating new windows.</li><li> Support title modification, name, whether to display.</li><li> Support window border settings, with title hiding, it is very easy to realize borderless windows.</li><li> Support window close event.</li></ul><p><br /></p><p>Code Modules:</p><ul><li> MultiWindow [Runtime]</li></ul><p><br /></p><p><br /></p><p><strong>Check out ywt20&#39;s other products here </strong>: <a href=\"https://www.unrealengine.com/marketplace/en-US/profile/YWT20\" rel=\"nofollow\">https://www.unrealengine.com/marketplace/en-US/profile/YWT20</a></p><p><br /></p><p>Number of C&#43;&#43; Classes:2</p><p>Network Replicated: (No)</p><p>Supported Development Platforms: (“Windows”)</p><p>Supported Target Build Platforms:(&#34;Win64&#34;, &#34;Win32&#34;)</p><p>Documentation: <a href=\"https://docs.google.com/document/d/e/2PACX-1vS6FzvxiU31DEPa75NLKl29TBsUN31Z96jpJ0xyRzVf-2c8dQVtL5bTrjyTFfJJUtaBF5iRlPD-wP0o/pub\" rel=\"nofollow\">Link</a></p><p>Example Project:<a href=\"https://drive.google.com/file/d/1CdxUp5MxAXZhrub4AA52n3oxTP2NW3Aa/view?usp&#61;sharing\" rel=\"nofollow\">Link</a>  <a href=\"https://1drv.ms/u/s!ArUXKe9rc5cylAtalje1B-JATien?e&#61;Ne7ctc\" rel=\"nofollow\">Show first-person footage in another window</a></p><p>Additional Notes:Try to avoid creating a new window when the window is closed. Because of this problem, I occasionally encounter a BUG when I close the program during testing.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-a127339dd68662ca58ad0d02d0652e90.jpg",
+      "md5": "a127339dd68662ca58ad0d02d0652e90",
+      "width": 1920,
+      "height": 1080,
+      "size": 238307,
+      "uploadedDate": "2020-11-26T12:24:42.129Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-e482ee7f752e757aa61c08b60d1f978a.jpg",
+      "md5": "e482ee7f752e757aa61c08b60d1f978a",
+      "width": 1920,
+      "height": 1080,
+      "size": 95816,
+      "uploadedDate": "2020-11-26T13:57:45.526Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-4f7dc1db48347630bc117375aef5e7b4.jpg",
+      "md5": "4f7dc1db48347630bc117375aef5e7b4",
+      "width": 1920,
+      "height": 1080,
+      "size": 97757,
+      "uploadedDate": "2020-11-26T13:57:45.843Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-24076e4acf526f2c6cbb524236cd0ea3.jpg",
+      "md5": "24076e4acf526f2c6cbb524236cd0ea3",
+      "width": 1920,
+      "height": 1080,
+      "size": 256183,
+      "uploadedDate": "2020-11-29T03:19:17.096Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TOP11-1920x1080-c24ed573789baf44af8f2d12f6fe3c52.jpg",
+      "md5": "c24ed573789baf44af8f2d12f6fe3c52",
+      "width": 1920,
+      "height": 1080,
+      "size": 120842,
+      "uploadedDate": "2022-10-19T12:16:43.557Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/-1-1920x1080-1aaac7fd006e6a6c2aaf1393f47f54fd.jpg",
+      "md5": "1aaac7fd006e6a6c2aaf1393f47f54fd",
+      "width": 1920,
+      "height": 1080,
+      "size": 646197,
+      "uploadedDate": "2024-01-11T05:48:30.501Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Multiwindow_thumb-284x284-5033112253636c0703ffe03eb9716abf.png",
+      "md5": "5033112253636c0703ffe03eb9716abf",
+      "width": 284,
+      "height": 284,
+      "size": 15559,
+      "uploadedDate": "2020-11-29T03:40:32.194Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Multiwindow_featured-894x488-e0ddd264b2309dfb1b899a012d0dbeb6.png",
+      "md5": "e0ddd264b2309dfb1b899a012d0dbeb6",
+      "width": 894,
+      "height": 488,
+      "size": 34491,
+      "uploadedDate": "2020-11-29T03:40:32.242Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/-1-1920x1080-1aaac7fd006e6a6c2aaf1393f47f54fd_Snapshot.jpg",
+      "md5": "475b72cb74ab3716d1856dafb9134153",
+      "width": 150,
+      "height": 74,
+      "size": 4108,
+      "uploadedDate": "2024-01-11T05:48:30.822Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TOP11-1920x1080-c24ed573789baf44af8f2d12f6fe3c52_Snapshot.jpg",
+      "md5": "10456dc6c99eb5e64d729b2b206a043c",
+      "width": 150,
+      "height": 74,
+      "size": 5198,
+      "uploadedDate": "2022-10-19T12:16:43.774Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-24076e4acf526f2c6cbb524236cd0ea3_Snapshot.jpg",
+      "md5": "e5ca3edb40cf12e5583dfa9b7b34f7c6",
+      "width": 150,
+      "height": 74,
+      "size": 3241,
+      "uploadedDate": "2020-11-29T03:19:17.330Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-e482ee7f752e757aa61c08b60d1f978a_Snapshot.jpg",
+      "md5": "907d71ec5a28b32478e730a6e5b0a4ba",
+      "width": 150,
+      "height": 74,
+      "size": 3155,
+      "uploadedDate": "2020-11-26T13:57:45.739Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-4f7dc1db48347630bc117375aef5e7b4_Snapshot.jpg",
+      "md5": "5afa05b36aece86b7ff299e91c7fde1a",
+      "width": 150,
+      "height": 74,
+      "size": 3197,
+      "uploadedDate": "2020-11-26T13:57:46.051Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-a127339dd68662ca58ad0d02d0652e90_Snapshot.jpg",
+      "md5": "b332bb15386dd740cb15b85d1b7470f2",
+      "width": 150,
+      "height": 74,
+      "size": 4788,
+      "uploadedDate": "2020-11-26T12:24:42.362Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-11-28T16:10:25.815Z",
+  "lastModifiedDate": "2024-12-12T19:22:25.080Z",
+  "customAttributes": {},
+  "entitlementName": "57462dabfbc54dbe8b187a24f2b22600",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "6224b0c32f1a4cd6854f2cbce2e2beb0",
+      "appId": "MultiWindow_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac"
+      ],
+      "dateAdded": "2020-11-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MultiWindow_4.25"
+    },
+    {
+      "id": "36e9be4e71df49529a5566c62574f5a9",
+      "appId": "MultiWindow_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MultiWindow_4.26"
+    },
+    {
+      "id": "c7bc378d5aa3484a949da9acfbdb4eae",
+      "appId": "MultiWindow_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Mac",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-08-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MultiWindow_4.27"
+    },
+    {
+      "id": "a72e16aeb57740c8a010a323e55eb380",
+      "appId": "MultiWindow_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2022-04-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "5ad729f113c94023ab18e865d3ff411e",
+      "appId": "MultiWindow_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-11-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "97a0bf9fd66e45f293874809fc122c86",
+      "appId": "MultiWindow_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "f3e2af4dbb6c41968414e248e05ad9a6",
+      "appId": "MultiWindow_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "5139497e9af94253912c4177dc6ef792",
+      "appId": "MultiWindow_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "YWT20",
+  "developerId": "o-36kebp2nggyevt5yn43s4ef7qv4rm9",
+  "endOfSupport": false,
+  "unsearchable": false
+}

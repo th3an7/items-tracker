@@ -1,0 +1,183 @@
+{
+  "id": "a61a36a0692448b59cfd3123e51bb2bc",
+  "title": "Asset Downgrader",
+  "description": "Downgrade Project Assets From 5.4 to 4.27 or inbetween",
+  "longDescription": "<p>Did you upgrade to a new UE version, saved some assets but now can&#39;t go back because those assets are &#34;invisible&#34; in the old version ?</p><p>Do you want to sell assets for users stuck on older versions of UE like 4.27 ?</p><p>Are you the one stuck on 4.27 and want to use assets saved on 5.0&#43; ?</p><p><strong>Asset Downgrader</strong> is the solution for all of the above !</p><p><br /></p><p>It will downgrade assets for compatibility with 5.0.3 or 4.27. It works by first upgrading the assets to Source Version (5.3-5.4), and then applying various patches to the .uasset files in order to make them compatible with the TargetVersion (5.0 or 4.27) but assets can then also be opened in UE5.1-5.3, just without the newer data (i.e. nanite data is removed for a 4.27 downgrade). Do note that features of the newer unreal versions (like nanite on masked materials, new material nodes, new niagara modules) can&#39;t be ported to the old versions.</p><p><br /></p><p><strong>Experimental support for 5.5 Preview 1 is also available !</strong></p><p><a href=\"https://www.youtube.com/watch?v&#61;yXvJfDNfrSQ\" rel=\"nofollow\">Video Tutorial and Demo</a></p><p><br /></p><p>How it works :</p><p>- First, backup all your assets as this plugin is highly experimental and in certain situations it may corrupt assets or crash the editor if something goes wrong.</p><p>- Either have 2 projects, one the SourceVersion and the other with the TargetVersion, or just switch versions for the project you&#39;re working with. Integrate the plugin in both projects.</p><p>- In the SourceVersion project, select the assets you wish to downgrade.</p><p>- From the Downgrader menu choose DowngradeSelectedAssets.</p><p>- Either migrate the assets by copy pasting affected files or entire folders with the assets or selecting say a level file, choosing migrate and then choosing a destination Content folder where the project on TargetVersion should reside. Alternatively, switch the version of the project to the TargetVersion</p><p>- If TargetVersion is a 5.0.3 project add</p><p>[Core.System]</p><p>UsePackageTrailer&#61;True</p><p>to Config/DefaultEngine.ini</p><p>You will get a warning if this is not enabled.</p><p>- Open the TargetVersion project and then the downgraded assets. If there were no errors, the assets should open correctly. To be able to migrate these assets to other TargetVersion projects that don&#39;t have the Downgrader plugin, the assets need to be resaved through the plugin ( select all the assets and use the plugin&#39;s SaveSelectedAssets option ) inside the TargetVersion editor.</p><p><br /></p><p><br /></p><p>What if I need to downgrade to just 5.2 or 5.1 ?</p><p><br /></p><p>The flow is identical, but instead of opening the assets in say 5.0.3 you can open them in 5.1 or 5.2. Do note that in certain situations resaving the assets in the target version is still required before opening them in a project without the plugin.</p><p><br /></p><p><a href=\"https://docs.google.com/spreadsheets/d/1hMbFOg1IlH4AyOd2A7_eN1xw2H375rqiDYqOOLKvRaY/edit#gid&#61;960867659\" rel=\"nofollow\">Supported Assets Spreadsheet</a></p><p><br /></p><p>In order to downgrade certain assets (or all assets as it&#39;s the case for 5.4) you need to use a custom version of unreal engine that has specific engine modifications in order to make downgrading possible. Check the plugin folder ( UE_5.4\\Engine\\Plugins\\Marketplace\\AssetDowngrader\\Download Custom Engine &amp; Plugin.url) for the link to where you must download both a custom UE5.4 build and a precompiled version of the plugin for this engine version. After downloading the custom engine and integrating the precompiled plugin in the source project&#39;s plugins folder you need to switch the source project engine version to this custom engine build.</p><p><br /></p><p>Can it be downgraded lower than 4.27 ?</p><p>Not currently but with enough research &amp; engine modifications definitely possible. Contact me if you have specific needs.</p><p><br /></p><p>My asset is not supported, can you add support ?</p><p>Let me know what kind of assets you&#39;re interested. Any asset is implementable but it requires a lot of work.</p><p><br /></p><p>Known Issues:</p><p>- If assets don&#39;t appear in packaged builds you forgot to resave the assets ( use the plugin&#39;s SaveSelectedAssets option )</p><p>- some downgraded scenes&#39; lighting may look too bright in 5.0. You may need to tune ReflectionProbes/Skylight/Directional light intensity and/or rebuild lighting</p><p>- if downgrading entire projects, a lot of assets will be loaded into memory, so you may need a lot of RAM sometimes up to 128GB</p><p>- if encountering unknown startup crashes due do downgrading a lot of assets, try and downgrade assets one by one, or exclude/delete the offending asset.</p><p>- textures with formats like RGBA32F are not downgraded because those formats don&#39;t exist in 5.0.</p><p>- opening certain maps will sometimes crash. This might be due to masked materials with nanite which are not allowed in 5.0. Try first to open assets individually or remove nanite entirely and then open the map</p><p>- if landscapes are pure black in 4.27 then use the Downgrader menu option FixLandscape</p><p><br /></p><p>If you use a custom engine build and require the engine modifications to downgrade, I can provide this service for a fee. Contact me for licensing details.</p><p><br /></p><p>If you have any issues, errors or crashes don&#39;t hesitate to contact me at relativegames7&#64;gmail.com as this plugin is highly experimental.</p><p>Please include your editor log found in ProjectName/Saved/Logs/ProjectName.log.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Ability to downgrade UE assets from 5.3-5.4 to 4.27-5.0</li></ul><p>Code Modules:</p><ul><li> Downgrader [Editor]</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 12</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Not designed for building with it</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery1920x1080-1920x1080-73a96ae23b806dacfcdbe666c32c3ed0.jpg",
+      "md5": "73a96ae23b806dacfcdbe666c32c3ed0",
+      "width": 1920,
+      "height": 1080,
+      "size": 410747,
+      "uploadedDate": "2024-03-12T19:27:15.829Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-d85900c8c5b3b6c1aa6bf3f39f9662b0.png",
+      "md5": "d85900c8c5b3b6c1aa6bf3f39f9662b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 194021,
+      "uploadedDate": "2024-06-01T11:01:29.416Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-044860b7497c0beb01f77d159bc3428a.png",
+      "md5": "044860b7497c0beb01f77d159bc3428a",
+      "width": 1920,
+      "height": 1080,
+      "size": 268128,
+      "uploadedDate": "2024-06-01T11:01:29.785Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-9c581b66588f737543b75cc6f79f572f.png",
+      "md5": "9c581b66588f737543b75cc6f79f572f",
+      "width": 1920,
+      "height": 1080,
+      "size": 261292,
+      "uploadedDate": "2024-06-01T11:01:30.221Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AssetDowngrader_thumb-284x284-b815d746decff6c0d2f1b5fbff066961.png",
+      "md5": "b815d746decff6c0d2f1b5fbff066961",
+      "width": 284,
+      "height": 284,
+      "size": 196780,
+      "uploadedDate": "2024-03-12T19:27:16.195Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AssetDowngrader_featured-894x488-4a534acf5463cbf7e27920ae37bfe15a.png",
+      "md5": "4a534acf5463cbf7e27920ae37bfe15a",
+      "width": 894,
+      "height": 488,
+      "size": 496801,
+      "uploadedDate": "2024-03-12T19:27:16.332Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-d85900c8c5b3b6c1aa6bf3f39f9662b0_Snapshot.png",
+      "md5": "5689da3a24d979c1fb9f9cc56e06057e",
+      "width": 150,
+      "height": 74,
+      "size": 3662,
+      "uploadedDate": "2024-06-01T11:01:29.661Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-044860b7497c0beb01f77d159bc3428a_Snapshot.png",
+      "md5": "211c5da18220d2b09e420086a62a896d",
+      "width": 150,
+      "height": 74,
+      "size": 4864,
+      "uploadedDate": "2024-06-01T11:01:30.053Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-9c581b66588f737543b75cc6f79f572f_Snapshot.png",
+      "md5": "3d50830833e472751cf4ab8d68c38f00",
+      "width": 150,
+      "height": 74,
+      "size": 4848,
+      "uploadedDate": "2024-06-01T11:01:30.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1920x1080-1920x1080-73a96ae23b806dacfcdbe666c32c3ed0_Snapshot.jpg",
+      "md5": "95de1696b93fc707040e0c02cdf31601",
+      "width": 150,
+      "height": 74,
+      "size": 6136,
+      "uploadedDate": "2024-03-12T19:27:16.062Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1920x1080-1920x1080-63c53330007c3698897d39501b6449ee_Snapshot.jpg",
+      "md5": "043730bdddab5e0fb2e98b539b660bac",
+      "width": 150,
+      "height": 74,
+      "size": 9932,
+      "uploadedDate": "2024-03-08T11:21:21.997Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-03-16T07:59:08.515Z",
+  "lastModifiedDate": "2025-01-28T11:52:25.082Z",
+  "customAttributes": {},
+  "entitlementName": "a61a36a0692448b59cfd3123e51bb2bc",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "f6c18f9131b44edbb64c3876c0c16c4f",
+      "appId": "AssetDowngrader_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-03-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.05_5_1"
+    },
+    {
+      "id": "930b6db3fc0449d9bd2ee3e9f9a37591",
+      "appId": "AssetDowngrader_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-03-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.09_5_2"
+    },
+    {
+      "id": "7a731e76c79e410691e85eb973b38715",
+      "appId": "AssetDowngrader_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-03-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.10_5_3"
+    },
+    {
+      "id": "bcf75fb745bd4def9a4e5e78bc602086",
+      "appId": "AssetDowngrader_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.10_5_4"
+    }
+  ],
+  "developer": "CiprianStanciu",
+  "developerId": "o-9qy3vtgmknyubzvuxxf4c4z9r5bpmh",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

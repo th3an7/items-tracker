@@ -1,0 +1,132 @@
+{
+  "id": "005c04ee52fe48e4a0e0566917424b27",
+  "title": "Simple Skill System",
+  "description": "Easy to use data driven skill framework. Made to work for all kinds of effects such as player skills, NPC abilities, environmental effects, etc...",
+  "longDescription": "<p>Tutorial: <a href=\"https://www.youtube.com/watch?v&#61;cbmAC1bXo28\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;cbmAC1bXo28</a></p><p><br /></p><ul><li>you need to create all kinds of skills with effects interacting with each other, but if like me you find the Gameplay Ability System hard to use, the Simple Skill System plugin is for you.</li><li>loosely inspired by the Entity-Component-System pattern for the architecture/usability benefits (not the cache coherency):</li></ul><ol><li>components are pieces of data, a damage value or a duration for example.</li><li>effects are sets of components.</li><li>systems are the logic that can modify/add/remove components. They filter effects according to their components and when they match, the changes are applied.</li><li>contexts can be seen as the world in which the other parts live. </li></ol><ul><li>create your own components and systems for any skill you can imagine.</li><li>promotes composition over inheritance as well as a more declarative workflow.</li><li>written in C&#43;&#43; with all the necessary features exposed to blueprints. The plugin is intended to be used in a data driven way by creating blueprints, facilitating work with designers as well.</li></ul>",
+  "technicalDetails": "<h2>DETAILS</h2><ul><li>tested on 4.25/4.26 on Windows and Linux. The plugin is exclusively made of regular Unreal Engine C&#43;&#43; so if you build from source it should work on most platforms/recent versions with minimal changes.</li><li>double buffered so every system will read the same values in a given tick, regardless of the execution order.</li><li>the double buffering does not cause time sensitive operation such as starting/stopping effects to have a tick of delay, the update is instant.</li><li>you can chain effects in a frame perfect manner. The delta time is propagated from the previous effect to the next. For example if the previous effect had 10ms left to run but the tick last 16ms, the next effect will be started immediately as if it had been running for 6ms.</li><li>you can create multiple contexts in case you want to separate some effects/systems from each other or if you want to enforce an order.</li><li>defensive programming protecting you from hard to diagnostic bugs.</li><li>pointer to implementation idiom working with UObjects.</li></ul><p><br /></p><p><br /></p><h2>CONTENT</h2><ul><li>the plugin code.</li><li>simple examples that can be run by setting the SSS_GameMode_BP on a map then pressing 1-4:</li></ul><ol><li>Toy example to see how to create effects and setup components to be run by a system</li><li>Damage over time to see how to create skills in a more procedural/data driven fashion</li><li>Layered skill to see how to create skills with effects running concurrently</li><li>&#34;Hold&#34; skill to see how to create skills that last an indefinite amount of time</li></ol><ul><li>an example with UI where you cancel attacks to perform a combo for a more &#34;real life&#34; use case</li><li>color coded comments, white for descriptions, green for intent and orange for implementation details coming from C&#43;&#43;.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ComboSystem-1920x1080-98fc3cec86eb589b3fd89a441b8a2220.png",
+      "md5": "98fc3cec86eb589b3fd89a441b8a2220",
+      "width": 1920,
+      "height": 1080,
+      "size": 206858,
+      "uploadedDate": "2020-11-27T17:58:42.597Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ComboSkill-1920x1080-00d463877381474bef269d1839333d18.png",
+      "md5": "00d463877381474bef269d1839333d18",
+      "width": 1920,
+      "height": 1080,
+      "size": 292574,
+      "uploadedDate": "2020-11-27T17:58:42.953Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ComboQualifiers-1920x1080-90bad8339f8950cd3879943dbda32ccc.png",
+      "md5": "90bad8339f8950cd3879943dbda32ccc",
+      "width": 1920,
+      "height": 1080,
+      "size": 220266,
+      "uploadedDate": "2020-11-27T17:58:43.347Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SimpleSkillSystem_thumb-284x284-525d1f28fcb866e955cf067e8198cf93.png",
+      "md5": "525d1f28fcb866e955cf067e8198cf93",
+      "width": 284,
+      "height": 284,
+      "size": 18196,
+      "uploadedDate": "2020-11-27T17:58:43.615Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SimpleSkillSystem_featured-894x488-2ee871269f0a61a747769428489f8c60.png",
+      "md5": "2ee871269f0a61a747769428489f8c60",
+      "width": 894,
+      "height": 488,
+      "size": 37234,
+      "uploadedDate": "2020-11-27T17:58:43.650Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ComboSystem-1920x1080-98fc3cec86eb589b3fd89a441b8a2220_Snapshot.png",
+      "md5": "9e2dbe168d554b067af04a95328544f1",
+      "width": 150,
+      "height": 74,
+      "size": 4009,
+      "uploadedDate": "2020-11-27T17:58:42.829Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ComboSkill-1920x1080-00d463877381474bef269d1839333d18_Snapshot.png",
+      "md5": "f8e2b44e3986d42708b51f274380643e",
+      "width": 150,
+      "height": 74,
+      "size": 4723,
+      "uploadedDate": "2020-11-27T17:58:43.207Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ComboQualifiers-1920x1080-90bad8339f8950cd3879943dbda32ccc_Snapshot.png",
+      "md5": "b3ed07408ebdf4bff1c1ac444876591b",
+      "width": 150,
+      "height": 74,
+      "size": 4430,
+      "uploadedDate": "2020-11-27T17:58:43.582Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2020-11-29T23:35:42.668Z",
+  "lastModifiedDate": "2021-09-22T04:27:08.401Z",
+  "entitlementName": "005c04ee52fe48e4a0e0566917424b27",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "eaf5462381e548efb019bafd676ad3f2",
+      "appId": "SimpleSkillSystem_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2020-11-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleSkillSystem-1.2.0-4.25"
+    },
+    {
+      "id": "53623e5e6d0b4c7bb2b6a5adb7d0412f",
+      "appId": "SimpleSkillSystem_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2020-12-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleSkillSystem-1.2.0-4.26"
+    }
+  ],
+  "developer": "Erebnyx Studio",
+  "developerId": "o-p3ylp4mwq3hvpjyeleclmu45hz3fdm",
+  "endOfSupport": false,
+  "unsearchable": false
+}

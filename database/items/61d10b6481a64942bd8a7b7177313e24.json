@@ -1,0 +1,170 @@
+{
+  "id": "61d10b6481a64942bd8a7b7177313e24",
+  "title": "Nans Timeline System",
+  "description": "This plugins allows to keep tracks of time for different timeline paradigm, attached events to them and managed serialization for Save and Load game.",
+  "longDescription": "<h2>1. Introduction</h2><p><br /></p><p>This plugins allows to keep tracks of time for different timeline paradigm(1), attached events(2) to them and managed serialization for Save and Load game.</p><blockquote>1 <a href=\"https://github.com/NansPellicari/UE4-TimelineSystem/tree/UE4Marketplace#331---real-life\" rel=\"nofollow\">Real life</a> time, <a href=\"https://github.com/NansPellicari/UE4-TimelineSystem/tree/UE4Marketplace#332---game-life\" rel=\"nofollow\">Game life</a> and <a href=\"https://github.com/NansPellicari/UE4-TimelineSystem/tree/UE4Marketplace#333---level-life\" rel=\"nofollow\">Level life</a></blockquote><blockquote>2 Light blueprint asset carrying data and/or simple functionalities you design</blockquote><p><br /></p><h2>2. Usages</h2><p><br /></p><p>I use this for different purposes.</p><p>First I created this to manage a bonus/malus system cause I needed to centralized their life duration.</p><p>Then I realized that it can be very helpful for different purposes in my game as creating promotional content, bonus/malus, temporary skills, XP earning factors, ... with a limited time and having precise stats for player activities.</p><h2><br /></h2><h2>3. Definitions</h2><h3><br /></h3><h3>3.1. Timeline</h3><p><br /></p><p>A timeline is a simple queue of events which is dedicated to store (to keep traces for stats) and notify them (depending on their parameters and timeline paradigm) on their lifetime events: start &amp; time increase.</p><p>As a client, you should never have to use it.</p><p><br /></p><h3>3.2. Timeline manager</h3><p><br /></p><p>Is working as a remote control for Timeline, it controls time state (Play, Pause) and stream (tick interval, slow motion, ...).</p><p>As a client, it is your main interface.</p><p><br /></p><h3>3.3. Timeline manager types</h3><h4><br /></h4><h4>3.3.1. - Real Life</h4><p><br /></p><p>The intent of the Real Life timeline is to track times since the first start of the game.</p><p>It is not affected by time alterations such as play/pause and slow motion.</p><p>After the game stops, it should replay all the missing time on game reloading to update attached Events states.</p><p>As real life is, its state is always Play.</p><p>Be careful when you attached events, it could increase memory if they have indeterminate life time.</p><h4><br /></h4><h4>3.3.2. - Game Life</h4><p><br /></p><p>It keeps track of player game session. It follows the same stream, Play/Pause, Stop, slow motion, ...</p><p>After the game stops, it should restart at the exact same time as the last session.</p><p>Be careful too when you attached event here.</p><h4><br /></h4><h4>3.3.3. - Level Life</h4><p><br /></p><p>The same as <a href=\"https://github.com/NansPellicari/UE4-TimelineSystem/tree/UE4Marketplace#2--game-life\" rel=\"nofollow\">Game Life</a> but it is reinitialized when level changes.</p><p>You can be less worried on attaching event here, but be aware that all events are definitively removed on reinitialization (level changes).</p><h4><br /></h4><h4>3.3.4. - And ...</h4><p><br /></p><p>You can easily create your own timeline manager. See <a href=\"https://github.com/NansPellicari/UE4-TimelineSystem/blob/UE4Marketplace/Docs/Developers.md\" rel=\"nofollow\">Developers docs</a>.</p><p><br /></p><h3>3.4. Event</h3><p><br /></p><p>It is intended to be the most extensible as possible.</p><p>So in its actual state, it is just a base UObject which embeds the necessary data to managed its lifetime.</p><p>You can specialized it with a dedicated Blueprint asset or in c&#43;&#43; classes (creating a <a href=\"https://refactoring.guru/design-patterns/decorator\" rel=\"nofollow\">Decorator</a> of the <a href=\"https://github.com/NansPellicari/UE4-TimelineSystem/blob/UE4Marketplace/Source/NansTimelineSystemUE4/Public/Event/EventBase.h\" rel=\"nofollow\">UNEventBase</a>) to do what your want.</p><p>To get some examples:</p><ul><li>I create a scheduled event to trigger a message to motivate the player when it cumulates an amount of succeeded actions during a determinate range of time.</li><li>In combination with my <a href=\"https://github.com/NansPellicari/UE4-FactorsFactory\" rel=\"nofollow\">Factors Factory System</a> and Interaction System, I used them to create a temporary Bonus/Malus factor after an Actor interaction.</li><li>... Sky&#39;s the limit!</li></ul><h2><br /></h2><h2>4. Getting started - a step by step guide</h2><p><br /></p><p>To maintain a short doc here, please read this page <a href=\"https://github.com/NansPellicari/UE4-TimelineSystem/blob/UE4Marketplace/Docs/StepByStep.md\" rel=\"nofollow\">here</a></p><p><br /></p><h2>5. Open Source</h2><p><br /></p><p>This plugins is open source (license apache2) and can be downloaded here</p><p><a href=\"https://github.com/NansPellicari/UE4-TimelineSystem\" rel=\"nofollow\">https://github.com/NansPellicari/UE4-TimelineSystem</a></p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Easy Timeline&#39;s creation &amp; configuration</li><li>Blueprint assets to create your own event&#39;s logics</li><li>Blueprints and c&#43;&#43; clients to manipulates any timelines and events</li><li>New Editor&#39;s windows to debug and visualize events in the timeline</li><li>Dedicated engine&#39;s subsystem</li><li>Open source <a href=\"https://github.com/NansPellicari/UE4-TimelineSystem\" rel=\"nofollow\">https://github.com/NansPellicari/UE4-TimelineSystem</a></li></ul><p>Code Modules:</p><ul><li> <strong>NansTimelineSystemCore</strong>, <em>Runtime, c&#43;&#43;</em>, manages the main logic of timelines and event notifications (UE4 engine agnostics)</li><li> <strong>NansTimelineSystemUE4</strong>, <em>Runtime, c&#43;&#43;/Blueprint</em>, the bridge between NansTimelineSystemCore and UE4 engine, provides dedicated blueprints to help designers to iterate fast.</li><li> <strong>NansTimelineSystemEd</strong>, <em>Editor, tools &amp; tests</em>, provides editor&#39;s windows to see timelines with attached events &#43; Blueprint asset for event.</li><li><strong>NansCoreHelpers</strong>, <em>DeveloperTool, c&#43;&#43;</em>, decorates UE&#39;s asserts macro allowing to use them in tests</li><li><strong>NansUE4TestsHelpers</strong>, <em>Runtime, c&#43;&#43;/Blueprint</em>, some macros to simplify test&#39;s asserts, Mocks, helpers to easily manages World in tests, Blueprint Utilities for tests.</li></ul><p>Number of Blueprints: &#43;7</p><p>Number of C&#43;&#43; Classes: &#43;10</p><p>Network Replicated: Not yet (next iteration)</p><p>Supported Development Platforms: Win64, Win32</p><p>Supported Target Build Platforms: Win64, Win32</p><p>Documentation: https://github.com/NansPellicari/UE4-TimelineSystem</p><p>Example Project: https://github.com/NansPellicari/UE4-TimelineSystem-Showcase</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Showcase-1920x1080-c3ea3e4247bbb257ba8a8a6abf5b0eb0.png",
+      "md5": "c3ea3e4247bbb257ba8a8a6abf5b0eb0",
+      "width": 1920,
+      "height": 1080,
+      "size": 784701,
+      "uploadedDate": "2021-09-20T13:26:57.632Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery-1-1920x1080-1493f55a3149c52aa829047389074e02.png",
+      "md5": "1493f55a3149c52aa829047389074e02",
+      "width": 1920,
+      "height": 1080,
+      "size": 1090386,
+      "uploadedDate": "2021-09-20T13:26:57.124Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery-4-1920x1080-52d0aa91e1ffff414e3f762e413b586d.png",
+      "md5": "52d0aa91e1ffff414e3f762e413b586d",
+      "width": 1920,
+      "height": 1080,
+      "size": 615873,
+      "uploadedDate": "2021-09-20T13:26:55.827Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery-3-1920x1080-444c40cdb037130d6cf2f0afc2fb721a.png",
+      "md5": "444c40cdb037130d6cf2f0afc2fb721a",
+      "width": 1920,
+      "height": 1080,
+      "size": 384035,
+      "uploadedDate": "2021-09-20T13:26:56.264Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery-5-1920x1080-e5e0bf5b48e8c6ad9f54f7d8af99a1a5.png",
+      "md5": "e5e0bf5b48e8c6ad9f54f7d8af99a1a5",
+      "width": 1920,
+      "height": 1080,
+      "size": 451139,
+      "uploadedDate": "2021-09-20T14:48:20.611Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery-2-1920x1080-74d5529518c4766ea4427b53316ef772.png",
+      "md5": "74d5529518c4766ea4427b53316ef772",
+      "width": 1920,
+      "height": 1080,
+      "size": 192590,
+      "uploadedDate": "2021-09-20T13:26:56.691Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/NansTimelineSystem_thumb-284x284-e2807a02b2996e19e8fa06b2fe10e26f.png",
+      "md5": "e2807a02b2996e19e8fa06b2fe10e26f",
+      "width": 284,
+      "height": 284,
+      "size": 33945,
+      "uploadedDate": "2021-09-20T13:26:58.018Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/NansTimelineSystem_featured-894x488-987a293ff847485e8954f77748309a60.png",
+      "md5": "987a293ff847485e8954f77748309a60",
+      "width": 894,
+      "height": 488,
+      "size": 272386,
+      "uploadedDate": "2021-09-20T13:26:58.080Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery-5-1920x1080-e5e0bf5b48e8c6ad9f54f7d8af99a1a5_Snapshot.png",
+      "md5": "d1ab38790c50ac24dc3cb300cc572200",
+      "width": 150,
+      "height": 74,
+      "size": 6443,
+      "uploadedDate": "2021-09-20T14:48:20.917Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery-4-1920x1080-52d0aa91e1ffff414e3f762e413b586d_Snapshot.png",
+      "md5": "0e3d2ec06a0e99ab0384a1059b1828c5",
+      "width": 150,
+      "height": 74,
+      "size": 5405,
+      "uploadedDate": "2021-09-20T13:26:56.111Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery-3-1920x1080-444c40cdb037130d6cf2f0afc2fb721a_Snapshot.png",
+      "md5": "eb9d97b6b3f895d2ff3c84507ea3ce4d",
+      "width": 150,
+      "height": 74,
+      "size": 5258,
+      "uploadedDate": "2021-09-20T13:26:56.523Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery-2-1920x1080-74d5529518c4766ea4427b53316ef772_Snapshot.png",
+      "md5": "9b1b9b91d5e1418f62b2cbb3d4dc4566",
+      "width": 150,
+      "height": 74,
+      "size": 4301,
+      "uploadedDate": "2021-09-20T13:26:56.940Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery-1-1920x1080-1493f55a3149c52aa829047389074e02_Snapshot.png",
+      "md5": "da8ea13febf892700c05929f2e2ed011",
+      "width": 150,
+      "height": 74,
+      "size": 7612,
+      "uploadedDate": "2021-09-20T13:26:57.448Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Showcase-1920x1080-c3ea3e4247bbb257ba8a8a6abf5b0eb0_Snapshot.png",
+      "md5": "db5bbce695f93740d470f1433cb18800",
+      "width": 150,
+      "height": 74,
+      "size": 7033,
+      "uploadedDate": "2021-09-20T13:26:57.943Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-09-27T21:17:57.380Z",
+  "lastModifiedDate": "2024-10-15T09:19:50.564Z",
+  "entitlementName": "61d10b6481a64942bd8a7b7177313e24",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "d4d9346c5a324f928ea8ceda4030167c",
+      "appId": "NansTimelineSystem_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-09-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "NansTimelineSystem.v1.0.0"
+    }
+  ],
+  "developer": "Nans Pellicari",
+  "developerId": "o-llh45s6sjybf35x8s6hg9x2amk6uxr",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,164 @@
+{
+  "id": "03897865f4d44f1294fd69f29f1fdf25",
+  "title": "Enhanced Multiplayer Rolling Component",
+  "description": "Simple to use component for character to perform dodges or play direction attacks with multiplayer support. Make sure that you are using root motion animations. ",
+  "longDescription": "<p><strong>NOTE: </strong>You must have root motion animations to use this component</p><p><a href=\"https://drive.google.com/file/d/1xavE25KyR5cSHbTH2RicvqK08RaASv0N/view?usp&#61;sharing\" rel=\"nofollow\">User Manual</a> \\ <a href=\"https://drive.google.com/file/d/1-6_zH6x7Ox0Xx2nkuanoB3qg3WCzdBTb/view?usp&#61;sharing\" rel=\"nofollow\">Playable Demo </a>\\ <a href=\"https://discord.gg/wWkdmG7H6J\" rel=\"nofollow\">Discord</a> \\ <a href=\"https://www.youtube.com/watch?v&#61;22XjoINn8tQ\" rel=\"nofollow\">Showcase</a></p><p><br /></p><p><strong>NOTE: NOT INCLUDED</strong></p><p>It is purely rough examle of real world <strong>Rolling Component</strong> use, but its enough to test example setup.</p><p><a href=\"https://drive.google.com/file/d/1P0YGZDxJmEr3TeooWioF5S7Q1dkxR23m/view?usp&#61;share_link\" rel=\"nofollow\">Adanced Playable Demo</a> \\ <a href=\"https://www.youtube.com/watch?v&#61;eJUBAEpiTRQ\" rel=\"nofollow\">Advanced Showcase </a></p><p><br /></p><p><strong>Rolling Component </strong>is easy to use and has a 1 node solution to add roll and dodge ability to your character.</p><p>While other components try to use user input keys, <strong>Rolling Component</strong> calculates direction in runtime and recognizes the direction to roll. Using Root Motion animations, your character will not have any delays before a dodge and will not strangly rotate for 1 frame. It will just roll in the right direction according to your input, or you may set a custom roll direction from -180° to 180°</p><p>If you have any questions, please feel free to write to: <strong><u>earloriastore&#64;gmail.com</u></strong></p><p><br /></p><p>Changelog:</p><p><strong>1.3.0</strong></p><p>Now users who have a large list of directional rolls and other actions can now use Rolling Objects, which allows you to easily manage your rolls and create large arrays of actions.</p><ul><li>Added Rolling Object. Checkout <strong>RC_PlayerCharacter_RC_Object </strong>for more information</li><li>RC_RollingObject. Now you can add your own via Panel or add Them with more complex way via code. Check <strong>RC_RollingObject_SimpleSettings </strong>and <strong>RC_RollingObject_AdvancedSettings</strong></li><li>Fixed Widget Blueprint Errors in network mode for Sample Content</li></ul><p><br /></p><p><strong>1.2.0</strong></p><ul><li>Now End Roll is client trust, so there will no be any lags even using Auto Roll End Event.</li><li>Now Montage Stop is client trust, so server will not force client roll stop while rolling</li><li>Fixed End Roll event spaming</li><li><strong>~Client-Trust</strong> does not means that client will have fully authority. As component is now replicated, server still fix clients location if you are not using character&#39;s client-trust location. This fix is only visual, so the clients will have more fluid expirience while rolling.</li></ul><p><br /></p><p><strong>1.1.4</strong></p><ul><li>Fixed End Roll Event. Now it works as expected</li><li>Fixed is Falling Check flag</li><li>Added commentaries for is Falling Check</li></ul><p><br /></p><p><strong>1.1.3</strong></p><ul><li>Fixed &#34;Unknown Struct Error&#34;</li><li>Fixed UI Bug in Samples</li><li>Added Client Trust Roll to prevent action lag on client (It may not work well if you use auto end roll detection)</li><li>Added Roll Component Category for search</li><li>Added <strong>Chance To Roll </strong>Example in InputDirection Character. Checkout Forward roll.</li></ul><p><br /></p><p><strong>1.1.2</strong></p><ul><li>Added additional comments</li><li>Added timer getters for Auto End Roll Detection for greater flexibility</li></ul><p>GetRollTimeElapsed</p><p>GetRollTimeRemaining</p><p>GetTimerHandle</p><ul><li>Added <strong><em>Chance To Play</em></strong><em> </em> for animations</li></ul><p><em>Now you can use several animations for each direction.</em></p><p><em>For example, you can add 2 or more animations for the forward direction and set the playback chance for each animation.</em></p><p><em>The Rolling Component will randomize them for you according to the chance.</em></p><p><em>If you leave a 100% chance for each animation, they will be played completely randomly.</em></p><p><br /></p><p><strong>1.1.1</strong></p><ul><li>Added AnimNotify End Roll Detection</li><li>Added Montage Playing stop ability</li><li>Added EndRoll(Manual) to force stop Roll event</li><li>Added EndRoll(Local) to stop Roll gracefully</li><li>Added Blend Out After Montage Stop</li><li>Fixed DataTable<strong> Animation Set</strong> reading</li><li>Fixed UI errors in multiplayer</li><li>Documentation updated to 1.1.10</li></ul>",
+  "technicalDetails": "<p><strong>Features: </strong></p><ul><li>Automatically recognize the direction of rotation</li><li>4 and 8 directional roll support</li><li>Replication (network/multiplayer support)</li><li>Automatic anti-spam roll prevention (optional)</li><li>Support for custom direction input (you can check driving direction with general direction like with cameras)</li><li>No any tick calculations</li></ul><p><strong>Requirements:</strong></p><ul><li>Root motion animations</li></ul><p><br /></p><p>Number of blueprints: 3</p><p>Input: n/a</p><p>Platform Support: As its pure blueprints there is no any limitation to build it</p><p>Network replication: Yes</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1080p2-1920x1080-6e0f1779e005e71c22c6d5a18b13e25a.png",
+      "md5": "6e0f1779e005e71c22c6d5a18b13e25a",
+      "width": 1920,
+      "height": 1080,
+      "size": 144891,
+      "uploadedDate": "2022-04-22T12:30:33.935Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1080p5-1920x1080-a3ecbd794d0d3d59511f83f803494b07.png",
+      "md5": "a3ecbd794d0d3d59511f83f803494b07",
+      "width": 1920,
+      "height": 1080,
+      "size": 122271,
+      "uploadedDate": "2022-04-22T12:30:34.254Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1080p6-1920x1080-88cd01282bee04cdcdbc6b7866f8c756.png",
+      "md5": "88cd01282bee04cdcdbc6b7866f8c756",
+      "width": 1920,
+      "height": 1080,
+      "size": 79583,
+      "uploadedDate": "2022-04-22T12:30:34.583Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1080p4-1920x1080-1a3dc70a99f8ed9551f7d2b67bdfb119.png",
+      "md5": "1a3dc70a99f8ed9551f7d2b67bdfb119",
+      "width": 1920,
+      "height": 1080,
+      "size": 125975,
+      "uploadedDate": "2022-04-22T12:30:34.848Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1080p3-1920x1080-bb87f8af8bf1ada1f24e93925a271d1a.png",
+      "md5": "bb87f8af8bf1ada1f24e93925a271d1a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1182390,
+      "uploadedDate": "2022-04-22T12:30:35.216Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RollingComponent_thumb-284x284-112291e12ac6e2f80a9b1b3ae34b850b.png",
+      "md5": "112291e12ac6e2f80a9b1b3ae34b850b",
+      "width": 284,
+      "height": 284,
+      "size": 11619,
+      "uploadedDate": "2022-04-22T12:30:35.532Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RollingComponent_featured-894x488-87e38330de6c109dbc1afa5456e0cfdb.png",
+      "md5": "87e38330de6c109dbc1afa5456e0cfdb",
+      "width": 894,
+      "height": 488,
+      "size": 52498,
+      "uploadedDate": "2022-04-22T12:30:35.606Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1080p2-1920x1080-6e0f1779e005e71c22c6d5a18b13e25a_Snapshot.png",
+      "md5": "b5ad096f89900ea8c30f67a322b4d0e6",
+      "width": 150,
+      "height": 74,
+      "size": 4019,
+      "uploadedDate": "2022-04-22T12:30:34.138Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1080p5-1920x1080-a3ecbd794d0d3d59511f83f803494b07_Snapshot.png",
+      "md5": "49834fbc35a8eebcc7ba315d472b3836",
+      "width": 150,
+      "height": 74,
+      "size": 2681,
+      "uploadedDate": "2022-04-22T12:30:34.498Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1080p6-1920x1080-88cd01282bee04cdcdbc6b7866f8c756_Snapshot.png",
+      "md5": "626d2183f2d497d9ec573091304235b4",
+      "width": 150,
+      "height": 74,
+      "size": 2761,
+      "uploadedDate": "2022-04-22T12:30:34.787Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1080p4-1920x1080-1a3dc70a99f8ed9551f7d2b67bdfb119_Snapshot.png",
+      "md5": "a7ba1f10587e64d65cbbba7a9a29df71",
+      "width": 150,
+      "height": 74,
+      "size": 3666,
+      "uploadedDate": "2022-04-22T12:30:35.066Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1080p3-1920x1080-bb87f8af8bf1ada1f24e93925a271d1a_Snapshot.png",
+      "md5": "ddcfabe351952d7a860b6abd960c2741",
+      "width": 150,
+      "height": 74,
+      "size": 3870,
+      "uploadedDate": "2022-04-22T12:30:35.492Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2022-04-25T17:59:31.159Z",
+  "lastModifiedDate": "2024-01-19T19:00:00.736Z",
+  "entitlementName": "03897865f4d44f1294fd69f29f1fdf25",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "6f2fcf52f8124469b14d42981691b83f",
+      "appId": "RollingC03897865f4d4V1",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Linux",
+        "HTML5",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-04-22T00:00:00.000Z",
+      "releaseNote": "Added Rolling Component Object ",
+      "versionTitle": "1.3.0"
+    }
+  ],
+  "developer": "Earloria",
+  "developerId": "o-w95egu8qjpkkcqjte2qqwbfak69yjs",
+  "endOfSupport": false,
+  "unsearchable": false
+}

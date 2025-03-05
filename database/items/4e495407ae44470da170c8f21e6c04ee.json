@@ -1,0 +1,595 @@
+{
+  "id": "4e495407ae44470da170c8f21e6c04ee",
+  "title": "Alien",
+  "description": "Alien",
+  "longDescription": "<p><a href=\"https://youtu.be/DIjPIrlc4Dg\" rel=\"nofollow\"><strong>Video Trailer</strong></a></p><p><a href=\"https://drive.google.com/file/d/18vCKGypOn-Gg0vEYm-AdlAgSVkj5ZXXl/view?usp&#61;sharing\" rel=\"nofollow\"><strong>Download Demo</strong></a></p><p><a href=\"https://etheriondesigns.com/product/crab-monster/\" rel=\"nofollow\"><strong>For a Discount, visit www.EtherionDesigns.com</strong></a></p><p><br /></p><p>Step into the realm of the extraordinary with our Alien Crab Monster, a game-ready creature that includes A.I, and can also be played by the character!</p><p>It includes numerous animations, complete with an advanced Inverse Kinematics system for the legs, ensuring natural movement even on steep terrains.</p><p><br /></p><p>The package boasts a comprehensive A.I. system, an A.I. Spawner blueprint, and a variety of footstep sounds that change depending on the surface it walks on, adding to its immersive realism.</p><p>Furthermore, a rich collection of creature sound effects enhances the gaming experience.</p><p>Check out the Extended feature list below for an in-depth look at the treasure-trove of features this package contains!</p><p><br /></p><p><br /></p><h2><strong>Extended Feature List:</strong></h2><p><br /></p><h3><strong>Animation</strong></h3><ul><li>The Player Pawn supports gamepad &amp; keyboard input</li><li>Pawn rotates to align with slope angle (and IK applies relative to this)</li><li>The Animation features an IK System that places each foot on the surface below or above it&#39;s relative positon. The IK System works regardless of the creature&#39;s rotation on a landscape. To understand how the IK System works, please see the <a href=\"https://docs.google.com/document/d/1yO7nJbbzc-191mx3OYO_ekh5LuDRrmM6RC-NVPGJ4os/edit?usp&#61;sharing\" rel=\"nofollow\"><strong>IK System Explanation document</strong></a></li><li>A Secondary “bored” Idle animation plays when pawn is still for a designated timeframe.</li><li>The animation blendspace&#39;s input axis is customized to accurately reflect real-world movement and avoid foot sliding. This is especially useful for Gamepad input (values between 0 and 1).</li></ul><p><br /></p><h3><strong>A.I Behavior</strong></h3><p>Set Aggressiveness Levels with an integer. The following explains what integers refer to what behavior:</p><ul><li><strong><em>0</em></strong><em> &#61; No response to player.</em></li><li><strong><em>1</em></strong><em> &#61; Growl and look at player when sensed, but don’t ever chase.</em></li><li><strong> <em>2</em></strong><em> &#61; Growl and look at player when sensed, and if the player continues to be sensed for an allocated timeframe, the A.I pawn will start chasing the player.</em></li><li><strong><em>3</em></strong><em> &#61; Chase the player upon being sensed.</em></li><li><strong><em>4</em></strong><em> &#61; Chase the player immediately upon spawn.</em></li></ul><p><br /></p><h3><strong>A.I Roaming</strong></h3><p><br /></p><ul><li>Pawns find a random navigable point within a radius, and move to it if it is within the viewing angle of the pawn (this angle can be set with a variable). The reason we find it within an angle is to stop creatures from moving forward and then immediately turning backwards which is unrealistic behavior.</li><li>If the Pawn cannot find a navigable point within the angular parameters, it will disregard the angular limits and find any navigable point within range (basically if it hits a wall it will turn around).</li><li>Once the Pawn reaches the roaming destination, it will roll a chance to either Roar, continue roaming, or play an idle animation for a random amount of seconds within a range. The statistical chances of these events can be set with variables (“<em>Chance of Roar</em>” &amp; “<em>Chance of Idle Tapping</em>”)</li><li>The chance of Pawn Roaring can optionally be influenced by the amount of pawns being spawned by the spawner blueprint. The reason you would want to enable this feature is because if you had 100 pawns with a 10% chance of roaring, you would have 10 pawns continuously roaring at any given time (which is very annoying). With the feature enabled, 10% would turn to 1% and only 1 roar would happen at a time.</li></ul><p><br /></p><h3><strong> A.I Chasing</strong></h3><ul><li> Sight and Hearing senses can be set with public variables</li><li>If the pawn sees or hears the player pawn, it will respond based on aggressiveness level.</li><li>If the pawn gets touched by the player, it will start attacking immediately even if aggressiveness level is 2 (where as sight and hearing will only trigger growling).</li><li>When chasing, if the pawn reaches the player, it will play a random attack animation (from 4 options).</li><li>If the pawn is chasing the player but does not sense the player, a retriggerable timer will play. When this timer is complete, and the pawn has still not been sensed, it will stop chasing and switch back to roaming. The time it takes to stop chasing is a public variable.</li></ul><p>  </p><h3><strong>Customize Appearance</strong></h3><ul><li>Set Glow color</li><li>Optional Glowing eyes</li><li>Optional point light, with customizable intensity &amp; radius (great for night time scenes)</li><li>Each pawn has variation on the brightness and hue of its material. The intensity of variation can be customized</li><li>Materials support Forward Shading</li></ul><p><br /></p><h3><strong>Sound</strong></h3><ul><li>Individual feet make separate noises based on surface</li><li>4 Surfaces (grass, wood, rubber, metal) with around 8 footstep sounds per surface. </li><li>Fall distance affects volume of landing noise, which is also different per surface</li><li>Vocal pitch changes based on creature scale (smaller creatures are higher pitched, larger are lower pitched)</li><li>Giant creatures make booming noises when they walk (when having a scale of 2 and above)</li><li>Easter-egg sounds included (babies crying, fart noises, etc). This can be changed with a global Scalar parameter (“<em>EasterEgg</em>”) found in the Material Parameter collection.</li></ul><p><br /></p><h3><strong> Blueprints</strong></h3><ul><li>Spawner Blueprint with spawn &amp; destroy events. This blueprint has access to all necessary public variables that influence it’s spawned actors. It will tag each spawned BP_Crabmonster.</li><li>Alien Crab Monster blueprint. This can be used as either an enemy or a player depending on a bool.</li><li>Extensive documentation within blueprints is included to teach you how the A.I functions and how the IK works relative to it&#39;s mesh.</li><li>I’ve included a “Hint Blueprint” which opens up when the pawn nears it</li></ul><p><br /></p><p><br /></p><h3><strong>Levels</strong></h3><p>You&#39;ll find two levels within this package: a model viewing level, vividly presented in a dark room for detailed examination, and an A.I. &amp; Player testing level, where you can take control of your own Alien Crab Monster, navigating through an interactive environment and engaging with other alien crab monsters.</p><p><br /></p><h2><strong>--&#61;&#61; </strong><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Etherion&#43;Designs\" rel=\"nofollow\"><strong>Check out our other Characters HERE!</strong></a><strong> &#61;&#61;--</strong></h2><h2>--&#61;&#61; <a href=\"https://discord.gg/yeefJUfk8S\" rel=\"nofollow\"><strong>Join our Discord Server for Free Assets &amp; Support!</strong></a> &#61;&#61;--</h2><p><br /></p>",
+  "technicalDetails": "<p><strong>Number of Characters</strong>: 1</p><p><strong>Scaled to Epic Skeleton</strong>: Yes</p><p><strong>Rigged</strong>: Yes</p><p><strong>Rigged to Epic Skeleton</strong>: No</p><p><strong>Animated</strong>: Yes</p><p><strong>Number of Animations</strong>: 15</p><p><strong>Animation Types</strong>: In-place</p><p><br /></p><p><strong>Animations:</strong></p><ul><li>Attack: Bite, Stab Left, Stab Right, Stab Both</li><li>Idle</li><li>Idle Tapping</li><li>Jump</li><li>Jump Loop</li><li>Roar</li><li>Rotate Left &amp; Right</li><li>Strafe Left &amp; Right</li><li>Walk Forwards &amp; Backwards</li></ul><p> </p><p><strong>Physically-Based Rendering</strong>: Yes</p><p><strong>Number of Materials</strong>: 6</p><p><strong>Number of Material Instances</strong>: 10</p><p><strong>Number of Textures</strong>: 14</p><p><br /></p><p><strong>Texture Sizes: </strong></p><ul><li>[8192] 2</li><li>[4096] 6</li><li>[1024] 5</li><li>[128] 1</li></ul><p> </p><p><strong>Collision</strong>: Yes, Generated</p><p><strong>LODS</strong>: 4</p><p> </p><p><strong>Vertex Count</strong></p><ul><li>LOD0&#61;205,360</li><li>LOD1&#61;13,328</li><li>LOD2&#61;8,248</li><li>LOD3&#61;1,619</li></ul><p> </p><p><strong>Supported Development Platforms</strong>: Windows, Mac</p><p><strong>Supported Target Build Platforms</strong>: Windows, Mac, Oculus, Steam VR, PlayStation 4, Xbox One</p><p><strong>Documentation Included</strong>: Extensive documentation In Blueprints</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Main-1920x1080-cfb3f658228609f8a3e94bdf8e51f78a.jpg",
+      "md5": "cfb3f658228609f8a3e94bdf8e51f78a",
+      "width": 1920,
+      "height": 1080,
+      "size": 307265,
+      "uploadedDate": "2019-09-02T06:57:00.097Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/back full-1920x1080-e2c7278e0b4eed16f7ee50c3e9637bef.jpg",
+      "md5": "e2c7278e0b4eed16f7ee50c3e9637bef",
+      "width": 1920,
+      "height": 1080,
+      "size": 429618,
+      "uploadedDate": "2019-09-02T06:57:01.294Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/jaw bottom-1920x1080-1c28cab9dfcea2397369cd9029c8fd50.jpg",
+      "md5": "1c28cab9dfcea2397369cd9029c8fd50",
+      "width": 1920,
+      "height": 1080,
+      "size": 348806,
+      "uploadedDate": "2019-08-15T14:15:51.609Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gameplay-1920x1080-40754c0cc7301b62e9578db801f4ef3e.jpg",
+      "md5": "40754c0cc7301b62e9578db801f4ef3e",
+      "width": 1920,
+      "height": 1080,
+      "size": 859457,
+      "uploadedDate": "2022-08-18T01:19:17.237Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/New4-1920x1080-e0034dd1c2347ba2209d660253ae4854.jpg",
+      "md5": "e0034dd1c2347ba2209d660253ae4854",
+      "width": 1920,
+      "height": 1080,
+      "size": 385485,
+      "uploadedDate": "2019-09-01T14:12:36.764Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/attack-1920x1080-cd133d375630569ffe83f4f29739b0cf.jpg",
+      "md5": "cd133d375630569ffe83f4f29739b0cf",
+      "width": 1920,
+      "height": 1080,
+      "size": 211569,
+      "uploadedDate": "2019-09-02T06:57:05.022Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/back-1920x1080-e01679f4fc660c11c37ea0576c575de7.jpg",
+      "md5": "e01679f4fc660c11c37ea0576c575de7",
+      "width": 1920,
+      "height": 1080,
+      "size": 442728,
+      "uploadedDate": "2019-09-02T06:57:03.807Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Top-1920x1080-0f5ec7c5e8995dc5fbf630939e15a5ea.jpg",
+      "md5": "0f5ec7c5e8995dc5fbf630939e15a5ea",
+      "width": 1920,
+      "height": 1080,
+      "size": 263067,
+      "uploadedDate": "2019-09-02T06:57:02.550Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/face-1920x1080-dfdb3f21aae22cd069eae950ea909546.jpg",
+      "md5": "dfdb3f21aae22cd069eae950ea909546",
+      "width": 1920,
+      "height": 1080,
+      "size": 412262,
+      "uploadedDate": "2019-08-15T14:15:54.142Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/11-1920x1080-ded343656a3bfb2a8ab5e3408c12bda6.jpg",
+      "md5": "ded343656a3bfb2a8ab5e3408c12bda6",
+      "width": 1920,
+      "height": 1080,
+      "size": 538168,
+      "uploadedDate": "2019-09-02T06:57:06.275Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blueprints-1920x1080-f83a6d62e9032aa2848b7b9a3e52574c.jpg",
+      "md5": "f83a6d62e9032aa2848b7b9a3e52574c",
+      "width": 1920,
+      "height": 1080,
+      "size": 472335,
+      "uploadedDate": "2019-09-01T14:12:37.948Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blueprint Box-1920x1080-f1fce09be9713a5145547a2d0ac84ad6.jpg",
+      "md5": "f1fce09be9713a5145547a2d0ac84ad6",
+      "width": 1920,
+      "height": 1080,
+      "size": 202017,
+      "uploadedDate": "2019-09-01T14:12:39.210Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FirstPerson-1920x1080-92e6674cd4bf9e202e90a0afd48a20c0.jpg",
+      "md5": "92e6674cd4bf9e202e90a0afd48a20c0",
+      "width": 1920,
+      "height": 1080,
+      "size": 704493,
+      "uploadedDate": "2022-08-18T01:19:16.351Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/hotns-1920x1080-c149d2aa955467aa743c3f8b40728ce8.jpg",
+      "md5": "c149d2aa955467aa743c3f8b40728ce8",
+      "width": 1920,
+      "height": 1080,
+      "size": 616097,
+      "uploadedDate": "2019-09-02T06:57:08.721Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Bottom-1920x1080-2e6446d0d78abd10bb04047b29be79a5.jpg",
+      "md5": "2e6446d0d78abd10bb04047b29be79a5",
+      "width": 1920,
+      "height": 1080,
+      "size": 304674,
+      "uploadedDate": "2019-09-02T06:57:07.503Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/jaw top-1920x1080-19046e31cbdb2821ae43ed48a2d4c9ae.jpg",
+      "md5": "19046e31cbdb2821ae43ed48a2d4c9ae",
+      "width": 1920,
+      "height": 1080,
+      "size": 312808,
+      "uploadedDate": "2019-08-15T14:15:52.913Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FinalImageforCharacters-1920x1080-3f84d05fec9df0a34475aba04b8578de.jpg",
+      "md5": "3f84d05fec9df0a34475aba04b8578de",
+      "width": 1920,
+      "height": 1080,
+      "size": 1045753,
+      "uploadedDate": "2023-10-21T11:13:51.098Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Alien_thumb-284x284-dd2cf2d6ca7331d614b5a3f5778052da.png",
+      "md5": "dd2cf2d6ca7331d614b5a3f5778052da",
+      "width": 284,
+      "height": 284,
+      "size": 126366,
+      "uploadedDate": "2024-07-22T00:44:17.211Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AlienCrabMonster_featured-894x488-1dc440f7e062cdbc26ed5a494575b49f.png",
+      "md5": "1dc440f7e062cdbc26ed5a494575b49f",
+      "width": 894,
+      "height": 488,
+      "size": 346784,
+      "uploadedDate": "2019-08-15T14:16:06.041Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FinalImageforCharacters-1920x1080-3f84d05fec9df0a34475aba04b8578de_Snapshot.jpg",
+      "md5": "ae3298208ddae786f8584fc394317de6",
+      "width": 150,
+      "height": 74,
+      "size": 8453,
+      "uploadedDate": "2023-10-21T11:13:51.405Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FirstPerson-1920x1080-92e6674cd4bf9e202e90a0afd48a20c0_Snapshot.jpg",
+      "md5": "fde310afdf576d484e5a8c9b443edf88",
+      "width": 150,
+      "height": 74,
+      "size": 7480,
+      "uploadedDate": "2022-08-18T01:19:16.926Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gameplay-1920x1080-40754c0cc7301b62e9578db801f4ef3e_Snapshot.jpg",
+      "md5": "e93a9867390d7555471c88d4987a29ce",
+      "width": 150,
+      "height": 74,
+      "size": 6408,
+      "uploadedDate": "2022-08-18T01:19:17.844Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Main-1920x1080-cfb3f658228609f8a3e94bdf8e51f78a_Snapshot.jpg",
+      "md5": "a7682141a91bb1f8b741ea1722589243",
+      "width": 150,
+      "height": 74,
+      "size": 4781,
+      "uploadedDate": "2019-09-02T06:57:00.879Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/back full-1920x1080-e2c7278e0b4eed16f7ee50c3e9637bef_Snapshot.jpg",
+      "md5": "9043be00e80cb9a7f724bc1dfa883d2f",
+      "width": 150,
+      "height": 74,
+      "size": 6451,
+      "uploadedDate": "2019-09-02T06:57:02.126Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Top-1920x1080-0f5ec7c5e8995dc5fbf630939e15a5ea_Snapshot.jpg",
+      "md5": "9fdfae233546b3182d29f1cc09980d79",
+      "width": 150,
+      "height": 74,
+      "size": 4647,
+      "uploadedDate": "2019-09-02T06:57:03.367Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/back-1920x1080-e01679f4fc660c11c37ea0576c575de7_Snapshot.jpg",
+      "md5": "4a2c639d2180de319c015604c93e8091",
+      "width": 150,
+      "height": 74,
+      "size": 5999,
+      "uploadedDate": "2019-09-02T06:57:04.607Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/attack-1920x1080-cd133d375630569ffe83f4f29739b0cf_Snapshot.jpg",
+      "md5": "fcd69de2f1e4f4d8f670aad896c23f43",
+      "width": 150,
+      "height": 74,
+      "size": 3879,
+      "uploadedDate": "2019-09-02T06:57:05.860Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11-1920x1080-ded343656a3bfb2a8ab5e3408c12bda6_Snapshot.jpg",
+      "md5": "6e490471639405c50dda627294de1ce2",
+      "width": 150,
+      "height": 74,
+      "size": 6317,
+      "uploadedDate": "2019-09-02T06:57:07.098Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Bottom-1920x1080-2e6446d0d78abd10bb04047b29be79a5_Snapshot.jpg",
+      "md5": "f252faf3f4098bb05e4795f4be2fd74f",
+      "width": 150,
+      "height": 74,
+      "size": 5082,
+      "uploadedDate": "2019-09-02T06:57:08.288Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/hotns-1920x1080-c149d2aa955467aa743c3f8b40728ce8_Snapshot.jpg",
+      "md5": "f3e39ac69e0ccb6a051fe501a435998a",
+      "width": 150,
+      "height": 74,
+      "size": 6715,
+      "uploadedDate": "2019-09-02T06:57:09.566Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/New1-1920x1080-38c9337a963d09d8932febb8805ec3b7_Snapshot.jpg",
+      "md5": "537e137d4bce701883b4487d53139d77",
+      "width": 150,
+      "height": 74,
+      "size": 5762,
+      "uploadedDate": "2019-09-01T14:12:36.386Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/New4-1920x1080-e0034dd1c2347ba2209d660253ae4854_Snapshot.jpg",
+      "md5": "a2603f02a6329054018cca68062ce55d",
+      "width": 150,
+      "height": 74,
+      "size": 5974,
+      "uploadedDate": "2019-09-01T14:12:37.576Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprints-1920x1080-f83a6d62e9032aa2848b7b9a3e52574c_Snapshot.jpg",
+      "md5": "ee4de726e8e29e4658f568ed8f17f397",
+      "width": 150,
+      "height": 74,
+      "size": 7057,
+      "uploadedDate": "2019-09-01T14:12:38.741Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Box-1920x1080-f1fce09be9713a5145547a2d0ac84ad6_Snapshot.jpg",
+      "md5": "a3cf2cb3f46fc0638706e3391085bdf2",
+      "width": 150,
+      "height": 74,
+      "size": 5277,
+      "uploadedDate": "2019-09-01T14:12:39.974Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/New2-1920x1080-d6ef3f6a7387827be9d95452f4e35873_Snapshot.jpg",
+      "md5": "fbd6f556fc73e6f17019ccb5cd450fbc",
+      "width": 150,
+      "height": 74,
+      "size": 1884,
+      "uploadedDate": "2019-09-01T14:12:41.090Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/New3-1920x1080-c604cb4c18ebc87e457a3f3964a9cc6c_Snapshot.jpg",
+      "md5": "b64b58799392bb0fec3d803b42390433",
+      "width": 150,
+      "height": 74,
+      "size": 6789,
+      "uploadedDate": "2019-09-01T14:12:42.386Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-2be05c3b495b43edde898a8a0633f877_Snapshot.jpg",
+      "md5": "3526bcd8ff1ec369d78a428af55b4ee4",
+      "width": 150,
+      "height": 74,
+      "size": 3597,
+      "uploadedDate": "2019-08-15T14:15:47.538Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/back full-1920x1080-c2c4eb7d668e75b873a66ce6e7bc6bbe_Snapshot.jpg",
+      "md5": "2eb14098e8a4f2760c7a8a8c04781c9f",
+      "width": 150,
+      "height": 74,
+      "size": 4039,
+      "uploadedDate": "2019-08-15T14:15:48.708Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/back-1920x1080-3e05fd38e53c794218029fdd4d16b3cb_Snapshot.jpg",
+      "md5": "2bac7ad93ccd6e69abd446ce992759c8",
+      "width": 150,
+      "height": 74,
+      "size": 5921,
+      "uploadedDate": "2019-08-15T14:15:49.969Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11-1920x1080-89f5b7f6c7f81b4f485e13a204136f1c_Snapshot.jpg",
+      "md5": "04323b8ba1968220a8ff830d9e36e91a",
+      "width": 150,
+      "height": 74,
+      "size": 5063,
+      "uploadedDate": "2019-08-15T14:15:51.219Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/jaw bottom-1920x1080-1c28cab9dfcea2397369cd9029c8fd50_Snapshot.jpg",
+      "md5": "66694a16102a605b87fe381aaa855fcb",
+      "width": 150,
+      "height": 74,
+      "size": 6211,
+      "uploadedDate": "2019-08-15T14:15:52.461Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/jaw top-1920x1080-19046e31cbdb2821ae43ed48a2d4c9ae_Snapshot.jpg",
+      "md5": "aa5c80fdc38fc2bea7f64438118b56cc",
+      "width": 150,
+      "height": 74,
+      "size": 5290,
+      "uploadedDate": "2019-08-15T14:15:53.718Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/face-1920x1080-dfdb3f21aae22cd069eae950ea909546_Snapshot.jpg",
+      "md5": "40b8b3b317dd74a8770dc99574d5672f",
+      "width": 150,
+      "height": 74,
+      "size": 6558,
+      "uploadedDate": "2019-08-15T14:15:54.960Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-787124c36181d877698f351c2b3ffd16_Snapshot.jpg",
+      "md5": "f3f4aac5971f44aa989b2acc7050b4ce",
+      "width": 150,
+      "height": 74,
+      "size": 6943,
+      "uploadedDate": "2019-08-15T14:15:56.292Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/attack-1920x1080-d36101b4a867b25d5f2a4c3b520a0c5b_Snapshot.jpg",
+      "md5": "1e069ae0f142a8ca975ddf52ea8466ae",
+      "width": 150,
+      "height": 74,
+      "size": 3453,
+      "uploadedDate": "2019-08-15T14:15:57.419Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/front 2-1920x1080-464b22551b1836023ef56751132b260d_Snapshot.jpg",
+      "md5": "f1377add989c51b9772849fd43a17413",
+      "width": 150,
+      "height": 74,
+      "size": 3731,
+      "uploadedDate": "2019-08-15T14:15:58.607Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/side lit-1920x1080-becfa5b88e92173c7b02d8ce1d529188_Snapshot.jpg",
+      "md5": "624964458c1b9a0029abc6836c0093f1",
+      "width": 150,
+      "height": 74,
+      "size": 4640,
+      "uploadedDate": "2019-08-15T14:15:59.794Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/outdoor1-1920x1080-3d93f95d305aa600dde03311a2ac0e39_Snapshot.jpg",
+      "md5": "c1df91bdebaa518a4fa557775c839596",
+      "width": 150,
+      "height": 74,
+      "size": 6903,
+      "uploadedDate": "2019-08-15T14:16:00.982Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Outdoor2-1920x1080-1a06ddd10809f680138eabce844dfbdb_Snapshot.jpg",
+      "md5": "7e2fa7c05c998f01e3418a6a8a705b03",
+      "width": 150,
+      "height": 74,
+      "size": 7934,
+      "uploadedDate": "2019-08-15T14:16:02.276Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/outdoor0-1920x1080-ae3f80ac44db4e9dedcfefb966bf512e_Snapshot.jpg",
+      "md5": "ae8888247c087956f67ac79693b73044",
+      "width": 150,
+      "height": 74,
+      "size": 5343,
+      "uploadedDate": "2019-08-15T14:16:03.477Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Outdoor3-1920x1080-7406a8d46b54cef28694ada6574ba4a5_Snapshot.jpg",
+      "md5": "4d21e31691edb3bfb4f8e0d5df6deb27",
+      "width": 150,
+      "height": 74,
+      "size": 4554,
+      "uploadedDate": "2019-08-15T14:16:04.643Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Outdoor4-1920x1080-8e3d7df2c136b369ab31277e9a96666e_Snapshot.jpg",
+      "md5": "60cece8200537becd8f8b26640fae51a",
+      "width": 150,
+      "height": 74,
+      "size": 4255,
+      "uploadedDate": "2019-08-15T14:16:05.842Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-08-28T13:05:13.873Z",
+  "lastModifiedDate": "2025-01-28T00:32:25.041Z",
+  "customAttributes": {},
+  "entitlementName": "4e495407ae44470da170c8f21e6c04ee",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b12b9805cbb5446b832f2f6f961165cd",
+      "appId": "AlienCra4e495407ae44V1",
+      "compatibleApps": [
+        "UE_4.9",
+        "UE_4.10",
+        "UE_4.11",
+        "UE_4.12",
+        "UE_4.13",
+        "UE_4.14",
+        "UE_4.15",
+        "UE_4.16",
+        "UE_4.17",
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac"
+      ],
+      "dateAdded": "2019-08-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AlienCrabMonster_4.9c"
+    },
+    {
+      "id": "07ee618b3c5446db870e6e28f35f04ad",
+      "appId": "AlienCra4e495407ae44V4",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac"
+      ],
+      "dateAdded": "2021-06-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AlienCrabMonster 4.24"
+    },
+    {
+      "id": "5698cca3f194480990c909bf7b2df767",
+      "appId": "AlienCra4e495407ae44V2",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac"
+      ],
+      "dateAdded": "2019-12-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AlienCrabMonster 4.25"
+    },
+    {
+      "id": "c2ee52cedae8404ca63989c1aa5d452a",
+      "appId": "AlienCra4e495407ae44V3",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac"
+      ],
+      "dateAdded": "2021-06-10T00:00:00.000Z",
+      "releaseNote": "Removed VR nodes that get depricated in unreal 5.4.\nModified some materials to look better.",
+      "versionTitle": "AlienCrabMonster 4.26d"
+    }
+  ],
+  "developer": "Etherion Designs",
+  "developerId": "o-15d6464bb74e179de22c774987a68f",
+  "endOfSupport": false,
+  "unsearchable": false
+}

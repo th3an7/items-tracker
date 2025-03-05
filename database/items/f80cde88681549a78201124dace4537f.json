@@ -1,0 +1,337 @@
+{
+  "id": "f80cde88681549a78201124dace4537f",
+  "title": "Blueprint Streams",
+  "description": "Blueprint Streams lets you handle byte array data streams directly in Blueprints.",
+  "longDescription": "<p>Blueprint Streams provides handling of byte array data streams directly in Blueprints.</p><p><br /></p><p><strong>Useful for:</strong></p><ul><li>Save game data in case you want to avoid huge, bloated, unmanageable SaveGame objects. Each actor can write to and load from your serialized array with a custom logic, and you only need to save this single array in your SaveGame object. See the Save and Load screenshots on this page as examples (contained in the attached project too).</li><li>Send encrypted data through network. If you have any sensitive data that you need to send to another machine, obfuscating a byte array is much easier than doing it on a per-variable basis.</li><li>And whatever else you generally use streams for in C&#43;&#43;.</li></ul><p><br /></p><p>We only actively update the package for the most recent UE4 version (but of course we provide e-mail support for older versions too). UE5 support is not planned at this point.</p>",
+  "technicalDetails": "<p>Generally, it is a simple wrapper around the memory writer C&#43;&#43; classes.</p><p><br /></p><p><strong>Features</strong>:</p><ul><li>Reading from and writing to byte array data streams</li><li>Saving and loading the streams to/from binary files</li><li>All 12 standard variable types and their array counterparts are supported</li><li>Extensible: You can create your own writer and reader functions directly in Blueprints, so you can (de)serialize your custom objects, structs, maps, sets, and arrays too</li></ul><p><br /></p><p><strong>Example Project</strong>: <a href=\"https://github.com/KristofMorva/blueprint-streams\" rel=\"nofollow\">https://github.com/KristofMorva/blueprint-streams</a></p><p><strong>Code Module</strong>: BlueprintStreams (Runtime)</p><p><strong>Number of C&#43;&#43; Classes</strong>: 2 (StreamReader, StreamWriter)</p><p><strong>Supported Development Platforms</strong>: All</p><p><strong>Supported Target Build Platforms</strong>: All</p><p><strong>Important/Additional Notes</strong>: Please note that direct file reading/writing is not supported on all platforms.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/readerapi-1920x1080-2a317c03781288524a1e16333e1e1ff6.png",
+      "md5": "2a317c03781288524a1e16333e1e1ff6",
+      "width": 1920,
+      "height": 1080,
+      "size": 100667,
+      "uploadedDate": "2019-01-24T12:30:08.064Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/writerapi-1920x1080-a88ace28649bbc4b70ae1771569f99a6.png",
+      "md5": "a88ace28649bbc4b70ae1771569f99a6",
+      "width": 1920,
+      "height": 1080,
+      "size": 134424,
+      "uploadedDate": "2019-01-24T12:30:08.248Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/fileapi-1920x1080-72978398002bef0acd18f29cf696235d.png",
+      "md5": "72978398002bef0acd18f29cf696235d",
+      "width": 1920,
+      "height": 1080,
+      "size": 56873,
+      "uploadedDate": "2019-01-24T12:30:08.459Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/reader-1920x1080-3d80ae7931a8e40c8e6d6803dd2b0d6f.png",
+      "md5": "3d80ae7931a8e40c8e6d6803dd2b0d6f",
+      "width": 1920,
+      "height": 1080,
+      "size": 67545,
+      "uploadedDate": "2019-01-24T12:30:08.656Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/savegame-1920x1080-5e59d948982fd778706ea299df019afc.png",
+      "md5": "5e59d948982fd778706ea299df019afc",
+      "width": 1920,
+      "height": 1080,
+      "size": 113032,
+      "uploadedDate": "2019-01-24T12:30:08.858Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/writer-1920x1080-dff1bbe3cc862aec180767bcc4a48989.png",
+      "md5": "dff1bbe3cc862aec180767bcc4a48989",
+      "width": 1920,
+      "height": 1080,
+      "size": 63472,
+      "uploadedDate": "2019-01-24T12:30:09.040Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BlueprintStreams_thumb-284x284-726d1791044406d9fefa1f0dc4120b1d.png",
+      "md5": "726d1791044406d9fefa1f0dc4120b1d",
+      "width": 284,
+      "height": 284,
+      "size": 10014,
+      "uploadedDate": "2019-01-24T12:30:09.203Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/BlueprintStreams_featured-894x488-5781d79897e902043d0d6ab9d24a69df.png",
+      "md5": "5781d79897e902043d0d6ab9d24a69df",
+      "width": 894,
+      "height": 488,
+      "size": 17958,
+      "uploadedDate": "2019-01-24T12:30:09.251Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/readerapi-1920x1080-2a317c03781288524a1e16333e1e1ff6_Snapshot.png",
+      "md5": "710444416d85c4e4f2a1922f45784ec2",
+      "width": 150,
+      "height": 74,
+      "size": 5023,
+      "uploadedDate": "2019-01-24T12:30:08.174Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/writerapi-1920x1080-a88ace28649bbc4b70ae1771569f99a6_Snapshot.png",
+      "md5": "3bb46100151a0784ec6f78c3c496b20b",
+      "width": 150,
+      "height": 74,
+      "size": 5252,
+      "uploadedDate": "2019-01-24T12:30:08.375Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/fileapi-1920x1080-72978398002bef0acd18f29cf696235d_Snapshot.png",
+      "md5": "36729a37c8d4148a6498b37ba8bce2cb",
+      "width": 150,
+      "height": 74,
+      "size": 1935,
+      "uploadedDate": "2019-01-24T12:30:08.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/reader-1920x1080-3d80ae7931a8e40c8e6d6803dd2b0d6f_Snapshot.png",
+      "md5": "db3d8414e8191d048fd8586649d11945",
+      "width": 150,
+      "height": 74,
+      "size": 2290,
+      "uploadedDate": "2019-01-24T12:30:08.766Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/savegame-1920x1080-5e59d948982fd778706ea299df019afc_Snapshot.png",
+      "md5": "85a76e0fe4aac73cd7eb4efa5a76378f",
+      "width": 150,
+      "height": 74,
+      "size": 1932,
+      "uploadedDate": "2019-01-24T12:30:08.942Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/writer-1920x1080-dff1bbe3cc862aec180767bcc4a48989_Snapshot.png",
+      "md5": "bb611bd4e21bf68e0e8be6e966a54128",
+      "width": 150,
+      "height": 74,
+      "size": 1887,
+      "uploadedDate": "2019-01-24T12:30:09.150Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2019-02-06T23:32:11.684Z",
+  "lastModifiedDate": "2024-09-17T18:26:08.029Z",
+  "customAttributes": {},
+  "entitlementName": "f80cde88681549a78201124dace4537f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "20c1bf40a4a4464fbcd8e7d3fb0f4b84",
+      "appId": "BlueprintStreams_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Android",
+        "Gear VR",
+        "iOS"
+      ],
+      "dateAdded": "2019-02-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.20.1.0.0"
+    },
+    {
+      "id": "a4653991f84d48e69a8d78411f6f1c1d",
+      "appId": "BlueprintStreams_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2019-01-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.21.1.0.0"
+    },
+    {
+      "id": "8a067e66fcdb4c7db7c0311317b450fd",
+      "appId": "BlueprintStreams_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.22 / 1.0.0"
+    },
+    {
+      "id": "9074169c7de94ead8975d0f0d7158a8d",
+      "appId": "BlueprintStreams_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus"
+      ],
+      "dateAdded": "2019-09-08T00:00:00.000Z",
+      "releaseNote": "- Add 64-bit integer support\n- Add support to load class synchronously in ReadClass\n- Deprecate folder-specific file handling",
+      "versionTitle": "4.23 / 1.1.0"
+    },
+    {
+      "id": "8b4c6de640a44f57b58521bb87bea07a",
+      "appId": "BlueprintStreams_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus"
+      ],
+      "dateAdded": "2020-01-28T00:00:00.000Z",
+      "releaseNote": "- Add Buffer Offset getters and setters",
+      "versionTitle": "4.24 / 1.2.0"
+    },
+    {
+      "id": "f2ffdbaed9ba441c9edb94981fad744c",
+      "appId": "BlueprintStreams_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus"
+      ],
+      "dateAdded": "2020-05-17T00:00:00.000Z",
+      "releaseNote": "Add support for Vector2D, IntPoint, IntVector and Object",
+      "versionTitle": "4.25 / 1.3.0"
+    },
+    {
+      "id": "551cd3ae2bd34028ad692563ad085b95",
+      "appId": "BlueprintStreams_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-01-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.26 / 1.3.0"
+    },
+    {
+      "id": "53998a91c5bc48de84d1e1c4314a6387",
+      "appId": "BlueprintStreams_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-12-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27 / 1.3.0"
+    }
+  ],
+  "developer": "Rapax Games",
+  "developerId": "o-d6686a353f40488df5384eb4037ab2",
+  "endOfSupport": false,
+  "unsearchable": false
+}

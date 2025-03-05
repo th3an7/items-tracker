@@ -1,0 +1,358 @@
+{
+  "id": "b8102846cabc4c2781c463e0dcc59913",
+  "title": "Port Windows",
+  "description": "You can receive and send messages via serial port, (Usb,Bluetooth-SPP).",
+  "longDescription": "<p><strong>&#xfeff;W</strong>e are setting up new <a href=\"https://discord.gg/m24uBUBchG\" rel=\"nofollow\">discord</a> support, To help you with development or if you need new features.</p><p><br /></p><p>You can very easily receive and send a communication via the port.</p><p>You can do a port search or do your own.</p><p>There are two ways to open the port:</p><ul><li>The one is controlling the receive flow.</li><li>The other is that you check the receive flow when you need.</li></ul><p><br /></p><p>For the Bluetooth you need to make a junction with Windows.</p><p>Please see below for the details.</p><p>&#x1f4da;<a href=\"https://support.microsoft.com/en-us/windows/pair-a-bluetooth-device-in-windows-2be7b51f-6ae9-b757-a3b9-95ee40c3e242#WindowsVersion&#61;Windows_11\" rel=\"nofollow\">Click here</a></p><p><br /></p><p>UE4.27 --&gt; 1.6.6</p><p>UE5.0 --&gt; 1.8.4</p><p>UE5.1 --&gt; 2.0.6</p><p>UE5.2 --&gt; 2.0.6</p><p>UE5.3 --&gt; 2.0.6</p><p>UE5.4 --&gt; 2.1.10</p><p><br /></p><p><br /></p><p><strong><u>The changes:</u></strong></p><p>2.1.10</p><p><strong>new node:</strong></p><ul><li>FilterDataByType</li></ul><p><strong>Fixed:</strong></p><ul><li>Problem converting text to Byte or decimal</li></ul><p><br /></p><p>2.1.8</p><p><strong>new node:</strong></p><p>Equal (data)</p><p>Not Equal (data)</p><p>Lengeth</p><p>LastIndex</p><p>IsValidIndex</p><p>Break (DataPrint)</p><p>GetIndexData</p><p>Find Data</p><p>Cut Data</p><p>Make CreatData</p><p>AppendData</p><p>AddData</p><p>CommandsConverter</p><p>DataConverter</p><p><br /></p><p><strong>Remove:</strong></p><p>StringToDecimal</p><p>DecimalToString</p><p>Decimal</p><p>HexToChar</p><p>HexToString</p><p>CharToHex</p><p>StringToHex</p><p>DecimalToHex</p><p>HexToDecimal</p><p>DataPortToDecimal</p><p>DataPortToOctal</p><p>HexToBinary</p><p>BinaryToHex</p><p>BinaryToASCIIT</p><p>ASCIIToBinary</p><p><br /></p><p><br /></p><p>2.0.6</p><p><strong>new node:</strong></p><ul><li>HexToChar</li><li>CharToHex</li><li>HexToString</li><li>StringToHex</li></ul><p><br /></p><p><br /></p><p>1.9.8</p><p><strong>new node:</strong></p><ul><li>LoadFileAsync</li><li>SaveFileAsync</li></ul><p><br /></p><p><br /></p><p><br /></p><p>1.9.7</p><p><strong>replace</strong></p><ul><li>&#34;DecimalToSensor&#34; replace with &#34;OpenPortWitmotion&#34;</li></ul><p><br /></p><p><br /></p><p><strong>change node:</strong></p><ul><li>ASCIIToDecimal</li><li>CASCIIToDecimal</li><li>setEventDetectedErrors</li></ul><p><br /></p><p><strong>new node:</strong></p><ul><li>GetBuffer</li><li>SetBuffer</li><li>OpenPortThread</li><li>OpenPortTick</li><li>OpenPortManual</li><li>Available</li><li>OpenPortWitmotion</li></ul><p><br /></p><ul><li>CreateModemInstance</li><li>XmodemUploadData</li><li>XmodemUploadFiles</li><li>XModemFileToDownload</li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p>1.8.5</p><p><strong>change node:</strong></p><ul><li>Open Port -&gt; Create a new option to change the buffer size.</li><li>Open Port Delegate -&gt; Create a new option to change the buffer size.</li></ul><p><strong>Fixed:</strong></p><ul><li>Optimization of the buffer that receives the data.</li><li>setControl -&gt; Loss of information when putting new data.</li></ul><p><br /></p><p><strong>new node </strong>Witmotion<strong>:</strong></p><ul><li>AutoScanBaudWitmotion</li><li>DecimalToSensor</li><li>getVersion</li><li>getAcceleration</li><li>getAnqularVelocity</li><li>getAnqle</li><li>GetTime</li><li>getMagneticField</li><li>getPressure</li><li>getPort</li><li>getQuaternion</li><li>getLocation</li><li>getPDOP</li><li>WitStartAccCali</li><li>WitStopAccCali</li><li>WitStartMagCali</li><li>WitStopMagCali</li><li>WitSetUartBaud</li><li>WitSetCanBaud</li><li>WitSetBandwidth</li><li>WitSetOutputRate</li></ul><p><br /></p><p>1.7.8</p><p><strong>Fixed:</strong></p><ul><li>With the Game Thread we could no longer receive data.</li><li>Occasionally the port would remain open when using a separate Thread.</li><li>When you open a port with EditorUtilityWidget you could not close it.</li></ul><p><br /></p><p>1.7.7</p><p><strong>new node:</strong></p><ul><li>DecimalToBWT61CL</li><li>BinaryToHex</li><li>StringToDecimal</li><li>DecimalToString</li><li>DecimalToHex</li><li>HexToDecimal</li></ul><p><strong>change node:</strong></p><ul><li>OpenComPort</li><li>SetEventDetectedErrors</li><li>DelegateDada</li></ul><p><br /></p><p>1.7.1</p><p><strong>new node:</strong></p><ul><li>HexToBinary</li><li>BinaryToHex</li></ul><p><br /></p><p><br /></p><p>1.6.6</p><p><strong>change node:</strong></p><ul><li>open Port -&gt; new option to create the Port instance on the level.</li></ul><p><br /></p><p>1.6.5</p><p>compatibility bug fix</p><p><br /></p><p>1.6.4</p><p><strong>new node:</strong></p><ul><li>Set Event Detected Errors.</li><li>Set Suspend Transmission</li><li>Set Remove Suspend Transmission</li><li>Create variable information in nodes.</li></ul><p><strong>change node:</strong></p><ul><li>break StructPort.</li></ul><p><br /></p><p><br /></p><h1><br /></h1><p>1.5.0</p><p><strong>new node:</strong></p><ul><li>Get Port</li><li>Get Control.</li><li>Get TimeOuts.</li><li>Set TimeOuts.</li></ul><p><strong>change node:</strong></p><ul><li>Create Serial Port Info.</li><li>Set Control.</li></ul><p><strong>Fixed:</strong></p><ul><li>The port closes badly in the event of a sudden break.</li></ul><p><br /></p><p><br /></p><h1><br /></h1><p>1.4 ~ 1.3</p><ul><li>First version marketed.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li> Very easy !</li><li> You can do a port search or do your own.</li><li> receive and send an order or an order list.</li></ul><p>Code Modules:</p><ul><li> PortWindows[Runtime]</li></ul><p><br /></p><p><br /></p><p>Number of Blueprints; 0</p><p>Number of C&#43;&#43; Classes: 3</p><p>Network Replicated: (No)</p><p>Supported Development Platforms: (Windows)</p><p>Supported Target Build Platforms: (&#34;Win64&#34;, &#34;Win32&#34;)</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h3><a href=\"https://emojipedia.org/television/\" rel=\"nofollow\">&#x1f4fa;</a><a href=\"https://www.youtube.com/watch?v&#61;ShS0CIuIytY\" rel=\"nofollow\">Tutorial in video New</a></h3><p><a href=\"https://1drv.ms/u/s!Ak__Tz9UJWWQj0T9VHFEmH301EiC?e&#61;ajQQh8\" rel=\"nofollow\">&#x1f4bb;Demo Program</a></p><p><br /></p><p><a href=\"https://1drv.ms/b/s!Ak__Tz9UJWWQgWISnAl4xSbYy0HQ\" rel=\"nofollow\">&#x1f4d8; Documentation OLD</a></p><p><a href=\"https://1drv.ms/b/s!Ak__Tz9UJWWQinu-4oz35tkNHNvf?e&#61;E35Fi2\" rel=\"nofollow\">&#x1f4d8; Documentation NEW</a></p><p><a href=\"https://1drv.ms/u/s!Ak__Tz9UJWWQg3--qmpQ13e7ia9V?e&#61;l3VRKy\" rel=\"nofollow\">&#x1f4bc;</a><a href=\"https://1drv.ms/u/s!Ak__Tz9UJWWQhEPgJH7C5v725ebX?e&#61;KocTVo\" rel=\"nofollow\">Example Project UE4.27.0</a></p><p><a href=\"https://1drv.ms/u/s!Ak__Tz9UJWWQg3--qmpQ13e7ia9V?e&#61;l3VRKy\" rel=\"nofollow\">&#x1f4bc;</a><a href=\"https://1drv.ms/u/s!Ak__Tz9UJWWQj0OC4xiXHr12v4Sw?e&#61;ioogS9\" rel=\"nofollow\">Example Project UE5</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/full1-1920x1080-621c5cae9228881c625993a1edce6482.png",
+      "md5": "621c5cae9228881c625993a1edce6482",
+      "width": 1920,
+      "height": 1080,
+      "size": 714129,
+      "uploadedDate": "2024-05-26T10:22:43.222Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1f-1920x1080-0ff6ada6fb9bdd97e6c593959479b0ac.png",
+      "md5": "0ff6ada6fb9bdd97e6c593959479b0ac",
+      "width": 1920,
+      "height": 1080,
+      "size": 658450,
+      "uploadedDate": "2024-05-26T10:22:44.202Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2f-1920x1080-a1aa2d0463af3a9058e5fcea9c173bee.png",
+      "md5": "a1aa2d0463af3a9058e5fcea9c173bee",
+      "width": 1920,
+      "height": 1080,
+      "size": 493449,
+      "uploadedDate": "2024-05-26T10:22:43.704Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Example-1920x1080-8f3afb13b1fe6627837bb77e0b14dfe8.png",
+      "md5": "8f3afb13b1fe6627837bb77e0b14dfe8",
+      "width": 1920,
+      "height": 1080,
+      "size": 939686,
+      "uploadedDate": "2023-07-14T06:58:15.477Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Example-1920x1080-e903897b6f8cf662f37b810b72720756.png",
+      "md5": "e903897b6f8cf662f37b810b72720756",
+      "width": 1920,
+      "height": 1080,
+      "size": 442425,
+      "uploadedDate": "2022-11-01T13:30:28.917Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Example1-1920x1080-495ab05a959872b6e26bf2c9665e2f9c.png",
+      "md5": "495ab05a959872b6e26bf2c9665e2f9c",
+      "width": 1920,
+      "height": 1080,
+      "size": 404099,
+      "uploadedDate": "2022-04-04T05:12:03.753Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Example2-1920x1080-940de5e0f16dc10f471f2577650dc370.png",
+      "md5": "940de5e0f16dc10f471f2577650dc370",
+      "width": 1920,
+      "height": 1080,
+      "size": 442332,
+      "uploadedDate": "2022-04-04T05:12:04.146Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PortWindows_thumb-284x284-524fce1240573d2a0347cd33e4cd323c.png",
+      "md5": "524fce1240573d2a0347cd33e4cd323c",
+      "width": 284,
+      "height": 284,
+      "size": 49800,
+      "uploadedDate": "2022-04-04T05:12:04.578Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PortWindows_featured-894x488-429b6a4022340bdd12f0ed1fdd25d95e.png",
+      "md5": "429b6a4022340bdd12f0ed1fdd25d95e",
+      "width": 894,
+      "height": 488,
+      "size": 269663,
+      "uploadedDate": "2024-05-26T10:22:44.721Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/full1-1920x1080-621c5cae9228881c625993a1edce6482_Snapshot.png",
+      "md5": "9c2dd3dba75c0618c0ce4457bb5316bc",
+      "width": 150,
+      "height": 74,
+      "size": 6264,
+      "uploadedDate": "2024-05-26T10:22:43.564Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2f-1920x1080-a1aa2d0463af3a9058e5fcea9c173bee_Snapshot.png",
+      "md5": "cc9382f810d42d07d07c761d3310f554",
+      "width": 150,
+      "height": 74,
+      "size": 4930,
+      "uploadedDate": "2024-05-26T10:22:44.037Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1f-1920x1080-0ff6ada6fb9bdd97e6c593959479b0ac_Snapshot.png",
+      "md5": "745221d3c866b173a4db256ad54c55a9",
+      "width": 150,
+      "height": 74,
+      "size": 6326,
+      "uploadedDate": "2024-05-26T10:22:44.546Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Capture dcran 2024-04-23 141117-1920x1080-d650a178813912951b87978551738174_Snapshot.png",
+      "md5": "b29a585d2e3552f4be2d9f65d758bf2f",
+      "width": 150,
+      "height": 74,
+      "size": 6129,
+      "uploadedDate": "2024-04-23T12:36:07.796Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Capture dcran 2024-04-23 140253-1920x1080-f9fd508e702f1c7ad71e749bd0426d35_Snapshot.png",
+      "md5": "edd4c89e50569431e81bcd4c69d89c35",
+      "width": 150,
+      "height": 74,
+      "size": 5031,
+      "uploadedDate": "2024-04-23T12:36:08.316Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Capture dcran 2024-03-25 155850-1920x1080-303af1df21ca1aeb8be6de3423441241_Snapshot.png",
+      "md5": "38df989640aef64938919f2ddd1a6d4b",
+      "width": 150,
+      "height": 74,
+      "size": 6673,
+      "uploadedDate": "2024-03-25T15:11:56.026Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Capture dcran 2024-03-25 160659-1920x1080-999bf079fe319eba7ccb008ac77f2a6a_Snapshot.png",
+      "md5": "480bb3f5469f42beac80977dde9b1d93",
+      "width": 150,
+      "height": 74,
+      "size": 5250,
+      "uploadedDate": "2024-03-25T15:11:56.620Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Capture dcran 2024-03-25 151250-1920x1080-19fe4ec474ea62ae35da946fb8ddd6ff_Snapshot.png",
+      "md5": "79430edd695541e7d68c145214f7f392",
+      "width": 150,
+      "height": 74,
+      "size": 5741,
+      "uploadedDate": "2024-03-25T14:57:13.824Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example1.8.3 - Copie 2-1920x1080-c464db8d2c205da6e265ddc68ac03b0d_Snapshot.png",
+      "md5": "6bd0391132cdf7c15040afc7151fd3d5",
+      "width": 150,
+      "height": 74,
+      "size": 6733,
+      "uploadedDate": "2023-07-14T07:10:12.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example1.8.3 - Copie 2-1920x1080-b8d3ab03069717461047e4c67f861039_Snapshot.png",
+      "md5": "28b0a80412a818e3fb573a10466d9303",
+      "width": 150,
+      "height": 74,
+      "size": 6713,
+      "uploadedDate": "2023-07-14T06:58:15.328Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-1920x1080-8f3afb13b1fe6627837bb77e0b14dfe8_Snapshot.png",
+      "md5": "da05c2be38ce2d10118dd3576e53df95",
+      "width": 150,
+      "height": 74,
+      "size": 5965,
+      "uploadedDate": "2023-07-14T06:58:15.789Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example1.7.7-1920x1080-97776bcd31e7cb5340eb5714e43d52fe_Snapshot.png",
+      "md5": "ca80c32a129d2bf67b40c89fc0ee30a0",
+      "width": 150,
+      "height": 74,
+      "size": 6593,
+      "uploadedDate": "2023-04-09T15:17:53.747Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example1.7.7 - Copie-1920x1080-df2e0b9274f3f7959b9adf58c43cde1f_Snapshot.png",
+      "md5": "5a8c7af25c0797eae7a7a40c7ab5155e",
+      "width": 150,
+      "height": 74,
+      "size": 5534,
+      "uploadedDate": "2023-04-09T15:17:54.171Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-1920x1080-e903897b6f8cf662f37b810b72720756_Snapshot.png",
+      "md5": "9a2fd102e41342fddfd07fb9c4551cde",
+      "width": 150,
+      "height": 74,
+      "size": 5087,
+      "uploadedDate": "2022-11-01T13:30:29.150Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example1.6.4-1920x1080-69b92eb6c692c7a8fb7968c4b1e2657f_Snapshot.png",
+      "md5": "c5356477ba42eddc3596503aa38a70e9",
+      "width": 150,
+      "height": 74,
+      "size": 6451,
+      "uploadedDate": "2022-11-01T12:17:51.434Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-1920x1080-2825ad62b8ac232cc00bd2d5eb6a9e3d_Snapshot.png",
+      "md5": "9243376c16ff96363a62eed63f020e9b",
+      "width": 150,
+      "height": 74,
+      "size": 6483,
+      "uploadedDate": "2022-04-04T05:12:03.614Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example1-1920x1080-495ab05a959872b6e26bf2c9665e2f9c_Snapshot.png",
+      "md5": "dc8a79e2174f99b01596780f43429221",
+      "width": 150,
+      "height": 74,
+      "size": 4085,
+      "uploadedDate": "2022-04-04T05:12:04.000Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example2-1920x1080-940de5e0f16dc10f471f2577650dc370_Snapshot.png",
+      "md5": "b99b3f662517de07c5aa095cbb81d949",
+      "width": 150,
+      "height": 74,
+      "size": 4561,
+      "uploadedDate": "2022-04-04T05:12:04.498Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-04-13T00:43:16.669Z",
+  "lastModifiedDate": "2025-02-28T04:51:25.138Z",
+  "customAttributes": {},
+  "entitlementName": "b8102846cabc4c2781c463e0dcc59913",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "9265c5c928ca4b3ca453085a24c89774",
+      "appId": "PortWindows_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2022-04-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PortWindows_4_27"
+    },
+    {
+      "id": "fbd4f4763c9a4b64a3694d2f4efaa8b4",
+      "appId": "PortWindows_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PortWindows_5.0"
+    },
+    {
+      "id": "1567276127d74154a4e81ca7ca69e0dc",
+      "appId": "PortWindows_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PortWindows_5.1"
+    },
+    {
+      "id": "8f6c13bcc96441a2a8d836d15e19e414",
+      "appId": "PortWindows_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-06-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PortWindows_5.2"
+    },
+    {
+      "id": "00b7ec0814ef4279a9ef383962b602ee",
+      "appId": "PortWindows_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PortWindows_5.3"
+    },
+    {
+      "id": "d957adbb6fdb49da84ff67a3cd2383b3",
+      "appId": "PortWindows_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2024-05-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PortWindows_5.4"
+    }
+  ],
+  "developer": "Flicona Studio",
+  "developerId": "o-z85dltm6bhg9p79mxhn4hj5kg73jzw",
+  "endOfSupport": false,
+  "unsearchable": false
+}

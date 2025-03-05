@@ -1,0 +1,497 @@
+{
+  "id": "546bf6ece79a47828aea986035401d41",
+  "title": "Video Ambient Lighting",
+  "description": "Light your Game or Architectural environments dynamically by video content!",
+  "longDescription": "<p><strong>• Generates Dynamic Lighting from Videos</strong></p><p><strong>• Supports Baked Shadows with Stationary Lights</strong></p><p><strong>• Highly performant implementation</strong></p><p><strong>• Can be shipped with Game &amp; Architectural Visualization Projects</strong></p><p><strong>• Easy to connect with existing Media content</strong></p><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;lbUPprdIxwc\" rel=\"nofollow\"><strong><u>Watch Introduction Video</u></strong></a></p><p><a href=\"https://www.youtube.com/watch?v&#61;EtZQ3TK292A\" rel=\"nofollow\"><strong><u>Watch Showcase Video</u></strong></a></p><p><br /></p><p><strong>How to use</strong></p><ol><li>Place a &#34;Video Ambient Rect Light&#34; from the &#34;Place Actor&#34; editor panel under the &#34;Lights&#34; tab</li><li>Assign the Media Texture from your Media Player to the &#34;Source Media Texture&#34; input (if you don&#39;t have a Media Player yet, follow <a href=\"https://docs.unrealengine.com/en-us/Engine/MediaFramework/HowTo/FileMediaSource\" rel=\"nofollow\"><u>this official tutorial</u></a> to set that up)</li><li>Press Play!</li></ol><p><br /></p><p><strong>Alternative setup for lower platforms</strong></p><ol><li>Add a &#34;Video Ambient Light&#34; component and any number of lights to an Actor or Blueprint (if you followed the tutorial linked above, this would be the plane you created in step 10)</li><li>Configure lighting functionality by enabling the desired features in the details panel, typing in the names of lights the plugin should connect to (they have to be <u>part of same Actor or Blueprint</u>), and assigning the video material to &#34;Source Material&#34; (if you followed the tutorial, the video material is created in step 11)</li><li>Press Play!</li></ol><p><br /></p><p>Connected lights will pick up the colors of the video <u>when you press play</u>.</p><p>Make sure to read the tooltips on all of the properties in the details panel!</p>",
+  "technicalDetails": "<p><strong>Supported LightComponents:</strong></p><p>PointLights, SpotLights, RectLights and DirectionalLights are supported, with <u>Stationary or Movable mobility</u>.</p><p>Stationary lights still <u>support baked shadows</u> while working with this plugin.</p><p>The LightComponents are identified by their name and <u>must be part of the same Actor as the VideoAmbientLightComponent.</u></p><p><br /></p><p><strong>Material compatibility:</strong></p><p>The simplest possible material would just contain the MediaTexture of your MediaPlayer connected to the emissive color output of an unlit material.</p><p>The plugin calculates the light colors based on the <u>emissive color output</u> of the assigned SourceMaterial. This allows for any effects added in the material to be taken into account for determining the output colors.</p><p><br /></p><p><strong>Performance</strong></p><p>The performance cost of this solution is generally small and scalable so it is suitable for games with tight performance constraints. The plugin is also built to support the DetailMode system, so if your project supports different graphics quality settings, you could disable the ambient lighting completely on low settings.</p><p><br /></p><p><strong>Feedback</strong></p><p>Feel free to contact me at <a href=\"mailto:decal_portal459&#64;simplelogin.com\" rel=\"nofollow\">decal_portal459&#64;simplelogin.com</a> if you run into any issues or have any feature requests.</p><p><br /></p><p>Code Modules:</p><ul><li> VideoAmbientLighting (Runtime) - Provides the VideoAmbientRectLight Actor and the VideoAmbientLight Component that can be used in any Actor or Blueprint and handles sampling of colors from video and communicating with connected LightComponents.</li><li> VideoAmbientLightingEditor (Editor) - Module to support the presentation of the new classes in the editor.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VAL200-1920x1080-83851ddaf5a4f7e0aca42916868dcb2f.png",
+      "md5": "83851ddaf5a4f7e0aca42916868dcb2f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1821834,
+      "uploadedDate": "2020-08-03T18:53:22.962Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VAL201-1920x1080-fad541ca32369ee9164332b3a9d7359d.png",
+      "md5": "fad541ca32369ee9164332b3a9d7359d",
+      "width": 1920,
+      "height": 1080,
+      "size": 2069313,
+      "uploadedDate": "2020-08-03T18:53:23.511Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VAL02-1920x1080-d3f64e1502db75f373ff2b26fd948083.png",
+      "md5": "d3f64e1502db75f373ff2b26fd948083",
+      "width": 1920,
+      "height": 1080,
+      "size": 1514585,
+      "uploadedDate": "2018-10-03T20:37:01.769Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VAL03-1920x1080-2a5006442aa9f9dee845a31c4dca75e1.png",
+      "md5": "2a5006442aa9f9dee845a31c4dca75e1",
+      "width": 1920,
+      "height": 1080,
+      "size": 1030000,
+      "uploadedDate": "2018-10-03T20:37:02.287Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VAL04-1920x1080-2e6c2b2b89705ff48414fdeadbf54688.png",
+      "md5": "2e6c2b2b89705ff48414fdeadbf54688",
+      "width": 1920,
+      "height": 1080,
+      "size": 1902468,
+      "uploadedDate": "2018-10-03T20:37:02.803Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/VideoAmbientLighting_thumb-284x284-315194aba0773cb57c38e11736ee1e7d.png",
+      "md5": "315194aba0773cb57c38e11736ee1e7d",
+      "width": 284,
+      "height": 284,
+      "size": 135909,
+      "uploadedDate": "2021-07-20T18:02:14.173Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/VideoAmbientLighting_featured-894x488-140cbbeff87763c7c47000ebfc025115.png",
+      "md5": "140cbbeff87763c7c47000ebfc025115",
+      "width": 894,
+      "height": 488,
+      "size": 689672,
+      "uploadedDate": "2021-07-20T18:02:14.299Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAL200-1920x1080-83851ddaf5a4f7e0aca42916868dcb2f_Snapshot.png",
+      "md5": "29ba919db076c5ebef0390c50694fd0f",
+      "width": 150,
+      "height": 74,
+      "size": 4631,
+      "uploadedDate": "2020-08-03T18:53:23.306Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAL201-1920x1080-fad541ca32369ee9164332b3a9d7359d_Snapshot.png",
+      "md5": "4451d449f02ae2b202c39c810dc8ebd8",
+      "width": 150,
+      "height": 74,
+      "size": 5379,
+      "uploadedDate": "2020-08-03T18:53:23.870Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAL00-1920x1080-f7157b0aaf69fbf7caa25c523b6e41d9_Snapshot.png",
+      "md5": "c98a2daa1e10f832333936278be67392",
+      "width": 150,
+      "height": 74,
+      "size": 18122,
+      "uploadedDate": "2018-10-03T20:37:00.949Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAL01-1920x1080-bc9a66139ef6403eb0565deaacd1898b_Snapshot.png",
+      "md5": "55f49c5bebc2dcb0ef0f1908e17e14e9",
+      "width": 150,
+      "height": 74,
+      "size": 12861,
+      "uploadedDate": "2018-10-03T20:37:01.500Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAL02-1920x1080-d3f64e1502db75f373ff2b26fd948083_Snapshot.png",
+      "md5": "30a55dc081a45f708ebf7eedb8c82a3d",
+      "width": 150,
+      "height": 74,
+      "size": 16723,
+      "uploadedDate": "2018-10-03T20:37:02.101Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAL03-1920x1080-2a5006442aa9f9dee845a31c4dca75e1_Snapshot.png",
+      "md5": "9b9209eca249a8cefede537f4171e558",
+      "width": 150,
+      "height": 74,
+      "size": 10154,
+      "uploadedDate": "2018-10-03T20:37:02.540Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAL04-1920x1080-2e6c2b2b89705ff48414fdeadbf54688_Snapshot.png",
+      "md5": "51d783dad3ea39a1f19f9cb98bd13eec",
+      "width": 150,
+      "height": 74,
+      "size": 19393,
+      "uploadedDate": "2018-10-03T20:37:03.176Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-11-01T11:59:05.855Z",
+  "lastModifiedDate": "2024-11-19T13:03:28.304Z",
+  "customAttributes": {},
+  "entitlementName": "546bf6ece79a47828aea986035401d41",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "314a7da2e2974cb39260e02aaa95b7b4",
+      "appId": "VideoAmbientLighting_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Mac",
+        "PS4",
+        "iOS",
+        "Xbox One",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2018-11-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.2-4.18"
+    },
+    {
+      "id": "a5f0fc3d24714de196371cd8426ec68c",
+      "appId": "VideoAmbientLighting_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "iOS",
+        "Android",
+        "Xbox One",
+        "Linux"
+      ],
+      "dateAdded": "2018-11-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.2-4.19"
+    },
+    {
+      "id": "51943f62a14648c2b1a4f36c086ed1b7",
+      "appId": "VideoAmbientLighting_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "iOS",
+        "Xbox One",
+        "Android",
+        "Linux",
+        "Gear VR",
+        "HTML5",
+        "Win32"
+      ],
+      "dateAdded": "2018-10-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.2-4.20"
+    },
+    {
+      "id": "3e91858491fd48c2be29f69e94baf445",
+      "appId": "VideoAmbientLighting_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "iOS",
+        "Xbox One",
+        "Oculus",
+        "Android",
+        "SteamVR / HTC Vive",
+        "Linux",
+        "Gear VR",
+        "HTML5",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.2-4.21"
+    },
+    {
+      "id": "b51f7d0a1407481dbed8e0be445687d7",
+      "appId": "VideoAmbientLighting_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Xbox One",
+        "Windows",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Gear VR",
+        "HTML5",
+        "Win32"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.2-4.22"
+    },
+    {
+      "id": "f6371faaf0a24f8ba8e6a0d4fb82a157",
+      "appId": "VideoAmbientLighting_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2019-09-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.2-4.23"
+    },
+    {
+      "id": "4e061447cc6343da991801ec43c27ed4",
+      "appId": "VideoAmbientLighting_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "PS4",
+        "Xbox One",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2020-01-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0.4-4.24"
+    },
+    {
+      "id": "8b5974842c204456a79b1a8b1c4df3f3",
+      "appId": "VideoAmbientLighting_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One",
+        "Win32",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2020-05-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0.4-4.25"
+    },
+    {
+      "id": "01f3520c96f84c6bbf9568e64680e393",
+      "appId": "VideoAmbientLighting_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Xbox One",
+        "Windows",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2020-12-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0.4-4.26"
+    },
+    {
+      "id": "bae1e52cf37b4d549294dfab44b04a00",
+      "appId": "VideoAmbientLighting_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Linux",
+        "iOS",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2021-08-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0.4-4.27"
+    },
+    {
+      "id": "c23fd9c04e96474995321dfd9c4e4d55",
+      "appId": "VideoAmbientLighting_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-05-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0.5-5.0"
+    },
+    {
+      "id": "873c10799ad04fc4ac0eb63b3422b8af",
+      "appId": "VideoAmbientLighting_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Oculus",
+        "Nintendo Switch",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2022-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0.6-5.1"
+    },
+    {
+      "id": "8804f4bc636a4439a37f4a004800f148",
+      "appId": "VideoAmbientLighting_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-05-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0.7-5.2"
+    },
+    {
+      "id": "f4435dbb2b884f148e3d2d3197e481fc",
+      "appId": "VideoAmbientLighting_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-10-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0.8-5.3"
+    },
+    {
+      "id": "fc705bb25c494fd1b404b131a13bc06a",
+      "appId": "VideoAmbientLighting_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-05-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0.8-5.4"
+    }
+  ],
+  "developer": "DecalPortal",
+  "developerId": "o-qu8fj9kf2qpsam5xk967u2p4wea4ex",
+  "endOfSupport": false,
+  "unsearchable": false
+}

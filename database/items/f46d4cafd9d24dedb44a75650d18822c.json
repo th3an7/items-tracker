@@ -1,0 +1,182 @@
+{
+  "id": "f46d4cafd9d24dedb44a75650d18822c",
+  "title": "TwitchPlay Plugin",
+  "description": "This is a plugin for Unreal Engine 4 that makes communication with the Twitch chat of any channel super simple to use. Also allows to subscribe to custom commands coming from the chat.",
+  "longDescription": "<p>OPEN SOURCE. Feel free to contribute or make your own version.</p><p>Git Repo: <a href=\"https://github.com/TheDiG3/TwitchPlay\" rel=\"nofollow\">https://github.com/TheDiG3/TwitchPlay</a></p><p>Preview: <a href=\"https://youtube.com/watch?v&#61;QCcoUbKkOjw\" rel=\"nofollow\">https://youtube.com/watch?v&#61;QCcoUbKkOjw</a></p><p><br /></p><p>Two components available for use: TwitchIRCComponent and TwitchPlayComponent.</p><p><br /></p><p>TwitchIRCComponent: enables communication back and forth with a Twitch channel chat. You can read each message (with relative username of the sender) by receiving a simple event (OnMessageReceived) or send your own messages to the chat (SendIRCMessage with SendTo enabled and chosen channel).</p><p><br /></p><p>TwitchPlayComponent: in addition to what the TwitchIRCComponent does, this is a wonderful utility and time saver for when you want to implement user generated commands directly inside the game!</p><p>No need to do any parsing or checks on you side. Just Register a text command on the component and associate your own event that should fire whenever that user sends a chat message in the correct form (which is [DELIMITER]command[DELIMITER][OPTIONS]options[OPTIONS]. DELIMITER is &#39;!&#39; by default, but you can choose what you want. You can specify options for the command by using another delimiter, &#39;#&#39; by default, separated by &#39;,&#39;).</p><p>You can also unregister commands that you don&#39;t need anymore at runtime. The only limitation is that a single object/function can be registered for a single command (if a second object tries to register it will overwrite the previous one&#39;s registration) at the moment. This might change in future API versions.</p>",
+  "technicalDetails": "<p>The implementation uses FSockets and custom delegates to enable its functionalities.</p><p>Right now authentication still needs some work so that an actual error is received when the login info is wrong (I will need to authenticate the user asynchronously).</p><p>Only one object can subscribe to a custom command at a time. I might change that in later API versions.</p><p><br /></p><p>Documentation: <a href=\"https://goo.gl/kjg3s0\" rel=\"nofollow\">https://goo.gl/kjg3s0</a></p><p>Intended Platform: Windows (should work on other platforms too)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/1-1290x754-d4b47ec3167ade0dfee32a4f7595453e.PNG",
+      "md5": "d4b47ec3167ade0dfee32a4f7595453e",
+      "width": 1290,
+      "height": 754,
+      "size": 43899,
+      "uploadedDate": "2017-06-16T17:27:06.941Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/2-1290x754-d1adb86148aa9c3f514d7085a22fd004.PNG",
+      "md5": "d1adb86148aa9c3f514d7085a22fd004",
+      "width": 1290,
+      "height": 754,
+      "size": 49632,
+      "uploadedDate": "2017-06-16T17:27:03.825Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/3-1290x754-0d6acc7e3c14f672f7e39f07a2e7cce7.PNG",
+      "md5": "0d6acc7e3c14f672f7e39f07a2e7cce7",
+      "width": 1290,
+      "height": 754,
+      "size": 88521,
+      "uploadedDate": "2017-06-16T17:27:02.164Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/4-1688x842-e307bdd6ed8b551aaaa5c976b3e14eec.PNG",
+      "md5": "e307bdd6ed8b551aaaa5c976b3e14eec",
+      "width": 1688,
+      "height": 842,
+      "size": 232460,
+      "uploadedDate": "2017-06-16T17:27:00.493Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/5-1414x851-7dc5112e79058e5bb5ac5072719635c9.PNG",
+      "md5": "7dc5112e79058e5bb5ac5072719635c9",
+      "width": 1414,
+      "height": 851,
+      "size": 206087,
+      "uploadedDate": "2017-06-16T17:26:58.904Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/item/TwitchPlay_Thumb-284x284-9b4138fe7f070716b64cb941b1ed4c19.png",
+      "md5": "9b4138fe7f070716b64cb941b1ed4c19",
+      "width": 284,
+      "height": 284,
+      "size": 339071,
+      "uploadedDate": "2017-06-16T17:26:57.198Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/item/TwitchPlay_Featured-894x488-dbb4d0381e67aa45fbcb1beca559a271.png",
+      "md5": "dbb4d0381e67aa45fbcb1beca559a271",
+      "width": 894,
+      "height": 488,
+      "size": 1761122,
+      "uploadedDate": "2017-06-16T17:27:17.376Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2016-07-11T13:29:16.265Z",
+  "lastModifiedDate": "2019-05-23T14:41:43.346Z",
+  "entitlementName": "f46d4cafd9d24dedb44a75650d18822c",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "5d0b45a20b794a1e80251d85df2f73dc",
+      "appId": "TwitchPlay_4.12",
+      "compatibleApps": [
+        "UE_4.12"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-07-11T00:00:00.000Z",
+      "versionTitle": "TwitchPlay_4.12"
+    },
+    {
+      "id": "58f340e1a83d473aa5c7b05226f9fcdd",
+      "appId": "TwitchPlay_4.15",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-06-27T00:00:00.000Z",
+      "versionTitle": "TwitchPlay_4.15"
+    },
+    {
+      "id": "d1de34df12d34ae8a2637de8329f3aaa",
+      "appId": "TwitchPlay_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-06-27T00:00:00.000Z",
+      "versionTitle": "TwitchPlay_4.16"
+    },
+    {
+      "id": "5124b63471c54d96a5e4efb39cd3ecce",
+      "appId": "TwitchPlay_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-12-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TwitchPlay 4.18"
+    },
+    {
+      "id": "d48a175fa6844ae9a58f36e082cc5852",
+      "appId": "TwitchPlay_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-04-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TwitchPlay_4.19"
+    },
+    {
+      "id": "06af78740bab46faaa4167daa9d21a8c",
+      "appId": "TwitchPlay_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-12-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TwitchPlay_4.20"
+    },
+    {
+      "id": "33a0217701194b98a71aa647e81e77ac",
+      "appId": "TwitchPlay_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-12-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TwitchPlay_4.21"
+    }
+  ],
+  "developer": "Simone Di Gravio",
+  "developerId": "o-f807fd42734e8d841068d51d712695",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

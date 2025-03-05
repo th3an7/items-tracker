@@ -1,0 +1,844 @@
+{
+  "id": "d741c074fe074bf2b809dead3ece6871",
+  "title": "KitchenPro",
+  "description": "Procedural Kitchen Cabinet Blueprint Generator. Easy and Flexible kitchen construction.",
+  "longDescription": "<p>&#x1f4c4;<a href=\"https://drive.google.com/file/d/1CSTOZt8vPTGn3i5IyFcldSGrykATWtxi/view?usp&#61;drive_link\" rel=\"nofollow\"><strong>PDF guide</strong></a> (v1.22 - updated 12/05/24)</p><p><strong>&#x1f3ac; </strong><a href=\"https://www.youtube.com/watch?v&#61;k4983gVWcsc&amp;list&#61;PL_egFrv4qQYZiz3G_UFuHs1u8VJ33IvlE&amp;index&#61;3&amp;ab_channel&#61;UEArchvizTools\" rel=\"nofollow\"><strong>Videos</strong></a></p><p>&#x1f4e7; <a href=\"https://telegram.me/tjommas\" rel=\"nofollow\"><strong>Contact</strong></a></p><p>&#x1f4da; <a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Tj0mmas\" rel=\"nofollow\"><strong>Check out my other products</strong></a></p><p><br /></p><p><u>Current published version</u> : 1.39 (06/28/24)</p><p><a href=\"https://docs.google.com/document/d/1PUXxwRyVztW-UJP8jJTwcRcgL-18EltjAwhtydOoZGE/edit?usp&#61;sharing\" rel=\"nofollow\"><strong>Changelog</strong></a></p><p><br /></p><p><strong>KitchenPro</strong> lets you easily create the kitchens you wish without the need of static meshes for cabinets. Almost everything is possible. It uses Dynamic mesh. It is mostly intended to archviz creation (use the bake feature for games).</p><p>It has various Blueprints to set your cabinets, your worktop above them, put appliances in your cabinets, and design your drawer. It probably can be used to design bathroom cabinets as well.</p><p><br /></p><ul><li>Simply start by dropping a Cabinet blueprint (BP_KitchenPro_Cabinet). Set its size, add divisions, use baseboard or leg mesh, set the handle, etc. You can save your presets as data assets to use them later. You also can copy/paste various settings.</li><li>Add a countertop above (BP_KitchenPro_CounterTop) and set its size, splashback and legs. Eventually easily add sinks and/or hob (it automatically cutouts the countertop according to the collision mesh of sink/hob).</li><li>Both Blueprints have an autoPositionning feature. Set the parent, and the cabinet/countertop will automatically move to the right location and will stick to it.</li><li>Add any (interactive) appliance inside the cabinet (BP_KitchenPro_Appliance)</li><li>Design your own Panel design (BP_KitchenPro_PanelDesigner) and save it as Data asset to use it with your cabinets.</li><li>After having designed your cabinet, eventually use the new OpenableDrawer and OpenableDoor BPs.</li><li>Every DynamicMesh can be baked to static mesh in 1 click with the editor utility widget, for performance saving and lumen support (tip: once baked, use the native UE feature &#34;convert actor to static mesh&#34; if you need the export the whole kitchen as .fbx)</li></ul><p><br /></p><ul><li>To understand the logic behind internal drawer structure and cookplate texture, you can see this <a href=\"https://drive.google.com/file/d/1EaVeYnUxOoXWNVQXqpO64Iw7KcRAHsGn/view?usp&#61;sharing\" rel=\"nofollow\"><strong>source file</strong></a></li><li>Download <a href=\"https://drive.google.com/file/d/1qbaVdQqxPdOIDsu4r88VX1LiqhcBcea2/view?usp&#61;drive_link\" rel=\"nofollow\"><strong>free Appliance assets</strong></a><strong> </strong>(updated 05/06/24) &amp; <a href=\"https://drive.google.com/file/d/1xSYJ1Xs6NVMcD9vmK37R-YVEQwYWsZRh/view?usp&#61;sharing\" rel=\"nofollow\"><strong>Free Props Assets</strong></a><strong> </strong>(updated 05/16/24) prepared for KitchenPro</li><li>Please, if you like KPro, rate the product, it helps a lot.</li></ul>",
+  "technicalDetails": "<p><u>Features</u> :</p><ul><li>Easy Kitchen Creation with highly customisable cabinet/countertop blueprints</li><li>Openable Door/Drawer Blueprints (interactive at runtime)</li><li>Interactive Appliance Blueprints (oven, cookplate)</li><li>AutoPositionning (cabinet, countertop, appliance)</li><li>Panel Designer (design your own front panel for doors/drawers but also for finisher panels)</li><li>Editor Utility Widget (fast building functions / save presets / static mesh baking)</li><li>Other usefull blueprints</li></ul><p><br /></p><p><u>Number of Blueprints</u> :</p><ul><li>15 actor BPs (&#43; Presets BPs)</li><li>1 Editor Utility Widget</li></ul><p><br /></p><p><u>Plugin needed</u> : GeometryScripting</p><p><br /></p><p><u>Credits</u> :</p><ul><li>T_EndlessDummy from <a href=\"https://www.youtube.com/watch?v&#61;SiBhArwW7YU&amp;ab_channel&#61;SOAAcademy\" rel=\"nofollow\">SOA Academy</a></li><li>T_RGBNoise from <a href=\"https://www.youtube.com/watch?v&#61;gwx2NOZJ5CE&amp;ab_channel&#61;BenCloward\" rel=\"nofollow\">Ben Cloward</a></li><li><a href=\"https://github.com/DoubleDeez/MDMetaDataEditor\" rel=\"nofollow\">MDMetaDataEditor</a> free plugin (from DoubleDeez &amp; BenVlodgi) (used to edit metadata on variables)</li></ul><p><br /></p><p><u>Additional Notes</u> :</p><ul><li>GeoScript currently not supported by Lumen/Nanite. You can bake the geometry to static mesh in 2 clicks with the system that comes from Lyra example (process described in the PDF) but since it&#39;s intended to Archviz creation, you may prefer pathTracer for your final production. But with proper Engine settings, the result is good.</li><li>No appliance static mesh included - except dummy examples (oven, handles, legs). Download Bonus Assets (links at bottom of description)</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProEngineSettings-1920x1080-3bf51bc4508dd172502fab5e2b39bdd2.jpg",
+      "md5": "3bf51bc4508dd172502fab5e2b39bdd2",
+      "width": 1920,
+      "height": 1080,
+      "size": 197483,
+      "uploadedDate": "2024-04-17T23:05:52.632Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProExample1-1920x1080-65137c3036f0f0a2ceebd1f64d28b8ae.jpg",
+      "md5": "65137c3036f0f0a2ceebd1f64d28b8ae",
+      "width": 1920,
+      "height": 1080,
+      "size": 701440,
+      "uploadedDate": "2024-06-20T21:23:52.313Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProExample2-1920x1080-bb09a6f31417cb32399f4ba5fac8b1e8.jpg",
+      "md5": "bb09a6f31417cb32399f4ba5fac8b1e8",
+      "width": 1920,
+      "height": 1080,
+      "size": 707849,
+      "uploadedDate": "2024-06-20T21:23:53.231Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProExample3-1920x1080-1d7e727835a0264f5c6061e9d6575808.jpg",
+      "md5": "1d7e727835a0264f5c6061e9d6575808",
+      "width": 1920,
+      "height": 1080,
+      "size": 571874,
+      "uploadedDate": "2024-03-03T09:53:13.227Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProExample4-1920x1080-8787e27168c19ae7b5f66795a7ebeff1.jpg",
+      "md5": "8787e27168c19ae7b5f66795a7ebeff1",
+      "width": 1920,
+      "height": 1080,
+      "size": 634661,
+      "uploadedDate": "2024-03-03T09:53:14.087Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProExample6-1920x1080-d0834fab02347c71e290123db18d61ae.jpg",
+      "md5": "d0834fab02347c71e290123db18d61ae",
+      "width": 1920,
+      "height": 1080,
+      "size": 805656,
+      "uploadedDate": "2024-03-03T09:53:15.006Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProCabinetBP-1920x1080-1fb61bb31389c026e34c98c974d6ecea.jpg",
+      "md5": "1fb61bb31389c026e34c98c974d6ecea",
+      "width": 1920,
+      "height": 1080,
+      "size": 802231,
+      "uploadedDate": "2024-06-21T08:55:28.004Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProCabinetBPSettings-1920x1080-436964974b7705a6b01b61db78f029d3.jpg",
+      "md5": "436964974b7705a6b01b61db78f029d3",
+      "width": 1920,
+      "height": 1080,
+      "size": 518788,
+      "uploadedDate": "2024-03-03T09:53:16.777Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProCornersDemoRoom-1920x1080-707bbdd61354142ff8a375e8bfdf5f35.jpg",
+      "md5": "707bbdd61354142ff8a375e8bfdf5f35",
+      "width": 1920,
+      "height": 1080,
+      "size": 692828,
+      "uploadedDate": "2024-03-03T09:53:17.627Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProWorkTopHob-1920x1080-44861cf7fef66c9b898710db575a1fbc.jpg",
+      "md5": "44861cf7fef66c9b898710db575a1fbc",
+      "width": 1920,
+      "height": 1080,
+      "size": 764397,
+      "uploadedDate": "2024-06-21T08:51:57.335Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GasBurnerEffect-1920x1080-85166f4fe6ef99ce06d054be7d251af3.jpg",
+      "md5": "85166f4fe6ef99ce06d054be7d251af3",
+      "width": 1920,
+      "height": 1080,
+      "size": 857041,
+      "uploadedDate": "2023-10-20T23:07:01.124Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProApplianceBP-1920x1080-e18b037408a9403db341b4bac007d70e.jpg",
+      "md5": "e18b037408a9403db341b4bac007d70e",
+      "width": 1920,
+      "height": 1080,
+      "size": 895129,
+      "uploadedDate": "2024-06-21T09:07:54.004Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProDoorDrawers-1920x1080-1b1828a1933393bd9f3dcf33988a3de7.jpg",
+      "md5": "1b1828a1933393bd9f3dcf33988a3de7",
+      "width": 1920,
+      "height": 1080,
+      "size": 955068,
+      "uploadedDate": "2024-06-20T21:23:54.187Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProKitchenPropsBP-1920x1080-05e5a6916c22b75076c1a4dbdd7efa17.jpg",
+      "md5": "05e5a6916c22b75076c1a4dbdd7efa17",
+      "width": 1920,
+      "height": 1080,
+      "size": 913885,
+      "uploadedDate": "2024-03-03T09:53:22.004Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProRecessedSpotlights-1920x1080-cacf5d27c7599fdf9474b2f834c38c93.jpg",
+      "md5": "cacf5d27c7599fdf9474b2f834c38c93",
+      "width": 1920,
+      "height": 1080,
+      "size": 715053,
+      "uploadedDate": "2024-06-21T09:02:56.754Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProDDBP-1920x1080-b5b16939402133dd1d802c7bc7cb2e6e.jpg",
+      "md5": "b5b16939402133dd1d802c7bc7cb2e6e",
+      "width": 1920,
+      "height": 1080,
+      "size": 716419,
+      "uploadedDate": "2024-03-03T09:53:20.216Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccurateConstruction-1920x1080-c915c1b8e6f2f6270845c8fe741c41eb.jpg",
+      "md5": "c915c1b8e6f2f6270845c8fe741c41eb",
+      "width": 1920,
+      "height": 1080,
+      "size": 746162,
+      "uploadedDate": "2023-10-20T23:07:00.139Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProHandleProfile-1920x1080-b062f1fc81d6f3c28c0b56b8cd490ab3.jpg",
+      "md5": "b062f1fc81d6f3c28c0b56b8cd490ab3",
+      "width": 1920,
+      "height": 1080,
+      "size": 941219,
+      "uploadedDate": "2023-10-20T23:07:00.598Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProWorkTopFreeForm-1920x1080-0111206ed999bc8cb6cea545407bb12c.jpg",
+      "md5": "0111206ed999bc8cb6cea545407bb12c",
+      "width": 1920,
+      "height": 1080,
+      "size": 766271,
+      "uploadedDate": "2023-10-05T10:49:07.534Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProOrnament-1920x1080-7bc968a317c2385e9522b7784d37ec87.jpg",
+      "md5": "7bc968a317c2385e9522b7784d37ec87",
+      "width": 1920,
+      "height": 1080,
+      "size": 620093,
+      "uploadedDate": "2023-10-05T10:49:06.687Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProPhotoStudio-1920x1080-a676bc5908e3e065a91570bd7f617337.jpg",
+      "md5": "a676bc5908e3e065a91570bd7f617337",
+      "width": 1920,
+      "height": 1080,
+      "size": 716709,
+      "uploadedDate": "2024-03-03T09:53:22.895Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenProDemoRoom-1920x1080-7e7610f80a9f8aa9a2fdb6a51beb2bb3.jpg",
+      "md5": "7e7610f80a9f8aa9a2fdb6a51beb2bb3",
+      "width": 1920,
+      "height": 1080,
+      "size": 405224,
+      "uploadedDate": "2023-06-30T12:56:55.411Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenPro-RenderGregor01-1920x1080-5857db894e0955df5dda4fc89ff2c9c1.jpg",
+      "md5": "5857db894e0955df5dda4fc89ff2c9c1",
+      "width": 1920,
+      "height": 1080,
+      "size": 939550,
+      "uploadedDate": "2023-10-05T11:06:48.309Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenPro-RenderGregor02-1920x1080-1c4db3022351abdbbc7444faacdae12f.jpg",
+      "md5": "1c4db3022351abdbbc7444faacdae12f",
+      "width": 1920,
+      "height": 1080,
+      "size": 977207,
+      "uploadedDate": "2023-10-05T11:06:49.076Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KitchenPro-RenderGregor03-1920x1080-e74f0a6b52081f7c9fb95576292a4db2.jpg",
+      "md5": "e74f0a6b52081f7c9fb95576292a4db2",
+      "width": 1920,
+      "height": 1080,
+      "size": 716752,
+      "uploadedDate": "2023-10-05T11:06:49.723Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/KitchenPro_thumb-284x284-53746377efde37d46274372145c30d53.png",
+      "md5": "53746377efde37d46274372145c30d53",
+      "width": 284,
+      "height": 284,
+      "size": 93074,
+      "uploadedDate": "2023-10-24T22:18:41.313Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/KitchenPro_featured-894x488-3bdd7a5dc367df5dfdc6841eb894766c.png",
+      "md5": "3bdd7a5dc367df5dfdc6841eb894766c",
+      "width": 894,
+      "height": 488,
+      "size": 296317,
+      "uploadedDate": "2023-06-30T12:56:56.475Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProApplianceBP-1920x1080-e18b037408a9403db341b4bac007d70e_Snapshot.jpg",
+      "md5": "6990e85490e2070d06aae645ec245777",
+      "width": 150,
+      "height": 74,
+      "size": 7659,
+      "uploadedDate": "2024-06-21T09:07:54.600Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProRecessedSpotlights-1920x1080-cacf5d27c7599fdf9474b2f834c38c93_Snapshot.jpg",
+      "md5": "cc83e0350675bf81add6e3ec15d6b3c2",
+      "width": 150,
+      "height": 74,
+      "size": 6025,
+      "uploadedDate": "2024-06-21T09:02:57.308Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProCabinetBP-1920x1080-1fb61bb31389c026e34c98c974d6ecea_Snapshot.jpg",
+      "md5": "54df5c17d24b65cd69eba8a3a718f5cb",
+      "width": 150,
+      "height": 74,
+      "size": 6944,
+      "uploadedDate": "2024-06-21T08:55:28.556Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProWorkTopHob-1920x1080-44861cf7fef66c9b898710db575a1fbc_Snapshot.jpg",
+      "md5": "e3784ea7edc672ebc30df427b1d1c6ad",
+      "width": 150,
+      "height": 74,
+      "size": 6816,
+      "uploadedDate": "2024-06-21T08:51:57.880Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample1-1920x1080-65137c3036f0f0a2ceebd1f64d28b8ae_Snapshot.jpg",
+      "md5": "c8593e62af10eea1437aa878bb35ac8f",
+      "width": 150,
+      "height": 74,
+      "size": 5844,
+      "uploadedDate": "2024-06-20T21:23:52.905Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample2-1920x1080-bb09a6f31417cb32399f4ba5fac8b1e8_Snapshot.jpg",
+      "md5": "3a691943468f47e5f604801b5fa4d584",
+      "width": 150,
+      "height": 74,
+      "size": 5369,
+      "uploadedDate": "2024-06-20T21:23:53.806Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProDoorDrawers-1920x1080-1b1828a1933393bd9f3dcf33988a3de7_Snapshot.jpg",
+      "md5": "97b6bab8ba51077320503523dcbf6da4",
+      "width": 150,
+      "height": 74,
+      "size": 7373,
+      "uploadedDate": "2024-06-20T21:23:54.777Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProEngineSettings-1920x1080-3bf51bc4508dd172502fab5e2b39bdd2_Snapshot.jpg",
+      "md5": "4aaeed9b26cc62e7ca35fdc07a1817e5",
+      "width": 150,
+      "height": 74,
+      "size": 3933,
+      "uploadedDate": "2024-04-17T23:05:53.125Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample1-1920x1080-d2fa8e2f612e1732b4a37e684ec7f5ab_Snapshot.jpg",
+      "md5": "a84063b3bd7c2503a7fdd279dfd92c0f",
+      "width": 150,
+      "height": 74,
+      "size": 5584,
+      "uploadedDate": "2024-03-03T09:53:11.981Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample2-1920x1080-c48783f18be0420693b48403cd979624_Snapshot.jpg",
+      "md5": "fac6cd52dad89e9bb92846ff2ee22b9d",
+      "width": 150,
+      "height": 74,
+      "size": 5378,
+      "uploadedDate": "2024-03-03T09:53:12.934Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample3-1920x1080-1d7e727835a0264f5c6061e9d6575808_Snapshot.jpg",
+      "md5": "0c1cb27d4813eacb5b89cfe17d3835f0",
+      "width": 150,
+      "height": 74,
+      "size": 5272,
+      "uploadedDate": "2024-03-03T09:53:13.783Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample4-1920x1080-8787e27168c19ae7b5f66795a7ebeff1_Snapshot.jpg",
+      "md5": "32f5a77092c7ccc14e2c0091c3c5a530",
+      "width": 150,
+      "height": 74,
+      "size": 5354,
+      "uploadedDate": "2024-03-03T09:53:14.685Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample6-1920x1080-d0834fab02347c71e290123db18d61ae_Snapshot.jpg",
+      "md5": "8b122fc8ef0ea650bf763828d048c4d1",
+      "width": 150,
+      "height": 74,
+      "size": 5605,
+      "uploadedDate": "2024-03-03T09:53:15.606Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProCabinetBP-1920x1080-0f1344e10c7d32a06efde8ed079739e9_Snapshot.jpg",
+      "md5": "0ae238313edd970b12fe99b1b6503723",
+      "width": 150,
+      "height": 74,
+      "size": 6669,
+      "uploadedDate": "2024-03-03T09:53:16.516Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProCabinetBPSettings-1920x1080-436964974b7705a6b01b61db78f029d3_Snapshot.jpg",
+      "md5": "965597ddac3652306f4ae2f601ae9919",
+      "width": 150,
+      "height": 74,
+      "size": 5507,
+      "uploadedDate": "2024-03-03T09:53:17.313Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProCornersDemoRoom-1920x1080-707bbdd61354142ff8a375e8bfdf5f35_Snapshot.jpg",
+      "md5": "5b7c9f6e8f4205098e722829b9b70337",
+      "width": 150,
+      "height": 74,
+      "size": 7199,
+      "uploadedDate": "2024-03-03T09:53:18.176Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProWorkTopHob-1920x1080-ae9dc631856150fc3eefbef3b834d04e_Snapshot.jpg",
+      "md5": "8b0c4a96f1d62e7c44110599f112ac11",
+      "width": 150,
+      "height": 74,
+      "size": 6869,
+      "uploadedDate": "2024-03-03T09:53:19.046Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProApplianceBP-1920x1080-d435d924120ef7f3785bcf21f425842b_Snapshot.jpg",
+      "md5": "0d52d8b1f8c85094fc5ecff09e9d9e3b",
+      "width": 150,
+      "height": 74,
+      "size": 6992,
+      "uploadedDate": "2024-03-03T09:53:19.877Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProDDBP-1920x1080-b5b16939402133dd1d802c7bc7cb2e6e_Snapshot.jpg",
+      "md5": "4934f9ccddcbe05f014cca90dc197b7f",
+      "width": 150,
+      "height": 74,
+      "size": 6655,
+      "uploadedDate": "2024-03-03T09:53:20.768Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProDoorDrawers-1920x1080-1325ad7d5c1f95b81e800139a213b6aa_Snapshot.jpg",
+      "md5": "3196de25368a4f92613cc005d9d5f280",
+      "width": 150,
+      "height": 74,
+      "size": 7321,
+      "uploadedDate": "2024-03-03T09:53:21.680Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProKitchenPropsBP-1920x1080-05e5a6916c22b75076c1a4dbdd7efa17_Snapshot.jpg",
+      "md5": "53404bcc6df567a3ec95e8aee2e396b9",
+      "width": 150,
+      "height": 74,
+      "size": 7131,
+      "uploadedDate": "2024-03-03T09:53:22.571Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProPhotoStudio-1920x1080-a676bc5908e3e065a91570bd7f617337_Snapshot.jpg",
+      "md5": "a1957fad65e39c3560abe8437daabf63",
+      "width": 150,
+      "height": 74,
+      "size": 6489,
+      "uploadedDate": "2024-03-03T09:53:23.464Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProEngineSettings-1920x1080-82b36fa1ec6a56e0fbe4729d0c2252d0_Snapshot.jpg",
+      "md5": "ca9fde9f1886dd65d5a173a2f6f3456c",
+      "width": 150,
+      "height": 74,
+      "size": 3993,
+      "uploadedDate": "2023-11-06T15:46:35.106Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample6-1920x1080-92a4fac4f03ad990bfe14b727822c1b9_Snapshot.jpg",
+      "md5": "b7f43521fdacc880de4d0f000875a450",
+      "width": 150,
+      "height": 74,
+      "size": 5824,
+      "uploadedDate": "2023-10-20T23:06:59.630Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProCabinetBPSettings-1920x1080-6792bd0910d980bfd40989525d77ac6f_Snapshot.jpg",
+      "md5": "c50e7a3c72526ca6be8a553787f4dfac",
+      "width": 150,
+      "height": 74,
+      "size": 5730,
+      "uploadedDate": "2023-10-20T23:06:59.989Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccurateConstruction-1920x1080-c915c1b8e6f2f6270845c8fe741c41eb_Snapshot.jpg",
+      "md5": "4eaa661f3690798fc2bec549185c2f0e",
+      "width": 150,
+      "height": 74,
+      "size": 5241,
+      "uploadedDate": "2023-10-20T23:07:00.387Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProHandleProfile-1920x1080-b062f1fc81d6f3c28c0b56b8cd490ab3_Snapshot.jpg",
+      "md5": "1e35582987ae5f87f1e785e74bdf6976",
+      "width": 150,
+      "height": 74,
+      "size": 5804,
+      "uploadedDate": "2023-10-20T23:07:00.845Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GasBurnerEffect-1920x1080-85166f4fe6ef99ce06d054be7d251af3_Snapshot.jpg",
+      "md5": "ce62f2f6ac3463e41400650f632aa5eb",
+      "width": 150,
+      "height": 74,
+      "size": 7303,
+      "uploadedDate": "2023-10-20T23:07:01.335Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenPro-RenderGregor01-1920x1080-5857db894e0955df5dda4fc89ff2c9c1_Snapshot.jpg",
+      "md5": "31e1a853261e5c224faca35d3c961794",
+      "width": 150,
+      "height": 74,
+      "size": 6787,
+      "uploadedDate": "2023-10-05T11:06:48.758Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenPro-RenderGregor02-1920x1080-1c4db3022351abdbbc7444faacdae12f_Snapshot.jpg",
+      "md5": "035707d1760647169d7d6c34b48eb284",
+      "width": 150,
+      "height": 74,
+      "size": 6385,
+      "uploadedDate": "2023-10-05T11:06:49.507Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenPro-RenderGregor03-1920x1080-e74f0a6b52081f7c9fb95576292a4db2_Snapshot.jpg",
+      "md5": "611d9cec3e7f66194cdab42b0384ec5e",
+      "width": 150,
+      "height": 74,
+      "size": 6079,
+      "uploadedDate": "2023-10-05T11:06:50.251Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample5c-1920x1080-79b05a50a4bbf09e81f272f7679646d1_Snapshot.jpg",
+      "md5": "c535d32f080cee14337ad51e3fd3aa3e",
+      "width": 150,
+      "height": 74,
+      "size": 4994,
+      "uploadedDate": "2023-10-05T10:49:03.864Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProCabinetBPSettings-1920x1080-500a5eda7afc6b36e3396c18ce9905d4_Snapshot.jpg",
+      "md5": "1573fb3e8a99098e54561b9e73d84fd9",
+      "width": 150,
+      "height": 74,
+      "size": 5651,
+      "uploadedDate": "2023-10-05T10:49:04.699Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProWorkTopBPc-1920x1080-34fc77fff13cfd5371ba2f92d04c8103_Snapshot.jpg",
+      "md5": "7cfd6eb10136a4df2a0372d92d98cc0b",
+      "width": 150,
+      "height": 74,
+      "size": 6229,
+      "uploadedDate": "2023-10-05T10:49:05.586Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProCornersDemoRoom-1920x1080-8426af6bcab11b966b647bc6f9ce401f_Snapshot.jpg",
+      "md5": "2dafed314c9adbc48f466b77f755973c",
+      "width": 150,
+      "height": 74,
+      "size": 6662,
+      "uploadedDate": "2023-10-05T10:49:06.402Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProOrnament-1920x1080-7bc968a317c2385e9522b7784d37ec87_Snapshot.jpg",
+      "md5": "5c9b5f05033a6c2d06e14717f44c6ffe",
+      "width": 150,
+      "height": 74,
+      "size": 5086,
+      "uploadedDate": "2023-10-05T10:49:07.228Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProWorkTopFreeForm-1920x1080-0111206ed999bc8cb6cea545407bb12c_Snapshot.jpg",
+      "md5": "518b555e439e8f502a04f5337169a7f9",
+      "width": 150,
+      "height": 74,
+      "size": 6384,
+      "uploadedDate": "2023-10-05T10:49:08.127Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample4b-1920x1080-bc43f3a67ccbf2a56f867b8436a9353c_Snapshot.jpg",
+      "md5": "71f8cf906c104357b37998ffcd31d168",
+      "width": 150,
+      "height": 74,
+      "size": 5305,
+      "uploadedDate": "2023-09-04T17:46:59.571Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample1b-1920x1080-d487f0a28c9ea7fba3dfb8779483c4de_Snapshot.jpg",
+      "md5": "a47df920731b221bfd979a89306fe496",
+      "width": 150,
+      "height": 74,
+      "size": 4968,
+      "uploadedDate": "2023-09-04T17:45:34.480Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample2b-1920x1080-22387ae2675a5a3c5a7cacad28d36093_Snapshot.jpg",
+      "md5": "407d9bca58c441c4a26e3101fcb31957",
+      "width": 150,
+      "height": 74,
+      "size": 5415,
+      "uploadedDate": "2023-09-04T17:45:34.985Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample3b-1920x1080-86abd2826270027b3eb1a9d7ff776ed5_Snapshot.jpg",
+      "md5": "a0c799c9aec327348c11a57ebb62c704",
+      "width": 150,
+      "height": 74,
+      "size": 5312,
+      "uploadedDate": "2023-09-04T17:45:35.292Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample4b-1920x1080-65a990b86070331b2cf1dec3a4c2e28d_Snapshot.jpg",
+      "md5": "9bc4f0bad76a4d6fb39c8952f7f78ac1",
+      "width": 150,
+      "height": 74,
+      "size": 5490,
+      "uploadedDate": "2023-09-04T17:45:35.663Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample5b-1920x1080-19404b31e6cb98f7144919c786a02f83_Snapshot.jpg",
+      "md5": "9907163ab8e2ff8c69d4dd3ee3e922a2",
+      "width": 150,
+      "height": 74,
+      "size": 4406,
+      "uploadedDate": "2023-09-04T17:45:36.002Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProKitchenPropsBP-1920x1080-0a8aac9fa43899c3edd49d2cb093cf40_Snapshot.jpg",
+      "md5": "c80edc46ebb1b97e3f05ee8f3290a621",
+      "width": 150,
+      "height": 74,
+      "size": 6379,
+      "uploadedDate": "2023-07-29T22:32:57.677Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProEngineSettings-1920x1080-44b066c4b126d67d64d6efcdd2c999d2_Snapshot.jpg",
+      "md5": "798b5484cdfa0862148b2e2c64566364",
+      "width": 150,
+      "height": 74,
+      "size": 3837,
+      "uploadedDate": "2023-07-11T10:20:12.928Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample1b-1920x1080-06f5148e121ca9a873dd903e1785f78b_Snapshot.jpg",
+      "md5": "b772f2e1a31c36c0840072438906a099",
+      "width": 150,
+      "height": 74,
+      "size": 4983,
+      "uploadedDate": "2023-06-30T12:56:51.212Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample2b-1920x1080-a07f2e112d446e760ee781f8ca417d0c_Snapshot.jpg",
+      "md5": "6fb43bbc7fc41872e4b09d9722d35d6d",
+      "width": 150,
+      "height": 74,
+      "size": 5274,
+      "uploadedDate": "2023-06-30T12:56:51.587Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample3b-1920x1080-24b3ee167cd3ee07c0ed405ecf2e382a_Snapshot.jpg",
+      "md5": "3b0c81e196f52a387d8ec729c3167b52",
+      "width": 150,
+      "height": 74,
+      "size": 5305,
+      "uploadedDate": "2023-06-30T12:56:51.990Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample4b-1920x1080-65a990b86070331b2cf1dec3a4c2e28d_Snapshot.jpg",
+      "md5": "9bc4f0bad76a4d6fb39c8952f7f78ac1",
+      "width": 150,
+      "height": 74,
+      "size": 5490,
+      "uploadedDate": "2023-06-30T12:56:52.396Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProExample5b-1920x1080-0ebcc49b0a8688bf3cd13009758d3378_Snapshot.jpg",
+      "md5": "9e6ee6cdf487636f10ba32f7a8de32e9",
+      "width": 150,
+      "height": 74,
+      "size": 4552,
+      "uploadedDate": "2023-06-30T12:56:52.870Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProCabinetBPb-1920x1080-bef9b2607545959292e858660604c8c4_Snapshot.jpg",
+      "md5": "118ed96281233ed242f64cac43ff668a",
+      "width": 150,
+      "height": 74,
+      "size": 6036,
+      "uploadedDate": "2023-06-30T12:56:53.279Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProCabinetBPSettings-1920x1080-42b3edd40af24791ee76f29077783f91_Snapshot.jpg",
+      "md5": "350506fdd924e91aec5afceb9df38a6b",
+      "width": 150,
+      "height": 74,
+      "size": 4976,
+      "uploadedDate": "2023-06-30T12:56:53.587Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProWorkTopBPb-1920x1080-5bc054d6d1a4df8533dfca627d6e93c7_Snapshot.jpg",
+      "md5": "5e2077c736c3be9719d08b27c4117bee",
+      "width": 150,
+      "height": 74,
+      "size": 6328,
+      "uploadedDate": "2023-06-30T12:56:54.038Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProWorkTopHob-1920x1080-fa7c5d1ff2d4fb6ef027c46ef4c938ba_Snapshot.jpg",
+      "md5": "266cbb3f36cd504dc2e3757b21bb9395",
+      "width": 150,
+      "height": 74,
+      "size": 6914,
+      "uploadedDate": "2023-06-30T12:56:54.459Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProApplianceBPb-1920x1080-d5482583cd54277af277c1fd2dadf7a7_Snapshot.jpg",
+      "md5": "f6bc931a1881c9fed885170349ec8d49",
+      "width": 150,
+      "height": 74,
+      "size": 6591,
+      "uploadedDate": "2023-06-30T12:56:54.875Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProDDBP-1920x1080-ed4159d07bcd220baee5c360bb04e52e_Snapshot.jpg",
+      "md5": "ad8cb009d0b45e4b191e33b2d76b7040",
+      "width": 150,
+      "height": 74,
+      "size": 6659,
+      "uploadedDate": "2023-06-30T12:56:55.268Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProDemoRoom-1920x1080-7e7610f80a9f8aa9a2fdb6a51beb2bb3_Snapshot.jpg",
+      "md5": "5a1fefc72cfdc399208b4bcf3bd880af",
+      "width": 150,
+      "height": 74,
+      "size": 7989,
+      "uploadedDate": "2023-06-30T12:56:55.666Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProPhotoStudio-1920x1080-db8568e5f1b7184d5cb010d9cd8a4045_Snapshot.jpg",
+      "md5": "67652b6cdb302cf8c7008ce9b03dd123",
+      "width": 150,
+      "height": 74,
+      "size": 5302,
+      "uploadedDate": "2023-06-30T12:56:55.958Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/KitchenProEngineSettings-1920x1080-d20e644bbe3fc1b2c55a74a2887b4a8c_Snapshot.jpg",
+      "md5": "6f0d0e3d160c8383029785793969abc0",
+      "width": 150,
+      "height": 74,
+      "size": 3441,
+      "uploadedDate": "2023-06-30T12:56:56.308Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-07-12T21:18:26.787Z",
+  "lastModifiedDate": "2025-01-27T16:22:24.865Z",
+  "customAttributes": {},
+  "entitlementName": "d741c074fe074bf2b809dead3ece6871",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3c31532e196442119637a422666ec040",
+      "appId": "KitchenPd741c074fe07V1",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "Win32",
+        "PS4",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-06-30T00:00:00.000Z",
+      "releaseNote": "no 5.4 compatibility due to node \"copy collision meshes from object\" crashing in 5.4.\nI hope Epic will fix this asap.",
+      "versionTitle": "KichenPro 1.40 UE5.1"
+    },
+    {
+      "id": "f3d03be2665840c8b12a70a7f42ec279",
+      "appId": "KitchenPd741c074fe07V2",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac",
+        "Xbox One",
+        "PS4"
+      ],
+      "dateAdded": "2024-05-15T00:00:00.000Z",
+      "releaseNote": "5.4 compatibility",
+      "versionTitle": "KichenPro 1.40 UE5.4"
+    }
+  ],
+  "developer": "Tj0mmas",
+  "developerId": "o-7wt9pm29cbd6pjqvgndnavsnhkxzhj",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

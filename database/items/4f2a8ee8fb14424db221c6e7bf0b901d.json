@@ -1,0 +1,181 @@
+{
+  "id": "4f2a8ee8fb14424db221c6e7bf0b901d",
+  "title": "Image Comparison Tool",
+  "description": "Editor tool for comparing textures side by side or visualizing differences",
+  "longDescription": "<p>This tool helps you to compare 2 textures side by side, making it easier to evaluate textures:</p><ul><li>Drag the line between the images back and forth to find differences</li><li>Compare screenshots when adjusting scalability settings or experimenting with rendering features</li><li>Evaluate the effects of different texture compressions and resolutions</li><li>When using render targets to create textures, compare your outputs to find errors</li><li>Difference view mode and channel selection supported to find even tiniest differences</li></ul><p><br /></p><p>This tool supports all the viewing options you&#39;re used to from Unreal&#39;s texture editor:</p><p>You can select mips or channels to display and change the exposure values used for HDR textures.</p><p>To detect even tiny differences, you can use the <strong>Difference View Mode</strong> that visualizes the difference between the two images for each pixel.</p><p><br /></p><p>The pictures shown in the screenshots are used for demonstration purposes only and aren&#39;t part of the tool.</p><p><br /></p><p><strong>Note</strong>: The tool doesn&#39;t allow comparing 2D textures with cube maps, so when selecting a cube map for either A or B, the other texture switches to the last cube map used in that slot.</p><p><br /></p><p>Usage</p><ol><li>After adding the plugin content to your project, right-click on <strong>EUW_ImageComparison </strong>and select <strong>Run Editor Utility Widget</strong> from the context menu to open the tool (From now on, the widget is registered and can be opened via <strong>Window/Editor Utility Widgets/EUW_ImageComparison</strong>)</li><li>Choose textures for Image A and B from the dropdown menus left and right. You can move the line between the two by using the slider at the bottom of the tool or just clicking and dragging the cursor in the texture viewport. Between the two dropdown menus is a button with two arrows to switch the textures, in case you want the texture on the left to be on the right and vice versa.</li><li>In the top left corner is a checkbox to activate the difference view mode, below that you can see the current zoom level and set it to 1:1/fit the view.</li><li>At the bottom of the widget, there are several settings that exist twice, once for each image. The 4 checkboxes control the visibility of the color channels for each texture. The button right to the checkbox restores the default (all channels visible). Click on the button again to restore the last manually defined configuration.</li><li>Right to the button, you can see and change the current MIP index. If it&#39;s greyed out, the texture doesn&#39;t have MIPs.</li><li>If one of your textures is an HDR texture, an additional setting for the exposure bias becomes visible.</li></ol><p><br /></p><p>Extending the Tool</p><p>If you want to modify the widget or add new features, there are two critical assets to start with:</p><p><strong>EUW_ImageComparison </strong>is the widget with the whole UI and most of the logic. The viewport is drawn using two dynamic material instances, <strong>MID_2D </strong>and <strong>MID_Cubemap</strong>.</p><p>Most UI widgets modify parameters on these two MIDs whenever any values on them are changed. These parameters control how the textures are displayed.</p><p>To be able to change them on the fly, some boolean variables are expressed using floats. <strong>0.0</strong> equals F<strong>alse</strong>,<strong> 1.0 </strong>equals <strong>True.</strong></p><p>The only exception is the <strong>isCubemap </strong>parameter. Instead, there is a material instance of the material that&#39;s used to display cube maps.</p><p><strong>M_ImageComparison </strong>is the parent material of the MIDs used in the viewport. All features that need to be controlled independently for each of the two textures are put in the <strong>MF_Image </strong>material function, which is used twice in the material. Most of the nodes are used to display textures correctly, whether they are sRGB/linear or normal maps.</p><p>There are two separate UV setups, depending on whether the texture is a 2D texture or a cube map.</p><p><br /></p><p>Other Assets and what they do</p><p><strong>MF_FixRatio </strong>makes sure non-square textures are displayed with the correct aspect ratio.</p><p><strong>MF_AddMatte </strong>displays all pixels outside of the 0.0-1.0 UV range as black.</p><p><strong>MF_sRGBToLinear </strong>converts a color from sRGB to linear.</p><p><strong>EUW_ChannelSelector </strong>contains the check boxes that control the active channels and contains the logic to switch between the last manually set configuration and the default.</p><p><strong>BP_ComparedImage </strong>and the data assets derived from it just contain references to the displayed textures.</p>",
+  "technicalDetails": "<p><strong>Features</strong></p><ul><li> Side-by-side image comparison for 2D textures and cube maps (no support for volume textures or arrays for now)</li><li>Supports options to change used mips, exposure, etc.</li><li> Difference view mode to spot even tiny differences like compression artifacts or anti-aliasing differences</li><li>Choose the color channels you want to compare.</li><li>Tool is an editor utility widget that is easy to extend. Blueprints and materials are commented.</li><li>Available from texture asset context menu (UE5 version only)</li><li>Adjusted to work with UE5 editor color customization</li></ul><p><strong>Number of Blueprints:</strong> 3 (UE4), 5 (UE5)</p><p><strong>Supported Development Platforms:</strong> There are no platform-specific features used by the tool.</p><p>Documentation: Widgets have tooltips. Materials and blueprints are commented.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2-1920x1080-d7e1cc89e6ab1e1862184fe5a8331f8b.jpg",
+      "md5": "d7e1cc89e6ab1e1862184fe5a8331f8b",
+      "width": 1920,
+      "height": 1080,
+      "size": 205772,
+      "uploadedDate": "2022-02-14T12:03:29.338Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot3-1920x1080-8afe4eb92c925656374bd37979864771.jpg",
+      "md5": "8afe4eb92c925656374bd37979864771",
+      "width": 1920,
+      "height": 1080,
+      "size": 194824,
+      "uploadedDate": "2022-02-14T12:03:29.710Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot4-1920x1080-8315bbf39c73f3bf91725a6798a240c0.jpg",
+      "md5": "8315bbf39c73f3bf91725a6798a240c0",
+      "width": 1920,
+      "height": 1080,
+      "size": 390536,
+      "uploadedDate": "2022-02-14T12:03:30.076Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot1new-1920x1080-9bfbaada63515b019dc216c687f4d080.jpg",
+      "md5": "9bfbaada63515b019dc216c687f4d080",
+      "width": 1920,
+      "height": 1080,
+      "size": 184175,
+      "uploadedDate": "2022-06-06T21:31:57.491Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot1new-1920x1080-9bfbaada63515b019dc216c687f4d080_Snapshot.jpg",
+      "md5": "cac0cf3c7ac767a0bea8ad21ab3f7919",
+      "width": 150,
+      "height": 74,
+      "size": 6673,
+      "uploadedDate": "2022-06-06T21:31:57.920Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ImageComparisonTool_thumb-284x284-fe25616240ba70342bc36bba96597e44.png",
+      "md5": "fe25616240ba70342bc36bba96597e44",
+      "width": 284,
+      "height": 284,
+      "size": 142799,
+      "uploadedDate": "2022-02-14T12:03:30.428Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ImageComparisonTool_featured-894x488-fefb935533b67fc0aa2f05d66751e518.png",
+      "md5": "fefb935533b67fc0aa2f05d66751e518",
+      "width": 894,
+      "height": 488,
+      "size": 817598,
+      "uploadedDate": "2022-02-14T12:03:30.563Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot1-1920x1080-3142d104a0005487e4a86d48b675b2dd_Snapshot.jpg",
+      "md5": "ba914e59d6664d862cf3dd45c7889c6e",
+      "width": 150,
+      "height": 74,
+      "size": 5568,
+      "uploadedDate": "2022-02-14T12:03:29.201Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2-1920x1080-d7e1cc89e6ab1e1862184fe5a8331f8b_Snapshot.jpg",
+      "md5": "7d1874cd53e8b5fd89087e5f9bfb13c5",
+      "width": 150,
+      "height": 74,
+      "size": 4777,
+      "uploadedDate": "2022-02-14T12:03:29.549Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot3-1920x1080-8afe4eb92c925656374bd37979864771_Snapshot.jpg",
+      "md5": "f9752fc01fdbd5660b431a247f09e0aa",
+      "width": 150,
+      "height": 74,
+      "size": 4691,
+      "uploadedDate": "2022-02-14T12:03:29.920Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot4-1920x1080-8315bbf39c73f3bf91725a6798a240c0_Snapshot.jpg",
+      "md5": "2f5beca55a58d9468ef94ca07ca5e576",
+      "width": 150,
+      "height": 74,
+      "size": 4708,
+      "uploadedDate": "2022-02-14T12:03:30.311Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-02-15T08:33:38.140Z",
+  "lastModifiedDate": "2024-10-08T20:32:12.271Z",
+  "entitlementName": "4f2a8ee8fb14424db221c6e7bf0b901d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "5fa18add161842e3acae4583d830773c",
+      "appId": "ImageCom4f2a8ee8fb14V1",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One",
+        "Win32"
+      ],
+      "dateAdded": "2022-02-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0"
+    },
+    {
+      "id": "8fdf8c4d4f7b41ea8a62fa253216de8c",
+      "appId": "ImageCom4f2a8ee8fb14V2",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Linux",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "iOS",
+        "Win32"
+      ],
+      "dateAdded": "2022-06-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1"
+    }
+  ],
+  "developer": "Hauke Thiessen",
+  "developerId": "o-uqfkg28j2fn3ludnvay3mgvyeutn37",
+  "endOfSupport": false,
+  "unsearchable": false
+}

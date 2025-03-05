@@ -1,0 +1,292 @@
+{
+  "id": "e04fdcd43d8c4fd2b4f99bbab335ab3e",
+  "title": "Blueprint SQL/ORACLE/MySQL/ODBC Database Communicator",
+  "description": "Plugin that can execute database queries for a dedicated game server",
+  "longDescription": "<p><strong>Works on Linux now! | REQUIRES FREE ODBC DRIVERS | Works on all common databases like SQL, MySql, Oracle etc... (You just have to chose the right ODBC driver)</strong></p><p><br /></p><ul><li>Executes database queries in blueprints using ODBC. ODBC is a free, old school, stable, reliable, and cross-platform way to talk to a database.</li><li>Most common database frameworks like SQL, MySql, Oracle, Azure, Amazon etc... all work with ODBC and can be queried with this plugin.</li><li>Utilizes UE4&#39;s FNonAbandonableTask to execute queries asynchronously without blocking the game thread.</li><li>Blueprint usage is VERY similar to the widely used VaRest plugin.</li></ul><p><br /></p><p><br /></p><p><strong>NEVER put a database connection string in something you&#39;ll give to a stranger. </strong>I put mine in a config file only found on my Linux game servers. This plugin is for dedicated server side logic, or local database logic only.</p><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;RRvzRxxUhcg&amp;feature&#61;youtu.be\" rel=\"nofollow\">Tutorial Video</a></p><p>Active Support: <a href=\"https://discord.gg/Sd4B2rm\" rel=\"nofollow\">https://discord.gg/Sd4B2rm</a></p><p><br /></p><p><strong>About Me</strong></p><p>I was the lead network engineer for a game studio using UE4. I&#39;ve been a full-stack developer for 10 years. I specialize in making computers talk with SQL and .Net Core. I&#39;ve built websites, email/fax/voice servers, matchmaking servers, torrent systems, and other network heavy logic. This plugin will improve overtime as I need it for my project <a href=\"https://www.thumpergames.com/world-of-pursuits\" rel=\"nofollow\">https://www.thumpergames.com/world-of-pursuits</a>.</p>",
+  "technicalDetails": "<p><strong>Features</strong></p><ul><li> Execute SQL statements within blueprints</li><li> Queries are ran asynchronously in UE4&#39;s async thread pool</li><li> Depending on query result size, hundreds of queries can execute at once without any noticeable lag on the game thread</li></ul><p><br /></p><p><strong>Code Modules</strong></p><ul><li> Core</li><li> CoreUObject</li><li> Engine</li></ul><p><br /></p><p><strong>How to create and execute a query in blueprints </strong>(See Blueprint Screenshot)</p><ol><li>Construct a Query UObject</li><li>Promote the constructed Query UObject to a variable</li><li>Bind the OnQueryFinished event</li><li>Add a DatabaseRowModel struct variable. The DatabaseRowModel should contain the array of DatabaseColumnModels which contains the column name and variable type definitions. The StringBufferSize is only needed for string columns</li><li>Call ExecuteQueryAsync on the DatabaseQuery object</li><li>A DatabaseQueryResult should be returned populated with results</li><li>You can GetValueAsString on a result column or cast it to it&#39;s variable type column to avoid converting it to a string</li></ol><p><br /></p><p><strong>Behind the scenes:</strong></p><ol><li>ExecuteQueryAsync is called</li><li>DatabaseQueryResult UObject is created on the game thread</li><li>FNonAbandonableTask is created and begins to run async</li><li>Inside of the async thread a connection is created to the SQL database</li><li>QueryResultRowStructs are created for each result row and populated by ODBC SQLFetch()</li><li>The FNonAbandonableTask returns the populated QueryResultStruct to the game thread and destroys</li><li>The game thread converts the QueryResultStruct to the UDatabaseQueryResult created in step 2</li><li>The blueprint friendly OnQueryFinished is broadcast with the populated UDatabaseQueryResult</li></ol>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DatabaseCommunicatorBlueprints-1920x1080-9628f751fc385c16b0021b6b7e36ba32.PNG",
+      "md5": "9628f751fc385c16b0021b6b7e36ba32",
+      "width": 1920,
+      "height": 1080,
+      "size": 625461,
+      "uploadedDate": "2018-09-28T03:41:19.567Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DatabaseCommunicatorBlueprints2-1920x1080-f7080478671f596202a3edbcc0f2ba5f.PNG",
+      "md5": "f7080478671f596202a3edbcc0f2ba5f",
+      "width": 1920,
+      "height": 1080,
+      "size": 999213,
+      "uploadedDate": "2018-09-28T03:41:19.895Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DatabaseRowModel-1920x1080-7f2d366d0aac2de98a803f70edfc4ee2.PNG",
+      "md5": "7f2d366d0aac2de98a803f70edfc4ee2",
+      "width": 1920,
+      "height": 1080,
+      "size": 98449,
+      "uploadedDate": "2018-09-28T03:41:19.270Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DatabaseCommunicatorFiles-1920x1080-0a6af7a2c191f1e124c89cce96bf3921.PNG",
+      "md5": "0a6af7a2c191f1e124c89cce96bf3921",
+      "width": 1920,
+      "height": 1080,
+      "size": 593387,
+      "uploadedDate": "2018-09-28T03:41:20.182Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DatabaseCommunicatorODBCRequirement-1920x1080-6814c8504ad14dd34c92ac717be1006f.PNG",
+      "md5": "6814c8504ad14dd34c92ac717be1006f",
+      "width": 1920,
+      "height": 1080,
+      "size": 462986,
+      "uploadedDate": "2018-09-28T03:41:20.449Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BlueprintSQLORACLEMySQLODBCDatabaseCommunicator_thumb-284x284-a4aa2a71cebfe479fa5c6325053f6f17.png",
+      "md5": "a4aa2a71cebfe479fa5c6325053f6f17",
+      "width": 284,
+      "height": 284,
+      "size": 74107,
+      "uploadedDate": "2020-08-07T05:21:31.228Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SQLDatabaseCommunicator_featured-894x488-3c6ce747f259d7aea1174754cf13d20c.png",
+      "md5": "3c6ce747f259d7aea1174754cf13d20c",
+      "width": 894,
+      "height": 488,
+      "size": 192310,
+      "uploadedDate": "2018-10-26T15:18:33.593Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DatabaseRowModel-1920x1080-7f2d366d0aac2de98a803f70edfc4ee2_Snapshot.PNG",
+      "md5": "18c7a9c5b7ae442cf02216da7fb48722",
+      "width": 150,
+      "height": 74,
+      "size": 2557,
+      "uploadedDate": "2018-09-28T03:41:19.445Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DatabaseCommunicatorBlueprints-1920x1080-9628f751fc385c16b0021b6b7e36ba32_Snapshot.PNG",
+      "md5": "55d25e7c1f0e3be6438efc7696b8b82f",
+      "width": 150,
+      "height": 74,
+      "size": 7096,
+      "uploadedDate": "2018-09-28T03:41:19.749Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DatabaseCommunicatorBlueprints2-1920x1080-f7080478671f596202a3edbcc0f2ba5f_Snapshot.PNG",
+      "md5": "9acf7c96e52e90ab86ba22739be0882d",
+      "width": 150,
+      "height": 74,
+      "size": 9165,
+      "uploadedDate": "2018-09-28T03:41:20.075Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DatabaseCommunicatorFiles-1920x1080-0a6af7a2c191f1e124c89cce96bf3921_Snapshot.PNG",
+      "md5": "5167441b419a114440b1a399a537d307",
+      "width": 150,
+      "height": 74,
+      "size": 5098,
+      "uploadedDate": "2018-09-28T03:41:20.337Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DatabaseCommunicatorODBCRequirement-1920x1080-6814c8504ad14dd34c92ac717be1006f_Snapshot.PNG",
+      "md5": "359dfe61adb22a981949983ad7fb5f5f",
+      "width": 150,
+      "height": 74,
+      "size": 5884,
+      "uploadedDate": "2018-09-28T03:41:20.621Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-10-26T15:18:34.682Z",
+  "lastModifiedDate": "2025-01-12T01:22:57.549Z",
+  "customAttributes": {},
+  "entitlementName": "e04fdcd43d8c4fd2b4f99bbab335ab3e",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "9ad7b07808f14a41af0fa9efb500a9b9",
+      "appId": "DatabaseCommunicator_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-04-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DatabaseCommunicator 1.1.22"
+    },
+    {
+      "id": "017be96120e747a7bef21e723913591d",
+      "appId": "DatabaseCommunicator_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-11-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DatabaseCommunicator 1.23.1"
+    },
+    {
+      "id": "ee69804692044326bf72cf9e363d176a",
+      "appId": "DatabaseCommunicator_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-01-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DatabaseCommunicator 1.24.1"
+    },
+    {
+      "id": "422291e526d049dbb9512e51a0d6db74",
+      "appId": "DatabaseCommunicator_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2020-08-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DatabaseCommunicator  1.25"
+    },
+    {
+      "id": "45b556aa38874a12be3625a70ec9093b",
+      "appId": "DatabaseCommunicator_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2021-01-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DatabaseCommunicator 1.26"
+    },
+    {
+      "id": "6c490736a9fc468aa2844f581e90d74e",
+      "appId": "DatabaseCommunicator_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2021-10-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DatabaseCommunicator 1.27"
+    },
+    {
+      "id": "412e7358fd1849f98bd51facd6dacc21",
+      "appId": "DatabaseCommunicator_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-05-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DatabaseCommunicator 5"
+    },
+    {
+      "id": "a3111720b1bb49e7b9d935dc441c6a1f",
+      "appId": "DatabaseCommunicator_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-12-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DatabaseCommunicator 5.1"
+    },
+    {
+      "id": "1eebdcee76744487a31efdc12cbf7532",
+      "appId": "DatabaseCommunicator_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-06-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DatabaseCommunicator 5.2"
+    },
+    {
+      "id": "616c8ed1507d45b2bbbfb1ff5d6af379",
+      "appId": "DatabaseCommunicator_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-11-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DatabaseCommunicator 5.3"
+    },
+    {
+      "id": "b334efcf09f74609ad39a27a3bcdfb87",
+      "appId": "DatabaseCommunicator_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DatabaseCommunicator 5.4"
+    }
+  ],
+  "developer": "John Poole",
+  "developerId": "o-qap7c6u7ara43u2jmngkd7tya9vc3g",
+  "endOfSupport": false,
+  "unsearchable": false
+}

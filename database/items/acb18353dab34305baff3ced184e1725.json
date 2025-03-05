@@ -1,0 +1,372 @@
+{
+  "id": "acb18353dab34305baff3ced184e1725",
+  "title": "Bolt Inventory System",
+  "description": "Advanced inventory system: includes grid inventories, equipment, cosmetics, and crafting.",
+  "longDescription": "<p>An advanced inventory system with support for many common inventory types.</p><h2>Inventory Types</h2><ul><li>Simple: Items always collide with a single slot.</li><li>Grid-Based: Items can collide with multiple slots.</li><li>Equipment: Items can be equipped and unequipped.</li><li>Socket: An item that is also an inventory. Other items may be deposited into its sockets.</li><li>World Item: Represents an item as an actor. Can be picked up or dropped to the world from inventories.</li></ul><h2>Crafting</h2><p>Craft items using data-driven item recipes. Crafting may be instant or over time.</p><h2>Cosmetics</h2><p>Apply network-replicated cosmetics to actors when they equip items. Cosmetics include meshes, particles, or child actors.</p><h2>Player Feedback</h2><p>Give feedback to players when they interact with inventories. Bolt uses a simple error system based on enums; you may display error messages, play sounds, etc. when a player&#39;s request fails.</p><h2>Network Replication</h2><p>Bolt&#39;s systems are fully network replicated. Additionally, player manipulation of inventories includes <strong>client-side prediction</strong>, greatly improving the feel of interacting with inventories. Client-side prediction can even be enabled for server-owned actors like shared chests.</p><h2>Save and Load</h2><p>Inventories and crafting can be saved and loaded seamlessly. All Bolt objects that can be saved/loaded implement a single interface, making integration with other save systems easy.</p><h2>Blueprint Accessible</h2><p>All of Bolt&#39;s major features are accessible with Blueprints or C&#43;&#43;.</p><h2>Gameplay Ability System</h2><p>Bolt integrates with Unreal&#39;s Gameplay Ability System:</p><ul><li>Grant and activate abilities from items.</li><li>Modify gameplay attributes when items are equipped.</li><li>Use gameplay abilities for player requested manipulation of inventories.</li><li>While integration is included, it&#39;s not required. Bolt&#39;s other features will all work with the gameplay ability system disabled.</li></ul>",
+  "technicalDetails": "<h2>Features:</h2><ul><li>Grid-based Inventories</li><li>Equipment Inventories</li><li>Socketable Items</li><li>Item Actors</li><li>Crafting</li><li>Cosmetics</li><li>Player Feedback</li><li>Save and Load</li><li>Integration with GAS</li><li>Replicated with Client-Side Prediction</li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Code Modules:</h2><ul><li>BoltCore (Runtime)</li><li>BoltCosmetics (Runtime)</li><li>BoltCommon (Runtime)</li><li>BoltGAS (Runtime)</li><li>BoltEditor (Editor)</li><li>MiraganicErrorHandling (Runtime)</li><li>MiraganicErrorHandlingEditor (Editor)</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 33</p><p>Network Replicated: <strong>Yes</strong> (Also includes client-side prediction)</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation: <a href=\"https://miraganicstudios.github.io/BoltDocs/\" rel=\"nofollow\">https://miraganicstudios.github.io/BoltDocs/</a></p><p>Example Projects (Requires Plugin): <a href=\"https://drive.google.com/drive/folders/1cf6pz_mgK6QoNGMDDTwDyjRRBVOdxoKO?usp&#61;drive_link\" rel=\"nofollow\">https://drive.google.com/drive/folders/1cf6pz_mgK6QoNGMDDTwDyjRRBVOdxoKO?usp&#61;drive_link</a></p><p>Important Additional Notes: Example map and gallery images include icons from <a href=\"https://opengameart.org/content/flare-weapon-icons-2\" rel=\"nofollow\">https://opengameart.org/content/flare-weapon-icons-2</a>.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallerygridinventory-1920x1080-7ebec7cb5be5305a3e6baee1b54ea3a3.png",
+      "md5": "7ebec7cb5be5305a3e6baee1b54ea3a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 891123,
+      "uploadedDate": "2023-08-29T23:57:08.363Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallerysimpleinventory-1920x1080-6935783e859edc887ab1f941e8179f12.png",
+      "md5": "6935783e859edc887ab1f941e8179f12",
+      "width": 1920,
+      "height": 1080,
+      "size": 807676,
+      "uploadedDate": "2023-08-29T23:57:07.306Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallerycrafting-1920x1080-6fdc6a7214dddc481eb466587c2cb0c2.png",
+      "md5": "6fdc6a7214dddc481eb466587c2cb0c2",
+      "width": 1920,
+      "height": 1080,
+      "size": 845216,
+      "uploadedDate": "2023-08-29T23:57:07.821Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallerycosmetics-1920x1080-61cbdf2ab6bf36a0663eccc1749ea5e3.png",
+      "md5": "61cbdf2ab6bf36a0663eccc1749ea5e3",
+      "width": 1920,
+      "height": 1080,
+      "size": 1332455,
+      "uploadedDate": "2023-08-11T20:35:53.016Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/galleryblueprints-1920x1080-d1af7506b1c04965ebde61437a092d2d.png",
+      "md5": "d1af7506b1c04965ebde61437a092d2d",
+      "width": 1920,
+      "height": 1080,
+      "size": 236528,
+      "uploadedDate": "2023-08-09T20:04:56.510Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallerysocketitems-1920x1080-6ce23c2f1d111fa4ca4d3bd266b00fa6.png",
+      "md5": "6ce23c2f1d111fa4ca4d3bd266b00fa6",
+      "width": 1920,
+      "height": 1080,
+      "size": 839959,
+      "uploadedDate": "2023-08-11T20:35:54.678Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/galleryitemactors-1920x1080-23136dfe7d73dd23b5fcb8ae9295ee16.png",
+      "md5": "23136dfe7d73dd23b5fcb8ae9295ee16",
+      "width": 1920,
+      "height": 1080,
+      "size": 1696090,
+      "uploadedDate": "2023-08-09T20:04:59.422Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/galleryusableitems-1920x1080-e001b613c4a5436d14f14d4d08e9a96a.png",
+      "md5": "e001b613c4a5436d14f14d4d08e9a96a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1475248,
+      "uploadedDate": "2023-08-11T20:35:53.456Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/galleryfeedback-1920x1080-2b0ac498ba77079cb760713aa5ef9a3f.png",
+      "md5": "2b0ac498ba77079cb760713aa5ef9a3f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1169911,
+      "uploadedDate": "2023-08-11T20:35:53.862Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/galleryproceduralitems-1920x1080-9afd709763cd0045f87552e8be574d47.png",
+      "md5": "9afd709763cd0045f87552e8be574d47",
+      "width": 1920,
+      "height": 1080,
+      "size": 835045,
+      "uploadedDate": "2023-08-11T20:35:54.272Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BoltInventorySystem_thumb-284x284-ec362fbb5fd37ad1bd334e9015cc586c.png",
+      "md5": "ec362fbb5fd37ad1bd334e9015cc586c",
+      "width": 284,
+      "height": 284,
+      "size": 86028,
+      "uploadedDate": "2023-08-09T20:05:01.760Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/BoltInventorySystem_featured-894x488-c50cbdbb1ed08da3980b747dbe32338a.png",
+      "md5": "c50cbdbb1ed08da3980b747dbe32338a",
+      "width": 894,
+      "height": 488,
+      "size": 407995,
+      "uploadedDate": "2023-08-29T23:57:08.756Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerysimpleinventory-1920x1080-6935783e859edc887ab1f941e8179f12_Snapshot.png",
+      "md5": "3a7de4c3640f6c56eea0fff80e126f01",
+      "width": 150,
+      "height": 74,
+      "size": 4610,
+      "uploadedDate": "2023-08-29T23:57:07.648Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerycrafting-1920x1080-6fdc6a7214dddc481eb466587c2cb0c2_Snapshot.png",
+      "md5": "df38b20d07fdaa10af0528780d4a441c",
+      "width": 150,
+      "height": 74,
+      "size": 4737,
+      "uploadedDate": "2023-08-29T23:57:08.172Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerygridinventory-1920x1080-7ebec7cb5be5305a3e6baee1b54ea3a3_Snapshot.png",
+      "md5": "5d4f6c0bb3075f4c1508968644dadf83",
+      "width": 150,
+      "height": 74,
+      "size": 5219,
+      "uploadedDate": "2023-08-29T23:57:08.699Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerygridinventory-1920x1080-8f2767a096af9ffdf61b0c9bbf605eab_Snapshot.png",
+      "md5": "77c7d80f090a248a3f44c318c45a7122",
+      "width": 150,
+      "height": 74,
+      "size": 4871,
+      "uploadedDate": "2023-08-11T20:35:52.013Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerysimpleinventory-1920x1080-03d18ae9964907ba8e711e7b7dbaad37_Snapshot.png",
+      "md5": "498b7dc3804482047f576342fb56fb1c",
+      "width": 150,
+      "height": 74,
+      "size": 4532,
+      "uploadedDate": "2023-08-11T20:35:52.468Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerycrafting-1920x1080-3f14f80a40d4b70649e1fb0ad8d1b996_Snapshot.png",
+      "md5": "c1647ab98b9064c27bf61d88aaf077a4",
+      "width": 150,
+      "height": 74,
+      "size": 5271,
+      "uploadedDate": "2023-08-11T20:35:52.906Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerycosmetics-1920x1080-61cbdf2ab6bf36a0663eccc1749ea5e3_Snapshot.png",
+      "md5": "8a4995100d1378c704be836579963b51",
+      "width": 150,
+      "height": 74,
+      "size": 3928,
+      "uploadedDate": "2023-08-11T20:35:53.267Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryusableitems-1920x1080-e001b613c4a5436d14f14d4d08e9a96a_Snapshot.png",
+      "md5": "5c5db3b4bfd41b2f4c916207e79298de",
+      "width": 150,
+      "height": 74,
+      "size": 5457,
+      "uploadedDate": "2023-08-11T20:35:53.676Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryfeedback-1920x1080-2b0ac498ba77079cb760713aa5ef9a3f_Snapshot.png",
+      "md5": "6a29fe637293d446cba3313ae0ef1b53",
+      "width": 150,
+      "height": 74,
+      "size": 4042,
+      "uploadedDate": "2023-08-11T20:35:54.092Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryproceduralitems-1920x1080-9afd709763cd0045f87552e8be574d47_Snapshot.png",
+      "md5": "3c48dd6ed4b0f4da26a65ac104a4162e",
+      "width": 150,
+      "height": 74,
+      "size": 5233,
+      "uploadedDate": "2023-08-11T20:35:54.510Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerysocketitems-1920x1080-6ce23c2f1d111fa4ca4d3bd266b00fa6_Snapshot.png",
+      "md5": "1f2666d1eba79611deb551060d417312",
+      "width": 150,
+      "height": 74,
+      "size": 5397,
+      "uploadedDate": "2023-08-11T20:35:54.935Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryblueprints-1920x1080-d1af7506b1c04965ebde61437a092d2d_Snapshot.png",
+      "md5": "610022c5445678fbfc3b4c5727ae193d",
+      "width": 150,
+      "height": 74,
+      "size": 4582,
+      "uploadedDate": "2023-08-09T20:04:56.790Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerycosmetics-1920x1080-1f0b79c88d736383e74fb9a7b2387dd1_Snapshot.png",
+      "md5": "9247419e21aecd65b96783b31c433256",
+      "width": 150,
+      "height": 74,
+      "size": 3992,
+      "uploadedDate": "2023-08-09T20:04:57.441Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerycrafting-1920x1080-400e7edad10859026ccd251b50d46621_Snapshot.png",
+      "md5": "acf94cf5db1bc65d7c839106dffc60c4",
+      "width": 150,
+      "height": 74,
+      "size": 5591,
+      "uploadedDate": "2023-08-09T20:04:58.065Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryfeedback-1920x1080-4626c05bc3740e7b5f5a6c4a9da50161_Snapshot.png",
+      "md5": "f10841bb1a9f854b98550893aabadcb2",
+      "width": 150,
+      "height": 74,
+      "size": 5712,
+      "uploadedDate": "2023-08-09T20:04:58.608Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerygridinventory-1920x1080-67cff9bc35a457d7515d3bb18ad62f68_Snapshot.png",
+      "md5": "22f85cb7bc95d5269053103c82a4a45c",
+      "width": 150,
+      "height": 74,
+      "size": 5741,
+      "uploadedDate": "2023-08-09T20:04:59.229Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryitemactors-1920x1080-23136dfe7d73dd23b5fcb8ae9295ee16_Snapshot.png",
+      "md5": "f30c9f38f4a652ff3656601457ff38e2",
+      "width": 150,
+      "height": 74,
+      "size": 5350,
+      "uploadedDate": "2023-08-09T20:04:59.789Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryproceduralitems-1920x1080-1ea6c4db682316ccb9f2f99832158979_Snapshot.png",
+      "md5": "e0cfdb8ca22bf94e60d65be7dbc36b34",
+      "width": 150,
+      "height": 74,
+      "size": 5189,
+      "uploadedDate": "2023-08-09T20:05:00.339Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallerysocketitems-1920x1080-2376ef7bbc4e07729327766c20ac080f_Snapshot.png",
+      "md5": "afb6564ec0dd55f4f8e11d01c07272ca",
+      "width": 150,
+      "height": 74,
+      "size": 5588,
+      "uploadedDate": "2023-08-09T20:05:00.927Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryusableitems-1920x1080-fbcac8b0519c8ec07abab0743a924fc6_Snapshot.png",
+      "md5": "2e44174569bb4ea031be3b01850afe81",
+      "width": 150,
+      "height": 74,
+      "size": 5450,
+      "uploadedDate": "2023-08-09T20:05:01.529Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-09-05T17:27:24.897Z",
+  "lastModifiedDate": "2024-11-16T15:36:24.905Z",
+  "customAttributes": {},
+  "entitlementName": "acb18353dab34305baff3ced184e1725",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "8bba6e8d9e064a8a860a7d854db497dd",
+      "appId": "Bolt_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-08-09T00:00:00.000Z",
+      "releaseNote": "UE5.1",
+      "versionTitle": "0.1.1-UE5.1"
+    },
+    {
+      "id": "fbb8d46a98dd49bc81141344c8fb572b",
+      "appId": "Bolt_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-08-09T00:00:00.000Z",
+      "releaseNote": "UE5.2",
+      "versionTitle": "0.1.2-UE5.2"
+    },
+    {
+      "id": "777eb1c7d6fc44849a324784e5bb2fd1",
+      "appId": "Bolt_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "UE5.3",
+      "versionTitle": "0.2.0-UE5.3"
+    },
+    {
+      "id": "d50f5e12ccd44e4daae6367f14c0887d",
+      "appId": "Bolt_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-01T00:00:00.000Z",
+      "releaseNote": "UE5.4",
+      "versionTitle": "0.2.0-UE5.4"
+    }
+  ],
+  "developer": "Miraganic Studios",
+  "developerId": "o-spewaeprrsauphkjrqq5gahfj89w8b",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

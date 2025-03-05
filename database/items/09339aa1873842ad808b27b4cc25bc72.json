@@ -1,0 +1,284 @@
+{
+  "id": "09339aa1873842ad808b27b4cc25bc72",
+  "title": "Combo System",
+  "description": "Custom graph editor to create trees of combos and an actor component to utilize them during runtime",
+  "longDescription": "<p>This plugin is an editor tool to help designers create a tree-like data structure for any fighting game where the player needs to string together a chain of combinations. It uses Blueprint and a custom GUI to make development easy but runs in C&#43;&#43; to increase performance.</p><p>The plugin adds a new ComboTree asset type under the miscellaneous tag that opens with a graph interface. From this graph you can create a tree of combo nodes, each of which contain a set of properties, such as name or multiplier. At each of these nodes you can branch down different combo paths. The path options available to you depend on a UEnum defined in code, which is the only coding required by this plugin. Say you have a UEnum with the fields ‘A’, ‘B’, and ‘C’, then at each node you can select the path to take given ‘A’, given ‘B’, and given ‘C’.</p><p>The second part to this plugin is an Actor Component called ComboSystem. This component holds a reference to a ComboTree and utilizes it during runtime. ComboSystem initially points to the root node of a tree and advances through it using a Blueprint-Callable function AdvanceToNextCombo. This function takes a UEnum of the same type that was used for the path options in the tree. During runtime when you want to advance your actor down the path associated with ‘B’ in the graph editor, you call the Blueprint function using the same ‘B’.</p><p>There are additional features that allow you to conditionally block advances. For example, ComboSystem runs a timer to allow the user to block input during the startup and ending frames of a combo. There are also Blueprint functions for accessing all the properties of a current node. These and a full explanation of the Combo System are included in the pdf documentation.</p>",
+  "technicalDetails": "<p><br /></p><p>Features:</p><p>New Combo Tree Asset type</p><ul><li>Graph Editor to create Combo Trees</li><li>Use a UEnum to specify combo paths</li><li>Associate a name, multiplier, and launch vector with each node in the tree</li></ul><p><br /></p><p>Combo System Actor Component</p><ul><li>Blueprint-callable functions that run in C&#43;&#43;</li><li>Move an Actor through a tree of combos using Blueprint</li><li>Pull information about the current node</li><li>Conditionally block combos from advancing:</li><li>Utilize built-in timers to block combos during transitions</li><li>Require that a &#39;Hit Landed&#39; flag be met before advancing</li><li>Coordinate combo availability with a movement UEnum</li></ul><p><br /></p><p>UPDATE: In UE version 4.20 and higher,  Startup, Input, and Cooldown time periods can now be specified as time in seconds OR as a number of frames using the Frame Rate Independent mode from the Combo Tree editor.</p><p><br /></p><p>Code Modules:</p><ul><li> ComboSystemEditor, Editor</li><li> ComboSystem, Runtime</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 16</p><p>Supported Development Platforms: Win64, Win32</p><p>Supported Target Build Platforms: Win64, Win32</p><p>Video Guide: https://www.youtube.com/watch?v&#61;7_W3Yuzegt4&amp;feature&#61;youtu.be</p><p>Documentation: https://drive.google.com/open?id&#61;1MSnJ7S-_7V04srjV_7KtFEW2ho_ZgIql</p><p>Example Project: https://drive.google.com/open?id&#61;1l7EU1oz8lF8eHX3nqwonPgdr16SE65gp</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ArrowGraph-1920x1080-afb05792474fd4e5e50faffb766e75bc.png",
+      "md5": "afb05792474fd4e5e50faffb766e75bc",
+      "width": 1920,
+      "height": 1080,
+      "size": 372182,
+      "uploadedDate": "2018-06-16T02:24:31.519Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ComboFuncs-1920x1080-ad8d1e0e183e56b596b7e826bd423bda.png",
+      "md5": "ad8d1e0e183e56b596b7e826bd423bda",
+      "width": 1920,
+      "height": 1080,
+      "size": 474731,
+      "uploadedDate": "2018-06-16T02:24:31.937Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FullGraph-1920x1080-1e8572eb9b43c9953f38ea8ae9e1fa67.png",
+      "md5": "1e8572eb9b43c9953f38ea8ae9e1fa67",
+      "width": 1920,
+      "height": 1080,
+      "size": 540395,
+      "uploadedDate": "2018-06-16T02:24:32.278Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/InAction-1920x1080-3865c876c3f50cd046ea50136745b5d3.png",
+      "md5": "3865c876c3f50cd046ea50136745b5d3",
+      "width": 1920,
+      "height": 1080,
+      "size": 786398,
+      "uploadedDate": "2018-06-16T02:24:32.593Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/NodeProperties-1920x1080-a3259319f578fe0342828f0c7975bf54.png",
+      "md5": "a3259319f578fe0342828f0c7975bf54",
+      "width": 1920,
+      "height": 1080,
+      "size": 293219,
+      "uploadedDate": "2018-06-16T02:24:32.946Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Traversal-1920x1080-65b0d050bef65dd4732b6e671d33cd97.png",
+      "md5": "65b0d050bef65dd4732b6e671d33cd97",
+      "width": 1920,
+      "height": 1080,
+      "size": 332877,
+      "uploadedDate": "2018-06-16T02:24:33.228Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TreeAsset-1920x1080-f6f3d0d3b6b12a387545252d1680d490.png",
+      "md5": "f6f3d0d3b6b12a387545252d1680d490",
+      "width": 1920,
+      "height": 1080,
+      "size": 710647,
+      "uploadedDate": "2018-06-16T02:24:33.531Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TreeInBP-1920x1080-e891ee4b24860fb42fc1c06e9e873b94.png",
+      "md5": "e891ee4b24860fb42fc1c06e9e873b94",
+      "width": 1920,
+      "height": 1080,
+      "size": 517131,
+      "uploadedDate": "2018-06-16T02:24:33.858Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ComboSystem_thumb-284x284-9d15ff7155d7af57d8057895d9e5ff90.png",
+      "md5": "9d15ff7155d7af57d8057895d9e5ff90",
+      "width": 284,
+      "height": 284,
+      "size": 64500,
+      "uploadedDate": "2018-06-16T02:24:34.094Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ComboSystem_featured-894x488-47db48c81202d2abe4f302c51ce19274.png",
+      "md5": "47db48c81202d2abe4f302c51ce19274",
+      "width": 894,
+      "height": 488,
+      "size": 216367,
+      "uploadedDate": "2018-06-16T02:24:34.173Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ArrowGraph-1920x1080-afb05792474fd4e5e50faffb766e75bc_Snapshot.png",
+      "md5": "ae439b763f67faba07388d50b2ef1026",
+      "width": 150,
+      "height": 74,
+      "size": 5521,
+      "uploadedDate": "2018-06-16T02:24:31.801Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ComboFuncs-1920x1080-ad8d1e0e183e56b596b7e826bd423bda_Snapshot.png",
+      "md5": "b36aca09ba077d857c9f043267f1a066",
+      "width": 150,
+      "height": 74,
+      "size": 11667,
+      "uploadedDate": "2018-06-16T02:24:32.139Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FullGraph-1920x1080-1e8572eb9b43c9953f38ea8ae9e1fa67_Snapshot.png",
+      "md5": "4a3e55b467315fcfed240979cb23c6d8",
+      "width": 150,
+      "height": 74,
+      "size": 7830,
+      "uploadedDate": "2018-06-16T02:24:32.481Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InAction-1920x1080-3865c876c3f50cd046ea50136745b5d3_Snapshot.png",
+      "md5": "01734a99e68a90eb33857d27757fccb0",
+      "width": 150,
+      "height": 74,
+      "size": 10474,
+      "uploadedDate": "2018-06-16T02:24:32.830Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NodeProperties-1920x1080-a3259319f578fe0342828f0c7975bf54_Snapshot.png",
+      "md5": "c1d92e05786ec0ffaaa70202c6446484",
+      "width": 150,
+      "height": 74,
+      "size": 7775,
+      "uploadedDate": "2018-06-16T02:24:33.108Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Traversal-1920x1080-65b0d050bef65dd4732b6e671d33cd97_Snapshot.png",
+      "md5": "0ff202b616a7c925540a9c04c9cb46e4",
+      "width": 150,
+      "height": 74,
+      "size": 7834,
+      "uploadedDate": "2018-06-16T02:24:33.395Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TreeAsset-1920x1080-f6f3d0d3b6b12a387545252d1680d490_Snapshot.png",
+      "md5": "aacb774b425e19e1470b33308348f0ca",
+      "width": 150,
+      "height": 74,
+      "size": 9374,
+      "uploadedDate": "2018-06-16T02:24:33.730Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TreeInBP-1920x1080-e891ee4b24860fb42fc1c06e9e873b94_Snapshot.png",
+      "md5": "ed2fd280fbde95d907ef0ea306e21e68",
+      "width": 150,
+      "height": 74,
+      "size": 8960,
+      "uploadedDate": "2018-06-16T02:24:34.043Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-06-29T00:16:43.613Z",
+  "lastModifiedDate": "2024-10-15T03:52:11.440Z",
+  "entitlementName": "09339aa1873842ad808b27b4cc25bc72",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3546703400d84349b67c4ac839635848",
+      "appId": "ComboSystem_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-06-19T00:00:00.000Z",
+      "releaseNote": "1.3",
+      "versionTitle": "Combo System 4.19"
+    },
+    {
+      "id": "0079d71cea68439e8e7ffbe0764a5ab5",
+      "appId": "ComboSystem_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-09-09T00:00:00.000Z",
+      "releaseNote": "1.3",
+      "versionTitle": " Combo System 4.20"
+    },
+    {
+      "id": "9b0ae3c723fa40c89215fe0f43b935b0",
+      "appId": "ComboSystem_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-12-13T00:00:00.000Z",
+      "releaseNote": "1.3",
+      "versionTitle": "Combo System 4.21"
+    },
+    {
+      "id": "f237a69355c64cb696516a912708c884",
+      "appId": "ComboSystem_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2019-07-21T00:00:00.000Z",
+      "releaseNote": "1.3",
+      "versionTitle": "Combo System 4.22"
+    },
+    {
+      "id": "4c7f2df2a36544faa0bbacff88c780b3",
+      "appId": "ComboSystem_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-11-18T00:00:00.000Z",
+      "releaseNote": "1.3",
+      "versionTitle": "Combo System 4.23"
+    },
+    {
+      "id": "2e79503214ed4bee99770936ccddc3f3",
+      "appId": "ComboSystem_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-01-27T00:00:00.000Z",
+      "releaseNote": "1.3",
+      "versionTitle": "Combo System 4.26"
+    },
+    {
+      "id": "1ae979be327d46d98c95c3df6f7dab8c",
+      "appId": "ComboSystem_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-07-23T00:00:00.000Z",
+      "releaseNote": "1.4",
+      "versionTitle": "Combo System 5.0"
+    }
+  ],
+  "developer": "JonathanFriesen",
+  "developerId": "o-fhzvdp27p7wdx79ekru39rt2uyb48b",
+  "endOfSupport": false,
+  "unsearchable": false
+}

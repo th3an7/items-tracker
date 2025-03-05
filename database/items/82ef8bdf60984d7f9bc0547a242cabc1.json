@@ -1,0 +1,561 @@
+{
+  "id": "82ef8bdf60984d7f9bc0547a242cabc1",
+  "title": "SimpleController",
+  "description": "SDL Framework (desktop) based Plugin to use as many controllers as possible in Unreal.",
+  "longDescription": "<p>This plugin is based on the <a href=\"https://www.libsdl.org/\" rel=\"nofollow\">SDL Framework</a> (on desktop platforms) and allows the use of much more controllers under Unreal. It supports DirectInput, XInput and RawInput Controllers. It runs independently of the Unreal controller settings. Controller inputs are fired via new Events. You can use these Events in almost all Blueprints. Not only in the Player Controller Blueprint. They work independently of the Focus. Rumble is supported. Force Feedback since Version 1.5. Most PS5 DualSense functions are available. You can move the mouse cursor with a controller. Since version 3.0 simple mapping of buttons and axes possible. Keyboard and Mouse emulation. (Keyboard/Mouse) Button events can be triggered via functions. Mouse cursor can also be controlled via functions.</p><p><br /></p><p><a href=\"https://www.virtualbird.de/ue4Doku/SimpleController/\" rel=\"nofollow\">Documentation</a></p><p><strong>You can try the plugin before you buy it. </strong><a href=\"https://www.virtualbird.de/ue4Doku/SimpleController/stuff/SimpleControllerDemoWin64_UE427_2.5.zip\" rel=\"nofollow\">Windows Demo Build </a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleController/stuff/SimpleConVehicleDemoWin64_UE51_Demo2.3.zip\" rel=\"nofollow\">Windows Vehicle Demo Build</a></p><p>Unreal Project (Plugin needed) <a href=\"https://www.virtualbird.de/ue4Doku/SimpleController/stuff/SimpleControllerDemoProject_UE427_2.5.zip\" rel=\"nofollow\">4.27 and higher</a></p><p>Vehicle Demo Project (Plugin needed) <a href=\"https://www.virtualbird.de/ue4Doku/SimpleController/stuff/SimpleConVehicleDemo_424_1.1.zip\" rel=\"nofollow\">4.24 and higher</a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleController/stuff/SimpleConVehicleDemo_UE51_Demo2.3.zip\" rel=\"nofollow\">5.1 and higher</a></p><p>Local Multiplayer Demo Project (Plugin needed) <a href=\"https://www.virtualbird.de/ue4Doku/SimpleController/stuff/SimpleControllerDemoProjectLocalMultiplayer_5.1_1.0.zip\" rel=\"nofollow\">5.1 and higher</a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleController/stuff/simpleControllerPluginLocalMulitplayer2.mp4\" rel=\"nofollow\">Video</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;5bagA826lm8\" rel=\"nofollow\">Video </a>of a customer demonstrating the mapping of a steering wheel.</p><p><br /></p><p>For the Mac version since UE5.2, see Troubleshooting in the documentation.</p><p>Nativization in UE4 may cause problems and should be disabled in BPs that use this plugin.</p><p><br /></p><p><strong>For the latest plugin version for old Unreal version you have to compile the plugin yourself. See documentation.</strong> </p><p><br /></p><p><strong><u>Changelog</u> </strong>(5.2, 5.3, 5.4)</p><ul><li>(09/14/2024) Version 3.35: Android: Rumble support via Bluetooth. Tested with Android 14, but according to the API at least Android 12 is required.</li><li>(09/04/2024) Version 3.34: Bugfix. Plugin could no longer be compiled for Android.</li><li>(08/16/2024) Version 3.33: Bugfix. If you first loaded a mapping profile and then added a persistent axis event, the event did not work.</li><li>(08/10/2024) Version 3.32: Hotfix: The mapping did not work anymore in version 3.30 when using the tick event path. </li><li>(08/01/2024) Version 3.30: Events are now determined per tick by default. This increases compatibility with certain systems. Linux benefits the most. Can be switched back to thread-based events in the settings.</li><li>(07/06/2024) Version 3.23: Stability improvements.</li><li>(06/10/2024) Version 3.22: UI functions added so that a menu can be controlled via the plugin. Source code is again compatible with UE4.27. Compatibility with Android increased and the Android path starts automatically. When connecting a steering wheel, FF settings are tested and set via a short FF effect. Can be deactivated via the settings. </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(5.1, 5.2, 5.3)</p><ul><li>(02/21/2024) Version 3.20: The &#34;Fire Keyboard Button Event&#34; function has been added. This can be used, for example, to emulate the keyboard in order to control the UI via a gamepad. Android: Attach and Detach events work now. Controller Name, VendorID and ProductID are now read out. Battery is read out (Android 12). Rumble works partially. I will try to improve it. </li><li>(02/12/2024) Version 3.19: The controller inputs on Android are now read out via the Android NDK instead of Unreal. This increases compatibility and flexibility. Rumble not yet possible. Variable &#34;Tag&#34; added to the action profiles. This allows you to search for them using the &#34;getMappingActionsByTag&#34; function and thus sort them better. More gamepads now fire the &#34;DirectionalPad&#34; event. </li><li>(02/01/2024) Version 3.18: Mouse mapping bug fixes.</li><li>(01/30/2024) Version 3.17: Bug fixes for the functions that remove mappings. New functions &#34;mapButton&#34; and &#34;mapAxis&#34; added to perform mapping without user interaction or to overwrite a mapping. New function &#34;createMappingFile&#34; added to create a standard mapping. Many events now have the &#34;ConnectionIndex&#34; parameter. Removed function &#34;setAxisMaxRange&#34;. The &#34;setDeadZone&#34; function has been extended instead. </li><li>(01/15/2024) Version 3.16: New functions: getBallValueBySDL, getHatValueBySDL, getButtonValueBySDL, getAxisValueBySDL added. Dpad (Hat) can now be mapped as button. Minor bug fixes. </li><li>(01/01/2024) Version 3.14: Added ButtonID/AxisID to the mapping function so that you can read out what the user has pressed in an already mapped action. Bugfix: Inverted mapped axis was inverted every time PIE was started. </li><li>(01/01/2024) Version 3.12: New functions added to calibrate an axis. Mainly for pedals. You can now change the settings of running Autocenter and Constant-force effects. Bugfix: Deleted mapping was saved incorrectly. </li><li>(12/26/2023) Version 3.11: Bug fixes in the Autocenter and Constant Force functions and stability improvements. </li><li>(12/13/2023) Version 3.10: New function &#34;fireMouseButtonEvent&#34; added. Changed the StructID parameter in the mapping profile so that UE no longer displays error messages. Be sure to create a new ID!</li><li>(12/13/2023) Version 3.9: Inversion of axes bug fixed. SDL update to version 2.29.0 (Windows). This should improve the recognition of steering wheel accessories. Mobile devices are now supported. This runs via Unreal and not via SDL. As a result, the range of functions is much smaller and should be understood as &#34;better than nothing&#34; at the current state. </li><li>(11/20/2023) Version 3.8: Fixed compilation errors on Linux.</li><li>(11/16/2023) Version 3.7: Added function &#34;setUnrealKeyboardAndMouseEvents&#34; so you can activate keyboard and mouse button events without using the mapping functions. A few small bug fixes.</li><li>(11/06/2023) Version 3.6: Bugifix in the setDeadZone function. Function &#34;setAxisMaxRange&#34; added.</li><li>(11/02/2023) Version 3.4: SDL settings can now be set in &#34;Project Settings -&gt; Engine -&gt; Simple Controller Plugin&#34;. SDL update to version 2.28.5 (Windows).  </li><li>(10/02/2023) Version 3.3: Automatic detection if an axis value is between 0 and 1 or between -1 and 1 removed because too error-prone. Now everybody can determine this by himself via the function &#34;addAxisCorrection&#34;. Some bug fixes.</li><li>(09/25/2023) Version 3.2: Keyboard and mouse support added*¹. New async functions for joysticks. New ForceFeedback functions (Stop, Update, Run). ForceFeedback steering wheel functions revised for higher compatibility. Deadzone function added. Other small improvements.  </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(5.0, 5.1, 5.2)</p><ul><li>(08/27/2023) Version 3.1: The initialization of the plugin within the engine will now be executed later. Stability improvements.</li><li>(08/19/2023) Version 3.0: Plugin now starts automatically. Gamepad events completely reworked. Completely new mapping functions and corresponding events added. New ForceFeedback functions for steering wheels. SDL updated. </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.27, 5.0, 5.1)</p><ul><li>(04/01/2023) Version 2.7: Raw Input enabled by default. Trigger Rumble added. Small bugfixes.</li></ul>",
+  "technicalDetails": "<p><sup>Epic only allows updates for the newest three engine versions. There might be features missing in older engine versions. Contact me if you are unsure.</sup></p><ul><li>DirectInput, XInput, RawInput</li><li>Hot Plugging</li><li>Force Feedback</li><li>Battery status</li><li>Support for more than 4 XInput Gamepads</li><li>PS5 Dualsense functions. Adaptive trigger, LED, touchpad, acceleration and gyro sensors</li><li>Keyboard and Mouse support *¹</li><li>Android and IOS *²</li><li>Designed for Blueprint Users</li><li>Works in almost all Blueprints</li><li>No problems with focus. Events are always fired (controllers on desktop)</li><li>Include C&#43;&#43; Source for C&#43;&#43; Projects</li><li><a href=\"https://www.virtualbird.de/ue4Doku/SimpleController/\" rel=\"nofollow\">Documentation</a></li><li>Support: <a href=\"mailto:unrealmarketplace&#64;virtualbird.de\" rel=\"nofollow\">unrealmarketplace&#64;virtualbird.de</a> (ENG,GER)</li></ul><p><br /></p><p><sup>*¹ </sup><sub>(Keyboard/Mouse) Events are received and can also be sent. The mouse cursor can be moved. No SDL functions are used but the Unreal functions for mouse and keyboard. Therefore you have to pay attention to the correct input mode and focus. Button mapping from the project settings will be overwritten when using the keyboard/mouse functions (only in RAM). </sub></p><p><sup>*²</sup><sub> The Android path runs via the NDK. Most functions are available. Rumble depending on the Android version. Rumble via Bluetooth requires at least Android 12 and plugin 3.35. The IOS path runs via Unreal. Untested and only basic functions like buttons and axes available. Think of it as &#34;better than nothing&#34;. </sub></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/simplecontroller1-1920x1080-927505d8191409616cd501e1a0f6e384.png",
+      "md5": "927505d8191409616cd501e1a0f6e384",
+      "width": 1920,
+      "height": 1080,
+      "size": 91568,
+      "uploadedDate": "2023-08-19T16:12:07.460Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/simplecontroller2-1920x1080-39095090602045de6c56929c6e2641c5.png",
+      "md5": "39095090602045de6c56929c6e2641c5",
+      "width": 1920,
+      "height": 1080,
+      "size": 49821,
+      "uploadedDate": "2023-08-19T16:12:07.574Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/simplecontroller3-1920x1080-a8156454e746af33860e276e5e3c0d9f.png",
+      "md5": "a8156454e746af33860e276e5e3c0d9f",
+      "width": 1920,
+      "height": 1080,
+      "size": 30226,
+      "uploadedDate": "2023-08-19T16:12:07.699Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/simplecontroller6-1920x1080-8c9749d952e3b524fe584ea9f5e12e99.png",
+      "md5": "8c9749d952e3b524fe584ea9f5e12e99",
+      "width": 1920,
+      "height": 1080,
+      "size": 37997,
+      "uploadedDate": "2023-08-19T16:12:07.356Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/demoproject2.51-1920x1080-447913d23642e0ef1c6d0f604f99965b.png",
+      "md5": "447913d23642e0ef1c6d0f604f99965b",
+      "width": 1920,
+      "height": 1080,
+      "size": 775101,
+      "uploadedDate": "2024-06-11T13:56:55.491Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/simplecontroller4-1920x1080-d464a5c69b1df0559fc6b12a2907a15e.png",
+      "md5": "d464a5c69b1df0559fc6b12a2907a15e",
+      "width": 1920,
+      "height": 1080,
+      "size": 102914,
+      "uploadedDate": "2023-08-19T16:12:07.830Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/simplecontroller5-1920x1080-d417df5671d527d6d267c65757981905.png",
+      "md5": "d417df5671d527d6d267c65757981905",
+      "width": 1920,
+      "height": 1080,
+      "size": 167088,
+      "uploadedDate": "2023-08-19T16:12:07.986Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-931cb3651609a2da3d5fcd51d6f94f07.png",
+      "md5": "931cb3651609a2da3d5fcd51d6f94f07",
+      "width": 1920,
+      "height": 1080,
+      "size": 244921,
+      "uploadedDate": "2018-11-23T15:22:57.657Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-afea44c26263bf46f321659304ecd6d1.png",
+      "md5": "afea44c26263bf46f321659304ecd6d1",
+      "width": 1920,
+      "height": 1080,
+      "size": 255022,
+      "uploadedDate": "2018-11-23T15:22:57.852Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SimpleController_thumb-284x284-8e82554f89c89f361a723dddda7f0ece.png",
+      "md5": "8e82554f89c89f361a723dddda7f0ece",
+      "width": 284,
+      "height": 284,
+      "size": 28016,
+      "uploadedDate": "2018-11-21T16:36:26.484Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SimpleController_featured-894x488-73613558c41983d387a09b597d27f7cb.png",
+      "md5": "73613558c41983d387a09b597d27f7cb",
+      "width": 894,
+      "height": 488,
+      "size": 94713,
+      "uploadedDate": "2018-11-21T16:36:26.531Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/demoproject2.51-1920x1080-447913d23642e0ef1c6d0f604f99965b_Snapshot.png",
+      "md5": "757d0256d0eeb0e59b090e00bb6760b0",
+      "width": 150,
+      "height": 74,
+      "size": 3392,
+      "uploadedDate": "2024-06-11T13:56:55.749Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/simplecontroller6-1920x1080-8c9749d952e3b524fe584ea9f5e12e99_Snapshot.png",
+      "md5": "b35fc0b32494fb784f5e849eb31ae650",
+      "width": 150,
+      "height": 74,
+      "size": 3651,
+      "uploadedDate": "2023-08-19T16:12:07.417Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/simplecontroller1-1920x1080-927505d8191409616cd501e1a0f6e384_Snapshot.png",
+      "md5": "cbe83e2b1e67418084bc70a659de9cc1",
+      "width": 150,
+      "height": 74,
+      "size": 4758,
+      "uploadedDate": "2023-08-19T16:12:07.527Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/simplecontroller2-1920x1080-39095090602045de6c56929c6e2641c5_Snapshot.png",
+      "md5": "eac19d3ce4958cb35bcd0d60e1f3c18e",
+      "width": 150,
+      "height": 74,
+      "size": 3872,
+      "uploadedDate": "2023-08-19T16:12:07.650Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/simplecontroller3-1920x1080-a8156454e746af33860e276e5e3c0d9f_Snapshot.png",
+      "md5": "3b8522aa7ff056b8e012d77f913659f0",
+      "width": 150,
+      "height": 74,
+      "size": 3036,
+      "uploadedDate": "2023-08-19T16:12:07.786Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/simplecontroller4-1920x1080-d464a5c69b1df0559fc6b12a2907a15e_Snapshot.png",
+      "md5": "de017ed5f18082c1070d55299e98d508",
+      "width": 150,
+      "height": 74,
+      "size": 3731,
+      "uploadedDate": "2023-08-19T16:12:07.911Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/simplecontroller5-1920x1080-d417df5671d527d6d267c65757981905_Snapshot.png",
+      "md5": "db56bffe6bd41f507c7af2e2c87c74bc",
+      "width": 150,
+      "height": 74,
+      "size": 3160,
+      "uploadedDate": "2023-08-19T16:12:08.057Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-76bed26946fb2d5cbb3581238b4f969e_Snapshot.png",
+      "md5": "fd08984c1deed071f9c055a5d91f6fe6",
+      "width": 150,
+      "height": 74,
+      "size": 4382,
+      "uploadedDate": "2023-01-23T13:45:13.674Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SimpleControlerDemo1.2-1920x1080-efc5da06a66bf21cbc438ac8f35f3697_Snapshot.png",
+      "md5": "227c871a80a2e1dba0ec004f54aa8100",
+      "width": 150,
+      "height": 74,
+      "size": 4964,
+      "uploadedDate": "2022-12-16T19:23:01.601Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SimpleControlerDemo1.2-1920x1080-ded693de74de59c1edaa322753a1ddff_Snapshot.png",
+      "md5": "90d6adad51a5bb76c263166e83855578",
+      "width": 150,
+      "height": 74,
+      "size": 5049,
+      "uploadedDate": "2022-12-16T19:15:51.206Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SimpleControlerDemo1.2g-1920x1080-4ec15f397d5a5fb50db793e1690d9dae2-1920x1080-fa243c9b47ed7dbca92f8bcdeb40c6a3_Snapshot.png",
+      "md5": "7b13044fdc1a973bc42ed2f0eb09c13f",
+      "width": 150,
+      "height": 74,
+      "size": 3637,
+      "uploadedDate": "2022-10-19T19:41:09.862Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SimpleControlerDemo1.2g-1920x1080-4ec15f397d5a5fb50db793e1690d9dae-1920x1080-36092ac334f1a7dc9e5a70b171540160_Snapshot.png",
+      "md5": "e830305d28e0e8f87887003f0f8f56d4",
+      "width": 150,
+      "height": 74,
+      "size": 5101,
+      "uploadedDate": "2022-10-19T19:37:19.457Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gamepad8-1920x1080-65f965b2e3a4ff3779348f8c3c0f344a_Snapshot.png",
+      "md5": "c4af3dd42d7aa22f3507f6e5101c8cd1",
+      "width": 150,
+      "height": 74,
+      "size": 4111,
+      "uploadedDate": "2021-10-06T14:00:31.420Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SimpleControlerDemo1.2g-1920x1080-4ec15f397d5a5fb50db793e1690d9dae_Snapshot.png",
+      "md5": "19e87c86d4b32c30a0c62e6c10f67363",
+      "width": 150,
+      "height": 74,
+      "size": 4983,
+      "uploadedDate": "2020-03-17T17:06:25.402Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SimpleControlerDemo1.2ffg-1920x1080-91ed15f4846755f4fb2d9ac219df95e9_Snapshot.png",
+      "md5": "a9d4aaae6b341566d377e13a4a7ff894",
+      "width": 150,
+      "height": 74,
+      "size": 4411,
+      "uploadedDate": "2020-03-17T17:06:25.859Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-bf6b3f2a2a3aaaea4b25f289788fc273_Snapshot.png",
+      "md5": "6c90ad77869f349bb6803767abc49506",
+      "width": 150,
+      "height": 74,
+      "size": 5292,
+      "uploadedDate": "2018-12-03T18:15:27.425Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SimpleControlerDemo1.1g-1920x1080-6e734f5593a505fa8dab26a12c3aa87a_Snapshot.png",
+      "md5": "10afe10b1a4578290c3f6f7a888ee5bd",
+      "width": 150,
+      "height": 74,
+      "size": 4370,
+      "uploadedDate": "2018-12-03T18:12:29.159Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-056b91cc0e08afc1c2b07aaf6cdda11c_Snapshot.png",
+      "md5": "76c6b317f3ffd93f90a66f49c544da4e",
+      "width": 150,
+      "height": 74,
+      "size": 2663,
+      "uploadedDate": "2018-11-23T15:27:33.651Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-07fe64fc57db153df6fb378de085eac7_Snapshot.png",
+      "md5": "f4ab3d1ed3433cd8392d1511fe6000d1",
+      "width": 150,
+      "height": 74,
+      "size": 5097,
+      "uploadedDate": "2018-11-23T15:22:57.532Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-931cb3651609a2da3d5fcd51d6f94f07_Snapshot.png",
+      "md5": "a092c11912ad731d6202410a0256a358",
+      "width": 150,
+      "height": 74,
+      "size": 5500,
+      "uploadedDate": "2018-11-23T15:22:57.768Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-afea44c26263bf46f321659304ecd6d1_Snapshot.png",
+      "md5": "7478e9284e1f8c9586a0202b38c16bae",
+      "width": 150,
+      "height": 74,
+      "size": 5312,
+      "uploadedDate": "2018-11-23T15:22:57.961Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-940f95c720951a50f27cbc09b489df3c_Snapshot.png",
+      "md5": "f2557935b65d4df6e72f50a314b7d4f8",
+      "width": 150,
+      "height": 74,
+      "size": 4487,
+      "uploadedDate": "2018-11-23T15:22:58.151Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gamepadLogo-1920x1080-d559156bfb968f9a0519c71697f52f41_Snapshot.png",
+      "md5": "f924a404b133d5f3d08ecf9c611c80c8",
+      "width": 150,
+      "height": 74,
+      "size": 4891,
+      "uploadedDate": "2018-11-21T16:35:49.055Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wip-1920x1080-7385a23ef3b49dd2b8c0fb228c986518_Snapshot.png",
+      "md5": "347ea7ec8df0566743361e23132b337f",
+      "width": 150,
+      "height": 74,
+      "size": 1193,
+      "uploadedDate": "2018-11-21T14:12:41.380Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-11-26T13:51:00.301Z",
+  "lastModifiedDate": "2025-03-03T08:30:03.591Z",
+  "customAttributes": {},
+  "entitlementName": "82ef8bdf60984d7f9bc0547a242cabc1",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "4204da88b486422a9d723d931f782755",
+      "appId": "SimpleController_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-11-27T00:00:00.000Z",
+      "releaseNote": "Mapping added.",
+      "versionTitle": "SimpleController11419"
+    },
+    {
+      "id": "c989986a66fb40568260445b13ef4500",
+      "appId": "SimpleController_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-27T00:00:00.000Z",
+      "releaseNote": "Mapping added.",
+      "versionTitle": "SimpleController11420"
+    },
+    {
+      "id": "34502a2b191b40f5962c1f1adf0fec01",
+      "appId": "SimpleController_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-21T00:00:00.000Z",
+      "releaseNote": "Mapping added.",
+      "versionTitle": "SimpleController11421"
+    },
+    {
+      "id": "f5010383087046ea8551141a637efeae",
+      "appId": "SimpleController_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleController15422"
+    },
+    {
+      "id": "8c2faca212dd4932b64d8499ff5fae14",
+      "appId": "SimpleController_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2019-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleController17423"
+    },
+    {
+      "id": "6291b7e2bb2a4a13bd7b2505e5ede080",
+      "appId": "SimpleController_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-12-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleController19424"
+    },
+    {
+      "id": "75f430b5952e4bdcb468835cf34566db",
+      "appId": "SimpleController_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2020-05-06T00:00:00.000Z",
+      "releaseNote": "Linux and mac?",
+      "versionTitle": "SimpleController20425de"
+    },
+    {
+      "id": "bcdf46d0a4014932a7ed677bdd8e29c4",
+      "appId": "SimpleController_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleController_24_426"
+    },
+    {
+      "id": "f9d9695785d94ba99efe48b9fc80dcc5",
+      "appId": "SimpleController_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleController_27_427"
+    },
+    {
+      "id": "ca32418626114f5ea47b8596bec4c7ee",
+      "appId": "SimpleController_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Controller_32_500"
+    },
+    {
+      "id": "45831c6cd80b4a7da8df7bf2805ae185",
+      "appId": "SimpleController_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Windows",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2022-11-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Controller_321_510"
+    },
+    {
+      "id": "0b9e06f8bff241a99c31ef4ba8b5cb3a",
+      "appId": "SimpleController_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2023-05-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Controller_335_520"
+    },
+    {
+      "id": "f72ac5d02d1541e0949e8fa535ecd4ab",
+      "appId": "SimpleController_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2023-09-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Controller_335_530"
+    },
+    {
+      "id": "411c860c0a1b4441a401f97064af0f70",
+      "appId": "SimpleController_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Controller_335_540"
+    }
+  ],
+  "developer": "Virtualbird UG",
+  "developerId": "o-5bc5ba8cdd4200a6e086d8c602bbf7",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

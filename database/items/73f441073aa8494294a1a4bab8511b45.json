@@ -1,0 +1,187 @@
+{
+  "id": "73f441073aa8494294a1a4bab8511b45",
+  "title": "Seamless Transition Camera",
+  "description": "This plugin provides a camera class that blends between cinematics and gameplay seamlessly",
+  "longDescription": "<p>This plugin provides a camera class that blends between a gameplay-driven camera and two data-driven tracks*. Please note that this plugin provides a camera type called &#34;ExtendedCamera&#34; rather than something based on the title.</p><p><br /></p><p><br /></p><h2>2024-10 Update</h2><p>This plugin is now available for free and is mirrored at <a href=\"https://github.com/CasperTheCat/UnrealExtendedCamera\" rel=\"nofollow\">CasperTheCat/UnrealExtendedCamera: Extended Camera System</a>.</p><p><br /></p><p><br /></p><h2>UE5 and Sequencer</h2><p><em>An update regarding Sequencer and UE5. </em></p><p>At least as of UE5.0, Sequencer can now blend into and out of the camera tracks by right-clicking on the Camera Cuts track in a shot and checking &#34;Can Blend&#34;. You can then drag from the start or end of a cut to ease it.</p><p>The City Sample project showcases this camera blend in the intro sequence. If Cinematic to Gameplay transitions are all you want, Sequencer now provides it out-of-the-box.</p><p><br /></p><p>As such, this plugin now adds features beyond just blending between tracks.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>What does this plugin add?</h2><p>Older versions duplicated some of the above sequencer functionality, but with a native sequencer-first approach that has Epic&#39;s support, I&#39;d lean into using that when it suffices.</p><p>What the sequencer approach can&#39;t currently do, however, is blend between multiple gameplay cameras. In moment-to-moment gameplay, the camera is driven by its position, such as by a spring arm component. The two data tracks can be programmatically fed data, such as a head position and rotation, or track another camera actor, such as a cinematic camera or a virtual bone.</p><p><br /></p><p>This plugin now supports locators and aims, and skeletal locators and aims. These can be used to track actors as they move through a scene. The skeletal variants allow for tracking the bone locations of skeletal meshes and can be useful when driven by virtual bones to bake camera animation directly into a gameplay animation. It also supports using a spherical blend to avoid situations where a linear interpolate would intersect the camera component&#39;s owner.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Example Uses</h2><ul><li>In our project, the first data track (True First-Person) is driven from an animation instance, and we use the second track to blend into animations that hide the First- to Third-Person transitions, and vice-versa.</li><li>One may want to have flashy animations that are highlighted by the camera, and camera movement can be baked into said animation using locators and aims. This combining of camera and character animation may be useful when authoring these animations.</li></ul><p><br /></p><p>An short example of what this plugin provides is available at: <a href=\"https://youtu.be/-oq6YqWFWlQ\" rel=\"nofollow\">https://youtu.be/-oq6YqWFWlQ</a></p><p><br /></p><p>* The tracks have different priorities, so the primary track is first blended with the logical position of the camera, then the secondary track is blended with the result of that blend. This is for first-third person transition support in cinematics. If the cinematic camera is selected to write into the secondary track and is fully blended, it will hide the modification of the primary track blend amount until the cinematic blends back out to it.</p>",
+  "technicalDetails": "<p>Features: (Please include a full, comprehensive list of the features of the product)</p><ul><li>Blended transition from cinematic to gameplay</li><li>Blended transition between primary and secondary data channels</li><li>Blueprint bindings for all necessary functions</li><li>Drivable in Sequencer</li><li>Locator and Aim tracking</li><li>Skeletal Locators and Aims</li><li>Dolly Zoom</li><li>Custom Line Of Sight handling</li><li>Overridable in Blueprint or C&#43;&#43;</li><li>Smoothed Return on a broken line of sight</li></ul><p>Code Modules:</p><ul><li> ExtendedCamera [Runtime]</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 1</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64, Linux</p><p>Supported Target Build Platforms: Win64, Linux</p><p>Documentation: <a href=\"https://acinonyx.nz/documentation-extendedcamera/\" rel=\"nofollow\">https://acinonyx.nz/documentation-extendedcamera/</a></p><p>Example Project: <a href=\"https://drive.google.com/file/d/1AI9gP2HP6fD3bFHcPf2_iHbTvKYLo2Tp/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/1AI9gP2HP6fD3bFHcPf2_iHbTvKYLo2Tp/view?usp&#61;sharing</a></p><p>Important/Additional Notes: This plugin only lists and has official support for Win64 and Linux at present, though it depends only on Unreal, and may build on other platforms.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2022-04-10 201755-1920x1080-ce1b933b873d45b9f23b1b32eb91d865.png",
+      "md5": "ce1b933b873d45b9f23b1b32eb91d865",
+      "width": 1920,
+      "height": 1080,
+      "size": 831291,
+      "uploadedDate": "2022-04-10T08:34:21.713Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ExtendedCameraDemo - Unreal Editor 2022-04-10 23-34-48Moment2-1920x1080-848e387ce3302cce08397d327e0d769e.png",
+      "md5": "848e387ce3302cce08397d327e0d769e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1034885,
+      "uploadedDate": "2022-04-16T02:58:36.271Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ExtendedCameraDemo - Unreal Editor 2022-04-10 23-34-48Moment-1920x1080-02658fd5b405afb663bdb97ea72af4b3.png",
+      "md5": "02658fd5b405afb663bdb97ea72af4b3",
+      "width": 1920,
+      "height": 1080,
+      "size": 1527595,
+      "uploadedDate": "2022-04-16T02:58:36.901Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SeamlessTransitionCamera_thumb-284x284-98ae752b2c383563c223f799de88049a.png",
+      "md5": "98ae752b2c383563c223f799de88049a",
+      "width": 284,
+      "height": 284,
+      "size": 99002,
+      "uploadedDate": "2022-04-10T08:34:22.148Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SeamlessTransitionCamera_featured-894x488-85665be807896da0aeb447b87d690599.png",
+      "md5": "85665be807896da0aeb447b87d690599",
+      "width": 894,
+      "height": 488,
+      "size": 416128,
+      "uploadedDate": "2022-04-10T08:34:22.243Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ExtendedCameraDemo - Unreal Editor 2022-04-10 23-34-48Moment2-1920x1080-848e387ce3302cce08397d327e0d769e_Snapshot.png",
+      "md5": "1da8e3874d1cd883b9ea35ee00f57d93",
+      "width": 150,
+      "height": 74,
+      "size": 4921,
+      "uploadedDate": "2022-04-16T02:58:36.644Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ExtendedCameraDemo - Unreal Editor 2022-04-10 23-34-48Moment-1920x1080-02658fd5b405afb663bdb97ea72af4b3_Snapshot.png",
+      "md5": "5818c0826434314f33b6fc6f4bfd17b0",
+      "width": 150,
+      "height": 74,
+      "size": 6477,
+      "uploadedDate": "2022-04-16T02:58:37.330Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2022-04-10 201755-1920x1080-ce1b933b873d45b9f23b1b32eb91d865_Snapshot.png",
+      "md5": "b3de9d4329c4f3df0abda6a1d449db07",
+      "width": 150,
+      "height": 74,
+      "size": 5569,
+      "uploadedDate": "2022-04-10T08:34:22.068Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-04-25T05:00:35.896Z",
+  "lastModifiedDate": "2025-02-07T22:07:39.471Z",
+  "customAttributes": {},
+  "entitlementName": "73f441073aa8494294a1a4bab8511b45",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "4461549f928a4ec881d9099751e8847a",
+      "appId": "SeamlessTransitionCamera_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2022-05-07T00:00:00.000Z",
+      "releaseNote": "Compiler Warning Fixes",
+      "versionTitle": "2.15.0.55 for 4.27"
+    },
+    {
+      "id": "ef2885fef42a47738eccafd2710c2f8a",
+      "appId": "SeamlessTransitionCamera_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-10T00:00:00.000Z",
+      "releaseNote": "Compiler Warning Fixes",
+      "versionTitle": "2.15.0.55 for 5.0"
+    },
+    {
+      "id": "adb6467c82014394ae0a77d98a5e6c96",
+      "appId": "SeamlessTransitionCamera_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "Compiler Warning Fixes",
+      "versionTitle": "2.15.0.55 for 5.1"
+    },
+    {
+      "id": "3c63369979ed4a55988b99760294dd18",
+      "appId": "SeamlessTransitionCamera_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-13T00:00:00.000Z",
+      "releaseNote": "Compiler Warning Fixes: Updated Manifest for 5.2",
+      "versionTitle": "2.15.0.55 for 5.2"
+    },
+    {
+      "id": "dc8321448db84e94b8c8ff87755a3aea",
+      "appId": "SeamlessTransitionCamera_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-10-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.15.0.55 for 5.3"
+    },
+    {
+      "id": "90c05692966b435484db90af96f1e525",
+      "appId": "Seamless73f441073aa8V6",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.15.0.56 for 5.4"
+    }
+  ],
+  "developer": "Acinonyx",
+  "developerId": "o-5ss368afg3e5h6kgkawpm2kpprc57u",
+  "endOfSupport": false,
+  "unsearchable": false
+}

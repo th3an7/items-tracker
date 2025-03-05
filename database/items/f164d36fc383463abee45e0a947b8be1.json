@@ -1,0 +1,420 @@
+{
+  "id": "f164d36fc383463abee45e0a947b8be1",
+  "title": "Transition Wave",
+  "description": "Create transition effects for materials.",
+  "longDescription": "<p>Plugin adds new <strong>material expression &#34;Transition Wave&#34;</strong> which allows to transition between various material parameters (e.g. Color, Alpha, Emissive) and affect mesh vertices for 3D effect .</p><p><br /></p><p><a href=\"https://youtu.be/7SXerTMetUg\" rel=\"nofollow\">Example project Video</a></p><p><a href=\"https://youtu.be/Q6bN0sBqb44\" rel=\"nofollow\">Transition Wave control parameters Video</a></p><p><a href=\"https://youtu.be/W1IHfDsRvxw\" rel=\"nofollow\">Blueprint and material setup example Video</a></p><p><br /></p><p>Transition Wave material expression outputs two values - Alpha nad Displacement.</p><p>To apply the effect add &#34;Transition Wave&#34; node expression inside a material and use it to lerp desired material parameters by Alpha value. Attach Displacement output value to World Position Offset to simulate 3D wave effect on vertices.</p><p><br /></p><p>The plugin contains<em> TransitionWaveComponent</em> which can be used for easier setup and control of the effect&#39;s parameters.</p><p><br /></p><p><em>TransitionWaveComponent u</em>se case:</p><ol><li>Attach to actor.</li><li>Initialize its default TransitionWave parameters.</li><li>Call &#34;Set Mesh Materials&#34; function (e.g. in BeginPlay) to specify meshes and materials which should be affected by the effect.</li><li>Call &#34;PlayTransition&#34; to start animated transition.</li></ol><p><br /></p><p>Checkout exemple project to see different use cases how to setup and control the effect.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Use <strong>Transition Wave material expression </strong>to add transitions between material parameters</li><li> Use <strong>TransitionWave component</strong> to control the effect</li><li> Example project with blueprints and material samples</li></ul><p>Code Modules:</p><ul><li> TransitionWaveFX (Runtime)</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: No</p><p>Supported Development Platforms: All</p><p>Supported Target Build Platforms: Win64, Win32, Linux, Mac, XboxOne, PS4, Android, IOS</p><p>Example Project Download: <a href=\"https://drive.google.com/file/d/1sKnlgJnjPgRvuUHhlbX4sWEHfAOA6LmB/view?usp&#61;sharing\" rel=\"nofollow\">4.26</a>; <a href=\"https://drive.google.com/file/d/1cSoP4m-Xr8ALVbKKcYhI18VEHHN1lq6a/view?usp&#61;sharing\" rel=\"nofollow\">4.27</a>; <a href=\"https://drive.google.com/file/d/1VfhEemjWuHPxGaBrLVme10NP6JCHSMFY/view?usp&#61;sharing\" rel=\"nofollow\">5.0</a>; <a href=\"https://drive.google.com/file/d/1QjA4zvn0510wp66Ld9r1k1PyrW6NCZ2I/view?usp&#61;sharing\" rel=\"nofollow\">5.3</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CarEffect01-1920x1080-4ad663b1ac0050fff45788efde253cc1.png",
+      "md5": "4ad663b1ac0050fff45788efde253cc1",
+      "width": 1920,
+      "height": 1080,
+      "size": 2010198,
+      "uploadedDate": "2021-06-14T22:05:58.208Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CarEffect02-1920x1080-dc5558255a56dffeae1f070b895bb9c3.png",
+      "md5": "dc5558255a56dffeae1f070b895bb9c3",
+      "width": 1920,
+      "height": 1080,
+      "size": 2052370,
+      "uploadedDate": "2021-06-14T22:05:58.839Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CarEffect03-1920x1080-452853cd4b9cf590df83e6396d50147c.png",
+      "md5": "452853cd4b9cf590df83e6396d50147c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1822663,
+      "uploadedDate": "2021-06-14T22:05:59.495Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ClickTransitionSpheres-1920x1080-2236073f4402eddd19c3c9915b5b686d.png",
+      "md5": "2236073f4402eddd19c3c9915b5b686d",
+      "width": 1920,
+      "height": 1080,
+      "size": 2294132,
+      "uploadedDate": "2021-06-14T22:06:00.148Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ExampleProject01-1920x1080-98a0dd8912b2b01ff72d3a96d9068b66.png",
+      "md5": "98a0dd8912b2b01ff72d3a96d9068b66",
+      "width": 1920,
+      "height": 1080,
+      "size": 1938963,
+      "uploadedDate": "2021-06-14T22:06:00.763Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ExampleProject02-1920x1080-a88e4d663653e507f927f5ad12d2fe56.png",
+      "md5": "a88e4d663653e507f927f5ad12d2fe56",
+      "width": 1920,
+      "height": 1080,
+      "size": 1918670,
+      "uploadedDate": "2021-06-14T22:06:01.394Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ExampleProject03-1920x1080-9e45b3a46de19aee2206963775e0b432.png",
+      "md5": "9e45b3a46de19aee2206963775e0b432",
+      "width": 1920,
+      "height": 1080,
+      "size": 1838880,
+      "uploadedDate": "2021-06-14T22:06:01.991Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ExampleProject04-1920x1080-9b54dc24454d1971a522ba6f2c5c0df9.png",
+      "md5": "9b54dc24454d1971a522ba6f2c5c0df9",
+      "width": 1920,
+      "height": 1080,
+      "size": 2070254,
+      "uploadedDate": "2021-06-14T22:06:02.579Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MaterialInstanceParameters-1920x1080-93f9a0577ec5496719a74fce1348b763.png",
+      "md5": "93f9a0577ec5496719a74fce1348b763",
+      "width": 1920,
+      "height": 1080,
+      "size": 1543155,
+      "uploadedDate": "2021-06-14T22:06:03.238Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MaterialSetup-1920x1080-86bfaaf5f8d9fcfa6711a2e3c849cc9e.png",
+      "md5": "86bfaaf5f8d9fcfa6711a2e3c849cc9e",
+      "width": 1920,
+      "height": 1080,
+      "size": 926746,
+      "uploadedDate": "2021-06-14T22:06:03.808Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MIBricksTransitionGlow-1920x1080-c317eb5e4ad432454717c7065af2cae6.png",
+      "md5": "c317eb5e4ad432454717c7065af2cae6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1738329,
+      "uploadedDate": "2021-06-14T22:06:04.291Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TransitionArea-1920x1080-afb6a8a83e4437b250b3c6f9a08c6c7e.png",
+      "md5": "afb6a8a83e4437b250b3c6f9a08c6c7e",
+      "width": 1920,
+      "height": 1080,
+      "size": 2046492,
+      "uploadedDate": "2021-06-14T22:06:04.978Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TransitionWaveComponentClickSetup-1920x1080-61b202a8ec473b715f7d26df725889b3.png",
+      "md5": "61b202a8ec473b715f7d26df725889b3",
+      "width": 1920,
+      "height": 1080,
+      "size": 533630,
+      "uploadedDate": "2021-06-14T22:06:05.551Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TransitionWaveComponentSetupMeshMaterials-1920x1080-8710d8b8aedd20a571000bfed8df2180.png",
+      "md5": "8710d8b8aedd20a571000bfed8df2180",
+      "width": 1920,
+      "height": 1080,
+      "size": 701411,
+      "uploadedDate": "2021-06-14T22:06:05.998Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MaterialSetup2-1920x1080-311fbe326ce0e89664f55fcb39db9114.png",
+      "md5": "311fbe326ce0e89664f55fcb39db9114",
+      "width": 1920,
+      "height": 1080,
+      "size": 728303,
+      "uploadedDate": "2021-06-15T21:37:20.874Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TransitionWave_thumb-284x284-0cc43ca065ecef9179b99a17f8a386a7.png",
+      "md5": "0cc43ca065ecef9179b99a17f8a386a7",
+      "width": 284,
+      "height": 284,
+      "size": 205766,
+      "uploadedDate": "2021-06-14T22:06:06.486Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TransitionWave_featured-894x488-9b6afba75d85d4edd21d04dabc60d65b.png",
+      "md5": "9b6afba75d85d4edd21d04dabc60d65b",
+      "width": 894,
+      "height": 488,
+      "size": 619048,
+      "uploadedDate": "2021-06-18T15:14:08.731Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MaterialSetup2-1920x1080-311fbe326ce0e89664f55fcb39db9114_Snapshot.png",
+      "md5": "30ae386f02fb713c835950c58ebb6143",
+      "width": 150,
+      "height": 74,
+      "size": 6782,
+      "uploadedDate": "2021-06-15T21:37:21.144Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CarEffect01-1920x1080-4ad663b1ac0050fff45788efde253cc1_Snapshot.png",
+      "md5": "8444c60ed54525fbf0e929d0ecfd0ce7",
+      "width": 150,
+      "height": 74,
+      "size": 6319,
+      "uploadedDate": "2021-06-14T22:05:58.612Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CarEffect02-1920x1080-dc5558255a56dffeae1f070b895bb9c3_Snapshot.png",
+      "md5": "7f49414b2e49d997c46c53656006fb51",
+      "width": 150,
+      "height": 74,
+      "size": 6100,
+      "uploadedDate": "2021-06-14T22:05:59.274Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CarEffect03-1920x1080-452853cd4b9cf590df83e6396d50147c_Snapshot.png",
+      "md5": "792e2631b815afbdf2319eb24aa08ffc",
+      "width": 150,
+      "height": 74,
+      "size": 5126,
+      "uploadedDate": "2021-06-14T22:05:59.920Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ClickTransitionSpheres-1920x1080-2236073f4402eddd19c3c9915b5b686d_Snapshot.png",
+      "md5": "6808f41a3de8e4f49d772a0e548706a7",
+      "width": 150,
+      "height": 74,
+      "size": 7270,
+      "uploadedDate": "2021-06-14T22:06:00.545Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ExampleProject01-1920x1080-98a0dd8912b2b01ff72d3a96d9068b66_Snapshot.png",
+      "md5": "3392fba135040481ad6f0955cacad1cd",
+      "width": 150,
+      "height": 74,
+      "size": 5760,
+      "uploadedDate": "2021-06-14T22:06:01.167Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ExampleProject02-1920x1080-a88e4d663653e507f927f5ad12d2fe56_Snapshot.png",
+      "md5": "ec7b77e2e47c792f527c30e0d05e46cb",
+      "width": 150,
+      "height": 74,
+      "size": 6220,
+      "uploadedDate": "2021-06-14T22:06:01.806Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ExampleProject03-1920x1080-9e45b3a46de19aee2206963775e0b432_Snapshot.png",
+      "md5": "0d1c28251554223560becc54b30079fd",
+      "width": 150,
+      "height": 74,
+      "size": 5815,
+      "uploadedDate": "2021-06-14T22:06:02.392Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ExampleProject04-1920x1080-9b54dc24454d1971a522ba6f2c5c0df9_Snapshot.png",
+      "md5": "ff2e57726490ab8e27e86b2083538062",
+      "width": 150,
+      "height": 74,
+      "size": 7089,
+      "uploadedDate": "2021-06-14T22:06:03.009Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MaterialInstanceParameters-1920x1080-93f9a0577ec5496719a74fce1348b763_Snapshot.png",
+      "md5": "aaaedf88ec82c2aaf438833f9561f26e",
+      "width": 150,
+      "height": 74,
+      "size": 5791,
+      "uploadedDate": "2021-06-14T22:06:03.624Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MaterialSetup-1920x1080-86bfaaf5f8d9fcfa6711a2e3c849cc9e_Snapshot.png",
+      "md5": "d421eb0446f84694518eae457b35e3d2",
+      "width": 150,
+      "height": 74,
+      "size": 6075,
+      "uploadedDate": "2021-06-14T22:06:04.132Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MIBricksTransitionGlow-1920x1080-c317eb5e4ad432454717c7065af2cae6_Snapshot.png",
+      "md5": "8c8f8c6cd4dbde407a8c40402c8b03f9",
+      "width": 150,
+      "height": 74,
+      "size": 6587,
+      "uploadedDate": "2021-06-14T22:06:04.648Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TransitionArea-1920x1080-afb6a8a83e4437b250b3c6f9a08c6c7e_Snapshot.png",
+      "md5": "96ab9422dbd271557ded967b3ec02b23",
+      "width": 150,
+      "height": 74,
+      "size": 6260,
+      "uploadedDate": "2021-06-14T22:06:05.406Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TransitionWaveComponentClickSetup-1920x1080-61b202a8ec473b715f7d26df725889b3_Snapshot.png",
+      "md5": "714d6d9b4ccca31af5ea81bcda15b689",
+      "width": 150,
+      "height": 74,
+      "size": 4594,
+      "uploadedDate": "2021-06-14T22:06:05.842Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TransitionWaveComponentSetupMeshMaterials-1920x1080-8710d8b8aedd20a571000bfed8df2180_Snapshot.png",
+      "md5": "1ef1f133c278acd7923bfaf4bc09c101",
+      "width": 150,
+      "height": 74,
+      "size": 5551,
+      "uploadedDate": "2021-06-14T22:06:06.388Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-06-20T18:27:26.758Z",
+  "lastModifiedDate": "2024-10-15T09:51:49.632Z",
+  "entitlementName": "f164d36fc383463abee45e0a947b8be1",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "98d6d6d106414a3195a212fbea3ea63a",
+      "appId": "TransitionWaveFX_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-06-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.0"
+    },
+    {
+      "id": "c88fe68950704ba298777e7cf232cf16",
+      "appId": "TransitionWaveFX_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "PS4",
+        "iOS",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2021-08-21T00:00:00.000Z",
+      "releaseNote": "4.27 support",
+      "versionTitle": "1.1.0"
+    },
+    {
+      "id": "e71f64a9ed37435f8b67b23202ae02d6",
+      "appId": "TransitionWaveFX_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-06-21T00:00:00.000Z",
+      "releaseNote": "5.0 support",
+      "versionTitle": "1.2.0"
+    },
+    {
+      "id": "41559e6e06f4442bb20945e9264a7a2c",
+      "appId": "TransitionWaveFX_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-11-18T00:00:00.000Z",
+      "releaseNote": "5.1 update",
+      "versionTitle": "1.3.0"
+    },
+    {
+      "id": "3ed2e4b3c9dd451ca382371f1290d7bc",
+      "appId": "TransitionWaveFX_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Oculus",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2023-10-19T00:00:00.000Z",
+      "releaseNote": "5.3 support",
+      "versionTitle": "1.5.0"
+    }
+  ],
+  "developer": "MDevTech",
+  "developerId": "o-hh9dputh5xmhdwjxmk258vpqtc6y9v",
+  "endOfSupport": false,
+  "unsearchable": false
+}

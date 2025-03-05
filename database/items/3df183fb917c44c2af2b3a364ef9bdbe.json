@@ -1,0 +1,345 @@
+{
+  "id": "3df183fb917c44c2af2b3a364ef9bdbe",
+  "title": "World Map System with Fog Of War",
+  "description": "The map system offer functionality to pan/zoom a world map, add icon over the map and a fog of war over the map that get revealed only when the player moves in.",
+  "longDescription": "<p>Documentation: <a href=\"https://pixiebellgames.com/documentation/map-navigation/\" rel=\"nofollow\">Pixiebell Map Navigation Documentation Link</a></p><p>Demo Video: <a href=\"https://youtu.be/v3kNIFBy4wM?si&#61;SMRhdaOYkUO03t6D\" rel=\"nofollow\">Youtube Demo Link</a></p><p>Demo Multiplayer Video: <a href=\"https://youtu.be/jQkacn-d27s\" rel=\"nofollow\">Youtube Multiplayer Link</a></p><p>Contact Email: marketplace&#64;pixiebellgames.com</p><p><br /></p><p><strong>Usage &#x1f380;: </strong></p><ul><li><strong>Custom texture world map:</strong> User can add it own texture map to pan/zoom on the world map widget.</li><li><strong>Fog of war: </strong>Reveal explored area as the player progress through the map.</li><li><strong>Switch dungeon map: </strong>Upon entering a dungeon trigger box, player can switch to that dungeon map.</li><li><strong>Add Icon</strong>: Icon can be added for example: to a static mesh on the level map using a blueprint component, that icon will be added both to the actor overhead(for mini map) and on the world map widget.</li><li><strong>Update Icon</strong>: An update function is provided that will update the icon both from the actor and world map, in addition to updating it from the game instance.</li><li><strong>Multiplayer(player icon): </strong>View other player icon from both mini map and world map.</li><li><strong>Multiplayer(RPC): </strong>Example on how to manage icon replication is given in the documentation.</li><li><strong>Custom Marker: </strong>Change icon and add description.</li><li><strong>Waypoint: </strong>Indicate the user the direction and distance of it waypoint set.</li><li><strong>Save Functionality</strong>: save fog render target as bytes, icon data as structures.</li></ul><p><br /></p><p><strong>Customize </strong>&#x1f4ab;<strong>:</strong></p><ul><li>The documentation link provide a detail guide on how to customize your widget</li><li>How to use the camera tool to capture the world map</li><li>Customize the world /dungeon map UI (displaying for wide screen, clamp map...)</li><li>Customize icons or waypoint (making overlay selected icon..)</li><li>Recommended ways to save your icons&#43;fog into your save manager system</li><li>Recommended ways to use less CPU when updating icon (using function timers)</li><li>Lock North or RotateWithCamera from the mini map</li><li>Switch between a circular mini map or square mini map</li><li>Recommended ways to use the switch dungeon tool</li><li>Customize custom marker</li></ul><p><br /></p><p><strong>Limitation / Note </strong>⚡:</p><ul><li>No gamepad support.</li><li>(can be a limitation or not) Fog are not shared across other player&#39;s machine.</li><li>If you already have a game instance setup, you can reparent them as a workaround (<a href=\"https://pixiebellgames.com/documentation/map-navigation/world-loadsave-icon.html\" rel=\"nofollow\">link</a>)</li></ul><p><br /></p><p><strong>Release Notes </strong>&#x1f4a1;<strong>:</strong></p><p>Version 1.1 (current]</p><ul><li>multiplayer support</li><li>function to switch world map when changing level map</li><li>fix assigning unique id when adding new custom marker icon</li><li>simplify GetCursorPositionOnMap</li><li>fix UpdateComponentIcon from BP_WidgetComponentIcon for not showing world map icon after hiding it</li><li>add ClearAllCustomMarkers for world map</li><li>optimise CaptureEveryFrame for capture camera tool when opening closing map</li><li>corrected some comments</li></ul><p><br /></p><p>Version 1.0</p><ul><li>published</li></ul>",
+  "technicalDetails": "<p>Features &#x1f380;: <a href=\"https://pixiebellgames.com/documentation/map-navigation/featues.html\" rel=\"nofollow\">All features list</a></p><p><br /></p><p>Number of Blueprints: 24</p><p>Number of CPP: 0</p><p>Network Replicated: Yes</p><p>Multiplayer Support: Yes</p><p>Static Mesh(decoration for demo): 7</p><p>Skeletal Mesh(for demo): 1 (BP_Cobaye) contain 3 animation(idle, talk, wave)</p><p>Texture(for mesh): 2048x2048</p><p>Texture(for UI icon): 256x256</p><p>Input: Input &#x1f3ae;: Preconfigured enhanced input action for Movement Right &amp; Forward and Mouse is included.</p><p>Required VS Studio for packaging: No, since it an asset pack 100% bp.</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Yes</p><p>Engine Version: 5.2 - 5.4</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery1-1920x1080-0cb5fb26e8c5771d4d78b601456d7f5b.png",
+      "md5": "0cb5fb26e8c5771d4d78b601456d7f5b",
+      "width": 1920,
+      "height": 1080,
+      "size": 2187418,
+      "uploadedDate": "2024-07-21T11:46:46.665Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery2-1920x1080-81a251ec40b43ab7deb50948fd3ab2af.png",
+      "md5": "81a251ec40b43ab7deb50948fd3ab2af",
+      "width": 1920,
+      "height": 1080,
+      "size": 1316614,
+      "uploadedDate": "2024-07-21T11:46:47.310Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery2.5-1920x1080-6af3e94cb70c08a780a9cf59c5c5e203.png",
+      "md5": "6af3e94cb70c08a780a9cf59c5c5e203",
+      "width": 1920,
+      "height": 1080,
+      "size": 2735444,
+      "uploadedDate": "2024-08-12T07:02:50.641Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery3-1920x1080-8b49be0401418f44db5fe87d6200c537.png",
+      "md5": "8b49be0401418f44db5fe87d6200c537",
+      "width": 1920,
+      "height": 1080,
+      "size": 864348,
+      "uploadedDate": "2024-07-21T11:46:47.794Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery4-1920x1080-e7e6e8a85ed7665221a5472d0a3c35ba.png",
+      "md5": "e7e6e8a85ed7665221a5472d0a3c35ba",
+      "width": 1920,
+      "height": 1080,
+      "size": 2688235,
+      "uploadedDate": "2024-07-21T11:46:48.343Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery5-1920x1080-32d834d6dc9fa23768a2637f61a59452.png",
+      "md5": "32d834d6dc9fa23768a2637f61a59452",
+      "width": 1920,
+      "height": 1080,
+      "size": 1790113,
+      "uploadedDate": "2024-07-21T11:46:49.006Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery5.5-1920x1080-d1dba7881affe0649fe255225fc86449.png",
+      "md5": "d1dba7881affe0649fe255225fc86449",
+      "width": 1920,
+      "height": 1080,
+      "size": 333501,
+      "uploadedDate": "2024-08-12T07:02:51.192Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery6-1920x1080-1587a9643cb44fa57b38ac3e0294eeb0.png",
+      "md5": "1587a9643cb44fa57b38ac3e0294eeb0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1425676,
+      "uploadedDate": "2024-07-21T11:46:49.591Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery7-1920x1080-2922746f2004a3eb0a55e24c3c972ed8.png",
+      "md5": "2922746f2004a3eb0a55e24c3c972ed8",
+      "width": 1920,
+      "height": 1080,
+      "size": 942221,
+      "uploadedDate": "2024-07-21T11:46:50.078Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery8-1920x1080-a0cb4a920b22e87024c7d477bfcd7cc9.png",
+      "md5": "a0cb4a920b22e87024c7d477bfcd7cc9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1132311,
+      "uploadedDate": "2024-07-21T11:46:50.585Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery9-1920x1080-97545bccf55cb527073c53b8bd4ccb37.png",
+      "md5": "97545bccf55cb527073c53b8bd4ccb37",
+      "width": 1920,
+      "height": 1080,
+      "size": 766749,
+      "uploadedDate": "2024-07-21T11:46:51.055Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery10-1920x1080-832392b6685c5ff9c68d57397222b659.png",
+      "md5": "832392b6685c5ff9c68d57397222b659",
+      "width": 1920,
+      "height": 1080,
+      "size": 1638669,
+      "uploadedDate": "2024-07-21T11:46:51.695Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery11-1920x1080-f3e5629277ec6ab7b7056ebc599b3ea0.png",
+      "md5": "f3e5629277ec6ab7b7056ebc599b3ea0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1615075,
+      "uploadedDate": "2024-07-21T11:46:52.279Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapGallery12-1920x1080-0c69455fefcce25f4b2a570f8a06927c.png",
+      "md5": "0c69455fefcce25f4b2a570f8a06927c",
+      "width": 1920,
+      "height": 1080,
+      "size": 417619,
+      "uploadedDate": "2024-07-21T11:46:52.819Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/WorldMapSystemwithFogOfWar_thumb-284x284-4612e657f7c3b8ae6ea0aed608067dab.png",
+      "md5": "4612e657f7c3b8ae6ea0aed608067dab",
+      "width": 284,
+      "height": 284,
+      "size": 103546,
+      "uploadedDate": "2024-08-12T07:02:51.556Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/WorldMapSystemwithFogOfWar_featured-894x488-e4ac192e857750ce90482e75698e13a4.png",
+      "md5": "e4ac192e857750ce90482e75698e13a4",
+      "width": 894,
+      "height": 488,
+      "size": 575606,
+      "uploadedDate": "2024-07-29T11:40:31.645Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery2.5-1920x1080-6af3e94cb70c08a780a9cf59c5c5e203_Snapshot.png",
+      "md5": "0e7c1f6d815144932aef234c0fec8850",
+      "width": 150,
+      "height": 74,
+      "size": 9413,
+      "uploadedDate": "2024-08-12T07:02:51.064Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery5.5-1920x1080-d1dba7881affe0649fe255225fc86449_Snapshot.png",
+      "md5": "329401c8b025d53ce4efec186028ea78",
+      "width": 150,
+      "height": 74,
+      "size": 7016,
+      "uploadedDate": "2024-08-12T07:02:51.439Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery1-1920x1080-0cb5fb26e8c5771d4d78b601456d7f5b_Snapshot.png",
+      "md5": "cb7ddfba2652235e86f4eafd116960db",
+      "width": 150,
+      "height": 74,
+      "size": 7331,
+      "uploadedDate": "2024-07-21T11:46:47.105Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery2-1920x1080-81a251ec40b43ab7deb50948fd3ab2af_Snapshot.png",
+      "md5": "2034aba9c59fd336fa9c658fe2206204",
+      "width": 150,
+      "height": 74,
+      "size": 6824,
+      "uploadedDate": "2024-07-21T11:46:47.653Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery3-1920x1080-8b49be0401418f44db5fe87d6200c537_Snapshot.png",
+      "md5": "5b3921842430530f364b1b2fc7ae098b",
+      "width": 150,
+      "height": 74,
+      "size": 7704,
+      "uploadedDate": "2024-07-21T11:46:48.094Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery4-1920x1080-e7e6e8a85ed7665221a5472d0a3c35ba_Snapshot.png",
+      "md5": "6e02d2b5c9a4e0f6911fcd0b69c85483",
+      "width": 150,
+      "height": 74,
+      "size": 8603,
+      "uploadedDate": "2024-07-21T11:46:48.788Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery5-1920x1080-32d834d6dc9fa23768a2637f61a59452_Snapshot.png",
+      "md5": "05fd0636780cf7908ea92874393bec24",
+      "width": 150,
+      "height": 74,
+      "size": 8283,
+      "uploadedDate": "2024-07-21T11:46:49.388Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery6-1920x1080-1587a9643cb44fa57b38ac3e0294eeb0_Snapshot.png",
+      "md5": "4702eeaa6913b75ad7424d999caf7ced",
+      "width": 150,
+      "height": 74,
+      "size": 7623,
+      "uploadedDate": "2024-07-21T11:46:49.913Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery7-1920x1080-2922746f2004a3eb0a55e24c3c972ed8_Snapshot.png",
+      "md5": "321883638db684f74a90cb3e5fb879a7",
+      "width": 150,
+      "height": 74,
+      "size": 7430,
+      "uploadedDate": "2024-07-21T11:46:50.384Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery8-1920x1080-a0cb4a920b22e87024c7d477bfcd7cc9_Snapshot.png",
+      "md5": "b1921269711645eecf31443094ab2b8c",
+      "width": 150,
+      "height": 74,
+      "size": 7148,
+      "uploadedDate": "2024-07-21T11:46:50.916Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery9-1920x1080-97545bccf55cb527073c53b8bd4ccb37_Snapshot.png",
+      "md5": "1c98ff7d0fcef4bac4cc39c0ca1d69aa",
+      "width": 150,
+      "height": 74,
+      "size": 6287,
+      "uploadedDate": "2024-07-21T11:46:51.386Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery10-1920x1080-832392b6685c5ff9c68d57397222b659_Snapshot.png",
+      "md5": "fd2b5aec8d1d447d8e5f29dda3cdd193",
+      "width": 150,
+      "height": 74,
+      "size": 7238,
+      "uploadedDate": "2024-07-21T11:46:52.078Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery11-1920x1080-f3e5629277ec6ab7b7056ebc599b3ea0_Snapshot.png",
+      "md5": "89b8a160b1a8a2091d9a90a4ffec0e43",
+      "width": 150,
+      "height": 74,
+      "size": 7414,
+      "uploadedDate": "2024-07-21T11:46:52.662Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapGallery12-1920x1080-0c69455fefcce25f4b2a570f8a06927c_Snapshot.png",
+      "md5": "6380b41974cff4a778fdd0f517186786",
+      "width": 150,
+      "height": 74,
+      "size": 6628,
+      "uploadedDate": "2024-07-21T11:46:53.075Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/QURkXx18Ko-1920x1080-5e9fb1710a728b3c1cb59bbf08645ece_Snapshot.png",
+      "md5": "b23a1536654b00e7701d6baf9ab36eaa",
+      "width": 150,
+      "height": 74,
+      "size": 6175,
+      "uploadedDate": "2024-06-07T20:33:21.967Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-07-29T18:07:11.263Z",
+  "lastModifiedDate": "2025-03-01T15:59:35.896Z",
+  "customAttributes": {},
+  "entitlementName": "3df183fb917c44c2af2b3a364ef9bdbe",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "75f20f8ee59d41dc87c990d32624df16",
+      "appId": "MapSyste3df183fb917cV1",
+      "compatibleApps": [
+        "UE_5.2",
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2024-06-08T00:00:00.000Z",
+      "releaseNote": "added support for multiplayer and added function to switch world map",
+      "versionTitle": "MS_1.1"
+    },
+    {
+      "id": "088333fc1f1a46f9945fc391963af87f",
+      "appId": "WorldMap3df183fb917cV2",
+      "compatibleApps": [
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Linux",
+        "Win32",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-09-09T00:00:00.000Z",
+      "releaseNote": "fix unknown function bug from hotfix ue5.4.4",
+      "versionTitle": "MS_1.1 for ue5.4"
+    }
+  ],
+  "developer": "Pixiebell Games",
+  "developerId": "o-3lascpwsccm4lv68rr6wtjw54xuczw",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

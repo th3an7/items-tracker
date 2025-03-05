@@ -1,0 +1,306 @@
+{
+  "id": "c4846959610f4d85b476e4ec81249044",
+  "title": "Aim Assist Scripts",
+  "description": "Easy to use aim assist components for shooter games",
+  "longDescription": "<p><strong>Aim Assist Scripts</strong> helps your shooter game to enable a more fluent gameplay even on a controller without sacrificing enemy mobility.</p><p>Using various, <strong>highly configurable</strong> aim assists, your players who use a controller can have a similar experience to those on a mouse and keyboard without the game taking over aiming completely, or making enemies stand still so they can actually be shot.</p><p><br /></p><p>The plugin comes with its practice range where you can experiment with the scripts&#39; settings in game, without relaunching the Play-In. The practice range has various enemies, like one that is A-D strafing or crouch spamming, and many more.</p><p><br /></p><p>See the <a href=\"https://youtu.be/TNnqbcJ111o\" rel=\"nofollow\">Lyra demo</a></p><p>See the <a href=\"https://youtu.be/YTnn53TiEUA\" rel=\"nofollow\">video documentation</a></p><p>See the <a href=\"https://drive.google.com/file/d/1htoo0yC6-TRb3CCpMRyDHhVDxgohKxNM/view?usp&#61;sharing\" rel=\"nofollow\">Practice Range</a></p><p>If you have questions about the plugin, feel free to contact me at amsiamun.dev at gmail.com.</p><p><br /></p><p>The plugin consists of 5 different aim assists that are added to the Player Controller as a Component.</p><ul><li><strong>Magnetism</strong> compensates for the player&#39;s strafing movement (with mirror strafing in mind)</li><li><strong>Motion Tracker</strong> compensates for the enemy movement (again with mirror strafing in mind)</li><li><strong>Aim Compensator</strong> partially corrects the player&#39;s look input towards the target</li><li><strong>Friction</strong> slows down look input around a target (and eases back in to avoid a jagged change)</li><li><strong>Aim Ease In</strong> helps avoid unwanted diagonal aim</li></ul><p>Also in the plugin</p><ul><li><strong>Target selector</strong> for each script, with either sphere casts or lines in a cone shape</li><li>A <strong>reticle widget</strong> for each aim assist, active only in debug and development, to show their radius</li></ul><p><br /></p><p>The scripts have their target selector with a cone or sphere cast (the former using lines in a cone shape).</p><p><br /></p><p>They also support having <strong>different configurations for different targets</strong> (distinguished by their Tag).</p><p><br /></p><p>Compatibility info:</p><ul><li>The main functionality is in C&#43;&#43;, with Blueprint subclasses</li><li>It requires Unreal&#39;s Enhanced Input (so input modifiers can be used)</li><li>It needs a Player Controller to put the scripts on</li><li>It was tested using a Controller and Mouse and Keyboard only (not tested on mobile and VR)</li><li>The scripts either augment the look input or rotate the Player Controller</li><li>Multiplayer is supported, but it isn&#39;t server authoritative. As the scripts work on the player&#39;s controller, they use local data to make calculations.</li><li>Developed on Unreal 5.3, verified on Unreal 5.4 (latest at the time of release).</li><li>Network replication: The calculated angles are local only, but their result is replicated if you replicate the Player Controller to show where other players are looking at.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Various highly configurable aim assists, detailed above</li><li>Support for multiplayer (locally controlled), no hiccups integrating into Lyra</li><li>Reticles for each aim assist that help during development, but do not show up in shipping</li><li>Practice range with various enemies and runtime settings to try the scripts out</li><li>Support for having different configurations for different targets</li></ul><p><br /></p><p>Modules:</p><ul><li>AimAssistInput (depends on Unreal Enhanced Input)</li><li>AimAssistScripts (the logic implementation)</li><li>PracticeRange (the example scene)</li></ul><p><br /></p><p>Structure:</p><p>--AimAssistScripts</p><p>----C&#43;&#43; classes</p><p>----Content, BP subclasses</p><p>----BP widgets for the reticle</p><p>--PracticeRange</p><p>----C&#43;&#43; base classes</p><p>----Content, BP classes with game logic</p><p><br /></p><p>Number of blueprints: 38</p><p>(this includes the Practice Range with its widgets as well as the actual scripts)</p><p>Number of C&#43;&#43; classes: 13</p><p>Network replicated: Yes*</p><p>*see details in the &#39;compatibility info&#39; in the description.</p><p>Supported development platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>(The project was developed and tested on Windows. While other target platforms may work, they have not been verified.)</p><p>Documentation: <a href=\"https://youtu.be/YTnn53TiEUA\" rel=\"nofollow\">Video Documentation</a>, also there&#39;s a PDF documentation in the plugin</p><p>Example Project: <a href=\"https://drive.google.com/file/d/1htoo0yC6-TRb3CCpMRyDHhVDxgohKxNM/view?usp&#61;sharing\" rel=\"nofollow\">See here</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/asset-store-thumbnail-1920x1080-2a5e365dcc3389863f670baaf4eeb7f3.jpg",
+      "md5": "2a5e365dcc3389863f670baaf4eeb7f3",
+      "width": 1920,
+      "height": 1080,
+      "size": 324869,
+      "uploadedDate": "2024-09-01T12:41:55.983Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/unreal-marketplace-aim-assists-list-1920x1080-dad8129ad0a7cb02adf478cfc5bc4a4d.jpg",
+      "md5": "dad8129ad0a7cb02adf478cfc5bc4a4d",
+      "width": 1920,
+      "height": 1080,
+      "size": 369889,
+      "uploadedDate": "2024-09-01T12:41:56.541Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/img1-1920x1080-b3c855d0cfbb3a026bee517f39834235.jpg",
+      "md5": "b3c855d0cfbb3a026bee517f39834235",
+      "width": 1920,
+      "height": 1080,
+      "size": 339444,
+      "uploadedDate": "2024-09-01T12:41:57.028Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/img2-1920x1080-8731faa458af267aeeffc80272eb8e13.jpg",
+      "md5": "8731faa458af267aeeffc80272eb8e13",
+      "width": 1920,
+      "height": 1080,
+      "size": 376228,
+      "uploadedDate": "2024-09-01T12:41:57.419Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/img3-1920x1080-c66c95065fa920b1ed10fd37cc5073f0.jpg",
+      "md5": "c66c95065fa920b1ed10fd37cc5073f0",
+      "width": 1920,
+      "height": 1080,
+      "size": 370664,
+      "uploadedDate": "2024-09-01T12:41:57.804Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/img4-1920x1080-f26a4c842970e248ee4511478ba5c683.jpg",
+      "md5": "f26a4c842970e248ee4511478ba5c683",
+      "width": 1920,
+      "height": 1080,
+      "size": 358142,
+      "uploadedDate": "2024-09-01T12:41:58.211Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/img7-1920x1080-9afdfd0d10bd5b9ba930124e8fbef504.jpg",
+      "md5": "9afdfd0d10bd5b9ba930124e8fbef504",
+      "width": 1920,
+      "height": 1080,
+      "size": 383044,
+      "uploadedDate": "2024-09-01T12:41:58.538Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/img5-1920x1080-95eed3987928e195becbc88f79f6e104.jpg",
+      "md5": "95eed3987928e195becbc88f79f6e104",
+      "width": 1920,
+      "height": 1080,
+      "size": 367985,
+      "uploadedDate": "2024-09-01T12:41:58.935Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/img6-1920x1080-df7bc6c6918182aa911b7d797e3bbaff.jpg",
+      "md5": "df7bc6c6918182aa911b7d797e3bbaff",
+      "width": 1920,
+      "height": 1080,
+      "size": 403067,
+      "uploadedDate": "2024-09-01T12:41:59.357Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AimAssistScripts_thumb-284x284-3b5857bce85a32c11678c1acba9c6847.png",
+      "md5": "3b5857bce85a32c11678c1acba9c6847",
+      "width": 284,
+      "height": 284,
+      "size": 24593,
+      "uploadedDate": "2024-08-31T22:42:13.807Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AimAssistScripts_featured-894x488-12a15eff5ab94ef2508549625b3d18aa.png",
+      "md5": "12a15eff5ab94ef2508549625b3d18aa",
+      "width": 894,
+      "height": 488,
+      "size": 506788,
+      "uploadedDate": "2024-08-31T22:42:13.920Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asset-store-thumbnail-1920x1080-2a5e365dcc3389863f670baaf4eeb7f3_Snapshot.jpg",
+      "md5": "79ceaf746be29577b1b014c01841ca9c",
+      "width": 150,
+      "height": 74,
+      "size": 7486,
+      "uploadedDate": "2024-09-01T12:41:56.323Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/unreal-marketplace-aim-assists-list-1920x1080-dad8129ad0a7cb02adf478cfc5bc4a4d_Snapshot.jpg",
+      "md5": "3c1a7f7c115522157b2e4be21047a42a",
+      "width": 150,
+      "height": 74,
+      "size": 6697,
+      "uploadedDate": "2024-09-01T12:41:56.908Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img1-1920x1080-b3c855d0cfbb3a026bee517f39834235_Snapshot.jpg",
+      "md5": "6dfab2ee3899e781d0c57a97a0000f07",
+      "width": 150,
+      "height": 74,
+      "size": 6586,
+      "uploadedDate": "2024-09-01T12:41:57.301Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img2-1920x1080-8731faa458af267aeeffc80272eb8e13_Snapshot.jpg",
+      "md5": "e64aff537454e4360910e40c2e741629",
+      "width": 150,
+      "height": 74,
+      "size": 6631,
+      "uploadedDate": "2024-09-01T12:41:57.654Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img3-1920x1080-c66c95065fa920b1ed10fd37cc5073f0_Snapshot.jpg",
+      "md5": "296be2380768c1ad8f4044a8b11d0685",
+      "width": 150,
+      "height": 74,
+      "size": 6629,
+      "uploadedDate": "2024-09-01T12:41:58.041Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img4-1920x1080-f26a4c842970e248ee4511478ba5c683_Snapshot.jpg",
+      "md5": "0abe832b9940b7870f8f97565d78c3cd",
+      "width": 150,
+      "height": 74,
+      "size": 6149,
+      "uploadedDate": "2024-09-01T12:41:58.446Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img7-1920x1080-9afdfd0d10bd5b9ba930124e8fbef504_Snapshot.jpg",
+      "md5": "2daaa7f15eabfbbc5cb7f748ad195ce1",
+      "width": 150,
+      "height": 74,
+      "size": 6272,
+      "uploadedDate": "2024-09-01T12:41:58.779Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img5-1920x1080-95eed3987928e195becbc88f79f6e104_Snapshot.jpg",
+      "md5": "c83e7360ead4897d2aa24d573dae0d04",
+      "width": 150,
+      "height": 74,
+      "size": 6230,
+      "uploadedDate": "2024-09-01T12:41:59.173Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img6-1920x1080-df7bc6c6918182aa911b7d797e3bbaff_Snapshot.jpg",
+      "md5": "eda3d466ca687b88dc549ad7596834fa",
+      "width": 150,
+      "height": 74,
+      "size": 6524,
+      "uploadedDate": "2024-09-01T12:41:59.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asset-store-thumbnail-1920x1080-2a5e365dcc3389863f670baaf4eeb7f3_Snapshot.jpg",
+      "md5": "79ceaf746be29577b1b014c01841ca9c",
+      "width": 150,
+      "height": 74,
+      "size": 7486,
+      "uploadedDate": "2024-08-31T22:42:10.531Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/unreal-marketplace-aim-assists-list-1920x1080-dad8129ad0a7cb02adf478cfc5bc4a4d_Snapshot.jpg",
+      "md5": "3c1a7f7c115522157b2e4be21047a42a",
+      "width": 150,
+      "height": 74,
+      "size": 6697,
+      "uploadedDate": "2024-08-31T22:42:11.109Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img1-1920x1080-b3c855d0cfbb3a026bee517f39834235_Snapshot.jpg",
+      "md5": "6dfab2ee3899e781d0c57a97a0000f07",
+      "width": 150,
+      "height": 74,
+      "size": 6586,
+      "uploadedDate": "2024-08-31T22:42:11.471Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img2-1920x1080-8731faa458af267aeeffc80272eb8e13_Snapshot.jpg",
+      "md5": "e64aff537454e4360910e40c2e741629",
+      "width": 150,
+      "height": 74,
+      "size": 6631,
+      "uploadedDate": "2024-08-31T22:42:11.797Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img3-1920x1080-c66c95065fa920b1ed10fd37cc5073f0_Snapshot.jpg",
+      "md5": "296be2380768c1ad8f4044a8b11d0685",
+      "width": 150,
+      "height": 74,
+      "size": 6629,
+      "uploadedDate": "2024-08-31T22:42:12.257Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img4-1920x1080-f26a4c842970e248ee4511478ba5c683_Snapshot.jpg",
+      "md5": "0abe832b9940b7870f8f97565d78c3cd",
+      "width": 150,
+      "height": 74,
+      "size": 6149,
+      "uploadedDate": "2024-08-31T22:42:12.617Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img7-1920x1080-9afdfd0d10bd5b9ba930124e8fbef504_Snapshot.jpg",
+      "md5": "2daaa7f15eabfbbc5cb7f748ad195ce1",
+      "width": 150,
+      "height": 74,
+      "size": 6272,
+      "uploadedDate": "2024-08-31T22:42:13.005Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img5-1920x1080-95eed3987928e195becbc88f79f6e104_Snapshot.jpg",
+      "md5": "c83e7360ead4897d2aa24d573dae0d04",
+      "width": 150,
+      "height": 74,
+      "size": 6230,
+      "uploadedDate": "2024-08-31T22:42:13.401Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img6-1920x1080-df7bc6c6918182aa911b7d797e3bbaff_Snapshot.jpg",
+      "md5": "eda3d466ca687b88dc549ad7596834fa",
+      "width": 150,
+      "height": 74,
+      "size": 6524,
+      "uploadedDate": "2024-08-31T22:42:13.775Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-09-03T18:03:17.596Z",
+  "lastModifiedDate": "2024-12-29T11:12:01.026Z",
+  "customAttributes": {},
+  "entitlementName": "c4846959610f4d85b476e4ec81249044",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "184a9523000a401c80505bdf09b9454d",
+      "appId": "AimAssistScripts_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-09-01T00:00:00.000Z",
+      "releaseNote": "Initial release, tested on Windows only using MnK and Controller.",
+      "versionTitle": "v1.0.0"
+    }
+  ],
+  "developer": "Amsiamun",
+  "developerId": "o-erh8waaqb4mqryhhjysedflgzeu65p",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

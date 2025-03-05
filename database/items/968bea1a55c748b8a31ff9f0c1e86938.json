@@ -1,0 +1,326 @@
+{
+  "id": "968bea1a55c748b8a31ff9f0c1e86938",
+  "title": "Vehicle AI Plugin",
+  "description": "Easy to integrate Vehicle AI using the Nav Mesh",
+  "longDescription": "<p><a href=\"https://youtu.be/LrD9DrUmZ2I\" rel=\"nofollow\">Preview Video</a></p><p><a href=\"https://drive.google.com/file/d/1sseXRx7CAuna8bQKpetG9d-HksbDWFBq/view?usp&#61;sharing\" rel=\"nofollow\">Downloadable Demo</a></p><p><br /></p><p>The Vehicle AI Plugin is a simple, effective way to get AI controlled vehicles using the NavMesh into your game. The plugin uses a customized version of the PathFollowingComponent to control the steering, throttle and brakes of your vehicle. The vehicle uses the Navigation Mesh, which makes it super fast to integrate to your own project. Simply use the normal AI Move To and it will find its way there! Implement the included interface to be able to use it on special vehicles, such as Tanks or N-Wheeled vehicles, or use it to customize the steering, throttle or braking, to get better results. The plugin also includes other useful features that make it a perfect starting point to use for any type of Vehicle AI you wish to implement. See the preview video to see some of those features in action.</p><p><br /></p><p><a href=\"https://www.youtube.com/playlist?list&#61;PLLyjYXyYtvZwLKH-pBqWQuy0gBN79P2WT\" rel=\"nofollow\">Video Tutorials</a></p><p><br /></p><p><strong>Unreal Engine 5.0 Update Notes:</strong></p><p>PhysX dependencies have been removed from the plugin - you <strong>must use the interface</strong> system. This has the added advantage of reducing the plugin dependencies for those using third party vehicle systems or still compiling the engine for PhysX.</p><p><br /></p><p><strong>1.6 Version Update Notes (available 5.0&#43; only):</strong></p><p>Added</p><ul><li>New spline following function - This works better than the older function and will generally follow the spline relatively precisely, and gives a good starting point for racing games (Note, this is not an out of the box solution for a racing game however other aspects such as choosing an appropriate racing line will be up to you).</li></ul><p><br /></p><p>Changed</p><ul><li>Updated example project with new spline following function for the racing example.</li><li>Moved most underused properties under &#39;advanced&#39; sections on the Path Following Component. These properties are provided for precise tweaking but shouldn&#39;t need to be used by most users unless you want to get very precise behaviour.</li><li>Improved braking and slowdown behaviour based on physical properties of the vehicle (have to be manually changed in the Path Following Component however) - This should mean vehicles stick to a path more precisely, and slow down for very sharp corners.</li></ul><p><br /></p><p>Removed</p><ul><li>Curve method of steering - Now uses PID controller only.</li><li>Variables that are no longer used or required, or are automatically calculated based on physical properties (eg. slowdown distance).</li></ul>",
+  "technicalDetails": "<p><strong>Features</strong>:</p><ul><li>NavMesh based path following</li><li>Quick and easy integration</li><li>Automatic throttle and braking based on a desired speed</li><li>Detour Crowd Avoidance compatible</li><li>Simple stuck detection gets AI moving again after becoming stuck (can be overridden for custom unstuck behaviour)</li><li>Handling is controlled by physical properties so fits many vehicle types</li></ul><p><br /></p><p><strong>Code Modules</strong>: Runtime: VehicleAIPlugin</p><p><strong>Number of Blueprints</strong>: 0</p><p><strong>Number of C&#43;&#43; Classes</strong>: 9</p><p><strong>Network Replicated</strong>: No</p><p><strong>Supported Development Platforms</strong>: Windows</p><p><strong>Supported Target Build Platforms</strong>: Windows</p><p><strong>Documentation</strong>: <a href=\"https://313-studios.com/wp-content/uploads/2019/12/VehicleAIPluginDocumentationV2.pdf\" rel=\"nofollow\">Link</a></p><p><strong>Example Project</strong>: <a href=\"https://drive.google.com/file/d/1_HPR_Ra-pzVlr7POgJ2z5B0ggWS8SIAZ/view?usp&#61;sharing\" rel=\"nofollow\">Link</a> (4.22-4.24) <a href=\"https://drive.google.com/file/d/1BS9B2Z89qwEsXA-vYULaomqeSQqMabOD/view?usp&#61;sharing\" rel=\"nofollow\">Link </a>(4.25-4.27), <a href=\"https://drive.google.com/file/d/1iGdh4Ch-C0oFm_k4jOhRKOlRdmRlQtYk/view?usp&#61;sharing\" rel=\"nofollow\">Link</a> (5.0)</p><p><strong>Important/Additional Notes</strong>:</p><ul><li>Example content shown in video (Driveable Vehicle Pack) is not included</li><li>This plugin is for generic vehicles to use the Navigation Mesh. It will not provide an out of the box solution for racing games or traffic simulations, although it can provide a basis for them as shown in the example project.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AIFramework-1920x1080-5c7d078bfe0cf8a24ca0d7d861f25242.jpg",
+      "md5": "5c7d078bfe0cf8a24ca0d7d861f25242",
+      "width": 1920,
+      "height": 1080,
+      "size": 510284,
+      "uploadedDate": "2019-07-23T15:58:01.590Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AutoReversing-1920x1080-f9476675a2a93dd9793c576a3deb538c.jpg",
+      "md5": "f9476675a2a93dd9793c576a3deb538c",
+      "width": 1920,
+      "height": 1080,
+      "size": 320728,
+      "uploadedDate": "2019-07-23T15:58:01.958Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Avoidance-1920x1080-dca4872ff50e168a53c40a6f8145f43d.jpg",
+      "md5": "dca4872ff50e168a53c40a6f8145f43d",
+      "width": 1920,
+      "height": 1080,
+      "size": 152394,
+      "uploadedDate": "2019-07-23T15:58:02.288Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighPerformance-1920x1080-b8e90405d9997bb2950323e8c379a7eb.jpg",
+      "md5": "b8e90405d9997bb2950323e8c379a7eb",
+      "width": 1920,
+      "height": 1080,
+      "size": 193064,
+      "uploadedDate": "2019-07-23T15:58:02.597Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/NavMesh-1920x1080-f1c2aa3e0d95dfc5fc878e9e98a1e70b.jpg",
+      "md5": "f1c2aa3e0d95dfc5fc878e9e98a1e70b",
+      "width": 1920,
+      "height": 1080,
+      "size": 282826,
+      "uploadedDate": "2019-07-23T15:58:03.013Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/VehicleAIPlugin_thumb-284x284-284ac1077ebfc55a0fefbbae93663d20.png",
+      "md5": "284ac1077ebfc55a0fefbbae93663d20",
+      "width": 284,
+      "height": 284,
+      "size": 71138,
+      "uploadedDate": "2019-07-23T15:58:03.293Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/VehicleAIPlugin_featured-894x488-0ee74278e9b68b9adb8a1e3a4b229b7c.png",
+      "md5": "0ee74278e9b68b9adb8a1e3a4b229b7c",
+      "width": 894,
+      "height": 488,
+      "size": 342165,
+      "uploadedDate": "2019-07-23T15:58:03.373Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AIFramework-1920x1080-5c7d078bfe0cf8a24ca0d7d861f25242_Snapshot.jpg",
+      "md5": "00f8ded0d87046ed7ff156727438169b",
+      "width": 150,
+      "height": 74,
+      "size": 5981,
+      "uploadedDate": "2019-07-23T15:58:01.852Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AutoReversing-1920x1080-f9476675a2a93dd9793c576a3deb538c_Snapshot.jpg",
+      "md5": "3c30bc1104ca96d7fb652859a3c77cf7",
+      "width": 150,
+      "height": 74,
+      "size": 4873,
+      "uploadedDate": "2019-07-23T15:58:02.168Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Avoidance-1920x1080-dca4872ff50e168a53c40a6f8145f43d_Snapshot.jpg",
+      "md5": "c9e640ba4805e20194ecf7d9c670656d",
+      "width": 150,
+      "height": 74,
+      "size": 2839,
+      "uploadedDate": "2019-07-23T15:58:02.484Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighPerformance-1920x1080-b8e90405d9997bb2950323e8c379a7eb_Snapshot.jpg",
+      "md5": "7d700a2af1903b2c688f948d381df5dc",
+      "width": 150,
+      "height": 74,
+      "size": 3211,
+      "uploadedDate": "2019-07-23T15:58:02.843Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NavMesh-1920x1080-f1c2aa3e0d95dfc5fc878e9e98a1e70b_Snapshot.jpg",
+      "md5": "bafce57fd6aaf1b2b20306661b040bcd",
+      "width": 150,
+      "height": 74,
+      "size": 5069,
+      "uploadedDate": "2019-07-23T15:58:03.259Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-07-26T18:59:12.726Z",
+  "lastModifiedDate": "2025-01-06T17:24:44.319Z",
+  "customAttributes": {},
+  "entitlementName": "968bea1a55c748b8a31ff9f0c1e86938",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "bf92eecf00d74e7b8840e14266fe5718",
+      "appId": "VehicleAIPlugin_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2019-07-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.21"
+    },
+    {
+      "id": "a80d05321367419aa2a2daa1c8d3f8d5",
+      "appId": "VehicleAIPlugin_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2019-07-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.22"
+    },
+    {
+      "id": "bfbf592e5aab47cc8c79031978d25edd",
+      "appId": "VehicleAIPlugin_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2019-09-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.23"
+    },
+    {
+      "id": "0b326fc2c27240d785ea02c2e923feb4",
+      "appId": "VehicleAIPlugin_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2019-12-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.24"
+    },
+    {
+      "id": "5f5d761ad29145f790508930ef9679dd",
+      "appId": "VehicleAIPlugin_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2020-05-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.25"
+    },
+    {
+      "id": "fd0d86705487426586e855c3a9e0adf6",
+      "appId": "VehicleAIPlugin_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2020-12-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.26"
+    },
+    {
+      "id": "2fbbbcf62919419c8b1ddaf94288d706",
+      "appId": "VehicleAIPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2021-08-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "192edd0da8734dd1a484c5f32a77b69d",
+      "appId": "VehicleAIPlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "b228f6cb46374b1f80127b5ebc11f991",
+      "appId": "VehicleAIPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "9c8661108560403ca64825f4af236363",
+      "appId": "VehicleAIPlugin_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "894ecc412d59451c93af9854ba2d99f6",
+      "appId": "VehicleAIPlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "08f77c6b7bf148609ac9f68d47398e05",
+      "appId": "VehicleAIPlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "313 Studios",
+  "developerId": "o-a9jh7trg3h9hzl4l7zaf9r6vxs2hlt",
+  "endOfSupport": false,
+  "unsearchable": false
+}

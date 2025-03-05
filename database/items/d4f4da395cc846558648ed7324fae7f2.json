@@ -1,0 +1,202 @@
+{
+  "id": "d4f4da395cc846558648ed7324fae7f2",
+  "title": "DataTableFillTools",
+  "description": "Easily convert your structured data into data tables；将您的数据轻松的保存到数据表中",
+  "longDescription": "<h2>Before starting, you need to make sure that you have a field named &#34;ID&#34; of type int64 in your structure, which is used to identify the index;</h2><h2>Note that the C&#43;&#43; type (unless it inherits FTableRowBase) does not support modification at any time, and the blueprint supports it; if you need to modify the C&#43;&#43; type, please delete your C&#43;&#43; type name _TableStruct structure in the /Game/ConfigDataTable/AutoCreateStruct directory and regenerate the data table</h2><h2>Please make sure that the blueprint type configured in the project has the variable of the structure that needs to be saved&#xff08;This part will be written later in the article&#xff09;; that is, the name of the structure that needs to be saved is &#34;SaveStruct&#34;, and there must be a variable of type ”SaveStruct“ in the blueprint to save and read</h2><p><br /></p><p>This plugin was born to quickly fill out data forms. It can add a tool called DataTableTools in the details panel of the blueprint. <strong><em>Just select the variable that this blueprint owns to save in the &#34;Select Structure Value Name&#34; dropdown box</em>,</strong> then click the &#34;Select Destination Data Table Name&#34; dropdown box to select the data table you want to add it to, and click &#34;Save Data To &#34;Table&#34; is saved to the data table;</p><p><br /></p><p>If you are using it for the first time, you need to select the variable name to be saved in the &#34;Select StructValue Name&#34; drop-down box, click the &#34;&#43;&#34; button to fill in the data table name, create a new data table, and then click &#34;Save Data to DataTable&#34; to save to data sheet. By default, the new table location is in the /Game/ConfigDataTable/ directory. If the C&#43;&#43; structure contained in it is not inherited from FTableRowBase, a &#34;structure name_TableStruct&#34; composed of your C&#43;&#43; structure name will be automatically created in the /Game/ConfigDataTable/AutoCreateStruct directory to fill the data table;</p><p><br /></p><p>Of course, this plug-in also provides the function of quickly reading data from the data table, just select the variable owned by the blueprint in the &#34;Select target data table name&#34; drop-down box, and select the data to be selected in &#34;Select&#34;. You can read the &#34;Target&#34; table from the &#34;DataTable Name&#34; drop-down box, and then click the &#34;Load Data From DataTable&#34; button to read the data according to the ID field in your current structure and overwrite the current variable data blueprint;</p><p><br /></p><p>This plugin can automatically convert C&#43;&#43; types that do not inherit FTableRowBase into blueprint structures (stored in the /Game/ConfigDataTable/AutoCreateStruct directory);</p><p><br /></p><p>The type of Blueprint to open can be configured through the game settings (in DataTableFillTools/Target Type Settings). C&#43;&#43; type only needs to fill in the name of this type, and blueprint type needs to add _C after the blueprint name</p><p><br /></p><p>Sorry, my native language is not English. This document was translated by Google. There may be ambiguities. If you have any questions, please file an issue on Github</p>",
+  "technicalDetails": "<p>Characteristic&#xff1a;</p><ul><li> 3 CodeFile</li></ul><p>Code Module&#xff1a;</p><ul><li> DataTableFillTools [Editor]</li></ul><p>Number of Blueprints&#xff1a;0</p><p>Number of C&#43;&#43; Classes&#xff1a;2</p><p>Network Replication&#xff1a;No</p><p>Supported Development Platforms&#xff1a;Editor</p><p>Supported Target Build Platforms&#xff1a;Editor</p><p>Document&#xff1a;https://github.com/QSWWLTN/DataTableFillToolsDocument</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image1-1920x1080-c0d465b9841961580f4c0862c43bebd6.png",
+      "md5": "c0d465b9841961580f4c0862c43bebd6",
+      "width": 1920,
+      "height": 1080,
+      "size": 84054,
+      "uploadedDate": "2023-07-23T18:10:11.375Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image2-1920x1080-b22e1a7855c0a577393e8a82f6fc2b65.png",
+      "md5": "b22e1a7855c0a577393e8a82f6fc2b65",
+      "width": 1920,
+      "height": 1080,
+      "size": 528925,
+      "uploadedDate": "2023-07-23T18:10:11.795Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image3-1920x1080-bf945d4d8e208c8d4181cc5f8d4670ab.png",
+      "md5": "bf945d4d8e208c8d4181cc5f8d4670ab",
+      "width": 1920,
+      "height": 1080,
+      "size": 556075,
+      "uploadedDate": "2023-07-23T18:10:12.270Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image4-1920x1080-ef9e7cf51f63ed0ab8655eef37280449.png",
+      "md5": "ef9e7cf51f63ed0ab8655eef37280449",
+      "width": 1920,
+      "height": 1080,
+      "size": 156087,
+      "uploadedDate": "2023-07-23T18:10:12.745Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DataTableFillTools_thumb-284x284-5192831f0d16cac08ce29e0a2936b116.png",
+      "md5": "5192831f0d16cac08ce29e0a2936b116",
+      "width": 284,
+      "height": 284,
+      "size": 13076,
+      "uploadedDate": "2023-07-22T15:40:26.040Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DataTableFillToolsEditor_featured-894x488-b1915f29b54fab7bd5caf8d4b968825e.png",
+      "md5": "b1915f29b54fab7bd5caf8d4b968825e",
+      "width": 894,
+      "height": 488,
+      "size": 52542,
+      "uploadedDate": "2023-07-23T18:10:13.142Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image1-1920x1080-c0d465b9841961580f4c0862c43bebd6_Snapshot.png",
+      "md5": "f859ff724829566c17ba0afada371eea",
+      "width": 150,
+      "height": 74,
+      "size": 3628,
+      "uploadedDate": "2023-07-23T18:10:11.650Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image2-1920x1080-b22e1a7855c0a577393e8a82f6fc2b65_Snapshot.png",
+      "md5": "bd33e4159abf32f80b3b270b630ff1b1",
+      "width": 150,
+      "height": 74,
+      "size": 4389,
+      "uploadedDate": "2023-07-23T18:10:12.104Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image3-1920x1080-bf945d4d8e208c8d4181cc5f8d4670ab_Snapshot.png",
+      "md5": "5071dbb6be7bb3d9b950af57f36d7fa9",
+      "width": 150,
+      "height": 74,
+      "size": 4469,
+      "uploadedDate": "2023-07-23T18:10:12.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image4-1920x1080-ef9e7cf51f63ed0ab8655eef37280449_Snapshot.png",
+      "md5": "06dadcdb02b74945d764f4248d458e19",
+      "width": 150,
+      "height": 74,
+      "size": 3913,
+      "uploadedDate": "2023-07-23T18:10:13.040Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image1-1920x1080-e158f9c29a94ec193829e60227c20f7e_Snapshot.png",
+      "md5": "b1064239ad49f026c74c3a0bc342b72c",
+      "width": 150,
+      "height": 74,
+      "size": 3761,
+      "uploadedDate": "2023-07-22T15:40:24.571Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image2-1920x1080-1b0633fecb5cbe8d9b5ee207959c492e_Snapshot.png",
+      "md5": "ac5ece32289f7b04fc8496e79a3f1e70",
+      "width": 150,
+      "height": 74,
+      "size": 4628,
+      "uploadedDate": "2023-07-22T15:40:25.135Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image3-1920x1080-8cd914d8a4b8d86a86b8be56d584a1d4_Snapshot.png",
+      "md5": "ace89b7e520f85c579c6d0bd01187e7c",
+      "width": 150,
+      "height": 74,
+      "size": 4811,
+      "uploadedDate": "2023-07-22T15:40:25.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image4-1920x1080-2ed1deb9656fcaaed58f9cf75793724f_Snapshot.png",
+      "md5": "a57eaca8cb16e6802b0fd989325f69a7",
+      "width": 150,
+      "height": 74,
+      "size": 3826,
+      "uploadedDate": "2023-07-22T15:40:26.007Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2023-08-10T04:54:38.668Z",
+  "lastModifiedDate": "2024-12-07T05:05:00.676Z",
+  "entitlementName": "d4f4da395cc846558648ed7324fae7f2",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "0c59ecc94e0f4037a27cd80bab7d5339",
+      "appId": "DataTableFillTools_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0"
+    },
+    {
+      "id": "a92fd5615580487d8681af6446a745a2",
+      "appId": "DataTableFillTools_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-07-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0"
+    },
+    {
+      "id": "fc685b1147fd432298f4fd77d7e70df5",
+      "appId": "DataTableFillTools_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "3.0"
+    }
+  ],
+  "developer": "ShenKongControidStudio",
+  "developerId": "o-n33966nwvjm38ur4493kats2ungyh6",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

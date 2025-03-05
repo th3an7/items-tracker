@@ -1,0 +1,416 @@
+{
+  "id": "86d4e7da74f7483e9995403e25690a9f",
+  "title": "Input Sequence",
+  "description": "Input Sequence plugin allows you to process Input Action and Input Axis events and their sequences",
+  "longDescription": "<h1>Input Sequence</h1><p><br /></p><h1>[IMPORTANT]</h1><blockquote>NEW version of <strong>Input Sequence</strong> plugin has been published (<a href=\"https://www.unrealengine.com/marketplace/en-US/product/c33feca902ef41829dc5ea8c64bec183\" rel=\"nofollow\">check here</a>). It does not support OLD Mappings input at all, so the logic is more simple, as well as configuration is more clear. As for this (OLD) version of <strong>Input Sequence</strong> plugin - it will be finalized and there will be no any updates for it since now. Please, start to work with NEW version of <strong>Input Sequence</strong> plugin for all new projects. Thank you!</blockquote><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;pMpKCx338mQ\" rel=\"nofollow\">TUTORIAL</a></p><p><a href=\"https://github.com/klauth86/UE_Plugin_InputSequence/wiki\" rel=\"nofollow\">DOCUMENTATION</a></p><p><a href=\"https://discord.gg/TjxHxkwzRb\" rel=\"nofollow\">SUPPORT/FEEDBACK</a></p><p><br /></p><p>This plugin consists of two primary assets - <u>Input Sequence Asset</u> and <u>Input Sequence Event</u></p><p><br /></p><p><u>Input Sequence Asset</u> (accessible from Content Browser context menu, Misc category) is used to build logic around <em>Input Action</em> and <em>Input Axis</em> events and their sequences (Mappings Input and Enhanced Input supported). It is configured with Graph Editor by creating and connecting nodes, setting properties on them and on asset itself. There are several node classes to use:</p><p><br /></p><ul><li><strong>Start node</strong> - this node is entry node of asset. Its primary child nodes are called First Layer Nodes (FLN). Each node except FLN and entry node has only one FLN parent</li><li><strong>Press node</strong> - this node is base to build logic around <em>Input Action</em> events and their sequences. It can be in two modes for every <em>Input Action</em> added - CLICK mode and HOLD mode (modes are toggled by down arrow button)</li><li><strong>Release node</strong> - this node is paired node for <strong>Press node</strong> in HOLD mode and corresponds to release event</li><li><strong>Axis node</strong> - this node is base to build logic around <em>Input Axis</em> events and their sequences. It is passed when value of added Axis is between thresholds that are set on node. It is possible to combine two 1D Axis into one 2D Axis and use 2D coordinate system to define pass conditions</li><li><strong>Hub node</strong> - this node is a router. It allows you to split one execution path into several branches. With it you can construct many combos in one <u>Input Sequence Asset</u></li><li><strong>Go To Start node</strong> - this node resets all active nodes, that have the same FLN parent as it has. This node can help if you have many branches for one FLN node and you want reset them all</li></ul><p><br /></p><p><strong>Press node</strong>, <strong>Release node</strong> and <strong>Axis node</strong> process all <em>Input</em> events and so can be called INPUT NODES. <strong>Start node</strong>, <strong>Hub node</strong> and <strong>Go To Start node</strong> define flow and can be called FLOW NODES. INPUT NODES can be ticking and can be reset after some time interval if there is no any <em>Input</em> events for them within that interval (see asset and node props). INPUT NODES also can be reset if there is some <em>Input</em> events that are mismatched to events added on node (see asset and node props).</p><p><br /></p><p>You can configure props on whole <u>Input Sequence Asset</u> and that logic will be active on every INPUT NODE of it. Also you can override that props on each INPUT NODE itself. INPUT NODES contains several <u>Input Sequence Event</u> subclass collections and that describe callback logic to execute when this INPUT NODE is entered, passed or reset (see node props).</p><p><br /></p><p><u>Input Sequence Event</u> is abstract blueprintable class that is supposed to be parent class for C&#43;&#43; or BP subclasses. There is no need to create instances of this class or its subclasses, because all execution is going through default object. You can use <u>Input Sequence Event</u> subclasses on each INPUT NODE when node is entered, passed or reset (see node props). During callback execution you can provide two contexts - STATE context and CALLING context. Every INPUT NODE has one <strong>Object</strong> prop and one <strong>String</strong> prop. With them you can define so called STATE context of current INPUT NODE for callbacks (see <u>Input Sequence Event</u> <em>OnExecuteByClass</em> method signature). In a very same way object that is using <u>Input Sequence Asset</u> (CALLING OBJECT) can pass one <strong>Object</strong> param and one <strong>String</strong> param (see <u>Input Sequence Event</u> <em>OnExecuteByClass</em> method signature). With them you can define so called CALLING context. STATE context and CALLING context can help you to implement almost any logic that is needed.</p><p><br /></p><p>As mentioned above INPUT NODES can be reset for one or several purposes. This reset requests can be EXTERNAL and INTERNAL. EXTERNAL reset request is just a call from CALLING OBJECT. INTERNAL reset request is a call from INPUT NODE itself or due to reaching of <strong>Go To Start node</strong>. In common case there can be several reset requests in one moment. For example, it can be <strong>Go To Start node</strong> reached and external user reset requested at once. Every call of <u>Input Sequence Asset</u> <em>OnInput</em> method generate information about all reset requests collected for this input processing, so you can pass this kind of information for every callback as param (see <u>Input Sequence Event</u> <em>OnExecuteByClass</em> method signature).</p><p><br /></p><p>For simplicity plugin also contains PlayerController_IS subclass that just adds two BP Implementable events - <em>OnPreProcessInput</em> and <em>OnPostProcessInput</em>. With them you can add custom logic in BP precisely before engine input processing and after input processing.</p><p><br /></p><p>Plugin Content folder contains very basic example assets for both Mappings Input and Enhanced Input.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Create, configure and use <u>Input Sequence Asset</u> to build logic around <em>Input Action</em> and <em>Input Axis</em> events and their sequences</li><li> Create, configure and use C&#43;&#43; or BP subclasses of <u>Input Sequence Event</u> to implement any other logic that is needed</li></ul><p>Code Modules:</p><ul><li> <u>InputSequence [Runtime]</u></li><li> <u>InputSequenceEditor</u> [Editor]</li></ul><p>Number of Blueprints: <u>12</u></p><p>Number of C&#43;&#43; Classes: <u>42</u></p><p>Network Replicated: <u>No</u></p><p>Supported Development Platforms: <u>Win64</u></p><p>Supported Target Build Platforms: <u>Win64</u></p><p>Documentation: https://github.com/klauth86/UE_Plugin_InputSequence/wiki</p><p>Example Project: <u>see plugin Content folder</u></p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Step1Sized-1920x1080-18fc883c89354ccf315e66587e5610f2.png",
+      "md5": "18fc883c89354ccf315e66587e5610f2",
+      "width": 1920,
+      "height": 1080,
+      "size": 256778,
+      "uploadedDate": "2022-09-12T13:30:44.509Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Step2Sized-1920x1080-fa2c0d50cdb3ae51f5eef7b063aae977.png",
+      "md5": "fa2c0d50cdb3ae51f5eef7b063aae977",
+      "width": 1920,
+      "height": 1080,
+      "size": 476169,
+      "uploadedDate": "2022-09-12T13:30:44.933Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Step3Sized-1920x1080-2ce1967d9251dd35ccef95add78ece36.png",
+      "md5": "2ce1967d9251dd35ccef95add78ece36",
+      "width": 1920,
+      "height": 1080,
+      "size": 111511,
+      "uploadedDate": "2022-09-12T13:30:45.404Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Step4Sized-1920x1080-2c769135370863fae63fa872c17bcf41.png",
+      "md5": "2c769135370863fae63fa872c17bcf41",
+      "width": 1920,
+      "height": 1080,
+      "size": 142545,
+      "uploadedDate": "2022-09-12T13:30:45.785Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Step5Sized-1920x1080-b90863170c967a0a5a71d13ac3b09001.png",
+      "md5": "b90863170c967a0a5a71d13ac3b09001",
+      "width": 1920,
+      "height": 1080,
+      "size": 352901,
+      "uploadedDate": "2022-09-12T13:30:46.183Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Step6Sized-1920x1080-658cb4e836467bc0fa959e2c03e15b8d.png",
+      "md5": "658cb4e836467bc0fa959e2c03e15b8d",
+      "width": 1920,
+      "height": 1080,
+      "size": 379882,
+      "uploadedDate": "2022-09-12T13:30:46.552Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/InputSequencePlugin_thumb-284x284-d5dbf28e27ffaf54a663c9fcf23b7811.png",
+      "md5": "d5dbf28e27ffaf54a663c9fcf23b7811",
+      "width": 284,
+      "height": 284,
+      "size": 91414,
+      "uploadedDate": "2022-07-29T12:12:42.473Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/InputSequence_featured-894x488-641170ef4c2ede256645bae371bdb302.png",
+      "md5": "641170ef4c2ede256645bae371bdb302",
+      "width": 894,
+      "height": 488,
+      "size": 49616,
+      "uploadedDate": "2022-09-12T13:30:46.896Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Step1Sized-1920x1080-18fc883c89354ccf315e66587e5610f2_Snapshot.png",
+      "md5": "804d292f8f5871662fb616ae1b167f06",
+      "width": 150,
+      "height": 74,
+      "size": 4122,
+      "uploadedDate": "2022-09-12T13:30:44.759Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Step2Sized-1920x1080-fa2c0d50cdb3ae51f5eef7b063aae977_Snapshot.png",
+      "md5": "3d378d0d412b15e19a76286e32ea3359",
+      "width": 150,
+      "height": 74,
+      "size": 4488,
+      "uploadedDate": "2022-09-12T13:30:45.283Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Step3Sized-1920x1080-2ce1967d9251dd35ccef95add78ece36_Snapshot.png",
+      "md5": "ae4c11607973b3fd284614f4737c3627",
+      "width": 150,
+      "height": 74,
+      "size": 2539,
+      "uploadedDate": "2022-09-12T13:30:45.657Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Step4Sized-1920x1080-2c769135370863fae63fa872c17bcf41_Snapshot.png",
+      "md5": "3eadaa8b889942c3383980d2456139fd",
+      "width": 150,
+      "height": 74,
+      "size": 2877,
+      "uploadedDate": "2022-09-12T13:30:46.049Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Step5Sized-1920x1080-b90863170c967a0a5a71d13ac3b09001_Snapshot.png",
+      "md5": "882421be09f2d265bdb2d209d1397f98",
+      "width": 150,
+      "height": 74,
+      "size": 5995,
+      "uploadedDate": "2022-09-12T13:30:46.441Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Step6Sized-1920x1080-658cb4e836467bc0fa959e2c03e15b8d_Snapshot.png",
+      "md5": "4703bca9e9da27a0f7cc8f7007087bde",
+      "width": 150,
+      "height": 74,
+      "size": 4756,
+      "uploadedDate": "2022-09-12T13:30:46.806Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ProjectSettingsInputC-1920x1080-a748e6d8c394506b8fe472e40767d001_Snapshot.png",
+      "md5": "802cfd8568c6c028dafd1f0ca05770cd",
+      "width": 150,
+      "height": 74,
+      "size": 4065,
+      "uploadedDate": "2022-08-04T09:31:12.003Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Tutorial01C-1920x1080-81771817f70e2eccb386d0e749749c54_Snapshot.png",
+      "md5": "eb1cf8d9b63706d94147a9c0c0c85362",
+      "width": 150,
+      "height": 74,
+      "size": 4134,
+      "uploadedDate": "2022-08-04T09:31:12.445Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Tutorial02C-1920x1080-1242573c8d8959269c087022653184fb_Snapshot.png",
+      "md5": "9d2cbcbb22b9466b07282c5a8977deff",
+      "width": 150,
+      "height": 74,
+      "size": 2466,
+      "uploadedDate": "2022-08-04T09:31:12.761Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Tutorial03C-1920x1080-d48c27db23395deab4ad95d9a2a519c2_Snapshot.png",
+      "md5": "3badee693cb3cf40f04440f8047145b5",
+      "width": 150,
+      "height": 74,
+      "size": 2555,
+      "uploadedDate": "2022-08-04T09:31:13.061Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Tutorial04C-1920x1080-f0549b1304eeb9291cac2cc00bb40b85_Snapshot.png",
+      "md5": "3c3f1625a5d036ee271afcff97072916",
+      "width": 150,
+      "height": 74,
+      "size": 2701,
+      "uploadedDate": "2022-08-04T09:31:13.367Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Tutorial05C-1920x1080-ff74f7e0f71533a0677584923c1ca170_Snapshot.png",
+      "md5": "2abf8ae1dd07ad27b3fd70bba7a69ed5",
+      "width": 150,
+      "height": 74,
+      "size": 2842,
+      "uploadedDate": "2022-08-04T09:31:13.773Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Tutorial06C-1920x1080-cd3741b42595847f05f16270459c7a0f_Snapshot.png",
+      "md5": "b16816c3e7b9c6e790129aa2684c2c74",
+      "width": 150,
+      "height": 74,
+      "size": 2962,
+      "uploadedDate": "2022-08-04T09:31:14.123Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Tutorial07C-1920x1080-cf3c0eff22dcb90e6517e658e4f67f23_Snapshot.png",
+      "md5": "6e45da7789083ccad9f02b8ce08355ab",
+      "width": 150,
+      "height": 74,
+      "size": 4268,
+      "uploadedDate": "2022-08-04T09:31:14.550Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequencePlugin011920x1080-1920x1080-cd4be4555c7a7b2bc268950e0ce93579_Snapshot.png",
+      "md5": "e451f04bacf51a309ae5da3050ec7084",
+      "width": 150,
+      "height": 74,
+      "size": 5499,
+      "uploadedDate": "2022-08-01T08:46:13.907Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequencePlugin021920x1080-1920x1080-f19020e68717ecb78a5d1704675f50a6_Snapshot.png",
+      "md5": "d506a54ce682c8645f00d588d7788dc7",
+      "width": 150,
+      "height": 74,
+      "size": 4136,
+      "uploadedDate": "2022-08-01T08:46:14.337Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequencePlugin031920x1080-1920x1080-c528b324f9e82eb9c77590fb62e8ac0f_Snapshot.png",
+      "md5": "580f9154f12878ee22e319080b146064",
+      "width": 150,
+      "height": 74,
+      "size": 2393,
+      "uploadedDate": "2022-08-01T08:46:14.660Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequencePlugin041920x1080-1920x1080-737f66bec17ac3f6b809e1615eec9ebd_Snapshot.png",
+      "md5": "322954fd17923d8f553d821cf5dceb7a",
+      "width": 150,
+      "height": 74,
+      "size": 2720,
+      "uploadedDate": "2022-08-01T08:46:15.064Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequencePlugin071920x1080-1920x1080-8e7732735d7f55e5be38f00c736700c7_Snapshot.png",
+      "md5": "3f2275fa11346cac67111071f80e3ef4",
+      "width": 150,
+      "height": 74,
+      "size": 3691,
+      "uploadedDate": "2022-08-01T08:46:15.442Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequencePlugin01-1920x1080-1491716bddfab348ce358ba6f0593113_Snapshot.png",
+      "md5": "bc8fce88de8fcbb6285fb32a910b273f",
+      "width": 150,
+      "height": 74,
+      "size": 5151,
+      "uploadedDate": "2022-07-29T13:10:44.889Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequencePlugin02-1920x1080-7a84fdbd781970f1599219fde629d9b4_Snapshot.png",
+      "md5": "af71801c837d1fe83258f6992ea14d99",
+      "width": 150,
+      "height": 74,
+      "size": 4128,
+      "uploadedDate": "2022-07-29T13:10:45.371Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequencePlugin03-1920x1080-17a303db3f7a5114d4b8fc9c94a51345_Snapshot.png",
+      "md5": "046d5decc0a4c096a0eface83f38ac64",
+      "width": 150,
+      "height": 74,
+      "size": 4377,
+      "uploadedDate": "2022-07-29T13:10:45.690Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequencePlugin04CallEventsNode-1920x1080-890f69b70480651d7567a0474c6f7123_Snapshot.png",
+      "md5": "fc413c329d636368b43e00f3398a98ab",
+      "width": 150,
+      "height": 74,
+      "size": 2690,
+      "uploadedDate": "2022-07-29T13:10:46.019Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequencePlugin04PressNode-1920x1080-e86622819b3350d9f32fdb6f293d4e27_Snapshot.png",
+      "md5": "062925e6a11b7797eda60048bc5efb25",
+      "width": 150,
+      "height": 74,
+      "size": 3239,
+      "uploadedDate": "2022-07-29T13:10:46.424Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequenceAsset-1920x1080-715a260ded678cc5bd08c54e699bbc65_Snapshot.png",
+      "md5": "0f9eb9c66a5559ece831f70c3b5f681f",
+      "width": 150,
+      "height": 74,
+      "size": 4774,
+      "uploadedDate": "2022-07-29T11:24:36.374Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InpuSequenceEditor-1920x1080-cd744008f047997baf22c253bd8090f0_Snapshot.png",
+      "md5": "1069da6c12be05b3c21b592d5f7eb610",
+      "width": 150,
+      "height": 74,
+      "size": 3794,
+      "uploadedDate": "2022-07-29T11:24:36.747Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2022-08-08T04:02:56.321Z",
+  "lastModifiedDate": "2024-08-01T08:05:48.987Z",
+  "customAttributes": {},
+  "entitlementName": "86d4e7da74f7483e9995403e25690a9f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "f93e5dc6515844889fd52cd903d7844c",
+      "appId": "InputSequencePlugin_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-08-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.4_4.26.2"
+    },
+    {
+      "id": "cb0989c0f97d47f796f1e9d15af124a0",
+      "appId": "InputSequencePlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-08-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.11_4.27.2"
+    },
+    {
+      "id": "e5fb6f9ae56040efa9d79daf9bec837f",
+      "appId": "InputSequencePlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-07-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.14_5.0.3"
+    },
+    {
+      "id": "e1bcd90f81ee46af8f9d59f193a3f3be",
+      "appId": "InputSequencePlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.15_5.1.0"
+    },
+    {
+      "id": "68699940769546a1a9c97750826ffcda",
+      "appId": "InputSequencePlugin_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.15_5.2.0"
+    },
+    {
+      "id": "9f5565f681aa49de967ca7fba66f3ea5",
+      "appId": "InputSequencePlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.15_5.3.0"
+    }
+  ],
+  "developer": "Pentangle St.",
+  "developerId": "o-uljepgj3r9qhqvt365cxemcuyqhawj",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

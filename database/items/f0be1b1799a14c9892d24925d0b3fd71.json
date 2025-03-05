@@ -1,0 +1,118 @@
+{
+  "id": "f0be1b1799a14c9892d24925d0b3fd71",
+  "title": "Editor Frame Rate Limiter",
+  "description": "Limits the editor's frame rate to the desired value based on whether play-in-editor is active or not.",
+  "longDescription": "<p>This simple editor plugin allows you to cap the editor&#39;s frame rate to the desired value.</p><p><br /></p><p>The plugin adds a new entry to the Editor Preferences page called &#34;Editor Frame Rate Limiter&#34;, under the Plugins section. Here you can set the values that the plugin will use to limit the editor frame rate. The default value for editor-use is 40 fps, while the default for play-in-editor is -1 (use game default).</p><p><br /></p><p>When you initially start the editor, or end/pause a play-in-editor session, the &#34;Max Editor FPS&#34; config entry value will be applied as the frame limit. When you begin play from within the editor, the &#34;Max PIE FPS&#34; config entry value will be applied. If one of these have a value of &lt; 0, the plugin will, for that mode, use the value that the t.maxfps CVar was last set to by something other than this plugin, effectively retaining the original engine behavior.</p><p><br /></p><p><br /></p>",
+  "technicalDetails": "<p><a href=\"https://docs.google.com/document/d/1vdhnCz7HoayNxvZYAXi7MA7aDqY47WkfC8aHGoc5N0o/\" rel=\"nofollow\">Documentation</a></p><p><br /></p><p>Features:</p><ul><li>Applies an optional frame rate limit on editor start</li><li>Editor Preferences entry for easy configuration</li><li>Separate frame rate limit values for editor use and play-in-editor modes</li><li>If no limit is set for a specific mode (a value of -1 in the settings), reverts back to the engine&#39;s last used FPS limit (e.g. scalability settings)</li></ul><p><br /></p><p>Code Modules:</p><ul><li> EditorFrameRateLimiter (Editor Module)</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 2</p><p>Supported Development Platforms: Any</p><p>Important/Additional Notes:</p><p><br /></p><p>The plugin uses the t.maxfps console command to manage the FPS limit. To avoid subscribing to console command sinks, the limit is only imposed on editor start and PIE start/stop/pause/resume. As such, using the t.maxfps command at runtime can override the current plugin-imposed fps limit, if any, until one of these events are triggered.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery0-1920x1080-621b0fce3ad33613df96b4b479cb667a.png",
+      "md5": "621b0fce3ad33613df96b4b479cb667a",
+      "width": 1920,
+      "height": 1080,
+      "size": 117061,
+      "uploadedDate": "2024-01-14T12:48:21.051Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/EditorFrameRateLimiter_thumb-284x284-eb43f363c452f1b5a27a895eef99d102.png",
+      "md5": "eb43f363c452f1b5a27a895eef99d102",
+      "width": 284,
+      "height": 284,
+      "size": 9465,
+      "uploadedDate": "2024-01-14T12:48:21.373Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/EditorFrameRateLimiter_featured-894x488-99af061a6fb38390bafb4223f2dc6216.png",
+      "md5": "99af061a6fb38390bafb4223f2dc6216",
+      "width": 894,
+      "height": 488,
+      "size": 28444,
+      "uploadedDate": "2024-01-14T12:48:21.442Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery0-1920x1080-621b0fce3ad33613df96b4b479cb667a_Snapshot.png",
+      "md5": "d0d52e943e81bda74e0dc86f49a28077",
+      "width": 150,
+      "height": 74,
+      "size": 2516,
+      "uploadedDate": "2024-01-14T12:48:21.308Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image2024-01-13213307867-1920x1080-68b3865b5de50b58ea42fec1e46e0ee5_Snapshot.png",
+      "md5": "1881ca3603357bac8213f9023d17c828",
+      "width": 150,
+      "height": 74,
+      "size": 2784,
+      "uploadedDate": "2024-01-13T21:14:36.009Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-01-16T15:23:02.248Z",
+  "lastModifiedDate": "2024-10-15T07:03:39.485Z",
+  "entitlementName": "f0be1b1799a14c9892d24925d0b3fd71",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "7fe010e5918e4a1b86a2e4f64e0c60c3",
+      "appId": "EditorFrameRateLimiter_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-01-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0-5.1"
+    },
+    {
+      "id": "fc016539aca4404da77dc7718029615c",
+      "appId": "EditorFrameRateLimiter_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-01-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0-5.2"
+    },
+    {
+      "id": "fbbbf7a42e574df7b1ada72e2f5d8fe5",
+      "appId": "EditorFrameRateLimiter_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-01-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0-5.3"
+    }
+  ],
+  "developer": "Sindre Nygaard",
+  "developerId": "o-vwgwjelantlplthvakr3y7aecstj9q",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

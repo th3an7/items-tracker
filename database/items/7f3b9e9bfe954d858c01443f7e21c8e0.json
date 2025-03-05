@@ -1,0 +1,218 @@
+{
+  "id": "7f3b9e9bfe954d858c01443f7e21c8e0",
+  "title": "Customizable Pathfinding",
+  "description": "Simple but highly customizable plugin for pathfinding. Find paths in free 3D space, on ground, on walls, 2D grid, or even 2D side scrolling with jumping. Easy default setup with examples, core features exposed to blueprints.",
+  "longDescription": "<p><a href=\"https://youtu.be/GFOeX_Xd0Z8\" rel=\"nofollow\">BASIC SETUP VIDEO TUTORIAL</a> | <a href=\"https://youtu.be/HhH-_kPN7j4\" rel=\"nofollow\">SHORT VIDEO SHOWCASING INCLUDED EXAMPLE LEVELS</a> | <a href=\"https://youtu.be/3wz0_jjlWFU\" rel=\"nofollow\">ADVANCED TUTORIAL</a></p><p><br /></p><p><strong>Blueprint exposed customization:</strong></p><ul><li>Setting box-shaped area of the graph</li><li>Agent shape (simple shapes)</li><li>Agent dimensions</li><li>Octree depth, 0 - grid, 3 - for large open spaces. 2 by default, suitable for most scenarios.</li><li>Graph resolution (choosing size of the smallest voxel)</li></ul><p><br /></p><p><strong>C&#43;&#43; customization:</strong></p><ul><li>Modification of generating phase by overriding a single function. Each voxel can also carry additional user data that can be used during path calculation.</li><li>Overriding the fitness function used by the pathfinding algorithm, with access to generated data.</li></ul><p><br /></p><p>Graph is generated at runtime, by default at begin play. Both generation and pathfinding requests are done <strong>asynchronously</strong>, on up to 32 threads.</p><p><strong>Core functionality</strong> is a single global Find Path function, that takes two world locations and returns an array of nodes between start and end location.</p><p><strong>Supports dynamic obstacles. </strong>Making an object affect the graph in real-time is as simple as adding a component.</p><p><strong>Path following should be implemented by the user.</strong> However, the plugin does include a simple flying pawn, with an example implementation of a &#34;<em>GoTo</em>&#34; function. It is showcased in <strong>provided example levels</strong>.</p><p>Pathfinding is implemented via customized A* algorithm with post-smoothing. It&#39;s faster than Theta* while producing very similar results. Implementation details will be included in my thesis (work in progress). The code is also available on <a href=\"https://github.com/NonStaticGH/CPathHostProject\" rel=\"nofollow\">GitHub</a>.</p><p><br /></p><p><strong>Patch Notes</strong></p><p><br /></p><p>Version 1.03:</p><ul><li>Added a simple benchmark tool with results printed to logs and a .csv file</li><li>Significantly improved pathfinding thread management</li><li>Created a simple interface for getting a path in C&#43;&#43;, similar to the blueprint one</li><li>Added FindPathSynchronous node to blueprint</li></ul><p><br /></p><p>Version 1.02:</p><ul><li>Added support for UE 5.1</li><li>Fixed linker error when statically accessing plugin classes</li><li>Occupied nodes are now drawn correctly when selected</li><li>User Data can now be passed to every FindPath call</li><li>Added new example level with 2D setup and modified pathfinding rules (covered by advanced <a href=\"https://youtu.be/3wz0_jjlWFU\" rel=\"nofollow\">tutorial</a> on youtube)</li><li>Many other minor bugfixes and QOL changes</li></ul><p><br /></p><p>Version 1.01:</p><ul><li>Added support for UE 4.27. Example levels cannot be degraded, so for proper example levels please download the Unreal Engine 5 version.</li><li>Added missing dependencies when adding to a blank project</li><li>Minor bugfixes</li></ul>",
+  "technicalDetails": "<p><strong>Features: </strong></p><ul><li>Dynamic graph generation at runtime</li><li>Easy setup, one core blueprint function</li><li>Precision is set by the user - works for setups of any size</li><li>Three example levels provided</li><li>Example blueprints and commented C&#43;&#43; code</li></ul><p><br /></p><p><strong>Code Modules: </strong></p><ul><li> Runtime</li></ul><p><br /></p><p>Number of Blueprints: 2</p><p>Number of C&#43;&#43; Classes: 9</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows*</p><p><br /></p><p><a href=\"https://docs.google.com/document/d/1j3NQCgR5H0Uz8qd1RfNvZPzvJEcxNIapOkz0MESesWY/edit?usp&#61;sharing\" rel=\"nofollow\">DOCUMENTATION</a></p><p><br /></p><p><strong>Important/Additional Notes:</strong></p><p>This plugin is part of my Engineering Thesis and it&#39;s the first iteration of it. In future, it will be heavily updated, with even better performance (however it&#39;s perfectly usable right now on projects of any scale), will most likely come with a price and a detailed YouTube video, as well as more example levels (2D setup, wall climbing setup, tile-based setup, etc.)</p><p><br /></p><p>[UPDATE]:</p><p>I successfully defended my thesis in February 2023, so it will be publicly available 6 months from then.</p><p>I have also updated this free version more than I planned, but this 1.03 update is most likely the last impactful one. I will still update it to support newer engine versions, and potentially fix bugs if any new ones are found.</p><p>Thanks to everyone for all the positive comments! :)</p><p><br /></p><p>* It should work on all platforms supported by Unreal Engine 5, however it has only been packaged and tested on Windows.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot1-1920x1080-e12d52a3f35b21468b72963daa0feeed.png",
+      "md5": "e12d52a3f35b21468b72963daa0feeed",
+      "width": 1920,
+      "height": 1080,
+      "size": 2641381,
+      "uploadedDate": "2022-10-16T02:05:34.195Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2-1920x1080-fae6a2f4907235a500eb017160c85f83.png",
+      "md5": "fae6a2f4907235a500eb017160c85f83",
+      "width": 1920,
+      "height": 1080,
+      "size": 2931061,
+      "uploadedDate": "2022-10-16T02:05:34.930Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot3-1920x1080-7d8dd72bffa20c55e879e033b02006e6.png",
+      "md5": "7d8dd72bffa20c55e879e033b02006e6",
+      "width": 1920,
+      "height": 1080,
+      "size": 2663630,
+      "uploadedDate": "2022-10-16T02:05:35.694Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot4-1920x1080-9aed6ac7a6652bc3a149d30ffea5a754.png",
+      "md5": "9aed6ac7a6652bc3a149d30ffea5a754",
+      "width": 1920,
+      "height": 1080,
+      "size": 2584166,
+      "uploadedDate": "2022-10-16T02:05:36.477Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot5-1920x1080-c07dd59f72d96fc067143507545f127b.png",
+      "md5": "c07dd59f72d96fc067143507545f127b",
+      "width": 1920,
+      "height": 1080,
+      "size": 2546868,
+      "uploadedDate": "2022-10-16T02:05:37.219Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/CustomizablePathfinding_thumb-284x284-d37bb3ce6b435fdb8355684838014934.png",
+      "md5": "d37bb3ce6b435fdb8355684838014934",
+      "width": 284,
+      "height": 284,
+      "size": 139068,
+      "uploadedDate": "2022-10-16T02:05:37.784Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/CustomizablePathfinding_featured-894x488-a2d415b25b79a7f3b488ef91b56c547e.png",
+      "md5": "a2d415b25b79a7f3b488ef91b56c547e",
+      "width": 894,
+      "height": 488,
+      "size": 671815,
+      "uploadedDate": "2022-10-16T02:05:37.919Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot1-1920x1080-e12d52a3f35b21468b72963daa0feeed_Snapshot.png",
+      "md5": "ec82ace628df55338ffaf88969a2114a",
+      "width": 150,
+      "height": 74,
+      "size": 9607,
+      "uploadedDate": "2022-10-16T02:05:34.697Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2-1920x1080-fae6a2f4907235a500eb017160c85f83_Snapshot.png",
+      "md5": "33a5e1fd41435f9e667961e4fd8cb2c3",
+      "width": 150,
+      "height": 74,
+      "size": 5959,
+      "uploadedDate": "2022-10-16T02:05:35.405Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot3-1920x1080-7d8dd72bffa20c55e879e033b02006e6_Snapshot.png",
+      "md5": "388649eb7bdbffee6567386e0fd3a54e",
+      "width": 150,
+      "height": 74,
+      "size": 6178,
+      "uploadedDate": "2022-10-16T02:05:36.199Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot4-1920x1080-9aed6ac7a6652bc3a149d30ffea5a754_Snapshot.png",
+      "md5": "1e67e3dfd977fdc84b8079f2601f1674",
+      "width": 150,
+      "height": 74,
+      "size": 4890,
+      "uploadedDate": "2022-10-16T02:05:36.971Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot5-1920x1080-c07dd59f72d96fc067143507545f127b_Snapshot.png",
+      "md5": "4fd5f59fe7010c76908e22a0029d5b1a",
+      "width": 150,
+      "height": 74,
+      "size": 6506,
+      "uploadedDate": "2022-10-16T02:05:37.677Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-10-20T14:27:59.906Z",
+  "lastModifiedDate": "2024-10-15T12:22:29.890Z",
+  "customAttributes": {},
+  "entitlementName": "7f3b9e9bfe954d858c01443f7e21c8e0",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "6f325e643e1a4d6799f13b91c33e9990",
+      "appId": "CPathfinding_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-10-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE4.27 v1.03"
+    },
+    {
+      "id": "f59ce33128d24eadba97919b97c28c08",
+      "appId": "CPathfinding_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-10-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.0 v1.03"
+    },
+    {
+      "id": "2974ec4be44347269efa279a3a282fd8",
+      "appId": "CPathfinding_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.1 v1.03"
+    },
+    {
+      "id": "e5f06243bf124e208e37b413af45a253",
+      "appId": "CPathfinding_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-07-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.2 v1.031"
+    },
+    {
+      "id": "efe13dec8b984df0a9ff5bad4e37de55",
+      "appId": "CPathfinding_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-11-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.3 v1.031"
+    },
+    {
+      "id": "08932a918d7743209b6d43f2f55526e3",
+      "appId": "CPathfinding_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.4 v1.0312"
+    }
+  ],
+  "developer": "NonStatic",
+  "developerId": "o-7rc68gcxhdvvcutlf6h39qpvn89nfb",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,233 @@
+{
+  "id": "9600ed5c5a54493cab0ced9f2cd6bc06",
+  "title": "IGToolsPP: Speedtree to Pivot Painter 2.0",
+  "description": "Transform Speed Tree models into Unreal static meshes with Pivot Painter 2.0 animated wind",
+  "longDescription": "<p>Speed Tree to Pivot Painter 2.0 plugin (IGToolsPP) allows to import a tree generated in Speed Tree (exported as USD – universal scene description) in Unreal Engine in order to create the following;</p><ul><li>A static mesh (nanite or not) with the additional UV channel and textures needed for <a href=\"https://docs.unrealengine.com/5.3/en-US/pivot-painter-tool-2.0-in-unreal-engine/\" rel=\"nofollow\">Pivot Painter 2</a> wind animation</li><li>A material layer implementing the wind animation</li><li>A set of materials for the mesh, either with normal textures or UDIM textures (less material slots in the mesh)</li></ul><p><br /></p><p><strong>Videos:</strong></p><ul><li><a href=\"https://youtu.be/-f06o28BdPQ\" rel=\"nofollow\"><strong>Presentation and short tutorial</strong></a></li><li><a href=\"https://youtube.com/playlist?list&#61;PLP-uPWYCiCCFISl9PjimyEn7imhi29wQf&amp;si&#61;Vc3GsQFM9f9ZSDM6\" rel=\"nofollow\"><strong>Step by step tutorials and other examples (playlist)</strong></a></li></ul><p><br /></p><p>The generated mesh and pivot textures can be used with Pivot Painter 2 material from Unreal’s Content Examples, but we also provide a modified version of the wind material implemented as a material layer, as well as default base materials for tree branches and leaves. Of course, you can also use the pivot painter textures and the anim material layer with your own materials.</p><p><br /></p><p>Current limitations: the plugin doesn’t import the textures (like base color), you will need to import them yourself. This is mostly because we normally use original PBR textures (like Quixel) instead of those exported by Speed Tree.</p><p><br /></p><p>Features:</p><ul><li>Generates static mesh, UVs and textures ready to use with Pivot Painter 2.0 materials</li><li>Contains a modified version of PP2 materials organized as material layers, with normal or UDIM textures</li><li>Nanite is supported but not required</li><li>Global wind controls via a Material Parameter collection which can be hooked with a Directional Wind Actor</li><li>UI that allows to map ST generators to PP2 levels</li><li>Included PP2 materials support 4 levels, but you can generate PP2 textures for an arbitrary number of levels to use with your own material or Niagara</li><li>Simple UVs manipulations that allow to use UDIM</li><li>Can generate multi-part meshes (for example leaves mesh separated from the branches mesh)</li><li>Supports trees with multiple trunks and grass </li></ul><p><br /></p><p>FAQ</p><ul><li>Q: What&#39;s the difference with Nanite Megatrees? A: Megascan trees are asset packs of premade trees. This is a plugin that allows to import trees from Speed Tree, so you make your own trees how you want and import them.</li><li>Q: What&#39;s the difference with Speed Tree wind? A: Speed Tree importer only supports 2 level wind and requires 5 additional UV channels and vertex paint: this doesn&#39;t work well with Nanite. Our plugin uses only one additional UV channel and 2 small textures for 4 levels wind; it works well with Nanite and gives a lot more control on the animation.</li></ul>",
+  "technicalDetails": "<p><br /></p><p><br /></p><p>Code Modules: IGToolsPP (Editor)</p><p>Number of Blueprints: 3 (UI)</p><p>Number of C&#43;&#43; Classes: 2</p><p>Number of Materials and Functions: 27</p><p>Supported Development Platforms: Win, Mac, Linux</p><p>Supported Target Build Platforms: Any</p><p>Documentation: <a href=\"https://inu-games.com/igtoolspp-documentation/\" rel=\"nofollow\">Written Documentation</a>, Video <a href=\"https://youtu.be/-f06o28BdPQ\" rel=\"nofollow\">intro tutorial</a>, <a href=\"https://youtube.com/playlist?list&#61;PLP-uPWYCiCCFISl9PjimyEn7imhi29wQf&amp;si&#61;Vc3GsQFM9f9ZSDM6\" rel=\"nofollow\">detailed tutorials and examples (playlist)</a> </p><p>Required plugins: USD Importer, Python Script and Geometry Script (included in UE5)</p><p>Support: <a href=\"https://forums.unrealengine.com/t/igtoolspp-speedtree-to-pivot-painter-2-0/1337966\" rel=\"nofollow\">forum</a></p><p><br /></p><p><strong><em>Important Note:</em></strong><em> Unreal Marketplace plugins pricing is </em><a href=\"https://marketplacehelp.epicgames.com/s/article/Can-I-share-products-with-my-team\" rel=\"nofollow\"><em>per seat</em></a><em>, if you need multiple licenses please </em><a href=\"https://www.artstation.com/a/31735561\" rel=\"nofollow\"><em>check our Artstaion store</em></a><em>: there&#39;s more licensing options, access to old versions and a better support chat.</em></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenshotOverview-1920x1080-b3233b45577ffccd7fd290588fc2312e.png",
+      "md5": "b3233b45577ffccd7fd290588fc2312e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1435848,
+      "uploadedDate": "2023-10-02T17:59:00.969Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenshotAnimLayer-1920x1080-6430ff7608791a6dc128a9739210a3a5.png",
+      "md5": "6430ff7608791a6dc128a9739210a3a5",
+      "width": 1920,
+      "height": 1080,
+      "size": 378809,
+      "uploadedDate": "2023-10-02T17:59:01.485Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenshotTextures-1920x1080-71dc3aba765dbab7209467511229b8a1.png",
+      "md5": "71dc3aba765dbab7209467511229b8a1",
+      "width": 1920,
+      "height": 1080,
+      "size": 244197,
+      "uploadedDate": "2023-10-02T17:59:02.053Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenshotUV-1920x1080-ab20269a076c4fcb95b5d1404052a915.png",
+      "md5": "ab20269a076c4fcb95b5d1404052a915",
+      "width": 1920,
+      "height": 1080,
+      "size": 838394,
+      "uploadedDate": "2023-10-02T17:59:02.603Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenshotAnimControl-1920x1080-b5dab2e3e1b71743aa15c21327fdceb3.png",
+      "md5": "b5dab2e3e1b71743aa15c21327fdceb3",
+      "width": 1920,
+      "height": 1080,
+      "size": 134777,
+      "uploadedDate": "2023-10-02T17:59:03.071Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenshotWindBP-1920x1080-2733bc1c2a9c3a706004880275daac57.png",
+      "md5": "2733bc1c2a9c3a706004880275daac57",
+      "width": 1920,
+      "height": 1080,
+      "size": 305134,
+      "uploadedDate": "2023-10-02T17:59:03.459Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenshotNanite-1920x1080-1dd9e9636e6bfa5c47786edca39fa870.png",
+      "md5": "1dd9e9636e6bfa5c47786edca39fa870",
+      "width": 1920,
+      "height": 1080,
+      "size": 842895,
+      "uploadedDate": "2023-10-02T17:59:03.898Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshotspeedtree.PNG-1920x1080-9a4adea55f3e9fbc7dfffeaa3e2ae165.jpg",
+      "md5": "9a4adea55f3e9fbc7dfffeaa3e2ae165",
+      "width": 1920,
+      "height": 1080,
+      "size": 1139928,
+      "uploadedDate": "2023-10-02T17:59:04.479Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SpeedTreetoPivotPainter20IGToolsPP_thumb-284x284-6260d87cf4507527ee82fea78a3651da.png",
+      "md5": "6260d87cf4507527ee82fea78a3651da",
+      "width": 284,
+      "height": 284,
+      "size": 189533,
+      "uploadedDate": "2023-10-02T17:21:09.363Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SpeedTreetoPivotPainter20IGToolsPP_featured-894x488-8aac25604d53884210743a3ff7ac9252.png",
+      "md5": "8aac25604d53884210743a3ff7ac9252",
+      "width": 894,
+      "height": 488,
+      "size": 805701,
+      "uploadedDate": "2023-10-02T17:21:09.583Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenshotOverview-1920x1080-b3233b45577ffccd7fd290588fc2312e_Snapshot.png",
+      "md5": "4ff165cb8beaa90b01c68ab4fd7cf89b",
+      "width": 150,
+      "height": 74,
+      "size": 7117,
+      "uploadedDate": "2023-10-02T17:59:01.315Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenshotAnimLayer-1920x1080-6430ff7608791a6dc128a9739210a3a5_Snapshot.png",
+      "md5": "2514967c46d1f3caa98bb82e6ba6917a",
+      "width": 150,
+      "height": 74,
+      "size": 6183,
+      "uploadedDate": "2023-10-02T17:59:01.779Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenshotTextures-1920x1080-71dc3aba765dbab7209467511229b8a1_Snapshot.png",
+      "md5": "53e26c0c96ca57397427ce1eaf90c46d",
+      "width": 150,
+      "height": 74,
+      "size": 6700,
+      "uploadedDate": "2023-10-02T17:59:02.310Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenshotUV-1920x1080-ab20269a076c4fcb95b5d1404052a915_Snapshot.png",
+      "md5": "8edef7214da9647d64d9afa13d1a2ca1",
+      "width": 150,
+      "height": 74,
+      "size": 5785,
+      "uploadedDate": "2023-10-02T17:59:02.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenshotAnimControl-1920x1080-b5dab2e3e1b71743aa15c21327fdceb3_Snapshot.png",
+      "md5": "b18d16a506372949b6165c32a96b5755",
+      "width": 150,
+      "height": 74,
+      "size": 3801,
+      "uploadedDate": "2023-10-02T17:59:03.311Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenshotWindBP-1920x1080-2733bc1c2a9c3a706004880275daac57_Snapshot.png",
+      "md5": "7cc1aa557f73c6d0ad928e4b17d613f0",
+      "width": 150,
+      "height": 74,
+      "size": 5498,
+      "uploadedDate": "2023-10-02T17:59:03.718Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenshotNanite-1920x1080-1dd9e9636e6bfa5c47786edca39fa870_Snapshot.png",
+      "md5": "222dc990e72aca4a2f1e58d10b85e6e9",
+      "width": 150,
+      "height": 74,
+      "size": 5753,
+      "uploadedDate": "2023-10-02T17:59:04.230Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshotspeedtree.PNG-1920x1080-9a4adea55f3e9fbc7dfffeaa3e2ae165_Snapshot.jpg",
+      "md5": "7a57a6fe29c3606ee1258946cad63687",
+      "width": 150,
+      "height": 74,
+      "size": 7495,
+      "uploadedDate": "2023-10-02T17:59:04.831Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/placeholder-1920x1080-d49056dee359206845e90dbf3fb210ec_Snapshot.png",
+      "md5": "f5b99436cf179a47885295a0d279a65b",
+      "width": 150,
+      "height": 74,
+      "size": 3675,
+      "uploadedDate": "2023-10-02T14:17:28.207Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-10-19T16:07:51.915Z",
+  "lastModifiedDate": "2025-01-20T18:11:56.763Z",
+  "customAttributes": {},
+  "entitlementName": "9600ed5c5a54493cab0ced9f2cd6bc06",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b4faf63f71e4448d9238fb8d44e1aff0",
+      "appId": "IGToolsPP_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-10-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.6.3 for UE5.3"
+    },
+    {
+      "id": "49516d9c94fc4d4aa66d30d302e3e0ea",
+      "appId": "IGToolsPP_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.6.3 for UE5.4"
+    }
+  ],
+  "developer": "Inu Games",
+  "developerId": "o-5qggagdnymmfwhysufrsaa3x39rqnr",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

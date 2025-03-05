@@ -1,0 +1,618 @@
+{
+  "id": "3cf5db8290ce4c13ad83a16c8d506d9d",
+  "title": "Nordic Conifer Biome",
+  "description": "Everything you need to recreate an authentic scandinavian conifer forest. AAA Quality, fully optimized and game ready.",
+  "longDescription": "<p><strong>Regarding 5.3 MRQ issues:</strong></p><p><strong><em>There seem to be some problems getting the example level to render correctly in 5.3 using the MovieRenderQueue.</em></strong></p><p><strong><em>After some testing it appears to be related to the amount of instances in the level, apparently MRQ can handle less instances than the regular real time renderer. (which is a bit ironic?)</em></strong></p><p><br /></p><p><strong><em>I managed to get it to render correctly by lowering the density of some of the Landscape Grass Scatter</em></strong></p><p><strong><em>(In the Landscape Material there is a Brown Node called &#34;Landscape Grass&#34; that contains all DataAssets with Density Settings)</em></strong></p><p><br /></p><p><strong><em>Rather than adjusting the content and making everything look worse based on a bug, I would hope this gets fixed in future updates. </em></strong></p><p><strong><em>But for now, lowering scatter density locally should get the MRQ to work again. Either through adjusting individual meshes, or by using a console variable like &#34;</em></strong>grass.densityScale 0.6&#34; <strong><em>to reduce all scatter across the board</em></strong></p><p><br /></p><p><strong>Update 1.6 :</strong></p><p>Adjusted Billboard distances to reduce issues when viewing the billboards from certain angles.</p><p>This will have a slight impact on performance.</p><p><br /></p><p>Adjusted Opacity Mask Clip Value to work better with UE5.</p><p>To revert the change, open M_Foliage and change the Opacity Mask Clip Value in the Root node back to 0.5</p><p><br /></p><p><strong>Update 1.5 :</strong> Imposters now work correctly with UE5.</p><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;nsI652Nc8DA\" rel=\"nofollow\"><strong>YOUTUBE VIDEO</strong></a></p><p><a href=\"https://www.artstation.com/artwork/WmPV2Q\" rel=\"nofollow\"><strong>ARTSTATION</strong></a></p><p>This pack contains everything needed to recreate a realistic mossy conifer forest for your game or scene!</p><p><br /></p><p>Everything has been carefully and thoughtfully crafted and optimized to run on currently gen hardware. </p><p>Every mesh is lodded and set up with custom LOD distances and Shader LODs where needed to reduce rendering cost at a distance.</p><p><br /></p><p>Most asset come with 4k textures, but have been scaled down in engine to reasonable &#34;game&#34; sizes so that it fits within Unreal&#39;s default StreamingPool. Of course without sacrificing any noticeable visual fidelity. </p><p><br /></p><p>All trees and large vegetation have been set up with billboards for maximum performance and visuals, as well as Pivot Painter Wind for realistic movement.</p><p><br /></p><p>Wind strength can be controlled globally through a single parameter in the Parameter Collection named MPC_Weather, to go from a light breeze to full on storm.</p><p><br /></p><p>Also within the MPC_Weather is a global snow parameter which will add a light coating of snow to the scene.</p><p><br /></p><p>Landscape shader is optimized and set up with 5 materials, one of them being a Path Material, intended to create gameplay paths, and no procedural spawning will happen on the Path material, which makes creating visual guidance easy.</p><p><br /></p><p>The Landscape Shader comes in two version, one with Tessellation/Displacement enabled and one without.</p><p>A word of warning, tessellation in Unreal is very expensive, and it is also no longer officially supported by Epic, and will not be available in future version of Unreal, so I would not recommend using it.</p><p>But if don&#39;t mind trading some performance for a little visual boost, I have included it none the less.</p><p><br /></p><p>Also included in the Pack is the example map from the screen shots, it is a 2x2km procedurally spawned forest, complete with backdrop.</p><p>Within the map, in addition to the regular conifer forest, you will find small sub-biomes such as swamps, grassy meadows and lakes.</p><p><br /></p><p>It is hard to convey the sheer scale of the map in just screenshots and video, so I recommend everyone to fire it up in an FPS Template project and go exploring!</p><p><br /></p><p>Just remember to also copy <a href=\"https://www.dropbox.com/s/lb8gn2bs3vqabko/NordicConfierBiomeINI.zip?dl&#61;0\" rel=\"nofollow\"><strong>THESE </strong></a>.ini files into the project or the performance and visuals will be off.</p><p>It might sound silly, but these are important,<strong> by default Unreal is not at all configured for performance, so you can gain *a lot* by learning what settings to turn on and off in these files!</strong></p><p><br /></p><p>Everything is spawned using Procedural Foliage Volumes set up in numbered order. So they are intended to spawn in the order suggested by the names . Please note, that due to the sheer size of the map, each volume can take several minutes to re-spawn. While this is unfortunate, it is still preferable to populating 4km2 by hand, right? ;)</p><p><br /></p><p>NOTE1: If you don&#39;t plan on using the dynamic snow, you can save a little bit of performance by going into the MF_Snow Material Function and un-checking the Boolean in there. This will disable the snow across all parent shaders and remove its cost completely.</p><p><br /></p><p>NOTE2: Procedural Foliage is an Editor Preference and not a Project setting. So in order to access and place new Foliage volumes and access the extended settings, you need to go into your Editor Preferences and activate Procedural Foliage.</p><p><br /></p><p>NOTE3: Unlike my previous environments, this is set up as an Asset Pack to make it easier for you guys to use in your own projects. Unfortunately this means that in order to get the correct lighting, visuals and performance in the Example Level, you need to manually download my .ini files and place them in your projects Config folder:</p><p>YourProject\\Config</p><p><br /></p><p>You can find the .ini files <a href=\"https://www.dropbox.com/s/lb8gn2bs3vqabko/NordicConfierBiomeINI.zip?dl&#61;0\" rel=\"nofollow\">HERE</a></p>",
+  "technicalDetails": "<p>Features: (Please include a full, comprehensive list of the features of the product)</p><ul><li> 28 Unique trees and stumps of various species, ranging from sizes XS to XL.</li><li> 25 Unique Cliffs and Rocks and Logs</li><li> Undergrowth and Scatter meshes to cover the forest floor.</li><li>Simple and optimized Landscape shader, both with and without Tessellation/Displacement</li><li>Simple to use Global Wind and Snow controls</li><li>Optimized vegetation and asset  parent shaders with LASTLOD function to easily create cheaper shaders for distant LODs</li><li>Billboards for all trees</li><li><br /></li></ul><p>Number of Unique Meshes: 93</p><p>Collision: Yes, generated capsules for all trees, convex hulls for everything else</p><p>Vertex Count: 4 - 33 000</p><p>LODs: Yes, generated LODs for all regular meshes, vegetation uses custom LODs and Billboards.</p><p>Number of Materials and Material Instances: 10 Parent Materials and 165 Material Instances(including regular and LOD-materials)</p><p>Number of Textures: 343</p><p>Texture Resolutions: 512x512 - 4096x4096 (and everything in between)</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Documentation: Link (or a description of where users can find) the documentation</p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080002119-1920x1080-2fcf39bbc73ebf1eeba176b1e4ceae04.jpg",
+      "md5": "2fcf39bbc73ebf1eeba176b1e4ceae04",
+      "width": 1920,
+      "height": 1080,
+      "size": 588268,
+      "uploadedDate": "2022-01-23T11:11:14.375Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped108000043-1920x1080-0546a6d2e6a322970e2a6470dd3c5fdd.jpg",
+      "md5": "0546a6d2e6a322970e2a6470dd3c5fdd",
+      "width": 1920,
+      "height": 1080,
+      "size": 451880,
+      "uploadedDate": "2022-01-23T11:11:13.280Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped108000011-1920x1080-bf4dafd20a3f77ecf2680edc9c110dcb.jpg",
+      "md5": "bf4dafd20a3f77ecf2680edc9c110dcb",
+      "width": 1920,
+      "height": 1080,
+      "size": 569157,
+      "uploadedDate": "2022-01-23T11:11:13.613Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped108000000-1920x1080-f3644534871517191cdb9be71a29f096.jpg",
+      "md5": "f3644534871517191cdb9be71a29f096",
+      "width": 1920,
+      "height": 1080,
+      "size": 699482,
+      "uploadedDate": "2022-01-23T11:11:15.173Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080001111-1920x1080-59d6f0a7795a90cbda9dfe7f8a969f11.jpg",
+      "md5": "59d6f0a7795a90cbda9dfe7f8a969f11",
+      "width": 1920,
+      "height": 1080,
+      "size": 481941,
+      "uploadedDate": "2022-01-23T11:11:13.995Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080003131-1920x1080-402855c36dbe6556be652987e082f257.jpg",
+      "md5": "402855c36dbe6556be652987e082f257",
+      "width": 1920,
+      "height": 1080,
+      "size": 466410,
+      "uploadedDate": "2022-01-23T11:11:14.795Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080002825-1920x1080-515c0845e3e89afc6bcc16760293a34d.jpg",
+      "md5": "515c0845e3e89afc6bcc16760293a34d",
+      "width": 1920,
+      "height": 1080,
+      "size": 469895,
+      "uploadedDate": "2022-01-23T11:11:15.559Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080003532-1920x1080-beee43729fb39a9b0c83959e93081eff.jpg",
+      "md5": "beee43729fb39a9b0c83959e93081eff",
+      "width": 1920,
+      "height": 1080,
+      "size": 555469,
+      "uploadedDate": "2022-01-23T11:13:24.989Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped108000066-1920x1080-6648a23fed1fcede45ab9f38121ba8c0.jpg",
+      "md5": "6648a23fed1fcede45ab9f38121ba8c0",
+      "width": 1920,
+      "height": 1080,
+      "size": 479980,
+      "uploadedDate": "2022-01-23T11:11:15.961Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080004944-1920x1080-01cc4a4ce1a14c8eed4c457134098bf0.jpg",
+      "md5": "01cc4a4ce1a14c8eed4c457134098bf0",
+      "width": 1920,
+      "height": 1080,
+      "size": 506875,
+      "uploadedDate": "2022-01-23T11:11:12.866Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080005155-1920x1080-13a9a9940bb80b0599b44bdf46f2dcb8.jpg",
+      "md5": "13a9a9940bb80b0599b44bdf46f2dcb8",
+      "width": 1920,
+      "height": 1080,
+      "size": 503714,
+      "uploadedDate": "2022-01-23T11:11:16.328Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped108000077-1920x1080-28f8373caee738a3095ce865cd4bc7af.jpg",
+      "md5": "28f8373caee738a3095ce865cd4bc7af",
+      "width": 1920,
+      "height": 1080,
+      "size": 563054,
+      "uploadedDate": "2022-01-23T11:11:16.633Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080002927-1920x1080-8748a109e463ec13ba764e780259094e.jpg",
+      "md5": "8748a109e463ec13ba764e780259094e",
+      "width": 1920,
+      "height": 1080,
+      "size": 510868,
+      "uploadedDate": "2022-01-23T11:11:17.019Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080001313-1920x1080-6728773a478403aa6888fb4f56bb0b33.jpg",
+      "md5": "6728773a478403aa6888fb4f56bb0b33",
+      "width": 1920,
+      "height": 1080,
+      "size": 523056,
+      "uploadedDate": "2022-01-23T11:11:17.345Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080003633-1920x1080-b376fdba75771d20e193c8ba44922077.jpg",
+      "md5": "b376fdba75771d20e193c8ba44922077",
+      "width": 1920,
+      "height": 1080,
+      "size": 534148,
+      "uploadedDate": "2022-01-23T11:11:17.742Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped108000099-1920x1080-69409a08bf55630a0cb54d2055271d84.jpg",
+      "md5": "69409a08bf55630a0cb54d2055271d84",
+      "width": 1920,
+      "height": 1080,
+      "size": 469345,
+      "uploadedDate": "2022-01-23T11:11:18.168Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080002220-1920x1080-e26e91fff2a6b519a1416b329bd0e22f.jpg",
+      "md5": "e26e91fff2a6b519a1416b329bd0e22f",
+      "width": 1920,
+      "height": 1080,
+      "size": 655599,
+      "uploadedDate": "2022-01-23T11:11:18.560Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped108000032-1920x1080-91a69d11dcc29e3442914be8872c8d98.jpg",
+      "md5": "91a69d11dcc29e3442914be8872c8d98",
+      "width": 1920,
+      "height": 1080,
+      "size": 447829,
+      "uploadedDate": "2022-01-23T11:11:18.945Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080001756-1920x1080-1a1738cea3c6f1fff47a3e487db26185.jpg",
+      "md5": "1a1738cea3c6f1fff47a3e487db26185",
+      "width": 1920,
+      "height": 1080,
+      "size": 625331,
+      "uploadedDate": "2022-01-23T11:11:19.326Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080001918-1920x1080-23c68d92dad49601cc797e89747d7353.jpg",
+      "md5": "23c68d92dad49601cc797e89747d7353",
+      "width": 1920,
+      "height": 1080,
+      "size": 684034,
+      "uploadedDate": "2022-01-23T11:11:19.722Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080002653-1920x1080-cabfd3a97cce84c8360868fa3c9f0e1a.jpg",
+      "md5": "cabfd3a97cce84c8360868fa3c9f0e1a",
+      "width": 1920,
+      "height": 1080,
+      "size": 239843,
+      "uploadedDate": "2022-01-23T11:11:20.105Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080003028-1920x1080-18b62cd6cce9b6fe1f7957588556a849.jpg",
+      "md5": "18b62cd6cce9b6fe1f7957588556a849",
+      "width": 1920,
+      "height": 1080,
+      "size": 427879,
+      "uploadedDate": "2022-01-23T11:11:20.834Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080005650-1920x1080-0c712e6a94f1f1c8dd32aa6c9c767908.jpg",
+      "md5": "0c712e6a94f1f1c8dd32aa6c9c767908",
+      "width": 1920,
+      "height": 1080,
+      "size": 864036,
+      "uploadedDate": "2022-01-23T11:11:20.493Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped1080005852-1920x1080-24713a4e21824207b905222cee9b05d0.jpg",
+      "md5": "24713a4e21824207b905222cee9b05d0",
+      "width": 1920,
+      "height": 1080,
+      "size": 822043,
+      "uploadedDate": "2022-01-23T11:11:21.275Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cropped10800059ScreenShot00118-1920x1080-c19cda87bdd4f57f6049f746076a55c9.jpg",
+      "md5": "c19cda87bdd4f57f6049f746076a55c9",
+      "width": 1920,
+      "height": 1080,
+      "size": 249714,
+      "uploadedDate": "2022-01-23T11:11:21.639Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/NordicConiferBiome_thumb-284x284-dec032d2c54236fe507c23e480473dfd.png",
+      "md5": "dec032d2c54236fe507c23e480473dfd",
+      "width": 284,
+      "height": 284,
+      "size": 215370,
+      "uploadedDate": "2022-01-23T11:37:08.488Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/NordicConiferBiome_featured-894x488-a1021834c975bbba5e530f1476f11235.png",
+      "md5": "a1021834c975bbba5e530f1476f11235",
+      "width": 894,
+      "height": 488,
+      "size": 918120,
+      "uploadedDate": "2022-01-16T20:02:38.336Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080003532-1920x1080-beee43729fb39a9b0c83959e93081eff_Snapshot.jpg",
+      "md5": "c1087210a94144c5f9347d9d66754285",
+      "width": 150,
+      "height": 74,
+      "size": 7216,
+      "uploadedDate": "2022-01-23T11:13:25.216Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080004944-1920x1080-01cc4a4ce1a14c8eed4c457134098bf0_Snapshot.jpg",
+      "md5": "def90cb1a10825ce975b96c397186ba2",
+      "width": 150,
+      "height": 74,
+      "size": 6866,
+      "uploadedDate": "2022-01-23T11:11:13.111Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped108000043-1920x1080-0546a6d2e6a322970e2a6470dd3c5fdd_Snapshot.jpg",
+      "md5": "6b5dbfc48428e037fc02ea84526cf333",
+      "width": 150,
+      "height": 74,
+      "size": 6319,
+      "uploadedDate": "2022-01-23T11:11:13.519Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped108000011-1920x1080-bf4dafd20a3f77ecf2680edc9c110dcb_Snapshot.jpg",
+      "md5": "789a042241309c90608352b675730236",
+      "width": 150,
+      "height": 74,
+      "size": 7993,
+      "uploadedDate": "2022-01-23T11:11:13.842Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080001111-1920x1080-59d6f0a7795a90cbda9dfe7f8a969f11_Snapshot.jpg",
+      "md5": "49b1d3b97c99298ef13466592534e09d",
+      "width": 150,
+      "height": 74,
+      "size": 6565,
+      "uploadedDate": "2022-01-23T11:11:14.245Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080002119-1920x1080-2fcf39bbc73ebf1eeba176b1e4ceae04_Snapshot.jpg",
+      "md5": "b7374eb8e78efa41dbd4f83e6dee9883",
+      "width": 150,
+      "height": 74,
+      "size": 7625,
+      "uploadedDate": "2022-01-23T11:11:14.626Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080003131-1920x1080-402855c36dbe6556be652987e082f257_Snapshot.jpg",
+      "md5": "aeb064a999dfc7a0643488e4eb181f9d",
+      "width": 150,
+      "height": 74,
+      "size": 6854,
+      "uploadedDate": "2022-01-23T11:11:15.016Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped108000000-1920x1080-f3644534871517191cdb9be71a29f096_Snapshot.jpg",
+      "md5": "21a83256299f785db2aa929e5f33b5f3",
+      "width": 150,
+      "height": 74,
+      "size": 8531,
+      "uploadedDate": "2022-01-23T11:11:15.429Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080002825-1920x1080-515c0845e3e89afc6bcc16760293a34d_Snapshot.jpg",
+      "md5": "14a8a78752dbd0120ec3794751017c40",
+      "width": 150,
+      "height": 74,
+      "size": 6531,
+      "uploadedDate": "2022-01-23T11:11:15.829Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped108000066-1920x1080-6648a23fed1fcede45ab9f38121ba8c0_Snapshot.jpg",
+      "md5": "eed861ab49469f0afc2673503926fa63",
+      "width": 150,
+      "height": 74,
+      "size": 6940,
+      "uploadedDate": "2022-01-23T11:11:16.180Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080005155-1920x1080-13a9a9940bb80b0599b44bdf46f2dcb8_Snapshot.jpg",
+      "md5": "05f43df331c1aa039370d21945308da4",
+      "width": 150,
+      "height": 74,
+      "size": 8616,
+      "uploadedDate": "2022-01-23T11:11:16.547Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped108000077-1920x1080-28f8373caee738a3095ce865cd4bc7af_Snapshot.jpg",
+      "md5": "feb69571cac69955dbe6c795d3fe9ba2",
+      "width": 150,
+      "height": 74,
+      "size": 7647,
+      "uploadedDate": "2022-01-23T11:11:16.860Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080002927-1920x1080-8748a109e463ec13ba764e780259094e_Snapshot.jpg",
+      "md5": "2b90b4349fdeb33fc0955e7a312c904b",
+      "width": 150,
+      "height": 74,
+      "size": 7377,
+      "uploadedDate": "2022-01-23T11:11:17.259Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080001313-1920x1080-6728773a478403aa6888fb4f56bb0b33_Snapshot.jpg",
+      "md5": "0b99104d0532b7ebca79988573793f4c",
+      "width": 150,
+      "height": 74,
+      "size": 6708,
+      "uploadedDate": "2022-01-23T11:11:17.588Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080003633-1920x1080-b376fdba75771d20e193c8ba44922077_Snapshot.jpg",
+      "md5": "46a46fa87cac163ffb03806690b39d17",
+      "width": 150,
+      "height": 74,
+      "size": 7319,
+      "uploadedDate": "2022-01-23T11:11:17.966Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped108000099-1920x1080-69409a08bf55630a0cb54d2055271d84_Snapshot.jpg",
+      "md5": "94960f258e831fac453146854697eb1c",
+      "width": 150,
+      "height": 74,
+      "size": 6316,
+      "uploadedDate": "2022-01-23T11:11:18.395Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080002220-1920x1080-e26e91fff2a6b519a1416b329bd0e22f_Snapshot.jpg",
+      "md5": "a0c9204b3816433a998cdce9e6b28658",
+      "width": 150,
+      "height": 74,
+      "size": 8249,
+      "uploadedDate": "2022-01-23T11:11:18.791Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped108000032-1920x1080-91a69d11dcc29e3442914be8872c8d98_Snapshot.jpg",
+      "md5": "a11830c07cd5f30f45708a2e8da7947f",
+      "width": 150,
+      "height": 74,
+      "size": 7979,
+      "uploadedDate": "2022-01-23T11:11:19.165Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080001756-1920x1080-1a1738cea3c6f1fff47a3e487db26185_Snapshot.jpg",
+      "md5": "1eb2408612a0f2ed2c37c772767a9e71",
+      "width": 150,
+      "height": 74,
+      "size": 7797,
+      "uploadedDate": "2022-01-23T11:11:19.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080001918-1920x1080-23c68d92dad49601cc797e89747d7353_Snapshot.jpg",
+      "md5": "4b13eb013f3f3e705548a3dbfb14b5fc",
+      "width": 150,
+      "height": 74,
+      "size": 8509,
+      "uploadedDate": "2022-01-23T11:11:19.976Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080002653-1920x1080-cabfd3a97cce84c8360868fa3c9f0e1a_Snapshot.jpg",
+      "md5": "99f70d594af347529320fb30760c0dc5",
+      "width": 150,
+      "height": 74,
+      "size": 6549,
+      "uploadedDate": "2022-01-23T11:11:20.395Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080005650-1920x1080-0c712e6a94f1f1c8dd32aa6c9c767908_Snapshot.jpg",
+      "md5": "e9a221e794c86c174604ac50c25a477e",
+      "width": 150,
+      "height": 74,
+      "size": 9008,
+      "uploadedDate": "2022-01-23T11:11:20.754Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080003028-1920x1080-18b62cd6cce9b6fe1f7957588556a849_Snapshot.jpg",
+      "md5": "b3a16d6f85b1f8be252b64d4dbcc4780",
+      "width": 150,
+      "height": 74,
+      "size": 6075,
+      "uploadedDate": "2022-01-23T11:11:21.088Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped1080005852-1920x1080-24713a4e21824207b905222cee9b05d0_Snapshot.jpg",
+      "md5": "860d2271f133c7a0975126153034768b",
+      "width": 150,
+      "height": 74,
+      "size": 9615,
+      "uploadedDate": "2022-01-23T11:11:21.520Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cropped10800059ScreenShot00118-1920x1080-c19cda87bdd4f57f6049f746076a55c9_Snapshot.jpg",
+      "md5": "6065ee577e0c14162f9c6a1dec2fb261",
+      "width": 150,
+      "height": 74,
+      "size": 5215,
+      "uploadedDate": "2022-01-23T11:11:21.855Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot000000000ScreenShot00009-1920x1080-19281c5a654788ce10eb9edcb318af75_Snapshot.jpg",
+      "md5": "340dc8ad3ba6cf3686fddb9871badbe8",
+      "width": 150,
+      "height": 74,
+      "size": 6351,
+      "uploadedDate": "2022-01-16T20:02:32.482Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot000000001ScreenShot00008-1920x1080-9f9d5993ba119e18a5d1226f8743eb20_Snapshot.jpg",
+      "md5": "934547b3a2254aeb75ced0e4a18e0d3b",
+      "width": 150,
+      "height": 74,
+      "size": 7161,
+      "uploadedDate": "2022-01-16T20:02:33.000Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot000000002ScreenShot00007-1920x1080-2943a5244b485048aaf1f279650a2c9b_Snapshot.jpg",
+      "md5": "a3b915b6a407b6dbe20f4e56e8ffdf99",
+      "width": 150,
+      "height": 74,
+      "size": 7014,
+      "uploadedDate": "2022-01-16T20:02:33.524Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot000000003ScreenShot00006-1920x1080-542689b62aff83294228142c7e26c794_Snapshot.jpg",
+      "md5": "e0bcb08165d4b103473f4a611416e4de",
+      "width": 150,
+      "height": 74,
+      "size": 6420,
+      "uploadedDate": "2022-01-16T20:02:34.054Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot000000004ScreenShot00005-1920x1080-b77aa9c22b1564525bd73f0be7c7d96d_Snapshot.jpg",
+      "md5": "44348def2f802227a570a68a9a3653d8",
+      "width": 150,
+      "height": 74,
+      "size": 6493,
+      "uploadedDate": "2022-01-16T20:02:34.569Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot000000005ScreenShot00004-1920x1080-92a4fa9ee5497e805a32647dc7c40b24_Snapshot.jpg",
+      "md5": "c59e670bcf26ed23739d4a2fe3ac6d2f",
+      "width": 150,
+      "height": 74,
+      "size": 8586,
+      "uploadedDate": "2022-01-16T20:02:35.208Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot000000006ScreenShot00003-1920x1080-5c34b015dd2a4e7ef923481803cd0fe1_Snapshot.jpg",
+      "md5": "98da3860a38f311f6e733f681b07845d",
+      "width": 150,
+      "height": 74,
+      "size": 8012,
+      "uploadedDate": "2022-01-16T20:02:35.772Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot000000007ScreenShot00002-1920x1080-e9b8d2e67d3c5827695d33d6697058c7_Snapshot.jpg",
+      "md5": "24bc67db20fd434166312bb7a0401eb1",
+      "width": 150,
+      "height": 74,
+      "size": 6458,
+      "uploadedDate": "2022-01-16T20:02:36.436Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot000000008ScreenShot00001-1920x1080-3f9e53d43a51740db5299a618d47a1df_Snapshot.jpg",
+      "md5": "eee136064154da25edce238a09a3dc72",
+      "width": 150,
+      "height": 74,
+      "size": 8152,
+      "uploadedDate": "2022-01-16T20:02:36.928Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot000000009ScreenShot00010-1920x1080-10ad42b7f84bdbd32b0ccdf65d03fb0b_Snapshot.jpg",
+      "md5": "6249952d7445806dd5196e0a6bab5dbc",
+      "width": 150,
+      "height": 74,
+      "size": 6974,
+      "uploadedDate": "2022-01-16T20:02:37.485Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot000000010Layer 1-1920x1080-db997fc54cb7f045fb2a6b74c2d3846b_Snapshot.jpg",
+      "md5": "407ec49f38f8908db2f03b736096f17e",
+      "width": 150,
+      "height": 74,
+      "size": 8060,
+      "uploadedDate": "2022-01-16T20:02:38.031Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/environments"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-01-23T20:41:07.339Z",
+  "lastModifiedDate": "2024-10-28T12:28:24.815Z",
+  "customAttributes": {},
+  "entitlementName": "3cf5db8290ce4c13ad83a16c8d506d9d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "d5921f9beead4b6389f461e9dabd9353",
+      "appId": "NordicCo3cf5db8290ceV1",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2022-01-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.7"
+    }
+  ],
+  "developer": "Pixelgoat Store",
+  "developerId": "o-9nkt3dje6gf57hkzwvsglsjgrsey7b",
+  "endOfSupport": false,
+  "unsearchable": false
+}

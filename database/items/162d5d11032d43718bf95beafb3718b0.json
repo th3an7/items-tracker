@@ -1,0 +1,720 @@
+{
+  "id": "162d5d11032d43718bf95beafb3718b0",
+  "title": "Velox Player Plus - Volumetric 3D Video",
+  "description": "Velox Player Plus is a code plug-in that imports, edits ans saves volumetric video files in the VLX format recorded on mobile devices with depth cameras.",
+  "longDescription": "<p><a href=\"https://youtu.be/s-niGDXLeO0\" rel=\"nofollow\">Tutorial Video</a></p><p><br /></p><p>***** UPDATE *****</p><p>Velox Player Plus</p><p>Version 0.5b.43</p><p><br /></p><p>We have updated Velox Recorder with the new Tutorial <a href=\"https://youtu.be/bhN7CDNQZQs\" rel=\"nofollow\">video</a></p><p>and released new features:</p><p>- Velox Recorder Sequence Track for recording frames driven by the time code from the Sequence player</p><p>Watch the new Velox Recorder With Sequencer Tutorial <a href=\"https://youtu.be/nZ8NziKpvRQ\" rel=\"nofollow\">video</a>.</p><p><br /></p><p>- New &#39;SyncWithSequencer&#39; bool property</p><p>- Save normals in the Recorder VLX footage in the correct format</p><p>- Improved reporting of errors with saving recorder datasets</p><p>- Improved stability of the Recorder in the Editor</p><p><br /></p><p><a href=\"https://youtu.be/RGIg2nh-fdY\" rel=\"nofollow\">Example Video</a> of recording a live VR game play</p><p><a href=\"https://docs.google.com/document/d/1w6GErcCPVvN7iL3qSEtFUm8e_kEWy3WbopOZZ4kcMYE/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p><br /></p><p>*** UPDATE ***</p><p>Velox Player Plus</p><p>Version 0.5.42a</p><p><br /></p><p>- Automatic Alignment</p><p>When placing the Velox blueprint actor into the scene, the camera and the entire scene will automatically align along the X-axis. We also updated the <a href=\"https://docs.google.com/document/d/1VRg--EoyDMH0MvI5aVRewUeqe6DTyvunCSx0S9bUSrQ/edit?usp&#61;sharing\" rel=\"nofollow\">advanced documentation</a> with the feature.</p><p>- Improved normals recovery from the video</p><p>- Velox Recorder improvements including the camera visualisation with 3 colours representing the states for offline, live and recording.</p><p><br /></p><p>*** UPDATE ***</p><p>Velox Player Plus plugin version 0.5.40</p><ul><li>Multi-pass rendering</li></ul><p>Allows you rendering the edges of Actors with different materials</p><p><a href=\"https://youtu.be/59ikVsPOcgY\" rel=\"nofollow\">Multi-pass Tutorial Video</a></p><p><br /></p><p>*** UPDATE ***</p><p>Velox Player Plus plugin version 0.5</p><p>UE 5.4 support</p><p>iOS Support</p><p>- Import UI</p><p>- New Renderer: mesh, point cloud</p><p>- VLX Material overhaul: Basic, Color Correction, Chromakey</p><p>- Relight: Normal channel generation with AI</p><p>- Runtime filters for depth correction</p><p>- ROI track Actor</p><p>- VeloxModBox Culling</p><p>- New Recorder with capturing Normal maps too</p><p><br /></p><p>NEW: Relight tutorial <a href=\"https://youtu.be/9yt3fO7UmMY\" rel=\"nofollow\">video</a>.</p><p>NEW: New <a href=\"https://docs.google.com/document/d/1eFauVw6H8gmk8gVmKQDSuQVLCZAlfi2YlqD6D8rCz0s\" rel=\"nofollow\">Documentation</a> and Advanced <a href=\"https://docs.google.com/document/d/1VRg--EoyDMH0MvI5aVRewUeqe6DTyvunCSx0S9bUSrQ/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a>.</p><p><br /></p><p>**** UPDATE ****</p><p>Velox Player Plus plugin version 0.3b Update:</p><ul><li>Processing Pipeline</li><li>New UI</li><li>Style Transfer</li></ul><p><br /></p><p>Velox Player Plus is a code open source plug-in that imports, edits and saves volumetric video files in the VLX format recorded on mobile devices with depth cameras. The VLX format allows creators to bring photo-realistic appearance of people and environments into Unreal Engine scenes. The video frames are turned into animated geometry with textures which is fully compatible with the real-time rendering pipeline of Unreal Engine. With added benefits of the camera tracking and elimination of the background it makes a perfect tool to virtual production and gaming studios for creating immersive experiences based on real-life performances.</p><p><br /></p><p>The video recording introduction and tutorial is <a href=\"https://vimeo.com/v3lox/tutorial?share&#61;copy\" rel=\"nofollow\">here</a>.</p><p><br /></p><p>Plus Features:</p><ul><li>Velox Player Editor UI</li><li>Run Converter Blueprints (from Content/Converter) with NN Models (requires <a href=\"https://www.unrealengine.com/marketplace/en-US/product/velox-neuro-machine-learning-inference-engine\" rel=\"nofollow\">Velox Neuro</a> plugin, download ONNX file from <a href=\"https://v3lox.com/nnmodels/MLModels.zip\" rel=\"nofollow\">here</a>) to</li><li>detect objects and humans</li><li>generate masks</li><li>generate normals</li><li>style transfer</li><li>Edit VLX files</li><li>Save VLX files</li></ul><p><br /></p><p>In order to record a 3D video you need an app installed on a device with a depth camera. For example, there is an official iOS app “V3L Camera &#39;&#39; available in the <a href=\"https://apps.apple.com/gb/app/v3lcamera/id1662079944\" rel=\"nofollow\">App Store</a> for FREE. The process is fully mobile and requires:</p><ul><li>NO green screen</li><li>NO special studio</li><li>NO camera calibration</li></ul><p><br /></p><p>The VLX format contains the following data channels:</p><ul><li>Camera tracking with world position and orientation - <strong>required</strong></li><li>Video in RGB format (compressed) - <strong>required</strong></li><li>Depth in Grayscale format - <strong>required</strong></li><li>Time code frame synchronization - <strong>required</strong></li><li>Mask channel in Grayscale format (compressed) - optional</li><li>Normals channel in RGB format (compressed) - optional</li><li>Human tracking - optional</li><li>Audio file in the WAV format - optional</li></ul><p><br /></p><p>To get started open our <a href=\"https://v3lox.com/demo/Demo_53.zip\" rel=\"nofollow\">sample project</a> for UE5.2 with basic features and effects you can create using our sample VLX footages which are available for everyone to download <a href=\"https://v3lox.com/vlx/Demo_Walk.vlx\" rel=\"nofollow\">video1</a>, <a href=\"https://v3lox.com/vlx/Demo_Sit.vlx\" rel=\"nofollow\">video2</a>, <a href=\"https://v3lox.com/vlx/Demo_Stairs.vlx\" rel=\"nofollow\">video3</a>, <a href=\"https://v3lox.com/vlx/VLX_01.vlx\" rel=\"nofollow\">video4</a>.</p><ul><li>Full frame reconstruction in 3D</li><li>Filter human subjects from the background with depth using tracking of Region of Interest (ROI) with AI (available in separate Plugin: <a href=\"https://www.unrealengine.com/marketplace/en-US/product/velox-neuro-machine-learning-inference-engine\" rel=\"nofollow\">Velox Neuro</a>)</li><li>Remove the background with human masks generated by AI (available in separate Plugin: <a href=\"https://www.unrealengine.com/marketplace/en-US/product/velox-neuro-machine-learning-inference-engine\" rel=\"nofollow\">Velox Neuro</a>)</li><li>Apply UE visual effects with fog, particles, lighting and reflection.</li><li>Virtual set extension example</li><li><a href=\"https://v3lox.com/demo/Demo53PlusBinariesWin64.zip\" rel=\"nofollow\">Windows Executable</a></li></ul><p><br /></p><p>Watch these preview videos of the sample project:</p><ol><li><a href=\"https://vimeo.com/852627181\" rel=\"nofollow\">https://vimeo.com/852627181</a></li><li><a href=\"https://vimeo.com/852627208\" rel=\"nofollow\">https://vimeo.com/852627208</a></li><li><a href=\"https://vimeo.com/852627236\" rel=\"nofollow\">https://vimeo.com/852627236</a></li><li><a href=\"https://vimeo.com/852627264\" rel=\"nofollow\">https://vimeo.com/852627264</a></li><li><a href=\"https://vimeo.com/852627289\" rel=\"nofollow\">https://vimeo.com/852627289</a></li><li><a href=\"https://vimeo.com/852627319\" rel=\"nofollow\">https://vimeo.com/852627319</a></li></ol><p><br /></p><p>Visit our <a href=\"https://forums.unrealengine.com/t/free-plugin-velox-player-import-and-play-volumetric-video-from-ios-devices-with-lidar/1350955?u&#61;alexvelox\" rel=\"nofollow\">Product page</a>.</p><p><br /></p><p>The plugin is compatible with Windows, Android and iOS platforms and tested on Android based standalone VR headsets.</p>",
+  "technicalDetails": "<p>The Velox Player Plus plugin implements the Media Player Framework interface to play video files rendering each video frame as a dynamic 3D mesh with video texture. By dropping in a VLX file into your project’s Content folder will create 6 assets:</p><ul><li>Media Source assets pointing to your VLX file</li><li>Media Player of VLX media source assets</li><li>Actor Blueprint asset with components for rendering the media player output</li><li>Velox Material Instance asset</li><li>Velox Media Texture for Color</li><li>Velox Media Texture for Masks</li></ul><p><br /></p><p>And 2 optional assets:</p><ul><li>Audio asset in your VLX file</li><li>Velox Media Texture for Normals</li></ul><p><br /></p><p>Features:</p><ul><li>Real-time dynamic mesh animation</li><li>Culling mesh polygons based on the tracked region of interest (ROI)</li><li>Culling mesh polygons with a Truncation Cube</li><li>Alpha masks to cull mesh polygons</li><li>Animated Normal maps</li><li>Color correction properties: brightness and contrast</li><li>Velox Player Editor UI</li><li>Blueprint processor/converter of VLX files</li><li>Edit VLX files with object detection, mask generation and more</li><li>Save VLX files</li></ul><p><br /></p><p>Number of Blueprints: 20</p><p>Number of C&#43;&#43; Classes: 26</p><p>Supported Development Platforms: Windows, Mac</p><p>Supported Target Build Platforms: Windows, Android, iOS, Mac</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1eFauVw6H8gmk8gVmKQDSuQVLCZAlfi2YlqD6D8rCz0s\" rel=\"nofollow\">Link</a></p><p>Example Project: <a href=\"https://v3lox.com/demo/Demo_53.zip\" rel=\"nofollow\">link</a></p><p>Discord server: <a href=\"https://discord.com/invite/uSZF9uW6RB\" rel=\"nofollow\">Link</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-b22df91fbfa60b62848ddddd30b52bfa.jpg",
+      "md5": "b22df91fbfa60b62848ddddd30b52bfa",
+      "width": 1920,
+      "height": 1080,
+      "size": 399658,
+      "uploadedDate": "2024-06-03T07:11:00.510Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-d5b65dc73c8bec8ea31363eadc4e715c.jpg",
+      "md5": "d5b65dc73c8bec8ea31363eadc4e715c",
+      "width": 1920,
+      "height": 1080,
+      "size": 336986,
+      "uploadedDate": "2024-06-03T07:11:01.341Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-54b95669681f2608699bce32f62a69d0.jpg",
+      "md5": "54b95669681f2608699bce32f62a69d0",
+      "width": 1920,
+      "height": 1080,
+      "size": 299397,
+      "uploadedDate": "2024-06-03T07:11:02.132Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-bbb24a57ac8de2f5e23eed19171e136e.jpg",
+      "md5": "bbb24a57ac8de2f5e23eed19171e136e",
+      "width": 1920,
+      "height": 1080,
+      "size": 363759,
+      "uploadedDate": "2024-06-03T07:11:02.940Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-76ca35d46e88eb8b6c2ba02480246c3c.jpg",
+      "md5": "76ca35d46e88eb8b6c2ba02480246c3c",
+      "width": 1920,
+      "height": 1080,
+      "size": 323426,
+      "uploadedDate": "2024-06-03T07:11:03.886Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-62f3ce5b3ecf79e6f846daf97ca9b9f0.jpg",
+      "md5": "62f3ce5b3ecf79e6f846daf97ca9b9f0",
+      "width": 1920,
+      "height": 1080,
+      "size": 364978,
+      "uploadedDate": "2024-06-03T07:11:04.658Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7-1920x1080-3c7744025d0dd826a65dcf352bc23f6c.jpg",
+      "md5": "3c7744025d0dd826a65dcf352bc23f6c",
+      "width": 1920,
+      "height": 1080,
+      "size": 334717,
+      "uploadedDate": "2024-06-03T07:11:05.412Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8-1920x1080-241bdde16a27d425218d800ac512f438.jpg",
+      "md5": "241bdde16a27d425218d800ac512f438",
+      "width": 1920,
+      "height": 1080,
+      "size": 288255,
+      "uploadedDate": "2024-06-03T07:11:06.168Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/9-1920x1080-6f3c9461d27914ea2913532f7b8929a3.jpg",
+      "md5": "6f3c9461d27914ea2913532f7b8929a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 390438,
+      "uploadedDate": "2024-06-03T07:11:06.942Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/10-1920x1080-febe296572e5aaeb1df763295195ac9d.jpg",
+      "md5": "febe296572e5aaeb1df763295195ac9d",
+      "width": 1920,
+      "height": 1080,
+      "size": 361214,
+      "uploadedDate": "2024-06-03T07:11:07.714Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/11-1920x1080-ec83ad36025088d04162daad6b0f5291.jpg",
+      "md5": "ec83ad36025088d04162daad6b0f5291",
+      "width": 1920,
+      "height": 1080,
+      "size": 520476,
+      "uploadedDate": "2024-06-03T07:11:08.481Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/12-1920x1080-1010db0de730bb9e40408d9861884405.jpg",
+      "md5": "1010db0de730bb9e40408d9861884405",
+      "width": 1920,
+      "height": 1080,
+      "size": 462823,
+      "uploadedDate": "2024-06-03T07:11:09.203Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/13-1920x1080-e0e15dbfbc74083f0fbfec8aee2e3f9e.jpg",
+      "md5": "e0e15dbfbc74083f0fbfec8aee2e3f9e",
+      "width": 1920,
+      "height": 1080,
+      "size": 359005,
+      "uploadedDate": "2024-06-03T07:11:09.981Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/14-1920x1080-03d98b2d9ff2a6c2ac43d52074acf0c1.jpg",
+      "md5": "03d98b2d9ff2a6c2ac43d52074acf0c1",
+      "width": 1920,
+      "height": 1080,
+      "size": 446325,
+      "uploadedDate": "2024-06-03T07:11:10.807Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/15-1920x1080-e950a7027f6415d6cad70cafc73d57ee.jpg",
+      "md5": "e950a7027f6415d6cad70cafc73d57ee",
+      "width": 1920,
+      "height": 1080,
+      "size": 311944,
+      "uploadedDate": "2024-06-03T07:11:11.616Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/16-1920x1080-bbdaca0438bef020dcf4d3edf9b497a7.jpg",
+      "md5": "bbdaca0438bef020dcf4d3edf9b497a7",
+      "width": 1920,
+      "height": 1080,
+      "size": 281413,
+      "uploadedDate": "2024-06-03T07:11:12.429Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/17-1920x1080-e49e64c657de46794a8126c45b2ea4a9.jpg",
+      "md5": "e49e64c657de46794a8126c45b2ea4a9",
+      "width": 1920,
+      "height": 1080,
+      "size": 283293,
+      "uploadedDate": "2024-06-03T07:11:13.346Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/18-1920x1080-c5b46e5d8b5a53f1aef62049954fb7ac.jpg",
+      "md5": "c5b46e5d8b5a53f1aef62049954fb7ac",
+      "width": 1920,
+      "height": 1080,
+      "size": 323981,
+      "uploadedDate": "2024-06-03T07:11:14.139Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/VeloxPlayerPlusVolumetric3DVideo_thumb-284x284-1331a365c8baa55ab363cfcf42380c99.png",
+      "md5": "1331a365c8baa55ab363cfcf42380c99",
+      "width": 284,
+      "height": 284,
+      "size": 23952,
+      "uploadedDate": "2024-06-03T07:11:14.743Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/VeloxPlayerPlusVolumetric3DVideo_featured-894x488-dba8f4e33557b8fc7ecce55e3a887f18.png",
+      "md5": "dba8f4e33557b8fc7ecce55e3a887f18",
+      "width": 894,
+      "height": 488,
+      "size": 362466,
+      "uploadedDate": "2024-05-31T08:16:52.510Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-b22df91fbfa60b62848ddddd30b52bfa_Snapshot.jpg",
+      "md5": "279c3ee30601658d1874af8a000901ad",
+      "width": 150,
+      "height": 74,
+      "size": 6849,
+      "uploadedDate": "2024-06-03T07:11:01.018Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-d5b65dc73c8bec8ea31363eadc4e715c_Snapshot.jpg",
+      "md5": "1f83897497de477de128a32187e088f6",
+      "width": 150,
+      "height": 74,
+      "size": 7219,
+      "uploadedDate": "2024-06-03T07:11:01.848Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-54b95669681f2608699bce32f62a69d0_Snapshot.jpg",
+      "md5": "95743c556a7087ac9906f221a1751c42",
+      "width": 150,
+      "height": 74,
+      "size": 6421,
+      "uploadedDate": "2024-06-03T07:11:02.645Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-bbb24a57ac8de2f5e23eed19171e136e_Snapshot.jpg",
+      "md5": "902ca00e4c70f81c67f95efac4785b64",
+      "width": 150,
+      "height": 74,
+      "size": 7601,
+      "uploadedDate": "2024-06-03T07:11:03.552Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-76ca35d46e88eb8b6c2ba02480246c3c_Snapshot.jpg",
+      "md5": "b1cd3bb60a95b039006f9c59ce0097d0",
+      "width": 150,
+      "height": 74,
+      "size": 6931,
+      "uploadedDate": "2024-06-03T07:11:04.398Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-62f3ce5b3ecf79e6f846daf97ca9b9f0_Snapshot.jpg",
+      "md5": "b002cd3e5845a3f27cbc0354e227d2fa",
+      "width": 150,
+      "height": 74,
+      "size": 6824,
+      "uploadedDate": "2024-06-03T07:11:05.179Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-3c7744025d0dd826a65dcf352bc23f6c_Snapshot.jpg",
+      "md5": "ab0247c7003f3c554a3bb5e4a108663e",
+      "width": 150,
+      "height": 74,
+      "size": 6913,
+      "uploadedDate": "2024-06-03T07:11:05.909Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-241bdde16a27d425218d800ac512f438_Snapshot.jpg",
+      "md5": "c17b16c7e53947543bb4116874118881",
+      "width": 150,
+      "height": 74,
+      "size": 6774,
+      "uploadedDate": "2024-06-03T07:11:06.678Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-6f3c9461d27914ea2913532f7b8929a3_Snapshot.jpg",
+      "md5": "b79eaef7df6982a6cdcda7b0933f54b8",
+      "width": 150,
+      "height": 74,
+      "size": 7662,
+      "uploadedDate": "2024-06-03T07:11:07.444Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10-1920x1080-febe296572e5aaeb1df763295195ac9d_Snapshot.jpg",
+      "md5": "99bf58f3f673d1a67a7e18554949adcc",
+      "width": 150,
+      "height": 74,
+      "size": 5806,
+      "uploadedDate": "2024-06-03T07:11:08.249Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11-1920x1080-ec83ad36025088d04162daad6b0f5291_Snapshot.jpg",
+      "md5": "6bd969923aef80f8670bef3622be1df5",
+      "width": 150,
+      "height": 74,
+      "size": 7576,
+      "uploadedDate": "2024-06-03T07:11:08.993Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/12-1920x1080-1010db0de730bb9e40408d9861884405_Snapshot.jpg",
+      "md5": "0c209c0046c3602039a548b537b79263",
+      "width": 150,
+      "height": 74,
+      "size": 7285,
+      "uploadedDate": "2024-06-03T07:11:09.711Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/13-1920x1080-e0e15dbfbc74083f0fbfec8aee2e3f9e_Snapshot.jpg",
+      "md5": "71f9c4f75f38047528b1f311c8f90bf7",
+      "width": 150,
+      "height": 74,
+      "size": 6639,
+      "uploadedDate": "2024-06-03T07:11:10.495Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/14-1920x1080-03d98b2d9ff2a6c2ac43d52074acf0c1_Snapshot.jpg",
+      "md5": "9f981d7bd9bf936b7b6ede1e3ebbfc77",
+      "width": 150,
+      "height": 74,
+      "size": 7224,
+      "uploadedDate": "2024-06-03T07:11:11.338Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/15-1920x1080-e950a7027f6415d6cad70cafc73d57ee_Snapshot.jpg",
+      "md5": "2b66ae3a22254922d990cc6c8c0594bf",
+      "width": 150,
+      "height": 74,
+      "size": 6260,
+      "uploadedDate": "2024-06-03T07:11:12.133Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/16-1920x1080-bbdaca0438bef020dcf4d3edf9b497a7_Snapshot.jpg",
+      "md5": "e703135359222841daa9b9ca95406d8e",
+      "width": 150,
+      "height": 74,
+      "size": 6180,
+      "uploadedDate": "2024-06-03T07:11:12.957Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/17-1920x1080-e49e64c657de46794a8126c45b2ea4a9_Snapshot.jpg",
+      "md5": "b438d6a9d493d2e56f061f188dc6da7c",
+      "width": 150,
+      "height": 74,
+      "size": 6426,
+      "uploadedDate": "2024-06-03T07:11:13.847Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/18-1920x1080-c5b46e5d8b5a53f1aef62049954fb7ac_Snapshot.jpg",
+      "md5": "6b0011fd7632db9d8ce8a1cd3ecc6638",
+      "width": 150,
+      "height": 74,
+      "size": 6284,
+      "uploadedDate": "2024-06-03T07:11:14.659Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-9e55e988db070ce5fc787a35f274edf5_Snapshot.png",
+      "md5": "cbcd17e9bb89cd0c2058a7329a83a66f",
+      "width": 150,
+      "height": 74,
+      "size": 6846,
+      "uploadedDate": "2024-05-31T08:16:42.497Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-b8a5926105fdfd29cb28e203010437b6_Snapshot.png",
+      "md5": "e4182b438dfcd9631b7eea0746880fb2",
+      "width": 150,
+      "height": 74,
+      "size": 7202,
+      "uploadedDate": "2024-05-31T08:16:43.208Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-ad1bd15b58e2895c629c32b2eb0ca94c_Snapshot.png",
+      "md5": "69c1addfb95c79174e3583ceb24c396b",
+      "width": 150,
+      "height": 74,
+      "size": 6423,
+      "uploadedDate": "2024-05-31T08:16:43.841Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-5369d59d6a4b3fd52c423cd85414a034_Snapshot.png",
+      "md5": "4a17f70e9b5d118b6380dcffe20fd897",
+      "width": 150,
+      "height": 74,
+      "size": 7600,
+      "uploadedDate": "2024-05-31T08:16:44.462Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-e2e910e4124825152af94b845fb16fc4_Snapshot.png",
+      "md5": "aa62e544996b1d5ae840b8f1b05d8b00",
+      "width": 150,
+      "height": 74,
+      "size": 6901,
+      "uploadedDate": "2024-05-31T08:16:45.109Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-fa2199ac41f79ce4518e3ed1a654141e_Snapshot.png",
+      "md5": "e90c702b27006c976366fe6d0992133d",
+      "width": 150,
+      "height": 74,
+      "size": 6795,
+      "uploadedDate": "2024-05-31T08:16:45.797Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-4dd65075aaedd65b86c42248b6cd8260_Snapshot.png",
+      "md5": "13d6b26e93416c6285a9ac86db05c64b",
+      "width": 150,
+      "height": 74,
+      "size": 6898,
+      "uploadedDate": "2024-05-31T08:16:46.462Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-55992bdefba1948687c558037064f328_Snapshot.png",
+      "md5": "a7c48bb46e0b4ddb92f9fed0dc85b992",
+      "width": 150,
+      "height": 74,
+      "size": 6757,
+      "uploadedDate": "2024-05-31T08:16:47.072Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-139edcb0a8f85cf5d8076edd8685834c_Snapshot.png",
+      "md5": "2282cb49806d542387bfa43fc4e922fa",
+      "width": 150,
+      "height": 74,
+      "size": 7664,
+      "uploadedDate": "2024-05-31T08:16:47.682Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10-1920x1080-a7e6e0e5dfaa7da568ec1a01dcf4a296_Snapshot.png",
+      "md5": "eebb401e1c36a03e74977fa50cc9d1f0",
+      "width": 150,
+      "height": 74,
+      "size": 5824,
+      "uploadedDate": "2024-05-31T08:16:48.217Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11-1920x1080-6978352d813beba17f92372a8d749e13_Snapshot.png",
+      "md5": "98863148225da2e5a0e5d31f5af86515",
+      "width": 150,
+      "height": 74,
+      "size": 7587,
+      "uploadedDate": "2024-05-31T08:16:48.834Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/12-1920x1080-d8ed723e3a64c9ef0a5f618ce40905b6_Snapshot.png",
+      "md5": "10ee07be40abe4872d1b2ff8cc5f3bd2",
+      "width": 150,
+      "height": 74,
+      "size": 7278,
+      "uploadedDate": "2024-05-31T08:16:49.442Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/13-1920x1080-358a6d88bf6118044d2833310df5560d_Snapshot.png",
+      "md5": "56a006f818ab80d76dcebe0468ff234f",
+      "width": 150,
+      "height": 74,
+      "size": 6626,
+      "uploadedDate": "2024-05-31T08:16:50.079Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/14-1920x1080-b49b0fca64b21bec011a614b62d52564_Snapshot.png",
+      "md5": "e3c227fcc13341c8ecf934941170e872",
+      "width": 150,
+      "height": 74,
+      "size": 7247,
+      "uploadedDate": "2024-05-31T08:16:50.733Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/15-1920x1080-2cd3e382e61bdf2414d5ee00d109c264_Snapshot.png",
+      "md5": "8337228a649fd8652c4c719109d2fdfb",
+      "width": 150,
+      "height": 74,
+      "size": 6254,
+      "uploadedDate": "2024-05-31T08:16:51.477Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/16-1920x1080-87927e4f012d499793b728879859268d_Snapshot.png",
+      "md5": "ef8e69e5954f81329b22749df24101f9",
+      "width": 150,
+      "height": 74,
+      "size": 6164,
+      "uploadedDate": "2024-05-31T08:16:52.249Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PlayerPlusGalleryMain-1920x1080-9c72ea95a36d95a00a7688d695ed88cb_Snapshot.png",
+      "md5": "8edbbaf37aa31162cd747c4bb7e65901",
+      "width": 150,
+      "height": 74,
+      "size": 7656,
+      "uploadedDate": "2023-10-28T08:23:20.985Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryPlayerPro-1920x1080-0877bd2c8a92bbb308ab710578b0ab71_Snapshot.png",
+      "md5": "23ecce07df42245e6762897521b37c6d",
+      "width": 150,
+      "height": 74,
+      "size": 6331,
+      "uploadedDate": "2023-10-10T16:14:00.022Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-f999be1d13829ec72d0716db921f9b01_Snapshot.png",
+      "md5": "25b9ae53de0535fce3a053ae1dd1b922",
+      "width": 150,
+      "height": 74,
+      "size": 6482,
+      "uploadedDate": "2023-10-10T16:14:00.665Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11-1920x1080-73154c8ca7c88d833231d72edd0b69ee_Snapshot.png",
+      "md5": "2aa2d495e61d03d150dc99a86c88672c",
+      "width": 150,
+      "height": 74,
+      "size": 7002,
+      "uploadedDate": "2023-10-10T16:14:01.229Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-90612e71c8f48de327df3c391282fffe_Snapshot.png",
+      "md5": "adf94cdd418bc854c4ce13f2591ccb43",
+      "width": 150,
+      "height": 74,
+      "size": 6141,
+      "uploadedDate": "2023-10-10T16:14:01.738Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-8dd6ae8f5e9ffe1f7cd5457037a3ce88_Snapshot.png",
+      "md5": "5eef8cfa6668cc3b4217d76836d527d5",
+      "width": 150,
+      "height": 74,
+      "size": 6134,
+      "uploadedDate": "2023-10-10T16:14:02.245Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-d7e43c0f69ea2bcfa21225da41c22a2a_Snapshot.png",
+      "md5": "08126cb6e8ab2e6ccbf0699e19f6d38b",
+      "width": 150,
+      "height": 74,
+      "size": 6292,
+      "uploadedDate": "2023-10-10T16:14:02.737Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-2b2b5fe88b452a534d34cb928c3b484f_Snapshot.png",
+      "md5": "a79b70ca2cf51758d524517ac59a7217",
+      "width": 150,
+      "height": 74,
+      "size": 7182,
+      "uploadedDate": "2023-10-10T16:14:03.309Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-8ff80056fcd74fb3184cb1fbef2536d6_Snapshot.png",
+      "md5": "6a7917a26e9e685e6bb2c7ad5dd3aa1e",
+      "width": 150,
+      "height": 74,
+      "size": 6004,
+      "uploadedDate": "2023-10-10T16:14:03.776Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-b4b55f5d6b8093a647e3a69c9ff06be6_Snapshot.png",
+      "md5": "67c6f5d1cb56bf3d7b237fc324d205d4",
+      "width": 150,
+      "height": 74,
+      "size": 6320,
+      "uploadedDate": "2023-10-10T16:14:04.216Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/12-1920x1080-e6fdaf99648a94d68ad7c1a58b2d41ef_Snapshot.png",
+      "md5": "4b42312a7e9da7fed71d52d1afd84a58",
+      "width": 150,
+      "height": 74,
+      "size": 7061,
+      "uploadedDate": "2023-10-10T16:14:04.719Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/13-1920x1080-13315e7af4251f7810e91cd961863474_Snapshot.png",
+      "md5": "1ac912964ab00e2cc26c82caaf6c54a0",
+      "width": 150,
+      "height": 74,
+      "size": 7145,
+      "uploadedDate": "2023-10-10T16:14:05.147Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/14-1920x1080-d55aa995946df9a30f07379bd2ece382_Snapshot.png",
+      "md5": "c62b7ffbcfd3b993bb0263e080780985",
+      "width": 150,
+      "height": 74,
+      "size": 7105,
+      "uploadedDate": "2023-10-10T16:14:05.639Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/16-1920x1080-4230ad8e7f684a8f1d15fad93ed0671b_Snapshot.png",
+      "md5": "7290b0372dc9e0eca93758264d9bf3ae",
+      "width": 150,
+      "height": 74,
+      "size": 6671,
+      "uploadedDate": "2023-10-10T16:14:06.152Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/17-1920x1080-89b05007ff2bcb0ece39bda0e344a574_Snapshot.png",
+      "md5": "71c9e8c56d4483a0b48a3fc5ec4b99f7",
+      "width": 150,
+      "height": 74,
+      "size": 6348,
+      "uploadedDate": "2023-10-10T16:14:06.725Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/22-1920x1080-28597103e62d82cd429dfd042c84494c_Snapshot.png",
+      "md5": "fc95e35a879b4040f4713ef5cc05eaf0",
+      "width": 150,
+      "height": 74,
+      "size": 6625,
+      "uploadedDate": "2023-10-10T16:14:07.184Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/20-1920x1080-ab366eeef64c701128adbae7c6840389_Snapshot.png",
+      "md5": "dfe7defcc63d90b0a0d17860e700059c",
+      "width": 150,
+      "height": 74,
+      "size": 6137,
+      "uploadedDate": "2023-10-10T16:14:07.723Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-10-26T11:06:56.130Z",
+  "lastModifiedDate": "2024-11-05T20:00:34.689Z",
+  "customAttributes": {},
+  "entitlementName": "162d5d11032d43718bf95beafb3718b0",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "2dce80befde14c7dbc0cd776e7b4664a",
+      "appId": "VeloxPlayerPlus_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Win32",
+        "Mac"
+      ],
+      "dateAdded": "2023-10-10T00:00:00.000Z",
+      "releaseNote": "v8",
+      "versionTitle": "VeloxPlayerPlus.5.2_5b.43a"
+    },
+    {
+      "id": "a3b66e93c2bc420d91cdc75f8affd771",
+      "appId": "VeloxPlayerPlus_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Win32",
+        "Mac"
+      ],
+      "dateAdded": "2023-10-10T00:00:00.000Z",
+      "releaseNote": "v8",
+      "versionTitle": "VeloxPlayerPlus.5.3_5b.43a"
+    },
+    {
+      "id": "293cbea58c9243c982d7b6e930c577b1",
+      "appId": "VeloxPlayerPlus_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Win32",
+        "Windows",
+        "iOS"
+      ],
+      "dateAdded": "2024-05-10T00:00:00.000Z",
+      "releaseNote": "v8",
+      "versionTitle": "VeloxPlayerPlus.5.4_5b.43a"
+    }
+  ],
+  "developer": "Velox XR",
+  "developerId": "o-t8dtr8vsnchx4a2v73s24qtgahp48v",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

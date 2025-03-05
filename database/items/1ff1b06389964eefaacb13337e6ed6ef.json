@@ -1,0 +1,118 @@
+{
+  "id": "1ff1b06389964eefaacb13337e6ed6ef",
+  "title": "Skeleposer",
+  "description": "Skeleposer is a skeletal combinator. It can be used for facial rigs and customization systems.",
+  "longDescription": "<h2>Description</h2><p>What is Skeleposer? Briefly, it&#39;s like Shape Editor in Maya, but works for transforms and joints rathen than points. A single Skeleposer node can control a bunch number of bones in a nice and convenient way. The tool is mostly for facial rigs, but actually a lot of rigs can be implemented this way like character cusomization systems.</p><p><br /></p><p>In order to use the tool you need both <strong>Maya </strong>and <strong>Unreal Engine</strong>.</p><p>While working in <strong>Maya</strong>, you define poses, add blendshapes and make your character look and deform beautifully.</p><p>In <strong>Unreal Engine </strong>you just use the content (poses, blend shapes) you&#39;ve create in Maya with <strong>Skeleposer Editor</strong>.</p><p><br /></p><p><br /></p><h2>Installation</h2><p>In the archive you&#39;ll find the plugin for Unreal Engine and Maya files which located in <em>maya </em>folder.<strong>&#xfeff;</strong></p><p>In order to install the plugin for your project, just put the content of the plugin folder to your project&#39;s Plugins folder (ignoring <em>maya </em>folder) and Unreal Engine will automatically build and load the plugin on startup.</p><p><u>The plugin should compile on UE 4.27 and above, where Control Rig is available.</u></p><p><br /></p><p><strong>Maya </strong>folder contains some demo scenes, <strong>Skeleposer Editor</strong> and the plugin for different Maya versions (2019, 2020, 2022, 2023). In order to install it, put the content of <strong>maya_module</strong> folder to your Maya module path (usually <em>C:\\Users\\USER\\Documents\\maya\\modules</em>). Then load <strong>skeleposer.mll </strong>in Plugin Manager after restarting Maya.</p><p>Once the module is loaded, use the following Python script to open Skeleposer Editor window.</p><p><strong><em>import </em></strong><em>skeleposerEditor; skeleposerEditor.skeleposerWindow.show()</em></p><p><br /></p><p><br /></p><h2>How to use</h2><p>General approach of how to work with Skeleposer is the following.</p><p><strong>Maya</strong></p><ol><li>Create a skeleton for your mesh and skin it as usual.</li><li>Create Skeleposer node and add joints using <strong>Skeleposer Editor</strong>.</li><li>Start adding poses and paint skin weights at the same time.</li><li>Refine poses, add corrective or inbetween poses when needed.</li><li>Once done, add blend shapes for specified poses if required (e.g. maintain volume).</li><li>Export data to a JSON file within <strong>Skeleposer Editor.</strong></li><li>Export your mesh to FBX with morph targets.</li></ol><p><br /></p><p><strong>Unreal Engine</strong></p><ol><li>Import FBX asset as Skeletal Mesh.</li><li>Create Control Rig for the asset.</li><li>Import the skeleton and curves to the Control Rig.</li><li>Create Skeleposer node and attach your JSON file.</li><li>Define poses you want to be activated.</li><li>Turn on <em>Use Morph Targets </em>if you want automatic morph target activation by Skeleposer.</li></ol><p>Morph target names should be the same as the poses which activate them (like leftEyeOpen pose and morph)!</p><p>Next time you need updated poses in Unreal Engine, just re-export JSON or FBX file.</p><p><br /></p><p>For more details please look the demo files (<em>cube.ma</em> and <em>face.ma</em> in maya folder) and the documentation video.</p><p><br /></p><p><br /></p><h2>Feedback</h2><p>Please don&#39;t be shy, ask questions and report bugs if any. I appreciate any ideas on how to improve the tool!</p>",
+  "technicalDetails": "<p><strong>Content</strong></p><ul><li>Skeleposer for Maya as a plugin with Skeleposer Editor.</li><li>Skeleposer for Unreal Engine as a plugin for your projects.</li><li><a href=\"https://drive.google.com/file/d/164A19G5XSre006YTnZ2A36FBAkE0OLIX/view\" rel=\"nofollow\">Example project</a></li></ul><p><br /></p><p><strong>Documentation</strong></p><ul><li><a href=\"https://youtu.be/A_Lm9DGlcpE\" rel=\"nofollow\">Skeleposer Reference for Maya</a></li><li><a href=\"https://youtu.be/z9SL326wLk0\" rel=\"nofollow\">Skeleposer Reference for Unreal Engine</a></li><li><a href=\"https://youtu.be/PLABgCM0wpw\" rel=\"nofollow\">Skeleposer Reference. Advanced techniques</a></li></ul><p><br /></p><p><strong>Features</strong></p><ul><li>Nice integration between Maya and Unreal.</li><li>Easy to use UI, similar to Shape Editor in Maya.</li><li>Corrective poses.</li><li>Inbetween poses.</li><li>Directories and hierarchy of poses.</li><li>Two blend modes, Additive and Replace.</li><li>Automatic morph targets (targets should have the same names as poses)</li><li>Fast and flexible.</li></ul><p><br /></p><p><strong>Code Modules</strong></p><ul><li> Skeleposer (Runtime)</li></ul><p><br /></p><p>Number of Blueprints: 1</p><p>Number of C&#43;&#43; Classes: 1</p><p>Supported Development Platforms: Win64 tested, but any other platform is fine too.</p><p>Supported Target Build Platforms: Win64 tested, but any other platform is fine too.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/title-1920x1080-c3c2e1968e6e2d2f22ef61235d6196a5.png",
+      "md5": "c3c2e1968e6e2d2f22ef61235d6196a5",
+      "width": 1920,
+      "height": 1080,
+      "size": 870824,
+      "uploadedDate": "2023-01-16T19:19:42.319Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/pic1.PNG-1920x1080-dea510a17c903752028e031da4b305df.jpg",
+      "md5": "dea510a17c903752028e031da4b305df",
+      "width": 1920,
+      "height": 1080,
+      "size": 895036,
+      "uploadedDate": "2023-01-24T16:57:35.152Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Skeleposer_thumb-284x284-e346b6284b1fb9c9b0a2b756b505df2a.png",
+      "md5": "e346b6284b1fb9c9b0a2b756b505df2a",
+      "width": 284,
+      "height": 284,
+      "size": 85701,
+      "uploadedDate": "2023-01-24T12:49:32.537Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Skeleposer_featured-894x488-23e7d703f2c2c2afa03c75dcbfb34b31.png",
+      "md5": "23e7d703f2c2c2afa03c75dcbfb34b31",
+      "width": 894,
+      "height": 488,
+      "size": 386007,
+      "uploadedDate": "2023-01-16T19:19:42.792Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/pic1.PNG-1920x1080-dea510a17c903752028e031da4b305df_Snapshot.jpg",
+      "md5": "437c1e98c39fba9516a3feef82a507ac",
+      "width": 150,
+      "height": 74,
+      "size": 6789,
+      "uploadedDate": "2023-01-24T16:57:35.416Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/pic1.PNG-1920x1080-52cb27172d0c272270d9deea623071ee_Snapshot.jpg",
+      "md5": "b424b9ce85c17ada205dd5b6270a0414",
+      "width": 150,
+      "height": 74,
+      "size": 6814,
+      "uploadedDate": "2023-01-24T16:53:15.318Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/title-1920x1080-c3c2e1968e6e2d2f22ef61235d6196a5_Snapshot.png",
+      "md5": "8874494798a228a552f32bed97bede72",
+      "width": 150,
+      "height": 74,
+      "size": 6909,
+      "uploadedDate": "2023-01-16T19:19:42.631Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/title-1920x1080-00464ef88dc9c44f22ef3972e4dd3881_Snapshot.png",
+      "md5": "8c8acbd4d80cec2c986229f3de365036",
+      "width": 150,
+      "height": 74,
+      "size": 6913,
+      "uploadedDate": "2023-01-10T19:09:44.506Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2023-01-23T17:59:35.773Z",
+  "lastModifiedDate": "2023-05-09T13:56:46.668Z",
+  "entitlementName": "1ff1b06389964eefaacb13337e6ed6ef",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "6973e9e2d35a48f08d6f9a8c60c3fd13",
+      "appId": "Skeleposer_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Win32"
+      ],
+      "dateAdded": "2023-01-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Skeleposer 1.0"
+    }
+  ],
+  "developer": "Alexander Zagoruyko",
+  "developerId": "o-qldjz368yf83ufgxpk8mjde5ugfbnh",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

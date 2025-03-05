@@ -1,0 +1,434 @@
+{
+  "id": "bf83aaf4c20e4829a71162bdb0a57cf3",
+  "title": "Cy Billboard Lensflare",
+  "description": "Advanced LensFlare in billboard, 100% GPU.",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;3Maaw6tOVMc\" rel=\"nofollow\">[Video]</a></p><p>v1.1.1b ( Include Experimantal PostProcess Version )</p><p><strong>Warning :</strong> does not currently work with path tracing. ( test in 5.2 ) ,<strong> current error in 5.4 (Occlusion flickering), currently being fixed</strong></p><p><br /></p><p><strong>Disclaimer :</strong> The scenes in the presentation images are not included in the content, except the demo level.</p><p>Scene used ( InfiltratorDemo by epic , PersonalScene with NASA HDRI ).</p><p><br /></p><p>Contrary to the lensflare based on the rendering on the screen in post process, the lensflare billboard is rendered in the world on a simple plane, that allows to have more control on the rendering of this one, and to use several different flare, but has a more important blow to a significant number of instance.</p><p>The lensflare billboard is intended to be used on local sources such as high power lamps or the sun.</p><p><br /></p><p>Entirely coded in Shader Material with 80% in HLSL (custom node), and is therefore only on the GPU side, it allows to be very powerful.</p><p>Fully configurable by constant material instance, includes high quality textures.</p><p><br /></p><p><strong>Feature :</strong></p><ul><li><strong>Billboard Shader WPO</strong> : Allows to perform an automatic rotation that faces the camera</li><li><strong>Distance to Camera WPO</strong> : Allows to put the billboard in front of the camera</li><li><strong>Fade Occlusion </strong>: As the billboard passes in front of everything and can be in disabled depth test, there is an occlusion test to progressively hide the flare when it is more visible, the number of tests can be configured to be more precise, and the distance of the points is based on the uv of the screen.</li><li><strong>Flare</strong> : Central Flare which is based on a texture .</li><li><strong>Center HighLight</strong> : Allows to add a strong Fake light ( Only high value, no light simulation<strong> ) </strong> in the center of the lensflare, the goal is to play with the rendering of the post process and for example to force the rendering of the bloom on the lensflare.</li><li><strong>Ghost </strong>: Render reflections on the lens, fully parametric and use a texture to render the reflections. The number is unlimited and with the advanced ghost, it is possible to use texture to render the different color of the reflection.</li><li>L<strong>ens Relfection </strong>: Renders a reflection and difraction effect on the front lens, with a chromatic distortion effect.</li><li><strong>LighShaft</strong> : Render a local light shaft effect.</li></ul><p><br /></p><p><strong>2023-05-02 Update v1.1</strong></p><ul><li>- <strong>FixBug</strong> : Correction of occlusion tests</li><li>- <strong>NEW</strong> : Ghost Screen Colorize : Possibility to colorize ghosts according to their position on the screen.</li><li>- <strong>NEW</strong> : Parametric Ghost : New ghost totally parametric one by one, with a posibility of 8 max.</li><li>- <strong>NEW</strong> : Flare Power By ScreenPosition : Additional option to the flare that allows to increase its intensity when it is in the center of the screen.</li><li>- <strong>NEW</strong> : Flare Diffuse : Addition of a new simple flare of diffused light to the flare by texture.</li><li>- <strong>NEW</strong> : Actor : Move Billboard to sun ( Directional Light )</li><li>- <strong>NEW</strong> : Actor : Occlusion by Sphere trace.</li></ul><p><br /></p><p><strong>2023-12-20 Update v1.1.1b</strong></p><ul><li>Small Sampling Optimisation</li><li>Experimantal PostProcess Version ( no documentation available at the moment )</li></ul><p><br /></p><p><br /></p><p><strong>Performance : </strong>( Flare Texture 2048 RGBA 16f , Ghost Texture 512 RGBA 16f , AdvancedGhost NoiseTexture 1600 Bad , AdvancedGhost Tint Texture 256x16 Bad LUT texture )</p><ul><li>Simple Occlusion &#43; Flare : <strong>0.08ms</strong></li><li>FadeOcclusion(4*8) &#43; Flare : <strong>0.31ms</strong></li><li>FadeOcclusion(4*8) &#43; Flare &#43; HighLight : <strong>0.33ms</strong></li><li>FadeOcclusion(4*8) &#43; Flare &#43; HighLight &#43; Simple Ghost ( 20 ) : <strong>0.52ms</strong></li><li>FadeOcclusion(4*8) &#43; Flare &#43; HighLight &#43; Advanced Ghost ( 20 ) : <strong>0.93ms</strong></li><li>FadeOcclusion(4*8) &#43; Flare &#43; HighLight &#43; Advanced Ghost ( 20 ) &#43; LensReflect : <strong>1.08ms</strong></li><li>FadeOcclusion(4*8) &#43; Flare &#43; HighLight &#43; Advanced Ghost ( 20 ) &#43; LensReflect &#43; LightShaft ( 8 samples ) : <strong>1.33ms</strong></li><li>FadeOcclusion(4*8) &#43; Flare &#43; HighLight &#43; Advanced Ghost ( 20 ) &#43; LensReflect &#43; LightShaft ( 32 samples ) : <strong>1.91ms</strong></li></ul><p><br /></p><p>The performance can be largely impacted by the configuration of the used texture, it is necessary to pay attention to use the mipmap and the good compression ( Effect ).</p><p>The number of samples for the light shaft can also have an impact on the performance, it is advised not to exceed 16 samples in the case of a video game, but you can increase strongly in the case of a cinematic rendering.</p><p><br /></p><p><strong>Recommended texture size : </strong></p><p><strong>Base Flare : </strong>2048x2048 RBGA 16f (HDR Compressed BC6H , Texture group Effect)</p><p><strong>Ghost</strong> : 512x512 RBGA 16f (HDR Compressed BC6H , Texture group Effect)</p>",
+  "technicalDetails": "<p><strong>Assets : <em>( All textures were generated with my own internal tool )</em></strong></p><ul><li>1 Master Material </li><li>21 Materials Instance Constant ( Presets )</li><li>18 Textures Flare ( 4k , 2k )</li><li>36 Texture Ghost ( 512x512 )</li><li>8 Texture Mask ( 2k )</li><li>8 Texture Noise ( 64x64 )</li><li>13 Texture Tint ( 64x64 )</li><li>1 Master Actor ( Billboard Material Component )</li><li>Demos File (Level, SM, Mat)</li></ul><p><br /></p><p><strong>Supported Development Platforms:</strong> Any</p><p><a href=\"https://sites.google.com/view/cy-billboard-lensflare/accueil\" rel=\"nofollow\"><strong>Documentation</strong></a></p><p><strong>Important/Additional Notes:</strong> Required Unreal engine 4.25 or higher</p><p><strong>Path of content : </strong>/Content/Cy_Billboard_LensFlare/</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00027-1920x1080-7762f427983d84684b512df05bd64403.jpg",
+      "md5": "7762f427983d84684b512df05bd64403",
+      "width": 1920,
+      "height": 1080,
+      "size": 2054648,
+      "uploadedDate": "2023-02-12T00:21:41.192Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00031-1920x1080-7ec3ca512d6f40508fe51e9e26b60fe2.jpg",
+      "md5": "7ec3ca512d6f40508fe51e9e26b60fe2",
+      "width": 1920,
+      "height": 1080,
+      "size": 2151944,
+      "uploadedDate": "2023-02-12T00:21:41.702Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00028-1920x1080-e9b9fcd29516df2d03ef4d461739c225.jpg",
+      "md5": "e9b9fcd29516df2d03ef4d461739c225",
+      "width": 1920,
+      "height": 1080,
+      "size": 1183289,
+      "uploadedDate": "2023-02-12T00:21:42.220Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00029-1920x1080-ba2c76115240eea3c8ca9f97b974e7cc.jpg",
+      "md5": "ba2c76115240eea3c8ca9f97b974e7cc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1210793,
+      "uploadedDate": "2023-02-12T00:21:42.656Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00030-1920x1080-470048531826758696918321a01bb0f3.jpg",
+      "md5": "470048531826758696918321a01bb0f3",
+      "width": 1920,
+      "height": 1080,
+      "size": 996641,
+      "uploadedDate": "2023-02-12T00:21:43.100Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00022-1920x1080-b4c1a609476ce61281e9da372705a46d.jpg",
+      "md5": "b4c1a609476ce61281e9da372705a46d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1867532,
+      "uploadedDate": "2023-02-12T00:21:43.588Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2023-02-12 004935-Greenshot-1920x1080-a5ffbe02af45be987c1288168e027b7c.jpg",
+      "md5": "a5ffbe02af45be987c1288168e027b7c",
+      "width": 1920,
+      "height": 1080,
+      "size": 816963,
+      "uploadedDate": "2023-02-12T00:21:44.130Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2023-02-12 005046-Greenshot-1920x1080-da227cd5ddc4800336687580d5bb3c75.jpg",
+      "md5": "da227cd5ddc4800336687580d5bb3c75",
+      "width": 1920,
+      "height": 1080,
+      "size": 825103,
+      "uploadedDate": "2023-02-12T00:21:44.561Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2023-02-12 005124-Greenshot-1920x1080-c6a66192a8ec6666ad451e974a1ef9ad.jpg",
+      "md5": "c6a66192a8ec6666ad451e974a1ef9ad",
+      "width": 1920,
+      "height": 1080,
+      "size": 752016,
+      "uploadedDate": "2023-02-12T00:21:44.997Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00063-1920x1080-3404dffcbb88504d15a5a666f7109981.jpg",
+      "md5": "3404dffcbb88504d15a5a666f7109981",
+      "width": 1920,
+      "height": 1080,
+      "size": 1000963,
+      "uploadedDate": "2023-02-12T00:21:45.445Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2023-02-12 005207-Greenshot-1920x1080-c24100fa2d5df9ffb394b26c4b3111ae.jpg",
+      "md5": "c24100fa2d5df9ffb394b26c4b3111ae",
+      "width": 1920,
+      "height": 1080,
+      "size": 618172,
+      "uploadedDate": "2023-02-12T00:21:45.898Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00064-1920x1080-dfef4d801c8d4e8a17041c3dfcffc989.jpg",
+      "md5": "dfef4d801c8d4e8a17041c3dfcffc989",
+      "width": 1920,
+      "height": 1080,
+      "size": 987187,
+      "uploadedDate": "2023-02-12T00:21:46.337Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00065-1920x1080-6bafb8f0f92357bb825a3cfb03d69633.jpg",
+      "md5": "6bafb8f0f92357bb825a3cfb03d69633",
+      "width": 1920,
+      "height": 1080,
+      "size": 713871,
+      "uploadedDate": "2023-02-12T00:21:46.782Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00023-1920x1080-4cf9689a38d52a749fa693d0bffbc7a0.jpg",
+      "md5": "4cf9689a38d52a749fa693d0bffbc7a0",
+      "width": 1920,
+      "height": 1080,
+      "size": 561677,
+      "uploadedDate": "2023-02-12T00:21:47.221Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00024-1920x1080-6e8cd1ccdae93b80ba40233195abd136.jpg",
+      "md5": "6e8cd1ccdae93b80ba40233195abd136",
+      "width": 1920,
+      "height": 1080,
+      "size": 428683,
+      "uploadedDate": "2023-02-12T00:21:47.683Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00025-1920x1080-d5e6ceb63b614dd8168493065919d47e.jpg",
+      "md5": "d5e6ceb63b614dd8168493065919d47e",
+      "width": 1920,
+      "height": 1080,
+      "size": 363109,
+      "uploadedDate": "2023-02-12T00:21:48.073Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00026-1920x1080-a035a54e8adbdc9e4a627ee4249fa144.jpg",
+      "md5": "a035a54e8adbdc9e4a627ee4249fa144",
+      "width": 1920,
+      "height": 1080,
+      "size": 365213,
+      "uploadedDate": "2023-02-12T00:21:48.457Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-7b643ab86184c249b4cc79483068fa18.png",
+      "md5": "7b643ab86184c249b4cc79483068fa18",
+      "width": 1920,
+      "height": 1080,
+      "size": 618039,
+      "uploadedDate": "2023-02-12T00:21:48.876Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-35420144b4e2e822a826a8b35c7f4cbd.png",
+      "md5": "35420144b4e2e822a826a8b35c7f4cbd",
+      "width": 1920,
+      "height": 1080,
+      "size": 729760,
+      "uploadedDate": "2023-02-12T00:21:49.370Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-067f2fcb5d915e91f56577f311d3a21b.png",
+      "md5": "067f2fcb5d915e91f56577f311d3a21b",
+      "width": 1920,
+      "height": 1080,
+      "size": 474205,
+      "uploadedDate": "2023-02-12T00:21:49.790Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/CyBillboardLensflare_thumb-284x284-045dd52634cd7de224e8d7acb47a196f.png",
+      "md5": "045dd52634cd7de224e8d7acb47a196f",
+      "width": 284,
+      "height": 284,
+      "size": 121529,
+      "uploadedDate": "2023-02-12T00:21:50.137Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/CyBillboardLensflare_featured-894x488-de79bf14d13279d87e312e712dc1a9d9.png",
+      "md5": "de79bf14d13279d87e312e712dc1a9d9",
+      "width": 894,
+      "height": 488,
+      "size": 501596,
+      "uploadedDate": "2023-02-12T00:21:50.256Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00027-1920x1080-7762f427983d84684b512df05bd64403_Snapshot.jpg",
+      "md5": "60db539e33d0126251a4cb8f6825e9bd",
+      "width": 150,
+      "height": 74,
+      "size": 6082,
+      "uploadedDate": "2023-02-12T00:21:41.523Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00031-1920x1080-7ec3ca512d6f40508fe51e9e26b60fe2_Snapshot.jpg",
+      "md5": "3a7a1e060e729e1af00df18436e84605",
+      "width": 150,
+      "height": 74,
+      "size": 6525,
+      "uploadedDate": "2023-02-12T00:21:42.018Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00028-1920x1080-e9b9fcd29516df2d03ef4d461739c225_Snapshot.jpg",
+      "md5": "c0d6cabe5941b37c57caf50c9888fab4",
+      "width": 150,
+      "height": 74,
+      "size": 4616,
+      "uploadedDate": "2023-02-12T00:21:42.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00029-1920x1080-ba2c76115240eea3c8ca9f97b974e7cc_Snapshot.jpg",
+      "md5": "bce3ea07e825a3f96cf38552e33017f4",
+      "width": 150,
+      "height": 74,
+      "size": 5336,
+      "uploadedDate": "2023-02-12T00:21:42.955Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00030-1920x1080-470048531826758696918321a01bb0f3_Snapshot.jpg",
+      "md5": "b50f50b8ac5c24ca0131b709ec1a83b2",
+      "width": 150,
+      "height": 74,
+      "size": 6319,
+      "uploadedDate": "2023-02-12T00:21:43.362Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00022-1920x1080-b4c1a609476ce61281e9da372705a46d_Snapshot.jpg",
+      "md5": "db674992d820b3f7f412efd65e79f5a3",
+      "width": 150,
+      "height": 74,
+      "size": 5814,
+      "uploadedDate": "2023-02-12T00:21:43.899Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-02-12 004935-Greenshot-1920x1080-a5ffbe02af45be987c1288168e027b7c_Snapshot.jpg",
+      "md5": "e38691b9c1aa8f48a9a97a4b75f6ee83",
+      "width": 150,
+      "height": 74,
+      "size": 5920,
+      "uploadedDate": "2023-02-12T00:21:44.415Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-02-12 005046-Greenshot-1920x1080-da227cd5ddc4800336687580d5bb3c75_Snapshot.jpg",
+      "md5": "b2b4e53fea041ac38aae51970d52f3b1",
+      "width": 150,
+      "height": 74,
+      "size": 6066,
+      "uploadedDate": "2023-02-12T00:21:44.843Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-02-12 005124-Greenshot-1920x1080-c6a66192a8ec6666ad451e974a1ef9ad_Snapshot.jpg",
+      "md5": "6748b2088bc3b241124b56842785b9fb",
+      "width": 150,
+      "height": 74,
+      "size": 5899,
+      "uploadedDate": "2023-02-12T00:21:45.246Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00063-1920x1080-3404dffcbb88504d15a5a666f7109981_Snapshot.jpg",
+      "md5": "059c40569bab103afc11f728b65b4135",
+      "width": 150,
+      "height": 74,
+      "size": 5900,
+      "uploadedDate": "2023-02-12T00:21:45.740Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-02-12 005207-Greenshot-1920x1080-c24100fa2d5df9ffb394b26c4b3111ae_Snapshot.jpg",
+      "md5": "40fc09ad32f7add5b9818e6ada81a31f",
+      "width": 150,
+      "height": 74,
+      "size": 4565,
+      "uploadedDate": "2023-02-12T00:21:46.139Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00064-1920x1080-dfef4d801c8d4e8a17041c3dfcffc989_Snapshot.jpg",
+      "md5": "4a79d3030ad5b5a62c32e38ca2e0facc",
+      "width": 150,
+      "height": 74,
+      "size": 5439,
+      "uploadedDate": "2023-02-12T00:21:46.600Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00065-1920x1080-6bafb8f0f92357bb825a3cfb03d69633_Snapshot.jpg",
+      "md5": "26f4bde4cd06285d17defe051aa5473a",
+      "width": 150,
+      "height": 74,
+      "size": 3143,
+      "uploadedDate": "2023-02-12T00:21:47.068Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00023-1920x1080-4cf9689a38d52a749fa693d0bffbc7a0_Snapshot.jpg",
+      "md5": "02c83da349ebb011bb615ec4857fec51",
+      "width": 150,
+      "height": 74,
+      "size": 3900,
+      "uploadedDate": "2023-02-12T00:21:47.539Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00024-1920x1080-6e8cd1ccdae93b80ba40233195abd136_Snapshot.jpg",
+      "md5": "8c013b1f9f043bb673a5c871f57377db",
+      "width": 150,
+      "height": 74,
+      "size": 3335,
+      "uploadedDate": "2023-02-12T00:21:47.930Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00025-1920x1080-d5e6ceb63b614dd8168493065919d47e_Snapshot.jpg",
+      "md5": "4a805083213ed287d9dc770a8e4c7344",
+      "width": 150,
+      "height": 74,
+      "size": 2713,
+      "uploadedDate": "2023-02-12T00:21:48.332Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00026-1920x1080-a035a54e8adbdc9e4a627ee4249fa144_Snapshot.jpg",
+      "md5": "8d49a67e763818d10c88f995a37ff769",
+      "width": 150,
+      "height": 74,
+      "size": 2267,
+      "uploadedDate": "2023-02-12T00:21:48.680Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-7b643ab86184c249b4cc79483068fa18_Snapshot.png",
+      "md5": "3c29e3883ec415414a1e38028112e19d",
+      "width": 150,
+      "height": 74,
+      "size": 4806,
+      "uploadedDate": "2023-02-12T00:21:49.170Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-35420144b4e2e822a826a8b35c7f4cbd_Snapshot.png",
+      "md5": "4a4d0368eeee056f6cc7577c332f34fb",
+      "width": 150,
+      "height": 74,
+      "size": 6624,
+      "uploadedDate": "2023-02-12T00:21:49.663Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-067f2fcb5d915e91f56577f311d3a21b_Snapshot.png",
+      "md5": "78d89f15a5a4ac35289318690a07c3da",
+      "width": 150,
+      "height": 74,
+      "size": 6085,
+      "uploadedDate": "2023-02-12T00:21:50.089Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/fx"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-02-16T17:48:02.104Z",
+  "lastModifiedDate": "2024-10-22T22:56:29.282Z",
+  "customAttributes": {},
+  "entitlementName": "bf83aaf4c20e4829a71162bdb0a57cf3",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "d735a3fb79f145ce90faf1a3a5950841",
+      "appId": "CyBillbobf83aaf4c20eV1",
+      "compatibleApps": [
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Win32",
+        "Xbox One",
+        "Windows",
+        "PS4"
+      ],
+      "dateAdded": "2023-02-12T00:00:00.000Z",
+      "releaseNote": "v1.1.1b ( With PPm )",
+      "versionTitle": "Cy_Billboard_LensFlare"
+    }
+  ],
+  "developer": "CyberAlien",
+  "developerId": "o-99fjqnfex7kdesspst3wzxcahtnmk9",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

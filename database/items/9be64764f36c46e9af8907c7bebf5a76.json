@@ -1,0 +1,242 @@
+{
+  "id": "9be64764f36c46e9af8907c7bebf5a76",
+  "title": "Custom Thumbnails",
+  "description": "Easily set custom 2D thumbnails for your blueprints objects and DataAssets.",
+  "longDescription": "<p>A feature I found to be quite missing from the base editor was this : being able to easily and quickly set icons for blueprints in the content browser.</p><p>When you have lots of items, skills, and other kinds of objects of this sort that are represented in game with a Texture2D, it&#39;s pretty sad to have them shown as a white circle in the editor. Hence, I made this plugin!</p><p>The setup is pretty easy, it&#39;s compatible with any projects whether it uses C&#43;&#43; or Blueprints, and can quickly be set on an existing project.</p><p><br /></p><p><br /></p><p><br /></p><h2><strong>To start using with Blueprint :</strong></h2><p>In your blueprint (e.g. the parent blueprint of all the skills/items), click the <strong>Class Settings</strong> button and <strong>add</strong> the <strong>IconThumbnailInterface</strong>. Then, double click the <strong>Get Icon </strong>function on the left panel.</p><p>There, you can return any Texture2D as the thumbnail.</p><p>Please refer to the explanatory screenshot above for more details.</p><p><br /></p><p><br /></p><p><br /></p><h2><strong>To start using with C&#43;&#43; :</strong></h2><p>Please add the module in your dependencies (i.e. in your <strong>ProjectName.build.cs</strong> file), like so for example :</p><blockquote>PrivateDependencyModuleNames.AddRange(new string[] { &#34;CustomThumbnails&#34; });</blockquote><p>Then implement the <strong>IIconThumbnailInterface </strong>in your class and override <strong>GetIcon_Implementation()</strong> to return the UTexture2D you want as the thumbnail.</p><p><br /></p><p><br /></p><h2><strong>New features from version 4.25 onwards :</strong></h2><p><strong>Y</strong>ou can now also tint your icons with an RGB color, with a new <strong>Get Tint </strong>method/function, usable in the same way as the <strong>Get Icon </strong>method/function.</p><p>The plugin now also works with <strong>DataAssets</strong>.</p><p> If you need these features for an older version of the engine, feel free to contact me about it and I&#39;ll send a patch to you.</p><p><br /></p><p>A lot of people have been getting this little plugin (way more than I expected, to be honest) but nobody left any note :(</p><p>Do feel free to leave one if you appreciate it, want something added, etc.</p><p>Thank you very much!</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Content browser rendering of any Texture2D for any blueprint thumbnail</li></ul><p>Code Modules:</p><ul><li> CustomThumbnails (DeveloperTool)</li><li> CustomThumbnailsEditor (Editor)</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 4</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64, Win32, MacOS &amp; Linux</p><p>Supported Target Build Platforms: Editor</p><p>Documentation: See screenshot and description</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1080px-1920x1080-8f965a775e929d30a0809c1bce53e182.png",
+      "md5": "8f965a775e929d30a0809c1bce53e182",
+      "width": 1920,
+      "height": 1080,
+      "size": 143435,
+      "uploadedDate": "2020-08-03T18:41:42.478Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/blueprint1080-1920x1080-46cd5c511ab9b583b23e958e0195aa57.png",
+      "md5": "46cd5c511ab9b583b23e958e0195aa57",
+      "width": 1920,
+      "height": 1080,
+      "size": 217060,
+      "uploadedDate": "2020-08-03T18:41:42.849Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/CustomThumbnails_thumb-284x284-63a5d5588c78f65e1f9b5303a069d621.png",
+      "md5": "63a5d5588c78f65e1f9b5303a069d621",
+      "width": 284,
+      "height": 284,
+      "size": 84828,
+      "uploadedDate": "2020-08-03T18:41:43.231Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/CustomThumbnails_featured-894x488-c4f2d08732c09e4f2cfcf5fbb98d1dee.png",
+      "md5": "c4f2d08732c09e4f2cfcf5fbb98d1dee",
+      "width": 894,
+      "height": 488,
+      "size": 164454,
+      "uploadedDate": "2020-08-03T18:41:43.306Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1080px-1920x1080-8f965a775e929d30a0809c1bce53e182_Snapshot.png",
+      "md5": "a82702376df39d769dcbddf4c7be2f15",
+      "width": 150,
+      "height": 74,
+      "size": 2854,
+      "uploadedDate": "2020-08-03T18:41:42.725Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/blueprint1080-1920x1080-46cd5c511ab9b583b23e958e0195aa57_Snapshot.png",
+      "md5": "23aa293c6314f0adb57c160815320623",
+      "width": 150,
+      "height": 74,
+      "size": 5432,
+      "uploadedDate": "2020-08-03T18:41:43.102Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-08-05T16:20:36.660Z",
+  "lastModifiedDate": "2024-11-20T16:28:40.957Z",
+  "customAttributes": {},
+  "entitlementName": "9be64764f36c46e9af8907c7bebf5a76",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3c0e9935d4cd4ba2af5a97d1efb1496c",
+      "appId": "CustomThumbnails_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2020-08-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE4.23"
+    },
+    {
+      "id": "164eaba927084fcbace261c2ba61a1e6",
+      "appId": "CustomThumbnails_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2020-08-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE4.24"
+    },
+    {
+      "id": "aa766df9091348e1ac17d14f33141601",
+      "appId": "CustomThumbnails_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac",
+        "Win32"
+      ],
+      "dateAdded": "2020-08-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE4.25"
+    },
+    {
+      "id": "39ecc7b69dfa4e0db5c0fec4a19cbae7",
+      "appId": "CustomThumbnails_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Mac",
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2020-12-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE4.26"
+    },
+    {
+      "id": "2f7ad16d187044d684f4082cd6ee787e",
+      "appId": "CustomThumbnails_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2021-08-21T00:00:00.000Z",
+      "releaseNote": "+ Tint feature",
+      "versionTitle": "UE4.27"
+    },
+    {
+      "id": "706bdff11d084f209b3b09ed53aee0e3",
+      "appId": "CustomThumbnails_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-22T00:00:00.000Z",
+      "releaseNote": "+ BugFix DataAsset Icon being black when they don't implement interface\n",
+      "versionTitle": "UE5.0"
+    },
+    {
+      "id": "7512b8522c5a4d7789c6bc459497275a",
+      "appId": "CustomThumbnails_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-12-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.1"
+    },
+    {
+      "id": "edfc3fa25e37425cae5973061c8cf0b4",
+      "appId": "CustomThumbnails_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-06-08T00:00:00.000Z",
+      "releaseNote": "+bugfix alphablend",
+      "versionTitle": "UE5.2"
+    },
+    {
+      "id": "8c8c3bf848d842f580d84ce2a303aad6",
+      "appId": "CustomThumbnails_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.3"
+    },
+    {
+      "id": "8eef8b0619f14c64bd5eaa333a75f251",
+      "appId": "CustomThumbnails_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2024-04-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.4"
+    }
+  ],
+  "developer": "JB Dev",
+  "developerId": "o-72qnc2rx2gd3sg4e7uj85hhuwagapc",
+  "endOfSupport": false,
+  "unsearchable": false
+}

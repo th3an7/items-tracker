@@ -1,0 +1,263 @@
+{
+  "id": "4ebaf45e399c47d4b2182733ccff1ebe",
+  "title": "Master Surfaces Shaders [2.0 Rewrite Update]",
+  "description": "Master Surfaces Shaders is a suite of simple shaders to apply optimized Materials on your objects and surfaces.",
+  "longDescription": "<p>USER GUIDE : <a href=\"https://sylvl.gitbook.io/untitled/guide/using-the-master-surfaces-shaders-introduction\" rel=\"nofollow\">https://sylvl.gitbook.io/untitled/guide/using-the-master-surfaces-shaders-introduction</a></p><p>FREE DEMO (On ArtStation) : <a href=\"https://www.artstation.com/a/13518398\" rel=\"nofollow\">https://www.artstation.com/a/13518398</a></p><p><em>Extract the archive content in the Content folder of your Project.</em></p><p><br /></p><p>These master materials shaders have been made from the ground up to be a easy to use and optimzed way to apply all sorts of materials to your objects, <strong>without ever having to use nodes.</strong></p><p><strong>What is unchecked isn&#39;t computed. The shader is more or less heavy according to what&#39;s enabled !</strong></p><p><br /></p><p>Includes a specific UE5.0 Preset for Nanite Meshes.</p><p><br /></p><p>It&#39;s just check what you need, choose your textures, and if needed use a suite of options directly in the material instances to fine-tune the look of your material. They have been made to be very versatile, and should be enough for the huge majority of your props and surfaces.</p><p><br /></p><p>Contains fully integrated features like Material Layers, RGBA Vertex Painting w/ Individual Channels Control, Triplanar(Planar) Mapping, Random value offsets, Parallax Occlusion Mapping / World Position Offset (w/ Wind Support), and more :</p><p><br /></p><p><strong><u>Basic</u></strong><u> Options in the shader includes :</u></p><p><br /></p><p><strong>--- Alpha of Base Color to Opacity Mask/Map</strong></p><p><br /></p><p><strong>--- UV Breaking (Anti-Tiling) Features </strong></p><p><strong>--- Dynamic Ambient Occlusion Features</strong></p><p>(Allows to use Occlusion with non-baked meshes by darkening Color and Specular)</p><p><br /></p><p><strong>--- Runtime Virtual Texturing Blending w/ Landscape</strong></p><p>(Allows to blend the shader with a Landscape material for better transition)</p><p><br /></p><p><strong>--- Full Material Layer Support</strong></p><p><br /></p><p><strong>--- Toggleable Map Support</strong></p><ul><li>Base Color*</li><li>Normal</li><li>Specular*</li><li>Roughness* <em>(Glossiness if reversed, using the gradient map Grayscale map adjustements)</em></li><li>Metallic*</li><li>Ambient Occlusion</li><li>SSS</li><li>Opacity Mask</li><li>Emissive</li><li>Anisotropy &amp; Tangent</li><li>Clear Coat</li></ul><p><br /></p><ul><li>Opacity*, Refraction* for the TRANSLUCENT variant</li><li>Tesselation Force, Distance, Displacement Map for the TESSELATED variant.</li></ul><p><br /></p><p><em>*If disabled, uses a changeable uniform value</em></p><p><br /></p><p><strong>--- Global UV Scaling</strong></p><p><strong>--- Triplanar Mapping</strong></p><ul><li>Smoothness of the transition</li><li>Toggleable Sides to Render (X,Y,Z) to save performance</li></ul><p><br /></p><p><strong>--- Packed &#34;ORM&#34; Map Support (For UE4 Packed Textures coming from Substance, or recomposed manually.)</strong></p><p><br /></p><p><strong>--- World Position Offset</strong></p><ul><li>Inflate vertices</li><li>XYZ Offset</li><li>Wind Effects &amp; Settings</li><li>Heightmap Masking</li></ul><p><br /></p><p><strong>--- Parallax Occlusion Mapping (Applies on all Color Maps)</strong></p><ul><li>Heightmap &amp; Min, Max Steps, Height control</li></ul><p><br /></p><p><br /></p><p><strong><u>Advanced</u></strong><u> Features in the shader includes :</u></p><p><br /></p><p><strong>--- Individual Color/Grayscale Map Adjustements</strong></p><p><br /></p><p>- Color : Hue Shift, Contrast, Luminosity, Saturation, Tint, Gradient Map</p><p>- Grayscale : Contrast, Luminosity, Gradient Map</p><p><br /></p><p>Includes a global or individual Mask to apply these corrections on some parts of the map only.</p><p><br /></p><p><strong>--- Vertex Painting (4 Channels / RGBA)</strong></p><p><br /></p><p><strong>- Standard or Height-Based</strong></p><p><strong>- Allows enabling/disabling individual channels per layer</strong></p><p>- Layer Opacity</p><p>- Per channel World Position Offset and Parallax Occlusion Mapping support</p><p>(Plus Opacity and IOR in the Translucent Version, Displacement map in the Tessellated version)</p><p><br /></p><ul><li>Supports &#34;ORM&#34; Packed Textures for each RGBA channel</li><li>Triplanar Mapping mode supported for Vertex Painting (independently of the global Triplanar mode)</li><li>UV Scale, Maps adjustement options for VP maps</li></ul><p><br /></p><p><strong>--- Variance Features</strong></p><p><br /></p><ul><li>Random UV Translate</li><li>Random Masks map adjustements UV Position</li><li>Random World Position Offset multiplier</li><li>Random Normal Flatness</li><li>Random Base Color Offset (by Tinting or standard Color Overlay, either from nothing to a standard color/random color on each R G B channel (see video for more precisions) &amp; Luminosity, Saturation Offset options</li><li>Random Metal/Roughness Offset</li></ul><p><br /></p><p>Allows the use of a mask for the Grayscale/Color offset values.</p><p><br /></p><p>--- Visual Effects</p><p><br /></p><p>- Global Fresnel (on Color and/or Emissive)</p><ul><li>Allows the use of a fresnel normal, mask, mask panner (Base color and Emissive Fresnel channels are independent.)</li></ul><p>- Global Panner</p><p>- Pixel Depth Offset (requires the mesh to have &#34;cast shadows&#34; disabled.</p><p><br /></p><p>--- Manual Cubemap Reflection w/ Opacity Setting</p>",
+  "technicalDetails": "<p>USER GUIDE : <a href=\"https://sylvl.gitbook.io/untitled/guide/using-the-master-surfaces-shaders-introduction\" rel=\"nofollow\">https://sylvl.gitbook.io/untitled/guide/using-the-master-surfaces-shaders-introduction</a></p><p><br /></p><p>VIDEO GUIDES</p><p><br /></p><p>Part 1 - Basics : https://vimeo.com/648558040</p><p>Part 2 : Advanced Features : https://vimeo.com/648574116</p><p><br /></p><p>Be sure to watch those before buying, to see if these shaders can suit your needs !</p><p><br /></p><ul><li>Contains 2 folders, _Common and _Masters.</li><li>Use only with instances, and the shaders should not be edited !</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screen1-1920x1080-464521ef29f098bfe743a38161667a2e.png",
+      "md5": "464521ef29f098bfe743a38161667a2e",
+      "width": 1920,
+      "height": 1080,
+      "size": 770659,
+      "uploadedDate": "2021-12-15T19:58:22.401Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screen1-1920x1080-133c002ceae07decf751dfccdc4231a7.png",
+      "md5": "133c002ceae07decf751dfccdc4231a7",
+      "width": 1920,
+      "height": 1080,
+      "size": 1243041,
+      "uploadedDate": "2021-11-24T11:22:11.069Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screen2-1920x1080-db5c08655b9aee6daa7960ffb36dc52b.png",
+      "md5": "db5c08655b9aee6daa7960ffb36dc52b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1408366,
+      "uploadedDate": "2021-11-24T11:22:11.596Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenAT-1920x1080-a09e8438aec5d58e188a46311e1a7ce4.png",
+      "md5": "a09e8438aec5d58e188a46311e1a7ce4",
+      "width": 1920,
+      "height": 1080,
+      "size": 2336730,
+      "uploadedDate": "2021-12-15T20:04:24.033Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/substance-1920x1080-5f2aaeca06d5e0603e51c02520e4e563.png",
+      "md5": "5f2aaeca06d5e0603e51c02520e4e563",
+      "width": 1920,
+      "height": 1080,
+      "size": 1235268,
+      "uploadedDate": "2021-11-24T11:22:12.117Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenVariance-1920x1080-3ca904c424dedaf334a263ee58ba61a0.png",
+      "md5": "3ca904c424dedaf334a263ee58ba61a0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1330551,
+      "uploadedDate": "2021-11-24T11:22:12.704Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenVP-1920x1080-9f5ea952d21717e5f000aba3524598d5.png",
+      "md5": "9f5ea952d21717e5f000aba3524598d5",
+      "width": 1920,
+      "height": 1080,
+      "size": 1100892,
+      "uploadedDate": "2021-11-24T11:22:13.234Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenVP2-1920x1080-94cf49d87b663389658cebe4a3abdc06.png",
+      "md5": "94cf49d87b663389658cebe4a3abdc06",
+      "width": 1920,
+      "height": 1080,
+      "size": 1186324,
+      "uploadedDate": "2021-11-24T11:22:13.855Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screen1-1920x1080-464521ef29f098bfe743a38161667a2e.png",
+      "md5": "464521ef29f098bfe743a38161667a2e",
+      "width": 1920,
+      "height": 1080,
+      "size": 770659,
+      "uploadedDate": "2021-12-15T19:58:23.496Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MasterSurfacesShadersUE5Compatible_thumb-284x284-87b58952f8a2a7d5f6c9e497933ded06.png",
+      "md5": "87b58952f8a2a7d5f6c9e497933ded06",
+      "width": 284,
+      "height": 284,
+      "size": 90808,
+      "uploadedDate": "2022-05-13T14:44:20.276Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MasterSurfacesShadersUE5Compatible_featured-894x488-ec2bf09e77f14d3f0d018df3826efcf3.png",
+      "md5": "ec2bf09e77f14d3f0d018df3826efcf3",
+      "width": 894,
+      "height": 488,
+      "size": 425770,
+      "uploadedDate": "2022-05-13T14:57:54.676Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenAT-1920x1080-a09e8438aec5d58e188a46311e1a7ce4_Snapshot.png",
+      "md5": "00cf5687a33163c32c7853b4c79867df",
+      "width": 150,
+      "height": 74,
+      "size": 6339,
+      "uploadedDate": "2021-12-15T20:04:24.437Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screen1-1920x1080-464521ef29f098bfe743a38161667a2e_Snapshot.png",
+      "md5": "4ad643090b1b576db8f12be2fad7761a",
+      "width": 150,
+      "height": 74,
+      "size": 5943,
+      "uploadedDate": "2021-12-15T19:58:22.716Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenAT-1920x1080-7ca676d4854492bfae33982e4b27d48a_Snapshot.png",
+      "md5": "0715a5ad248bc40ec2467fa163f78172",
+      "width": 150,
+      "height": 74,
+      "size": 6341,
+      "uploadedDate": "2021-12-15T19:58:23.305Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screen1-1920x1080-464521ef29f098bfe743a38161667a2e_Snapshot.png",
+      "md5": "4ad643090b1b576db8f12be2fad7761a",
+      "width": 150,
+      "height": 74,
+      "size": 5943,
+      "uploadedDate": "2021-12-15T19:58:23.772Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screen1-1920x1080-e1eba10c3b1f671f23f242ad82c8f8ed_Snapshot.png",
+      "md5": "0e8846ea8893dd058e74a50761af37e1",
+      "width": 150,
+      "height": 74,
+      "size": 6563,
+      "uploadedDate": "2021-11-24T11:22:10.837Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screen1-1920x1080-133c002ceae07decf751dfccdc4231a7_Snapshot.png",
+      "md5": "2092da095d55495b6f0de21105e4f492",
+      "width": 150,
+      "height": 74,
+      "size": 5486,
+      "uploadedDate": "2021-11-24T11:22:11.410Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screen2-1920x1080-db5c08655b9aee6daa7960ffb36dc52b_Snapshot.png",
+      "md5": "073cc5271783abd58c24836650d7fdc1",
+      "width": 150,
+      "height": 74,
+      "size": 5834,
+      "uploadedDate": "2021-11-24T11:22:11.924Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/substance-1920x1080-5f2aaeca06d5e0603e51c02520e4e563_Snapshot.png",
+      "md5": "af707d62938dff6bffa0a1ad9b4c3d08",
+      "width": 150,
+      "height": 74,
+      "size": 7025,
+      "uploadedDate": "2021-11-24T11:22:12.448Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenVariance-1920x1080-3ca904c424dedaf334a263ee58ba61a0_Snapshot.png",
+      "md5": "4c8ccec03b8d4ec4ee3d74ea223c2f1a",
+      "width": 150,
+      "height": 74,
+      "size": 8230,
+      "uploadedDate": "2021-11-24T11:22:13.063Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenVP-1920x1080-9f5ea952d21717e5f000aba3524598d5_Snapshot.png",
+      "md5": "31f981ed26cafb2444cfe2019356d4b2",
+      "width": 150,
+      "height": 74,
+      "size": 7564,
+      "uploadedDate": "2021-11-24T11:22:13.559Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenVP2-1920x1080-94cf49d87b663389658cebe4a3abdc06_Snapshot.png",
+      "md5": "9d3810fda03f53397e77286e82f1eda7",
+      "width": 150,
+      "height": 74,
+      "size": 7100,
+      "uploadedDate": "2021-11-24T11:22:14.208Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screen1-1920x1080-e1eba10c3b1f671f23f242ad82c8f8ed_Snapshot.png",
+      "md5": "0e8846ea8893dd058e74a50761af37e1",
+      "width": 150,
+      "height": 74,
+      "size": 6563,
+      "uploadedDate": "2021-11-24T11:22:14.707Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/materials"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-11-27T16:46:04.030Z",
+  "lastModifiedDate": "2024-11-28T17:32:25.075Z",
+  "customAttributes": {},
+  "entitlementName": "4ebaf45e399c47d4b2182733ccff1ebe",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "cd097fa5ba2b4df8b7cb0b72c9daecd6",
+      "appId": "PnPMaste4ebaf45e399cV1",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-11-24T00:00:00.000Z",
+      "releaseNote": "2.0 Rewrite Update - Please see the full changelog at \nhttps://sylvl.gitbook.io/untitled/changelog",
+      "versionTitle": "2.0"
+    }
+  ],
+  "developer": "Sylvain L",
+  "developerId": "o-bpscq4var62475zx4qsgf8lfmec4z4",
+  "endOfSupport": false,
+  "unsearchable": false
+}

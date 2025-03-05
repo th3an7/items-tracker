@@ -1,0 +1,370 @@
+{
+  "id": "a694d5e1b4f24524bb73814fae4c428f",
+  "title": "AI Perception Turret Pro",
+  "description": "Easy to integrate, full-featured turret with AI Perception. Supports factions, target sorting, hacking and more!",
+  "longDescription": "<p>The AI Perception Turret Pro project adds a turret, turret hacking terminal, bullet BP, examples of humanoid bot BPs (one for the enemy, one for the player&#39;s ally) and player, and many auxiliary assets* to your project.</p><p><br /></p><p><br /></p><h2><a href=\"https://youtu.be/vmIy9S9r-pM\" rel=\"nofollow\">Demonstration</a></h2><p><br /></p><h2><a href=\"https://youtu.be/wP-d7158tDY\" rel=\"nofollow\">Implementation guide</a></h2><p><br /></p><p>Basic Turret BP features:</p><p>- The turret has several main modes: patrolling &amp; searching for a recently lost target (angle and style of rotation is customizable, adding your own rotation styles is supported), aiming and firing at the enemy;</p><p>- Turret has 5 perception senses: Sight, Hearing, Damage, Touch, Team_Sight. Of these, 3 senses I developed myself (Sight, Touch, Team_Sight), 2 are standard AI Perception senses (Hearing, Damage);</p><p>- Turret Sight sensor has two subsensors: one main one, and another one for close targets. No more blind spots if the enemy is too close to the turret!</p><p>- Turret Sight sensor can now be freely moved and attached to the socket you want;</p><p>- Turret Sight sensor can rotate both on the Z-axis (Yaw) and on the Y-axis (Pitch). Now turret Sight sensor won&#39;t miss its enemy even if enemy jumped up!</p><p>- (Optional) The angle of sight of the turret increases if it sees an enemy;</p><p>- (Optional) If a turret sees an enemy, it will always see him within Lose Sight Radius (unless he is hiding behind cover);</p><p>- Team_Sight Sensor: if a turret has seen an enemy, it informs its closest allies;</p><p>- Turret splits all targets into 3 groups by priority (from I to III) and attacks one by one and according to sorting rules (you can add your own rules)**:</p><p>   - I. Turret sees the target right now;</p><p>   - II. Turret has previously detected this target with one of its sensors AND the target was not hiding behind cover at the time of detection;</p><p>   - III. Turret has previously detected this target with one of its sensors BUT the target was hiding at the time of detection.</p><p>- Factions Support: turret can be both an ally for the player and an enemy;</p><p>- Hacking support: turret can be hacked through the terminal (you can add a new turret to the terminal in a few clicks &#43; the project supports integration of your own hacking mechanics, such as password input, mini-games during hacking, etc.), after hacking turret becomes an ally for the player;</p><p>- (Optional) Turret emits laser beams for better visibility of its field of sight;</p><p>- Customizable appearance (including color and thickness of lasers);</p><p>- Customizable amount of lives &#43; (optional) HealthBar widget;</p><p>- Customizable damage value, hit range, and bullet speed.</p><p><br /></p><p>Some other project features:</p><p>- BP Bullet allows you to create custom settings (such as damage, range, speed) for each class;</p><p>- Each bot and player has a health score, if the value becomes 0, the actor dies;</p><p>- (Optional) Each bot has a health widget, the display range is customizable.</p><p><br /></p><p>* Please note that the rights to some assets (such as some materials, sounds, character animations, etc.) belong to Epic Games or the author from Pixabay (1 Pixabay-licensed image is free for commercial use; a link to the original image is in the documentation) and are used in my project <u>for demonstration purposes only</u>.</p><p><br /></p><p>** Note that target sorting occurs each time the last target selected for attack is killed/lost, or if the last selected target location was checked by the turret and no target was found there (for optimization).</p><p><br /></p><p>If you have any questions, suggestions or problems, please contact me.</p><p>Discord: <a href=\"https://discord.gg/uvYTzBSbAm\" rel=\"nofollow\">link</a></p><p>Gmail: easyproengine&#64;gmail.com</p><p>YouTube: <a href=\"https://www.youtube.com/&#64;easyproengine\" rel=\"nofollow\">link</a></p>",
+  "technicalDetails": "<p>Number of Blueprints: 25 (including 9 demonstration BPs)</p><p>Total number of project files: 268 (including animations, sounds, textures, etc.)</p><p>Input: The showcase character uses mouse and keyboard</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows &amp; Mac</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1uvJJ7jop2WNfM_cMjAgW5IVZRVV_XhfecYa6T54NNCM/edit?usp&#61;sharing\" rel=\"nofollow\">link</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/F05FF964-71EA-48FA-BF50-4338B5D24CDA-1920x1080-3ebb2d759280fedd213e1257eb3d4507.jpeg",
+      "md5": "3ebb2d759280fedd213e1257eb3d4507",
+      "width": 1920,
+      "height": 1080,
+      "size": 983698,
+      "uploadedDate": "2023-02-04T17:12:53.072Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/16103D78-EE94-484C-B106-06EB1EB63BDF-1920x1080-fe258dd8c3a8f2c89770cb6ca4b2c85b.jpeg",
+      "md5": "fe258dd8c3a8f2c89770cb6ca4b2c85b",
+      "width": 1920,
+      "height": 1080,
+      "size": 910204,
+      "uploadedDate": "2023-02-04T17:12:53.602Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/955DD571-DDC6-4132-A544-0B21C872420B-1920x1080-2219c6844d504444d9ab0c3a1d778543.jpeg",
+      "md5": "2219c6844d504444d9ab0c3a1d778543",
+      "width": 1920,
+      "height": 1080,
+      "size": 1504324,
+      "uploadedDate": "2023-02-04T17:12:54.189Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CE87D42F-2A81-4D37-A786-618BF4DBDE4E-1920x1080-b7faa951df62997a927ac00cdf23a636.jpeg",
+      "md5": "b7faa951df62997a927ac00cdf23a636",
+      "width": 1920,
+      "height": 1080,
+      "size": 1336216,
+      "uploadedDate": "2023-02-04T17:12:54.798Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FE3C4A84-1371-4028-BAF1-80938DA5C612-1920x1080-679be0a7f5cfeb831b3c52db8b791b9a.jpeg",
+      "md5": "679be0a7f5cfeb831b3c52db8b791b9a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1730361,
+      "uploadedDate": "2023-02-04T17:12:55.400Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FD1373B4-5462-4333-B4C1-E8E214077819-1920x1080-b9ab7a800b9a77e48a6b26fcdda890bf.jpeg",
+      "md5": "b9ab7a800b9a77e48a6b26fcdda890bf",
+      "width": 1920,
+      "height": 1080,
+      "size": 1866757,
+      "uploadedDate": "2023-02-04T17:12:55.989Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6C533006-2FE5-42BB-A980-446044A1B34F-1920x1080-dcea0f614de47cc36bd13e5b682dd0f0.jpeg",
+      "md5": "dcea0f614de47cc36bd13e5b682dd0f0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1736733,
+      "uploadedDate": "2023-02-04T17:12:56.624Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2E864F43-B2D6-4A3B-BF87-C7402CC24D9B-1920x1080-509802ec45b61c45742af4b3a300764d.jpeg",
+      "md5": "509802ec45b61c45742af4b3a300764d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1838737,
+      "uploadedDate": "2023-02-04T17:12:57.264Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DD398295-BC6E-45D2-A78B-73906F6F0F78-1920x1080-9788fcbb9086bc38ec6be739431efb14.jpeg",
+      "md5": "9788fcbb9086bc38ec6be739431efb14",
+      "width": 1920,
+      "height": 1080,
+      "size": 1136856,
+      "uploadedDate": "2023-02-07T06:21:51.206Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7FE0BFFC-7727-43A7-94A4-7627218BC95C-1920x1080-e408028f39d18c9a5d4e38428efbb55d.jpeg",
+      "md5": "e408028f39d18c9a5d4e38428efbb55d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1006773,
+      "uploadedDate": "2023-02-04T17:12:58.413Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8CEC18F6-140F-435F-9FA5-B6F0E70C39C9-1920x1080-ee982b24395aae4ae746c9baaadf232a.jpeg",
+      "md5": "ee982b24395aae4ae746c9baaadf232a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1266129,
+      "uploadedDate": "2023-02-04T17:12:58.978Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1C3289C7-CF88-4020-A8A0-764412C2B3D8-1920x1080-72328220190a528bd89f839c430ff534.jpeg",
+      "md5": "72328220190a528bd89f839c430ff534",
+      "width": 1920,
+      "height": 1080,
+      "size": 856682,
+      "uploadedDate": "2023-02-04T17:12:59.521Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3AF2A1B7-4E65-443C-AF17-4FA0F2987D56-1920x1080-8925a9f1743c3f70673b593d2ee50937.jpeg",
+      "md5": "8925a9f1743c3f70673b593d2ee50937",
+      "width": 1920,
+      "height": 1080,
+      "size": 765134,
+      "uploadedDate": "2023-02-04T17:13:00.036Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/C336B4DC-7967-4CEC-B520-035BE91BCBCC-1920x1080-7efd1856188e1038771888d2e17b8e5d.jpeg",
+      "md5": "7efd1856188e1038771888d2e17b8e5d",
+      "width": 1920,
+      "height": 1080,
+      "size": 372068,
+      "uploadedDate": "2023-02-04T17:13:00.502Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AIPerceptionTurretPro_thumb-284x284-ce3e132346751abee1c3d41b784bae05.png",
+      "md5": "ce3e132346751abee1c3d41b784bae05",
+      "width": 284,
+      "height": 284,
+      "size": 149099,
+      "uploadedDate": "2023-02-04T17:13:00.928Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AIPerceptionTurretPro_featured-894x488-b3da56f0e4caf7f5e20ca5e9f0b17004.png",
+      "md5": "b3da56f0e4caf7f5e20ca5e9f0b17004",
+      "width": 894,
+      "height": 488,
+      "size": 457108,
+      "uploadedDate": "2023-02-04T17:13:01.067Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DD398295-BC6E-45D2-A78B-73906F6F0F78-1920x1080-9788fcbb9086bc38ec6be739431efb14_Snapshot.jpeg",
+      "md5": "33b05a5cdf38ea203af6fdc1fa8dbeeb",
+      "width": 150,
+      "height": 74,
+      "size": 5486,
+      "uploadedDate": "2023-02-07T06:21:51.546Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/F05FF964-71EA-48FA-BF50-4338B5D24CDA-1920x1080-3ebb2d759280fedd213e1257eb3d4507_Snapshot.jpeg",
+      "md5": "d8f5c5fc470e567518e66a4e1d4a07bd",
+      "width": 150,
+      "height": 74,
+      "size": 6941,
+      "uploadedDate": "2023-02-04T17:12:53.401Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/16103D78-EE94-484C-B106-06EB1EB63BDF-1920x1080-fe258dd8c3a8f2c89770cb6ca4b2c85b_Snapshot.jpeg",
+      "md5": "82d0f9f1913b1a20fdceb003c390c9f9",
+      "width": 150,
+      "height": 74,
+      "size": 5822,
+      "uploadedDate": "2023-02-04T17:12:53.970Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/955DD571-DDC6-4132-A544-0B21C872420B-1920x1080-2219c6844d504444d9ab0c3a1d778543_Snapshot.jpeg",
+      "md5": "9ff2822dde3405b1c38fd062778f271a",
+      "width": 150,
+      "height": 74,
+      "size": 7839,
+      "uploadedDate": "2023-02-04T17:12:54.580Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CE87D42F-2A81-4D37-A786-618BF4DBDE4E-1920x1080-b7faa951df62997a927ac00cdf23a636_Snapshot.jpeg",
+      "md5": "4d243e2a737d71734c7ff046f99c663c",
+      "width": 150,
+      "height": 74,
+      "size": 7741,
+      "uploadedDate": "2023-02-04T17:12:55.167Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FE3C4A84-1371-4028-BAF1-80938DA5C612-1920x1080-679be0a7f5cfeb831b3c52db8b791b9a_Snapshot.jpeg",
+      "md5": "429d42818d2fc88975c1be86bc1bb85d",
+      "width": 150,
+      "height": 74,
+      "size": 7743,
+      "uploadedDate": "2023-02-04T17:12:55.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FD1373B4-5462-4333-B4C1-E8E214077819-1920x1080-b9ab7a800b9a77e48a6b26fcdda890bf_Snapshot.jpeg",
+      "md5": "e4990314966b71090c818384ab4832b0",
+      "width": 150,
+      "height": 74,
+      "size": 7406,
+      "uploadedDate": "2023-02-04T17:12:56.392Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6C533006-2FE5-42BB-A980-446044A1B34F-1920x1080-dcea0f614de47cc36bd13e5b682dd0f0_Snapshot.jpeg",
+      "md5": "389682b341f64d91c0621114e97222ee",
+      "width": 150,
+      "height": 74,
+      "size": 6726,
+      "uploadedDate": "2023-02-04T17:12:57.019Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2E864F43-B2D6-4A3B-BF87-C7402CC24D9B-1920x1080-509802ec45b61c45742af4b3a300764d_Snapshot.jpeg",
+      "md5": "a55c6b32dd395ed120ae1d7273d9fb54",
+      "width": 150,
+      "height": 74,
+      "size": 5740,
+      "uploadedDate": "2023-02-04T17:12:57.655Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/D779E63E-B113-4A8D-8A81-05BC89FBE7E8-1920x1080-6801f3fc90a221f607dd9a8c06791aa3_Snapshot.jpeg",
+      "md5": "bd52244d78f2f8fa5cca468c61ce0e49",
+      "width": 150,
+      "height": 74,
+      "size": 5204,
+      "uploadedDate": "2023-02-04T17:12:58.208Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7FE0BFFC-7727-43A7-94A4-7627218BC95C-1920x1080-e408028f39d18c9a5d4e38428efbb55d_Snapshot.jpeg",
+      "md5": "9e86cda753e0429a1257f2b7042f6073",
+      "width": 150,
+      "height": 74,
+      "size": 5022,
+      "uploadedDate": "2023-02-04T17:12:58.767Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8CEC18F6-140F-435F-9FA5-B6F0E70C39C9-1920x1080-ee982b24395aae4ae746c9baaadf232a_Snapshot.jpeg",
+      "md5": "83b588e87518d42f474988236f7d7682",
+      "width": 150,
+      "height": 74,
+      "size": 6905,
+      "uploadedDate": "2023-02-04T17:12:59.326Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1C3289C7-CF88-4020-A8A0-764412C2B3D8-1920x1080-72328220190a528bd89f839c430ff534_Snapshot.jpeg",
+      "md5": "f6f7971406925561d88b466d016e1eef",
+      "width": 150,
+      "height": 74,
+      "size": 6767,
+      "uploadedDate": "2023-02-04T17:12:59.835Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3AF2A1B7-4E65-443C-AF17-4FA0F2987D56-1920x1080-8925a9f1743c3f70673b593d2ee50937_Snapshot.jpeg",
+      "md5": "250411743a4277443806512d9f165c56",
+      "width": 150,
+      "height": 74,
+      "size": 5842,
+      "uploadedDate": "2023-02-04T17:13:00.350Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/C336B4DC-7967-4CEC-B520-035BE91BCBCC-1920x1080-7efd1856188e1038771888d2e17b8e5d_Snapshot.jpeg",
+      "md5": "544fd3fe9ee61a437539963f5484b22b",
+      "width": 150,
+      "height": 74,
+      "size": 4285,
+      "uploadedDate": "2023-02-04T17:13:00.807Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2023-02-07T18:41:16.896Z",
+  "lastModifiedDate": "2023-03-08T03:50:45.353Z",
+  "entitlementName": "a694d5e1b4f24524bb73814fae4c428f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "2a1558779d644a238cf92e9d875c3d3a",
+      "appId": "AIPercepa694d5e1b4f2V1",
+      "compatibleApps": [
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2023-02-04T00:00:00.000Z",
+      "releaseNote": "Password:\nh2ehIH*Wdiojdp9P{)((@UEHUH!U@HE*R",
+      "versionTitle": "4.18"
+    },
+    {
+      "id": "5752be8d4fec45ba981d2fd58ab28ed8",
+      "appId": "AIPercepa694d5e1b4f2V2",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-02-04T00:00:00.000Z",
+      "releaseNote": "Password:\nh2ehIH*Wdiojdp9P{)((@UEHUH!U@HE*R",
+      "versionTitle": "5.0"
+    }
+  ],
+  "developer": "EasyPro Engine",
+  "developerId": "o-vtfx4qdxqn2565ntjlvjrjnpyg7qqs",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

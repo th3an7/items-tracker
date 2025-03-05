@@ -1,0 +1,148 @@
+{
+  "id": "b60c2a33fc2e4d49a4ce5bcc7d5d810a",
+  "title": "Simple Serverless Master Server",
+  "description": "A plugin for creating and deploying a master server to AWS. (Contains server deployment as well as Unreal Engine plugin)",
+  "longDescription": "<p>A plugin for creating and deploying a master server to AWS. (Contains server deployment as well as Unreal Engine plugin)</p><p><br /></p><p>Read Before Purchasing</p><p><br /></p><ol><li>Please understand that you <strong>will </strong>need an AWS account with IAM permissions in order to deploy your master server.</li><li>This plugin is a master server. It contains a list of all active game servers that are connected to it (to allow a user to browse and select a server to join). There are a few limitations:</li></ol><ul><li>SSMS is <strong>NOT</strong> an online subsystem. The goal is to provide a simple master server, not replace an online subsystem from Steam or Epic Games</li><li>SSMS is <strong>ONLY</strong> available for the Windows platform currently.</li><li>SSMS does <strong>NOT</strong> handle NAT punch-through. NAT punch-through requires UDP, which AWS Lambdas do not currently support. There is no way around this limitation.</li><li>Game servers <strong>WILL</strong> need to forward UDP ports 7777 and 7787 in order for the game server and beacons to communicate with client connections. Once again, SSMS does not support NAT punch-through.</li></ul><p><br /></p><p>Features:</p><ul><li> Contains Master Server using Serverless Framework for AWS deployment</li><li>Master Server contains endpoints for both server and clients</li><li> Contains client interface for for fetching and displaying servers from master server</li><li> Contains server functions for registering with master server</li><li>Automatically sets up server beacon for pinging and querying</li><li>Working server list UI for displaying information from master server</li><li>Fully working example (pending <u>your</u> AWS master server deployment)</li></ul>",
+  "technicalDetails": "<p><strong>Code Modules:</strong> ServerlessMasterServer - Runtime</p><p><strong>Number of Blueprints</strong>: 4</p><p><strong>Number of C&#43;&#43; Classes</strong>: 6</p><p><strong>Network Replicated</strong>: No (Sample uses built-in Replication)</p><p><strong>Supported Development Platforms</strong>: Windows</p><p><strong>Supported Target Build Platforms</strong>: N/A</p><p><strong>Documentation</strong>: <a href=\"https://drive.google.com/open?id&#61;1oQHtY-CUivf9ytbMQCtr8nubjtIhAaGW9NnBaOANhDQ\" rel=\"nofollow\">https://drive.google.com/open?id&#61;1oQHtY-CUivf9ytbMQCtr8nubjtIhAaGW9NnBaOANhDQ</a></p><p><strong>Example Project</strong>: <a href=\"https://drive.google.com/open?id&#61;1-C1vkMlrY8h31dbl99oSv_6awoptyE8J\" rel=\"nofollow\">https://drive.google.com/open?id&#61;1-C1vkMlrY8h31dbl99oSv_6awoptyE8J</a></p><p><strong>Important/Additional Notes</strong>:</p><ol><li>Simple Serverless Master Server requires an AWS account with the correct credentials setup.</li><li>The master server depends on Node.js and Serverless Framework.</li><li>The code plugin includes a sample UI element. Editing this sample UI will affect all projects if this plugin is installed as an engine module (rather than a project plugin).</li><li>Windows is the only platform that has been tested currently. I do not officially support any other platform.</li></ol>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ss1-1920x1080-b01b2af70e37a39038e01de03ed9207e.png",
+      "md5": "b01b2af70e37a39038e01de03ed9207e",
+      "width": 1920,
+      "height": 1080,
+      "size": 323459,
+      "uploadedDate": "2019-07-24T01:54:50.271Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ss2-1920x1080-f342b1056f93202907c0f58fdc69a481.png",
+      "md5": "f342b1056f93202907c0f58fdc69a481",
+      "width": 1920,
+      "height": 1080,
+      "size": 464282,
+      "uploadedDate": "2019-07-24T01:54:50.678Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ss3-1920x1080-aaba56c0a08be9e312ad3001531d827f.png",
+      "md5": "aaba56c0a08be9e312ad3001531d827f",
+      "width": 1920,
+      "height": 1080,
+      "size": 36586,
+      "uploadedDate": "2019-07-24T01:54:51.018Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ss4-1920x1080-5759933b2453e41e45f44b508591f05d.png",
+      "md5": "5759933b2453e41e45f44b508591f05d",
+      "width": 1920,
+      "height": 1080,
+      "size": 220541,
+      "uploadedDate": "2019-07-24T01:54:51.345Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SimpleServerlessMasterServer_thumb-284x284-67927196465a82b213a45d5f936060ab.png",
+      "md5": "67927196465a82b213a45d5f936060ab",
+      "width": 284,
+      "height": 284,
+      "size": 15202,
+      "uploadedDate": "2019-07-24T01:54:51.618Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SimpleServerlessMasterServer_featured-894x488-fdce0cbc7ccd84a8c50c84b3e5eda042.png",
+      "md5": "fdce0cbc7ccd84a8c50c84b3e5eda042",
+      "width": 894,
+      "height": 488,
+      "size": 30320,
+      "uploadedDate": "2019-07-24T01:54:51.659Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ss1-1920x1080-b01b2af70e37a39038e01de03ed9207e_Snapshot.png",
+      "md5": "b1523b1e630e87c758ab019b6d97c94b",
+      "width": 150,
+      "height": 74,
+      "size": 4868,
+      "uploadedDate": "2019-07-24T01:54:50.550Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ss2-1920x1080-f342b1056f93202907c0f58fdc69a481_Snapshot.png",
+      "md5": "7202fa95ea44e5267e06e3c266583e57",
+      "width": 150,
+      "height": 74,
+      "size": 6206,
+      "uploadedDate": "2019-07-24T01:54:50.938Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ss3-1920x1080-aaba56c0a08be9e312ad3001531d827f_Snapshot.png",
+      "md5": "89f0db87c4b6fe89d85887c075777ec3",
+      "width": 150,
+      "height": 74,
+      "size": 2166,
+      "uploadedDate": "2019-07-24T01:54:51.235Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ss4-1920x1080-5759933b2453e41e45f44b508591f05d_Snapshot.png",
+      "md5": "0391b30c8c909554fdd822fe75dd1389",
+      "width": 150,
+      "height": 74,
+      "size": 3648,
+      "uploadedDate": "2019-07-24T01:54:51.588Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2019-08-13T01:25:22.164Z",
+  "lastModifiedDate": "2021-09-22T05:37:05.152Z",
+  "entitlementName": "b60c2a33fc2e4d49a4ce5bcc7d5d810a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "6972b78b818d40e2a66f30a2ba26d2f1",
+      "appId": "ServerlessMasterServer_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-07-23T00:00:00.000Z",
+      "releaseNote": "SSMS 1.0.0 Release",
+      "versionTitle": "SSMS 4.22"
+    },
+    {
+      "id": "96317757699148d683d10d4af863cfe8",
+      "appId": "ServerlessMasterServer_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2020-01-12T00:00:00.000Z",
+      "releaseNote": "SSMS 1.0.1 Update for 4.24",
+      "versionTitle": "SSMS 4.24"
+    }
+  ],
+  "developer": "Rainy Labs",
+  "developerId": "o-9vcdqkehurrbcajedgjgj5fh98727a",
+  "endOfSupport": false,
+  "unsearchable": false
+}

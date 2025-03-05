@@ -1,0 +1,614 @@
+{
+  "id": "26bb63d8bcf7435fb1105579c5776ef6",
+  "title": "VICODynamics: Rope/Cloth/Soft-Body Simulation Plugin",
+  "description": "A plugin for Unreal Engine to use the VICO Dynamics soft-body physics library.",
+  "longDescription": "<p>Preview: <a href=\"https://youtu.be/7Rs3joj0aMU\" rel=\"nofollow\">https://youtu.be/7Rs3joj0aMU</a></p><p><br /></p><p>This library is essentially engine independent, but it also simulates a much more accurate system with higher performance, support for multi-threaded and async simulation.</p><p><br /></p><p>Feature Rundown: <a href=\"https://youtu.be/rXN_St1CwBk\" rel=\"nofollow\">https://youtu.be/rXN_St1CwBk</a></p><p>Showcase: <a href=\"https://youtu.be/4xt7ydQWlwA\" rel=\"nofollow\">https://youtu.be/4xt7ydQWlwA</a></p><p><br /></p><p>Can now simulate cloth, either procedurally created sheets or by converting Static Meshes into Cloth, with collision, volume preservation, attachments, tension constraints, drag modifiers, applied forces and physically simulated wind with support for occlusion! And fluids are coming soon as well.</p><p>The beauty of using a particle based simulation is that you are never limited in what you can create out of particles and constraints.</p><p>Another big feature of the VICO Dynamics physics library; is that it runs on the CPU. This means it supports a wide variety of platforms: PC, Mobile and Console! No dependencies to any hardware. Has been tested on Windows, Xbox One, PS4/5, Nintendo Switch, Android, and Meta Quest. NOTE: Console access requires source and that the UE Plugin itself is WIP for Linux and Android (supported, but not production ready just yet).</p><p><br /></p><p>To receive source access to this plugin or the physics library via GitHub and have access to the very latest test versions, send an email with your Marketplace receipt and your GitHub username to <a href=\"mailto:vdue4&#64;vicogamestudio.com\" rel=\"nofollow\">vdue4&#64;vicogamestudio.com</a></p>",
+  "technicalDetails": "<p>Technical Details: Intended Platforms: Windows, Android, VR (Consoles supported with access to Source)</p><p>Example Project: <a href=\"https://drive.google.com/file/d/1bnoKdlPlSR_Hy73Wkb8HQe_YrAJeylj0/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/1bnoKdlPlSR_Hy73Wkb8HQe_YrAJeylj0/view?usp&#61;sharing</a> </p><p>Forum Support Thread: <a href=\"https://forums.unrealengine.com/showthread.php?79906-VICODynamics-a-particle-based-physics-library\" rel=\"nofollow\">https://forums.unrealengine.com/showthread.php?79906-VICODynamics-a-particle-based-physics-library</a></p><p>Tutorials Playlist: <a href=\"https://www.youtube.com/playlist?list&#61;PLrGqa6VIm-FjSZLHMKz8ROWTG7EPWnG7i\" rel=\"nofollow\">https://www.youtube.com/playlist?list&#61;PLrGqa6VIm-FjSZLHMKz8ROWTG7EPWnG7i </a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/VICODynamicsScreenshot1-1920x1080-5c544a4702d96ebd030882096ddbaaf2.png",
+      "md5": "5c544a4702d96ebd030882096ddbaaf2",
+      "width": 1920,
+      "height": 1080,
+      "size": 514525,
+      "uploadedDate": "2016-09-06T19:00:58.290Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (16) (Custom)-1920x1080-73713cff9317e05e0a440df336a9ab77.jpg",
+      "md5": "73713cff9317e05e0a440df336a9ab77",
+      "width": 1920,
+      "height": 1080,
+      "size": 101397,
+      "uploadedDate": "2017-10-02T15:26:02.240Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenShot00015 (Custom)-1920x1080-e3c42a34755b6203a229445b5dce1b59.jpg",
+      "md5": "e3c42a34755b6203a229445b5dce1b59",
+      "width": 1920,
+      "height": 1080,
+      "size": 198234,
+      "uploadedDate": "2017-10-02T15:42:27.434Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenShot00016 (Custom)-1920x1080-f3da8b07a1484fc6490da3de77b43f9b.jpg",
+      "md5": "f3da8b07a1484fc6490da3de77b43f9b",
+      "width": 1920,
+      "height": 1080,
+      "size": 158692,
+      "uploadedDate": "2017-10-02T15:42:27.839Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/VICODynamicsScreenshot3-1920x1080-769bfb8a9670d63f13d9887e293a0509.png",
+      "md5": "769bfb8a9670d63f13d9887e293a0509",
+      "width": 1920,
+      "height": 1080,
+      "size": 480764,
+      "uploadedDate": "2016-09-06T19:01:09.133Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/VICODynamicsScreenshot4-1920x1080-491371ef9c0d1d21840c6b3cbba8b335.png",
+      "md5": "491371ef9c0d1d21840c6b3cbba8b335",
+      "width": 1920,
+      "height": 1080,
+      "size": 523218,
+      "uploadedDate": "2016-09-06T19:01:13.602Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/VICODynamicsScreenshot2-1920x1080-60f1b8295c86a90f7cd539452176ab66.png",
+      "md5": "60f1b8295c86a90f7cd539452176ab66",
+      "width": 1920,
+      "height": 1080,
+      "size": 493421,
+      "uploadedDate": "2016-09-06T19:01:07.084Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (7) (Custom)-1920x1080-2241894a09ae58cd6cc398b00e4f08ad.jpg",
+      "md5": "2241894a09ae58cd6cc398b00e4f08ad",
+      "width": 1920,
+      "height": 1080,
+      "size": 110489,
+      "uploadedDate": "2017-10-02T15:26:01.265Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (6) (Custom)-1920x1080-5d3aa77eef5bf613b79e26b7f2091617.jpg",
+      "md5": "5d3aa77eef5bf613b79e26b7f2091617",
+      "width": 1920,
+      "height": 1080,
+      "size": 94750,
+      "uploadedDate": "2017-10-02T15:26:01.368Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (24) (Custom)-1920x1080-6fa1d9a23a6872c57e4e3752d148d2d3.jpg",
+      "md5": "6fa1d9a23a6872c57e4e3752d148d2d3",
+      "width": 1920,
+      "height": 1080,
+      "size": 77521,
+      "uploadedDate": "2017-10-02T15:26:01.533Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (11) (Custom)-1920x1080-c703ccee931d0f5c9b70673758b744b2.jpg",
+      "md5": "c703ccee931d0f5c9b70673758b744b2",
+      "width": 1920,
+      "height": 1080,
+      "size": 109057,
+      "uploadedDate": "2017-10-02T15:26:01.646Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (10) (Custom)-1920x1080-edaf1a614c581c14b7c56963cc2d790f.jpg",
+      "md5": "edaf1a614c581c14b7c56963cc2d790f",
+      "width": 1920,
+      "height": 1080,
+      "size": 111790,
+      "uploadedDate": "2017-10-02T15:26:01.881Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (8) (Custom)-1920x1080-6eb62ea16410238691f20d01b8a9d1ea.jpg",
+      "md5": "6eb62ea16410238691f20d01b8a9d1ea",
+      "width": 1920,
+      "height": 1080,
+      "size": 122641,
+      "uploadedDate": "2017-10-02T15:26:02.009Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (9) (Custom)-1920x1080-db976a5d38ddfb04946c9fef5d33be2d.jpg",
+      "md5": "db976a5d38ddfb04946c9fef5d33be2d",
+      "width": 1920,
+      "height": 1080,
+      "size": 112817,
+      "uploadedDate": "2017-10-02T15:26:02.131Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (14) (Custom)-1920x1080-a35e81a4d51353bf2725dea59ae2f647.jpg",
+      "md5": "a35e81a4d51353bf2725dea59ae2f647",
+      "width": 1920,
+      "height": 1080,
+      "size": 99297,
+      "uploadedDate": "2017-10-02T15:26:02.349Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (15) (Custom)-1920x1080-7e653c5144d160ff16180451bfc6a252.jpg",
+      "md5": "7e653c5144d160ff16180451bfc6a252",
+      "width": 1920,
+      "height": 1080,
+      "size": 103755,
+      "uploadedDate": "2017-10-02T15:26:02.424Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (19) (Custom)-1920x1080-0fcd86a5b332e6a1d7921d98b7a65b21.jpg",
+      "md5": "0fcd86a5b332e6a1d7921d98b7a65b21",
+      "width": 1920,
+      "height": 1080,
+      "size": 102260,
+      "uploadedDate": "2017-10-02T15:26:02.620Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (23) (Custom)-1920x1080-36e87a7df442dc32f901aa34814ea1b4.jpg",
+      "md5": "36e87a7df442dc32f901aa34814ea1b4",
+      "width": 1920,
+      "height": 1080,
+      "size": 57485,
+      "uploadedDate": "2017-10-02T15:26:02.705Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (21) (Custom)-1920x1080-9e532636dfba106f268ea28383ab6fb0.jpg",
+      "md5": "9e532636dfba106f268ea28383ab6fb0",
+      "width": 1920,
+      "height": 1080,
+      "size": 78112,
+      "uploadedDate": "2017-10-02T15:26:02.918Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (12) (Custom)-1920x1080-04f4c67d6a5d04547a8b0b8920763e32.jpg",
+      "md5": "04f4c67d6a5d04547a8b0b8920763e32",
+      "width": 1920,
+      "height": 1080,
+      "size": 114809,
+      "uploadedDate": "2017-10-02T15:26:03.039Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (13) (Custom)-1920x1080-b98fcb2656afbcdde64be1dbf66d857f.jpg",
+      "md5": "b98fcb2656afbcdde64be1dbf66d857f",
+      "width": 1920,
+      "height": 1080,
+      "size": 127431,
+      "uploadedDate": "2017-10-02T15:26:03.177Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (17) (Custom)-1920x1080-fb6912b85c1be4f7b3e021cc2b9dc972.jpg",
+      "md5": "fb6912b85c1be4f7b3e021cc2b9dc972",
+      "width": 1920,
+      "height": 1080,
+      "size": 150550,
+      "uploadedDate": "2017-10-02T15:26:03.294Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VICODynamicsScreenshot (18) (Custom)-1920x1080-35ad193e143feec2bdfbb627bb774356.jpg",
+      "md5": "35ad193e143feec2bdfbb627bb774356",
+      "width": 1920,
+      "height": 1080,
+      "size": 110157,
+      "uploadedDate": "2017-10-02T15:26:03.433Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenShot00013 (Custom)-1920x1080-35254f7ae64b5e5cdc5dce54a8ec05b7.jpg",
+      "md5": "35254f7ae64b5e5cdc5dce54a8ec05b7",
+      "width": 1920,
+      "height": 1080,
+      "size": 191004,
+      "uploadedDate": "2017-10-02T15:42:27.573Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenShot00017 (Custom)-1920x1080-a8212854370d034012ce7e34a69a8acb.jpg",
+      "md5": "a8212854370d034012ce7e34a69a8acb",
+      "width": 1920,
+      "height": 1080,
+      "size": 195775,
+      "uploadedDate": "2017-10-02T15:42:27.724Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/item/VICODynamics_Thumb-284x284-b46c25d35c19d0b5f4cb98289df99d60.png",
+      "md5": "b46c25d35c19d0b5f4cb98289df99d60",
+      "width": 284,
+      "height": 284,
+      "size": 42016,
+      "uploadedDate": "2016-09-06T19:01:27.618Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/item/VICODynamics_Featured-476x246-f1ca6fa99034c842f57509ce7cc59dcf.png",
+      "md5": "f1ca6fa99034c842f57509ce7cc59dcf",
+      "width": 476,
+      "height": 246,
+      "size": 471484,
+      "uploadedDate": "2016-09-06T19:00:54.226Z"
+    },
+    {
+      "type": "NewFeatured",
+      "url": "https://cdn1.epicgames.com/ue/item/VICODynamics_FeaturedNew-894x488-6bc4d94e97117acc36c4b4b5f04f5872.png",
+      "md5": "6bc4d94e97117acc36c4b4b5f04f5872",
+      "width": 894,
+      "height": 488,
+      "size": 124915,
+      "uploadedDate": "2016-09-06T19:00:55.967Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2015-12-15T19:52:06.858Z",
+  "lastModifiedDate": "2024-12-10T16:19:27.403Z",
+  "customAttributes": {},
+  "entitlementName": "26bb63d8bcf7435fb1105579c5776ef6",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b4496b4ab3f04eb690570ed606eecb60",
+      "appId": "VICODynamicsPlugin_4.12",
+      "compatibleApps": [
+        "UE_4.12"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2016-08-02T00:00:00.000Z",
+      "versionTitle": "VICODynamicsPlugin_4-12"
+    },
+    {
+      "id": "cb597c2231bc42b7bea7b816fe306273",
+      "appId": "VICODynamicsPlugin_4.13",
+      "compatibleApps": [
+        "UE_4.13"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2016-09-14T00:00:00.000Z",
+      "versionTitle": "VICODynamicsPlugin_4-13"
+    },
+    {
+      "id": "30b9ce0e336d4510b1e7bf0535fe1742",
+      "appId": "VICODynamicsPlugin_4.14",
+      "compatibleApps": [
+        "UE_4.14"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2016-11-18T00:00:00.000Z",
+      "versionTitle": "VICODynamicsPlugin_4-14"
+    },
+    {
+      "id": "06e173a357c143c380238fa5028c95a6",
+      "appId": "VICODynamicsPlugin_4.15",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2017-02-24T00:00:00.000Z",
+      "versionTitle": "VICODynamicsPlugin_4-15"
+    },
+    {
+      "id": "f28f685326894a8488385c6bbc2051c6",
+      "appId": "VICODynamicsPlugin_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2017-06-02T00:00:00.000Z",
+      "versionTitle": "VICODynamicsPlugin_4-16"
+    },
+    {
+      "id": "7623d791e4d342afb9270162f20601ec",
+      "appId": "VICODynamicsPlugin_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2017-09-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VICODynamicsPlugin_4-17"
+    },
+    {
+      "id": "5e15857d8bc84e929e4abf3a33835d0f",
+      "appId": "VICODynamicsPlugin_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2017-10-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VICODynamicsPlugin_4-18"
+    },
+    {
+      "id": "09fcec985be54a10bc80320f68b483e1",
+      "appId": "VICODynamicsPlugin_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2018-03-16T00:00:00.000Z",
+      "releaseNote": "Wind Source Component features, Radius and per-VDComponent list",
+      "versionTitle": "VICODynamicsPlugin_4-19"
+    },
+    {
+      "id": "a61f0cd27fb74fe68bd8d0d0eadf9035",
+      "appId": "VICODynamicsPlugin_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2018-07-25T00:00:00.000Z",
+      "releaseNote": "Bug fix to Attach to Rigids from prev patch\nBug fix to Tension Constraints",
+      "versionTitle": "VICODynamicsPlugin_4-20"
+    },
+    {
+      "id": "7278290ea8a84b4ebcbf33729ec58965",
+      "appId": "VICODynamicsPlugin_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2018-11-09T00:00:00.000Z",
+      "releaseNote": "4.21 support\nCollision detection ~10% faster\nRope Render thread perf improved ~15-20%",
+      "versionTitle": "VICODynamicsPlugin_4-21"
+    },
+    {
+      "id": "9805a1d9cc2a49fb8c6bdd67f3e8ebe3",
+      "appId": "VICODynamicsPlugin_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2019-04-09T00:00:00.000Z",
+      "releaseNote": "4.22 support added\nFew bug fixes",
+      "versionTitle": "VICODynamicsPlugin_4-22"
+    },
+    {
+      "id": "804fe35db84342eeb3efb367365edda6",
+      "appId": "VICODynamicsPlugin_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Mac",
+        "Win32",
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2019-09-09T00:00:00.000Z",
+      "releaseNote": "4.23 support\nUser submitted features and bug fixes, thank you!",
+      "versionTitle": "VICODynamicsPlugin_4-23"
+    },
+    {
+      "id": "ad86ae10a2054176b29c2752ddbeb5cf",
+      "appId": "VICODynamicsPlugin_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2019-12-26T00:00:00.000Z",
+      "releaseNote": "4.24 support",
+      "versionTitle": "VICODynamicsPlugin_4-24"
+    },
+    {
+      "id": "e171af7b8deb495382a1e5237a8a55fd",
+      "appId": "VICODynamicsPlugin_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Mac",
+        "Win32",
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2020-05-05T00:00:00.000Z",
+      "releaseNote": "4.25 support\nRTX rendering support\nExperimental Volume-Preserving Soft-Body support",
+      "versionTitle": "VICODynamicsPlugin_4-25"
+    },
+    {
+      "id": "e3ba2ef4acb64749b40fd62ab13a7394",
+      "appId": "VICODynamicsPlugin_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2020-12-15T00:00:00.000Z",
+      "releaseNote": "Update for 4.26",
+      "versionTitle": "VICODynamicsPlugin_4-26"
+    },
+    {
+      "id": "70abea3b930244e49d73aa00edcfd96e",
+      "appId": "VICODynamicsPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Mac"
+      ],
+      "dateAdded": "2021-08-25T00:00:00.000Z",
+      "releaseNote": "Updated for 4.27",
+      "versionTitle": "VICODynamicsPlugin_4-27"
+    },
+    {
+      "id": "5b08230e782f4a8db361125b51a2e9bb",
+      "appId": "VICODynamicsPlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "Oculus",
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2022-04-24T00:00:00.000Z",
+      "releaseNote": "Improved Collision stability\nMulti-Threading is now toggled in Project Settings\nFixed crash when going over particle or constraint budgets",
+      "versionTitle": "VICODynamicsPlugin_5-0"
+    },
+    {
+      "id": "0f2d92cd8316448b9615847a38aee34f",
+      "appId": "VICODynamicsPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Windows"
+      ],
+      "dateAdded": "2022-11-19T00:00:00.000Z",
+      "releaseNote": "Updated for UE5.1",
+      "versionTitle": "VICODynamicsPlugin_5-1"
+    },
+    {
+      "id": "417b5490f4e8440da2b9ae7a13e659c7",
+      "appId": "VICODynamicsPlugin_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Android",
+        "Oculus"
+      ],
+      "dateAdded": "2023-05-15T00:00:00.000Z",
+      "releaseNote": "Updated for UE5.2",
+      "versionTitle": "VICODynamicsPlugin_5-2"
+    },
+    {
+      "id": "aa48d7bfd403455d97492f324132df33",
+      "appId": "VICODynamicsPlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Oculus",
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2023-10-11T00:00:00.000Z",
+      "releaseNote": "Updated for 5.3",
+      "versionTitle": "VICODynamicsPlugin_5-3"
+    },
+    {
+      "id": "e6a4f070a3bb4f15834c1874dd836e46",
+      "appId": "VICODynamicsPlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Android"
+      ],
+      "dateAdded": "2024-09-15T00:00:00.000Z",
+      "releaseNote": "Updated to 5.4\nFixed a number of bugs",
+      "versionTitle": "VICODynamicsPlugin_5-4"
+    }
+  ],
+  "developer": "VICO Game Studio LLC",
+  "developerId": "o-89483a7d5341a1b3d20a0677c13d1e",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

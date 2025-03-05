@@ -1,0 +1,190 @@
+{
+  "id": "c534f37261c2459aa5625e6fb2ca4af6",
+  "title": "Turn Based Strategy Grids",
+  "description": "Tools for representing and querying 2D grid worlds, targeted at turn based strategy games.",
+  "longDescription": "Video: <a href=\"https://www.youtube.com/watch?v&#61;0hrfFMf1eR8\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;0hrfFMf1eR8</a><br /><br />This blueprint system provides developers of turn based strategy games with logic for managing and querying 2D grid worlds. Its main function is the computation of action grids: queriable grids that efficiently store all pathing and attack options available to a unit during its current turn. Square tiles and hexagonal tiles are supported, but line of sight is not yet implemented for hex tiles.<br /><br />Action grids are intended to be used for efficiently retrieving shortest paths to any reachable tile, for displaying the movement and attack options that are available to the player&#39;s selected unit, and for providing AI units with a search function to retrieve the set or a subset of valid actions, which can then be processed by your high level AI controller.<br /><br />The system includes features such as editing of level layouts in the editor and at run-time, multiple terrain types with different interaction per unit and optional line of sight checking when determining which tiles are in attack range. Action grids can be merged to represent the influence radius of multiple units. An example map and player controller is included that demonstrates usage of the plugin in blueprints and handling of player input. All blueprint is commented.<br /><br />A detailed user guide for this plugin is available at: <a href=\"http://www.zkshao.com/downloads/TBStrategyGrids_UserGuide.pdf\" rel=\"nofollow\">http://www.zkshao.com/downloads/TBStrategyGrids_UserGuide.pdf</a>",
+  "technicalDetails": "Any blueprint class can be made compatible with the plugin by implementing the included blueprint interface IGridActor.<br /><br />The included LevelGrid blueprint has a number of functions prepared that can be overridden in a subclass for the following customization purposes:<br />- Defining unit-terrain interaction: accessibility, movement cost, targetability<br />- Defining vision-terrain interaction: whether a tile&#39;s area and corner block line of sight or not<br />- Defining unit-unit interaction: whether unit A can pass through unit B and whether unit A can attack unit B<br /><br />The example map demonstrates customization via the subclass ExampleLevelGrid which makes mountains more costly to pass, allows units of the same team to pass through each other and allows units to only target enemies.<br /><br />Intended Platform: Desktop",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/TBStrategyGrids_Screenshot_01-1920x1080-395b0599f10fd62de63873f10ce88076.png",
+      "md5": "395b0599f10fd62de63873f10ce88076",
+      "width": 1920,
+      "height": 1080,
+      "size": 1131423,
+      "uploadedDate": "2015-11-19T19:56:13.805Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/TBStrategyGrids_Screenshot_02-1920x1080-f616f5d35e4813fca02e7e5f24c6c7bc.png",
+      "md5": "f616f5d35e4813fca02e7e5f24c6c7bc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1579407,
+      "uploadedDate": "2015-11-19T19:56:17.124Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/TBStrategyGrids_Screenshot_03-1920x1080-c8f6326fb2b008ca50f93e46145f45ac.png",
+      "md5": "c8f6326fb2b008ca50f93e46145f45ac",
+      "width": 1920,
+      "height": 1080,
+      "size": 1191311,
+      "uploadedDate": "2015-11-19T19:56:21.047Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/TBStrategyGrids_Screenshot_04-1920x1080-6f3a7f1b33a828ab0681ed8e27fb49ba.png",
+      "md5": "6f3a7f1b33a828ab0681ed8e27fb49ba",
+      "width": 1920,
+      "height": 1080,
+      "size": 370218,
+      "uploadedDate": "2015-11-19T19:56:23.544Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/TBStrategyGrids_Screenshot_05-1920x1080-ca2c1e9b8860f9fd56030515cd75c34d.png",
+      "md5": "ca2c1e9b8860f9fd56030515cd75c34d",
+      "width": 1920,
+      "height": 1080,
+      "size": 900631,
+      "uploadedDate": "2015-11-19T19:56:27.338Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/item/TBStrategyGrids_Thumb-284x284-28b5709335eab66191369f4816f4bfba.png",
+      "md5": "28b5709335eab66191369f4816f4bfba",
+      "width": 284,
+      "height": 284,
+      "size": 92768,
+      "uploadedDate": "2015-11-19T19:56:30.392Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/item/TBStrategyGrids_Featured-476x246-a516fbd3c7b16c1eb87fbcfbd847db6e.png",
+      "md5": "a516fbd3c7b16c1eb87fbcfbd847db6e",
+      "width": 476,
+      "height": 246,
+      "size": 129129,
+      "uploadedDate": "2015-11-19T19:56:02.582Z"
+    },
+    {
+      "type": "ComingSoon",
+      "url": "https://cdn1.epicgames.com/ue/item/TBStrategyGrids_ComingSoon-394x208-4d3a6bcb70f509aaee6aebf81cb2da20.png",
+      "md5": "4d3a6bcb70f509aaee6aebf81cb2da20",
+      "width": 394,
+      "height": 208,
+      "size": 89607,
+      "uploadedDate": "2015-11-19T19:55:52.464Z"
+    },
+    {
+      "type": "ComingSoon_Small",
+      "url": "https://cdn1.epicgames.com/ue/item/TBStrategyGrids_ComingSoon_Sm-145x208-e43c80187ed9f8a38dc4abb8bd4539f6.png",
+      "md5": "e43c80187ed9f8a38dc4abb8bd4539f6",
+      "width": 145,
+      "height": 208,
+      "size": 51262,
+      "uploadedDate": "2015-11-19T19:55:54.748Z"
+    },
+    {
+      "type": "NewFeatured",
+      "url": "https://cdn1.epicgames.com/ue/item/TBStrategyGrids_FeaturedNew-894x488-4e2b536f0905239a1a604360d80d3a57.png",
+      "md5": "4e2b536f0905239a1a604360d80d3a57",
+      "width": 894,
+      "height": 488,
+      "size": 352833,
+      "uploadedDate": "2015-11-19T19:56:06.127Z"
+    },
+    {
+      "type": "Image_894x488",
+      "url": "https://cdn1.epicgames.com/ue/item/TBStrategyGrids_Image_894X488-896x488-0072cc423af6f61bbd2088fcfc0cd345.png",
+      "md5": "0072cc423af6f61bbd2088fcfc0cd345",
+      "width": 896,
+      "height": 488,
+      "size": 378258,
+      "uploadedDate": "2015-11-19T19:56:10.508Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2015-02-09T16:18:52.139Z",
+  "lastModifiedDate": "2024-10-10T23:00:24.791Z",
+  "entitlementName": "c534f37261c2459aa5625e6fb2ca4af6",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "19fe7be45da94e6f95541cad880f9f0e",
+      "appId": "TBStrategyGrids",
+      "compatibleApps": [
+        "UE_4.7",
+        "UE_4.8"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "iOS",
+        "Android",
+        "Xbox One",
+        "Oculus"
+      ],
+      "dateAdded": "2015-02-09T00:00:00.000Z",
+      "versionTitle": "TBStrategyGrids"
+    },
+    {
+      "id": "15672eedf4d0400abb7abb0954803837",
+      "appId": "TBStrategyGrids49",
+      "compatibleApps": [
+        "UE_4.9",
+        "UE_4.10",
+        "UE_4.11",
+        "UE_4.12"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "iOS",
+        "Android",
+        "Xbox One",
+        "Oculus"
+      ],
+      "dateAdded": "2015-11-19T00:00:00.000Z",
+      "versionTitle": "TBStrategyGrids49"
+    },
+    {
+      "id": "3dac103f4e994d168c013b6e0f2feeb8",
+      "appId": "TurnBasec534f37261c2V1",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "Win32",
+        "PS4",
+        "Android",
+        "Xbox One",
+        "iOS"
+      ],
+      "dateAdded": "2020-10-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TBStrategyGrids_4.25"
+    }
+  ],
+  "developer": "Zhi Kang Shao",
+  "developerId": "o-7665254b8f4aabac4466b9363ae28d",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

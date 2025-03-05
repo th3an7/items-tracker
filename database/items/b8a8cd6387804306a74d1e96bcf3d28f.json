@@ -1,0 +1,275 @@
+{
+  "id": "b8a8cd6387804306a74d1e96bcf3d28f",
+  "title": "Soft Outlines",
+  "description": "Highly efficient and scalable soft outlines post process effect",
+  "longDescription": "<h2><a href=\"https://youtu.be/DyRgkTYgx_0\" rel=\"nofollow\"><u>See demo of the 20 outline styles included</u></a></h2><p><br /></p><p>All styles support occlusion with the options of only showing occluded areas, only showing non-occluded areas or always showing everything.</p><p><br /></p><p>This post process effect is based on custom HLSL code that is designed to achieve a soft outline effect in the most efficient way. This is achieved by leveraging temporal anti aliasing (TAA) which enables spreading out the calculations over multiple frames, significantly reducing the performance cost.</p><p><br /></p><p><strong>How to use</strong></p><ol><li>Add a post process volume to your level and check the &#34;Infinite Extent&#34; tick box in the details panel</li><li>Find the Post Process Materials section and add a new asset reference to the &#34;Post Process Materials&#34;</li><li>Assign a material instance (Style) of the SoftOutline material to the asset reference</li><li>Select meshes you wish to receive the outline and enable the &#34;Render CustomDepth Pass&#34; tick box</li><li>You should now be able to see the outline on those meshes - if you need more information, check out the <a href=\"https://docs.unrealengine.com/en-US/Engine/Rendering/PostProcessEffects/PostProcessMaterials/index.html\" rel=\"nofollow\"><u>official documentation on post process materials</u></a></li></ol><p><br /></p><p><strong>How to use multiple outline styles (supported from engine version 4.25):</strong></p><ol><li>In the project settings set &#34;Custom Depth-Stencil Pass&#34; to &#34;Enabled with Stencil&#34;</li><li>On the outline material instance enable &#34;UseMultipleOutlines&#34; and set &#34;CustomDepth Stencil Value&#34; on both the material instance and the meshes to the same value (values from 1-255 are valid)</li><li>Add additional outline styles to the post process volume and match it with other meshes by assign a different stencil value to the material instance and the meshes</li></ol>",
+  "technicalDetails": "<p><strong>Performance</strong></p><p>At at resolution of 1920x1080 on a NVIDIA GTX 980 (released in 2014) it only takes 0.3ms at 100% and 0.16ms at 75% resolution scaling, to render the outline effect on medium quality setting and 8 pixels in size.</p><p>You can also see approximate performance numbers for different settings in <a href=\"https://youtu.be/Itv1fjtgYlE\" rel=\"nofollow\"><u>this video</u></a>.</p><p><br /></p><p><strong>Scalability</strong></p><p>In the default AutoQuality mode, which seeks to optimize sample counts at different outline sizes, the effect offers a quality parameter, which allows you to choose the quality/ performance trade-off that works best for you. If you need more fine control, you can disable AutoQuality mode and set the sample counts manually.</p><p>In addition to that, the performance cost scales very well with resolution scaling and the cost of using multiple outline styles at the same time stacks linearly.</p><p><br /></p><p><strong>Rendering Compatibility</strong></p><p>While the effect was designed to work best with TAA, it does have automatic fallback solutions for FXAA, MSAA and no anti aliasing built in - look at the video/ screenshots to see what it looks like at different quality settings with different anti aliasing methods. The effect also automatically adjust to any screen resolution or resolution scaling.</p><p><br /></p><p><strong>Included Content</strong></p><p>This product includes the Soft Outline master material and 20 material instances, each featuring a unique style.</p><p><br /></p><p><strong>Feedback</strong></p><p>Feel free to contact me at <a href=\"mailto:decal_portal459&#64;simplelogin.com\" rel=\"nofollow\">decal_portal459&#64;simplelogin.com</a> if you run into any issues or have any feature requests.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SoftOutlineFeatureCloseUp1080-1920x1080-b65970871fe38e17d92959223868e720.png",
+      "md5": "b65970871fe38e17d92959223868e720",
+      "width": 1920,
+      "height": 1080,
+      "size": 2062693,
+      "uploadedDate": "2021-07-07T21:35:10.717Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SoftOutlineScreenshotStyles-1920x1080-0024e00efe0cf02d7cd957edc905c661.png",
+      "md5": "0024e00efe0cf02d7cd957edc905c661",
+      "width": 1920,
+      "height": 1080,
+      "size": 2179782,
+      "uploadedDate": "2020-10-23T20:44:45.850Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SoftOutlineOcclusion-1920x1080-f1c1f6b2957cc58a3f1cf00bbba5c58a.png",
+      "md5": "f1c1f6b2957cc58a3f1cf00bbba5c58a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1298504,
+      "uploadedDate": "2021-08-24T20:14:14.518Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SoftOutline_thumb-284x284-a218b8c959d27da9e0e14b3e989ad711.png",
+      "md5": "a218b8c959d27da9e0e14b3e989ad711",
+      "width": 284,
+      "height": 284,
+      "size": 37705,
+      "uploadedDate": "2020-07-11T15:58:37.697Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SoftOutlines_featured-894x488-a12a3c10270e3be95bd75d98a9ee6b2e.png",
+      "md5": "a12a3c10270e3be95bd75d98a9ee6b2e",
+      "width": 894,
+      "height": 488,
+      "size": 578105,
+      "uploadedDate": "2021-07-07T21:35:11.193Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SoftOutlineOcclusion-1920x1080-f1c1f6b2957cc58a3f1cf00bbba5c58a_Snapshot.png",
+      "md5": "d2b961887c53cba0e7f5b343fc14c50b",
+      "width": 150,
+      "height": 74,
+      "size": 7383,
+      "uploadedDate": "2021-08-24T20:14:14.786Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SoftOutlineFeatureCloseUp1080-1920x1080-b65970871fe38e17d92959223868e720_Snapshot.png",
+      "md5": "74d670fdaaa7202c5d6ac658c02d04ac",
+      "width": 150,
+      "height": 74,
+      "size": 6961,
+      "uploadedDate": "2021-07-07T21:35:11.083Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SoftOutlineScreenshotFillOccluded-1920x1080-e66c835dec56e45c5976208701606f17_Snapshot.png",
+      "md5": "03c667ea8417590260f7b7e3cae32c8c",
+      "width": 150,
+      "height": 74,
+      "size": 5519,
+      "uploadedDate": "2020-10-23T20:45:45.060Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SoftOutlineScreenshotStyles-1920x1080-0024e00efe0cf02d7cd957edc905c661_Snapshot.png",
+      "md5": "a39ce2c318678fd88b28f4429cff2e1f",
+      "width": 150,
+      "height": 74,
+      "size": 5771,
+      "uploadedDate": "2020-10-23T20:44:46.159Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SoftOutlineFeature1080-1920x1080-2eb22625a98a74dd57fa0ba7c0102578_Snapshot.png",
+      "md5": "c25c7d854f2525f00df01c01c931b429",
+      "width": 150,
+      "height": 74,
+      "size": 6007,
+      "uploadedDate": "2020-10-22T07:22:01.039Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SoftOutlineScreenshotStyles-1920x1080-0024e00efe0cf02d7cd957edc905c661_Snapshot.png",
+      "md5": "a39ce2c318678fd88b28f4429cff2e1f",
+      "width": 150,
+      "height": 74,
+      "size": 5771,
+      "uploadedDate": "2020-10-21T07:45:52.720Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SoftOutlineScreenshotEditor-1920x1080-3298c3785ad011fc9cd68bab94e91f24_Snapshot.png",
+      "md5": "71310cccfa5f67f667d18d237a2a676b",
+      "width": 150,
+      "height": 74,
+      "size": 5438,
+      "uploadedDate": "2020-07-13T07:59:31.205Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SoftOutlineScreenshotFillOccluded-1920x1080-e66c835dec56e45c5976208701606f17_Snapshot.png",
+      "md5": "03c667ea8417590260f7b7e3cae32c8c",
+      "width": 150,
+      "height": 74,
+      "size": 5519,
+      "uploadedDate": "2020-07-13T07:49:43.692Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SoftOutlineScreenshotEditor-1920x1080-3f4b577b8606e86e19d820b14eff25b3_Snapshot.png",
+      "md5": "85534288a05341db033a78c81b5fb888",
+      "width": 150,
+      "height": 74,
+      "size": 5068,
+      "uploadedDate": "2020-07-11T15:58:36.296Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SoftOutlineScreenshotFXAA-1920x1080-9579802a7bda64e8d8d484c2c0514ca5_Snapshot.png",
+      "md5": "7b5f05118662220da055d6574aaecaaf",
+      "width": 150,
+      "height": 74,
+      "size": 5973,
+      "uploadedDate": "2020-07-11T15:58:36.970Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SoftOutlineScreenshotTAA-1920x1080-c057eb3010f4f561014e7d68b1175634_Snapshot.png",
+      "md5": "ad78a2b3d0c2e47a176f6508371c2b64",
+      "width": 150,
+      "height": 74,
+      "size": 6008,
+      "uploadedDate": "2020-07-11T15:58:37.637Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/fx"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-10-23T16:38:50.882Z",
+  "lastModifiedDate": "2024-11-16T12:10:43.426Z",
+  "customAttributes": {},
+  "entitlementName": "b8a8cd6387804306a74d1e96bcf3d28f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "255e09eb30844769b69912e57865cb00",
+      "appId": "SoftGlowb8a8cd638780V3",
+      "compatibleApps": [
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "Xbox One",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2020-10-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.1-4.21"
+    },
+    {
+      "id": "6c9f33690cdb40f8bc5bdca051054dda",
+      "appId": "SoftGlowb8a8cd638780V2",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "PS4",
+        "Windows",
+        "Xbox One",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "iOS",
+        "Android",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2020-10-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.2.1-4.25"
+    },
+    {
+      "id": "73f438d5ae054bcf8c28151f076bbb72",
+      "appId": "SoftGlowb8a8cd638780V4",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "Windows",
+        "Xbox One",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2021-05-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.2.1-4.26"
+    },
+    {
+      "id": "1cbd3ec72f854419950a6961a1e9aed2",
+      "appId": "SoftOutlb8a8cd638780V5",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.2.2-540"
+    }
+  ],
+  "developer": "DecalPortal",
+  "developerId": "o-qu8fj9kf2qpsam5xk967u2p4wea4ex",
+  "endOfSupport": false,
+  "unsearchable": false
+}

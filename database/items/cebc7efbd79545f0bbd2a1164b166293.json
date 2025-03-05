@@ -1,0 +1,313 @@
+{
+  "id": "cebc7efbd79545f0bbd2a1164b166293",
+  "title": "Smart Tools - Splines",
+  "description": "Generate adaptive resolution meshes from spline extrusions or revolutions",
+  "longDescription": "<p>The purpose of this plugin (written in C&#43;&#43;) is to provide a way to define meshes using Splines. It is not SplineMesh but procedural meshes with a parametrized definition adapted to the curvature of the splines used.</p><p>In realtime the modifications to the splines are reported on the generated meshes. </p><p>The module can be used in Runtime and in Editor mode, the only difference is that in Editor mode, you can generate StaticMesh instead of working only with ProceduralMesh.</p><p><br /></p><p>For any question or problem, contact me: contact&#64;infine-it.fr</p><p><br /></p><p><a href=\"https://youtube.com/playlist?list&#61;PLUjXqT37eA8zVPi_h10hfiX_Tk4vE0pgt\" rel=\"nofollow\">Feature videos</a></p><p><br /></p><p><strong>The plugin is required to use the following example projects. </strong></p><p><a href=\"https://unreal.infine-it.fr/SmartToolsDemo.zip\" rel=\"nofollow\">ExampleProject</a> (UE5 only - Meshes are duplicated to see subdivisions using a wireframe material superimposed with a black material)</p><p><a href=\"https://unreal.infine-it.fr/SmartToolsWithoutMaterialsDemo.zip\" rel=\"nofollow\">ExampleProjectWithoutMaterial</a> (UE5 only - This second example is without duplication of the meshes and let you play directly with the generated objects)</p><p><br /></p><p><strong><u>Release notes:</u></strong></p><ul><li>V1.1 (19 April 2022) - Fix: runtime bug corrected</li><li>V1.2 (25 April 2022) - Optimizations on thread management for a smoothness experience - more options for static mesh generations. Fix: missing segment in rare cases during mesh generation.</li><li>V1.3 (20 May 2022) - New feature: Array object which can instantiate Actors/Meshes along a spline and a new plugin version for Unreal V4.27</li><li>V1.4 (02 June 2022) - Fix: bad Array object locations using closed splines</li><li>v1.5 (22 August 2022) - New feature: Array support Instanced Static Meshes and Hierarchical Instanced Static Meshes (culling distances are exposed for these options)</li><li>v1.7 (08 June 2023) - UE5 only - New feature: Support of DynamicMesh with a new Object (SmartDynExtruder) to keep compatibility with previous projects (a part of the code is duplicated but a refactor will be made for ProceduralMesh). Fix - editor crash in runtime mode when the stop was triggered during mesh generation.</li><li>v1.8 (05 June 2024) - Fix - reload some splines in editor scene was broken in some cases - Support of UE versions 5.3 and 5.4</li></ul><p><br /></p><p><strong><u>Known Bugs:</u></strong></p><ul><li>V1.7 and below - The option for a unique Material in ProceduralMesh is broken (only a part of the mesh is modified, a fix will be published)</li></ul>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li> Predefined splines: line, regular polygon, regular rounded polygon, circle, petals, star, rounded star, gear, arc or custom</li><li> Extrusion of splines by splines with parametrized sampling methods (can be used also for revolutions)</li><li>Array of actors or meshes along a spline (for meshes it is possible to specify Static Meshes, Instanced Static Meshes or Hierarchical Instanced Static Meshes with culling distances)</li></ul><p><strong>Extrusion Features:</strong></p><ul><li>Modifiers on the extrusion</li><li>offset of the sub meshes</li><li>closure of top or/and bottom of the shape</li><li>scale</li><li>rotation and twist</li><li>noise to add randomness to generated objects</li><li>UV, Normal and Material settings</li><li>In Editor: StaticMesh generation with Collider</li><li>Blueprint access to all the necessary structures</li><li>Threaded and cached computations</li></ul><p><strong>Array Features:</strong></p><ul><li>offset for the location of the meshes/actors along the spline</li><li>Scale/Rotation to apply on the meshes/actors along the spline</li><li>Duplicated static meshes in the array are: static meshes, instanced static meshes or hierarchical instanced static meshes</li></ul><p><strong>Code Modules:</strong></p><ul><li> Runtime: SmartSpline</li><li> Editor: SmartSplineEditor, SmartCore</li></ul><p><strong>Number of C&#43;&#43; Classes:</strong> 18 (10 exposed)</p><p><strong>Supported Development Platforms:</strong> Win64</p><p><strong>Supported Target Build Platforms:</strong> Win64, Linux</p><p><strong>Documentation:</strong> <a href=\"https://unreal.infine-it.fr/Documentation-v1.2.pdf\" rel=\"nofollow\">Documentation-v1.2.pdf</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AdaptiveMesh.JPG-1920x1080-2dc04cae7cd7ab5264819479ff62be8f.jpg",
+      "md5": "2dc04cae7cd7ab5264819479ff62be8f",
+      "width": 1920,
+      "height": 1080,
+      "size": 194632,
+      "uploadedDate": "2022-04-12T13:55:43.671Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ClosedShapes.JPG-1920x1080-2168ff33e1de2defae3af9b17344820b.jpg",
+      "md5": "2168ff33e1de2defae3af9b17344820b",
+      "width": 1920,
+      "height": 1080,
+      "size": 169794,
+      "uploadedDate": "2022-04-12T13:55:44.575Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ComplexExtrusionWithNoise.JPG-1920x1080-84b2034a8f1a9f130dda89450574ab70.jpg",
+      "md5": "84b2034a8f1a9f130dda89450574ab70",
+      "width": 1920,
+      "height": 1080,
+      "size": 283474,
+      "uploadedDate": "2022-04-12T13:55:45.519Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ControlledSubdivisions.JPG-1920x1080-b211775033ae5c7e03d232dc1e14eaee.jpg",
+      "md5": "b211775033ae5c7e03d232dc1e14eaee",
+      "width": 1920,
+      "height": 1080,
+      "size": 214656,
+      "uploadedDate": "2022-04-12T13:55:46.444Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MultipleExtrusions.JPG-1920x1080-c1130ee3e6a901fd40e95f4e0a11cace.jpg",
+      "md5": "c1130ee3e6a901fd40e95f4e0a11cace",
+      "width": 1920,
+      "height": 1080,
+      "size": 235106,
+      "uploadedDate": "2022-04-12T13:55:47.402Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Revolutions.JPG-1920x1080-5775f8d335e21e273f227cb2b8757f16.jpg",
+      "md5": "5775f8d335e21e273f227cb2b8757f16",
+      "width": 1920,
+      "height": 1080,
+      "size": 215676,
+      "uploadedDate": "2022-04-12T13:55:48.346Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Rope.JPG-1920x1080-5cd17c9175d2e024b1e1634cd9c29fb1.jpg",
+      "md5": "5cd17c9175d2e024b1e1634cd9c29fb1",
+      "width": 1920,
+      "height": 1080,
+      "size": 231543,
+      "uploadedDate": "2022-04-12T13:55:49.245Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScaleCurve.JPG-1920x1080-a6516da9129f0d84836b70588da903b0.jpg",
+      "md5": "a6516da9129f0d84836b70588da903b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 277669,
+      "uploadedDate": "2022-04-12T13:55:50.164Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Shapes.JPG-1920x1080-e4772e5e8b146e2f76b5416daa0dad77.jpg",
+      "md5": "e4772e5e8b146e2f76b5416daa0dad77",
+      "width": 1920,
+      "height": 1080,
+      "size": 137044,
+      "uploadedDate": "2022-04-12T13:55:51.067Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Arrays.JPG-1920x1080-79e06d5c0a5136cf295a1b92330cbbd4.jpg",
+      "md5": "79e06d5c0a5136cf295a1b92330cbbd4",
+      "width": 1920,
+      "height": 1080,
+      "size": 287870,
+      "uploadedDate": "2022-06-02T16:04:11.677Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SmartToolsSplines_thumb-284x284-1cc4ef5827d8dbca555748b9ee980a19.png",
+      "md5": "1cc4ef5827d8dbca555748b9ee980a19",
+      "width": 284,
+      "height": 284,
+      "size": 142291,
+      "uploadedDate": "2022-04-12T13:55:51.787Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SmartToolsSplines_featured-894x488-b95aab6fd9cd02e679a66d8639a5d04e.png",
+      "md5": "b95aab6fd9cd02e679a66d8639a5d04e",
+      "width": 894,
+      "height": 488,
+      "size": 828412,
+      "uploadedDate": "2022-04-12T13:55:51.868Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Arrays.JPG-1920x1080-79e06d5c0a5136cf295a1b92330cbbd4_Snapshot.jpg",
+      "md5": "beee914ebf3e0f2771290d2e2529cc84",
+      "width": 150,
+      "height": 74,
+      "size": 5968,
+      "uploadedDate": "2022-06-02T16:04:11.940Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AdaptiveMesh.JPG-1920x1080-2dc04cae7cd7ab5264819479ff62be8f_Snapshot.jpg",
+      "md5": "6afa23466820c53732533c851e3046a7",
+      "width": 150,
+      "height": 74,
+      "size": 6564,
+      "uploadedDate": "2022-04-12T13:55:44.304Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ClosedShapes.JPG-1920x1080-2168ff33e1de2defae3af9b17344820b_Snapshot.jpg",
+      "md5": "d347916a5df8bf44087d6e370805d714",
+      "width": 150,
+      "height": 74,
+      "size": 5455,
+      "uploadedDate": "2022-04-12T13:55:45.207Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ComplexExtrusionWithNoise.JPG-1920x1080-84b2034a8f1a9f130dda89450574ab70_Snapshot.jpg",
+      "md5": "7caa1f1762c4c55b30415fd31aa6c41b",
+      "width": 150,
+      "height": 74,
+      "size": 5793,
+      "uploadedDate": "2022-04-12T13:55:46.144Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ControlledSubdivisions.JPG-1920x1080-b211775033ae5c7e03d232dc1e14eaee_Snapshot.jpg",
+      "md5": "93d0aebded5164e8d189fdeabcb57771",
+      "width": 150,
+      "height": 74,
+      "size": 5868,
+      "uploadedDate": "2022-04-12T13:55:47.076Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MultipleExtrusions.JPG-1920x1080-c1130ee3e6a901fd40e95f4e0a11cace_Snapshot.jpg",
+      "md5": "d3f2800eaf86f9c2f6b00a84e865942a",
+      "width": 150,
+      "height": 74,
+      "size": 6781,
+      "uploadedDate": "2022-04-12T13:55:48.022Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Revolutions.JPG-1920x1080-5775f8d335e21e273f227cb2b8757f16_Snapshot.jpg",
+      "md5": "3fd6a402ff3b07f3de69572905d69e2c",
+      "width": 150,
+      "height": 74,
+      "size": 5615,
+      "uploadedDate": "2022-04-12T13:55:48.965Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Rope.JPG-1920x1080-5cd17c9175d2e024b1e1634cd9c29fb1_Snapshot.jpg",
+      "md5": "495cede012df8f8b28f5beee6b43196a",
+      "width": 150,
+      "height": 74,
+      "size": 5755,
+      "uploadedDate": "2022-04-12T13:55:49.881Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScaleCurve.JPG-1920x1080-a6516da9129f0d84836b70588da903b0_Snapshot.jpg",
+      "md5": "a26f1d2ff09e099b60b63522edd7d0d8",
+      "width": 150,
+      "height": 74,
+      "size": 6607,
+      "uploadedDate": "2022-04-12T13:55:50.796Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Shapes.JPG-1920x1080-e4772e5e8b146e2f76b5416daa0dad77_Snapshot.jpg",
+      "md5": "639e36984ad5f60c585efe68b28589d0",
+      "width": 150,
+      "height": 74,
+      "size": 6257,
+      "uploadedDate": "2022-04-12T13:55:51.674Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-04-13T14:34:34.512Z",
+  "lastModifiedDate": "2024-10-19T13:17:25.752Z",
+  "customAttributes": {},
+  "entitlementName": "cebc7efbd79545f0bbd2a1164b166293",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "92444e95c4cc47d4b45414b575597a78",
+      "appId": "SmartToolsSplines_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2022-05-20T00:00:00.000Z",
+      "releaseNote": "UE4-v1.5",
+      "versionTitle": "SmartTools-UE4-V1.5"
+    },
+    {
+      "id": "ec05ebde00f44ba0a657c27a629a4dd4",
+      "appId": "SmartToolsSplines_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-12T00:00:00.000Z",
+      "releaseNote": "UE5-V1.7c",
+      "versionTitle": "SmartTools-UE5-V1.7c"
+    },
+    {
+      "id": "8e9e9d5720124a46bf5925b00e1c9c2a",
+      "appId": "SmartToolsSplines_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "UE5.1-v1.7c",
+      "versionTitle": "SmartTools-UE5.1-V1.7c"
+    },
+    {
+      "id": "07c11c4c1e3b4533872e35d9e495d533",
+      "appId": "SmartToolsSplines_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-15T00:00:00.000Z",
+      "releaseNote": "UE5.2-v1.8",
+      "versionTitle": "SmartTools-UE5.2-V1.8"
+    },
+    {
+      "id": "4a021d5981464899a7e7ab419a604d42",
+      "appId": "SmartToolsSplines_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2024-06-05T00:00:00.000Z",
+      "releaseNote": "UE5.3-v1.8",
+      "versionTitle": "SmartTools-UE5.3-V1.8"
+    },
+    {
+      "id": "8b4b3698fb204f65bb2b360f4d174a7d",
+      "appId": "SmartToolsSplines_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2024-06-05T00:00:00.000Z",
+      "releaseNote": "UE5.4-v1.8",
+      "versionTitle": "SmartTools-UE5.4-V1.8"
+    }
+  ],
+  "developer": "InFine-IT",
+  "developerId": "o-e6b5n6nc85gmcjvpdzh2lyzyc6ff57",
+  "endOfSupport": false,
+  "unsearchable": false
+}

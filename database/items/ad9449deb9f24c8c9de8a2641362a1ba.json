@@ -1,0 +1,188 @@
+{
+  "id": "ad9449deb9f24c8c9de8a2641362a1ba",
+  "title": "Random Level Generator (with Moving Objects and Materials)",
+  "description": "Random Level Generator (with Moving Objects and Materials)",
+  "longDescription": "<p>This LevelGenerator creaters Actors with StaticMeshes and puts them in a Level on a Random Location.</p><p>You will be able choose The Mesh, Scale, Frequency, Material and more from a DataTable.</p><p><br /></p><p>A example Level (and how to use) can be found on Youtube:</p><p>https://www.youtube.com/watch?v&#61;FpRHBom8yyk</p><p>(Collision Method and Rotation can not be seen in the Video but it is part of the plugin datatable. So you can set a Random or fix Rotation and also choose a CollisionMethod)</p><p><br /></p><p>Or check the <a href=\"http://wiki.teufel-engineering.com/\" rel=\"nofollow\">Documentation</a>:</p><p>http://wiki.teufel-engineering.com/</p><p><br /></p><p>The DataTable includes:</p><p>class UStaticMesh* Mesh; // Change the Mesh of the Actor</p><p>FString Name; // Create a Name</p><p>FVector Scale; // Scale the Mesh</p><p>FVector RandomRangeMinMultiplier; // X, Y, Z Min Range till the next Actor will Spawn</p><p>FVector RandomRangeMaxMultiplier; // X, Y, Z Max Range till the next Actor will Spawn</p><p>int Frequency; // How often should the Object Spawn</p><p>FVector AbsoluteOffset; // X, Y, Z Offset in any direction</p><p>UMaterial* Material; // Choose the Material</p><p>bool IsMoving; // Should Actor Move? Yes -&gt; True</p><p>FVector MovementSpeed; // X, Y, Z Speed in every direction is chooseable</p><p>float MovementRange; // Which Distance to move (after reaching the Object moves back)</p><p>ESpawnActorCollisionHandlingMethod CollisionMethod; // Choose Collision Method -&gt; AlwaysSpawn &#43; 3 Options if Collision occured</p><p>FRotator RotationRange; // Choose the Range which Random Rotation should occure (Pitch, Yaw, Roll)</p><p>FRotator AbsoluteRotationOffset; // Every Component will have this Rotation (Pitch, Yaw, Roll)</p><p><br /></p><p><br /></p><p><u>Steps to Create a Level with a DataTable</u></p><ol><li>Create a Blueprint out of the Classes Component and ComponentGeneratorGameMode (In Example they are called BP_Component and BP_GeneratorGameMode)</li><li>Create a DataTable and choose ComponentData as Table Template. (you can finde my table in All\\Engine\\Plugins\\RandomLevelGenerator\\Content\\RandomLevelGenerator\\Blueprints\\Actors\\DT_ComponentDat</li><li>Choose the Table in your BP_CompGeneratorGameMode</li><li>Choose your ComponentClass (BP_Component) in your BP_GeneratorGameMode</li><li>Fill the Table (for Example DT_ComponentData)</li><li>Choose the GameMode (for Example BP_GeneratorGameMode) in the LevelEditor and Start the Level</li></ol><p><br /></p><p>More Work from me: https://www.unrealengine.com/marketplace/en-US/profile/Silvan&#43;Teufel</p>",
+  "technicalDetails": "<p>Features: (Please include a full, comprehensive list of the features of the product)</p><ul><li> Component (Parent Class)</li><li>ComponentGeneratorGameMode (Parent Class)</li></ul><p>Code Modules: (Please include a full list of each Plugin module and their module type (Runtime, Editor etc.))</p><ul><li> RandomLevelGenerator [Runtime]</li></ul><p>Public Dependency Module Names:</p><ul><li>Core, CoreUObject, Engine, InputCore</li><li>HeadMountedDisplay, NavigationSystem</li><li>AIModule</li><li>UMG</li></ul><p>Number of Blueprints: 2 (Based on C&#43;&#43; Parent Class)</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win10/11</p><p>Supported Target Build Platforms: Win10/11</p><p>Documentation: https://github.com/SilvanTeufel/RandomLevelGenerator_ReadMe/blob/main/ReadMe.md</p><p>Example Project: https://www.youtube.com/watch?v&#61;FpRHBom8yyk</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-a633766a14d775aac54b0881a64828dd.jpg",
+      "md5": "a633766a14d775aac54b0881a64828dd",
+      "width": 1920,
+      "height": 1080,
+      "size": 246466,
+      "uploadedDate": "2022-10-22T14:09:25.879Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-d7c01d369759368563945c8944eccd9d.png",
+      "md5": "d7c01d369759368563945c8944eccd9d",
+      "width": 1920,
+      "height": 1080,
+      "size": 2544607,
+      "uploadedDate": "2022-10-22T14:09:26.369Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-ce7fe92d6860e6efe5948807f4aa865c.png",
+      "md5": "ce7fe92d6860e6efe5948807f4aa865c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2977421,
+      "uploadedDate": "2022-10-22T14:09:27.175Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-10bf91fbdf1785dfa381093cd820193f.png",
+      "md5": "10bf91fbdf1785dfa381093cd820193f",
+      "width": 1920,
+      "height": 1080,
+      "size": 2434873,
+      "uploadedDate": "2022-10-22T14:09:27.801Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-8a1dee30cd46217f7b13da6dba4274dd.jpg",
+      "md5": "8a1dee30cd46217f7b13da6dba4274dd",
+      "width": 1920,
+      "height": 1080,
+      "size": 392276,
+      "uploadedDate": "2022-10-26T16:55:07.904Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RandomLevelGeneratorwithMovingObjectsandMaterials_thumb-284x284-3cb7fee04d777a4a000e0e8ab895a614.png",
+      "md5": "3cb7fee04d777a4a000e0e8ab895a614",
+      "width": 284,
+      "height": 284,
+      "size": 119249,
+      "uploadedDate": "2022-11-06T10:12:47.784Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RandomLevelGeneratorwithMovingObjectsandMaterials_featured-894x488-2b143a1d3f3563028ebe3dc2db4a1344.png",
+      "md5": "2b143a1d3f3563028ebe3dc2db4a1344",
+      "width": 894,
+      "height": 488,
+      "size": 503296,
+      "uploadedDate": "2022-10-22T14:09:28.414Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-8a1dee30cd46217f7b13da6dba4274dd_Snapshot.jpg",
+      "md5": "df3c5be258138ad4e13f24e3e6a083c6",
+      "width": 150,
+      "height": 74,
+      "size": 4080,
+      "uploadedDate": "2022-10-26T16:55:08.115Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-a633766a14d775aac54b0881a64828dd_Snapshot.jpg",
+      "md5": "7ee0cae701be5070aaa96548f89cd236",
+      "width": 150,
+      "height": 74,
+      "size": 5653,
+      "uploadedDate": "2022-10-22T14:09:26.117Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-d7c01d369759368563945c8944eccd9d_Snapshot.png",
+      "md5": "43fe72bc548e8a110b1f8f5e7b3a2a07",
+      "width": 150,
+      "height": 74,
+      "size": 6548,
+      "uploadedDate": "2022-10-22T14:09:26.697Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-ce5200f590ed94427a4c21f58ef1d86f_Snapshot.png",
+      "md5": "dce2aab54c33a767e5f6cb49c0b44c06",
+      "width": 150,
+      "height": 74,
+      "size": 4052,
+      "uploadedDate": "2022-10-22T14:09:27.007Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-ce7fe92d6860e6efe5948807f4aa865c_Snapshot.png",
+      "md5": "8f2521084b13c5b51b57d24416552d7e",
+      "width": 150,
+      "height": 74,
+      "size": 5097,
+      "uploadedDate": "2022-10-22T14:09:27.508Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-10bf91fbdf1785dfa381093cd820193f_Snapshot.png",
+      "md5": "7b3c78adc03ed3a06ae493e95e1a02e2",
+      "width": 150,
+      "height": 74,
+      "size": 5366,
+      "uploadedDate": "2022-10-22T14:09:28.161Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-10-26T16:39:53.795Z",
+  "lastModifiedDate": "2024-10-28T11:46:15.139Z",
+  "customAttributes": {},
+  "entitlementName": "ad9449deb9f24c8c9de8a2641362a1ba",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b775a5f603744a7bbd5f4a00e3a5e113",
+      "appId": "RandomLevelGenerator_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-10-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RandomLevelGenerator"
+    },
+    {
+      "id": "d6949307fc6542ff8935ce4ad24510ad",
+      "appId": "RandomLevelGenerator_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RandomLevelGenerator_1.1.0"
+    },
+    {
+      "id": "47cee126ebd64b25b3c7a6145b884810",
+      "appId": "RandomLevelGenerator_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RandomLevelGenerator_1.1.1"
+    }
+  ],
+  "developer": "Silvan Teufel",
+  "developerId": "o-c23yjldgpngkl34xmytfm89qemzycb",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

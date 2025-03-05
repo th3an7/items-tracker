@@ -1,0 +1,230 @@
+{
+  "id": "a674553dadfe464a988fff4306824816",
+  "title": "PixelTools",
+  "description": "Adds a pixel perfect Camera that disables the effect of pixel distortion, provides TRUE pixelation and MORE.",
+  "longDescription": "<p>PixelTools is needed in order to simplify the creation of 2d pixel games or add a pixel effect to your 3d project while increasing your FPS.</p><p><br /></p><ol><li>PixelPerfect Camera (Component) - Add pixelation effect to your project, Eliminates the effect of pixel distortion as it calculates the correct ortho width based on your preferences: Resolution - regulates how close camera is to the playing field. Pixel per unit - need for the camera to work with sprites of any size, this parameter can be viewed either in the project settings or in the sprites.</li><li>PixelPerfect Camera Manager - need to center the camera on the pixel grid to avoid visual defects.</li><li>PixelatedGameInstance - need to remove the scaling effect of the system, you may know the problem of 125% scaling, which makes many applications look incorrect.</li><li>M_WidgetPixelisation - This material need to pixelate widgets, use retainer box with this material to pixelate your widgets.</li><li>Pixelate Texture menu button - You may not know that without special texture preparation in the build, all sprites created with it will be blurry. This button removes this effect (Use it after &#34;Apply Paper2D Texture Settings&#34;)</li><li>Set Pixelated Settings button - Button in the project settings menu, disable some settings that are good for 3d but not for 2d.</li></ol><p><br /></p><blockquote>FAQ:</blockquote><ol><li>Is that works with camera lag? - Of cource BUT you need to enable Frame rate limit and choose a Camera lag distance value that will look good, or disable PixelPerfect Camera manager but you will see that the pixelation effect in motion works differently... strange. EXPERIMENT!</li><li>Why i need to enable PixelPerfect Camera manager and Pixelated Game Instance? - For better picture quality. PixelPerfectCamera manager guarantees a clear display of pixels when moving, as it does not allow the camera to move off the pixel grid, and a PixelatedGameInstance protects your game from external influences at startup, and also includes settings that are suitable for pixel graphics, if you want complement Game Instance or Camera manager you will can make child classes from classes from plugin.</li></ol><p><br /></p><blockquote>How it works?</blockquote><ol><li>PixelperfectCameraComponent - Camera Component that will make it easier to work with pixel graphics. To make pixelation effect use Reslution Scale Value and disable game upscaler, The formula for calculating the resolution of the game - (Your Res (Resolution value) / Desktop Res) * 100. Have functions to scale change the size of the playing field, Calculate PixelPerfect Resolution, startup settings.</li><li>PixePerfectCameraManager - Camera Manager Centers Camera to the pixel grid, formula: 1 / PixelPerunit (Get it automaticly from the active camera in begin play)</li><li>PixelatedGame Instance - Quickly switches Fullscreen mode when initializing the project, which disables the system scaling of your game, also disable VSync, DynamicResolution and set resolution of the game to native.</li><li>M_PixelatedWidget - Use it in retainer box to pixelate your widgets. Works like pixelisation material for post processing.</li><li>PixelateTexture button - Disable mipmaps and upsampler for this texture, which is why the sprite in the build looks clear.</li><li>Set Pixelated Settings button - Disable parameters for best pixel graphycs: </li></ol><p>DefaultManualScreenPercentage &#61; 100</p><p>DefaultScreenPercentageDesktopMode &#61; BasedOnDisplayResolution</p><p>DefaultScreenPercentageMobileMode &#61; BasedOnDisplayResolution</p><p>DefaultFeatureAntiAliasing &#61; AAM_None</p><p>MobileAntiAliasing &#61; None</p><p>bDefaultFeatureMotionBlur &#61; false</p><p>DynamicGlobalIllumination &#61; None</p><p>bDefaultFeatureAutoExposure &#61; false</p><p>DefaultFeatureAutoExposureBias &#61; 0</p><p>Reflections &#61; None</p><p>ShadowMapMethod &#61; ShadowMaps</p><p>bDefaultFeatureBloom &#61; false</p>",
+  "technicalDetails": "<blockquote>Features:</blockquote><ul><li> PixelperfectCameraComponent</li><li> PixePerfectCameraManager</li><li> PixelatedGame Instance</li><li>M_PixelatedWidget</li><li>PixelateTexture button</li><li>Set Pixelated Settings button</li></ul><p><br /></p><blockquote>Code Modules:</blockquote><ul><li> PixelTools Runtime</li><li> PixelToolsEditor</li></ul><p><br /></p><p>Number of Blueprints: 1</p><p>Number of Materials: 3</p><p>Number of C&#43;&#43; Classes: 5 (7 With PixelToolsEnditor and PixelToolsRuntime)</p><p>Supported Development Platforms: Win64, Linux, Mac</p><p>Supported Target Build Platforms: Win64, Android, Linux, LinuxArm64</p><p>Documentation: <a href=\"https://youtu.be/uDgLy5O7-u0\" rel=\"nofollow\">Video Instruction</a></p><p>Support: <a href=\"https://discord.com/invite/E34MweDABv\" rel=\"nofollow\">Discord</a></p><p><br /></p><blockquote>Important/Additional Notes:</blockquote><p>In the windowed preview mode, you can see a lot of graphical artifacts (this applies to both the camera and the Widgets). You will be able to see a truly clean picture only in full-screen mode, that is, in Standalone or Quick Launch / Build</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blue plugin gallery1-1920x1080-7432b8db0712da0190d0096d5c8ae1d4.png",
+      "md5": "7432b8db0712da0190d0096d5c8ae1d4",
+      "width": 1920,
+      "height": 1080,
+      "size": 30643,
+      "uploadedDate": "2024-09-15T15:06:59.947Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blue plugin gallery2-1920x1080-c286fbcf53668597fbd2d313fb8062bf.png",
+      "md5": "c286fbcf53668597fbd2d313fb8062bf",
+      "width": 1920,
+      "height": 1080,
+      "size": 67381,
+      "uploadedDate": "2024-09-15T15:07:00.271Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blue plugin gallery3-1920x1080-5734cf1ce2ab822253abc8cbfbcdf129.png",
+      "md5": "5734cf1ce2ab822253abc8cbfbcdf129",
+      "width": 1920,
+      "height": 1080,
+      "size": 29762,
+      "uploadedDate": "2024-09-15T15:07:00.634Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blue plugin gallery4-1920x1080-2c42989ed5ecff9e09aec5f62c3c3c0c.png",
+      "md5": "2c42989ed5ecff9e09aec5f62c3c3c0c",
+      "width": 1920,
+      "height": 1080,
+      "size": 150458,
+      "uploadedDate": "2024-09-15T15:07:01.054Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blue plugin gallery5-1920x1080-8410c24c74adef331d7bb81ceef93f26.png",
+      "md5": "8410c24c74adef331d7bb81ceef93f26",
+      "width": 1920,
+      "height": 1080,
+      "size": 164645,
+      "uploadedDate": "2024-09-15T15:07:01.698Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PixelTools_thumb-284x284-e37828a953be69282f6fa4b08ccf9a10.png",
+      "md5": "e37828a953be69282f6fa4b08ccf9a10",
+      "width": 284,
+      "height": 284,
+      "size": 5946,
+      "uploadedDate": "2024-09-01T12:48:36.622Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PixelTools_featured-894x488-788c15453bb686117cbdfa81e7070a76.png",
+      "md5": "788c15453bb686117cbdfa81e7070a76",
+      "width": 894,
+      "height": 488,
+      "size": 40319,
+      "uploadedDate": "2024-09-15T15:46:16.884Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blue plugin gallery1-1920x1080-7432b8db0712da0190d0096d5c8ae1d4_Snapshot.png",
+      "md5": "d586db7d24b723a70c812c86362f5839",
+      "width": 150,
+      "height": 74,
+      "size": 7332,
+      "uploadedDate": "2024-09-15T15:07:00.200Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blue plugin gallery2-1920x1080-c286fbcf53668597fbd2d313fb8062bf_Snapshot.png",
+      "md5": "c4bcd06378b64a7a464297b84e7dc9c8",
+      "width": 150,
+      "height": 74,
+      "size": 6792,
+      "uploadedDate": "2024-09-15T15:07:00.526Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blue plugin gallery3-1920x1080-5734cf1ce2ab822253abc8cbfbcdf129_Snapshot.png",
+      "md5": "90c5ff019b7e8862485b95e216323e6d",
+      "width": 150,
+      "height": 74,
+      "size": 5797,
+      "uploadedDate": "2024-09-15T15:07:00.882Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blue plugin gallery4-1920x1080-2c42989ed5ecff9e09aec5f62c3c3c0c_Snapshot.png",
+      "md5": "60a937c6e4bb9fa16316374534c14b4a",
+      "width": 150,
+      "height": 74,
+      "size": 6538,
+      "uploadedDate": "2024-09-15T15:07:01.321Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blue plugin gallery5-1920x1080-8410c24c74adef331d7bb81ceef93f26_Snapshot.png",
+      "md5": "705e43589b0d6a0414052d0da4bd117a",
+      "width": 150,
+      "height": 74,
+      "size": 6194,
+      "uploadedDate": "2024-09-15T15:07:01.982Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PluginGallery2-1920x1080-0248e9e6b932d1aec5f6e283c327961e_Snapshot.png",
+      "md5": "efd32cb51096f0b2682245ad7b311982",
+      "width": 150,
+      "height": 74,
+      "size": 6201,
+      "uploadedDate": "2024-09-01T12:48:35.096Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PluginGallery3-1920x1080-fd41754125312b0510498658d1874949_Snapshot.png",
+      "md5": "74b1584cc363a1012fb552a5db55194a",
+      "width": 150,
+      "height": 74,
+      "size": 4378,
+      "uploadedDate": "2024-09-01T12:48:35.459Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PluginGallery4-1920x1080-b3ace2adcc7e6ba33c8bd9240bf33def_Snapshot.png",
+      "md5": "3232acf597a297f020e1eb24ba53a935",
+      "width": 150,
+      "height": 74,
+      "size": 5836,
+      "uploadedDate": "2024-09-01T12:48:35.885Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PluginGallery5-1920x1080-5adff4a93aa9b51ec580ec7b188eefb5_Snapshot.png",
+      "md5": "e8bbec3b22d4766f1485099188678d8f",
+      "width": 150,
+      "height": 74,
+      "size": 6633,
+      "uploadedDate": "2024-09-01T12:48:36.185Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PluginGallery6-1920x1080-2ffcd757d5a85467fa8950fec91e5a8e_Snapshot.png",
+      "md5": "504a7ebfa044e4c5ec8429245d10b092",
+      "width": 150,
+      "height": 74,
+      "size": 5322,
+      "uploadedDate": "2024-09-01T12:48:36.586Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-09-15T15:47:14.782Z",
+  "lastModifiedDate": "2024-11-02T18:22:29.950Z",
+  "customAttributes": {},
+  "entitlementName": "a674553dadfe464a988fff4306824816",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "5e6864fd8eee4ac8b502548856811d20",
+      "appId": "PixelTools_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2024-09-04T00:00:00.000Z",
+      "releaseNote": "Empty icons bug fix",
+      "versionTitle": "V1.2 5.2"
+    },
+    {
+      "id": "2a6f3ea92e3d48689a621e1e77b376f8",
+      "appId": "PixelTools_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2024-09-04T00:00:00.000Z",
+      "releaseNote": "Empty icons bug fix",
+      "versionTitle": "V1.2 5.3"
+    },
+    {
+      "id": "06a74da8797d424096fca0be0eded3ec",
+      "appId": "PixelTools_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2024-09-04T00:00:00.000Z",
+      "releaseNote": "Empty icons bug fix",
+      "versionTitle": "V1.2 5.4"
+    }
+  ],
+  "developer": "Michael B. !",
+  "developerId": "o-wvwxl8r37vbymv837q2gqm8arlt2ju",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

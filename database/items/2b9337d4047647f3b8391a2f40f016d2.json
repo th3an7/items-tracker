@@ -1,0 +1,331 @@
+{
+  "id": "2b9337d4047647f3b8391a2f40f016d2",
+  "title": "SetupUEr",
+  "description": "A configurable UE4 game launcher plugin with graphics and keyboard settings.",
+  "longDescription": "<p>Create an optional, configurable, titled and logo&#39;d setup front-end loader in which users can edit certain graphics and keyboard options, which will be saved across sessions. Can easily be extended with further functionality, if needed.</p><p><br /></p><p>Features:</p><p>- Can be configured to be shown at game start automatically, or only if the user passes the command line parameter &#39;-setup&#39; along</p><p>- Decide the game title and logo in the Unreal Editor, and decide which setup options you want to show your users, in which order</p><p>- Graphics options include resolution, fullscreen/borderless/windowed mode, vsync and various rendering quality sliders</p><p>- Keyboard options include buttons that quickly switch between QWERTY and AZERTY modes and the ability to reassign keys and mouse buttons for axes and actions</p>",
+  "technicalDetails": "<p>- Functionality split between an editor and a game startup element. Set up your basic UI options and look in the editor, then watch it appear when the game is run (as shown in the screenshots)</p><p>- Basic graphics options: Fullscreen/borderless/windowed, resolution, VSync</p><p>- Graphics quality options for performance tweaking</p><p>- Key remapping from project-assigned input keys/mouse buttons, supports most keyboard keys and mouse buttons</p><p>- Settings are saved on disk and re-applied on game start</p><p><br /></p><p>- Combined editor and runtime plugin</p><p>- No third party code</p><p><br /></p><p>Platforms Tested: Windows</p><p><br /></p><p><strong><u>Disclaimer:</u></strong> It seems Epic changed how PreLoadingScreen works in 4.22, and it doesn&#39;t seem to actually trigger <em>before </em>the loading screen any longer, the way it used to, so be aware of this. Now the game will pop up its window and <em>then</em> show the SetupUEr setup screen.</p><p><br /></p><p><strong><u>SUNSET:</u></strong> Since Epic started pushing Enhanced Input Actions and deprecating the classic Axis and Action mappings in UE 5, and those are stored <strong><em>very </em></strong>differently, it makes less and less sense to have something like SetupUEr. This is why I&#39;ve decided to sunset this plugin, and no longer update it.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/SetupUEr_Screenshot_01-1920x1080-85f55d87d298f6f377450bbac7734d26.png",
+      "md5": "85f55d87d298f6f377450bbac7734d26",
+      "width": 1920,
+      "height": 1080,
+      "size": 542095,
+      "uploadedDate": "2016-10-27T20:26:09.403Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/SetupUEr_Screenshot_02-1920x1080-8f3879917c767d317d14984b1fb4a6ce.png",
+      "md5": "8f3879917c767d317d14984b1fb4a6ce",
+      "width": 1920,
+      "height": 1080,
+      "size": 867833,
+      "uploadedDate": "2016-10-27T20:26:08.174Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/SetupUEr_Screenshot_03-1920x1080-5820d4de50ddd9d9c8b77bce2a064b1a.png",
+      "md5": "5820d4de50ddd9d9c8b77bce2a064b1a",
+      "width": 1920,
+      "height": 1080,
+      "size": 229558,
+      "uploadedDate": "2016-10-27T20:26:06.713Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/SetupUEr_Screenshot_04-1920x1080-c70ea2c0734f731e1cf431a769944bc4.png",
+      "md5": "c70ea2c0734f731e1cf431a769944bc4",
+      "width": 1920,
+      "height": 1080,
+      "size": 970027,
+      "uploadedDate": "2016-10-27T20:26:04.512Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/SetupUEr_Screenshot_05-1920x1080-371c8a19cdc64a87ed220b46cc4ba984.png",
+      "md5": "371c8a19cdc64a87ed220b46cc4ba984",
+      "width": 1920,
+      "height": 1080,
+      "size": 110923,
+      "uploadedDate": "2016-10-27T20:26:02.066Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/item/SetupUEr_Thumb-284x284-eb89fe87a57c263512fc026bd71c5664.png",
+      "md5": "eb89fe87a57c263512fc026bd71c5664",
+      "width": 284,
+      "height": 284,
+      "size": 61006,
+      "uploadedDate": "2016-10-27T20:26:00.724Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/item/SetupUEr_Featured-476x246-dfa460c9543c9bd3d66f52e71d5543dd.png",
+      "md5": "dfa460c9543c9bd3d66f52e71d5543dd",
+      "width": 476,
+      "height": 246,
+      "size": 69251,
+      "uploadedDate": "2016-10-27T20:26:12.668Z"
+    },
+    {
+      "type": "NewFeatured",
+      "url": "https://cdn1.epicgames.com/ue/item/SetupUEr_FeaturedNew-864x488-d4385dcdebb38d9c7b901abe63384ea8.png",
+      "md5": "d4385dcdebb38d9c7b901abe63384ea8",
+      "width": 864,
+      "height": 488,
+      "size": 230605,
+      "uploadedDate": "2016-10-27T20:26:11.275Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2016-10-27T20:26:59.850Z",
+  "lastModifiedDate": "2024-10-14T20:42:24.718Z",
+  "entitlementName": "2b9337d4047647f3b8391a2f40f016d2",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b6a2457c898a44fd8f87878299e8d698",
+      "appId": "SetupUEr_4.12",
+      "compatibleApps": [
+        "UE_4.12"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-10-27T00:00:00.000Z",
+      "versionTitle": "SetupUEr_4.12"
+    },
+    {
+      "id": "e54c9e84b99348e6b14c36413f1c6f65",
+      "appId": "SetupUEr_4.13",
+      "compatibleApps": [
+        "UE_4.13"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-10-27T00:00:00.000Z",
+      "versionTitle": "SetupUEr_4.13"
+    },
+    {
+      "id": "b7e90d22d708422c8c9ef8ca04f7731e",
+      "appId": "SetupUEr_4.14",
+      "compatibleApps": [
+        "UE_4.14"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-11-18T00:00:00.000Z",
+      "versionTitle": "SetupUEr_4.14"
+    },
+    {
+      "id": "5c7cd900a59846cfbfa28be3ca6447ed",
+      "appId": "SetupUEr_4.15",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-02-22T00:00:00.000Z",
+      "versionTitle": "SetupUEr_4.15"
+    },
+    {
+      "id": "30d26b5aa46543b087503515f0df08a2",
+      "appId": "SetupUEr_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-06-01T00:00:00.000Z",
+      "versionTitle": "SetupUEr_4.16"
+    },
+    {
+      "id": "cbb73decdff843579fe688178d811398",
+      "appId": "SetupUEr_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-08-11T00:00:00.000Z",
+      "versionTitle": "SetupUEr_4.17"
+    },
+    {
+      "id": "afa2a9c2ee86423290bbbaeed18af503",
+      "appId": "SetupUEr_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-10-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_4.18"
+    },
+    {
+      "id": "4ea1790548bc403d9f86dea05d00124e",
+      "appId": "SetupUEr_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-04-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_4.19"
+    },
+    {
+      "id": "6f8c5de0d4644f2bac459226bf5e76ab",
+      "appId": "SetupUEr_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-08-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_4.20"
+    },
+    {
+      "id": "d52ea129ba22402c9e290dbe524fa46d",
+      "appId": "SetupUEr_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-01-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_421"
+    },
+    {
+      "id": "1d3dc37cde4b48e18861c5b0d531e0ee",
+      "appId": "SetupUEr_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-05-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_4.22"
+    },
+    {
+      "id": "06e69b4595084b64b34ba9ea5a0cf67e",
+      "appId": "SetupUEr_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-09-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_423"
+    },
+    {
+      "id": "1121468a6b224fe2b6c32994efdb1869",
+      "appId": "SetupUEr_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-01-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_4.24"
+    },
+    {
+      "id": "d5ebd930941e47baac1d05c9ad65907a",
+      "appId": "SetupUEr_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-06-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_4.25"
+    },
+    {
+      "id": "60ab9e1d1c8c4e16991b366e95cbcfad",
+      "appId": "SetupUEr_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-02-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_4.26"
+    },
+    {
+      "id": "d6bb338bb8a14348a3bc297556c8a158",
+      "appId": "SetupUEr_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-10-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_4.27"
+    },
+    {
+      "id": "17c0851d4a524a23b6635b10e6ea8f43",
+      "appId": "SetupUEr_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_500"
+    },
+    {
+      "id": "7248b2b4b8ec4f758a586778fa12a9db",
+      "appId": "SetupUEr_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SetupUEr_510"
+    }
+  ],
+  "developer": "NT Entertainment",
+  "developerId": "o-a07591008b4f74bada481ca6572def",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

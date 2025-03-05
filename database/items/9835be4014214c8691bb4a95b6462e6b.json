@@ -1,0 +1,457 @@
+{
+  "id": "9835be4014214c8691bb4a95b6462e6b",
+  "title": "Runtime Audio Importer",
+  "description": "Runtime Audio Importer plugin for Unreal Engine. Importing audio of various formats at runtime. Supports MP3, WAV, FLAC, OGG Vorbis, BINK and RAW formats",
+  "longDescription": "<p><a href=\"https://docs.georgy.dev/runtime-audio-importer/overview\" rel=\"nofollow\"><strong>Documentation</strong></a></p><p><a href=\"https://georgy.dev/discord\" rel=\"nofollow\"><strong>Discord support chat</strong></a></p><p><br /></p><p>Open-source plugin to import audio files of <strong>MP3</strong>, <strong>WAV</strong>, <strong>FLAC</strong>, <strong>OGG Vorbis, BINK</strong> and <strong>RAW </strong>formats into the game at runtime.</p><p>It&#39;s easy to use in both C&#43;&#43; and Blueprints.</p><p>Plugin does not require any static libraries and external dependencies.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Fast transcoding speed</li><li>Supported for major audio formats: <strong>MP3</strong>, <strong>WAV</strong>, <strong>FLAC</strong>, <strong>OGG Vorbis</strong> and <strong>BINK</strong></li><li>Supported for RAW formats: int8, uint8, int16, uint16, int32, uint32, float32</li><li>Same behavior as regular sound wave, including SoundCue, etc</li><li>Automatic detection of audio format</li><li>Audio streaming functionality</li><li>Audio capturing from input devices (eg microphone), including within Pixel Streaming context</li><li>Voice Activity Detection (VAD)</li><li>Exporting a sound wave to a separate file</li><li>Pre-imported sound assets</li><li>No static libraries or external dependencies</li><li>Cross-platform compatibility (Windows, Mac, Linux, Android, iOS, etc)</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/runtimeaudioimporterbanner-1920x1080-cb0f1464e5288d8ed53dbdbf9de5d01d.jpg",
+      "md5": "cb0f1464e5288d8ed53dbdbf9de5d01d",
+      "width": 1920,
+      "height": 1080,
+      "size": 179257,
+      "uploadedDate": "2021-12-03T15:45:36.231Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/verybigexampleshow-1920x1080-46580a0828f5c76370b4848ecbf22658.jpg",
+      "md5": "46580a0828f5c76370b4848ecbf22658",
+      "width": 1920,
+      "height": 1080,
+      "size": 819438,
+      "uploadedDate": "2022-10-15T15:59:13.148Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/regularappr-1920x1080-75181b3755519e269f00468c052ad049.jpg",
+      "md5": "75181b3755519e269f00468c052ad049",
+      "width": 1920,
+      "height": 1080,
+      "size": 561530,
+      "uploadedDate": "2023-01-08T06:38:54.632Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/streamingappr-1920x1080-c6a587207f219c9a9f118787b8a26148.jpg",
+      "md5": "c6a587207f219c9a9f118787b8a26148",
+      "width": 1920,
+      "height": 1080,
+      "size": 634960,
+      "uploadedDate": "2023-01-08T06:38:55.415Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RuntimeAudioImporter_thumb-284x284-5e325ef484f1f8b5e5e802333a99cefe.png",
+      "md5": "5e325ef484f1f8b5e5e802333a99cefe",
+      "width": 284,
+      "height": 284,
+      "size": 4203,
+      "uploadedDate": "2021-12-03T15:49:19.311Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RuntimeAudioImporter_featured-894x488-6057d7f91bd0f47370160675af7378da.png",
+      "md5": "6057d7f91bd0f47370160675af7378da",
+      "width": 894,
+      "height": 488,
+      "size": 27319,
+      "uploadedDate": "2021-12-04T14:42:45.488Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/regularappr-1920x1080-75181b3755519e269f00468c052ad049_Snapshot.jpg",
+      "md5": "5add4e44f56c3b4e2bad20a883172db3",
+      "width": 150,
+      "height": 74,
+      "size": 5398,
+      "uploadedDate": "2023-01-08T06:38:55.127Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/streamingappr-1920x1080-c6a587207f219c9a9f118787b8a26148_Snapshot.jpg",
+      "md5": "c75661d0f30b0adea46a9d0bf63fb409",
+      "width": 150,
+      "height": 74,
+      "size": 6316,
+      "uploadedDate": "2023-01-08T06:38:55.940Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bigexampleshow-1920x1080-734d711d35d37c3f2f006e1fbb6b0476_Snapshot.jpg",
+      "md5": "729723e85c07bdb5cc1e41bc47c5a704",
+      "width": 150,
+      "height": 74,
+      "size": 3556,
+      "uploadedDate": "2022-10-16T11:09:29.930Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/verybigexampleshow-1920x1080-46580a0828f5c76370b4848ecbf22658_Snapshot.jpg",
+      "md5": "316c694f36253a06e1f9bd732559620b",
+      "width": 150,
+      "height": 74,
+      "size": 6742,
+      "uploadedDate": "2022-10-15T15:59:13.676Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bigexampleshow-1920x1080-d6a1f032a2b3c2f71d39019796228c74_Snapshot.jpg",
+      "md5": "b8ae4106fc14b7ef1a8c491e243f801d",
+      "width": 150,
+      "height": 74,
+      "size": 3369,
+      "uploadedDate": "2022-10-15T15:41:59.407Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/newRAI1920x1080-1920x1080-677af9e1c5e84e1a6d449f3beb31adce_Snapshot.png",
+      "md5": "82c1f0dc37f76d174552139508454093",
+      "width": 150,
+      "height": 74,
+      "size": 6727,
+      "uploadedDate": "2022-09-18T17:20:09.169Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/marketim-1920x1080-3535048d08417a67b0566e5132b4e25f_Snapshot.jpg",
+      "md5": "cd608e5e57e42337d9831bb2ef5c553a",
+      "width": 150,
+      "height": 74,
+      "size": 7122,
+      "uploadedDate": "2022-05-11T04:51:20.562Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/raiexample-1920x1080-f59c388fd34032a74d63fd9818120388_Snapshot.jpg",
+      "md5": "79299f13ce7762259c782fc989972107",
+      "width": 150,
+      "height": 74,
+      "size": 6889,
+      "uploadedDate": "2022-05-02T05:04:29.973Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/marketplaceexampleruntimetwo-1920x1080-dbade319c6761a82c537cfe029a96ec2_Snapshot.jpg",
+      "md5": "d777afacb2d5a22a19cfa65cb4a584dd",
+      "width": 150,
+      "height": 74,
+      "size": 3675,
+      "uploadedDate": "2022-02-07T08:50:58.959Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/runtimeaudioimportedbigexamples-1920x1080-dccbe398e7ca47ba325f730004eca92a_Snapshot.jpg",
+      "md5": "1ddd3fabc79b13f5af8574f029234dee",
+      "width": 150,
+      "height": 74,
+      "size": 6302,
+      "uploadedDate": "2022-01-30T11:43:14.041Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/runtimeaudioimporterbanner-1920x1080-cb0f1464e5288d8ed53dbdbf9de5d01d_Snapshot.jpg",
+      "md5": "b31969a84a12d1884966e6b1bbee42c3",
+      "width": 150,
+      "height": 74,
+      "size": 2302,
+      "uploadedDate": "2021-12-03T15:45:36.432Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RAWBufferBanner-1920x1080-2ed590193a34b4465981e2f2f1ad6714_Snapshot.jpg",
+      "md5": "5e4977a4ce6cf84c464c71a0151a0ab2",
+      "width": 150,
+      "height": 74,
+      "size": 3017,
+      "uploadedDate": "2021-11-29T07:54:26.465Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/nodespreview1-1920x1080-ca177482be09d13f3bc69810bbbfe539_Snapshot.jpg",
+      "md5": "46ad1dbd0d90835f3d430c87a033852b",
+      "width": 150,
+      "height": 74,
+      "size": 5560,
+      "uploadedDate": "2021-09-08T11:21:18.363Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/nodespreview-1920x1080-513a4eb1843ad29d6c1a2bfef583495e_Snapshot.jpg",
+      "md5": "ba108ac6d2c8742df30dfaa08b553d9f",
+      "width": 150,
+      "height": 74,
+      "size": 5558,
+      "uploadedDate": "2021-09-08T11:19:21.371Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/imgformarketplace-1920x1080-1f375fa06d776a0537e08b452d8e27cb_Snapshot.png",
+      "md5": "6bb163b3252b6dd0a0abf97d526e18ad",
+      "width": 150,
+      "height": 74,
+      "size": 4005,
+      "uploadedDate": "2021-03-18T09:43:31.488Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bigimage-1920x1080-b8cb279bbefaadcb19d7165aeab31a06_Snapshot.png",
+      "md5": "cf93bffc679b037d0c8deb898d1f98a1",
+      "width": 150,
+      "height": 74,
+      "size": 4352,
+      "uploadedDate": "2021-03-03T09:32:13.095Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/nodessamples-1920x1080-60431b04f8b3ab57e39dc3ec3bd6cb7a_Snapshot.png",
+      "md5": "eb26d788d21db6c882b5bbbc7831d846",
+      "width": 150,
+      "height": 74,
+      "size": 2919,
+      "uploadedDate": "2021-01-02T08:02:49.932Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bigimg-1920x1080-6f08c8208b4cb5f5a9a97c68d32ebe51_Snapshot.jpg",
+      "md5": "421c53cccbec04d1cf661b324a6675bf",
+      "width": 150,
+      "height": 74,
+      "size": 2271,
+      "uploadedDate": "2020-12-29T11:10:45.376Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/secondimagebasic-1920x1080-80760f08e3cdcc9e851cbb53c3cb568a_Snapshot.png",
+      "md5": "5a7d3ef73991e7aba2137c1f42f28fa5",
+      "width": 150,
+      "height": 74,
+      "size": 5894,
+      "uploadedDate": "2020-12-17T15:02:28.244Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/firstimagebp-1920x1080-1e6875d7ef4deecd808bd0fbac65a0c8_Snapshot.png",
+      "md5": "2e25d4e1ea95c7e573f9e8fe980e2760",
+      "width": 150,
+      "height": 74,
+      "size": 2686,
+      "uploadedDate": "2020-12-17T15:02:28.597Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x10802new-1920x1080-80760f08e3cdcc9e851cbb53c3cb568a_Snapshot.png",
+      "md5": "5a7d3ef73991e7aba2137c1f42f28fa5",
+      "width": 150,
+      "height": 74,
+      "size": 5894,
+      "uploadedDate": "2020-12-13T08:46:13.681Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x10802-1920x1080-7de9260ec5760cb7490c9217d15b380d_Snapshot.png",
+      "md5": "05c19d725d26d11be7512e665b44f416",
+      "width": 150,
+      "height": 74,
+      "size": 5934,
+      "uploadedDate": "2020-12-11T15:40:02.850Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x10801-1920x1080-1e6875d7ef4deecd808bd0fbac65a0c8_Snapshot.png",
+      "md5": "2e25d4e1ea95c7e573f9e8fe980e2760",
+      "width": 150,
+      "height": 74,
+      "size": 2686,
+      "uploadedDate": "2020-12-11T15:40:03.253Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-12-17T13:52:41.827Z",
+  "lastModifiedDate": "2025-02-28T08:35:32.741Z",
+  "customAttributes": {},
+  "entitlementName": "9835be4014214c8691bb4a95b6462e6b",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "c5db9af34417412c9011344d33c105fb",
+      "appId": "RuntimeAudioImporter_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-12-11T00:00:00.000Z",
+      "releaseNote": "Adding \"GetAudioHeaderInfoFromFile\" and \"GetAudioHeaderInfoFromBuffer\" functions for getting basic information about audio",
+      "versionTitle": "RuntimeAudioImporter 4.25"
+    },
+    {
+      "id": "7025ef0a80dc43b39cf9172187e7016c",
+      "appId": "RuntimeAudioImporter_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "iOS",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2020-12-13T00:00:00.000Z",
+      "releaseNote": "Adding \"GetAudioHeaderInfoFromFile\" and \"GetAudioHeaderInfoFromBuffer\" functions for getting basic information about audio",
+      "versionTitle": "RuntimeAudioImporter 4.26"
+    },
+    {
+      "id": "9d2ca4f7d23c4ce19f4ae96dd9136fbe",
+      "appId": "RuntimeAudioImporter_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "iOS",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2021-08-21T00:00:00.000Z",
+      "releaseNote": "Fix the pre-imported sound factory to proceed properly with creating an asset",
+      "versionTitle": "RuntimeAudioImporter 4.27.0"
+    },
+    {
+      "id": "77bea23431884fcf80dc99cb4c5909d3",
+      "appId": "RuntimeAudioImporter_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "Append audio data to the streaming sound wave using the audio thread instead of the background thread to maintain the sequence",
+      "versionTitle": "RuntimeAudioImporter 5.0"
+    },
+    {
+      "id": "88f7f710243c4774a6e7ebdc735c24e5",
+      "appId": "RuntimeAudioImporter_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "iOS",
+        "Linux",
+        "Android",
+        "Mac"
+      ],
+      "dateAdded": "2022-12-11T00:00:00.000Z",
+      "releaseNote": "FRuntimeBulkDataBuffer hotfix",
+      "versionTitle": "RuntimeAudioImporter 5.1"
+    },
+    {
+      "id": "3baa8f568b5d4b648373f88d7744c427",
+      "appId": "RuntimeAudioImporter_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "Disable Android permissions handling on Apple platforms",
+      "versionTitle": "RuntimeAudioImporter 5.2"
+    },
+    {
+      "id": "231b5aca357b4dcf804d6d366e39fec0",
+      "appId": "RuntimeAudioImporter_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Linux",
+        "iOS",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "Disable Android permissions handling on Apple platforms",
+      "versionTitle": "RuntimeAudioImporter 5.3"
+    },
+    {
+      "id": "a0076a06a96b48bb97350d1ba8ce9d96",
+      "appId": "RuntimeAudioImporter_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Linux",
+        "iOS",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2024-04-27T00:00:00.000Z",
+      "releaseNote": "Disable Android permissions handling on Apple platforms",
+      "versionTitle": "RuntimeAudioImporter 5.4"
+    }
+  ],
+  "developer": "Georgy Dev",
+  "developerId": "o-4lh62cwwn79qkb9yvqadtwsx72bdy3",
+  "endOfSupport": false,
+  "unsearchable": false
+}

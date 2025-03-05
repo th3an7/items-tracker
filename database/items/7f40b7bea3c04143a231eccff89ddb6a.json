@@ -1,0 +1,491 @@
+{
+  "id": "7f40b7bea3c04143a231eccff89ddb6a",
+  "title": "HTTP Blueprint WebCommunication",
+  "description": "HTTP Communication with Web server over Blueprints. Use GET or POST. File Upload and File Download. Login or authenticate. PHP. Get your own external IP.",
+  "longDescription": "<p><a href=\"https://www.virtualbird.de/ue4Doku/WebCommunication/\" rel=\"nofollow\">Documentation</a></p><p><br /></p><p>Communicate with a Webserver via Blueprints. You can send Data to a HTTP or HTTPS Webserver via GET or POST and get a String Array back. Each Line in the Server Response is one Array Value. Since Version 1.2 File Upload support. I recommend my <a href=\"https://www.unrealengine.com/marketplace/jsonparser\" rel=\"nofollow\">JSON plugin</a> for data communication. You don&#39;t need C&#43;&#43;.</p><p>Third-party websites may have security mechanisms (Captchas, Cookies) to block plugins like this. Check this beforehand or use your own server. Exceptions to this rule are HTTP/HTTPS APIs which are provided for this purpose. But Google Drive (Download) is since Version 1.8 supported. Tested on:<strong> </strong>Windows 10, Android 9 (Redmi Note 8T). IOS 12.1.2 (iPhone 5s)</p><p>I don&#39;t like special sales. My prices are low all year round. </p><p>Nativization may cause problems and should be disabled in BPs that use this plugin.</p><p><br /></p><p>Simple GET,POST,Download,Upload UMG Demo. <a href=\"https://www.virtualbird.de/ue4Doku/WebCommunication/stuff/demo.png\" rel=\"nofollow\">Screenshot</a> , <a href=\"https://www.virtualbird.de/ue4Doku/WebCommunication/stuff/WebComDemoWin64v1.3.zip\" rel=\"nofollow\">Win64 Demo</a> , <a href=\"https://www.virtualbird.de/ump/WebComDemov1.0.zip\" rel=\"nofollow\">UE4.21</a>, <a href=\"https://www.virtualbird.de/ue4Doku/WebCommunication/stuff/WebComDemov1.1.zip\" rel=\"nofollow\">UE4.25</a> ,<a href=\"https://www.virtualbird.de/ue4Doku/WebCommunication/stuff/WebComDemov1.3.zip\" rel=\"nofollow\">UE4.26</a> (and higher), <a href=\"https://www.virtualbird.de/ue4Doku/WebCommunication/stuff/WebComDemov1.4_UE5.2.zip\" rel=\"nofollow\">UE5.2</a> (and higher) Project Demo</p><p><br /></p><p><strong><u>Changelog</u> </strong>(5.2, 5.3, 5.4)</p><ul><li>(08/05/2024) Version 2.14: Stability improvements for the async nodes.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(5.2, 5.3, 5.4)</p><ul><li>(05/16/2024) Version 2.13: Changed the File ID parameter of the Multiupload functions from String to String Array.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(5.1, 5.2, 5.3)</p><ul><li>(03/19/2024) Version 2.12: Bugfix: Under certain circumstances the wrong error number 500 was returned.</li><li>(12/02/2023) Version 2.11: All requests can now be canceled, not just download/upload. The &#34;Individual request&#34; function can now also trigger the progress events. </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(5.0, 5.1, 5.2)</p><ul><li>(07/17/2023) Version 2.10: Bugfix: Header Map was not correctly passed to the GET function.</li><li>(06/26/2023) Version 2.9: There are now &#34;Multiple Upload&#34; functions to upload multiple files at once. Added new function to split files. More errors are now reported via the functions instead of just writing them in the logs.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.27, 5.0, 5.1)</p><ul><li>(04/14/2023) Version 2.8: New event &#34;Server Send Event&#34; added. This allows to receive push messages from an http server. </li><li>(03/27/2023) Version 2.7: Return values now additionally consist of a string next to the string array. The upload function now also has these return values.</li><li>(03/10/2023) Version 2.6: Bugfix: Plugin could not be compiled under Linux.</li><li>(01/15/2023) Version 2.5: Bugfix: The &#34;Content length&#34; was calculated incorrectly in the individual request function if UTF-8 characters were present in it.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.26, 4.27, 5.0)</p><ul><li>(09/26/2022) Version 2.4: New: A function that determines the mimetype. Bugfix: Cross compiling should work now.</li><li>(09/08/2022) Version 2.3: Bugfix: Some Google Drive links could lead to a crash.</li><li>(09/06/2022) Version 2.2: &#34;StringToBase64String&#34; and &#34;Base64StringToString&#34; functions added.</li><li>(08/28/2022) Version 2.1: Upload compatibility increased. Fixed a bug that prevented compiling under Linux UE5.</li><li>(08/10/2022) Version 2.0: The HTTP requests can now be executed via <a href=\"https://www.virtualbird.de/ue4Doku/WebCommunication/stuff/async1.png\" rel=\"nofollow\">AsycNodes</a>. Is easier and cleaner. The individual HTTP node now has the possibility to specify a file as content.</li><li>(05/13/2022) Version 1.26: In the &#34;individual http request&#34; function it is now checked if the header &#34;Content-Type&#34; is present.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.25, 4.26, 4.27)</p><ul><li>(03/14/2022) Version 1.25: Each HTTP function now has a header parameter. Added 3 PUT stream upload options. This allows to upload very large files without loading them into RAM first. See documentation.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.24, 4.25, 4.26)</p><ul><li>(08/10/2021) Version 1.24: Fixed a bug in the GETDownload function.</li><li>(03/14/2021) Version 1.23: The &#34;onHttpRequestComplete&#34; event now also returns the server headers.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.23, 4.24, 4.25)</p><ul><li>(08/18/2020) Version 1.21: &#34;Low RAM&#34; download Node is now partly 64 bit to make downloads larger than 2GB possible.</li></ul>",
+  "technicalDetails": "<p><sup>Epic only allows updates for the newest three engine versions. There might be features missing in older engine versions. Contact me if you are unsure.</sup></p><p><br /></p><ul><li>POST and GET Requests</li><li>HTTP and HTTPS</li><li>File Upload and Download (Large files possible)*</li><li>Google Drive(Download) support</li><li>Individual Headers and custom HTTP Requests</li><li>Create a login and authenticate via <strong>your own</strong> web server</li><li>Get your own external IP over http://checkip.amazonaws.com or your own Web server</li><li>Different directory and file <a href=\"https://www.virtualbird.de/ue4Doku/WebCommunication/stuff/fileFunctions.png\" rel=\"nofollow\">blueprint nodes</a>.</li><li>Asynchronous Background Task (Don&#39;t affect game performance)</li><li>Include C&#43;&#43; Source for C&#43;&#43; Projects</li><li><a href=\"https://www.virtualbird.de/ue4Doku/WebCommunication/\" rel=\"nofollow\">Documentation </a></li><li>Support: <a href=\"mailto:unrealmarketplace&#64;virtualbird.de\" rel=\"nofollow\">unrealmarketplace&#64;virtualbird.de</a> (ENG,GER)</li></ul><p><sup>*See documentation for highest download speed.</sup> <sup>Download resume is possible. There are also special functions to download/upload large files with low RAM consumption. Use only direct links for Downloads like www.myWebserver.com/download.zip. Links that use authentication, cookies, redirection or similar (Dropbox) may not work.</sup></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/asyncGET1-1920x1080-eb8b05fa407d6ac0f8f027250c2ba89c.png",
+      "md5": "eb8b05fa407d6ac0f8f027250c2ba89c",
+      "width": 1920,
+      "height": 1080,
+      "size": 122999,
+      "uploadedDate": "2022-08-12T19:06:48.037Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/asyncPOST1-1920x1080-6f57b4e5f462f2f0b9c6684c363ade2a.png",
+      "md5": "6f57b4e5f462f2f0b9c6684c363ade2a",
+      "width": 1920,
+      "height": 1080,
+      "size": 138090,
+      "uploadedDate": "2022-08-12T19:06:48.258Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/asyncIndividual1-1920x1080-77f5231698f1c0401c1c3d03a386216f.png",
+      "md5": "77f5231698f1c0401c1c3d03a386216f",
+      "width": 1920,
+      "height": 1080,
+      "size": 90025,
+      "uploadedDate": "2022-08-12T19:06:48.418Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/asyncDownload2-1920x1080-5e8ad6c0ced7bf66d1a300acf9cb0675.png",
+      "md5": "5e8ad6c0ced7bf66d1a300acf9cb0675",
+      "width": 1920,
+      "height": 1080,
+      "size": 183271,
+      "uploadedDate": "2022-08-12T19:06:48.610Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/asyncUpload2-1920x1080-add23cf25f824448a264f54cbd844899.png",
+      "md5": "add23cf25f824448a264f54cbd844899",
+      "width": 1920,
+      "height": 1080,
+      "size": 195441,
+      "uploadedDate": "2022-08-12T19:06:48.823Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/HTTPBlueprintWebCommunication_thumb-284x284-b6d6f0b40f6d2ee58c02049502ae9f03.png",
+      "md5": "b6d6f0b40f6d2ee58c02049502ae9f03",
+      "width": 284,
+      "height": 284,
+      "size": 50034,
+      "uploadedDate": "2017-11-14T16:19:36.020Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/HTTPBlueprintWebCommunication_featured-894x488-0f4c708db0589cfbdcc222ad1c419227.png",
+      "md5": "0f4c708db0589cfbdcc222ad1c419227",
+      "width": 894,
+      "height": 488,
+      "size": 144237,
+      "uploadedDate": "2017-11-14T16:19:36.176Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asyncGET1-1920x1080-eb8b05fa407d6ac0f8f027250c2ba89c_Snapshot.png",
+      "md5": "6b9941da6d43cce0870b7ab7b9155fef",
+      "width": 150,
+      "height": 74,
+      "size": 3502,
+      "uploadedDate": "2022-08-12T19:06:48.108Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asyncPOST1-1920x1080-6f57b4e5f462f2f0b9c6684c363ade2a_Snapshot.png",
+      "md5": "bf556cf84131b1bc0ae965e65d91296d",
+      "width": 150,
+      "height": 74,
+      "size": 3901,
+      "uploadedDate": "2022-08-12T19:06:48.331Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asyncIndividual1-1920x1080-77f5231698f1c0401c1c3d03a386216f_Snapshot.png",
+      "md5": "bb7ec69d7703c8bddb979722239f8353",
+      "width": 150,
+      "height": 74,
+      "size": 2628,
+      "uploadedDate": "2022-08-12T19:06:48.499Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asyncDownload2-1920x1080-5e8ad6c0ced7bf66d1a300acf9cb0675_Snapshot.png",
+      "md5": "f14b20e4c8ded581037ad641ca74c17c",
+      "width": 150,
+      "height": 74,
+      "size": 4698,
+      "uploadedDate": "2022-08-12T19:06:48.687Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asyncUpload2-1920x1080-add23cf25f824448a264f54cbd844899_Snapshot.png",
+      "md5": "4b2c0018c89dd21daed50ce622500baa",
+      "width": 150,
+      "height": 74,
+      "size": 4387,
+      "uploadedDate": "2022-08-12T19:06:48.894Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/invidual3-1920x1080-ab1ac641eafbb0390ccbd562e9562fa0_Snapshot.png",
+      "md5": "dd3c22348f3fd489b1a7447c98303f8e",
+      "width": 150,
+      "height": 74,
+      "size": 5900,
+      "uploadedDate": "2019-06-20T21:58:40.795Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/invidual3-1920x1080-b227d78e235f384706b7ae2439cd902a_Snapshot.png",
+      "md5": "40177ff4b191b8375b50664801aca91c",
+      "width": 150,
+      "height": 74,
+      "size": 5828,
+      "uploadedDate": "2019-06-20T21:53:56.944Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GetAndPost18-1920x1080-40372cfd84e739c1162e2ed87d440a22_Snapshot.png",
+      "md5": "da22fb794eb505b4f450d2307f6ceb2f",
+      "width": 150,
+      "height": 74,
+      "size": 6719,
+      "uploadedDate": "2018-09-21T17:48:18.013Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/new18-1920x1080-176b826884ab5f6576232bec24fe71dc_Snapshot.png",
+      "md5": "a8f02a55fc67ec0a4ca88336117e4431",
+      "width": 150,
+      "height": 74,
+      "size": 5304,
+      "uploadedDate": "2018-09-21T17:48:18.322Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/anonfiles-1920x1080-0e2cce516dfab8e530fdf63e83ff7d1c_Snapshot.png",
+      "md5": "78b4a23b70a562cfef6a7d1ba8bc6c6a",
+      "width": 150,
+      "height": 74,
+      "size": 10379,
+      "uploadedDate": "2018-09-21T17:48:18.603Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/php-1920x1080-1a2738d62878b8bc50b0de7d0d006250_Snapshot.png",
+      "md5": "9eebdba009938b875431812bfe91f4ae",
+      "width": 150,
+      "height": 74,
+      "size": 5492,
+      "uploadedDate": "2018-06-04T23:38:40.001Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2017-10-03T10:12:42.216Z",
+  "lastModifiedDate": "2025-01-04T14:21:24.964Z",
+  "customAttributes": {},
+  "entitlementName": "7f40b7bea3c04143a231eccff89ddb6a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "40e3432c24eb41b19d29433e9e97f6f3",
+      "appId": "WebCommunication_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2017-10-03T10:12:42.190Z",
+      "releaseNote": "",
+      "versionTitle": "WebCommunication15416"
+    },
+    {
+      "id": "d3cd42ba7df4412abd9565bc6f29a038",
+      "appId": "WebCommunication_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2017-10-03T10:12:42.190Z",
+      "releaseNote": "",
+      "versionTitle": "WebCommunication16417"
+    },
+    {
+      "id": "29dc87d0fff54753b2fc645651507c3d",
+      "appId": "WebCommunication_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2017-10-17T00:00:00.000Z",
+      "releaseNote": "Relativ Upload Bugfix",
+      "versionTitle": "WebCommunication110418"
+    },
+    {
+      "id": "687c3d7c48c44bb08672c8e93c5a6748",
+      "appId": "WebCommunication_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Linux",
+        "Mac",
+        "iOS"
+      ],
+      "dateAdded": "2018-03-28T00:00:00.000Z",
+      "releaseNote": "Relativ Upload Bugfix",
+      "versionTitle": "WebCommunication110419"
+    },
+    {
+      "id": "6cdc7c829de24d1897aad6785114bbbb",
+      "appId": "WebCommunication_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Win32"
+      ],
+      "dateAdded": "2018-07-20T00:00:00.000Z",
+      "releaseNote": "Download in parts.",
+      "versionTitle": "WebCommunication130420"
+    },
+    {
+      "id": "f13d268c08c24bafa4d8b66bdd386d9e",
+      "appId": "WebCommunication_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Linux",
+        "Android",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-08T00:00:00.000Z",
+      "releaseNote": "New File Functions.",
+      "versionTitle": "WebCommunication117421"
+    },
+    {
+      "id": "a2e35d850e1143d4bd9a9f2319cd9148",
+      "appId": "WebCommunication_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Android"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "Performance and stability improvements.",
+      "versionTitle": "WebCommunication118422"
+    },
+    {
+      "id": "b42f48c0704e4334871f9f81a4608748",
+      "appId": "WebCommunication_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2019-09-09T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "WebCommunication122423"
+    },
+    {
+      "id": "e166de720b6c44598411094c7fe807ac",
+      "appId": "WebCommunication_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-12-20T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "WebCommunication124424"
+    },
+    {
+      "id": "4346c84884f54645bb6ae1491ed0a8e0",
+      "appId": "WebCommunication_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-05-06T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "WebCommunication125425"
+    },
+    {
+      "id": "9fc8d111c31f4ab9ad1f3ba112a58fd5",
+      "appId": "WebCommunication_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WebCommunication_204_426"
+    },
+    {
+      "id": "6493bd4f504e46b9aeb945b342c1bf14",
+      "appId": "WebCommunication_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WebCommunication_208_427"
+    },
+    {
+      "id": "7fa7cd2b84c44fc3a2d1403863ee7628",
+      "appId": "WebCommunication_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WebCommunication_210_500"
+    },
+    {
+      "id": "5879d23c53154278bddd8cd7d5175c8e",
+      "appId": "WebCommunication_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2022-11-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WebCommunication_212_510"
+    },
+    {
+      "id": "2e3fd9bee04049568eb7640e5643bc9c",
+      "appId": "WebCommunication_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WebCommunication_214_520"
+    },
+    {
+      "id": "882e9adf3e3f4ff59e75b10e3bae3c11",
+      "appId": "WebCommunication_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WebCommunication_214_530"
+    },
+    {
+      "id": "fb352e6f71b24dc089952bc9fa943872",
+      "appId": "WebCommunication_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WebCommunication_214_540"
+    }
+  ],
+  "developer": "Virtualbird UG",
+  "developerId": "o-5bc5ba8cdd4200a6e086d8c602bbf7",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

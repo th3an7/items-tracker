@@ -1,0 +1,293 @@
+{
+  "id": "e8a10c1897eb47b0acaf10f507813b36",
+  "title": "Positioning Manager - Separated NPCs' Position Slots",
+  "description": "Positioning Manager plugin allows separation between AI/enemies preventing them from being too squeezed. Separation between AI is achieved by acquiring EQS based position slots, which are then managed by the positioning plugin.",
+  "longDescription": "<p>&#x1f3ac; <a href=\"https://youtu.be/TnArf-XydUA\" rel=\"nofollow\">Overview Video</a></p><p>&#x1f393; <a href=\"https://docs.google.com/document/d/1W7fRkJ6lbI-XWpQwU4GESt8x7CbFLQzHRFFPmiPVuN8/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p>❓ <a href=\"https://discord.gg/JXU64Rr7kg\" rel=\"nofollow\">Have a question? Would you like to request new features or report a bug? Join Discord community</a></p><p><br /></p><p>Positioning Manager plugin allows users to create separation between NPCs&#39; target locations, which prevents them from being too squeezed. Separation between AIs is achieved by acquiring EQS based position slots, which are then managed by the positioning plugin. At the same time one position slot can be only acquired by one NPC, which means each spot provides a free area spot for its owner. <strong>While the plugin prevents NPCs&#39; target locations from being too close to each other, it does not prevent NPCs from bumping into each other while moving towards their acquired position slot. </strong>The process of searching for the valid position slot is purely based on user defined Environment Query System queries. This means that any currently existing EQS template can be easily adopted to support slot acquiring mechanisms by simply adding position slot filtering EQS test provided with the plugin. Users can also define parameters for each slot separately, making slots customizable and adjustable.</p><p>The plugin includes built-in blackboard and behavior tree integration, which allows using token’s logic inside the behavior tree based AI decision making process. Usage of the plugin is not restricted solely to behavior trees, as all of the provided functions are available from everywhere in the project thanks to the static methods implemented inside the PositioningSubsystem world subsystem</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Blueprints and C&#43;&#43; support</li><li>Implemented fully in C&#43;&#43; with core functionality provided using Developer Settings, World Subsystem and Environment Query System</li><li>Position Slot search based on standard EQS generators and tests</li><li>Provides easy to add EQS Test introducing Position Slot Acquiring mechanism to any existing EQS Query</li><li>Gives ability to filter requested position slots using configurable slot types</li><li>No Tick function used</li><li>No replication/network support</li><li>Out of the box behavior tree integration and easy to integrate with other decision making systems</li><li>Built-in debugging tool</li></ul><p><br /></p><p>Number of C&#43;&#43; Classes: 7</p><p>Supported Development Platforms: [Windows 64-bit]</p><p>Supported Target Build Platforms: [Windows 64-bit, MacOS, iOS, Android, Nintendo Switch, Playstation 4/5, Xbox One/Series]</p><p>Code Modules: [PositioningManagerPlugin(Runtime)]</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/positioningmanagermain-1920x1080-d619548402ae8b42248afbe8062edcf2.png",
+      "md5": "d619548402ae8b42248afbe8062edcf2",
+      "width": 1920,
+      "height": 1080,
+      "size": 656771,
+      "uploadedDate": "2024-02-17T20:16:57.409Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/eqs-1920x1080-13bd6bea8a15d58c25034dbc2ed199a2.png",
+      "md5": "13bd6bea8a15d58c25034dbc2ed199a2",
+      "width": 1920,
+      "height": 1080,
+      "size": 201350,
+      "uploadedDate": "2024-02-13T20:09:51.192Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/behaviortreesupport-1920x1080-fe28252c3f4a7c51fc824c69bf925e16.png",
+      "md5": "fe28252c3f4a7c51fc824c69bf925e16",
+      "width": 1920,
+      "height": 1080,
+      "size": 224561,
+      "uploadedDate": "2024-02-13T20:15:05.830Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Settings-1920x1080-26618f62ffbb3bc7ba0a2038f9a5cace.png",
+      "md5": "26618f62ffbb3bc7ba0a2038f9a5cace",
+      "width": 1920,
+      "height": 1080,
+      "size": 117067,
+      "uploadedDate": "2024-02-13T20:05:56.718Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/subsystemfunctions-1920x1080-dfc3fdf51ae2f31481d6ec05cca58fb3.png",
+      "md5": "dfc3fdf51ae2f31481d6ec05cca58fb3",
+      "width": 1920,
+      "height": 1080,
+      "size": 425667,
+      "uploadedDate": "2024-03-13T19:36:52.868Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/debugger-1920x1080-5543eab9f157eb02c79113ce49514445.png",
+      "md5": "5543eab9f157eb02c79113ce49514445",
+      "width": 1920,
+      "height": 1080,
+      "size": 2279873,
+      "uploadedDate": "2024-02-13T19:55:09.683Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PositioningManagerSeparatedNPCsPositionSlots_thumb-284x284-6ef9d12f8d7133c81573725e4a3a0d79.png",
+      "md5": "6ef9d12f8d7133c81573725e4a3a0d79",
+      "width": 284,
+      "height": 284,
+      "size": 83560,
+      "uploadedDate": "2024-02-17T20:16:57.751Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PositioningManagerSeparatedNPCsPositionSlots_featured-894x488-82cecb77719866d4f96e26d552f5ce22.png",
+      "md5": "82cecb77719866d4f96e26d552f5ce22",
+      "width": 894,
+      "height": 488,
+      "size": 259738,
+      "uploadedDate": "2024-02-17T20:16:57.878Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/subsystemfunctions-1920x1080-dfc3fdf51ae2f31481d6ec05cca58fb3_Snapshot.png",
+      "md5": "7d9a71376d61c427d303b96913d6f369",
+      "width": 150,
+      "height": 74,
+      "size": 6344,
+      "uploadedDate": "2024-03-13T19:36:53.155Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/subsystemfunctions-1920x1080-e8abfc98fcdc3dc805ff8a3a58740f20_Snapshot.png",
+      "md5": "0180f9a65a3ecef024bb85c17dc67694",
+      "width": 150,
+      "height": 74,
+      "size": 5958,
+      "uploadedDate": "2024-02-20T20:23:02.311Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/positioningmanagermain-1920x1080-d619548402ae8b42248afbe8062edcf2_Snapshot.png",
+      "md5": "902f689103a5365086b7cfec2bfab674",
+      "width": 150,
+      "height": 74,
+      "size": 8018,
+      "uploadedDate": "2024-02-17T20:16:57.691Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/subsystemfunctions-1920x1080-9a96560228325e7a5bd1c17978cac9a6_Snapshot.png",
+      "md5": "5918226f48528cd0e030cdcf43e957f8",
+      "width": 150,
+      "height": 74,
+      "size": 5925,
+      "uploadedDate": "2024-02-13T20:28:48.741Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/behaviortreesupport-1920x1080-fe28252c3f4a7c51fc824c69bf925e16_Snapshot.png",
+      "md5": "f89dc9ba4a10d20fab2905de7adc4067",
+      "width": 150,
+      "height": 74,
+      "size": 5259,
+      "uploadedDate": "2024-02-13T20:15:06.042Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/eqs-1920x1080-13bd6bea8a15d58c25034dbc2ed199a2_Snapshot.png",
+      "md5": "bdd437a3bcfefa7c6cbabce34d744abb",
+      "width": 150,
+      "height": 74,
+      "size": 5175,
+      "uploadedDate": "2024-02-13T20:09:51.430Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings-1920x1080-26618f62ffbb3bc7ba0a2038f9a5cace_Snapshot.png",
+      "md5": "d103c9bbc6c634e5c63285601bbcc65c",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2024-02-13T20:05:56.952Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/eqs-1920x1080-a94830679441d1ee65178b906351a04d_Snapshot.png",
+      "md5": "63c2a2aa5febbcfe26046edde380fc4c",
+      "width": 150,
+      "height": 74,
+      "size": 4746,
+      "uploadedDate": "2024-02-13T19:59:02.246Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/debugger-1920x1080-5543eab9f157eb02c79113ce49514445_Snapshot.png",
+      "md5": "219e145964845af8107704fc438b43b2",
+      "width": 150,
+      "height": 74,
+      "size": 6568,
+      "uploadedDate": "2024-02-13T19:55:10.021Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/debugger-1920x1080-5543eab9f157eb02c79113ce49514445_Snapshot.png",
+      "md5": "219e145964845af8107704fc438b43b2",
+      "width": 150,
+      "height": 74,
+      "size": 6568,
+      "uploadedDate": "2024-02-13T19:34:29.633Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/positioningmanagermain-1920x1080-8b0fd810f5a6d94ba0fbe17e4ee1df6e_Snapshot.png",
+      "md5": "939c13941406531486e69cb264c08e9c",
+      "width": 150,
+      "height": 74,
+      "size": 8023,
+      "uploadedDate": "2024-02-12T18:27:57.784Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TMfunctionsbackground-1920x1080-5e6bb7e509f17960d182f59e69caa095_Snapshot.png",
+      "md5": "17b9b69f8e1a8339b8da586dc54bad7f",
+      "width": 150,
+      "height": 74,
+      "size": 4843,
+      "uploadedDate": "2024-02-04T08:13:46.443Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-04-04T10:53:04.302Z",
+  "lastModifiedDate": "2024-12-09T12:04:27.332Z",
+  "customAttributes": {
+    "promotionalContent": {
+      "type": "STRING",
+      "value": "false"
+    }
+  },
+  "entitlementName": "e8a10c1897eb47b0acaf10f507813b36",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "88bf9f37c35349d482a70632f35d9d88",
+      "appId": "PositioningManagerPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2024-03-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_5_1_V_1_0"
+    },
+    {
+      "id": "7e00675dd4c748efbc87ef0e335e5e09",
+      "appId": "PositioningManagerPlugin_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2024-03-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_5_2_V_1_0"
+    },
+    {
+      "id": "cf15b6d797cc4b359cff0bcd2d44ec53",
+      "appId": "PositioningManagerPlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2024-02-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_5_3_V_1_0"
+    },
+    {
+      "id": "751addc16cfe4af09d7c2ea807b6e782",
+      "appId": "PositioningManagerPlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_5_4_V_1_0"
+    }
+  ],
+  "developer": "MateoPlugins",
+  "developerId": "o-xw79dc9r4z2kbg45k5hk74hqf9c6nm",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

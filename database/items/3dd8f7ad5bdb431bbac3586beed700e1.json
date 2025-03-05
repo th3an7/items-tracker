@@ -1,0 +1,397 @@
+{
+  "id": "3dd8f7ad5bdb431bbac3586beed700e1",
+  "title": "Enhanced Data Tables",
+  "description": "Adds multiple data tables with extended functionality, including a data table that allows you to add development-only rows that are not included in shipping and test builds, and a data table that generates enum-compliant rows.",
+  "longDescription": "<p>The following enhanced data table assets will be added.</p><p><br /></p><p>・Development Data Table</p><p>Allows you to add development-only row data that is deleted during shipping builds and test builds.</p><p>This is useful if you want to create debugging data that is valid only in the development environment.</p><p>Development-only row data will not be cooked in shipping and test builds.</p><p><br /></p><p>・Enum Based Data Table</p><p>Based on an enumeration that specifies the enumeration that is the source of the row name and order in addition to the row structure.</p><p>This is useful for creating the kind of data defined in some enumeration type or for making sense of the order of row data.</p><p>Also, when retrieving row data from C&#43;&#43;, row names can be specified as enumerations instead of strings, avoiding problems caused by typos or renaming of rows.</p><p><br /></p><p>・Grouped Data Table</p><p>Allows you to obtain the names and data of multiple rows with the same value based on the group id included in the row structure.</p><p>This is useful when you want to retrieve data in batches from the same id, such as different skins for the same character, or categories of items, etc.</p><p><br /></p><p>・Data Table Row Coloration</p><p>This is a function that allows you to determine the background color and text color of the rows on the editor of the extended data table added by this plugin based on arbitrary conditions such as row name, row data, row number, etc.</p><p>Also, when using C&#43;&#43;, it is also possible to change the image used for the background of the row.</p><p>To change the background color or text color, you need to create a class that inherits from UDataTableRowColoration in C&#43;&#43; or Blueprint and implement the conditions.</p><p><br /></p><p>You can perform the conversion process between each data table, including standard data tables, from the context menu of the content browser.</p><p><br /></p><p>Although it requires the use of C&#43;&#43;, the TDataTableGroupMapper can be used to retrieve the names and data of multiple rows based on the value of a specific property, even for data tables other than grouped data table.</p>",
+  "technicalDetails": "<p>Usage:</p><p>For more information on how to use each enhanced data table asset or feature, please refer to the documentation links in the &#34;Documentation:&#34; section.</p><p>You can also download the shipping build and development build packages for the sample projects from the samples in the same section.</p><p>This does not include plugin code, and the status on the editor should be checked from the images and some test code.</p><p>This allows you to see how this plugin work before purchasing.</p><p><br /></p><p>Code Modules:</p><ul><li>EnhancedDataTables[Runtime]</li><li>EnhancedDataTablesEditor[EditorNoCommandlet]</li><li>EnumViewer[EditorNoCommandlet]</li><li>DataTableConvertActions[EditorNoCommandlet]</li><li>DevelopmentDataTable[Runtime]</li><li>DevelopmentDataTableEditor[EditorNoCommandlet]</li><li>EnumBasedDataTable[Runtime]</li><li>EnumBasedDataTableEditor[EditorNoCommandlet]</li><li>EnumBasedDataTableNodes[UncookedOnly]</li><li>GroupedDataTable[Runtime]</li><li>GroupedDataTableEditor[EditorNoCommandlet]</li><li>GroupedDataTableNodes[UncookedOnly]</li></ul><p><br /></p><p>Supported Development Platforms:</p><p>Windows, Mac, Linux (Runtime module has no platform restrictions)</p><p><br /></p><p>Documentation:</p><p><a href=\"https://github.com/Naotsun19B/EnhancedDataTables-Document\" rel=\"nofollow\">Document</a></p><p><a href=\"https://github.com/Naotsun19B/EnhancedDataTables-Document/releases/tag/Sample\" rel=\"nofollow\">Sample</a></p><p><br /></p><p>Latest Update:</p><ul><li>Added Data Table Row Coloration that allows users to decide the background and text color of each row in the extended data table asset editor using arbitrary conditions</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ContentBrowserContextMenu-1920x1080-780c790bc023d925fd80f84f4dffd052.png",
+      "md5": "780c790bc023d925fd80f84f4dffd052",
+      "width": 1920,
+      "height": 1080,
+      "size": 280144,
+      "uploadedDate": "2023-10-01T12:24:46.286Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DevelopmentDataTableAsset-1920x1080-cd70242c8214d7fa3fc0b3c19acbfa3f.png",
+      "md5": "cd70242c8214d7fa3fc0b3c19acbfa3f",
+      "width": 1920,
+      "height": 1080,
+      "size": 154596,
+      "uploadedDate": "2023-10-01T12:24:46.582Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DevelopmentDataTableNative-1920x1080-4b5124b443e61a2cc8ba1c9ed920b292.png",
+      "md5": "4b5124b443e61a2cc8ba1c9ed920b292",
+      "width": 1920,
+      "height": 1080,
+      "size": 304401,
+      "uploadedDate": "2023-10-01T12:24:46.946Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EnumBasedDataTableAsset-1920x1080-c726c44c3376efda8eed780c8aa0c680.png",
+      "md5": "c726c44c3376efda8eed780c8aa0c680",
+      "width": 1920,
+      "height": 1080,
+      "size": 188487,
+      "uploadedDate": "2023-10-01T12:24:47.319Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EnumBasedDataTableNative-1920x1080-97bf78e162127fc719a2193facdbf1bb.png",
+      "md5": "97bf78e162127fc719a2193facdbf1bb",
+      "width": 1920,
+      "height": 1080,
+      "size": 383056,
+      "uploadedDate": "2023-10-01T12:24:47.622Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GroupedDataTableAsset-1920x1080-6d4e98d98143b3c86d1d63d63feaaf96.png",
+      "md5": "6d4e98d98143b3c86d1d63d63feaaf96",
+      "width": 1920,
+      "height": 1080,
+      "size": 158559,
+      "uploadedDate": "2023-10-01T12:24:47.914Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GroupedDataTableNative-1920x1080-7ae8fbc1ccfbbe71ba8766ad496d7317.png",
+      "md5": "7ae8fbc1ccfbbe71ba8766ad496d7317",
+      "width": 1920,
+      "height": 1080,
+      "size": 287615,
+      "uploadedDate": "2023-10-01T12:24:48.292Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Nodes-1920x1080-5f9430b4314905561a1e61afc4c72474.png",
+      "md5": "5f9430b4314905561a1e61afc4c72474",
+      "width": 1920,
+      "height": 1080,
+      "size": 290070,
+      "uploadedDate": "2023-10-01T12:24:48.631Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EnumBasedDataTableCode-1920x1080-6c24d0d99f665cb3b544e8edd41b7119.png",
+      "md5": "6c24d0d99f665cb3b544e8edd41b7119",
+      "width": 1920,
+      "height": 1080,
+      "size": 366378,
+      "uploadedDate": "2023-10-01T12:24:49.042Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GroupedDataTableCode-1920x1080-a5e4a185c0aacfd14559a143745e1344.png",
+      "md5": "a5e4a185c0aacfd14559a143745e1344",
+      "width": 1920,
+      "height": 1080,
+      "size": 286875,
+      "uploadedDate": "2023-10-01T12:24:49.378Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Plugins-1920x1080-097df345f6ba679b7ec9f090e42683d7.png",
+      "md5": "097df345f6ba679b7ec9f090e42683d7",
+      "width": 1920,
+      "height": 1080,
+      "size": 156596,
+      "uploadedDate": "2023-10-01T12:24:49.745Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DataTableRowColorationSimple-1920x1080-8d7e6d030b2cf0c796c1642d29441ca2.png",
+      "md5": "8d7e6d030b2cf0c796c1642d29441ca2",
+      "width": 1920,
+      "height": 1080,
+      "size": 174985,
+      "uploadedDate": "2024-08-04T07:30:13.539Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DataTableRowColorationSimple-1920x1080-8d7e6d030b2cf0c796c1642d29441ca2_Snapshot.png",
+      "md5": "68101348eb51a8d2afc9771f1d7f5b02",
+      "width": 150,
+      "height": 74,
+      "size": 2795,
+      "uploadedDate": "2024-08-04T07:30:13.803Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DataTableRowColorationComplex-1920x1080-8ea0231b7d5e522c43fb9603b51d7662.png",
+      "md5": "8ea0231b7d5e522c43fb9603b51d7662",
+      "width": 1920,
+      "height": 1080,
+      "size": 576298,
+      "uploadedDate": "2024-08-04T07:30:14.017Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DataTableRowColorationComplex-1920x1080-8ea0231b7d5e522c43fb9603b51d7662_Snapshot.png",
+      "md5": "7940e97137bc3b38a4f97777138ac856",
+      "width": 150,
+      "height": 74,
+      "size": 4009,
+      "uploadedDate": "2024-08-04T07:30:14.269Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DataTableRowColorationCppDefine-1920x1080-57056048757a4572f1b730241287c273.png",
+      "md5": "57056048757a4572f1b730241287c273",
+      "width": 1920,
+      "height": 1080,
+      "size": 352330,
+      "uploadedDate": "2024-08-04T07:30:14.441Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DataTableRowColorationCppDefine-1920x1080-57056048757a4572f1b730241287c273_Snapshot.png",
+      "md5": "68bdf8b1e45c1e08519f847b5936b646",
+      "width": 150,
+      "height": 74,
+      "size": 2257,
+      "uploadedDate": "2024-08-04T07:30:14.719Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DataTableRowColorationCppImplementation-1920x1080-3b6198273117fd34ba4fe8af71622ae8.png",
+      "md5": "3b6198273117fd34ba4fe8af71622ae8",
+      "width": 1920,
+      "height": 1080,
+      "size": 356249,
+      "uploadedDate": "2024-08-04T07:30:14.850Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DataTableRowColorationCppImplementation-1920x1080-3b6198273117fd34ba4fe8af71622ae8_Snapshot.png",
+      "md5": "27dee87cdb7447c349716bf46bc996a8",
+      "width": 150,
+      "height": 74,
+      "size": 2490,
+      "uploadedDate": "2024-08-04T07:30:15.112Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/EnhancedDataTables_thumb-284x284-ebaff08ca8bf74731bc78e35be4577aa.png",
+      "md5": "ebaff08ca8bf74731bc78e35be4577aa",
+      "width": 284,
+      "height": 284,
+      "size": 39923,
+      "uploadedDate": "2023-09-28T10:18:53.200Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/EnhancedDataTables_featured-894x488-1d5f2242673b58662906bf069e754b32.png",
+      "md5": "1d5f2242673b58662906bf069e754b32",
+      "width": 894,
+      "height": 488,
+      "size": 150926,
+      "uploadedDate": "2023-10-06T12:06:06.730Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ContentBrowserContextMenu-1920x1080-780c790bc023d925fd80f84f4dffd052_Snapshot.png",
+      "md5": "01fc088daa402e1d370c7dcea51d9c48",
+      "width": 150,
+      "height": 74,
+      "size": 3817,
+      "uploadedDate": "2023-10-01T12:24:46.482Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DevelopmentDataTableAsset-1920x1080-cd70242c8214d7fa3fc0b3c19acbfa3f_Snapshot.png",
+      "md5": "c228f13affb643078c2713eb78c69e05",
+      "width": 150,
+      "height": 74,
+      "size": 3177,
+      "uploadedDate": "2023-10-01T12:24:46.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DevelopmentDataTableNative-1920x1080-4b5124b443e61a2cc8ba1c9ed920b292_Snapshot.png",
+      "md5": "f131b726ecca35a11d3c3f1b1ee1f787",
+      "width": 150,
+      "height": 74,
+      "size": 3345,
+      "uploadedDate": "2023-10-01T12:24:47.162Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EnumBasedDataTableAsset-1920x1080-c726c44c3376efda8eed780c8aa0c680_Snapshot.png",
+      "md5": "58281dcff6dec104c110cd4ecf692ef6",
+      "width": 150,
+      "height": 74,
+      "size": 3221,
+      "uploadedDate": "2023-10-01T12:24:47.510Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EnumBasedDataTableNative-1920x1080-97bf78e162127fc719a2193facdbf1bb_Snapshot.png",
+      "md5": "9d7a209ad4060b32c0018588a6bc21ee",
+      "width": 150,
+      "height": 74,
+      "size": 3464,
+      "uploadedDate": "2023-10-01T12:24:47.843Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GroupedDataTableAsset-1920x1080-6d4e98d98143b3c86d1d63d63feaaf96_Snapshot.png",
+      "md5": "cef9eeeef24540faa616b01467d69400",
+      "width": 150,
+      "height": 74,
+      "size": 2809,
+      "uploadedDate": "2023-10-01T12:24:48.148Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GroupedDataTableNative-1920x1080-7ae8fbc1ccfbbe71ba8766ad496d7317_Snapshot.png",
+      "md5": "ac0532400d2dbc42ad104d9f1b814b9a",
+      "width": 150,
+      "height": 74,
+      "size": 3122,
+      "uploadedDate": "2023-10-01T12:24:48.490Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Nodes-1920x1080-5f9430b4314905561a1e61afc4c72474_Snapshot.png",
+      "md5": "dbaef731a0a4f0cb9dfeddc505b6eb59",
+      "width": 150,
+      "height": 74,
+      "size": 3244,
+      "uploadedDate": "2023-10-01T12:24:48.814Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EnumBasedDataTableCode-1920x1080-6c24d0d99f665cb3b544e8edd41b7119_Snapshot.png",
+      "md5": "17ecaf9fcf2fb1141fc03fddd4abc4e5",
+      "width": 150,
+      "height": 74,
+      "size": 3221,
+      "uploadedDate": "2023-10-01T12:24:49.255Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GroupedDataTableCode-1920x1080-a5e4a185c0aacfd14559a143745e1344_Snapshot.png",
+      "md5": "e8851c3dbd27abdcdc533f01accf17ca",
+      "width": 150,
+      "height": 74,
+      "size": 2532,
+      "uploadedDate": "2023-10-01T12:24:49.565Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Plugins-1920x1080-097df345f6ba679b7ec9f090e42683d7_Snapshot.png",
+      "md5": "2618ad5e0e498b2eef71f2c1cee2797a",
+      "width": 150,
+      "height": 74,
+      "size": 2437,
+      "uploadedDate": "2023-10-01T12:24:49.926Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Plugin.PNG-1920x1080-569c8e2a37f2da390a0cb78bd6526c5d_Snapshot.jpg",
+      "md5": "4c7297eff985e6edc8b3c4015a1a8562",
+      "width": 150,
+      "height": 74,
+      "size": 3071,
+      "uploadedDate": "2023-09-28T10:18:53.162Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-11-01T10:58:42.517Z",
+  "lastModifiedDate": "2024-09-18T08:16:20.969Z",
+  "customAttributes": {},
+  "entitlementName": "3dd8f7ad5bdb431bbac3586beed700e1",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "a6e975bd31c7406187f0c929b11e9942",
+      "appId": "EnhancedDataTables_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2023-09-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "52f04560f31748ea929385e5138afcc4",
+      "appId": "EnhancedDataTables_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2023-09-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "a6c3b73be4584bc0a034c937cb9a05a4",
+      "appId": "EnhancedDataTables_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2023-09-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "f4bc90132f2244b28f9a78a7106ec811",
+      "appId": "EnhancedDataTables_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Naotsun",
+  "developerId": "o-p2zcz9a9nu4ks6lud98wcez4dc4lgv",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

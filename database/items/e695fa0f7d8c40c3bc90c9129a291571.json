@@ -1,0 +1,272 @@
+{
+  "id": "e695fa0f7d8c40c3bc90c9129a291571",
+  "title": "Improved Quest System Blueprints",
+  "description": "The blueprint version of Improved Quest System that allows you to quickly create in-game quests that players can receive and complete from NPCs or from in-game events. Quest objectives can be displayed on screen and minimap/compass user widgets",
+  "longDescription": "<p>With Improved Quest System you can create quests of any complexity for your game in seconds. The system can be used in any type of Unreal Engine project, easily integrates with any other products on the Unreal Marketplace.</p><p><br /></p><p>Preview (Youtube): <a href=\"https://youtu.be/Nb-qlngFU6c?si&#61;mpOQhfy2SDFQKCmi\" rel=\"nofollow\">https://youtu.be/Nb-qlngFU6c?si&#61;mpOQhfy2SDFQKCmi</a></p><p>Preview (exe): <a href=\"https://drive.google.com/file/d/1SxRdXtV_-sBmIG5UbgsyHNyTMYpMEei7/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/1SxRdXtV_-sBmIG5UbgsyHNyTMYpMEei7/view?usp&#61;sharing</a></p><p>How to add the system to your project (Youtube): <a href=\"https://www.youtube.com/watch?v&#61;3h5bjLIXxkw\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;3h5bjLIXxkw</a></p><p>Documentation (pdf): <a href=\"https://drive.google.com/file/d/192BekH5nrLGpZycPNyPlbgDkWfui70LQ/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/192BekH5nrLGpZycPNyPlbgDkWfui70LQ/view?usp&#61;sharing</a></p><p><br /></p><p>Adding the Improved Quest System into your project will take literally minutes: you just need to add the Quest Component to your PlayerController, copy a few functions from the Demo PlayerController, create a quest in the Quest Table and the main functionality is already implemented.</p><p>You can control how the player completes quests in your game using two main functions available anywhere in your project:</p><ul><li><strong>GetQuestState: </strong>pass the Quest Id and get the Quest State (not started | completed | in progress | finished completly).</li><li><strong>QuestComplete: </strong>pass the Quest Id and Quest State you want to set the selected quest to (receive a quest, add one specific step to the quest progress, complete quest).</li></ul><p>Detailed documentation with video guides is attached.</p><p>A <strong>Fog of War</strong> feature also available in this version. <strong>Static texture-based minimap</strong> method will solve all possible problems with creating a minimap in your project.</p><p><br /></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/product/improved-quest-system\" rel=\"nofollow\">Link to C&#43;&#43; version of this project </a>(only 5.1&#43; UE versions supported)</p><p><br /></p><p>Features:</p><ul><li>Quickly create quests, set up complex quests.</li><li>Includes a Minimap and Zone Map User Widgets (static texture-based) with the possibility to display quest objectives. You can scale the minimap and change a rotation method (your game level may need to change the landscape coordinates to use this option).</li><li>The system provides a full-featured changeable user interface widgets for interacting with a NPC and possibility to accept and complete unlimited amount of Quests.</li><li>Upon accepting/completing a Quests, you can show game cinematics to the players.</li><li>The system provides a methods to displaying the goals of the Quests (and places for taking/completing quests) - on the screen, on the minimap, on the compass.</li><li>System includes an interactive changeable Quest Log widget, which allows the player to read the Quest text, track/untrack the Quests and cancels the Quests.</li><li>The Fog of War and Zone Map features are available in this version.</li><li>Depending on the settings, some Quests can be available to the player only if the previous chain Quests are completed.</li><li>Accepting/turning in Quests can trigger events that change the game world, for example, you can make quests that involves escorting an ally NPC from point A to point B.</li><li>The possibility of issuing in-game rewards to players after Quests completion is provided.</li><li>The system supports the possibility of transitions between game levels with any number of nested levels (showing the location of the doors to the levels on which the Quest is performed).</li><li>The system supports a multiplayer games in the mode of cooperative walkthrough - general quests for the player group (quest progress replication implemented by using a demo Player Controller replicated Custom Events).</li><li>Save/load game progress is supported.</li><li>The possibility to change map texture for a caves and building floors.</li><li>The possibility to customize icons for Quests and objectives.</li><li>Support for large open levels with WorldPartition and WorldComposition systems.</li><li>Support for non-linearity - the ability to select the Quest being performed with a complete or partial change in the further walkthrough. Also, the non-linearity of the walkthrough can be applied through interaction with game actors or user widgets.</li><li>Full GamePad support (all widgets are usable via GamePad).</li><li>The possibility to use the system in projects of any type (first-person view, third-person view, TopDownTemplate, quest, horror, racing, etc). Quest System settings available as BP component variables and Quest Table variables.</li><li>The possibility to use the system as a Player Controller Blueprint component which is available anywhere in your project.</li><li>The project includes a detailed training video guide that demonstrates the how to use the system in detail (4 hours&#43;).</li><li>Support for localization of Quests text and user interface into any number of languages.</li><li>The possibility to easily transfer all the plugin user widgets to your own user widgets. The method for this is reviewed in the video guide is provided.</li><li>There is the possibility of a usage Improved Quest System with a dialog system (the dialog system is not included in the project).</li></ul><p><br /></p><p><strong>Notification:</strong></p><p>Errors &#34;Unknown structure&#34; may occur in the project if you change one of the project Blueprint structures after migrating the content to your project.</p><p>A common solution: <a href=\"https://youtu.be/aMGEqsGIrcI?si&#61;AcZeNI6KYIob14k_\" rel=\"nofollow\">https://youtu.be/aMGEqsGIrcI?si&#61;AcZeNI6KYIob14k_</a></p><p><em>I would like to draw special attention to the fact that you must first click “Compile” and then “Save” all these files. Even if you have the “Save after each compilation” setting set, you still need to click “Compile” and then “Save” since it is the “Save” button that corrects this error.</em></p><p><br /></p><p><strong>Updates:</strong></p><p><u>Update 1.1 (05/18/2024):</u></p><p>- fixed possible problems with overlapping User Widgets: if your project uses other User Widgets (for example, an inventory system widgets), then IQS widgets no longer overlap them.</p><p>- if the mini-map for a game level is not configured, now the mini-map widget is still displayed and shows markers of quest objectives.</p><p>- an improvement has been made for the levels using World Partition/World Composition: in the BP_IQS_BotExampleActor_Objective class, a function call has been added that allows you to enable hiding/showing quest markers at the targets if the quest target was removed from the level/added to the tiled level during the game by World Partition/World Composition.</p><p>- the ability to “look around” has been added to the demo character BP_IQS_ThirdPersonCharacter.</p><p><br /></p><p>The font <a href=\"https://fontesk.com/lt-beverage-font/\" rel=\"nofollow\">Lt Beverage</a> was used in the project (free for commercial use, OFL). Many thanks to the <a href=\"https://www.behance.net/lyonstypebackup\" rel=\"nofollow\">author</a> of the font</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Compass, quest log and texture-based map/minimap widgets are included.</li><li>Possibility to use the system as Player Controller blueprint component.</li><li>All quests settings are made in the Data Table.</li><li>Settings is available as Blueprints component variables.</li></ul><p><br /></p><p>Number of Blueprints: 45</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: All</p><p>Supported Target Build Platforms: All</p><p>Documentation (pdf): <a href=\"https://drive.google.com/file/d/192BekH5nrLGpZycPNyPlbgDkWfui70LQ/view?usp&#61;drive_link\" rel=\"nofollow\">https://drive.google.com/file/d/192BekH5nrLGpZycPNyPlbgDkWfui70LQ/view?usp&#61;drive_link</a></p><p>Example Project: <a href=\"https://drive.google.com/file/d/1SxRdXtV_-sBmIG5UbgsyHNyTMYpMEei7/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/1SxRdXtV_-sBmIG5UbgsyHNyTMYpMEei7/view?usp&#61;sharing</a></p><p>Video: <a href=\"https://youtu.be/p80TlwXmcnQ?si&#61;qqr4QpkF890uWXpR\" rel=\"nofollow\">https://youtu.be/p80TlwXmcnQ?si&#61;qqr4QpkF890uWXpR</a></p><p>Please report any issues you find and your questions to email <strong>w4ee44&#64;gmail.com</strong></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0-1920x1080-51a7fe4e3a4dbdca28a62994ec4f839c.png",
+      "md5": "51a7fe4e3a4dbdca28a62994ec4f839c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2000661,
+      "uploadedDate": "2024-02-24T18:19:36.282Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/-1-1920x1080-a7bf4d5d6f5525701b940a25d6357a7c.png",
+      "md5": "a7bf4d5d6f5525701b940a25d6357a7c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2035572,
+      "uploadedDate": "2024-02-24T18:19:36.761Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-d84409909a21e067123e452732218ed7.png",
+      "md5": "d84409909a21e067123e452732218ed7",
+      "width": 1920,
+      "height": 1080,
+      "size": 1744249,
+      "uploadedDate": "2024-02-24T18:19:37.237Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-0b72837662fcaf7d1662b32979d6cea7.png",
+      "md5": "0b72837662fcaf7d1662b32979d6cea7",
+      "width": 1920,
+      "height": 1080,
+      "size": 2767740,
+      "uploadedDate": "2024-02-24T18:19:37.726Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-d35777e7e3ef6d60b5abb90f9577ddf4.png",
+      "md5": "d35777e7e3ef6d60b5abb90f9577ddf4",
+      "width": 1920,
+      "height": 1080,
+      "size": 1530855,
+      "uploadedDate": "2024-02-24T18:19:38.224Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-33495e5b7fcb2dd34547f7ae25507380.png",
+      "md5": "33495e5b7fcb2dd34547f7ae25507380",
+      "width": 1920,
+      "height": 1080,
+      "size": 1375383,
+      "uploadedDate": "2024-02-24T18:19:38.650Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-3cb5c44e84397d50a5c43119e9174d31.png",
+      "md5": "3cb5c44e84397d50a5c43119e9174d31",
+      "width": 1920,
+      "height": 1080,
+      "size": 1999685,
+      "uploadedDate": "2024-02-24T18:19:39.114Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-03ab7744cf8a33f9fddfd6014501dc56.png",
+      "md5": "03ab7744cf8a33f9fddfd6014501dc56",
+      "width": 1920,
+      "height": 1080,
+      "size": 289671,
+      "uploadedDate": "2024-02-24T18:19:39.505Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7-1920x1080-fa1d20a6007f3e4dfef51a913b9ae5f4.png",
+      "md5": "fa1d20a6007f3e4dfef51a913b9ae5f4",
+      "width": 1920,
+      "height": 1080,
+      "size": 685827,
+      "uploadedDate": "2024-02-24T18:19:39.851Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ImprovedQuestSystemBlueprints_thumb-284x284-32499b71494a1aa798784701097d068a.png",
+      "md5": "32499b71494a1aa798784701097d068a",
+      "width": 284,
+      "height": 284,
+      "size": 105473,
+      "uploadedDate": "2024-02-24T18:19:40.303Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ImprovedQuestSystemBlueprints_featured-894x488-fe3242ac158a304bea1baca31b6e0e70.png",
+      "md5": "fe3242ac158a304bea1baca31b6e0e70",
+      "width": 894,
+      "height": 488,
+      "size": 668809,
+      "uploadedDate": "2024-02-24T18:19:40.457Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0-1920x1080-51a7fe4e3a4dbdca28a62994ec4f839c_Snapshot.png",
+      "md5": "4be6ca09f2d1e48e00e5981dfecf9bf1",
+      "width": 150,
+      "height": 74,
+      "size": 6569,
+      "uploadedDate": "2024-02-24T18:19:36.577Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/-1-1920x1080-a7bf4d5d6f5525701b940a25d6357a7c_Snapshot.png",
+      "md5": "b234d105f3fd7877004520d21e5da96d",
+      "width": 150,
+      "height": 74,
+      "size": 6433,
+      "uploadedDate": "2024-02-24T18:19:37.038Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-d84409909a21e067123e452732218ed7_Snapshot.png",
+      "md5": "0c89169714e115b6e01003dc53ce31dc",
+      "width": 150,
+      "height": 74,
+      "size": 6182,
+      "uploadedDate": "2024-02-24T18:19:37.504Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-0b72837662fcaf7d1662b32979d6cea7_Snapshot.png",
+      "md5": "0bff0d7343c1a0fb3e9382a2d3aaa4a6",
+      "width": 150,
+      "height": 74,
+      "size": 6950,
+      "uploadedDate": "2024-02-24T18:19:38.034Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-d35777e7e3ef6d60b5abb90f9577ddf4_Snapshot.png",
+      "md5": "4c20eb9712b4a1c3922820a1e2f8f0c5",
+      "width": 150,
+      "height": 74,
+      "size": 6070,
+      "uploadedDate": "2024-02-24T18:19:38.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-33495e5b7fcb2dd34547f7ae25507380_Snapshot.png",
+      "md5": "86ce28e5a93d805286bc89c458e8bef0",
+      "width": 150,
+      "height": 74,
+      "size": 4215,
+      "uploadedDate": "2024-02-24T18:19:38.915Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-3cb5c44e84397d50a5c43119e9174d31_Snapshot.png",
+      "md5": "3cb45610b4b8c1aa14b24de514e6dada",
+      "width": 150,
+      "height": 74,
+      "size": 5671,
+      "uploadedDate": "2024-02-24T18:19:39.394Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-03ab7744cf8a33f9fddfd6014501dc56_Snapshot.png",
+      "md5": "00dc84def1492db9a48708d3b06abc74",
+      "width": 150,
+      "height": 74,
+      "size": 4025,
+      "uploadedDate": "2024-02-24T18:19:39.704Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-fa1d20a6007f3e4dfef51a913b9ae5f4_Snapshot.png",
+      "md5": "a0607c8e504046aa3737fedef03f9561",
+      "width": 150,
+      "height": 74,
+      "size": 4225,
+      "uploadedDate": "2024-02-24T18:19:40.147Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-03-06T02:32:03.580Z",
+  "lastModifiedDate": "2024-12-06T13:26:40.962Z",
+  "customAttributes": {},
+  "entitlementName": "e695fa0f7d8c40c3bc90c9129a291571",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "464e9ca169d742a984c14946860800a3",
+      "appId": "Improvede695fa0f7d8cV1",
+      "compatibleApps": [
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-02-24T00:00:00.000Z",
+      "releaseNote": "Password: w3eew3ee",
+      "versionTitle": "4.24 - 5.1"
+    },
+    {
+      "id": "b5c7856eb5634182bcbdcbf0e6de6499",
+      "appId": "Improvede695fa0f7d8cV8",
+      "compatibleApps": [
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-03-04T00:00:00.000Z",
+      "releaseNote": "Password: w3eew3ee",
+      "versionTitle": "5.2 - 5.5"
+    }
+  ],
+  "developer": "ANRw Studios",
+  "developerId": "o-naldfeuvy3jqfezvdws7dysunth2fs",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

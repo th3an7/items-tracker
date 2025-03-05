@@ -1,0 +1,225 @@
+{
+  "id": "1c03b313692a46dc94928bc56e42b759",
+  "title": "Palm Generative Art Maker",
+  "description": "Develop game-ready generative art projects and NFT collections using built in modules for assigning traits, rarity, descriptions and metadata.",
+  "longDescription": "<ul><li>The Palm NFT Studio Creator Tool enables a user to develop generative, game-ready 3D assets. These assets can be static or animated, and can be generated from a multitude of traits. </li><li>Once a concept is established and 3D meshes are prepared, import those assets into Unreal Engine 5.1. From there, fine tune their positions, shaders, camera settings, and lighting.</li><li>The assets in your project can be assigned as traits, creating a trait key corresponding to unique values and metadata.</li><li>The custom naming and description module allows you to generate descriptions and description modifiers for the traits in your project.</li><li>The unique rarity weighting module allows traits to be weighted individually or using a tiered structure. </li><li>The bulk render tool produces the final imagery and data before further external processing, iteration or minting. It also generates your desired amount of JSON documents. This tool allows for large quantities of renders to be batched with an upper limit of 20k.</li></ul><p><br /></p><p><strong><u>Output Formats:</u> </strong>Single PNG /JPEG still image, PNG/JPEG movie image sequence, .mov ProRes422 video file, and more. Setting defined via Movie Render Queue Pipeline Assets &#43; JSON file</p><p><br /></p><p><strong><u>Trait Types</u></strong></p><p><strong>mesh </strong>- a 3D model (UE Type: Static Mesh)</p><p><strong>material </strong>- materials to be applied to 3D models (UE Type: Material Instances)</p><p><strong>background </strong>- materials to be applied to the background actor (UE Type: Material Instances)</p><p><strong>modifier </strong>- other elements that manipulate the JSON document</p><p><strong>animation </strong>- root animations that move the entire generative scene (UE Type: Level Sequence Actor)</p><p><br /></p><p><strong><u>Session Manager Block</u></strong></p><p>The <em>required</em> first step of any new project. Creates, saves and displays sessions - a session is an individual project. </p><p><br /></p><p><strong><u>Asset Ingest Block</u></strong></p><p>The asset ingest block imports project 3D models and textures into Unreal Engine from a file directory. </p><ul><li><strong>Trait Assignment</strong></li><li>The assignment block uses config files to allow users to assign UE assets to traits, a critical step in the pipeline process that connects user-generated assets with their referenced traits.</li></ul><p><br /></p><p><strong><u>Edit Data Block</u></strong></p><p>The edit data tool lets you edit trait values for one or many traits in a spreadsheet layout. This creates a list of current traits with existing and any missing data, including a preview of the UE object assigned to it. </p><p><br /></p><p><strong><u>Description Manager Block:</u></strong></p><p>The description manager lets you edit descriptions assigned to traits and used with dynamic variables when generating metadata. The editor lets you add, delete or edit up to 20 variations for a single trait.</p><p><br /></p><p><strong><u>Metadata Generator Block:</u></strong></p><p>The generator has two functions: (1) it helps create keys (traits) and values for those keys, (2) then uses those traits to generate a set number of working JSON files for later rendering.</p><p><br /></p><p><strong>Step 1: Choose Data</strong></p><ul><li>Keys: Create keys by entering one into the input field and hitting “Add”</li><li>Value: To add values to the new keys, select a desired key from the dropdown, then fill in the data.</li><li>Data Included (<em>Type, Selected Asset, Value, Display Name, Visual Key, Include in Output, Backend Key, Weight, Rarity, Rarity Preset, Description Modifiers, Material Slot Name, Generate Random Number</em>)</li><li><em>“Add Trait</em><strong>”</strong> to create a database entry. Then continue to add more values to the same key or to other keys.</li></ul><p><br /></p><p><strong>Step 2: Descriptions:</strong></p><ul><li>This adds descriptions generation. You can add multiple variations, edit and delete them.</li><li>Dynamic variables use key names to replace text.</li></ul><p><br /></p><p><strong>Step 3: Generate Metadata</strong></p><p>Generates the working JSON documents and exports them as .json files into the <em>/generated</em> project folder.</p><p><br /></p><ul><li>Choose a naming convention</li><li>Choose how descriptions are added</li><li>Enable the Random Number system</li><li>Use Weights?</li><li>Choose the number of documents to generate</li></ul><p><br /></p><p><strong><u>Metadata Preview Block:</u></strong></p><p>The preview tool takes a JSON document, finds and analyzes all assets referenced by it and assembles the 3D scene. The goal is to allow anyone to preview items and render preview content.</p><p><br /></p><ul><li>You can either load existing JSON documents or choose a single .json file to import.</li><li>The preview section also lets you filter by key:value pair. Once selected, the tool chooses a random item that includes the selected value</li><li>On selection, the item is assembled into the scene and viewport. This includes assets and materials in the level outliner.</li><li>Once assembled, the tool also breaks down all referenced assets and assignments. If assignments are missing, they appear in red.</li><li>The render section lets you render a preview video, and provides some basic creative controls to quickly produce output content. You can override the background material, lighting and camera position. Preview renders are placed in the “preview-renders” folder:</li></ul><p><br /></p><p><strong><u>Bulk Render Block:</u></strong></p><p>The bulk render tool is the final step in the pipeline, and produces the final imagery and data before further external processing, iteration or minting. It requires the desired amount of JSON documents either generated within Unreal using the METADATA GENERATOR tool and/or placed in the <em>/generated</em> folder.</p><p><br /></p><ul><li><strong>Preview Camera</strong> toggles the main camera cinematic mode in the editor viewport</li><li><strong>Select Main Camera</strong> selects the main camera in the outliner</li><li><strong>Edit Output Format Preset</strong> opens the currently selected Render Queue Pipeline Asset for further editing</li><li><strong>Output Folder:</strong> pre-populated from the session data, but can be overwritten. Defaults to session output directory.</li><li><strong>Create Folders:</strong> place each item inside its own folder</li><li><strong>Output Format:</strong> Single PNG still image, PNG movie image sequence or .mov ProRes422 video file. Setting defined via Movie Render Queue Pipeline Assets.</li><li><strong>Test Render</strong> can be enabled to render a few test items to check your settings before committing to rendering a potentially large amount of items. </li><li><strong>Render Level Sequence</strong>: the UE level sequence to use to control camera motion, position and sequence length. LS_Preview is used by default, manipulated and/or duplicated. The same sequence is used for all renders.</li><li><strong>Batch Render:</strong> allows batch rendering of metadata within a given number range. </li><li><strong>Rendering</strong></li><li><strong>When you hit render,</strong> the tool goes through each item one-by-one, and picks out all the models, materials and modifiers to construct the 3D scene for each item:</li><li>It then uses the render queue to render the content and places both video/image files and final sanitized .json document into the “/final” folder.</li></ul><p><br /></p><p><strong><u>Metadata Editor Block:</u></strong></p><p>Metadata editor lets you edit existing generated metadata - either from within the UE pipeline or from a folder of .json files in the project <strong>/generated </strong>directory. </p><p>The tool will load all items and present you with two options:</p><p><br /></p><ul><li><strong>Edit Item</strong> - edit an individual item and re-save it to the same data source</li><li><strong>Conditional Edit </strong>- edit all items with certain conditions and re-save them to the same data source</li></ul><p>To edit an individual item, select the item by name, or search via its name or serial number. </p><p><br /></p><p><strong><u>Metadata Constructor Block:</u></strong></p><p>Enables creative prototyping of different key:value combinations. Data is based on your config, so ensure config data exists before using this tool. Any prototyping done with this tool is not saved, so is purely for creative exploration.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Creates, saves and displays sessions</li><li>Imports project 3D models and textures into Unreal Engine from a file directory</li><li>Use config files to allow users to assign UE assets to traits (Mesh, material, background, modifier, animation, &#43;)</li><li>Edit trait values for one or many traits (includes a spreadsheet layout and import/export options).</li><li>Create and edit descriptions and descriptions tied to traits (includes dynamic variables)</li><li>Assign weighting and rarity to traits (trait presets and tiers available)</li><li>The Preview Tool reads created JSON file, finds and analyzes all assets referenced by it, and assembles the custom generated 3D scene in editor for previews and testing</li><li>Bulk render files with custom export settings (Image &#43; JSON metadata)</li><li>Edit existing metadata</li><li>Creative custom prototyping and 1:1 creation</li></ul><p><br /></p><p>Code Modules:</p><ul><li> PalmCreatorTool</li></ul><p><br /></p><p>Number of Blueprints: 13</p><p>Number of C&#43;&#43; Classes: 5</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows, MacOS</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1Uov-mLulWAPHNxrVO0B0PgURynqq3waBqJzI6uT7E2A/edit\" rel=\"nofollow\">Palm Generative Art Maker Documentation</a></p><p>Important/Additional Notes: Created by Palm NFT Studio 2023</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UI5-1920x1080-19f937772752a68097d7a650594b4cc6.png",
+      "md5": "19f937772752a68097d7a650594b4cc6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1016742,
+      "uploadedDate": "2023-04-19T15:50:44.489Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UI6-1920x1080-9c0fbe01dd2876843f89104c94c2b764.png",
+      "md5": "9c0fbe01dd2876843f89104c94c2b764",
+      "width": 1920,
+      "height": 1080,
+      "size": 1716426,
+      "uploadedDate": "2023-04-19T15:50:39.943Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UI7-1920x1080-64c66796e78c735ed483f66f6c2c7b84.png",
+      "md5": "64c66796e78c735ed483f66f6c2c7b84",
+      "width": 1920,
+      "height": 1080,
+      "size": 1719179,
+      "uploadedDate": "2023-04-19T15:50:40.556Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UI9-1920x1080-f26b871bb3bccbf54d8d6c81c5748de7.png",
+      "md5": "f26b871bb3bccbf54d8d6c81c5748de7",
+      "width": 1920,
+      "height": 1080,
+      "size": 1332300,
+      "uploadedDate": "2023-04-19T15:50:41.179Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UI8-1920x1080-de4f3d0003de24c21f397af71d797d1a.png",
+      "md5": "de4f3d0003de24c21f397af71d797d1a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1200746,
+      "uploadedDate": "2023-04-19T15:50:41.741Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UI4-1920x1080-8cb9d2a1abce50bbac8ea7afe39d6a4f.png",
+      "md5": "8cb9d2a1abce50bbac8ea7afe39d6a4f",
+      "width": 1920,
+      "height": 1080,
+      "size": 660110,
+      "uploadedDate": "2023-04-19T15:50:43.979Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UI1-1920x1080-d2036ff8dfaa02b9f2b41a7f2f84fc7f.png",
+      "md5": "d2036ff8dfaa02b9f2b41a7f2f84fc7f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1052785,
+      "uploadedDate": "2023-04-19T15:50:42.220Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UI2-1920x1080-0d930e8f8a26acc3ec65b751b5a9cf77.png",
+      "md5": "0d930e8f8a26acc3ec65b751b5a9cf77",
+      "width": 1920,
+      "height": 1080,
+      "size": 1226602,
+      "uploadedDate": "2023-04-19T15:50:42.774Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UI3-1920x1080-7ce5d997057a1d9319cfaf99a4b9f219.png",
+      "md5": "7ce5d997057a1d9319cfaf99a4b9f219",
+      "width": 1920,
+      "height": 1080,
+      "size": 1653522,
+      "uploadedDate": "2023-04-19T15:50:43.407Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PalmGenerativeArtMaker_thumb-284x284-1a5264e033768db8c6223bc2c09d7b3c.png",
+      "md5": "1a5264e033768db8c6223bc2c09d7b3c",
+      "width": 284,
+      "height": 284,
+      "size": 92282,
+      "uploadedDate": "2023-04-19T15:50:44.888Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PalmGenerativeArtMaker_featured-894x488-f4d78cebe8453a218a1cafc88fc5e83a.png",
+      "md5": "f4d78cebe8453a218a1cafc88fc5e83a",
+      "width": 894,
+      "height": 488,
+      "size": 369008,
+      "uploadedDate": "2023-04-19T15:50:44.995Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UI6-1920x1080-9c0fbe01dd2876843f89104c94c2b764_Snapshot.png",
+      "md5": "18d681a4ac1abe121e4de22e01de8324",
+      "width": 150,
+      "height": 74,
+      "size": 4584,
+      "uploadedDate": "2023-04-19T15:50:40.331Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UI7-1920x1080-64c66796e78c735ed483f66f6c2c7b84_Snapshot.png",
+      "md5": "8c9c09ee48f4b7b46c00983abe2a1fce",
+      "width": 150,
+      "height": 74,
+      "size": 4286,
+      "uploadedDate": "2023-04-19T15:50:40.965Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UI9-1920x1080-f26b871bb3bccbf54d8d6c81c5748de7_Snapshot.png",
+      "md5": "7d42ee9790473d6bd71286c4380ea8ec",
+      "width": 150,
+      "height": 74,
+      "size": 6527,
+      "uploadedDate": "2023-04-19T15:50:41.571Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UI8-1920x1080-de4f3d0003de24c21f397af71d797d1a_Snapshot.png",
+      "md5": "73b3d51fd3d08d3dcc4229085b864ec9",
+      "width": 150,
+      "height": 74,
+      "size": 6618,
+      "uploadedDate": "2023-04-19T15:50:42.083Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UI1-1920x1080-d2036ff8dfaa02b9f2b41a7f2f84fc7f_Snapshot.png",
+      "md5": "6552779e004a8c81356f5eb58f4274a8",
+      "width": 150,
+      "height": 74,
+      "size": 6239,
+      "uploadedDate": "2023-04-19T15:50:42.576Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UI2-1920x1080-0d930e8f8a26acc3ec65b751b5a9cf77_Snapshot.png",
+      "md5": "ebb180e7654f04c5c999f9d9909c53f4",
+      "width": 150,
+      "height": 74,
+      "size": 5392,
+      "uploadedDate": "2023-04-19T15:50:43.123Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UI3-1920x1080-7ce5d997057a1d9319cfaf99a4b9f219_Snapshot.png",
+      "md5": "0196a4eab95eddc1991306190732854b",
+      "width": 150,
+      "height": 74,
+      "size": 4500,
+      "uploadedDate": "2023-04-19T15:50:43.788Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UI4-1920x1080-8cb9d2a1abce50bbac8ea7afe39d6a4f_Snapshot.png",
+      "md5": "93a6638791fc83d833fcf2f1c4e312d0",
+      "width": 150,
+      "height": 74,
+      "size": 4137,
+      "uploadedDate": "2023-04-19T15:50:44.286Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UI5-1920x1080-19f937772752a68097d7a650594b4cc6_Snapshot.png",
+      "md5": "72860dfabafbb0faae972dd68090dc64",
+      "width": 150,
+      "height": 74,
+      "size": 6108,
+      "uploadedDate": "2023-04-19T15:50:44.845Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-05-03T18:56:40.239Z",
+  "lastModifiedDate": "2024-10-15T04:26:24.770Z",
+  "entitlementName": "1c03b313692a46dc94928bc56e42b759",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "4c0add1e0c974d53aaa67c1de6a98842",
+      "appId": "PalmCreatorTool_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2023-04-19T00:00:00.000Z",
+      "releaseNote": "Version 1.3.0",
+      "versionTitle": "Palm Generative Art Maker v1"
+    }
+  ],
+  "developer": "Palm NFT Studio",
+  "developerId": "o-95q368peetcs9ls3feu4hsmjhvx5mf",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

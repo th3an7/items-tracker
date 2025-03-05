@@ -1,0 +1,772 @@
+{
+  "id": "e4b6b29022bd41af99199b8ed437f34c",
+  "title": "XGXunFeiLink",
+  "description": "This plugin helps to connect XunFei(iFlyTek) to UnrealEngine 5. It contains Spark Big Model,Automatic Speech Recognition, Speech Synthesis,Speech Extension,Face Recognition,Nature Lanauage Process,Face Recognition, Character Recognition,Image Recognition.",
+  "longDescription": "<p>Hello,the plugin helps you connect to iFlyTek Web API.</p><p><br /></p><p>CurrentPluginVersion:5.0</p><p><br /></p><p>已包含科大讯飞WebAPI板块:星火认知大模型,语音识别,语音扩展,人脸识别,文字识别,图像识别,自然语言处理等.</p><p>各模块功能可用接口,详见文档,示例工程,视频等.</p><p><br /></p><p>At present,It supports a lot of functions:</p><p><br /></p><p>Spark Big Model </p><p><br /></p><p>Automatic Speech Recognition</p><p><br /></p><p>Speech Synthesis</p><p><br /></p><p>Speech Extension</p><p><br /></p><p>Face Recognition</p><p><br /></p><p>Nature Lanauage Process</p><p><br /></p><p>Character Recognition </p><p><br /></p><p>Image Recognition</p><p><br /></p><p><strong><em>0.Important Things</em></strong></p><p><br /></p><p>iFlyTek provides a lot of Web API both in China or in the global region.</p><p><br /></p><p><em><u>This plugin only supports these Web API in right region,when iFlyTek can support these. </u></em></p><p><br /></p><p>Most of Web API seem to be similar.</p><p><br /></p><p>However,they are really different.You need different accounts,AppID,APIKey,APISecret,especially when you are in China and out of China.</p><p><br /></p><p>Keep in mind that right App information correspond with right Web API.</p><p><br /></p><p>Global: ASRG,TTSG;</p><p><br /></p><p>No Global:Everything else.</p><p><br /></p><p><strong><em>1.Get App Information</em></strong></p><p><br /></p><p>If you don&#39;t create the iFlyTek App,you should create it.</p><p><br /></p><p>iFlyTek Web(Chinese site-No Global):</p><p><br /></p><p><a href=\"https://www.xfyun.cn/\" rel=\"nofollow\">https://www.xfyun.cn/</a></p><p><br /></p><p>iFlyTek Web(English site-Global):</p><p><br /></p><p><a href=\"https://global.xfyun.cn/\" rel=\"nofollow\">https://global.xfyun.cn/</a></p><p><br /></p><p>This plugin supports Global Webp API and No Global Webp API.</p><p><br /></p><p>Although the code is similar,you have to register your account and manage your App information through different sites.</p><p><br /></p><p>It is not very difficult to do . You can translate this web page directly through the browser tool.</p><p><br /></p><p>I have translated some important interface parameters in my codes and documents.</p><p><br /></p><p>After you created the App, you should enable corresponding function in your iFlyTek control panel,such as STT ,TTS,Spark.</p><p><br /></p><p>Be careful that some functions are not free.Howover,you can try it for free in a short time.</p><p><br /></p><p><strong><em>2.Browse the plugin information From document and UE.</em></strong></p><p>You can quickly learn the functions and documentation for each API</p><p>[ProjectSettings/XGPlugins/XGXunFeiLinkCoreSettings]</p><p><br /></p><p><strong><em>3.Spark Big Model</em></strong></p><p><br /></p><p>You can call XunFeiSpark to begin Spark.</p><p><br /></p><p>You can communicate with Spark(v1.5,v2.0,v3.0),SparkHelper,SpakHint,SparkV3FunctionCall,ImgUnderstand......</p><p><br /></p><p><strong><em>4.Automatic Speech Recognition</em></strong></p><p><br /></p><p>You can call XunFeiBeginRealTimeSpeechToText to begin STT.</p><p><br /></p><p>You can call XunFeiStopRealTimeSpeechToText to end STT.</p><p><br /></p><p>It captures audio data from audio input device,and then send it to iFLyTek Web API.</p><p><br /></p><p>It will call you to recive results.</p><p><br /></p><p>Your defualt audio input device must be in</p><p><br /></p><p>[{48000 kHz,16 bits, 2 channle},</p><p><br /></p><p>{48000 kHz,16 bits, 1 channle},</p><p><br /></p><p>{16000 kHz,16 bits, 1 channle}]</p><p><br /></p><p>You can keep it default for test at first.</p><p><br /></p><p><strong><em>5.Speech Synthesis</em></strong></p><p><br /></p><p>You can call XunFeiTextToSpeech to begin TTS.</p><p><br /></p><p>It is a async blueprint node.</p><p><br /></p><p>It converts text to USoundWave and wav file.</p><p><br /></p><p>You have to input the text to convert it.</p><p><br /></p><p>If you enable bSaveToLocal,you must input the right and absolute file path.</p><p><br /></p><p>The directory must exist.</p><p><br /></p><p>The file name must end with &#34;.wav&#34;</p><p><br /></p><p>You can keep it default for test at first.</p><p><br /></p><p><strong><em>6.Face Recognition </em></strong></p><p><br /></p><p>You can compare the similarity of two photos of faces.</p><p><br /></p><p><strong><em>7.Character Recognition </em></strong></p><p><br /></p><p>You can recognize text in multiple languages.</p><p><br /></p><p><strong><em>8.Image Recognition.</em></strong></p><p><br /></p><p>You can identify scenes, objects, places from pictures.</p><p><br /></p><p>9.Other</p><p><br /></p><p>This plugin does not contain any iFlyTek&#39;s files(<em>*.h,*</em>.cpp,*.lib,......)</p><p><br /></p><p>This plugin does not contain AI code or AI Model code.</p><p><br /></p><p>This plugin uses &#34;OpenSSL&#34; to encrypt information in the network,but it will not send data to the Creator(&#34;OpenSSL&#34;).</p><p><br /></p><p>This plugin will not send any data to the plugin author.</p><p><br /></p><p>This plugin was not developed by iFlyTek.</p><p><br /></p><p>This plugin will only send the interactive data to iFLyTek and recieve the message from iFlyTek . This plugin will not generate any data directly.You must comply with the relevant user and data usage agreements aboutt iFlyTek.These agreements can be found in the iFLyTek website.</p><p><br /></p><p>Plugin Video URL(Plugin-v2.4):</p><p><a href=\"https://youtu.be/6NQ4PO2RpOU\" rel=\"nofollow\">https://youtu.be/6NQ4PO2RpOU</a></p><p>Demo Download URL:</p><p><a href=\"https://github.com/liuhuagang/XGIflytekToUE/tree/main\" rel=\"nofollow\">XGXunFeiLinkDemo</a></p><p><br /></p><p>The old version part of plugin code was uploaded to GitHub just for learning.</p><p><br /></p><p>If the plugin is useful for you. Please purchase it in Unreal Engine Marketplace.</p><p><br /></p><p>Thanks a lot.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>More than nine main BlueprintMethods are provided to begin and stop Real-Time Speech To Text.</li><li>More than two main BlueprintAsyncNodes are provided to generate voice from text.</li><li>More than six main BlueprintAsyncNodes are provided to communicate with Spark.</li><li>These API are connected with iFlyTek Web API through WebSocket.</li><li>Manny Settings From iFlyTekWeb API are supported.</li></ul><p>Code Modules:</p><ul><li>[XGXunFeiBase] [Runtime]</li><li>[XGXunFeiCore] [Runtime]</li><li>[XGXunFeiSTT] [Runtime]</li><li>[XGXunFeiTTS] [Runtime]</li><li>[XGXunFeiASRG] [Runtime]</li><li>[XGXunFeiTTSG] [Runtime]</li><li>[XGXunFeiSpark] [Runtime]</li><li>[XGXunFeiFR] [Runtime]</li><li>[XGXunFeiTR] [Runtime]</li><li>[XGXunFeiIR] [Runtime]</li><li>[XGXunFeiLink] [Runtime]</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes:\t30\t(More than)</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: <a href=\"https://github.com/liuhuagang/XGIflytekToUE/blob/main/README.md\" rel=\"nofollow\">https://github.com/liuhuagang/XGIflytekToUE/blob/main/README.md</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GCategoryList-1920x1080-18222b23649d23401e9c1beee7f29745.png",
+      "md5": "18222b23649d23401e9c1beee7f29745",
+      "width": 1920,
+      "height": 1080,
+      "size": 322897,
+      "uploadedDate": "2024-04-10T08:25:06.288Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GFunctionList1-1920x1080-2a9090ef9a9398c525e6492d676c6c4f.png",
+      "md5": "2a9090ef9a9398c525e6492d676c6c4f",
+      "width": 1920,
+      "height": 1080,
+      "size": 412218,
+      "uploadedDate": "2024-04-10T08:25:06.531Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GFunctionList2-1920x1080-ef06173473c71e5354710f16242ad0c0.png",
+      "md5": "ef06173473c71e5354710f16242ad0c0",
+      "width": 1920,
+      "height": 1080,
+      "size": 376230,
+      "uploadedDate": "2024-04-10T08:25:06.880Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GFunctionListFaceRecognition-1920x1080-b3776be7188443707fff40e0b1ab774b.png",
+      "md5": "b3776be7188443707fff40e0b1ab774b",
+      "width": 1920,
+      "height": 1080,
+      "size": 417615,
+      "uploadedDate": "2024-04-10T08:25:07.173Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ImgGenerate1-1920x1080-f60884882e9c929665d46cc06221dcca.png",
+      "md5": "f60884882e9c929665d46cc06221dcca",
+      "width": 1920,
+      "height": 1080,
+      "size": 756946,
+      "uploadedDate": "2024-04-10T08:25:07.504Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GAllMethod-1920x1080-cde9b465205cebf9210b78798730635e.png",
+      "md5": "cde9b465205cebf9210b78798730635e",
+      "width": 1920,
+      "height": 1080,
+      "size": 737638,
+      "uploadedDate": "2024-01-28T04:27:26.340Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GASRGCode-1920x1080-8ee376279724bc99103d8436c18b8cdf.png",
+      "md5": "8ee376279724bc99103d8436c18b8cdf",
+      "width": 1920,
+      "height": 1080,
+      "size": 725680,
+      "uploadedDate": "2024-01-19T06:48:51.071Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GTTSGCode-1920x1080-4f027983691a34d85191a12a78a917f8.png",
+      "md5": "4f027983691a34d85191a12a78a917f8",
+      "width": 1920,
+      "height": 1080,
+      "size": 705636,
+      "uploadedDate": "2024-01-19T06:48:51.520Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GSTTCode-1920x1080-03157c6794d348be46ac179011562664.png",
+      "md5": "03157c6794d348be46ac179011562664",
+      "width": 1920,
+      "height": 1080,
+      "size": 590930,
+      "uploadedDate": "2024-01-19T06:48:51.994Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GVDCode-1920x1080-7e38554e66ef6d6efe20dc2d734660e6.png",
+      "md5": "7e38554e66ef6d6efe20dc2d734660e6",
+      "width": 1920,
+      "height": 1080,
+      "size": 734682,
+      "uploadedDate": "2024-01-19T06:48:52.315Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GTTSCode-1920x1080-fc8d2e96afc74aad52aa8b2c8a7945dc.png",
+      "md5": "fc8d2e96afc74aad52aa8b2c8a7945dc",
+      "width": 1920,
+      "height": 1080,
+      "size": 725805,
+      "uploadedDate": "2024-01-19T06:48:52.712Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GSparkCode-1920x1080-56c824362b52e9fefcf3efa0de1c791e.png",
+      "md5": "56c824362b52e9fefcf3efa0de1c791e",
+      "width": 1920,
+      "height": 1080,
+      "size": 597881,
+      "uploadedDate": "2024-01-19T06:48:53.178Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GSparkHelperCode-1920x1080-d6dbbc23f07d448743bb9cd7e4c41250.png",
+      "md5": "d6dbbc23f07d448743bb9cd7e4c41250",
+      "width": 1920,
+      "height": 1080,
+      "size": 577099,
+      "uploadedDate": "2024-01-19T06:48:53.540Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GSparkHintCode-1920x1080-e0940c5455a13a7b0e5d3203dbc96d9b.png",
+      "md5": "e0940c5455a13a7b0e5d3203dbc96d9b",
+      "width": 1920,
+      "height": 1080,
+      "size": 765292,
+      "uploadedDate": "2024-01-19T06:48:53.923Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GSparkV3FunctionCallCode-1920x1080-c20baf56feee0d1823f012c2186f2155.png",
+      "md5": "c20baf56feee0d1823f012c2186f2155",
+      "width": 1920,
+      "height": 1080,
+      "size": 880504,
+      "uploadedDate": "2024-01-19T06:48:54.315Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GImgUnderstandCode-1920x1080-d01542d9e55ac47f417422c659890ba0.png",
+      "md5": "d01542d9e55ac47f417422c659890ba0",
+      "width": 1920,
+      "height": 1080,
+      "size": 686712,
+      "uploadedDate": "2024-01-19T06:48:54.695Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GFaceCompareCode-1920x1080-fb3736a1f04b0faa4d317f3d14fc6071.png",
+      "md5": "fb3736a1f04b0faa4d317f3d14fc6071",
+      "width": 1920,
+      "height": 1080,
+      "size": 490921,
+      "uploadedDate": "2024-01-28T04:27:26.727Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GUCRCode-1920x1080-8d8134e5678c1b523dee8e5efd27e4c2.png",
+      "md5": "8d8134e5678c1b523dee8e5efd27e4c2",
+      "width": 1920,
+      "height": 1080,
+      "size": 461665,
+      "uploadedDate": "2024-01-28T04:27:27.108Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GUCRintsigCode-1920x1080-f3e4890ccf48b80f7145db544f91d428.png",
+      "md5": "f3e4890ccf48b80f7145db544f91d428",
+      "width": 1920,
+      "height": 1080,
+      "size": 451252,
+      "uploadedDate": "2024-01-28T04:27:27.500Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GSceneRecognitionCode-1920x1080-e0c35803508c0ba0ef06892f00ba4f93.png",
+      "md5": "e0c35803508c0ba0ef06892f00ba4f93",
+      "width": 1920,
+      "height": 1080,
+      "size": 530065,
+      "uploadedDate": "2024-01-28T04:27:27.895Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GObjectRecognitionCode-1920x1080-ff70ff2376c0a99b3c2477ee74ae0f95.png",
+      "md5": "ff70ff2376c0a99b3c2477ee74ae0f95",
+      "width": 1920,
+      "height": 1080,
+      "size": 478047,
+      "uploadedDate": "2024-01-28T04:27:28.262Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GPlaceRecognition-1920x1080-b2446bbcf62ae57557d4389ff45d9a02.png",
+      "md5": "b2446bbcf62ae57557d4389ff45d9a02",
+      "width": 1920,
+      "height": 1080,
+      "size": 487239,
+      "uploadedDate": "2024-01-28T04:27:28.678Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/XGXunFeiLink_thumb-284x284-d41ec27f51a0f76a0970bbc4832276cd.png",
+      "md5": "d41ec27f51a0f76a0970bbc4832276cd",
+      "width": 284,
+      "height": 284,
+      "size": 21948,
+      "uploadedDate": "2024-04-11T09:21:49.984Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/XGXunFeiLink_featured-894x488-35db4e5d802ea2190628ddea9c39046d.png",
+      "md5": "35db4e5d802ea2190628ddea9c39046d",
+      "width": 894,
+      "height": 488,
+      "size": 152502,
+      "uploadedDate": "2024-03-20T10:14:44.392Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GCategoryList-1920x1080-18222b23649d23401e9c1beee7f29745_Snapshot.png",
+      "md5": "c3f4a86c4180e621c2f61dd8c9484223",
+      "width": 150,
+      "height": 74,
+      "size": 3824,
+      "uploadedDate": "2024-04-10T08:25:06.464Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFunctionList1-1920x1080-2a9090ef9a9398c525e6492d676c6c4f_Snapshot.png",
+      "md5": "b6a3df28d7698d8a8d8a1e32ab306e0e",
+      "width": 150,
+      "height": 74,
+      "size": 5291,
+      "uploadedDate": "2024-04-10T08:25:06.733Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFunctionList2-1920x1080-ef06173473c71e5354710f16242ad0c0_Snapshot.png",
+      "md5": "228dd13aec5a9ef2be0c10c8e68384b8",
+      "width": 150,
+      "height": 74,
+      "size": 4801,
+      "uploadedDate": "2024-04-10T08:25:07.048Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFunctionListFaceRecognition-1920x1080-b3776be7188443707fff40e0b1ab774b_Snapshot.png",
+      "md5": "ec941a37e6b2d4b388e1fb11f167577e",
+      "width": 150,
+      "height": 74,
+      "size": 4522,
+      "uploadedDate": "2024-04-10T08:25:07.364Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ImgGenerate1-1920x1080-f60884882e9c929665d46cc06221dcca_Snapshot.png",
+      "md5": "252c14aa4fb1e446f8d5acdc772aa43e",
+      "width": 150,
+      "height": 74,
+      "size": 5805,
+      "uploadedDate": "2024-04-10T08:25:07.733Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFunctionList1-1920x1080-2a36b8e364a61e1086c8d3c328fe0b80_Snapshot.png",
+      "md5": "c914c184530272481ff2bd656e076eac",
+      "width": 150,
+      "height": 74,
+      "size": 5309,
+      "uploadedDate": "2024-03-20T10:16:45.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GCategoryList-1920x1080-cf0111c50cae9fd43cfe02460d124344_Snapshot.png",
+      "md5": "0eb5a338ed2db722e821954569bf4b5e",
+      "width": 150,
+      "height": 74,
+      "size": 4169,
+      "uploadedDate": "2024-03-20T10:14:43.475Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFunctionList1-1920x1080-f224f702d8212aee0037376fe199f455_Snapshot.png",
+      "md5": "737b7891aded73f79d4b6308c1627df9",
+      "width": 150,
+      "height": 74,
+      "size": 5301,
+      "uploadedDate": "2024-03-20T10:14:43.839Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFunctionList2-1920x1080-548d38e687743aa3608b7da5a0ddf62d_Snapshot.png",
+      "md5": "383e83d37a54f738115d3e3b272873ec",
+      "width": 150,
+      "height": 74,
+      "size": 5733,
+      "uploadedDate": "2024-03-20T10:14:44.267Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GCategoryList-1920x1080-d7914e0b0bd482d97e1e61c6a556c1a2_Snapshot.png",
+      "md5": "5baf85d23003d37e5a0bcaf6188b9b7a",
+      "width": 150,
+      "height": 74,
+      "size": 3237,
+      "uploadedDate": "2024-01-28T04:27:25.271Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFunctionList1-1920x1080-c881363bb468e7c2575b8a294e1009d8_Snapshot.png",
+      "md5": "63292b64c6f7d3b0127aa4a271bb4af9",
+      "width": 150,
+      "height": 74,
+      "size": 4268,
+      "uploadedDate": "2024-01-28T04:27:25.719Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFunctionList2-1920x1080-f62b07fbea806c6874a5b5fce45327c1_Snapshot.png",
+      "md5": "a37e3d0d0f316dac33c6c9d3599a7b34",
+      "width": 150,
+      "height": 74,
+      "size": 4318,
+      "uploadedDate": "2024-01-28T04:27:26.123Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GAllMethod-1920x1080-cde9b465205cebf9210b78798730635e_Snapshot.png",
+      "md5": "a3e826e67f3cbaed33f117809b72d443",
+      "width": 150,
+      "height": 74,
+      "size": 5714,
+      "uploadedDate": "2024-01-28T04:27:26.592Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFaceCompareCode-1920x1080-fb3736a1f04b0faa4d317f3d14fc6071_Snapshot.png",
+      "md5": "b2c6d68d4b6957ac9034d5a8911ed526",
+      "width": 150,
+      "height": 74,
+      "size": 4050,
+      "uploadedDate": "2024-01-28T04:27:26.984Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GUCRCode-1920x1080-8d8134e5678c1b523dee8e5efd27e4c2_Snapshot.png",
+      "md5": "7c2e593fa64ae7a306fe7400d0cfa19d",
+      "width": 150,
+      "height": 74,
+      "size": 3945,
+      "uploadedDate": "2024-01-28T04:27:27.381Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GUCRintsigCode-1920x1080-f3e4890ccf48b80f7145db544f91d428_Snapshot.png",
+      "md5": "cc94e60b00f685618dae24f464e1e4ac",
+      "width": 150,
+      "height": 74,
+      "size": 3839,
+      "uploadedDate": "2024-01-28T04:27:27.737Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSceneRecognitionCode-1920x1080-e0c35803508c0ba0ef06892f00ba4f93_Snapshot.png",
+      "md5": "1c6fdad785c45ae428abc892f6fd37f0",
+      "width": 150,
+      "height": 74,
+      "size": 4251,
+      "uploadedDate": "2024-01-28T04:27:28.119Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GObjectRecognitionCode-1920x1080-ff70ff2376c0a99b3c2477ee74ae0f95_Snapshot.png",
+      "md5": "c785b69e156bddd6ff90e95a8ca5065e",
+      "width": 150,
+      "height": 74,
+      "size": 4314,
+      "uploadedDate": "2024-01-28T04:27:28.527Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GPlaceRecognition-1920x1080-b2446bbcf62ae57557d4389ff45d9a02_Snapshot.png",
+      "md5": "d1fbc7d668328bca45edd922f9245713",
+      "width": 150,
+      "height": 74,
+      "size": 4046,
+      "uploadedDate": "2024-01-28T04:27:28.925Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFunctionList-1920x1080-43da210ac32b02451472d7f44eed9588_Snapshot.png",
+      "md5": "710994d2790fb64b9f138d9033fdb9fa",
+      "width": 150,
+      "height": 74,
+      "size": 3706,
+      "uploadedDate": "2024-01-19T06:48:50.396Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GAllMethod-1920x1080-a7f0207057d0d4af2356891fe0694e87_Snapshot.png",
+      "md5": "bb9109879a638b0de978533a3935ae1e",
+      "width": 150,
+      "height": 74,
+      "size": 4729,
+      "uploadedDate": "2024-01-19T06:48:50.811Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GASRGCode-1920x1080-8ee376279724bc99103d8436c18b8cdf_Snapshot.png",
+      "md5": "6de0a0ddfd81405ed91763a9cc5482f8",
+      "width": 150,
+      "height": 74,
+      "size": 5682,
+      "uploadedDate": "2024-01-19T06:48:51.337Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GTTSGCode-1920x1080-4f027983691a34d85191a12a78a917f8_Snapshot.png",
+      "md5": "ca926de524442801957d85a215305ce9",
+      "width": 150,
+      "height": 74,
+      "size": 4718,
+      "uploadedDate": "2024-01-19T06:48:51.758Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSTTCode-1920x1080-03157c6794d348be46ac179011562664_Snapshot.png",
+      "md5": "53c2ea1cb7c6ad094599c62fc0bbabef",
+      "width": 150,
+      "height": 74,
+      "size": 4683,
+      "uploadedDate": "2024-01-19T06:48:52.229Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GVDCode-1920x1080-7e38554e66ef6d6efe20dc2d734660e6_Snapshot.png",
+      "md5": "9c99d9de2eb45dc0928291309f2bbb76",
+      "width": 150,
+      "height": 74,
+      "size": 5764,
+      "uploadedDate": "2024-01-19T06:48:52.551Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GTTSCode-1920x1080-fc8d2e96afc74aad52aa8b2c8a7945dc_Snapshot.png",
+      "md5": "8ffb2ed9433fb1d0741e3e32cdb1f6d4",
+      "width": 150,
+      "height": 74,
+      "size": 4743,
+      "uploadedDate": "2024-01-19T06:48:53.013Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSparkCode-1920x1080-56c824362b52e9fefcf3efa0de1c791e_Snapshot.png",
+      "md5": "58af92446928519264d725f0953da262",
+      "width": 150,
+      "height": 74,
+      "size": 4680,
+      "uploadedDate": "2024-01-19T06:48:53.421Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSparkHelperCode-1920x1080-d6dbbc23f07d448743bb9cd7e4c41250_Snapshot.png",
+      "md5": "30bc0d40743328597bd70d28447ce24f",
+      "width": 150,
+      "height": 74,
+      "size": 4519,
+      "uploadedDate": "2024-01-19T06:48:53.775Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSparkHintCode-1920x1080-e0940c5455a13a7b0e5d3203dbc96d9b_Snapshot.png",
+      "md5": "2fb29fb821df7f1621fa38b37b19398d",
+      "width": 150,
+      "height": 74,
+      "size": 4708,
+      "uploadedDate": "2024-01-19T06:48:54.175Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSparkV3FunctionCallCode-1920x1080-c20baf56feee0d1823f012c2186f2155_Snapshot.png",
+      "md5": "52a5ebdeca4c554f2df0a5813986ac84",
+      "width": 150,
+      "height": 74,
+      "size": 5833,
+      "uploadedDate": "2024-01-19T06:48:54.563Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GImgUnderstandCode-1920x1080-d01542d9e55ac47f417422c659890ba0_Snapshot.png",
+      "md5": "4d47260ffd65dc3f5e609866c4692c4d",
+      "width": 150,
+      "height": 74,
+      "size": 4981,
+      "uploadedDate": "2024-01-19T06:48:54.979Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GAllMethod-1920x1080-0c3cf965cb306a1a1122aff13fbc6a59_Snapshot.png",
+      "md5": "3b5bd19dd84c1861bcc2967068405d41",
+      "width": 150,
+      "height": 74,
+      "size": 5278,
+      "uploadedDate": "2024-01-10T11:00:27.864Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GASRG-1920x1080-e9ede3fe0d853ede98224e7f124c47eb_Snapshot.png",
+      "md5": "eb0b9ccd10ba5a0526929934f2c1a5a6",
+      "width": 150,
+      "height": 74,
+      "size": 4232,
+      "uploadedDate": "2024-01-10T11:00:28.239Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GTTSGCode-1920x1080-4f027983691a34d85191a12a78a917f8_Snapshot.png",
+      "md5": "ca926de524442801957d85a215305ce9",
+      "width": 150,
+      "height": 74,
+      "size": 4718,
+      "uploadedDate": "2024-01-10T11:00:28.569Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSTTCode-1920x1080-9f7ceb9b6f451c6b295b1f98a144e245_Snapshot.png",
+      "md5": "b3ae3b9403ee048d26ac829edb36b366",
+      "width": 150,
+      "height": 74,
+      "size": 4197,
+      "uploadedDate": "2024-01-10T11:00:28.920Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GTTSCode-1920x1080-fc8d2e96afc74aad52aa8b2c8a7945dc_Snapshot.png",
+      "md5": "8ffb2ed9433fb1d0741e3e32cdb1f6d4",
+      "width": 150,
+      "height": 74,
+      "size": 4743,
+      "uploadedDate": "2024-01-10T11:00:29.278Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSparkCode-1920x1080-aee4282e6dfa61ec40b37be1051020ee_Snapshot.png",
+      "md5": "d6fa30a1846be018b707f657d1a1ee6c",
+      "width": 150,
+      "height": 74,
+      "size": 4514,
+      "uploadedDate": "2024-01-10T11:00:29.633Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSparkHelperCode-1920x1080-9c6edd99ddfd3f01607fbf9d2234022d_Snapshot.png",
+      "md5": "1d019cc68d0b7477d22b61a09e65bbb9",
+      "width": 150,
+      "height": 74,
+      "size": 4421,
+      "uploadedDate": "2024-01-10T11:00:30.018Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSparkHintCode-1920x1080-240dc3de9772d066178ac927a1865b01_Snapshot.png",
+      "md5": "bd1b06390d00ddeccb2a9daeb969c38e",
+      "width": 150,
+      "height": 74,
+      "size": 4570,
+      "uploadedDate": "2024-01-10T11:00:30.337Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSparkV3FunctionCallCode-1920x1080-832f0ca99b99406b800db44be2a1b86c_Snapshot.png",
+      "md5": "12eb05c383374abc8709be7eb5cf3e45",
+      "width": 150,
+      "height": 74,
+      "size": 4675,
+      "uploadedDate": "2024-01-10T11:00:30.795Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GImgUnderstandCode-1920x1080-6c191ed6e1763ac010fa670d57477fac_Snapshot.png",
+      "md5": "3f43b0b25b5ad8f7baa4d680700cde69",
+      "width": 150,
+      "height": 74,
+      "size": 4286,
+      "uploadedDate": "2024-01-10T11:00:31.145Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFunctionList-1920x1080-6312b6136d704f7d9dfba568c003eb5b_Snapshot.png",
+      "md5": "e637c639eb14cec725f8bb8150107c35",
+      "width": 150,
+      "height": 74,
+      "size": 4233,
+      "uploadedDate": "2024-01-09T08:03:00.695Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GAllMethod-1920x1080-94cd369a73d2ef999a11ae8d58462d24_Snapshot.png",
+      "md5": "8bf5e53b183e59d0970c70f3bc25b79c",
+      "width": 150,
+      "height": 74,
+      "size": 5367,
+      "uploadedDate": "2024-01-09T07:19:35.940Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFunctionList-1920x1080-c1036c70f26c102429bdaade610674a2_Snapshot.png",
+      "md5": "a8d7d9da3a8d2f9b71f1058ba2e3eb49",
+      "width": 150,
+      "height": 74,
+      "size": 5205,
+      "uploadedDate": "2024-01-09T07:19:36.273Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GASRG-1920x1080-e9ede3fe0d853ede98224e7f124c47eb_Snapshot.png",
+      "md5": "eb0b9ccd10ba5a0526929934f2c1a5a6",
+      "width": 150,
+      "height": 74,
+      "size": 4232,
+      "uploadedDate": "2023-12-11T08:44:26.590Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GASRG-1920x1080-41dd833dd020f26175dbc2e95842e12f_Snapshot.png",
+      "md5": "2dfef677083e21a832e1d91947a550d1",
+      "width": 150,
+      "height": 74,
+      "size": 4452,
+      "uploadedDate": "2023-12-11T08:32:43.553Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GTTSG-1920x1080-b4788ec1e7a8a7e681237b7de660fdc1_Snapshot.png",
+      "md5": "947aba9d3bf9e6a3ae233c1018da37ef",
+      "width": 150,
+      "height": 74,
+      "size": 4321,
+      "uploadedDate": "2023-12-11T08:32:43.984Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSpark-1920x1080-f2b28b0ff45c86c6a993df867748acf8_Snapshot.png",
+      "md5": "1d420e0e42cb4afe19cfc62720c9d25f",
+      "width": 150,
+      "height": 74,
+      "size": 4518,
+      "uploadedDate": "2023-11-17T09:04:40.676Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSTT-1920x1080-5cc69dd4cc2dc39eaea5948fdf32b26d_Snapshot.png",
+      "md5": "457e413eb24f02ff62d06eb3f44a4bab",
+      "width": 150,
+      "height": 74,
+      "size": 4879,
+      "uploadedDate": "2023-11-15T05:49:07.033Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GTTS-1920x1080-ca7dcb08cfc2aca4a5ff83904d0821e7_Snapshot.png",
+      "md5": "c675662cd5d09b0a5ea408538a0aac8c",
+      "width": 150,
+      "height": 74,
+      "size": 4209,
+      "uploadedDate": "2023-11-15T05:49:07.425Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GSTT-1920x1080-0f9f416955f41cfd5514e8eb6d2dbe92_Snapshot.png",
+      "md5": "f9271321285e1d8ea863e4434fc06ce6",
+      "width": 150,
+      "height": 74,
+      "size": 4892,
+      "uploadedDate": "2023-11-14T13:50:57.344Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GTTS-1920x1080-8bc9bfaa3be9fdd3f5de0421e92108c4_Snapshot.png",
+      "md5": "0288afce2a849658b006141493cf53e4",
+      "width": 150,
+      "height": 74,
+      "size": 5078,
+      "uploadedDate": "2023-11-14T13:50:57.631Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-12-14T14:45:43.217Z",
+  "lastModifiedDate": "2025-02-19T08:15:25.165Z",
+  "customAttributes": {},
+  "entitlementName": "e4b6b29022bd41af99199b8ed437f34c",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "ee2951156f1548a4b1966ad3cf1fbdb5",
+      "appId": "XGXunFeiLink_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2024-01-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "XGXunFeiLink_5_1"
+    },
+    {
+      "id": "7d3b442741884d508893ba157f9314ab",
+      "appId": "XGXunFeiLink_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2024-01-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "XGXunFeiLink_5_2"
+    },
+    {
+      "id": "7067d1b5c98949e4b619b4a678c15b41",
+      "appId": "XGXunFeiLink_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2023-11-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "XGXunFeiLink_5_3"
+    },
+    {
+      "id": "f28e644400494c67a7069ec03ef6b4f7",
+      "appId": "XGXunFeiLink_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2024-05-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "XGXunFeiLink_5_4"
+    }
+  ],
+  "developer": "XG",
+  "developerId": "o-bfvqmh37rf2sspvltpgu5sz59y7wje",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,420 @@
+{
+  "id": "f2e0a6c683d547c6be209729ac8c0c53",
+  "title": "Simple UDP TCP Socket Server",
+  "description": "UDP TCP Socket Server. Easy to use TCP and UDP Sockets in Blueprints.",
+  "longDescription": "<p>Please check the <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/\" rel=\"nofollow\">documentation</a> for up-to-date examples of the functions.  </p><p><br /></p><p>You can easily use TCP and UDP connections to send and receive data in blueprints with this plugin . This is a Server. You can buy a client <a href=\"https://www.unrealengine.com/marketplace/simple-udp-tcp-socket-client\" rel=\"nofollow\">here</a>. All functions can be used independently in almost all Blueprints. You can start the server in Blueprint A. You can receive the data Blueprint B <strong>and</strong> C. Then you can stop the server in Blueprint X. Use UDP for streams, gaming (your own replication). For everything else, like matchmaking, lobby, chat, is TCP suitable. I recommend my <a href=\"https://www.unrealengine.com/marketplace/jsonparser\" rel=\"nofollow\">JSON plugin</a> for data communication. You don&#39;t need C&#43;&#43;. You can use this <a href=\"https://packetsender.com/download\" rel=\"nofollow\">tool</a> for testing and developing. Nativizing may not be possible in the blueprints where the plugin is used. See Documentaiton.</p><p>My prices are low all year round. </p><p><strong>Version 1.12 and 1.20 tested on: </strong>Windows 10, Mojave, Android 7 and 9, IOS 12.</p><p>Free <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/SocketServerDemoWin64_v155_510.zip\" rel=\"nofollow\">Win64 Demo</a> with GUI (245MB)</p><p>Demo Projects <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/SocketServerDemoV112_421.zip\" rel=\"nofollow\">UE4.21</a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/SocketServerDemo_v120_422.zip\" rel=\"nofollow\">UE4.22</a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/SocketServerDemo_425_v130_plugin_v130.zip\" rel=\"nofollow\">UE4.25</a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/SocketServerDemo_426_v140_plugin_v140.zip\" rel=\"nofollow\">UE4.26 </a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/SocketServerDemo_427_v150_plugin_v150.zip\" rel=\"nofollow\">UE4.27 </a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/SocketServerDemo_500_v150_plugin_v150.zip\" rel=\"nofollow\">UE5.0</a> and newer <sub>(Plugin needed, GUI Elments are so big because of mobile),</sub><a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/SocketServerCodeDemo_425_v1_plugin_v130.zip\" rel=\"nofollow\"><sub> </sub>C&#43;&#43; Demo</a></p><p>Demo that shows how to find a server on the LAN. <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/LANServerBrowserDemoWin64v1.0.zip\" rel=\"nofollow\">Win64</a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/LANServerBrowserDemo424v1.0.zip\" rel=\"nofollow\">Project</a> <sub>(Server and </sub><a href=\"https://www.unrealengine.com/marketplace/en-US/product/simple-udp-tcp-socket-client\" rel=\"nofollow\"><sub>Client </sub></a><sub>Plugins needed),</sub> <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/LANServerBrowserDemo.png\" rel=\"nofollow\">Screenshots</a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/LANServerBrowserDemo.mp4\" rel=\"nofollow\">Video</a></p><p><br /></p><p><strong><u>Changelog</u> </strong>(5.1, 5.2, 5.3)</p><ul><li>(03/28/2024) Version 1.57: &#34;Keep-Alive&#34; option added. If a client neither sends nor receives data for 10 seconds, a byte (0x00) is sent to the client. This allows to detect an unintentional disconnection of the client. </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(5.0, 5.1, 5.2)</p><ul><li>(09/01/2023) Version 1.55: File transfer functions revised.</li><li>(08/24/2023) Version 1.54: Added the HEX functions from the client plugin to the server plugin.</li><li>(08/15/2023) Version 1.53: Bugfix: File transfer functions did not always work.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(5.0, 5.1, 5.2)</p><ul><li>(05/30/2023) Version 1.51: Replaced an Unreal function that limited the maximum number of server instances to 12. There is no longer a limit.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.27, 5.0, 5.1)</p><ul><li>(01/03/2022) Version 1.50: Memory management revised to avoid memory leaks. You don&#39;t have to connect a target in Blueprints anymore (except for the events). Minor bug fixes. </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.26, 4.27, 5.0)</p><ul><li>(09/26/2022) Version 1.44: Bugfix: Cross compiling should work now.</li><li>(09/02/2022) Version 1.43: Bugfix: Plugin could not be compiled on Linux.</li><li>(07/19/2022) Version 1.42: Bugfix: Plugin was not able to compile in C&#43;&#43; projects.</li><li>(04/22/2022) Version 1.41: You can now pass the RCON password as a parameter instead of loading it from a file.</li><li>(04/18/2022) Version 1.40: RCON protocol implemented. You can create an RCON server that communicates with third party RCON clients. </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.25, 4.26, 4.27)</p><ul><li>(12/07/2021) Version 1.31: Added function to start the UE4 game server (game host) at runtime. Added various integer and float to bytes and back functions.</li><li>(02/14/2022) Version 1.32: See version 1.23. Additionally added a better function. See documentation. </li><li>(10/17/2021) Version 1.30: IPv6. AES encryption/decryption. File sending and receiving over TCP (without RAM consumption).</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.23, 4.24, 4.25)</p><ul><li>(07/16/2020) Version 1.23: If you send small messages very quickly over TCP, they are sometimes merged , or if you send large messages, they are split. This problem can now be solved with the node &#34;TCPMessage Wrapping</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.22, 4.23, 4.24)</p><ul><li>(04/30/2020) Version 1.21: UDP packet size can be determined.</li></ul>",
+  "technicalDetails": "<p><sup>Epic only allows updates for the newest three engine versions. There might be features missing in older engine versions. Contact me if you are unsure.</sup></p><p><br /></p><ul><li>Send and receive Bytes or Text (UTF-8*) over UDP and TCP</li><li>Runs asynchronously in own threads (Don&#39;t affect game performance)</li><li>Blueprint independent</li><li>Multiple servers simultaneously possible</li><li>IPv4 and IPv6</li><li>AES encryption and decryption</li><li>File sending and receiving over TCP (without RAM consumption)</li><li>RCON Protocol</li><li>HEX Functions</li><li>Different directory and file <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/fileFunctions.png\" rel=\"nofollow\">blueprint nodes</a></li><li>Include C&#43;&#43; Source for C&#43;&#43; Projects</li><li>Tested with various Thirdparty Clients and thousands of connections simultaneously</li><li><a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/\" rel=\"nofollow\">Documentation</a></li><li>Support: <a href=\"mailto:unrealmarketplace&#64;virtualbird.de\" rel=\"nofollow\">unrealmarketplace&#64;virtualbird.de</a> (ENG,GER)</li></ul><p><sup>* Chinese, Russian, etc.</sup></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tcp1-1920x1080-23958f98c55ad83947e2547129c108c5.png",
+      "md5": "23958f98c55ad83947e2547129c108c5",
+      "width": 1920,
+      "height": 1080,
+      "size": 352244,
+      "uploadedDate": "2018-10-05T12:58:37.930Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tcp2-1920x1080-205341073df12ab5f6fb8aea4a11e24e.png",
+      "md5": "205341073df12ab5f6fb8aea4a11e24e",
+      "width": 1920,
+      "height": 1080,
+      "size": 212965,
+      "uploadedDate": "2018-10-05T12:58:38.316Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tcp3-1920x1080-81e8c177fc63bb33a1ff31f2d26a759a.png",
+      "md5": "81e8c177fc63bb33a1ff31f2d26a759a",
+      "width": 1920,
+      "height": 1080,
+      "size": 211033,
+      "uploadedDate": "2018-10-05T12:58:38.551Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/udp1-1920x1080-824758e2e7a3cee61bdaf25a2d03770b.png",
+      "md5": "824758e2e7a3cee61bdaf25a2d03770b",
+      "width": 1920,
+      "height": 1080,
+      "size": 296035,
+      "uploadedDate": "2018-10-05T12:58:38.791Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/session1-1920x1080-d5512d250f839942fd99122d987e131f.png",
+      "md5": "d5512d250f839942fd99122d987e131f",
+      "width": 1920,
+      "height": 1080,
+      "size": 127289,
+      "uploadedDate": "2017-11-21T15:36:06.446Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/menu-1920x1080-f5ac9799f5121c7121a7646c7023a2ca.png",
+      "md5": "f5ac9799f5121c7121a7646c7023a2ca",
+      "width": 1920,
+      "height": 1080,
+      "size": 121806,
+      "uploadedDate": "2017-11-21T15:36:06.514Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SimpleUDPTCPSocketServer_thumb-284x284-6cd6b56f6fc14ba0362738c5fc7efc17.png",
+      "md5": "6cd6b56f6fc14ba0362738c5fc7efc17",
+      "width": 284,
+      "height": 284,
+      "size": 187483,
+      "uploadedDate": "2021-08-20T20:36:06.283Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SimpleUDPTCPSocketServer_featured-894x488-3e2f16c212d5d42ec56f7d978af4d65b.png",
+      "md5": "3e2f16c212d5d42ec56f7d978af4d65b",
+      "width": 894,
+      "height": 488,
+      "size": 802736,
+      "uploadedDate": "2021-08-20T20:36:06.461Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tcp1-1920x1080-23958f98c55ad83947e2547129c108c5_Snapshot.png",
+      "md5": "0fc10411f41b08db28c2a86d0d61aaf4",
+      "width": 150,
+      "height": 74,
+      "size": 6908,
+      "uploadedDate": "2018-10-05T12:58:38.180Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tcp2-1920x1080-205341073df12ab5f6fb8aea4a11e24e_Snapshot.png",
+      "md5": "97d87c187216b3b72329606b9b426344",
+      "width": 150,
+      "height": 74,
+      "size": 4334,
+      "uploadedDate": "2018-10-05T12:58:38.454Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tcp3-1920x1080-81e8c177fc63bb33a1ff31f2d26a759a_Snapshot.png",
+      "md5": "257b8e2742282d121b3a4f90345a7746",
+      "width": 150,
+      "height": 74,
+      "size": 5368,
+      "uploadedDate": "2018-10-05T12:58:38.689Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/udp1-1920x1080-824758e2e7a3cee61bdaf25a2d03770b_Snapshot.png",
+      "md5": "998342a7b4c8a85057c7865f6f11fab6",
+      "width": 150,
+      "height": 74,
+      "size": 5915,
+      "uploadedDate": "2018-10-05T12:58:38.930Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-01-11T18:39:51.612Z",
+  "lastModifiedDate": "2025-01-08T09:36:08.848Z",
+  "customAttributes": {},
+  "entitlementName": "f2e0a6c683d547c6be209729ac8c0c53",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "45de49b84aa94e83881124f1a8ba914c",
+      "appId": "SocketServer_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2017-11-21T00:00:00.000Z",
+      "releaseNote": "Bytes send and receive.",
+      "versionTitle": "SimpleTCPUDPSocketServer14417"
+    },
+    {
+      "id": "a9a362b9b363473b9fec42d35f8f4ee4",
+      "appId": "SocketServer_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2017-11-21T00:00:00.000Z",
+      "releaseNote": "fixed package problem",
+      "versionTitle": "SimpleTCPUDPSocketServer110418"
+    },
+    {
+      "id": "e9b7c9ac83d54c1487afc168fbe48f48",
+      "appId": "SocketServer_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Linux",
+        "Android",
+        "Mac",
+        "Windows",
+        "iOS",
+        "Win32"
+      ],
+      "dateAdded": "2018-03-15T00:00:00.000Z",
+      "releaseNote": "Fixed closing of individual TCP connections. ",
+      "versionTitle": "SimpleTCPUDPSocketServer113419"
+    },
+    {
+      "id": "d86c4fe769884e08b2bad69929e853b1",
+      "appId": "SocketServer_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2018-07-20T00:00:00.000Z",
+      "releaseNote": "TCP improvements.",
+      "versionTitle": "SimpleTCPUDPSocketServer115420"
+    },
+    {
+      "id": "a245b1ac96d3433ea3cbd83d433b4856",
+      "appId": "SocketServer_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-09T00:00:00.000Z",
+      "releaseNote": "Added filefunctions",
+      "versionTitle": "SimpleTCPUDPSocketServer118421"
+    },
+    {
+      "id": "1f66604ad15e4fe6bf03886052ac9b74",
+      "appId": "SocketServer_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "UDP packet size can be determined.",
+      "versionTitle": "SimpleTCPUDPSocketServer121422"
+    },
+    {
+      "id": "54b5cc88894347568c315045243dbe55",
+      "appId": "SocketServer_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2019-09-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleTCPUDPSocketServer125423"
+    },
+    {
+      "id": "d63a95f6e2fb4d44b8a5a83fc23996b1",
+      "appId": "SocketServer_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2019-12-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleTCPUDPSocketServer126424"
+    },
+    {
+      "id": "06cdbf043cf74bf09ecf97579e95cb99",
+      "appId": "SocketServer_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2020-05-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleTCPUDPSocketServer132425"
+    },
+    {
+      "id": "3ffb753f81924850b43aed5fd1f9f4ce",
+      "appId": "SocketServer_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "iOS",
+        "Android",
+        "Mac"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketServer_144_426"
+    },
+    {
+      "id": "ebc0ee8aee7e4e7bb70e571b0ac0f8c4",
+      "appId": "SocketServer_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketServer_151_427"
+    },
+    {
+      "id": "ebc2ec947ada4eb5a0e3645e5483a1f5",
+      "appId": "SocketServer_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketServer_155_500"
+    },
+    {
+      "id": "ce64e5b0066c4c56a3a91b32d5aa31be",
+      "appId": "SocketServer_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-11-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketServer_157_510"
+    },
+    {
+      "id": "687427e930f14202998bf0c3e87068f1",
+      "appId": "SocketServer_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketServer_157_520"
+    },
+    {
+      "id": "181d94e47f48473db16261d09fa1b12e",
+      "appId": "SocketServer_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketServer_157_530"
+    },
+    {
+      "id": "8f973730a8cf46d59606579b203bbecb",
+      "appId": "SocketServer_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketServer_157_540"
+    }
+  ],
+  "developer": "Virtualbird UG",
+  "developerId": "o-5bc5ba8cdd4200a6e086d8c602bbf7",
+  "endOfSupport": false,
+  "unsearchable": false
+}

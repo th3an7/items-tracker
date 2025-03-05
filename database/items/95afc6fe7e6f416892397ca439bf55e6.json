@@ -1,0 +1,327 @@
+{
+  "id": "95afc6fe7e6f416892397ca439bf55e6",
+  "title": "Total MQTT",
+  "description": "Enhance Unreal Engine with MQTT: Real-time IoT integration for Blueprints and C++.",
+  "longDescription": "<p>Total MQTT: Advanced MQTT Integration for Unreal Engine</p><p><br /></p><p>Total MQTT seamlessly integrates MQTT protocol support into Unreal Engine, accessible through both Blueprints and C&#43;&#43;. This plugin enables real-time communication in games and interactive applications, featuring secure message handling, multiple Quality of Service (QoS) levels, and enhanced security with TLS encryption, including support for Mutual TLS and SNI, encrypts certificates for packaging and supports dynamic certificate generation from external API&#39;s.</p><p><br /></p><p>Designed for developers aiming to incorporate complex IoT or real-time communications into their projects, Total MQTT offers easy setup, robust MQTT client/broker management, and flexible message subscription and publishing capabilities within the Unreal environment. Whether you&#39;re creating multiplayer games, virtual reality experiences, or advanced simulations, Total MQTT ensures efficient and secure interactions with MQTT brokers.</p><p><br /></p><p>The plugin supports both asynchronous and synchronous clients and offers configurable options such as message queue processing, allowing customization to fit specific project requirements. Total MQTT supports multi client and multi broker simultaneously , providing versatile connectivity solutions for developers.</p><p><br /></p><p>Includes a blueprint helper library for serializing/deserializing actors and publishing.</p><p><br /></p><p>Changelog</p><p>v1.2.5</p><ul><li>Fixed an issue with some dependencies not being loaded correctly in the editor</li></ul><p>v1.1.1</p><ul><li>Added support for Android</li></ul><p>v1.1.0</p><ul><li>Added support for Linux and LinuxArm64</li></ul><p>v1.0.6</p><ul><li>Added encryption option to CreateTLSClientDynamic which will store the certificate encrypted in memory while it&#39;s being used.</li><li>CreateTLSClientDynamic now expects the certificates to be Base64 encoded whether encrypted or not.</li></ul><p>v1.0.5</p><ul><li>Added &#34;Compress Binary&#34; function to BP library to compress data before sending over MQTT.</li><li>Added &#34;Decompress Binary Dynamic &#34; to decompress and stream data when receiving from MQTT. (Unknown sizes)</li><li>Added &#34;Decompress Known Binary&#34; to decompress with a given size. (faster if you know the expected size of the data.. ie a vector or float)</li></ul><p>v1.0.2</p><ul><li>Fixed a rare crash in shipping builds when shutting down the application.</li><li>Added ability to use raw strings as certificates for TLS clients when generating them at runtime from 3rd party services.</li><li>Added a new component to use as a unique identifier when sending/retrieving actors over mqtt. ( It&#39;s recommended to override the Serializer for the actor so you don&#39;t get memory reference issues.)</li></ul>",
+  "technicalDetails": "<p>Features: </p><ul><li>MQTT Client</li><li>MQTT Broker</li><li>MQTT v3.1.1/MQTT v5</li><li>Mutual TLS/SSL and SNI support</li><li>TLSv1.2/TLSv1.3</li><li>Encrypted certificate packaging (CA/Client/Server/Key)</li><li>Supports dynamic certificate generation</li><li>Basic authentication (Username/Password)</li><li>Asynchronous/Synchronous</li><li>Configurable message queue processing size</li><li>Multi client support</li><li>Multi broker support</li><li>Actor/UObject transmission ( Provided library to convert actors for sending/receiving )</li><li>Simple string transmission</li><li>Windows/Linux/LinuxArm64/Android support</li></ul><p>Code Modules:</p><ul><li>UnrealMQTT (Runtime)</li><li>UnrealMQTTEditor (Editor)</li></ul><p><br /></p><p>Number of Blueprints: 8</p><p>Number of C&#43;&#43; Classes: 20</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64 </p><p>Supported Target Build Platforms: Win64, Linux, LinuxArm64, Android</p><p>Documentation: https://warpstudios.com.au/totalmqtt/</p><p>Important/Additional Notes: Join the discord for help. https://discord.gg/B8QXRFQtyw</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tlsclient-1920x1080-0f6f1cdff22dd496b1152061debf2f35.png",
+      "md5": "0f6f1cdff22dd496b1152061debf2f35",
+      "width": 1920,
+      "height": 1080,
+      "size": 712318,
+      "uploadedDate": "2024-08-09T10:30:51.633Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/settings-1920x1080-14a0f967ebf6a8ae54db440ab0f39e4b.png",
+      "md5": "14a0f967ebf6a8ae54db440ab0f39e4b",
+      "width": 1920,
+      "height": 1080,
+      "size": 583815,
+      "uploadedDate": "2024-08-09T10:30:52.059Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Non-TLSBroker-1920x1080-3ff88e4ac89d23def3611f4606a6326f.png",
+      "md5": "3ff88e4ac89d23def3611f4606a6326f",
+      "width": 1920,
+      "height": 1080,
+      "size": 679486,
+      "uploadedDate": "2024-08-09T10:30:52.416Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/clientevents-1920x1080-4f86c969f98bf9b5bdf4db7482a9903e.png",
+      "md5": "4f86c969f98bf9b5bdf4db7482a9903e",
+      "width": 1920,
+      "height": 1080,
+      "size": 655528,
+      "uploadedDate": "2024-08-09T10:30:52.780Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GkQ6HED-1920x1080-59d5bf60619df173c7d23a5ebf197c1d.png",
+      "md5": "59d5bf60619df173c7d23a5ebf197c1d",
+      "width": 1920,
+      "height": 1080,
+      "size": 707486,
+      "uploadedDate": "2024-08-09T10:30:53.154Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/clientevents-1920x1080-4f86c969f98bf9b5bdf4db7482a9903e.png",
+      "md5": "4f86c969f98bf9b5bdf4db7482a9903e",
+      "width": 1920,
+      "height": 1080,
+      "size": 655528,
+      "uploadedDate": "2024-08-09T10:30:53.789Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/brokerevents-1920x1080-79c37e031c189ed7da13e49263173815.png",
+      "md5": "79c37e031c189ed7da13e49263173815",
+      "width": 1920,
+      "height": 1080,
+      "size": 640168,
+      "uploadedDate": "2024-08-09T10:30:54.183Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/sharedclientevents-1920x1080-909e1f810905689872f806d3d0c9441d.png",
+      "md5": "909e1f810905689872f806d3d0c9441d",
+      "width": 1920,
+      "height": 1080,
+      "size": 498862,
+      "uploadedDate": "2024-08-09T10:30:54.556Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tlsbroker-1920x1080-a88f397941bc27dae18c4a079b2a6460.png",
+      "md5": "a88f397941bc27dae18c4a079b2a6460",
+      "width": 1920,
+      "height": 1080,
+      "size": 640681,
+      "uploadedDate": "2024-08-09T10:30:54.964Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tlsclientevents-1920x1080-3d1930e2a1b57fae6f427a2be2e18dac.png",
+      "md5": "3d1930e2a1b57fae6f427a2be2e18dac",
+      "width": 1920,
+      "height": 1080,
+      "size": 680811,
+      "uploadedDate": "2024-08-09T10:30:55.416Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/publishexample-1920x1080-259596ffddc2df362d2a2a937482e87e.png",
+      "md5": "259596ffddc2df362d2a2a937482e87e",
+      "width": 1920,
+      "height": 1080,
+      "size": 518774,
+      "uploadedDate": "2024-08-09T10:30:55.826Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/non client-1920x1080-b6b8656d9dc6f87dd881dfee8a6a4a62.png",
+      "md5": "b6b8656d9dc6f87dd881dfee8a6a4a62",
+      "width": 1920,
+      "height": 1080,
+      "size": 784879,
+      "uploadedDate": "2024-08-09T10:30:56.245Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/events2-1920x1080-afafe103b13466ca0ac3f9b4903dc395.png",
+      "md5": "afafe103b13466ca0ac3f9b4903dc395",
+      "width": 1920,
+      "height": 1080,
+      "size": 572277,
+      "uploadedDate": "2024-08-09T10:30:56.671Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/beginplay-1920x1080-23c04414547fc842a2eaff4c08f7a70f.png",
+      "md5": "23c04414547fc842a2eaff4c08f7a70f",
+      "width": 1920,
+      "height": 1080,
+      "size": 473662,
+      "uploadedDate": "2024-08-09T10:30:57.019Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TotalMQTT_thumb-284x284-28a0697d649fc78022d2fbcc1a64aacc.png",
+      "md5": "28a0697d649fc78022d2fbcc1a64aacc",
+      "width": 284,
+      "height": 284,
+      "size": 120503,
+      "uploadedDate": "2024-06-05T18:21:25.018Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TotalMQTT_featured-894x488-0a9b8703d750fcb5713b530214ce846e.png",
+      "md5": "0a9b8703d750fcb5713b530214ce846e",
+      "width": 894,
+      "height": 488,
+      "size": 374767,
+      "uploadedDate": "2024-06-05T18:21:25.157Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tlsclient-1920x1080-0f6f1cdff22dd496b1152061debf2f35_Snapshot.png",
+      "md5": "09f0fec514c6f05b42c78bb32e560fab",
+      "width": 150,
+      "height": 74,
+      "size": 6604,
+      "uploadedDate": "2024-08-09T10:30:51.910Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/settings-1920x1080-14a0f967ebf6a8ae54db440ab0f39e4b_Snapshot.png",
+      "md5": "3465058131f52ae586931dd0f805c871",
+      "width": 150,
+      "height": 74,
+      "size": 5575,
+      "uploadedDate": "2024-08-09T10:30:52.318Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Non-TLSBroker-1920x1080-3ff88e4ac89d23def3611f4606a6326f_Snapshot.png",
+      "md5": "23fecc2855ba7ce3adeb9d2f12e7736a",
+      "width": 150,
+      "height": 74,
+      "size": 6515,
+      "uploadedDate": "2024-08-09T10:30:52.679Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/clientevents-1920x1080-4f86c969f98bf9b5bdf4db7482a9903e_Snapshot.png",
+      "md5": "f44090f00a1accdb6f39a2f4125672ea",
+      "width": 150,
+      "height": 74,
+      "size": 6720,
+      "uploadedDate": "2024-08-09T10:30:53.014Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GkQ6HED-1920x1080-59d5bf60619df173c7d23a5ebf197c1d_Snapshot.png",
+      "md5": "9323b4c3da5646387ea1ee477ca1c49b",
+      "width": 150,
+      "height": 74,
+      "size": 5227,
+      "uploadedDate": "2024-08-09T10:30:53.421Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/clientevents-1920x1080-4f86c969f98bf9b5bdf4db7482a9903e_Snapshot.png",
+      "md5": "f44090f00a1accdb6f39a2f4125672ea",
+      "width": 150,
+      "height": 74,
+      "size": 6720,
+      "uploadedDate": "2024-08-09T10:30:54.023Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/brokerevents-1920x1080-79c37e031c189ed7da13e49263173815_Snapshot.png",
+      "md5": "20bd98b9861428dfc9d68e74cae6d7a5",
+      "width": 150,
+      "height": 74,
+      "size": 6433,
+      "uploadedDate": "2024-08-09T10:30:54.449Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/sharedclientevents-1920x1080-909e1f810905689872f806d3d0c9441d_Snapshot.png",
+      "md5": "5b7114fa45cc4921743e1f4200e7b17c",
+      "width": 150,
+      "height": 74,
+      "size": 5429,
+      "uploadedDate": "2024-08-09T10:30:54.810Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tlsbroker-1920x1080-a88f397941bc27dae18c4a079b2a6460_Snapshot.png",
+      "md5": "7869518bc8e5917fb8f655d1f392f785",
+      "width": 150,
+      "height": 74,
+      "size": 6113,
+      "uploadedDate": "2024-08-09T10:30:55.231Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tlsclientevents-1920x1080-3d1930e2a1b57fae6f427a2be2e18dac_Snapshot.png",
+      "md5": "2edafa50df5e3c40b8bd53d82b64b89e",
+      "width": 150,
+      "height": 74,
+      "size": 6041,
+      "uploadedDate": "2024-08-09T10:30:55.711Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/publishexample-1920x1080-259596ffddc2df362d2a2a937482e87e_Snapshot.png",
+      "md5": "54034e69cbee7b61abb6e935663a5a92",
+      "width": 150,
+      "height": 74,
+      "size": 5771,
+      "uploadedDate": "2024-08-09T10:30:56.079Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/non client-1920x1080-b6b8656d9dc6f87dd881dfee8a6a4a62_Snapshot.png",
+      "md5": "1330e105c5d4d888e6e2fb21ffee3f39",
+      "width": 150,
+      "height": 74,
+      "size": 6538,
+      "uploadedDate": "2024-08-09T10:30:56.508Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/events2-1920x1080-afafe103b13466ca0ac3f9b4903dc395_Snapshot.png",
+      "md5": "581c573ffaeb061e6bad76991bc0b6cb",
+      "width": 150,
+      "height": 74,
+      "size": 6033,
+      "uploadedDate": "2024-08-09T10:30:56.931Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/beginplay-1920x1080-23c04414547fc842a2eaff4c08f7a70f_Snapshot.png",
+      "md5": "e11884dbe4e2764806ca1703828c3b3d",
+      "width": 150,
+      "height": 74,
+      "size": 6077,
+      "uploadedDate": "2024-08-09T10:30:57.276Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GkQ6HED-1920x1080-59d5bf60619df173c7d23a5ebf197c1d_Snapshot.png",
+      "md5": "9323b4c3da5646387ea1ee477ca1c49b",
+      "width": 150,
+      "height": 74,
+      "size": 5227,
+      "uploadedDate": "2024-06-05T13:09:19.127Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-06-22T04:51:34.950Z",
+  "lastModifiedDate": "2025-02-21T14:45:27.309Z",
+  "customAttributes": {},
+  "entitlementName": "95afc6fe7e6f416892397ca439bf55e6",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b3396bc61d8d48069ea7301153f62e01",
+      "appId": "TotalMQTT_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2024-06-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TotalMQTT v1.3.2"
+    }
+  ],
+  "developer": "warpstudios",
+  "developerId": "o-6pvlqc2qzxke3dkr5w743yjk29n5j2",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

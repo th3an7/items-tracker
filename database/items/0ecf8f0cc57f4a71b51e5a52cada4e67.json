@@ -1,0 +1,656 @@
+{
+  "id": "0ecf8f0cc57f4a71b51e5a52cada4e67",
+  "title": "Beefy Blackbirds (Niagara Bird System)",
+  "description": "Set of 10+ stylized birds with animations, and interactive Niagara particle system BP.",
+  "longDescription": "<p><strong>Unreal 5.2 September update! </strong><a href=\"https://docs.google.com/document/d/1dqBrZVpUxuXHOA8tIZK_QjaPslbyqTmuZVpSx8jSBZY/edit?usp&#61;sharing\" rel=\"nofollow\">Readme</a> |<strong> </strong><a href=\"https://youtu.be/fZtrn-0tcOI?si&#61;khga23n20HQ2bxIX\" rel=\"nofollow\"><strong>P</strong>review</a></p><p><strong>Discord: </strong><a href=\"https://discord.gg/JwQY7nQUww\" rel=\"nofollow\">Link</a></p><p><br /></p><ul><li><strong>Blackbird Particles Video: </strong><a href=\"https://youtu.be/LGKTLbKQAWc\" rel=\"nofollow\">Youtube</a></li><li><strong>Idle Animations:</strong> <a href=\"https://twitter.com/i/status/1345605948497227776\" rel=\"nofollow\">Twitter</a></li><li><strong>FAQ: </strong><a href=\"http://bit.ly/2NA5fcG\" rel=\"nofollow\">Link</a></li></ul><p><br /></p><p><em>*** I recommend opening the Map_NiagaraFlockExample level to see how these Blueprints are used. Thanks! ***</em></p><p><br /></p><p>This pack features <strong>11 unique bird meshes and 21 color variants </strong>with highly customizable material animation and color parameters - including color masks, low poly shading, and fresnel highlights. Easily create material instances for more variations! Each mesh has 2 LODs: LOD0 is around 2.1k triangles, LOD1 is around 1.2k.</p><p><br /></p><p>** Mesh can be change directly in the Actor. A separate LOD1 meshes is included for situations where you&#39;d like less detail &#43; better optimization for your scene.</p><p><br /></p><p>The <strong>new flocking blueprint systems</strong> allowing you to quickly add bird flocks to your level with different behavior and functionality. Flight behavior is determined by the InitialFlightType enum variable. Some examples include:</p><p><br /></p><ul><li>Perch: Birds fly to nearby Perch actor locations. (Perches are detected by the collision component, so no reference variable needs to be set.)</li><li>Free roam: Fish remain idle until approached, and swim only to avoid Players/intruders.</li><li>SplinePath: Birds flocking along a path (make sure to set the PathActor reference variable to a nearby Path BP)</li><li>FlockingPoint: Birds flocking randomly within a box. (You can set up a BoundaryBox tool BP or use a Flight Path BP.)</li><li>Follow Intruder: Fish swim toward the nearest intruder.</li></ul><p><br /></p><p>The Niagara system has <strong>modules for flocking, raytraced collision detection, spline flightpaths, random idling, and more!</strong></p><p><br /></p><p><strong>Static Mesh Animations:</strong> All animations use material WorldPositionOffset, offering lightweight performance and extra control over all animation parameters. <strong>Works with any custom mesh that is properly oriented along X&#43; axis.</strong></p>",
+  "technicalDetails": "<p><br /></p><p><strong>*** IMPORTANT: Grass, and water assets sold separately. ***</strong></p><p><br /></p><p><strong>Features:</strong></p><ul><li>New Niagara blueprint system with flocking and various flight modes. (CPU System, max # particles ~500)</li><li>Perch &#43; Spline Path Blueprint Actors that can be placed in a scene, and referenced by the Particle system.</li><li>11 Bird species, 21 color variants; 42 meshes total including separate LOD1. (customize colors and animations; 3 LODs each)</li><li>42 Material instances (2 MI for each bird: eg. Blackbird_Actor, Blackbird_Particle)</li><li>1 Master bird material with full color, shading, and animation customization - including a lightweight and reusable function library.</li></ul><p><br /></p><p><strong>Number of Blueprints:</strong> 5 Master Blueprint, 5 Child Actors</p><p><strong>Network Replicated:</strong> Yes</p><p><strong>Supported Development Platforms: </strong>Mobile Shading ES 3.1 or better</p><p><strong>Windows:</strong> Yes</p><p><strong>Mac:</strong> Yes</p><p><strong>Documentation: </strong><a href=\"http://bit.ly/2NA5fcG\" rel=\"nofollow\">FAQ</a> &#43; <a href=\"https://docs.google.com/document/d/1dqBrZVpUxuXHOA8tIZK_QjaPslbyqTmuZVpSx8jSBZY/edit?usp&#61;sharing\" rel=\"nofollow\"><strong>Readme</strong></a></p><p>_______________________________________________________</p><p><br /></p><h2><br /></h2>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BeefyBushtit01-1920x1080-963cead8c343ed8d3fcb4c7b628c3825.png",
+      "md5": "963cead8c343ed8d3fcb4c7b628c3825",
+      "width": 1920,
+      "height": 1080,
+      "size": 2503462,
+      "uploadedDate": "2021-06-29T20:11:45.835Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00269-1920x1080-cd0215c11740086cf81663bc672f9fe3.png",
+      "md5": "cd0215c11740086cf81663bc672f9fe3",
+      "width": 1920,
+      "height": 1080,
+      "size": 2708667,
+      "uploadedDate": "2021-06-29T20:11:48.399Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BeefyBlackbirdExampleMap-1920x1080-163863537b8655cac33dc592392a6d4d.jpg",
+      "md5": "163863537b8655cac33dc592392a6d4d",
+      "width": 1920,
+      "height": 1080,
+      "size": 755548,
+      "uploadedDate": "2023-09-20T01:17:03.373Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BeefyBlackbirdBlueprintTools-1920x1080-a5206285533ce2c2e5437572b380c860.jpg",
+      "md5": "a5206285533ce2c2e5437572b380c860",
+      "width": 1920,
+      "height": 1080,
+      "size": 782269,
+      "uploadedDate": "2023-09-20T01:17:03.913Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00099-1920x1080-f2f8f2cb338e34b8009e588487a18e00.png",
+      "md5": "f2f8f2cb338e34b8009e588487a18e00",
+      "width": 1920,
+      "height": 1080,
+      "size": 138217,
+      "uploadedDate": "2021-01-05T12:06:32.975Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackCappedChickadee-Material-1920x1080-a97fcf3e041edb2e88ea70679a93cc62.png",
+      "md5": "a97fcf3e041edb2e88ea70679a93cc62",
+      "width": 1920,
+      "height": 1080,
+      "size": 1354898,
+      "uploadedDate": "2021-06-26T22:13:38.554Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BeefyChickadees01-1920x1080-6b212758943bbbeeca2a472f6c5c3e50.png",
+      "md5": "6b212758943bbbeeca2a472f6c5c3e50",
+      "width": 1920,
+      "height": 1080,
+      "size": 2766068,
+      "uploadedDate": "2021-06-29T20:11:46.440Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BeefyParidae02-1920x1080-94db78eab5a4b59ae9bb336d9d849882.png",
+      "md5": "94db78eab5a4b59ae9bb336d9d849882",
+      "width": 1920,
+      "height": 1080,
+      "size": 2895270,
+      "uploadedDate": "2021-06-29T20:11:47.101Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BeefyBirdsMisc01-1920x1080-015ab816046a40c4e8c8643817fb148d.png",
+      "md5": "015ab816046a40c4e8c8643817fb148d",
+      "width": 1920,
+      "height": 1080,
+      "size": 2777661,
+      "uploadedDate": "2021-06-29T20:11:47.754Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00078-1920x1080-716fd97fa68b5537cded7044727b021e.png",
+      "md5": "716fd97fa68b5537cded7044727b021e",
+      "width": 1920,
+      "height": 1080,
+      "size": 2815744,
+      "uploadedDate": "2021-06-26T22:13:37.291Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BeefyBlackbirds01-1920x1080-f1dd6773388c3c8dec0068344f9e439a.png",
+      "md5": "f1dd6773388c3c8dec0068344f9e439a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2551450,
+      "uploadedDate": "2021-06-29T20:11:49.031Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BeefyBirdsNiagara_thumb-284x284-1b68f2b6d0ee5ae53458a4e2da171c17.png",
+      "md5": "1b68f2b6d0ee5ae53458a4e2da171c17",
+      "width": 284,
+      "height": 284,
+      "size": 103560,
+      "uploadedDate": "2021-06-29T20:11:49.462Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/BeefyBirdsNiagara_featured-894x488-c3a1c9000cf04bbae9746fbe8b175f14.png",
+      "md5": "c3a1c9000cf04bbae9746fbe8b175f14",
+      "width": 894,
+      "height": 488,
+      "size": 524193,
+      "uploadedDate": "2021-06-29T20:11:49.531Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyBlackbirdExampleMap-1920x1080-163863537b8655cac33dc592392a6d4d_Snapshot.jpg",
+      "md5": "f28065267adfbe73282999eb2f61dd85",
+      "width": 150,
+      "height": 74,
+      "size": 6511,
+      "uploadedDate": "2023-09-20T01:17:03.734Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyBlackbirdBlueprintTools-1920x1080-a5206285533ce2c2e5437572b380c860_Snapshot.jpg",
+      "md5": "dc502ce5bd8733b924f1cb46cbc4e5d3",
+      "width": 150,
+      "height": 74,
+      "size": 6536,
+      "uploadedDate": "2023-09-20T01:17:04.279Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyBushtit01-1920x1080-963cead8c343ed8d3fcb4c7b628c3825_Snapshot.png",
+      "md5": "c97b61f57e98d8fe1d4759b480d7d657",
+      "width": 150,
+      "height": 74,
+      "size": 4909,
+      "uploadedDate": "2021-06-29T20:11:46.218Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyChickadees01-1920x1080-6b212758943bbbeeca2a472f6c5c3e50_Snapshot.png",
+      "md5": "e6f431c210cc2bce81d36d9b25719f6a",
+      "width": 150,
+      "height": 74,
+      "size": 6019,
+      "uploadedDate": "2021-06-29T20:11:46.860Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyParidae02-1920x1080-94db78eab5a4b59ae9bb336d9d849882_Snapshot.png",
+      "md5": "41ccfe2e85a6dfec7c2526e77dd52df7",
+      "width": 150,
+      "height": 74,
+      "size": 5884,
+      "uploadedDate": "2021-06-29T20:11:47.524Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyBirdsMisc01-1920x1080-015ab816046a40c4e8c8643817fb148d_Snapshot.png",
+      "md5": "316581c34c668808883e0c86ca00f575",
+      "width": 150,
+      "height": 74,
+      "size": 6345,
+      "uploadedDate": "2021-06-29T20:11:48.142Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00269-1920x1080-cd0215c11740086cf81663bc672f9fe3_Snapshot.png",
+      "md5": "94610fa6b6d237a3bdd69987e7a98f15",
+      "width": 150,
+      "height": 74,
+      "size": 6848,
+      "uploadedDate": "2021-06-29T20:11:48.796Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyBlackbirds01-1920x1080-f1dd6773388c3c8dec0068344f9e439a_Snapshot.png",
+      "md5": "94b1a6ef0bf2fb90cc101b1208bfd26f",
+      "width": 150,
+      "height": 74,
+      "size": 5173,
+      "uploadedDate": "2021-06-29T20:11:49.416Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00122-1920x1080-1318b83ff5370d4c7d484521b6d003a3_Snapshot.png",
+      "md5": "3e303de518c7cebf84ed907b7e3166b7",
+      "width": 150,
+      "height": 74,
+      "size": 5332,
+      "uploadedDate": "2021-06-26T22:13:36.378Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00092-1920x1080-9093d4057efd32bd4fc4695111f0e376_Snapshot.png",
+      "md5": "59b10aa24c2e3ee70c8ad0b926dd6e15",
+      "width": 150,
+      "height": 74,
+      "size": 6380,
+      "uploadedDate": "2021-06-26T22:13:37.029Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00078-1920x1080-716fd97fa68b5537cded7044727b021e_Snapshot.png",
+      "md5": "133f210e27b949e3d0a9f51e784a9917",
+      "width": 150,
+      "height": 74,
+      "size": 5035,
+      "uploadedDate": "2021-06-26T22:13:37.660Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00091-1920x1080-7e816836c6773a339d6e4c6b0549062e_Snapshot.png",
+      "md5": "677267d34bc7bb9869421c18cb6fc983",
+      "width": 150,
+      "height": 74,
+      "size": 5926,
+      "uploadedDate": "2021-06-26T22:13:38.254Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackCappedChickadee-Material-1920x1080-a97fcf3e041edb2e88ea70679a93cc62_Snapshot.png",
+      "md5": "621763f1f84baa270bfcc17062540248",
+      "width": 150,
+      "height": 74,
+      "size": 4018,
+      "uploadedDate": "2021-06-26T22:13:39.034Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00143-1920x1080-f3006d49eaf5ad41d123bc8b5abc1882_Snapshot.png",
+      "md5": "ab3c974ae4326131738c5de13354a6e2",
+      "width": 150,
+      "height": 74,
+      "size": 3762,
+      "uploadedDate": "2021-06-26T22:13:39.551Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00154-1920x1080-b08176b1242683f61069e64425008659_Snapshot.png",
+      "md5": "cbd6e129a20d5c407448520c677baf3a",
+      "width": 150,
+      "height": 74,
+      "size": 4106,
+      "uploadedDate": "2021-06-26T22:13:40.124Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00133-1920x1080-e0473859650edd64d25fd80d4e8884cc_Snapshot.png",
+      "md5": "5868c8aee61b4c8b7e294a08f5b3d718",
+      "width": 150,
+      "height": 74,
+      "size": 3734,
+      "uploadedDate": "2021-06-26T22:13:40.638Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00158-1920x1080-869108852d6630307d72ed6825aefc3a_Snapshot.png",
+      "md5": "913c1db82fed0b14ec9d35441440e41f",
+      "width": 150,
+      "height": 74,
+      "size": 4238,
+      "uploadedDate": "2021-06-26T22:13:41.188Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Junco-SplineFlightPathBP-1920x1080-ec56a21694adf12869db07cbe753f49b_Snapshot.png",
+      "md5": "8a846d7b3a13518e9ae739aba33186b6",
+      "width": 150,
+      "height": 74,
+      "size": 6995,
+      "uploadedDate": "2021-01-05T12:21:18.252Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ChestnutBackedChickadee-Material-1920x1080-e0bb1e0e01b4b2642683d49f1ca471b2_Snapshot.png",
+      "md5": "2f101dac705a4e475c621b0fa311b223",
+      "width": 150,
+      "height": 74,
+      "size": 3723,
+      "uploadedDate": "2021-01-05T12:21:19.001Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00003-1920x1080-000e9d3622650e8cfa9a5391e0d2f2d3_Snapshot.png",
+      "md5": "465d17f0109af94f92d997f27e575014",
+      "width": 150,
+      "height": 74,
+      "size": 6520,
+      "uploadedDate": "2021-01-05T12:06:32.872Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00099-1920x1080-f2f8f2cb338e34b8009e588487a18e00_Snapshot.png",
+      "md5": "041c09162e49701043586b64a7fe729a",
+      "width": 150,
+      "height": 74,
+      "size": 2943,
+      "uploadedDate": "2021-01-05T12:06:33.188Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00040-1920x1080-e80179f4a100aada820cd1e0d1ba6aaf_Snapshot.png",
+      "md5": "df80c7032a5b413c576e932bb2ae0b75",
+      "width": 150,
+      "height": 74,
+      "size": 4734,
+      "uploadedDate": "2021-01-02T07:15:52.200Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00029-1920x1080-8e02f62217de782c547b13ac2cee83bc_Snapshot.png",
+      "md5": "0f3d167c90266660f3211465232c49b4",
+      "width": 150,
+      "height": 74,
+      "size": 4595,
+      "uploadedDate": "2021-01-02T07:15:52.832Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00007-1920x1080-fab5419f6127ac87b8e8111b5cdb1e9e_Snapshot.png",
+      "md5": "c8f6841d9fcce4965abf658faa35e259",
+      "width": 150,
+      "height": 74,
+      "size": 6508,
+      "uploadedDate": "2021-01-01T06:41:04.928Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Junco-SplineFlightPathBP-1920x1080-ec56a21694adf12869db07cbe753f49b_Snapshot.png",
+      "md5": "8a846d7b3a13518e9ae739aba33186b6",
+      "width": 150,
+      "height": 74,
+      "size": 6995,
+      "uploadedDate": "2021-01-01T06:41:05.912Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackCappedChickadee-MaterialFlying-1920x1080-2c4692c26930731fed68ac71551496c7_Snapshot.png",
+      "md5": "03f7d6247ea64cf7c8054c70c8f961a2",
+      "width": 150,
+      "height": 74,
+      "size": 3754,
+      "uploadedDate": "2021-01-01T06:41:06.657Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ChestnutBackedChickadee-Material-1920x1080-e0bb1e0e01b4b2642683d49f1ca471b2_Snapshot.png",
+      "md5": "2f101dac705a4e475c621b0fa311b223",
+      "width": 150,
+      "height": 74,
+      "size": 3723,
+      "uploadedDate": "2021-01-01T06:41:07.373Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-9f5b3b76364a6550173035c0a2b714d5_Snapshot.png",
+      "md5": "ace33f216bbe2fef3157dc612949b8ee",
+      "width": 150,
+      "height": 74,
+      "size": 4981,
+      "uploadedDate": "2021-01-01T05:29:17.867Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00022-1920x1080-1da8f1ee3b85a244778fde16a4785e01_Snapshot.png",
+      "md5": "60ca64b1c58b9ba596dbe2a423e7f2ce",
+      "width": 150,
+      "height": 74,
+      "size": 4489,
+      "uploadedDate": "2021-01-01T05:29:18.435Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00005-1920x1080-442ba8066d11263b661bf6547674a251_Snapshot.png",
+      "md5": "e7d2d46b40513d0d7063019e64c3bc4c",
+      "width": 150,
+      "height": 74,
+      "size": 5718,
+      "uploadedDate": "2021-01-01T05:29:19.144Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00005-1920x1080-1eeb07ba8287237ae4f8326dfdd1500c_Snapshot.png",
+      "md5": "fd63c8a784d0a73c6971ebcc7c990399",
+      "width": 150,
+      "height": 74,
+      "size": 5622,
+      "uploadedDate": "2021-01-01T05:29:19.719Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00027-1920x1080-4c240dd4f6343ed968fd23681815c8d0_Snapshot.png",
+      "md5": "ceb826ce00654ee4948c2c6b382b456a",
+      "width": 150,
+      "height": 74,
+      "size": 5467,
+      "uploadedDate": "2020-05-08T05:48:13.928Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00030-1920x1080-5fcb50d26bfb24c15470fd6b768e0cde_Snapshot.png",
+      "md5": "afd5e46a6589f071175ed142c91d9adc",
+      "width": 150,
+      "height": 74,
+      "size": 5337,
+      "uploadedDate": "2020-05-08T05:48:14.535Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-5b0e2d24072ffa4e3b24ed072c065f9b_Snapshot.png",
+      "md5": "6fff0c27b186122a330f0e0d90d8657f",
+      "width": 150,
+      "height": 74,
+      "size": 5947,
+      "uploadedDate": "2020-05-08T05:48:15.202Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00024-1920x1080-0103a962abb5051a330fac0a0c320cae_Snapshot.png",
+      "md5": "5908eed2fd722fc72118d9ce6fd6818a",
+      "width": 150,
+      "height": 74,
+      "size": 5467,
+      "uploadedDate": "2020-05-08T05:48:15.864Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00099-1920x1080-f2f8f2cb338e34b8009e588487a18e00_Snapshot.png",
+      "md5": "041c09162e49701043586b64a7fe729a",
+      "width": 150,
+      "height": 74,
+      "size": 2943,
+      "uploadedDate": "2020-04-11T09:59:11.633Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-c43aa0f72669fd711552aff20e0b87eb_Snapshot.png",
+      "md5": "bd0975c6cbc9448e4d1db41d069fcd58",
+      "width": 150,
+      "height": 74,
+      "size": 5885,
+      "uploadedDate": "2020-04-11T09:38:53.912Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-83c02ecd79b02e194f3fd993b7b90504_Snapshot.png",
+      "md5": "171a156f566f9d8b7ffef2c028d7c4a3",
+      "width": 150,
+      "height": 74,
+      "size": 6217,
+      "uploadedDate": "2020-04-11T09:38:54.463Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00004-1920x1080-2af9f583df341ec11863decc0e452e8d_Snapshot.png",
+      "md5": "ea75f2fd4a0a75089c9a3505b212e91c",
+      "width": 150,
+      "height": 74,
+      "size": 6561,
+      "uploadedDate": "2020-04-11T09:38:55.052Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00098-1920x1080-52e4b1c55586d25bcdb1ddf040205503_Snapshot.png",
+      "md5": "255da86a80455df7edf95eb10229441a",
+      "width": 150,
+      "height": 74,
+      "size": 4185,
+      "uploadedDate": "2020-04-11T09:38:55.667Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackbirdLowpolyLOD0-1920x1080-e0d86daa6ef168c8cf0e7a924539e361_Snapshot.png",
+      "md5": "644a529957cb70df11836b0a3b26470b",
+      "width": 150,
+      "height": 74,
+      "size": 4528,
+      "uploadedDate": "2020-04-11T09:38:56.201Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackbirdLOD0-1920x1080-b83fb0a1717abc0c9db91cd3217f1489_Snapshot.png",
+      "md5": "8c939eef582e2a7e53f21e8fad73349b",
+      "width": 150,
+      "height": 74,
+      "size": 4708,
+      "uploadedDate": "2020-04-11T09:38:56.638Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-05-11T19:03:18.194Z",
+  "lastModifiedDate": "2024-10-09T05:30:18.064Z",
+  "customAttributes": {},
+  "entitlementName": "0ecf8f0cc57f4a71b51e5a52cada4e67",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "f90703a0b5904656bfa1e46c259299b1",
+      "appId": "BeefyBla0ecf8f0cc57fV1",
+      "compatibleApps": [
+        "UE_4.21",
+        "UE_4.22"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-04-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Version 1"
+    },
+    {
+      "id": "33dd68d805e94b3983487f7421757011",
+      "appId": "BeefyBla0ecf8f0cc57fV2",
+      "compatibleApps": [
+        "UE_4.23",
+        "UE_4.24"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Xbox One",
+        "Win32",
+        "Windows",
+        "PS4"
+      ],
+      "dateAdded": "2020-05-15T00:00:00.000Z",
+      "releaseNote": "- Spline BP issue fix: reset mesh rotation.\n",
+      "versionTitle": "Update 7-27-20"
+    },
+    {
+      "id": "97c30439f7754dd59c5cdc5bafef75b4",
+      "appId": "BeefyBla0ecf8f0cc57fV3",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "PS4",
+        "Xbox One",
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-12-30T00:00:00.000Z",
+      "releaseNote": "- CustomPrimitiveData fix\n- Default mat. settings: Undulation now disabled for actors.\n- random response time \n- no longer supports version 4.26",
+      "versionTitle": "Blackbirds Pack 2.0"
+    },
+    {
+      "id": "9c7467b47bdb46079493bc9bf0a96437",
+      "appId": "BeefyBla0ecf8f0cc57fV4",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Win32",
+        "PS4",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2021-06-17T00:00:00.000Z",
+      "releaseNote": "+ Niagara-Blueprint systems\n+ Random idle animations\n+ All birds include separate LOD mesh with simplified wing geometry ",
+      "versionTitle": "Blackbirds Niagara 2.0"
+    },
+    {
+      "id": "059e75f3fc3e485eb9bec254dec727f7",
+      "appId": "BeefyBla0ecf8f0cc57fV5",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Win32",
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Oculus",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-11-30T00:00:00.000Z",
+      "releaseNote": "Beefy update for Unreal Engine 5.1",
+      "versionTitle": "Beefy Blackbirds 510"
+    },
+    {
+      "id": "7778dfd1e7024b93b1d698c0481bb077",
+      "appId": "BeefyBla0ecf8f0cc57fV6",
+      "compatibleApps": [
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "Win32",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2023-09-14T00:00:00.000Z",
+      "releaseNote": "Respawn Fix,\nFlockingToPerch Fix",
+      "versionTitle": "Beefy Blackbirds 520"
+    }
+  ],
+  "developer": "MWallace3D",
+  "developerId": "o-wspfycd856348muwzrh42kjsusqq87",
+  "endOfSupport": false,
+  "unsearchable": false
+}

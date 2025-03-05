@@ -1,0 +1,280 @@
+{
+  "id": "adc650ef7477457ca34a37ccf53bf180",
+  "title": "Clever Objects",
+  "description": "Simple system for AI and player interaction with in-game objects through predefined slots and GameplayTags",
+  "longDescription": "<p><a href=\"https://youtu.be/OCz3_3Xf5fs\" rel=\"nofollow\">Trailer Video (YouTube)</a></p><p><a href=\"https://github.com/faxcorp/CleverObjectsDocumentation/wiki\" rel=\"nofollow\">Documentation (GitHub)</a></p><p><a href=\"https://drive.google.com/file/d/19M2mioSxT7Fok2AA7IVWOT3NzZ1swwBp/view?usp&#61;sharing\" rel=\"nofollow\">Packaged Example Game (GoogleDrive)</a></p><p><a href=\"https://github.com/faxcorp/CleverObjectsDemoProject\" rel=\"nofollow\">Example Game Project (GitHub)</a></p><p><br /></p><p>The <strong>Clever Objects</strong> system is a flexible and efficient plugin designed to bring life to NPCs and environment with celver slot based actions using in-game objects. Inspired by Unreal Engine’s Smart Objects, Clever Objects offers several advantages, including support for both AI and non-AI characters, and it functions without the need for WorldPartition, and in general easier to implement.</p><p>This system creates interactions where characters engage with objects, such as chairs, computers, or beds, through predefined &#34;slots.&#34; These slots are managed using <strong>GameplayTags</strong>, which govern which characters can interact with specific objects. For example, only security NPCs might be allowed to use a &#34;Guard&#34; slot, while engineers could access a slot tagged for &#34;Computer Interaction.&#34;</p><p>The core workflow includes the following:</p><ul><li><strong>Defining Slots on Objects</strong>: Developers add the <strong>CleverSlot</strong> component to in-game objects (e.g., chairs, computers) to create interactive slots. Each slot specifies the action to be performed when occupied, such as playing Animation Montage of sitting or using a terminal.</li><li><strong>Claiming and Using Slots</strong>: Characters with the <strong>CleverObjectsUser</strong> component can search for, claim, and use available slots. The system ensures that only characters with matching <strong>GameplayTags</strong> or specified conditions can use a particular slot, creating controlled and purposeful interactions.</li><li><strong>Executing Actions</strong>: Once a slot is claimed and then used, a corresponding <strong>CleverAction</strong> is triggered, governing the character’s behavior—such as animations or interactions. These actions can run for a predefined duration or conclude based on custom criteria.</li><li><strong>Dynamic Conditions</strong>: Using interfaces like <strong>CleverObjectsInterface</strong> and <strong>CleverUserInterface</strong>, developers can impose additional conditions for slot usage. This might include time-of-day restrictions or ensuring the character has unlocked access to the relevant areas.</li></ul>",
+  "technicalDetails": "<h3>Features:</h3><ul><li>Custom interaction system enabling both AI NPCs and player-controlled characters to interact with in-game objects via predefined slots</li><li>Slot-based interaction governed by <strong>GameplayTags</strong>, ensuring specific character types (e.g., security, engineers) can use particular slots</li><li>Interfaces to define additional interaction conditions, such as restricting slots by time of day or access to specific doors</li><li>Compatible with both AI and non-AI (player-controlled) characters</li></ul><h3>Code Modules:</h3><ul><li><strong>CleverObjectsSubsystem</strong> – Manages all active slots and performs real-time searches for available slots.</li><li><strong>CleverSlot - </strong>Scene component to add to an actor</li><li><strong>CleverAction - </strong>Object that contains logic for the action when slot is used</li></ul><h3>Number of Blueprints:</h3><ul><li>1 Blueprint class for Action of playing Animation Montage</li></ul><h3>Number of C&#43;&#43; Classes:</h3><ul><li>9 C&#43;&#43; classes.</li></ul><h3>Network Replicated:</h3><ul><li><strong>No</strong></li></ul><h3>Supported Development Platforms:</h3><ul><li>Windows</li></ul><h3>Supported Target Build Platforms:</h3><ul><li>Windows</li></ul><h3>Documentation:</h3><ul><li>Documentation can be found at https://github.com/faxcorp/CleverObjectsDocumentation/wiki</li></ul><h3>Example Project:</h3><ul><li>Example project is available for download at https://drive.google.com/file/d/1ih5Jq-_ZYYEvpKkkUcwpp7H3E4C4E1uK/view?usp&#61;sharing</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-d97c93ad336811b0e85bacb7e4a88124.jpg",
+      "md5": "d97c93ad336811b0e85bacb7e4a88124",
+      "width": 1920,
+      "height": 1080,
+      "size": 699378,
+      "uploadedDate": "2024-09-20T13:52:13.301Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-a66e7c7b6bfc88901ea3f2741885f83e.jpg",
+      "md5": "a66e7c7b6bfc88901ea3f2741885f83e",
+      "width": 1920,
+      "height": 1080,
+      "size": 665501,
+      "uploadedDate": "2024-09-20T13:52:12.650Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-545a1200c3c8bcabf988d234f5fe821f.jpg",
+      "md5": "545a1200c3c8bcabf988d234f5fe821f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1083834,
+      "uploadedDate": "2024-09-20T13:52:12.040Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00002-1920x1080-c69bd8c23712e72678815d45df15460f.jpg",
+      "md5": "c69bd8c23712e72678815d45df15460f",
+      "width": 1920,
+      "height": 1080,
+      "size": 964977,
+      "uploadedDate": "2024-09-20T13:52:14.856Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00000-1920x1080-be75af8a4b859046e056f721ffbddd9e.jpg",
+      "md5": "be75af8a4b859046e056f721ffbddd9e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1118813,
+      "uploadedDate": "2024-09-20T13:52:13.959Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00008-1920x1080-ef4033c8b75830fa020d490a063de0af.jpg",
+      "md5": "ef4033c8b75830fa020d490a063de0af",
+      "width": 1920,
+      "height": 1080,
+      "size": 875907,
+      "uploadedDate": "2024-09-20T13:52:15.378Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00010-1920x1080-6d541fc0f61a8c400f5d870d005df730.jpg",
+      "md5": "6d541fc0f61a8c400f5d870d005df730",
+      "width": 1920,
+      "height": 1080,
+      "size": 678122,
+      "uploadedDate": "2024-09-20T13:52:15.780Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00001-1920x1080-b9166f0a7515337d151519b35fa602e8.jpg",
+      "md5": "b9166f0a7515337d151519b35fa602e8",
+      "width": 1920,
+      "height": 1080,
+      "size": 997533,
+      "uploadedDate": "2024-09-20T13:52:14.450Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/slot-1920x1080-4137a0180ffcf6c38f36588c81c9acdf.jpg",
+      "md5": "4137a0180ffcf6c38f36588c81c9acdf",
+      "width": 1920,
+      "height": 1080,
+      "size": 457596,
+      "uploadedDate": "2024-09-20T14:31:36.601Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/action-1920x1080-3491d9c9ccf9b3f8537dcacaad89e03b.jpg",
+      "md5": "3491d9c9ccf9b3f8537dcacaad89e03b",
+      "width": 1920,
+      "height": 1080,
+      "size": 174736,
+      "uploadedDate": "2024-09-20T14:31:37.111Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/nodes-1920x1080-ff8dac4d9da69e5cc0f093ab0bb3b153.jpg",
+      "md5": "ff8dac4d9da69e5cc0f093ab0bb3b153",
+      "width": 1920,
+      "height": 1080,
+      "size": 744178,
+      "uploadedDate": "2024-09-20T14:35:24.589Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/CleverObjects_thumb-284x284-3776b7fe7808d7b52335a214b4d30379.png",
+      "md5": "3776b7fe7808d7b52335a214b4d30379",
+      "width": 284,
+      "height": 284,
+      "size": 172431,
+      "uploadedDate": "2024-09-20T13:52:16.640Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/CleverObjects_featured-894x488-80be403be21ea27e0fa56a591a4f3737.png",
+      "md5": "80be403be21ea27e0fa56a591a4f3737",
+      "width": 894,
+      "height": 488,
+      "size": 666521,
+      "uploadedDate": "2024-09-25T06:01:22.572Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/nodes-1920x1080-ff8dac4d9da69e5cc0f093ab0bb3b153_Snapshot.jpg",
+      "md5": "f3d917039504e21b6169a205fd16faee",
+      "width": 150,
+      "height": 74,
+      "size": 5187,
+      "uploadedDate": "2024-09-20T14:35:24.948Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/slot-1920x1080-4137a0180ffcf6c38f36588c81c9acdf_Snapshot.jpg",
+      "md5": "0036eb1a66a857d59894168ab9c5e57e",
+      "width": 150,
+      "height": 74,
+      "size": 4246,
+      "uploadedDate": "2024-09-20T14:31:36.934Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/action-1920x1080-3491d9c9ccf9b3f8537dcacaad89e03b_Snapshot.jpg",
+      "md5": "a12d8e06a751df04c6a767779f531e1c",
+      "width": 150,
+      "height": 74,
+      "size": 2606,
+      "uploadedDate": "2024-09-20T14:31:37.441Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/nodes-1920x1080-3649a9230208a59895f222be9f0bf904_Snapshot.jpg",
+      "md5": "8ae5952acedc50163085bb1b4c4c280a",
+      "width": 150,
+      "height": 74,
+      "size": 4755,
+      "uploadedDate": "2024-09-20T14:31:37.964Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-545a1200c3c8bcabf988d234f5fe821f_Snapshot.jpg",
+      "md5": "0a824d742f7f8d48a90d41f406e3aa94",
+      "width": 150,
+      "height": 74,
+      "size": 7033,
+      "uploadedDate": "2024-09-20T13:52:12.431Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-a66e7c7b6bfc88901ea3f2741885f83e_Snapshot.jpg",
+      "md5": "5d5eb16d878fc0dd1b5118c37918bd79",
+      "width": 150,
+      "height": 74,
+      "size": 5130,
+      "uploadedDate": "2024-09-20T13:52:13.015Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-d97c93ad336811b0e85bacb7e4a88124_Snapshot.jpg",
+      "md5": "750519e7426f2326bd53a01e2ad31b87",
+      "width": 150,
+      "height": 74,
+      "size": 5082,
+      "uploadedDate": "2024-09-20T13:52:13.659Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00000-1920x1080-be75af8a4b859046e056f721ffbddd9e_Snapshot.jpg",
+      "md5": "07a2d30fd68e8d07c233350759d0e9c1",
+      "width": 150,
+      "height": 74,
+      "size": 8124,
+      "uploadedDate": "2024-09-20T13:52:14.272Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-b9166f0a7515337d151519b35fa602e8_Snapshot.jpg",
+      "md5": "3cc13360ec046790bed67734033de288",
+      "width": 150,
+      "height": 74,
+      "size": 6684,
+      "uploadedDate": "2024-09-20T13:52:14.712Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-c69bd8c23712e72678815d45df15460f_Snapshot.jpg",
+      "md5": "ff7ce49d2b98da1b6fcc8b9129e16558",
+      "width": 150,
+      "height": 74,
+      "size": 6378,
+      "uploadedDate": "2024-09-20T13:52:15.146Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00008-1920x1080-ef4033c8b75830fa020d490a063de0af_Snapshot.jpg",
+      "md5": "716e7d855a381419f171a62438d56ece",
+      "width": 150,
+      "height": 74,
+      "size": 6368,
+      "uploadedDate": "2024-09-20T13:52:15.660Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00010-1920x1080-6d541fc0f61a8c400f5d870d005df730_Snapshot.jpg",
+      "md5": "fcba929c6be7e9813b606e518e61dba0",
+      "width": 150,
+      "height": 74,
+      "size": 5505,
+      "uploadedDate": "2024-09-20T13:52:16.031Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00011-1920x1080-15443d073af236ecca95d3c2903fbdc8_Snapshot.jpg",
+      "md5": "4478907da1b64571ef9ba05f5b9a82c8",
+      "width": 150,
+      "height": 74,
+      "size": 5746,
+      "uploadedDate": "2024-09-20T13:52:16.454Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-09-22T17:16:27.925Z",
+  "lastModifiedDate": "2025-02-14T13:00:32.621Z",
+  "customAttributes": {},
+  "entitlementName": "adc650ef7477457ca34a37ccf53bf180",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "7516959115a74a6aa118e1fd483bdd86",
+      "appId": "FAXCORPCleverObjects_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2024-09-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "54v2"
+    }
+  ],
+  "developer": "FAXCORPunlimited",
+  "developerId": "o-j8t6nwrs2tr8mangr6yqwgrcur7gf7",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

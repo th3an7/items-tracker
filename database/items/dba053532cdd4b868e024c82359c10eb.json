@@ -1,0 +1,338 @@
+{
+  "id": "dba053532cdd4b868e024c82359c10eb",
+  "title": "Niagara UI Renderer",
+  "description": "Render Niagara particles directly into UMG widgets",
+  "longDescription": "<p>Video: <a href=\"https://youtu.be/iFa40Sf4QPA\" rel=\"nofollow\">https://youtu.be/iFa40Sf4QPA</a></p><p><br /></p><p>The Niagara UI Renderer Plugin adds a Niagara Particle System Widget that allows you to render Niagara particle systems directly into the UI. The plugin supports <strong>sprite and ribbon CPU particles.</strong></p><p><br /></p><p>With this plugin you can finally use Niagara particles in the UI, without the hassle of creating expensive render targets. Just drag the Niagara System Widget into your widget blueprint, select your Niagara particle system, add your materials into the Material Remap List and you&#39;re good to go! For the step by step guide, please visit the <a href=\"https://sourysk.github.io/NiagaraUIRendererDocumentation/\" rel=\"nofollow\">documentation</a>.</p><p><br /></p><p>This plugin was tested on Windows and Android, but it should work on other platforms too. They are not officialy supported, because I don&#39;t have a way to test in on the other platforms.</p><p><br /></p><p>You can use &#34;stat NiagaraUI&#34; console command to check the performance of your particle systems. In my test scene running on an AMD Ryzen 9 5900X, it took 0.05ms to generate the sprite data and 0.1ms to generate the ribbon data for 1,000 particles.</p><p><br /></p><p>If you want to get help getting started with this plugin, you can take a look at the tutorials:</p><p><a href=\"https://youtu.be/1shJqOcEb0E\" rel=\"nofollow\">Beginner Tutorial</a></p><p><a href=\"https://youtu.be/1O4fLjqosBg\" rel=\"nofollow\">Intermediate Tutorial</a></p><p><a href=\"https://youtu.be/iMBJ4-39mu8\" rel=\"nofollow\">Advanced Tutorial</a></p><p><br /></p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Adds a Niagara System Widget</li><li> Supports <strong>CPU particles only</strong></li><li> Supports Sprite and Ribbon particles</li><li> Allows remapping particle materials to the UI materials in the widget itself</li><li> Automatically convert particle materials to the UI materials</li><li> Directly transfers the widget location to the actor location so it supports moving / animating the widget</li></ul><p><br /></p><p>Code Modules:</p><ul><li> NiagaraUIRenderer (Runtime)</li><li> NiagaraUIRendererEditor (Editor)</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 10</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win32, Win64</p><p>Supported Target Build Platforms: Win32, Win64, Android</p><p>Documentation: <a href=\"https://sourysk.github.io/NiagaraUIRendererDocumentation/\" rel=\"nofollow\">https://sourysk.github.io/NiagaraUIRendererDocumentation/</a></p><p>Example Project: <a href=\"https://github.com/SourySK/NiagaraUIRenderer/releases/download/v1.0/NiagaraUIRenderer_Demo_ProjectOnly_1.0.2_4.26.zip\" rel=\"nofollow\">https://github.com/SourySK/NiagaraUIRenderer/releases/download/v1.0/NiagaraUIRenderer_Demo_ProjectOnly_1.0.2_4.26.zip</a></p><p>Important/Additional Notes:</p><ul><li>Supports <strong>only CPU particles</strong></li><li>Supports <strong>only Sprite and Ribbon particle renderers</strong></li><li>You can use &#34;stat NiagaraUI&#34; to see how long it takes to generate particle data.</li><li>After you selected your CPU Niagara System and still can&#39;t see it, the most likely cause is that you don&#39;t have Material Remap List set up correctly. Please take a look at the documentation to see how to set it up.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Sample-1920x1080-a4cf5fb43a4ee2fe807dcd0c88ceb56d.png",
+      "md5": "a4cf5fb43a4ee2fe807dcd0c88ceb56d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1217528,
+      "uploadedDate": "2021-07-01T13:46:59.519Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EditorExample-1920x1080-071f7681fc643d73ef2c3883dd7b6d94.png",
+      "md5": "071f7681fc643d73ef2c3883dd7b6d94",
+      "width": 1920,
+      "height": 1080,
+      "size": 428422,
+      "uploadedDate": "2021-07-01T13:46:58.383Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Configuration-1920x1080-4b3dfc2b3b58124f1982592ca6a53750.png",
+      "md5": "4b3dfc2b3b58124f1982592ca6a53750",
+      "width": 1920,
+      "height": 1080,
+      "size": 467469,
+      "uploadedDate": "2021-07-01T13:46:57.957Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SpriteRibbon-1920x1080-8de48ca277a578cae03a083d64767672.png",
+      "md5": "8de48ca277a578cae03a083d64767672",
+      "width": 1920,
+      "height": 1080,
+      "size": 622496,
+      "uploadedDate": "2021-07-01T13:47:00.025Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blueprint-1920x1080-646caf51feb7bc220d5436ed65baee92.png",
+      "md5": "646caf51feb7bc220d5436ed65baee92",
+      "width": 1920,
+      "height": 1080,
+      "size": 439214,
+      "uploadedDate": "2021-07-01T13:46:57.546Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Performance-1920x1080-170a8d5ea6fa995367c278ce6e74a389.png",
+      "md5": "170a8d5ea6fa995367c278ce6e74a389",
+      "width": 1920,
+      "height": 1080,
+      "size": 2109768,
+      "uploadedDate": "2021-07-01T13:46:58.894Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/NiagaraUIRenderer_thumb-284x284-c8ee500c1094dfd9bc2abc6a216290b1.png",
+      "md5": "c8ee500c1094dfd9bc2abc6a216290b1",
+      "width": 284,
+      "height": 284,
+      "size": 92969,
+      "uploadedDate": "2021-07-01T18:20:20.646Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/NiagaraUIRenderer_featured-894x488-432cf52a8ba0b63428ba97df8103dd02.png",
+      "md5": "432cf52a8ba0b63428ba97df8103dd02",
+      "width": 894,
+      "height": 488,
+      "size": 383818,
+      "uploadedDate": "2021-07-01T09:12:18.357Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint-1920x1080-646caf51feb7bc220d5436ed65baee92_Snapshot.png",
+      "md5": "b5e5dd73b2a74a5d1d8e453a5b86d2fd",
+      "width": 150,
+      "height": 74,
+      "size": 4373,
+      "uploadedDate": "2021-07-01T13:46:57.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Configuration-1920x1080-4b3dfc2b3b58124f1982592ca6a53750_Snapshot.png",
+      "md5": "d66d901fb32af7f8f376b99070d09ee3",
+      "width": 150,
+      "height": 74,
+      "size": 5363,
+      "uploadedDate": "2021-07-01T13:46:58.250Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EditorExample-1920x1080-071f7681fc643d73ef2c3883dd7b6d94_Snapshot.png",
+      "md5": "99dddb5b041c736dffc888a9e66b6928",
+      "width": 150,
+      "height": 74,
+      "size": 6078,
+      "uploadedDate": "2021-07-01T13:46:58.709Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Performance-1920x1080-170a8d5ea6fa995367c278ce6e74a389_Snapshot.png",
+      "md5": "eafb1ef3280ddc389b05f2c89e5cc8ad",
+      "width": 150,
+      "height": 74,
+      "size": 7003,
+      "uploadedDate": "2021-07-01T13:46:59.335Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Sample-1920x1080-a4cf5fb43a4ee2fe807dcd0c88ceb56d_Snapshot.png",
+      "md5": "313fa0662bba8c55350e1843edc398ec",
+      "width": 150,
+      "height": 74,
+      "size": 5541,
+      "uploadedDate": "2021-07-01T13:46:59.856Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SpriteRibbon-1920x1080-8de48ca277a578cae03a083d64767672_Snapshot.png",
+      "md5": "ab54f234ed12e129201c3ae046cd7709",
+      "width": 150,
+      "height": 74,
+      "size": 5072,
+      "uploadedDate": "2021-07-01T13:47:00.303Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Configuration-1920x1080-4b3dfc2b3b58124f1982592ca6a53750_Snapshot.png",
+      "md5": "d66d901fb32af7f8f376b99070d09ee3",
+      "width": 150,
+      "height": 74,
+      "size": 5363,
+      "uploadedDate": "2021-07-01T12:01:18.627Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EditorExample-1920x1080-071f7681fc643d73ef2c3883dd7b6d94_Snapshot.png",
+      "md5": "99dddb5b041c736dffc888a9e66b6928",
+      "width": 150,
+      "height": 74,
+      "size": 6078,
+      "uploadedDate": "2021-07-01T12:00:36.582Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Sample-1920x1080-a4cf5fb43a4ee2fe807dcd0c88ceb56d_Snapshot.png",
+      "md5": "313fa0662bba8c55350e1843edc398ec",
+      "width": 150,
+      "height": 74,
+      "size": 5541,
+      "uploadedDate": "2021-07-01T12:00:12.513Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EditorExample-1920x1080-9dabbda328ed730faaaf1ace9e83afdc_Snapshot.png",
+      "md5": "599c764a22c1d5ee52d6cc0f0c2c876a",
+      "width": 150,
+      "height": 74,
+      "size": 6099,
+      "uploadedDate": "2021-07-01T10:19:24.594Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Configuration-1920x1080-0559e14128400d109b6efc5872ff9392_Snapshot.png",
+      "md5": "fef1342a516543d90f341a446a956a0c",
+      "width": 150,
+      "height": 74,
+      "size": 5346,
+      "uploadedDate": "2021-07-01T10:19:25.053Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint-1920x1080-7c5cb95382b152650704229cb4848e78_Snapshot.png",
+      "md5": "ec5626c448b9aadd9fa19b2a83cc928d",
+      "width": 150,
+      "height": 74,
+      "size": 4409,
+      "uploadedDate": "2021-07-01T10:19:25.468Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Performance-1920x1080-a03eda55ce7708c643eaaed57cdb653d_Snapshot.png",
+      "md5": "8db0b8a7a9f75efa2579ccec55092462",
+      "width": 150,
+      "height": 74,
+      "size": 7218,
+      "uploadedDate": "2021-07-01T10:19:26.076Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SpriteRibbon-1920x1080-8de48ca277a578cae03a083d64767672_Snapshot.png",
+      "md5": "ab54f234ed12e129201c3ae046cd7709",
+      "width": 150,
+      "height": 74,
+      "size": 5072,
+      "uploadedDate": "2021-07-01T10:19:26.526Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Banner-1920x1080-a86688a1f4ddbf92606ed032ba31155f_Snapshot.png",
+      "md5": "f185c20d02a81c793b427ed56411490f",
+      "width": 150,
+      "height": 74,
+      "size": 4975,
+      "uploadedDate": "2021-07-01T09:12:18.040Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-07-01T20:15:38.401Z",
+  "lastModifiedDate": "2024-11-13T18:22:24.713Z",
+  "customAttributes": {},
+  "entitlementName": "dba053532cdd4b868e024c82359c10eb",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "209e4d47b00c45f2a9cf2fc471f278c9",
+      "appId": "NiagaraUIRenderer_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-07-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.1_UE4.26"
+    },
+    {
+      "id": "281f839cb9674da4875099875f332e49",
+      "appId": "NiagaraUIRenderer_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.1_UE4.27"
+    },
+    {
+      "id": "ec7ee25d773942469a859d7eb8152287",
+      "appId": "NiagaraUIRenderer_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.6_UE5.0"
+    },
+    {
+      "id": "d16417fc7b054adb913b7c41ca72ff60",
+      "appId": "NiagaraUIRenderer_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.7_UE5.1"
+    },
+    {
+      "id": "d724da4d18114375adbad399263b8b1f",
+      "appId": "NiagaraUIRenderer_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2023-05-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.7_UE5.2"
+    },
+    {
+      "id": "5735169596f84ebca913e885e82ea629",
+      "appId": "NiagaraUIRenderer_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.7_UE5.3"
+    },
+    {
+      "id": "835ba19dc0384d8d8a6d4c13ba29485b",
+      "appId": "NiagaraUIRenderer_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2024-04-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.7_UE5.4"
+    }
+  ],
+  "developer": "Michal Smolen",
+  "developerId": "o-839f7ecde04e62bfd4c2ed494d398a",
+  "endOfSupport": false,
+  "unsearchable": false
+}

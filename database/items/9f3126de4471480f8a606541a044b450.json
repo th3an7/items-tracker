@@ -1,0 +1,448 @@
+{
+  "id": "9f3126de4471480f8a606541a044b450",
+  "title": "River Generation Plugin",
+  "description": "Generation of tributaries, automatic spline generation based on terrain, spreading animations with particle systems, complex rivernetworks, spline based",
+  "longDescription": "<p>This plugin uses precedural generated meshes based on splines. They can be provided with animations and particle emitters, which are following the spline. In addition you can easily create seamless tributaries, which can branch and join from and to any other spline flowing in the same direction. You can create very easily your own materials (Plugin provides example starting code). Also there is an automatic spline generation feature, when using unreal landscapes. A spline becomes generated dependent on specific heightmap information (like tangents). When you have some additional questions have a look at the <a href=\"https://youtu.be/7Q2CrSeJ0_c\" rel=\"nofollow\">video</a> or post them here.</p><p><br /></p><p>Youtube link: https://youtu.be/7Q2CrSeJ0_c</p><p><br /></p><p>Fix for unreal version 4.26.2 and 4.27.1:</p><ul><li>Spline generation did not work properly in some landscape scenarios. Updating heightmap reading code fixed the issue. </li></ul><p><br /></p><p>Update 1.01</p><ul><li>BUG FIX : All types of landscapes work properly now (Bug when using landscapes &gt; 8x8 Sections)</li><li>IMPROVEMENT : New spline generation algorithm with improved performance (Make sure to select correct river width for best results)</li><li>FEATURE : Plugin keeps track of deleted spline points. Tributaries become automatically updated when deleting spline points</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Custom spline actor with easy usage</li><li>Generation of splitting and joining tributaries</li><li>Procedural generated river meshes (Including fully vertices resolution control)</li><li>Automatic spline generation dependant on terrain</li><li>2 different animation modes</li><li>4 default materials</li><li>Easy usage of custom materials</li><li>3 different particle emitters</li><li>Waterfall emitter</li><li>3 river soundfiles</li><li>PDF documentation</li></ul><p><br /></p><p>Code Modules:</p><ul><li> River Plugin (PostEngineInit)</li></ul><p><br /></p><p>Number of Blueprints: 2</p><p>Number of C&#43;&#43; Classes: 9</p><p>Collision: Yes (can be deactivated)</p><p>Vertex Count: Custom</p><p>Number of Materials and Material Instances: 4</p><p>Supported Development Platforms: win32, win64</p><p>Supported Target Build Platforms: PlayStation 4, Xbox One, win32, win64, MacOS, Linux</p><p>Documentation: Documentation can be found inside the plugin folder</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 105-1920x1080-138be00712e12d9db517d1a9ca612aea.png",
+      "md5": "138be00712e12d9db517d1a9ca612aea",
+      "width": 1920,
+      "height": 1080,
+      "size": 1399303,
+      "uploadedDate": "2019-09-17T16:07:59.000Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 118-1920x1080-7b49aff7e1b8647b97488f938d23fc99.png",
+      "md5": "7b49aff7e1b8647b97488f938d23fc99",
+      "width": 1920,
+      "height": 1080,
+      "size": 1267518,
+      "uploadedDate": "2019-09-17T16:07:57.187Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 119-1920x1080-73eba87dc4bf3619750c9dbcc8c1e3dd.png",
+      "md5": "73eba87dc4bf3619750c9dbcc8c1e3dd",
+      "width": 1920,
+      "height": 1080,
+      "size": 1130313,
+      "uploadedDate": "2019-09-17T16:07:57.417Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 121-1920x1080-b2e5cf39b91909bbf58aaffa22c6fcc3.png",
+      "md5": "b2e5cf39b91909bbf58aaffa22c6fcc3",
+      "width": 1920,
+      "height": 1080,
+      "size": 873370,
+      "uploadedDate": "2019-09-17T16:07:57.679Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 122-1920x1080-927c4fb78b0cc0ffa3d4f687f045a2e1.png",
+      "md5": "927c4fb78b0cc0ffa3d4f687f045a2e1",
+      "width": 1920,
+      "height": 1080,
+      "size": 1070378,
+      "uploadedDate": "2019-09-17T16:07:57.898Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 123-1920x1080-6eef30831dc8fc4969a4a8ceb1a21849.png",
+      "md5": "6eef30831dc8fc4969a4a8ceb1a21849",
+      "width": 1920,
+      "height": 1080,
+      "size": 702647,
+      "uploadedDate": "2019-09-17T16:07:58.088Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 124-1920x1080-67f492b28a95f50169766564da09edd3.png",
+      "md5": "67f492b28a95f50169766564da09edd3",
+      "width": 1920,
+      "height": 1080,
+      "size": 727045,
+      "uploadedDate": "2019-09-17T16:07:58.274Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 102-1920x1080-23fa0ddf558131c1c477f4267e42fd16.png",
+      "md5": "23fa0ddf558131c1c477f4267e42fd16",
+      "width": 1920,
+      "height": 1080,
+      "size": 1414428,
+      "uploadedDate": "2019-09-17T16:07:58.486Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 103-1920x1080-efd9940a6b82698add9026f3d145e655.png",
+      "md5": "efd9940a6b82698add9026f3d145e655",
+      "width": 1920,
+      "height": 1080,
+      "size": 1411409,
+      "uploadedDate": "2019-09-17T16:07:58.764Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 110-1920x1080-a7b7b2a8d2050062354c56e77da7659b.png",
+      "md5": "a7b7b2a8d2050062354c56e77da7659b",
+      "width": 1920,
+      "height": 1080,
+      "size": 947702,
+      "uploadedDate": "2019-09-17T16:07:59.245Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 108-1920x1080-a6987980e4dcaa751e004eff64497532.png",
+      "md5": "a6987980e4dcaa751e004eff64497532",
+      "width": 1920,
+      "height": 1080,
+      "size": 1330162,
+      "uploadedDate": "2019-09-17T16:07:59.898Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 148-1920x1080-491e469782f7eff60280359654506152.png",
+      "md5": "491e469782f7eff60280359654506152",
+      "width": 1920,
+      "height": 1080,
+      "size": 1441032,
+      "uploadedDate": "2019-09-17T17:46:12.547Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 142-1920x1080-28fc4a8a2f5f8faa2092c9c8c74066a1.png",
+      "md5": "28fc4a8a2f5f8faa2092c9c8c74066a1",
+      "width": 1920,
+      "height": 1080,
+      "size": 3005830,
+      "uploadedDate": "2019-09-17T17:46:12.887Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 143-1920x1080-1a26d5116d5989281b322ac878ea2a2c.png",
+      "md5": "1a26d5116d5989281b322ac878ea2a2c",
+      "width": 1920,
+      "height": 1080,
+      "size": 3007581,
+      "uploadedDate": "2019-09-17T17:46:13.472Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RiverGenerationPlugin_thumb-284x284-f9f60978fd5ce4586d8975df2bfe864e.png",
+      "md5": "f9f60978fd5ce4586d8975df2bfe864e",
+      "width": 284,
+      "height": 284,
+      "size": 200576,
+      "uploadedDate": "2019-09-17T16:08:00.358Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RiverGenerationPlugin_featured-894x488-6b70f3656368d53d210f564073a18fde.png",
+      "md5": "6b70f3656368d53d210f564073a18fde",
+      "width": 894,
+      "height": 488,
+      "size": 1017111,
+      "uploadedDate": "2019-09-17T16:08:00.504Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 148-1920x1080-491e469782f7eff60280359654506152_Snapshot.png",
+      "md5": "c9d73615a349f927dc52368efe2199ff",
+      "width": 150,
+      "height": 74,
+      "size": 8834,
+      "uploadedDate": "2019-09-17T17:46:12.664Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 142-1920x1080-28fc4a8a2f5f8faa2092c9c8c74066a1_Snapshot.png",
+      "md5": "925318a340d01396c4736ecb7e8cba30",
+      "width": 150,
+      "height": 74,
+      "size": 5192,
+      "uploadedDate": "2019-09-17T17:46:13.256Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 143-1920x1080-1a26d5116d5989281b322ac878ea2a2c_Snapshot.png",
+      "md5": "d481b653cfee9f45425fe084c6c997ae",
+      "width": 150,
+      "height": 74,
+      "size": 5191,
+      "uploadedDate": "2019-09-17T17:46:13.821Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 118-1920x1080-7b49aff7e1b8647b97488f938d23fc99_Snapshot.png",
+      "md5": "6121f32f62c9dc86a0dd607c7039e126",
+      "width": 150,
+      "height": 74,
+      "size": 5674,
+      "uploadedDate": "2019-09-17T16:07:57.315Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 119-1920x1080-73eba87dc4bf3619750c9dbcc8c1e3dd_Snapshot.png",
+      "md5": "7dbc2d70253e6488dbeece2193add8d3",
+      "width": 150,
+      "height": 74,
+      "size": 5722,
+      "uploadedDate": "2019-09-17T16:07:57.553Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 121-1920x1080-b2e5cf39b91909bbf58aaffa22c6fcc3_Snapshot.png",
+      "md5": "922a6882eea9944b7a71196de16a6cb8",
+      "width": 150,
+      "height": 74,
+      "size": 4164,
+      "uploadedDate": "2019-09-17T16:07:57.791Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 122-1920x1080-927c4fb78b0cc0ffa3d4f687f045a2e1_Snapshot.png",
+      "md5": "662729348c049f9abf1d46b93887deb7",
+      "width": 150,
+      "height": 74,
+      "size": 4674,
+      "uploadedDate": "2019-09-17T16:07:57.995Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 123-1920x1080-6eef30831dc8fc4969a4a8ceb1a21849_Snapshot.png",
+      "md5": "25c3c6948477e72e9377ffed872477ac",
+      "width": 150,
+      "height": 74,
+      "size": 6258,
+      "uploadedDate": "2019-09-17T16:07:58.170Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 124-1920x1080-67f492b28a95f50169766564da09edd3_Snapshot.png",
+      "md5": "589b877118531b6f6c03fffdf47c5782",
+      "width": 150,
+      "height": 74,
+      "size": 5962,
+      "uploadedDate": "2019-09-17T16:07:58.357Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 102-1920x1080-23fa0ddf558131c1c477f4267e42fd16_Snapshot.png",
+      "md5": "351501186b8f334cc7791ef271b6aa51",
+      "width": 150,
+      "height": 74,
+      "size": 6306,
+      "uploadedDate": "2019-09-17T16:07:58.630Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 103-1920x1080-efd9940a6b82698add9026f3d145e655_Snapshot.png",
+      "md5": "64efdc99d996fafb892f2f6527957cfc",
+      "width": 150,
+      "height": 74,
+      "size": 6370,
+      "uploadedDate": "2019-09-17T16:07:58.885Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 105-1920x1080-138be00712e12d9db517d1a9ca612aea_Snapshot.png",
+      "md5": "c12b9516cfc581f063d2a6ce8383d569",
+      "width": 150,
+      "height": 74,
+      "size": 6409,
+      "uploadedDate": "2019-09-17T16:07:59.109Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 110-1920x1080-a7b7b2a8d2050062354c56e77da7659b_Snapshot.png",
+      "md5": "38df27593e55738f510558d8ad374ae9",
+      "width": 150,
+      "height": 74,
+      "size": 5199,
+      "uploadedDate": "2019-09-17T16:07:59.352Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 113-1920x1080-5e9657ad9089ef794e08b11e2880d932_Snapshot.png",
+      "md5": "6076ffbbbd4ebbb0a5e3996a0c15eb5a",
+      "width": 150,
+      "height": 74,
+      "size": 5977,
+      "uploadedDate": "2019-09-17T16:07:59.578Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 114-1920x1080-c647c81c4b71b3fd522dfdf0aac565b8_Snapshot.png",
+      "md5": "5c09186cd637920c1e4ad53eacdb49b7",
+      "width": 150,
+      "height": 74,
+      "size": 5965,
+      "uploadedDate": "2019-09-17T16:07:59.817Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 108-1920x1080-a6987980e4dcaa751e004eff64497532_Snapshot.png",
+      "md5": "cca0e35b6d70dcd38ea345cac6cee1ca",
+      "width": 150,
+      "height": 74,
+      "size": 6169,
+      "uploadedDate": "2019-09-17T16:08:00.016Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 116-1920x1080-9b5dd10d1e98b8d363e87e97bb0ef62b_Snapshot.png",
+      "md5": "25708d54bea939c0678db16ff8bde2ee",
+      "width": 150,
+      "height": 74,
+      "size": 8075,
+      "uploadedDate": "2019-09-17T16:08:00.311Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 59-1920x1080-5c84f0b3b3031ec18c4d42e40c5e90bd_Snapshot.jpg",
+      "md5": "4ff7cba4aaad3623c34bd2e42ce57db7",
+      "width": 150,
+      "height": 74,
+      "size": 6410,
+      "uploadedDate": "2019-09-17T14:07:36.748Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-10-01T14:39:23.065Z",
+  "lastModifiedDate": "2024-10-27T16:54:25.079Z",
+  "entitlementName": "9f3126de4471480f8a606541a044b450",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "4d27821a39d34709a1041584a2366a6c",
+      "appId": "RiverPlugin_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "PS4"
+      ],
+      "dateAdded": "2019-09-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RiverPlugin_21"
+    },
+    {
+      "id": "6d423e3e6cb24a638fe83139983c92d6",
+      "appId": "RiverPlugin_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "PS4"
+      ],
+      "dateAdded": "2019-09-17T00:00:00.000Z",
+      "releaseNote": "- BUG FIX: Landscape\n- New spline generation algorithm\n- Plugin keeps track on deleted spline points\n",
+      "versionTitle": "RiverPlugin_22_V1.01"
+    },
+    {
+      "id": "d35f061ac81e4c2fb90b2646d929baad",
+      "appId": "RiverPlugin_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "PS4"
+      ],
+      "dateAdded": "2019-09-17T00:00:00.000Z",
+      "releaseNote": "- BUG FIX: Landscape\n- New spline generation algorithm\n- Plugin keeps track on deleted spline points",
+      "versionTitle": "RiverPlugin_23_V1.01"
+    },
+    {
+      "id": "a277f6b8df81431993c766c17ff50640",
+      "appId": "RiverPlugin_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-01-05T00:00:00.000Z",
+      "releaseNote": "- BUG FIX: Landscape\n- New spline generation algorithm\n- Plugin keeps track on deleted spline points",
+      "versionTitle": "RiverPlugin_24_V1.01"
+    },
+    {
+      "id": "ea0e17830ca34b2ba9e3f9774f4ed973",
+      "appId": "RiverPlugin_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "PS4",
+        "Xbox One",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2020-05-26T00:00:00.000Z",
+      "releaseNote": "Build Fix",
+      "versionTitle": "RiverPlugin_25.1_V1.01"
+    },
+    {
+      "id": "0e6694c25b0f41ec9952e37f4a6cda50",
+      "appId": "RiverPlugin_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "PS4",
+        "Win32",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2021-01-16T00:00:00.000Z",
+      "releaseNote": "- Fixed heightmap reading issue",
+      "versionTitle": "RiverPlugin_26_V1.021"
+    },
+    {
+      "id": "9f6cc0b250be484ebb498e6baeffecf2",
+      "appId": "RiverPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Xbox One",
+        "PS4",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-11-21T00:00:00.000Z",
+      "releaseNote": "- Fixed heightmap reading issue",
+      "versionTitle": "RiverPlugin_27_V1.021"
+    }
+  ],
+  "developer": "SimonKeller",
+  "developerId": "o-cs5qv29hej48bgv6ukpqk6hul6sycl",
+  "endOfSupport": false,
+  "unsearchable": false
+}

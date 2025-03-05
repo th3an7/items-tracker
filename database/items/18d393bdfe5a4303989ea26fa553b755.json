@@ -1,0 +1,346 @@
+{
+  "id": "18d393bdfe5a4303989ea26fa553b755",
+  "title": "Runtime Pixel Mesh Component",
+  "description": "Create meshes from pixel art and other textures.",
+  "longDescription": "<p>Great for prototyping quickly or use in your shipping game! Runtime Pixel Mesh Component is a plugin that allows fast rendering of pixel art and other textures at runtime as a mesh with depth. Complete with collision generation, different fill techniques, support to load exported static meshes and delegates/events when the mesh has finished.</p><p><br /></p><p>Use it in a game or as part of an asset pipeline!</p><p><br /></p><p>YouTube Usage Example Video: <a href=\"https://youtu.be/zy77yeTHF-I?t&#61;31\" rel=\"nofollow\">Rifle Example</a></p><p>YouTube Overview Video: <a href=\"https://youtu.be/mcTQVM4ccio\" rel=\"nofollow\">https://youtu.be/mcTQVM4ccio</a></p><p>Documentation and Example Project: <a href=\"https://github.com/humblebyte/PixelMeshPluginExampleProject\" rel=\"nofollow\">https://github.com/humblebyte/PixelMeshPluginExampleProject</a></p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Generate a mesh with depth from a texture at Runtime</li><li>Stepped Generation tunable via # of steps over a specified time</li><li>Includes a Blueprint Helper Node to quickly spawn pixel meshes (Spawn Pixel Mesh Actor Helper)</li><li>OnPixelMeshComplete() Event and Delegate</li><li>Mesh Chroma Key, separate from the texture&#39;s chroma key, use in place of or in addition to</li><li> Various optimizations (Stepped generation, hide interior faces,...)</li><li>Fill methods (Forwards, Reverse, Random, Hidden Until Complete)</li><li>Optional Collision Generation</li><li>Randomize pixel depth between a minimum and maximum values</li><li>Using existing ue functionality to save static meshes at runtime, the plugin supports loading these meshes as an override. While still triggering the same code path as runtime generation</li><li>Basic spinning actor and example material are included in the plugin content</li></ul><p><br /></p><p>Number of Blueprints: 1</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: No, unrelated</p><p>Supported Development Platforms: Win64, Win32, Mac, Xbox One, PS4, HTML5, Switch</p><p>Supported Target Build Platforms: Win64, Win32, Mac, Xbox One, PS4, HTML5, Switch</p><p>Documentation: https://github.com/humblebyte/PixelMeshPluginExampleProject</p><p>Example Project: https://github.com/humblebyte/PixelMeshPluginExampleProject</p><p>Important/Additional Notes:</p><ul><li>Textures should be power of 2 (...64...128...256...512...1024...)</li><li>Extends on the ue-built in ProceduralMeshComponent</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/m4a1fullscreen-1920x1080-28a55f7693380e51a0a1ff444217ec24.png",
+      "md5": "28a55f7693380e51a0a1ff444217ec24",
+      "width": 1920,
+      "height": 1080,
+      "size": 1705320,
+      "uploadedDate": "2021-03-23T02:06:05.016Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Storefront-1920x1080-19ac5ed3912624fdd3b9bb5c4cddd6f6.png",
+      "md5": "19ac5ed3912624fdd3b9bb5c4cddd6f6",
+      "width": 1920,
+      "height": 1080,
+      "size": 57357,
+      "uploadedDate": "2021-03-15T02:06:54.848Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MeshChromaKey-1920x1080-61822c33638e34916a1cc0375d0f3b82.png",
+      "md5": "61822c33638e34916a1cc0375d0f3b82",
+      "width": 1920,
+      "height": 1080,
+      "size": 1406916,
+      "uploadedDate": "2021-03-15T02:06:55.273Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SteppedGeneration-1920x1080-e281ab3a1a75eaf42cbe5be3cf1eee2f.png",
+      "md5": "e281ab3a1a75eaf42cbe5be3cf1eee2f",
+      "width": 1920,
+      "height": 1080,
+      "size": 35327,
+      "uploadedDate": "2021-03-15T02:06:55.657Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EventsAndDelegates-1920x1080-aa2aee1952a92db98ca008885ba119fc.png",
+      "md5": "aa2aee1952a92db98ca008885ba119fc",
+      "width": 1920,
+      "height": 1080,
+      "size": 40216,
+      "uploadedDate": "2021-03-15T02:06:55.961Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RandomFill-1920x1080-16915faa932c0944b1cab89fdcbbf4c9.png",
+      "md5": "16915faa932c0944b1cab89fdcbbf4c9",
+      "width": 1920,
+      "height": 1080,
+      "size": 55449,
+      "uploadedDate": "2021-03-15T02:06:56.293Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RandomPixelDepth-1920x1080-c09d4b4284cb0aa843b10765bc7e405a.png",
+      "md5": "c09d4b4284cb0aa843b10765bc7e405a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1441625,
+      "uploadedDate": "2021-03-15T02:06:56.691Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SaveExportInEditorTime-1920x1080-079e7281159a5d17e53197b796224fce.png",
+      "md5": "079e7281159a5d17e53197b796224fce",
+      "width": 1920,
+      "height": 1080,
+      "size": 197184,
+      "uploadedDate": "2021-03-15T02:06:57.187Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlueprintSettings-1920x1080-a0f35f83fc4d324990c0a90d380d7830.png",
+      "md5": "a0f35f83fc4d324990c0a90d380d7830",
+      "width": 1920,
+      "height": 1080,
+      "size": 311916,
+      "uploadedDate": "2021-03-15T02:06:57.575Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HiddenUntilComplete-1920x1080-59d9b9818bbbbdbb76f438fbb6595b66.png",
+      "md5": "59d9b9818bbbbdbb76f438fbb6595b66",
+      "width": 1920,
+      "height": 1080,
+      "size": 1265765,
+      "uploadedDate": "2021-03-15T02:06:57.987Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Optimizations-1920x1080-88bbd421441418bada2d382efe806493.png",
+      "md5": "88bbd421441418bada2d382efe806493",
+      "width": 1920,
+      "height": 1080,
+      "size": 1248349,
+      "uploadedDate": "2021-03-15T02:06:58.385Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RuntimePixelMeshComponent_thumb-284x284-56b551c96b6eaee39591fda783fe379b.png",
+      "md5": "56b551c96b6eaee39591fda783fe379b",
+      "width": 284,
+      "height": 284,
+      "size": 18383,
+      "uploadedDate": "2021-05-19T03:11:02.695Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RuntimePixelMeshComponent_featured-894x488-2f3c482f931b8295010502c4e19f6e53.png",
+      "md5": "2f3c482f931b8295010502c4e19f6e53",
+      "width": 894,
+      "height": 488,
+      "size": 230728,
+      "uploadedDate": "2021-03-23T02:06:05.504Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/m4a1fullscreen-1920x1080-28a55f7693380e51a0a1ff444217ec24_Snapshot.png",
+      "md5": "ea2b8b6583dc58068d5b0d76b9ab43da",
+      "width": 150,
+      "height": 74,
+      "size": 5026,
+      "uploadedDate": "2021-03-23T02:06:05.341Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Storefront-1920x1080-19ac5ed3912624fdd3b9bb5c4cddd6f6_Snapshot.png",
+      "md5": "7dc977476a2574f61288c1a04327dda2",
+      "width": 150,
+      "height": 74,
+      "size": 5671,
+      "uploadedDate": "2021-03-15T02:06:55.086Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MeshChromaKey-1920x1080-61822c33638e34916a1cc0375d0f3b82_Snapshot.png",
+      "md5": "f27248730d552f657fa25e8e4221fbae",
+      "width": 150,
+      "height": 74,
+      "size": 5272,
+      "uploadedDate": "2021-03-15T02:06:55.564Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SteppedGeneration-1920x1080-e281ab3a1a75eaf42cbe5be3cf1eee2f_Snapshot.png",
+      "md5": "dd1720518a4e47887602e3f341a89791",
+      "width": 150,
+      "height": 74,
+      "size": 3553,
+      "uploadedDate": "2021-03-15T02:06:55.859Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EventsAndDelegates-1920x1080-aa2aee1952a92db98ca008885ba119fc_Snapshot.png",
+      "md5": "1432abdf670e9762a3a39f1b0018c3fa",
+      "width": 150,
+      "height": 74,
+      "size": 4121,
+      "uploadedDate": "2021-03-15T02:06:56.159Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RandomFill-1920x1080-16915faa932c0944b1cab89fdcbbf4c9_Snapshot.png",
+      "md5": "975bf4bbe2d52506991cdafb99306b05",
+      "width": 150,
+      "height": 74,
+      "size": 3399,
+      "uploadedDate": "2021-03-15T02:06:56.497Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RandomPixelDepth-1920x1080-c09d4b4284cb0aa843b10765bc7e405a_Snapshot.png",
+      "md5": "0725b6fe556a66445783263b3363019d",
+      "width": 150,
+      "height": 74,
+      "size": 3869,
+      "uploadedDate": "2021-03-15T02:06:56.976Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SaveExportInEditorTime-1920x1080-079e7281159a5d17e53197b796224fce_Snapshot.png",
+      "md5": "2c32ff3592f883316d68a6b555f29633",
+      "width": 150,
+      "height": 74,
+      "size": 4769,
+      "uploadedDate": "2021-03-15T02:06:57.434Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlueprintSettings-1920x1080-a0f35f83fc4d324990c0a90d380d7830_Snapshot.png",
+      "md5": "816f5849957f57bd812e73e093912f46",
+      "width": 150,
+      "height": 74,
+      "size": 3955,
+      "uploadedDate": "2021-03-15T02:06:57.814Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HiddenUntilComplete-1920x1080-59d9b9818bbbbdbb76f438fbb6595b66_Snapshot.png",
+      "md5": "a9d219ea2756a9c5a99c40d0dcf03274",
+      "width": 150,
+      "height": 74,
+      "size": 3446,
+      "uploadedDate": "2021-03-15T02:06:58.272Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Optimizations-1920x1080-88bbd421441418bada2d382efe806493_Snapshot.png",
+      "md5": "f561d6a69f0462d78ac1024aa7a00817",
+      "width": 150,
+      "height": 74,
+      "size": 3000,
+      "uploadedDate": "2021-03-15T02:06:58.649Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-03-21T15:16:13.939Z",
+  "lastModifiedDate": "2024-10-15T12:25:59.967Z",
+  "entitlementName": "18d393bdfe5a4303989ea26fa553b755",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "fd479d5248e04d6788adb22170dce570",
+      "appId": "PixelMesh_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "Win32",
+        "PS4",
+        "Xbox One",
+        "Nintendo Switch",
+        "HTML5"
+      ],
+      "dateAdded": "2021-03-21T00:00:00.000Z",
+      "releaseNote": "Built and downgraded content from the 4.26 release.",
+      "versionTitle": "4.25 Default Version"
+    },
+    {
+      "id": "ff81740f1bb1455a865d54d12741bf5c",
+      "appId": "PixelMesh_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "HTML5",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "PS4",
+        "Nintendo Switch",
+        "Mac"
+      ],
+      "dateAdded": "2021-03-14T00:00:00.000Z",
+      "releaseNote": "Third Submission\n- Cleanup, attempted to reproduce the crash experienced in submission, but could not.",
+      "versionTitle": "4.26 Default Version"
+    },
+    {
+      "id": "de73a4df383240b8965262e8f057f5f6",
+      "appId": "PixelMesh_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Win32",
+        "PS4",
+        "Nintendo Switch",
+        "Android",
+        "HTML5",
+        "Mac"
+      ],
+      "dateAdded": "2021-08-21T00:00:00.000Z",
+      "releaseNote": "Updated to 4.27, only had to change the uplugin version to update.",
+      "versionTitle": "4.27 Default Version"
+    },
+    {
+      "id": "6961bab7609f4813ab736abeacb77b13",
+      "appId": "PixelMesh_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "HTML5",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2022-04-10T00:00:00.000Z",
+      "releaseNote": "Update to support 5.0.3",
+      "versionTitle": "5.0 Default Version"
+    },
+    {
+      "id": "e925c8ccd14c4a40ac5fd3d6b6f2e51a",
+      "appId": "PixelMesh_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "HTML5",
+        "Linux",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Nintendo Switch",
+        "PS4"
+      ],
+      "dateAdded": "2022-11-18T00:00:00.000Z",
+      "releaseNote": "Update to support 5.1.\nCorrected submission url.",
+      "versionTitle": "5.1 Default Version"
+    }
+  ],
+  "developer": "Humblebyte",
+  "developerId": "o-xfl6njjmqm7d9lwdl3qsj4ggxsqh4e",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,348 @@
+{
+  "id": "38afccad4819474d9ce4cedbd63bfbf1",
+  "title": "Multiplayer World Origin Rebase Tool",
+  "description": "Repositioning the origin of the world for each player in landscape-sized grids.",
+  "longDescription": "<p><strong>This project is focused on a grid tool that reposition the origin of the world individually for each player.</strong></p><p><strong>This grid generator is a algorithm that spawns several grids in the editor next to each other in the 3 vectors X, Y and Z. The grid size is equal to the maximum size of a landscape. The number of actors is temporarily stored in the grid generator variables and can be infinite.</strong></p><p><br /></p><p><strong>(World Origin Rebasing: When a player travels a certain distance from 0,0,0 (the world origin), the world origin is reset to the To the center position of the triggered box. This eliminates floating point precision errors on things like animations that occur at great distances from 0,0,0). </strong><a href=\"https://github.com/CesiumGS/cesium-unreal/issues/480\" rel=\"nofollow\"><strong>See about how it works at this link.</strong></a></p><p><br /></p><p><strong>Frequently asked questions and answers:</strong></p><p>\tThe project is not a GPS scraper.</p><p>\tThe project is not a plugin.</p><p>\tThe project does not change the source code of the unreal engine, so it does not rewrite the &#34;Set World Origin Location&#34; method.</p><p>\tThe project was not designed to work with world composition.</p><p>\tThe migration project must have at least one character to call the grid trigger event (check yours collisions first).</p><p>\tThe project is multiplayer but rebasing only happens on clients or player servers that use presence.</p><p>\tThe project does not allow for an infinite universe. There is a limited radius where rebasing no longer works, float precision limit.</p><p>\tYou need to set your project options manually based on those described in the instructions, transferring content from this project to your current one is not automatic.</p><p>\t</p><p><strong>It allows each player to have their own origin in the world and to share objects and their location on the server relatively.</strong></p><p><strong>It allows for giant worlds or space games.</strong></p><p><br /></p><p><strong>Video demonstration: </strong><a href=\"https://www.youtube.com/watch?v&#61;V8ys099dOeE\" rel=\"nofollow\"><strong>https://www.youtube.com/watch?v&#61;V8ys099dOeE</strong></a></p><p><br /></p><p><strong>License: Commercial for end-game product. (cannot sub-license the content for further redistribution)</strong></p><p><br /></p><p><strong>If you found this raw pack sold outside the Epic Games Store, please report: webtvbrowserhelp&#64;gmail.com.</strong></p>",
+  "technicalDetails": "<ul><li> Works on the dedicated server.</li><li> Works offline</li></ul><p><br /></p><p><strong>Instructions</strong></p><p><br /></p><p>In the project settings, activate the option &#34;Enable Multiplayer World Origin Rebasing&#34;</p><p>Project Settings&gt; Network</p><p><br /></p><p>Put the actor: GridGenerator_BP in the world</p><p>Put the actor: GetWorldOrigin_BP in the world</p><p>Check the character&#39;s collisions with the GridGenerator_BP</p><p><br /></p><p>In the editor select the actor GridGenerator_BP in the world click on the details tab and there will be buttons and parameters that can be controlled in the editor to generate the grids, increase the radius of the cube if it is an even value or a rectangle if it is an odd value or remove it.</p><p><br /></p><p>If it is a multiplayer game, it may be necessary to check how the player replicates the character&#39;s location and where actors are spawned, location correction calculations on each client side can be made. See: <a href=\"https://docs.unrealengine.com/4.26/en-US/BlueprintAPI/Game/RebaseZeroOriginOntoLocal/\" rel=\"nofollow\">Rebase Zero Irigin Onto Local</a> and <a href=\"https://docs.unrealengine.com/4.26/en-US/BlueprintAPI/Game/RebaseLocalOriginOntoZero/\" rel=\"nofollow\">Rebase Local Origin Onto Zero</a>. Or use the relative locations between the character and the center of the collision boxes.</p><p><br /></p><p>The actor: GetWorldOrigin_BP uses a 3d widget to allow the user to view the origin of the world during the game.</p><p><br /></p><p>Number of Blueprints: 20</p><p>Network Replicated: (Yes)</p><p>Supported Development Platforms: (ALL)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-6ab39790844c5a946ea4e2901c3ca73c.png",
+      "md5": "6ab39790844c5a946ea4e2901c3ca73c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2484083,
+      "uploadedDate": "2020-05-14T23:47:43.493Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-6dbd720dbd73604e0e170088d94c2a3b.png",
+      "md5": "6dbd720dbd73604e0e170088d94c2a3b",
+      "width": 1920,
+      "height": 1080,
+      "size": 683590,
+      "uploadedDate": "2020-05-25T20:14:32.088Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1 - Copia-1920x1080-07f998f9e6dea5ac3a90aa21585db883.png",
+      "md5": "07f998f9e6dea5ac3a90aa21585db883",
+      "width": 1920,
+      "height": 1080,
+      "size": 2819926,
+      "uploadedDate": "2020-05-14T23:47:45.208Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FixImage3-1920x1080-d25e5adb696300797db4022248d754fe.png",
+      "md5": "d25e5adb696300797db4022248d754fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 1898169,
+      "uploadedDate": "2020-05-29T16:31:20.466Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MultiplayerWorldOriginRebaseTool_thumb-284x284-3c2ed564962a8a2e1ae1ab4bafa590dd.png",
+      "md5": "3c2ed564962a8a2e1ae1ab4bafa590dd",
+      "width": 284,
+      "height": 284,
+      "size": 149540,
+      "uploadedDate": "2020-05-14T23:47:45.627Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MultiplayerWorldOriginRebaseTool_featured-894x488-d0e05703ca1c5e30fc76677fadaece6c.png",
+      "md5": "d0e05703ca1c5e30fc76677fadaece6c",
+      "width": 894,
+      "height": 488,
+      "size": 749109,
+      "uploadedDate": "2020-05-14T23:47:45.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FixImage3-1920x1080-d25e5adb696300797db4022248d754fe_Snapshot.png",
+      "md5": "4794003063dcdaf3e0ea699ec021d177",
+      "width": 150,
+      "height": 74,
+      "size": 5946,
+      "uploadedDate": "2020-05-29T16:31:20.774Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-ccaf9cbab6ff8bca32f379132a0baf5c_Snapshot.png",
+      "md5": "e83da1042279de6f6c41ab662ce35fad",
+      "width": 150,
+      "height": 74,
+      "size": 5200,
+      "uploadedDate": "2020-05-25T20:14:31.929Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-6dbd720dbd73604e0e170088d94c2a3b_Snapshot.png",
+      "md5": "7cd42431d1732435f8c5af49a5bfc720",
+      "width": 150,
+      "height": 74,
+      "size": 6310,
+      "uploadedDate": "2020-05-25T20:14:32.398Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-990d71a02e987cbcfbb39a24337c70fe_Snapshot.png",
+      "md5": "783fdf6bed1b3b83b590e2ea250a002b",
+      "width": 150,
+      "height": 74,
+      "size": 6940,
+      "uploadedDate": "2020-05-25T20:14:33.032Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-6ab39790844c5a946ea4e2901c3ca73c_Snapshot.png",
+      "md5": "27d8bafd8d6ccf4fde9a88f80dd17e8b",
+      "width": 150,
+      "height": 74,
+      "size": 9172,
+      "uploadedDate": "2020-05-14T23:47:43.889Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-e5fa00296e958886341097a1f815cb29_Snapshot.png",
+      "md5": "a4460ad3065496b3cb680324a1cbe71f",
+      "width": 150,
+      "height": 74,
+      "size": 5263,
+      "uploadedDate": "2020-05-14T23:47:44.278Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-8904f72d1d8be6b097ab9adbaed7268e_Snapshot.png",
+      "md5": "90728020166634f88b616494b1edf8aa",
+      "width": 150,
+      "height": 74,
+      "size": 6529,
+      "uploadedDate": "2020-05-14T23:47:44.629Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-952a5bfa17c011d342135a278c0224ee_Snapshot.png",
+      "md5": "9b4e3d166ba5e3d9c674cb2d348f8293",
+      "width": 150,
+      "height": 74,
+      "size": 6952,
+      "uploadedDate": "2020-05-14T23:47:45.010Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1 - Copia-1920x1080-07f998f9e6dea5ac3a90aa21585db883_Snapshot.png",
+      "md5": "ae5c78a0f088d5c9230fcde019a599e7",
+      "width": 150,
+      "height": 74,
+      "size": 9549,
+      "uploadedDate": "2020-05-14T23:47:45.565Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2020-05-26T17:38:34.191Z",
+  "lastModifiedDate": "2024-12-02T01:05:00.746Z",
+  "customAttributes": {},
+  "entitlementName": "38afccad4819474d9ce4cedbd63bfbf1",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "e18c321db3c548a9883412896e80b5eb",
+      "appId": "Multipla38afccad4819V1",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Xbox One",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "Gear VR",
+        "Android",
+        "HoloLens 2",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2020-05-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Multiplayer Origin Rebase 4.24"
+    },
+    {
+      "id": "88dedbfea8904a2db09258fc6a8b8e48",
+      "appId": "Multipla38afccad4819V2",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "Gear VR",
+        "Android",
+        "Nintendo Switch",
+        "HoloLens 2"
+      ],
+      "dateAdded": "2020-05-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Multiplayer Origin Rebase 4.25"
+    },
+    {
+      "id": "aae3763869d64d8c8b04b4db0d1d3339",
+      "appId": "Multipla38afccad4819V3",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Gear VR",
+        "Android",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "Nintendo Switch",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2021-01-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Multiplayer Origin Rebase 4.26"
+    },
+    {
+      "id": "b6c8e70cfe4346e2afbd2a9f4f1b662c",
+      "appId": "Multipla38afccad4819V4",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2023-03-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Multiplayer Origin Rebase 4.27"
+    },
+    {
+      "id": "95b6f80f7b1d474a90bc97d57d8298d5",
+      "appId": "Multipla38afccad4819V5",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2023-03-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Multiplayer Origin Rebase 5.0"
+    },
+    {
+      "id": "da760c21bf7245a4a96a61aa9c0a421d",
+      "appId": "Multipla38afccad4819V6",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HoloLens 2",
+        "HTML5",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2023-03-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Multiplayer Origin Rebase 5.1"
+    },
+    {
+      "id": "6a2a6992b1a84051a13c13ef8b6ae9c0",
+      "appId": "Multipla38afccad4819V7",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2024-09-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Multiplayer Origin Rebase 5.4"
+    }
+  ],
+  "developer": "Suundumused",
+  "developerId": "o-febdw63txbjgdgfsfurbccksuccrtf",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,214 @@
+{
+  "id": "b5b13fef90f947159764f671a2673106",
+  "title": "Prediction Projectile V2.0",
+  "description": "Advanced Projectile Solver That Predicts Target Path With RLS Algorithm",
+  "longDescription": "<p>Demo Video: <a href=\"https://youtu.be/Ub3gSSMv9gg\" rel=\"nofollow\"><u>https://youtu.be/Ub3gSSMv9gg</u></a></p><p><br /></p><p>Prediction Projectile V2.0 Documentation</p><p> </p><p>This product contains 5 blueprint functions that allow you to run RLS estimations on targets and shoot projectiles at them with prediction. RLS estimation ensures higher probability to hit a randomly moving target. No matter the target is moving linearly or turning, no matter it is accelerating or moving at a constant speed, you will always have a higher chance for a direct hit.</p><p> </p><p><strong>About RLS Estimation</strong></p><p>RLS is short for Recursive Least Square. This algorithm can process streaming data in runtime and model the input-output relationship of the data with multi-nomial equations. For more info, pls visit <a href=\"https://en.wikipedia.org/wiki/Recursive_least_squares_filter\" rel=\"nofollow\"><u>this wikipedia link</u></a>. Because RLS is relatively low on computational cost and can yield results in runtime, it is often used in auto piloting. It is recommended to use RLS only when the target’s path is unknown. If your target is moving along a spline, or is mocap data, then it is not necessary to use RLS, since you can just get the ground truth. Both RLS and customized prediction equation are supported by this product. <strong>You don’t have to understand how RLS works. You can simply create variables for each function input and let the function do the rest.</strong></p><p> </p><p><br /></p><p><strong>Parameters Explanation</strong></p><p><br /></p><p><strong><em><u>RLS Solver Functions</u></em></strong></p><p><br /></p><p>The RLS solver is splitted into two steps for the following reason:</p><p> If you need to track multiple targets at the same time with RLS, you only have to run Step 1 node one time each iteration. This result will apply to all targets you want to track. You then need to run Step 2 node on every targets to solve their own path equations.</p><p> </p><p>Note that the RLS solver can predict all sorts of things, not just Time-Location equations. Wn array&#39;s default value have 3 members because a coordinate has 3 dimensions. It can be as many members as you need.</p><p><br /></p><p>1. PArray: Variable to cache the P Matrix of RLS Math Expression.</p><p>2. Kn: Variable to cache the <strong>k </strong>vector of RLS Math Expression.</p><p>3. Xn: Variable to cache the X matrix of RLS Math Expression.</p><p>4. Timer: The function input. It’s the delta time since the RLS solver first started.</p><p>5. Forgetting Factor: The strength that RLS will prefer newer data. 1 means no forgetting at all.</p><p>6. Yn Array: Is the array that holds the x,y and z coordinate of each target location sample.</p><p>7. Wn Array: Is the array of 3 members,each of which is one <strong>w</strong> vector of RLS Math Expression. The 3 members corresponds to the 3 dimensions of a coordinate.</p><p><br /></p><p><br /></p><p><strong><em><u>Relay RLS Solvers Macro</u></em></strong></p><p><br /></p><p>Pn variable tend to be too large for the engine to calculate when running a RLS solver for more than 150 iterations. To solve this issue, you can use this Macro to relay between two RLS solvers. The Macro overlaps the two solvers&#39; runtime. It switches to another solver&#39;s result after pre-running the solver for the number of iterations you give in the Pre Run Iterations variable to ensure a smooth transition between solvers. If you just need to run RLS a few seconds while your character is aiming, then you won&#39;t be needing this. </p><p> </p><p>Note:I used the vector2d for the timer variables only to make use of the set vector 2d node to be able to set the value inside a function, so you don&#39;t have to fix variable reference problems.</p><p> </p><p><br /></p><p><strong><em><u>Projectile Solvers</u></em></strong></p><p><br /></p><p>There are two functions related to projectile solvers. One is used inside the other. The main one is the <strong><em>Solve Projectile with Prediction</em></strong> function. Since the RLS has given us the Time-Location relationship of our target. We then use this relationship to calculate the projectile parameter. The result of this function can then be used to spawn a projectile that will hit the target with prediction. The Can Reach Target output pin will show whether or not the target is within shooting range. You can decide not to shoot when the target is not within reach.</p><p> </p><p>1. To Location: The current location of the moving target.</p><p>2. From Location: The current location of the shooting site.</p><p>3. SolveMode:</p><p>Solve initial velocity with given pitch angle, suitable in archery to show a cooller trajectory and still hit a moving target.</p><p>Solve pitch angle with given initial velocity, suitable for high speed projectiles like bullets and cannon balls.</p><p>4. Fixed Pitch Angle: Fill in the pitch angle used to fire the projectile in degrees.</p><p>5. Fixed Projectile Speed: Fill in the projectile speed used to fire the projectile.</p><p>6. Gravity: Define the gravity that will effect projectile motion.</p><p>7. Precision: Gets more precise with bigger numbers, 2 is good enough.</p><p>8. RandomMin and Random Max: The neutral is 1, you can set Min to 0.9 and Max to 1.1. Not network replicate.</p><p><br /></p><p><br /></p><p>The other is the <strong><em>Customizable Time-Location</em></strong> Function.</p><p>This is the RLS version. This function is placed inside the previous one. But if your target&#39;s future location can be better predicted with other methods rather than RLS, say the target is moving along a known spline, or is mocap data. In those cases you need to put in your own Time-Location equation into this function, And just use the projectile solver alone(since you are not using RLS estimation).</p><p> </p><p><br /></p><p>1. Current time:The current delta time since this solver’s time of activation.</p><p>2. Time Of Prediction: The future time based on the current time.</p><p>3. Even Expected Acceleration and Corrective Multiplier: Due to characteristics of multinomial equation, the estimation tend to think the target will keep accelerating after each turn. But in most cases the target&#39;s speed is relatively constant. To fix this, two parameters are introduced. Bigger Even Expected Acceleration means the target&#39;s will keep a more constant speed after each turn(default 5), the Corrective Multiplier adjust the overall speed after each turn.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Shoot a randomly moving target with given pitch angle.</li><li> Shoot a randomly moving target with given initial speed.</li><li> Custom gravity.</li><li>Add random deviation.</li></ul><p>Number of Blueprints: 3</p><p>Network Replicated: Not Tested</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Not Tested</p><p>Documentation:</p><p>https://docs.google.com/document/d/1XIOBym7o-id7zgsD-Yacw2zYyYWn_1HG/edit?usp&#61;sharing&amp;ouid&#61;100838755932631478450&amp;rtpof&#61;true&amp;sd&#61;true</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Comp 3 0-00-01-14-1920x1080-25f234fc7e5b8cd1aab7996f812f8c70.png",
+      "md5": "25f234fc7e5b8cd1aab7996f812f8c70",
+      "width": 1920,
+      "height": 1080,
+      "size": 352773,
+      "uploadedDate": "2022-07-31T10:21:03.680Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Comp 3 0-00-38-18-1920x1080-64262b17657447b0cdb96f87955e32d6.png",
+      "md5": "64262b17657447b0cdb96f87955e32d6",
+      "width": 1920,
+      "height": 1080,
+      "size": 817968,
+      "uploadedDate": "2022-07-31T10:21:04.094Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Comp 300000-1920x1080-0c7071c0654e280ed490fa0a66fddad1.png",
+      "md5": "0c7071c0654e280ed490fa0a66fddad1",
+      "width": 1920,
+      "height": 1080,
+      "size": 462107,
+      "uploadedDate": "2022-07-31T10:21:04.525Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Comp 300003-1920x1080-c778ffb386229e738d69a4d1be9f4ece.png",
+      "md5": "c778ffb386229e738d69a4d1be9f4ece",
+      "width": 1920,
+      "height": 1080,
+      "size": 483254,
+      "uploadedDate": "2022-07-31T10:21:05.735Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Comp 300001-1920x1080-64e6a443100e24758dbe9166162caa15.png",
+      "md5": "64e6a443100e24758dbe9166162caa15",
+      "width": 1920,
+      "height": 1080,
+      "size": 438700,
+      "uploadedDate": "2022-07-31T10:21:04.917Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Comp 300002-1920x1080-8713d638054770f4b31fa23b30f14a0f.png",
+      "md5": "8713d638054770f4b31fa23b30f14a0f",
+      "width": 1920,
+      "height": 1080,
+      "size": 508166,
+      "uploadedDate": "2022-07-31T10:21:05.341Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PredictionProjectileWithRLSEstimation_thumb-284x284-36e869dd9da7d7b63ad16189b0ee9c98.png",
+      "md5": "36e869dd9da7d7b63ad16189b0ee9c98",
+      "width": 284,
+      "height": 284,
+      "size": 47507,
+      "uploadedDate": "2022-07-31T10:21:06.074Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PredictionProjectileWithRLSEstimation_featured-894x488-1d0531222b53b9d3bb081b260f0dc870.png",
+      "md5": "1d0531222b53b9d3bb081b260f0dc870",
+      "width": 894,
+      "height": 488,
+      "size": 145694,
+      "uploadedDate": "2022-07-31T10:21:06.197Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Comp 3 0-00-01-14-1920x1080-25f234fc7e5b8cd1aab7996f812f8c70_Snapshot.png",
+      "md5": "ce08d4f01c8d4aa2f702228b281f6240",
+      "width": 150,
+      "height": 74,
+      "size": 4334,
+      "uploadedDate": "2022-07-31T10:21:03.959Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Comp 3 0-00-38-18-1920x1080-64262b17657447b0cdb96f87955e32d6_Snapshot.png",
+      "md5": "820fb8a6436d0ffb16c91eee0202cf9f",
+      "width": 150,
+      "height": 74,
+      "size": 4908,
+      "uploadedDate": "2022-07-31T10:21:04.390Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Comp 300000-1920x1080-0c7071c0654e280ed490fa0a66fddad1_Snapshot.png",
+      "md5": "712261da07dfc5d5f25d13cd65afddaa",
+      "width": 150,
+      "height": 74,
+      "size": 5356,
+      "uploadedDate": "2022-07-31T10:21:04.781Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Comp 300001-1920x1080-64e6a443100e24758dbe9166162caa15_Snapshot.png",
+      "md5": "5d876a59076b032716c692c47aa9721c",
+      "width": 150,
+      "height": 74,
+      "size": 4569,
+      "uploadedDate": "2022-07-31T10:21:05.179Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Comp 300002-1920x1080-8713d638054770f4b31fa23b30f14a0f_Snapshot.png",
+      "md5": "4a40a2794b76137892ca0ec4803fe5b2",
+      "width": 150,
+      "height": 74,
+      "size": 5198,
+      "uploadedDate": "2022-07-31T10:21:05.599Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Comp 300003-1920x1080-c778ffb386229e738d69a4d1be9f4ece_Snapshot.png",
+      "md5": "974f6051a160373d601795e34fa283ae",
+      "width": 150,
+      "height": 74,
+      "size": 5027,
+      "uploadedDate": "2022-07-31T10:21:05.985Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Comp 3 0-00-00-00-1920x1080-34813a2fc6b03dff8575620872e0b4ca_Snapshot.png",
+      "md5": "ed511dc62f6c37b64b40f00405adf6e4",
+      "width": 150,
+      "height": 74,
+      "size": 3863,
+      "uploadedDate": "2022-05-27T12:10:08.840Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Comp 3 0-00-00-01-1920x1080-18b056da89e5e83cfcb4b322fb4e2d71_Snapshot.png",
+      "md5": "05f3be45e697ad6cb11c4dd8d2b96a8c",
+      "width": 150,
+      "height": 74,
+      "size": 4546,
+      "uploadedDate": "2022-05-27T12:10:09.298Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Comp 3 0-00-00-02-1920x1080-e922ef5a1a4f7fb25fb956ba8ebda89b_Snapshot.png",
+      "md5": "efe37c107bf64fcd0a332ca6665715de",
+      "width": 150,
+      "height": 74,
+      "size": 4388,
+      "uploadedDate": "2022-05-27T12:10:09.891Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Comp 3 0-00-00-03-1920x1080-c234fd2a934c8aba57b8da04d424ebb7_Snapshot.png",
+      "md5": "c6104f66c16a9350a991499863002bb2",
+      "width": 150,
+      "height": 74,
+      "size": 4464,
+      "uploadedDate": "2022-05-27T12:10:10.529Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-06-30T02:59:05.577Z",
+  "lastModifiedDate": "2024-12-12T07:41:58.774Z",
+  "customAttributes": {},
+  "entitlementName": "b5b13fef90f947159764f671a2673106",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "cc5050a54bb44fa989dfc201a57e7fb5",
+      "appId": "Projectib5b13fef90f9V1",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-05-27T00:00:00.000Z",
+      "releaseNote": "Fixed \"output log : sqrt of negative number\" issue.",
+      "versionTitle": "ProjectilePredictionV2"
+    }
+  ],
+  "developer": "Leroy Works",
+  "developerId": "o-jtwq5rtbb4qddmjqq7b8rnlsy79mz5",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

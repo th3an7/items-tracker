@@ -1,0 +1,444 @@
+{
+  "id": "5f70b3075439431281c9850beb84b30a",
+  "title": "Easy Flight Model",
+  "description": "A simple, versatile and easy to use semi-realistic flight model. Just attach it as a child component to any physics body and it'll fly.",
+  "longDescription": "<p>Preview 1: <a href=\"https://www.youtube.com/watch?v&#61;ZiUyCK9HqDc\" rel=\"nofollow\">youtube.com/watch?v&#61;ZiUyCK9HqDc</a> (from first example project)</p><p>Preview 2: <a href=\"https://www.youtube.com/watch?v&#61;z0hXVZMwNTU\" rel=\"nofollow\">youtube.com/watch?v&#61;z0hXVZMwNTU</a> (from second example project)</p><p>Example Project 1 (UE 5.1) : <a href=\"https://drive.google.com/open?id&#61;0B20tIRBAcOlsSDIwcTJuMFdoRDA\" rel=\"nofollow\">https://drive.google.com/open?id&#61;0B20tIRBAcOlsSDIwcTJuMFdoRDA</a></p><p>Example Project 2 (UE 5.1): <a href=\"https://drive.google.com/file/d/0B20tIRBAcOlscGdHc3JFSjJLRzQ/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/0B20tIRBAcOlscGdHc3JFSjJLRzQ/view?usp&#61;sharing</a></p><p><br /></p><p>Tutorial Playlist: <a href=\"https://www.youtube.com/playlist?list&#61;PLpdNKDbSpbwV4xJCTI-9l_SGJjedPvAp9\" rel=\"nofollow\">youtube.com/playlist?list&#61;PLpdNKDbSpbwV4xJCTI-9l_SGJjedPvAp9</a></p><p><br /></p><p>Works by taking location, velocity, mass and other properties of physics object it&#39;s attached to, computing aerodynamic forces that would act on it, and applying them as physics impulses. Can be used to simulate almost any fixed wing airplane, as well as bombs, missiles and similar objects.</p>",
+  "technicalDetails": "<p>List of Modules:</p><p>- &#34;easyfm&#34; (Runtime)</p><p><br /></p><p>List of Features:</p><p>-Lift, drag - uses a curve to vary coefficient depending on angle of attack.-Can simulate lift and drag caused by sideways movement - for vehicles with vertical lifting surfaces.</p><p>-Buoyancy - can also simulate balloons and airships.</p><p>-Stabilization - Neutral and control trim simulated, can use control curves to vary for realistic stalls.</p><p>-Control surfaces - w/ curves to vary control efficiency based on AoA. -Additional lift devices - flaps and spoilers, deployment/retraction time simulated.</p><p>-Engine - control curves, thrust redirection for VTOL.</p><p>-Dynamic air density - affecting all aerodynamic forces, default curves based on real world measurements included.</p><p>-Mach - lift, drag, stability and engine thrust can be varied depending on mach number.</p><p>-Ground effect - using raycast against terrain mesh</p><p>-Fly-by-wire computer assists.</p><p>-Guidance - automatically adjust controls to steer towards target vector using PID controller.</p><p>-Linear mode - optional unrealistic mode for more &#34;slidey&#34; arcade physics.</p><p>-Code plugin - works in both C&#43;&#43; and blueprint-only projects.</p><p>-Can run in physx substep to increase accuracy.</p><p>-Net movement replication with smoothing and jitter filter.</p><p>-Complete blueprint integration - all variables can be read and changed.</p><p>-No hardcoded parameters.</p><p>-Includes bonus very simple raycast landing gear simulation</p><p>-Full source code included.</p><p>-Lift asymmetry simulation (new in 2.30)</p><p><br /></p><p>Intended Platforms: Desktop</p><p>Platforms Tested: Windows, Linux</p><p>Documentation Included: No</p><p>Important/Additional Notes: Multiplayer world origin rebasing is only supported in UE4.14&#43;</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/ScreenShot00000-1920x1080-e3f468df7b940a7a378e1b46c4f4e7a0.png",
+      "md5": "e3f468df7b940a7a378e1b46c4f4e7a0",
+      "width": 1920,
+      "height": 1080,
+      "size": 527173,
+      "uploadedDate": "2016-08-05T18:16:43.407Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/ScreenShot00001-1920x1080-4d984e133989175cb7c983a5c4e7f190.png",
+      "md5": "4d984e133989175cb7c983a5c4e7f190",
+      "width": 1920,
+      "height": 1080,
+      "size": 437741,
+      "uploadedDate": "2016-08-05T18:16:41.052Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/ScreenShot00003-1920x1080-c6875945ad1c5430ec6ad10f6551634d.png",
+      "md5": "c6875945ad1c5430ec6ad10f6551634d",
+      "width": 1920,
+      "height": 1080,
+      "size": 856479,
+      "uploadedDate": "2016-08-05T18:16:38.620Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/ScreenShot00004-1920x1080-3618bc6fee66a03f302fb8b6de190bde.png",
+      "md5": "3618bc6fee66a03f302fb8b6de190bde",
+      "width": 1920,
+      "height": 1080,
+      "size": 497032,
+      "uploadedDate": "2016-08-05T18:16:36.870Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/item/easyfm_Thumb-284x284-af3441a0a63c94fb3550292920bb75e9.png",
+      "md5": "af3441a0a63c94fb3550292920bb75e9",
+      "width": 284,
+      "height": 284,
+      "size": 163775,
+      "uploadedDate": "2016-08-05T18:16:35.144Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/item/featured-476x246-a04f284ce5ac009aa82643e9b0c3ea34.png",
+      "md5": "a04f284ce5ac009aa82643e9b0c3ea34",
+      "width": 476,
+      "height": 246,
+      "size": 232319,
+      "uploadedDate": "2016-08-05T18:16:46.943Z"
+    },
+    {
+      "type": "NewFeatured",
+      "url": "https://cdn1.epicgames.com/ue/item/featuredNew-894x488-c60c973485b220bdb17aeb9d161c3cea.png",
+      "md5": "c60c973485b220bdb17aeb9d161c3cea",
+      "width": 894,
+      "height": 488,
+      "size": 728544,
+      "uploadedDate": "2016-08-05T18:16:45.373Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2016-08-05T18:16:55.590Z",
+  "lastModifiedDate": "2024-11-28T17:51:37.937Z",
+  "customAttributes": {},
+  "entitlementName": "5f70b3075439431281c9850beb84b30a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "d320a8c620db4519bb1b4f34226a006f",
+      "appId": "EasyFlightModel_4.12",
+      "compatibleApps": [
+        "UE_4.12"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-09-16T00:00:00.000Z",
+      "versionTitle": "EasyFlightModel_4.12"
+    },
+    {
+      "id": "840fb737dd804bcdaed709a00ead553f",
+      "appId": "EasyFlightModel_4.13",
+      "compatibleApps": [
+        "UE_4.13"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-09-16T00:00:00.000Z",
+      "versionTitle": "EasyFlightModel_4.13"
+    },
+    {
+      "id": "9e3fbc013aba4dc099a548a3ddbe2044",
+      "appId": "EasyFlightModel_4.14",
+      "compatibleApps": [
+        "UE_4.14"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-11-16T00:00:00.000Z",
+      "versionTitle": "EasyFlightModel_4.14"
+    },
+    {
+      "id": "210b6c9c9cb64b31a0fef4818976beb9",
+      "appId": "EasyFlightModel_4.15",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-02-16T00:00:00.000Z",
+      "versionTitle": "EasyFlightModel_4.15"
+    },
+    {
+      "id": "d9a19d820bb549cf8ac210fe36344b78",
+      "appId": "EasyFlightModel_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2017-05-26T00:00:00.000Z",
+      "versionTitle": "EasyFlightModel_4.16"
+    },
+    {
+      "id": "58448b6382444dfa9e4bea4320ca8dff",
+      "appId": "EasyFlightModel_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2017-08-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_4.17"
+    },
+    {
+      "id": "c14a9cedb3b84e54957e7bc4982a9be6",
+      "appId": "EasyFlightModel_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2017-11-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_4.18"
+    },
+    {
+      "id": "119d398183314e0ba8fb3fde2c1a08ab",
+      "appId": "EasyFlightModel_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Oculus",
+        "Linux",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2018-03-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_4.19"
+    },
+    {
+      "id": "a2b7fb98a2384575afa33163461de31b",
+      "appId": "EasyFlightModel_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Android"
+      ],
+      "dateAdded": "2018-07-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_4.20"
+    },
+    {
+      "id": "1235f4193897429f820deca4a9c57489",
+      "appId": "EasyFlightModel_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Linux"
+      ],
+      "dateAdded": "2018-11-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_4.21"
+    },
+    {
+      "id": "898fb1d2366c4f678f04498aff45f1ad",
+      "appId": "EasyFlightModel_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Android",
+        "Linux",
+        "Mac",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Windows"
+      ],
+      "dateAdded": "2019-04-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_4.22"
+    },
+    {
+      "id": "111b24c5cfb942ea9c010fdb569df8f4",
+      "appId": "EasyFlightModel_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Android",
+        "Linux",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Windows"
+      ],
+      "dateAdded": "2019-09-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_4.23"
+    },
+    {
+      "id": "f25b6139b0b640399b4b9b998e77e155",
+      "appId": "EasyFlightModel_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Android",
+        "Oculus",
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2019-12-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_4.24"
+    },
+    {
+      "id": "e3345347e2ea488bbb2df28b56353c92",
+      "appId": "EasyFlightModel_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "Linux",
+        "Mac",
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2020-05-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_4.25"
+    },
+    {
+      "id": "2dcf3e718a5d4d2d840aac5ee56e14fb",
+      "appId": "EasyFlightModel_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "Linux",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Windows"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_4.26"
+    },
+    {
+      "id": "ed8a4b7f8c5544d78660969341e8aa40",
+      "appId": "EasyFlightModel_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2021-08-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_4.27"
+    },
+    {
+      "id": "57eb45966d714844a6fa498020888abf",
+      "appId": "EasyFlightModel_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac",
+        "Oculus",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_5.00"
+    },
+    {
+      "id": "5ecdb9993e764ab4a9a2b85a8eceea41",
+      "appId": "EasyFlightModel_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "Linux",
+        "Mac",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Oculus"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_5.1"
+    },
+    {
+      "id": "dc61224685d74fa19c7537b63dfc9a07",
+      "appId": "EasyFlightModel_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "Linux",
+        "Mac",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Oculus"
+      ],
+      "dateAdded": "2023-05-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_5.20"
+    },
+    {
+      "id": "f098b67425374961b72dce803ec1fbe1",
+      "appId": "EasyFlightModel_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Linux",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Gear VR"
+      ],
+      "dateAdded": "2023-09-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_5.30"
+    },
+    {
+      "id": "8da3e15563ac406ba6a69118dbaca504",
+      "appId": "EasyFlightModel_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Linux",
+        "Mac",
+        "Oculus",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2024-04-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyFlightModel_5.40"
+    }
+  ],
+  "developer": "mookie",
+  "developerId": "o-5d323d7e97444299516a3431d27685",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,394 @@
+{
+  "id": "677775cf93ee4d509ab5d2d1b1c58fde",
+  "title": "Simple UDP TCP Socket Client",
+  "description": "UDP TCP Socket Client. Easy to use TCP and UDP Sockets in Blueprints.",
+  "longDescription": "<p>Please check the <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/\" rel=\"nofollow\">documentation</a> for up-to-date examples of the functions.  </p><p><br /></p><p>You can easily use TCP and UDP connections to send and receive data in blueprints with this plugin . This is a client. You can find my server plugin <a href=\"https://www.unrealengine.com/marketplace/simple-udp-tcp-socket-server\" rel=\"nofollow\">here</a>. You don&#39;t need C&#43;&#43;. I recommend my <a href=\"https://www.unrealengine.com/marketplace/jsonparser\" rel=\"nofollow\">JSON plugin</a> for data communication. I recommend <a href=\"https://packetsender.com/download\" rel=\"nofollow\">this tool</a> for testing and developing. Nativizing may not be possible in the blueprints where the plugin is used. See Documentaiton.</p><p>My prices are low all year round. </p><p><a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/SocketClientWin64_510_v103_plugin_v255.zip\" rel=\"nofollow\">Win64 Demo</a> <sub>(Windows exe)</sub></p><p>Demo Projects <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/SocketClientDemo_421_v100_plugin_v200.zip\" rel=\"nofollow\">UE4.21</a> , <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/SocketClientDemo_424_v101_plugin_v207.zip\" rel=\"nofollow\">UE4.24</a> , <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/SocketClientDemo_425_v102_plugin_v220.zip\" rel=\"nofollow\">UE4.25</a> , <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/SocketClientDemo_427_v103_plugin_v250.zip\" rel=\"nofollow\">UE4.27 </a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/SocketClientDemo_500_v103_plugin_v250.zip\" rel=\"nofollow\">UE5.0</a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/SocketClientDemo_510_v104_plugin_v256.zip\" rel=\"nofollow\">UE5.</a><a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/SocketClientDemo_500_v103_plugin_v250.zip\" rel=\"nofollow\">1</a>  and newer. C&#43;&#43; Demo <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/SocketClientCPPDemoV1.zip\" rel=\"nofollow\">UE4.24</a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/SocketClientCPPDemoV2.zip\" rel=\"nofollow\">UE4.26 </a>and newer.</p><p>Demo that shows how to find a server on the LAN. <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/LANServerBrowserDemoWin64v1.0.zip\" rel=\"nofollow\">Win64</a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/LANServerBrowserDemo424v1.0.zip\" rel=\"nofollow\">Project</a> (<a href=\"https://www.unrealengine.com/marketplace/en-US/product/simple-udp-tcp-socket-server\" rel=\"nofollow\">Server </a>and Client Plugins needed), <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/LANServerBrowserDemo.png\" rel=\"nofollow\">Screenshots</a>, <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketServer/stuff/LANServerBrowserDemo.mp4\" rel=\"nofollow\">Video</a></p><p><strong>Version 2.00 tested on: </strong>Windows 10, Android 7.1.2 (S4 mini with LineageOS). IOS 12.1.2 (iPhone 5s).</p><p><br /></p><p><strong><u>Changelog</u> </strong>(5.1, 5.2, 5.3)</p><ul><li>(03/28/2024) Version 2.56: The server plugin has been given a &#34;Keep-Alive&#34; setting and can send a 0 byte (0x00) every 10 seconds. This plugin has been given a setting to ignore this 0 byte. </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(5.0, 5.1, 5.2)</p><ul><li>(09/01/2023) Version 2.55: File transfer functions revised.</li><li>(08/15/2023) Version 2.54: New: Files can be encrypted/decrypted with AES. Bugfix: File transfer functions did not always work.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.27, 5.0, 5.1)</p><ul><li>(05/01/2023) Version 2.53: It is now possible to specify your own ConnectionID for TCP connections. Minor bug fixes.</li><li>(01/19/2023) Version 2.52: Bugfix: The function &#34;isTCPConnected&#34; has returned the correct values after a delay.</li><li>(01/03/2023) Version 2.50: Memory management revised to avoid memory leaks. You don&#39;t have to connect a target in Blueprints anymore (except for the events). AsyncNodes added. Minor bug fixes. </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.26, 4.27, 5.0)</p><ul><li>(09/26/2022) Version 2.25: Bugfix: Cross compiling should work now.</li><li>(09/02/2022) Version 2.24: Bugfix: Plugin could not be compiled on Linux.</li><li>(04/27/2022) Version 2.23: Bugfix: When sending UDP messages below 1 millisecond, a crash could occur.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.25, 4.26, 4.27)</p><ul><li>(02/14/2022) Version 2.22: Added an additional better function to deal with the UE4 problem of connected TCP datasets. See documentation. </li><li>(11/12/2021) Version 2.21: Added various integer and float to bytes and back functions</li><li>(10/17/2021) Version 2.20: IPv6. AES encryption/decryption. File sending and receiving over TCP (without RAM consumption)</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.24, 4.25, 4.26)</p><ul><li>(07/22/2021) Version 2.10: The writeStringToFile function has now a fileEncoding parameter. New: stringToBase64String, base64StringToString, getAllFilesFromDirectory</li></ul>",
+  "technicalDetails": "<p><sup>Epic only allows updates for the newest three engine versions. There might be features missing in older engine versions. Contact me if you are unsure.</sup></p><p><br /></p><ul><li>Send and receive Bytes or Text (UTF-8)<sup>*</sup> over UDP and TCP</li><li>One of the fastest and best multithreading TCP/UDP plugins on Marketplace. <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/tcpClientPerformanceDemo.jsp\" rel=\"nofollow\">Video</a></li><li>Multiple TCP and UDP connections possible</li><li>IPv4 and IPv6</li><li>AES encryption and decryption</li><li>File sending and receiving over TCP (without RAM consumption)</li><li>Different directory and file <a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/stuff/fileFunctions.png\" rel=\"nofollow\">blueprint nodes</a></li><li>Hex to Bytes and Bytes no Hex Nodes</li><li>Include C&#43;&#43; Source for C&#43;&#43; Projects</li><li>Tested with a Java and C&#43;&#43; Server</li><li><a href=\"https://www.virtualbird.de/ue4Doku/SimpleTCPUDPSocketClient2/\" rel=\"nofollow\">Documentation</a></li><li>Support: <a href=\"mailto:unrealmarketplace&#64;virtualbird.de\" rel=\"nofollow\">unrealmarketplace&#64;virtualbird.de</a> (ENG,GER). Usually e-mails are answered within 24 hours.</li></ul><p><sup>*This allows text to be sent in all languages (Chinese, Russian ...)</sup></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/socketClientPluginTCP1-1920x1080-9cdd0756e2d9f59938a29a7b2bfe4428.png",
+      "md5": "9cdd0756e2d9f59938a29a7b2bfe4428",
+      "width": 1920,
+      "height": 1080,
+      "size": 343873,
+      "uploadedDate": "2023-01-04T15:49:32.263Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/socketClientPluginUDP1-1920x1080-5890d3e1b977282c2cf5b1134dcdc9e7.png",
+      "md5": "5890d3e1b977282c2cf5b1134dcdc9e7",
+      "width": 1920,
+      "height": 1080,
+      "size": 361487,
+      "uploadedDate": "2023-01-04T15:49:32.599Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SimpleUDPTCPSocketClient_thumb-284x284-fe60c43f174ab3282fd87cf29072d730.png",
+      "md5": "fe60c43f174ab3282fd87cf29072d730",
+      "width": 284,
+      "height": 284,
+      "size": 186535,
+      "uploadedDate": "2018-01-09T01:01:44.411Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SimpleUDPTCPSocketClient_featured-894x488-ddc49a4d8c892bd84f7c5501ac5ae3f9.png",
+      "md5": "ddc49a4d8c892bd84f7c5501ac5ae3f9",
+      "width": 894,
+      "height": 488,
+      "size": 790322,
+      "uploadedDate": "2018-01-09T01:01:44.519Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/socketClientPluginTCP1-1920x1080-9cdd0756e2d9f59938a29a7b2bfe4428_Snapshot.png",
+      "md5": "3f520ffdb572b5317272f4c1af5f7a59",
+      "width": 150,
+      "height": 74,
+      "size": 5468,
+      "uploadedDate": "2023-01-04T15:49:32.491Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/socketClientPluginUDP1-1920x1080-5890d3e1b977282c2cf5b1134dcdc9e7_Snapshot.png",
+      "md5": "b7da8924af8f973ddc8c8dd0eed14abe",
+      "width": 150,
+      "height": 74,
+      "size": 5566,
+      "uploadedDate": "2023-01-04T15:49:32.823Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/socketClientPluginTCP1-1920x1080-dea4b3dce45726754024805dde63fced_Snapshot.png",
+      "md5": "1a93244972ffaa67f9768ec765f1dc4b",
+      "width": 150,
+      "height": 74,
+      "size": 5510,
+      "uploadedDate": "2019-11-19T16:44:18.108Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/socketClientPluginUDP1-1920x1080-cd3a0b0d339b0e834402da9380413dcd_Snapshot.png",
+      "md5": "d248eac8d17f87f17196b241c89ae93f",
+      "width": 150,
+      "height": 74,
+      "size": 5467,
+      "uploadedDate": "2019-11-19T16:44:18.489Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tcpEx04-1920x1080-e0367a4d7fb765db5e7e4dfd7d612085_Snapshot.png",
+      "md5": "27e5fbf4959d632b201727f9673661ff",
+      "width": 150,
+      "height": 74,
+      "size": 10761,
+      "uploadedDate": "2018-10-22T12:55:21.384Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2017-11-14T11:00:53.757Z",
+  "lastModifiedDate": "2025-01-08T09:36:04.515Z",
+  "customAttributes": {},
+  "entitlementName": "677775cf93ee4d509ab5d2d1b1c58fde",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "fe27ea2522894e34bdb2fd5e194a94c0",
+      "appId": "SimpleUDPTCPSocketClient_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2017-10-10T00:00:00.000Z",
+      "releaseNote": "Version 1.9: TCP stability",
+      "versionTitle": "SimpleTCPUDPSocketClient110417"
+    },
+    {
+      "id": "c71da35c869c42d78f12713a7b942845",
+      "appId": "SimpleUDPTCPSocketClient_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2017-11-07T00:00:00.000Z",
+      "releaseNote": "fixed package problem",
+      "versionTitle": "SimpleTCPUDPSocketClient118418"
+    },
+    {
+      "id": "3d8b3096d89e498e89d0099353667b1f",
+      "appId": "SimpleUDPTCPSocketClient_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "Linux",
+        "iOS",
+        "Win32"
+      ],
+      "dateAdded": "2018-03-23T00:00:00.000Z",
+      "releaseNote": "Fix Broadcast",
+      "versionTitle": "SimpleTCPUDPSocketClient124419"
+    },
+    {
+      "id": "96dda9ce3b30496d944afc704a00d4da",
+      "appId": "SimpleUDPTCPSocketClient_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2018-07-20T00:00:00.000Z",
+      "releaseNote": "Multithreading optimizations",
+      "versionTitle": "SimpleTCPUDPSocketClient126420"
+    },
+    {
+      "id": "8a4ab31734824627b405cd15cfbaea5d",
+      "appId": "SimpleUDPTCPSocketClient_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "Linux",
+        "iOS",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-13T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "SimpleTCPUDPSocketClient202421"
+    },
+    {
+      "id": "a8818ac8ed5249e0830a9731dd3bc30a",
+      "appId": "SimpleUDPTCPSocketClient_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "SimpleTCPUDPSocketClient203422"
+    },
+    {
+      "id": "a0fd49b63aa646b2af8fc197bd04248c",
+      "appId": "SimpleUDPTCPSocketClient_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "iOS",
+        "Mac",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2019-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleTCPUDPSocketClient207423"
+    },
+    {
+      "id": "93944c4af5b34feab709e5401c3a526e",
+      "appId": "SimpleUDPTCPSocketClient_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac",
+        "iOS",
+        "Android",
+        "Win32"
+      ],
+      "dateAdded": "2019-12-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleTCPUDPSocketClient210424"
+    },
+    {
+      "id": "226c3834630a414cafdf297ef25f1231",
+      "appId": "SimpleUDPTCPSocketClient_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2020-05-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SimpleTCPUDPSocketClient222425"
+    },
+    {
+      "id": "01bc387011cd4ebf83d6901d3405231d",
+      "appId": "SimpleUDPTCPSocketClient_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketClient_225_426"
+    },
+    {
+      "id": "e8de135768a24107a71ff9eafa9525a4",
+      "appId": "SimpleUDPTCPSocketClient_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Linux",
+        "iOS",
+        "Android",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketClient_253_427"
+    },
+    {
+      "id": "5da21911f5f346e697019b003cfffd20",
+      "appId": "SimpleUDPTCPSocketClient_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketClient_255_500"
+    },
+    {
+      "id": "be9ffc67b42d47c9abb8c94c11fcb4a5",
+      "appId": "SimpleUDPTCPSocketClient_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-11-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketClient_256_510"
+    },
+    {
+      "id": "b843d62947544afdb527c171d6af35b6",
+      "appId": "SimpleUDPTCPSocketClient_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketClient_256_520"
+    },
+    {
+      "id": "c5964a9b7b714a1da8b5f8076f348bb9",
+      "appId": "SimpleUDPTCPSocketClient_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketClient_256_530"
+    },
+    {
+      "id": "75ee10ccf48148c8aabbf6b6d8938d7a",
+      "appId": "SimpleUDPTCPSocketClient_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SocketClient_256_540"
+    }
+  ],
+  "developer": "Virtualbird UG",
+  "developerId": "o-5bc5ba8cdd4200a6e086d8c602bbf7",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

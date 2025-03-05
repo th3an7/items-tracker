@@ -1,0 +1,143 @@
+{
+  "id": "e1745c1835fa46468765790bdfb7eca6",
+  "title": "Multiplayer Functional Testing Helpers",
+  "description": "Write functional tests for multiplayer games to automate your testing and catch bugs early.",
+  "longDescription": "<p>Tired of making changes to your Unreal Engine multiplayer game only to realize later that you broke something else? That’s what <a href=\"https://dev.epicgames.com/documentation/en-us/unreal-engine/functional-testing-in-unreal-engine\" rel=\"nofollow\">Functional Testing</a> is for, to automatically test your game without having to do it manually. You can connect this to a <a href=\"https://en.wikipedia.org/wiki/Continuous_integration\" rel=\"nofollow\">Continuous Integration</a> (CI) system to make sure that when any changes are made, the tests will run and you’ll know immediately if anything broke. This can save hours of work because the alternative is to detect the bug much later after it was introduced and then having to investigate to find the root cause.</p><p><br /></p><p>Unreal Engine has a Functional Testing framework for writing automated tests, but with a big limitation that it only works well for single-player games. This plugin exposes helper methods to be able to write functional tests for multiplayer games.</p><p><br /></p><p>By default if you run a functional test in client net mode the issue is that anytime you try to access an actor using functions such as “Get All Actors Of Class” it will return data from the server instead of the client. This is OK for some tests but generally for multiplayer games you want to assert the state of the world on the client, not the server. This helps catch bugs related to replication, such as if you forgot to replicate some property or you’re not updating client state properly with <a href=\"https://dev.epicgames.com/documentation/en-us/unreal-engine/replicate-actor-properties-in-unreal-engine#addareplicatedusingproperty\" rel=\"nofollow\">ReplicatedUsing / RepNotify</a>.</p><p><br /></p><p><a href=\"https://docs.google.com/document/d/11Ss26q3j1IifSWYAvEY3mvNwl5BhD6egaciludfdg6Q/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p>",
+  "technicalDetails": "<p>Features:</p><ul><li> 5 Blueprint helper functions for multiplayer functional testing</li><li> 1 C&#43;&#43; helper function for multiplayer functional testing</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: No (The classes provided don&#39;t make sense to be replicated but they support replicated code)</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64, Mac, Linux, Android, iOS</p><p>Documentation: <a href=\"https://docs.google.com/document/d/11Ss26q3j1IifSWYAvEY3mvNwl5BhD6egaciludfdg6Q/edit?usp&#61;sharing\" rel=\"nofollow\">Link</a></p><p>Example Project: <a href=\"https://drive.google.com/file/d/11_H4YGAg27lA7eQNbg0kMvLpdDgIyY5R/view?usp&#61;sharing\" rel=\"nofollow\">Link</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenshotShowcase-1920x1080-9df8ff2ef19b01a255bdb12256432f8b.png",
+      "md5": "9df8ff2ef19b01a255bdb12256432f8b",
+      "width": 1920,
+      "height": 1080,
+      "size": 207001,
+      "uploadedDate": "2024-07-20T15:39:50.631Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenshotInjectInputAction-1920x1080-277afbf02cf33c43bed0d21d455c5dbb.png",
+      "md5": "277afbf02cf33c43bed0d21d455c5dbb",
+      "width": 1920,
+      "height": 1080,
+      "size": 209259,
+      "uploadedDate": "2024-07-20T15:39:51.059Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenshotMultipleClientTest-1920x1080-b28932df21f80048bf09b36623446532.png",
+      "md5": "b28932df21f80048bf09b36623446532",
+      "width": 1920,
+      "height": 1080,
+      "size": 213925,
+      "uploadedDate": "2024-07-20T15:39:51.450Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MultiplayerFunctionalTestingHelpers_thumb-284x284-5c4a4296f4fbcfceb42e09dde0e78d3e.png",
+      "md5": "5c4a4296f4fbcfceb42e09dde0e78d3e",
+      "width": 284,
+      "height": 284,
+      "size": 27180,
+      "uploadedDate": "2024-07-20T15:39:51.754Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MultiplayerFunctionalTestingHelpers_featured-894x488-92e85bb9ae3df5a613c0e532a7337246.png",
+      "md5": "92e85bb9ae3df5a613c0e532a7337246",
+      "width": 894,
+      "height": 488,
+      "size": 76821,
+      "uploadedDate": "2024-07-20T15:39:51.837Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenshotShowcase-1920x1080-9df8ff2ef19b01a255bdb12256432f8b_Snapshot.png",
+      "md5": "f5a411a6ac0d314b2daea53b235e6d33",
+      "width": 150,
+      "height": 74,
+      "size": 4280,
+      "uploadedDate": "2024-07-20T15:39:50.884Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenshotInjectInputAction-1920x1080-277afbf02cf33c43bed0d21d455c5dbb_Snapshot.png",
+      "md5": "34ea826d8c38ab8d9809353852a83e74",
+      "width": 150,
+      "height": 74,
+      "size": 4256,
+      "uploadedDate": "2024-07-20T15:39:51.309Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenshotMultipleClientTest-1920x1080-b28932df21f80048bf09b36623446532_Snapshot.png",
+      "md5": "261311b20b541f9daee59591167d2852",
+      "width": 150,
+      "height": 74,
+      "size": 4260,
+      "uploadedDate": "2024-07-20T15:39:51.701Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-07-21T23:01:23.360Z",
+  "lastModifiedDate": "2024-10-15T12:47:25.090Z",
+  "customAttributes": {},
+  "entitlementName": "e1745c1835fa46468765790bdfb7eca6",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "0bacdd01ac854d08bc8bc7ffd6b17ee7",
+      "appId": "MutiFTH_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-07-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_5.2"
+    },
+    {
+      "id": "cd9772c03bd342a7b99c6c4976041ea8",
+      "appId": "MutiFTH_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-07-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_5.3"
+    },
+    {
+      "id": "af07264a50e64ab0a556a0af067ba75e",
+      "appId": "MutiFTH_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-07-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_5.4"
+    }
+  ],
+  "developer": "Haywire Interactive",
+  "developerId": "o-bj9ldbccjg7psc4mp8xkxzcpjz6e93",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

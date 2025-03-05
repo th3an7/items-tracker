@@ -1,0 +1,334 @@
+{
+  "id": "0ab8c402d1d54bb2922e5dd02f46d63a",
+  "title": "Open Virtual Film Project",
+  "description": "A suite of tools, material shaders, folder structures, naming conventions and plugins for DCCs (blender/rhino/maya) designed to streamline the UE filmmaking process",
+  "longDescription": "<p>5.4 update: The plugin will be updated to 5.4 in the coming weeks, I am working on a few bug fixes and visual updates. At the same time 5.3 will get some UI updates. </p><p>The editor VR mode will be removed in the 5.4 update and I will be testing the new editor vr scouting setup to determine if I would like to make a layer on top of that with the features from the OVFP editor VR mode. </p><p><br /></p><p>www.openvirtualfilmproject.com</p><p><a href=\"https://www.youtube.com/channel/UCgoRQJcTxzqW9ID9onbNsFA\" rel=\"nofollow\">https://www.youtube.com/channel/UCgoRQJcTxzqW9ID9onbNsFA</a></p><p><strong>This plugin provides several core functions:</strong></p><ul><li>OVFP Editor Utility Widget: Provides a dashboard of the following tools</li><li>Dynamic setlist: shows all levels in the environments folder with notes, create versions and new environments easily</li><li>Import/Export (beta)</li><li>Selection tools</li><li>Replace Materials in Scene</li><li>Create Materials from Textures</li><li>Transformation tools</li><li>Editor interactable objects</li><li>Sticky Notes</li><li>Ruler</li><li>Batch rename assets</li><li>Bulk edit materials</li><li>VR Scouting Tools: An extension to Epic&#39;s virtual production scouting tools, with several quality of life improvements</li></ul><p><strong>Swappable Parent Materials</strong></p><ul><li>60 surfaces</li><li>5 decal</li><li>7 light function</li><li>all use the same internal logic, so you can switch parent materials quickly</li></ul><p><strong>DCC to Unreal Bridge Python Plugins</strong></p><ul><li>supports Blender 2.8x-2.9x, Rhino 6-7 and Maya 2019-20 (Maya is in early development)</li><li>Send files from the DCC to UE with proper pivots, instancing naming conventions and folder structure</li><li>create and assign a material instance using one of the plugin&#39;s parent materials and attempt to recreate the DCC texture assignments</li><li>auto generate naming conventions: https://www.openvirtualfilmproject.com/ue4-naming-conventions</li><li>import into UE automatically with the OVFP folder structures: https://www.openvirtualfilmproject.com/documentation-pages/ue4-folder-structure</li><li>set the units and export/import settings for the DCC and UE to prevent issues</li><li><strong>NOTE:</strong> Currently only works for static meshes. Animations and skeletal meshes will be supported in the future</li><li><strong>NOTE:</strong> Not associated with the Blender to Unreal tools</li></ul>",
+  "technicalDetails": "<p><strong>Version 2.0</strong></p><p><strong>Tutorial playlist:</strong> www.youtube.com/playlist?list&#61;PLVCFA0tGjAXMjwvur9DCppwB-IJjizx9d</p><p><strong>Trello board for development:</strong> www.trello.com/b/iogFF7xe/open-virtual-film-project</p><p><strong>Bugs/Feature Requests: </strong>www.openvirtualfilmproject.com/about</p><p><strong>Github Source Code: </strong>https://github.com/ACaesuraIsStillMusic/Open-Virtual-Film-Project </p><p><br /></p><p><strong>Requires the following non-default settings:</strong></p><ul><li>Project Settings -&gt; Separate Translucency - Disabled (Not required, but otherwise transparent objects will not show depth of field correctly)</li><li>Project Settings -&gt; Python Remote Execution -&gt; Enable python remote execution (allows the DCC to UE4 bridge software to work)</li></ul><p><strong>Requires the following plugins:</strong></p><ul><li> Editor scripting Utilities</li><li> Virtual production Utilities</li><li>Python Editor Script Plugin</li></ul><p><strong>Code Modules:</strong></p><ul><li> OVFPPlugin - Editor</li></ul><p><strong>Number of Blueprints:</strong></p><ul><li>1 core editor utility widget with 10 sub widgets</li><li>5 spawnable blueprint actor types</li><li>1 set of right-click actor scripted actions</li><li>1 set of right-click asset scripted actions</li></ul><p><strong>Number of C&#43;&#43; Classes:</strong> 2</p><p><strong>Network Replicated:</strong> no</p><p><strong>Supported Development Platforms:</strong> win64, win32</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery01.PNG-1920x1080-e3cfc53c27491254d259ef1d7cb0c37b.jpg",
+      "md5": "e3cfc53c27491254d259ef1d7cb0c37b",
+      "width": 1920,
+      "height": 1080,
+      "size": 187018,
+      "uploadedDate": "2020-12-08T17:51:53.182Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/dynamicSetlist.PNG-1920x1080-dccc00dcf3852c80f126fbbc2645d773.jpg",
+      "md5": "dccc00dcf3852c80f126fbbc2645d773",
+      "width": 1920,
+      "height": 1080,
+      "size": 267246,
+      "uploadedDate": "2020-12-08T17:51:53.533Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/transformTools.PNG-1920x1080-cf43cd200075b78546f9a53348f00289.jpg",
+      "md5": "cf43cd200075b78546f9a53348f00289",
+      "width": 1920,
+      "height": 1080,
+      "size": 141799,
+      "uploadedDate": "2020-12-08T17:51:53.905Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/blenderBridge.PNG-1920x1080-d9249647c1e75aa828863031fabc0254.jpg",
+      "md5": "d9249647c1e75aa828863031fabc0254",
+      "width": 1920,
+      "height": 1080,
+      "size": 281897,
+      "uploadedDate": "2020-12-08T17:51:54.262Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/mayaBridge.PNG-1920x1080-868b26589fa9bd8a9f5b8c641a5aa5eb.jpg",
+      "md5": "868b26589fa9bd8a9f5b8c641a5aa5eb",
+      "width": 1920,
+      "height": 1080,
+      "size": 329427,
+      "uploadedDate": "2020-12-08T17:51:54.647Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/rhinoBridge.PNG-1920x1080-94fcdd8a73163b0fe9d55f4b3e4062ee.jpg",
+      "md5": "94fcdd8a73163b0fe9d55f4b3e4062ee",
+      "width": 1920,
+      "height": 1080,
+      "size": 1057663,
+      "uploadedDate": "2020-12-08T17:51:55.115Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/material instance.PNG-1920x1080-977eaa20e4c411f10de2ff7ec2766236.jpg",
+      "md5": "977eaa20e4c411f10de2ff7ec2766236",
+      "width": 1920,
+      "height": 1080,
+      "size": 1181732,
+      "uploadedDate": "2020-12-08T17:51:55.583Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Material Replace.PNG-1920x1080-06834cae3632e5b04fb6cacedefca20e.jpg",
+      "md5": "06834cae3632e5b04fb6cacedefca20e",
+      "width": 1920,
+      "height": 1080,
+      "size": 116347,
+      "uploadedDate": "2020-12-08T17:51:56.046Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Material Generator.PNG-1920x1080-04c33ebaaaa55a057b0a857d2923c2d8.jpg",
+      "md5": "04c33ebaaaa55a057b0a857d2923c2d8",
+      "width": 1920,
+      "height": 1080,
+      "size": 351168,
+      "uploadedDate": "2020-12-08T17:51:56.378Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ruler.PNG-1920x1080-705b7d3d79b92f9735392ed1d03feb70.jpg",
+      "md5": "705b7d3d79b92f9735392ed1d03feb70",
+      "width": 1920,
+      "height": 1080,
+      "size": 1029640,
+      "uploadedDate": "2020-12-08T17:51:56.752Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/OpenVirtualFilmProject_thumb-284x284-f596907f5311d5b2d1e0481203379093.png",
+      "md5": "f596907f5311d5b2d1e0481203379093",
+      "width": 284,
+      "height": 284,
+      "size": 16317,
+      "uploadedDate": "2020-12-08T17:51:57.127Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/OpenVirtualFilmProject_featured-894x488-7556a31d24ded637173c93de82b0fa81.png",
+      "md5": "7556a31d24ded637173c93de82b0fa81",
+      "width": 894,
+      "height": 488,
+      "size": 82905,
+      "uploadedDate": "2020-12-08T17:51:57.181Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery01.PNG-1920x1080-e3cfc53c27491254d259ef1d7cb0c37b_Snapshot.jpg",
+      "md5": "da4670699a071799f5a8a20078c30c63",
+      "width": 150,
+      "height": 74,
+      "size": 5734,
+      "uploadedDate": "2020-12-08T17:51:53.402Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/dynamicSetlist.PNG-1920x1080-dccc00dcf3852c80f126fbbc2645d773_Snapshot.jpg",
+      "md5": "e898147876262b650c0c555e9b6640ba",
+      "width": 150,
+      "height": 74,
+      "size": 5042,
+      "uploadedDate": "2020-12-08T17:51:53.751Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/transformTools.PNG-1920x1080-cf43cd200075b78546f9a53348f00289_Snapshot.jpg",
+      "md5": "e5c494f054c698e0eaad6b7e7197cad2",
+      "width": 150,
+      "height": 74,
+      "size": 4058,
+      "uploadedDate": "2020-12-08T17:51:54.120Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/blenderBridge.PNG-1920x1080-d9249647c1e75aa828863031fabc0254_Snapshot.jpg",
+      "md5": "6feb15434b0bd5a923c5f7ddef0b8160",
+      "width": 150,
+      "height": 74,
+      "size": 4295,
+      "uploadedDate": "2020-12-08T17:51:54.483Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/mayaBridge.PNG-1920x1080-868b26589fa9bd8a9f5b8c641a5aa5eb_Snapshot.jpg",
+      "md5": "4be08765c9d0bac78ad7bfeccfa0d159",
+      "width": 150,
+      "height": 74,
+      "size": 4580,
+      "uploadedDate": "2020-12-08T17:51:54.906Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rhinoBridge.PNG-1920x1080-94fcdd8a73163b0fe9d55f4b3e4062ee_Snapshot.jpg",
+      "md5": "01331191f147504f96e83434ec47bd2e",
+      "width": 150,
+      "height": 74,
+      "size": 5760,
+      "uploadedDate": "2020-12-08T17:51:55.407Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/material instance.PNG-1920x1080-977eaa20e4c411f10de2ff7ec2766236_Snapshot.jpg",
+      "md5": "2b1162a216cbb00dbe30f312d3e6faaa",
+      "width": 150,
+      "height": 74,
+      "size": 4277,
+      "uploadedDate": "2020-12-08T17:51:55.931Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Material Replace.PNG-1920x1080-06834cae3632e5b04fb6cacedefca20e_Snapshot.jpg",
+      "md5": "26aaf3ad75f743837143b9e16d2574bb",
+      "width": 150,
+      "height": 74,
+      "size": 3130,
+      "uploadedDate": "2020-12-08T17:51:56.255Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Material Generator.PNG-1920x1080-04c33ebaaaa55a057b0a857d2923c2d8_Snapshot.jpg",
+      "md5": "1d75e1f4fd1d1d5bf5eaaa209ac0e0b6",
+      "width": 150,
+      "height": 74,
+      "size": 6924,
+      "uploadedDate": "2020-12-08T17:51:56.616Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ruler.PNG-1920x1080-705b7d3d79b92f9735392ed1d03feb70_Snapshot.jpg",
+      "md5": "5942f641b1d50deb44bfc03707cf056d",
+      "width": 150,
+      "height": 74,
+      "size": 5857,
+      "uploadedDate": "2020-12-08T17:51:57.050Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-12-10T19:49:40.763Z",
+  "lastModifiedDate": "2025-01-22T22:18:24.847Z",
+  "customAttributes": {},
+  "entitlementName": "0ab8c402d1d54bb2922e5dd02f46d63a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "8de5194ec94e42c8aac81d1d0c162b06",
+      "appId": "OpenVirtualFilm_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2020-12-08T00:00:00.000Z",
+      "releaseNote": "Will not be updated further",
+      "versionTitle": "OVFP 4.25 V2.30"
+    },
+    {
+      "id": "5e1c23edb09a4da6a584319c508debbf",
+      "appId": "OpenVirtualFilm_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-12-08T00:00:00.000Z",
+      "releaseNote": "Fixing camera bug, new blender bridge features, thin transluscent material",
+      "versionTitle": "OVFP 4.26 v4.00"
+    },
+    {
+      "id": "177ca89bf1214467aea33416717ed7cd",
+      "appId": "OpenVirtualFilm_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-10-18T00:00:00.000Z",
+      "releaseNote": "Fixing camera bug, new blender bridge features, thin transluscent material",
+      "versionTitle": "OVFP 4.27 v4.00"
+    },
+    {
+      "id": "84f11932a1dc4c15a6502313d3df2188",
+      "appId": "OpenVirtualFilm_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "Fixing camera bug, new blender bridge features, thin transluscent material",
+      "versionTitle": "OVFP 5.0 4.00"
+    },
+    {
+      "id": "5f51c7427d894feba444c85776286d43",
+      "appId": "OpenVirtualFilm_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "OVFP 5.1 v 6.01"
+    },
+    {
+      "id": "27a75fb913cf4f12b668ddf1b3500f71",
+      "appId": "OpenVirtualFilm_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-06-02T00:00:00.000Z",
+      "releaseNote": "updating the blender files",
+      "versionTitle": "OVFP 5.2 v 8.0"
+    },
+    {
+      "id": "764a529a342742318f95ee2ff08dcefc",
+      "appId": "OpenVirtualFilm_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-11-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "OVFP 5.3 v 8.0"
+    },
+    {
+      "id": "352eb1f0796e40a883f8a205c3c0503d",
+      "appId": "OpenVirtualFilm_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-08-01T00:00:00.000Z",
+      "releaseNote": "Removed Editor VR code and improved stability",
+      "versionTitle": "OVFP 5.4 V 8.01"
+    }
+  ],
+  "developer": "Fae Corrigan",
+  "developerId": "o-ajhapwt2ddyccyfcskvxf5su3n5w5f",
+  "endOfSupport": false,
+  "unsearchable": false
+}

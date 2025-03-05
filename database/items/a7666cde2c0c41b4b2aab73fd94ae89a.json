@@ -1,0 +1,769 @@
+{
+  "id": "a7666cde2c0c41b4b2aab73fd94ae89a",
+  "title": "Audio Analyzer",
+  "description": "Plugin to visualize the wave data using amplitude, frequency spectrum and beat tracking",
+  "longDescription": "<h1><a href=\"https://www.parallelcube.com/content/docs/audioanalyzer/install.html#manual-installation-ue4-4-20-and-older-versions\" rel=\"nofollow\"><strong>&gt;&gt;&gt;&gt; Manual installation UE4 support and no listed versions &lt;&lt;&lt;&lt;</strong></a></h1><p><br /></p><p>Audio Analyzer is a plugin for Unreal Engine 5 that allow you to visualize the waveform and frequency spectrum of an audio file in real-time. Also can detect the beats of any audio source in realtime by using frequency spectrum analysis (FFT).</p><p>You can use in your games or applications and make your games react to the music. It is really easy to configure.</p><h2><strong>Current features</strong></h2><ul><li>Amplitude Analysis</li><li>Frequency spectrum</li><li>Basic beat tracking</li><li>BPM Tracking</li><li>Pitch Tracking</li><li>Works with audio file, microphone and loopback input</li><li>Support cooked builds</li><li>Android Mobile friendly</li><li>Full source C&#43;&#43; included</li><li>Wav, Mp3, Ogg, Flac Supported</li><li>Loopback (What-you-hear) support (Only windows)</li><li>Offline analysis (Amplitude sections)</li><li>Soundwave and AudioComponent support</li><li>Audio runtime import supported</li></ul>",
+  "technicalDetails": "<p>See below documentation to a detailed explanation of the plugin integration and supported audio files.</p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 18</p><p>Network Replicated: No</p><h2>Supported Development Platforms:</h2><ul><li>Windows</li><li>Linux</li><li>Mac</li></ul><h2>Supported Target Build Platforms:</h2><ul><li>Windows 64 bits</li><li>Android</li><li>Linux</li><li>Mac</li><li>iOS</li></ul><h2>Supported Engine Versions:</h2><ul><li>5.4</li><li>5.3</li><li>5.2</li><li>5.1 and Older</li><li>4.27 and Older (<a href=\"https://www.parallelcube.com/content/docs/audioanalyzer/install.html#manual-installation-ue4-4-20-and-older-versions\" rel=\"nofollow\">Manual Installation</a>)</li></ul><h2>Documentation:</h2><p><a href=\"https://www.parallelcube.com/content/docs/audioanalyzer/\" rel=\"nofollow\">Documentation</a> | <a href=\"https://www.parallelcube.com/audio-analyzer-plugin/\" rel=\"nofollow\">Web</a> | <a href=\"https://forums.unrealengine.com/t/support-audioanalyzer/121249\" rel=\"nofollow\">Forum support</a> | <a href=\"https://www.parallelcube.com/audioanalyzer-support-ticket/\" rel=\"nofollow\">Ticket Support</a></p><h2>Example Projects:</h2><p><a href=\"https://www.parallelcube.com/audioanalyzer-projects/\" rel=\"nofollow\">Sample Projects</a></p><h2>Current version:</h2><p>3.11 <a href=\"https://www.parallelcube.com/audioanalyzer-changelog/\" rel=\"nofollow\"><strong>Changelog</strong></a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cover1920x1080-1920x1080-3033feb916bcb00d23b1eab55292a99d.png",
+      "md5": "3033feb916bcb00d23b1eab55292a99d",
+      "width": 1920,
+      "height": 1080,
+      "size": 595743,
+      "uploadedDate": "2018-11-27T19:59:17.456Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AAAnalysis1-1920x1080-ac98afb9dbb34ac9d9d3d88a0c6e317f.png",
+      "md5": "ac98afb9dbb34ac9d9d3d88a0c6e317f",
+      "width": 1920,
+      "height": 1080,
+      "size": 104657,
+      "uploadedDate": "2021-05-20T20:49:29.259Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AABeatTracking-1920x1080-29d96f0542aa0abfbbddf2144d1a963e.png",
+      "md5": "29d96f0542aa0abfbbddf2144d1a963e",
+      "width": 1920,
+      "height": 1080,
+      "size": 124876,
+      "uploadedDate": "2021-05-20T20:49:29.394Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AAExtractor-1920x1080-bb2a59ae927ee76cf788309b9b0d8d39.png",
+      "md5": "bb2a59ae927ee76cf788309b9b0d8d39",
+      "width": 1920,
+      "height": 1080,
+      "size": 89688,
+      "uploadedDate": "2021-05-20T20:49:29.495Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AAPlayer-1920x1080-67bdd096e52187ef242168be1c887ca2.png",
+      "md5": "67bdd096e52187ef242168be1c887ca2",
+      "width": 1920,
+      "height": 1080,
+      "size": 167968,
+      "uploadedDate": "2021-05-20T20:49:29.602Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AACapturer-1920x1080-6a7dde0d2d10eed19b8401185f8e0a8f.png",
+      "md5": "6a7dde0d2d10eed19b8401185f8e0a8f",
+      "width": 1920,
+      "height": 1080,
+      "size": 120073,
+      "uploadedDate": "2021-05-20T20:49:29.783Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AALoopback-1920x1080-063ff6b088da3d98aae27d84d3483746.png",
+      "md5": "063ff6b088da3d98aae27d84d3483746",
+      "width": 1920,
+      "height": 1080,
+      "size": 80038,
+      "uploadedDate": "2021-05-20T20:49:29.887Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AAStream-1920x1080-f4db4a3061dec6015da6820e3c269d42.png",
+      "md5": "f4db4a3061dec6015da6820e3c269d42",
+      "width": 1920,
+      "height": 1080,
+      "size": 79038,
+      "uploadedDate": "2021-05-20T20:49:29.990Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AAOVR-1920x1080-62160b2108abcc87897d45191e6a5b70.png",
+      "md5": "62160b2108abcc87897d45191e6a5b70",
+      "width": 1920,
+      "height": 1080,
+      "size": 94927,
+      "uploadedDate": "2021-05-20T20:49:30.128Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/soundwavenodes-1920x1080-24fa1ccc72e455ba56f2d99d6454412b.png",
+      "md5": "24fa1ccc72e455ba56f2d99d6454412b",
+      "width": 1920,
+      "height": 1080,
+      "size": 261697,
+      "uploadedDate": "2021-06-21T11:28:42.877Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/audiocomponentnodes-1920x1080-ce5e92330c15df099ed3a021f100dbb8.png",
+      "md5": "ce5e92330c15df099ed3a021f100dbb8",
+      "width": 1920,
+      "height": 1080,
+      "size": 296345,
+      "uploadedDate": "2021-06-21T11:28:43.020Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screen51-1920x1080-edf496171be3a83fc4a77d9cea15a407.png",
+      "md5": "edf496171be3a83fc4a77d9cea15a407",
+      "width": 1920,
+      "height": 1080,
+      "size": 1159302,
+      "uploadedDate": "2019-03-12T17:44:13.514Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/bpmscreen-1920x1080-2ec927162108b4da436df68d2c6f5d58.png",
+      "md5": "2ec927162108b4da436df68d2c6f5d58",
+      "width": 1920,
+      "height": 1080,
+      "size": 264880,
+      "uploadedDate": "2019-03-12T17:44:13.866Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DemoM1-1920x1080-91aebbf78a3ea0f6de33e96b111dcf29.png",
+      "md5": "91aebbf78a3ea0f6de33e96b111dcf29",
+      "width": 1920,
+      "height": 1080,
+      "size": 108243,
+      "uploadedDate": "2021-07-30T21:56:45.753Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DemoM2-1920x1080-f14beb9f356c46c34bd1493c3f75c4c9.png",
+      "md5": "f14beb9f356c46c34bd1493c3f75c4c9",
+      "width": 1920,
+      "height": 1080,
+      "size": 57354,
+      "uploadedDate": "2021-07-30T21:56:45.882Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DemoM2a-1920x1080-cc2976fed8b9efe39b27c9d503d0a69d.png",
+      "md5": "cc2976fed8b9efe39b27c9d503d0a69d",
+      "width": 1920,
+      "height": 1080,
+      "size": 86523,
+      "uploadedDate": "2021-07-30T21:56:45.996Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DemoM3-1920x1080-2a7bcc4345da25e00eebf00956b6a3d6.png",
+      "md5": "2a7bcc4345da25e00eebf00956b6a3d6",
+      "width": 1920,
+      "height": 1080,
+      "size": 239437,
+      "uploadedDate": "2021-07-30T21:56:46.183Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DemoM4-1920x1080-2c8e30db11569c91317ef221a72d7f98.png",
+      "md5": "2c8e30db11569c91317ef221a72d7f98",
+      "width": 1920,
+      "height": 1080,
+      "size": 142311,
+      "uploadedDate": "2021-07-30T21:56:46.482Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DemoM5-1920x1080-19095a566897cdd4d611843860a481e7.png",
+      "md5": "19095a566897cdd4d611843860a481e7",
+      "width": 1920,
+      "height": 1080,
+      "size": 65895,
+      "uploadedDate": "2021-07-30T21:56:46.602Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Playeramplitude-1920x1080-bb6978d41bc51ff68715b17f04ed52c2.png",
+      "md5": "bb6978d41bc51ff68715b17f04ed52c2",
+      "width": 1920,
+      "height": 1080,
+      "size": 85259,
+      "uploadedDate": "2018-11-27T20:04:47.564Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ampplayermc-1920x1080-b0471d4804954fb09d0732bfe6b248b6.png",
+      "md5": "b0471d4804954fb09d0732bfe6b248b6",
+      "width": 1920,
+      "height": 1080,
+      "size": 138014,
+      "uploadedDate": "2019-03-12T17:44:14.386Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DemoM6-1920x1080-e1d5ef77b25e409f75843f3b70eb9207.png",
+      "md5": "e1d5ef77b25e409f75843f3b70eb9207",
+      "width": 1920,
+      "height": 1080,
+      "size": 43990,
+      "uploadedDate": "2021-07-30T21:56:46.721Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DemoM7-1920x1080-646608e84cee2cacd460df203ddab02e.png",
+      "md5": "646608e84cee2cacd460df203ddab02e",
+      "width": 1920,
+      "height": 1080,
+      "size": 54751,
+      "uploadedDate": "2021-07-30T21:56:46.829Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/btplayer-1920x1080-3e32edcc8470e9966ea837eace161b74.png",
+      "md5": "3e32edcc8470e9966ea837eace161b74",
+      "width": 1920,
+      "height": 1080,
+      "size": 210138,
+      "uploadedDate": "2019-03-12T17:44:14.882Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/btplayermc-1920x1080-621f3faf22754ef4fb5c6758985bb271.png",
+      "md5": "621f3faf22754ef4fb5c6758985bb271",
+      "width": 1920,
+      "height": 1080,
+      "size": 306748,
+      "uploadedDate": "2019-03-12T17:44:15.123Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AudioAnalyzer_thumb-284x284-639916b6c5619cf742ad96e60df64e58.png",
+      "md5": "639916b6c5619cf742ad96e60df64e58",
+      "width": 284,
+      "height": 284,
+      "size": 86463,
+      "uploadedDate": "2018-11-27T19:49:31.826Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AudioAnalyzer_featured-894x488-0974a16c245433f67a539a87cab9ea49.png",
+      "md5": "0974a16c245433f67a539a87cab9ea49",
+      "width": 894,
+      "height": 488,
+      "size": 371439,
+      "uploadedDate": "2018-11-27T19:49:31.913Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DemoM1-1920x1080-91aebbf78a3ea0f6de33e96b111dcf29_Snapshot.png",
+      "md5": "ef4b7dc00b52172ae5b456d1e29a8854",
+      "width": 150,
+      "height": 74,
+      "size": 5464,
+      "uploadedDate": "2021-07-30T21:56:45.820Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DemoM2-1920x1080-f14beb9f356c46c34bd1493c3f75c4c9_Snapshot.png",
+      "md5": "fa0b32083de9ed372c5263148c3312e3",
+      "width": 150,
+      "height": 74,
+      "size": 3466,
+      "uploadedDate": "2021-07-30T21:56:45.945Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DemoM2a-1920x1080-cc2976fed8b9efe39b27c9d503d0a69d_Snapshot.png",
+      "md5": "8689dcfb0fa979fb8de9ef1b0e6e4503",
+      "width": 150,
+      "height": 74,
+      "size": 4488,
+      "uploadedDate": "2021-07-30T21:56:46.084Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DemoM3-1920x1080-2a7bcc4345da25e00eebf00956b6a3d6_Snapshot.png",
+      "md5": "018256fa2b923f53921561ff250f134a",
+      "width": 150,
+      "height": 74,
+      "size": 6284,
+      "uploadedDate": "2021-07-30T21:56:46.258Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DemoM4-1920x1080-2c8e30db11569c91317ef221a72d7f98_Snapshot.png",
+      "md5": "c069d4347a24788bbb912b2f81332475",
+      "width": 150,
+      "height": 74,
+      "size": 5405,
+      "uploadedDate": "2021-07-30T21:56:46.558Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DemoM5-1920x1080-19095a566897cdd4d611843860a481e7_Snapshot.png",
+      "md5": "93f291c25843945d1eabcf239154784f",
+      "width": 150,
+      "height": 74,
+      "size": 3550,
+      "uploadedDate": "2021-07-30T21:56:46.668Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DemoM6-1920x1080-e1d5ef77b25e409f75843f3b70eb9207_Snapshot.png",
+      "md5": "ff33429886d3115b8c643cb77f2186a3",
+      "width": 150,
+      "height": 74,
+      "size": 3454,
+      "uploadedDate": "2021-07-30T21:56:46.787Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DemoM7-1920x1080-646608e84cee2cacd460df203ddab02e_Snapshot.png",
+      "md5": "13920c71b405da94a53b9ec1638cbfb4",
+      "width": 150,
+      "height": 74,
+      "size": 4443,
+      "uploadedDate": "2021-07-30T21:56:46.911Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/soundwavenodes-1920x1080-24fa1ccc72e455ba56f2d99d6454412b_Snapshot.png",
+      "md5": "fb5593f5053b65e78cd708cace1e9918",
+      "width": 150,
+      "height": 74,
+      "size": 6447,
+      "uploadedDate": "2021-06-21T11:28:42.965Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/audiocomponentnodes-1920x1080-ce5e92330c15df099ed3a021f100dbb8_Snapshot.png",
+      "md5": "10ba5018f7c4d142cae0a8f2d3f823a1",
+      "width": 150,
+      "height": 74,
+      "size": 5811,
+      "uploadedDate": "2021-06-21T11:28:43.098Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AAAnalysis1-1920x1080-ac98afb9dbb34ac9d9d3d88a0c6e317f_Snapshot.png",
+      "md5": "0416cd88ddd726b2b7494717bf0cfa34",
+      "width": 150,
+      "height": 74,
+      "size": 6037,
+      "uploadedDate": "2021-05-20T20:49:29.327Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AABeatTracking-1920x1080-29d96f0542aa0abfbbddf2144d1a963e_Snapshot.png",
+      "md5": "229e8ccf1b740e2f8d680c233bb8481d",
+      "width": 150,
+      "height": 74,
+      "size": 5905,
+      "uploadedDate": "2021-05-20T20:49:29.455Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AAExtractor-1920x1080-bb2a59ae927ee76cf788309b9b0d8d39_Snapshot.png",
+      "md5": "8167bc0b8c7e16bdc0fe5f0dc8e55b87",
+      "width": 150,
+      "height": 74,
+      "size": 4837,
+      "uploadedDate": "2021-05-20T20:49:29.557Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AAPlayer-1920x1080-67bdd096e52187ef242168be1c887ca2_Snapshot.png",
+      "md5": "a658ffffa3283a311e1c67a19bd441e5",
+      "width": 150,
+      "height": 74,
+      "size": 6397,
+      "uploadedDate": "2021-05-20T20:49:29.698Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AACapturer-1920x1080-6a7dde0d2d10eed19b8401185f8e0a8f_Snapshot.png",
+      "md5": "e31d5c3df3c74923df2420713a981500",
+      "width": 150,
+      "height": 74,
+      "size": 5121,
+      "uploadedDate": "2021-05-20T20:49:29.845Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AALoopback-1920x1080-063ff6b088da3d98aae27d84d3483746_Snapshot.png",
+      "md5": "7eef1eb9533e83fa79a6ab909355499c",
+      "width": 150,
+      "height": 74,
+      "size": 4649,
+      "uploadedDate": "2021-05-20T20:49:29.949Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AAStream-1920x1080-f4db4a3061dec6015da6820e3c269d42_Snapshot.png",
+      "md5": "36b8b3dafe73827da8b4e882f42b543e",
+      "width": 150,
+      "height": 74,
+      "size": 4768,
+      "uploadedDate": "2021-05-20T20:49:30.052Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AAOVR-1920x1080-62160b2108abcc87897d45191e6a5b70_Snapshot.png",
+      "md5": "2d41a59c2887cca05cf5a69936f3d164",
+      "width": 150,
+      "height": 74,
+      "size": 4748,
+      "uploadedDate": "2021-05-20T20:49:30.206Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpcapturer1-1920x1080-936da486ce347b8b4ba8803bf03518ff_Snapshot.png",
+      "md5": "5d04756fa44323d9f361698a7936365f",
+      "width": 150,
+      "height": 74,
+      "size": 9001,
+      "uploadedDate": "2019-04-18T21:07:50.540Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpplayer1-1920x1080-4075d5f916c47920a120a0e421a323d7_Snapshot.png",
+      "md5": "140ad491bd3907c335d5d65aa635d047",
+      "width": 150,
+      "height": 74,
+      "size": 11187,
+      "uploadedDate": "2019-04-18T21:07:50.940Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpplayer2-1920x1080-b68a4bce3be73870d7d27fffc4d90b61_Snapshot.png",
+      "md5": "fdf4097d821475bd09acd49d4ca2e415",
+      "width": 150,
+      "height": 74,
+      "size": 10060,
+      "uploadedDate": "2019-04-18T21:07:51.270Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MainMenu-1920x1080-ab11624400d847742a5dcdc568c1a574_Snapshot.png",
+      "md5": "8b4ab63610eb6252b41ef68e7fcb3c90",
+      "width": 150,
+      "height": 74,
+      "size": 6746,
+      "uploadedDate": "2019-04-18T21:07:51.506Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Menuamplitude-1920x1080-315e27605d14eb1bf20ad31b6438a9ea_Snapshot.png",
+      "md5": "e8f66ad196d666061765e91f3a736e36",
+      "width": 150,
+      "height": 74,
+      "size": 3494,
+      "uploadedDate": "2019-04-18T21:07:51.741Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MenuBT-1920x1080-697d4057a25d81a80bc5430b0732fac5_Snapshot.png",
+      "md5": "e3f4a190e620e55d24c013004c6b924e",
+      "width": 150,
+      "height": 74,
+      "size": 4324,
+      "uploadedDate": "2019-04-18T21:07:52.115Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MenuFrequency-1920x1080-c4b3be68f7565b1367fc95979989ae25_Snapshot.png",
+      "md5": "b54f2eeee91d56de8ce70a87d5549660",
+      "width": 150,
+      "height": 74,
+      "size": 4703,
+      "uploadedDate": "2019-04-18T21:07:52.338Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/analysisampfreq-1920x1080-aaa2086d71c9980b180047cf3cc9d6a3_Snapshot.png",
+      "md5": "96ebb6408f07c1dd18b4fa0a4b91f047",
+      "width": 150,
+      "height": 74,
+      "size": 8867,
+      "uploadedDate": "2019-03-12T17:44:12.412Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/analysisbt-1920x1080-4a1c500038944d158b9ff79d56788032_Snapshot.png",
+      "md5": "6921edfb4371a9064477054e1030c33b",
+      "width": 150,
+      "height": 74,
+      "size": 8917,
+      "uploadedDate": "2019-03-12T17:44:12.749Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/inputcapturer-1920x1080-01ab18b77ecee71b02f151f883a23ede_Snapshot.png",
+      "md5": "02c65f7a8a3b3063059ad271b547677b",
+      "width": 150,
+      "height": 74,
+      "size": 6875,
+      "uploadedDate": "2019-03-12T17:44:13.028Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/inputplayer-1920x1080-3b7b379f3a7b5a9ab67736a01bb2543c_Snapshot.png",
+      "md5": "508be24efa6fb21732296382f8e2fe13",
+      "width": 150,
+      "height": 74,
+      "size": 8936,
+      "uploadedDate": "2019-03-12T17:44:13.317Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screen51-1920x1080-edf496171be3a83fc4a77d9cea15a407_Snapshot.png",
+      "md5": "81803b7b08610983958bc8627c70b1cf",
+      "width": 150,
+      "height": 74,
+      "size": 14989,
+      "uploadedDate": "2019-03-12T17:44:13.769Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpmscreen-1920x1080-2ec927162108b4da436df68d2c6f5d58_Snapshot.png",
+      "md5": "99f932f6b007b298d859c113015d705a",
+      "width": 150,
+      "height": 74,
+      "size": 5646,
+      "uploadedDate": "2019-03-12T17:44:14.035Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/menu-1920x1080-0c3df88879679189cd7dd5cf6dcd7f5b_Snapshot.png",
+      "md5": "8b0eb74478f1e22b92aa2bcf33d475ed",
+      "width": 150,
+      "height": 74,
+      "size": 6992,
+      "uploadedDate": "2019-03-12T17:44:14.284Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ampplayermc-1920x1080-b0471d4804954fb09d0732bfe6b248b6_Snapshot.png",
+      "md5": "28bc3d806bc5390e493bbefcbfbceea2",
+      "width": 150,
+      "height": 74,
+      "size": 3652,
+      "uploadedDate": "2019-03-12T17:44:14.523Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/specplayermc-1920x1080-e96bbda1dd2629e60e58881842184c0a_Snapshot.png",
+      "md5": "e79000695f883e558195d28ea3e38eee",
+      "width": 150,
+      "height": 74,
+      "size": 4237,
+      "uploadedDate": "2019-03-12T17:44:14.779Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/btplayer-1920x1080-3e32edcc8470e9966ea837eace161b74_Snapshot.png",
+      "md5": "e468db3874cc7867704dfddae5cbc35b",
+      "width": 150,
+      "height": 74,
+      "size": 5745,
+      "uploadedDate": "2019-03-12T17:44:15.018Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/btplayermc-1920x1080-621f3faf22754ef4fb5c6758985bb271_Snapshot.png",
+      "md5": "a95b8e3e6d36ce22c9dcf54499156370",
+      "width": 150,
+      "height": 74,
+      "size": 7768,
+      "uploadedDate": "2019-03-12T17:44:15.247Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpanalysis1-1920x1080-bfde216e56d7f2d1d0d4c6d569d6d4da_Snapshot.png",
+      "md5": "e0344b989691c7500f840dd73568c4b8",
+      "width": 150,
+      "height": 74,
+      "size": 7562,
+      "uploadedDate": "2018-11-28T17:44:58.139Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpanalysis2-1920x1080-a971cae322b673ded6235a541bddaac3_Snapshot.png",
+      "md5": "39e67fd9de4d2d26a973a9e1b18c4cb5",
+      "width": 150,
+      "height": 74,
+      "size": 9805,
+      "uploadedDate": "2018-11-28T17:44:58.522Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpcapturer1-1920x1080-66335fadc964b6b1c3689b8e7329fa85_Snapshot.png",
+      "md5": "7096ce6365d39d414b157c41f34c2643",
+      "width": 150,
+      "height": 74,
+      "size": 7701,
+      "uploadedDate": "2018-11-28T17:44:58.889Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpplayer1-1920x1080-1b7f575c6de2dab34150870a0723879b_Snapshot.png",
+      "md5": "f2166e9720b37da1fc5335006c0bda29",
+      "width": 150,
+      "height": 74,
+      "size": 9577,
+      "uploadedDate": "2018-11-28T17:44:59.334Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpplayer2-1920x1080-882dd3287f5d47a1495028e9b87ab990_Snapshot.png",
+      "md5": "c22548308b94e4e58c423b56266dc69e",
+      "width": 150,
+      "height": 74,
+      "size": 8186,
+      "uploadedDate": "2018-11-28T17:44:59.691Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Menuamplitude-1920x1080-af89eba6fcc852dce00b65f31535fc94_Snapshot.png",
+      "md5": "33f236bad70298a123d2542be4df53c8",
+      "width": 150,
+      "height": 74,
+      "size": 3271,
+      "uploadedDate": "2018-11-27T20:04:47.489Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Playeramplitude-1920x1080-bb6978d41bc51ff68715b17f04ed52c2_Snapshot.png",
+      "md5": "2473bf5d903e1206e7f956321505564a",
+      "width": 150,
+      "height": 74,
+      "size": 4028,
+      "uploadedDate": "2018-11-27T20:04:47.706Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MenuFrequency-1920x1080-73af3c6b172cc098575d5ff7369a8a81_Snapshot.png",
+      "md5": "7a5b4c05c297a31848412fc4d6bee16a",
+      "width": 150,
+      "height": 74,
+      "size": 3910,
+      "uploadedDate": "2018-11-27T20:04:47.959Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PlayerFrequency-1920x1080-22434b16058b501864621bc7ae0dfff6_Snapshot.png",
+      "md5": "10c0da04e89208512251895305046265",
+      "width": 150,
+      "height": 74,
+      "size": 4899,
+      "uploadedDate": "2018-11-27T20:04:48.166Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MenuBT-1920x1080-448b620454800b4266e84304ce1845fe_Snapshot.png",
+      "md5": "487a779512638a7ad70bc4ec062f9336",
+      "width": 150,
+      "height": 74,
+      "size": 3783,
+      "uploadedDate": "2018-11-27T20:04:48.379Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PlayerBT1-1920x1080-4ecbb83b984de6d6e59d69375b524fdf_Snapshot.png",
+      "md5": "fcd067366986f622ad33a7963edb7950",
+      "width": 150,
+      "height": 74,
+      "size": 5002,
+      "uploadedDate": "2018-11-27T20:04:48.590Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PlayerBT2-1920x1080-fee7bef2136d60a9f1cb3848f1c6afaa_Snapshot.png",
+      "md5": "110fb10b451bfce37776597b52fecceb",
+      "width": 150,
+      "height": 74,
+      "size": 4905,
+      "uploadedDate": "2018-11-27T20:04:48.829Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cover1920x1080-1920x1080-3033feb916bcb00d23b1eab55292a99d_Snapshot.png",
+      "md5": "9105dbdc85491af843a35296f1535e41",
+      "width": 150,
+      "height": 74,
+      "size": 10850,
+      "uploadedDate": "2018-11-27T19:59:17.674Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MainMenu-1920x1080-b23f2a207dacb70e209ba5df305a8912_Snapshot.png",
+      "md5": "edb67ec4b36c45dd6da04fd14d2cc303",
+      "width": 150,
+      "height": 74,
+      "size": 4675,
+      "uploadedDate": "2018-11-27T19:49:31.495Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Menuamplitude-1920x1080-af89eba6fcc852dce00b65f31535fc94_Snapshot.png",
+      "md5": "33f236bad70298a123d2542be4df53c8",
+      "width": 150,
+      "height": 74,
+      "size": 3271,
+      "uploadedDate": "2018-11-27T19:49:31.761Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-01-09T00:46:53.726Z",
+  "lastModifiedDate": "2024-11-28T17:12:25.863Z",
+  "customAttributes": {},
+  "entitlementName": "a7666cde2c0c41b4b2aab73fd94ae89a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "7fb242bb0865497ab93b336388a18a8e",
+      "appId": "AudioAnalyzer_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Oculus",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AudioAnalyzer_503_310"
+    },
+    {
+      "id": "831b1be0f64c4e6f95110eefa4a08e38",
+      "appId": "AudioAnalyzer_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Oculus",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-04-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AudioAnalyzer_504_313"
+    }
+  ],
+  "developer": "Parallelcube",
+  "developerId": "o-syf3mu3ef45qkdd5uyq77nsfa78e9w",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,380 @@
+{
+  "id": "489a0d10396145339c36fd5548045589",
+  "title": "AutoDecalMerger",
+  "description": "AutoDecalMerger Plugin allows you to spawn merge-able permanent decals and automagically merges them once overlapped. This will dramatically increase performance and optimize your game.",
+  "longDescription": "<p>* A UE5 UPDATE HAS BEEN SUBMITTED AND IS WAITING FOR REVIEWER&#39;S APPROVAL *</p><p>Demo: <a href=\"https://youtu.be/PcT66Hj0_Kc\" rel=\"nofollow\">https://youtu.be/PcT66Hj0_Kc</a></p><p>Tutorial: <a href=\"https://youtu.be/hY6F5pxdX2U\" rel=\"nofollow\">https://youtu.be/hY6F5pxdX2U</a></p><p> </p><p>AutoDecalMerger Plugin is very useful for adding up certain gore level for your top down game, or for similar concepts.</p><p>The Plugin merges overlapping Vertically Projected Decals (spawned by <em>DecalManagerComponent</em>) thus reducing pixel overdraw to as low as possible.</p><p> </p><p>This allows you to have hundreds of translucent Decals in a dense area, the denser the area the more decals you can merge.</p><p> </p><p>The heavy processing is done on a background thread, allowing as less performance impact on the game thread as possible.</p><p> </p><p>*Note: The merging is done by approximation of the material&#39;s textures thus having some error level.</p><p>*Note2: Therefore the plugin is not intended to be used with close-ups.</p><p> </p><p>AutoDecalMerger Plugin is a great tool for creating great games.</p>",
+  "technicalDetails": "<p>Example project (4.17): <a href=\"https://drive.google.com/open?id&#61;0B0IdKcPdt9ldX3l6d1NFeWYxN1U\" rel=\"nofollow\">https://drive.google.com/open?id&#61;0B0IdKcPdt9ldX3l6d1NFeWYxN1U</a></p><p> </p><p>Use <em>DecalManagerComponent</em> to spawn decals. <em>DecalManagerComponent</em> utilizes an adjustable background thread that merges decals without stalling the main thread.</p><p> </p><p>*Note: <em>AutoDecalMerger</em> Plugin does not merges every deferred decals spawned in the level, it merges only decals spawned by <em>DecalManagerComponent</em>.</p><p> </p><p><u>Texture requirements</u>:</p><ul><li><em>Compression</em> settings must be <em>VectorDisplacementmap </em>(RGBA8)</li><li><em>Mip Gen</em> settings must be <em>NoMipmaps</em></li><li><em>sRGB gamma</em> correction must be turned off.</li><li><em>Never Stream</em> option must be turned ON.</li></ul><p> </p><p><u>Material requirements:</u></p><ul><li>Material must have a texture parameter named &#34;<em>Texture</em>&#34; !</li><li>The sampler type of the texture parameter must be &#34;<em>Linear Color</em>&#34;.</li></ul><p>*Note: The more complex the material is, the bigger the error level will be. The plugin accounts only the texture itself.</p><p> </p><p>Number of classes: 5</p><p>Network Replicated: No</p><p>Supported Development Platforms: Mac, iOS, Linux, Android, Win32, Win64</p><p>Supported Target Build Platforms: Mac, iOS, Linux, Android, Win32, Win64</p><p>Tested Platforms: Mac, Win64</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 01-1920x1080-9618d6e1a361e59ede30e2121ff1d8f1.jpg",
+      "md5": "9618d6e1a361e59ede30e2121ff1d8f1",
+      "width": 1920,
+      "height": 1080,
+      "size": 327340,
+      "uploadedDate": "2022-01-11T11:43:35.550Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 02-1920x1080-fd016f0ff76d8b1d03f5657c60d9454f.jpg",
+      "md5": "fd016f0ff76d8b1d03f5657c60d9454f",
+      "width": 1920,
+      "height": 1080,
+      "size": 369966,
+      "uploadedDate": "2022-01-11T11:43:35.875Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 03-1920x1080-93839bb5808cf2056867cd4186da1b97.jpg",
+      "md5": "93839bb5808cf2056867cd4186da1b97",
+      "width": 1920,
+      "height": 1080,
+      "size": 356428,
+      "uploadedDate": "2022-01-11T11:43:36.269Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 04-1920x1080-241fb1e2abcc68690600e73cbe0f5000.jpg",
+      "md5": "241fb1e2abcc68690600e73cbe0f5000",
+      "width": 1920,
+      "height": 1080,
+      "size": 324716,
+      "uploadedDate": "2022-01-11T11:43:36.589Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 05-1920x1080-72178b029ec4b5384e380a8248d014ec.jpg",
+      "md5": "72178b029ec4b5384e380a8248d014ec",
+      "width": 1920,
+      "height": 1080,
+      "size": 356018,
+      "uploadedDate": "2022-01-11T11:43:36.928Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AutoDecalMerger_thumb-284x284-7081afb86b1c332c000086557784887f.png",
+      "md5": "7081afb86b1c332c000086557784887f",
+      "width": 284,
+      "height": 284,
+      "size": 130234,
+      "uploadedDate": "2022-01-11T11:43:37.301Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AutoDecalMerger_featured-894x488-6c80d4ca1ff443808201d043648e02a4.png",
+      "md5": "6c80d4ca1ff443808201d043648e02a4",
+      "width": 894,
+      "height": 488,
+      "size": 342820,
+      "uploadedDate": "2022-01-11T11:43:37.395Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 01-1920x1080-9618d6e1a361e59ede30e2121ff1d8f1_Snapshot.jpg",
+      "md5": "19ac41c0ad4bf35216f69d2621728813",
+      "width": 150,
+      "height": 74,
+      "size": 5906,
+      "uploadedDate": "2022-01-11T11:43:35.757Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 02-1920x1080-fd016f0ff76d8b1d03f5657c60d9454f_Snapshot.jpg",
+      "md5": "50a3f0d5f5302daf6312f4acfa3eb669",
+      "width": 150,
+      "height": 74,
+      "size": 6648,
+      "uploadedDate": "2022-01-11T11:43:36.103Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 03-1920x1080-93839bb5808cf2056867cd4186da1b97_Snapshot.jpg",
+      "md5": "ac757c4eeed761cd818dcbd882103437",
+      "width": 150,
+      "height": 74,
+      "size": 6523,
+      "uploadedDate": "2022-01-11T11:43:36.474Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 04-1920x1080-241fb1e2abcc68690600e73cbe0f5000_Snapshot.jpg",
+      "md5": "1a3db8150231bca5fa65fc00ee32308c",
+      "width": 150,
+      "height": 74,
+      "size": 5874,
+      "uploadedDate": "2022-01-11T11:43:36.800Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 05-1920x1080-72178b029ec4b5384e380a8248d014ec_Snapshot.jpg",
+      "md5": "330c2c06753071d6061b41e3846e1f91",
+      "width": 150,
+      "height": 74,
+      "size": 5087,
+      "uploadedDate": "2022-01-11T11:43:37.138Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2017-11-14T20:11:27.788Z",
+  "lastModifiedDate": "2023-03-18T15:58:24.087Z",
+  "entitlementName": "489a0d10396145339c36fd5548045589",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "bf09ae9ac7a04f3ca0c7a4b0b20920c3",
+      "appId": "AutoDecalMerger_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2017-10-13T00:00:00.000Z",
+      "releaseNote": "Version 1.1\nusing lanczos for resizing",
+      "versionTitle": "4_16"
+    },
+    {
+      "id": "655f10f6cdc4470d9e1666713ce56a29",
+      "appId": "AutoDecalMerger_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2017-10-13T00:00:00.000Z",
+      "releaseNote": "Version 1.1\nusing lanczos for resizing",
+      "versionTitle": "4_17"
+    },
+    {
+      "id": "196cd0ba17d147d3bd36708401d7ed09",
+      "appId": "AutoDecalMerger_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Android",
+        "Linux",
+        "iOS",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2017-11-07T00:00:00.000Z",
+      "releaseNote": "Version 1.1\nusing lanczos for resizing",
+      "versionTitle": "4_18"
+    },
+    {
+      "id": "6355901c226e41bf961f041546c1af97",
+      "appId": "AutoDecalMerger_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Linux",
+        "Android",
+        "iOS",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2018-03-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.19"
+    },
+    {
+      "id": "bf7fac10f80f4552922996d58be6b274",
+      "appId": "AutoDecalMerger_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Linux",
+        "Android",
+        "iOS",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2018-07-20T00:00:00.000Z",
+      "releaseNote": "Engine Version Update 4.20",
+      "versionTitle": "4_20"
+    },
+    {
+      "id": "527e67a2b4f34483af22a601db9618e3",
+      "appId": "AutoDecalMerger_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2018-11-15T00:00:00.000Z",
+      "releaseNote": "Engine Version Update",
+      "versionTitle": "4_21"
+    },
+    {
+      "id": "b6a68a6bf19144ff96e731eb1b470e06",
+      "appId": "AutoDecalMerger_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Windows",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2019-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4_22"
+    },
+    {
+      "id": "ea84dd311df34e51b6303385dc8bee74",
+      "appId": "AutoDecalMerger_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "iOS",
+        "Android",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2019-09-13T00:00:00.000Z",
+      "releaseNote": "Engine Version Update",
+      "versionTitle": "4.23"
+    },
+    {
+      "id": "ecf759fe38794d868105736695071e5c",
+      "appId": "AutoDecalMerger_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2019-12-14T00:00:00.000Z",
+      "releaseNote": "1.1 for 4.24",
+      "versionTitle": "4.24"
+    },
+    {
+      "id": "2a4fc319c27845678148955c6d37a952",
+      "appId": "AutoDecalMerger_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Mac",
+        "Linux",
+        "Windows",
+        "Win32",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-05-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4_25"
+    },
+    {
+      "id": "e86927fc58be41c58964e3cd1ac0a5d1",
+      "appId": "AutoDecalMerger_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Mac",
+        "Linux",
+        "iOS",
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2020-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4_26"
+    },
+    {
+      "id": "c4aeab874c22485bb809cad9e95f4114",
+      "appId": "AutoDecalMerger_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Linux",
+        "iOS",
+        "Android",
+        "Mac",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-08-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "482bd782957a4deaa1999f400cbe3594",
+      "appId": " AutoDecalMerger_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-04-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "f10a4c2594a5485bab3a4107910a608b",
+      "appId": "AutoDecalMerger_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "Linux",
+        "iOS"
+      ],
+      "dateAdded": "2022-11-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5_1"
+    }
+  ],
+  "developer": "Mashmashu Studio",
+  "developerId": "o-a64a8579f148a6bcc00b8527ec9b55",
+  "endOfSupport": false,
+  "unsearchable": false
+}

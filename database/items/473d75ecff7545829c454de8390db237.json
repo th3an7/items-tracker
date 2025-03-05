@@ -1,0 +1,546 @@
+{
+  "id": "473d75ecff7545829c454de8390db237",
+  "title": "Pulldown Builder",
+  "description": "By creating the PulldownContents asset added by this plugin, you can easily add a structure that displays a pull-down menu based on a data table, string table, etc.",
+  "longDescription": "<p>By creating the PulldownContents asset added by this plugin, you can easily add a structure that displays a pull-down menu based on a data table, string table, etc.</p><p>When using C &#43;&#43;, define a structure that inherits FPulldownStructBase and set it in the PulldownContents asset.</p><p>When not using C &#43;&#43;, use NativeLessPulldownStruct to specify the PulldownContents from which the pull-down menu is based.</p>",
+  "technicalDetails": "<p>Usage:</p><p>With or without C&#43;&#43;, you can add data tables and other structures that allow you to pull down the data to enumerate.</p><p>Simply define the structure in C&#43;&#43; or create a structure asset, create a PulldownContents asset, and set PulldownListGenerator as the pulldown generation method.</p><p>The pulldown generation method can be flexibly extended by the user via PulldownListGenerator.</p><p>For details on how to use each case, please refer to the following documents.</p><p><br /></p><p>Code Modules:</p><ul><li>PulldownStruct[Runtime]</li><li>PulldownBuilder[EditorNoCommandlet]</li><li>PulldownStructNodes[UncookedOnly]</li></ul><p><br /></p><p>Supported Development Platforms:</p><p>Windows, Mac, Linux (Runtime module has no platform restrictions)</p><p><br /></p><p>Documentation:</p><p><a href=\"https://github.com/Naotsun19B/PulldownBuilder/blob/master/README.md\" rel=\"nofollow\">Document</a></p><p><br /></p><p>Latest Update:</p><ul><li>Added support for UE5.4</li><li>Added a node that converts the pulldown structure to a string with the value set in Selected Value</li><li>Changed the pulldown content asset to be loaded asynchronously when the editor starts</li><li>It is now possible to specify the vertical and horizontal sizes of the pulldown menu individually in the pulldown content asset</li><li>Added a feature that allows you to check which asset uses which pulldown structure and which value in the reference viewer</li><li>Fixed a bug where the value could not be saved correctly if the default value of the pulldown structure pin contained special characters</li><li>Fixed a bug that caused a crash when using a pulldown structure in the sequencer key property</li><li>Fixed a bug that caused an error on K 2 Node during packaging</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PulldownPin.PNG-1920x1080-d6447edf87f7839ad2fce594e71454d3.jpg",
+      "md5": "d6447edf87f7839ad2fce594e71454d3",
+      "width": 1920,
+      "height": 1080,
+      "size": 169431,
+      "uploadedDate": "2023-02-02T13:13:24.577Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PulldownDetails.PNG-1920x1080-5a29db7ce7e2650ba2850d0736066dee.jpg",
+      "md5": "5a29db7ce7e2650ba2850d0736066dee",
+      "width": 1920,
+      "height": 1080,
+      "size": 190039,
+      "uploadedDate": "2023-02-02T13:13:24.171Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/NativeLessPin.PNG-1920x1080-76f39a10c9c0e866337ab1e5733f9bd2.jpg",
+      "md5": "76f39a10c9c0e866337ab1e5733f9bd2",
+      "width": 1920,
+      "height": 1080,
+      "size": 178985,
+      "uploadedDate": "2023-02-02T13:13:25.322Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/NativeLessDetails.PNG-1920x1080-b2f6bda68e3df6d569856f8060532ebf.jpg",
+      "md5": "b2f6bda68e3df6d569856f8060532ebf",
+      "width": 1920,
+      "height": 1080,
+      "size": 169120,
+      "uploadedDate": "2023-02-02T13:13:24.922Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CreatePulldownContents.PNG-1920x1080-7bf685b419ca5be968076f801c1638a0.jpg",
+      "md5": "7bf685b419ca5be968076f801c1638a0",
+      "width": 1920,
+      "height": 1080,
+      "size": 208611,
+      "uploadedDate": "2022-06-13T12:57:31.820Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Nodes.PNG-1920x1080-d2efb57c64db6f0fae2bd46a580cc847.jpg",
+      "md5": "d2efb57c64db6f0fae2bd46a580cc847",
+      "width": 1920,
+      "height": 1080,
+      "size": 283163,
+      "uploadedDate": "2023-03-09T04:19:46.020Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Code.PNG-1920x1080-b9ef8cedf16ac69e1c4b4c0bc4d4e962.jpg",
+      "md5": "b9ef8cedf16ac69e1c4b4c0bc4d4e962",
+      "width": 1920,
+      "height": 1080,
+      "size": 43600,
+      "uploadedDate": "2022-06-13T12:57:32.187Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Plugin.PNG-1920x1080-96c9a9a059e5522dfd0c5927e1c741e3.jpg",
+      "md5": "96c9a9a059e5522dfd0c5927e1c741e3",
+      "width": 1920,
+      "height": 1080,
+      "size": 98506,
+      "uploadedDate": "2022-06-13T12:57:32.536Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PulldownBuilder_thumb-284x284-17b58ea17716d697bfe26e0c9eeb1329.png",
+      "md5": "17b58ea17716d697bfe26e0c9eeb1329",
+      "width": 284,
+      "height": 284,
+      "size": 77579,
+      "uploadedDate": "2023-05-15T16:00:27.211Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PulldownBuilder_featured-894x488-e89b8ae4b54eb32893f316689930dfea.png",
+      "md5": "e89b8ae4b54eb32893f316689930dfea",
+      "width": 894,
+      "height": 488,
+      "size": 82248,
+      "uploadedDate": "2022-06-13T12:57:32.814Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Nodes.PNG-1920x1080-d2efb57c64db6f0fae2bd46a580cc847_Snapshot.jpg",
+      "md5": "067143a46f05fa4d7f0a2000c52ad3e2",
+      "width": 150,
+      "height": 74,
+      "size": 3087,
+      "uploadedDate": "2023-03-09T04:19:46.380Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PulldownDetails.PNG-1920x1080-5a29db7ce7e2650ba2850d0736066dee_Snapshot.jpg",
+      "md5": "1a540431e5c92eea5e58bdae85341e91",
+      "width": 150,
+      "height": 74,
+      "size": 3902,
+      "uploadedDate": "2023-02-02T13:13:24.406Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PulldownPin.PNG-1920x1080-d6447edf87f7839ad2fce594e71454d3_Snapshot.jpg",
+      "md5": "ea35d05f8c55ee2a40024c9aa43e88cf",
+      "width": 150,
+      "height": 74,
+      "size": 3532,
+      "uploadedDate": "2023-02-02T13:13:24.814Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NativeLessDetails.PNG-1920x1080-b2f6bda68e3df6d569856f8060532ebf_Snapshot.jpg",
+      "md5": "b4f677a0a4b2e1a0673946e6deb7ee30",
+      "width": 150,
+      "height": 74,
+      "size": 3723,
+      "uploadedDate": "2023-02-02T13:13:25.181Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NativeLessPin.PNG-1920x1080-76f39a10c9c0e866337ab1e5733f9bd2_Snapshot.jpg",
+      "md5": "3bf3348e6d6abd3eaeb2df2348b23de2",
+      "width": 150,
+      "height": 74,
+      "size": 3799,
+      "uploadedDate": "2023-02-02T13:13:25.570Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Nodes.PNG-1920x1080-b8db8a9fee4797bf646e2ae790584eff_Snapshot.jpg",
+      "md5": "25048e4b35a9a657068674784a5df344",
+      "width": 150,
+      "height": 74,
+      "size": 3640,
+      "uploadedDate": "2023-02-02T13:13:25.939Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PulldownPin.PNG-1920x1080-d6447edf87f7839ad2fce594e71454d3_Snapshot.jpg",
+      "md5": "ea35d05f8c55ee2a40024c9aa43e88cf",
+      "width": 150,
+      "height": 74,
+      "size": 3532,
+      "uploadedDate": "2022-06-13T12:57:30.092Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PulldownDetails.PNG-1920x1080-5a29db7ce7e2650ba2850d0736066dee_Snapshot.jpg",
+      "md5": "1a540431e5c92eea5e58bdae85341e91",
+      "width": 150,
+      "height": 74,
+      "size": 3902,
+      "uploadedDate": "2022-06-13T12:57:30.466Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NativeLessPin.PNG-1920x1080-76f39a10c9c0e866337ab1e5733f9bd2_Snapshot.jpg",
+      "md5": "3bf3348e6d6abd3eaeb2df2348b23de2",
+      "width": 150,
+      "height": 74,
+      "size": 3799,
+      "uploadedDate": "2022-06-13T12:57:30.845Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NativeLessDetails.PNG-1920x1080-b2f6bda68e3df6d569856f8060532ebf_Snapshot.jpg",
+      "md5": "b4f677a0a4b2e1a0673946e6deb7ee30",
+      "width": 150,
+      "height": 74,
+      "size": 3723,
+      "uploadedDate": "2022-06-13T12:57:31.237Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Nodes.PNG-1920x1080-23a899b78486a4541d1613ba4b2c3c40_Snapshot.jpg",
+      "md5": "3a20e72bec5981a9193a6219c240ee6e",
+      "width": 150,
+      "height": 74,
+      "size": 3428,
+      "uploadedDate": "2022-06-13T12:57:31.744Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CreatePulldownContents.PNG-1920x1080-7bf685b419ca5be968076f801c1638a0_Snapshot.jpg",
+      "md5": "299ff12d598594649c2dd65fc6713e16",
+      "width": 150,
+      "height": 74,
+      "size": 4846,
+      "uploadedDate": "2022-06-13T12:57:32.061Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Code.PNG-1920x1080-b9ef8cedf16ac69e1c4b4c0bc4d4e962_Snapshot.jpg",
+      "md5": "82506ef6e0251e64b1cd676e7fd2f276",
+      "width": 150,
+      "height": 74,
+      "size": 2134,
+      "uploadedDate": "2022-06-13T12:57:32.414Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Plugin.PNG-1920x1080-96c9a9a059e5522dfd0c5927e1c741e3_Snapshot.jpg",
+      "md5": "6c2afb66d4160a566131ddcb9a83096a",
+      "width": 150,
+      "height": 74,
+      "size": 2629,
+      "uploadedDate": "2022-06-13T12:57:32.765Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/nativelesspin.PNG-1920x1080-6f69be541ae4fbbf824d1152c22dda29_Snapshot.jpg",
+      "md5": "87254fe25bdad8382327271596609270",
+      "width": 150,
+      "height": 74,
+      "size": 4878,
+      "uploadedDate": "2021-07-30T10:57:23.722Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/nativelessdetail.PNG-1920x1080-0527b8ca7c064b2cf61c860003417fc4_Snapshot.jpg",
+      "md5": "e9931d5b4a6acd563196823b46af7271",
+      "width": 150,
+      "height": 74,
+      "size": 4362,
+      "uploadedDate": "2021-07-30T10:57:24.113Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/pin.PNG-1920x1080-401ca4102e0419994ff163b0e5550b9f_Snapshot.jpg",
+      "md5": "3e2975ecab503fb650bec880bd06857d",
+      "width": 150,
+      "height": 74,
+      "size": 4856,
+      "uploadedDate": "2021-07-30T10:57:24.453Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/detail.PNG-1920x1080-c49e3fb6e2b41cb5cffb4e2af95ff60e_Snapshot.jpg",
+      "md5": "ebaede6a68efda9ca466f12e7c44c5f2",
+      "width": 150,
+      "height": 74,
+      "size": 4342,
+      "uploadedDate": "2021-07-30T10:57:24.763Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asset.PNG-1920x1080-b24d5188e1c1872f8470ceaeb66ed2ca_Snapshot.jpg",
+      "md5": "2f83d5d9e020f33f3162349a102536f6",
+      "width": 150,
+      "height": 74,
+      "size": 2450,
+      "uploadedDate": "2021-07-30T10:57:25.058Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1PulldownDetail.PNG-1920x1080-55778a7b7326142cf1c614440f1176d7_Snapshot.jpg",
+      "md5": "6506f3eee5ae822a52de1fdff2e3275c",
+      "width": 150,
+      "height": 74,
+      "size": 4468,
+      "uploadedDate": "2021-05-12T09:17:50.837Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2PulldownPin.PNG-1920x1080-01340ebab4f664985e442f3d67d0a07e_Snapshot.jpg",
+      "md5": "1eaabdb4a9366a6b50f83b72a90a52ea",
+      "width": 150,
+      "height": 74,
+      "size": 4406,
+      "uploadedDate": "2021-05-12T09:17:51.256Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3NativeLessDetail.PNG-1920x1080-6107339848424f6e0ff26a896e58ff3b_Snapshot.jpg",
+      "md5": "984aca7c6fc70f7641ceab95fbbbc6ad",
+      "width": 150,
+      "height": 74,
+      "size": 4428,
+      "uploadedDate": "2021-05-12T09:17:51.606Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4NativeLessPin.PNG-1920x1080-7907cf91fd2d8fdadffd36e123a0390a_Snapshot.jpg",
+      "md5": "b4c2f0edf96e9a8b8c25a74b83bed940",
+      "width": 150,
+      "height": 74,
+      "size": 4441,
+      "uploadedDate": "2021-05-12T09:17:51.947Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5AssetCreate.PNG-1920x1080-785200a87ad28989a852068adf7462a6_Snapshot.jpg",
+      "md5": "97f04aeb444db830886205b59a51f85b",
+      "width": 150,
+      "height": 74,
+      "size": 4707,
+      "uploadedDate": "2021-05-12T09:17:52.395Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6AssetEditor.PNG-1920x1080-a77c609ae9c3464869f9d2fbf998144d_Snapshot.jpg",
+      "md5": "5b512605fa1b7cee00c4bf1dde5f5ad1",
+      "width": 150,
+      "height": 74,
+      "size": 2302,
+      "uploadedDate": "2021-05-12T09:17:52.727Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7Code.PNG-1920x1080-0da46a5d6d1465d0df70cbaba5463b29_Snapshot.jpg",
+      "md5": "4ad99d224a1705bb3b51daa19dcce910",
+      "width": 150,
+      "height": 74,
+      "size": 3893,
+      "uploadedDate": "2021-05-12T09:17:53.785Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Code.PNG-1920x1080-0da46a5d6d1465d0df70cbaba5463b29_Snapshot.jpg",
+      "md5": "4ad99d224a1705bb3b51daa19dcce910",
+      "width": 150,
+      "height": 74,
+      "size": 3893,
+      "uploadedDate": "2021-05-12T05:10:07.745Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AssetEditor.PNG-1920x1080-a77c609ae9c3464869f9d2fbf998144d_Snapshot.jpg",
+      "md5": "5b512605fa1b7cee00c4bf1dde5f5ad1",
+      "width": 150,
+      "height": 74,
+      "size": 2302,
+      "uploadedDate": "2021-05-12T05:10:08.032Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AssetCreate.PNG-1920x1080-785200a87ad28989a852068adf7462a6_Snapshot.jpg",
+      "md5": "97f04aeb444db830886205b59a51f85b",
+      "width": 150,
+      "height": 74,
+      "size": 4707,
+      "uploadedDate": "2021-05-12T05:10:08.371Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NativeLessPin.PNG-1920x1080-7907cf91fd2d8fdadffd36e123a0390a_Snapshot.jpg",
+      "md5": "b4c2f0edf96e9a8b8c25a74b83bed940",
+      "width": 150,
+      "height": 74,
+      "size": 4441,
+      "uploadedDate": "2021-05-12T05:10:08.798Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NativeLessDetail.PNG-1920x1080-6107339848424f6e0ff26a896e58ff3b_Snapshot.jpg",
+      "md5": "984aca7c6fc70f7641ceab95fbbbc6ad",
+      "width": 150,
+      "height": 74,
+      "size": 4428,
+      "uploadedDate": "2021-05-12T05:10:09.151Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PulldownPin.PNG-1920x1080-01340ebab4f664985e442f3d67d0a07e_Snapshot.jpg",
+      "md5": "1eaabdb4a9366a6b50f83b72a90a52ea",
+      "width": 150,
+      "height": 74,
+      "size": 4406,
+      "uploadedDate": "2021-05-12T05:10:09.509Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PulldownDetail.PNG-1920x1080-55778a7b7326142cf1c614440f1176d7_Snapshot.jpg",
+      "md5": "6506f3eee5ae822a52de1fdff2e3275c",
+      "width": 150,
+      "height": 74,
+      "size": 4468,
+      "uploadedDate": "2021-05-12T05:10:09.918Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-05-19T11:37:31.859Z",
+  "lastModifiedDate": "2024-12-26T20:29:34.783Z",
+  "customAttributes": {},
+  "entitlementName": "473d75ecff7545829c454de8390db237",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "db933540af544a708826e1075f3b5844",
+      "appId": "PulldownBuilder_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2021-05-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.25"
+    },
+    {
+      "id": "9e69c258f32740d097eb7070378a9918",
+      "appId": "PulldownBuilder_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "iOS",
+        "Mac",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-05-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.26"
+    },
+    {
+      "id": "18ec376928934373980876a0bca477f1",
+      "appId": "PulldownBuilder_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2021-09-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "4cea78949c7547dd87686695bdf115f9",
+      "appId": "PulldownBuilder_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "f9e5ae0ee9a74c6d995177fbe3647e7b",
+      "appId": "PulldownBuilder_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "83829c121a0341688c7a506f4e33184f",
+      "appId": "PulldownBuilder_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "9b2b883e885f4cbca79243faa3d980fd",
+      "appId": "PulldownBuilder_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "a50644be65904a3a8e6df576452b01ad",
+      "appId": "PulldownBuilder_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Naotsun",
+  "developerId": "o-p2zcz9a9nu4ks6lud98wcez4dc4lgv",
+  "endOfSupport": false,
+  "unsearchable": false
+}

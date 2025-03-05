@@ -1,0 +1,876 @@
+{
+  "id": "a89fc9cd773f4a3f8bd21bcfdd13a6d2",
+  "title": "Dynamic Bounce Lighting",
+  "description": "Bounce lighting allows for dynamic and static global illumination and provides a cheap alternative to traditional unshadowed lights.",
+  "longDescription": "<p><strong>DISCLAIMER: This is NOT RTX, the system was built from the ground up on a GTX 760.</strong></p><p><br /></p><p>Preview video: <a href=\"https://www.youtube.com/watch?v&#61;A3MDqqshSYk\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;A3MDqqshSYk</a></p><p>Free demo: <a href=\"https://drive.google.com/open?id&#61;1nfZPVHE8xZJ2UIBoMK9CCZ_tHsk_zAmD\" rel=\"nofollow\">https://drive.google.com/open?id&#61;1nfZPVHE8xZJ2UIBoMK9CCZ_tHsk_zAmD</a></p><p><br /></p><p>More interactive comparisons can be found in the documentation listed below.</p><p><br /></p><p>This bounce light system is designed to allow for more realistic lighting in a scene. Bounce lights can be attached to normal Unreal spot and point lights to create more natural and realistic lighting, or be used to add general fill lighting throughout an environment at a fraction of the performance cost of Unreal’s default lights.</p><p>In addition, spotlights have the capability of full dynamic global illumination.</p><p>As an extra feature, the system can be used for textured planar lights, with color accurately taken from any custom texture.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Light bouncing provides <strong>realistic global illumination for spotlights</strong> (e.g. flashlights)</li><li>Light wrapping can simulate more <strong>natural ambient and bounce lighting</strong> when attached to traditional lights</li><li><strong>Textured Planar Lights provide cheap unshadowed area lighting</strong> with a variety of color from any custom texture (e.g. TV screens) (video textures supported)</li><li>Up to 64 Ambient Light probes provide a <strong>cheaper alternative to traditional unshadowed UE4 lights</strong></li><li><strong>Infinite light range</strong> allows lights to affect large areas <strong>without any extra performance impact</strong></li><li>Ambient Lights can be used to create <strong>ambient occlusion lights</strong></li><li>Sharp reflections can be used to <strong>accurately bounce spotlights off of mirrors, glass, and other flat, reflective surfaces</strong> in combination with diffuse bounce lighting for rougher surfaces</li></ul><p><strong>&#xfeff;</strong></p><p>Blueprints: 8</p><p>Materials: 9</p><p>Material Functions: 4</p><p>Textures: 8 essential, 7 example color and mask textures for planar lights</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1Dr9PHqKTcRWTDHJ0LMPIOfPq9R34SzL6wFoAa6kIm3A/edit?usp&#61;sharing\" rel=\"nofollow\">Google Docs</a></p><p>Important/Additional Notes: I recommend reading the &#34;Sharp Spotlight Bounce Lighting&#34; description towards the bottom of the documentation before purchase, as sharp (mirror, glass, etc.) reflections require a little custom work to function properly for unique reflective objects.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SSGI1-1920x1080-70ff0a072ec695314e7edeef33522ae1.png",
+      "md5": "70ff0a072ec695314e7edeef33522ae1",
+      "width": 1920,
+      "height": 1080,
+      "size": 2123969,
+      "uploadedDate": "2019-09-07T23:16:10.094Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BannerSmallNotext-1920x1080-2ca004b5cc315961a3684bb45d1ad177.png",
+      "md5": "2ca004b5cc315961a3684bb45d1ad177",
+      "width": 1920,
+      "height": 1080,
+      "size": 2080599,
+      "uploadedDate": "2019-06-06T21:18:29.073Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ULvsALComparison-1920x1080-409ae417bed8ee1c65d41b8646fceb39.jpg",
+      "md5": "409ae417bed8ee1c65d41b8646fceb39",
+      "width": 1920,
+      "height": 1080,
+      "size": 571072,
+      "uploadedDate": "2019-03-30T19:57:26.993Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SSGI2-1920x1080-fbb34715b6b983e119fac76d23687730.png",
+      "md5": "fbb34715b6b983e119fac76d23687730",
+      "width": 1920,
+      "height": 1080,
+      "size": 1723985,
+      "uploadedDate": "2019-09-07T23:16:10.565Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00005-1920x1080-50095edd9a0e30abd5a9245d167184b3.png",
+      "md5": "50095edd9a0e30abd5a9245d167184b3",
+      "width": 1920,
+      "height": 1080,
+      "size": 2826333,
+      "uploadedDate": "2019-05-25T19:38:26.922Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ReflectedLight-1920x1080-288dc191ce5ad6c17f22cafdd2eacc88.jpg",
+      "md5": "288dc191ce5ad6c17f22cafdd2eacc88",
+      "width": 1920,
+      "height": 1080,
+      "size": 193739,
+      "uploadedDate": "2019-03-30T19:57:28.598Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/wrapLightingComparison-1920x1080-2b17809371931f7c6417605718faaed2.jpg",
+      "md5": "2b17809371931f7c6417605718faaed2",
+      "width": 1920,
+      "height": 1080,
+      "size": 308722,
+      "uploadedDate": "2019-03-30T19:57:29.241Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00012-1920x1080-d664d905ab06c233ee0c5c4e33bffba2.png",
+      "md5": "d664d905ab06c233ee0c5c4e33bffba2",
+      "width": 1920,
+      "height": 1080,
+      "size": 2903918,
+      "uploadedDate": "2019-06-06T19:47:29.188Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BounceLightNo-1920x1080-4cac564036f58fc1af8aff608053bbd9.png",
+      "md5": "4cac564036f58fc1af8aff608053bbd9",
+      "width": 1920,
+      "height": 1080,
+      "size": 182333,
+      "uploadedDate": "2019-06-06T20:03:52.565Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BounceLightYes-1920x1080-0a18be48405b7cc124e388f2dae0763a.png",
+      "md5": "0a18be48405b7cc124e388f2dae0763a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1581674,
+      "uploadedDate": "2019-06-06T20:03:52.998Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/rectLight2-1920x1080-1e25b6a91c945823cd8d3ac744f13dec.jpg",
+      "md5": "1e25b6a91c945823cd8d3ac744f13dec",
+      "width": 1920,
+      "height": 1080,
+      "size": 694037,
+      "uploadedDate": "2019-03-30T19:57:30.036Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AOBallsNOAO-1920x1080-8ce4d4155622f66edd08b66667b82d60.jpg",
+      "md5": "8ce4d4155622f66edd08b66667b82d60",
+      "width": 1920,
+      "height": 1080,
+      "size": 338103,
+      "uploadedDate": "2019-03-30T19:57:33.612Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AOBalls-1920x1080-650cfb1b8f87f0ad17e4312f4ee23aff.jpg",
+      "md5": "650cfb1b8f87f0ad17e4312f4ee23aff",
+      "width": 1920,
+      "height": 1080,
+      "size": 336530,
+      "uploadedDate": "2019-03-30T19:57:34.351Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RectLightComp-1920x1080-1cd3f009d5d79e42dc2e31d83bcd3cc8.png",
+      "md5": "1cd3f009d5d79e42dc2e31d83bcd3cc8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2552702,
+      "uploadedDate": "2019-06-06T19:47:29.915Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PlanarLightComp-1920x1080-08ca24aa71bbad5b6ca3747d39118b4e.png",
+      "md5": "08ca24aa71bbad5b6ca3747d39118b4e",
+      "width": 1920,
+      "height": 1080,
+      "size": 2451195,
+      "uploadedDate": "2019-06-06T19:47:30.616Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GINoBounce-1920x1080-c7e0bd3341fe080af4da3eb0d4d418b9.jpg",
+      "md5": "c7e0bd3341fe080af4da3eb0d4d418b9",
+      "width": 1920,
+      "height": 1080,
+      "size": 224404,
+      "uploadedDate": "2019-03-30T19:57:32.234Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GIWithBounce-1920x1080-72122dad86176057831210b15d7084ff.jpg",
+      "md5": "72122dad86176057831210b15d7084ff",
+      "width": 1920,
+      "height": 1080,
+      "size": 264763,
+      "uploadedDate": "2019-03-30T19:57:32.913Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SSGI3-1920x1080-5cfb78c9c2b133b708122399a57e58c5.png",
+      "md5": "5cfb78c9c2b133b708122399a57e58c5",
+      "width": 1920,
+      "height": 1080,
+      "size": 1836466,
+      "uploadedDate": "2019-09-07T23:16:11.036Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DynamicBounceLighting_thumb-284x284-c2fc5f688a2508a6ad1abd42474c0a13.png",
+      "md5": "c2fc5f688a2508a6ad1abd42474c0a13",
+      "width": 284,
+      "height": 284,
+      "size": 127445,
+      "uploadedDate": "2019-06-06T21:17:07.695Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DynamicBounceLighting_featured-894x488-ed68ac04ca215507fb63848f13b5b4ba.png",
+      "md5": "ed68ac04ca215507fb63848f13b5b4ba",
+      "width": 894,
+      "height": 488,
+      "size": 597365,
+      "uploadedDate": "2019-06-06T21:17:07.814Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SSGI1-1920x1080-70ff0a072ec695314e7edeef33522ae1_Snapshot.png",
+      "md5": "6f8d765efef66a2fa04911783b7da9a8",
+      "width": 150,
+      "height": 74,
+      "size": 3743,
+      "uploadedDate": "2019-09-07T23:16:10.404Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SSGI2-1920x1080-fbb34715b6b983e119fac76d23687730_Snapshot.png",
+      "md5": "3a45a414e492b300efe9265b88107a19",
+      "width": 150,
+      "height": 74,
+      "size": 3251,
+      "uploadedDate": "2019-09-07T23:16:10.861Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SSGI3-1920x1080-5cfb78c9c2b133b708122399a57e58c5_Snapshot.png",
+      "md5": "cb9ecfa05659f29d3974dc60ae9010db",
+      "width": 150,
+      "height": 74,
+      "size": 3082,
+      "uploadedDate": "2019-09-07T23:16:11.397Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BannerSmallNotext-1920x1080-2ca004b5cc315961a3684bb45d1ad177_Snapshot.png",
+      "md5": "a1bab403be3fb1b61f961be4aefa42ce",
+      "width": 150,
+      "height": 74,
+      "size": 4753,
+      "uploadedDate": "2019-06-06T21:18:29.382Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BounceLightNo-1920x1080-4cac564036f58fc1af8aff608053bbd9_Snapshot.png",
+      "md5": "6ca4c019b61c332d7593783172bb05f1",
+      "width": 150,
+      "height": 74,
+      "size": 1713,
+      "uploadedDate": "2019-06-06T20:03:52.816Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BounceLightYes-1920x1080-0a18be48405b7cc124e388f2dae0763a_Snapshot.png",
+      "md5": "e5f5a70b0564e2de27869a074b1161f8",
+      "width": 150,
+      "height": 74,
+      "size": 3741,
+      "uploadedDate": "2019-06-06T20:03:53.279Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00012-1920x1080-d664d905ab06c233ee0c5c4e33bffba2_Snapshot.png",
+      "md5": "6c010cbcf1e1d610072ed8be0dc59db8",
+      "width": 150,
+      "height": 74,
+      "size": 5019,
+      "uploadedDate": "2019-06-06T19:47:29.650Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RectLightComp-1920x1080-1cd3f009d5d79e42dc2e31d83bcd3cc8_Snapshot.png",
+      "md5": "64e29645a6a2f1bf6af6d83fd29f0445",
+      "width": 150,
+      "height": 74,
+      "size": 6279,
+      "uploadedDate": "2019-06-06T19:47:30.377Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PlanarLightComp-1920x1080-08ca24aa71bbad5b6ca3747d39118b4e_Snapshot.png",
+      "md5": "97c5ff7dbadf12e21f3e307469696f76",
+      "width": 150,
+      "height": 74,
+      "size": 5739,
+      "uploadedDate": "2019-06-06T19:47:31.051Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00005-1920x1080-50095edd9a0e30abd5a9245d167184b3_Snapshot.png",
+      "md5": "c3c0dc7677f91d6ffc643e0471a41b61",
+      "width": 150,
+      "height": 74,
+      "size": 6442,
+      "uploadedDate": "2019-05-25T19:38:27.254Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIWhiteReflection-1920x1080-4b2eb6e682151483097268d2c83ffb84_Snapshot.jpg",
+      "md5": "a09b2c7bf7b2781885926c869b6cabec",
+      "width": 150,
+      "height": 74,
+      "size": 1442,
+      "uploadedDate": "2019-03-30T19:57:26.646Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ULvsALComparison-1920x1080-409ae417bed8ee1c65d41b8646fceb39_Snapshot.jpg",
+      "md5": "abccfc6ef1f91b452d780a22e411fb19",
+      "width": 150,
+      "height": 74,
+      "size": 2942,
+      "uploadedDate": "2019-03-30T19:57:27.488Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rectLight-1920x1080-718afbba529fe6673cd5f6ac6880fa3b_Snapshot.jpg",
+      "md5": "ca34017e33a426f3dc0b3d4db0d2a680",
+      "width": 150,
+      "height": 74,
+      "size": 2630,
+      "uploadedDate": "2019-03-30T19:57:28.302Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ReflectedLight-1920x1080-288dc191ce5ad6c17f22cafdd2eacc88_Snapshot.jpg",
+      "md5": "b4882c8d65b20387ea748d129e1d27a9",
+      "width": 150,
+      "height": 74,
+      "size": 1319,
+      "uploadedDate": "2019-03-30T19:57:29.011Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wrapLightingComparison-1920x1080-2b17809371931f7c6417605718faaed2_Snapshot.jpg",
+      "md5": "38d19dd880da61c83191fcbd1fa191d8",
+      "width": 150,
+      "height": 74,
+      "size": 2141,
+      "uploadedDate": "2019-03-30T19:57:29.731Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rectLight2-1920x1080-1e25b6a91c945823cd8d3ac744f13dec_Snapshot.jpg",
+      "md5": "fa86795ab8e1bb5bffbc3798132f3bd2",
+      "width": 150,
+      "height": 74,
+      "size": 2928,
+      "uploadedDate": "2019-03-30T19:57:30.526Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIGreen-1920x1080-652ce00b2a3171a6b1860ec27b4c68cb_Snapshot.jpg",
+      "md5": "6d0217a836d5259c32f1517929fdca20",
+      "width": 150,
+      "height": 74,
+      "size": 1375,
+      "uploadedDate": "2019-03-30T19:57:31.259Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIRed2-1920x1080-e101ae0c30846e439c51dcf28e45f068_Snapshot.jpg",
+      "md5": "df8e717e53d01e97d21019cd442fa872",
+      "width": 150,
+      "height": 74,
+      "size": 1259,
+      "uploadedDate": "2019-03-30T19:57:31.971Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GINoBounce-1920x1080-c7e0bd3341fe080af4da3eb0d4d418b9_Snapshot.jpg",
+      "md5": "0e1bd80ffd84319d7b07c4c5645338e5",
+      "width": 150,
+      "height": 74,
+      "size": 1189,
+      "uploadedDate": "2019-03-30T19:57:32.657Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIWithBounce-1920x1080-72122dad86176057831210b15d7084ff_Snapshot.jpg",
+      "md5": "3c472a1e8cd862abc7c34fb95afc4eae",
+      "width": 150,
+      "height": 74,
+      "size": 1352,
+      "uploadedDate": "2019-03-30T19:57:33.353Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBallsNOAO-1920x1080-8ce4d4155622f66edd08b66667b82d60_Snapshot.jpg",
+      "md5": "ea80eceb94ddf0baf09eca788e7c7e22",
+      "width": 150,
+      "height": 74,
+      "size": 1287,
+      "uploadedDate": "2019-03-30T19:57:34.047Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBalls-1920x1080-650cfb1b8f87f0ad17e4312f4ee23aff_Snapshot.jpg",
+      "md5": "ac6534c4af2e259233a1f4b48d470c71",
+      "width": 150,
+      "height": 74,
+      "size": 1251,
+      "uploadedDate": "2019-03-30T19:57:34.812Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBallsNOAO-1920x1080-8ce4d4155622f66edd08b66667b82d60_Snapshot.jpg",
+      "md5": "ea80eceb94ddf0baf09eca788e7c7e22",
+      "width": 150,
+      "height": 74,
+      "size": 1287,
+      "uploadedDate": "2019-03-30T19:51:31.471Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBalls-1920x1080-650cfb1b8f87f0ad17e4312f4ee23aff_Snapshot.jpg",
+      "md5": "ac6534c4af2e259233a1f4b48d470c71",
+      "width": 150,
+      "height": 74,
+      "size": 1251,
+      "uploadedDate": "2019-03-30T19:51:32.167Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBalls-1920x1080-650cfb1b8f87f0ad17e4312f4ee23aff_Snapshot.jpg",
+      "md5": "ac6534c4af2e259233a1f4b48d470c71",
+      "width": 150,
+      "height": 74,
+      "size": 1251,
+      "uploadedDate": "2019-03-30T19:49:09.076Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBalls-1920x1080-650cfb1b8f87f0ad17e4312f4ee23aff_Snapshot.jpg",
+      "md5": "ac6534c4af2e259233a1f4b48d470c71",
+      "width": 150,
+      "height": 74,
+      "size": 1251,
+      "uploadedDate": "2019-03-30T19:46:38.916Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIWhiteReflection-1920x1080-4b2eb6e682151483097268d2c83ffb84_Snapshot.jpg",
+      "md5": "a09b2c7bf7b2781885926c869b6cabec",
+      "width": 150,
+      "height": 74,
+      "size": 1442,
+      "uploadedDate": "2019-03-30T19:41:35.625Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ULvsALComparison-1920x1080-409ae417bed8ee1c65d41b8646fceb39_Snapshot.jpg",
+      "md5": "abccfc6ef1f91b452d780a22e411fb19",
+      "width": 150,
+      "height": 74,
+      "size": 2942,
+      "uploadedDate": "2019-03-30T19:41:36.394Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rectLight-1920x1080-718afbba529fe6673cd5f6ac6880fa3b_Snapshot.jpg",
+      "md5": "ca34017e33a426f3dc0b3d4db0d2a680",
+      "width": 150,
+      "height": 74,
+      "size": 2630,
+      "uploadedDate": "2019-03-30T19:41:37.264Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ReflectedLight-1920x1080-288dc191ce5ad6c17f22cafdd2eacc88_Snapshot.jpg",
+      "md5": "b4882c8d65b20387ea748d129e1d27a9",
+      "width": 150,
+      "height": 74,
+      "size": 1319,
+      "uploadedDate": "2019-03-30T19:41:37.912Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wrapLightingComparison-1920x1080-2b17809371931f7c6417605718faaed2_Snapshot.jpg",
+      "md5": "38d19dd880da61c83191fcbd1fa191d8",
+      "width": 150,
+      "height": 74,
+      "size": 2141,
+      "uploadedDate": "2019-03-30T19:41:38.629Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rectLight2-1920x1080-1e25b6a91c945823cd8d3ac744f13dec_Snapshot.jpg",
+      "md5": "fa86795ab8e1bb5bffbc3798132f3bd2",
+      "width": 150,
+      "height": 74,
+      "size": 2928,
+      "uploadedDate": "2019-03-30T19:41:39.432Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIGreen-1920x1080-652ce00b2a3171a6b1860ec27b4c68cb_Snapshot.jpg",
+      "md5": "6d0217a836d5259c32f1517929fdca20",
+      "width": 150,
+      "height": 74,
+      "size": 1375,
+      "uploadedDate": "2019-03-30T19:41:40.100Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIRed2-1920x1080-e101ae0c30846e439c51dcf28e45f068_Snapshot.jpg",
+      "md5": "df8e717e53d01e97d21019cd442fa872",
+      "width": 150,
+      "height": 74,
+      "size": 1259,
+      "uploadedDate": "2019-03-30T19:41:40.791Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBallsNOAO-1920x1080-8ce4d4155622f66edd08b66667b82d60_Snapshot.jpg",
+      "md5": "ea80eceb94ddf0baf09eca788e7c7e22",
+      "width": 150,
+      "height": 74,
+      "size": 1287,
+      "uploadedDate": "2019-03-30T19:41:41.605Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBalls-1920x1080-650cfb1b8f87f0ad17e4312f4ee23aff_Snapshot.jpg",
+      "md5": "ac6534c4af2e259233a1f4b48d470c71",
+      "width": 150,
+      "height": 74,
+      "size": 1251,
+      "uploadedDate": "2019-03-30T19:41:42.354Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GINoBounce-1920x1080-c7e0bd3341fe080af4da3eb0d4d418b9_Snapshot.jpg",
+      "md5": "0e1bd80ffd84319d7b07c4c5645338e5",
+      "width": 150,
+      "height": 74,
+      "size": 1189,
+      "uploadedDate": "2019-03-30T19:41:42.986Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIWithBounce-1920x1080-72122dad86176057831210b15d7084ff_Snapshot.jpg",
+      "md5": "3c472a1e8cd862abc7c34fb95afc4eae",
+      "width": 150,
+      "height": 74,
+      "size": 1352,
+      "uploadedDate": "2019-03-30T19:41:43.710Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIWhiteReflection-1920x1080-a02efea23c7eb9120fc2e3abc884df52_Snapshot.png",
+      "md5": "e1fa8144d5ab57f59553ae91f54006af",
+      "width": 150,
+      "height": 74,
+      "size": 7641,
+      "uploadedDate": "2019-03-30T19:33:44.118Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ULvsALComparison-1920x1080-b49a188e11ba337e5ad29f48fd858435_Snapshot.png",
+      "md5": "6397a70f61efb2e3625fdde2dea6d8df",
+      "width": 150,
+      "height": 74,
+      "size": 25483,
+      "uploadedDate": "2019-03-30T19:33:44.572Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rectLight-1920x1080-9c1f0014fc5bedffb44edf70f6fa43f8_Snapshot.jpg",
+      "md5": "d0f1b190eb37611e40aa98d6d98d6cff",
+      "width": 150,
+      "height": 74,
+      "size": 2635,
+      "uploadedDate": "2019-03-30T19:33:45.516Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ReflectedLight-1920x1080-ed98071f3a395d9518b64a212c08d3a1_Snapshot.png",
+      "md5": "80e1de6f9ff1ec7235e87022f7200afd",
+      "width": 150,
+      "height": 74,
+      "size": 5778,
+      "uploadedDate": "2019-03-30T19:33:45.857Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wrapLightingComparison-1920x1080-b66729196ec19aa067a196a986ba19c3_Snapshot.png",
+      "md5": "5d9c1db5205be39f06791070d39e1fda",
+      "width": 150,
+      "height": 74,
+      "size": 9730,
+      "uploadedDate": "2019-03-30T19:33:46.191Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rectLight2-1920x1080-f953edfd2665cf301264749cef71dc1f_Snapshot.png",
+      "md5": "a45a359759cf08ff7186dcb6a56683bb",
+      "width": 150,
+      "height": 74,
+      "size": 26972,
+      "uploadedDate": "2019-03-30T19:33:46.848Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIGreen-1920x1080-f47a0cdbb8afa1bc5a041d60ba1a6000_Snapshot.png",
+      "md5": "41264527f061536c30d6da9e3df9232e",
+      "width": 150,
+      "height": 74,
+      "size": 8148,
+      "uploadedDate": "2019-03-30T19:33:47.202Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIRed2-1920x1080-a3710e17e2d7cd37ba1b8f4371033722_Snapshot.png",
+      "md5": "957228b341e628730708e277ac90b0af",
+      "width": 150,
+      "height": 74,
+      "size": 7364,
+      "uploadedDate": "2019-03-30T19:33:47.478Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBallsNOAO-1920x1080-3f1293e82d7d26b25d5737b1025f994e_Snapshot.png",
+      "md5": "df947329724ca0e27a028330f90e776d",
+      "width": 150,
+      "height": 74,
+      "size": 7650,
+      "uploadedDate": "2019-03-30T19:33:47.766Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBalls-1920x1080-ebd42163ce936a1c5cc35a4d62c0925b_Snapshot.png",
+      "md5": "e6a2af530486dfba57b320d24d7dc484",
+      "width": 150,
+      "height": 74,
+      "size": 8140,
+      "uploadedDate": "2019-03-30T19:33:48.073Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GINoBounce-1920x1080-94319ab4db1a9b74436ac185d538899f_Snapshot.png",
+      "md5": "d4b9e3b040914bd3d0abbbae6730e054",
+      "width": 150,
+      "height": 74,
+      "size": 6482,
+      "uploadedDate": "2019-03-30T19:33:48.334Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIWithBounce-1920x1080-783f8fd35c04e37e9b7c8e55b4ed3e91_Snapshot.png",
+      "md5": "0f0c9200d2324c8b58594280ee0cacb5",
+      "width": 150,
+      "height": 74,
+      "size": 8658,
+      "uploadedDate": "2019-03-30T19:33:48.679Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBallsNOAO-1920x1080-3f1293e82d7d26b25d5737b1025f994e_Snapshot.png",
+      "md5": "df947329724ca0e27a028330f90e776d",
+      "width": 150,
+      "height": 74,
+      "size": 7650,
+      "uploadedDate": "2019-03-30T17:31:36.221Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBalls-1920x1080-ebd42163ce936a1c5cc35a4d62c0925b_Snapshot.png",
+      "md5": "e6a2af530486dfba57b320d24d7dc484",
+      "width": 150,
+      "height": 74,
+      "size": 8140,
+      "uploadedDate": "2019-03-30T17:31:36.538Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIRed2-1920x1080-a3710e17e2d7cd37ba1b8f4371033722_Snapshot.png",
+      "md5": "957228b341e628730708e277ac90b0af",
+      "width": 150,
+      "height": 74,
+      "size": 7364,
+      "uploadedDate": "2019-03-30T16:02:59.854Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIGreen-1920x1080-f47a0cdbb8afa1bc5a041d60ba1a6000_Snapshot.png",
+      "md5": "41264527f061536c30d6da9e3df9232e",
+      "width": 150,
+      "height": 74,
+      "size": 8148,
+      "uploadedDate": "2019-03-30T15:58:43.046Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIWhiteReflection-1920x1080-a02efea23c7eb9120fc2e3abc884df52_Snapshot.png",
+      "md5": "e1fa8144d5ab57f59553ae91f54006af",
+      "width": 150,
+      "height": 74,
+      "size": 7641,
+      "uploadedDate": "2019-03-30T15:55:18.077Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GINoBounce-1920x1080-94319ab4db1a9b74436ac185d538899f_Snapshot.png",
+      "md5": "d4b9e3b040914bd3d0abbbae6730e054",
+      "width": 150,
+      "height": 74,
+      "size": 6482,
+      "uploadedDate": "2019-03-29T20:09:06.347Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rectLight2-1920x1080-f953edfd2665cf301264749cef71dc1f_Snapshot.png",
+      "md5": "a45a359759cf08ff7186dcb6a56683bb",
+      "width": 150,
+      "height": 74,
+      "size": 26972,
+      "uploadedDate": "2019-03-29T20:07:30.582Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rectLight-1920x1080-e59be2e137ef84b9a3c5b8472e0a7b3b_Snapshot.png",
+      "md5": "a82421c9925698fd664dfeb3d215902f",
+      "width": 150,
+      "height": 74,
+      "size": 21754,
+      "uploadedDate": "2019-03-29T19:38:22.192Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIGreen-1920x1080-f4dbd5ee705bae631a769f0f0e5d7f56_Snapshot.png",
+      "md5": "5c35f6b82bbd0155e2f220e363cba351",
+      "width": 150,
+      "height": 74,
+      "size": 7075,
+      "uploadedDate": "2019-03-02T19:40:13.797Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AOBalls-1920x1080-82e32e45fdce6bf22a21ab6a452e295b_Snapshot.png",
+      "md5": "b382baaad3b959c3161a91644dd89c13",
+      "width": 150,
+      "height": 74,
+      "size": 7502,
+      "uploadedDate": "2019-03-02T19:40:14.037Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIRed-1920x1080-d0ab6e965461e0ddf979dbd3f5ee0c8a_Snapshot.png",
+      "md5": "474153496f761be33717e405500d9922",
+      "width": 150,
+      "height": 74,
+      "size": 6862,
+      "uploadedDate": "2019-03-02T19:40:14.460Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIWithBounce-1920x1080-783f8fd35c04e37e9b7c8e55b4ed3e91_Snapshot.png",
+      "md5": "0f0c9200d2324c8b58594280ee0cacb5",
+      "width": 150,
+      "height": 74,
+      "size": 8658,
+      "uploadedDate": "2019-02-27T21:36:10.909Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIWhiteReflection-1920x1080-d656acb61a00f59b2ddf6ba5577706e7_Snapshot.png",
+      "md5": "f1994a6cf184040e408696b586b2fa53",
+      "width": 150,
+      "height": 74,
+      "size": 4828,
+      "uploadedDate": "2019-02-27T21:36:11.146Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIGreen-1920x1080-33e9cd5f20715e7e58ff3be6c800c924_Snapshot.png",
+      "md5": "7920d8297051d5c9cc80961442626b81",
+      "width": 150,
+      "height": 74,
+      "size": 5768,
+      "uploadedDate": "2019-02-27T21:36:11.436Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GIRed-1920x1080-110c443e2295926b930c9ad87f9c00f4_Snapshot.png",
+      "md5": "ec5de5a8dbd17976c5f5b78107aea45d",
+      "width": 150,
+      "height": 74,
+      "size": 5595,
+      "uploadedDate": "2019-02-27T21:36:11.714Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ReflectedLight-1920x1080-ed98071f3a395d9518b64a212c08d3a1_Snapshot.png",
+      "md5": "80e1de6f9ff1ec7235e87022f7200afd",
+      "width": 150,
+      "height": 74,
+      "size": 5778,
+      "uploadedDate": "2019-02-27T21:36:12.140Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ULvsALComparison-1920x1080-b49a188e11ba337e5ad29f48fd858435_Snapshot.png",
+      "md5": "6397a70f61efb2e3625fdde2dea6d8df",
+      "width": 150,
+      "height": 74,
+      "size": 25483,
+      "uploadedDate": "2019-02-27T21:36:12.586Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wrapLightingComparison-1920x1080-b66729196ec19aa067a196a986ba19c3_Snapshot.png",
+      "md5": "5d9c1db5205be39f06791070d39e1fda",
+      "width": 150,
+      "height": 74,
+      "size": 9730,
+      "uploadedDate": "2019-02-27T21:36:12.944Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bounce1-1920x1080-f87a633315d507f8563d1dab679b39d8_Snapshot.JPG",
+      "md5": "4ab183bae4e5261f8ff14afb225ead22",
+      "width": 150,
+      "height": 74,
+      "size": 1231,
+      "uploadedDate": "2019-02-27T14:16:51.084Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2019-03-30T18:45:20.451Z",
+  "lastModifiedDate": "2020-06-09T13:46:42.496Z",
+  "entitlementName": "a89fc9cd773f4a3f8bd21bcfdd13a6d2",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "19e205c2f0774fe58c340b99865d08e6",
+      "appId": "BounceLia89fc9cd773fV1",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-02-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Bounce Lighting 4.16"
+    },
+    {
+      "id": "820a1292287146cebb0d44379ec19a6f",
+      "appId": "BounceLia89fc9cd773fV2",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-02-27T00:00:00.000Z",
+      "releaseNote": "Spotlight GI performance improved due to new scenecapture options available in UE4 4.17+",
+      "versionTitle": "Bounce Lighting 4.17"
+    },
+    {
+      "id": "3141822d385c45d493c564099e577670",
+      "appId": "BounceLia89fc9cd773fV3",
+      "compatibleApps": [
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-05-23T00:00:00.000Z",
+      "releaseNote": "Spotlight color bounce performance slightly improved due to new RT format option when spawned through BP in UE4 4.18+",
+      "versionTitle": "Bounce Lighting 4.18-4.22"
+    }
+  ],
+  "developer": "Radius Gordello",
+  "developerId": "o-bghsmq4xlsxyfdl8tphwhk7kf42yth",
+  "endOfSupport": false,
+  "unsearchable": false
+}

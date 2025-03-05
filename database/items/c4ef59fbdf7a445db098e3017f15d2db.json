@@ -1,0 +1,169 @@
+{
+  "id": "c4ef59fbdf7a445db098e3017f15d2db",
+  "title": "Modular conveyor generation system",
+  "description": "Use spline tool to place modular conveyor elements as ISM, setup any custom mesh as part of your conveyor and see how objects move on it!",
+  "longDescription": "<p>Easy to setup modular conveyor system. Use spline tool to place modules instances, add some custom modules (easy to setup any mesh as part of modular system with custom module master blueprint), adjust colliders generation, place objects spawner above conveyor and hit Simulate to see how it works!</p><p><strong>What can you do with this system?</strong></p><ul><li> Use line conveyor generator to place various conveyor modules in line (in forward direction using different modules (module that goes up, down, with different angles or in straight line)</li><li> Use BP_ConvCustomModule to setup any mesh as BP module for conveyor system (angle mesh, some surface it&#39;s doesnt matter, you can setup movement area with spline tool inside BP editor)</li><li>Objects movement on conveyor</li><li>Demo map with ready and working conveyor system (just start Simulate)</li><li>Auto snap (can be disabled) will place next conveyor module after previous. It will also adjust next elements position, if previous element was moved</li></ul><p><br /></p><p><strong>Check quick demo video:</strong></p><p><a href=\"https://www.youtube.com/watch?v&#61;M9gyypUF-lc&amp;t&#61;2s\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;M9gyypUF-lc</a></p><p><strong>Do you like it? Then check detailed tutorial video:</strong></p><p><a href=\"https://www.youtube.com/watch?v&#61;6Y4TlyvmnKM\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;6Y4TlyvmnKM</a></p>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li> Line conveyor generator</li><li> Custom module BP</li><li> Objects movement on conveyor</li><li>Modules auto snap</li><li>Demo map from demo video</li></ul><p><strong>Number of Blueprints: 20</strong></p><p><strong>Number of meshes: 24</strong></p><ul><li>8 meshes for different angle modules</li><li>16 line meshes (start/end/middle/start&#43;end mesh with 16/32/48 degree variations)</li></ul><p><strong>Collision:</strong> auto generated</p><p><strong>Supported Development Platforms:</strong> tested on Windows, but should work with any</p><p><strong>Supported Target Build Platforms:</strong> tested on Windows, but should work with any</p><p><strong>Important/Additional Notes:</strong></p><ol><li>in <strong>BP_ConvCustomModule</strong> be carefull with <strong>CollidersDistance</strong> variable. It used for movement colliders generation and setting this variable to high can result in serious performace issues</li><li>in <strong>BP_ConvLineMaster PlacementDistance</strong> variable used for instances placement. Be carefull and dont setup this variable to low (same reason)</li><li>Auto snap use references between conveyor modules to calculate correct position for modules. This references calculating with trace box, but the problem is modules (sometimes) cannot find previous module, because it wasnt constructed yet. This issue can happen when re-opening map. To fix it, select last conveyor element and hit <strong>FixReferences</strong> button (event). Then module will find prev. element, prev. element will find his prev. element and so on. You can use it in runtime also</li><li>Use <strong>RotationSpeed</strong> and <strong>EnableRotation</strong> variables in <strong>BP_ConvCustomModule </strong>to control rotation of objects on conveyor</li></ol><p><br /></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-efc25f2fca70818e4cd4ac2dba2aaa1d.jpg",
+      "md5": "efc25f2fca70818e4cd4ac2dba2aaa1d",
+      "width": 1920,
+      "height": 1080,
+      "size": 401628,
+      "uploadedDate": "2019-10-12T16:26:47.974Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-a440aefac05b649994a7cd091dfdcbdf.jpg",
+      "md5": "a440aefac05b649994a7cd091dfdcbdf",
+      "width": 1920,
+      "height": 1080,
+      "size": 657980,
+      "uploadedDate": "2019-10-12T16:26:48.335Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-47c5989d6f2226798816126162f9dc25.jpg",
+      "md5": "47c5989d6f2226798816126162f9dc25",
+      "width": 1920,
+      "height": 1080,
+      "size": 628467,
+      "uploadedDate": "2019-10-12T16:26:48.700Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-6007243e2a8e41cd0bd07ac2d199e931.jpg",
+      "md5": "6007243e2a8e41cd0bd07ac2d199e931",
+      "width": 1920,
+      "height": 1080,
+      "size": 794248,
+      "uploadedDate": "2019-10-12T16:26:49.060Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-943f04f782fa43ecbdbe30023d577cdc.jpg",
+      "md5": "943f04f782fa43ecbdbe30023d577cdc",
+      "width": 1920,
+      "height": 1080,
+      "size": 711508,
+      "uploadedDate": "2019-10-12T16:26:49.497Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Modularconveyorgenerationsystem_thumb-284x284-f667dd6b2c1e5945bdbe7fb897f86c70.png",
+      "md5": "f667dd6b2c1e5945bdbe7fb897f86c70",
+      "width": 284,
+      "height": 284,
+      "size": 67540,
+      "uploadedDate": "2019-10-12T16:26:49.808Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Modularconveyorgenerationsystem_featured-894x488-a836d1d8ee84498318ed3421c843c13e.png",
+      "md5": "a836d1d8ee84498318ed3421c843c13e",
+      "width": 894,
+      "height": 488,
+      "size": 292443,
+      "uploadedDate": "2019-10-12T16:26:49.952Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-efc25f2fca70818e4cd4ac2dba2aaa1d_Snapshot.jpg",
+      "md5": "d413a651daf08025c993b8738cf5a4ec",
+      "width": 150,
+      "height": 74,
+      "size": 5455,
+      "uploadedDate": "2019-10-12T16:26:48.185Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-a440aefac05b649994a7cd091dfdcbdf_Snapshot.jpg",
+      "md5": "4d81c86ee7d6eeb586361ab0ae2e5168",
+      "width": 150,
+      "height": 74,
+      "size": 3301,
+      "uploadedDate": "2019-10-12T16:26:48.576Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-47c5989d6f2226798816126162f9dc25_Snapshot.jpg",
+      "md5": "82b5baff501742a9bdd1cefbdc1fd23e",
+      "width": 150,
+      "height": 74,
+      "size": 5049,
+      "uploadedDate": "2019-10-12T16:26:48.928Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-6007243e2a8e41cd0bd07ac2d199e931_Snapshot.jpg",
+      "md5": "e80780608265901542bc11ea0bd4e50a",
+      "width": 150,
+      "height": 74,
+      "size": 5590,
+      "uploadedDate": "2019-10-12T16:26:49.286Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-943f04f782fa43ecbdbe30023d577cdc_Snapshot.jpg",
+      "md5": "ea6c1e9c1ae5de93f529b6e8c3a0c5fb",
+      "width": 150,
+      "height": 74,
+      "size": 5598,
+      "uploadedDate": "2019-10-12T16:26:49.721Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-11-15T21:51:55.349Z",
+  "lastModifiedDate": "2025-01-08T20:12:16.622Z",
+  "customAttributes": {},
+  "entitlementName": "c4ef59fbdf7a445db098e3017f15d2db",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "528ab8e747e447b591bcb29d423ebc57",
+      "appId": "Modularcc4ef59fbdf7aV1",
+      "compatibleApps": [
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus"
+      ],
+      "dateAdded": "2019-10-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Conveyor_4_21_22_23"
+    }
+  ],
+  "developer": "GregTDev",
+  "developerId": "o-u843huht8hran5ed3k7ed7xeteqjax",
+  "endOfSupport": false,
+  "unsearchable": false
+}

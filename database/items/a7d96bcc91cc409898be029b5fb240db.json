@@ -1,0 +1,224 @@
+{
+  "id": "a7d96bcc91cc409898be029b5fb240db",
+  "title": "Faster Data Handling",
+  "description": "Overcome the native blueprint array limitations with blueprint only BTrees.",
+  "longDescription": "<p>This - <strong>BP only</strong> - implementation of a <strong>BTree </strong>does enable you to store <strong>up to millions of data entries </strong>with very fast data access. This means you&#39;ll get an <strong>automatic sorting</strong> (ASCENDING) and <strong>duplication check</strong> without the need of nested for loops. It is especially helpful for modders and such that cannot implement their own plugins and cannot access C&#43;&#43; code.</p><p><br /></p><p>It does provide a set of interface functions:</p><ul><li>FDH_Init (Build the BTree root and provide a world context and order (Order means the number of pointers/records that can be held by a node/leaf (max keys &#61; Order - 1), default is 5 and the Tree is optimized/tested to work with 5.))</li><li>FDH_MakeNewKey (Helper function to create a key of an array of strings that should be unique)</li><li>FDH_GetBTreeLength (Returns the currently held amount of records)</li><li>FDH_GetBTreeOrder (Returns the order setting; Order means amount of pointer that can be held per node/leaf)</li><li>FDH_SetTimeStamp (Helper function to set up a named timestamp)</li><li>FDH_MeasureExecTime (Helper function to read named time stamp and calculate difference up until now (realtime))</li><li>FDH_Insert (Adds a new key-value pair to the BTree)</li><li>FDH_Seek (Looks for a given key)</li><li>FDH_Remove (Can remove a key and rebuilds the index, but can get wanky if more then 50% of the tree gets deleted - better to rebuild the tree in that case (UE might crash in with a runaway loop))</li><li>FDH_Pack (Pulls leaves together and compacts the overall Tree)</li><li>FDH_Export (Returns an array of all stored records (in ASC order))</li></ul>",
+  "technicalDetails": "<p>Features: </p><ul><li>BP only ObjLib with Interface for BTree </li><li>Time measurement functions</li><li>Utilizes savegame objects, to be backward compatible to UE_4.5</li><li>Test actor to measure and compare execution time as well as functionality testing (simply put it into your viewport and start play in the editor)</li></ul><p><br /></p><p>Limitations, there are limitations imposed by UE that this bp lib cannot overcome:</p><ul><li>BTrees should only be used if more then 250 entries are expected. Otherwise, it becomes unstable and way slower than normal array operations (due to index building and such, see performance measurements).</li><li>Cannot delete multiple entries in one go, needs delays between each deletion</li><li>Export (only works up to 10k entries, if more -&gt; runaway loop)</li><li>Pack (only works up to 10k entries, if more -&gt; runaway loop)</li><li>Insert needs to be delayed if you try to insert more then 500 entries within one frame tick</li><li>Insert and Seek can be used even if you need to store millions of entries, and will always be very fast</li></ul><p> </p><p>Number of Blueprints: </p><ul><li>BTree &#61; 2 &#43; 1 Key Struct</li><li>Test Actor &#61; 3 &#43; 2 Meshes &#43; 1 Struct &#43; 1 Level &#43; 1 Mat</li></ul><p><br /></p><p>Network Replicated:</p><ul><li>Cannot be replicated, only lives on either server or client-side</li></ul><p><br /></p><p>Saveable:</p><ul><li>BTrees cannot be saved, needs to be exported, saved as an array and rebuild upon next start</li></ul><p><br /></p><p>Supported Development Platforms:</p><ul><li>all</li></ul><p><br /></p><p>Supported Target Build Platforms:</p><ul><li>all</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FDHFullHDFunctionOverview-1920x1080-4624e89aa1a5f3649f5447cb36fa54d0.png",
+      "md5": "4624e89aa1a5f3649f5447cb36fa54d0",
+      "width": 1920,
+      "height": 1080,
+      "size": 659931,
+      "uploadedDate": "2019-08-15T20:15:40.154Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FDHFullHDSeekSpeedComparison-1920x1080-2674d131ff7d30be904509aaaa142af1.png",
+      "md5": "2674d131ff7d30be904509aaaa142af1",
+      "width": 1920,
+      "height": 1080,
+      "size": 534142,
+      "uploadedDate": "2019-08-15T20:15:40.562Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FDHFullHDInsertSpeedComparison-1920x1080-9c560d748e191039f73f03063d067f37.png",
+      "md5": "9c560d748e191039f73f03063d067f37",
+      "width": 1920,
+      "height": 1080,
+      "size": 751036,
+      "uploadedDate": "2019-08-15T20:15:41.031Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FDHFullHDHowToCreateAKey-1920x1080-a547d45c1c21ef687200e0323e367435.png",
+      "md5": "a547d45c1c21ef687200e0323e367435",
+      "width": 1920,
+      "height": 1080,
+      "size": 421418,
+      "uploadedDate": "2019-08-15T20:15:41.466Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FDHFullHDHowToStart-1920x1080-675a6b7627ac1ccb1179cc6c517beece.png",
+      "md5": "675a6b7627ac1ccb1179cc6c517beece",
+      "width": 1920,
+      "height": 1080,
+      "size": 459919,
+      "uploadedDate": "2019-08-15T20:15:41.862Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FDHFullHDHowToWrapDataInObj-1920x1080-163edc92073f81dde78e9a6443ea6b83.png",
+      "md5": "163edc92073f81dde78e9a6443ea6b83",
+      "width": 1920,
+      "height": 1080,
+      "size": 336215,
+      "uploadedDate": "2019-08-15T20:15:42.295Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FDHFullHDRequiredAndOptionalParts-1920x1080-0615af767818412a51b5f0725cf1fcae.png",
+      "md5": "0615af767818412a51b5f0725cf1fcae",
+      "width": 1920,
+      "height": 1080,
+      "size": 192713,
+      "uploadedDate": "2019-08-21T08:37:23.636Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/FasterDataHandling_thumb-284x284-5e60047efa5b51e4efe5924ab4ea6a1e.png",
+      "md5": "5e60047efa5b51e4efe5924ab4ea6a1e",
+      "width": 284,
+      "height": 284,
+      "size": 30468,
+      "uploadedDate": "2019-08-15T20:15:42.981Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/FasterDataHandling_featured-894x488-19475b8b06bfebb2c8a6300f48711563.png",
+      "md5": "19475b8b06bfebb2c8a6300f48711563",
+      "width": 894,
+      "height": 488,
+      "size": 386957,
+      "uploadedDate": "2019-08-15T20:15:43.115Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FDHFullHDRequiredAndOptionalParts-1920x1080-0615af767818412a51b5f0725cf1fcae_Snapshot.png",
+      "md5": "ef16069dea30c6e8ae19c6215d8e8ca0",
+      "width": 150,
+      "height": 74,
+      "size": 4293,
+      "uploadedDate": "2019-08-21T08:37:23.912Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FDHFullHDFunctionOverview-1920x1080-4624e89aa1a5f3649f5447cb36fa54d0_Snapshot.png",
+      "md5": "8186feda67b59917dd6471386a3f3d32",
+      "width": 150,
+      "height": 74,
+      "size": 5023,
+      "uploadedDate": "2019-08-15T20:15:40.421Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FDHFullHDSeekSpeedComparison-1920x1080-2674d131ff7d30be904509aaaa142af1_Snapshot.png",
+      "md5": "8d81e75eb834b7333342acbbf9434383",
+      "width": 150,
+      "height": 74,
+      "size": 5332,
+      "uploadedDate": "2019-08-15T20:15:40.826Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FDHFullHDInsertSpeedComparison-1920x1080-9c560d748e191039f73f03063d067f37_Snapshot.png",
+      "md5": "03a9fef03f9728c5843f30f4dd3b0e28",
+      "width": 150,
+      "height": 74,
+      "size": 6007,
+      "uploadedDate": "2019-08-15T20:15:41.335Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FDHFullHDHowToCreateAKey-1920x1080-a547d45c1c21ef687200e0323e367435_Snapshot.png",
+      "md5": "3f81fa8c0b837aff3f11204b2c27ff75",
+      "width": 150,
+      "height": 74,
+      "size": 3894,
+      "uploadedDate": "2019-08-15T20:15:41.725Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FDHFullHDHowToStart-1920x1080-675a6b7627ac1ccb1179cc6c517beece_Snapshot.png",
+      "md5": "0bdca7ada1e56e02784c9adbe631cddd",
+      "width": 150,
+      "height": 74,
+      "size": 5114,
+      "uploadedDate": "2019-08-15T20:15:42.145Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FDHFullHDHowToWrapDataInObj-1920x1080-163edc92073f81dde78e9a6443ea6b83_Snapshot.png",
+      "md5": "794cf76b46b53a052f78f0d7dcf15975",
+      "width": 150,
+      "height": 74,
+      "size": 4111,
+      "uploadedDate": "2019-08-15T20:15:42.540Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FDHFullHDRequiredAndOptionalParts-1920x1080-a541a4d9c1f8b62b495a0ef3c516303f_Snapshot.png",
+      "md5": "8dc3f14bcf0526dba1dc2fa7f8d21f24",
+      "width": 150,
+      "height": 74,
+      "size": 4403,
+      "uploadedDate": "2019-08-15T20:15:42.905Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-08-23T06:55:05.225Z",
+  "lastModifiedDate": "2019-08-23T06:57:22.684Z",
+  "entitlementName": "a7d96bcc91cc409898be029b5fb240db",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "4524b42ae6c94955998a5b646382bc80",
+      "appId": "FasterDaa7d96bcc91ccV1",
+      "compatibleApps": [
+        "UE_4.5",
+        "UE_4.6",
+        "UE_4.7",
+        "UE_4.8",
+        "UE_4.9",
+        "UE_4.10",
+        "UE_4.11",
+        "UE_4.12",
+        "UE_4.13",
+        "UE_4.14",
+        "UE_4.15",
+        "UE_4.16",
+        "UE_4.17",
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus"
+      ],
+      "dateAdded": "2019-08-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "FDH_V1.1"
+    }
+  ],
+  "developer": "Impulse",
+  "developerId": "o-6yxw9x8w66btedxfuwaeymlduuythn",
+  "endOfSupport": false,
+  "unsearchable": false
+}

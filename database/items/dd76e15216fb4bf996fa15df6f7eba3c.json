@@ -1,0 +1,197 @@
+{
+  "id": "dd76e15216fb4bf996fa15df6f7eba3c",
+  "title": "Global World Optimization Framework PRO MAX with Multiplayer",
+  "description": "Global World Optimization Framework PRO MAX  with Multiplayer",
+  "longDescription": "<p><a href=\"https://youtu.be/h6OX5Z7pyXA\" rel=\"nofollow\">DEMO VIDEO</a></p><p><a href=\"https://youtu.be/APLAF6gd-mw\" rel=\"nofollow\">Spawner Work Video</a></p><p><a href=\"https://youtu.be/3KsdKsJgh0w\" rel=\"nofollow\">Demo Replacing Meshes</a></p><p><a href=\"https://docs.google.com/document/d/17DqwTZOev1pDlIHpMlS58LcXgLzipYoLi1svmoVJZGY/edit?usp&#61;drive_link\" rel=\"nofollow\">Changelog</a></p><p>After adding some cool features to the plugin and also with the introduction of Loot Generator, the price of the plugin will be increased.</p><ul><li>This is a very powerful, dynamically scalable and easily pluggable optimization algorithm for your project with the “Divide and Conquer” principle.</li><li>The system can handle thousands of actors. You can create a whole world where each actor will always remember his parameters (character health level, character hunger level, plant growth level, etc.).</li><li>Imagine, you have a window in your house, you opened it and took a bite of an apple, ran away hundreds of kilometers across the world, in which there are still a million actors, and when you returned, the window will also be open, but the apple has already spoiled. And all this with maximum FPS.</li><li>You yourself control the number of actors near your character. And yes, all this with multiplayer support. This is several years of experience in implementing optimization algorithms and it is a perfect creation. This is the best offer on the market.</li></ul><p>2 Modules included. Optimization and spawner.</p><ul><li>Optimization module - Sectors Director:</li></ul><ol><li>“Divide and Conquer” - The best optimization algorithm. A technology that divides the entire game world into sectors, and each sector separately stores information about all the actors within the sector. This allows you to work with any number of actors and any size of the world. Simply put, if you have hundreds of thousands of actors in the world, for example: NPCs, weapons, food, chests, doors, in general, everything that your character can interact with, they constantly load the computer and are difficult to process. This system optimizes all actors: it remembers, but does not process in real time, the parameters of those actors who are currently outside the zone of active sectors, but as soon as these actors appear in the active sector, the parameters are immediately loaded taking into account temporary changes (for example , the apple bitten 20 minutes ago has already rotted).</li><li>All actors have several stages of optimization.</li></ol><ul><li>0 - active actor stage, not limited in any way by the GWO system. </li><li>1 - stage, the actor is outside the camera&#39;s visibility area, the actor is limited by the Event Tick, his animation is simplified, shadows and meshes are disabled. This happens on the client side, so in reality, on the server, the actor is not limited and executes all its events at the right time.</li><li>2 - stage, the actor is far away, his information is saved and he is unloaded, and if necessary, a replacement with a static mesh occurs. Now the actor is waiting for the player to approach him, and he will be loaded into the system again with all his variables saved.</li></ul><p>3. And so, each sector stores only the necessary information, but there can also be a lot of sectors. And here we also created a powerful optimization, we have a cache of sectors that are often used, so if the character moves mainly in one zone, then the data from the cache is loaded instantly. </p><p>4. With a component that connects to your actor, implementing our optimization system is made very simple. Each actor will have a unique ID to save in the common system.</p><p>5. Each Actor or NPC is processed separately in active sectors and you can specify the distance to the actor at which it will be visible. For example, large actors may appear at great distances, while small ones may appear at close distances. This way you can even out your FPS for your project.</p><p>6. The size of the sectors can be adjusted to suit your world.</p><p>7. Does not require creating markup at your level. The system is fully dynamically scalable.</p><p>8. Dynamic asset loading system. If you entered the visibility zone of objects and there are a lot of them, then they will not all spawn in one frame, but you can adjust the spawn, for example, 5 actors in 1 frame with skipping 2 frames. Then all spawning occurs very smoothly, without friezes.</p><p>9. Optimization using a system for replacing actors with instance Static Mesh. To maximize immersion in your project, you may need to show a lot of interactive actors. For example, imagine a city. Each apartment has interactive actors, doors, air conditioners, refrigerators, and televisions. Each of these actors makes sounds when working, as well as waiting for your interaction, and they always take up CPU resources. Yes, with the help of a plugin and optimization they will be removed, but if you look at this apartment from afar, you will not see the air conditioner or other actors. With our system, all these actors will be replaced with Instances, and like trees, they will be displayed from afar, while using practically no resources. And when approaching, they will be gently replaced by real actors and will restore the information. Your TV will turn on again. Now, imagine a whole city of such houses with hundreds of thousands of actors. With this system this can be easily achieved.</p><ul><li>Population control module - Spawner:</li></ul><ol><li>This spawner can cope with any task, this is not only the spawning of NPCs, but also any actors. For example, fruits or weapons. Everything you might need for your project.</li><li>Full integration with Sectors Director. By using a unique ID for each actor, each spawner always knows the status/state/parameters of the actor belonging to him.</li><li>For maximum convenience, in each spawner it is not necessary to make separate settings for the spawn of each actor. Now you can make lists based on DataTable and each spawner can have as many lists as you like. For example, you have a list of NPC spawns that contains gnomes and orcs, and the second list may contain magicians and warriors. You can add as many lists as you like to each spawner, it’s fast and convenient. Another example, during development you decided to add NPC archers to some spawners. You can simply add archers to one of the lists, or create another list and simply add them to the spawners.</li><li>For each actor in the list, you can flexibly configure a large number of parameters, such as spawn chance, spawn chance depending on the time of day, distance at which to spawn, random Rotation, respawn time, minimum spawn distance (so that actors don’t spawn right in front of you) and much more other parameters.</li><li>Now in the actor spawn settings you can configure the maximum number of spawned actors, and the maximum number of active actors in the world. This way you can limit the spawning of only 5 orcs, and if this number of orcs are spawned, the spawner will wait until they are destroyed. </li><li>All actors that are currently ready to spawn are transferred to Sectors Director, which can spawn everyone not in one frame, but based on the settings. For example, 2 actors per 1 frame, and after that skip frames, the number of which you can configure yourself. Therefore, the spawn of all actors is very smooth and without loss of FPS.</li><li>In RunTime, the spawner can change spawn points if you want it to. This is done so that the spawn is always random, which makes the world unique and interesting.</li><li>The spawner always monitors the actor population. With it, you can easily support a huge number of actors in your world. This allows the creation of large populated worlds.</li><li>All information about your actor is saved at any distance. If an actor spawned, and you performed some manipulations with him and went a long distance, then when you return, all the information will be restored, be it health or any other parameters.</li><li>When setting up the spawner, it will divide the entire area into sectors, and show spawn points in these sectors. You can configure the number of actors to be in each sector. Plus, in Runtime these sectors can be mixed to create unique worlds. </li><li>Spawn at start. You want some objects to be visible from afar, especially if they are large and will be further optimized using Instances. Just enable this feature in the list and the spawner will spawn everything at startup using spawn queues, so it won&#39;t cause freezes in your project.</li></ol><p>This plugin will be constantly improved and expanded.</p>",
+  "technicalDetails": "<p><strong>Many people ask the question if this plugin can optimize your actors and NPCs without a dedicated server. Of course it can. The trailer made for this plugin does not have any dedicated server. The plugin also optimizes single-player games perfectly.</strong></p><p><br /></p><p>Features:</p><ul><li> “Divide and Conquer” - The best optimization algorithm.</li><li> Save and Load System</li><li> Soft actor spawn</li><li>The system can optimize any number of actors, even if there are millions of them</li><li>Spawn lists. Maximum flexibility with spawn settings.</li><li>The plugin is easy to use.</li><li>Full multiplayer support</li><li>All calculations are done on the server side.</li><li>Does not require knowledge of C&#43;&#43;. All the necessary functions are presented in the blueprint</li><li>It&#39;s easy to create big worlds</li><li>Free support for our products in discord</li><li>This is the best offer on the market.</li></ul><p>Code Modules:</p><ul><li> AGWOSpawner (Type: Runtime)</li><li> AGWOSpawnZoneBlocking (Type: Runtime)</li><li>AGWOSectorsDirector (Type: Runtime)</li><li>UGWOPlayerComponent (Type: Runtime)</li><li>AGWOGeneralAccess (Type: Runtime)</li><li>UGWOActorComponent (Type: Runtime)</li></ul><p>Number of Blueprints: 8</p><p>Number of C&#43;&#43; Classes: 9</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Win64, Mac, Linux</p><p>Supported Target Build Platforms: Win64, Mac, Linux</p><p>Documentation: <a href=\"https://docs.google.com/document/d/12Pk5_9CccdLgPb4OihI0cbgeeDTgxfmVz30IsVngqYY/edit?usp&#61;sharing\" rel=\"nofollow\"><strong>Documentation</strong></a>, <a href=\"https://discord.gg/DN4PhbmShg\" rel=\"nofollow\"><strong>Discord</strong></a></p><p>Example Project: Included</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-a5869aab2b0a4f8301e7feafb36c27c7.jpg",
+      "md5": "a5869aab2b0a4f8301e7feafb36c27c7",
+      "width": 1920,
+      "height": 1080,
+      "size": 2042168,
+      "uploadedDate": "2023-10-14T08:59:46.688Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-c948ca306c893b6c2c1051969bb54f8e.jpg",
+      "md5": "c948ca306c893b6c2c1051969bb54f8e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1952243,
+      "uploadedDate": "2023-10-14T08:59:47.312Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-382caa5284e467bdf1b82fb2a02a3072.jpg",
+      "md5": "382caa5284e467bdf1b82fb2a02a3072",
+      "width": 1920,
+      "height": 1080,
+      "size": 180837,
+      "uploadedDate": "2023-10-14T09:25:39.334Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-c20f0a7ffe2a0803c534480e1488a67d.jpg",
+      "md5": "c20f0a7ffe2a0803c534480e1488a67d",
+      "width": 1920,
+      "height": 1080,
+      "size": 333300,
+      "uploadedDate": "2023-10-14T09:25:39.624Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/GlobalWorldOptimizationFrameworkPROMAXwithMultiplayer_thumb-284x284-a2371e79f8d5379607cd77279cedcd2c.png",
+      "md5": "a2371e79f8d5379607cd77279cedcd2c",
+      "width": 284,
+      "height": 284,
+      "size": 97851,
+      "uploadedDate": "2023-10-04T08:58:54.216Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/GlobalWorldOptimizationFrameworkPROMAXwithMultiplayer_featured-894x488-aa1662994d14c630858716a5ef9ca961.png",
+      "md5": "aa1662994d14c630858716a5ef9ca961",
+      "width": 894,
+      "height": 488,
+      "size": 249978,
+      "uploadedDate": "2023-10-04T08:58:54.363Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-382caa5284e467bdf1b82fb2a02a3072_Snapshot.jpg",
+      "md5": "d243404e5354093704e7f82f701fa2e8",
+      "width": 150,
+      "height": 74,
+      "size": 3186,
+      "uploadedDate": "2023-10-14T09:25:39.485Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-c20f0a7ffe2a0803c534480e1488a67d_Snapshot.jpg",
+      "md5": "b68109dc1e50ed3f4d36c4f4c6c05b8c",
+      "width": 150,
+      "height": 74,
+      "size": 5024,
+      "uploadedDate": "2023-10-14T09:25:39.803Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-a5869aab2b0a4f8301e7feafb36c27c7_Snapshot.jpg",
+      "md5": "cc123b3b2a1e9ea0a5c1235293524342",
+      "width": 150,
+      "height": 74,
+      "size": 10418,
+      "uploadedDate": "2023-10-14T08:59:47.058Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-c948ca306c893b6c2c1051969bb54f8e_Snapshot.jpg",
+      "md5": "d5de68b7f5febe2ca304191aebd06998",
+      "width": 150,
+      "height": 74,
+      "size": 10005,
+      "uploadedDate": "2023-10-14T08:59:47.618Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2022-12-1823-09-00-1920x1080-b4e43db6e180d3efb27756c3755a3833_Snapshot.jpg",
+      "md5": "f9c2eefa542c68a3c5ffb1d0db3f087a",
+      "width": 150,
+      "height": 74,
+      "size": 4095,
+      "uploadedDate": "2023-09-23T11:09:32.113Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-11-09T17:14:18.255Z",
+  "lastModifiedDate": "2025-02-13T05:04:26.714Z",
+  "customAttributes": {},
+  "entitlementName": "dd76e15216fb4bf996fa15df6f7eba3c",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "d47a0c0a0bba4f68b18e70f972491126",
+      "appId": "GWPROMAX_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2023-12-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GWO UE52 1.0.4"
+    },
+    {
+      "id": "6f4a6f6035f24ec38972f52fc16d9e8b",
+      "appId": "GWPROMAX_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus"
+      ],
+      "dateAdded": "2023-09-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GWO UE53 1.0.5"
+    },
+    {
+      "id": "ab0453a142fc47f281768612e6bd2d6e",
+      "appId": "GWPROMAX_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GWO UE54 1.1.0"
+    }
+  ],
+  "developer": "Craft Assets Studio (CAS)",
+  "developerId": "o-ff78aff15e4a0d9314b2e452451aca",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

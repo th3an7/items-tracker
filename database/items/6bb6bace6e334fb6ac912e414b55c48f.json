@@ -1,0 +1,377 @@
+{
+  "id": "6bb6bace6e334fb6ac912e414b55c48f",
+  "title": "Better Homing Projectiles - now with Missile Movement Component!",
+  "description": "Improves the Projectile Movement Component's homing performance and targeting and adds behaviors useful for building missiles, rockets and bombs.",
+  "longDescription": "<h2><a href=\"https://drive.google.com/file/d/1GZIywgNfDrMh5YtGKv1QHfWPrL6IIPb8/view?usp&#61;drive_link\" rel=\"nofollow\">Playable Demo</a> | <a href=\"https://www.youtube.com/watch?v&#61;lZGVSJH52Wc\" rel=\"nofollow\">Showcase video</a> | <a href=\"https://drive.google.com/file/d/1uMK7QN2ElvhFIykFtUxrqPsRGzLY3KOW/view?usp&#61;sharing\" rel=\"nofollow\">Documentation</a> | <a href=\"https://discord.gg/R6bnXqh2P5\" rel=\"nofollow\">Discord server</a> | <a href=\"https://drive.google.com/file/d/1fNQnguakEdlWnUcTjcgKHF9B6YQ2STay/view?usp&#61;drive_link\" rel=\"nofollow\">Example Project</a></h2><p><br /></p><p><strong>Better Homing Projectiles</strong> features two classes:</p><p><br /></p><p>1.    BHP_ProjectileMovmentComponent:</p><ul><li>Subclass of the Projectile Movement Component</li><li>Drastically improves homing performance with a performant c&#43;&#43; implementation of the proportional navigation homing algorithm. Homing looks better and performs better than it does in the stock PMC.</li><li>Enables homing on any arbitrary point, which can be attached to an actor or a free point in space. Use this to hit specific points on a target or to set waypoints!</li><li>Adds option to inherit the shooter’s velocity</li><li>OnMissedHomingTarget delegate enables you to trigger logic when the projectile misses its target</li><li>Includes static functions to predict the impact location of a projectile and target and the time until impact</li><li>Adds ability to set a target impact time. When set, the projectile will vary its speed as needed to collide at the specified time.</li></ul><p><br /></p><p>2.    BHP_MissileMovementComponent</p><ul><li>Subclass of the BHP_ProjectileMovementComponent with configurable rocket motor behavior, including:</li><li>Automatic thrust whenever the rocket motor is active</li><li>Automatic or manual rocket motor ignition</li><li>Ignition delay (when using automatic ignition)</li><li>Infinite or limited rocket motor burn duration</li><li>Can smoothly rotate the projectile toward the velocity when the rocket motor is off to simulate passive stabilization and homing with control surfaces.</li><li>Can smoothly rotate the projectile toward the homing acceleration vector when the rocket motor is on to align the missile with the thrust.</li><li>Allow homing after rocket motor burnout to simulate a missile which continues homing with control surfaces and no thrust or disable homing after motor burnout.</li><li>OnRocketMotorActive delegate allows you to respond to changes in the rocket motor state to easily trigger particle and sound effects.</li></ul><p><br /></p><p>This plugin strives to provide a highly effective and easy-to-use implementation of proportional navigation in a component you&#39;re probably already using. If you are familiar with the projectile movement component, you will be able to get up and running in minutes. And, it is Blueprint friendly! All helper functions and important variables are exposed to blueprints. The code is well-commented and the documentation is thorough and meticulous. After purchasing the plugin, you can pick apart the demo project to see how the new components can be used. The projectile homing performance is easily tunable, so you can achieve the desired hit probability with your targets to suit your game design goals. Adding <strong>Better Homing Projectiles</strong> to your project is the simplest and most affordable way to enhance your game with high-performance homing projectiles!</p><p><br /></p><p>Can you use it in multiplayer games? Yes! The components are not replicated, but projectile movement can be replicated at the actor level the same way you would replicate projectiles with the stock projectile movement component. Please see the &#34;Replication&#34; section in the documentation for more info.</p><p><br /></p><p>Change log:</p><p><u>2.2.0 (7/15/2024)</u></p><ul><li>Added ability to specify a target impact time. If a target impact time is set, the projectile will change its speed to attempt to impact the target at the specified game time.</li><li>Added new impact estimation functions which return the impact location and now also the time until impact.</li><li>Fixed bugs which could cause unlimited speed projectiles (MaxSpeed &lt;&#61; 0) to stop or have limited speed.</li></ul><p><u>v2.1.1 (7/3/2024)</u></p><ul><li>Fixed bug which could prevent physics projectiles from inheriting velocity properly.</li></ul><p><u>v2.1 (6/15/2024)</u></p><ul><li>Improved homing algorithm to be even more efficient at getting back on a collision course when moving away from the target. This most often occurs if the target is behind you when you fire.</li></ul><p><u>v2.0 (6/11/2024)</u></p><ul><li>Added BHP_MissileMovementComponent</li><li>Added ability to inherit the shooter&#39;s velocity</li><li>Added MissedHomingTargetDistanceThreshold to filter out unwanted broadcasts of OnMissedHomingTarget</li><li>Improved homing algorithm to better counteract gravity and external forces</li></ul>",
+  "technicalDetails": "<p>Code Module: BetterHomingProjectiles (Runtime)</p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: No. The plugin does not add any new networking functionality. You should replicate projectile movement in networked games the same way you would with the stock Projectile Movement Component.</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p><br /></p><p><a href=\"https://drive.google.com/file/d/1GZIywgNfDrMh5YtGKv1QHfWPrL6IIPb8/view?usp&#61;drive_link\" rel=\"nofollow\">Playable Demo</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;lZGVSJH52Wc\" rel=\"nofollow\">Showcase video</a></p><p><a href=\"https://youtu.be/Kj4TgnoVbRs\" rel=\"nofollow\">FPS Stress Test</a> (compares frame rate between Better Homing Projectiles and stock homing projectiles when there are a large number of projectiles on screen)</p><p><a href=\"https://drive.google.com/file/d/1uMK7QN2ElvhFIykFtUxrqPsRGzLY3KOW/view?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://discord.gg/R6bnXqh2P5\" rel=\"nofollow\">Discord server</a></p><p><a href=\"https://drive.google.com/file/d/1fNQnguakEdlWnUcTjcgKHF9B6YQ2STay/view?usp&#61;drive_link\" rel=\"nofollow\">Example Project</a> (Includes demo level and stress test - does not include plugin)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ImproveHomingPerformanceSlide-1920x1080-5f5e16815fe9a0033b4ed9d4d8b63c11.png",
+      "md5": "5f5e16815fe9a0033b4ed9d4d8b63c11",
+      "width": 1920,
+      "height": 1080,
+      "size": 1951233,
+      "uploadedDate": "2024-05-05T02:06:26.950Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Build missiles rockets and bombs-1920x1080-14c1035b4d5f1701b58c0a8c4a516fff.png",
+      "md5": "14c1035b4d5f1701b58c0a8c4a516fff",
+      "width": 1920,
+      "height": 1080,
+      "size": 2356616,
+      "uploadedDate": "2024-06-11T23:49:50.792Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HomeInOnAnyPointRockets-1920x1080-2653c01f741383d374288146c0bf398c.png",
+      "md5": "2653c01f741383d374288146c0bf398c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2047824,
+      "uploadedDate": "2024-06-11T23:49:51.360Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WaypointSlide-1920x1080-c5bccfc15c96334b12c0703cb2954dae.png",
+      "md5": "c5bccfc15c96334b12c0703cb2954dae",
+      "width": 1920,
+      "height": 1080,
+      "size": 1799094,
+      "uploadedDate": "2024-05-05T01:55:46.167Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/InheritVelocity-1920x1080-7504752fd925aab54e7378045513f8b1.png",
+      "md5": "7504752fd925aab54e7378045513f8b1",
+      "width": 1920,
+      "height": 1080,
+      "size": 2260590,
+      "uploadedDate": "2024-06-11T23:49:51.854Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MissedTargetSlide-1920x1080-3e96f28e193c9a7e162c633adc800fdc.png",
+      "md5": "3e96f28e193c9a7e162c633adc800fdc",
+      "width": 1920,
+      "height": 1080,
+      "size": 2193593,
+      "uploadedDate": "2024-05-05T01:55:47.175Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HomeInOnAnyPointSlide-1920x1080-fa0acc191147ac6b4f304d6513f7eecc.png",
+      "md5": "fa0acc191147ac6b4f304d6513f7eecc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1592439,
+      "uploadedDate": "2024-05-05T01:55:45.579Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/LaserGuidedSlide-1920x1080-7054f49d983909f611bfea4537130177.png",
+      "md5": "7054f49d983909f611bfea4537130177",
+      "width": 1920,
+      "height": 1080,
+      "size": 1473332,
+      "uploadedDate": "2024-05-05T01:55:46.709Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PipSlide-1920x1080-317384a4c171c20b9ae1cdd46d71c557.png",
+      "md5": "317384a4c171c20b9ae1cdd46d71c557",
+      "width": 1920,
+      "height": 1080,
+      "size": 1378869,
+      "uploadedDate": "2024-05-05T01:55:47.774Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Better Homing Projectiles Logo 1920x1080-1920x1080-5e14803ae679cef1221f51fb62c2266e.jpg",
+      "md5": "5e14803ae679cef1221f51fb62c2266e",
+      "width": 1920,
+      "height": 1080,
+      "size": 196005,
+      "uploadedDate": "2024-05-04T14:02:15.519Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BetterHomingProjectiles_thumb-284x284-d0436cc798ba13fd4ea8a95ba207fa7b.png",
+      "md5": "d0436cc798ba13fd4ea8a95ba207fa7b",
+      "width": 284,
+      "height": 284,
+      "size": 39969,
+      "uploadedDate": "2024-04-21T04:44:03.177Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/BetterHomingProjectiles_featured-894x488-3e5aa6338ad9095fe5b91f82fb090654.png",
+      "md5": "3e5aa6338ad9095fe5b91f82fb090654",
+      "width": 894,
+      "height": 488,
+      "size": 230041,
+      "uploadedDate": "2024-04-21T01:39:59.260Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Build missiles rockets and bombs-1920x1080-14c1035b4d5f1701b58c0a8c4a516fff_Snapshot.png",
+      "md5": "7af373049ebc8aded6cb00a84cc10e80",
+      "width": 150,
+      "height": 74,
+      "size": 7496,
+      "uploadedDate": "2024-06-11T23:49:51.167Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HomeInOnAnyPointRockets-1920x1080-2653c01f741383d374288146c0bf398c_Snapshot.png",
+      "md5": "55856cdbcdca8753b7b49e3d430af804",
+      "width": 150,
+      "height": 74,
+      "size": 6516,
+      "uploadedDate": "2024-06-11T23:49:51.700Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/InheritVelocity-1920x1080-7504752fd925aab54e7378045513f8b1_Snapshot.png",
+      "md5": "969ddf2b20203f9d54471d500d80ba86",
+      "width": 150,
+      "height": 74,
+      "size": 6879,
+      "uploadedDate": "2024-06-11T23:49:52.204Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ImproveHomingPerformanceSlide-1920x1080-5f5e16815fe9a0033b4ed9d4d8b63c11_Snapshot.png",
+      "md5": "f33be0657aaa03337f969e000fadf85e",
+      "width": 150,
+      "height": 74,
+      "size": 6388,
+      "uploadedDate": "2024-05-05T02:06:27.330Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HomeInOnAnyPointSlide-1920x1080-fa0acc191147ac6b4f304d6513f7eecc_Snapshot.png",
+      "md5": "b40c5d8de1599eab7f54711bed220f49",
+      "width": 150,
+      "height": 74,
+      "size": 6683,
+      "uploadedDate": "2024-05-05T01:55:45.904Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WaypointSlide-1920x1080-c5bccfc15c96334b12c0703cb2954dae_Snapshot.png",
+      "md5": "81d0e4cfb596d75e52137ea3f63adb8d",
+      "width": 150,
+      "height": 74,
+      "size": 6412,
+      "uploadedDate": "2024-05-05T01:55:46.508Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LaserGuidedSlide-1920x1080-7054f49d983909f611bfea4537130177_Snapshot.png",
+      "md5": "8d11fdc85bae27e46276d6ce03e6dadc",
+      "width": 150,
+      "height": 74,
+      "size": 5785,
+      "uploadedDate": "2024-05-05T01:55:47.019Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MissedTargetSlide-1920x1080-3e96f28e193c9a7e162c633adc800fdc_Snapshot.png",
+      "md5": "bde213c17f98138a4e9a6fb5541d9cbe",
+      "width": 150,
+      "height": 74,
+      "size": 6435,
+      "uploadedDate": "2024-05-05T01:55:47.531Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PipSlide-1920x1080-317384a4c171c20b9ae1cdd46d71c557_Snapshot.png",
+      "md5": "cace982461fe212405fafba55bca5097",
+      "width": 150,
+      "height": 74,
+      "size": 5831,
+      "uploadedDate": "2024-05-05T01:55:48.099Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ImproveHomingPerformanceSlide-1920x1080-f152fffe8544f515b9e90abca449166e_Snapshot.png",
+      "md5": "2cb033ae202f926289aa0bce9352e86e",
+      "width": 150,
+      "height": 74,
+      "size": 6268,
+      "uploadedDate": "2024-05-05T01:44:36.118Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Better Homing Projectiles Logo 1920x1080-1920x1080-5e14803ae679cef1221f51fb62c2266e_Snapshot.jpg",
+      "md5": "d73f932f60e43503e06d60df5b4b5ef1",
+      "width": 150,
+      "height": 74,
+      "size": 2432,
+      "uploadedDate": "2024-05-04T14:02:15.709Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Welcome-1920x1080-72bead5167048979be8d269a09f1d6fe_Snapshot.jpg",
+      "md5": "0afd0d3bcdbedf1a932a07e25f216ec2",
+      "width": 150,
+      "height": 74,
+      "size": 7042,
+      "uploadedDate": "2024-05-04T03:21:46.381Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Basic-1920x1080-1079efa550e26bb73375fa673d05e15b_Snapshot.jpg",
+      "md5": "57b71f59fab8172a2d78385e112932a4",
+      "width": 150,
+      "height": 74,
+      "size": 5584,
+      "uploadedDate": "2024-05-04T03:21:46.672Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HomingPointOnActor-1920x1080-e35052c466779826b88db25272b7a7f2_Snapshot.jpg",
+      "md5": "be1caf996769f06261a76ca50c16752b",
+      "width": 150,
+      "height": 74,
+      "size": 6051,
+      "uploadedDate": "2024-05-04T03:21:46.980Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Laser guided-1920x1080-d554e4ffb9e8c57dbaebdc6afe468dde_Snapshot.jpg",
+      "md5": "dc7af3fb71b036eba896af87dc222afd",
+      "width": 150,
+      "height": 74,
+      "size": 4978,
+      "uploadedDate": "2024-05-04T03:21:47.399Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MissedTarget-1920x1080-6f8e33e4e5e298f93ab1257c3e296397_Snapshot.jpg",
+      "md5": "a6719e8a5eebbcaea4fde55f318dcbb2",
+      "width": 150,
+      "height": 74,
+      "size": 6680,
+      "uploadedDate": "2024-05-04T03:21:47.793Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Waypoint-1920x1080-a66048ade96e716ed2b1e53ddb709f2d_Snapshot.jpg",
+      "md5": "6278f076ab0b3367f6558418e247fb20",
+      "width": 150,
+      "height": 74,
+      "size": 5743,
+      "uploadedDate": "2024-05-04T03:21:48.202Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pip-1920x1080-c4f27a2bba300bba5aad91af9e624965_Snapshot.jpg",
+      "md5": "de0ddf448b2eebc006c0d37f4e0ad510",
+      "width": 150,
+      "height": 74,
+      "size": 6643,
+      "uploadedDate": "2024-05-04T03:21:48.551Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HomingPointOffActor-1920x1080-eb9d9ca9b3160576983cb76fdcbcf383_Snapshot.jpg",
+      "md5": "f3f5016397291bef86d48bd788a2beda",
+      "width": 150,
+      "height": 74,
+      "size": 6465,
+      "uploadedDate": "2024-04-21T01:39:58.127Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CircleTargetComparison-1920x1080-7c69c6cd95928a0c8a7cd6bd0c7a1124_Snapshot.jpg",
+      "md5": "f7b84f65fb954e04cfdb8ddd135e94f2",
+      "width": 150,
+      "height": 74,
+      "size": 6393,
+      "uploadedDate": "2024-04-21T01:39:58.470Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HomingPointOnActor2-1920x1080-6d25c741935248cadcbe0989997c2fe0_Snapshot.jpg",
+      "md5": "0be1f08103c818b324296d0530eb2341",
+      "width": 150,
+      "height": 74,
+      "size": 6536,
+      "uploadedDate": "2024-04-21T01:39:58.809Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PingPongTarget-1920x1080-4e136727989301431a715032f4f9ec0e_Snapshot.jpg",
+      "md5": "d71373c40db61a61e0c11ac69b72144e",
+      "width": 150,
+      "height": 74,
+      "size": 6328,
+      "uploadedDate": "2024-04-21T01:39:59.080Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-05-23T04:01:15.535Z",
+  "lastModifiedDate": "2024-11-19T14:12:57.479Z",
+  "customAttributes": {},
+  "entitlementName": "6bb6bace6e334fb6ac912e414b55c48f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b2a037a015aa47aa9eea2959a09bc62d",
+      "appId": "BetterHomingProjectiles_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-12T00:00:00.000Z",
+      "releaseNote": "Added ability to impact target at a specific time. Added more impact estimation functions. Bug fixes to unlimited speed projectiles.",
+      "versionTitle": "UE_5.2 Version 2.2.0"
+    },
+    {
+      "id": "db486c7f512145d4bdf3a2a4c15fc56d",
+      "appId": "BetterHomingProjectiles_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-12T00:00:00.000Z",
+      "releaseNote": "Added ability to impact target at a specific time. Added more impact estimation functions. Bug fixes to unlimited speed projectiles.",
+      "versionTitle": "UE_5.3 Version 2.2.0"
+    },
+    {
+      "id": "5f34990987854a5d8aa01286800eecac",
+      "appId": "BetterHomingProjectiles_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-20T00:00:00.000Z",
+      "releaseNote": "Added ability to impact target at a specific time. Added more impact estimation functions. Bug fixes to unlimited speed projectiles.",
+      "versionTitle": "UE_5.4 Version 2.2.0"
+    }
+  ],
+  "developer": "Pitch n' Roll Games",
+  "developerId": "o-4hnvmnq8u7sadbe8j3wuvld8p29efu",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

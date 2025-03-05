@@ -1,0 +1,457 @@
+{
+  "id": "c4f4a39f5f8040888b32b5787ff23e60",
+  "title": "Not Yet: Task System",
+  "description": "Provides an easy to use, extendable way to execute different tasks after each other.",
+  "longDescription": "<p>The Not Yet Task System Plugin provides an easy to use, extendable way to execute different tasks after each other. You can define those in the details panel via adding tasks to an array.</p><p><br /></p><p>The plugin was based on our internal tech, which we use for the movements of our mechanical traps, doors, moving platforms and elevators in our platformer game.</p><p><br /></p><p><strong>Example video showcase: </strong><a href=\"https://youtu.be/u0AoulEpkow\" rel=\"nofollow\">https://youtu.be/ADqZI6VTYEA</a></p><p><br /></p><p><strong>Explanation:</strong></p><p>The plugin contains Tasks which can be used to manipulate Actors. Some Task are just a single action, some are executed for a specified time.</p><p>The predefined tasks can be used to:</p><ul><li>Rotate, Translate, Activate/Deactivate components</li><li>Change material properties inside primitive components</li><li>Call functions on the owner actor</li><li>Manipulate float values of the owner actor</li><li>Manipulate other processes in the same Actor</li><li>Wait, spawn sounds, spawn particle systems</li><li>Execute more tasks parallel</li></ul><p><br /></p><p><strong>Features:</strong></p><ul><li>Full Blueprint and C&#43;&#43; support</li><li>23 different Task classes</li><li>An actor component which contains the logic to handle an array of processes. Each process contains a list of tasks which are executed after each other.</li><li>Extendable - create your own tasks in Blueprint or in C&#43;&#43;</li><li>Custom types with editor support (own custom UI picker element, which lists the available components/variables/material parameters via parsing the actor the variable is belongs to)</li></ul>",
+  "technicalDetails": "<p><strong>Code Modules</strong>:</p><ul><li>  NotYetTaskSystem - [Runtime]</li><li>  NotYetTaskSystemEditor - [Editor]</li></ul><p><br /></p><p><strong>Network Replicated</strong>: No</p><p><strong>Supported Development Platforms</strong>: Windows, Mac, Linux</p><p><strong>Supported Target Build Platforms</strong>: Windows, Mac, Linux</p><p><strong>Documentation</strong>: <a href=\"https://bit.ly/NYTaskSystemWiki\" rel=\"nofollow\">CLICK HERE</a></p><p><strong>Example Project: </strong><a href=\"https://www.dropbox.com/scl/fi/3i22nqyuo1qbjat2fc3w1/NotYetTaskSystemExample-5.3.zip?rlkey&#61;d6ej085qm05l0krhcs8wxmlta&amp;dl&#61;1\" rel=\"nofollow\">5.3 version</a> or <a href=\"https://www.dropbox.com/s/ep1xbzssrpl63sg/NotYetTaskSystemExample-5.2.zip?dl&#61;1\" rel=\"nofollow\">5.2 version</a> or <a href=\"https://www.dropbox.com/s/8pqp1f8sb6s38fn/NotYetTaskSystemExample-5.1.zip?dl&#61;1\" rel=\"nofollow\">5.1 version</a><strong> </strong>(<strong>must own the plugin to make it work</strong>)</p><p><strong>Contact</strong>: <a href=\"https://bit.ly/NYDiscord\" rel=\"nofollow\">Discord</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tasksystem0-1920x1080-bf438c1f09c51f5fbe51f738b19e4fd2.jpg",
+      "md5": "bf438c1f09c51f5fbe51f738b19e4fd2",
+      "width": 1920,
+      "height": 1080,
+      "size": 245848,
+      "uploadedDate": "2018-11-13T18:38:19.916Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tasksystem1-1920x1080-7099aa2594616ced53b2f7b0bb63ffbd.jpg",
+      "md5": "7099aa2594616ced53b2f7b0bb63ffbd",
+      "width": 1920,
+      "height": 1080,
+      "size": 233717,
+      "uploadedDate": "2018-11-13T18:38:21.129Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tasksystem2-1920x1080-2cb5c1be0021b8013515596addb2666f.jpg",
+      "md5": "2cb5c1be0021b8013515596addb2666f",
+      "width": 1920,
+      "height": 1080,
+      "size": 270867,
+      "uploadedDate": "2018-11-13T18:38:22.470Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tasksystem3-1920x1080-613a249ddcba68099dfd4f78958c4123.jpg",
+      "md5": "613a249ddcba68099dfd4f78958c4123",
+      "width": 1920,
+      "height": 1080,
+      "size": 258194,
+      "uploadedDate": "2018-11-13T18:38:23.681Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tasksystem4-1920x1080-d38ae1e33a546ecee5a25f51fde9dfa7.jpg",
+      "md5": "d38ae1e33a546ecee5a25f51fde9dfa7",
+      "width": 1920,
+      "height": 1080,
+      "size": 288485,
+      "uploadedDate": "2018-11-13T18:38:24.863Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/NotYetTaskSystem_thumb-284x284-73c3fb97ca4003939899ed8024fd554e.png",
+      "md5": "73c3fb97ca4003939899ed8024fd554e",
+      "width": 284,
+      "height": 284,
+      "size": 57259,
+      "uploadedDate": "2018-11-13T19:19:45.077Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/NotYetTaskSystem_featured-894x488-0c4e5c53d2900bddd2f59cfe2aed635b.png",
+      "md5": "0c4e5c53d2900bddd2f59cfe2aed635b",
+      "width": 894,
+      "height": 488,
+      "size": 278252,
+      "uploadedDate": "2018-11-13T19:19:45.148Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tasksystem0-1920x1080-bf438c1f09c51f5fbe51f738b19e4fd2_Snapshot.jpg",
+      "md5": "7a7e2c6cf517c0aacb4deeaf5b5ef17d",
+      "width": 150,
+      "height": 74,
+      "size": 2700,
+      "uploadedDate": "2018-11-13T18:38:20.719Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tasksystem1-1920x1080-7099aa2594616ced53b2f7b0bb63ffbd_Snapshot.jpg",
+      "md5": "3cf74ce302b00e288be5e0fe909a3613",
+      "width": 150,
+      "height": 74,
+      "size": 3076,
+      "uploadedDate": "2018-11-13T18:38:21.909Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tasksystem2-1920x1080-2cb5c1be0021b8013515596addb2666f_Snapshot.jpg",
+      "md5": "e92eb370792f26416fc716101b4740d5",
+      "width": 150,
+      "height": 74,
+      "size": 3554,
+      "uploadedDate": "2018-11-13T18:38:23.250Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tasksystem3-1920x1080-613a249ddcba68099dfd4f78958c4123_Snapshot.jpg",
+      "md5": "636e3304bcf18bf2e676868a4a08e94b",
+      "width": 150,
+      "height": 74,
+      "size": 3224,
+      "uploadedDate": "2018-11-13T18:38:24.447Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tasksystem4-1920x1080-d38ae1e33a546ecee5a25f51fde9dfa7_Snapshot.jpg",
+      "md5": "28823db048597553bfe605e3450f32c8",
+      "width": 150,
+      "height": 74,
+      "size": 2404,
+      "uploadedDate": "2018-11-13T18:38:25.621Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/vlcsnap-2018-11-08-21h00m28s152-1920x1080-fefc95806df0bc2300a88f28b53b5b44_Snapshot.png",
+      "md5": "25f828ac7c8389ee55b4dd1c7908549e",
+      "width": 150,
+      "height": 74,
+      "size": 21281,
+      "uploadedDate": "2018-11-13T16:08:29.944Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-11-19T16:48:10.363Z",
+  "lastModifiedDate": "2024-11-25T15:36:36.441Z",
+  "customAttributes": {},
+  "entitlementName": "c4f4a39f5f8040888b32b5787ff23e60",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "73bb32b6e733474ea094630f4fc76bb9",
+      "appId": "NotYetTaskSystem_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "NotYetTaskSystem 4.19 v1.0"
+    },
+    {
+      "id": "36a2e82fd2224c92956f2edefdb7f912",
+      "appId": "NotYetTaskSystem_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-13T00:00:00.000Z",
+      "releaseNote": "- Fix wrong field names\n- Fix error messages and handling",
+      "versionTitle": "NotYetTaskSystem 4.20 v1.0"
+    },
+    {
+      "id": "ea2ca6385c03473190f2fc20056b7e8c",
+      "appId": "NotYetTaskSystem_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-13T00:00:00.000Z",
+      "releaseNote": "- Fix wrong field names\n- Fix error messages and handling",
+      "versionTitle": "NotYetTaskSystem 4.21 v1.0"
+    },
+    {
+      "id": "eb6eaa9218ca42f78c65c3e9e4e76b84",
+      "appId": "NotYetTaskSystem_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "- Fix wrong field names\n- Fix error messages and handling",
+      "versionTitle": "NotYetTaskSystem 4.22 v1.0"
+    },
+    {
+      "id": "33e8d8920fdc4efb8227763c42345280",
+      "appId": "NotYetTaskSystem_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2019-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "NotYetTaskSystem 4.23 v1.0"
+    },
+    {
+      "id": "f0e2bb09734a4fda9c468e07004bb3e0",
+      "appId": "NotYetTaskSystem_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Xbox One"
+      ],
+      "dateAdded": "2019-12-16T00:00:00.000Z",
+      "releaseNote": "Whitelist all supported platforms",
+      "versionTitle": "NotYetTaskSystem 4.24 v1.2"
+    },
+    {
+      "id": "208b852972454c3a895f991ea892819e",
+      "appId": "NotYetTaskSystem_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Android",
+        "Gear VR",
+        "HTML5",
+        "HoloLens 2",
+        "iOS",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-05-28T00:00:00.000Z",
+      "releaseNote": "Whitelist all supported platforms",
+      "versionTitle": "NotYetTaskSystem 4.25 v1.2"
+    },
+    {
+      "id": "001780f90f1449c8acf46809e487816d",
+      "appId": "NotYetTaskSystem_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "HoloLens 2",
+        "Gear VR",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-12-03T00:00:00.000Z",
+      "releaseNote": "Whitelist all supported platforms",
+      "versionTitle": "NotYetTaskSystem 4.26 v1.2"
+    },
+    {
+      "id": "2979d061afa248068c9cc9e87c4c3ee4",
+      "appId": "NotYetTaskSystem_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2021-08-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "NotYetTaskSystem 4.27 v1.2"
+    },
+    {
+      "id": "44c39a1b9f66414689953e458b612b21",
+      "appId": "NotYetTaskSystem_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2022-04-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0 v1.2"
+    },
+    {
+      "id": "a68c84e719fa4de5b352bf527acccf2a",
+      "appId": "NotYetTaskSystem_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Win32",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2022-11-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1 v1.2"
+    },
+    {
+      "id": "3ab8e88790e34dd19b1c17aa5fc320f6",
+      "appId": "NotYetTaskSystem_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2023-05-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2 v1.2"
+    },
+    {
+      "id": "9993b84abf844030bbf10582790e8483",
+      "appId": "NotYetTaskSystem_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3 v1.2"
+    },
+    {
+      "id": "89b82ddf67b44436b0174c06dd285810",
+      "appId": "NotYetTaskSystem_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "Nintendo Switch",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2024-06-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4 v1.2"
+    }
+  ],
+  "developer": "Not Yet",
+  "developerId": "o-bf784eefn92xnmvwl5qp7esuzz242l",
+  "endOfSupport": false,
+  "unsearchable": false
+}

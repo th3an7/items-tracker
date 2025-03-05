@@ -1,0 +1,341 @@
+{
+  "id": "59d7900df577440d9466ca6e4ef74fb1",
+  "title": "NordVaderLibrary",
+  "description": "Is a toolkit for Unreal Engine developers, offering asynchronous functions to streamline workflows. It handles complex, resource-intensive tasks without disrupting the main game thread, ensuring smooth and effective performance.",
+  "longDescription": "<p><strong>Current Version: 0.03</strong></p><p><strong>Last Update: 19.07.2024</strong></p><p><br /></p><p><strong>Overview:</strong></p><p>The <strong>NordVaderLibrary</strong> Plugin is a comprehensive toolkit designed for Unreal Engine developers to enhance their workflow with a variety of powerful, asynchronous functions. These functions are specifically crafted to handle complex, resource-intensive tasks without interrupting the main game thread, ensuring smooth and efficient performance.</p><p>Features:</p><ul><li>Asynchronous Actor Spawning: Efficiently spawn actors, emitters, and decals without causing game lag.</li><li>Parallel Processing: Utilize multi-threading for intensive calculations and checks.</li><li>Soft Class Handling: Manage and load assets dynamically using soft references to optimize memory usage.</li><li>Advanced Damage Handling: Apply damage with precision, utilizing safe and parallel methods.</li><li>Math Utilities: Perform complex range checks and random value generation effortlessly.</li></ul><p><br /></p><p><br /></p><p><br /></p><h3>Core Functions:</h3><p><strong>Actor Management:</strong></p><ul><li><strong>AsyncSpawnActor:</strong> Asynchronously spawns an actor in the game world.</li><li><strong>AsyncSpawnActorTask:</strong> Queues actor spawning as an asynchronous task.</li><li><strong>SetSeparationWeight:</strong> Adjusts the separation weight for crowd following components to manage AI behavior dynamically.</li><li><strong>AsyncDestroyActorTask:</strong> Asynchronously destroys an actor and calls a delegate upon completion.</li><li><strong>AsyncPlayAnimationTask:</strong> Asynchronously plays an animation on a skeletal mesh component.</li><li><strong>AsyncSetAnimInstanceClassTask:</strong> Asynchronously sets the animation instance class for a skeletal mesh component.</li></ul><p><strong>Emitter and System Management:</strong></p><ul><li><strong>AsyncSpawnEmitter:</strong> Spawns particle systems asynchronously.</li><li><strong>AsyncSpawnEmitterTask:</strong> Manages particle system spawning as an asynchronous task.</li><li><strong>AsyncSpawnSystemAttached:</strong> Attaches and spawns Niagara systems asynchronously.</li><li><strong>AsyncSpawnSystemAttachedTask:</strong> Queues Niagara system spawning as an asynchronous task.</li></ul><p><strong>Decal Management:</strong></p><ul><li><strong>AsyncSpawnDecalAtLocation:</strong> Spawns decals at specified locations asynchronously.</li><li><strong>AsyncSpawnDecalAtLocationTask:</strong> Manages decal spawning as an asynchronous task.</li></ul><p><strong>Sound Management:</strong></p><ul><li><strong>AsyncPlaySoundAtLocation:</strong> Plays sounds at specific locations asynchronously.</li><li><strong>AsyncPlaySoundAtLocationTask:</strong> Manages sound playback as an asynchronous task.</li></ul><p><strong>Damage Management:</strong></p><ul><li><strong>ApplyDamageSafely:</strong> Applies damage to an actor safely using soft references.</li><li><strong>ApplyDamageActorsTask:</strong> Manages applying damage to multiple actors as an asynchronous task.</li><li><strong>ApplyDamageActorTask:</strong> Queues damage application to a single actor as an asynchronous task.</li><li><strong>ApplyPointDamageActorTask:</strong> Manages point damage application to actors asynchronously.</li><li><strong>ApplyRadialDamageActorTask:</strong> Applies radial damage in an asynchronous manner.</li><li><strong>ApplyDamageToActors:</strong> Applies specified damage to an array of actor-damage structures.</li></ul><p><strong>Utility Functions:</strong></p><ul><li><strong>InRange:</strong> Checks if a value is within a specified range.</li><li><strong>InRange_Pure:</strong> Pure version of InRange for simplified checks.</li><li><strong>RandomFloatInRange:</strong> Generates random floats within a specified range.</li><li><strong>RandomFloatInRange_Pure:</strong> Pure version for generating random floats.</li><li><strong>GetBoolByChance:</strong> Determines if an event should occur based on a given chance.</li><li><strong>GetMemoryUsage:</strong> Retrieves the current memory usage statistics of the system.</li></ul><p><strong>Parallel Processing:</strong></p><ul><li><strong>GetActorsBySoftClassParallel:</strong> Filters actors by class using parallel processing.</li><li><strong>GetWasRecentlyRenderedbyActorsParallel:</strong> Checks if actors were recently rendered using parallel processing.</li><li><strong>ParallelSortActorsByDistance:</strong> Sorts actors by distance to a point using multi-threading.</li><li><strong>CheckActorsInFOVParallel:</strong> Asynchronously checks if actors are within a specified Field of View (FOV) angle of the camera.</li><li><strong>TraceSocketsInSkeletalMeshesByTagParallel:</strong> Performs parallel line trace operations from a specified starting location to the socket locations of skeletal mesh components tagged with a specific tag.</li><li><strong>GeneratePointsOnSphereFibonacciParallel:</strong> Generates points on a sphere using the Fibonacci lattice method in parallel.</li><li><strong>PerformFibonacciLatticeTracesParallel:</strong> Performs ray traces from the center in directions based on points generated by the Fibonacci lattice method and returns an array of hit results.</li></ul><p><br /></p><p><strong>Intended Use:</strong></p><p>Ideal for game developers working on complex projects requiring efficient resource management and advanced asynchronous operations. The plugin supports various tasks from actor management to damage handling, ensuring high performance and seamless gameplay experience.</p><p><br /></p><p><strong>Support:</strong></p><p>For any issues or further assistance, please refer to the detailed documentation included with the plugin or contact our support team through the Discord.</p><p><br /></p><p><strong>Links</strong>:</p><ul><li>Documentation - <a href=\"https://ubiquitous-petroleum-1ed.notion.site/NordVaderLibrary-bfafa8368de34d53bf0c1658b5404850\" rel=\"nofollow\">Notion</a></li><li>Support - <a href=\"https://discord.gg/D39JZHHpwD\" rel=\"nofollow\">Discord</a> </li></ul><p><br /></p><p>This plugin is developed and maintained by <strong>NordVader Inc</strong>., ensuring regular updates and dedicated support for users. Transform your development process with <strong>NordVaderLibrary&#39;s</strong> advanced asynchronous functionalities today!</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Asynchronous Actor Creation: Efficiently spawn actors without causing delays in the game.</li><li>Asynchronous Emitter and Decal Creation: Spawn particle systems and decals asynchronously.</li><li>Parallel Processing for Intensive Tasks: Utilize multithreading for heavy computations and checks.</li><li>Advanced Damage Management: Safely and efficiently apply damage to actors, supporting point and radial damage.</li><li>Mathematical Utilities: Easily perform complex range checks and generate random values.</li><li>Soft Reference Management: Dynamically load assets using soft references to optimize memory usage.</li><li>Support for Blueprint Functions: Create objects with tick functions, Begin Play, Delay, and other standard Blueprint functions.</li></ul><p>Code Modules:</p><ul><li>NordVaderLibrary (Runtime): Contains all the plugin&#39;s functionalities for runtime execution.</li></ul><p>Number of Blueprints: None</p><p>Number of C&#43;&#43; Classes: 6</p><p>Network Replicated: Yes</p><p>Supported Target Build Platforms:</p><ul><li>Windows</li></ul><p>Documentation:</p><ul><li>Documentation - <a href=\"https://ubiquitous-petroleum-1ed.notion.site/NordVaderLibrary-bfafa8368de34d53bf0c1658b5404850\" rel=\"nofollow\">Notion</a></li></ul><p>Important/Additional Notes:</p><ul><li>Ensure you understand how to effectively use asynchronous tasks and soft references to maximize performance benefits offered by this plugin.</li><li>The plugin is developed and maintained by NordVader Inc., ensuring regular updates and dedicated user support.</li></ul><p><br /></p><p>This plugin serves as a versatile toolkit designed to optimize and enhance the development process in Unreal Engine, especially for projects requiring efficient management of heavy tasks and dynamic resources. </p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/NordVaderLibraryLogo1920x1080-1920x1080-efbc2a2dd28abbcfdacc1eccb1813ad0.png",
+      "md5": "efbc2a2dd28abbcfdacc1eccb1813ad0",
+      "width": 1920,
+      "height": 1080,
+      "size": 2034584,
+      "uploadedDate": "2024-05-24T03:44:44.496Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-1632b321cce3d825a3731f739af72953.png",
+      "md5": "1632b321cce3d825a3731f739af72953",
+      "width": 1920,
+      "height": 1080,
+      "size": 641827,
+      "uploadedDate": "2024-05-25T19:11:43.194Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-390413540b14ce26f09969020d167a8a.png",
+      "md5": "390413540b14ce26f09969020d167a8a",
+      "width": 1920,
+      "height": 1080,
+      "size": 845993,
+      "uploadedDate": "2024-05-25T19:11:43.739Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-c63e1e725b38a79169e94e71625e4b33.png",
+      "md5": "c63e1e725b38a79169e94e71625e4b33",
+      "width": 1920,
+      "height": 1080,
+      "size": 162526,
+      "uploadedDate": "2024-05-25T19:11:44.308Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-2f54dbb948da4560086c7be6f97bb383.png",
+      "md5": "2f54dbb948da4560086c7be6f97bb383",
+      "width": 1920,
+      "height": 1080,
+      "size": 164239,
+      "uploadedDate": "2024-05-25T19:11:44.744Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-73b9f12e711dae04610eb60d768029fb.png",
+      "md5": "73b9f12e711dae04610eb60d768029fb",
+      "width": 1920,
+      "height": 1080,
+      "size": 212552,
+      "uploadedDate": "2024-05-25T19:11:45.194Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-de0afbb94da8adade203d5aa9c45a826.png",
+      "md5": "de0afbb94da8adade203d5aa9c45a826",
+      "width": 1920,
+      "height": 1080,
+      "size": 767401,
+      "uploadedDate": "2024-05-25T19:11:45.623Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7-1920x1080-45e740a10f32628477de3027dc87de67.png",
+      "md5": "45e740a10f32628477de3027dc87de67",
+      "width": 1920,
+      "height": 1080,
+      "size": 197407,
+      "uploadedDate": "2024-05-25T19:11:46.058Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8-1920x1080-01444f04f4ff7e485a0e7046c5929112.png",
+      "md5": "01444f04f4ff7e485a0e7046c5929112",
+      "width": 1920,
+      "height": 1080,
+      "size": 373347,
+      "uploadedDate": "2024-05-25T19:11:46.616Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/NordVaderLibrary_thumb-284x284-cbb75a12a515af5b1dd96ca9ed04fc1a.png",
+      "md5": "cbb75a12a515af5b1dd96ca9ed04fc1a",
+      "width": 284,
+      "height": 284,
+      "size": 154687,
+      "uploadedDate": "2024-05-24T03:44:49.470Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/NordVaderLibrary_featured-894x488-7815a0febeb994742a17913af2cfcf5a.png",
+      "md5": "7815a0febeb994742a17913af2cfcf5a",
+      "width": 894,
+      "height": 488,
+      "size": 678935,
+      "uploadedDate": "2024-05-24T03:44:49.639Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-1632b321cce3d825a3731f739af72953_Snapshot.png",
+      "md5": "617976d6729dacf1b74bbc8ca542d46f",
+      "width": 150,
+      "height": 74,
+      "size": 5361,
+      "uploadedDate": "2024-05-25T19:11:43.541Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-390413540b14ce26f09969020d167a8a_Snapshot.png",
+      "md5": "07ded855ebd1957ff180e53cc32b9ca8",
+      "width": 150,
+      "height": 74,
+      "size": 6366,
+      "uploadedDate": "2024-05-25T19:11:44.086Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-c63e1e725b38a79169e94e71625e4b33_Snapshot.png",
+      "md5": "be0b0138a6a3bdec7f69e7de1a8ee6d3",
+      "width": 150,
+      "height": 74,
+      "size": 4640,
+      "uploadedDate": "2024-05-25T19:11:44.595Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-2f54dbb948da4560086c7be6f97bb383_Snapshot.png",
+      "md5": "48aea091edbd65b386a3f969f2031d9b",
+      "width": 150,
+      "height": 74,
+      "size": 4696,
+      "uploadedDate": "2024-05-25T19:11:45.053Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-73b9f12e711dae04610eb60d768029fb_Snapshot.png",
+      "md5": "8160dbad06e05a10c5efb3bb585bac4c",
+      "width": 150,
+      "height": 74,
+      "size": 5221,
+      "uploadedDate": "2024-05-25T19:11:45.482Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-de0afbb94da8adade203d5aa9c45a826_Snapshot.png",
+      "md5": "2e24d72f690ce7175633e2a8870dead5",
+      "width": 150,
+      "height": 74,
+      "size": 5208,
+      "uploadedDate": "2024-05-25T19:11:45.929Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-45e740a10f32628477de3027dc87de67_Snapshot.png",
+      "md5": "d6d7cb5e653afcbb87495b7c93b37e4e",
+      "width": 150,
+      "height": 74,
+      "size": 4931,
+      "uploadedDate": "2024-05-25T19:11:46.453Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-01444f04f4ff7e485a0e7046c5929112_Snapshot.png",
+      "md5": "390815444a1d18bc6da9b6219d5471a7",
+      "width": 150,
+      "height": 74,
+      "size": 6134,
+      "uploadedDate": "2024-05-25T19:11:46.943Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NordVaderLibraryLogo1920x1080-1920x1080-efbc2a2dd28abbcfdacc1eccb1813ad0_Snapshot.png",
+      "md5": "36ff439380c3e0707e72e5124efcec30",
+      "width": 150,
+      "height": 74,
+      "size": 6343,
+      "uploadedDate": "2024-05-24T03:44:44.944Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-edf7af9c39cb2e16fe541c2688253717_Snapshot.png",
+      "md5": "09f442296fffb932f27217e3f5c7fbfb",
+      "width": 150,
+      "height": 74,
+      "size": 5750,
+      "uploadedDate": "2024-05-24T03:44:45.447Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-20016ada2908c5eb6df8cb140d45862c_Snapshot.png",
+      "md5": "5bc83bf1d44830f38804ad2776c13fc6",
+      "width": 150,
+      "height": 74,
+      "size": 5345,
+      "uploadedDate": "2024-05-24T03:44:46.006Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-c63e1e725b38a79169e94e71625e4b33_Snapshot.png",
+      "md5": "be0b0138a6a3bdec7f69e7de1a8ee6d3",
+      "width": 150,
+      "height": 74,
+      "size": 4640,
+      "uploadedDate": "2024-05-24T03:44:46.475Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-2f54dbb948da4560086c7be6f97bb383_Snapshot.png",
+      "md5": "48aea091edbd65b386a3f969f2031d9b",
+      "width": 150,
+      "height": 74,
+      "size": 4696,
+      "uploadedDate": "2024-05-24T03:44:46.951Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-73b9f12e711dae04610eb60d768029fb_Snapshot.png",
+      "md5": "8160dbad06e05a10c5efb3bb585bac4c",
+      "width": 150,
+      "height": 74,
+      "size": 5221,
+      "uploadedDate": "2024-05-24T03:44:47.395Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-b91dfd6773ecfaf531beca6abd64501d_Snapshot.png",
+      "md5": "f76183c19ffe99aeafc18188bbf219d7",
+      "width": 150,
+      "height": 74,
+      "size": 5275,
+      "uploadedDate": "2024-05-24T03:44:47.818Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-de0afbb94da8adade203d5aa9c45a826_Snapshot.png",
+      "md5": "2e24d72f690ce7175633e2a8870dead5",
+      "width": 150,
+      "height": 74,
+      "size": 5208,
+      "uploadedDate": "2024-05-24T03:44:48.321Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-45e740a10f32628477de3027dc87de67_Snapshot.png",
+      "md5": "d6d7cb5e653afcbb87495b7c93b37e4e",
+      "width": 150,
+      "height": 74,
+      "size": 4931,
+      "uploadedDate": "2024-05-24T03:44:48.852Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-01444f04f4ff7e485a0e7046c5929112_Snapshot.png",
+      "md5": "390815444a1d18bc6da9b6219d5471a7",
+      "width": 150,
+      "height": 74,
+      "size": 6134,
+      "uploadedDate": "2024-05-24T03:44:49.339Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-06-01T05:21:00.763Z",
+  "lastModifiedDate": "2024-12-23T16:55:24.850Z",
+  "customAttributes": {},
+  "entitlementName": "59d7900df577440d9466ca6e4ef74fb1",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "0ad05d8673364a5a8c20fd7ed92ec743",
+      "appId": "NordVaderLibrary_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2024-06-15T03:44:00.000Z",
+      "releaseNote": "add new features",
+      "versionTitle": "0.03_4_27"
+    },
+    {
+      "id": "fe5e6d4ccbb7439e9d5d96e4d77f18a6",
+      "appId": "NordVaderLibrary_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android"
+      ],
+      "dateAdded": "2024-05-24T00:00:00.000Z",
+      "releaseNote": "add new features",
+      "versionTitle": "0.03_5_3"
+    },
+    {
+      "id": "9ecc2d29a9d5491c99ff8d48979e2bbb",
+      "appId": "NordVaderLibrary_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android"
+      ],
+      "dateAdded": "2024-05-24T00:00:00.000Z",
+      "releaseNote": "add new features",
+      "versionTitle": "0.03_5_4"
+    }
+  ],
+  "developer": "NordVader Inc.",
+  "developerId": "o-64789f5q79t74b6p779ysjcdclqlc9",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "ageGatings": {},
+  "applicationId": "",
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,98 @@
+{
+  "id": "2cf8ff5a023d47efb2f83da48c150b12",
+  "title": "Decay: Destroy Actors the Proper Way",
+  "description": "A subsystem for Unreal Engine 5 for handling the destruction of Actors and Components",
+  "longDescription": "<h1>What does Decay do?</h1><p>It is more than typical for new developers to destroy inactive Actors, such as corpses or hit impacts, after a certain amount of time. While this may work well in the short term for some games, it can cause serious performance issues when you start having dozens or even hundreds of these &#39;dead&#39; Actors present.</p><p><br /></p><p>Decay allows you to register an inactive Actor (or Component) to a Decay Instance (group) and Decay will decide when to destroy this Actor based on the game&#39;s current state. This ensures your game keeps running smoothly.</p><p><br /></p><p>Let&#39;s say you have a Decay Instance (group) for Corpses with the following settings { <strong>lifetime</strong>: 30s, <strong>max objects</strong>: 15 }:</p><ul><li>As soon as a character dies, instead of destroying it, you can register the Actor with the Corpses Decay Instance.</li><li>The character&#39;s corpse will remain to exist for a maximum of 30 seconds.</li><li>When the Corpses Decay Instance <strong>max objects </strong>limit has been reached (more than 15 corpses present), the oldest corpse will be immediately destroyed to make room for new the corpse.</li></ul><p><br /></p><p><br /></p><h1>How-to-use</h1><h3><br /></h3><h3>1. Create a Decay Instance</h3><p>A <strong>Decay Instance</strong> is a group of decayable objects in your game. We recommend making a Decay Instance for every type of decayable object in your game, for example, one for Corpses, another for Bullet Impacts and another for Foliage. This allows Corpses and Bullet Impacts to act independently from each other. Alternatively, you could assign a Decay Instance in a priority fashion instead, such as VeryHigh, High, Normal and Low.</p><p>Decay Instances can be easily created by going to <strong>Project Settings &gt; Plugins &gt; Decay</strong> and then adding a <strong>CustomDecayInstance</strong>. The Tag you provide for the Decay Instance is what you will use to reference this Decay Instance later. Tags can be created just like another other <strong>Gameplay Tag</strong>.</p><p>The <strong>Default Decay Instance</strong> is the Decay Instance where objects will be automatically assigned to if no Decay Instance Tag is given and can be used as an &#39;other&#39; decay group.</p><p><br /></p><p><br /></p><p><br /></p><h3>2. Adding an Actor or ActorComponent to a Decay Instance</h3><p>Instead of destroying an Actor or ActorComponent when it enters an inactive state (immediately or after time has passed), as you typically would, register the object with a Decay Instance by either:</p><h4><br /></h4><h4>Default Decay Instance</h4><ul><li>DECAY_DEFAULT_ADD(ObjectPtr) (preferred)</li><li>GetWorld()-&gt;GetSubsystem&lt;UDecaySubsystem&gt;()-&gt;GetDefaultDecayInstance()-&gt;AddObject(ObjectPtr)</li></ul><h4><br /></h4><h4>Custom Decay Instance</h4><ul><li>DECAY_ADD(DecayInstanceName, ObjectPtr) (preferred)</li><li>GetWorld()-&gt;GetSubsystem&lt;UDecaySubsystem&gt;()-&gt;GetDecayInstance(DecayInstanceName)-&gt;AddObject(ObjectPtr)</li></ul><p><strong>Blueprint</strong></p><ul><li>See the screenshot (<strong>Add Actor To Decay</strong> and <strong>Add Component To Decay</strong> nodes)</li><li>Get Decay Subsystem -&gt; Get Decay Instance -&gt; Add Object</li></ul><h3><br /></h3><h3>3. And more</h3><p>That&#39;s all you need to know to use Decay. For anything else, such as disabling Decay Instances or manually destroying objects, feel free to read the documentation within the code.</p>",
+  "technicalDetails": "<p>Features: </p><ul><li> Keeps performance stable by limiting the number of inactive Actors or Components in the world.</li><li> Works with C&#43;&#43; and Blueprint</li><li> Fully configurable.</li></ul><p>Code Modules: </p><ul><li> Decay - Runtime</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 5</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows, macOS, Linux</p><p>Supported Target Build Platforms: Windows, macOS, Linux</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-26199af8f2bf8ecd4775d2af4c66cc56.jpg",
+      "md5": "26199af8f2bf8ecd4775d2af4c66cc56",
+      "width": 1920,
+      "height": 1080,
+      "size": 224525,
+      "uploadedDate": "2023-01-04T14:26:35.971Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/210535976-aae916db-3040-4f2b-853d-37dd1ae4061b - Copy-1920x1080-f611e57f43dd924e8c5b46aa7e3fafe9.png",
+      "md5": "f611e57f43dd924e8c5b46aa7e3fafe9",
+      "width": 1920,
+      "height": 1080,
+      "size": 134511,
+      "uploadedDate": "2023-01-04T14:26:36.323Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DecayDestroyActorstheProperWay_thumb-284x284-7f7d3356296698712ea8cb1174c6b9e8.png",
+      "md5": "7f7d3356296698712ea8cb1174c6b9e8",
+      "width": 284,
+      "height": 284,
+      "size": 134633,
+      "uploadedDate": "2023-01-04T14:26:36.648Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DecayDestroyActorstheProperWay_featured-894x488-61068f74849a078b5a8e670f2f24e60a.png",
+      "md5": "61068f74849a078b5a8e670f2f24e60a",
+      "width": 894,
+      "height": 488,
+      "size": 322364,
+      "uploadedDate": "2023-01-04T14:26:36.784Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-26199af8f2bf8ecd4775d2af4c66cc56_Snapshot.jpg",
+      "md5": "7e34404ed96d4aa32b783027d4b0d925",
+      "width": 150,
+      "height": 74,
+      "size": 3930,
+      "uploadedDate": "2023-01-04T14:26:36.209Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/210535976-aae916db-3040-4f2b-853d-37dd1ae4061b - Copy-1920x1080-f611e57f43dd924e8c5b46aa7e3fafe9_Snapshot.png",
+      "md5": "77bdf22d391b6a67dc16f3e46ca35f8f",
+      "width": 150,
+      "height": 74,
+      "size": 3681,
+      "uploadedDate": "2023-01-04T14:26:36.562Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-06-15T17:33:44.239Z",
+  "lastModifiedDate": "2024-10-14T20:39:25.011Z",
+  "entitlementName": "2cf8ff5a023d47efb2f83da48c150b12",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "6960b5f809174f36a8cf2b5dd8e974d4",
+      "appId": "Decay_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    }
+  ],
+  "developer": "Vixentail",
+  "developerId": "o-7mu4x4sjwydmebjrdbf9bfy942u8xv",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

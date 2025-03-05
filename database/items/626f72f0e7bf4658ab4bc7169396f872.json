@@ -1,0 +1,159 @@
+{
+  "id": "626f72f0e7bf4658ab4bc7169396f872",
+  "title": "Quiet Viewport Region",
+  "description": "It is a tool based on a user widget that selects the viewport region.",
+  "longDescription": "<p><a href=\"https://youtu.be/Gaj7Y47IEmE\" rel=\"nofollow\">Example Video</a></p><p>The main asset of the tool - <strong>WBP_ViewportRegion</strong>.</p><p>The widget works in two modes:</p><p><strong>1. Simple selection</strong> <em>(Crop Mode)</em>.</p><p>A user selects an area of the screen with the mouse. When the mouse is released, the dispatcher event <strong>NotifyRegionCompleted</strong> is called with the coordinates of the selected region then the widget is closed automatically.</p><p><strong>2. Selection with editing.</strong></p><p>The user selects a region of the screen and then changes the position and size of the region. When you click on the Close button, the dispatcher event <strong>NotifyOnClosed</strong> is called then the selection area is reset.</p><p><br /></p><p>For each selecting tick, the widget calls the dispatcher event <strong>NotifyMaskChanged</strong> with the coordinates and size of the selected region. </p><p><br /></p><p>Dispatcher events <strong>NotifyMaskChanged</strong> and <strong>NotifyRegionComplete</strong> return three values:</p><p><strong>Normalized Mask </strong><em>(LinearColor)</em>: Offsets from sides of the UV-Canvas.</p><p>It is used in post-process materials. Also, this value is written to the <em>MaterialParameterCollection</em> <strong>MPC_Region</strong>. In the example post-process material <strong>M_RegionPostprocess</strong>, I use parameters from this collection.</p><p><strong>Position </strong><em>(Vector2D)</em>: Coords of the upper left corner of the mask on the viewport.</p><p><strong>Size</strong> <em>(Vector2D)</em>: Mask size.</p><p><br /></p><p><strong>MPC_Region</strong> also contains some parameters for the customization appearance of the widget.</p><p>Scalar Parameters:</p><ul><li>DashLength - Set the length of the dashes on the region frame.</li><li>PostprocessMaskWeight - Enable/Disable Region mask in the post-process material.</li><li>DashWeight - Enable/Disable dashes on the region frame material</li></ul><p>Vector Parameters:</p><ul><li>RegionMask - Offsets from sides of the UV-Canvas.</li><li>RegionOutColor</li><li>RegionInnerColor</li></ul><p><br /></p><p>In the example, I&#39;ve shown only two cases where you can use the tool, but there are many other cases, for instance, to zoom viewport or crop some image, etc.</p><p><br /></p><p>Write me if you have any questions. I will be happy to help you implement this tool in your project.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Selecting viewport region</li><li>Moving and resizing the viewport region</li></ul><p>Number of Blueprints: 3</p><p>Number of Widgets: 2</p><p>UMG Materials: 2</p><p>Material Functions: 1</p><p>Material Parameter Collections: 1</p><p>Input: Mouse</p><p>Network Replicated: No</p><p>Supported Development Platforms:</p><p>Windows: Yes </p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2-1920x1080-175279ed606c4e9ad9bc8cdfeb026ec4.jpg",
+      "md5": "175279ed606c4e9ad9bc8cdfeb026ec4",
+      "width": 1920,
+      "height": 1080,
+      "size": 432098,
+      "uploadedDate": "2022-09-01T13:40:34.826Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot3-1920x1080-40aed42bea886ad9970651c552cd36a8.jpg",
+      "md5": "40aed42bea886ad9970651c552cd36a8",
+      "width": 1920,
+      "height": 1080,
+      "size": 501630,
+      "uploadedDate": "2022-09-01T13:40:35.201Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot4-1920x1080-6ae206da97530e8ab5f0787c4c0bb12e.jpg",
+      "md5": "6ae206da97530e8ab5f0787c4c0bb12e",
+      "width": 1920,
+      "height": 1080,
+      "size": 523219,
+      "uploadedDate": "2022-09-01T13:40:35.673Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot5-1920x1080-3e554871797d3fba74796e169d9d8593.jpg",
+      "md5": "3e554871797d3fba74796e169d9d8593",
+      "width": 1920,
+      "height": 1080,
+      "size": 540028,
+      "uploadedDate": "2022-09-01T13:40:36.007Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HowToUse-1920x1080-7562327e19a660f69df93ad6b1cde936.jpg",
+      "md5": "7562327e19a660f69df93ad6b1cde936",
+      "width": 1920,
+      "height": 1080,
+      "size": 773261,
+      "uploadedDate": "2022-09-01T18:27:54.716Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/QuietViewportRegion_thumb-284x284-ca88d27f9fa667967e27a46feb7ea75b.png",
+      "md5": "ca88d27f9fa667967e27a46feb7ea75b",
+      "width": 284,
+      "height": 284,
+      "size": 56966,
+      "uploadedDate": "2022-09-01T13:40:36.293Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/QuietViewportRegion_featured-894x488-3599377da709952f4e973406737b16a9.png",
+      "md5": "3599377da709952f4e973406737b16a9",
+      "width": 894,
+      "height": 488,
+      "size": 217509,
+      "uploadedDate": "2022-09-01T13:40:36.404Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HowToUse-1920x1080-7562327e19a660f69df93ad6b1cde936_Snapshot.jpg",
+      "md5": "366a962c7d9ca0406ea30bc212b8dfa8",
+      "width": 150,
+      "height": 74,
+      "size": 4608,
+      "uploadedDate": "2022-09-01T18:27:54.967Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2-1920x1080-175279ed606c4e9ad9bc8cdfeb026ec4_Snapshot.jpg",
+      "md5": "3b43f9fdd2de908721ec72dde94fac95",
+      "width": 150,
+      "height": 74,
+      "size": 4302,
+      "uploadedDate": "2022-09-01T13:40:35.063Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot3-1920x1080-40aed42bea886ad9970651c552cd36a8_Snapshot.jpg",
+      "md5": "c25ada62ae0fa751a6394333d78ed225",
+      "width": 150,
+      "height": 74,
+      "size": 4805,
+      "uploadedDate": "2022-09-01T13:40:35.524Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot4-1920x1080-6ae206da97530e8ab5f0787c4c0bb12e_Snapshot.jpg",
+      "md5": "0c4c933d392cb86b211ff02f5ffeed64",
+      "width": 150,
+      "height": 74,
+      "size": 5230,
+      "uploadedDate": "2022-09-01T13:40:35.909Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot5-1920x1080-3e554871797d3fba74796e169d9d8593_Snapshot.jpg",
+      "md5": "9bab8b3c3ca893706217c3a9977cd576",
+      "width": 150,
+      "height": 74,
+      "size": 5531,
+      "uploadedDate": "2022-09-01T13:40:36.248Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-09-03T19:23:56.465Z",
+  "lastModifiedDate": "2024-12-07T09:17:39.414Z",
+  "customAttributes": {},
+  "entitlementName": "626f72f0e7bf4658ab4bc7169396f872",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "af9cfb8753124b0c91c838ba5095e9d7",
+      "appId": "QuietVie626f72f0e7bfV1",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac"
+      ],
+      "dateAdded": "2022-09-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Quiet Viewport Region v.0.0"
+    }
+  ],
+  "developer": "Aleksandr Sidorov",
+  "developerId": "o-c70d30100843eda7b73634dcd26932",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

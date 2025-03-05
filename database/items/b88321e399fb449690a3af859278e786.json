@@ -1,0 +1,365 @@
+{
+  "id": "b88321e399fb449690a3af859278e786",
+  "title": "Physic Based Lawn Mower",
+  "description": "Driveable Physic Based Lawn Mower based on physic constraints and static meshes (not rigged) + Dynamic grass bp",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;6Nh48GgCb5I\" rel=\"nofollow\">Video</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;6Nh48GgCb5I\" rel=\"nofollow\">Demo</a></p><p><a href=\"https://drive.google.com/open?id&#61;1fBCNW4XjWI6-9hU9TokWR1bV5noCWvZp\" rel=\"nofollow\">Doc </a></p><p><a href=\"https://www.youtube.com/watch?v&#61;P3O9ByVhCPo&amp;feature&#61;youtu.be\" rel=\"nofollow\">Migration</a></p><p><a href=\"https://zerstorengames.com/index.html\" rel=\"nofollow\">Website</a></p><p><strong><u>UE5 PROJECT VERSION: Due to issues with physic constraints in UE5.0 we have to wait for UE5.1 to release the project since constraints will be fixed in the next engine version. More info here: </u></strong> <a href=\"https://issues.unrealengine.com/issue/UE-148444\" rel=\"nofollow\">https://issues.unrealengine.com/issue/UE-148444</a></p><p><br /></p><p><strong>This template features</strong>:</p><ol><li>A driveable physic constraints based lawn mower made with static meshes (not rigged). Easy to adjust and with the possibility to change parts to create other lawn mowers</li><li>Driver animation Blueprint. You can adjust the animation using one single animation pose and Ik or fabric transforms. This allows to dynamically move the driver</li><li>A Lawn field Blueprint, actor type, that can be used to create fields of different size using as many different grass static meshes you want. Grass has no collision and it&#39;s made using hierarchically instanced static meshes. Can be placed on landscape or on static meshes (doesn&#39;t work with BSP)</li><li>Grass cutting is made using a system that reduces the overall cpu usage to minimum as possible and that does not rely on grass collision or on ticks, overlaps, etc. It&#39;s just an event called that requires a location to work.</li><li>The already cut grass is also represented on the hud by a map that uses a render target to track the location where the grass was cut.</li><li>A static Lawn mower Blueprint with adjustable lights and colors (not every color can be obtained because the base color is orange red) The full Mower static Mesh has 80k triangles with 3 lods up to 10k triangles at lod 2 and has just 4 materials</li></ol>",
+  "technicalDetails": "<p><strong>Features</strong>:</p><ul><li>BP_Mower: Pawn class: Driveable, physic constraints based (not rigged no skeletal mesh) pawn</li><li>BP_Lawn: Actor Class: Drag and drop, configure size, grass types, grass height, cull distances, etc.</li><li>BP_Mower_Static: Actor class that can be used for static scenes</li><li>18 static meshes: 1 for the full mower (80k poly), the other for the mower split into single static meshes</li><li>4 materials for the mower: Body, Cabin, Wheels, Detail</li><li>27 textures</li><li>4096x4096 textures for the 4 Mower materials each has Diffuse, Normal, Ambient Occlusion, Metallic, and Roughness</li><li>2 FX: Mower smoke with adjustable color and grass cutting effect</li><li>4 sound cues and sound waves for the engine, the lawn, start, and stop.</li><li>1 Animation Blueprint using two bone ik and fabric or bone transforms to animate the driver that is using Epic skeleton</li><li>LODS are auto generated where necessary</li></ul><p><strong>Number of Blueprints</strong>: 3: BP_Mower: Pawn class &#43; BP_Mower_Static: Actor class &#43; BP_Lawn: Actor Class</p><p><strong>Input</strong>: Gamepad, Keyboard, Mouse</p><p><strong>Network Replicated</strong>: NO</p><p><strong>Supported Development Platforms</strong>: Windows 64 Bits</p><p><strong>Supported Target Build Platforms</strong>: Windows 64 Bits</p><p><strong>Documentation</strong>: See Above</p><p><strong>Important/Additional Notes</strong>:</p><ul><li>The mower depicted here is purely fictional.</li><li>The grass used is derived from the EPIC(TM) Kite Demo Field Grass</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.45.21.26-1920x1080-2175e7b3a1d061bba631a2916d81ba07.jpg",
+      "md5": "2175e7b3a1d061bba631a2916d81ba07",
+      "width": 1920,
+      "height": 1080,
+      "size": 705732,
+      "uploadedDate": "2019-03-27T08:57:05.324Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.33.33.61-1920x1080-e0cf92c0e166d56bf40f9b49e575655f.png",
+      "md5": "e0cf92c0e166d56bf40f9b49e575655f",
+      "width": 1920,
+      "height": 1080,
+      "size": 2772474,
+      "uploadedDate": "2019-03-27T08:57:00.815Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.46.21.10-1920x1080-92e01e799eab10fe59ae0359069323bc.jpg",
+      "md5": "92e01e799eab10fe59ae0359069323bc",
+      "width": 1920,
+      "height": 1080,
+      "size": 610953,
+      "uploadedDate": "2019-03-27T08:57:03.212Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.33.52.75-1920x1080-6d69afea3dfcdcffe8aff9bd3d364cc1.png",
+      "md5": "6d69afea3dfcdcffe8aff9bd3d364cc1",
+      "width": 1920,
+      "height": 1080,
+      "size": 1575039,
+      "uploadedDate": "2019-03-27T08:57:01.170Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.34.08.38-1920x1080-d0282984dad3f444099a081acfc75ae9.png",
+      "md5": "d0282984dad3f444099a081acfc75ae9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1957423,
+      "uploadedDate": "2019-03-27T08:57:01.558Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.34.35.83-1920x1080-26e98e3d31a4950a2a4ba3a44511c140.png",
+      "md5": "26e98e3d31a4950a2a4ba3a44511c140",
+      "width": 1920,
+      "height": 1080,
+      "size": 1936111,
+      "uploadedDate": "2019-03-27T08:57:02.154Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.34.38.99-1920x1080-1fa8e55e7692384a9ade95ad92bc2809.png",
+      "md5": "1fa8e55e7692384a9ade95ad92bc2809",
+      "width": 1920,
+      "height": 1080,
+      "size": 1861231,
+      "uploadedDate": "2019-03-27T08:57:02.527Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.41.46.17-1920x1080-7ff79a0cda989c851362d9cdb4eced89.png",
+      "md5": "7ff79a0cda989c851362d9cdb4eced89",
+      "width": 1920,
+      "height": 1080,
+      "size": 2153603,
+      "uploadedDate": "2019-03-27T08:57:02.875Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.46.16.91-1920x1080-0d6ad8ecad2c9d65897a2f6e72378665.jpg",
+      "md5": "0d6ad8ecad2c9d65897a2f6e72378665",
+      "width": 1920,
+      "height": 1080,
+      "size": 771172,
+      "uploadedDate": "2019-03-27T08:57:03.499Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.46.02.37-1920x1080-132905047fd4334974a7161d2da0b537.jpg",
+      "md5": "132905047fd4334974a7161d2da0b537",
+      "width": 1920,
+      "height": 1080,
+      "size": 827539,
+      "uploadedDate": "2019-03-27T08:57:03.839Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.45.45.78-1920x1080-4e66d76a80de4ddec31f7346088ac7c6.jpg",
+      "md5": "4e66d76a80de4ddec31f7346088ac7c6",
+      "width": 1920,
+      "height": 1080,
+      "size": 543881,
+      "uploadedDate": "2019-03-27T08:57:04.282Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.45.33.66-1920x1080-ff164048ac941738d6823a9bbb37b80c.jpg",
+      "md5": "ff164048ac941738d6823a9bbb37b80c",
+      "width": 1920,
+      "height": 1080,
+      "size": 584244,
+      "uploadedDate": "2019-03-27T08:57:04.761Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.03.27 - 09.45.29.34-1920x1080-b326751ccec4e183a41b121e34b14cd4.jpg",
+      "md5": "b326751ccec4e183a41b121e34b14cd4",
+      "width": 1920,
+      "height": 1080,
+      "size": 571334,
+      "uploadedDate": "2019-03-27T08:57:05.057Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PhysicBasedLawnMower_thumb-284x284-fb51b9cb028f70c344ae115248ef9bed.png",
+      "md5": "fb51b9cb028f70c344ae115248ef9bed",
+      "width": 284,
+      "height": 284,
+      "size": 177613,
+      "uploadedDate": "2019-03-27T08:57:05.557Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DriveablePhysicBasedLawnMower_featured-894x488-a7786026e5f84a44fcb27fc3901e74f5.png",
+      "md5": "a7786026e5f84a44fcb27fc3901e74f5",
+      "width": 894,
+      "height": 488,
+      "size": 1228824,
+      "uploadedDate": "2019-03-27T08:58:42.082Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.33.33.61-1920x1080-e0cf92c0e166d56bf40f9b49e575655f_Snapshot.png",
+      "md5": "8947ac90af0cfe7208ca75acf91bb382",
+      "width": 150,
+      "height": 74,
+      "size": 23245,
+      "uploadedDate": "2019-03-27T08:57:01.023Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.33.52.75-1920x1080-6d69afea3dfcdcffe8aff9bd3d364cc1_Snapshot.png",
+      "md5": "e1f1a2f5399216b8c50d812d670ab912",
+      "width": 150,
+      "height": 74,
+      "size": 18628,
+      "uploadedDate": "2019-03-27T08:57:01.366Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.34.08.38-1920x1080-d0282984dad3f444099a081acfc75ae9_Snapshot.png",
+      "md5": "737fcd02ae94e1f822d8889b493a7494",
+      "width": 150,
+      "height": 74,
+      "size": 18918,
+      "uploadedDate": "2019-03-27T08:57:01.724Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.34.35.83-1920x1080-26e98e3d31a4950a2a4ba3a44511c140_Snapshot.png",
+      "md5": "06d2029a144296e0ca62a955ffdb5c69",
+      "width": 150,
+      "height": 74,
+      "size": 20553,
+      "uploadedDate": "2019-03-27T08:57:02.322Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.34.38.99-1920x1080-1fa8e55e7692384a9ade95ad92bc2809_Snapshot.png",
+      "md5": "f23a3df5b35cde0c1dbee3c92ed71a3e",
+      "width": 150,
+      "height": 74,
+      "size": 20331,
+      "uploadedDate": "2019-03-27T08:57:02.701Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.41.46.17-1920x1080-7ff79a0cda989c851362d9cdb4eced89_Snapshot.png",
+      "md5": "af080ab939c3543c3523042ab167bc16",
+      "width": 150,
+      "height": 74,
+      "size": 22322,
+      "uploadedDate": "2019-03-27T08:57:03.068Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.46.21.10-1920x1080-92e01e799eab10fe59ae0359069323bc_Snapshot.jpg",
+      "md5": "b8f3749ca4e251393cdae56f04e0185e",
+      "width": 150,
+      "height": 74,
+      "size": 3114,
+      "uploadedDate": "2019-03-27T08:57:03.366Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.46.16.91-1920x1080-0d6ad8ecad2c9d65897a2f6e72378665_Snapshot.jpg",
+      "md5": "96389a0091f62579687e83fe75043945",
+      "width": 150,
+      "height": 74,
+      "size": 2810,
+      "uploadedDate": "2019-03-27T08:57:03.661Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.46.02.37-1920x1080-132905047fd4334974a7161d2da0b537_Snapshot.jpg",
+      "md5": "d9bce6e3fd9d6c407e8946c57212fc07",
+      "width": 150,
+      "height": 74,
+      "size": 2351,
+      "uploadedDate": "2019-03-27T08:57:04.167Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.45.45.78-1920x1080-4e66d76a80de4ddec31f7346088ac7c6_Snapshot.jpg",
+      "md5": "de28115cf6e9cbf8d6ac6e4c3869401a",
+      "width": 150,
+      "height": 74,
+      "size": 2567,
+      "uploadedDate": "2019-03-27T08:57:04.419Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.45.33.66-1920x1080-ff164048ac941738d6823a9bbb37b80c_Snapshot.jpg",
+      "md5": "23b2567a6ee2fcd916e72d81dc8bb145",
+      "width": 150,
+      "height": 74,
+      "size": 2757,
+      "uploadedDate": "2019-03-27T08:57:04.913Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.45.29.34-1920x1080-b326751ccec4e183a41b121e34b14cd4_Snapshot.jpg",
+      "md5": "b569de883d94598d6ab47a90cd23b1b2",
+      "width": 150,
+      "height": 74,
+      "size": 2898,
+      "uploadedDate": "2019-03-27T08:57:05.204Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.27 - 09.45.21.26-1920x1080-2175e7b3a1d061bba631a2916d81ba07_Snapshot.jpg",
+      "md5": "45131dd8d50982a72aac240a77622d87",
+      "width": 150,
+      "height": 74,
+      "size": 2866,
+      "uploadedDate": "2019-03-27T08:57:05.471Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.01 - 15.30.09.34-1920x1080-7ba50783a9850cc42a8626c5771a3155_Snapshot.png",
+      "md5": "88a0362b175561b7d12a2e08d7f9361c",
+      "width": 150,
+      "height": 74,
+      "size": 14105,
+      "uploadedDate": "2019-03-01T14:40:42.243Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.01 - 15.30.14.48-1920x1080-fdfd714dee46298808342647edf19c68_Snapshot.png",
+      "md5": "23e0ae585b7506b9f705db81e1504938",
+      "width": 150,
+      "height": 74,
+      "size": 18181,
+      "uploadedDate": "2019-03-01T14:40:42.554Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.03.01 - 15.30.17.09-1920x1080-600ed16d6fa08402b2b435403b67ec4b_Snapshot.png",
+      "md5": "5303c59c34e5f9722e6fb0e6670544a9",
+      "width": 150,
+      "height": 74,
+      "size": 18165,
+      "uploadedDate": "2019-03-01T14:40:42.860Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-03-28T15:15:23.238Z",
+  "lastModifiedDate": "2024-09-18T10:04:28.694Z",
+  "customAttributes": {},
+  "entitlementName": "b88321e399fb449690a3af859278e786",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "5f534b47092b41d9a34806d50eeae9b7",
+      "appId": "PhysicBab88321e399fbV1",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-03-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Mower 421"
+    },
+    {
+      "id": "d51ab096bb7f43429782cb5c0d3dd5d7",
+      "appId": "Driveablb88321e399fbV2",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Mower 422"
+    },
+    {
+      "id": "0ad9fce449284f54a2a4001eb0ecc908",
+      "appId": "Driveablb88321e399fbV3",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Mower 423"
+    },
+    {
+      "id": "3b4121f07def4b38ac786a2ba4f07cc1",
+      "appId": "Driveablb88321e399fbV4",
+      "compatibleApps": [
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-12-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Mower 424"
+    }
+  ],
+  "developer": "ZerstorenGames",
+  "developerId": "o-bkf3kxdvsarf99sprznlj2gj3fyqx4",
+  "endOfSupport": false,
+  "unsearchable": false
+}

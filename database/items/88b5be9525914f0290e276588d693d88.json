@@ -1,0 +1,166 @@
+{
+  "id": "88b5be9525914f0290e276588d693d88",
+  "title": "Orbital Mechanics and Gravity Plugin",
+  "description": "The orbital mechanics and gravity plugin lets you quickly simulate orbits, do orbital mechanics calculations, and experiment with gravity sandboxes in unreal engine.",
+  "longDescription": "Video Quickstart: <a href=\"https://www.youtube.com/watch?v=jzugf55Idrw\">youtube.com/watch?v=jzugf55Idrw</a>\n\nThe Orbit and Gravity C++ plugin lets you create gravity sandboxes, place actors in orbit, and perform orbital mechanics calculations.\n\nThe plugin uses Newton’s Law of Gravity to apply a realistic gravitational force affected by distance and a gravitational size parameter. The plugin can be used to create orbiting bodies in a celestial environment (e.g. a solar system), set the orbit of a spaceship around a planet, or, for games set on the ground, create magnetism and levitation effects on actors (e.g. an anti-gravity floor or pneumatic tube).\n\nFeatures: \n• ­Three types of physics calculation modes (kinematic, Kepler, and blend) \n• ­Elliptical, Parabolic, and Hyperbolic orbits supported \n• ­Orbital prediction based on a future time \n• ­50+ orbital mechanics calculations available (e.g. inclination, true anomaly) \n• ­Orbits can be nested, for example, a moon orbiting a planet, while a planet orbits a star. \n• ­Incorporates player input as acceleration (delta V) if actor is possessed by a player \n• ­Physics substepping (kinematic mode) \n• ­Configurable time scale; use as real time or with a selected timestep \n• ­Easily create projectiles (start velocity can be specified in local space) \n• ­Anti­gravity (kinematic only) \n• ­Calculate gravity from the center of the actor (e.g. a planet) or from the StaticMesh’s closest point (e.g. e.g. applying effect to a floor or wall)",
+  "technicalDetails": "List of Modules: \n• OrbitMovement (Runtime)\n\nList of Features: \n• “Float” variable type used for all calculations. \n• Kinematic physics mode: Calculates the gravitational effect for every GravityMass actor in the scene, applies the change in velocity to each orbiting actor, and then updates the position. Kinematic can be used to incorporate gravity for multiple GravityMass actors, but the stability of the orbit is affected by how long each timestep is. \n• Kepler physics mode: Generates a mathematically precise orbit based on one GravityMass. The orbit will stay consistent regardless of framerate. Numerical approximation is required so this will be more computationally intensive than other modes. \n• Blend physics mode: Incorporates elements from both methods for more efficient calculations but slightly less precise than Kepler mode. Blend calculates the correct velocity and then updates the orbiting body kinematically. Maintains the correct distance from the GravityMass, but orbit timing may be less accurate than Kepler mode. \n• Example map (showing a variety of orbit types) \n• Over 50 orbital mechanical functions and parameters\n\nIntended Platforms: Windows\nPlatforms Tested: Windows\nDocumentation Included: Yes",
+  "keyImages": [
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/item/OrbitMovement_featured-1920x1080-0fa2b0387937070614317467d7cb2c01.png",
+      "md5": "0fa2b0387937070614317467d7cb2c01",
+      "width": 1920,
+      "height": 1080,
+      "size": 300294,
+      "uploadedDate": "2016-06-13T15:04:58.790Z"
+    },
+    {
+      "type": "NewFeatured",
+      "url": "https://cdn1.epicgames.com/ue/item/OrbitMovement_FeaturedNew-894x488-52a76544ed0f16ef5186ec6473cf4224.png",
+      "md5": "52a76544ed0f16ef5186ec6473cf4224",
+      "width": 894,
+      "height": 488,
+      "size": 124357,
+      "uploadedDate": "2016-06-13T15:04:56.584Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/OrbitMovement_screenshot_1-1920x1080-d7f9cb1f4a366ccd0e9f358104258487.png",
+      "md5": "d7f9cb1f4a366ccd0e9f358104258487",
+      "width": 1920,
+      "height": 1080,
+      "size": 467666,
+      "uploadedDate": "2016-06-13T15:04:55.305Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/OrbitMovement_screenshot_2-1920x1080-6fc2f275702d53c71e19c130f20e16fe.png",
+      "md5": "6fc2f275702d53c71e19c130f20e16fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 1000773,
+      "uploadedDate": "2016-06-13T15:04:53.355Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/OrbitMovement_screenshot_3-1920x1080-e54c470b332406a835e4c823b5b40ef2.png",
+      "md5": "e54c470b332406a835e4c823b5b40ef2",
+      "width": 1920,
+      "height": 1080,
+      "size": 779201,
+      "uploadedDate": "2016-06-13T15:04:51.179Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/OrbitMovement_screenshot_4-1920x1080-bfdf0a5c2f604c20d677bb1c599f465f.png",
+      "md5": "bfdf0a5c2f604c20d677bb1c599f465f",
+      "width": 1920,
+      "height": 1080,
+      "size": 361677,
+      "uploadedDate": "2016-06-13T15:04:49.278Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/OrbitMovement_screenshot_5-1920x1080-b908677358f02950e546a5736127b394.png",
+      "md5": "b908677358f02950e546a5736127b394",
+      "width": 1920,
+      "height": 1080,
+      "size": 423656,
+      "uploadedDate": "2016-06-13T15:04:45.830Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/OrbitMovement_screenshot_6-1920x1080-ec9ebac32078ccf126096066a6ca9d44.png",
+      "md5": "ec9ebac32078ccf126096066a6ca9d44",
+      "width": 1920,
+      "height": 1080,
+      "size": 395298,
+      "uploadedDate": "2016-06-13T15:04:45.678Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/OrbitMovement_screenshot_7-1920x1080-757dc9c78c8e2cee95fcf748332e0e65.png",
+      "md5": "757dc9c78c8e2cee95fcf748332e0e65",
+      "width": 1920,
+      "height": 1080,
+      "size": 558475,
+      "uploadedDate": "2016-06-13T15:04:41.762Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/OrbitMovement_screenshot_8-1920x1080-5a53101db599d735e53b728ae14a7634.png",
+      "md5": "5a53101db599d735e53b728ae14a7634",
+      "width": 1920,
+      "height": 1080,
+      "size": 842954,
+      "uploadedDate": "2016-06-13T15:04:40.585Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/item/OrbitMovement_Thumb-284x284-16e3b89a50e7c563c622065b318136af.png",
+      "md5": "16e3b89a50e7c563c622065b318136af",
+      "width": 284,
+      "height": 284,
+      "size": 39294,
+      "uploadedDate": "2016-06-13T15:04:37.484Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2016-01-08T19:24:54.593Z",
+  "lastModifiedDate": "2017-03-30T05:55:05.882Z",
+  "entitlementName": "88b5be9525914f0290e276588d693d88",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "c87db98ff3ba482ea5950a5b6ab86bf4",
+      "appId": "OrbitMovement_4.11",
+      "compatibleApps": [
+        "UE_4.11"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2016-06-08T00:00:00.000Z"
+    },
+    {
+      "id": "e1135a05c9a743f8a2a49e153c278829",
+      "appId": "OrbitMovement_4.12",
+      "compatibleApps": [
+        "UE_4.12"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2016-06-08T00:00:00.000Z"
+    },
+    {
+      "id": "79ef566fea4b4dc1b2b502aae49cc8ef",
+      "appId": "OrbitMovement_4.13",
+      "compatibleApps": [
+        "UE_4.13"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2016-09-12T00:00:00.000Z"
+    }
+  ],
+  "developer": "David",
+  "developerId": "o-afdddb61c749149740126784ff724b",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

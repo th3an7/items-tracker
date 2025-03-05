@@ -1,0 +1,403 @@
+{
+  "id": "1c8e63176d89495caca5d84426c01d39",
+  "title": "ImageProcess",
+  "description": "Process the image -color mapping, image contour recognition, mosaic, frosted glass, oil painting, sketch, relief, lens, blur, face detection, cat face detection, license plate detection, etc.",
+  "longDescription": "<p>Process the image -color mapping, image contour recognition, mosaic, frosted glass, oil painting, sketch, relief, lens, blur, face detection, cat face detection, license plate detection, etc.</p><p><br /></p><blockquote>Open the Content Browser window, in the upper right corner of the Content Browser, click the Settings button, This will open a menu where you can adjust various settings for the current instance of the Content Browser, Under the View category, check the Show Plugin Content option, Find the ImageProcess-&gt;Content-&gt;ImageProcess directory, There are sample levels and related assets inside.</blockquote><p><br /></p><p>Change log : (2023/06)</p><p>Support 5.2 version</p><p>5.1-5.2&#xff1a;</p><p>Added RenderTargetToTexture2D function.</p><p>Add MediaTextureToTexture2D function.</p><p>Note that if the conversion is performed every frame or some calculation-intensive functions will cause stuttering.</p><p><br /></p><blockquote><strong>In UE5, you need to add plugin content in Additional Asset Directories to Cook in the project settings. Otherwise, it will crash when used after packaging. And when loading pictures, try to use PNG pictures, JPG still has problems that have not been solved.</strong></blockquote><p><br /></p><p>Including some common functions (get all the file names in the path, load and save the picture file, crop the picture, superimpose the picture, reset the picture size, etc.)</p><p><br /></p><ul><li>Most functions have the original function and the function P and the function TMS.</li><li>FunctionP&#61;&#61;&gt;&gt;The input image can be the disk path where the image is located.</li><li>FunctionTMS&#61;&#61;&gt;&gt;The input image can be the FTAndM structure returned by other functions. (Mainly used to accept Mat).</li><li>The face detection function will have different accuracy rates based on different cascaded classifiers.</li><li> Most area parameters are FBox, from Min coordinate point to Max coordinate point. For example, if it is Min (100, 100)-Max (100, 100), then the area of this area is equal to 0 instead of taking the width 100 and height 100 from Min (100, 100).</li><li>Numerical parameters generally have default values. If the value is modified to a wrong value and the wrong result is obtained, the value can be restored to the default value.</li><li>When setting the texture properties, you also need to set the value of MipGenSettings to NoMipmaps.</li><li> GetPathFiles--Get all file names in the disk path</li><li> LoadFileToTexture2D--Add image files to Texture2D through the disk file path</li><li> SaveTexture2DToFile--Save Texture2D to the disk file of the corresponding path, and determine the file type according to the file name</li><li>ResizeTexture2D--Reset the size of Texture2D</li><li>CutOutTexture2D--Cut out a part of the area from Texture2D</li><li>OverlayTexture2D--Overlay another Texture2D to the specified area for Texture2D</li><li>MakeTAndM--Create a TAndM</li><li>FindContours--Identify the contour in the image and return the point data of the contour</li><li>ApplyColorMap--Apply a color map to Texture2D</li><li>Mosaic--Apply a mosaic filter to the specified area for Texture2D</li><li>FrostedGlass--Apply a Frosted glass filter to the specified area for Texture2D</li><li>OilPainting--Apply a Oil Painting filter to the specified area for Texture2D</li><li>Sketch--Convert Texture2D to sketch filter</li><li>ReliefSculpture--Convert Texture2D to Relief Sculpture filter</li><li>Lens--Convert Texture2D to Lens filter</li><li>Blurred--Convert Texture2D to Blurred filter</li><li>FaceDetection--According to the use of different CascadeClassifier to carry out different target detection.</li></ul>",
+  "technicalDetails": "<p>Code Modules:</p><ul><li> ImageProcessBPFunctionLibrary [Runtime]</li></ul><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: No</p><p>Supported Development Platforms: (“Windows”)</p><p>Supported Target Build Platforms: (&#34;Win64&#34;, &#34;Win32&#34;)</p><p>Doc: <a href=\"https://docs.google.com/document/d/e/2PACX-1vR1_9pVec23NIMNUeGuZpexgNHHF6Jk0IpMZ24p4HUFFGEW3m_alrHXiyVC4FZ3PpbbBFefGKvRF0HQ/pub\" rel=\"nofollow\">Link</a></p><p>Example: <a href=\"https://1drv.ms/u/s!ArUXKe9rc5cykTziSyTrXoSAa0Tz?e&#61;4HNbLS\" rel=\"nofollow\">Link</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/IP-1920x1080-54db66c1944d2f19a22d402556266faf.png",
+      "md5": "54db66c1944d2f19a22d402556266faf",
+      "width": 1920,
+      "height": 1080,
+      "size": 195272,
+      "uploadedDate": "2022-04-26T02:37:25.312Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ApplyColorMap-1920x1080-4a352b9d7dd2a0cc9fb9ca0c5050d254.jpg",
+      "md5": "4a352b9d7dd2a0cc9fb9ca0c5050d254",
+      "width": 1920,
+      "height": 1080,
+      "size": 826952,
+      "uploadedDate": "2021-06-01T13:30:00.097Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Stylization-1920x1080-65a58ada79148edb5ade62d3e951b2d6.jpg",
+      "md5": "65a58ada79148edb5ade62d3e951b2d6",
+      "width": 1920,
+      "height": 1080,
+      "size": 779487,
+      "uploadedDate": "2021-06-01T13:30:00.501Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FaceDetection-1920x1080-60f68fd7e2fe113bfd6769f5355cd0d4.jpg",
+      "md5": "60f68fd7e2fe113bfd6769f5355cd0d4",
+      "width": 1920,
+      "height": 1080,
+      "size": 581313,
+      "uploadedDate": "2021-06-01T13:30:00.903Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ImageProcess_thumb-284x284-0af0b28a418e26e773637bf5a8181179.png",
+      "md5": "0af0b28a418e26e773637bf5a8181179",
+      "width": 284,
+      "height": 284,
+      "size": 110221,
+      "uploadedDate": "2021-06-01T13:30:01.209Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ImageProcess_featured-894x488-aaaa64d3505d8e37e68efd92badd4636.png",
+      "md5": "aaaa64d3505d8e37e68efd92badd4636",
+      "width": 894,
+      "height": 488,
+      "size": 438678,
+      "uploadedDate": "2021-06-01T13:30:01.307Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/IP-1920x1080-54db66c1944d2f19a22d402556266faf_Snapshot.png",
+      "md5": "9969a944f87e9c3797852343e607d247",
+      "width": 150,
+      "height": 74,
+      "size": 4624,
+      "uploadedDate": "2022-04-26T02:37:25.542Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ApplyColorMap-1920x1080-4a352b9d7dd2a0cc9fb9ca0c5050d254_Snapshot.jpg",
+      "md5": "12e9e3347ec3b19a26b4d58e7a945e00",
+      "width": 150,
+      "height": 74,
+      "size": 7498,
+      "uploadedDate": "2021-06-01T13:30:00.367Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Stylization-1920x1080-65a58ada79148edb5ade62d3e951b2d6_Snapshot.jpg",
+      "md5": "bdb1c340a9216f80f59147fdc1e0487a",
+      "width": 150,
+      "height": 74,
+      "size": 6616,
+      "uploadedDate": "2021-06-01T13:30:00.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FaceDetection-1920x1080-60f68fd7e2fe113bfd6769f5355cd0d4_Snapshot.jpg",
+      "md5": "d23627dd2a735727eb750ebaa6f7cba8",
+      "width": 150,
+      "height": 74,
+      "size": 4734,
+      "uploadedDate": "2021-06-01T13:30:01.163Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/fc1-1920x1080-706451692ed6bd2e23cdbe230663dd0c_Snapshot.jpg",
+      "md5": "078c2c232ef047fa4dc74bef23f58dbf",
+      "width": 150,
+      "height": 74,
+      "size": 4709,
+      "uploadedDate": "2021-05-31T12:39:09.233Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/fd1-1920x1080-7a3ba2bd4dc0f70086bdc8be35c22e4f_Snapshot.jpg",
+      "md5": "926786a9558941bc59a9fae713323294",
+      "width": 150,
+      "height": 74,
+      "size": 4275,
+      "uploadedDate": "2021-05-31T12:39:09.571Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/fd2-1920x1080-79b5d64d43852c8677f15ca791192b45_Snapshot.jpg",
+      "md5": "70b100859ba596e1ea6d12882a3e414b",
+      "width": 150,
+      "height": 74,
+      "size": 4862,
+      "uploadedDate": "2021-05-31T12:39:09.922Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/fd3-1920x1080-4c6c3d307ffdb92f0ccfa3f2060a0c05_Snapshot.jpg",
+      "md5": "89ade6729db542127dc675426df5272f",
+      "width": 150,
+      "height": 74,
+      "size": 4399,
+      "uploadedDate": "2021-05-31T12:39:10.332Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/fd4-1920x1080-4836ecf12e96f5d03c01b2358c20ddb3_Snapshot.jpg",
+      "md5": "31def8885a0e1b0b6a0d9ad707b050ac",
+      "width": 150,
+      "height": 74,
+      "size": 5122,
+      "uploadedDate": "2021-05-31T12:39:10.663Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/fd5-1920x1080-e7157637f4359bfb428d296d0c932856_Snapshot.jpg",
+      "md5": "56fc53b82d382d79eec771882cce18f0",
+      "width": 150,
+      "height": 74,
+      "size": 5228,
+      "uploadedDate": "2021-05-31T12:39:11.014Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s1-1920x1080-d96dde715ed2cf514e190446897dd87e_Snapshot.jpg",
+      "md5": "6c8d9a3a1a30da385ac41a70f22483b0",
+      "width": 150,
+      "height": 74,
+      "size": 5400,
+      "uploadedDate": "2021-05-31T12:39:11.394Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s2-1920x1080-98075dd0312045f6aba6a317d2417b72_Snapshot.jpg",
+      "md5": "716398e98fc7adc88bf716880648e856",
+      "width": 150,
+      "height": 74,
+      "size": 5415,
+      "uploadedDate": "2021-05-31T12:39:11.803Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s3-1920x1080-a10d3067cd769880f7cb47644b2f6962_Snapshot.jpg",
+      "md5": "6476145b561236bbf146a99f89676b05",
+      "width": 150,
+      "height": 74,
+      "size": 5429,
+      "uploadedDate": "2021-05-31T12:39:12.110Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s4-1920x1080-4a35c576972908a6a75c1c439e57042d_Snapshot.jpg",
+      "md5": "09e67fc16f101bcc34a04c4fb3b28ebf",
+      "width": 150,
+      "height": 74,
+      "size": 5828,
+      "uploadedDate": "2021-05-31T12:39:12.453Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s4a-1920x1080-4a4c4aa276a406e5a490096abd7fffbc_Snapshot.jpg",
+      "md5": "d8dd7f0fe4c2f3aeaa9a9949fb0b05f1",
+      "width": 150,
+      "height": 74,
+      "size": 5949,
+      "uploadedDate": "2021-05-31T12:39:12.787Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s5-1920x1080-04eb204b46fca5414a9d0547439601b1_Snapshot.jpg",
+      "md5": "164cfb274abb1ae39dc1ab055404a049",
+      "width": 150,
+      "height": 74,
+      "size": 4941,
+      "uploadedDate": "2021-05-31T12:39:13.164Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s5a-1920x1080-427ab2348d7a6c40200d9737fd0ee78d_Snapshot.jpg",
+      "md5": "ca815644b2a76e418f6c30f587840f0f",
+      "width": 150,
+      "height": 74,
+      "size": 4934,
+      "uploadedDate": "2021-05-31T12:39:13.518Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s6-1920x1080-23e9f1071f80d40798bf5f869031f881_Snapshot.jpg",
+      "md5": "5a93bb26bb44a018a895c4f58df19729",
+      "width": 150,
+      "height": 74,
+      "size": 5532,
+      "uploadedDate": "2021-05-31T12:39:13.856Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s6a-1920x1080-0dfbdd7a95acc7a2df3f290c1b53885a_Snapshot.jpg",
+      "md5": "fe63c3a952ce1ea037f3fc3752a90393",
+      "width": 150,
+      "height": 74,
+      "size": 5410,
+      "uploadedDate": "2021-05-31T12:39:14.208Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s7-1920x1080-2d87440e41c3030d366aa2a2c928e586_Snapshot.jpg",
+      "md5": "ff2c2cdecf6e16ed47b4ea010e8333a9",
+      "width": 150,
+      "height": 74,
+      "size": 5389,
+      "uploadedDate": "2021-05-31T12:39:14.531Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s7a-1920x1080-6629bac800ea10657105148a268ab32a_Snapshot.jpg",
+      "md5": "dac43f2e44e834bb0fb4e370505c7ebf",
+      "width": 150,
+      "height": 74,
+      "size": 5354,
+      "uploadedDate": "2021-05-31T12:39:14.847Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s8-1920x1080-ad09e4bfb21c654afe8a748725c10d18_Snapshot.jpg",
+      "md5": "12eaea56065fc27e7f7e358da1d13a2d",
+      "width": 150,
+      "height": 74,
+      "size": 5075,
+      "uploadedDate": "2021-05-31T12:39:15.209Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s9-1920x1080-f23719179a398f61d0aeecae98266d5d_Snapshot.jpg",
+      "md5": "f0cc93169c96800df40f6d9c5cf762f3",
+      "width": 150,
+      "height": 74,
+      "size": 4948,
+      "uploadedDate": "2021-05-31T12:39:15.538Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s10-1920x1080-a4fbe860c552b02fc49085a173b5a314_Snapshot.jpg",
+      "md5": "6a27be5df2121997fada56a292183cb5",
+      "width": 150,
+      "height": 74,
+      "size": 5391,
+      "uploadedDate": "2021-05-31T12:39:15.954Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0-1920x1080-fd73ed970b85d09fa8b410b4cfe26537_Snapshot.jpg",
+      "md5": "4460215da16cd05af3cda6da4960bd25",
+      "width": 150,
+      "height": 74,
+      "size": 4232,
+      "uploadedDate": "2021-05-30T01:49:02.059Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-06-08T01:01:46.567Z",
+  "lastModifiedDate": "2024-11-22T21:53:28.854Z",
+  "customAttributes": {},
+  "entitlementName": "1c8e63176d89495caca5d84426c01d39",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3731d71bb66c4edfa70dccabb7cf242b",
+      "appId": "ImageProcess_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-05-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ImageProcess_4.26"
+    },
+    {
+      "id": "47d3788492ba49c2b3e3bc318eab3532",
+      "appId": "ImageProcess_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-08-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ImageProcess_4.27"
+    },
+    {
+      "id": "570ec4f70bd946c3bca8a10f96ae63b4",
+      "appId": "ImageProcess_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "c44537c80bf146a4a3a5d78d1e5159f9",
+      "appId": "ImageProcess_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "dd0a1aa3a3b34fd3a50859d7e53b8808",
+      "appId": "ImageProcess_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "e0306822b3ca41d9b283b4b07499f0a7",
+      "appId": "ImageProcess_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "4d7532f72fed46e48a1370b3a2e870f4",
+      "appId": "ImageProcess_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "YWT20",
+  "developerId": "o-36kebp2nggyevt5yn43s4ef7qv4rm9",
+  "endOfSupport": false,
+  "unsearchable": false
+}

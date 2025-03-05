@@ -1,0 +1,325 @@
+{
+  "id": "a3d91cd4abd5448a802210c29f41d770",
+  "title": "Game Time Manager Plugin",
+  "description": "Define custom in game-time, and schedule events based off that game-time.",
+  "longDescription": "<p>The Game Time Manager Plugin is designed to be a central controller for scheduling and executing game events. It also has many controls to allow game developers to define how time passes in their game, such as: Days per year, months per year, days per week, hours per day, minutes per hour, seconds per hour, how often leap years occur, how fast game time will tick in relation to real time, and more.</p><p>It is fully <a href=\"https://drive.google.com/open?id&#61;1VP8Ee5PPDrOlxdciJZOk9FoFmd_9WcmQ\" rel=\"nofollow\">Documented</a>, and has many functions and variables available for Blueprint use, so no C&#43;&#43; knowledge is required in order to use this plugin.</p><p><br /></p><p><strong>Latest Changes</strong>:</p><p><strong>v2.4</strong>:</p><ul><li>Added helper functions for setting/getting Time Delta in terms of real life seconds</li><li>Added 4.27 version</li><li>Added Linux Support</li></ul><p><strong>V2.5:</strong></p><ul><li>Bugfixes for Adding Event from present not setting the correct event time, improved reliability when changing time on server and replicating to clients.</li><li>Functions for setting and checking current time based on real-time settings.</li><li>Added a setting for executing daily events on Time Skips under <em>Time &gt; Setup &gt; Advanced &gt; Execute Daily Events on Long Skip</em>.</li><li>Added UE 5.0 version</li></ul><p><strong>V2.6:</strong></p><ul><li>Added time skip functions to skip to specific date or hour.</li></ul>",
+  "technicalDetails": "<p> Features:</p><ul><li> Custom user-defined game-time calendar. Completely define how long years, months, days, hours, minutes, seconds last, and even define when leap years occur (if they do).</li><li> Schedule, modify, or remove events based on game-time.</li><li> Full game-time controls, such as pausing, slowing/speeding up game-time, and skipping forward or backwards in time.</li><li>Serialization functions for Game Time Manager classes.</li><li>Includes many examples, including a Day/Night Cycle Skysphere whose sun position changes over the year!</li><li>Replication: The Game Time Manager is fully replicated, and will automatically synchronize Game Time from the server to clients!</li></ul><p><br /></p><p><br /></p><p>Code Modules:</p><ul><li> GameTimeManager (Runtime)</li></ul><p>Number of Blueprints: 16</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows, Linux</p><p>Documentation: <a href=\"https://drive.google.com/file/d/1Q1-42XK5iS9GfqI7LJdlp0ck9yE-r67b/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/1Q1-42XK5iS9GfqI7LJdlp0ck9yE-r67b/view?usp&#61;sharing</a></p><p>(UE5 Documentation to come)</p><p>Demo: <a href=\"https://drive.google.com/open?id&#61;1Ju1OtO1QE4dQI6igfSyAXxRL1HBCfgmp\" rel=\"nofollow\">https://drive.google.com/open?id&#61;1Ju1OtO1QE4dQI6igfSyAXxRL1HBCfgmp</a></p><p>Example Project: Included in Plugin Content Folder</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MapView-1920x1080-6e9550488a2a6d3fce2b9ac59b61eecd.png",
+      "md5": "6e9550488a2a6d3fce2b9ac59b61eecd",
+      "width": 1920,
+      "height": 1080,
+      "size": 2479399,
+      "uploadedDate": "2020-05-07T20:19:54.553Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WelcomeScreen-1920x1080-f160d39d103e31bd8ffe9c2e2220ad62.png",
+      "md5": "f160d39d103e31bd8ffe9c2e2220ad62",
+      "width": 1920,
+      "height": 1080,
+      "size": 2621244,
+      "uploadedDate": "2020-05-07T20:19:55.247Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/bp-1920x1080-18963bd2863db5396c1b0141d3f313da.png",
+      "md5": "18963bd2863db5396c1b0141d3f313da",
+      "width": 1920,
+      "height": 1080,
+      "size": 547400,
+      "uploadedDate": "2020-01-06T23:32:02.295Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/settings-1920x1080-e1d3fab11afcc1e33a8efb5ac2adf084.png",
+      "md5": "e1d3fab11afcc1e33a8efb5ac2adf084",
+      "width": 1920,
+      "height": 1080,
+      "size": 1166550,
+      "uploadedDate": "2020-01-20T20:07:48.295Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CC-1920x1080-7276301258249380598d909ada7232d6.png",
+      "md5": "7276301258249380598d909ada7232d6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1282632,
+      "uploadedDate": "2020-05-07T20:19:55.902Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/daynight-1920x1080-1204eb94aa05fc2077477fbc39204d61.png",
+      "md5": "1204eb94aa05fc2077477fbc39204d61",
+      "width": 1920,
+      "height": 1080,
+      "size": 1387971,
+      "uploadedDate": "2020-02-01T15:05:13.915Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/GameTimeManagerPlugin_thumb-284x284-6562ff9ee15fa0ab3c8515158f83975b.png",
+      "md5": "6562ff9ee15fa0ab3c8515158f83975b",
+      "width": 284,
+      "height": 284,
+      "size": 23006,
+      "uploadedDate": "2020-01-20T20:07:48.699Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/GameTimeManagerPlugin_featured-894x488-06686528a8e2612c919d0d55191957a0.png",
+      "md5": "06686528a8e2612c919d0d55191957a0",
+      "width": 894,
+      "height": 488,
+      "size": 348566,
+      "uploadedDate": "2020-05-07T20:19:56.378Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapView-1920x1080-6e9550488a2a6d3fce2b9ac59b61eecd_Snapshot.png",
+      "md5": "8a17d5eab8f2521d928a47705746d3b8",
+      "width": 150,
+      "height": 74,
+      "size": 5674,
+      "uploadedDate": "2020-05-07T20:19:55.026Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WelcomeScreen-1920x1080-f160d39d103e31bd8ffe9c2e2220ad62_Snapshot.png",
+      "md5": "2b072dc7c321445d296c418720267a10",
+      "width": 150,
+      "height": 74,
+      "size": 5372,
+      "uploadedDate": "2020-05-07T20:19:55.720Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CC-1920x1080-7276301258249380598d909ada7232d6_Snapshot.png",
+      "md5": "b5274961ccc70ea4b034aa0f4ac1bcc4",
+      "width": 150,
+      "height": 74,
+      "size": 5239,
+      "uploadedDate": "2020-05-07T20:19:56.257Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/daynight-1920x1080-1204eb94aa05fc2077477fbc39204d61_Snapshot.png",
+      "md5": "ad15018614e5546a3403bea443e234c4",
+      "width": 150,
+      "height": 74,
+      "size": 4982,
+      "uploadedDate": "2020-02-01T15:05:14.372Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/settings-1920x1080-e1d3fab11afcc1e33a8efb5ac2adf084_Snapshot.png",
+      "md5": "78757ab2834f00c1d2140bd5a48d8867",
+      "width": 150,
+      "height": 74,
+      "size": 5707,
+      "uploadedDate": "2020-01-20T20:07:48.639Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WelcomeScreen-1920x1080-edcc41b2d39b00f6731015d084aab172_Snapshot.png",
+      "md5": "f64f372b8db6eb9fc881558ff574865d",
+      "width": 150,
+      "height": 74,
+      "size": 5223,
+      "uploadedDate": "2020-01-06T23:32:01.369Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MapView-1920x1080-40747691a890e4bec9c778de5af61449_Snapshot.png",
+      "md5": "328aa3e261044139fde556f51e59dd35",
+      "width": 150,
+      "height": 74,
+      "size": 5391,
+      "uploadedDate": "2020-01-06T23:32:02.112Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bp-1920x1080-18963bd2863db5396c1b0141d3f313da_Snapshot.png",
+      "md5": "7eaa2f3fbd536de9b93325f2a6a92ec7",
+      "width": 150,
+      "height": 74,
+      "size": 6248,
+      "uploadedDate": "2020-01-06T23:32:02.606Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-02-01T15:05:44.888Z",
+  "lastModifiedDate": "2025-01-01T11:11:24.974Z",
+  "customAttributes": {},
+  "entitlementName": "a3d91cd4abd5448a802210c29f41d770",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "86dad76c0d94425d9a59c0297364aea7",
+      "appId": "GameTimeManagerPlugin_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2020-05-05T00:00:00.000Z",
+      "releaseNote": "4.23",
+      "versionTitle": "GTMv2.5.0_4.23"
+    },
+    {
+      "id": "bda2335c9965447f8ba38f31899cde50",
+      "appId": "GameTimeManagerPlugin_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2020-01-06T00:00:00.000Z",
+      "releaseNote": "4.24",
+      "versionTitle": "GTMv2.5.0_4.24"
+    },
+    {
+      "id": "9c6994f070114522a3239e22c1f461ac",
+      "appId": "GameTimeManagerPlugin_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2020-05-05T00:00:00.000Z",
+      "releaseNote": "4.25",
+      "versionTitle": "GTMv2.5.1_4.25"
+    },
+    {
+      "id": "c13bfea6c43649809c1e726645ff4061",
+      "appId": "GameTimeManagerPlugin_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2021-01-06T00:00:00.000Z",
+      "releaseNote": "4.26",
+      "versionTitle": "GTM_2.5.2_4.26"
+    },
+    {
+      "id": "dd9ca423942440d68b656e46eb0eb1a2",
+      "appId": "GameTimeManagerPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2021-08-24T00:00:00.000Z",
+      "releaseNote": "4.27",
+      "versionTitle": "GTMv2.5.2_4.27"
+    },
+    {
+      "id": "2b93df9f45894f86b9f8da3131902fa6",
+      "appId": "GameTimeManagerPlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2022-04-08T00:00:00.000Z",
+      "releaseNote": "5.0",
+      "versionTitle": "GTMv2.6.0_5.0"
+    },
+    {
+      "id": "80a289f718084cff89b1040434d64b59",
+      "appId": "GameTimeManagerPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2022-11-28T00:00:00.000Z",
+      "releaseNote": "5.1",
+      "versionTitle": "GTM_2.6.0_5.1"
+    },
+    {
+      "id": "f5f81b39c04246b3a8ff1e4482e0fe68",
+      "appId": "GameTimeManagerPlugin_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-19T00:00:00.000Z",
+      "releaseNote": "5.2",
+      "versionTitle": "GMT_2.6.0_5.2"
+    },
+    {
+      "id": "e5184cd6bde04d6db2b03f5c13928a05",
+      "appId": "GameTimeManagerPlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Linux",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-12T00:00:00.000Z",
+      "releaseNote": "5.3",
+      "versionTitle": "GMT_2.6.0_5.3"
+    },
+    {
+      "id": "2c03f5debea8423c8ed01e577d39a803",
+      "appId": "GameTimeManagerPlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Linux",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-09T00:00:00.000Z",
+      "releaseNote": "5.4",
+      "versionTitle": "GTM2.6.0_5.4"
+    }
+  ],
+  "developer": "Lexsonn",
+  "developerId": "o-2wn4gl9ev5hhgk8hxu672f8seuae3k",
+  "endOfSupport": false,
+  "unsearchable": false
+}

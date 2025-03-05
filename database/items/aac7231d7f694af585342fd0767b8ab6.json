@@ -1,0 +1,332 @@
+{
+  "id": "aac7231d7f694af585342fd0767b8ab6",
+  "title": "Blockchain",
+  "description": "Integrate blockchain transactions and smart contracts directly into Unreal Engine, supporting multiple EVM networks and NFTs. Ideal for seamless play-to-earn mechanics.",
+  "longDescription": "<p><a href=\"http://discord.3studio.online\" rel=\"nofollow\">DISCORD SUPPORT</a> | <a href=\"https://www.youtube.com/watch?v&#61;Qp_JcKgtlzw&amp;list&#61;PLTztLWdi2XEG8sSoCs_lmqXq1_yvlWmkk&amp;index&#61;2&amp;t&#61;1s&amp;ab_channel&#61;AngeIV\" rel=\"nofollow\">Tutorials</a> (new) | <a href=\"https://3studioonline.github.io/TSBC-Documentation/\" rel=\"nofollow\">Documentation</a> | <a href=\"https://dev.azure.com/3StudioOnline/Public%20Resources/_git/Web3UE\" rel=\"nofollow\">Example Project</a> (new)</p><p><strong>Important Note:</strong> <em>We are thrilled to announce that, starting today, the Blockchain Integration Plugin is now available for free, thanks to our collaboration with the Filecoin Foundation!</em></p><p><br /></p><h2><br /></h2><h2>Blockchain Integration Plugin</h2><p>The Blockchain Integration Plugin provides a robust library of functions to construct and send blockchain transactions via JSON-RPC, enabling seamless communication with smart contracts directly from Unreal Engine. All functions are exposed to Blueprints for user convenience and can be packaged and shipped with dedicated servers.</p><p><br /></p><p><br /></p><p><br /></p><h2>Currently Supports:</h2><p>·      All EVM-based networks, including Ethereum, Filecoin, Lukso, Avalanche, Polygon, Binance Smart Chain, and more.</p><p>·      Layer 2 networks based on Optimism or zk Rollup, such as ImmutableX.</p><p><br /></p><p><br /></p><p><br /></p><h2>Why Blockchain?</h2><p>Blockchain technology allows you to write, read, and store values and functions inside a decentralized ledger. This decentralized approach eliminates the need for traditional server or database setups, reducing maintenance costs. Blockchain can handle various tasks, such as saving game progress, storing user statistics, and managing user-generated content, all without the need for third-party providers. Using test networks can reduce operational costs to nearly zero, and transitioning to the main net incurs costs only for actual usage, without ongoing subscription fees.</p><p><br /></p><p><br /></p><p><br /></p><h2>NFT Support</h2><p>Our plugin fully supports NFT functionalities. You can mint, transfer, and utilize NFTs directly within your game, either as player rewards or by leveraging existing NFT collections. This makes it easy to add utility to NFTs within your projects.</p><p><br /></p><p><br /></p><p><br /></p><h2>Play-to-Earn Model</h2><p>The plugin also supports the play-to-earn model, allowing you to reward players with your tokens or through direct transfers and minting privileges for game NFTs. This model can operate without a custom token or payment model, emphasizing in-game achievements and rewards.</p><p><br /></p><p><br /></p><p><br /></p><h2>Features</h2><ul><li>Construct and Send Transactions: Create and manage blockchain transactions using JSON-RPC.</li><li>Smart Contract Interaction: Communicate directly with smart contracts from Unreal Engine.</li><li>Blueprint Integration: Expose all functions to Blueprints for ease of use.</li><li>Multi-Network Support: Compatible with multiple blockchain networks and testnets, including EVM-based networks.</li><li>NFT Management: Mint, transfer, and use NFTs within your game.</li><li>Play-to-Earn Support: Implement play-to-earn mechanics seamlessly.</li><li>Advanced Cryptography: Utilizes a custom secp256k1 implementation in C&#43;&#43; for all cryptographic operations.</li><li>In-Game Key Management: Generate cryptographic keys, addresses, and signatures within the game, eliminating the need for external wallets.</li><li>QR Code Generation: Generate QR codes for various blockchain-related functionalities.</li><li>Meta Transactions: Support for meta transactions, allowing for efficient and secure transaction management.</li><li>Efficient File Handling: Efficient sha256 hashing of large files.</li><li>HD Wallet support. Including mnemonic based key generation.</li></ul><p><br /></p><p><br /></p><p><br /></p><h3>Changelog</h3><p><strong>V 3.1 Release Note:</strong></p><ul><li><strong>Added:</strong></li><li><strong>Generic JSON-RPC</strong></li><li>SendJsonRpcBatchRequest</li><li>Ethereum extension function: GetBlockchainTransactions</li><li><strong>Changed:</strong></li><li><strong>Renamed FBase32 to FTSBC_Base32</strong></li><li><strong>Fixed:</strong></li><li><strong>UTF8 Warnings</strong></li></ul><p><strong>V 3.0 Release Note:</strong></p><ul><li><strong>Added:</strong></li><li><strong>Filecoin Support</strong></li><li>BLAKE2b hashing function</li><li>Base32 encoding/decoding</li><li>More Ethereum functions:</li><li>eth_chainId</li><li>eth_getBlockByHash</li><li>eth_getBlockByNumber</li><li>eth_maxPriorityFeePerGas</li><li>eth_protocolVersion</li><li><strong>Fixed:</strong></li><li><strong>Sha256 hashing large files</strong></li></ul><p><strong>V 2.6 Release Note:</strong></p><ul><li>Major refactoring and stability update</li></ul><p><strong>V 2.5 Release Note:</strong></p><ul><li>Meta Transactions</li><li>QR Code Generation</li></ul><p><strong>V 2.4 Release Note:</strong></p><ul><li>Ronin network support</li><li>ETH_GetLogs method</li><li>HD Mnemonic Wallet support (BIP-32 BIP-39)</li><li>Deterministic signing for secp256k1 and other cryptographic features</li><li>EIP-1559 Transactions type2</li></ul><p><strong>V 2.3 Release Note:</strong></p><ul><li>Custom HTTP headers for authentication purposes</li></ul><p><strong>V 2.2 Release Note:</strong></p><ul><li>Added full LUKSO network support</li><li>Multiple ERC, EIP, and LSP standards covered by ABI objects</li><li>OpenSea Meta Data Standard covered</li></ul><p><strong>V 2.1 Release Note:</strong></p><ul><li>Private key AES Encryption-Decryption</li></ul><p><strong>V 2.0 Release Note:</strong></p><ul><li>New ABI encoding and decoding using K2 Nodes and Data assets!</li><li>Allows returning multiple arrays or a mix of static values and arrays/structures.</li><li>Automatic parsing of values to number, bool, and string.</li><li>ERC20, WRC721, and ERC1155 standards already prepared for ABI use.</li></ul><p><strong>V 1.1 Release Note:</strong></p><ul><li>Layer 2 reading capability for both ZK rollup and Optimism, currently supports ImmutableX &amp; Loopring</li><li>New ETH functions: get transaction receipt, get transaction by hash, get block number</li></ul><p><strong>V 1.0 Release Note:</strong></p><ul><li>Base58 encoding</li><li>Bytes array operations</li><li>ECDSA SECP256k1 full support (signing, key generation, etc.)</li><li>Sha512, Sha256, Ripemd160</li><li>Keccak-256 full support</li><li>JSON-RPC General API call function (async and callback)</li><li>Uint256 full support: Calculation, Comparison, Conversion, Parsing</li><li>Ethereum Methods: Estimate gas, Gas price, Transaction count, Get balance</li><li>Send raw transactions</li><li>Address generation</li><li>Address validation</li><li>Transaction signing</li><li>Transaction validation</li><li>Get network configuration</li></ul><p><strong>Planned Updates:</strong></p><ul><li>Solana Blockchain</li><li>Bitcoin Blockchain</li></ul>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li>ECDSA - SECP 256 K1: Generate private and public keys based on elliptic curves.</li><li>Hashing Library Functions: Integration of Keccak 256, SHA 256, SHA 512, and RIPEMD 160 hashing functions.</li><li>Ethereum Address Generation and Validation: Easily generate and validate Ethereum addresses.</li><li>JSON RPC Request: Perform JSON RPC calls on any blockchain node implementing JSON RPC for communication.</li><li>_ETH Functions: Basic Ethereum functions such as checking gas price, getting balance, sending raw transactions, and estimating gas.</li><li>Filecoin &amp; FVM Support. Filecoin v4 address generation.</li><li>Uint256 Parser: Handle 256-bit integers and unsigned integers.</li><li>Hex Conversion: Convert between hex strings and big integer strings.</li><li>Generate Transaction: Generate and sign transactions to send via RPC calls.</li><li>Base58 Parser: Parse Base58 encoded data.</li><li>Secure Random Bytes Library: Generate secure random bytes.</li><li>QR Code Generation: Generate QR codes directly in the engine for various use cases.</li><li>DAG-JSON Encoder/Decoder: Encode and decode DAG-JSON for advanced data structures.</li></ul><p> </p><p>Code Modules:</p><ul><li> TSBC_Plugin (runtime) </li></ul><p> </p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 138</p><p>Network Replicated: Yes (via blockchain)</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Win64, Linux, Android</p><p>Documentation: <a href=\"https://3studioonline.github.io/TSBC-Documentation/\" rel=\"nofollow\">Link</a>.</p><p>Example Project: <a href=\"https://dev.azure.com/3StudioOnline/Public%20Resources/_git/Web3UE\" rel=\"nofollow\">Link</a>.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TS-Blockchain-ScreenShot-01-1920x1080-1920x1080-f3c9e21f2de4446b9dba7cc61263ac1a.png",
+      "md5": "f3c9e21f2de4446b9dba7cc61263ac1a",
+      "width": 1920,
+      "height": 1080,
+      "size": 722753,
+      "uploadedDate": "2024-07-12T14:07:24.248Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TSBCScreenshot07Loopring1920x1080-1920x1080-f8c0a6fc342dbea049ca5f36940f8b79.png",
+      "md5": "f8c0a6fc342dbea049ca5f36940f8b79",
+      "width": 1920,
+      "height": 1080,
+      "size": 727593,
+      "uploadedDate": "2024-07-12T14:07:24.737Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TSBCScreenshot03QR1920x1080-1920x1080-c1cbeadf82aca3b8ddca140880701268.png",
+      "md5": "c1cbeadf82aca3b8ddca140880701268",
+      "width": 1920,
+      "height": 1080,
+      "size": 767433,
+      "uploadedDate": "2024-07-12T14:07:25.232Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TSBCScreenshot02Filecoin1920x1080-1920x1080-0938f135e686794cb5fc1e0791066083.png",
+      "md5": "0938f135e686794cb5fc1e0791066083",
+      "width": 1920,
+      "height": 1080,
+      "size": 721810,
+      "uploadedDate": "2024-07-12T14:07:25.697Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TSBCScreenshot01Filecoin1920x1080-1920x1080-8e43460e6a185073740998cfe9ef9f3c.png",
+      "md5": "8e43460e6a185073740998cfe9ef9f3c",
+      "width": 1920,
+      "height": 1080,
+      "size": 913238,
+      "uploadedDate": "2024-07-12T14:07:26.167Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TSBCScreenshot06Cryptography1920x1080-1920x1080-61188564df199dedaf242a6b3006e589.png",
+      "md5": "61188564df199dedaf242a6b3006e589",
+      "width": 1920,
+      "height": 1080,
+      "size": 763627,
+      "uploadedDate": "2024-07-12T14:07:26.663Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TSBCScreenshot04Sign1920x1080-1920x1080-8a0aa41c5aa5720b695394862ed927f1.png",
+      "md5": "8a0aa41c5aa5720b695394862ed927f1",
+      "width": 1920,
+      "height": 1080,
+      "size": 667889,
+      "uploadedDate": "2024-07-12T14:07:27.147Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TSBCScreenshot05Wallet1920x1080-1920x1080-91f2126b5c315675e0b360c2f0c80e14.png",
+      "md5": "91f2126b5c315675e0b360c2f0c80e14",
+      "width": 1920,
+      "height": 1080,
+      "size": 805309,
+      "uploadedDate": "2024-07-12T14:07:27.586Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Blockchain_thumb-284x284-2a1cfaf41787b1380f59cd4a4b09ab73.png",
+      "md5": "2a1cfaf41787b1380f59cd4a4b09ab73",
+      "width": 284,
+      "height": 284,
+      "size": 109601,
+      "uploadedDate": "2024-07-12T14:07:28.001Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Blockchain_featured-894x488-104da86f5804b2c667de035acc81d05d.png",
+      "md5": "104da86f5804b2c667de035acc81d05d",
+      "width": 894,
+      "height": 488,
+      "size": 547097,
+      "uploadedDate": "2024-07-12T14:07:28.239Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TS-Blockchain-ScreenShot-01-1920x1080-1920x1080-f3c9e21f2de4446b9dba7cc61263ac1a_Snapshot.png",
+      "md5": "7ac386495c0f1b8da8673364b95c707c",
+      "width": 150,
+      "height": 74,
+      "size": 5717,
+      "uploadedDate": "2024-07-12T14:07:24.544Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TSBCScreenshot07Loopring1920x1080-1920x1080-f8c0a6fc342dbea049ca5f36940f8b79_Snapshot.png",
+      "md5": "7425297eeeb88eb5e6097139c7c8bbde",
+      "width": 150,
+      "height": 74,
+      "size": 5271,
+      "uploadedDate": "2024-07-12T14:07:25.036Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TSBCScreenshot03QR1920x1080-1920x1080-c1cbeadf82aca3b8ddca140880701268_Snapshot.png",
+      "md5": "ade2b519348ab5bea6ac47f6a59bf2e4",
+      "width": 150,
+      "height": 74,
+      "size": 5946,
+      "uploadedDate": "2024-07-12T14:07:25.519Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TSBCScreenshot02Filecoin1920x1080-1920x1080-0938f135e686794cb5fc1e0791066083_Snapshot.png",
+      "md5": "696183c9207900f3dd919d557723262a",
+      "width": 150,
+      "height": 74,
+      "size": 5611,
+      "uploadedDate": "2024-07-12T14:07:25.976Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TSBCScreenshot01Filecoin1920x1080-1920x1080-8e43460e6a185073740998cfe9ef9f3c_Snapshot.png",
+      "md5": "1a9c9f6120cc623f8f0b2570f54f6b2f",
+      "width": 150,
+      "height": 74,
+      "size": 6202,
+      "uploadedDate": "2024-07-12T14:07:26.462Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TSBCScreenshot06Cryptography1920x1080-1920x1080-61188564df199dedaf242a6b3006e589_Snapshot.png",
+      "md5": "1898961dc12f7e6e1a8fdb2ef6811ff1",
+      "width": 150,
+      "height": 74,
+      "size": 5917,
+      "uploadedDate": "2024-07-12T14:07:26.948Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TSBCScreenshot04Sign1920x1080-1920x1080-8a0aa41c5aa5720b695394862ed927f1_Snapshot.png",
+      "md5": "d50fb647b647a0ef02a047dcafb1af75",
+      "width": 150,
+      "height": 74,
+      "size": 5697,
+      "uploadedDate": "2024-07-12T14:07:27.423Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TSBCScreenshot05Wallet1920x1080-1920x1080-91f2126b5c315675e0b360c2f0c80e14_Snapshot.png",
+      "md5": "43d465f8f2ae893963b54da305b6d0d7",
+      "width": 150,
+      "height": 74,
+      "size": 6179,
+      "uploadedDate": "2024-07-12T14:07:27.873Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Collaboration-MP-1920x1080-0fe73363c1bc9d37cb178ee98009d0c5_Snapshot.png",
+      "md5": "3bb67a5c1a2617fda3e97cbc2f78aebc",
+      "width": 150,
+      "height": 74,
+      "size": 5943,
+      "uploadedDate": "2022-07-04T17:35:23.834Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TS-Blockchain-ScreenShot-01-1920x1080-1920x1080-f3c9e21f2de4446b9dba7cc61263ac1a_Snapshot.png",
+      "md5": "7ac386495c0f1b8da8673364b95c707c",
+      "width": 150,
+      "height": 74,
+      "size": 5717,
+      "uploadedDate": "2022-07-04T17:33:25.072Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TS-Blockchain-ScreenShot-02-1920x1080-1920x1080-cca3b1816d86e53e55ac951023542bda_Snapshot.png",
+      "md5": "58b4b828e421d280495480a60adf20b0",
+      "width": 150,
+      "height": 74,
+      "size": 4919,
+      "uploadedDate": "2022-07-04T17:33:25.456Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TS-Blockchain-ScreenShot-03-1920x1080-1920x1080-8773cd945ffe9d0748b0e251eaedd8bd_Snapshot.png",
+      "md5": "9d9427fb879cf66240b4cb26576f9894",
+      "width": 150,
+      "height": 74,
+      "size": 6121,
+      "uploadedDate": "2022-07-04T17:33:25.932Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2022-07-14T18:37:27.623Z",
+  "lastModifiedDate": "2024-11-17T15:40:29.761Z",
+  "customAttributes": {},
+  "entitlementName": "aac7231d7f694af585342fd0767b8ab6",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "bad15c221aec4f57b5f35de6ddf512aa",
+      "appId": "TSBCPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Android",
+        "iOS",
+        "Mac"
+      ],
+      "dateAdded": "2022-07-04T00:00:00.000Z",
+      "releaseNote": "2.1.1",
+      "versionTitle": "2.1.1 ue4.27"
+    },
+    {
+      "id": "2cfe514504144fae826197cf3d16c3db",
+      "appId": "TSBCPlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Android",
+        "iOS",
+        "Mac"
+      ],
+      "dateAdded": "2022-07-04T00:00:00.000Z",
+      "releaseNote": "2.2.1",
+      "versionTitle": "ue5.0"
+    },
+    {
+      "id": "f4ab23cafbca4f24a85f3d80bc0152a3",
+      "appId": "TSBCPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2022-12-08T00:00:00.000Z",
+      "releaseNote": "2.5.1",
+      "versionTitle": "ue5.1"
+    },
+    {
+      "id": "3cbf2e0578a5486883a98ee1a030723a",
+      "appId": "TSBCPlugin_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Mac",
+        "Android",
+        "Windows",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-13T00:00:00.000Z",
+      "releaseNote": "3.1.1",
+      "versionTitle": "ue5.2"
+    },
+    {
+      "id": "391b72ee6cde4329abf5ae4920d67375",
+      "appId": "TSBCPlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-12T00:00:00.000Z",
+      "releaseNote": "3.1.1",
+      "versionTitle": "ue5.3"
+    },
+    {
+      "id": "9c9645bff580471f85d7f24c17ee36f3",
+      "appId": "TSBCPlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2024-05-06T00:00:00.000Z",
+      "releaseNote": "3.1.1",
+      "versionTitle": "ue5.4"
+    }
+  ],
+  "developer": "3S Game Studio",
+  "developerId": "o-p88zrld5nmf89nh79khfyvpa7qkp2t",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

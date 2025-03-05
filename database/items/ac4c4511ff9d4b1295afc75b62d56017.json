@@ -1,0 +1,747 @@
+{
+  "id": "ac4c4511ff9d4b1295afc75b62d56017",
+  "title": "Projectile Curve Visualizer",
+  "description": "A blueprint plugin for rendering projectile paths.",
+  "longDescription": "<p>Demo: <a href=\"https://youtu.be/mikk5_oK5EY\" rel=\"nofollow\"><u>https://youtu.be/mikk5_oK5EY</u></a></p><p>Setup: <a href=\"https://youtu.be/IBss09hBqu4\" rel=\"nofollow\"><u>https://youtu.be/IBss09hBqu4</u></a></p><p>Discord: <a href=\"https://discord.gg/pAtEX6v5gn\" rel=\"nofollow\"><u>https://discord.gg/pAtEX6v5gn</u></a></p><p>Documentation: <a href=\"https://docs.google.com/document/d/1SsKAIxYNEgQCIWwuFkt8w6nHjrQPHeUohhYoygwLtJg/edit?usp&#61;share_link\" rel=\"nofollow\"><u>https://docs.google.com/document/d/1SsKAIxYNEgQCIWwuFkt8w6nHjrQPHeUohhYoygwLtJg/edit?usp&#61;share_link</u></a></p><p><br /></p><p>Version 1.1 update</p><p>Trampoline: <a href=\"https://youtu.be/SffwY5JfWAk\" rel=\"nofollow\"><u>https://youtu.be/SffwY5JfWAk</u></a></p><p>Documentation: <a href=\"https://docs.google.com/document/d/1RWpXJ8QCT_kKJrhpmQDAcMluNccoof5zez0vi4eNJlY/edit?usp&#61;sharing\" rel=\"nofollow\"><u>https://docs.google.com/document/d/1RWpXJ8QCT_kKJrhpmQDAcMluNccoof5zez0vi4eNJlY/edit?usp&#61;sharing</u></a></p><p><br /></p><p>This visualizer was implemented using pure blueprints, responsible for the visual part of projectile curve. The actual projectile Actor template is also provided.</p><p><br /></p><p>Demo maps include:</p><ol><li>Third-person projectile: Player can aim and throw projectiles.</li><li>Third-person puzzle: Projectiles can be used as a bridge(has collision) like some magic.</li><li>Top-down tower defense(paper ball fight): Target location is already known, throwers will launch projectiles exactly to that point. Certain heuristic(thrower can predict the possible target location at real-time) is implemented for both moving thrower and moving target, which makes it more difficult to dodge.</li></ol>",
+  "technicalDetails": "<p>Features:</p><ul><li> Lightweight</li><li> Customizable</li><li> Mobile friendly</li></ul><p><br /></p><p>Number of Blueprints: 2</p><p>Number of Materials: 4</p><p>Number of Textures: 5</p><p>Input: Keyboard, Mouse</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows, macOS, Linux</p><p>Windows: Yes</p><p>Mac: Yes</p><p><br /></p><p>Support email: gameofwoody&#64;gmail.com</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ThirdPersonThrow1-1920x1080-7219259673c06e1190a5e2743bbf2662.png",
+      "md5": "7219259673c06e1190a5e2743bbf2662",
+      "width": 1920,
+      "height": 1080,
+      "size": 1179591,
+      "uploadedDate": "2023-08-31T13:35:47.815Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ThirdPersonThrow2-1920x1080-355c1ae5f839d0379091632517c39201.png",
+      "md5": "355c1ae5f839d0379091632517c39201",
+      "width": 1920,
+      "height": 1080,
+      "size": 1190678,
+      "uploadedDate": "2023-08-31T13:35:48.215Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ThirdPersonThrow3-1920x1080-72bea36cf58c0363c795430c20eb3a06.png",
+      "md5": "72bea36cf58c0363c795430c20eb3a06",
+      "width": 1920,
+      "height": 1080,
+      "size": 1330473,
+      "uploadedDate": "2023-08-31T13:35:48.779Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ThirdPersonPuzzle-1920x1080-18e10e571bf0ac936b0efe3060bce6d4.png",
+      "md5": "18e10e571bf0ac936b0efe3060bce6d4",
+      "width": 1920,
+      "height": 1080,
+      "size": 1295958,
+      "uploadedDate": "2023-08-31T13:35:49.288Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PaperBallFight-1920x1080-eca9a659632af8dd9cc80ee329b86a37.png",
+      "md5": "eca9a659632af8dd9cc80ee329b86a37",
+      "width": 1920,
+      "height": 1080,
+      "size": 1373237,
+      "uploadedDate": "2023-08-31T13:35:49.911Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MovingThrower-1920x1080-c3f84d81cea5886f8e23e10d209faf89.png",
+      "md5": "c3f84d81cea5886f8e23e10d209faf89",
+      "width": 1920,
+      "height": 1080,
+      "size": 1456107,
+      "uploadedDate": "2023-08-31T13:35:50.276Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Trampoline Throw-1920x1080-1b17172ea67e3e0e29bfac3cc4ecc879.png",
+      "md5": "1b17172ea67e3e0e29bfac3cc4ecc879",
+      "width": 1920,
+      "height": 1080,
+      "size": 684180,
+      "uploadedDate": "2023-08-31T13:35:50.802Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Trampoline Room-1920x1080-7b8f151ed01410fc788c7544435fe549.png",
+      "md5": "7b8f151ed01410fc788c7544435fe549",
+      "width": 1920,
+      "height": 1080,
+      "size": 526669,
+      "uploadedDate": "2023-08-31T13:35:50.997Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Demo-1920x1080-d5591d9b42f27b97b1984493603d95cd.png",
+      "md5": "d5591d9b42f27b97b1984493603d95cd",
+      "width": 1920,
+      "height": 1080,
+      "size": 949714,
+      "uploadedDate": "2023-08-31T13:35:51.203Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ProjectileCurveVisualizer_thumb-284x284-c8a5a2e50bf9184cb72e8a56b404973c.png",
+      "md5": "c8a5a2e50bf9184cb72e8a56b404973c",
+      "width": 284,
+      "height": 284,
+      "size": 73493,
+      "uploadedDate": "2023-03-10T20:57:01.004Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ProjectileCurveVisualizer_featured-894x488-cf0cf04b049a6904a515d67757f01731.png",
+      "md5": "cf0cf04b049a6904a515d67757f01731",
+      "width": 894,
+      "height": 488,
+      "size": 351192,
+      "uploadedDate": "2023-03-10T20:57:01.107Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow1-1920x1080-7219259673c06e1190a5e2743bbf2662_Snapshot.png",
+      "md5": "5f4e30556d53ff8a1004870657ce398d",
+      "width": 150,
+      "height": 74,
+      "size": 4047,
+      "uploadedDate": "2023-08-31T13:35:48.032Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow2-1920x1080-355c1ae5f839d0379091632517c39201_Snapshot.png",
+      "md5": "f1a0777551ade066f6fcb4727ef9c537",
+      "width": 150,
+      "height": 74,
+      "size": 5433,
+      "uploadedDate": "2023-08-31T13:35:48.535Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow3-1920x1080-72bea36cf58c0363c795430c20eb3a06_Snapshot.png",
+      "md5": "c3997d79c49f773a12e8b5807465ed71",
+      "width": 150,
+      "height": 74,
+      "size": 5296,
+      "uploadedDate": "2023-08-31T13:35:49.100Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonPuzzle-1920x1080-18e10e571bf0ac936b0efe3060bce6d4_Snapshot.png",
+      "md5": "a33e109a8c0431630128af6058e33165",
+      "width": 150,
+      "height": 74,
+      "size": 4742,
+      "uploadedDate": "2023-08-31T13:35:49.643Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PaperBallFight-1920x1080-eca9a659632af8dd9cc80ee329b86a37_Snapshot.png",
+      "md5": "33e98d83bcd3dbb12280a44eb19adb74",
+      "width": 150,
+      "height": 74,
+      "size": 5059,
+      "uploadedDate": "2023-08-31T13:35:50.156Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MovingThrower-1920x1080-c3f84d81cea5886f8e23e10d209faf89_Snapshot.png",
+      "md5": "a86a1ea38d0a4ba7f54cdbbfb75327b4",
+      "width": 150,
+      "height": 74,
+      "size": 4390,
+      "uploadedDate": "2023-08-31T13:35:50.518Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Trampoline Throw-1920x1080-1b17172ea67e3e0e29bfac3cc4ecc879_Snapshot.png",
+      "md5": "496d86c49d8ff960d8b7f8946cd05145",
+      "width": 150,
+      "height": 74,
+      "size": 5833,
+      "uploadedDate": "2023-08-31T13:35:50.903Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Trampoline Room-1920x1080-7b8f151ed01410fc788c7544435fe549_Snapshot.png",
+      "md5": "72cf8a9fae0a6b12fdd7bf367ed89492",
+      "width": 150,
+      "height": 74,
+      "size": 8120,
+      "uploadedDate": "2023-08-31T13:35:51.063Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Demo-1920x1080-d5591d9b42f27b97b1984493603d95cd_Snapshot.png",
+      "md5": "117e2e8d58e0c1b2fbc7322e634e09bc",
+      "width": 150,
+      "height": 74,
+      "size": 4534,
+      "uploadedDate": "2023-08-31T13:35:51.326Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow1-1920x1080-7219259673c06e1190a5e2743bbf2662_Snapshot.png",
+      "md5": "5f4e30556d53ff8a1004870657ce398d",
+      "width": 150,
+      "height": 74,
+      "size": 4047,
+      "uploadedDate": "2023-08-26T17:40:51.730Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow2-1920x1080-355c1ae5f839d0379091632517c39201_Snapshot.png",
+      "md5": "f1a0777551ade066f6fcb4727ef9c537",
+      "width": 150,
+      "height": 74,
+      "size": 5433,
+      "uploadedDate": "2023-08-26T17:40:52.221Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow3-1920x1080-72bea36cf58c0363c795430c20eb3a06_Snapshot.png",
+      "md5": "c3997d79c49f773a12e8b5807465ed71",
+      "width": 150,
+      "height": 74,
+      "size": 5296,
+      "uploadedDate": "2023-08-26T17:40:52.638Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonPuzzle-1920x1080-18e10e571bf0ac936b0efe3060bce6d4_Snapshot.png",
+      "md5": "a33e109a8c0431630128af6058e33165",
+      "width": 150,
+      "height": 74,
+      "size": 4742,
+      "uploadedDate": "2023-08-26T17:40:53.078Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PaperBallFight-1920x1080-eca9a659632af8dd9cc80ee329b86a37_Snapshot.png",
+      "md5": "33e98d83bcd3dbb12280a44eb19adb74",
+      "width": 150,
+      "height": 74,
+      "size": 5059,
+      "uploadedDate": "2023-08-26T17:40:53.516Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MovingThrower-1920x1080-c3f84d81cea5886f8e23e10d209faf89_Snapshot.png",
+      "md5": "a86a1ea38d0a4ba7f54cdbbfb75327b4",
+      "width": 150,
+      "height": 74,
+      "size": 4390,
+      "uploadedDate": "2023-08-26T17:40:53.910Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Trampoline Throw-1920x1080-1b17172ea67e3e0e29bfac3cc4ecc879_Snapshot.png",
+      "md5": "496d86c49d8ff960d8b7f8946cd05145",
+      "width": 150,
+      "height": 74,
+      "size": 5833,
+      "uploadedDate": "2023-08-26T17:40:54.172Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Trampoline Room-1920x1080-7b8f151ed01410fc788c7544435fe549_Snapshot.png",
+      "md5": "72cf8a9fae0a6b12fdd7bf367ed89492",
+      "width": 150,
+      "height": 74,
+      "size": 8120,
+      "uploadedDate": "2023-08-26T17:40:54.415Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Demo-1920x1080-e6d8517805444757a7732e4b155da5a5_Snapshot.png",
+      "md5": "9f92d4ff44a3ca3e2352298362fbd404",
+      "width": 150,
+      "height": 74,
+      "size": 4573,
+      "uploadedDate": "2023-08-26T17:40:54.956Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow1-1920x1080-7219259673c06e1190a5e2743bbf2662_Snapshot.png",
+      "md5": "5f4e30556d53ff8a1004870657ce398d",
+      "width": 150,
+      "height": 74,
+      "size": 4047,
+      "uploadedDate": "2023-03-13T18:27:32.386Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow2-1920x1080-355c1ae5f839d0379091632517c39201_Snapshot.png",
+      "md5": "f1a0777551ade066f6fcb4727ef9c537",
+      "width": 150,
+      "height": 74,
+      "size": 5433,
+      "uploadedDate": "2023-03-13T18:27:32.935Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow3-1920x1080-72bea36cf58c0363c795430c20eb3a06_Snapshot.png",
+      "md5": "c3997d79c49f773a12e8b5807465ed71",
+      "width": 150,
+      "height": 74,
+      "size": 5296,
+      "uploadedDate": "2023-03-13T18:27:33.489Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonPuzzle-1920x1080-18e10e571bf0ac936b0efe3060bce6d4_Snapshot.png",
+      "md5": "a33e109a8c0431630128af6058e33165",
+      "width": 150,
+      "height": 74,
+      "size": 4742,
+      "uploadedDate": "2023-03-13T18:27:34.053Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PaperBallFight-1920x1080-eca9a659632af8dd9cc80ee329b86a37_Snapshot.png",
+      "md5": "33e98d83bcd3dbb12280a44eb19adb74",
+      "width": 150,
+      "height": 74,
+      "size": 5059,
+      "uploadedDate": "2023-03-13T18:27:34.729Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MovingThrower-1920x1080-c3f84d81cea5886f8e23e10d209faf89_Snapshot.png",
+      "md5": "a86a1ea38d0a4ba7f54cdbbfb75327b4",
+      "width": 150,
+      "height": 74,
+      "size": 4390,
+      "uploadedDate": "2023-03-13T18:27:35.298Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Demo-1920x1080-e6d8517805444757a7732e4b155da5a5_Snapshot.png",
+      "md5": "9f92d4ff44a3ca3e2352298362fbd404",
+      "width": 150,
+      "height": 74,
+      "size": 4573,
+      "uploadedDate": "2023-03-13T18:27:35.926Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 1-1920x1080-f5b23b35af0a74d6c8d342983c552eb2_Snapshot.png",
+      "md5": "8db1382832be6b376178eb6adb99d43c",
+      "width": 150,
+      "height": 74,
+      "size": 4044,
+      "uploadedDate": "2023-03-13T18:27:36.317Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 2-1920x1080-8d86b2e280161dbb4806cb371bbf8c36_Snapshot.png",
+      "md5": "d2dbd64183393ff2863b7aff0e2c3eb6",
+      "width": 150,
+      "height": 74,
+      "size": 4128,
+      "uploadedDate": "2023-03-13T18:27:36.802Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 3-1920x1080-d24d81df096290a59bd39626cdd9de45_Snapshot.png",
+      "md5": "b59129cc5daf17786fce63ad82ad4450",
+      "width": 150,
+      "height": 74,
+      "size": 3888,
+      "uploadedDate": "2023-03-13T18:27:37.251Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Material-1920x1080-34e984807a6e5d07bc612e6173e43aa4_Snapshot.png",
+      "md5": "f7fc17a0cc86c2b69577f664679332f9",
+      "width": 150,
+      "height": 74,
+      "size": 5074,
+      "uploadedDate": "2023-03-13T18:27:37.654Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow1-1920x1080-7219259673c06e1190a5e2743bbf2662_Snapshot.png",
+      "md5": "5f4e30556d53ff8a1004870657ce398d",
+      "width": 150,
+      "height": 74,
+      "size": 4047,
+      "uploadedDate": "2023-03-13T18:22:53.626Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow2-1920x1080-355c1ae5f839d0379091632517c39201_Snapshot.png",
+      "md5": "f1a0777551ade066f6fcb4727ef9c537",
+      "width": 150,
+      "height": 74,
+      "size": 5433,
+      "uploadedDate": "2023-03-13T18:22:54.164Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow3-1920x1080-72bea36cf58c0363c795430c20eb3a06_Snapshot.png",
+      "md5": "c3997d79c49f773a12e8b5807465ed71",
+      "width": 150,
+      "height": 74,
+      "size": 5296,
+      "uploadedDate": "2023-03-13T18:22:54.713Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonPuzzle-1920x1080-18e10e571bf0ac936b0efe3060bce6d4_Snapshot.png",
+      "md5": "a33e109a8c0431630128af6058e33165",
+      "width": 150,
+      "height": 74,
+      "size": 4742,
+      "uploadedDate": "2023-03-13T18:22:55.276Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PaperBallFight-1920x1080-eca9a659632af8dd9cc80ee329b86a37_Snapshot.png",
+      "md5": "33e98d83bcd3dbb12280a44eb19adb74",
+      "width": 150,
+      "height": 74,
+      "size": 5059,
+      "uploadedDate": "2023-03-13T18:22:55.810Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MovingThrower-1920x1080-c3f84d81cea5886f8e23e10d209faf89_Snapshot.png",
+      "md5": "a86a1ea38d0a4ba7f54cdbbfb75327b4",
+      "width": 150,
+      "height": 74,
+      "size": 4390,
+      "uploadedDate": "2023-03-13T18:22:56.360Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Demo-1920x1080-e6d8517805444757a7732e4b155da5a5_Snapshot.png",
+      "md5": "9f92d4ff44a3ca3e2352298362fbd404",
+      "width": 150,
+      "height": 74,
+      "size": 4573,
+      "uploadedDate": "2023-03-13T18:22:56.968Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 1-1920x1080-f5b23b35af0a74d6c8d342983c552eb2_Snapshot.png",
+      "md5": "8db1382832be6b376178eb6adb99d43c",
+      "width": 150,
+      "height": 74,
+      "size": 4044,
+      "uploadedDate": "2023-03-13T18:22:57.344Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 2-1920x1080-8d86b2e280161dbb4806cb371bbf8c36_Snapshot.png",
+      "md5": "d2dbd64183393ff2863b7aff0e2c3eb6",
+      "width": 150,
+      "height": 74,
+      "size": 4128,
+      "uploadedDate": "2023-03-13T18:22:57.726Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 3-1920x1080-9782d9e732e703d3c82f13de9c6241c0_Snapshot.png",
+      "md5": "3490ea78fb1cb2b396abb8ac763e5cf0",
+      "width": 150,
+      "height": 74,
+      "size": 3838,
+      "uploadedDate": "2023-03-13T18:22:58.167Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Material-1920x1080-34e984807a6e5d07bc612e6173e43aa4_Snapshot.png",
+      "md5": "f7fc17a0cc86c2b69577f664679332f9",
+      "width": 150,
+      "height": 74,
+      "size": 5074,
+      "uploadedDate": "2023-03-13T18:22:58.586Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow1-1920x1080-7219259673c06e1190a5e2743bbf2662_Snapshot.png",
+      "md5": "5f4e30556d53ff8a1004870657ce398d",
+      "width": 150,
+      "height": 74,
+      "size": 4047,
+      "uploadedDate": "2023-03-13T03:34:58.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow2-1920x1080-355c1ae5f839d0379091632517c39201_Snapshot.png",
+      "md5": "f1a0777551ade066f6fcb4727ef9c537",
+      "width": 150,
+      "height": 74,
+      "size": 5433,
+      "uploadedDate": "2023-03-13T03:34:59.269Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow3-1920x1080-72bea36cf58c0363c795430c20eb3a06_Snapshot.png",
+      "md5": "c3997d79c49f773a12e8b5807465ed71",
+      "width": 150,
+      "height": 74,
+      "size": 5296,
+      "uploadedDate": "2023-03-13T03:34:59.896Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonPuzzle-1920x1080-18e10e571bf0ac936b0efe3060bce6d4_Snapshot.png",
+      "md5": "a33e109a8c0431630128af6058e33165",
+      "width": 150,
+      "height": 74,
+      "size": 4742,
+      "uploadedDate": "2023-03-13T03:35:00.450Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PaperBallFight-1920x1080-eca9a659632af8dd9cc80ee329b86a37_Snapshot.png",
+      "md5": "33e98d83bcd3dbb12280a44eb19adb74",
+      "width": 150,
+      "height": 74,
+      "size": 5059,
+      "uploadedDate": "2023-03-13T03:35:00.986Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MovingThrower-1920x1080-c3f84d81cea5886f8e23e10d209faf89_Snapshot.png",
+      "md5": "a86a1ea38d0a4ba7f54cdbbfb75327b4",
+      "width": 150,
+      "height": 74,
+      "size": 4390,
+      "uploadedDate": "2023-03-13T03:35:01.525Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Demo-1920x1080-e6d8517805444757a7732e4b155da5a5_Snapshot.png",
+      "md5": "9f92d4ff44a3ca3e2352298362fbd404",
+      "width": 150,
+      "height": 74,
+      "size": 4573,
+      "uploadedDate": "2023-03-13T03:35:02.127Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 1-1920x1080-f5b23b35af0a74d6c8d342983c552eb2_Snapshot.png",
+      "md5": "8db1382832be6b376178eb6adb99d43c",
+      "width": 150,
+      "height": 74,
+      "size": 4044,
+      "uploadedDate": "2023-03-13T03:35:02.562Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 2-1920x1080-8d86b2e280161dbb4806cb371bbf8c36_Snapshot.png",
+      "md5": "d2dbd64183393ff2863b7aff0e2c3eb6",
+      "width": 150,
+      "height": 74,
+      "size": 4128,
+      "uploadedDate": "2023-03-13T03:35:03.006Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 3-1920x1080-819c6efd9133697a88c810d84543abdf_Snapshot.png",
+      "md5": "9b82b9d8fdc79ecefe8e3093dce147a2",
+      "width": 150,
+      "height": 74,
+      "size": 3683,
+      "uploadedDate": "2023-03-13T03:35:03.363Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Material-1920x1080-34e984807a6e5d07bc612e6173e43aa4_Snapshot.png",
+      "md5": "f7fc17a0cc86c2b69577f664679332f9",
+      "width": 150,
+      "height": 74,
+      "size": 5074,
+      "uploadedDate": "2023-03-13T03:35:03.709Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 1-1920x1080-f5b23b35af0a74d6c8d342983c552eb2_Snapshot.png",
+      "md5": "8db1382832be6b376178eb6adb99d43c",
+      "width": 150,
+      "height": 74,
+      "size": 4044,
+      "uploadedDate": "2023-03-13T03:32:31.853Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 2-1920x1080-8d86b2e280161dbb4806cb371bbf8c36_Snapshot.png",
+      "md5": "d2dbd64183393ff2863b7aff0e2c3eb6",
+      "width": 150,
+      "height": 74,
+      "size": 4128,
+      "uploadedDate": "2023-03-13T03:32:32.259Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 3-1920x1080-819c6efd9133697a88c810d84543abdf_Snapshot.png",
+      "md5": "9b82b9d8fdc79ecefe8e3093dce147a2",
+      "width": 150,
+      "height": 74,
+      "size": 3683,
+      "uploadedDate": "2023-03-13T03:32:32.619Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow1-1920x1080-7219259673c06e1190a5e2743bbf2662_Snapshot.png",
+      "md5": "5f4e30556d53ff8a1004870657ce398d",
+      "width": 150,
+      "height": 74,
+      "size": 4047,
+      "uploadedDate": "2023-03-10T20:56:55.599Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow2-1920x1080-355c1ae5f839d0379091632517c39201_Snapshot.png",
+      "md5": "f1a0777551ade066f6fcb4727ef9c537",
+      "width": 150,
+      "height": 74,
+      "size": 5433,
+      "uploadedDate": "2023-03-10T20:56:56.102Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonThrow3-1920x1080-72bea36cf58c0363c795430c20eb3a06_Snapshot.png",
+      "md5": "c3997d79c49f773a12e8b5807465ed71",
+      "width": 150,
+      "height": 74,
+      "size": 5296,
+      "uploadedDate": "2023-03-10T20:56:56.661Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThirdPersonPuzzle-1920x1080-18e10e571bf0ac936b0efe3060bce6d4_Snapshot.png",
+      "md5": "a33e109a8c0431630128af6058e33165",
+      "width": 150,
+      "height": 74,
+      "size": 4742,
+      "uploadedDate": "2023-03-10T20:56:57.234Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PaperBallFight-1920x1080-eca9a659632af8dd9cc80ee329b86a37_Snapshot.png",
+      "md5": "33e98d83bcd3dbb12280a44eb19adb74",
+      "width": 150,
+      "height": 74,
+      "size": 5059,
+      "uploadedDate": "2023-03-10T20:56:57.811Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MovingThrower-1920x1080-c3f84d81cea5886f8e23e10d209faf89_Snapshot.png",
+      "md5": "a86a1ea38d0a4ba7f54cdbbfb75327b4",
+      "width": 150,
+      "height": 74,
+      "size": 4390,
+      "uploadedDate": "2023-03-10T20:56:58.378Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Demo-1920x1080-e6d8517805444757a7732e4b155da5a5_Snapshot.png",
+      "md5": "9f92d4ff44a3ca3e2352298362fbd404",
+      "width": 150,
+      "height": 74,
+      "size": 4573,
+      "uploadedDate": "2023-03-10T20:56:59.082Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 1-1920x1080-8cf6e9f4ce1edbbaecb70b64754edd2e_Snapshot.png",
+      "md5": "65ce3e55842e0190219446e524311442",
+      "width": 150,
+      "height": 74,
+      "size": 4184,
+      "uploadedDate": "2023-03-10T20:56:59.533Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 2-1920x1080-6c4ed8db090878fb7a11c233283286e2_Snapshot.png",
+      "md5": "4f82b261551bc8acbe1717c6555ff269",
+      "width": 150,
+      "height": 74,
+      "size": 4349,
+      "uploadedDate": "2023-03-10T20:56:59.967Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint Function Node 3-1920x1080-f1af02ad76e13b7464168ea9dd4a22c6_Snapshot.png",
+      "md5": "3c2aa40a5ebbb1195ef394218cc0eca8",
+      "width": 150,
+      "height": 74,
+      "size": 3750,
+      "uploadedDate": "2023-03-10T20:57:00.466Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Material-1920x1080-34e984807a6e5d07bc612e6173e43aa4_Snapshot.png",
+      "md5": "f7fc17a0cc86c2b69577f664679332f9",
+      "width": 150,
+      "height": 74,
+      "size": 5074,
+      "uploadedDate": "2023-03-10T20:57:00.965Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-03-13T17:30:03.245Z",
+  "lastModifiedDate": "2025-01-29T14:22:53.466Z",
+  "customAttributes": {},
+  "entitlementName": "ac4c4511ff9d4b1295afc75b62d56017",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "7b7b7687aad845d6ad40591eeae4b779",
+      "appId": "Projectiac4c4511ff9dV1",
+      "compatibleApps": [
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "iOS",
+        "Linux",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Oculus"
+      ],
+      "dateAdded": "2023-03-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.1"
+    }
+  ],
+  "developer": "Woody's Games",
+  "developerId": "o-ncl983clykey3wmkymg792vl4tbmlk",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

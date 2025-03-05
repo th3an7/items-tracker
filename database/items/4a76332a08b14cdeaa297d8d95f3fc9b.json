@@ -1,0 +1,356 @@
+{
+  "id": "4a76332a08b14cdeaa297d8d95f3fc9b",
+  "title": "Map Widget",
+  "description": "Map Widget allows user to create multilayered scalable maps with basic navigation and generate data for them from any UMap asset",
+  "longDescription": "<h1>MAP WIDGET</h1><p><br /></p><p><a href=\"https://youtu.be/p8WqwBi96pI\" rel=\"nofollow\">3 MIN OVERVIEW</a></p><p><br /></p><p>Map Widget plugin allows to:</p><p><br /></p><ul><li>Easily create SCALABLE and SCROLLABLE maps</li><li>Use custom scale profile if needed</li><li>Add dynamic elements to map during Gameplay</li><li>Easily fill up map with static icons, signs and other elements via Widget Brush in Editor</li><li>Easily setup radar logic for specific actors on the scene via Map View Actors</li><li>Generate assets from Unreal Engine Map</li><li>Use different Levels of Details depending on scale (multilayered structure &#43; blending logic)</li></ul><p><br /></p><h2>Normalized coords</h2><p><br /></p><p>It is very useful to have independent measure for map space and for this purpose many properties are expressed in Normalized coords. Normalized coords are defined by space occupied by map under Scale Value of 1. Left top corner - [0, 0], center - [0.5, 0.5], right bottom corner - [1, 1], etc…</p><p><br /></p><h2>Scale Mode</h2><p><br /></p><p>Child widgets can have different behavior regarding Scale Value depending on Scale Mode that is used:</p><ul><li>Not scaled - not scaled (usage case - same icon size, same font size)</li><li>Area scaled - Area will be scaled (usage case - scaled icon size, same font size)</li><li>Fully scaled - Child widget will be scaled (usage case - scaled icon size, scaled font size)</li></ul><p><br /></p><h2>Background</h2><p><br /></p><p>To set up Background for Map you need to:</p><ul><li>Create new <strong>UDataTable</strong> asset with <strong>FMapViewBackgroundLayer</strong> structure for rows</li><li>Edit created <strong>UDataTable</strong> asset - add rows and set their properties</li><li>Set created <strong>UDataTable</strong> asset as the value of [Background Data Table] property for <strong>UMapView</strong> panel</li></ul><p><br /></p><p><a href=\"https://discord.gg/TjxHxkwzRb\" rel=\"nofollow\">SUPPORT/FEEDBACK</a></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Pentangle&#43;St.\" rel=\"nofollow\">CHECK OTHER PLUGINS BY US</a></p><p>_____________________________________________________________________________________________</p><p><br /></p><h2>TECHNICAL NOTES</h2><p><br /></p><h2>FMapViewBackgroundLayer</h2><p><br /></p><p><u>DESCRIPTION:</u> Is a structure which defines Background layer</p><p><u>PROPERTIES:</u></p><ul><li>[BlendInRange] - Blend In Range (from Scale Value when layer just starts to appear to Scale Value when layer is fully blended)</li><li>[BackgroundItems] - Background items added to Background layer</li></ul><p><br /></p><h2>FMapViewBackgroundItem</h2><p><br /></p><p><u>DESCRIPTION:</u> is a structure which defines Background item.</p><p><u>PROPERTIES:</u></p><ul><li>[Area] - Area occupied by Background item in Normalized coords</li><li>[Texture] - Texture used to paint Background item</li></ul><p><br /></p><h2>Map View</h2><p><br /></p><p>To add <strong>UMapView</strong> panel it is needed to go through the same steps as it will be with any other UMG panel.</p><p><br /></p><p><u>PANEL PROPERTIES:</u></p><ul><li>[SizeInWorldSpace] - Size of Map in World Space for calcs between spaces (used for Map View Actors)</li><li>[CenterInWorldSpace] - Center of Map in World Space for calcs between spaces (used for Map View Actors)</li><li>[Scale] - Current Scale Settings</li><li>[Scale Rate] - Scale Rate used for Zoom In/Out (as multiplier)</li><li>[Scale Profile/Mode] - Blend option used for Zoom In/Out</li><li>[Scale Profile/Custom Curve] - Custom Curve used for Zoom In/Out</li><li>[Offset] - Current Offset in Normalized coords</li><li>[Scroll Rate] - Scroll Rate used for Scroll (as multiplier)</li><li>[Background Data Table] - <strong>UDataTable</strong> asset with Background layers</li><li>[MapViewActors] - Settings to add Actors of specific classes to map</li><li>[MapViewActorsUpdateRate] - Update Rate used for Map View Actors</li><li>[Design] - this sub panel contains all things to use paint tool for Layering and filling</li></ul><p><br /></p><p>To add Child widgets to <strong>UMapView</strong> panel it is needed to go through the same steps as it will be with any other UMG panel. <strong>UMapView</strong> panel has its own Slot class.</p><p><br /></p><p><u>SLOT PROPERTIES:</u></p><ul><li>[Position] - Position of the slot in Normalized coords</li><li>[Size] - Size occupied by the slot in Normalized coords</li><li>[Pivot] - Pivot of the slot relative to [Position] (Left top corner - [0, 0], center - [0.5, 0.5], right bottom corner - [1, 1])</li><li>[Size To Content] - when is TRUE, Desired Size will be used instead of [Size]</li><li>[Scaling Mode] - Scaling mode of the slot, only when [Size To Content] is TRUE</li><li>[Z Order] - Order priority to paint with - higher values are painted last (and so they will appear to be on top)</li><li>[Blend In Range] - Blend In Range of the slot (from Scale Value when layer just starts to appear to Scale Value when layer is fully blended)</li></ul><p><br /></p><h2>Background Generation</h2><p><br /></p><p>To generate Backgound Layers from UMap asset, follow through steps:</p><p><br /></p><p>- Open <strong>UMap</strong></p><p><br /></p><p>- Place <strong>Shot Camera Actor</strong> (in Editor Viewport) and select it (in World Outliner)</p><p><br /></p><p>- Set [Ortho Width] and [Ortho Far Clip Plane] to catch all required volume of UMap that should be used (in Details, check green gizmo in Editor Viewport)</p><p><br /></p><p>- Hints for placement:</p><ul><li>Shots are taken in Orthographic Projection Mode, so direct distance between <strong>Shot Camera Actor</strong> and target has no impact on generation process</li><li>Set Location to catch all required volume of UMap between [Ortho Near Clip Plane] and [Ortho Far Clip Plane] (in Details or in Editor Viewport)</li><li>Set Rotation to catch required view point (in Details or in Editor Viewport)</li></ul><p><br /></p><p>- Hints for [Scale Range] (in Details)</p><ul><li>Scale Range Min in most cases is 1 - when no any scaling applied, it should be original size</li><li>Scale Range Max should be greater than Scale Range Min to represent valid scaling range, set it depending on project requirements (default value is 1000)</li></ul><p><br /></p><p>- Hints for [Shot Layers] (in Details)</p><ul><li><em><u>Layer 00</u></em> is root Shot layer, Blend In Range for it is always set to Scale Range Min, this Shot layer cant be removed</li><li>Use <strong>Plus Button</strong> to add Shot layer and <strong>Cross button</strong> to remove Shot layer</li><li>[Subdivision] defines how many pieces will be this Shot layer subdivided to - If Shot layer has [Subdivision] equal to 2x2 that means it will be subdivided into 4 pieces during generation process (check green gizmo in Editor Viewport)</li><li>[Subdivision] is accumulated via multiplication - If <em><u>Layer 00</u></em> has [Subdivision] equal to 2x2 and next <em><u>Layer 01</u></em> has [Subdivision] equal to 2x2 as well, that means <em><u>Layer 00</u></em> will be subdivided into 4 pieces while <em><u>Layer 01</u></em> will be subdivided into 16 pieces</li><li>[Texture Size] defines what will be output size for texture for each piece of Shot layer during generation process with respect to Aspect Ratio</li><li>[Blend In Range] - Blend In Range (from Scale Value when layer just starts to appear to Scale Value when layer is fully blended)</li></ul><p><br /></p><p>- Create/open folder (in Content Browser)</p><p><br /></p><p>- Click on Play and wait a bit, generation will start after several seconds</p><p><br /></p><p>- Background Generation:</p><ul><li>Textures will be generated according to <strong>Shot Camera Actor</strong> placement and configuration</li><li><strong>UDataTable</strong> asset will be created and filled according to <strong>Shot Camera Actor</strong> placement and configuration</li></ul><p><br /></p><p>Now, this <strong>UDataTable</strong> asset can be set as value for [Background Data Table] property of <strong>UMapView</strong> panel.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Easily create SCALABLE and SCROLLABLE maps</li><li>Use custom scale profile if needed</li><li>Add dynamic elements to map during Gameplay</li><li>Easily fill up map with static icons, signs and other elements via Widget Brush in Editor</li><li>Easily setup radar logic for specific actors on the scene via Map View Actors</li><li>Generate assets from Unreal Engine Map</li><li>Use different Levels of Details depending on scale (multilayered structure &#43; blending logic)</li></ul><p>Code Modules:</p><ul><li>MapWidget [Runtime]</li><li>MapWidgetEditor [Editor]</li><li>MapWidgetToolsEditor [Editor]</li></ul><p>Number of Blueprints: 17</p><p>Number of C&#43;&#43; Classes: 28</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64, Mac, Linux</p><p>Supported Target Build Platforms: Win64, Mac, Linux</p><p>Documentation: see full description above</p><p>Example Project: see full description above</p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery00-1920x1080-e2b21e6204e00ecc646c9718446a80b7.jpg",
+      "md5": "e2b21e6204e00ecc646c9718446a80b7",
+      "width": 1920,
+      "height": 1080,
+      "size": 672475,
+      "uploadedDate": "2024-09-13T13:56:36.333Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery01-1920x1080-730a07123c24559d29d5560c105c7ff7.png",
+      "md5": "730a07123c24559d29d5560c105c7ff7",
+      "width": 1920,
+      "height": 1080,
+      "size": 2133618,
+      "uploadedDate": "2024-09-13T13:20:15.117Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery02-1920x1080-a286dbaf2dbfba630357399c5b1bb178.png",
+      "md5": "a286dbaf2dbfba630357399c5b1bb178",
+      "width": 1920,
+      "height": 1080,
+      "size": 1008978,
+      "uploadedDate": "2024-09-13T13:20:16.035Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery03-1920x1080-3912bf57ff363fc458d16290573f64aa.png",
+      "md5": "3912bf57ff363fc458d16290573f64aa",
+      "width": 1920,
+      "height": 1080,
+      "size": 863885,
+      "uploadedDate": "2024-09-13T13:20:16.541Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery04-1920x1080-68bec3a26fadb4c76a3784a486887ae9.png",
+      "md5": "68bec3a26fadb4c76a3784a486887ae9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1019183,
+      "uploadedDate": "2024-09-13T13:20:17.088Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MapWidget_thumb-284x284-11a29cb2a6bf41f5541445626177037a.png",
+      "md5": "11a29cb2a6bf41f5541445626177037a",
+      "width": 284,
+      "height": 284,
+      "size": 181149,
+      "uploadedDate": "2024-09-13T13:48:59.741Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MapWidget_featured-894x488-a1a341e13ff070679b021cde2e01f809.png",
+      "md5": "a1a341e13ff070679b021cde2e01f809",
+      "width": 894,
+      "height": 488,
+      "size": 959145,
+      "uploadedDate": "2024-09-13T13:48:59.821Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery00-1920x1080-e2b21e6204e00ecc646c9718446a80b7_Snapshot.jpg",
+      "md5": "b6aa66af5e77256b007737071a195667",
+      "width": 150,
+      "height": 74,
+      "size": 8858,
+      "uploadedDate": "2024-09-13T13:56:37.186Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery01-1920x1080-730a07123c24559d29d5560c105c7ff7_Snapshot.png",
+      "md5": "17f1e257ec8e88245e7818f874242583",
+      "width": 150,
+      "height": 74,
+      "size": 6887,
+      "uploadedDate": "2024-09-13T13:20:15.500Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery02-1920x1080-a286dbaf2dbfba630357399c5b1bb178_Snapshot.png",
+      "md5": "b34f79b2857bf9f66a2e5664c591be9b",
+      "width": 150,
+      "height": 74,
+      "size": 5782,
+      "uploadedDate": "2024-09-13T13:20:16.413Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery03-1920x1080-3912bf57ff363fc458d16290573f64aa_Snapshot.png",
+      "md5": "0bc53330f62fcef1c8f0fc5d2ff0fc75",
+      "width": 150,
+      "height": 74,
+      "size": 5577,
+      "uploadedDate": "2024-09-13T13:20:16.884Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery04-1920x1080-68bec3a26fadb4c76a3784a486887ae9_Snapshot.png",
+      "md5": "7395c2d090297bcd4a72a48c8324b2a4",
+      "width": 150,
+      "height": 74,
+      "size": 6047,
+      "uploadedDate": "2024-09-13T13:20:17.471Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1-1920x1080-56f2aaa59689292d1f72b2583bf4e5c5_Snapshot.png",
+      "md5": "820efe8955924d49a82d5945d06cb220",
+      "width": 150,
+      "height": 74,
+      "size": 6431,
+      "uploadedDate": "2024-08-07T06:34:33.035Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery2-1920x1080-8e73613c819f656d8af8cbc2e8e9a7b0_Snapshot.png",
+      "md5": "fb09970b717e94c60523c644d3304b3a",
+      "width": 150,
+      "height": 74,
+      "size": 6091,
+      "uploadedDate": "2024-08-07T06:34:33.556Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery3-1920x1080-78d6580a9d2de09e7939261e888d3747_Snapshot.png",
+      "md5": "3dd6babb5d31dd5e2e7be07b528f0aba",
+      "width": 150,
+      "height": 74,
+      "size": 5952,
+      "uploadedDate": "2024-08-07T06:34:34.057Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryFeatureList-1920x1080-d096e755cf7c63d925853da54de53a66_Snapshot.png",
+      "md5": "693e8fa0c3e6b58b3163ea5199dd0345",
+      "width": 150,
+      "height": 74,
+      "size": 6783,
+      "uploadedDate": "2024-06-10T12:59:20.711Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryDetailsRevealing-1920x1080-78b1d1ba577e6471d85115f301bc5711_Snapshot.png",
+      "md5": "6a0d6e368bef600a8506c5df24511ba9",
+      "width": 150,
+      "height": 74,
+      "size": 6132,
+      "uploadedDate": "2024-06-10T12:34:08.156Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryGeneration-1920x1080-88c2afcf6deedecb9b178f68e0d0de71_Snapshot.png",
+      "md5": "dfc38c13a4febe4c1393cf32b7467acc",
+      "width": 150,
+      "height": 74,
+      "size": 6661,
+      "uploadedDate": "2024-06-10T12:34:08.780Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryShotCameraActor-1920x1080-b16f4b6ff347baa8fd9793f57e12d1a3_Snapshot.png",
+      "md5": "408958bf7ca1f01b781a68d3615d5174",
+      "width": 150,
+      "height": 74,
+      "size": 7738,
+      "uploadedDate": "2024-06-10T12:29:07.598Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryShotCameraActor2-1920x1080-be378a002352fc6977f8223b259524af_Snapshot.png",
+      "md5": "78de4aebf963e3d781f9c47ad1b48ad2",
+      "width": 150,
+      "height": 74,
+      "size": 6121,
+      "uploadedDate": "2024-06-10T12:24:36.418Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryIntro-1920x1080-411fedb29ff6f01b2a484f39000d7604_Snapshot.png",
+      "md5": "d7d41657e0ed90acfdc664f9fdf2e2b1",
+      "width": 150,
+      "height": 74,
+      "size": 4876,
+      "uploadedDate": "2024-06-10T12:17:56.282Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryProps-1920x1080-992805c6d4380e8ae56c60a15881c89b_Snapshot.png",
+      "md5": "0fa88320eda9f7a6a5b296a0927c2846",
+      "width": 150,
+      "height": 74,
+      "size": 5467,
+      "uploadedDate": "2024-06-10T12:17:56.704Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryDataTable-1920x1080-e6d382e4aac41336a3724f661b9a17d1_Snapshot.png",
+      "md5": "f65205a946c9a5b05cc4fe0846cdcc0a",
+      "width": 150,
+      "height": 74,
+      "size": 3935,
+      "uploadedDate": "2024-06-10T12:17:57.095Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Background1920Comments-1920x1080-0debf68429cd9342ffdb6b11332c3baf_Snapshot.png",
+      "md5": "0008053b735e12464cd7575523a435dc",
+      "width": 150,
+      "height": 74,
+      "size": 7643,
+      "uploadedDate": "2024-06-01T16:36:14.743Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryPropsHighlight1920-1920x1080-00b8aeaa20901b20b0d134e6f3f74638_Snapshot.png",
+      "md5": "ba60c66fbc37b213fb3e5bc3b3b80219",
+      "width": 150,
+      "height": 74,
+      "size": 6403,
+      "uploadedDate": "2024-06-01T16:36:15.269Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryDetailsHighlight1920-1920x1080-866188ba4f0efac2e8a5171b183bbc38_Snapshot.png",
+      "md5": "2439a68c062d861dc1cf200094444313",
+      "width": 150,
+      "height": 74,
+      "size": 9588,
+      "uploadedDate": "2024-06-01T16:36:16.024Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryChildWidgetsHighlight1920-1920x1080-8dec4f4b3f2b7e08f799daf1b62b708b_Snapshot.png",
+      "md5": "1808066f6eb19aca1155ad76c18a17c0",
+      "width": 150,
+      "height": 74,
+      "size": 8421,
+      "uploadedDate": "2024-06-01T16:36:16.644Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryMiniMapHighlight1920-1920x1080-3c1ffbcebd052602826b5f8ee62a1292_Snapshot.png",
+      "md5": "6dd07519cf9abad9e63002efe9caa21d",
+      "width": 150,
+      "height": 74,
+      "size": 5267,
+      "uploadedDate": "2024-06-01T16:36:17.278Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryShotCameraActor1920Comments-1920x1080-27ca956e8a09f82fa68a7c046ccbb894_Snapshot.png",
+      "md5": "9d31f432fdcf11841579c01d14836426",
+      "width": 150,
+      "height": 74,
+      "size": 7897,
+      "uploadedDate": "2024-06-01T16:36:17.780Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryGeneration1920-1920x1080-383a2511bef5b4ed5c93ced616cd7ab7_Snapshot.png",
+      "md5": "cee0584b0a5a5907df8452dfc96bbc67",
+      "width": 150,
+      "height": 74,
+      "size": 6551,
+      "uploadedDate": "2024-06-01T16:36:18.387Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryDataTableHighlight1920-1920x1080-c470c0d8bf55a82c14b316c80ef80df0_Snapshot.png",
+      "md5": "94376a5aa63790cb0e65295aa6182d0e",
+      "width": 150,
+      "height": 74,
+      "size": 3603,
+      "uploadedDate": "2024-06-01T16:36:18.734Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-06-17T11:24:16.907Z",
+  "lastModifiedDate": "2025-02-24T12:53:26.582Z",
+  "customAttributes": {},
+  "entitlementName": "4a76332a08b14cdeaa297d8d95f3fc9b",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "349329b3ee334196a32edd38fd8b660d",
+      "appId": "MapWidget_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-06-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.7_5.2"
+    },
+    {
+      "id": "c8e361cbe4524943aa3e86fc633f396e",
+      "appId": "MapWidget_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-06-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.7_5.3"
+    },
+    {
+      "id": "d82c5837d90644fcb8a4c3cff39b3326",
+      "appId": "MapWidget_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-06-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.7_5.4"
+    }
+  ],
+  "developer": "Pentangle St.",
+  "developerId": "o-uljepgj3r9qhqvt365cxemcuyqhawj",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

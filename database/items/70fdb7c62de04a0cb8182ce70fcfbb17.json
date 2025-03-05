@@ -1,0 +1,335 @@
+{
+  "id": "70fdb7c62de04a0cb8182ce70fcfbb17",
+  "title": "Interactive Flow (VR Controls extension)",
+  "description": "Propagate signals at runtime along cables or anything else, triggering dynamic changes along the way, such as switching lights, openning doors, changing object materials, etc.",
+  "longDescription": "<p>FROM LATEST UPDATE:</p><p>* You now have interaction icons from VrControls, so that it is easier to see when interactions are possible, and to choose between grab or interact actions.</p><p>* You now can grab a female plug by hand (see VrControls), approch a male plug until it turns green, and open your hand to attach the plugs together.</p><p>* Dropping an object is always done by opening your hand.</p><p><br /></p><p>Requires the VR Controls plugins for the sample Blueprints to work ! Without it, you will need additional work to link your own events and/or C&#43;&#43; code to this plugin.</p><p><br /></p><p><a href=\"https://drive.google.com/file/d/1fjVhRdrgY4yfOQ67_9TuoYrufFwF2dvv/view?usp&#61;sharing\" rel=\"nofollow\">Demo video</a></p><p><a href=\"https://docs.google.com/presentation/d/17sr9OgExEGai5RRZbgJ08BLuLVVm5MvqrIJkqdQazw0/edit?usp&#61;sharing\" rel=\"nofollow\">Tutorial</a></p><p><br /></p><p>Propagate signals at runtime automatically and interactively. The plugin ships some signal emitters, recievers, and transmitters, but you can of course customize them or create your own.</p><p><br /></p><p>Emitters could be buttons, terminals, pressure plates, events, etc. The plugin provides the following as examples :</p><ul><li>A lever with 3 positions (top, bottom, middle) and two output plugs (top, bottom). This lever is VR compatible in several ways. First, it supports physics, so you can push it, grab it, throw physics object at it, etc. Then, it implements the InteractableInterface (from VR Controls), so it can be switched at a distance by pointing at it and pressing the trigger (VR motion controller), or clicking (mouse). The output plugs send signal 1 when the lever is switched toward them, else 0.</li></ul><p><br /></p><p>Receivers could be traps, machines, doors, etc. The plugin provides the following as examples :</p><ul><li>A door which opens when its input plug receives 1 and shuts when it receives 0.</li><li>A light which lits up when its input plug receives 1 and shuts when it receives 0.</li></ul><p><br /></p><p>Transmitters could be wires, pipes, wireless, etc. The plugin provides the following as examples :</p><ul><li>A first cable propagates the signal instantly from its input plug to its output plug. <strong>You can plug, unplug and move it at runtime. Signals are updated accordingly and propagated to all signal actors down the line. </strong>The plugs also change material when entering or leaving focus, such as when you are approaching another plug that can connect to it. Both plugs implement the InteractableInterface (from VR Controls), so they can be plugged/unplugged at a distance by pointing at them and pressing the trigger (VR motion controller), or clicking (mouse). They also support physics, so you can grab and move them around.</li><li>A second cable is the same except it propagates signals with a delay and lights up progressively from its input plug toward its output plug.</li><li>A signal multiplexer with one input plug and an output plug which can be connected to multiple outputs.</li></ul>",
+  "technicalDetails": "<p>Features (BP&#61;Blueprint, BPC&#61;Blueprint Component):</p><p>- The SignalActor class (C&#43;&#43;) is the base class of all Actors that can propagate a signal. The following derived classes are provided :</p><ul><li>BP_SignalCable</li><li>BP_SignalCableDelayed</li><li>BP_SignalEmitter_Lever</li><li>BP_SignalReceiver_Door</li><li>BP_SignalReceiver_WallLight</li><li>BP_SignalMultiplexer</li></ul><p>- The SignalPlugComponent (C&#43;&#43;) is used to connect signal actors together. The following derived classes are provided :</p><ul><li>BPC_InteractablePlug{In/Out}</li></ul><p><br /></p><p>Code Modules:</p><ul><li> InteractiveFlow (Runtime)</li></ul><p><br /></p><p>Number of Blueprints: 8</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: Not tested</p><p>Supported Development Platforms: Windows 10 (Should also work for other platforms)</p><p>Supported Target Build Platforms: Windows 10 (Should also work for other platforms)</p><p>Tested Hardware: Valve Index, Mouse/Keyboard (Should also work with other hardware)</p><p>Documentation: See the tutorial above for basic usage. Open the blueprints for customization.</p><p><br /></p><p>Example Project: Coming soon.</p><p><br /></p><p>Important/Additional Notes: This plugin works out of the box if you have the VR Controls plugin. If you don&#39;t have the VR Controls plugin, you will need additional work to link your own events and/or C&#43;&#43; code to this plugin.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00001-1920x1080-ca47f2bf794b19f93ec741c2a9f2f0d8.png",
+      "md5": "ca47f2bf794b19f93ec741c2a9f2f0d8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2299096,
+      "uploadedDate": "2021-08-29T20:51:42.478Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00002-1920x1080-120d297f678d1265501d908444b7bb29.png",
+      "md5": "120d297f678d1265501d908444b7bb29",
+      "width": 1920,
+      "height": 1080,
+      "size": 2291853,
+      "uploadedDate": "2021-08-29T20:51:43.091Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00003-1920x1080-3c90a07b298f3ef4e93f4eeae351e35c.png",
+      "md5": "3c90a07b298f3ef4e93f4eeae351e35c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2278213,
+      "uploadedDate": "2021-08-29T20:51:43.710Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00004-1920x1080-00a00aa9f8211feae7b73324409e2529.png",
+      "md5": "00a00aa9f8211feae7b73324409e2529",
+      "width": 1920,
+      "height": 1080,
+      "size": 2337935,
+      "uploadedDate": "2021-08-29T20:51:44.320Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00005-1920x1080-a1da0e112185f441b9bccd6759e3c157.png",
+      "md5": "a1da0e112185f441b9bccd6759e3c157",
+      "width": 1920,
+      "height": 1080,
+      "size": 2340791,
+      "uploadedDate": "2021-08-29T20:51:44.926Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00008-1920x1080-f4a2d5393b4b7c9a1cb908146624ccba.png",
+      "md5": "f4a2d5393b4b7c9a1cb908146624ccba",
+      "width": 1920,
+      "height": 1080,
+      "size": 2364588,
+      "uploadedDate": "2021-08-29T20:51:46.672Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00012-1920x1080-b10a06c11e7097b70fb4ef6e4e373e6a.png",
+      "md5": "b10a06c11e7097b70fb4ef6e4e373e6a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2130413,
+      "uploadedDate": "2021-09-08T21:32:48.272Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00013-1920x1080-c16857ab0130212405c27561bf718128.png",
+      "md5": "c16857ab0130212405c27561bf718128",
+      "width": 1920,
+      "height": 1080,
+      "size": 2204143,
+      "uploadedDate": "2021-09-08T21:32:48.822Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00014-1920x1080-3ec6f80e43189a98bc638f4d2e708841.png",
+      "md5": "3ec6f80e43189a98bc638f4d2e708841",
+      "width": 1920,
+      "height": 1080,
+      "size": 2110717,
+      "uploadedDate": "2021-09-08T21:32:49.393Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00015-1920x1080-63efab443cef824e673a04025172f1d2.png",
+      "md5": "63efab443cef824e673a04025172f1d2",
+      "width": 1920,
+      "height": 1080,
+      "size": 2171383,
+      "uploadedDate": "2021-09-08T21:32:49.977Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00016-1920x1080-88b51f6644e6499f3857dcecc4ffa3f7.png",
+      "md5": "88b51f6644e6499f3857dcecc4ffa3f7",
+      "width": 1920,
+      "height": 1080,
+      "size": 2226159,
+      "uploadedDate": "2021-09-08T21:32:50.567Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DynamicelectricalsystemVR_thumb-284x284-2f007bed24d485a324f7f4ca6f27a9f8.png",
+      "md5": "2f007bed24d485a324f7f4ca6f27a9f8",
+      "width": 284,
+      "height": 284,
+      "size": 86294,
+      "uploadedDate": "2021-08-29T20:51:47.186Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DynamicelectricalsystemVR_featured-894x488-d990b8d9a3ecaacf9e492eadde35e597.png",
+      "md5": "d990b8d9a3ecaacf9e492eadde35e597",
+      "width": 894,
+      "height": 488,
+      "size": 480329,
+      "uploadedDate": "2021-08-29T20:51:47.287Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00012-1920x1080-b10a06c11e7097b70fb4ef6e4e373e6a_Snapshot.png",
+      "md5": "d0bea4f65e921430ee39156522d7f985",
+      "width": 150,
+      "height": 74,
+      "size": 4148,
+      "uploadedDate": "2021-09-08T21:32:48.629Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00013-1920x1080-c16857ab0130212405c27561bf718128_Snapshot.png",
+      "md5": "649415109d62684bd28da883cd5eb10b",
+      "width": 150,
+      "height": 74,
+      "size": 4312,
+      "uploadedDate": "2021-09-08T21:32:49.199Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00014-1920x1080-3ec6f80e43189a98bc638f4d2e708841_Snapshot.png",
+      "md5": "d0a1a85282301b497923360e0be80cd8",
+      "width": 150,
+      "height": 74,
+      "size": 4037,
+      "uploadedDate": "2021-09-08T21:32:49.785Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00015-1920x1080-63efab443cef824e673a04025172f1d2_Snapshot.png",
+      "md5": "cf316a74de55546e876fac71638cf719",
+      "width": 150,
+      "height": 74,
+      "size": 4241,
+      "uploadedDate": "2021-09-08T21:32:50.352Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00016-1920x1080-88b51f6644e6499f3857dcecc4ffa3f7_Snapshot.png",
+      "md5": "a52ee881b0cd7135152eed7a09b62915",
+      "width": 150,
+      "height": 74,
+      "size": 4806,
+      "uploadedDate": "2021-09-08T21:32:50.916Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-ca47f2bf794b19f93ec741c2a9f2f0d8_Snapshot.png",
+      "md5": "164dcc589eb69b1f00405304e7790838",
+      "width": 150,
+      "height": 74,
+      "size": 5152,
+      "uploadedDate": "2021-08-29T20:51:42.885Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-120d297f678d1265501d908444b7bb29_Snapshot.png",
+      "md5": "75ae430cb50b79f7ea19b48beb1e3544",
+      "width": 150,
+      "height": 74,
+      "size": 5170,
+      "uploadedDate": "2021-08-29T20:51:43.512Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00003-1920x1080-3c90a07b298f3ef4e93f4eeae351e35c_Snapshot.png",
+      "md5": "8da2b913d0a1b507812f512522673e26",
+      "width": 150,
+      "height": 74,
+      "size": 5200,
+      "uploadedDate": "2021-08-29T20:51:44.119Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00004-1920x1080-00a00aa9f8211feae7b73324409e2529_Snapshot.png",
+      "md5": "ca0b049344ada2cd54aeba4906704323",
+      "width": 150,
+      "height": 74,
+      "size": 4903,
+      "uploadedDate": "2021-08-29T20:51:44.742Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00005-1920x1080-a1da0e112185f441b9bccd6759e3c157_Snapshot.png",
+      "md5": "e56efb0dae9e846cc602082112ecc138",
+      "width": 150,
+      "height": 74,
+      "size": 4968,
+      "uploadedDate": "2021-08-29T20:51:45.370Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00006-1920x1080-0920c0c0cf898268e48899d1dcef1817_Snapshot.png",
+      "md5": "b3a1f88a33827ab843b9a5d933b92bcb",
+      "width": 150,
+      "height": 74,
+      "size": 5327,
+      "uploadedDate": "2021-08-29T20:51:45.930Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00007-1920x1080-39547bbc2ff0633fe0c0958142ff2072_Snapshot.png",
+      "md5": "39586fb8833092c460bce4998235636b",
+      "width": 150,
+      "height": 74,
+      "size": 5396,
+      "uploadedDate": "2021-08-29T20:51:46.470Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00008-1920x1080-f4a2d5393b4b7c9a1cb908146624ccba_Snapshot.png",
+      "md5": "f1587e63ab304d79fdadcb1dff48fa9b",
+      "width": 150,
+      "height": 74,
+      "size": 5502,
+      "uploadedDate": "2021-08-29T20:51:47.083Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-09-13T18:19:43.637Z",
+  "lastModifiedDate": "2024-10-15T13:36:50.229Z",
+  "customAttributes": {},
+  "entitlementName": "70fdb7c62de04a0cb8182ce70fcfbb17",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "910230fe16ae4cdbae5aa71ab11ec498",
+      "appId": "InteractiveFlow_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "Windows"
+      ],
+      "dateAdded": "2021-08-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.1"
+    },
+    {
+      "id": "5ae62a3719d741758787b6618292f2aa",
+      "appId": "InteractiveFlow_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "Windows"
+      ],
+      "dateAdded": "2022-05-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.2_ue5"
+    },
+    {
+      "id": "50ab4afe0ff946df98bd98935a96face",
+      "appId": "InteractiveFlow_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2023-01-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.2_ue5.1"
+    },
+    {
+      "id": "f6fa51b81bcf4fdeabdc04f54ad62dcf",
+      "appId": "InteractiveFlow_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2023-06-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.2_ue5.2"
+    },
+    {
+      "id": "7ae282131a2a45f2a3b15bcd56e8af7f",
+      "appId": "InteractiveFlow_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.2_ue5.4"
+    }
+  ],
+  "developer": "GodeffroyValet",
+  "developerId": "o-ghr2f6qwdpw7374q2yw8kfj4kg3zyc",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,195 @@
+{
+  "id": "de79430a81d04864ab6a5d6ee8d31ba0",
+  "title": "Auto Buffs",
+  "description": "A component meant to handle modifiers, allowing multiple types of changes to various values from a variety of sources all easily combined together for one simple output modifier. Be it lasting armor modifiers, or timed debuffs, this product handles it.",
+  "longDescription": "<p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;X1KwPFXSfak&amp;index&#61;22&amp;list&#61;PLAgvMMfMQH2O1-YfsKXSwcFK2bvVg7UrP\" rel=\"nofollow\">Demo Video</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;OB69D9J7QpA\" rel=\"nofollow\">Basic Tutorial</a></p><p><br /></p><p>Auto Buffs is component that can be dropped into any actor and then can allow for one to easily send messages to that actor about changes to various values. The component itself can hold information for any number of values, be it damage dealt, movement speed, or intelligence, it doesn’t really matter. The component will simply hold onto and manage changes for the different buffs. Managing includes counting down their remaining durations, limiting duplicates of the same buff type if set to do so, and keeping track all currently applied buffs unique IDs, names, tooltip descriptions, or other parts.</p><p>The first type is Float Multiplier, meant to produce a float that you can multiply against the original value in that actor by referencing it to figure out the new final value. There is also a Float Flat type meant for storing flat value changes like &#43;10 or -5. Next is a Boolean type that will return true as long as there is an active buff present, and false if none are present (this is meant for On/Off effects like silence, EMP, or Invincible Mode). And last is a simple Status type, that is simply meant as a place to drop effects with unique IDs that don’t have any specific modifier value associated with them. Even if you have five different modifiers affecting one base stat, some timed and expiring, others not, and others needing to be ignored if duplicates or reapplied instead, this can manage all of that while feeding you the simple output modifier that all of these changes would combine to create at any given moment.</p><p>You can also have the actor notified of any changes to its buffs, with a new value sent directly along with those updates.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Allows for easily sent buff messages from any source to any actor with the Auto_Buffs_BP component.</li><li> Keeps track of all buffs, including counting down their durations and disabling them as needed. It stores IDs so applied buffs can be searched for or modified, and also stores relevant information an a customizable struct for easy reference.</li><li> Customizable Buff Types allow for the user to create their own list of buffs that they plan to use in their project.</li><li>Supports multiplier buffs to allow for percentage adjustments to an end value. Supports flat float buffs to make simple direct adjustments to a value. Supports Boolean buffs that will return true if at least one active buff is present for the given Buff Type. And supports Status buffs, an area to store buffs with IDs and Info included that won&#39;t necessarily have any modifiers included.</li></ul><p><br /></p><p><br /></p><p>Number of Blueprints: 6 Actors, 1 Actor Component, 1 Game Mode, 1 Blueprint Interface.</p><p>Materials: 3 Master Materials, 9 Instanced Materials.</p><p>Textures: 4 256*256 textures (include alpha channels)</p><p>Input: Keyboard and mouse used for demo, none required by the component itself.</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: <a href=\"https://docs.google.com/document/d/10YcP62rznmA-hK4-6jIgIHaAzIbVONmfahVmvSJ2dcU/edit?usp&#61;sharing\" rel=\"nofollow\">https://docs.google.com/document/d/10YcP62rznmA-hK4-6jIgIHaAzIbVONmfahVmvSJ2dcU/edit?usp&#61;sharing</a></p><p><br /></p><p>Important Info:</p><p>ThirdPersonCharacter and all Mannequin assets are product of Epic Games and included for demonstration purposes.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AutoBuffsScreenshot3-1920x1080-e41ecb427c8e927e527373a692960f8a.png",
+      "md5": "e41ecb427c8e927e527373a692960f8a",
+      "width": 1920,
+      "height": 1080,
+      "size": 687730,
+      "uploadedDate": "2018-08-14T20:43:55.899Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AutoBuffsScreenshot2-1920x1080-fd208c58fe011ca7d471a9d4282366ac.png",
+      "md5": "fd208c58fe011ca7d471a9d4282366ac",
+      "width": 1920,
+      "height": 1080,
+      "size": 759342,
+      "uploadedDate": "2018-08-14T20:43:56.599Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AutoBuffsScreenshot1-1920x1080-574af43088191cfd555f3883721d45cb.png",
+      "md5": "574af43088191cfd555f3883721d45cb",
+      "width": 1920,
+      "height": 1080,
+      "size": 185259,
+      "uploadedDate": "2018-08-14T20:43:57.159Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AutoBuffsScreenshot5-1920x1080-5a89174df293c2c5db4f0b217242af4d.png",
+      "md5": "5a89174df293c2c5db4f0b217242af4d",
+      "width": 1920,
+      "height": 1080,
+      "size": 277717,
+      "uploadedDate": "2018-08-14T20:43:57.420Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AutoBuffs_thumb-284x284-fda75c99594bb38fc487ca1874a740ad.png",
+      "md5": "fda75c99594bb38fc487ca1874a740ad",
+      "width": 284,
+      "height": 284,
+      "size": 43099,
+      "uploadedDate": "2018-07-09T00:53:29.193Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AutoBuffs_featured-894x488-f6ad31aa71e46a0c54867afb31c81173.png",
+      "md5": "f6ad31aa71e46a0c54867afb31c81173",
+      "width": 894,
+      "height": 488,
+      "size": 175954,
+      "uploadedDate": "2018-07-09T00:53:29.240Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AutoBuffsScreenshot3-1920x1080-e41ecb427c8e927e527373a692960f8a_Snapshot.png",
+      "md5": "02309f3b97a95cddc2eedb7993c24741",
+      "width": 150,
+      "height": 74,
+      "size": 15597,
+      "uploadedDate": "2018-08-14T20:43:56.088Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AutoBuffsScreenshot2-1920x1080-fd208c58fe011ca7d471a9d4282366ac_Snapshot.png",
+      "md5": "d614650f3eab5b1946a03020c0436189",
+      "width": 150,
+      "height": 74,
+      "size": 14182,
+      "uploadedDate": "2018-08-14T20:43:56.967Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AutoBuffsScreenshot1-1920x1080-574af43088191cfd555f3883721d45cb_Snapshot.png",
+      "md5": "580511f69b6e80f7df26e672b188d657",
+      "width": 150,
+      "height": 74,
+      "size": 6526,
+      "uploadedDate": "2018-08-14T20:43:57.290Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AutoBuffsScreenshot5-1920x1080-5a89174df293c2c5db4f0b217242af4d_Snapshot.png",
+      "md5": "5c9e2da497038274b007fe6651b0cff2",
+      "width": 150,
+      "height": 74,
+      "size": 9925,
+      "uploadedDate": "2018-08-14T20:43:57.610Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AutoBuffsScreenshot3-1920x1080-fd9b0b4f3daaf5fbef0038a0a60513d3_Snapshot.png",
+      "md5": "9c69f24903e77add08412342593ae1e8",
+      "width": 150,
+      "height": 74,
+      "size": 5434,
+      "uploadedDate": "2018-07-09T00:53:28.666Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AutoBuffsScreenshot2-1920x1080-4005d015468d89929e5c8216b72774b6_Snapshot.png",
+      "md5": "2b8cdbde5ffa9f4e498437a75bffb0e6",
+      "width": 150,
+      "height": 74,
+      "size": 4859,
+      "uploadedDate": "2018-07-09T00:53:28.869Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AutoBuffsScreenshot1-1920x1080-580ac5817bbc532cfb8eb1f27517720b_Snapshot.png",
+      "md5": "67f62dbd23e270c00032be399bbfb673",
+      "width": 150,
+      "height": 74,
+      "size": 4128,
+      "uploadedDate": "2018-07-09T00:53:28.988Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AutoBuffsScreenshot5-1920x1080-9786aedee38767eee4731bca60b06286_Snapshot.png",
+      "md5": "f34f79a67cb2679aedcbc41bf398b856",
+      "width": 150,
+      "height": 74,
+      "size": 5706,
+      "uploadedDate": "2018-07-09T00:53:29.168Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-07-19T19:48:56.482Z",
+  "lastModifiedDate": "2024-11-22T05:59:46.525Z",
+  "customAttributes": {},
+  "entitlementName": "de79430a81d04864ab6a5d6ee8d31ba0",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "5027472b1c5c4a8abc21ea7f7c76a63e",
+      "appId": "AutoBuffde79430a81d0V1",
+      "compatibleApps": [
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-07-08T00:00:00.000Z",
+      "releaseNote": "Fix on Clear Existing for clearing all buffs and not just one.\nFix on replace existing duration for Float Flat in some cases.",
+      "versionTitle": "Auto Buffs 4.19"
+    },
+    {
+      "id": "0b968610cdb24905a237f026e02ead0d",
+      "appId": "AutoBuffde79430a81d0V2",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-15T00:00:00.000Z",
+      "releaseNote": "Replaced old UI with new setup that works with changes made in Unreal Engine version.",
+      "versionTitle": "Auto Buffs 5.1"
+    }
+  ],
+  "developer": "Sean Dachtler",
+  "developerId": "o-5b3e61c1f64a79abf802cee6df7f61",
+  "endOfSupport": false,
+  "unsearchable": false
+}

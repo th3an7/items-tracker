@@ -1,0 +1,271 @@
+{
+  "id": "efece972036743c988570e10029a3c9f",
+  "title": "Audio Anim Notify Tool",
+  "description": "Quickly synchronise sounds to your animations with automatic anim notify creation. Automatically add animation notifies to character animations to trigger sounds.",
+  "longDescription": "<ul><li><strong>Quick and easy to use tool for sound designers looking to add movement notifies to many animations / skeletons</strong></li><li><strong>Can be used with both Unreal sound types and FMOD Studio</strong></li><li><strong>More reliable and efficient than runtime movement detection methods, and more feature-rich than Anim Modifiers</strong></li></ul><p><br /></p><ul><li>Add audio notifies for all animations linked to a skeleton, in one go</li><li>Advanced detection for footsteps, hand and arm movements, and more</li><li>Dynamic ground detection or manual ground level setup</li><li><strong>Custom Unreal SoundBase Anim Notify Class OR FMOD Anim Notify class </strong></li><li>Surface detection with sound asset mapping or sound cue parameter switching (Unreal), or event parameter passing (FMOD)</li><li>Sound attenuation override</li><li>Ability to add Niagara effects</li><li>Animation filtering by &#39;contains&#39; name for bulk application of notifies by movement type - e.g. &#39;Walk&#39;, &#39;Run&#39;.</li><li>Biped, quadraped, etc.</li><li>Detailed logging</li><li>Standalone editor window plugin (not tied to the animation editor)</li></ul><p><br /></p><p>This plugin automates the time-consuming process of manually adding audio animation notifies to animations, in bulk or on a per-animation basis. It handles the automatic generation of movement notifies in the animation editor. The plugin contains advanced notify classes for both Unreal SoundBase and FMOD. Originally conceived and developed for a game team dealing with many biped and quadraped characters to speed up the workflow. The aim of the tool is to, within a single interface, quickly give you synchronised sounds that are mostly suitable across a number of skeletons, animations and ground surfaces, reducing the manual work down to the fine tuning rather than the entire setup of every notify.</p><p><br /></p><p><a href=\"https://vimeo.com/957192876\" rel=\"nofollow\"><strong>View the overview and operation video here</strong></a></p><p><a href=\"https://vimeo.com/962704996?share&#61;copy\" rel=\"nofollow\"><strong>View the quick demo video here</strong></a></p><p><br /></p><p><strong>For any help setting up, feature requests, bugs, etc - please email james&#64;jmaud.io for the fastest response</strong></p><p><br /></p><p>Footsteps are detected by monitoring the proximity of the bones to the ground, and footstep strength is measured through motion velocity. Dynamic ground detection can be used as an alternative to manually setting the ground height threshold.</p><p><br /></p><p>Hand / arm movements are detected through a weighting algorithm that takes into account velocity and positional distance comparisons to a defined reference bone (e.g. pelvis). The likelihood of an upper body limb generating a sound when it moves is linked to both the proximity to the center of the body (as it is likely to make audible contact with other surfaces), as well as the velocity of that movement. The user can define the weighting of these factors in deriving a notify event. The hand section can also be used with melee weapons and combat.</p><p><br /></p><p>There are custom Unreal and FMOD notify classes included in this plugin that can handle surface physical material detection (through line tracing), movement strength, footstep angle (upward / downward slope) and more, providing a lot of potential for highly adaptive sound. Each notify is fully modifiable once generated.</p><p><br /></p><p>UPDATES:</p><p>08/24 - v1.5 - Added Unreal SoundBase support and custom class including surface detection, Niagara effects, and much more..</p><p>06/24 - v1.3 - Changed FMOD Studio detection from compile-time to runtime to avoid having to manually recompile the plugin.</p><p>06/24 - v1.2 - Added Dynamic Ground Detection; UI visual changes. 4.27 no longer supported due to marketplace limitations.</p><p>05/24 - v1.1 - UE5.4 version added, plugin re-written to support updated APIs</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Automatically detect foot and hand movements in animations and generate animation notifies</li><li> Easy to set up, with default values for the UE4 mannequin</li><li> Customisable detection for feet and hands (ground thresholds, positional vs speed weightings, etc)</li><li>Dynamic ground detection or manual ground height entry</li><li>Custom Unreal and FMOD studio notify classes, with further features including:</li><li>Ground surface detection - detect physical surfaces with a line trace fired from the bone</li><li>Movement strength detection</li><li>Surface angle detection</li></ul><p><br /></p><p>Code Modules:</p><ul><li> AutoNotifyTool [Editor]</li></ul><p><br /></p><p>Number of Blueprints: 2</p><p>Number of C&#43;&#43; Classes: 6</p><p>Network Replicated: No</p><p>Supported Development Platforms: Mac, Win64</p><p>Supported Target Build Platforms:</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1X_UNnvWUZLTmueA6cj0EShiQstuFZpHH95v5tw8phDo/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a> &amp; <a href=\"https://vimeo.com/957192876\" rel=\"nofollow\">Basic Operation Video</a> | www.jmaud.io</p><p>Important/Additional Notes: FMOD Studio support is included through a complex runtime detection of the FMOD integration plugin, due to dependency and compile-time limitations of marketplace</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/banner-1920x1080-dd7d46abb8480b71c25a570ce10cb24b.png",
+      "md5": "dd7d46abb8480b71c25a570ce10cb24b",
+      "width": 1920,
+      "height": 1080,
+      "size": 648902,
+      "uploadedDate": "2024-08-29T00:55:38.736Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-0f2689586bfde71197e90ab0b81f33ea.png",
+      "md5": "0f2689586bfde71197e90ab0b81f33ea",
+      "width": 1920,
+      "height": 1080,
+      "size": 343330,
+      "uploadedDate": "2024-08-29T00:55:39.298Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-ed33b74c567211e30310bbf9e7c4da55.png",
+      "md5": "ed33b74c567211e30310bbf9e7c4da55",
+      "width": 1920,
+      "height": 1080,
+      "size": 852335,
+      "uploadedDate": "2024-08-29T00:55:39.869Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-17875673d6cbd3b379528198f86ce4e4.png",
+      "md5": "17875673d6cbd3b379528198f86ce4e4",
+      "width": 1920,
+      "height": 1080,
+      "size": 864723,
+      "uploadedDate": "2024-06-19T23:53:51.426Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-9a38f41396132c1dd8712ec6778631c4.png",
+      "md5": "9a38f41396132c1dd8712ec6778631c4",
+      "width": 1920,
+      "height": 1080,
+      "size": 570581,
+      "uploadedDate": "2024-06-19T23:53:51.988Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-5b49d50e47fdc82daab66aa8e992bebd.png",
+      "md5": "5b49d50e47fdc82daab66aa8e992bebd",
+      "width": 1920,
+      "height": 1080,
+      "size": 664757,
+      "uploadedDate": "2024-06-19T23:53:53.084Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AudioAnimNotifyTool_thumb-284x284-f329f9521180259c5aa268ae67eb2d48.png",
+      "md5": "f329f9521180259c5aa268ae67eb2d48",
+      "width": 284,
+      "height": 284,
+      "size": 65249,
+      "uploadedDate": "2024-08-29T00:55:40.284Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AudioAnimNotifyTool_featured-894x488-a434474ecf67d4955f2c253e887304f3.png",
+      "md5": "a434474ecf67d4955f2c253e887304f3",
+      "width": 894,
+      "height": 488,
+      "size": 278826,
+      "uploadedDate": "2024-08-29T00:55:40.336Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/banner-1920x1080-dd7d46abb8480b71c25a570ce10cb24b_Snapshot.png",
+      "md5": "1259cf0a89498db45f1931a6decaf64b",
+      "width": 150,
+      "height": 74,
+      "size": 6707,
+      "uploadedDate": "2024-08-29T00:55:39.062Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-0f2689586bfde71197e90ab0b81f33ea_Snapshot.png",
+      "md5": "5d0c8deb05cf379933b154e10434c835",
+      "width": 150,
+      "height": 74,
+      "size": 4523,
+      "uploadedDate": "2024-08-29T00:55:39.593Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-ed33b74c567211e30310bbf9e7c4da55_Snapshot.png",
+      "md5": "8be11a98d0f39d2be2de819f0f8d6243",
+      "width": 150,
+      "height": 74,
+      "size": 5203,
+      "uploadedDate": "2024-08-29T00:55:40.188Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main-1920x1080-5f274bb5279874ae465b40d7147d7ae9_Snapshot.png",
+      "md5": "6341c24867e3ce6df02f9b252e1b8d65",
+      "width": 150,
+      "height": 74,
+      "size": 6904,
+      "uploadedDate": "2024-06-24T22:24:56.036Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4.27-1920x1080-65dc2d016ac5128af953cfbee2f04d07_Snapshot.png",
+      "md5": "3a17a3119ddd9aa2c483d6048c6bb5e4",
+      "width": 150,
+      "height": 74,
+      "size": 7141,
+      "uploadedDate": "2024-06-24T11:29:10.314Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main-1920x1080-93cecbd0ee20957dbedf2a682c3669c1_Snapshot.png",
+      "md5": "4d4f3abc218fdc6c975544713565e2ea",
+      "width": 150,
+      "height": 74,
+      "size": 6981,
+      "uploadedDate": "2024-06-23T12:44:11.973Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-56486c768d5ce954b2f86acf1c97c7c0_Snapshot.png",
+      "md5": "0df05adb21c51426c928938789b43273",
+      "width": 150,
+      "height": 74,
+      "size": 4329,
+      "uploadedDate": "2024-06-23T12:44:12.453Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-56486c768d5ce954b2f86acf1c97c7c0_Snapshot.png",
+      "md5": "0df05adb21c51426c928938789b43273",
+      "width": 150,
+      "height": 74,
+      "size": 4329,
+      "uploadedDate": "2024-06-23T12:44:12.910Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-a39ea3658fcfd603be30dd5330b20a37_Snapshot.png",
+      "md5": "f232fc12ef091f93ed0a66c54bb2e1b3",
+      "width": 150,
+      "height": 74,
+      "size": 5535,
+      "uploadedDate": "2024-06-23T12:44:13.427Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-1a3b4f26ede44640fb20622c69653734_Snapshot.png",
+      "md5": "8f86b665c4d2763ae0a7910bd7208b64",
+      "width": 150,
+      "height": 74,
+      "size": 4755,
+      "uploadedDate": "2024-06-23T12:44:13.892Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main-1920x1080-eae4b59efdeb4c7c1d367f43ac6604c3_Snapshot.png",
+      "md5": "00e3f16478fee2a46adf9934fc02a5d8",
+      "width": 150,
+      "height": 74,
+      "size": 6622,
+      "uploadedDate": "2024-06-19T23:53:50.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-6f6fd7c081eba5a76a0778adca3df73f_Snapshot.png",
+      "md5": "2876eeab6d5ee7b734bd40204973b2f4",
+      "width": 150,
+      "height": 74,
+      "size": 4598,
+      "uploadedDate": "2024-06-19T23:53:51.163Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-17875673d6cbd3b379528198f86ce4e4_Snapshot.png",
+      "md5": "43f0e95b89baa715026f3ade0c5a2472",
+      "width": 150,
+      "height": 74,
+      "size": 5525,
+      "uploadedDate": "2024-06-19T23:53:51.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-9a38f41396132c1dd8712ec6778631c4_Snapshot.png",
+      "md5": "bb9cec0381652a1754a0151ef75a8f23",
+      "width": 150,
+      "height": 74,
+      "size": 4169,
+      "uploadedDate": "2024-06-19T23:53:52.347Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-e8fbf85d208d01fc1e792e05b83f8328_Snapshot.png",
+      "md5": "8c0506974258c83c4a5ebd3a94bae5c5",
+      "width": 150,
+      "height": 74,
+      "size": 5114,
+      "uploadedDate": "2024-06-19T23:53:52.896Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-5b49d50e47fdc82daab66aa8e992bebd_Snapshot.png",
+      "md5": "74e29fcc430244081583a6ecc290292b",
+      "width": 150,
+      "height": 74,
+      "size": 4653,
+      "uploadedDate": "2024-06-19T23:53:53.411Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main-1920x1080-64ed5004c5b39ebcdc4a6e49d138467c_Snapshot.png",
+      "md5": "c4f9c44c831c1b7bfea282e97150ae1c",
+      "width": 150,
+      "height": 74,
+      "size": 7656,
+      "uploadedDate": "2024-06-17T00:27:45.322Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-06-24T22:33:40.188Z",
+  "lastModifiedDate": "2025-02-01T18:52:37.206Z",
+  "customAttributes": {},
+  "entitlementName": "efece972036743c988570e10029a3c9f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b0f6402121134ed88d0424d51214a59c",
+      "appId": "AutoNotifyTool_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-06-17T00:00:00.000Z",
+      "releaseNote": "Version 1.5 update. Unreal SB added.",
+      "versionTitle": "AudioAnimNotifyTool_v1.5"
+    }
+  ],
+  "developer": "JMAudio",
+  "developerId": "o-4dt2qzlukkn5yhk34kwg6mtjd7jr6r",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

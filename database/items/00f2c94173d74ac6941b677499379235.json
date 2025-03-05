@@ -1,0 +1,251 @@
+{
+  "id": "00f2c94173d74ac6941b677499379235",
+  "title": "Tiled Toolkit",
+  "description": "Allows you to import and parse Tiled Map Editor files (.tmx, .tsx) to Unreal asset files (.uasset). Can be used with BP and C++.",
+  "longDescription": "<p>Provides blueprint/C&#43;&#43; functions to parse and import Tiled Tilemap (.tmx) files and Tiled Tilesets (.tsx) files. Supports the standard Tiled file format (.tmx and .tsx) and templates (.tx) files.</p><p><br /></p><p><strong>VIDEO(Tileset importing): </strong><a href=\"https://youtu.be/aSyHZhVWVQE\" rel=\"nofollow\">https://youtu.be/aSyHZhVWVQE</a></p><p><strong>VIDEO(Tilemap importing): </strong><a href=\"https://youtu.be/XbtF3Wwd_rg\" rel=\"nofollow\">https://youtu.be/XbtF3Wwd_rg</a></p><p><br /></p><p><strong>Docs</strong>: <a href=\"https://docs.google.com/document/d/16wduH8VJiq5yRyN7LYOTv0vYkfx0cd24QSqj8D68x9E\" rel=\"nofollow\">https://docs.google.com/document/d/16wduH8VJiq5yRyN7LYOTv0vYkfx0cd24QSqj8D68x9E</a></p>",
+  "technicalDetails": "<p>Parser supported features:</p><ul><li>Tiled TMX format versions form 1.2 to 1.10. (Tiled 1.10)</li><li>All Tiled Tilemaps orientations</li><li>Embedded Tilesets inside .tmx files.</li><li>Standard Tiled .tmx, .tsx and .tx formats.</li><li>Tiled Object, Tile and Image layers.</li><li>All type of objects available in Tiled (Rectangle, Ellipse, Polygon, Polyline, Point, Text, Tile)</li><li>Tile Layer formats in Tiled (CSV, XML, Base64 uncompressed, Base64 compressed zlib or gzip)</li><li>Tilemaps tile collision objects information.</li><li>Key-Value user data in tilemap, tileset, tile and layers.</li><li>Template objects in .tx files.</li><li>Tiled world .world files.</li></ul><p>Parser NOT (yet) Supported features:</p><ul><li>Group layers in tilemap.</li><li>No zstd compression.</li><li>Animations parsing.</li><li>Terrains parsing.</li><li>No &lt;transformations&gt;&lt;wangsets&gt;&lt;wangtiles&gt;.</li><li>(Collection of images type) Tilesets</li></ul><p>Importing features:</p><ul><li>It parses Tilesets from .tsx files and creates an APTiledTileset asset that supports everything except terrains. Only Rectangle, Ellipse and Polygon are imported to the APTiledTileset. Other collisions are ignored.</li><li>It parses Tilemaps from .tmx files and saves the data in APTiledTilemap. Then you can always retrieve this information in runtime and create the layers you need for your custom Tilemap behavior.</li></ul><p>Code Modules:</p><ul><li> APTiled(Runtime) - Contains Tiled Parser, Parser output data containers, APTiledTileset and APTiledTilemap assets.</li><li> APTiledEditor(Editor) - Contains the factories and importing logic of APTiledTileset and APTiledTilemap. Settings for the importing process.</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 1 class / 8 structs</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TiledParser1-1920x1080-33805825c765e02cd6773ebfe0e18dbb.png",
+      "md5": "33805825c765e02cd6773ebfe0e18dbb",
+      "width": 1920,
+      "height": 1080,
+      "size": 838698,
+      "uploadedDate": "2018-10-20T00:13:03.112Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TiledParser2-1920x1080-04c9d9be93ee61551fc87f9fe0aab3bb.png",
+      "md5": "04c9d9be93ee61551fc87f9fe0aab3bb",
+      "width": 1920,
+      "height": 1080,
+      "size": 554642,
+      "uploadedDate": "2018-10-20T00:13:03.615Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TiledParserBPs-1920x1080-f29a1c0359a4e61e4d1cca32f7e1e0cf.png",
+      "md5": "f29a1c0359a4e61e4d1cca32f7e1e0cf",
+      "width": 1920,
+      "height": 1080,
+      "size": 518725,
+      "uploadedDate": "2018-10-20T00:13:03.942Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TiledParserSettings-1920x1080-63789f063c0f4f75108db02311399c51.png",
+      "md5": "63789f063c0f4f75108db02311399c51",
+      "width": 1920,
+      "height": 1080,
+      "size": 639224,
+      "uploadedDate": "2018-10-31T16:45:13.324Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TiledParser_thumb-284x284-51b66f76043bfa7efe76c332c617d94a.png",
+      "md5": "51b66f76043bfa7efe76c332c617d94a",
+      "width": 284,
+      "height": 284,
+      "size": 85172,
+      "uploadedDate": "2018-10-31T16:45:13.639Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TiledParser_featured-894x488-5b5e34207e46ece4fdc5e69f591e2f41.png",
+      "md5": "5b5e34207e46ece4fdc5e69f591e2f41",
+      "width": 894,
+      "height": 488,
+      "size": 300324,
+      "uploadedDate": "2018-10-31T16:45:13.698Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TiledParserSettings-1920x1080-63789f063c0f4f75108db02311399c51_Snapshot.png",
+      "md5": "58043cd253c048fdc074649331e5a420",
+      "width": 150,
+      "height": 74,
+      "size": 9572,
+      "uploadedDate": "2018-10-31T16:45:13.591Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TiledParser1-1920x1080-33805825c765e02cd6773ebfe0e18dbb_Snapshot.png",
+      "md5": "6c7426ff668bda8b2d72680d832765aa",
+      "width": 150,
+      "height": 74,
+      "size": 17476,
+      "uploadedDate": "2018-10-20T00:13:03.454Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TiledParser2-1920x1080-04c9d9be93ee61551fc87f9fe0aab3bb_Snapshot.png",
+      "md5": "9b1ea7514d62f4045cfabfa1ac0420bc",
+      "width": 150,
+      "height": 74,
+      "size": 9918,
+      "uploadedDate": "2018-10-20T00:13:03.780Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TiledParserBPs-1920x1080-f29a1c0359a4e61e4d1cca32f7e1e0cf_Snapshot.png",
+      "md5": "479f0f8321213cc25fa2912cb832a234",
+      "width": 150,
+      "height": 74,
+      "size": 10785,
+      "uploadedDate": "2018-10-20T00:13:04.128Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-11-20T15:24:18.327Z",
+  "lastModifiedDate": "2024-10-09T19:05:33.732Z",
+  "customAttributes": {},
+  "entitlementName": "00f2c94173d74ac6941b677499379235",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "5038e655fe104210953087785f9944a7",
+      "appId": "APTiledParser_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-03-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "427-v2.4"
+    },
+    {
+      "id": "1d458feddf78494a9ab3eeedf07193a5",
+      "appId": "APTiledParser_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-03-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "500-v2.4"
+    },
+    {
+      "id": "1b8ea42defeb4b1abb9f3f6ab484b0a4",
+      "appId": "APTiledParser_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-03-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "501-v2.4"
+    },
+    {
+      "id": "bd70c15f23994983b7aacc988e0abe14",
+      "appId": "APTiledParser_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-10-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "503-v2.5"
+    },
+    {
+      "id": "658674d906d74cf181a2a576e75563a0",
+      "appId": "APTiledParser_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "504-v2.6"
+    }
+  ],
+  "developer": "AstralPixel",
+  "developerId": "o-m7k42t9pb3brqhlczsywgfvyn9d8qf",
+  "endOfSupport": false,
+  "unsearchable": false
+}

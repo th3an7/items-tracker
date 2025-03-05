@@ -1,0 +1,206 @@
+{
+  "id": "d6ca84767c1a454da1fd4329c7cc7e11",
+  "title": "Rapid Packer Textures Toolset",
+  "description": "Fast, smart and easy to use selection based textures packing, repacking and generation tool. Editor tool, no need to drop into scene.",
+  "longDescription": "<p><strong>Showcase Video:</strong> <a href=\"https://youtu.be/FzhthPvN3ok\" rel=\"nofollow\">Link</a></p><p><strong>Tutorial Video:</strong> <a href=\"https://youtu.be/10GreLhY6pA\" rel=\"nofollow\">Link</a></p><p><strong>Extra tutorial how to use packed textures and Normal map combine:</strong> <a href=\"https://youtu.be/d0XecERRT2U\" rel=\"nofollow\">Link</a></p><p><br /></p><p><strong>Update 1.1</strong> - More naming options. Can use name of the first selected texture (useful for repacking same texture) with option to replace something in it. For example If original texture is RMA (Roughness &#43; Metallic &#43; AO) and you want to repack it to ARM.</p><p>If use reuse original texture name it won&#39;t be overwritten, but instead will get suffix _old.</p><p><br /></p><p><strong>Update 1.2</strong> - Added option to use first selected texture size (CAUTION - original texture must be power of two or it won&#39;t pack. For example 512x1024 or 256x2048 are valid sizes even if not square).</p><p>It has been noticed that sometimes packer doesn&#39;t produce 1:1 contrast. This is happening if original texture is really sRGB or not. Now packer will check that and adjust material. So if your packed texture won&#39;t be 1:1 quality just enable/disable sRGB tick and it should fix issue.</p><p><br /></p><p><strong>Currently you can use Rapid Packer to:</strong></p><ul><li>Pack textures into RGBA (or single channel etc.)</li><li>Repack single texture (swap channels information)</li><li>Generate Normal map based on up to 4 source inputs</li><li>Combine Normal map with extra textures</li><li>Add Alpha to the Albedo</li><li>Export PNG texture to the local disk</li><li>Invert channels</li></ul><p><br /></p><p>Tool works as an editor utility, which means you don’t need to drop anything to the scene to start using it.</p><p>No need to drag and drop anything or import, selected textures in Content Browser added automatically to the channels based on selection order (1&#43;2&#43;3&#43;4 &#61; 1R&#43;2G&#43;3B&#43;4A).</p><p><br /></p><p>Different options and buttons appear based on selected mode, so no need to worry about what to click when (less confusion, faster work).</p><p>Automatic output to the same folder where textures were selected to speed up the process.</p><p>Simple information window showing which selected texture assigned to which channel.</p><p>Large preview window showing what the final result would look like and 4 small windows for each channel, working as grayscale.</p><p><br /></p><p><strong>Update:</strong></p><p>Added options to manually name packed texture or use the name of the first selected texture. If name is reused then old texture will have added _old. Additionally there is now option to replace part of the text, which is useful when repacking single texture, for example PackedMRA into PackedARM. More info with images in the manual.</p><p><br /></p><p><strong>IMPORTANT:</strong></p><p>Unfortunately virtual textures (when on the texture thumbnail you can see VT) are not directly compatible with Rapid Packer.</p><p>Packet texture will be low quality. I tried different ways to detect when the texture is VT and automatically use a different input sampler. In some cases that worked, but it wasn’t 100% all the time. On top of that quality of VT textures sampling is affected by another parameter in the Project Setting &gt; Rendering &gt; Virtual Textures called “Tile Size”. For instance if your original texture is 2k and in Tile Size set to 256, output will be unfortunately of low quality.</p><p><br /></p><p>Simple solution for a workaround would be to convert the texture into regular texture and after packing convert back to VT. Yes, it isn’t so fast then, especially with many textures, but for now it’s the only way to make sure output is 100% of the time highest quality possible. </p><p><br /></p><p>To quickly convert a VT texture into a regular one right click on it and choose “Convert to Regular Texture”. After you are done you can again right click on it and choose “Convert to Virtual Texture”.</p><p><br /></p><p><strong>Make sure to turn on in Plugins:</strong> Editor Scripting Utilities</p><p><u>I have tested this tool many times, but if you encounter any issues or glitches please send me an email (or contact in any other way) and I will fix it ASAP.</u></p><p><u>If you have any suggestions or requests please don’t hesitate to contact me and I will check them.</u></p>",
+  "technicalDetails": "<p><strong>Technical Details: </strong></p><p>Number of Blueprints: 1</p><p>Materials: 1</p><p>Material Functions: 13</p><p>Platforms: All because it&#39;s editor tool and not meant to be used in runtime</p><p>Virtual Textures: Not supported directly (please read about it in IMPORTANT above)</p><p><br /></p><p>Documentation: <a href=\"https://drive.google.com/file/d/1jHMimietCzbWg3XtBa7Zkd02nvdfqDMv/view?usp&#61;sharing\" rel=\"nofollow\">Link</a> Or can be accessed from Packer window</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RepackMaskMap-1920x1080-fdbfc39c7a092dbf5aa94b992943fcdb.png",
+      "md5": "fdbfc39c7a092dbf5aa94b992943fcdb",
+      "width": 1920,
+      "height": 1080,
+      "size": 266464,
+      "uploadedDate": "2021-06-23T00:32:21.412Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AddAlphaToAlbedo-1920x1080-ffb1bfacb09b061f6d5f41a4d7fb614d.png",
+      "md5": "ffb1bfacb09b061f6d5f41a4d7fb614d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1306520,
+      "uploadedDate": "2021-06-23T00:32:21.918Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/NormalMapGeneration-1920x1080-59421b757b36cddc733e7306c221e1ac.png",
+      "md5": "59421b757b36cddc733e7306c221e1ac",
+      "width": 1920,
+      "height": 1080,
+      "size": 1469002,
+      "uploadedDate": "2021-06-23T00:32:22.400Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CombineNormalMapWithExtraMaps-1920x1080-5af6cd748eb4e1cf108c1debb5ec544e.png",
+      "md5": "5af6cd748eb4e1cf108c1debb5ec544e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1043868,
+      "uploadedDate": "2021-06-23T00:32:22.871Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RapidPackerWindowOn-1920x1080-6780683e4aa037dca105fce83e5cd415.png",
+      "md5": "6780683e4aa037dca105fce83e5cd415",
+      "width": 1920,
+      "height": 1080,
+      "size": 246655,
+      "uploadedDate": "2022-11-07T19:53:25.097Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/NormalMapGeneration-1920x1080-d6659f220a8d4c491c378e590d87442f.png",
+      "md5": "d6659f220a8d4c491c378e590d87442f",
+      "width": 1920,
+      "height": 1080,
+      "size": 283689,
+      "uploadedDate": "2022-11-07T19:53:25.435Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RapidPackerTexturesToolset_thumb-284x284-b981ddc3612441df323652f2aa37f6a6.png",
+      "md5": "b981ddc3612441df323652f2aa37f6a6",
+      "width": 284,
+      "height": 284,
+      "size": 25949,
+      "uploadedDate": "2021-06-23T00:32:23.226Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RapidPackerTexturesToolset_featured-894x488-96f38e123ff08b695143026f2e653602.png",
+      "md5": "96f38e123ff08b695143026f2e653602",
+      "width": 894,
+      "height": 488,
+      "size": 96450,
+      "uploadedDate": "2021-06-23T00:32:23.272Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RapidPackerWindowOn-1920x1080-6780683e4aa037dca105fce83e5cd415_Snapshot.png",
+      "md5": "af9cf0f7bb13541e2445e1da3a6bf90e",
+      "width": 150,
+      "height": 74,
+      "size": 4464,
+      "uploadedDate": "2022-11-07T19:53:25.330Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NormalMapGeneration-1920x1080-d6659f220a8d4c491c378e590d87442f_Snapshot.png",
+      "md5": "8dd4609007ef6d1eb7ee8c4ab4b88e73",
+      "width": 150,
+      "height": 74,
+      "size": 4437,
+      "uploadedDate": "2022-11-07T19:53:25.726Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AddSelectedToChannels-1920x1080-80bb847529e0def526a9ac6e1e2de716_Snapshot.png",
+      "md5": "99d64a56c6e07c596fbe648b2ab9dd4c",
+      "width": 150,
+      "height": 74,
+      "size": 4665,
+      "uploadedDate": "2021-06-23T00:32:21.256Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RepackMaskMap-1920x1080-fdbfc39c7a092dbf5aa94b992943fcdb_Snapshot.png",
+      "md5": "e4dd655905e9ba8e85add16763354998",
+      "width": 150,
+      "height": 74,
+      "size": 4669,
+      "uploadedDate": "2021-06-23T00:32:21.663Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AddAlphaToAlbedo-1920x1080-ffb1bfacb09b061f6d5f41a4d7fb614d_Snapshot.png",
+      "md5": "d0ff81dc1fe1aafdc1d8554c8ce96d26",
+      "width": 150,
+      "height": 74,
+      "size": 5148,
+      "uploadedDate": "2021-06-23T00:32:22.227Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NormalMapGeneration-1920x1080-59421b757b36cddc733e7306c221e1ac_Snapshot.png",
+      "md5": "54921d0dd0114f914fd70866989404f8",
+      "width": 150,
+      "height": 74,
+      "size": 5020,
+      "uploadedDate": "2021-06-23T00:32:22.691Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CombineNormalMapWithExtraMaps-1920x1080-5af6cd748eb4e1cf108c1debb5ec544e_Snapshot.png",
+      "md5": "386e2b147b379c0212da2b9f25871100",
+      "width": 150,
+      "height": 74,
+      "size": 4716,
+      "uploadedDate": "2021-06-23T00:32:23.175Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2021-06-23T15:39:19.560Z",
+  "lastModifiedDate": "2024-05-31T00:53:48.543Z",
+  "customAttributes": {},
+  "entitlementName": "d6ca84767c1a454da1fd4329c7cc7e11",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "d49aafdc14024fb282fe5bec1a6d49de",
+      "appId": "RapidPacd6ca84767c1aV1",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Linux",
+        "Win32",
+        "PS4",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-06-23T00:00:00.000Z",
+      "releaseNote": "1.2 - Added check if original texture is sRGB and change material parameters accordingly. Added use of original texture size instead choose manually.",
+      "versionTitle": "UE4 Rapid Packer 1.2"
+    },
+    {
+      "id": "ec9dc90c95b94f8ca0e6ac67b0801a7f",
+      "appId": "RapidPacd6ca84767c1aV2",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Linux",
+        "Oculus"
+      ],
+      "dateAdded": "2022-04-07T00:00:00.000Z",
+      "releaseNote": "1.2 - Added check if original texture is sRGB and change material parameters accordingly. Added use of original texture size instead choose manually.",
+      "versionTitle": "UE5 Rapid Packer 1.2"
+    }
+  ],
+  "developer": "Cheslav Sukstul",
+  "developerId": "o-rlwq655ufdydfwq6d6vqjtzaqkfnkc",
+  "endOfSupport": false,
+  "unsearchable": false
+}

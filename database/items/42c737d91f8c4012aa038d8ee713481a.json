@@ -1,0 +1,243 @@
+{
+  "id": "42c737d91f8c4012aa038d8ee713481a",
+  "title": "Unlit Gouraud/Phong Shading Material",
+  "description": "Unlit implementation of a Gouraud/Phong lighting model. Supports directional, point and spot lights with a Blueprint interface for control.",
+  "longDescription": "<p><strong>UPDATE 2.3.1</strong>: Minor quality of life features. Added new BP_Directional_Light_New that acts like the built in directional light. Added BP_SceneHelper, which allows you to reset editor lighting, and a toggle to disable tonemapping and auto exposure to make Lit mode match Unlit. Added a button to force update a selected light source, use it after resetting lighting with BP_SceneHelper when making adjustments to the editor only light index setting.</p><p><br /></p><p><strong>UPDATE 2.3</strong>: Blinn-Phong specular support has been added and is set to be enabled by default, this can be toggled in a material instance. Also fixed custom specular colour not being applied for point/spot lights.</p><p><br /></p><p><strong>UPDATE 2.2</strong>: Support for spot lights. Spot lights can be activated by changing the &#39;Spot Angle&#39; variable on a point light. Setting this value to 0 will revert the light back to a point light. Added a new showcase level for spot lights. Also fixed specular not working with point lights.</p><p><br /></p><p><strong>UPDATE 2.1</strong>: New demo level for landscape materials and the new material fog function.</p><p><br /></p><p><strong>UPDATE 2.0</strong>: Complete re-write of the shader to be cleaner and more performant. Point lights now use a proper quadratic attenuation for light falloff. The point lighting system has been overhauled entirely and now uses a new Blueprint system to automatically enable and disable lights around the player Pawn.</p><p><br /></p><p><br /></p><p>Unlit implementation of a Gouraud/Phong lighting model. Supports directional, point and spot lights with a Blueprint interface for control.</p><p><br /></p><p>This shading model allows the creation of games using vertex based Gouraud lighting or per pixel Phong lighting with a classical diffuse/specular format. Re-create the look of games from the 6th (Gouraud) and 7th (Phong) generation of consoles, or use it for cheap mobile rendering. All materials are unlit and use a Material Parameter Collection to control light and material options.</p><p><br /></p><p>Included is an example scene made using the techniques of the 6th generation consoles; relying upon vertex colouring and vertex alpha to blend between textures. This pack is intended to be used as a base, so only some basic examples are included. Use your imagination and get creative with your usage.</p><p><br /></p><p>Pairs well with: <a href=\"https://www.unrealengine.com/marketplace/en-US/product/stylized-retro-water-material\" rel=\"nofollow\">Stylized Retro Water Material</a></p><p><br /></p><p><strong>DISCLAIMER: Landscapes DO NOT support the Vertex Interpolator node required to use Gouraud mode. Landscapes will only work with Phong mode.</strong></p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Sample level made with old techniques</li><li>Support for up to 8 point lights by default</li><li>Directional light function with switch between Phong and Gouraud shading modes</li><li>Modular point light system</li><li>Spot lights as part of the point light system</li><li>Blueprint tools for controlling all lighting</li></ul><p>Number of Unique Materials and Material Instances: 26</p><p>Number of Material Functions: 12</p><p>Number of Textures: 13</p><p>Texture Resolutions: 256x256, 512x256, 1024x1024, 2048x2048</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Yes</p><p>Documentation: Included in material functions</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/phonggouraud-1920x1080-d7bfb2cc367ba66d09080c966d9367ea.png",
+      "md5": "d7bfb2cc367ba66d09080c966d9367ea",
+      "width": 1920,
+      "height": 1080,
+      "size": 925858,
+      "uploadedDate": "2022-05-19T03:43:56.952Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00000-1920x1080-1b926302830c051d68a2fa9b07e810df.png",
+      "md5": "1b926302830c051d68a2fa9b07e810df",
+      "width": 1920,
+      "height": 1080,
+      "size": 1340487,
+      "uploadedDate": "2022-12-28T03:47:44.198Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00001-1920x1080-76999ce83c79b4de287544eb5166d04d.png",
+      "md5": "76999ce83c79b4de287544eb5166d04d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1499455,
+      "uploadedDate": "2022-12-28T03:47:44.652Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00000-1920x1080-83042f56bad09bb44e8ddca76a65a2a3.png",
+      "md5": "83042f56bad09bb44e8ddca76a65a2a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 643738,
+      "uploadedDate": "2023-06-17T18:34:02.389Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00002-1920x1080-d320edbf0a679dc6347fd92dcf37629b.png",
+      "md5": "d320edbf0a679dc6347fd92dcf37629b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1548216,
+      "uploadedDate": "2022-12-28T03:47:45.161Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00000-1920x1080-8a75e173dd1222812e8c9c9a61b99f1d.png",
+      "md5": "8a75e173dd1222812e8c9c9a61b99f1d",
+      "width": 1920,
+      "height": 1080,
+      "size": 2023412,
+      "uploadedDate": "2022-12-28T03:47:45.647Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00000-1920x1080-0af4f1d19a528723e68912836c2c9e80.png",
+      "md5": "0af4f1d19a528723e68912836c2c9e80",
+      "width": 1920,
+      "height": 1080,
+      "size": 1876231,
+      "uploadedDate": "2023-06-07T05:40:58.190Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/UnlitGouraudPhongShadingMaterial_thumb-284x284-a5ee2f80bd0cff543658a0ccfa205f92.png",
+      "md5": "a5ee2f80bd0cff543658a0ccfa205f92",
+      "width": 284,
+      "height": 284,
+      "size": 80855,
+      "uploadedDate": "2022-12-28T03:47:46.053Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/UnlitGouraudPhongShadingMaterial_featured-894x488-2860ed0025b26fc3abb77614057139f9.png",
+      "md5": "2860ed0025b26fc3abb77614057139f9",
+      "width": 894,
+      "height": 488,
+      "size": 273759,
+      "uploadedDate": "2022-05-19T03:43:58.886Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00000-1920x1080-83042f56bad09bb44e8ddca76a65a2a3_Snapshot.png",
+      "md5": "67325bdc4badaffb85142dc90dc8062d",
+      "width": 150,
+      "height": 74,
+      "size": 2861,
+      "uploadedDate": "2023-06-17T18:34:02.639Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00000-1920x1080-0af4f1d19a528723e68912836c2c9e80_Snapshot.png",
+      "md5": "049c4e87642bf2fc072e61c47fb8210b",
+      "width": 150,
+      "height": 74,
+      "size": 3793,
+      "uploadedDate": "2023-06-07T05:40:58.577Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00000-1920x1080-1b926302830c051d68a2fa9b07e810df_Snapshot.png",
+      "md5": "eac367caaa505bc9a4f595ac3f9371e2",
+      "width": 150,
+      "height": 74,
+      "size": 4943,
+      "uploadedDate": "2022-12-28T03:47:44.480Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-76999ce83c79b4de287544eb5166d04d_Snapshot.png",
+      "md5": "0337d9cb8a5a6c0ab4339ae57d072808",
+      "width": 150,
+      "height": 74,
+      "size": 4717,
+      "uploadedDate": "2022-12-28T03:47:44.955Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-d320edbf0a679dc6347fd92dcf37629b_Snapshot.png",
+      "md5": "6998a3027a2453a080b00ffdc021d0e9",
+      "width": 150,
+      "height": 74,
+      "size": 4887,
+      "uploadedDate": "2022-12-28T03:47:45.461Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00000-1920x1080-8a75e173dd1222812e8c9c9a61b99f1d_Snapshot.png",
+      "md5": "0ed051bf1fe294346a141642e30c84f0",
+      "width": 150,
+      "height": 74,
+      "size": 4084,
+      "uploadedDate": "2022-12-28T03:47:45.988Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/phonggouraud-1920x1080-d7bfb2cc367ba66d09080c966d9367ea_Snapshot.png",
+      "md5": "01aab0f1104dbff10ce68922a30b02c6",
+      "width": 150,
+      "height": 74,
+      "size": 2576,
+      "uploadedDate": "2022-05-19T03:43:57.204Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00017-1920x1080-129d725eccda5322c01dda08d3edce0e_Snapshot.png",
+      "md5": "b8c4aa8cf07caa9c9b6501fa65ebfc33",
+      "width": 150,
+      "height": 74,
+      "size": 2779,
+      "uploadedDate": "2022-05-19T03:43:57.367Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00015-1920x1080-e7bdb0d467fda605f266524d0e0d3d6b_Snapshot.png",
+      "md5": "2acd4a9150b9087f2955e477a3ff7619",
+      "width": 150,
+      "height": 74,
+      "size": 4442,
+      "uploadedDate": "2022-05-19T03:43:57.852Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00016-1920x1080-eef673882fd019596a9a64fb773de961_Snapshot.png",
+      "md5": "a7911c0157f8399f61f9e6d1e5e9493f",
+      "width": 150,
+      "height": 74,
+      "size": 4388,
+      "uploadedDate": "2022-05-19T03:43:58.235Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00014-1920x1080-bfabfb16e3e117d5533b8b99f9ad37eb_Snapshot.png",
+      "md5": "0319cdec732144586ad11c861c8f9f25",
+      "width": 150,
+      "height": 74,
+      "size": 3037,
+      "uploadedDate": "2022-05-19T03:43:58.662Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/materials"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-05-23T19:20:09.099Z",
+  "lastModifiedDate": "2024-12-20T07:41:45.679Z",
+  "customAttributes": {},
+  "entitlementName": "42c737d91f8c4012aa038d8ee713481a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "f70febdbefbd4a87a77bdd3f79a2dbb1",
+      "appId": "UnlitGou42c737d91f8cV1",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "Win32",
+        "Linux",
+        "iOS",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-05-18T00:00:00.000Z",
+      "releaseNote": "Quality of life features",
+      "versionTitle": "2.3.1"
+    }
+  ],
+  "developer": "Epoch Labs",
+  "developerId": "o-qumqu2npzm46lwussl68yvsphnr7un",
+  "endOfSupport": false,
+  "unsearchable": false
+}

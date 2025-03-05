@@ -1,0 +1,467 @@
+{
+  "id": "cea89c8f61834a9e8376d845301b143c",
+  "title": "Apparatus",
+  "description": "Network-ready data-driven ECS workflow for Unreal Engine (C++ and Blueprints).",
+  "longDescription": "<p><em>Apparatus ECS supports the Unreal Engine 5 version day one! Go true next-gen, go data-driven NOW! </em></p><p><em>Also take a look at our newest </em><strong><em>interactive </em></strong><a href=\"https://youtu.be/atiY5s3TOXI\" rel=\"nofollow\"><strong><em>Shoot&#39;em-Up Stress Test Demo</em></strong></a><strong><em>.</em></strong></p><p><em>Our </em><strong><em>multi-threaded </em></strong><a href=\"https://www.youtube.com/watch?v&#61;m9ubhM3FAaY\" rel=\"nofollow\"><strong><em>100 000 Paper Planes Demo</em></strong></a><a href=\"https://www.youtube.com/watch?v&#61;6Vw_VDXTaaA\" rel=\"nofollow\"><em>.</em></a></p><p><br /></p><p>Have you dreamt about developing your Unreal games ECS-style? The data-driven workflow has finally arrived to Unreal Engine in its full versatile glory. Introducing – the Apparatus!</p><p><br /></p><p><strong>LATEST NEWS</strong></p><p><strong>In-Editor dumping</strong> capability of the subjects. Capture the state of the game for an advanced inspection.</p><p><br /></p><p><strong>FAQ</strong></p><blockquote>Is this a real ECS or some hack, emulation, limited implementation?</blockquote><p>This is a <strong>full-featured</strong> ECS implementation with cache-friendly memory model implemented.</p><p><br /></p><blockquote>Is it C&#43;&#43;-only or Blueprint-only implementation?</blockquote><p>It supports <strong>both</strong>, wholeheartedly.</p><p><br /></p><blockquote>Is it some kind of port of the other library?</blockquote><p>No. The framework is designed and <strong>written from scratch</strong> with Unreal Engine in mind and is using its whole infrastructure of available APIs, reflection system, Editor, etc. The legacy of the tool goes as far as of 2019.</p><p><br /></p><blockquote>I&#39;ve heard Unreal Engine is not suited for ECS and has to be refactored to make such functionality even possible.</blockquote><p>Unreal Engine has enough features already built in. You just have to go low-level, have <strong>enough expertise</strong> and a <strong>good design</strong> to implement the feature.</p><p><br /></p><blockquote>Is the source code provided?</blockquote><p>This is a commercial <strong>sources-available</strong> initiative, much like Unreal Engine itself is.</p><p><br /></p><blockquote>Is it compatible with other Unreal Engine systems like Animation Blueprints, Behavior Trees, Niagara?</blockquote><p><strong>Yes</strong>.</p><p><br /></p><blockquote>How fast is it?</blockquote><p><strong>Yes.</strong> All sorts of optimizations, lookups, packing and caching are used. The Blueprint frontend is pushed to the limits with of what can be achieved within UE&#39;s VM. C&#43;&#43; base is 90% header-only for the most performant compiler output. With the current feature-set implemented, we don&#39;t even know what else to improve performance-wise. Maybe we&#39;ll introduce more faster-less-safe APIs in the future and provide additional iterating contexts.</p><p><br /></p><blockquote>Is this some kind of experimental package. How stable is the codebase?</blockquote><p>The tool has already passed quite some iterations and is regularly being tested with our own automation suite and projects. Consider it utterly <strong>ready for production</strong>. Feel challenged to find any behavioral issues within our runtime, please.</p><p><br /></p><blockquote>Is multi-threading supported?</blockquote><p>The implementation contains a unique and profound <strong>concurrent processing support</strong> and is effectively parallelized via tasks. Topology-changing operations are compatible through the deferring .</p><p><br /></p><blockquote>Is it Network-Replicated?</blockquote><p>The framework is <strong>network-ready</strong>. Our tech already provides the necessary means for exchanging the data between the entities in a robust and secure way.</p><p><br /></p><p><strong>TERMINOLOGY</strong></p><p>We provide all of the ECS idioms and even more. Being unambiguous and self-sustained, the framework uses its own naming scheme. Here is the list of the analogs:</p><ul><li>Entity – <strong>Subject</strong>(<strong>tive</strong>)</li><li>Component – <strong>Trait</strong>, <strong>Detail</strong></li><li>System – <strong>Mechanic</strong></li><li>Archetype – <strong>Fingerprint</strong></li><li>Query - <strong>Filter</strong></li><li>Chunk –<strong> Belt</strong>, <strong>Chunk</strong></li></ul><p><br /></p><p><strong>GOALS</strong></p><p>We strongly believe in the profound data-driven workflow and use it in our own studio projects. That&#39;s why we created Apparatus. The story behind it is quite long of almost 1,5 years of research, active prototyping, development, profiling and tests. The first of its iterations were developed for a whole different technology stack, but after some long days and nights of work, we are thrilled to present it to you – the Unreal Engine Community!</p><p><br /></p><p>The current sample project, while having quite a broad functionality scope, can be considered a basic demonstration of the technology and some more complex examples are due to come in the near future. The Apparatus itself is thoroughly tested and fully production-ready. Don&#39;t hesitate to contact us for any assistance possible as we strive do deliver the most comprehensive and feature-rich experience.</p><p><br /></p><p><strong>UPCOMING FEATURES</strong></p><ul><li>Deterministic math library.</li></ul><p><br /></p><p><strong>LINKS</strong></p><ul><li><a href=\"https://discord.gg/t7HMPZfCP8\" rel=\"nofollow\">Discord Server</a></li><li><a href=\"https://talk.turbanov.ru/c/apparatus/7\" rel=\"nofollow\">TurboTalk Forum</a></li></ul><p><br /></p><p>From Russia, Moscow and Chekhov cities with much ♡<strong>.</strong></p><p><br /></p><p>© 2019 – 2023 Vladislav Dmitrievich Turbanov</p><p><br /></p><p><em>* The installation for UE5 EA is manual for now as the Marketplace doesn&#39;t support scenario at the moment. Please verify your purchase and contact us through support&#64;turbanov.ru for the installation guide.</em></p>",
+  "technicalDetails": "<p><strong>FEATURES</strong></p><ul><li>A complete Unreal Engine integration of the data-oriented paradigm. Both C&#43;&#43; and Blueprint development is supported.</li><li>Performance-targeted GC-less linear data of structs and high-level components with inheritance support.</li><li>Semantically-safe multi-threading support with deferred operation execution.</li><li>Versatile including and excluding subject filtering.</li><li>Multiple details of the same type on a single subject are allowed. All of the available detail combinations are processed.</li><li>Secure built-in networking functionality with a laconic API.</li><li>Dedicated user experience touches for some clear reading, validation and overall ease of use.</li><li>Many performance optimizations: LUTs, fast bit-array matching, cache-locality, etc.</li><li>Thoroughly documented API with a dedicated manual.</li></ul><p><br /></p><p><strong>MODULES</strong></p><ul><li>ApparatusRuntime</li><li>ApparatusUncooked</li><li>ApparatusEditor</li></ul><p><br /></p><p><strong>INFORMATION</strong></p><p>Number of C&#43;&#43; Classes: <strong>&gt;80</strong></p><p>Network Replicated: <strong>Yes</strong></p><p>Supported Development Platforms: <strong>Windows, Linux, macOS</strong></p><p>Supported Target Build Platforms: <strong>Windows, Linux, macOS, iOS, Android, Switch, PS4, XBox One</strong></p><p>Documentation: <a href=\"https://turbanov.ru/wiki/en/toolworks/docs/apparatus\" rel=\"nofollow\">Turbopedia</a>, <a href=\"https://turbanov.ru/toolworks/apparatus/docs/api/annotated.html\" rel=\"nofollow\">API Reference</a></p><p>Example Projects: <a href=\"https://github.com/toolworks/ApparatusShootEmUp\" rel=\"nofollow\">ApparatusShootEmUp</a>, <a href=\"https://github.com/toolworks/ApparatusPlatformer\" rel=\"nofollow\">ApparatusPlatformer</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-shmup-1920x1080px-RGB-1920x1080-c2f97118d64787b9f9aeed55ca3b2843.png",
+      "md5": "c2f97118d64787b9f9aeed55ca3b2843",
+      "width": 1920,
+      "height": 1080,
+      "size": 1986437,
+      "uploadedDate": "2023-03-23T20:59:46.924Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-multi-threading-1920x1080px-RGB-1920x1080-a36d7a8b00af76e8696929757e66f1f6.png",
+      "md5": "a36d7a8b00af76e8696929757e66f1f6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1834582,
+      "uploadedDate": "2023-03-23T20:29:19.249Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-development-standard-1920x1080px-RGB-1920x1080-313b9f312c1a3b4402d2afce7099be65.png",
+      "md5": "313b9f312c1a3b4402d2afce7099be65",
+      "width": 1920,
+      "height": 1080,
+      "size": 646574,
+      "uploadedDate": "2023-03-23T21:04:03.869Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-networking-1920x1080px-RGB-1920x1080-505a68833c7b3e2608a82a65716bbfc8.png",
+      "md5": "505a68833c7b3e2608a82a65716bbfc8",
+      "width": 1920,
+      "height": 1080,
+      "size": 298386,
+      "uploadedDate": "2023-03-23T20:43:06.935Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-uev-compatible-1920x1080px-RGB-1920x1080-981afff3be46977fb6060c7becdf62d5.png",
+      "md5": "981afff3be46977fb6060c7becdf62d5",
+      "width": 1920,
+      "height": 1080,
+      "size": 247136,
+      "uploadedDate": "2023-03-23T20:17:40.072Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-mechanics-1920x1080px-RGB-1920x1080-2da1582c9547a98e20aa01fd8eb23787.png",
+      "md5": "2da1582c9547a98e20aa01fd8eb23787",
+      "width": 1920,
+      "height": 1080,
+      "size": 233944,
+      "uploadedDate": "2021-04-07T16:07:42.844Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-details-1920x1080px-RGB-1920x1080-4a32facb2762ec313c81b26559faa362.png",
+      "md5": "4a32facb2762ec313c81b26559faa362",
+      "width": 1920,
+      "height": 1080,
+      "size": 183888,
+      "uploadedDate": "2021-04-07T16:07:43.247Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-filtering-1920x1080px-RGB-1920x1080-f8390ac2dc77a20c920fd4b7c489548f.png",
+      "md5": "f8390ac2dc77a20c920fd4b7c489548f",
+      "width": 1920,
+      "height": 1080,
+      "size": 287710,
+      "uploadedDate": "2021-04-07T16:07:43.764Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-interpolation-1920x1080px-RGB-1920x1080-a75574c9da766e95a81a8948c249bc32.png",
+      "md5": "a75574c9da766e95a81a8948c249bc32",
+      "width": 1920,
+      "height": 1080,
+      "size": 262981,
+      "uploadedDate": "2021-04-07T16:07:44.270Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-nativity-1920x1080px-RGB-1920x1080-c476c16750e7c0837c0e95f1c39ad908.png",
+      "md5": "c476c16750e7c0837c0e95f1c39ad908",
+      "width": 1920,
+      "height": 1080,
+      "size": 276037,
+      "uploadedDate": "2021-04-07T16:07:44.746Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-support-1920x1080px-RGB-1920x1080-cc58e3f248378aaf70daa4c31e6204b1.png",
+      "md5": "cc58e3f248378aaf70daa4c31e6204b1",
+      "width": 1920,
+      "height": 1080,
+      "size": 280961,
+      "uploadedDate": "2021-04-07T16:07:45.170Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apparatus-sample-1920x1080px-RGB-1920x1080-80534fe37f81517aa0497b954cc6026f.png",
+      "md5": "80534fe37f81517aa0497b954cc6026f",
+      "width": 1920,
+      "height": 1080,
+      "size": 514204,
+      "uploadedDate": "2021-04-07T20:20:11.143Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Apparatus_thumb-284x284-329e0a50314301069321486995bd8351.png",
+      "md5": "329e0a50314301069321486995bd8351",
+      "width": 284,
+      "height": 284,
+      "size": 101215,
+      "uploadedDate": "2021-05-28T13:41:03.733Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Apparatus_featured-894x488-a1388a6b9eecd31bb4c8ee45a493fb35.png",
+      "md5": "a1388a6b9eecd31bb4c8ee45a493fb35",
+      "width": 894,
+      "height": 488,
+      "size": 464447,
+      "uploadedDate": "2021-12-10T07:50:41.618Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-development-standard-1920x1080px-RGB-1920x1080-313b9f312c1a3b4402d2afce7099be65_Snapshot.png",
+      "md5": "58a0c9142af551016d4e14f80ef8a7dc",
+      "width": 150,
+      "height": 74,
+      "size": 5208,
+      "uploadedDate": "2023-03-23T21:04:04.170Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-shmup-1920x1080px-RGB-1920x1080-c2f97118d64787b9f9aeed55ca3b2843_Snapshot.png",
+      "md5": "68b10d2fbdc44f68f55dda10b426c538",
+      "width": 150,
+      "height": 74,
+      "size": 6577,
+      "uploadedDate": "2023-03-23T20:59:47.319Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-shmup-1920x1080px-RGB-1920x1080-ec5b0cfa29ded9b7e672b7e2ce033250_Snapshot.png",
+      "md5": "3a8d1c90768687580b5f0196be08b809",
+      "width": 150,
+      "height": 74,
+      "size": 6589,
+      "uploadedDate": "2023-03-23T20:56:35.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-networking-1920x1080px-RGB-1920x1080-505a68833c7b3e2608a82a65716bbfc8_Snapshot.png",
+      "md5": "191f81613af06f08f8f2eba174111f58",
+      "width": 150,
+      "height": 74,
+      "size": 4025,
+      "uploadedDate": "2023-03-23T20:43:07.205Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-development-standard-1920x1080px-RGB-1920x1080-ce15ee2801861823e396e511ad6844bd_Snapshot.png",
+      "md5": "2b6a21d1e3438421bef5e9442417903a",
+      "width": 150,
+      "height": 74,
+      "size": 5301,
+      "uploadedDate": "2023-03-23T20:38:20.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-multi-threading-1920x1080px-RGB-1920x1080-a36d7a8b00af76e8696929757e66f1f6_Snapshot.png",
+      "md5": "563ac278c05f94fe343254b8df3e1b29",
+      "width": 150,
+      "height": 74,
+      "size": 5436,
+      "uploadedDate": "2023-03-23T20:29:19.654Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-uev-compatible-1920x1080px-RGB-1920x1080-981afff3be46977fb6060c7becdf62d5_Snapshot.png",
+      "md5": "e06380aaee2958a90b5eff93fab7021d",
+      "width": 150,
+      "height": 74,
+      "size": 4177,
+      "uploadedDate": "2023-03-23T20:17:40.372Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-networking-1920x1080px-RGB-1920x1080-5d767fd01983e0c0c5cae4cb335085c5_Snapshot.png",
+      "md5": "48b524de162b4ab7a6098caccbd4fc19",
+      "width": 150,
+      "height": 74,
+      "size": 4067,
+      "uploadedDate": "2021-11-27T16:24:17.982Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-uev-compatible-1920x1080px-RGB-1920x1080-f1cdbe9c970d19eae35abbdc29efac44_Snapshot.png",
+      "md5": "f9cf8b184075dd9d7983f3a18811599c",
+      "width": 150,
+      "height": 74,
+      "size": 4334,
+      "uploadedDate": "2021-09-06T09:37:41.958Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-multi-threading-1920x1080px-RGB-1920x1080-1682e9333aa4fde4b13a99f23d9c72f4_Snapshot.png",
+      "md5": "f50e06e4e239e48625d711f341648fe8",
+      "width": 150,
+      "height": 74,
+      "size": 5537,
+      "uploadedDate": "2021-09-06T09:26:16.604Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-multi-threading-1920x1080px-RGB-1920x1080-df7ab4b8c263b24fea9e31ae589bfc6e_Snapshot.png",
+      "md5": "7418b8c5852c69225eaa41172176e5a0",
+      "width": 150,
+      "height": 74,
+      "size": 5441,
+      "uploadedDate": "2021-09-04T19:04:04.986Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-coding-standard-1920x1080px-RGB-1920x1080-ce15ee2801861823e396e511ad6844bd_Snapshot.png",
+      "md5": "2b6a21d1e3438421bef5e9442417903a",
+      "width": 150,
+      "height": 74,
+      "size": 5301,
+      "uploadedDate": "2021-06-04T15:58:27.678Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-uev-compatible-1920x1080px-RGB-1920x1080-62ad5dd9fb67d7ccc3543e0fc7bc9c2e_Snapshot.png",
+      "md5": "9b783e8a994b331a007099700ca0f46f",
+      "width": 150,
+      "height": 74,
+      "size": 4255,
+      "uploadedDate": "2021-05-28T13:22:23.734Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-sample-1920x1080px-RGB-1920x1080-80534fe37f81517aa0497b954cc6026f_Snapshot.png",
+      "md5": "6204aab6c771e5710f83dcb338375e42",
+      "width": 150,
+      "height": 74,
+      "size": 4510,
+      "uploadedDate": "2021-04-07T20:20:11.494Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-mechanics-1920x1080px-RGB-1920x1080-2da1582c9547a98e20aa01fd8eb23787_Snapshot.png",
+      "md5": "e1f2d9e6c3e0a9728a25e02f3e93261e",
+      "width": 150,
+      "height": 74,
+      "size": 3467,
+      "uploadedDate": "2021-04-07T16:07:43.148Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-details-1920x1080px-RGB-1920x1080-4a32facb2762ec313c81b26559faa362_Snapshot.png",
+      "md5": "28831afc10901ede2ca45872f33189ab",
+      "width": 150,
+      "height": 74,
+      "size": 3828,
+      "uploadedDate": "2021-04-07T16:07:43.567Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-filtering-1920x1080px-RGB-1920x1080-f8390ac2dc77a20c920fd4b7c489548f_Snapshot.png",
+      "md5": "8cc7011583dc032c712f58f607c56d84",
+      "width": 150,
+      "height": 74,
+      "size": 4237,
+      "uploadedDate": "2021-04-07T16:07:44.101Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-interpolation-1920x1080px-RGB-1920x1080-a75574c9da766e95a81a8948c249bc32_Snapshot.png",
+      "md5": "2a5ad44a37c436c310bd056abee9ed59",
+      "width": 150,
+      "height": 74,
+      "size": 3575,
+      "uploadedDate": "2021-04-07T16:07:44.576Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-nativity-1920x1080px-RGB-1920x1080-c476c16750e7c0837c0e95f1c39ad908_Snapshot.png",
+      "md5": "5b7d93b84044001a6ec595e162bcd51e",
+      "width": 150,
+      "height": 74,
+      "size": 4043,
+      "uploadedDate": "2021-04-07T16:07:45.029Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apparatus-support-1920x1080px-RGB-1920x1080-cc58e3f248378aaf70daa4c31e6204b1_Snapshot.png",
+      "md5": "a9f25b7820a07af10ea27ee41fda6243",
+      "width": 150,
+      "height": 74,
+      "size": 5237,
+      "uploadedDate": "2021-04-07T16:07:45.496Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/placeholder-1920x1080-1cfbef3f292927338fa3d3b34265d530_Snapshot.png",
+      "md5": "6f0efc59e083e9381360e4a10449cdd8",
+      "width": 150,
+      "height": 74,
+      "size": 827,
+      "uploadedDate": "2021-02-25T11:19:44.079Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-04-11T18:39:30.925Z",
+  "lastModifiedDate": "2024-10-15T12:36:24.495Z",
+  "entitlementName": "cea89c8f61834a9e8376d845301b143c",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3f41c5cf0e7b4da581f78aa56b583117",
+      "appId": "Apparatus_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Win32",
+        "Windows",
+        "Nintendo Switch",
+        "PS4",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-02-25T00:00:00.000Z",
+      "releaseNote": "• Support for explicit async operating.\n• Operating shortcuts.\n• Networking revamped.\n• Faster index mapping in the operating.\n• Issues resolved.",
+      "versionTitle": "1.22.1-ue.4.26.engine"
+    },
+    {
+      "id": "d520c1b0a12b423eaa37f8ce641b8fc3",
+      "appId": "Apparatus_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Nintendo Switch",
+        "PS4"
+      ],
+      "dateAdded": "2021-09-01T00:00:00.000Z",
+      "releaseNote": "• VS2022 compatibility fixes.\n• Path warnings resolved.",
+      "versionTitle": "1.23.9-ue.4.27.engine"
+    },
+    {
+      "id": "6b269262fd7748ad9dd1166039ae1eaf",
+      "appId": "Apparatus_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "iOS",
+        "Android",
+        "Mac",
+        "Xbox One",
+        "Nintendo Switch",
+        "PS4"
+      ],
+      "dateAdded": "2022-04-19T00:00:00.000Z",
+      "releaseNote": "• Minor changes.\n",
+      "versionTitle": "1.23.10-ue.5.0.engine"
+    },
+    {
+      "id": "c7355388914f4d7b9ccecef0234f928a",
+      "appId": "Apparatus_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-12-01T00:00:00.000Z",
+      "releaseNote": "• Standalone mode fix.",
+      "versionTitle": "1.23.12-ue.5.1.engine"
+    },
+    {
+      "id": "5e086c6c98104c04be5050647dc782a6",
+      "appId": "Apparatus_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "PS4",
+        "Windows",
+        "Xbox One",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2023-06-05T00:00:00.000Z",
+      "releaseNote": "• Standalone mode fix.",
+      "versionTitle": "1.23.12-ue.5.2.engine"
+    },
+    {
+      "id": "454c951e08664127a4e165de0647c27a",
+      "appId": "Apparatus_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "PS4",
+        "Nintendo Switch",
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2023-09-28T00:00:00.000Z",
+      "releaseNote": "• Standalone mode fix.",
+      "versionTitle": "1.23.12-ue.5.3.engine"
+    }
+  ],
+  "developer": "Vladislav Dmitrievich Turbanov",
+  "developerId": "o-5bav3u4p33fflcqyd6lnujl4tyeq8e",
+  "endOfSupport": false,
+  "unsearchable": false
+}

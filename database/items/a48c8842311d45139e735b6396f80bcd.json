@@ -1,0 +1,189 @@
+{
+  "id": "a48c8842311d45139e735b6396f80bcd",
+  "title": "Radial Scan FX",
+  "description": "Radial Scan FX is a highly customizable scanning ring shader, prepped and ready for easy integration into your game.",
+  "longDescription": "<p><a href=\"https://youtu.be/AMAu3Hwdzs8\" rel=\"nofollow\"><strong>Video Showcase</strong></a></p><p><br /></p><h1>What is it?</h1><p>Radial Scan FX is a highly customizable scanning ring shader, prepped and ready for easy integration into your game. With a few tweaks, you can create an entire game mechanic using just the shader.</p><p>The scan effect is projected onto the world using deferred decals, meaning you can layer many Radial Scans on top of each other at once without impacting performance.</p><p><br /></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/David&#43;Grouse\" rel=\"nofollow\"><strong>Check out my other asset packs here!</strong></a></p><p>As always I appreciate community feedback to help improve my asset packs. Thanks!</p><p><br /></p><h2>How do I spawn it?</h2><p>Much like a particle effect, you can attach the <em>BP_RadialScanComponent</em> to any actor and fire the <strong>Spawn Radial Scan Effect</strong> function to begin the scan. Alternatively, you can drop in a <em>BP_RadialScanActor</em> and fire the <strong>Begin Radial Scan </strong>function. Be aware that the actor will die upon completion.</p><p><br /></p><p><br /></p><h2>How do I customize it?</h2><p><strong>To customize the way it spawns, moves and dies:</strong> Adjust the settings on the scan component</p><p><strong>To customize the look of the scan effect:</strong> Adjust the material instance settings. The best way to learn the material is to drag the material instance into the level, this will create a decal. Scale it up to cover a large area, then adjust the <em>Distance</em> parameter to preview the scan effect at different distances. Change the parameters to see what they do. You can think of each &#34;Layer&#34; as a separate ring with it&#39;s own settings, one layer could show the edge of the effect, while another layer creates the highlighted object effect.</p><p><br /></p><h2>How do I make it project on everything?</h2><p>Make sure that <em>Receives Decals</em> is enabled on every mesh you want the effect to cast on.</p><p><br /></p><h2>How do I preview the examples?</h2><p>Find the character pawn in the level, inside it&#39;s components list you&#39;ll find the <em>BP_RadialScanComponent, </em>click on that and swap out the material used, feel free to play around with the other settings to get an understanding of them.</p><h2><br /></h2><h2>I can&#39;t see the highlights, help!</h2><p>Make sure to set custom depth stencil settings to <strong>Enabled with Stencil</strong>, make sure the mesh you want highlighted has custom depth enabled in rendering settings and it&#39;s stencil value matches the stencil value in the radial scan material instance. Remember, not all radial scans examples use the highlight effect, only examples 2 and 3.</p>",
+  "technicalDetails": "<p>Update! </p><p>17/04/2021</p><p>Forward Rendering is now supported for 4.26&#43;</p><p><br /></p><p>Features:</p><ul><li>Forest example map</li><li>5 Radial Scan FX examples</li><li>Many material functions</li><li>Tool-tipped and ordered material settings</li><li> Static switches to enable advanced effects</li><li> Color gradients &amp; gradient atlases</li><li>Texture projection settings</li><li>Directional scanning projection</li><li>Sobel outline effects</li><li>Stencil mask settings</li><li>Up to 4 layers of Radial FX in the master shader (can be expanded for more)</li><li>VR Compatible</li><li>Forward Rendering Supported (4.26&#43;)</li></ul><p>Number of Maps: 1</p><p>Number of Textures: 25</p><p>Number of Materials: 20</p><p>Number of Material Functions: 13</p><p>Number of Blueprints: 4</p><p>Number of Meshes: 7</p><p>Supported Platforms: Desktop, VR</p><p>Important/Additional Notes:</p><ul><li>Works on mobile with <em>Mobile HDR</em> enabled. However, the sobel effect is not supported.</li><li>The forest assets originate from <a href=\"https://www.unrealengine.com/marketplace/en-US/slug/soul-cave\" rel=\"nofollow\">Soul: Cave by Epic Games</a> but the materials and textures have been tweaked to look their best in the forest setting.</li><li>If you have bad performance in the example map, edit the level blueprint and remove the volumetric setting adjustment or disable volumetric lighting entirely, additionally, you can disable tessellation on the landscape material.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery-UniqueObjectScanning-1920x1080-a8752eca7f57aca68701e71949fc4974.png",
+      "md5": "a8752eca7f57aca68701e71949fc4974",
+      "width": 1920,
+      "height": 1080,
+      "size": 2323476,
+      "uploadedDate": "2019-08-12T15:40:45.611Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery-TexturesAndGradients-1920x1080-eae70220b7c60f26c08f6b33f9aa0374.jpg",
+      "md5": "eae70220b7c60f26c08f6b33f9aa0374",
+      "width": 1920,
+      "height": 1080,
+      "size": 1988137,
+      "uploadedDate": "2019-08-12T15:40:46.127Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery-NetworkReplication-1920x1080-b5d27b382359844b3a29473585436492.png",
+      "md5": "b5d27b382359844b3a29473585436492",
+      "width": 1920,
+      "height": 1080,
+      "size": 2160483,
+      "uploadedDate": "2019-08-12T15:40:46.620Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery-Settings-1920x1080-87bd2201916c3d92881b9f2d57aa120a.png",
+      "md5": "87bd2201916c3d92881b9f2d57aa120a",
+      "width": 1920,
+      "height": 1080,
+      "size": 532240,
+      "uploadedDate": "2019-08-12T15:40:47.094Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RadialScanFX_thumb-284x284-56baeec39d45d90dd2b08378e088fee2.png",
+      "md5": "56baeec39d45d90dd2b08378e088fee2",
+      "width": 284,
+      "height": 284,
+      "size": 141874,
+      "uploadedDate": "2019-08-12T15:40:47.399Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RadialScanFX_featured-894x488-a6e0636b75737569ac04a06e90cd7e54.png",
+      "md5": "a6e0636b75737569ac04a06e90cd7e54",
+      "width": 894,
+      "height": 488,
+      "size": 689636,
+      "uploadedDate": "2019-08-12T15:40:47.531Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery-UniqueObjectScanning-1920x1080-a8752eca7f57aca68701e71949fc4974_Snapshot.png",
+      "md5": "4c4c889985a0b623fcca231cf4e7ad70",
+      "width": 150,
+      "height": 74,
+      "size": 4826,
+      "uploadedDate": "2019-08-12T15:40:45.947Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery-TexturesAndGradients-1920x1080-eae70220b7c60f26c08f6b33f9aa0374_Snapshot.jpg",
+      "md5": "1479fbba8a6ec26f79cceb6655340f94",
+      "width": 150,
+      "height": 74,
+      "size": 7808,
+      "uploadedDate": "2019-08-12T15:40:46.454Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery-NetworkReplication-1920x1080-b5d27b382359844b3a29473585436492_Snapshot.png",
+      "md5": "c3def93cb8630b552847d4acc120aa3f",
+      "width": 150,
+      "height": 74,
+      "size": 6095,
+      "uploadedDate": "2019-08-12T15:40:46.953Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery-Settings-1920x1080-87bd2201916c3d92881b9f2d57aa120a_Snapshot.png",
+      "md5": "83811792b9f778003c9dba04d872b062",
+      "width": 150,
+      "height": 74,
+      "size": 5942,
+      "uploadedDate": "2019-08-12T15:40:47.326Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/fx"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-08-20T10:21:22.060Z",
+  "lastModifiedDate": "2024-09-25T13:27:37.569Z",
+  "customAttributes": {},
+  "entitlementName": "a48c8842311d45139e735b6396f80bcd",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "518b00bb7ccf480ca3defe14e3ac5318",
+      "appId": "RadialSca48c8842311dV1",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "PS4",
+        "Xbox One",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2019-08-13T00:00:00.000Z",
+      "releaseNote": "4.22 Adjusted over exposure in case of white screen bug",
+      "versionTitle": "Radial Scan Effect 4.22"
+    },
+    {
+      "id": "98374d57409e426d84f6c60ddc3e79e1",
+      "appId": "RadialSca48c8842311dV2",
+      "compatibleApps": [
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2019-09-09T00:00:00.000Z",
+      "releaseNote": "4.23 Update",
+      "versionTitle": "Radial Scan Effect 4.23"
+    },
+    {
+      "id": "594de491585c414dbd38d71cfbf6be46",
+      "appId": "RadialSca48c8842311dV3",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-04-17T00:00:00.000Z",
+      "releaseNote": "Added forward rendering support",
+      "versionTitle": "Radial Scan Effect 4.26"
+    }
+  ],
+  "developer": "Luna Joy",
+  "developerId": "o-8e0e2b789145c4a7bdbd572e43e990",
+  "endOfSupport": false,
+  "unsearchable": false
+}

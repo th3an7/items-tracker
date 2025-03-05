@@ -1,0 +1,192 @@
+{
+  "id": "3c67be62833f465e842ad3e9c1f33585",
+  "title": "3D Gaussians Plugin",
+  "description": "Import and render training results of 3D Gaussian Splatting",
+  "longDescription": "<p>Demo Video: <a href=\"https://youtu.be/xjIJklDqJdE\" rel=\"nofollow\">Link</a></p><p>Free Demo EXE: <a href=\"https://akiya-research-institute.github.io/3dGaussiansPlugin-Manual/en/demo-project-overview/\" rel=\"nofollow\">Link</a></p><p>Product Page: <a href=\"https://vrlab.akiya-souken.co.jp/en/products/threedgaussianplugin/\" rel=\"nofollow\">Link</a></p><p>Documentation: <a href=\"https://akiya-research-institute.github.io/3dGaussiansPlugin-Manual/\" rel=\"nofollow\">Link</a></p><p><br /></p><p><br /></p><h2><strong>Use real-world captures as photo-realistic 3D environments</strong></h2><p>3D Gaussian Splatting is a technique for reconstructing scenes from multiple photos, whose accuracy is equivalent or better than NeRF, and whose rendering load is lower than NeRF.</p><p>Anyone can create 3D Gaussian Splatting data by using <a href=\"https://github.com/graphdeco-inria/gaussian-splatting\" rel=\"nofollow\">the official implementation</a>.</p><p>This plugin is a importer and a renderer of the training results of 3D Gaussian Splatting.</p><p><br /></p><ul><li>Just a few clicks on the UE editor to import.</li><li>Real-time rendering at about 30-100 FPS with RTX3070, depending on the data</li><li>Fully implemented in Niagara and Material, without relying on Python, CUDA, or custom HLSL node</li><li><a href=\"https://akiya-research-institute.github.io/3dGaussiansPlugin-Manual/en/demo-project-overview/\" rel=\"nofollow\">Demo project</a> is available for free.</li></ul><p><br /></p><p><br /></p><h2><strong>System Requirement</strong></h2><p>GPU which supports DirectX 12 is required.</p><p><br /></p><p><br /></p><h2><strong>Limitations</strong></h2><ul><li>This plugin renders 3D Gaussian Splatting data using Niagara particles. Because there is a limit to the number of particles in a Niagara system, this plugin imports 3D Gaussian Splatting data into multiple blocks. The seams between the blocks can be seen if one looks carefully.</li><li>Lighting support is EXPERIMENTAL. You can use Lit/Translucent material for rendering of 3D Gaussian Splatting data, but problems occurs under certain conditions. <a href=\"https://akiya-research-institute.github.io/3dGaussiansPlugin-Manual/en/how-to-import#known-issues\" rel=\"nofollow\">See the details</a>.</li><li>Lumen is not supported. You can receive the light from Lumen Global Illumination, but the brightness may be unstable over time. Also, it cannot emit GI light.</li><li>Shadow is not supported.</li><li>Ray Traced Translucency is not supported.</li><li>3D Gaussian Splatting data are rendered by translucent material. When used with other transparent objects, problems can occur when deciding which objects to render in front of or behind other transparent objects; if multiple 3D Gaussian Splatting actors are placed, they will not intersect with each other correctly.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Import training results of <a href=\"https://github.com/graphdeco-inria/gaussian-splatting\" rel=\"nofollow\">the official implementation of 3D Gaussian Splatting</a></li><li>Render the imported results in Unreal Engine</li></ul><p>Code Modules:</p><ul><li> ThreeDGaussians (Runtime)</li><li> ThreeDGaussiansImporter (Editor)</li></ul><p>Number of Blueprints: 1</p><p>Number of C&#43;&#43; Classes: 1&#43;</p><p>Number of Materials: 1&#43;</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows 64bit</p><p>Supported Target Build Platforms: Windows 64bit</p><p>Documentation: <a href=\"https://akiya-research-institute.github.io/3dGaussiansPlugin-Manual/\" rel=\"nofollow\">Link</a></p><p>Example Project: <a href=\"https://akiya-research-institute.github.io/3dGaussiansPlugin-Manual/en/demo-project-overview/\" rel=\"nofollow\">Link</a>, <a href=\"https://github.com/Akiya-Research-Institute/3dGaussiansPlugin-Demo\" rel=\"nofollow\">GitHub</a></p><p>Important/Additional Notes: GPU which supports DirectX 12 is required</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/demobicycle-1920x1080-a225f2cbae0a76f606c7e3fe6c6484fb.png",
+      "md5": "a225f2cbae0a76f606c7e3fe6c6484fb",
+      "width": 1920,
+      "height": 1080,
+      "size": 2926502,
+      "uploadedDate": "2023-09-16T09:47:51.150Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/demotrain-1920x1080-bf336d206093b04f9ce5d0cc2445c396.png",
+      "md5": "bf336d206093b04f9ce5d0cc2445c396",
+      "width": 1920,
+      "height": 1080,
+      "size": 2384972,
+      "uploadedDate": "2023-09-16T09:47:51.744Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/lit-1920x1080-755e8e2d89ce5a20172746c583e248d0.png",
+      "md5": "755e8e2d89ce5a20172746c583e248d0",
+      "width": 1920,
+      "height": 1080,
+      "size": 2812007,
+      "uploadedDate": "2023-10-07T15:09:42.913Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/vr-1920x1080-eb840dfa1a936efc976e8e39e29299ef.png",
+      "md5": "eb840dfa1a936efc976e8e39e29299ef",
+      "width": 1920,
+      "height": 1080,
+      "size": 882610,
+      "uploadedDate": "2023-10-07T15:09:43.340Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/3DGaussiansPlugin_thumb-284x284-8bf168b69e00c7eb0972a43f897cd1d4.png",
+      "md5": "8bf168b69e00c7eb0972a43f897cd1d4",
+      "width": 284,
+      "height": 284,
+      "size": 11192,
+      "uploadedDate": "2023-09-10T14:27:31.742Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/3DGaussiansPlugin_featured-894x488-2de10fbeba60527bcff2c700e21c007f.png",
+      "md5": "2de10fbeba60527bcff2c700e21c007f",
+      "width": 894,
+      "height": 488,
+      "size": 685604,
+      "uploadedDate": "2023-09-10T14:27:31.829Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/lit-1920x1080-755e8e2d89ce5a20172746c583e248d0_Snapshot.png",
+      "md5": "8d292337afb6212e269df304ecfeb5f7",
+      "width": 150,
+      "height": 74,
+      "size": 6003,
+      "uploadedDate": "2023-10-07T15:09:43.223Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/vr-1920x1080-eb840dfa1a936efc976e8e39e29299ef_Snapshot.png",
+      "md5": "12d667d9aaccaa28bad148f1a7825856",
+      "width": 150,
+      "height": 74,
+      "size": 8429,
+      "uploadedDate": "2023-10-07T15:09:43.480Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/demobicycle-1920x1080-a225f2cbae0a76f606c7e3fe6c6484fb_Snapshot.png",
+      "md5": "872284859fdc99f4ca6cec8aeec414a2",
+      "width": 150,
+      "height": 74,
+      "size": 7048,
+      "uploadedDate": "2023-09-16T09:47:51.557Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/demotrain-1920x1080-bf336d206093b04f9ce5d0cc2445c396_Snapshot.png",
+      "md5": "288e5f3746942841d91d85afbf1ac131",
+      "width": 150,
+      "height": 74,
+      "size": 7988,
+      "uploadedDate": "2023-09-16T09:47:52.181Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/demogarden-1920x1080-fbfbebf84629280f2c3c419ed91b3342_Snapshot.png",
+      "md5": "b6291400e24f3be9fcc72c40ed6cd0b1",
+      "width": 150,
+      "height": 74,
+      "size": 8837,
+      "uploadedDate": "2023-09-16T09:37:16.645Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3dgaussianhero-1920x1080-1d6f4a72d4c98761f0c99ea81374c2b6_Snapshot.png",
+      "md5": "4da7563d3106c7111c1723e53f5c2783",
+      "width": 150,
+      "height": 74,
+      "size": 7014,
+      "uploadedDate": "2023-09-10T14:27:31.658Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-09-19T01:05:05.221Z",
+  "lastModifiedDate": "2025-01-26T12:47:24.844Z",
+  "customAttributes": {},
+  "entitlementName": "3c67be62833f465e842ad3e9c1f33585",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3fd9eb6d229a47bf8b5e8543e2131241",
+      "appId": "ThreeDGaussians_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-22T00:00:00.000Z",
+      "releaseNote": "v1.10",
+      "versionTitle": "v1.10-ue5.1"
+    },
+    {
+      "id": "66d6d09cfdea4a36ad04925f3da283a0",
+      "appId": "ThreeDGaussians_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-22T00:00:00.000Z",
+      "releaseNote": "v1.11",
+      "versionTitle": "v1.11-ue5.2"
+    },
+    {
+      "id": "720058a12eb24db9a03f4b9f92924ce6",
+      "appId": "ThreeDGaussians_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-10T00:00:00.000Z",
+      "releaseNote": "v1.111 Fix flickering issue, Fix portrait aspect ratio issue\nv1.10 Polycam compatible",
+      "versionTitle": "v1.11-ue5.3"
+    },
+    {
+      "id": "c4f1c9b3d2794174b3903e6367c745c2",
+      "appId": "ThreeDGaussians_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-17T00:00:00.000Z",
+      "releaseNote": "v1.11",
+      "versionTitle": "v1.11-ue5.4"
+    }
+  ],
+  "developer": "Akiya Research Institute",
+  "developerId": "o-8ddnkezjdadpvsjej6lb58e8u96xgs",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

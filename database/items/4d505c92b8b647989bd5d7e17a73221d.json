@@ -1,0 +1,331 @@
+{
+  "id": "4d505c92b8b647989bd5d7e17a73221d",
+  "title": "Widget Guided Grapple Points",
+  "description": "Grapple onto different objects and reach high places!",
+  "longDescription": "<p><a href=\"https://drive.google.com/drive/folders/1QQWlkxf2plpNCImVZBolAHq94o0uSN6b?usp&#61;sharing\" rel=\"nofollow\">Demo</a></p><p><a href=\"https://youtu.be/WAfgKPmLbxA\" rel=\"nofollow\">Example Video</a></p><p><a href=\"https://youtu.be/PISpLxlieUg\" rel=\"nofollow\">Version 2 Tutorial Video</a></p><p><br /></p><p><strong>04/05/2024: Version 2 Update - Character Component support was added. It now uses Montages to play all animations. </strong>Land Recovery animations might not blend smoothly in some cases. <a href=\"https://drive.google.com/drive/folders/1Gx4f9PWT2_qKJf5vqE5mqF1Xmvw87M5N?usp&#61;sharing\" rel=\"nofollow\">Here</a> we can download mirrored versions of those animations. Try using both in case one of them blends better than the other.</p><p><br /></p><p><strong>* If there are any issues, questions or technical assistance, please let me know, I&#39;ll respond as soon as possible.</strong></p><p><br /></p><p><br /></p><p>Place Grapple Points around the level and choose between 3 types: Landing, Swing or Jump Points.</p><p><br /></p><ul><li>The component searches constantly for Grapple Points within view and places a Widget on top of the one closest to the Player and within a certain angle.</li><li>Searching for Grapple Points its done on Tick. It can be paused with a component provided function.</li><li>Customize the Widget&#39;s color and size.</li><li>All animations play using Montages only.</li><li>A few nodes need to be added inside your Character blueprint. They are used to communicate with the Component.</li></ul><p><br /></p><p>Requirements:</p><p><br /></p><ul><li>A Third Person Character with a Character Movement component.</li><li>A Character Animation Blueprint that can play Montages.</li><li>A Custom Trace Channel used by the component and blocked by the Grapple Points only.</li></ul><p><br /></p><p>Limitations:</p><p><br /></p><ul><li>It won&#39;t work as intended if your Character uses a system that constantly updates Gravity and Velocity. Before using Grapple Points, both Gravity and Velocity are set to 0. After a short period of time, Gravity is returned to it&#39;s previous value. Depending on your project, any logic that constantly updates Gravity and Velocity should pause momentarily before using Grapple Points.</li></ul><p><br /></p><ul><li>Unreal Engine&#39;s Control Rig Foot IK solution will rotate incorrectly both Character&#39;s legs while using Grapple Points. To prevent that, we need to set the IK Alpha value to 0 and return it to 1 after using Grapple Points. The tutorial video provides more information on how to do it.</li></ul><p><br /></p><ul><li>There is an issue with the Cable Component Plugin in the engine versions 5.2 and 5.3 where the cable segments bend incorrectly so the Rope in those versions only has 1 segment. As a result, it doesn´t bend like in the 4.27 - 5.1 and 5.4&#43; versions.</li></ul><p><br /></p><ul><li>Not replicated.</li></ul><p><br /></p><p><br /></p><p><br /></p><p>---- Attribution ----</p><p><br /></p><p>The following assets are included in this product: <a href=\"https://docs.google.com/document/d/1X2nxiSetJPCgTbSni8BCTSOaYKj2AZDClZoA5bjVLZs/edit?usp&#61;sharing\" rel=\"nofollow\">Link</a></p>",
+  "technicalDetails": "<p>Features:</p><p><br /></p><ul><li>A Component and a Rope blueprint manage all the logic.</li><li>Movement is handled by Timelines and curves. No physics are implemented.</li><li>A test Level with Grapple Points to move around.</li><li>3 types of Grapple Points: Landing, Swinging and Jumping Points.</li></ul><p><br /></p><p>Number of Blueprints: 1 Component, 2 Blueprints (Rope / Grapple Points), 1 Widget</p><p>Input: Gamepad, Keyboard and Mouse</p><p>Network Replicated: Not Replicated</p><p>Supported Development Platforms: Windows 64 bits</p><p>Windows: Yes</p><p>Mac: No</p><p>Documentation: <a href=\"https://youtu.be/PISpLxlieUg\" rel=\"nofollow\">Version 2 Video Tutorial</a> / <a href=\"https://docs.google.com/document/d/10VuX4SBHcLp86dTCDb6jpk8BzBpU5xJEMA6TTOuaxf4/edit?usp&#61;sharing\" rel=\"nofollow\">Version 1 Documentation</a></p><p>Important/Additional Notes: This product includes some of Epic&#39;s demo assets inside the Demo folder</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I9-1920x1080-90ab7fdc503278bfbca6ce40aca7ae70.png",
+      "md5": "90ab7fdc503278bfbca6ce40aca7ae70",
+      "width": 1920,
+      "height": 1080,
+      "size": 567149,
+      "uploadedDate": "2023-06-15T19:38:46.408Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I7-1920x1080-2b72568a3aca78f5593103b6f6549d72.png",
+      "md5": "2b72568a3aca78f5593103b6f6549d72",
+      "width": 1920,
+      "height": 1080,
+      "size": 1307434,
+      "uploadedDate": "2023-06-15T19:38:46.619Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I3-1920x1080-1dd29be5df3c556e2c6ceece197e1b83.png",
+      "md5": "1dd29be5df3c556e2c6ceece197e1b83",
+      "width": 1920,
+      "height": 1080,
+      "size": 843648,
+      "uploadedDate": "2023-06-15T19:38:46.990Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I4-1920x1080-c9084521cf25b6060a0a58ebace7b758.png",
+      "md5": "c9084521cf25b6060a0a58ebace7b758",
+      "width": 1920,
+      "height": 1080,
+      "size": 636449,
+      "uploadedDate": "2023-06-15T19:38:47.244Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I5-1920x1080-723f2c6dc978c06422f1f79c64813d31.png",
+      "md5": "723f2c6dc978c06422f1f79c64813d31",
+      "width": 1920,
+      "height": 1080,
+      "size": 639010,
+      "uploadedDate": "2023-06-15T19:38:47.504Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I6-1920x1080-5957af00cd117ebf67c7ae2476aed514.png",
+      "md5": "5957af00cd117ebf67c7ae2476aed514",
+      "width": 1920,
+      "height": 1080,
+      "size": 866857,
+      "uploadedDate": "2023-06-15T19:38:47.760Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I8-1920x1080-267fbbed494c46740d58547de8c76c2c.png",
+      "md5": "267fbbed494c46740d58547de8c76c2c",
+      "width": 1920,
+      "height": 1080,
+      "size": 829497,
+      "uploadedDate": "2023-06-15T19:38:48.064Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I10-1920x1080-2779ac3d863ab49126648bf89cb06bd3.png",
+      "md5": "2779ac3d863ab49126648bf89cb06bd3",
+      "width": 1920,
+      "height": 1080,
+      "size": 527583,
+      "uploadedDate": "2023-06-15T19:38:48.374Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I11-1920x1080-2fe5cd44db1deca6b44022e8014767f0.png",
+      "md5": "2fe5cd44db1deca6b44022e8014767f0",
+      "width": 1920,
+      "height": 1080,
+      "size": 681874,
+      "uploadedDate": "2023-06-15T19:38:48.604Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I12-1920x1080-33c9c229f3abbba614bfd94561995a50.png",
+      "md5": "33c9c229f3abbba614bfd94561995a50",
+      "width": 1920,
+      "height": 1080,
+      "size": 802878,
+      "uploadedDate": "2023-06-15T19:38:48.828Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I14-1920x1080-5aab30f6017c57cfafbf9fbfc5098992.png",
+      "md5": "5aab30f6017c57cfafbf9fbfc5098992",
+      "width": 1920,
+      "height": 1080,
+      "size": 670438,
+      "uploadedDate": "2023-06-15T19:38:49.080Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I13-1920x1080-bfd9343c8818530ef3f534f0c36510a3.png",
+      "md5": "bfd9343c8818530ef3f534f0c36510a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 635437,
+      "uploadedDate": "2023-06-15T19:38:49.288Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/WidgetGuidedGrapplePoints_thumb-284x284-146caeba85c046659fb39286b2a19cde.png",
+      "md5": "146caeba85c046659fb39286b2a19cde",
+      "width": 284,
+      "height": 284,
+      "size": 135204,
+      "uploadedDate": "2023-06-15T19:38:49.432Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/WidgetGuidedGrapplePoints_featured-894x488-a126c0c696f05263e166d3ef6da19f72.png",
+      "md5": "a126c0c696f05263e166d3ef6da19f72",
+      "width": 894,
+      "height": 488,
+      "size": 781193,
+      "uploadedDate": "2023-06-15T19:38:49.568Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I9-1920x1080-90ab7fdc503278bfbca6ce40aca7ae70_Snapshot.png",
+      "md5": "2343e766a46f4800b43ce2331f280adc",
+      "width": 150,
+      "height": 74,
+      "size": 7726,
+      "uploadedDate": "2023-06-15T19:38:46.495Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I7-1920x1080-2b72568a3aca78f5593103b6f6549d72_Snapshot.png",
+      "md5": "74b9e2cdca0da4d8bf4968b67322e4d3",
+      "width": 150,
+      "height": 74,
+      "size": 9390,
+      "uploadedDate": "2023-06-15T19:38:46.772Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I3-1920x1080-1dd29be5df3c556e2c6ceece197e1b83_Snapshot.png",
+      "md5": "aac2c0a68b957378752cc8e956389e86",
+      "width": 150,
+      "height": 74,
+      "size": 8722,
+      "uploadedDate": "2023-06-15T19:38:47.107Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I4-1920x1080-c9084521cf25b6060a0a58ebace7b758_Snapshot.png",
+      "md5": "1df3d1a6f78c4087e9a4d2108ca73db2",
+      "width": 150,
+      "height": 74,
+      "size": 7166,
+      "uploadedDate": "2023-06-15T19:38:47.332Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I5-1920x1080-723f2c6dc978c06422f1f79c64813d31_Snapshot.png",
+      "md5": "574b72b15218b631e9951b1f3df519fe",
+      "width": 150,
+      "height": 74,
+      "size": 6680,
+      "uploadedDate": "2023-06-15T19:38:47.598Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I6-1920x1080-5957af00cd117ebf67c7ae2476aed514_Snapshot.png",
+      "md5": "cac61fbf2a286600cadc3d29605afe67",
+      "width": 150,
+      "height": 74,
+      "size": 8168,
+      "uploadedDate": "2023-06-15T19:38:47.867Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I8-1920x1080-267fbbed494c46740d58547de8c76c2c_Snapshot.png",
+      "md5": "ef215476605bf803c1db6c171a5328b0",
+      "width": 150,
+      "height": 74,
+      "size": 8022,
+      "uploadedDate": "2023-06-15T19:38:48.223Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I10-1920x1080-2779ac3d863ab49126648bf89cb06bd3_Snapshot.png",
+      "md5": "f8802b14f73a93c65acc3821de8e5c73",
+      "width": 150,
+      "height": 74,
+      "size": 7395,
+      "uploadedDate": "2023-06-15T19:38:48.466Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I11-1920x1080-2fe5cd44db1deca6b44022e8014767f0_Snapshot.png",
+      "md5": "1cf5d52a932106f0919f0b39e47d5beb",
+      "width": 150,
+      "height": 74,
+      "size": 7683,
+      "uploadedDate": "2023-06-15T19:38:48.717Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I12-1920x1080-33c9c229f3abbba614bfd94561995a50_Snapshot.png",
+      "md5": "6c929a9cb067d7a92dcebaafeb1421c0",
+      "width": 150,
+      "height": 74,
+      "size": 8360,
+      "uploadedDate": "2023-06-15T19:38:48.961Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I14-1920x1080-5aab30f6017c57cfafbf9fbfc5098992_Snapshot.png",
+      "md5": "a6cf7e362f2ce556d51b739c8a5f2605",
+      "width": 150,
+      "height": 74,
+      "size": 7136,
+      "uploadedDate": "2023-06-15T19:38:49.177Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I13-1920x1080-bfd9343c8818530ef3f534f0c36510a3_Snapshot.png",
+      "md5": "e747c45856521aa10089a41aa67ebf64",
+      "width": 150,
+      "height": 74,
+      "size": 7003,
+      "uploadedDate": "2023-06-15T19:38:49.389Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-06-17T22:30:58.741Z",
+  "lastModifiedDate": "2024-11-23T00:55:43.417Z",
+  "customAttributes": {},
+  "entitlementName": "4d505c92b8b647989bd5d7e17a73221d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "f8b92295731b4ea2b04f5986425af2cd",
+      "appId": "WidgetGu4d505c92b8b6V1",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-06-15T00:00:00.000Z",
+      "releaseNote": "Component BP hotfix.",
+      "versionTitle": "4.27 Version 2"
+    },
+    {
+      "id": "a04dbb495dc240b286864a9ae1549d6b",
+      "appId": "WidgetGu4d505c92b8b6V2",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-06-15T00:00:00.000Z",
+      "releaseNote": "Component BP hotfix.",
+      "versionTitle": "5.1 Version 2"
+    },
+    {
+      "id": "9c0f903f47c14b3ea5b292717689fadd",
+      "appId": "WidgetGu4d505c92b8b6V3",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-06-15T00:00:00.000Z",
+      "releaseNote": "Component BP hotfix.",
+      "versionTitle": "5.2 Version 2"
+    },
+    {
+      "id": "ced4a492116745c58d6f590e5a651c5e",
+      "appId": "WidgetGu4d505c92b8b6V4",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-10-03T00:00:00.000Z",
+      "releaseNote": "Component BP hotfix.",
+      "versionTitle": "5.3 Version 2"
+    },
+    {
+      "id": "5dd698278ce941c59e1eab678db466bc",
+      "appId": "WidgetGu4d505c92b8b6V5",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-26T00:00:00.000Z",
+      "releaseNote": "Added 5.4 engine version",
+      "versionTitle": "5.4 Version 2"
+    }
+  ],
+  "developer": "Raul Jaramillo",
+  "developerId": "o-dwr98md8acanu8q2tsnlm66yglmjj4",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

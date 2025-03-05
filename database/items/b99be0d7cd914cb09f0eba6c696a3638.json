@@ -1,0 +1,186 @@
+{
+  "id": "b99be0d7cd914cb09f0eba6c696a3638",
+  "title": "Quiet Docking System",
+  "description": "The tool allows you to quickly construct a dynamic user interface.",
+  "longDescription": "<p><strong>Quiet Docking System</strong> is a set of related widgets that allows you to construct a classic desktop app user interface quickly. All these widgets are collected in one group in <em>Widget Designer &gt; Pallette &gt; Quiet Docking Blocks</em>, and the developer simply builds a widget tree with them. The screen space is pre-marked into logical areas, so the user spends almost no time on markup. The system has prepared design themes that a developer can apply at any working stage. Also, the developer can independently create new themes and edit existing ones.</p><p><a href=\"https://youtu.be/VmG1IsMmTy0\" rel=\"nofollow\">Working with system</a></p><p><a href=\"https://youtu.be/szzP-xnyiDo\" rel=\"nofollow\">Example</a></p><p><br /></p><p><strong>Markup</strong></p><p><br /></p><p>The screen is divided into nine logical areas. <em>Floating windows</em> are placed over them. The following is a listing of these areas from top to bottom and from left to right, indicating the widgets that should be placed in them:</p><p><br /></p><ul><li><em>Slot_Titlebar</em> - <strong>Titlebar.</strong> You can also fill it with any other widget or leave it empty. Independent slot.</li><li><em>Slot_MainMenu</em> - <strong>Main Menu Root</strong>. The developer can build a hierarchy of this area either directly in the main widget or in a separate widget. There is an example in the Examples folder. Independent slot.</li><li><em>Slot_ToolbarTop – </em><strong>Toolbar Container</strong>. Independent slot.</li><li><em>Slot_ToolbarLeft</em> – <strong>Toolbar Container</strong>. Independent slot.</li><li>Slot_SidebarLeft – <strong>Sidebar</strong>. It is related to <em>Slot_DockingSystem</em>. The user will not be able to collapse <em>Docker Tab</em> to <em>Sidebar</em> if this slot is not empty or filled with something other than <em>Sidebar</em>.</li><li><em>Slot_DockingSystem – </em><strong><em>Grid Panel</em></strong><em>. </em>It is the main slot of the system. <em>Dockers</em> and <em>Docker Tabs</em> of any nesting level can be placed here. They can be freely moved around the screen and create configurations of any complexity. The main viewport is also placed in this area. The slot is related to <em>Slot_SidebarLeft, Slot_SidebarRight</em>.</li><li><em>Slot_SidebarRight</em> – <strong>Sidebar</strong>. </li><li>Slot_SidebarLeft – <strong>Sidebar</strong>. It is related to <em>Slot_DockingSystem</em>. The user will not be able to collapse <em>Docker Tab</em> to <em>Sidebar</em> if this slot is not empty or filled with something other than <em>Sidebar</em>.</li><li>Slot_ToolbarRight – <strong>Toolbar Container</strong>. Independent slot.</li><li><em>Slot_Statusbar – </em><strong>Statusbar</strong><em>. </em>It is related to <em>floating windows</em>. Each <em>floating window</em> contains control buttons, and the <em>Minimize</em> button collapses the window to the <em>Statusbar</em>. This button will not be active if the <em>Statusbar</em> is not built.</li></ul><p><br /></p><p><strong>Main Feature</strong></p><p><br /></p><p>The main feature of the product is the dynamic <em>Docking System</em>. It occupies the main part of the screen, and its root is the native <strong>Grid Panel</strong>. The <em>Grid Panel</em> must contain a <strong>Docking Viewport</strong> to work correctly. It is a widget that contains the app viewport. All other elements are placed around it. By default, the viewport is fitted to the widget&#39;s size using a post-process. If you are using the cursor coordinate functions, for example, to trace actors in the world, you need to use the screen coordinates inverse transformation functions from the library <em>(QuietDockingSystem &gt; Blueprints &gt; QuietDockingFLibrary)</em>. You can disable this fitting in the theme settings. The Docking Viewport will be optional in the next version of the product. <em>DockingSystem</em> and <em>Sidebar</em> layouts can be saved and loaded runtime.</p><p><br /></p><p>Another smart feature is <strong>Toolbars</strong>. The developer can create an unlimited number of toolbars and place them in the desired order runtime. The widget set contains a multifunctional <strong>Toolbar Item</strong> widget that can operate in four modes: <em>Button, Check button, Radiobutton, and Drag&#39;n&#39;Drop</em>.</p><p><br /></p><p>Almost all widgets are inherited from <em>Docking Base Widget</em>. So the tree has a common design theme. Each descendant contains an overridden <strong>ApplyTheme</strong> function that applies the theme selected in the root widget to the entire tree.</p><p><br /></p><p><strong>Limitations</strong></p><p><br /></p><ul><li>In the current version of the product, it is not possible to set a theme for individual elements of the tree. I will add this feature in future versions.</li><li>Because the main viewport adjusts to the size of the <em>Docking Viewport</em>, some post-process effects may not work correctly. A developer can fix this by combining the viewport fit and effects in united post-process material.</li><li>Themes are based on structures. If the developer edits any structures or moves them, this may cause errors. It is a known issue with Unreal Engine.</li><li>It is essential to understand that the system is just an emulation. Windows, Tabs, Dockers, and other elements are <em>User Widgets</em> created within a single app window.</li></ul><p><br /></p><p><strong>Quiet Tools Demo</strong></p><p><br /></p><p>I used widgets from my <em>Quiet Tools</em> collection in the examples for content. This collection is currently in development, but tools like the <em>World Outliner</em> or <em>Transform Gizmo</em> are already testable, so I&#39;ve included them as examples to get feedback from users.</p><p><br /></p><p><strong>Conclusion</strong></p><p><br /></p><p>I will develop and improve this product. Therefore, if you have any comments or suggestions, write to me.</p><p>Be sure to read the manual before using this product. I will expand it, adding new details and showing how you can solve issues and fine-tune the system.</p><p><br /></p>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li> Dynamic docking system with save and load capabilities</li><li>Quick building of a multi-level main menu</li><li>Sidebar panels</li><li>Dynamic toolbar panels with multimode items</li><li>Global design themes for the widget tree.</li><li>Debug tools</li></ul><p><br /></p><p>Number of Blueprints: 27</p><p>Number of Structures: 20</p><p>Number of Enums: 6</p><p>Number of Widget Blueprints: 72</p><p>Number of Materials: 18</p><p>Number of Material Instances: 43</p><p>Number of Textures: 185</p><p>Network Replicated: No</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Yes</p><p><strong>Documentation:</strong> <a href=\"https://drive.google.com/file/d/1oMENQljOEUnYaGDFXO_SbIRCH5fem2lX/view?usp&#61;sharing\" rel=\"nofollow\">Link</a></p><p><strong>Important/Additional Notes:</strong></p><ul><li> Before starting work, you must carefully study the manual and strictly follow the order of placing widgets in the tree. Use debug functions.</li><li>In this version, you cannot edit the appearance of separate elements. Design Themes apply to the entire hierarchy.</li><li>Sample content widgets such as the World Outliner are just demos of a future collection of tools that I will post on the Marketplace later.</li><li>Try not to move structures in the project. It can cause errors that are difficult to resolve.</li></ul><p><br /></p><p>Example icons designed by the following authors from Flaticon:</p><p>https://www.flaticon.com/ru/authors/andrean-prabowo</p><p>https://www.flaticon.com/ru/authors/Design-Circle</p><p>https://www.flaticon.com/ru/authors/Eucalyp</p><p>https://www.flaticon.com/ru/authors/IconGeek26</p><p>https://www.flaticon.com/ru/authors/Pixel-Perfect</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot1-1920x1080-a068b15988122abc4894b0a82450c593.jpg",
+      "md5": "a068b15988122abc4894b0a82450c593",
+      "width": 1920,
+      "height": 1080,
+      "size": 476065,
+      "uploadedDate": "2022-05-25T19:55:27.565Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2-1920x1080-21f2a2e3ba26e033bfb3af2fafb4df5c.jpg",
+      "md5": "21f2a2e3ba26e033bfb3af2fafb4df5c",
+      "width": 1920,
+      "height": 1080,
+      "size": 448494,
+      "uploadedDate": "2022-05-25T19:55:28.341Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot3-1920x1080-20e9f0e5ebc38f694a98b739eb5f7df1.jpg",
+      "md5": "20e9f0e5ebc38f694a98b739eb5f7df1",
+      "width": 1920,
+      "height": 1080,
+      "size": 457007,
+      "uploadedDate": "2022-05-25T19:55:29.140Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot4-1920x1080-fe4f3912e5cda0aa200577633afd181a.png",
+      "md5": "fe4f3912e5cda0aa200577633afd181a",
+      "width": 1920,
+      "height": 1080,
+      "size": 211442,
+      "uploadedDate": "2022-05-30T14:25:20.051Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot5-1920x1080-c91882eca62abdc4bf279210deae153f.png",
+      "md5": "c91882eca62abdc4bf279210deae153f",
+      "width": 1920,
+      "height": 1080,
+      "size": 236699,
+      "uploadedDate": "2022-05-30T14:25:20.381Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/QuietDockingSystem_thumb-284x284-20e1ceeb1f0b5860a3ce32666ff4715f.png",
+      "md5": "20e1ceeb1f0b5860a3ce32666ff4715f",
+      "width": 284,
+      "height": 284,
+      "size": 45161,
+      "uploadedDate": "2022-05-25T19:55:31.326Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/QuietDockingSystem_featured-894x488-648c7d08b3cff4a777ef05e838116459.png",
+      "md5": "648c7d08b3cff4a777ef05e838116459",
+      "width": 894,
+      "height": 488,
+      "size": 96898,
+      "uploadedDate": "2022-05-25T19:55:31.388Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot4-1920x1080-fe4f3912e5cda0aa200577633afd181a_Snapshot.png",
+      "md5": "7956ca8049fe2a09447ea1fcb1c70a9b",
+      "width": 150,
+      "height": 74,
+      "size": 4252,
+      "uploadedDate": "2022-05-30T14:25:20.262Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot5-1920x1080-c91882eca62abdc4bf279210deae153f_Snapshot.png",
+      "md5": "e79a8ab912b90134f03ba560c0c5d1cd",
+      "width": 150,
+      "height": 74,
+      "size": 5226,
+      "uploadedDate": "2022-05-30T14:25:20.601Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot1-1920x1080-a068b15988122abc4894b0a82450c593_Snapshot.jpg",
+      "md5": "6f600b18608abaf10be1c7f9b4f557ce",
+      "width": 150,
+      "height": 74,
+      "size": 5872,
+      "uploadedDate": "2022-05-25T19:55:28.086Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2-1920x1080-21f2a2e3ba26e033bfb3af2fafb4df5c_Snapshot.jpg",
+      "md5": "299e4d426300f2c1498094278209f786",
+      "width": 150,
+      "height": 74,
+      "size": 6093,
+      "uploadedDate": "2022-05-25T19:55:28.857Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot3-1920x1080-20e9f0e5ebc38f694a98b739eb5f7df1_Snapshot.jpg",
+      "md5": "5267fe43de8600b3ce0418ecf1b7de57",
+      "width": 150,
+      "height": 74,
+      "size": 6691,
+      "uploadedDate": "2022-05-25T19:55:29.658Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot4-1920x1080-63f92c6568b5e0c08839df7510391f69_Snapshot.jpg",
+      "md5": "cdefb5e654b7d68e8061af76cb075040",
+      "width": 150,
+      "height": 74,
+      "size": 4930,
+      "uploadedDate": "2022-05-25T19:55:30.476Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot5-1920x1080-31bc1498b32ff4bf071beb41a9b960c6_Snapshot.jpg",
+      "md5": "5901e34de09d9a848098df19803b3da8",
+      "width": 150,
+      "height": 74,
+      "size": 5203,
+      "uploadedDate": "2022-05-25T19:55:31.239Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-05-30T15:33:17.529Z",
+  "lastModifiedDate": "2024-10-09T13:39:08.564Z",
+  "entitlementName": "b99be0d7cd914cb09f0eba6c696a3638",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "557d4474d81747698ea9aca4bb89aef0",
+      "appId": "QuietDocb99be0d7cd91V1",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2022-05-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Quiet Docking System 0.5.0"
+    },
+    {
+      "id": "af65261a57c6447f8c127cf8348eb2aa",
+      "appId": "QuietDocb99be0d7cd91V2",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-02-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Quiet Docking System 0.5.1"
+    }
+  ],
+  "developer": "Aleksandr Sidorov",
+  "developerId": "o-c70d30100843eda7b73634dcd26932",
+  "endOfSupport": false,
+  "unsearchable": false
+}

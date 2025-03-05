@@ -1,0 +1,273 @@
+{
+  "id": "22fb5044cba34eee9d489bd9233efb26",
+  "title": "Easy Voice Chat",
+  "description": "Easy to implement Voice Chat (VOIP) using Blueprints",
+  "longDescription": "<p>Easy Voice Chat lets you add custom voice communication to your game. Voice data is provided as a byte array which can then be sent over the network using RPCs. This means it is completely independent of the Online Sessions system, and so can work without having to create a session.</p><p><br /></p><p>The Voip Manager component captures audio, and then passes it to blueprints via an event so you can choose how it is sent and played back. The Voip Audio component then plays compressed audio back. Both of these components can be attached to any actor, meaning that you can have audio not just for within a game, you can also have it within lobby&#39;s or when spectating etc. The system is designed to give you as much flexibility as possible.</p><p><br /></p><p>Uses SynthComponent for audio playback, which allows you to easily apply dynamic sound effects such as making it sound like a radio broadcast. This also lets you adjust settings such as attenuation so you can use the plugin for local/positional VOIP, or any other situation you want. Unlike the default implementation in the engine, you can also change the microphone at runtime if you want.</p><p><br /></p><p>Please check the documentation to configure your project to be able to use the plugin, there are a few config changes required to get it working as intended.</p>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li>Voip Manager for voice capture</li><li>Voip Audio for voice playback</li><li>Blueprint exposed voice related events (Started talking, stopped talking, Microphone volume etc.)</li><li>Uses VOIP Project Settings for configuration</li><li>Change capture device/microphone at runtime</li></ul><p><strong>Code Modules:</strong></p><ul><li> Runtime: EasyVoiceChat</li></ul><p><br /></p><p><strong>Number of C&#43;&#43; Classes:</strong> 3</p><p><strong>Network Replicated:</strong> No - Handle this yourself in Blueprints</p><p><strong>Supported Development Platforms:</strong> Win64</p><p><strong>Supported Target Build Platforms:</strong> Win64</p><p><strong>Documentation</strong>: <a href=\"https://313-studios.com/wp-content/uploads/2019/08/VoiceChatDocumentation.pdf\" rel=\"nofollow\">Link</a> (Updated 21/06/2024)</p><p><strong>Example Project:</strong> <a href=\"https://drive.google.com/file/d/1WE78BBbkNZ6s5BJtJF2EUtgzzghDaylI/view\" rel=\"nofollow\">Link</a> (4.21-4.24) <a href=\"https://drive.google.com/file/d/1DeiEV8AFOs0St1x00pl4ZuVfRo4Zxlc2/view?usp&#61;sharing\" rel=\"nofollow\">Link</a> (4.25) <a href=\"https://drive.google.com/file/d/1YUUBSLkPl5L4giSmwTcyASn2wF3IcMzU/view?usp&#61;sharing\" rel=\"nofollow\">Link </a> (4.26&#43;) <a href=\"https://drive.google.com/file/d/1Rg5m534nQKczdoawC4Di_lrKJBfFGhYb/view?usp&#61;sharing\" rel=\"nofollow\">Link</a> (5.3&#43;)</p><p><strong>Important/Additional Notes:</strong></p><p>Make sure to enable the voice module for your project (see documentation to know how). Please read other aspects of the documentation such as increasing the bandwidth of your NetDriver.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blueprints-1920x1080-179190b47337e8a80965dcb3a5fae9c6.jpg",
+      "md5": "179190b47337e8a80965dcb3a5fae9c6",
+      "width": 1920,
+      "height": 1080,
+      "size": 327004,
+      "uploadedDate": "2019-08-05T10:58:06.512Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Dsp-1920x1080-4c6d4e700fcddf42205670de004ccfe4.jpg",
+      "md5": "4c6d4e700fcddf42205670de004ccfe4",
+      "width": 1920,
+      "height": 1080,
+      "size": 157792,
+      "uploadedDate": "2019-08-05T10:58:07.279Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AttachAnyActor-1920x1080-5acd8063cc23898dacbb9d899bcb2bdc.jpg",
+      "md5": "5acd8063cc23898dacbb9d899bcb2bdc",
+      "width": 1920,
+      "height": 1080,
+      "size": 171187,
+      "uploadedDate": "2019-08-05T10:58:05.736Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/EasyVoiceChat_thumb-284x284-ebdf1d9e2ebd1a9f4e28be77d3f56ed5.png",
+      "md5": "ebdf1d9e2ebd1a9f4e28be77d3f56ed5",
+      "width": 284,
+      "height": 284,
+      "size": 82455,
+      "uploadedDate": "2019-08-02T14:37:51.203Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/EasyVoiceChat_featured-894x488-7d339ec5e70119b774b0075e384a060d.png",
+      "md5": "7d339ec5e70119b774b0075e384a060d",
+      "width": 894,
+      "height": 488,
+      "size": 316829,
+      "uploadedDate": "2019-08-05T11:02:35.752Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AttachAnyActor-1920x1080-5acd8063cc23898dacbb9d899bcb2bdc_Snapshot.jpg",
+      "md5": "504bdbad5736e04b7edf2bf137c25bc0",
+      "width": 150,
+      "height": 74,
+      "size": 5622,
+      "uploadedDate": "2019-08-05T10:58:06.262Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprints-1920x1080-179190b47337e8a80965dcb3a5fae9c6_Snapshot.jpg",
+      "md5": "11451df1889072b2ef558b5e3b22679e",
+      "width": 150,
+      "height": 74,
+      "size": 6731,
+      "uploadedDate": "2019-08-05T10:58:07.011Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Dsp-1920x1080-4c6d4e700fcddf42205670de004ccfe4_Snapshot.jpg",
+      "md5": "62a39ce4dcab179de180dcdc1d107e14",
+      "width": 150,
+      "height": 74,
+      "size": 4959,
+      "uploadedDate": "2019-08-05T10:58:07.752Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlueprintExposedEvents-1920x1080-85b483476bbafebaf7b3f60b31b2bbe8_Snapshot.PNG",
+      "md5": "cc24b2e425d8b876cb7e6daf89a1ffb2",
+      "width": 150,
+      "height": 74,
+      "size": 6272,
+      "uploadedDate": "2019-08-02T14:37:51.119Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-08-15T13:18:05.319Z",
+  "lastModifiedDate": "2024-10-08T11:57:24.216Z",
+  "customAttributes": {},
+  "entitlementName": "22fb5044cba34eee9d489bd9233efb26",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "f52ca23c0faa4147b9778e46a590b466",
+      "appId": "EasyVoiceChat_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2019-08-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.21"
+    },
+    {
+      "id": "2d03c77fa1814cfd8cb13ccd982fb2f9",
+      "appId": "EasyVoiceChat_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-08-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.22"
+    },
+    {
+      "id": "c725043617c140e58017f3dc7de73d6c",
+      "appId": "EasyVoiceChat_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2019-09-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.23"
+    },
+    {
+      "id": "cab4fef44b24443bb0e16ea19422318f",
+      "appId": "EasyVoiceChat_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-12-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.24"
+    },
+    {
+      "id": "82b35384b09c4c89af8130dda92cf5de",
+      "appId": "EasyVoiceChat_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2020-05-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.25"
+    },
+    {
+      "id": "8f2f70791795480bbd26cdc05fd5bf36",
+      "appId": "EasyVoiceChat_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-12-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.26"
+    },
+    {
+      "id": "a66b3bf240354afea9d2e4362ed72423",
+      "appId": "EasyVoiceChat_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-08-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "65708d142fd74c778b51ad4ee0a49152",
+      "appId": "EasyVoiceChat_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "c0eeb4045fdf43bd94b61027e346bdab",
+      "appId": "EasyVoiceChat_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "2b4285db134f450cb1282833f481e0d5",
+      "appId": "EasyVoiceChat_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "816890b08ae94a038c53984649957b50",
+      "appId": "EasyVoiceChat_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "3cec6cad4aaf4590a2fb4657d6469824",
+      "appId": "EasyVoiceChat_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "313 Studios",
+  "developerId": "o-a9jh7trg3h9hzl4l7zaf9r6vxs2hlt",
+  "endOfSupport": false,
+  "unsearchable": false
+}

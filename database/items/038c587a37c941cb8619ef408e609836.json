@@ -1,0 +1,197 @@
+{
+  "id": "038c587a37c941cb8619ef408e609836",
+  "title": "MeshPack",
+  "description": "MeshPack automatically instances your Static Meshes when the game is packaged. No manual work. No destructive workflows. Instancing done right",
+  "longDescription": "<p>MeshPack analyses all Static Mesh Actors and packs them into instances when the game is packaged. No need to manually combine actors while you are working on your game.</p><p>It works with World Partition and normal levels, making your workflow nondestructive and highly optimized.</p><p><br /></p><p>MeshPack also re-packs Blueprints, Packed Level Actors and more. This further optimizes your game regardless of your workflow.</p><p><br /></p><p>MeshPack doesn&#39;t currently support meshes with prebuilt static lighting. I want to support this, but unsure if it&#39;s technically possible at this point.</p><p><br /></p><p>Latest update: Version 1.2</p><ul><li>Improved support for packing meshes in Blueprints</li><li>Added console command <strong>MeshPack.SetMaterialInstancedUsage</strong> that toggles &#34;Used with instanced static meshes&#34; on needed materials</li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Example cases</h2><p><br /></p><p><strong>Valley of the Ancient</strong></p><p>Large open world level with thousands of meshes. Used to showcase UE 5.0 with World Partition and Packed Level Actors.</p><p>MeshPack stats:</p><ul><li>Actors reduced from 16502 to 6303</li><li>Components reduced from 216417 to 97573</li></ul><p><br /></p><p><strong>Lyra Starter Game</strong></p><p>Medium size action game project optimized as a arena shooter. Uses static mesh actors mostly for floors and walls.</p><p>MeshPack stats:</p><ul><li>Actors reduced from 4507 to 1339</li><li>Components reduced from 6163 to 3506</li></ul><p><br /></p><p><strong>Local benchmark level</strong></p><p>Large open world level with over 200.000 StaticMeshActors</p><p>MeshPack stats:</p><ul><li>Actors reduced from 214631 to 1004</li><li>Components reduced from 215114 to 2745</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Analyses Static Mesh Actors in the level and packs those that can be instanced.</li><li>Only runs when the game is packaged, no need to pack actors together while you work.</li><li>Works with World Partition - Actors are packed together within their WP cell as each is processed separately</li><li>Works with Packed Level Actors - All static mesh actors within a PLA are instanced together with the rest of the level.</li><li>Works with Blueprints - Analyses and extracts static meshes from blueprints together with the rest of the level.</li><li>Packs SMs into batches of a sensible size to improve WP level streaming. This setting is adjustable.</li><li>Uses ISMs for Nanite meshes and HISM for rest by default. Forcing ISM or HISM can be set specifically.</li><li>Extensible through C&#43;&#43; and Blueprint. Got a special SM actors you don&#39;t want to instance? Add custom logic in no time.</li></ul><p>Code Modules:</p><ul><li> MeshPack - Editor</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 5</p><p>Supported Development Platforms: Win64, Mac, Linux</p><p>Supported Target Build Platforms: All</p><p><br /></p><p>Latest Documentation: <a href=\"https://drive.google.com/file/d/1VYouZISleYcijjHK8W8JgCyYw-JtuBnt/view\" rel=\"nofollow\">https://drive.google.com/file/d/1VYouZISleYcijjHK8W8JgCyYw-JtuBnt/view</a></p><p>Discord: <a href=\"https://discord.gg/sX48CssHWM\" rel=\"nofollow\">https://discord.gg/sX48CssHWM</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 1-1920x1080-4b91b9459f66bda83f68d245480f8747.png",
+      "md5": "4b91b9459f66bda83f68d245480f8747",
+      "width": 1920,
+      "height": 1080,
+      "size": 2218603,
+      "uploadedDate": "2024-09-04T16:21:09.661Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 5-1920x1080-709991c56469e1f5fc99f9beabbcb93a.png",
+      "md5": "709991c56469e1f5fc99f9beabbcb93a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2892102,
+      "uploadedDate": "2024-08-26T18:50:42.318Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2-1920x1080-8d879196fab6442d2f1a99d70f5740a4.png",
+      "md5": "8d879196fab6442d2f1a99d70f5740a4",
+      "width": 1920,
+      "height": 1080,
+      "size": 1457697,
+      "uploadedDate": "2024-08-26T18:50:42.970Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 4-1920x1080-26433b7243cf302980a8256a31114b99.png",
+      "md5": "26433b7243cf302980a8256a31114b99",
+      "width": 1920,
+      "height": 1080,
+      "size": 1669884,
+      "uploadedDate": "2024-08-26T18:50:43.691Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MeshPack_thumb-284x284-3d767281456a9125afdb1ab9be839fdf.png",
+      "md5": "3d767281456a9125afdb1ab9be839fdf",
+      "width": 284,
+      "height": 284,
+      "size": 123480,
+      "uploadedDate": "2024-08-28T05:15:54.017Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MeshPack_featured-894x488-e5c8b4b5f278d1a09db17a63b7e1306e.png",
+      "md5": "e5c8b4b5f278d1a09db17a63b7e1306e",
+      "width": 894,
+      "height": 488,
+      "size": 754870,
+      "uploadedDate": "2024-10-01T14:01:58.088Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 1-1920x1080-4b91b9459f66bda83f68d245480f8747_Snapshot.png",
+      "md5": "c22023a20c34c6de6607f1db1344d249",
+      "width": 150,
+      "height": 74,
+      "size": 6984,
+      "uploadedDate": "2024-09-04T16:21:10.107Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 1-1920x1080-5a42b807875f5e67ea9136958249b676_Snapshot.png",
+      "md5": "d80cf037486358e8f581d14b409298f9",
+      "width": 150,
+      "height": 74,
+      "size": 5909,
+      "uploadedDate": "2024-08-28T19:22:06.095Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 1-1920x1080-d1e7e109eeb42b5b19d6cc7be865055d_Snapshot.png",
+      "md5": "3d96eb8c3c7293eeacbeca4d62b17bdb",
+      "width": 150,
+      "height": 74,
+      "size": 5792,
+      "uploadedDate": "2024-08-26T18:50:41.953Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 5-1920x1080-709991c56469e1f5fc99f9beabbcb93a_Snapshot.png",
+      "md5": "cc6befb386d8a5952ffc2eb150787c5d",
+      "width": 150,
+      "height": 74,
+      "size": 7190,
+      "uploadedDate": "2024-08-26T18:50:42.780Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2-1920x1080-8d879196fab6442d2f1a99d70f5740a4_Snapshot.png",
+      "md5": "ac61689e24a6667ec79db94b7d707f7c",
+      "width": 150,
+      "height": 74,
+      "size": 7373,
+      "uploadedDate": "2024-08-26T18:50:43.353Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 4-1920x1080-26433b7243cf302980a8256a31114b99_Snapshot.png",
+      "md5": "b76173b5438493503f5c999446aa124b",
+      "width": 150,
+      "height": 74,
+      "size": 6603,
+      "uploadedDate": "2024-08-26T18:50:44.097Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s3-1920x1080-eb940dd33442aa5c35e719d741b97a3b_Snapshot.png",
+      "md5": "fc290ec75c611fb4a4e5c82c83ad94bc",
+      "width": 150,
+      "height": 74,
+      "size": 6602,
+      "uploadedDate": "2024-08-25T07:13:30.686Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s1-1920x1080-641a001dab1611d754300ac50754bf21_Snapshot.png",
+      "md5": "abb66bf40dd4405985a8aeceea1c2f56",
+      "width": 150,
+      "height": 74,
+      "size": 6623,
+      "uploadedDate": "2024-08-24T18:26:41.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/s2-1920x1080-3f71ad7237b76f2e5dd197f5c3843b40_Snapshot.png",
+      "md5": "363c81a17462a9b8bf482be809d20073",
+      "width": 150,
+      "height": 74,
+      "size": 7375,
+      "uploadedDate": "2024-08-24T18:26:42.042Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-08-28T04:53:03.284Z",
+  "lastModifiedDate": "2025-03-03T14:08:14.193Z",
+  "customAttributes": {},
+  "entitlementName": "038c587a37c941cb8619ef408e609836",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "78697761905d41e8bc92049b67aa6715",
+      "appId": "MeshPack_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-08-24T00:00:00.000Z",
+      "releaseNote": "Improved blueprint support. Added console command to set material usage on all used materials from editor.",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "78ffe755270f463b95213d5f92ac95ae",
+      "appId": "MeshPack_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-08-24T00:00:00.000Z",
+      "releaseNote": "Improved blueprint support. Added console command to set material usage on all used materials from editor.",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Tore Lervik",
+  "developerId": "o-4tr3svtqubaea5q4ye7k2z4w7wt8tq",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

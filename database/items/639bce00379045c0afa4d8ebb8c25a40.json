@@ -1,0 +1,309 @@
+{
+  "id": "639bce00379045c0afa4d8ebb8c25a40",
+  "title": "Runtime DataTable",
+  "description": "This plugin will load a text csv or download a public or private Google Sheet and add parsed values to matching FStructs or UObjects at Runtime. All data types supported by the built-in UE4 DataTable are supported by this plugin.",
+  "longDescription": "<p>This plugin includes <em>easyCSV </em> in full.</p><p><br /></p><p><a href=\"https://docs.google.com/document/d/1sn7RqYHOQhwlenU_1020ANgnuo8d0bFxOSrlPlVVhic/edit#\" rel=\"nofollow\"><strong>Which plugin is right for me? Compare easyCSV, Runtime DataTable and GSheets Operator.</strong></a></p><p><br /></p><p><strong>See </strong><a href=\"https://forums.unrealengine.com/t/runtime-datatable-import-text-csv-or-google-sheet-at-runtime-and-fill-an-array-of-structs/221791/30?u&#61;jared_therriault\" rel=\"nofollow\"><strong>this post</strong></a><strong> for Changelog and Upgrade fixes.</strong></p><p><br /></p><p>Runtime DataTable or “<strong>RDT</strong>” is a plugin for Unreal Engine that loads a Comma-Separated Values or CSV document at runtime with an FStruct or UObject’s variables in text form and fills an array of that type with the appropriate values, converting text into the appropriate type.</p><p><br /></p><p>RDT can be likened to the <strong>Data Table</strong> system built into UE4, but while that system works only at design time, this plugin is designed to work while the game is running.</p><p><br /></p><p>The system works by downloading a <strong>public or private (with authorization) Google Sheet</strong> or loading a CSV from disk and attempts to update an array of FStruct or UObject with values loaded and converted from the CSV. After the attempt is made, the plugin will call a function defined by the user to signal that the plugin has finished its duties.</p><p><br /></p><p><strong>As of 4.27.4, the plugin also supports local and Google Sheets CSV export,</strong> sort of the reverse of the above. It can take an array of FStructs or UObjects, get their members and output a CSV using the live data from your game or application while it’s running.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Runtime parsing of Data Tables</li><li>Automatic update of FStructs or UObjects</li><li>Connectivity with Google Sheets - edit values on the fly, no need to reimport CSVs manually at design time</li><li>Export CSV from game data to a local file on disk</li></ul><p>Code Modules:</p><ul><li>Runtime Data Table: A runtime module that handles the download, parsing and struct/object updates</li></ul><p><br /></p><p>Number of Blueprints: 26</p><p>C&#43;&#43; Classes: 3</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64, Mac</p><p>Supported Target Build Platforms: Win32, Win64, Android, Mac, iOS (&#43;tvOS for versions 4.25 and 4.26, no longer supported in 4.27 due to Google Sheets Export)</p><p><br /></p><p><a href=\"https://docs.google.com/document/d/1DFFwTq1ROahXk5ee8EhsqN2oHWbIaJZv55l-TGs_RVE\" rel=\"nofollow\">English Language Manual</a></p><p><a href=\"https://docs.google.com/document/d/1aQ1sqP_hXGA41WirBj2gM24wjnaWQR0NwsDGGo9kvXg\" rel=\"nofollow\">中文版 (Chinese, simplified version)</a></p><p><a href=\"https://forums.unrealengine.com/t/runtime-datatable-import-export-text-csv-or-google-sheet-at-runtime-and-auto-update-structs-and-uobjects/221791/21\" rel=\"nofollow\">Discussion</a><strong> </strong>(changelog also found here)</p><p><a href=\"https://drive.google.com/drive/folders/1a4u2hJ5lyYNGWhhW6H3BbLS0tBeaPXWd?usp&#61;sharing\" rel=\"nofollow\">Sample Projects</a></p><p><a href=\"https://drive.google.com/file/d/1tRuAopmsYw7Pktg3_wsbAJhXr67_uWPj/view?usp&#61;sharing\" rel=\"nofollow\">Demo</a></p><p><br /></p><p><a href=\"https://drive.google.com/file/d/16R-xFdoz_QUAWIrA2fCIk-VmaNeWHM5-/view?usp&#61;sharing\" rel=\"nofollow\">Video<strong>: </strong>What Is Runtime Data Table</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/rdtFlow.PNG-1920x1080-7638f3b343dbec49358bf9b7bba110f0.jpg",
+      "md5": "7638f3b343dbec49358bf9b7bba110f0",
+      "width": 1920,
+      "height": 1080,
+      "size": 264381,
+      "uploadedDate": "2022-02-26T23:38:25.447Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/export.PNG-1920x1080-babc4c227fbb8c77b959624e29880301.jpg",
+      "md5": "babc4c227fbb8c77b959624e29880301",
+      "width": 1920,
+      "height": 1080,
+      "size": 221270,
+      "uploadedDate": "2022-02-27T00:24:41.896Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WriteToSheet.PNG-1920x1080-cceb28bd171a53b2ec96391ae62436c1.jpg",
+      "md5": "cceb28bd171a53b2ec96391ae62436c1",
+      "width": 1920,
+      "height": 1080,
+      "size": 231316,
+      "uploadedDate": "2022-02-27T00:24:42.266Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/sheet1080-1920x1080-41280b1d781108a40478267a471bf15f.png",
+      "md5": "41280b1d781108a40478267a471bf15f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1784245,
+      "uploadedDate": "2019-09-26T04:46:54.794Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RuntimeDataTable_thumb-284x284-0d0d868190632df3a246a0aea7b97d62.png",
+      "md5": "0d0d868190632df3a246a0aea7b97d62",
+      "width": 284,
+      "height": 284,
+      "size": 37849,
+      "uploadedDate": "2019-09-26T04:46:55.174Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RuntimeDataTable_featured-894x488-b40fe7fc05559940ccc41a203f5a3c6e.png",
+      "md5": "b40fe7fc05559940ccc41a203f5a3c6e",
+      "width": 894,
+      "height": 488,
+      "size": 144511,
+      "uploadedDate": "2022-02-26T23:38:25.807Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/export.PNG-1920x1080-babc4c227fbb8c77b959624e29880301_Snapshot.jpg",
+      "md5": "cdd3ef16d29a4052e1d0f7c067146177",
+      "width": 150,
+      "height": 74,
+      "size": 4139,
+      "uploadedDate": "2022-02-27T00:24:42.153Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WriteToSheet.PNG-1920x1080-cceb28bd171a53b2ec96391ae62436c1_Snapshot.jpg",
+      "md5": "832092214cf1993ea2fa7ff963ade9e3",
+      "width": 150,
+      "height": 74,
+      "size": 3525,
+      "uploadedDate": "2022-02-27T00:24:42.569Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rdtFlow.PNG-1920x1080-7638f3b343dbec49358bf9b7bba110f0_Snapshot.jpg",
+      "md5": "f20f5e7c9c1f84a9280a6c01613fe408",
+      "width": 150,
+      "height": 74,
+      "size": 4349,
+      "uploadedDate": "2022-02-26T23:38:25.710Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/creds1080-1920x1080-598fc803b4091b0bac9ef2619609a71c_Snapshot.png",
+      "md5": "055ceb6d193913d75f991d58cf00c6ce",
+      "width": 150,
+      "height": 74,
+      "size": 5511,
+      "uploadedDate": "2019-09-26T04:46:54.245Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/OneNode1080-1920x1080-57ca78ebb8fbdc5ef5342fe9f1382d8e_Snapshot.png",
+      "md5": "db310e81606cda537522e9867046d74e",
+      "width": 150,
+      "height": 74,
+      "size": 5317,
+      "uploadedDate": "2019-09-26T04:46:54.634Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/sheet1080-1920x1080-41280b1d781108a40478267a471bf15f_Snapshot.png",
+      "md5": "116a45cc48e5369b0093b5524dd5bef3",
+      "width": 150,
+      "height": 74,
+      "size": 6756,
+      "uploadedDate": "2019-09-26T04:46:55.078Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-10-23T21:56:10.098Z",
+  "lastModifiedDate": "2024-11-26T14:47:27.079Z",
+  "customAttributes": {},
+  "entitlementName": "639bce00379045c0afa4d8ebb8c25a40",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "28872bcc96e34b30b8a739971d4b7475",
+      "appId": "RuntimeDataTable_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android",
+        "Mac",
+        "iOS"
+      ],
+      "dateAdded": "2019-09-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.23.1"
+    },
+    {
+      "id": "f300750941d949da9f6a0cfebb0df19d",
+      "appId": "RuntimeDataTable_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Win32",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2019-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.24.1"
+    },
+    {
+      "id": "28f4b5023eae4368b31395c9d165ee26",
+      "appId": "RuntimeDataTable_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2020-05-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.25.1"
+    },
+    {
+      "id": "574b67c0240a409cb2140087cb30d97a",
+      "appId": "RuntimeDataTable_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "Win32",
+        "iOS"
+      ],
+      "dateAdded": "2020-12-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.26.3"
+    },
+    {
+      "id": "361284d440a44751b2eba47619e8b7d0",
+      "appId": "RuntimeDataTable_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2021-08-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27.2.7"
+    },
+    {
+      "id": "02555fb19a9f49e589230e94699695c7",
+      "appId": "RuntimeDataTable_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Mac",
+        "iOS",
+        "Android",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0.3.7"
+    },
+    {
+      "id": "de43f5478b2d42eda6251d2e0743092c",
+      "appId": "RuntimeDataTable_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2022-11-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1.1.0"
+    },
+    {
+      "id": "ef39ab684d774ec581b5b3e8c938a0e9",
+      "appId": "RuntimeDataTable_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2023-06-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2.2"
+    },
+    {
+      "id": "a7e24a3948fa4b34bb382844b77300cb",
+      "appId": "RuntimeDataTable_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3.2"
+    },
+    {
+      "id": "99ab3e61bd4447d683a59f7cda8ea9f0",
+      "appId": "RuntimeDataTable_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4.1"
+    }
+  ],
+  "developer": "Jared Therriault",
+  "developerId": "o-a64f9d8fec453c9ea6363232d3856c",
+  "endOfSupport": false,
+  "unsearchable": false
+}

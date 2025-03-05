@@ -1,0 +1,467 @@
+{
+  "id": "a5991dae48084c428e4fa4270fed8520",
+  "title": "Active 3rd Person Camera",
+  "description": "Active 3rd person camera system written in blueprints. Fully customizable and curve driven (13 curve files included). Comes with two actor component blueprints, one to manage the camera and another to attach too static meshes to turn them transparent.",
+  "longDescription": "<p><a href=\"https://youtu.be/1YpjFOVi9Oc\" rel=\"nofollow\">Video</a></p><p><a href=\"https://drive.google.com/open?id&#61;1riYNn_cKEUmTxybsu0ip4jrUNjnAerOx\" rel=\"nofollow\">Playable Demo</a></p><p><a href=\"https://drive.google.com/open?id&#61;1vuv4iUezpVPXFETLVbPJvBE8jICmX9B8jiM20kCHb9U\" rel=\"nofollow\">Documentation</a></p><p><br /></p><p><strong>Description:</strong></p><ul><li>Auto yaw and pitch adjustment will gradually self align with the players direction</li><li>Camera length adjustment will enable the camera to avoid crashing into the ground a low pitch, and offer a better wider view at high pitch</li><li>FOV adjustment will add a visual effect to to the character moving fast or sprinting. It will provide a better view at lower pitches, so the player can see more</li><li>Object avoidance and transparency will prevent the camera crashing into world objects. Avoidance will move the camera around objects to keep the character always in view. Transparency is useful for smaller objects or objects with void space.</li><li>Camera lag will smooth camera moment and make it much easier for the player to focus their vision. Interpolating off when the player manually moves the camera to preserve precision</li><li>Analog input accel adds acceleration to analog inputs. Enabling fine control while retaining rapid movement</li><li>4 built in dynamically switchable camera modes: Default 3rd person, over the shoulder, first person, and camera lock to char</li></ul>",
+  "technicalDetails": "<p><strong>Auto yaw adjust:</strong> Based on moment speed and delta angle between char moment direction and camera.</p><p><strong>Auto pitch adjust:</strong> Auto returns to a set angle. Specify different set angles for running toward or away from camera. Align camera to slope. Set min and max pitch angle. Adjust speed changes with the current pitch and char speed.</p><p><strong>Auto camera length adjust:</strong> Adjusts the distance of the camera from the player based on current pitch of camera. </p><p><strong>Auto FOV adjust:</strong> Changes FOV relative to the camera&#39;s current pitch, and char speed.</p><p><strong>Auto object avoidance:</strong> Works in both pitch and yaw. Avoidance &#34;aggressiveness&#34; is a function of the char speed and delta angle between char moment direction and the camera rotation. </p><p><strong>Object transparency:</strong> Make objects transparent when they block line of site between camera and char. Comes with simple transparent mesh</p><p><strong>Camera modes:</strong> Default 3rd person, TPS, TPS close, Aim.</p><p><strong>Zoom:</strong> Zoom in and out.</p><p><strong>Curve Driven:</strong> Full customization and tuning through float 13 curves.</p><p><strong>Camera Lag:</strong> Interp&#39;s on and off. Customizable values.</p><p><strong>Player intent preservation:</strong> Prioritizes player camera input. Auto adjust only active when necessary.</p><p><strong>Analog Input Accel</strong></p><p><br /></p><p><strong>Number of Blueprints:</strong> 2</p><p><strong>Input:</strong> Gamepad, Keyboard, Mouse</p><p><br /></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery1-1920x1080-3b977633de2f286a37bd53a9199f5948.png",
+      "md5": "3b977633de2f286a37bd53a9199f5948",
+      "width": 1920,
+      "height": 1080,
+      "size": 632750,
+      "uploadedDate": "2018-11-26T20:14:31.081Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery2-1920x1080-d4a17177e7beeea78bd8bbb64bd3dc6d.png",
+      "md5": "d4a17177e7beeea78bd8bbb64bd3dc6d",
+      "width": 1920,
+      "height": 1080,
+      "size": 726903,
+      "uploadedDate": "2018-11-26T20:14:31.292Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery3-1920x1080-07ddc32ba80e435b65f174253bdc8e5b.png",
+      "md5": "07ddc32ba80e435b65f174253bdc8e5b",
+      "width": 1920,
+      "height": 1080,
+      "size": 634299,
+      "uploadedDate": "2018-11-26T20:14:31.486Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery4-1920x1080-9bcabd4148057e571d5a5fd7a27f9e81.png",
+      "md5": "9bcabd4148057e571d5a5fd7a27f9e81",
+      "width": 1920,
+      "height": 1080,
+      "size": 750472,
+      "uploadedDate": "2018-11-26T20:14:31.686Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery5-1920x1080-ff7c9a78cd14d605b57b51ea912276d8.png",
+      "md5": "ff7c9a78cd14d605b57b51ea912276d8",
+      "width": 1920,
+      "height": 1080,
+      "size": 680269,
+      "uploadedDate": "2018-11-26T20:14:31.903Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery6-1920x1080-a0c5896381c8eb46d5a93482d23e3fea.png",
+      "md5": "a0c5896381c8eb46d5a93482d23e3fea",
+      "width": 1920,
+      "height": 1080,
+      "size": 789543,
+      "uploadedDate": "2018-11-26T20:14:32.100Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery7-1920x1080-2f1146daa662d83a93cb47d28fe91c3d.png",
+      "md5": "2f1146daa662d83a93cb47d28fe91c3d",
+      "width": 1920,
+      "height": 1080,
+      "size": 436488,
+      "uploadedDate": "2018-11-26T20:14:32.304Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery8-1920x1080-27db3ef00cff27a7b8e196190faa7b1d.png",
+      "md5": "27db3ef00cff27a7b8e196190faa7b1d",
+      "width": 1920,
+      "height": 1080,
+      "size": 966999,
+      "uploadedDate": "2018-11-26T20:14:32.545Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery9-1920x1080-9e0a33219316602f7756004e3876445f.png",
+      "md5": "9e0a33219316602f7756004e3876445f",
+      "width": 1920,
+      "height": 1080,
+      "size": 825566,
+      "uploadedDate": "2018-11-26T20:14:32.803Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery10-1920x1080-2569af779dfb8d456ac71484a5aa9f9c.png",
+      "md5": "2569af779dfb8d456ac71484a5aa9f9c",
+      "width": 1920,
+      "height": 1080,
+      "size": 961795,
+      "uploadedDate": "2018-11-26T20:14:33.072Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery11-1920x1080-4ad567db732af0f96b1b9b266260562a.png",
+      "md5": "4ad567db732af0f96b1b9b266260562a",
+      "width": 1920,
+      "height": 1080,
+      "size": 940868,
+      "uploadedDate": "2018-11-26T20:14:33.316Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery13-1920x1080-31c7a261575a3b1513e5742a9fcfec29.png",
+      "md5": "31c7a261575a3b1513e5742a9fcfec29",
+      "width": 1920,
+      "height": 1080,
+      "size": 1137186,
+      "uploadedDate": "2018-11-26T20:14:33.603Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery14-1920x1080-e9f71c8310d1b4c43deb816f8b8d5305.png",
+      "md5": "e9f71c8310d1b4c43deb816f8b8d5305",
+      "width": 1920,
+      "height": 1080,
+      "size": 805051,
+      "uploadedDate": "2018-11-26T20:14:33.833Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery15-1920x1080-30eed7b2437e68d815c056c41f783a88.png",
+      "md5": "30eed7b2437e68d815c056c41f783a88",
+      "width": 1920,
+      "height": 1080,
+      "size": 1257906,
+      "uploadedDate": "2018-11-26T20:14:34.161Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery16-1920x1080-f250dcfd707390b39909df1b13d8d9c1.png",
+      "md5": "f250dcfd707390b39909df1b13d8d9c1",
+      "width": 1920,
+      "height": 1080,
+      "size": 735952,
+      "uploadedDate": "2018-11-26T20:14:34.386Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Active3rdPersonCamera_thumb-284x284-99eea71a4116c8e6d0936ac1a93e6d58.png",
+      "md5": "99eea71a4116c8e6d0936ac1a93e6d58",
+      "width": 284,
+      "height": 284,
+      "size": 176579,
+      "uploadedDate": "2020-03-20T22:33:59.946Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Active3rdPersonCamera_featured-894x488-27c4454aeb86f660083f0d92a3c78018.png",
+      "md5": "27c4454aeb86f660083f0d92a3c78018",
+      "width": 894,
+      "height": 488,
+      "size": 797677,
+      "uploadedDate": "2020-03-20T22:34:00.164Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery17-1920x1080-58263010c937d3cca5e316f81fc98835_Snapshot.png",
+      "md5": "06324bbf1696357508062ef7d4ceedd5",
+      "width": 150,
+      "height": 74,
+      "size": 7472,
+      "uploadedDate": "2018-11-26T20:14:29.834Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery18-1920x1080-2deae9c9d5752c129a676a1c63415ac4_Snapshot.png",
+      "md5": "d6533ea671f923534e70d68f53b52acd",
+      "width": 150,
+      "height": 74,
+      "size": 6533,
+      "uploadedDate": "2018-11-26T20:14:30.091Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery19-1920x1080-453728c720a284ab3932844c10bfee3b_Snapshot.png",
+      "md5": "478c8b26a057afedce64560caeff1c80",
+      "width": 150,
+      "height": 74,
+      "size": 6828,
+      "uploadedDate": "2018-11-26T20:14:30.373Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery20-1920x1080-96d812ff21276a9f2359edc604ea6659_Snapshot.png",
+      "md5": "c1330e508280e95a293d9dfe06c7f3f5",
+      "width": 150,
+      "height": 74,
+      "size": 6952,
+      "uploadedDate": "2018-11-26T20:14:30.645Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery21-1920x1080-4dd5f8a740b4d78214b76a047f41b489_Snapshot.png",
+      "md5": "975d1e97b11ea65cb64b88129b74182a",
+      "width": 150,
+      "height": 74,
+      "size": 6724,
+      "uploadedDate": "2018-11-26T20:14:30.959Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery1-1920x1080-3b977633de2f286a37bd53a9199f5948_Snapshot.png",
+      "md5": "7195d2d700e2c39a03c82a23a985c869",
+      "width": 150,
+      "height": 74,
+      "size": 7393,
+      "uploadedDate": "2018-11-26T20:14:31.180Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery2-1920x1080-d4a17177e7beeea78bd8bbb64bd3dc6d_Snapshot.png",
+      "md5": "e649e2108aaa1f07eab52829a10b0dac",
+      "width": 150,
+      "height": 74,
+      "size": 7638,
+      "uploadedDate": "2018-11-26T20:14:31.393Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery3-1920x1080-07ddc32ba80e435b65f174253bdc8e5b_Snapshot.png",
+      "md5": "cac74bc6d0d7ac8be954b119184cf993",
+      "width": 150,
+      "height": 74,
+      "size": 7293,
+      "uploadedDate": "2018-11-26T20:14:31.577Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery4-1920x1080-9bcabd4148057e571d5a5fd7a27f9e81_Snapshot.png",
+      "md5": "5c391238b59318adfbb53603ce720234",
+      "width": 150,
+      "height": 74,
+      "size": 7563,
+      "uploadedDate": "2018-11-26T20:14:31.784Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery5-1920x1080-ff7c9a78cd14d605b57b51ea912276d8_Snapshot.png",
+      "md5": "c70289ca7e4ccb8d0d2e17cd006836a4",
+      "width": 150,
+      "height": 74,
+      "size": 7241,
+      "uploadedDate": "2018-11-26T20:14:31.997Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery6-1920x1080-a0c5896381c8eb46d5a93482d23e3fea_Snapshot.png",
+      "md5": "f61afb594cea490d2e789581b54b5d22",
+      "width": 150,
+      "height": 74,
+      "size": 8382,
+      "uploadedDate": "2018-11-26T20:14:32.199Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery7-1920x1080-2f1146daa662d83a93cb47d28fe91c3d_Snapshot.png",
+      "md5": "9098e9d3b1446662e1c4c1b3f2c310a6",
+      "width": 150,
+      "height": 74,
+      "size": 4857,
+      "uploadedDate": "2018-11-26T20:14:32.390Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery8-1920x1080-27db3ef00cff27a7b8e196190faa7b1d_Snapshot.png",
+      "md5": "c143eb13b9096ac6937437823f056b41",
+      "width": 150,
+      "height": 74,
+      "size": 7110,
+      "uploadedDate": "2018-11-26T20:14:32.681Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery9-1920x1080-9e0a33219316602f7756004e3876445f_Snapshot.png",
+      "md5": "65d46daf32dcd8ea1e5de727f090aa1f",
+      "width": 150,
+      "height": 74,
+      "size": 7907,
+      "uploadedDate": "2018-11-26T20:14:32.945Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery10-1920x1080-2569af779dfb8d456ac71484a5aa9f9c_Snapshot.png",
+      "md5": "f5aebca18656eb11fc4e225bda8fecee",
+      "width": 150,
+      "height": 74,
+      "size": 7785,
+      "uploadedDate": "2018-11-26T20:14:33.180Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery11-1920x1080-4ad567db732af0f96b1b9b266260562a_Snapshot.png",
+      "md5": "a6451d266f676e3734896f6fc883daa6",
+      "width": 150,
+      "height": 74,
+      "size": 7860,
+      "uploadedDate": "2018-11-26T20:14:33.445Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery13-1920x1080-31c7a261575a3b1513e5742a9fcfec29_Snapshot.png",
+      "md5": "7bf99682515270ed86e36c7b2cde94e1",
+      "width": 150,
+      "height": 74,
+      "size": 5945,
+      "uploadedDate": "2018-11-26T20:14:33.722Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery14-1920x1080-e9f71c8310d1b4c43deb816f8b8d5305_Snapshot.png",
+      "md5": "35de81a678e76c7e291526a1ebe78f59",
+      "width": 150,
+      "height": 74,
+      "size": 5778,
+      "uploadedDate": "2018-11-26T20:14:34.018Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery15-1920x1080-30eed7b2437e68d815c056c41f783a88_Snapshot.png",
+      "md5": "00198e254ad50c1a1700dd85c96c3865",
+      "width": 150,
+      "height": 74,
+      "size": 7275,
+      "uploadedDate": "2018-11-26T20:14:34.285Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery16-1920x1080-f250dcfd707390b39909df1b13d8d9c1_Snapshot.png",
+      "md5": "68f65d771db4e3d1634ff9aba40bd642",
+      "width": 150,
+      "height": 74,
+      "size": 6248,
+      "uploadedDate": "2018-11-26T20:14:34.486Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-12-13T17:16:08.649Z",
+  "lastModifiedDate": "2024-10-08T21:20:44.713Z",
+  "entitlementName": "a5991dae48084c428e4fa4270fed8520",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "13acfe75d2fd4c349cbad09fb71f9445",
+      "appId": "Active3ra5991dae4808V1",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "Xbox One",
+        "Linux"
+      ],
+      "dateAdded": "2018-11-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Active 3rd Person Camera"
+    },
+    {
+      "id": "3a005431422c4cfbbcc9692f7b97e5db",
+      "appId": "Active3ra5991dae4808V2",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Linux"
+      ],
+      "dateAdded": "2019-04-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Active 3rd Person Camera 4.22"
+    },
+    {
+      "id": "ecb2a668eb7e45c2a5b1cb218957e4c3",
+      "appId": "Active3ra5991dae4808V3",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Linux"
+      ],
+      "dateAdded": "2019-09-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Active 3rd Person Camera 4.23"
+    },
+    {
+      "id": "b37c8613db564363ba453eb3f23dbcfb",
+      "appId": "Active3ra5991dae4808V4",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "PS4",
+        "Windows",
+        "Xbox One",
+        "Linux",
+        "Mac",
+        "Win32"
+      ],
+      "dateAdded": "2019-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Active 3rd Person Camera 4.24"
+    },
+    {
+      "id": "6d950539eb3e46ad9ccd6a1ca7f55f2f",
+      "appId": "Active3ra5991dae4808V5",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "PS4",
+        "Windows",
+        "Win32",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-05-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Active 3rd Person Camera 4.25"
+    },
+    {
+      "id": "4cff5885ec5543f38a1da3ffac36b00f",
+      "appId": "Active3ra5991dae4808V6",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Linux",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-01-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Active 3rd Person Camera 4.26"
+    }
+  ],
+  "developer": "9Ball Games",
+  "developerId": "o-hta2d34enn57qkf5rxhj9apbw44kcd",
+  "endOfSupport": false,
+  "unsearchable": false
+}

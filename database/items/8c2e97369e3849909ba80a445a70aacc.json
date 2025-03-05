@@ -1,0 +1,400 @@
+{
+  "id": "8c2e97369e3849909ba80a445a70aacc",
+  "title": "Complete Inventory System Framework V1.2",
+  "description": "A framework designed to help you rapidly develop inventory, equipment, interaction, crafting, vendor, stash, save and item loot systems with a highly customizable, top-quality UI for your project.",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;AK00zOo8X_o\" rel=\"nofollow\"><strong>Trailer</strong></a></p><p><a href=\"https://www.youtube.com/watch?v&#61;QasBwcH9apg\" rel=\"nofollow\">Showcase Video</a> (Watch the showcase video)</p><p><a href=\"https://drive.google.com/drive/folders/149QQna7cruWubYd8LMwALTgegZPcNkgS?usp&#61;drive_link\" rel=\"nofollow\">Demo (Windows-64)</a> (Download demo and try it out!)</p><p><a href=\"https://www.youtube.com/watch?v&#61;QasBwcH9apg&amp;list&#61;PLhjcU00qQ0QM2piVw6_Jw4HUwFQIHrjXY&amp;index&#61;1\" rel=\"nofollow\">Youtube Playlist</a> (Watch guide videos)</p><p><a href=\"https://drive.google.com/drive/folders/1K-zV5qAhnQIGkzkBrNU3YuJj--NKxvKt?usp&#61;drive_link\" rel=\"nofollow\">Template Project</a> (Template project for the plugin to work properly, as it contains config and localization files.)</p><p><a href=\"https://www.youtube.com/watch?v&#61;B7YZ14UuOBM\" rel=\"nofollow\">How to setup plugin</a></p><p><a href=\"https://discord.gg/g6Axvke9tj\" rel=\"nofollow\">Discord</a> (To connect with the developer and community, report bugs and access documentation.)</p><p><br /></p><p>I strongly recommend downloading the demo and trying it out for yourself or at least watch the showcase video. 95% of this asset pack has been built with Blueprints. The save system and item primary data asset classes were created in C&#43;&#43;. Also the pack contains many meshes, materials, ui related textures, visual effects and sound assets as well.</p><p><br /></p><p>Version 1.1 released on May 17, 2024.</p><p>Version 1.2 released on june 17, 2024.</p><p><br /></p><p><br /></p><h1>Easy Implementation</h1><ul><li>By using character and controller interfaces, any custom system can easily implement this framework.</li></ul><p><br /></p><p><br /></p><p><br /></p><h1>Inventory System</h1><ul><li>Primary data assets are used to store an item&#39;s static essential information, such as name, icon, etc.</li><li>A struct is utilized throughout this framework to represent item information. It holds a reference to the associated item data asset for its static essential item info and includes additional variables to represent its dynamic info, like the quantity of the item.</li><li>You can split, stack, drop, loot, reallocate, transfer, inspect, use, mark, disassemble, consume, etc., an item.</li></ul><p>By using inventory component, you can control inventory features such as:</p><ul><li>Column count</li><li>Max displayed inventory row count at the same time in the viewport</li><li>Global slot limit, per category slot limit, or infinite slot limit</li><li>Weight limit and the ability to block item looting when over the weight limit or limit character attributes (Walking speed)</li><li>Data table item import workflow or directly adding items to a specified array manually to initialize this inventory</li><li>Whether the component should generate empty slots to fill the grid or match the slot capacity</li><li>Infinite budget for the default currency when this component represents a vendor</li><li>Sound references to specify your custom inventory action UI sounds</li></ul><p><br /></p><p><br /></p><p><br /></p><h1>Equipment System</h1><p><br /></p><p>The Equipment component manages all equipment-related functionality. This component contains all the slots in an array, allowing you to specify the features of each slot using the elements of this array. You can configure the following features:</p><ul><li>Whether a slot is enabled or not</li><li>Suitable item types for this slot</li><li>Slot capacity (which can also be infinite)</li><li>Suitable sub item types (For exp: Helmet or gauntlet)</li></ul><p><br /></p><p><br /></p><p><br /></p><h1>Interaction System</h1><ul><li>Work with FPS and TPS cams.</li><li>Interaction sense and interaction outline post process effects to visualize interactable objects.</li><li>Precise interaction logic is used to determine whether the player is facing the front of the interactable actor or if both of them are facing each other.</li><li>Tap, double-tap and hold interaction inputs.</li><li>Obstacle detection.</li><li>Animated interaction and loot info widgets.</li><li>Can examine objects or inspect items.</li></ul><p><br /></p><p><br /></p><p><br /></p><h1>Vendor System</h1><ul><li>The sell and buy price multipliers.</li><li>The item categories that are enabled or not for the player and vendor, also to block item transfer from the player&#39;s inventory for some of the item categories that are enabled for the vendor.</li><li>Vendor budget (can be infinite).</li><li>Vendor Showcases allow players to purchase items directly from the vendor&#39;s showcase, and they are directly bound to their associated vendor.</li></ul><p><br /></p><p><br /></p><p><br /></p><h1>Stash System</h1><ul><li>Whether the stash is going to be a skeletal mesh (animated) or a static mesh.</li><li>The item categories that are enabled or not for the player and stash.</li><li>Opening and closing sounds.</li></ul><p><br /></p><p><br /></p><p><br /></p><h1>Crafting System</h1><ul><li>To craft an item, you must have the item&#39;s blueprint in your inventory, all the items in the required amounts as listed in its recipe and enough coins to cover its crafting cost.</li><li>The crafting module can be configured to enable specific item categories, allowing for a tailored crafting experience. For instance, you can create a campfire that is only able to craft food items or a crafting bench designed for crafting resources, armors, and weapons.</li></ul><p><br /></p><p><br /></p><p><br /></p><h2>Flexible Widget Design Workflow</h2><ul><li>Base widget classes feature an empty widget hierarchy; they contain no visual designs. All design-related elements are created within the templates, necessitating the passage of essential variables to convey the template widget hierarchy elements&#39; references to their base class. By utilizing the necessary base logic written in these widget base classes, we can easily create numerous different-looking custom widgets.</li></ul><p><br /></p><p><br /></p><p><br /></p><h2>Gamepad Navigation Support</h2><ul><li>Full Xbox gamepad support encapsulates continuous navigation through the focusable widgets. Additionally, by using a gamepad, players are capable of performing every action that can be done with a mouse and keyboard.</li><li>On-screen keyboard support.</li></ul><p><br /></p><p><br /></p><p><br /></p><h2>Loot Chests - Item Containers</h2><ul><li>Items can be placed manually or generated through a random loot generation system by defining its rules in a data asset instance within the editor.</li><li>Item containers can be destroyed after being looted with a disintegration effect.</li><li>Loot chests contain a key system where you can define which item the player needs to open the chest, along with some other useful configuration variables.</li></ul><p><br /></p><p><br /></p><p><br /></p><h2>Openable Modules (Doors, Drawers, Lockers etc.)</h2><ul><li>Contains a key system similar to what the loot chests have.</li><li>Items can be placed in drawers or on lockers.</li><li>A door can be created that opens both rotationally and linearly (left-right or up-down).</li></ul><p><br /></p><p><br /></p><p><br /></p><h2>Save System</h2><ul><li>You can specify a save slot limit, mark a save game file as manual or auto-save, and the saved local time will be written in the save game file.</li><li>Additionally, it features a main menu and popup system to control the save and load system.</li></ul><p><br /></p><p><br /></p><p><br /></p><h2>Localization</h2><ul><li>All the text in the widget has been referenced by a string table entry. I&#39;ve localized all the string tables for Japanese and Spanish cultures.</li><li>This pack contains a font asset that encapsulates most of the Unicode character ranges.</li></ul><p><br /></p><p>I created some of the assets myself, however, I took advantage of the beautiful public domain (CC0) assets to achieve top-quality looking environments. These sources are listed <a href=\"https://docs.google.com/document/d/1KwkYpOt6Dwnfx1YkghOM4fI9Df51jvtG2Zp6k9xfIJs/edit?usp&#61;drive_link\" rel=\"nofollow\">here</a>.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Inventory System</li><li>Equipment System</li><li>Interaction System (FPS&amp;TPS)</li><li>Item Inspection System</li><li>Vendor System</li><li>Stash System</li><li>Crafting System</li><li>Flexible Widget Design Workflow</li><li>Gamepad Navigation Support</li><li>Item Loot and Drop System</li><li>Loot Chests</li><li>Item Containers</li><li>Random Loot Generation System</li><li>Openable Modules (Doors, Drawers, Lockers etc.)</li><li>Object Examine System</li><li>Save System</li><li>Localization and On-Screen Keyboard Support</li><li>Main Menu</li><li>Animated Interaction and Loot Info Widgets</li></ul><p><br /></p><p>Code Modules:</p><ul><li> CISFramework, Runtime</li></ul><p><br /></p><p>Blueprints: 50</p><p>Widgets: 117</p><p>C&#43;&#43; Classes: 23</p><p>Meshes: 232</p><p>Materials : 268</p><p>Textures: 1122</p><p>Sound Waves: 31</p><p>Network Replicated: No</p><p>Supported Development Platforms: All</p><p>Supported Target Build Platforms: Windows 64-bit</p><p><strong>Support</strong></p><p>Please join our <a href=\"https://discord.gg/g6Axvke9tj\" rel=\"nofollow\">Discord</a> server and complete the verification process by following the verification instructions. Upon verifying your purchase, you will gain access to documentation, guide videos, support forums where you can address bug issues and discuss topics related to asset usage with other developers to help each other. If you encounter any problems during this verification process, you can contact me by sending a message through Discord or email (fatihyilmazermarketplace&#64;gmail.com).</p><p>Additional Notes: This pack is comprehensive and might be challenging for beginners to fully understand.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/11-1920x1080-e9273abec0738575881585b2ab8b892d.jpg",
+      "md5": "e9273abec0738575881585b2ab8b892d",
+      "width": 1920,
+      "height": 1080,
+      "size": 221259,
+      "uploadedDate": "2024-04-11T02:11:46.668Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/12-1920x1080-7bf1d379f0d85e4fd70e99fc3a6dbe01.jpg",
+      "md5": "7bf1d379f0d85e4fd70e99fc3a6dbe01",
+      "width": 1920,
+      "height": 1080,
+      "size": 222086,
+      "uploadedDate": "2024-04-11T02:11:47.704Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/9-1920x1080-423acc5f93980203933d7f890bdb83d9.jpg",
+      "md5": "423acc5f93980203933d7f890bdb83d9",
+      "width": 1920,
+      "height": 1080,
+      "size": 356337,
+      "uploadedDate": "2024-04-11T02:11:48.792Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8-1920x1080-292da7f398d0e769ff4e5c316ab44eee.jpg",
+      "md5": "292da7f398d0e769ff4e5c316ab44eee",
+      "width": 1920,
+      "height": 1080,
+      "size": 105698,
+      "uploadedDate": "2024-04-11T02:11:49.782Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-10f69509d7241e0eda8f2464d9a61054.jpg",
+      "md5": "10f69509d7241e0eda8f2464d9a61054",
+      "width": 1920,
+      "height": 1080,
+      "size": 191844,
+      "uploadedDate": "2024-04-11T02:11:50.931Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-d673d39c7eb92931bab1db25755477ff.jpg",
+      "md5": "d673d39c7eb92931bab1db25755477ff",
+      "width": 1920,
+      "height": 1080,
+      "size": 173613,
+      "uploadedDate": "2024-04-11T02:11:51.948Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/10-1920x1080-187a06b90ead30b8cceed024cf7f97aa.jpg",
+      "md5": "187a06b90ead30b8cceed024cf7f97aa",
+      "width": 1920,
+      "height": 1080,
+      "size": 225206,
+      "uploadedDate": "2024-04-11T02:11:52.872Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7-1920x1080-6bef36500cc7cb6796802a28397cd0b0.jpg",
+      "md5": "6bef36500cc7cb6796802a28397cd0b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 166381,
+      "uploadedDate": "2024-04-11T02:11:53.830Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-f411a65d54d5ac2975a6ac4441e06f8c.jpg",
+      "md5": "f411a65d54d5ac2975a6ac4441e06f8c",
+      "width": 1920,
+      "height": 1080,
+      "size": 197665,
+      "uploadedDate": "2024-04-11T02:11:54.754Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/17-1920x1080-13a608c97d69d9f77725324ceff29f3f.jpg",
+      "md5": "13a608c97d69d9f77725324ceff29f3f",
+      "width": 1920,
+      "height": 1080,
+      "size": 333273,
+      "uploadedDate": "2024-04-11T02:11:55.618Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-4185075c107d051ea390b32ecd05f56d.jpg",
+      "md5": "4185075c107d051ea390b32ecd05f56d",
+      "width": 1920,
+      "height": 1080,
+      "size": 484999,
+      "uploadedDate": "2024-04-11T02:11:56.829Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/15-1920x1080-24ea96893e328ede228671e957c243b8.jpg",
+      "md5": "24ea96893e328ede228671e957c243b8",
+      "width": 1920,
+      "height": 1080,
+      "size": 307418,
+      "uploadedDate": "2024-04-11T02:11:58.107Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/16-1920x1080-0bddd7f99d43a197797fcc5ec3fb6f6e.jpg",
+      "md5": "0bddd7f99d43a197797fcc5ec3fb6f6e",
+      "width": 1920,
+      "height": 1080,
+      "size": 352652,
+      "uploadedDate": "2024-04-11T02:11:59.168Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/14-1920x1080-0b296e3d4906e3b7b7f532cefb1b664c.jpg",
+      "md5": "0b296e3d4906e3b7b7f532cefb1b664c",
+      "width": 1920,
+      "height": 1080,
+      "size": 409188,
+      "uploadedDate": "2024-04-11T02:12:00.287Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-510194e36a556354769219915624ea32.jpg",
+      "md5": "510194e36a556354769219915624ea32",
+      "width": 1920,
+      "height": 1080,
+      "size": 427515,
+      "uploadedDate": "2024-04-11T02:12:01.482Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-64637308f944b382b1c932f646f6cbb1.jpg",
+      "md5": "64637308f944b382b1c932f646f6cbb1",
+      "width": 1920,
+      "height": 1080,
+      "size": 228137,
+      "uploadedDate": "2024-04-11T02:12:02.657Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/13-1920x1080-0949c3bc2ea777b07192ff4a5704fee0.jpg",
+      "md5": "0949c3bc2ea777b07192ff4a5704fee0",
+      "width": 1920,
+      "height": 1080,
+      "size": 325824,
+      "uploadedDate": "2024-04-11T02:12:03.714Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/18-1920x1080-78c447e3f9a5597ed6b077a892ed6eb8.png",
+      "md5": "78c447e3f9a5597ed6b077a892ed6eb8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2808284,
+      "uploadedDate": "2024-04-11T02:12:04.812Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/CompleteInventorySystemFramework_thumb-284x284-df76fb14823976e901d1de015c109670.png",
+      "md5": "df76fb14823976e901d1de015c109670",
+      "width": 284,
+      "height": 284,
+      "size": 140764,
+      "uploadedDate": "2024-04-11T02:12:05.437Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/CompleteInventorySystemFramework_featured-894x488-9026019949812fcbc9d3380c35f92c3c.png",
+      "md5": "9026019949812fcbc9d3380c35f92c3c",
+      "width": 894,
+      "height": 488,
+      "size": 689962,
+      "uploadedDate": "2024-04-11T02:12:05.610Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11-1920x1080-e9273abec0738575881585b2ab8b892d_Snapshot.jpg",
+      "md5": "5111ca35d26d83a10882ca387826a765",
+      "width": 150,
+      "height": 74,
+      "size": 5932,
+      "uploadedDate": "2024-04-11T02:11:47.369Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/12-1920x1080-7bf1d379f0d85e4fd70e99fc3a6dbe01_Snapshot.jpg",
+      "md5": "c6bc9a251d551837993d30b45528fe32",
+      "width": 150,
+      "height": 74,
+      "size": 6890,
+      "uploadedDate": "2024-04-11T02:11:48.376Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-423acc5f93980203933d7f890bdb83d9_Snapshot.jpg",
+      "md5": "12f819dbb415bd283c8987255991fb15",
+      "width": 150,
+      "height": 74,
+      "size": 7416,
+      "uploadedDate": "2024-04-11T02:11:49.454Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-292da7f398d0e769ff4e5c316ab44eee_Snapshot.jpg",
+      "md5": "4f09eb6e7fff4268d2acf043b9b24565",
+      "width": 150,
+      "height": 74,
+      "size": 3956,
+      "uploadedDate": "2024-04-11T02:11:50.501Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-10f69509d7241e0eda8f2464d9a61054_Snapshot.jpg",
+      "md5": "f02403c2961a959a7ed5cb546f5c43a9",
+      "width": 150,
+      "height": 74,
+      "size": 5810,
+      "uploadedDate": "2024-04-11T02:11:51.568Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-d673d39c7eb92931bab1db25755477ff_Snapshot.jpg",
+      "md5": "b90bec0326b2af9cf796d8e2ff635617",
+      "width": 150,
+      "height": 74,
+      "size": 6559,
+      "uploadedDate": "2024-04-11T02:11:52.502Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10-1920x1080-187a06b90ead30b8cceed024cf7f97aa_Snapshot.jpg",
+      "md5": "178158b97e50247da6f4fe1aab5216b2",
+      "width": 150,
+      "height": 74,
+      "size": 6424,
+      "uploadedDate": "2024-04-11T02:11:53.511Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-6bef36500cc7cb6796802a28397cd0b0_Snapshot.jpg",
+      "md5": "c670711f2c495c5248c3f3b17410a045",
+      "width": 150,
+      "height": 74,
+      "size": 5845,
+      "uploadedDate": "2024-04-11T02:11:54.456Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-f411a65d54d5ac2975a6ac4441e06f8c_Snapshot.jpg",
+      "md5": "8327389fb038bb044ba11bba270afbc4",
+      "width": 150,
+      "height": 74,
+      "size": 6257,
+      "uploadedDate": "2024-04-11T02:11:55.296Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/17-1920x1080-13a608c97d69d9f77725324ceff29f3f_Snapshot.jpg",
+      "md5": "483218eae8e04cb5c9529f82df98a3b8",
+      "width": 150,
+      "height": 74,
+      "size": 8023,
+      "uploadedDate": "2024-04-11T02:11:56.356Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-4185075c107d051ea390b32ecd05f56d_Snapshot.jpg",
+      "md5": "74a83633106fab69a95d7c69350e46a2",
+      "width": 150,
+      "height": 74,
+      "size": 8882,
+      "uploadedDate": "2024-04-11T02:11:57.744Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/15-1920x1080-24ea96893e328ede228671e957c243b8_Snapshot.jpg",
+      "md5": "3faeae8d3904448015e9713e7b3db3ae",
+      "width": 150,
+      "height": 74,
+      "size": 7038,
+      "uploadedDate": "2024-04-11T02:11:58.792Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/16-1920x1080-0bddd7f99d43a197797fcc5ec3fb6f6e_Snapshot.jpg",
+      "md5": "a82c17418e21a0bfef1b471479ccb60b",
+      "width": 150,
+      "height": 74,
+      "size": 7740,
+      "uploadedDate": "2024-04-11T02:11:59.893Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/14-1920x1080-0b296e3d4906e3b7b7f532cefb1b664c_Snapshot.jpg",
+      "md5": "5621316b5222632bb8c3f4eddc66e6b7",
+      "width": 150,
+      "height": 74,
+      "size": 8366,
+      "uploadedDate": "2024-04-11T02:12:01.084Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-510194e36a556354769219915624ea32_Snapshot.jpg",
+      "md5": "8ec33962210bf2caaeca58e9b04b19d3",
+      "width": 150,
+      "height": 74,
+      "size": 8478,
+      "uploadedDate": "2024-04-11T02:12:02.218Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-64637308f944b382b1c932f646f6cbb1_Snapshot.jpg",
+      "md5": "a627b4fa3c2cda3801e381982b8da975",
+      "width": 150,
+      "height": 74,
+      "size": 6354,
+      "uploadedDate": "2024-04-11T02:12:03.330Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/13-1920x1080-0949c3bc2ea777b07192ff4a5704fee0_Snapshot.jpg",
+      "md5": "d33336e02e115346babf8d3d8e30c94d",
+      "width": 150,
+      "height": 74,
+      "size": 7707,
+      "uploadedDate": "2024-04-11T02:12:04.418Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/18-1920x1080-78c447e3f9a5597ed6b077a892ed6eb8_Snapshot.png",
+      "md5": "0c4555700ae47168cbd9ad8bc3f0def4",
+      "width": 150,
+      "height": 74,
+      "size": 7613,
+      "uploadedDate": "2024-04-11T02:12:05.320Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-04-16T22:28:18.017Z",
+  "lastModifiedDate": "2024-09-28T12:23:13.220Z",
+  "customAttributes": {},
+  "entitlementName": "8c2e97369e3849909ba80a445a70aacc",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "686d3c9431e94e4ba850f9e5674f6841",
+      "appId": "CISFramework_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "CISF 5.3"
+    },
+    {
+      "id": "1f882ce7119c4679b23b32e100f50734",
+      "appId": "CISFramework_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "CISF 5.4"
+    }
+  ],
+  "developer": "Fatih Yilmazer",
+  "developerId": "o-nrrmhzc2k8zw85a4ysgv6vllh5ahlm",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

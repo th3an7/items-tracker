@@ -1,0 +1,470 @@
+{
+  "id": "af81a47cd3b246b8ac58b61d798ccc61",
+  "title": "Game Flow",
+  "description": "Game Flow allows user to create state machines and configure them for various reasons",
+  "longDescription": "<h1><strong>GAME FLOW</strong></h1><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;BYvq3tpIUT8&amp;list&#61;PLukJdog_m6IDID3_HVnJKpI8HRUxXBEA6\" rel=\"nofollow\">TUTORIAL</a></p><p><a href=\"https://github.com/klauth86/UE_Plugin_GameFlow\" rel=\"nofollow\">EXAMPLE/SOURCE CODE</a></p><p><a href=\"https://www.paypal.com/paypalme/ArturKhairullin\" rel=\"nofollow\">DONATE&#x1f44d;</a></p><p><br /></p><p>Game Flow allows user to create state machines and configure them for various reasons.</p><p><br /></p><p>You can create all assets provided by this plugin via opening <em>Content Browser</em> context menu (with Right Mouse Button) and navigating to <em>Gameplay</em> category after plugin is installed.</p><p><br /></p><p>[NEWS]</p><blockquote>Recently we have published plugin to quickly setup Input Combos for action games. Check it <a href=\"https://www.unrealengine.com/marketplace/product/53610412440c49ea8aca54bf94574bad\" rel=\"nofollow\">HERE</a></blockquote><p><br /></p><p><a href=\"https://discord.gg/TjxHxkwzRb\" rel=\"nofollow\">SUPPORT/FEEDBACK</a></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Pentangle&#43;St.\" rel=\"nofollow\">CHECK OTHER PLUGINS BY US:</a></p><p>_____________________________________________________________________________________________</p><p><br /></p><h2>TECHNICAL NOTES</h2><p><br /></p><p>1) GAME FLOW</p><p><br /></p><p><strong>Game Flow</strong> - is main asset class which contains state machine. It is configured via <em>Graph Editor</em> by creating and editing nodes, links between them, setting properties on that nodes, links and asset itself. By default there is an <strong>Entry Node</strong> which defines state machine entry point.</p><p><br /></p><p>2) GAME FLOW STATE</p><p><br /></p><p><strong>Game Flow State</strong> - is the only node class available for user to add while editing <strong>Game Flow</strong>.</p><p><br /></p><p><strong>Game Flow State</strong> properties:</p><ul><li>[Sub Flow] - with this property user can include one <strong>Game Flow</strong> into another one, so building by this some hierarchy of <strong>Game Flows</strong>. Avoid referencing <strong>Game Flow</strong> by itself with this property - this can create execution logic cycle and cause problems.</li><li>[Instanced Sub Flow] - If true, referenced [Sub Flow] will be used as template to create instance inside this state. If false, referenced [Sub Flow] will be used as shared flow. <em>IS AVAILABLE ONLY WHEN [Sub Flow] IS SET</em></li><li>[Reset Sub Flow On Enter State]<strong> - </strong>If true, referenced [Sub Flow] will be reset when this state is entered. <em>IS AVAILABLE ONLY WHEN [Sub Flow] IS SET AND [Instanced Sub Flow] IS FALSE - INSTANCED [Sub Flow] IS ALWAYS RESET WHEN STATE IS ENTERED</em></li><li>[Reset Sub Flow On Exit State]<strong> - </strong>If true, referenced [Sub Flow] will be reset when this state is exited. <em>IS AVAILABLE ONLY WHEN [Sub Flow] IS SET AND [Instanced Sub Flow] IS FALSE - INSTANCED [Sub Flow] IS ALWAYS RESET WHEN STATE IS EXITED</em></li><li>[Steps] - collection of <strong>Game Flow Step</strong> objects to execute when state is entered and exited, going from first to last when entering and vice versa when exiting. See Steps section below.</li><li>[Transition Key] - if set, state will try to make transition with this <strong>Transition Key</strong> object after executing its [Steps]</li></ul><p><br /></p><p>3) GAME FLOW TRANSITION</p><p><br /></p><p>While editing <strong>Game Flow</strong> user can select links between states via their labels.</p><p><br /></p><p><strong>Game Flow Transition</strong> properties:</p><ul><li>[Transition Key] - this property defines what <strong>Transition Key</strong> object will trigger thais transition.</li></ul><p><br /></p><p>4) TRANSITION KEY</p><p><br /></p><p><strong>Transition Key</strong> - is asset class for all objects that are used as keys to control transitions between states of <strong>Game Flows</strong>.</p><p><br /></p><p>5) GAME FLOW STEP</p><p><br /></p><p><strong>Game Flow Step</strong> - is base blueprint class for all objects that can be executed by <strong>Game Flows</strong> when entering and exiting their states. States contains [Steps] property, that stores collection of <strong>Game Flow Step</strong> objects to execute. Execution order is different when entering (from first step to last) and when exiting (from last step to first). That is similar to stack execution model.</p><p><br /></p><p>User can create own subclasses of this class both in C&#43;&#43; and Blueprints. See pictures to check sync and async templates.</p><p><br /></p><p>6) GAME FLOW CONTEXT</p><p><br /></p><p><strong>Game Flow Context</strong> - is an interface which provide some common mechanism to get and set values by keys. It is possible that user will need some data to be stored in the sense of place (globally/locally) and time (permanent/temporary) when using <strong>Game Flows</strong>. For example, there can be some state that is creating SaveGame for active game session. In this case, it will be needed to store that information somewhere globally while this game session is active. Although, it can be done with internal logic of user created subclasses of <strong>Game Flow Step</strong>, it also can be done based on <strong>Game Flow Context</strong>, achieving the same in more abstract and formal way.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Game Flow allows user to create <strong>Game Flows</strong> (state machines) and configure them for various reasons</li><li>Game Flow allows user to create <strong>Game Flow Steps</strong> that are executed by <strong>Game Flows</strong> when entering and exiting their states</li><li>Game Flow allows user to create <strong>Game Flow Contexts</strong> that can store data for <strong>Game Flows</strong> related to their states or flows</li><li>Game Flow allows user to create <strong>Transition Keys</strong> that are used as keys to control transitions between states</li></ul><p>Code Modules:</p><ul><li>GameFlowCore [Runtime]</li><li>GameFlowCoreEditor [Editor] </li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 25</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64, Linux, Mac</p><p>Supported Target Build Platforms: Win64, Linux, Mac</p><p>Documentation: see full description above</p><p>Example Project: <a href=\"https://github.com/klauth86/UE_Plugin_GameFlow\" rel=\"nofollow\">HERE</a></p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GameFlowFeatBigN-1920x1080-5e28256c2e86deb77f97ba7238385c73.png",
+      "md5": "5e28256c2e86deb77f97ba7238385c73",
+      "width": 1920,
+      "height": 1080,
+      "size": 244720,
+      "uploadedDate": "2023-11-11T14:58:01.773Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GameFlowContextMenuN-1920x1080-9efface102c86d570e09b674e5cf7876.png",
+      "md5": "9efface102c86d570e09b674e5cf7876",
+      "width": 1920,
+      "height": 1080,
+      "size": 336694,
+      "uploadedDate": "2023-11-11T14:49:56.979Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GameFlowGameFlowEditorN1-1920x1080-4737bf5ea8fe78369ed3f342d028898b.png",
+      "md5": "4737bf5ea8fe78369ed3f342d028898b",
+      "width": 1920,
+      "height": 1080,
+      "size": 197692,
+      "uploadedDate": "2023-11-11T14:49:57.375Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GameFlowGameFlowEditorN2-1920x1080-994a313e9543fef24971227599cd8e39.png",
+      "md5": "994a313e9543fef24971227599cd8e39",
+      "width": 1920,
+      "height": 1080,
+      "size": 241086,
+      "uploadedDate": "2023-11-11T14:49:57.931Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GameFlowGameFlowEditorN3-1920x1080-539ac87df28e7d24265648a8846329ae.png",
+      "md5": "539ac87df28e7d24265648a8846329ae",
+      "width": 1920,
+      "height": 1080,
+      "size": 221852,
+      "uploadedDate": "2023-11-11T14:49:58.405Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GameFlowGameFlowEditorN4-1920x1080-6940a638fe7481a72cc7a6cac93325e2.png",
+      "md5": "6940a638fe7481a72cc7a6cac93325e2",
+      "width": 1920,
+      "height": 1080,
+      "size": 277279,
+      "uploadedDate": "2023-11-11T14:49:58.770Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GameFlowGameFlowEditorN5-1920x1080-d54c418747adedacefafb03129c9a063.png",
+      "md5": "d54c418747adedacefafb03129c9a063",
+      "width": 1920,
+      "height": 1080,
+      "size": 222504,
+      "uploadedDate": "2023-11-11T14:49:59.210Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GameFlowLogsN-1920x1080-35b25072fc2762717f9d452652e986d5.png",
+      "md5": "35b25072fc2762717f9d452652e986d5",
+      "width": 1920,
+      "height": 1080,
+      "size": 875933,
+      "uploadedDate": "2023-11-11T14:49:59.753Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GFSN1-1920x1080-47c93968c6d640a5415e001f6383b798.png",
+      "md5": "47c93968c6d640a5415e001f6383b798",
+      "width": 1920,
+      "height": 1080,
+      "size": 279504,
+      "uploadedDate": "2023-11-11T15:06:03.060Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GFSN2-1920x1080-67f62587286afab49a72084badd9369f.png",
+      "md5": "67f62587286afab49a72084badd9369f",
+      "width": 1920,
+      "height": 1080,
+      "size": 345152,
+      "uploadedDate": "2023-11-11T15:06:03.600Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GameFlowBlueprintExampleN-1920x1080-3d568af4fe213d43bc476e7cb29d28c0.png",
+      "md5": "3d568af4fe213d43bc476e7cb29d28c0",
+      "width": 1920,
+      "height": 1080,
+      "size": 426482,
+      "uploadedDate": "2023-11-11T15:08:30.214Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/GameFlow_thumb-284x284-7b0efa07aeb9b4df3fd6cbc59409bdee.png",
+      "md5": "7b0efa07aeb9b4df3fd6cbc59409bdee",
+      "width": 284,
+      "height": 284,
+      "size": 38284,
+      "uploadedDate": "2023-10-23T06:00:08.557Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/GameFlow_featured-894x488-cbf2d0e70c563543a4080d033ca4effc.png",
+      "md5": "cbf2d0e70c563543a4080d033ca4effc",
+      "width": 894,
+      "height": 488,
+      "size": 136458,
+      "uploadedDate": "2023-11-11T14:58:02.258Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowBlueprintExampleN-1920x1080-3d568af4fe213d43bc476e7cb29d28c0_Snapshot.png",
+      "md5": "fe834cde8ff991bcf136a74fd02a5841",
+      "width": 150,
+      "height": 74,
+      "size": 5366,
+      "uploadedDate": "2023-11-11T15:08:30.508Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFSN1-1920x1080-47c93968c6d640a5415e001f6383b798_Snapshot.png",
+      "md5": "d95a676d0211c44afbb67e3737e5d60f",
+      "width": 150,
+      "height": 74,
+      "size": 4355,
+      "uploadedDate": "2023-11-11T15:06:03.404Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GFSN2-1920x1080-67f62587286afab49a72084badd9369f_Snapshot.png",
+      "md5": "231e1875fa7e4b924fea8e93fba1e60b",
+      "width": 150,
+      "height": 74,
+      "size": 4649,
+      "uploadedDate": "2023-11-11T15:06:03.876Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowFeatBigN-1920x1080-5e28256c2e86deb77f97ba7238385c73_Snapshot.png",
+      "md5": "fdd9d31a619ac830609c27a40f0d4db7",
+      "width": 150,
+      "height": 74,
+      "size": 3692,
+      "uploadedDate": "2023-11-11T14:58:02.056Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowContextMenuN-1920x1080-9efface102c86d570e09b674e5cf7876_Snapshot.png",
+      "md5": "db72f88763d33c1767f394caefa90a4c",
+      "width": 150,
+      "height": 74,
+      "size": 5173,
+      "uploadedDate": "2023-11-11T14:49:57.260Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditorN1-1920x1080-4737bf5ea8fe78369ed3f342d028898b_Snapshot.png",
+      "md5": "d748377c8f28aa82468052bdee60ef58",
+      "width": 150,
+      "height": 74,
+      "size": 3602,
+      "uploadedDate": "2023-11-11T14:49:57.667Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditorN2-1920x1080-994a313e9543fef24971227599cd8e39_Snapshot.png",
+      "md5": "288e11a8d250f79c7aac8edfcb8d4bef",
+      "width": 150,
+      "height": 74,
+      "size": 3979,
+      "uploadedDate": "2023-11-11T14:49:58.225Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditorN3-1920x1080-539ac87df28e7d24265648a8846329ae_Snapshot.png",
+      "md5": "9541df56c93e7bcbaa1074a132132c29",
+      "width": 150,
+      "height": 74,
+      "size": 3836,
+      "uploadedDate": "2023-11-11T14:49:58.684Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditorN4-1920x1080-6940a638fe7481a72cc7a6cac93325e2_Snapshot.png",
+      "md5": "31d19ec50bd9b1e986a76432a5256fb4",
+      "width": 150,
+      "height": 74,
+      "size": 4272,
+      "uploadedDate": "2023-11-11T14:49:59.060Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditorN5-1920x1080-d54c418747adedacefafb03129c9a063_Snapshot.png",
+      "md5": "548e499eae3e23a0144735926fccf128",
+      "width": 150,
+      "height": 74,
+      "size": 4267,
+      "uploadedDate": "2023-11-11T14:49:59.530Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowLogsN-1920x1080-35b25072fc2762717f9d452652e986d5_Snapshot.png",
+      "md5": "5378933c3dfa4d2c2b59345e62aa509b",
+      "width": 150,
+      "height": 74,
+      "size": 5108,
+      "uploadedDate": "2023-11-11T14:50:00.116Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowFeatBig-1920x1080-4c8c4dbba42d35bddfe50031357b4a20_Snapshot.png",
+      "md5": "1c595c6fe10b5842c37673c8a434ff39",
+      "width": 150,
+      "height": 74,
+      "size": 4655,
+      "uploadedDate": "2023-10-24T18:06:22.100Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowContextMenu-1920x1080-7e1c71976b73c0169ca8a71957d1439e_Snapshot.png",
+      "md5": "7e215d4c13872ecc7f4611b6467f1a83",
+      "width": 150,
+      "height": 74,
+      "size": 4773,
+      "uploadedDate": "2023-10-23T18:04:53.944Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditor1-1920x1080-9165fd7cb95720c9fe78b0a94de873f7_Snapshot.png",
+      "md5": "9875a1129a321db16b356658761177a2",
+      "width": 150,
+      "height": 74,
+      "size": 4027,
+      "uploadedDate": "2023-10-23T18:04:54.296Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditor2-1920x1080-a6802f38e1ece969cac6f0956b6f6d74_Snapshot.png",
+      "md5": "2ed0f62f9135220308b315204e6b9b41",
+      "width": 150,
+      "height": 74,
+      "size": 4302,
+      "uploadedDate": "2023-10-23T18:04:54.674Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditor4-1920x1080-0e014c21c1e6801e043ce845f1ff04d7_Snapshot.png",
+      "md5": "d53b0edcce9617d3bae9af67adbfbe15",
+      "width": 150,
+      "height": 74,
+      "size": 4125,
+      "uploadedDate": "2023-10-23T18:04:55.083Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditor3-1920x1080-08db0f4c06de46e7f96159d2f393d2b7_Snapshot.png",
+      "md5": "671417b4668ef8d879ff36a00e6dd749",
+      "width": 150,
+      "height": 74,
+      "size": 4312,
+      "uploadedDate": "2023-10-23T18:04:55.539Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowDebug-1920x1080-61c2d1f553ba24f6668a912925fe4fc3_Snapshot.png",
+      "md5": "f681a589ee2e238bf671f0a1f49aea31",
+      "width": 150,
+      "height": 74,
+      "size": 4749,
+      "uploadedDate": "2023-10-23T18:04:55.954Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowBlueprintExample-1920x1080-c65cb43785a84cd1aad5ccc211e29af4_Snapshot.png",
+      "md5": "4b00c7c102fd5e0d8da8e0a178999040",
+      "width": 150,
+      "height": 74,
+      "size": 4200,
+      "uploadedDate": "2023-10-23T18:04:56.403Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowLogs-1920x1080-eba2d352c43a9b8750c8638421e53687_Snapshot.png",
+      "md5": "236e39e276b985b4a447b4c1b564c5ff",
+      "width": 150,
+      "height": 74,
+      "size": 3727,
+      "uploadedDate": "2023-10-23T18:04:56.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowContextMenu-1920x1080-99914302171fefd7db6468297fcaca24_Snapshot.png",
+      "md5": "b1c216ade926b4aa45366f19ef8c7366",
+      "width": 150,
+      "height": 74,
+      "size": 5366,
+      "uploadedDate": "2023-10-22T10:06:58.070Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditor1-1920x1080-689a1783c120095228ddd4462b8f3d68_Snapshot.png",
+      "md5": "5e52468cb0a7f0110aa51a68753d7f08",
+      "width": 150,
+      "height": 74,
+      "size": 4722,
+      "uploadedDate": "2023-10-22T10:06:58.566Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditor2-1920x1080-aa8beffcb8943e2501f6e8c3e9eddeb1_Snapshot.png",
+      "md5": "29f0b33f85f5620dd715ea66314f9647",
+      "width": 150,
+      "height": 74,
+      "size": 4991,
+      "uploadedDate": "2023-10-22T10:06:59.134Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditor4-1920x1080-99b5192871dc11d92c639c2b4b1b82b8_Snapshot.png",
+      "md5": "b671aa6597a121b17def20e01fb08fa2",
+      "width": 150,
+      "height": 74,
+      "size": 4887,
+      "uploadedDate": "2023-10-22T10:06:59.535Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowGameFlowEditor3-1920x1080-7692cb62f670a754a33180eae6f90ee3_Snapshot.png",
+      "md5": "a26280f898f1a10bf7a18633718165ed",
+      "width": 150,
+      "height": 74,
+      "size": 5100,
+      "uploadedDate": "2023-10-22T10:06:59.968Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowDebug-1920x1080-2113973d1e28b3938757f714e4511291_Snapshot.png",
+      "md5": "0c970819cb56d435b8f4d4eb3f19f746",
+      "width": 150,
+      "height": 74,
+      "size": 5229,
+      "uploadedDate": "2023-10-22T10:07:00.488Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowBlueprintExample-1920x1080-c67cb3283752e7587f3670bb550dc47f_Snapshot.png",
+      "md5": "6c985dece5cb9628b7ab22f93dc569bb",
+      "width": 150,
+      "height": 74,
+      "size": 4911,
+      "uploadedDate": "2023-10-22T10:07:00.990Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GameFlowLogs-1920x1080-8c2e4d48ae08c115024d190624e06b5f_Snapshot.png",
+      "md5": "d78d730e0b5c3f052926a9b4f45b2d94",
+      "width": 150,
+      "height": 74,
+      "size": 4540,
+      "uploadedDate": "2023-10-22T10:07:01.689Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryMock-1920x1080-f624c017e48e79b97b0399e9f1d783eb_Snapshot.png",
+      "md5": "b90989a3659a663e012c03ff5a6fd540",
+      "width": 150,
+      "height": 74,
+      "size": 828,
+      "uploadedDate": "2023-10-20T17:07:28.231Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-10-24T17:55:02.504Z",
+  "lastModifiedDate": "2024-09-24T11:26:25.991Z",
+  "customAttributes": {},
+  "entitlementName": "af81a47cd3b246b8ac58b61d798ccc61",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "0deb6b3944bf4ef3926bb14e60ea6bfc",
+      "appId": "GameFlow_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2023-10-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v2.0_5.1"
+    },
+    {
+      "id": "b0194ef43e08435f9fac9f8de7d87b4d",
+      "appId": "GameFlow_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2023-10-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v2.1_5.2"
+    },
+    {
+      "id": "806a5ba7cff6446db67fe41088995d52",
+      "appId": "GameFlow_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2023-10-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v2.1_5.3"
+    },
+    {
+      "id": "172595f60a8047e881250a593f6a0457",
+      "appId": "GameFlow_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-05-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v2.1_5.4"
+    }
+  ],
+  "developer": "Pentangle St.",
+  "developerId": "o-uljepgj3r9qhqvt365cxemcuyqhawj",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

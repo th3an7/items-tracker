@@ -1,0 +1,345 @@
+{
+  "id": "8b7142a911064b5188ca17e857d2b671",
+  "title": "SKELOT - Instanced Skeletal Mesh Rendering",
+  "description": "Instanced Skeletal Mesh Rendering Component.",
+  "longDescription": "<p><a href=\"https://youtu.be/zPSr_R3wceo\" rel=\"nofollow\">Watch Main Trailer</a></p><p>Watch Other Videos: <a href=\"https://youtu.be/LJDpybYgWtA\" rel=\"nofollow\">Video 1</a>, <a href=\"https://youtu.be/J_-6sTGebUg\" rel=\"nofollow\">Video 2</a>,<a href=\"https://youtu.be/hsPLzie0QwY\" rel=\"nofollow\"> Video 3</a></p><p>Download <a href=\"https://drive.google.com/file/d/1bAjXvX0qnrkr9kxp0gvTLnj5Yj_ear2s/view?usp&#61;sharing\" rel=\"nofollow\">Win64-Demo</a></p><p>Download <a href=\"https://drive.google.com/file/d/16NPW9WqVkhua8KKZBgvV2aWd5SnxxZWG/view?usp&#61;sharing\" rel=\"nofollow\">SampleProject-UE5.4.2</a> , <a href=\"https://drive.google.com/file/d/1dKhIuC6osRxIo-VNko6IkafBwGPPFSxq/view?usp&#61;sharing\" rel=\"nofollow\">OldSampleProject-UE5.2 </a></p><p>Join <a href=\"https://discord.gg/uVVyWbprnP\" rel=\"nofollow\">Discord </a>for QA and Support.</p><p><a href=\"https://github.com/LazyMarmotGames/SkelotDocument/blob/main/QuickStart.md\" rel=\"nofollow\">Quick Start Document</a></p><p><br /></p><p>Render hundreds of thousands of skeletal meshes without pain directly within Editor. no need for customized material, just adjust your SkeletalMesh&#39;s LODs, make an SkelotAnimCollection DataAsset and then use SkelotComponent. well optimized as light as InstancedStaticMeshComponent. very suitable for TopDown/RTS games.</p><p><br /></p><p><em>UPDATE</em>:</p><ul><li><strong>NEW</strong>: Instancing with negative scale is supported now</li><li><strong>NEW</strong>: Modular Mesh. several USkeletalMesh can be attached to one instance now (similar to Leader/Follower pose).</li><li><strong>NEW</strong>: Dynamic transition. (transitions are generated and cached at runtime when needed, eats less VRAM )</li><li><strong>NEW</strong>: Dynamic Pose (instances can switch to Dynamic Pose and be bound to a USkeletalMeshComponent)</li><li><strong>UPDATE</strong>: No more Bone or Influence limit. uint16 bone index and skin weight added, up to 8 influence is supported now.</li><li><strong>UPDATE</strong>: Animation sequences are generated at load time. AnimCollection takes less disk size now.</li><li><strong>UPDATE</strong>: AnimCollection uses DerivedDataCache. rebuild won&#39;t take minutes anymore.</li><li><strong>OPTIMIZATION</strong>: Only sends skinned bones to VRAM . SkinWeight is taken from SkeltalMeshes now.</li><li><strong>OPTIMIZATION</strong>: Spatial Grid for culling &#43; SIMDified Codes.</li></ul>",
+  "technicalDetails": "<p><em>Features</em>:</p><ul><li>Supports Modular Mesh. easily attach/detach skeletal meshes to the instances.</li><li>Supports Dynamic Transition. blend from sequence A to B smoothly. (transitions are generated and cached at runtime when needed)</li><li>Supports Dynamic Pose. (Instances can be marked as dynamic and be filled with whatever you want. physics simulation and AnimInstance is possible now).</li><li>Anything is done inside Unreal Editor</li><li>Frustum Cull &#43; Spatial Grid &#43; LOD</li><li>No Anti-Aliasing and Motion-Blur artifacts (writes accurate velocity)</li><li>Uses skinning instead of Vertex Animation technique (less VRAM usage &#43; animations are shared for skeletal meshes with the same skeleton)</li><li>Fully dynamic with simple StructOfArray design (destroy and spawn thousands of instances every frame)</li><li>Supports Sockets and Attachments</li><li>Simple LineCast through Customized PhysicsBody</li><li>Supports PerInstanceCustomDataFloat (can be accessed by material)</li><li>Blueprint Support</li></ul><p><br /></p><p>Code Modules:</p><ul><li> Skelot (Runtime)</li><li> SkelotEd (Editor)</li></ul><p><br /></p><p>Number of Blueprints: 2</p><p>Number of C&#43;&#43; Classes: &gt; 30</p><p>Network Replicated: No</p><p>Supported Development Platforms: All</p><p>Supported Target Build Platforms: All (only Win64 and Android tested till now)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Workers-Modular2-1920x1080-08744c0c0b493dc447257b2e5098e194.jpg",
+      "md5": "08744c0c0b493dc447257b2e5098e194",
+      "width": 1920,
+      "height": 1080,
+      "size": 546652,
+      "uploadedDate": "2024-04-16T17:53:04.146Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WorkersSample3-1920x1080-b13ab4d20cd94ff0b11b837306651fc1.jpg",
+      "md5": "b13ab4d20cd94ff0b11b837306651fc1",
+      "width": 1920,
+      "height": 1080,
+      "size": 679677,
+      "uploadedDate": "2024-04-16T17:53:04.594Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WorkersSample3-Complexity-1920x1080-5b18894cec4e9d447c830e7eb6531b50.jpg",
+      "md5": "5b18894cec4e9d447c830e7eb6531b50",
+      "width": 1920,
+      "height": 1080,
+      "size": 330355,
+      "uploadedDate": "2024-04-16T17:53:05.042Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PerfTest-1920x1080-4e4805bc5492a4d6120debbc04d73d8f.jpg",
+      "md5": "4e4805bc5492a4d6120debbc04d73d8f",
+      "width": 1920,
+      "height": 1080,
+      "size": 866079,
+      "uploadedDate": "2024-04-16T17:53:05.412Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PerfTestLOD-1920x1080-e2bfd4a481f99500cda3f78f82d1b9d3.jpg",
+      "md5": "e2bfd4a481f99500cda3f78f82d1b9d3",
+      "width": 1920,
+      "height": 1080,
+      "size": 587568,
+      "uploadedDate": "2024-04-16T17:53:05.845Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WSnight-1920x1080-5a79d524e8710f9751dcae76bee723c8.jpg",
+      "md5": "5a79d524e8710f9751dcae76bee723c8",
+      "width": 1920,
+      "height": 1080,
+      "size": 402078,
+      "uploadedDate": "2024-04-16T17:53:06.261Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/V2-Functions-1920x1080-ccb808c19a201cd7094d998a295c8812.jpg",
+      "md5": "ccb808c19a201cd7094d998a295c8812",
+      "width": 1920,
+      "height": 1080,
+      "size": 430350,
+      "uploadedDate": "2024-04-16T17:53:06.671Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/V2-AnimCollection-1920x1080-fa91a0a1c2110d7b3e1f2aca6d1021f5.jpg",
+      "md5": "fa91a0a1c2110d7b3e1f2aca6d1021f5",
+      "width": 1920,
+      "height": 1080,
+      "size": 159725,
+      "uploadedDate": "2024-04-16T17:53:07.048Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SKELOTInstancedSkeletalMeshRendering_thumb-284x284-b5237de7e752eeda2ba91c928fbdebca.png",
+      "md5": "b5237de7e752eeda2ba91c928fbdebca",
+      "width": 284,
+      "height": 284,
+      "size": 167769,
+      "uploadedDate": "2024-01-06T15:11:06.551Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SKELOTInstancedSkeletalMeshRendering_featured-894x488-a105614dfcb414a5b9029c1eaab42dce.png",
+      "md5": "a105614dfcb414a5b9029c1eaab42dce",
+      "width": 894,
+      "height": 488,
+      "size": 1165490,
+      "uploadedDate": "2024-01-06T15:11:06.723Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Workers-Modular2-1920x1080-08744c0c0b493dc447257b2e5098e194_Snapshot.jpg",
+      "md5": "859a57d430dac37ed1dc22f3e39f6193",
+      "width": 150,
+      "height": 74,
+      "size": 9630,
+      "uploadedDate": "2024-04-16T17:53:04.408Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WorkersSample3-1920x1080-b13ab4d20cd94ff0b11b837306651fc1_Snapshot.jpg",
+      "md5": "9b6a37850b3c26d43b4cf1a21f9b3ada",
+      "width": 150,
+      "height": 74,
+      "size": 8821,
+      "uploadedDate": "2024-04-16T17:53:04.806Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WorkersSample3-Complexity-1920x1080-5b18894cec4e9d447c830e7eb6531b50_Snapshot.jpg",
+      "md5": "9935838be31916b2de8f2eeeb50fc352",
+      "width": 150,
+      "height": 74,
+      "size": 5784,
+      "uploadedDate": "2024-04-16T17:53:05.242Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PerfTest-1920x1080-4e4805bc5492a4d6120debbc04d73d8f_Snapshot.jpg",
+      "md5": "624e28f24b6bcdd88c6ca69c079293b7",
+      "width": 150,
+      "height": 74,
+      "size": 10830,
+      "uploadedDate": "2024-04-16T17:53:05.667Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PerfTestLOD-1920x1080-e2bfd4a481f99500cda3f78f82d1b9d3_Snapshot.jpg",
+      "md5": "0087503aca65e9cb7b1f8cf775613835",
+      "width": 150,
+      "height": 74,
+      "size": 9696,
+      "uploadedDate": "2024-04-16T17:53:06.109Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WSnight-1920x1080-5a79d524e8710f9751dcae76bee723c8_Snapshot.jpg",
+      "md5": "a5eea46527d3307503c31ddc60009515",
+      "width": 150,
+      "height": 74,
+      "size": 5670,
+      "uploadedDate": "2024-04-16T17:53:06.493Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/V2-Functions-1920x1080-ccb808c19a201cd7094d998a295c8812_Snapshot.jpg",
+      "md5": "facfe336fdf860e6a9d29ba915d4a4dc",
+      "width": 150,
+      "height": 74,
+      "size": 6094,
+      "uploadedDate": "2024-04-16T17:53:06.853Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/V2-AnimCollection-1920x1080-fa91a0a1c2110d7b3e1f2aca6d1021f5_Snapshot.jpg",
+      "md5": "e26e31a21614f2392b75e73edd946ee8",
+      "width": 150,
+      "height": 74,
+      "size": 2832,
+      "uploadedDate": "2024-04-16T17:53:07.250Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/dataasset-1920x1080-55cf0e67f6fe2f7bc364cde3e57835fa_Snapshot.jpg",
+      "md5": "fdd8fd1b72244436e866b8b19eb6cc60",
+      "width": 150,
+      "height": 74,
+      "size": 2953,
+      "uploadedDate": "2024-01-09T17:13:57.548Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00025-1920x1080-e9f73232a74c5f973451b99320b08c6d_Snapshot.jpg",
+      "md5": "11e0a0c388a35477c2444296c94e5f73",
+      "width": 150,
+      "height": 74,
+      "size": 8935,
+      "uploadedDate": "2024-01-09T14:02:54.898Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00018-1920x1080-be26bc32a7dd5c9c17ebbe66daf6f9e0_Snapshot.jpg",
+      "md5": "fabb1fd7e942d08874f8ceb83567b3f2",
+      "width": 150,
+      "height": 74,
+      "size": 8296,
+      "uploadedDate": "2024-01-09T14:02:55.312Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00023-1920x1080-7ac48f8f31cebc7d7c0c8fe505abacf7_Snapshot.jpg",
+      "md5": "c2da95768b2e1c435994b6c011a7eae9",
+      "width": 150,
+      "height": 74,
+      "size": 8527,
+      "uploadedDate": "2024-01-09T14:02:55.796Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RndMoveShot1-1920x1080-4acb5287fd65f136b7663a762fc5dda0_Snapshot.jpg",
+      "md5": "fd31c4ca3bc2308941abaf6e24c33cbf",
+      "width": 150,
+      "height": 74,
+      "size": 8676,
+      "uploadedDate": "2024-01-06T15:11:04.755Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PerfCmp40k-1920x1080-b6fde016ce3a24eeaab6a50571e4c0f0_Snapshot.jpg",
+      "md5": "59191238784d791dac8cdaa37bc1ce61",
+      "width": 150,
+      "height": 74,
+      "size": 9269,
+      "uploadedDate": "2024-01-06T15:11:05.238Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShaderComplexity-1920x1080-6cf596d48409a3db7b242f2d816abc69_Snapshot.jpg",
+      "md5": "32a224e0b78fdc590d97a79e7631bee7",
+      "width": 150,
+      "height": 74,
+      "size": 5561,
+      "uploadedDate": "2024-01-06T15:11:05.628Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LOD-1920x1080-f0df4d4cbda1c73294379f7fd8116f8d_Snapshot.jpg",
+      "md5": "85e490125d6720d599e7926f474a8442",
+      "width": 150,
+      "height": 74,
+      "size": 7314,
+      "uploadedDate": "2024-01-06T15:11:06.065Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BPFunctions-1920x1080-d56b7f09b8e7efde133d2a29d7c637f9_Snapshot.jpg",
+      "md5": "82ec69fe2f39d6b6a9844c5efd30ebe9",
+      "width": 150,
+      "height": 74,
+      "size": 5057,
+      "uploadedDate": "2024-01-06T15:11:06.422Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2024-01-15T18:09:29.189Z",
+  "lastModifiedDate": "2025-02-25T10:28:43.796Z",
+  "customAttributes": {},
+  "entitlementName": "8b7142a911064b5188ca17e857d2b671",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "d179c039ba554353b022a1ed66066589",
+      "appId": "Skelot_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Gear VR",
+        "Android",
+        "HoloLens 2"
+      ],
+      "dateAdded": "2024-01-09T00:00:00.000Z",
+      "releaseNote": "password:\n$$qwerty123$$",
+      "versionTitle": "v2-5.2"
+    },
+    {
+      "id": "31f06f6989944db58b8c363c8b8f3bb5",
+      "appId": "Skelot_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "iOS",
+        "Linux",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2024-01-09T00:00:00.000Z",
+      "releaseNote": "password:\n$$qwerty123$$",
+      "versionTitle": "v2-5.3"
+    },
+    {
+      "id": "ab41ed51e962453badfc55ff18a0b502",
+      "appId": "Skelot_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2024-06-18T00:00:00.000Z",
+      "releaseNote": "password:\n$$qwerty123$$n",
+      "versionTitle": "v3-5.4.2"
+    }
+  ],
+  "developer": "Lazy Marmot Games",
+  "developerId": "o-9ej7fkpzp94jbpufhwezml7l5apbqm",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

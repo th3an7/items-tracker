@@ -1,0 +1,229 @@
+{
+  "id": "57e66c19afbf44599d13bef2a30f2ff6",
+  "title": "Advanced Decal Component",
+  "description": "The Advanced Decal Component offers features to customize your characters, add decal layers to animated skeletal meshes and static meshes. You can edit the layer stack, move layers up or down, scale and rotate decals, and change their color and opacity.",
+  "longDescription": "<blockquote><strong>1.Introduction:</strong></blockquote><p><br /></p><p><br /></p><p>V3 Update (Memory Optimization, Save &amp; Load Decals, New In-Editor GUI) <a href=\"https://www.youtube.com/watch?v&#61;a8IboHx1ls0\" rel=\"nofollow\">YOUTUBE LINK</a></p><p>V2 Update (PBR Decals, Wraps, Material Brushes) Video: <a href=\"https://www.youtube.com/watch?v&#61;aBQHnmbTT80\" rel=\"nofollow\">YOUTUBE LINK</a></p><p>Demo Video: <a href=\"https://youtu.be/SqwMc_5V1aI\" rel=\"nofollow\">YOUTUBE LINK</a></p><p><br /></p><p>Advanced Decal Component is a StaticMesh/SkeletalMesh UV independent Mesh Decal Projection tool with multi-layer support (add,edit, move up/down and remove). Usable in editor-time as an Actor, and at runtime as a component attached to desired blueprint. The component projects, packs and bakes all decal texture to the mesh UV for optimal performance.</p><p>By attaching this component to an actor with mesh data (Skeletal Mesh, Static Mesh) you can paint skins and decals on said actor. You have total control over where to project the decal (see section &#39;2.Requirements&#39; below), stack multiple decals on top of each other, edit existing decals, or remove baked decals. It also works on translucent surfaces.</p><p>An example widget and Actor to manipulate the layers are available. An Actor blueprint with a skeletal mesh component is considered as an example target with added Decal Component to showcase integration of the subsystem with your game.</p><p><br /></p><p><br /></p><blockquote><strong>2.Requirements:</strong></blockquote><p><br /></p><ul><li>The mesh should be uniquely UVed (no mirrored UVs) with no overlapping islands and visible seams. (the example mannequin provided is a modified version of UE4 Mannequin that has unique UVs)</li><li>The target Skeletal or Static Mesh should have its material blended with the provided &#39;DecalBlendFunc&#39; and expose three TextureObjectParameter (automatically set at runtime to CanvasRenderTarget2D objects) values for the component to store its data in.</li></ul><p><br /></p><p><br /></p><blockquote><strong>3.Advantages:</strong></blockquote><p><br /></p><p>These are the advantages over conventional Decal Components in Unreal Engine 4:</p><ul><li>Doesn&#39;t bleed to other actors.</li></ul><p>Conventional: Bleeds to other actors that have bReceivesDecals On.</p><ul><li>Projects on a single material index.</li></ul><p>Conventional: Can&#39;t have control by default over what material to project</p><ul><li>Can be used to layer decals one on top of others  using the same component       </li></ul><p>Conventional: Doesn&#39;t blend between decals of multiple DecalActor/DecalComponent instances</p><ul><li>Works on translucent surfaces!               </li></ul><p>Conventional: Doesn&#39;t support projection on translucent surfaces by default because it requires depth information</p><ul><li>Single actor for all decals of the same mesh</li></ul><p>Conventional: Number of actors/components keeps going up as u add more decals making it hard to manage all the actors</p><ul><li>Bakes all projections to UV map to optimize performance instead of using active projection on all decals</li></ul><p>Conventional: Active projection for all decal components/actors</p><ul><li>Deform (set coverage area, scale, rotate) decal, modify tint color and translucency over one another!</li></ul><p>Conventional: Only transforms are available by default, need to explicitly define other params in your decal material</p><ul><li>Works for animated skeletals !</li></ul><p>Conventional: Must be socketed to a bone with chances of bleeding if collision cube touches other surfaces of the same/other mesh</p><p><br /></p><p><br /></p><blockquote><strong>3.Project Details:</strong></blockquote><p><br /></p><p>The provided project has one example map to showcase the component usability. Without the example Skeletal Meshes, the project size is under 12MB.</p><p><br /></p><p><br /></p><blockquote><strong>4.Bonus Content:</strong></blockquote><p><br /></p><p>A 3D concept car skeletal mesh (300MB)</p><p>A fully functional multi-purpose Color Widget Blueprint</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Project Decals onto Static Meshes or animated Skeletal Meshes</li><li> Control how the decals are layered on top of each other</li><li> Limit the amount of maximum decals to project, remove baked decals, or edit the position, projection angle, rotation, color, and transparency of existing decal layer in the layer stack.</li><li>Each actor with an Advanced Decal Component allocates space for 3 CanvasRenderTarget2D in memory</li></ul><p>Number of Blueprints: 10</p><p>Input: (Keyboard, Mouse)</p><p>Network Replicated: (Yes)</p><p>Supported Development Platforms:</p><p>Windows: (Yes)</p><p>Mac: (Yes)</p><p>Documentation:</p><p>\tV3 <a href=\"https://drive.google.com/file/d/1855cxL39eJsqyp5Kvz6gjPCgeo8k52XV/view?usp&#61;sharing\" rel=\"nofollow\">GDRIVE LINK</a> </p><p>\tV2 <a href=\"https://drive.google.com/file/d/1jlAWKIGjbI92Y2kVt2ac37JHGVJhS_u5/view?usp&#61;sharing\" rel=\"nofollow\">GDRIVE LINK</a></p><p>Important/Additional Notes: Please feel free to read through blueprints&#39; descriptions.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AdvancedDecalSkeletals02-1920x1080-2753559d6c3de0f4b3d8c2f4961a54fd.png",
+      "md5": "2753559d6c3de0f4b3d8c2f4961a54fd",
+      "width": 1920,
+      "height": 1080,
+      "size": 2062839,
+      "uploadedDate": "2021-11-03T06:06:52.677Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AdvancedDecalSkeletals01-1920x1080-27c1afa8f34bc446be331ea6b6c2c134.png",
+      "md5": "27c1afa8f34bc446be331ea6b6c2c134",
+      "width": 1920,
+      "height": 1080,
+      "size": 2135468,
+      "uploadedDate": "2021-11-03T06:06:53.182Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AdvancedDecalLayerStack2-1920x1080-54e18f218f70fde2e03e779ea7df3d9d.png",
+      "md5": "54e18f218f70fde2e03e779ea7df3d9d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1977659,
+      "uploadedDate": "2021-11-06T14:49:50.345Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AdvancedDecalLayerStack-1920x1080-d1160550c860b8d64a8ecb334cafcb70.png",
+      "md5": "d1160550c860b8d64a8ecb334cafcb70",
+      "width": 1920,
+      "height": 1080,
+      "size": 1973148,
+      "uploadedDate": "2021-11-06T14:49:50.814Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AdvancedDecalEdit-1920x1080-c4200b581173c7f68b1539ee313783e5.png",
+      "md5": "c4200b581173c7f68b1539ee313783e5",
+      "width": 1920,
+      "height": 1080,
+      "size": 2012447,
+      "uploadedDate": "2021-11-06T14:49:51.272Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AdvancedDecalComponent_thumb-284x284-944d8f38f1c023a404583b008458e2cf.png",
+      "md5": "944d8f38f1c023a404583b008458e2cf",
+      "width": 284,
+      "height": 284,
+      "size": 112873,
+      "uploadedDate": "2021-11-06T14:49:51.643Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AdvancedDecalComponent_featured-894x488-0a9cd2490dda0498789005e19f8cd1c0.png",
+      "md5": "0a9cd2490dda0498789005e19f8cd1c0",
+      "width": 894,
+      "height": 488,
+      "size": 543257,
+      "uploadedDate": "2021-11-03T06:06:55.181Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AdvancedDecalLayerStack2-1920x1080-54e18f218f70fde2e03e779ea7df3d9d_Snapshot.png",
+      "md5": "85221a02f441a97174714a6d77a15b4e",
+      "width": 150,
+      "height": 74,
+      "size": 6158,
+      "uploadedDate": "2021-11-06T14:49:50.645Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AdvancedDecalLayerStack-1920x1080-d1160550c860b8d64a8ecb334cafcb70_Snapshot.png",
+      "md5": "39367df19216c724bf48417a86686383",
+      "width": 150,
+      "height": 74,
+      "size": 5976,
+      "uploadedDate": "2021-11-06T14:49:51.112Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AdvancedDecalEdit-1920x1080-c4200b581173c7f68b1539ee313783e5_Snapshot.png",
+      "md5": "19260bed8de4a9ed18b3d3c91ece6e8f",
+      "width": 150,
+      "height": 74,
+      "size": 6742,
+      "uploadedDate": "2021-11-06T14:49:51.567Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AdvancedDecalSkeletals02-1920x1080-2753559d6c3de0f4b3d8c2f4961a54fd_Snapshot.png",
+      "md5": "628aeb0c6336dff0c286fb53c445d82f",
+      "width": 150,
+      "height": 74,
+      "size": 6550,
+      "uploadedDate": "2021-11-03T06:06:52.988Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AdvancedDecalSkeletals01-1920x1080-27c1afa8f34bc446be331ea6b6c2c134_Snapshot.png",
+      "md5": "51620f50138576582e265ade0f4c1414",
+      "width": 150,
+      "height": 74,
+      "size": 6000,
+      "uploadedDate": "2021-11-03T06:06:53.483Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AdvancedDecalTranslucent-1920x1080-395c39efd3fe7fc8f949ec57b6edcdba_Snapshot.png",
+      "md5": "bf69521f583ff5f9674da8e62db25dba",
+      "width": 150,
+      "height": 74,
+      "size": 6942,
+      "uploadedDate": "2021-11-03T06:06:54.025Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AdvancedDecalLayerStack-1920x1080-1830747404e0f3b9fa4d141af2c0c520_Snapshot.png",
+      "md5": "28a0c2687b69931f73a762cf0f63ddff",
+      "width": 150,
+      "height": 74,
+      "size": 6853,
+      "uploadedDate": "2021-11-03T06:06:54.502Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AdvancedDecalEdit-1920x1080-fa131837eeb2b8bcb4d61a533216f80e_Snapshot.png",
+      "md5": "54c785b4ce24e03043ca28d6acb69d31",
+      "width": 150,
+      "height": 74,
+      "size": 6381,
+      "uploadedDate": "2021-11-03T06:06:54.976Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-11-15T19:44:36.501Z",
+  "lastModifiedDate": "2024-09-18T13:54:10.003Z",
+  "customAttributes": {},
+  "entitlementName": "57e66c19afbf44599d13bef2a30f2ff6",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "aa08755137564382b03d4cbdbb0fe3f0",
+      "appId": "Advanced57e66c19afbfV1",
+      "compatibleApps": [
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Xbox One",
+        "Nintendo Switch",
+        "PS4",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2021-11-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AdvancedDecalComponentV3UE4.24"
+    },
+    {
+      "id": "faad3dab697247da9246120386f31c8f",
+      "appId": "Advanced57e66c19afbfV2",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-04-25T00:00:00.000Z",
+      "releaseNote": "Changes had to be made to fix erros caused by Asset Registry API changes in 5.1 update. ",
+      "versionTitle": "AdvancedDecalComponentV3UE5.1"
+    },
+    {
+      "id": "83a52ab69e924dd19a1f0c9d79b7e7f4",
+      "appId": "Advanced57e66c19afbfV4",
+      "compatibleApps": [
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Mac",
+        "Nintendo Switch",
+        "Windows",
+        "Xbox One",
+        "PS4",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2023-07-03T00:00:00.000Z",
+      "releaseNote": "Changes had to be made to fix erros caused by Asset Registry API changes in 5.2 update.",
+      "versionTitle": "AdvancedDecalComponentV3UE5.2"
+    }
+  ],
+  "developer": "SHADESPIRIT",
+  "developerId": "o-4y4ddcyuxqn87hpsjavdw9kszs3wmw",
+  "endOfSupport": false,
+  "unsearchable": false
+}

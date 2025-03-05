@@ -1,0 +1,274 @@
+{
+  "id": "954755c69a8f4445b7ff16e277f772e8",
+  "title": "Speech To Life",
+  "description": "Offline Speech Recognition for Windows and Android platforms including Quest 1 / 2",
+  "longDescription": "<p>Speech To Life is a voice recognition plugin for Unreal Engine which gives you performant offline voice recognition for Windows and Android platforms including Quest 1 / 2. It includes a sentence fuzzy matching library to allow conversation selection-like gameplay and easily supports voice command control found in games where your voice causes actions/events to occur in the game world. This can be a very powerful mechanic in VR games where it adds an extra layer of &#39;presence&#39;.</p><p><br /></p><p>Some examples of usage:</p><ul><li>Choose dialog choices with NPCs using your voice</li><li>Have NPCs react to things you say, give commands</li><li>Ghost hunting game questions to the ghost to get responses / make the ghost do things.</li><li>Add an extra layer of controls for VR/AR applications</li></ul><p><br /></p><p>Considerations:</p><ul><li>Speech recognition is completely offline and doesn&#39;t require an internet connection.</li><li>A speech model is around 40-80Mb in size on average and needs to be completely loaded into memory to be used. You should include this in your memory budget when using this plugin.</li><li>This plugin only supports Windows and Android platforms. Linux, MacOS, and iOS will come at a future time.</li><li>The plugin uses Vosk for voice recognition, but if there is interest / if I feel the need I will add new recognition systems. Vosk is great because it is offline, works on all platforms, and is fast.</li></ul><p><br /></p><p>Speech To Life can support over 20 languages using the exceptional voice recognition supplied by Vosk.</p><p><br /></p><p>This plugin contains a <strong>BONUS </strong>Fuzzy String Matching library exposed to blueprint for using a number of fuzzy string matching methods to match a voice recognition result sentence (or the words of) to a number of strings you are checking for. You can use this library for purposes other than voice recognition matching as well.</p><p><br /></p><p>The plugin can be simply implemented into your own project and contains a fully working example found <a href=\"https://github.com/SolarStormInteractive/SpeechToLife_Example/releases\" rel=\"nofollow\">here</a>.</p><p>NOTE: The example project is for Engine 4.27 and greater. Let me know on the Solar Storm Interactive Discord if you need a version for 4.26 and we can arrange something.</p><p><a href=\"https://github.com/SolarStormInteractive/SpeechToLife_Example/archive/refs/tags/ue_5.0_v1.0.3.zip\" rel=\"nofollow\">Engine 5.0 Example Project</a></p><p><a href=\"https://github.com/SolarStormInteractive/SpeechToLife_Example/archive/refs/tags/ue_5.0_quest_v1.0.3.zip\" rel=\"nofollow\">Engine 5.0 Quest Specific Example Project</a></p><p><a href=\"https://github.com/SolarStormInteractive/SpeechToLife_Example/archive/refs/tags/ue_4.27_v1.0.3.zip\" rel=\"nofollow\">Engine 4.27 Example Project</a></p><p><br /></p><p>Demos can be found here:</p><ul><li><a href=\"https://drive.google.com/file/d/1MHZvabS2nBEDL2ztkFuHlHPNWW_LfD6g/view?usp&#61;sharing\" rel=\"nofollow\">Windows</a></li><li><a href=\"https://drive.google.com/file/d/13LS9zfDIyamoAaAp50iQV_2QCHYG5CGX/view?usp&#61;sharing\" rel=\"nofollow\">Android</a></li><li><a href=\"https://drive.google.com/file/d/1GqRT9NQKZEEM1NSN3DjtEp2rA6Setzqx/view?usp&#61;sharing\" rel=\"nofollow\">Quest</a></li></ul><p>Documentation can be found <a href=\"https://github.com/SolarStormInteractive/SpeechToLife_Docs/wiki\" rel=\"nofollow\">here</a></p><p>Join the Solar Storm Interactive Discord <a href=\"https://discord.gg/zBXM6VC4r8\" rel=\"nofollow\">here</a> to get support!</p><p><br /></p><p>This plugin would not be possible without the amazing work done on the Kaldi and Vosk projects. This plugin also contains the RapidFuzz C&#43;&#43; library for matching recognizer output sentence strings to strings pre-defined by the designer to be checked against.</p><p><br /></p><p>Vosk : <a href=\"https://alphacephei.com/vosk/\" rel=\"nofollow\">https://alphacephei.com/vosk/</a></p><p>RapidFuzz : <a href=\"https://github.com/maxbachmann/RapidFuzz\" rel=\"nofollow\">https://github.com/maxbachmann/RapidFuzz</a></p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Offline, no internet required, voice recognition</li><li>Runs on Mobile Android Devices</li><li>Supports 20&#43; languages</li><li>Performant threaded implementation</li><li>Fuzzy matching library included for large sentence matching</li></ul><p>Code Modules:</p><ul><li>SpeechToUnreal (Runtime) Contains a game instance subsystem for globally controlling the current locale (language) used, a component to feed audio for voice recognition and get results, a function library for matching results in different ways, an extended audio device capture source for feeding microphone audio into the recognizer component, a bonus audio generator synth component for taking the microphone (or any audio generator source) and mixing it back into the games audio or to feed through mixers for creating walkie-talkie voice FX for example.</li><li>SpeechToUnrealRecognizers (Runtime) Recognizer implementation, currently includes Vosk but might contain more in the future if requested.</li><li>SpeechToUnrealEditor (Editor) For editor settings extension.</li><li>RapidFuzz (Runtime) A fuzzy string matching library</li></ul><p>Number of C&#43;&#43; Classes: 10</p><p>Supported Development Platforms: Windows 64-bit</p><p>Supported Target Build Platforms: Windows 64-bit, Android, Oculus, Steam VR</p><p>Nativizable: Yes</p><p>Documentation: <a href=\"https://github.com/SolarStormInteractive/SpeechToLife_Docs/wiki\" rel=\"nofollow\">Here</a></p><p>Example Project: <a href=\"https://github.com/SolarStormInteractive/SpeechToLife_Example/releases\" rel=\"nofollow\">Here</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1 Main Logo-1920x1080-72ede0c5682cfdf025a02868b25d10c6.png",
+      "md5": "72ede0c5682cfdf025a02868b25d10c6",
+      "width": 1920,
+      "height": 1080,
+      "size": 463258,
+      "uploadedDate": "2022-07-24T02:18:53.667Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2 Simple To Implement view of blueprint implementation-1920x1080-64fae2358267636b322db166b010db47.png",
+      "md5": "64fae2358267636b322db166b010db47",
+      "width": 1920,
+      "height": 1080,
+      "size": 541423,
+      "uploadedDate": "2022-07-24T02:18:54.128Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3 VR Presence-1920x1080-8af2c1adb65adb47be2a98bcfe1a91ef.png",
+      "md5": "8af2c1adb65adb47be2a98bcfe1a91ef",
+      "width": 1920,
+      "height": 1080,
+      "size": 500131,
+      "uploadedDate": "2022-07-24T02:18:54.557Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4 Mobile-1920x1080-06332f044412b57048777393aeab3e9e.png",
+      "md5": "06332f044412b57048777393aeab3e9e",
+      "width": 1920,
+      "height": 1080,
+      "size": 812146,
+      "uploadedDate": "2022-07-24T02:18:54.986Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5 Language support-1920x1080-dca84816432403236e39ca2d4a69010f.png",
+      "md5": "dca84816432403236e39ca2d4a69010f",
+      "width": 1920,
+      "height": 1080,
+      "size": 536064,
+      "uploadedDate": "2022-07-24T02:18:55.491Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6 View of example Project Full example project available-1920x1080-ed85ed1cf767d3b25350cf196cdc0913.png",
+      "md5": "ed85ed1cf767d3b25350cf196cdc0913",
+      "width": 1920,
+      "height": 1080,
+      "size": 906273,
+      "uploadedDate": "2022-07-24T02:18:55.967Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7 Recognition types-1920x1080-39e5c878052d2389711568b74414e2e6.png",
+      "md5": "39e5c878052d2389711568b74414e2e6",
+      "width": 1920,
+      "height": 1080,
+      "size": 499035,
+      "uploadedDate": "2022-07-24T02:18:56.432Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SpeechToLife_thumb-284x284-12303e40ec02885b8ebd731c2bad3e3b.png",
+      "md5": "12303e40ec02885b8ebd731c2bad3e3b",
+      "width": 284,
+      "height": 284,
+      "size": 33858,
+      "uploadedDate": "2022-07-24T02:18:56.783Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SpeechToLife_featured-894x488-79f1927867181bc9b7bf5b8653ee716a.png",
+      "md5": "79f1927867181bc9b7bf5b8653ee716a",
+      "width": 894,
+      "height": 488,
+      "size": 137272,
+      "uploadedDate": "2022-07-24T02:18:56.879Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1 Main Logo-1920x1080-72ede0c5682cfdf025a02868b25d10c6_Snapshot.png",
+      "md5": "ad2ba46c276d5d055e2a4221901a9cef",
+      "width": 150,
+      "height": 74,
+      "size": 3724,
+      "uploadedDate": "2022-07-24T02:18:53.956Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2 Simple To Implement view of blueprint implementation-1920x1080-64fae2358267636b322db166b010db47_Snapshot.png",
+      "md5": "27ab8f98ed3a44e96f1d9fb41c64f680",
+      "width": 150,
+      "height": 74,
+      "size": 5263,
+      "uploadedDate": "2022-07-24T02:18:54.417Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3 VR Presence-1920x1080-8af2c1adb65adb47be2a98bcfe1a91ef_Snapshot.png",
+      "md5": "f024b1a151db0a8bee794b47664e2ce3",
+      "width": 150,
+      "height": 74,
+      "size": 6013,
+      "uploadedDate": "2022-07-24T02:18:54.821Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4 Mobile-1920x1080-06332f044412b57048777393aeab3e9e_Snapshot.png",
+      "md5": "f0911e70ee9402931ebb456fdaef65c9",
+      "width": 150,
+      "height": 74,
+      "size": 4980,
+      "uploadedDate": "2022-07-24T02:18:55.324Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5 Language support-1920x1080-dca84816432403236e39ca2d4a69010f_Snapshot.png",
+      "md5": "2fbf12bdce0098c9984c381a2d2b3a30",
+      "width": 150,
+      "height": 74,
+      "size": 4821,
+      "uploadedDate": "2022-07-24T02:18:55.785Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6 View of example Project Full example project available-1920x1080-ed85ed1cf767d3b25350cf196cdc0913_Snapshot.png",
+      "md5": "0545b2847ae322e9819798d7c0f4d9eb",
+      "width": 150,
+      "height": 74,
+      "size": 6536,
+      "uploadedDate": "2022-07-24T02:18:56.276Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7 Recognition types-1920x1080-39e5c878052d2389711568b74414e2e6_Snapshot.png",
+      "md5": "b53fc1e04fb9182491f546f785579b7c",
+      "width": 150,
+      "height": 74,
+      "size": 4601,
+      "uploadedDate": "2022-07-24T02:18:56.721Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-08-17T17:13:10.906Z",
+  "lastModifiedDate": "2024-11-28T18:09:07.579Z",
+  "customAttributes": {},
+  "entitlementName": "954755c69a8f4445b7ff16e277f772e8",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "05ee3f527a8e4e0c9a90887084db1ca9",
+      "appId": "SpeechToLife_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2022-08-16T00:00:00.000Z",
+      "releaseNote": "Fixed result sentence not being converted from UTF8 to UTF16 which broke languages other than general ASCII character users.",
+      "versionTitle": "Version 1.0.3 UE4.26"
+    },
+    {
+      "id": "2dea342f1f58470caf187b6858b4b111",
+      "appId": "SpeechToLife_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-07-23T00:00:00.000Z",
+      "releaseNote": "1.0.5 release",
+      "versionTitle": "Version 1.0.5 UE4.27"
+    },
+    {
+      "id": "f183ff559b3d41c7a988c315063bd3a4",
+      "appId": "SpeechToLife_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-07-23T00:00:00.000Z",
+      "releaseNote": "1.0.5 release",
+      "versionTitle": "Version 1.0.5 UE5"
+    },
+    {
+      "id": "fad5fb794b174a84bbb4f3794a70217e",
+      "appId": "SpeechToLife_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-11-15T00:00:00.000Z",
+      "releaseNote": "1.0.7 hotfix",
+      "versionTitle": "Version 1.0.7 UE5.1"
+    },
+    {
+      "id": "2516d9aba00d4bdb99dd2c53ac9fea10",
+      "appId": "SpeechToLife_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2023-05-28T00:00:00.000Z",
+      "releaseNote": "- Improved for Click-To-Talk recognition scenarios\n- Added new Dialog Choice matcher function",
+      "versionTitle": "Version 1.0.8 UE5.2"
+    },
+    {
+      "id": "4a2332250a674899befc117c080ca102",
+      "appId": "SpeechToLife_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-23T00:00:00.000Z",
+      "releaseNote": "- Improved for Click-To-Talk recognition scenarios\n- Added new Dialog Choice matcher function",
+      "versionTitle": "Version 1.0.8 UE5.3"
+    },
+    {
+      "id": "a1550f6104bf43d9a1c5e58abdac9bdc",
+      "appId": "SpeechToLife_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "- Improved for Click-To-Talk recognition scenarios\n- Added new Dialog Choice matcher function",
+      "versionTitle": "Version 1.0.8 UE5.4"
+    }
+  ],
+  "developer": "Solar Storm Interactive",
+  "developerId": "o-mrqsm49k9q8y645frd5fdm8ltgp9nz",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

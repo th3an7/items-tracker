@@ -1,0 +1,357 @@
+{
+  "id": "35bed3df291b4c33b3e24ad97b093f7d",
+  "title": "Runtime FBX Importer",
+  "description": "Asynchronously Import FBX files in your Unreal projects, in runtime.",
+  "longDescription": "<p>With this plugin, you can import FBX files along with all the textures ( diffuse, opacity, normal , specular) and color values. Highly detailed FBX scenes can be loaded very fast, and grouping of a single file into Nodes and Material sections further allows you to generate an entire scene comprising of various interactive actors, from a single FBX file.</p><p><br /></p><p>You will also be able to select and modify Material properties of the individual sections of final geometry in runtime. Each FBX scene is converted into a group of Procedural Mesh Components, each having unique material section and is a child of specific node, as read from the source FBX file. Custom collision meshes with UCX_ prefix can be created in the source file to apply collisions to the final Procedural Mesh Components.</p><p><br /></p><p>This plugin is very flexible and optimized to ensure maximum usability, allowing you to import from smaller props to an entire scene, dynamically. Asynchronous Import allows you to execute other tasks while the FBX is being imported.</p><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;qrB7rDunSrM&amp;feature&#61;youtu.be\" rel=\"nofollow\">Trailer</a></p><p><a href=\"https://drive.google.com/file/d/1_kIR1ZSYFjo6JkffaWq5j0ZG5nJ0XNNW/view?usp&#61;sharing\" rel=\"nofollow\">Playable Demo</a></p><p><a href=\"https://athian-docs.netlify.app/doc_fbximport.html\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://github.com/ar3emis/RuntimeFBXImporter.git\" rel=\"nofollow\"><strong>Example Projects</strong></a></p><p><a href=\"https://discord.gg/hsejuTW\" rel=\"nofollow\">Join me in Discord</a></p>",
+  "technicalDetails": "<p><strong>Features</strong>:</p><ol><li>Asynchronously import FBX files during runtime, ensuring the main thread is not blocked during the Import.</li><li>Automatically import relevant textures (Diffuse, Normal, Specular, Opacity) alongside the mesh, which can be further applied to the generated Procedural Mesh Components. Each component is uniquely assigned to a material index and serves as a child to a specific node, as per the source file&#39;s instructions.</li><li>Enable custom collisions on the generated mesh component using the &#39;UCX_&#39; prefix sourced from the original file.</li><li>Provide built-in support for designing a customizable material property layout for every Mesh Component.</li><li>Represent each imported FBX scene as a custom actor, housing all the Procedural Mesh Components derived from the nodes in the source file. This way, each FBX scene can host its own set of custom logic, empowering users to utilize this plugin in various scenarios. This ranges from importing larger scenes to interacting with smaller props like weapons, barrels, etc.</li><li>Integrate DataAssets for Custom Texture Path Mapping, allowing users to map custom path references and naming patterns for their mesh textures.</li><li>Visualize the imported FBX nodes in a TreeView Hierarchy format, providing a clear structural overview.</li></ol><p><br /></p><p><br /></p><p><br /></p><p><strong>Code Modules</strong>: Moduel Name - RuntimeFBXImport, Type - Runtime</p><p><strong>Number of Blueprints</strong>: 12</p><p><strong>Number of C&#43;&#43; Classes</strong>: 9</p><p><strong>Network Replicated</strong>: No</p><p><strong>Supported Development Platforms</strong>: Windows</p><p><strong>Supported Target Build Platforms</strong>: Windows</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RuntimeAssetImport1-1920x1080-fbf4601ac3045bd36e5247207d91b809.png",
+      "md5": "fbf4601ac3045bd36e5247207d91b809",
+      "width": 1920,
+      "height": 1080,
+      "size": 1899977,
+      "uploadedDate": "2019-05-20T10:18:54.233Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RuntimeAssetImport2-1920x1080-6413df3a469f863bfda0b85da85e1e6d.png",
+      "md5": "6413df3a469f863bfda0b85da85e1e6d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1857136,
+      "uploadedDate": "2019-05-20T10:18:54.737Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RuntimeAssetImport4-1920x1080-2302c4dc314082dcf4fcfbd24e57314b.png",
+      "md5": "2302c4dc314082dcf4fcfbd24e57314b",
+      "width": 1920,
+      "height": 1080,
+      "size": 2341996,
+      "uploadedDate": "2019-05-20T10:18:55.798Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RuntimeAssetImport5-1920x1080-5b4b3b5624139d1d5eb0fbd48605da6a.png",
+      "md5": "5b4b3b5624139d1d5eb0fbd48605da6a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1173723,
+      "uploadedDate": "2019-05-20T10:18:56.245Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RuntimeAssetImport3-1920x1080-81a0003dc081ea5c852c3b903e58d1a5.png",
+      "md5": "81a0003dc081ea5c852c3b903e58d1a5",
+      "width": 1920,
+      "height": 1080,
+      "size": 1620615,
+      "uploadedDate": "2019-05-20T10:18:55.299Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RuntimeAssetImport6-1920x1080-2cf4f516a17226fd917caf8800aa20ce.png",
+      "md5": "2cf4f516a17226fd917caf8800aa20ce",
+      "width": 1920,
+      "height": 1080,
+      "size": 1668386,
+      "uploadedDate": "2019-05-20T10:18:56.654Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RuntimeAssetImport7-1920x1080-3e2b37439656e3eacbd3e9526cd9eeab.png",
+      "md5": "3e2b37439656e3eacbd3e9526cd9eeab",
+      "width": 1920,
+      "height": 1080,
+      "size": 2143040,
+      "uploadedDate": "2019-05-20T10:18:57.081Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RuntimeFBXImport_thumb-284x284-e1148087319f8ea02b1d93538435c71d.png",
+      "md5": "e1148087319f8ea02b1d93538435c71d",
+      "width": 284,
+      "height": 284,
+      "size": 155813,
+      "uploadedDate": "2023-02-12T21:44:14.360Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RuntimeFBXImportAsynchronous_featured-894x488-34e1a063005ae3f011e46a85f247acbf.png",
+      "md5": "34e1a063005ae3f011e46a85f247acbf",
+      "width": 894,
+      "height": 488,
+      "size": 737575,
+      "uploadedDate": "2019-05-20T10:18:57.610Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RuntimeAssetImport1-1920x1080-fbf4601ac3045bd36e5247207d91b809_Snapshot.png",
+      "md5": "8f138e3196e87e5cfda0bafd8a820de0",
+      "width": 150,
+      "height": 74,
+      "size": 25690,
+      "uploadedDate": "2019-05-20T10:18:54.533Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RuntimeAssetImport2-1920x1080-6413df3a469f863bfda0b85da85e1e6d_Snapshot.png",
+      "md5": "26a2c76e28960d2d8b24d1a286d7d40a",
+      "width": 150,
+      "height": 74,
+      "size": 25723,
+      "uploadedDate": "2019-05-20T10:18:55.111Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RuntimeAssetImport3-1920x1080-81a0003dc081ea5c852c3b903e58d1a5_Snapshot.png",
+      "md5": "c60ba0bd502aa22a9f3268d093369c1b",
+      "width": 150,
+      "height": 74,
+      "size": 21414,
+      "uploadedDate": "2019-05-20T10:18:55.546Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RuntimeAssetImport4-1920x1080-2302c4dc314082dcf4fcfbd24e57314b_Snapshot.png",
+      "md5": "504f9c93e2127d5783a1b02a65363709",
+      "width": 150,
+      "height": 74,
+      "size": 28369,
+      "uploadedDate": "2019-05-20T10:18:56.113Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RuntimeAssetImport5-1920x1080-5b4b3b5624139d1d5eb0fbd48605da6a_Snapshot.png",
+      "md5": "1195d9bfee7ade996ffb7ea243c03b95",
+      "width": 150,
+      "height": 74,
+      "size": 17857,
+      "uploadedDate": "2019-05-20T10:18:56.463Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RuntimeAssetImport6-1920x1080-2cf4f516a17226fd917caf8800aa20ce_Snapshot.png",
+      "md5": "918934e9db246eadb979dc3d9cbb850c",
+      "width": 150,
+      "height": 74,
+      "size": 18120,
+      "uploadedDate": "2019-05-20T10:18:56.894Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RuntimeAssetImport7-1920x1080-3e2b37439656e3eacbd3e9526cd9eeab_Snapshot.png",
+      "md5": "ed8eb273719c554bc928c475717251ef",
+      "width": 150,
+      "height": 74,
+      "size": 25087,
+      "uploadedDate": "2019-05-20T10:18:57.359Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-06-13T19:32:45.019Z",
+  "lastModifiedDate": "2025-02-27T10:54:24.808Z",
+  "customAttributes": {},
+  "entitlementName": "35bed3df291b4c33b3e24ad97b093f7d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "c43fe5cb834949aeabf2235585510663",
+      "appId": "RuntimeFBXImport_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2019-07-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_421"
+    },
+    {
+      "id": "6cb871f21d4744bbb5605d302fe6cd9a",
+      "appId": "RuntimeFBXImport_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2019-05-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_422"
+    },
+    {
+      "id": "4b74a60f1a2d4597a118bf93df9bc12d",
+      "appId": "RuntimeFBXImport_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-09-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_423"
+    },
+    {
+      "id": "6002e74804a6466a9eddc53e121898ee",
+      "appId": "RuntimeFBXImport_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Win32"
+      ],
+      "dateAdded": "2019-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_424"
+    },
+    {
+      "id": "9a055bc8c4a44d2e9a286dd8099113ab",
+      "appId": "RuntimeFBXImport_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Windows"
+      ],
+      "dateAdded": "2020-05-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_425"
+    },
+    {
+      "id": "bb5b6b7c4ad144088e89cfa4862119f0",
+      "appId": "RuntimeFBXImport_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Oculus",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_426"
+    },
+    {
+      "id": "0ccdfe9c2e614c7c827bea9b87c261cb",
+      "appId": "RuntimeFBXImport_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2021-08-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_427"
+    },
+    {
+      "id": "e97b86d57a044ed881d0a0d9dd675521",
+      "appId": "RuntimeFBXImport_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_500"
+    },
+    {
+      "id": "848d87f8e0fc4e1fb6b0dbabd0e16d67",
+      "appId": "RuntimeFBXImport_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2022-12-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_510"
+    },
+    {
+      "id": "cb340a49daf246aca37057f9a31146af",
+      "appId": "RuntimeFBXImport_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2023-06-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_502"
+    },
+    {
+      "id": "9c57b10216df451aab9b14d18ae6deda",
+      "appId": "RuntimeFBXImport_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2023-09-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_503"
+    },
+    {
+      "id": "126a305f86594b82945ad703af460639",
+      "appId": "RuntimeFBXImport_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RuntimeFBXImport_504"
+    }
+  ],
+  "developer": "Athian Games",
+  "developerId": "o-qw55kvk2ahanfsu8sk8ff39lbuyun9",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,393 @@
+{
+  "id": "ba73a9d7d44d4989abb717fbf23e1d5b",
+  "title": "Game Systems",
+  "description": "Game Systems plugin is a plugin featuring multiple systems integrated with each other, mostly based on blueprints, and partially based on C++ to provide additional functionality.",
+  "longDescription": "<p>A playable demo - <a href=\"https://1drv.ms/u/s!AtN54Wyd09uAc7iYvLEvxZPALGk?e&#61;XWpPfu\" rel=\"nofollow\">Plugin Demo</a></p><p><br /></p><p>A brief overview of the implemented systems:</p><p>·        Blueprint based ability system supports the following:</p><p>o   AOEs around the caster&#39;s character.</p><p>o  Buffs.</p><p>o  Debuffs.</p><p>o  Projectiles.</p><p>o  Ranged AOEs (AOEs around the target).</p><p>o  Ability items (scrolls), which upon usage, fire the specified ability.</p><p>The system can be used by both the player and the AI (in the demo we have 2 NPC’s using the system).</p><p>·        Dialog system, which uses behavior trees in order to run the dialog. Supports the following:</p><p>o  Say a line to the player.</p><p>o  Ask questions with multiple possible answers.</p><p>o  Check which response was selected.</p><p>o  Say a line only once (this line will never be said again).</p><p>o  Hand quest.</p><p>o  Check if the player has the specified quest.</p><p>o  Check if a quest is complete.</p><p>o  Hand reward for a quest.</p><p>o  Take an item from the player’s inventory.</p><p>·        Equipment system, which is integrated as part of the inventory system (all the equipment is taken/returned to the inventory). Supports the following:</p><p>o  Showing the player’s character and rotating its preview.</p><p>o  Equipping / unequipping items using the character window. Each category (for example head armor) sees the item that fits it from the inventory.</p><p>o  Supports both skeletal mesh and static mesh.</p><p>o  Applying stats when equipping items.</p><p>o  The details of equipment are implemented using a data table.</p><p>·        HUD.</p><p>·        Main menu, pause menu.</p><p>·        Graphical options menu, including super-sampling (screen percentage) and rescaling the HUD size.</p><p>·        Inventory system supports the following:</p><p>o  Picking up items.</p><p>o  Using items.</p><p>o  Destroying items.</p><p>o  Splitting item stacks.</p><p>o  Chests that are saved in save game (when player loads, the chest will be emptied out).</p><p>o  Non-saved chests.</p><p>o  Synced storage (if a player opens storage of same class in different locations, they will all have same contents, can see in demo example, we placed storage in 3 places, 2 in the same level and 1 more in other levels).</p><p>o  Sorting by name/sell value/gap removal (just removes the gaps in inventory).</p><p>o  Auto-stacking items.</p><p>o  Searching the inventory using item name.</p><p>o  Items hot bar, which allows the player to use items directly without opening the inventory.</p><p>o  Currency, including currency transfer to storage / from storage.</p><p>o  All the widgets with slider and text box allows to specify the amount using the slider or by typing the amount directly into the text box. The slider and text box are synced.</p><p>·        Key bindings system, which allows the player to rebind keys for various actions. The system supports the following:</p><p>o  Up to 2 keys per action/axis, main and secondary.</p><p>o  Various HUD elements changed based on the current binding, for example, the action bar will change the displayed key based on the key selected by the player.</p><p>o  Clearing a key.</p><p>o  Ensures keys are unique, no two actions can have the same key.</p><p>o  Keys can be restored to default bindings.</p><p>·        Quest system, supporting the following:</p><p>o  Interaction quests (interact with the given target).</p><p>o  Collection quests (collect the given item). Removes the required items from inventory once the quest is complete.</p><p>o  Location quests (get to indicated location).</p><p>o  Killing quests (kill the specified target). Targets can be killed before the quest is accepted, and the quest will correctly update.</p><p>o  Quests can be multi-level, meaning, the quest starts in map A and continues to map B (we have examples of such quest in the demo).</p><p>o  Quest selection. If an NPC has multiple quests to hand, it&#39;s possible to select which one you want to take first.</p><p>o  Quests can have either a simple menu of accepting/rejecting or be combined with dialog (both exist as examples in the demo).</p><p>o  Quest markers indicating the objective.</p><p>·        Shop system supports the following:</p><p>o  Buying and selling items. Items can be infinite stock or finite stock.</p><p>o  Items buyback.</p><p>o  Bulk items purchase (allows to specify how many items to buy).</p><p>o  Inventory management while inside the store.</p><p>·        Skill system supports the following:</p><p>o  Perk points.</p><p>o  Skills that require 1 or more pre-requisites.</p><p>o  Integrated with other systems, for example, can give a new ability (can see in demo).</p><p>·        XP system which supports leveling up and giving level-up rewards.</p><p>·        Saving and loading system, which saves all the systems we have specified here.</p><p>·        All the systems support map transitions (can be seen in the demo).</p><p>Some systems come with tests to ensure correct implementation of user-created objects (such as new quests), and some of the systems got C&#43;&#43; implementation to help create new objects (such as new item fields grey out depending on the selections you make).</p>",
+  "technicalDetails": "<p>Features: </p><ul><li> Blueprint-based ability system.</li><li> Behavior tree dialog nodes.</li><li> Inventory system.</li><li>Equipment system.</li><li>Main menu.</li><li>Pause menu.</li><li>Graphical options menu.</li><li>Key bindings system.</li><li>Quest system.</li><li>Shop system.</li><li>Skill system.</li><li>XP system.</li><li>Saving and loading feature for all the systems.</li></ul><p>Code Modules:</p><ul><li> GameSystems module, runtime type.</li></ul><p><br /></p><p>Number of Blueprints: 75.</p><p>Number of C&#43;&#43; Classes: 12.</p><p>Network Replicated: No.</p><p>Supported Development Platforms: Windows 64 (Other platforms have not been tested).</p><p>Supported Target Build Platforms: Windows 64 (Other platforms have not been tested).</p><p>Documentation: <a href=\"https://1drv.ms/u/s!AtN54Wyd09uAazkEM8jWBHJcYSo?e&#61;NJKhfi\" rel=\"nofollow\">Plugin Documentation</a></p><p>Example Project: <a href=\"https://1drv.ms/u/s!AtN54Wyd09uAcFJCYstQrjBgfJc?e&#61;uTzYo0\" rel=\"nofollow\">Example Project</a></p><p>Important/Additional Notes: This plugin is meant to be used as a foundation to build upon.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenShot00003-1920x1080-e7719997e65fdcb06b4ac72ab4ee4c89.png",
+      "md5": "e7719997e65fdcb06b4ac72ab4ee4c89",
+      "width": 1920,
+      "height": 1080,
+      "size": 393754,
+      "uploadedDate": "2021-08-14T17:48:17.446Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenShot00002-1920x1080-36a8a469351a2fc28ba8a03425438382.png",
+      "md5": "36a8a469351a2fc28ba8a03425438382",
+      "width": 1920,
+      "height": 1080,
+      "size": 332059,
+      "uploadedDate": "2021-08-14T17:48:17.582Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenShot00001-1920x1080-7865cd6a843d5cc88a8da7d39bbea983.png",
+      "md5": "7865cd6a843d5cc88a8da7d39bbea983",
+      "width": 1920,
+      "height": 1080,
+      "size": 374808,
+      "uploadedDate": "2021-08-14T17:48:17.764Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenShot00000-1920x1080-6a07b2b3073aa5776d2eef9008254289.png",
+      "md5": "6a07b2b3073aa5776d2eef9008254289",
+      "width": 1920,
+      "height": 1080,
+      "size": 391135,
+      "uploadedDate": "2021-08-14T17:48:17.986Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS13-1920x1080-59948f3075e8bbc39022c9bec969799e.png",
+      "md5": "59948f3075e8bbc39022c9bec969799e",
+      "width": 1920,
+      "height": 1080,
+      "size": 320498,
+      "uploadedDate": "2021-08-14T17:48:18.147Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS12-1920x1080-cb8acf1628f0d20d3e83811e76faa769.png",
+      "md5": "cb8acf1628f0d20d3e83811e76faa769",
+      "width": 1920,
+      "height": 1080,
+      "size": 398994,
+      "uploadedDate": "2021-08-14T17:48:18.330Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS11-1920x1080-3fe8f49f625394e885dae8aeed6269ab.png",
+      "md5": "3fe8f49f625394e885dae8aeed6269ab",
+      "width": 1920,
+      "height": 1080,
+      "size": 366205,
+      "uploadedDate": "2021-08-14T17:48:18.511Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS10-1920x1080-b2656a0e14afefedbe2e069cc430c599.png",
+      "md5": "b2656a0e14afefedbe2e069cc430c599",
+      "width": 1920,
+      "height": 1080,
+      "size": 401703,
+      "uploadedDate": "2021-08-14T17:48:18.649Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS9-1920x1080-4db8f2f97ed6bf11cf088ea1cf49585f.png",
+      "md5": "4db8f2f97ed6bf11cf088ea1cf49585f",
+      "width": 1920,
+      "height": 1080,
+      "size": 355241,
+      "uploadedDate": "2021-08-14T17:48:18.857Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS8-1920x1080-8359bb66dc9c2fab57dd05bd592ddd27.png",
+      "md5": "8359bb66dc9c2fab57dd05bd592ddd27",
+      "width": 1920,
+      "height": 1080,
+      "size": 348214,
+      "uploadedDate": "2021-08-14T17:48:19.038Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS7-1920x1080-3f8e48d897a03d92e607e818afa04c7e.png",
+      "md5": "3f8e48d897a03d92e607e818afa04c7e",
+      "width": 1920,
+      "height": 1080,
+      "size": 370808,
+      "uploadedDate": "2021-08-14T17:48:19.204Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS6-1920x1080-df2bcf0ebb1babcd0ec4293b4f20be7e.png",
+      "md5": "df2bcf0ebb1babcd0ec4293b4f20be7e",
+      "width": 1920,
+      "height": 1080,
+      "size": 340090,
+      "uploadedDate": "2021-08-14T17:48:19.384Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS5-1920x1080-df873d7e49f56d63039d195bbe229cca.png",
+      "md5": "df873d7e49f56d63039d195bbe229cca",
+      "width": 1920,
+      "height": 1080,
+      "size": 383898,
+      "uploadedDate": "2021-08-14T17:48:19.557Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS4-1920x1080-862644451679a8654baaa9d4aba490e1.png",
+      "md5": "862644451679a8654baaa9d4aba490e1",
+      "width": 1920,
+      "height": 1080,
+      "size": 354647,
+      "uploadedDate": "2021-08-14T17:48:19.744Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS3-1920x1080-2d9dbe1ab243f84d7c3c38451eb908dc.png",
+      "md5": "2d9dbe1ab243f84d7c3c38451eb908dc",
+      "width": 1920,
+      "height": 1080,
+      "size": 321449,
+      "uploadedDate": "2021-08-14T17:48:19.934Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS1-1920x1080-c2e91d72f68704ee0e7207847e318295.jpg",
+      "md5": "c2e91d72f68704ee0e7207847e318295",
+      "width": 1920,
+      "height": 1080,
+      "size": 181306,
+      "uploadedDate": "2021-08-14T17:48:20.113Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SS2 Resized-1920x1080-6badfefd1d5bfa4e4485d4e73314219d.png",
+      "md5": "6badfefd1d5bfa4e4485d4e73314219d",
+      "width": 1920,
+      "height": 1080,
+      "size": 296046,
+      "uploadedDate": "2021-08-14T17:48:20.403Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/GameSystems_thumb-284x284-469bcc9b827440d161d5534de2281fb8.png",
+      "md5": "469bcc9b827440d161d5534de2281fb8",
+      "width": 284,
+      "height": 284,
+      "size": 16981,
+      "uploadedDate": "2021-08-14T17:48:20.521Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/GameSystems_featured-894x488-e9e1eecad7a81f4f6beed8a69e11338c.png",
+      "md5": "e9e1eecad7a81f4f6beed8a69e11338c",
+      "width": 894,
+      "height": 488,
+      "size": 239175,
+      "uploadedDate": "2021-08-14T17:48:20.574Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00003-1920x1080-e7719997e65fdcb06b4ac72ab4ee4c89_Snapshot.png",
+      "md5": "2bdf30bd2e6e7cb73fc428fdd540fec9",
+      "width": 150,
+      "height": 74,
+      "size": 3856,
+      "uploadedDate": "2021-08-14T17:48:17.526Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00002-1920x1080-36a8a469351a2fc28ba8a03425438382_Snapshot.png",
+      "md5": "3bf07c54df130635e79589877dc9127b",
+      "width": 150,
+      "height": 74,
+      "size": 4745,
+      "uploadedDate": "2021-08-14T17:48:17.672Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00001-1920x1080-7865cd6a843d5cc88a8da7d39bbea983_Snapshot.png",
+      "md5": "f0f059c1714ba4ccd6e49127a8bf2012",
+      "width": 150,
+      "height": 74,
+      "size": 4669,
+      "uploadedDate": "2021-08-14T17:48:17.838Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00000-1920x1080-6a07b2b3073aa5776d2eef9008254289_Snapshot.png",
+      "md5": "3fe6987aef5bc035411fdb283107013f",
+      "width": 150,
+      "height": 74,
+      "size": 3815,
+      "uploadedDate": "2021-08-14T17:48:18.067Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS13-1920x1080-59948f3075e8bbc39022c9bec969799e_Snapshot.png",
+      "md5": "170c61ed52ff510611db73ca95d488ea",
+      "width": 150,
+      "height": 74,
+      "size": 4071,
+      "uploadedDate": "2021-08-14T17:48:18.222Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS12-1920x1080-cb8acf1628f0d20d3e83811e76faa769_Snapshot.png",
+      "md5": "8fd364fd6e23f7a685ab28f72ded0d39",
+      "width": 150,
+      "height": 74,
+      "size": 3903,
+      "uploadedDate": "2021-08-14T17:48:18.400Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS11-1920x1080-3fe8f49f625394e885dae8aeed6269ab_Snapshot.png",
+      "md5": "2e6bb18794eaf912b9f2df4dbbf68091",
+      "width": 150,
+      "height": 74,
+      "size": 4422,
+      "uploadedDate": "2021-08-14T17:48:18.590Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS10-1920x1080-b2656a0e14afefedbe2e069cc430c599_Snapshot.png",
+      "md5": "6729fe4eb0088b999f9abb0ebf5a61e8",
+      "width": 150,
+      "height": 74,
+      "size": 4179,
+      "uploadedDate": "2021-08-14T17:48:18.728Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS9-1920x1080-4db8f2f97ed6bf11cf088ea1cf49585f_Snapshot.png",
+      "md5": "88831a2784ad0f7ac813fd19b1218420",
+      "width": 150,
+      "height": 74,
+      "size": 5051,
+      "uploadedDate": "2021-08-14T17:48:18.936Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS8-1920x1080-8359bb66dc9c2fab57dd05bd592ddd27_Snapshot.png",
+      "md5": "4fd89b2a03a733595d82f9be2d470e01",
+      "width": 150,
+      "height": 74,
+      "size": 4644,
+      "uploadedDate": "2021-08-14T17:48:19.114Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS7-1920x1080-3f8e48d897a03d92e607e818afa04c7e_Snapshot.png",
+      "md5": "10dbcf707b56608900608c36a87cbf05",
+      "width": 150,
+      "height": 74,
+      "size": 4532,
+      "uploadedDate": "2021-08-14T17:48:19.294Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS6-1920x1080-df2bcf0ebb1babcd0ec4293b4f20be7e_Snapshot.png",
+      "md5": "c32471c00592aa138daec00cf35fb6c7",
+      "width": 150,
+      "height": 74,
+      "size": 4198,
+      "uploadedDate": "2021-08-14T17:48:19.462Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS5-1920x1080-df873d7e49f56d63039d195bbe229cca_Snapshot.png",
+      "md5": "17ebb31db0cd76f546dc94d07131efd1",
+      "width": 150,
+      "height": 74,
+      "size": 4678,
+      "uploadedDate": "2021-08-14T17:48:19.635Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS4-1920x1080-862644451679a8654baaa9d4aba490e1_Snapshot.png",
+      "md5": "cf99e920df3f03fdf006919dd6e260ad",
+      "width": 150,
+      "height": 74,
+      "size": 4160,
+      "uploadedDate": "2021-08-14T17:48:19.820Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS3-1920x1080-2d9dbe1ab243f84d7c3c38451eb908dc_Snapshot.png",
+      "md5": "d6cf8d0319e29a75c73b09466ad85e82",
+      "width": 150,
+      "height": 74,
+      "size": 3632,
+      "uploadedDate": "2021-08-14T17:48:20.007Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS1-1920x1080-c2e91d72f68704ee0e7207847e318295_Snapshot.jpg",
+      "md5": "4ee12abad1187f9cf01a45137ec2611a",
+      "width": 150,
+      "height": 74,
+      "size": 4307,
+      "uploadedDate": "2021-08-14T17:48:20.317Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SS2 Resized-1920x1080-6badfefd1d5bfa4e4485d4e73314219d_Snapshot.png",
+      "md5": "78dcfe43dfc91d30e26988f3162aa0b7",
+      "width": 150,
+      "height": 74,
+      "size": 4185,
+      "uploadedDate": "2021-08-14T17:48:20.482Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-08-15T17:01:20.334Z",
+  "lastModifiedDate": "2024-10-15T13:24:24.713Z",
+  "entitlementName": "ba73a9d7d44d4989abb717fbf23e1d5b",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "fd3104aeb5714073a82c7b7859770b0f",
+      "appId": "GameSystems_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-08-14T00:00:00.000Z",
+      "releaseNote": "This plugin is meant can use as a foundation to build their product from.",
+      "versionTitle": "Game Systems"
+    },
+    {
+      "id": "23ca34ff786841b1b4d13d94e875c572",
+      "appId": "GameSystems_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-08-26T00:00:00.000Z",
+      "releaseNote": "This plugin is meant can use as a foundation to build their product from.",
+      "versionTitle": "Game Systems 4.27"
+    },
+    {
+      "id": "e8cab839cbdd487e950eec6bc47186b7",
+      "appId": "GameSystems_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-07-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Game Systems 5.0"
+    }
+  ],
+  "developer": "LiniStudios",
+  "developerId": "o-ad2cw3jzbjtd73t952u9eaxu4a8dbk",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,212 @@
+{
+  "id": "6446f95d373e4a4fa47e9a1501579485",
+  "title": "Optimization Tools",
+  "description": "Optimization Tools",
+  "longDescription": "<p>This plugin offers the following optimizations and tools :</p><p><br /></p><ul><li>SetDecalResponseToNoneForAllMaterials</li></ul><p>By default all Unreal materials have the decal response set to &#34;Color,Normal,Roughness&#34;. This is useful only for decals placed on</p><p>lightmapped surfaces. If your projects uses only dynamic lights, setting the DecalResponse to None will save up</p><p><br /></p><ul><li>AutomaticallySetFullyRoughToAllMaterials</li></ul><p>By default this option is off and is only meant for materials that will always have roughness &#61; 1. This option will search all materials that don&#39;t have any value connected</p><p>to the roughness output or where that value is constant or not needed like in the case of a few transparency options.</p><p><br /></p><ul><li>DetectAnimationsImportedAtResampleRateOver30FPS;</li></ul><p>This option will list all animations imported at over 30 frames per second. In some projects artist may have exported animations at unrealistic rates like say 240 FPS and then</p><p>those animations will consume a lot of memory, this will list in the output log a list of such animations and their resample rates.</p><p><br /></p><ul><li>OptimizeParticleSystems;</li></ul><p>Particle Systems&#39; lights can consume a lot of GPU miliseconds. This option will tick off VolumetricScatteringIntensity, bHighQualityLights and ShadowCastingLights options from</p><p>all Particle Systems so you don&#39;t have to search them manually in a large project.</p><p><br /></p><ul><li>DisplayMaterialParameterStats</li></ul><p>In large projects when creating a lot of materials and material instances there are situations where a specific scalar/vector parameter is not actually overriden in the material</p><p>instance. Having a material parameter instead of hardcoding that value in the material as a constant can be costly. Having a constant instead of a parameter can reduce</p><p>total shader instructions in some cases by ~14 instructions/parameter depending on how frequently it&#39;s used.</p><p><br /></p><p>Example output:</p><p>/Game/FantasyVillage/Materials/M_Puddle01.M_Puddle01 NumMaterialInstances&#61;6</p><p>Roughness 1 / 6</p><p>Color 6 / 6</p><p><br /></p><p>This material has 6 MaterialInstances, and only 1 overrides Roughness while all 6 override Color. It&#39;s safe to assume Color shouldn&#39;t be touched but you could make it so that</p><p>the overriden value from the instance is actually the default value in the material and then make that value constant, assuming you don&#39;t need any new instances of this material.</p><p><br /></p><p>LogTemp: /Game/FantasyVillage/Materials/M_MasterBlend.M_MasterBlend NumMaterialInstances&#61;4</p><p>Blend Invert Height 0 / 4</p><p>height contrast 0 / 4</p><p><br /></p><p>In this case you can go ahead and make these 2 parameters constant with the values from the base material. You&#39;ll save quite a few instructions with no visual impact.</p><p><br /></p><ul><li>AnalyzeMeshes</li></ul><p>This is a complex tool that analyzes frequent issues with assets, StaticMeshes in particular and lists them.</p><p>ScreenSizes</p><p>This will list all screensizes and triangle counts of all meshes. This can help identify issues like let&#39;s say all your trees have screen sizes 1,0.5,0.25,0.1 but</p><p>1 tree has 1,0.8,0.5,0.1 signaling that it will not change LODs similar to the other assets and will consume more GPU performance.</p><p>WrongLODOrder</p><p>This will list the meshes where LOD[n&#43;1] has more triangles than LOD[n]</p><p>ScreenSize0</p><p>This will list the meshes where any ScreenSize from any LOD is 0. All screensizes must be greater than 0.</p><p>DuplicateSections</p><p>This will list the meshes where a mesh has say 3 sections but only 1 material. This will hinder performance and usually signals a problem at export. You should merge all objects with the</p><p> same material into one prior to importing to unreal.</p><p>1LOD</p><p>This will list the meshes where a mesh only has 1 LOD. This may be intended or a forgotten asset that can hinder performance if left without LODs.</p><p>UVChannelsOver1</p><p>This will list all meshes&#39; Maximum UVChannels for each LOD level. While not an error, having more than one UV channel when not using lightmapping can consume more memory or create issues</p><p>where you&#39;re not sampling from the correct texcoord index.</p><p>ScreenSizesInvalidOrder</p><p>This will list the meshes where screensizes are not set up in descending order. For example a mesh with screen sizes 1,0.5,0.7,0.2 is in an invalid state and you should correct it.</p><p><br /></p><ul><li>MoveTextureSamplingDependenciesToVS</li></ul><p>(This option is still experimental) It will try to safely move all nodes connected to a texture sample&#39;s UV coordinates to the vertex shader. This will increase vertex shader instructions</p><p>and reduce pixel shader instructions. In most projects pixel shaders are the GPU bottleneck you need to watch out for so this option will increase performance.</p><p><br /></p><ul><li>DetectDuplicateFoliageInstances</li></ul><p>For some reason, the editor will sometimes save duplicate foliage instances in the same position/rotation. This is probably a bug and if this is the case it will show you what levels are affected</p><p><br /></p><ul><li>MoveStaticMeshesToFoliage</li></ul><p>If you have a lot of static mesh actors that you wish were turned into foliage for performance reasons, use this option. It will look into the level&#39;s foliage types and only the meshes</p><p>that have foliage types will get converted. No selection is required. If you don&#39;t have any foliage types yet, first create them and add them to the foliage type list in the foliage edit mode</p><p>then choose this option.</p><p><br /></p><ul><li>AssignLodForCollision</li></ul><p>Assigns LodForCollision on selected assets. Use ot.AssignLodForCollision.TargetLOD (default is 1) to specify which LOD to assign for collision.</p><p>This will reduce memory usage.</p><p><br /></p><ul><li>AssignOpaqueMaterialsToHigherLods</li></ul><p>Use this on selected assets to create opaque material instances where masked material instances are used (like trees &amp; foliage).</p><p>Use ot.AssignOpaqueMaterialsToMesh.StartLOD (default 2) to specify from which LOD level to assign opaque materials.</p><p>This will significantly improve performance.</p><p><br /></p><ul><li>DenanitizeAssets</li></ul><p>This option will disable nanite on all static meshes assets with a twist : Internally nanite produces &#34;replacement meshes&#34; for raytracing which typically have 1-4% of the triangles of a mesh with millions of triangles. This option fetches this percentage and makes LOD0 equal to that percentage then proceeds with adding up to 7 LOD levels up until the last LOD is under 100 triangles. Each subsequent LOD has half the screen size and half the triangles of the previous LOD.</p>",
+  "technicalDetails": "<p>Features:</p><p> - SetDecalResponseToNoneForAllMaterials</p><p>- AutomaticallySetFullyRoughToAllMaterials</p><p>- DetectAnimationsImportedAtResampleRateOver30FPS</p><p>- OptimizeParticleSystems</p><p>- DisplayMaterialParameterStats</p><p>- AnalyzeMeshes</p><p>- MoveTextureSamplingDependenciesToVS</p><p>- DetectDuplicateFoliageInstances</p><p>- MoveStaticMeshesToFoliage</p><p>- AssignLodForCollision</p><p>- AssignOpaqueMaterialsToHigherLods</p><p>- DenanitizeAssets</p><p>Code Modules:</p><ul><li> OptimizationTools ( Editor )</li></ul><p>Number of Blueprints:0</p><p>Number of C&#43;&#43; Classes:2</p><p>Network Replicated: (Yes/No) No</p><p>Supported Development Platforms: Win64, Max, Linux</p><p>Supported Target Build Platforms: None</p><p>Documentation: Documentation.txt inside package</p><p>Example Project: N/A</p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MenuOptions1920x1080-1920x1080-2aeee14513983fbf37831cd98db9af6c.png",
+      "md5": "2aeee14513983fbf37831cd98db9af6c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1271127,
+      "uploadedDate": "2021-03-30T20:23:17.684Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DisplayMaterialParameterStats-1920x1080-0514ebcd41b991e042f6508e1db053f7.png",
+      "md5": "0514ebcd41b991e042f6508e1db053f7",
+      "width": 1920,
+      "height": 1080,
+      "size": 158824,
+      "uploadedDate": "2021-04-05T18:03:21.238Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SetDecalResponseToNoneForAllMaterials-1920x1080-34b883b383c7405a8b0db68c19a22d91.png",
+      "md5": "34b883b383c7405a8b0db68c19a22d91",
+      "width": 1920,
+      "height": 1080,
+      "size": 171196,
+      "uploadedDate": "2021-04-05T18:03:21.622Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AutomaticallySetFullyRoughToAllMaterials-1920x1080-8e0d2de1cb5119fff104e0b3a468ef86.png",
+      "md5": "8e0d2de1cb5119fff104e0b3a468ef86",
+      "width": 1920,
+      "height": 1080,
+      "size": 178364,
+      "uploadedDate": "2021-04-05T18:03:20.912Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/OptimizationTools_thumb-284x284-c69677fd24833648cb4ea23a5739d90c.png",
+      "md5": "c69677fd24833648cb4ea23a5739d90c",
+      "width": 284,
+      "height": 284,
+      "size": 3277,
+      "uploadedDate": "2021-03-30T20:23:18.011Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/OptimizationTools_featured-894x488-291b4293536d700152b944b5c8f4153e.png",
+      "md5": "291b4293536d700152b944b5c8f4153e",
+      "width": 894,
+      "height": 488,
+      "size": 303941,
+      "uploadedDate": "2021-03-30T20:23:18.121Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AutomaticallySetFullyRoughToAllMaterials-1920x1080-8e0d2de1cb5119fff104e0b3a468ef86_Snapshot.png",
+      "md5": "a1cb3341f80445a962a1c2ce7a02cb47",
+      "width": 150,
+      "height": 74,
+      "size": 3493,
+      "uploadedDate": "2021-04-05T18:03:21.134Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisplayMaterialParameterStats-1920x1080-0514ebcd41b991e042f6508e1db053f7_Snapshot.png",
+      "md5": "f39548cc88ee3cba3073a525ac2a6667",
+      "width": 150,
+      "height": 74,
+      "size": 3061,
+      "uploadedDate": "2021-04-05T18:03:21.458Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SetDecalResponseToNoneForAllMaterials-1920x1080-34b883b383c7405a8b0db68c19a22d91_Snapshot.png",
+      "md5": "59fb33507a07dcbd209854c93c2fe04d",
+      "width": 150,
+      "height": 74,
+      "size": 3525,
+      "uploadedDate": "2021-04-05T18:03:21.882Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MenuOptions1920x1080-1920x1080-2aeee14513983fbf37831cd98db9af6c_Snapshot.png",
+      "md5": "09a5185c30c37889517492a8eb3167d5",
+      "width": 150,
+      "height": 74,
+      "size": 4446,
+      "uploadedDate": "2021-03-30T20:23:17.959Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-04-05T18:00:53.531Z",
+  "lastModifiedDate": "2024-11-17T10:20:24.963Z",
+  "customAttributes": {},
+  "entitlementName": "6446f95d373e4a4fa47e9a1501579485",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "9c1bfc1c07184619b8275c028d33efb4",
+      "appId": "OptimizationTools_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-03-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.03"
+    },
+    {
+      "id": "e17f4bc83f774a509f646b8eb2652244",
+      "appId": "OptimizationTools_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-08-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.04"
+    },
+    {
+      "id": "9598be2cbdc548ccb1a0e0aada16a996",
+      "appId": "OptimizationTools_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-07-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.07"
+    },
+    {
+      "id": "c8f6f082779841319d1fb4fe7a83c280",
+      "appId": "OptimizationTools_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.08"
+    },
+    {
+      "id": "b569b8fc3cdc43bfa79ab96b0792f567",
+      "appId": "OptimizationTools_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.09_5_2"
+    },
+    {
+      "id": "c242fa536a66400fa212effc812d5eb7",
+      "appId": "OptimizationTools_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.09_5_3"
+    },
+    {
+      "id": "5c878084265547249a6c5ee047178b19",
+      "appId": "OptimizationTools_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-10-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.09_5_4"
+    }
+  ],
+  "developer": "CiprianStanciu",
+  "developerId": "o-9qy3vtgmknyubzvuxxf4c4z9r5bpmh",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,382 @@
+{
+  "id": "2e055f19d8a240069b1c87462c0280b7",
+  "title": "Discord Messenger",
+  "description": "Unreal Engine Plugin to send messages to Discord during runtime using HTTP Request.",
+  "longDescription": "<p><strong>UPDATE 07/04/2022: </strong>Added UE5.0 Support!</p><p><br /></p><p><strong>UPDATE 03/09/2021: </strong>Here are the latest patch notes for UE4.27:</p><ul><li>Removed &#34;IncludeEmbed&#34; argument as Discord Messenger now figures out internally if an embed was attached or not</li><li>Embed color can now be defined directly from a color picker window in the graph editor. No more need for manual hex to decimal conversion.</li><li>Improved error handling and logging</li><li>Added tooltip comments</li><li>Reduced function-call overhead</li><li>Updated documentation</li></ul><p><br /></p><p><strong>How to Use</strong></p><ol><li>Setup a Discord webhook (<a href=\"https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks\" rel=\"nofollow\">https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks</a>)</li><li>Call SendDiscordMessage from DiscordMessenger in any blueprint</li><li>Set webhook URL and fill in atleast one of these arguments: &#34;Content&#34;, &#34;Embed&#34; and/or &#34;Files&#34;</li></ol>",
+  "technicalDetails": "<p>Features:</p><ul><li>Send automated messages, embeds and/or files to Discord using the flexible SendDiscordMessage blueprint function</li><li>Supports sending files of type: .png, .jpg, .gif, .txt and .mp4</li><li>Can be called in any blueprint</li></ul><p><br /></p><p>Code Modules:</p><ul><li> DiscordMessenger [Runtime]</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 2</p><p>Supported Development Platforms: Windows, Mac, Linux, Android, IOS</p><p>Supported Target Build Platforms: Windows, Mac, Linux, Android, IOS</p><p>Documentation:</p><ul><li>Post-UE4.27: <a href=\"https://docs.google.com/document/d/1q2KXQiDCMoY5KcidiuSvI4i_o0K3wpLOM9PgFWdSvh4/edit?usp&#61;sharing\" rel=\"nofollow\">https://docs.google.com/document/d/1q2KXQiDCMoY5KcidiuSvI4i_o0K3wpLOM9PgFWdSvh4/edit?usp&#61;sharing</a></li><li>Pre-UE4.27: <a href=\"https://docs.google.com/document/d/1UMT_zgP61_wqZhtAWcjBnn_O7p8_PqYlWNUZOvqU-Ys/edit?usp&#61;sharing\" rel=\"nofollow\">https://docs.google.com/document/d/1UMT_zgP61_wqZhtAWcjBnn_O7p8_PqYlWNUZOvqU-Ys/edit?usp&#61;sharing</a></li></ul><p>Important/Additional Notes:</p><ul><li>Discord&#39;s upload limit for files is max 8MB</li><li>You cannot include more than 10 files in one HTTP Request</li><li>Supported file types are: .png, .jpg, .gif, .txt and .mp4 (Additional file types can be added by modifying source code)</li><li>Embed image requires the file name of one of the included files. You cannot have more than one embed image in a single embed</li><li>Atleast one of these arguments must contain data: &#34;Content&#34;, &#34;Embed&#34; and/or &#34;Files&#34;</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/logobig-1920x1080-b373825b2670c31956a7397e24d1a9b4.png",
+      "md5": "b373825b2670c31956a7397e24d1a9b4",
+      "width": 1920,
+      "height": 1080,
+      "size": 171790,
+      "uploadedDate": "2020-11-07T13:54:32.749Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AllExamples-1920x1080-ff06a703a2ef48213407551f6c132e1b.jpg",
+      "md5": "ff06a703a2ef48213407551f6c132e1b",
+      "width": 1920,
+      "height": 1080,
+      "size": 262381,
+      "uploadedDate": "2021-09-03T16:41:39.590Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Simple-1920x1080-e4574ae437c9ad9f8abf1dc248825712.jpg",
+      "md5": "e4574ae437c9ad9f8abf1dc248825712",
+      "width": 1920,
+      "height": 1080,
+      "size": 114919,
+      "uploadedDate": "2021-09-03T16:41:39.920Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Embed-1920x1080-232e95a2c13263602eeb889924233d09.jpg",
+      "md5": "232e95a2c13263602eeb889924233d09",
+      "width": 1920,
+      "height": 1080,
+      "size": 155930,
+      "uploadedDate": "2021-09-03T16:41:40.240Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ComplexEmbed-1920x1080-affb1b4a94affd811c798a98649cdd44.jpg",
+      "md5": "affb1b4a94affd811c798a98649cdd44",
+      "width": 1920,
+      "height": 1080,
+      "size": 272413,
+      "uploadedDate": "2021-09-03T16:41:40.561Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EmbedWithFiles-1920x1080-395bbfaf9348832819f6d63b27176cac.jpg",
+      "md5": "395bbfaf9348832819f6d63b27176cac",
+      "width": 1920,
+      "height": 1080,
+      "size": 244416,
+      "uploadedDate": "2021-09-03T16:41:41.010Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Structs-1920x1080-784729b577ff317de8947378c6e72cda.jpg",
+      "md5": "784729b577ff317de8947378c6e72cda",
+      "width": 1920,
+      "height": 1080,
+      "size": 169155,
+      "uploadedDate": "2021-09-03T16:41:41.307Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DiscordMessenger_thumb-284x284-0c19e7dc9b716b21efbce7ad89d16fd2.png",
+      "md5": "0c19e7dc9b716b21efbce7ad89d16fd2",
+      "width": 284,
+      "height": 284,
+      "size": 13674,
+      "uploadedDate": "2020-11-07T13:54:34.920Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DiscordMessenger_featured-894x488-2bcd9d7dbda92bb752c1de37c6cd081d.png",
+      "md5": "2bcd9d7dbda92bb752c1de37c6cd081d",
+      "width": 894,
+      "height": 488,
+      "size": 28992,
+      "uploadedDate": "2020-11-07T13:54:34.961Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AllExamples-1920x1080-ff06a703a2ef48213407551f6c132e1b_Snapshot.jpg",
+      "md5": "5612275db66486440280241e3206bf76",
+      "width": 150,
+      "height": 74,
+      "size": 4257,
+      "uploadedDate": "2021-09-03T16:41:39.798Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Simple-1920x1080-e4574ae437c9ad9f8abf1dc248825712_Snapshot.jpg",
+      "md5": "327778cfabe75e71590fcec18b39ce9b",
+      "width": 150,
+      "height": 74,
+      "size": 2598,
+      "uploadedDate": "2021-09-03T16:41:40.118Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Embed-1920x1080-232e95a2c13263602eeb889924233d09_Snapshot.jpg",
+      "md5": "e27f2b0d7e29b4043553641db44cb476",
+      "width": 150,
+      "height": 74,
+      "size": 3363,
+      "uploadedDate": "2021-09-03T16:41:40.445Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ComplexEmbed-1920x1080-affb1b4a94affd811c798a98649cdd44_Snapshot.jpg",
+      "md5": "6155c43254e2e6b02955ca17ef0a4aa8",
+      "width": 150,
+      "height": 74,
+      "size": 4712,
+      "uploadedDate": "2021-09-03T16:41:40.883Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EmbedWithFiles-1920x1080-395bbfaf9348832819f6d63b27176cac_Snapshot.jpg",
+      "md5": "9b63ac09538962ddd235230b275ebdbd",
+      "width": 150,
+      "height": 74,
+      "size": 4057,
+      "uploadedDate": "2021-09-03T16:41:41.214Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Structs-1920x1080-784729b577ff317de8947378c6e72cda_Snapshot.jpg",
+      "md5": "159667b16c72351c69eab489d8ba6522",
+      "width": 150,
+      "height": 74,
+      "size": 3532,
+      "uploadedDate": "2021-09-03T16:41:41.518Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/logobig-1920x1080-b373825b2670c31956a7397e24d1a9b4_Snapshot.png",
+      "md5": "f323b8d5e1bb707c957eb9e687d8848c",
+      "width": 150,
+      "height": 74,
+      "size": 3151,
+      "uploadedDate": "2020-11-07T13:54:33.033Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/examples-1920x1080-6f24e590e4ef8c9c13bda833ce974eb1_Snapshot.png",
+      "md5": "c6cfc4d883fb06d55f0be2d4d4a7d0e7",
+      "width": 150,
+      "height": 74,
+      "size": 4486,
+      "uploadedDate": "2020-11-07T13:54:33.383Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/simpleexample-1920x1080-cf01b729b5183bb7273438955aa1ecf7_Snapshot.png",
+      "md5": "cf911edeb3d3aa8b3e0c8a426e8f59f7",
+      "width": 150,
+      "height": 74,
+      "size": 4465,
+      "uploadedDate": "2020-11-07T13:54:33.780Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/embedexample-1920x1080-2f1c90800121e988f620afceb8f9d9cf_Snapshot.png",
+      "md5": "45e3a8d5639cc3a92240d2b7a01fc384",
+      "width": 150,
+      "height": 74,
+      "size": 3555,
+      "uploadedDate": "2020-11-07T13:54:34.145Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/complexexample-1920x1080-220d2920d82b4ab5e6270bcad33cec8e_Snapshot.png",
+      "md5": "513ab0abbf84eb0b926f594b58ee39cf",
+      "width": 150,
+      "height": 74,
+      "size": 4431,
+      "uploadedDate": "2020-11-07T13:54:34.506Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/embedwithimagesexample-1920x1080-b02bb7a1f24ec3ccaa5f451276b76f2c_Snapshot.png",
+      "md5": "c852db04886a1a8d700a918789fb6e0a",
+      "width": 150,
+      "height": 74,
+      "size": 4170,
+      "uploadedDate": "2020-11-07T13:54:34.881Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-11-10T21:12:59.702Z",
+  "lastModifiedDate": "2024-10-05T07:13:16.896Z",
+  "customAttributes": {},
+  "entitlementName": "2e055f19d8a240069b1c87462c0280b7",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "a8d98d783a6347cbb63ff4af037bd15f",
+      "appId": "DiscordMessenger_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-11-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DiscordMessengerUE4.24"
+    },
+    {
+      "id": "50ed6eb96be94990a0dc890595a8df73",
+      "appId": "DiscordMessenger_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-11-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DiscordMessengerUE4.25"
+    },
+    {
+      "id": "2efcf38d07d44fd19039fa364fa2175c",
+      "appId": "DiscordMessenger_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-12-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DiscordMessengerUE4.26"
+    },
+    {
+      "id": "80df50cb728d415eb0f38ddfd430b91f",
+      "appId": "DiscordMessenger_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-09-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DiscordMessengerUE4.27"
+    },
+    {
+      "id": "a4f8ab6bd7894f8d9960f7afa78bfd26",
+      "appId": "DiscordMessenger_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": ".",
+      "versionTitle": "DiscordMessengerUE5.0"
+    },
+    {
+      "id": "4b8c0803e7e346088f8944c7bb506c2b",
+      "appId": "DiscordMessenger_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Mac",
+        "Linux",
+        "iOS",
+        "Windows",
+        "Win32",
+        "Android"
+      ],
+      "dateAdded": "2022-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DiscordMessengerUE5.1"
+    },
+    {
+      "id": "48431f4960ff4de4969587ae310bc15a",
+      "appId": "DiscordMessenger_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2023-06-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DiscordMessengerUE5.2"
+    },
+    {
+      "id": "e975940186af4c94b5ec8c3f7304bdda",
+      "appId": "DiscordMessenger_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DiscordMessengerUE5.3"
+    },
+    {
+      "id": "6d95c81ce2b84b13af582db92b3f0d4b",
+      "appId": "DiscordMessenger_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2024-04-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DiscordMessengerUE5.4"
+    }
+  ],
+  "developer": "David ten Kate",
+  "developerId": "o-5zgjb8tasuzbgazahxdv2sc7uxu2lk",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,359 @@
+{
+  "id": "7bc8beb4435849bd8846d945d2509530",
+  "title": "Formation System v2",
+  "description": "A system for implementing formations and easily allowing characters to move in formation.",
+  "longDescription": "<p>The Formation System allows you to easily add formations to your game. Make AI characters follow you in formation, make groups move in formation, or use for any situation where you need characters to move relative to each other.</p><p><br /></p><p>Promo Video: <a href=\"https://youtu.be/9li9xoqbbaA\" rel=\"nofollow\">https://youtu.be/9li9xoqbbaA</a></p><p>Documentation: <a href=\"https://codesquirl.github.io/FormationSystem/\" rel=\"nofollow\">https://codesquirl.github.io/FormationSystem/</a></p><p>Example Project: <a href=\"https://github.com/codesquirl/FormationSystemExample\" rel=\"nofollow\">https://github.com/codesquirl/FormationSystemExample</a></p><p>Formations Tool: <a href=\"https://github.com/codesquirl/FormationsTool\" rel=\"nofollow\">https://github.com/codesquirl/FormationsTool</a></p><p><br /></p><p>Version 2.5.4:</p><ul><li>Updated compatibility to UE 5.4</li><li>Added Validation check when fetching formation positions</li><li>Fix to correctly set member state when changing group leader</li></ul><p><br /></p><p>Version 2.5.3:</p><ul><li>Updated compatibility to UE 5.3</li></ul><p><br /></p><p>Version 2.5.2:</p><ul><li>Updated compatibility to UE 5.2</li></ul><p><br /></p><p>Version 2.5.1:</p><ul><li>Updated compatibility to UE 5.1</li><li>Added Member validation checks during UpdateMembers</li><li>Added Group validation check during DisbandFormationGroup</li><li>Made sure CreateFormationGroup can only be called by the Authority.</li><li>Added CreateFormationGroupWithLeader function that returns the group.</li><li>Added CreateFormationGroupPinned function to create groups without a leader.</li></ul><p><br /></p><p>Version 2:</p><p>A complete rewrite from the ground up to include multiplayer capabilities, make it easier to use and add suggested features like formation spread. The example project now includes an RTS example.</p><p><br /></p><p>Updated for UE5.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Formations Manager for central formation and group management</li><li>Formation Component for formation members and convenient system access.</li><li>Custom formations</li><li>Variable sized formations</li><li>Easily change formation at runtime.</li><li>Use from either Blueprint or C&#43;&#43;</li></ul><p>Code Modules:</p><ul><li>FormationSystem (Runtime)</li></ul><p>Number of Blueprints: 1</p><p>Number of C&#43;&#43; Classes: 4</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Windows, Linux (See notes below)</p><p>Supported Target Build Platforms: Win32, Win64, Linux (See notes below)</p><p>Documentation: https://codesquirl.github.io/FormationSystem/</p><p>Example Project: https://github.com/codesquirl/FormationSystemExample</p><p>Important/Additional Notes:</p><p>This plugin should work for most platforms and build targets, but has only been tested on Windows and cross-compiled for Linux. Feedback on other platforms would be appreciated, and I would be happy to work with you to resolve any issues that may arise in supporting additional platforms. </p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Simple-1920x1080-8e560f3138ad60eb274bf86e27073e71.png",
+      "md5": "8e560f3138ad60eb274bf86e27073e71",
+      "width": 1920,
+      "height": 1080,
+      "size": 2534498,
+      "uploadedDate": "2021-02-12T11:06:15.610Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GridH-1920x1080-6440150b4b72f72edfe4fb5856901f56.png",
+      "md5": "6440150b4b72f72edfe4fb5856901f56",
+      "width": 1920,
+      "height": 1080,
+      "size": 2368170,
+      "uploadedDate": "2021-02-12T11:06:16.291Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GridHDebug-1920x1080-f976bb6f6f4718d3917ab47a96906d90.png",
+      "md5": "f976bb6f6f4718d3917ab47a96906d90",
+      "width": 1920,
+      "height": 1080,
+      "size": 2482355,
+      "uploadedDate": "2021-02-12T11:06:16.942Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GridHFormationTool-1920x1080-42428ddd212a2e9d35a0cc51bbcb35be.png",
+      "md5": "42428ddd212a2e9d35a0cc51bbcb35be",
+      "width": 1920,
+      "height": 1080,
+      "size": 147963,
+      "uploadedDate": "2021-02-12T11:06:17.494Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SimpleBirb-1920x1080-e046a4eb5cf90a34f939f303b8a15817.png",
+      "md5": "e046a4eb5cf90a34f939f303b8a15817",
+      "width": 1920,
+      "height": 1080,
+      "size": 2664879,
+      "uploadedDate": "2021-02-12T11:06:17.968Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Birb-1920x1080-3f26d5be1657900f12a2db4705eac163.png",
+      "md5": "3f26d5be1657900f12a2db4705eac163",
+      "width": 1920,
+      "height": 1080,
+      "size": 2932068,
+      "uploadedDate": "2021-02-12T11:06:18.638Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BirbDebug-1920x1080-ad677fe43c2f7215777fd9cb530a5ed6.png",
+      "md5": "ad677fe43c2f7215777fd9cb530a5ed6",
+      "width": 1920,
+      "height": 1080,
+      "size": 2922636,
+      "uploadedDate": "2021-02-12T11:06:19.265Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BirbFormationToolBirb-1920x1080-77af2708aca0485dcf3f3004a52ac566.png",
+      "md5": "77af2708aca0485dcf3f3004a52ac566",
+      "width": 1920,
+      "height": 1080,
+      "size": 179817,
+      "uploadedDate": "2021-02-12T11:06:19.743Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Phalanx-1920x1080-62a21f5303062e57f5df43f81745c614.png",
+      "md5": "62a21f5303062e57f5df43f81745c614",
+      "width": 1920,
+      "height": 1080,
+      "size": 2647531,
+      "uploadedDate": "2021-02-12T11:06:20.166Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PhalanxDebug-1920x1080-35520fdbbaf2a77d125b96567aed431b.png",
+      "md5": "35520fdbbaf2a77d125b96567aed431b",
+      "width": 1920,
+      "height": 1080,
+      "size": 2861455,
+      "uploadedDate": "2021-02-12T11:06:20.774Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/networked-1920x1080-cea9e5f1edcf90781d3e2154783feeb0.png",
+      "md5": "cea9e5f1edcf90781d3e2154783feeb0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1694270,
+      "uploadedDate": "2021-03-13T08:00:08.113Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/FormationSystem_thumb-284x284-8dc29feb460ceb857d02b9f91c84efaa.png",
+      "md5": "8dc29feb460ceb857d02b9f91c84efaa",
+      "width": 284,
+      "height": 284,
+      "size": 166531,
+      "uploadedDate": "2021-02-12T11:06:21.204Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/FormationSystemv2_featured-894x488-e4a487684cf26f501daffdce26ae8819.png",
+      "md5": "e4a487684cf26f501daffdce26ae8819",
+      "width": 894,
+      "height": 488,
+      "size": 732265,
+      "uploadedDate": "2021-03-13T08:00:08.575Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/networked-1920x1080-cea9e5f1edcf90781d3e2154783feeb0_Snapshot.png",
+      "md5": "eb985f6ab459e2766a2c1726fd1af82b",
+      "width": 150,
+      "height": 74,
+      "size": 6135,
+      "uploadedDate": "2021-03-13T08:00:08.435Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprints-1920x1080-3e528c7aa61a607e343e207028b44e70_Snapshot.png",
+      "md5": "6056e49e2cae03ddc5ba26ef80793ea3",
+      "width": 150,
+      "height": 74,
+      "size": 4558,
+      "uploadedDate": "2021-02-12T11:26:41.999Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Simple-1920x1080-8e560f3138ad60eb274bf86e27073e71_Snapshot.png",
+      "md5": "26c964b3098d0992300b0b34860589f1",
+      "width": 150,
+      "height": 74,
+      "size": 6535,
+      "uploadedDate": "2021-02-12T11:06:16.057Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GridH-1920x1080-6440150b4b72f72edfe4fb5856901f56_Snapshot.png",
+      "md5": "5430e2184c9a1291b4cd345cb013c978",
+      "width": 150,
+      "height": 74,
+      "size": 5514,
+      "uploadedDate": "2021-02-12T11:06:16.692Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GridHDebug-1920x1080-f976bb6f6f4718d3917ab47a96906d90_Snapshot.png",
+      "md5": "5f0475ed1583b41a9f991912c9169155",
+      "width": 150,
+      "height": 74,
+      "size": 5625,
+      "uploadedDate": "2021-02-12T11:06:17.349Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GridHFormationTool-1920x1080-42428ddd212a2e9d35a0cc51bbcb35be_Snapshot.png",
+      "md5": "43e477fbd634fc33c51887b6a6f0f826",
+      "width": 150,
+      "height": 74,
+      "size": 3363,
+      "uploadedDate": "2021-02-12T11:06:17.714Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SimpleBirb-1920x1080-e046a4eb5cf90a34f939f303b8a15817_Snapshot.png",
+      "md5": "54babf23a461a6ff0e09689f6c896e46",
+      "width": 150,
+      "height": 74,
+      "size": 5858,
+      "uploadedDate": "2021-02-12T11:06:18.395Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Birb-1920x1080-3f26d5be1657900f12a2db4705eac163_Snapshot.png",
+      "md5": "4d8d9b0ca8525ef779a39f615e5838c1",
+      "width": 150,
+      "height": 74,
+      "size": 3589,
+      "uploadedDate": "2021-02-12T11:06:19.006Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BirbDebug-1920x1080-ad677fe43c2f7215777fd9cb530a5ed6_Snapshot.png",
+      "md5": "f3afc0986d54779428f6e17862f7685e",
+      "width": 150,
+      "height": 74,
+      "size": 3936,
+      "uploadedDate": "2021-02-12T11:06:19.614Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BirbFormationToolBirb-1920x1080-77af2708aca0485dcf3f3004a52ac566_Snapshot.png",
+      "md5": "80e2f44b33ed02868e4149699b37b56a",
+      "width": 150,
+      "height": 74,
+      "size": 4044,
+      "uploadedDate": "2021-02-12T11:06:19.969Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Phalanx-1920x1080-62a21f5303062e57f5df43f81745c614_Snapshot.png",
+      "md5": "70f0dbac428096951047662eed0c9b54",
+      "width": 150,
+      "height": 74,
+      "size": 3225,
+      "uploadedDate": "2021-02-12T11:06:20.499Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PhalanxDebug-1920x1080-35520fdbbaf2a77d125b96567aed431b_Snapshot.png",
+      "md5": "8f27b4bbc41817945e792fc3a067c1b6",
+      "width": 150,
+      "height": 74,
+      "size": 3329,
+      "uploadedDate": "2021-02-12T11:06:21.120Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-02-17T14:34:16.783Z",
+  "lastModifiedDate": "2025-01-11T05:18:38.964Z",
+  "customAttributes": {},
+  "entitlementName": "7bc8beb4435849bd8846d945d2509530",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "0026035252e94040b6c50147d8266d78",
+      "appId": "FormationSystem_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2021-02-12T00:00:00.000Z",
+      "releaseNote": "[2.0.0]\n* Complete rewrite for multiplayer.\n\n[1.0.2]\n* Added required Category to Blueprint Properties",
+      "versionTitle": "v2.0.0"
+    },
+    {
+      "id": "595f8b1784aa48da92e51ebd668ce624",
+      "appId": "FormationSystem_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-08-23T00:00:00.000Z",
+      "releaseNote": "Upgrade to UE4.27",
+      "versionTitle": "v2.0.0-4.27"
+    },
+    {
+      "id": "ddfde1ad830c421298b97f810b9f3ef0",
+      "appId": "FormationSystem_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "Upgrade to UE5.0",
+      "versionTitle": "v2.5.0"
+    },
+    {
+      "id": "969cbd440afa4752b5c8f645abe0cd93",
+      "appId": "FormationSystem_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-12-31T00:00:00.000Z",
+      "releaseNote": "Update to UE5.1\nSeveral bug fixes",
+      "versionTitle": "v2.5.1"
+    },
+    {
+      "id": "84f6b68373c54f108e72576c060b2c1c",
+      "appId": "FormationSystem_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2023-07-20T00:00:00.000Z",
+      "releaseNote": "Update to UE5.2",
+      "versionTitle": "v2.5.2"
+    },
+    {
+      "id": "598a539f5c024c72b8b97eac243678a6",
+      "appId": "FormationSystem_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2023-09-09T00:00:00.000Z",
+      "releaseNote": "Update to UE 5.3",
+      "versionTitle": "v2.5.3"
+    },
+    {
+      "id": "437ca8aa33f8469ea0eb4ff1cdcb45b1",
+      "appId": "FormationSystem_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-04-29T00:00:00.000Z",
+      "releaseNote": "Upgrade to UE 5.4",
+      "versionTitle": "v2.5.4"
+    }
+  ],
+  "developer": "CodeSquirl",
+  "developerId": "o-qz9jxr96qpfq86yuup8mrfws9bxk84",
+  "endOfSupport": false,
+  "unsearchable": false
+}

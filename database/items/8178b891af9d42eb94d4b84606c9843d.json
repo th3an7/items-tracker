@@ -1,0 +1,210 @@
+{
+  "id": "8178b891af9d42eb94d4b84606c9843d",
+  "title": "Parametric Cornell Box",
+  "description": "A parametric Cornell Box Actor blueprint, with fully configurable box geometry, lighting system, walls material, and box content.",
+  "longDescription": "<p>This product provides a blueprint allowing to create of fully parametric <strong>Cornell Boxes</strong>.</p><p><br /></p><p>A <a href=\"https://en.wikipedia.org/wiki/Cornell_box\" rel=\"nofollow\">Cornell Box</a> is a common test case used by graphics professionals and researchers to measure the quality of a global illumination and light transport method, such as - in the case of Unreal Engine 5 - Lumen, Path Tracing, and Static Lighting.</p><p><br /></p><p>The purpose of this product is to be used as a tool in the Editor to analyze and understand Lumen behavior (direct lighting, specular lighting, global illumination, reflections/mirrors) in a tightly controlled environment: a Cornell Box. The main effect to observe is the color of the walls &#34;bleeding&#34; on nearby objects (diffuse interreflections). Accuracy of soft-shadowing as well as quality of specular reflections can be analyzed too.</p><p><br /></p><p>The functionality is exposed in the Editor as a blueprint actor: to instantiate a new Cornell Box, simply drag and drop the <strong><em>BP_CornellBox</em></strong><em> </em>blueprint (in the <em>Blueprints</em> subfolder) in the scene. The newly instanced Box is then configurable through dedicated attributes in the <em>Details</em> panel of the actor: dimensions, lighting setup, walls material and colors, and box contents.</p><p><br /></p><p>Boxes are fully reconstructed each time one of their attributes is updated, allowing for interactive modification from within the Editor. This is done automatically by the blueprint construction script. The default Box attributes are set to one of a standard Cornell Box, scaled out 5 times, for practical purposes.</p><p><br /></p><p>Please have a look at the documentation for a comprehensive list of features and available attributes (you may have a quick overview of them in the fourth screenshot).</p><p><br /></p><p>An example map is provided in the <em>Maps </em>subfolder: <em>Showcase.umap</em>. This map showcases various features of the plugin through different Cornell Boxes instanced in the scene.</p><p><br /></p><p>This blueprint is intended to be mostly used with real-time Lumen and Raytracing enabled (including raytraced shadows), as well as with Path Tracing. It is nevertheless possible to use it in Static Lighting scenarios, by changing the mobility attribute in the &#34;Advanced&#34; section of &#34;Lighting&#34; attributes (see the documentation).</p><p><br /></p><p> </p><p> </p><p> </p>",
+  "technicalDetails": "<p>Features:</p><ul><li>A parametric Cornell Box blueprint actor</li></ul><p><br /></p><p>Available attributes :</p><ul><li>Geometry: box dimensions (depth/width/height), wall thickness, wall visibilities ;</li><li>Lighting: several light types (<em>None</em>, <em>Rect Light</em>, <em>Emissive Surface</em>, <em>Reflected Light</em>), light attachment wall, light color, intensity, dimensions, position, and a couple of advanced attributes ;</li><li>Materials: metalness, specularity, roughness, neutral/left/right/external colors ;</li><li>Contents: several content types (<em>Empty</em>, <em>Classic Cubes</em>, <em>Sample Sphere</em>, <em>User Mesh</em>), transformation</li></ul><p><br /></p><p>Number of Blueprints: 2</p><ul><li>1 blueprint for the Actor &#43; 1 support blueprint function library, and a few additional enumerations/structs used internally ;</li><li>The blueprint does not use Geometry Scripting (because dynamic meshes are not 100% functional with Lumen), relying instead on instancing and scaling of elementary static meshes (each individual wall, the emissive light source, the sample content, etc.)</li></ul><p><br /></p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows, Mac</p><p><br /></p><p>Documentation:</p><ul><li><a href=\"https://github.com/gabrielcuvillier/ue5-parametric-cornell-box\" rel=\"nofollow\">Github project page</a></li><li><a href=\"https://github.com/gabrielcuvillier/ue5-parametric-cornell-box#attributes\" rel=\"nofollow\">Attributes documentation</a></li></ul><p><br /></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-2815ef43673bfa12251c76028dd02364.png",
+      "md5": "2815ef43673bfa12251c76028dd02364",
+      "width": 1920,
+      "height": 1080,
+      "size": 2085456,
+      "uploadedDate": "2023-08-25T16:11:28.152Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-f5f6b934919c7b95ec6c8dc756ada990.png",
+      "md5": "f5f6b934919c7b95ec6c8dc756ada990",
+      "width": 1920,
+      "height": 1080,
+      "size": 1408319,
+      "uploadedDate": "2023-08-25T16:11:28.749Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-be32eadfa86eace9664ae0b3af82769f.png",
+      "md5": "be32eadfa86eace9664ae0b3af82769f",
+      "width": 1920,
+      "height": 1080,
+      "size": 2243719,
+      "uploadedDate": "2023-08-25T16:11:29.260Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-d7451943d9e73ab8e97708168dce153e.png",
+      "md5": "d7451943d9e73ab8e97708168dce153e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1367583,
+      "uploadedDate": "2023-08-27T13:40:15.771Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-2c54b12dd7c52660b39c24df5ced4fef.png",
+      "md5": "2c54b12dd7c52660b39c24df5ced4fef",
+      "width": 1920,
+      "height": 1080,
+      "size": 1651118,
+      "uploadedDate": "2023-08-25T16:11:30.488Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-4bd33ef1c9bfdd3c1823b34af4d0aec4.png",
+      "md5": "4bd33ef1c9bfdd3c1823b34af4d0aec4",
+      "width": 1920,
+      "height": 1080,
+      "size": 2031956,
+      "uploadedDate": "2023-08-25T16:11:31.091Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ParametricCornellBox_thumb-284x284-10cff58dcb53c928d23e3d0003d960a6.png",
+      "md5": "10cff58dcb53c928d23e3d0003d960a6",
+      "width": 284,
+      "height": 284,
+      "size": 81596,
+      "uploadedDate": "2023-08-25T16:11:31.548Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ParametricCornellBox_featured-894x488-d98f35df2bb4d9da2ed91ff93e0dca9f.png",
+      "md5": "d98f35df2bb4d9da2ed91ff93e0dca9f",
+      "width": 894,
+      "height": 488,
+      "size": 425132,
+      "uploadedDate": "2023-08-25T16:11:31.798Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-d7451943d9e73ab8e97708168dce153e_Snapshot.png",
+      "md5": "33a9dc4d2f45d9538a94b86780b41306",
+      "width": 150,
+      "height": 74,
+      "size": 5796,
+      "uploadedDate": "2023-08-27T13:40:16.091Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-2815ef43673bfa12251c76028dd02364_Snapshot.png",
+      "md5": "2af8828119a657522783f65e7d749916",
+      "width": 150,
+      "height": 74,
+      "size": 4080,
+      "uploadedDate": "2023-08-25T16:11:28.526Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-f5f6b934919c7b95ec6c8dc756ada990_Snapshot.png",
+      "md5": "91071a2282f26439a9a26ce9e078fe99",
+      "width": 150,
+      "height": 74,
+      "size": 2741,
+      "uploadedDate": "2023-08-25T16:11:29.071Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-be32eadfa86eace9664ae0b3af82769f_Snapshot.png",
+      "md5": "f7fa11576e850a817791ba57891edbd3",
+      "width": 150,
+      "height": 74,
+      "size": 5284,
+      "uploadedDate": "2023-08-25T16:11:29.680Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-1f68abaa2f955f4c00584b22212c7da8_Snapshot.png",
+      "md5": "fea3a97bba48fa1c63a2d0d2c7e7b21b",
+      "width": 150,
+      "height": 74,
+      "size": 5280,
+      "uploadedDate": "2023-08-25T16:11:30.239Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-2c54b12dd7c52660b39c24df5ced4fef_Snapshot.png",
+      "md5": "26d676c08120bef88535ace78b4e900e",
+      "width": 150,
+      "height": 74,
+      "size": 3710,
+      "uploadedDate": "2023-08-25T16:11:30.867Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-4bd33ef1c9bfdd3c1823b34af4d0aec4_Snapshot.png",
+      "md5": "e9d91c4b464d8e9b09052e6d793778ba",
+      "width": 150,
+      "height": 74,
+      "size": 6191,
+      "uploadedDate": "2023-08-25T16:11:31.484Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-09-03T19:00:58.315Z",
+  "lastModifiedDate": "2024-11-19T14:14:30.583Z",
+  "customAttributes": {},
+  "entitlementName": "8178b891af9d42eb94d4b84606c9843d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "14cb1f9b0f7245c5b89a594cdce1db8c",
+      "appId": "Parametr8178b891af9dV2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-08-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.2"
+    },
+    {
+      "id": "cc20ef25599f4b9f81fa1d052c7cdc01",
+      "appId": "Parametr8178b891af9dV3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.2-ue5.3"
+    },
+    {
+      "id": "b94d568c7c494612bece253d83eb2370",
+      "appId": "Parametr8178b891af9dV4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.2-ue5.4"
+    }
+  ],
+  "developer": "Gabriel Cuvillier",
+  "developerId": "o-xrpq28ubxuq9svakv7eyvcynczd6k4",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

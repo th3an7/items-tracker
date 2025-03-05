@@ -1,0 +1,1160 @@
+{
+  "id": "c013f70cbbf945159340dcd675827507",
+  "title": "Train Template",
+  "description": "A complete system to build large railway networks with with drivable trains in minutes",
+  "longDescription": "<p>THE PROJECT IS NOW AVAILABLE ON THE MARKETPLACE WITH THE NEW UPDATE (V2) (UE5.1 &amp; later VERSIONS)</p><p><br /></p><ul><li>Version 2<a href=\"https://drive.google.com/file/d/11Z-YVRwrbktnlgpKPKTWFTy-9Zcw2XZ2/view?usp&#61;sharing\" rel=\"nofollow\"> CHANGELOG PDF</a> (check this link also for upcoming updates)</li><li>Version 2 Official documentation download: <a href=\"https://drive.google.com/file/d/1maS8fAGa-2yr_TEboJcdSPkB3jRYB4ou/view?usp&#61;sharing\" rel=\"nofollow\">PDF</a> <a href=\"https://drive.google.com/file/d/1ys26D_0tDLadJ1ohpKxMWnC3YiSDBHgN/view?usp&#61;sharing\" rel=\"nofollow\"> ZIP</a></li><li>Version 2<a href=\"https://drive.google.com/file/d/19YPHPQTPjIqysfRb3NGwgvhLkGWOmbcU/view?usp&#61;sharing\" rel=\"nofollow\"> Playable Demo (WIN 64)</a> - large level with foliage and a many tracks. Updated <u>02/20/2024</u></li><li>Version 2 Track Creation BASICS <a href=\"https://youtu.be/lnWB3BzK3UY\" rel=\"nofollow\">VIDEO</a></li><li>Version 2 Track Creation ADVANCED <a href=\"https://youtu.be/LeV0x0xoixk\" rel=\"nofollow\">VIDEO</a></li><li>Version 2 Adding New Bogies <a href=\"https://youtu.be/QzCVGlKdwNs\" rel=\"nofollow\">VIDEO</a></li><li>Version 2 Train Save / Load / Start / Stop / Reset <a href=\"https://youtu.be/OmrTrU7EA-E\" rel=\"nofollow\">VIDEO</a></li><li>Version 2 Gameplay <a href=\"https://youtu.be/IpIB_le2xvQ\" rel=\"nofollow\">VIDEO </a>(First video of the demo map, with the gameplay, we are working on a tutorial to explain how to create trains, railways etc.)</li></ul><p><br /></p><p><u>FEATURES OF THE NEW V2 Update for Unreal Engine 5.1 and later versions:</u></p><ul><li>Quick railway creation using a new system to add sections of railway selecting the length, pitch, yaw and the type of section (switch point, station, tunnel, bridge, level crossing or normal track)</li><li>Really working switch mechanism using a push bar and rails that are moving when you activate or deactivate the switch</li><li>New train spawner system using instanced static meshes to keep the train using minimum resources until it&#39;s used.</li><li>Trains can now be saved, restored to the original starting position, stopped and instanced or restarted during game time</li><li>Trains are using a built in AI system to allow them to move, adjust the speed according to the track speed limit, stop at stations, avoid collisions, reverse at the end of the track and many other functionalities so you don&#39;t need to manually drive them if you just want trains moving in the level</li><li>Trains can now reach 400 km/h without problems of any type when moving on a track and they will derail if, for example, they take an active switch point at very high speed or if they find another train that can collide</li><li>The derailment system is using a dedicated actor that simulate physics and it&#39;s using constraints to keep the cars connected after the derailment</li><li>It&#39;s now possible to have several length of carriages in the same train</li><li>Train are affected by slope and lateral forces in turns so they now will overheat and lean</li><li>You can create new trains very quickly using a data table where all the settings like, length, mass, max speed, brake speed, sounds, type of carriage (engine or car), and then you can use a child of the BP_Carriage_Master blueprint to add the static meshes that you want to use</li><li>It&#39;s possible to walk with a character on a moving train but to avoid issues with the character movement component it&#39;s better to use a low speed for the train, we have also prepared an actor that can be possessed when the train is moving fast in order to avoid glitches caused by the way the character movement component (jump without considering the speed of the train, glitches when walking from a car to the next one at high speed). We can&#39;t modify the character movement component because it&#39;s in C&#43;&#43; but it&#39;s something you might do if you want to use the train to move the character at high speed.</li><li>Trains are now spawned during game instead than using the construction script. Also railways can be loaded on begin play or using a custom event</li><li>Railway themes: all the static meshes of a railway are stored in a data table to quickly retrieve them and switch the look of a railway selecting a different theme. We have provided 6 themes: modern track, old track, old western track, abandoned track and snowy track</li></ul><p><br /></p><p><br /></p><p>IMPORTANT: Project downloads: If you download the project for UE4.XX you will download the first version of the project as it was updated up to UE 4.28. If you download the project for UE5.XX you will download the current V2 version. It&#39;s possible to port the V2 version to UE4 but you will have to do this manually since the V2 version was created using UE5</p><p><br /></p>",
+  "technicalDetails": "<p>Features:</p><ul><li> 53 blueprints: BP_Carriage_Master &#43; Childs, BP_Railway, BP_Train_Control_System, etc)  </li><li> 340 static meshes With auto lods poly count max 40k (made by us using Maya LT)</li><li> 14 UI widgets</li><li>1600 textures 2048x2048 or less (diffuse&#43;normal&#43;occlusion, roughness, metallic) made by us using Substance Painter</li><li>6 railway themes: Modern, Old, Old western, Abandoned, Futuristic, Snowy</li><li>BP_CarriageMaster is the base for any carriage you want to build, locomotive, passengers or freight. You can create a child blueprint, customize the meshes and create a logic for the carriage you want. </li><li>BP_Railway is the actor used to create railways and is drag and drop in the scene. Tracks can be just simply aligned by moving the points or the whole actor and then the train will look for a new railway if the current one is over.</li><li>BP_Low_Cost_Train is the actor used to spawn a copy of the train made using instanced static meshes when the train is not used</li></ul><p><br /></p><p>Input: Keyboard, Mouse</p><p>Network Replicated: No but it&#39;s possible to replicate</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Desktop</p><p>Important/Additional Notes:</p><p><strong>1) There&#39;s a limit for the amount of carriages connected that is about 50 </strong></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.18.54.32-1920x1080-5be64d2f613c82980235b8b97dfe035e.jpg",
+      "md5": "5be64d2f613c82980235b8b97dfe035e",
+      "width": 1920,
+      "height": 1080,
+      "size": 384638,
+      "uploadedDate": "2023-10-30T10:40:32.847Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.15.11.87-1920x1080-f168d2277902a9b2fb92e85cc36d6a19.jpg",
+      "md5": "f168d2277902a9b2fb92e85cc36d6a19",
+      "width": 1920,
+      "height": 1080,
+      "size": 350214,
+      "uploadedDate": "2023-10-30T10:40:28.488Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.15.19.36-1920x1080-0fffe312c5d7a7d62fe6d46ef16e52ec.jpg",
+      "md5": "0fffe312c5d7a7d62fe6d46ef16e52ec",
+      "width": 1920,
+      "height": 1080,
+      "size": 316496,
+      "uploadedDate": "2023-10-30T10:40:28.909Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.15.26.92-1920x1080-cd9960011f9fb7a96ee65f88b6abd9b0.jpg",
+      "md5": "cd9960011f9fb7a96ee65f88b6abd9b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 376727,
+      "uploadedDate": "2023-10-30T10:40:29.362Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.15.51.66-1920x1080-09bfebe3ea80266909fe79488b9feb9b.jpg",
+      "md5": "09bfebe3ea80266909fe79488b9feb9b",
+      "width": 1920,
+      "height": 1080,
+      "size": 216434,
+      "uploadedDate": "2023-10-30T10:40:29.703Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.16.42.17-1920x1080-f7a1a41aed79551fb80bdabc8e33309a.jpg",
+      "md5": "f7a1a41aed79551fb80bdabc8e33309a",
+      "width": 1920,
+      "height": 1080,
+      "size": 412900,
+      "uploadedDate": "2023-10-30T10:40:30.110Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.17.20.13-1920x1080-9b0096eee8f6dd4716df626d5c12cfc0.jpg",
+      "md5": "9b0096eee8f6dd4716df626d5c12cfc0",
+      "width": 1920,
+      "height": 1080,
+      "size": 476902,
+      "uploadedDate": "2023-10-30T10:40:30.669Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.17.52.05-1920x1080-b6c2b9750a431165ee80a182a55d5a89.jpg",
+      "md5": "b6c2b9750a431165ee80a182a55d5a89",
+      "width": 1920,
+      "height": 1080,
+      "size": 526193,
+      "uploadedDate": "2023-10-30T10:40:31.553Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.18.07.04-1920x1080-53ea2fd2b11a4d2b9288dd2b08f35da7.jpg",
+      "md5": "53ea2fd2b11a4d2b9288dd2b08f35da7",
+      "width": 1920,
+      "height": 1080,
+      "size": 319561,
+      "uploadedDate": "2023-10-30T10:40:32.053Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.18.36.24-1920x1080-06b3c0ba9ddcb0f0d6f48fdde38b21e6.jpg",
+      "md5": "06b3c0ba9ddcb0f0d6f48fdde38b21e6",
+      "width": 1920,
+      "height": 1080,
+      "size": 359802,
+      "uploadedDate": "2023-10-30T10:40:32.427Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.19.07.19-1920x1080-02fce00b8a61c7cbe3b03ef3e4eb7cac.jpg",
+      "md5": "02fce00b8a61c7cbe3b03ef3e4eb7cac",
+      "width": 1920,
+      "height": 1080,
+      "size": 228116,
+      "uploadedDate": "2023-10-30T10:40:33.251Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.19.18.41-1920x1080-893549a544de68fe35314c55cb4042b6.jpg",
+      "md5": "893549a544de68fe35314c55cb4042b6",
+      "width": 1920,
+      "height": 1080,
+      "size": 396595,
+      "uploadedDate": "2023-10-30T10:40:33.647Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.30.35.89-1920x1080-84541d367a4e1f1d5dd75f313960efb2.jpg",
+      "md5": "84541d367a4e1f1d5dd75f313960efb2",
+      "width": 1920,
+      "height": 1080,
+      "size": 464835,
+      "uploadedDate": "2023-10-30T10:40:34.067Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.31.01.68-1920x1080-c9ce65450b5ab869d5bea1b3500b46f0.jpg",
+      "md5": "c9ce65450b5ab869d5bea1b3500b46f0",
+      "width": 1920,
+      "height": 1080,
+      "size": 317649,
+      "uploadedDate": "2023-10-30T10:40:34.521Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 10.34.17.45-1920x1080-5323de289c8f3afeeeb42915103676c0.jpg",
+      "md5": "5323de289c8f3afeeeb42915103676c0",
+      "width": 1920,
+      "height": 1080,
+      "size": 148275,
+      "uploadedDate": "2023-10-30T10:40:34.892Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 11.28.33.41-1920x1080-5b353c284ba8101b992cb3ecd045109e.jpg",
+      "md5": "5b353c284ba8101b992cb3ecd045109e",
+      "width": 1920,
+      "height": 1080,
+      "size": 232952,
+      "uploadedDate": "2023-10-30T10:40:35.743Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 11.28.40.13-1920x1080-7b59a1e987707ecadb4ce9462cea1c23.jpg",
+      "md5": "7b59a1e987707ecadb4ce9462cea1c23",
+      "width": 1920,
+      "height": 1080,
+      "size": 230791,
+      "uploadedDate": "2023-10-30T10:40:36.083Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 11.29.54.34-1920x1080-12445a81cfa7164fb1851f5ec48c236f.jpg",
+      "md5": "12445a81cfa7164fb1851f5ec48c236f",
+      "width": 1920,
+      "height": 1080,
+      "size": 227623,
+      "uploadedDate": "2023-10-30T10:40:36.568Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 11.30.12.56-1920x1080-8edb2a7548479b6646ba9ae45cf26628.jpg",
+      "md5": "8edb2a7548479b6646ba9ae45cf26628",
+      "width": 1920,
+      "height": 1080,
+      "size": 250252,
+      "uploadedDate": "2023-10-30T10:40:36.872Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 11.30.27.54-1920x1080-d0d74f3e26e7674c8301fe31cf977dfc.jpg",
+      "md5": "d0d74f3e26e7674c8301fe31cf977dfc",
+      "width": 1920,
+      "height": 1080,
+      "size": 232384,
+      "uploadedDate": "2023-10-30T10:40:37.345Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 11.34.20.38-1920x1080-1da6681f1fa3c2c25ab7e3156d1fda82.jpg",
+      "md5": "1da6681f1fa3c2c25ab7e3156d1fda82",
+      "width": 1920,
+      "height": 1080,
+      "size": 276788,
+      "uploadedDate": "2023-10-30T10:40:37.702Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 11.35.03.35-1920x1080-c6b12215605cb6f7959e7c9076070713.jpg",
+      "md5": "c6b12215605cb6f7959e7c9076070713",
+      "width": 1920,
+      "height": 1080,
+      "size": 398228,
+      "uploadedDate": "2023-10-30T10:40:38.115Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 11.35.18.41-1920x1080-493ac68652bd951c811b9e7e7c1411d6.jpg",
+      "md5": "493ac68652bd951c811b9e7e7c1411d6",
+      "width": 1920,
+      "height": 1080,
+      "size": 462667,
+      "uploadedDate": "2023-10-30T10:40:38.679Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 11.42.32.61-1920x1080-5b966d4f29892b1884f5ec7e248d559d.jpg",
+      "md5": "5b966d4f29892b1884f5ec7e248d559d",
+      "width": 1920,
+      "height": 1080,
+      "size": 464330,
+      "uploadedDate": "2023-10-30T10:55:02.692Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2023.10.30 - 11.43.41.41-1920x1080-760508fed6475a0b636e20edaf2a9275.jpg",
+      "md5": "760508fed6475a0b636e20edaf2a9275",
+      "width": 1920,
+      "height": 1080,
+      "size": 322891,
+      "uploadedDate": "2023-10-30T10:55:03.130Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TrainTemplate_thumb-284x284-d4bf237f3218aa0692524a5e712c852f.png",
+      "md5": "d4bf237f3218aa0692524a5e712c852f",
+      "width": 284,
+      "height": 284,
+      "size": 179629,
+      "uploadedDate": "2023-10-30T10:55:03.544Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TrainTemplate_featured-894x488-b7ce70266f5a892ad778b5ba2b65ec00.png",
+      "md5": "b7ce70266f5a892ad778b5ba2b65ec00",
+      "width": 894,
+      "height": 488,
+      "size": 778743,
+      "uploadedDate": "2023-10-30T10:55:03.729Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 11.42.32.61-1920x1080-5b966d4f29892b1884f5ec7e248d559d_Snapshot.jpg",
+      "md5": "2a695534ea3eadc9a21ebf344a6eed8b",
+      "width": 150,
+      "height": 74,
+      "size": 6502,
+      "uploadedDate": "2023-10-30T10:55:02.971Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 11.43.41.41-1920x1080-760508fed6475a0b636e20edaf2a9275_Snapshot.jpg",
+      "md5": "8a85eee3748958dec74219801b55353c",
+      "width": 150,
+      "height": 74,
+      "size": 5981,
+      "uploadedDate": "2023-10-30T10:55:03.400Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.15.11.87-1920x1080-f168d2277902a9b2fb92e85cc36d6a19_Snapshot.jpg",
+      "md5": "af1e3052a3833d69a069c797f34635ac",
+      "width": 150,
+      "height": 74,
+      "size": 8978,
+      "uploadedDate": "2023-10-30T10:40:28.718Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.15.19.36-1920x1080-0fffe312c5d7a7d62fe6d46ef16e52ec_Snapshot.jpg",
+      "md5": "0fa9ef457d88a1e7e90657e25035d1f7",
+      "width": 150,
+      "height": 74,
+      "size": 8410,
+      "uploadedDate": "2023-10-30T10:40:29.133Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.15.26.92-1920x1080-cd9960011f9fb7a96ee65f88b6abd9b0_Snapshot.jpg",
+      "md5": "11bda52f54697a156d54fb24f4a6c558",
+      "width": 150,
+      "height": 74,
+      "size": 8927,
+      "uploadedDate": "2023-10-30T10:40:29.597Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.15.51.66-1920x1080-09bfebe3ea80266909fe79488b9feb9b_Snapshot.jpg",
+      "md5": "e4a3122d413ffcf86c45b5a392fe4eeb",
+      "width": 150,
+      "height": 74,
+      "size": 6765,
+      "uploadedDate": "2023-10-30T10:40:29.928Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.16.42.17-1920x1080-f7a1a41aed79551fb80bdabc8e33309a_Snapshot.jpg",
+      "md5": "2dc4cd81c8bc93d51abea637b564c947",
+      "width": 150,
+      "height": 74,
+      "size": 7101,
+      "uploadedDate": "2023-10-30T10:40:30.341Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.17.20.13-1920x1080-9b0096eee8f6dd4716df626d5c12cfc0_Snapshot.jpg",
+      "md5": "7bf86b7a1442dac6916f6e7bd8251491",
+      "width": 150,
+      "height": 74,
+      "size": 8630,
+      "uploadedDate": "2023-10-30T10:40:30.953Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.17.40.77-1920x1080-5684ea38390deb0b5f508e388f9333d7_Snapshot.jpg",
+      "md5": "79ab35d37e561fa84d4e143bf4c49227",
+      "width": 150,
+      "height": 74,
+      "size": 8253,
+      "uploadedDate": "2023-10-30T10:40:31.358Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.17.52.05-1920x1080-b6c2b9750a431165ee80a182a55d5a89_Snapshot.jpg",
+      "md5": "543531c768d3d9c0ae42456068d57469",
+      "width": 150,
+      "height": 74,
+      "size": 8827,
+      "uploadedDate": "2023-10-30T10:40:31.849Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.18.07.04-1920x1080-53ea2fd2b11a4d2b9288dd2b08f35da7_Snapshot.jpg",
+      "md5": "58e38c0b430dff2a0caa562365aae50d",
+      "width": 150,
+      "height": 74,
+      "size": 7014,
+      "uploadedDate": "2023-10-30T10:40:32.283Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.18.36.24-1920x1080-06b3c0ba9ddcb0f0d6f48fdde38b21e6_Snapshot.jpg",
+      "md5": "f396e14957b71ab2579671ac1c18bbeb",
+      "width": 150,
+      "height": 74,
+      "size": 6940,
+      "uploadedDate": "2023-10-30T10:40:32.681Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.18.54.32-1920x1080-5be64d2f613c82980235b8b97dfe035e_Snapshot.jpg",
+      "md5": "0b5f879b59166b42421a483995a7d5df",
+      "width": 150,
+      "height": 74,
+      "size": 7309,
+      "uploadedDate": "2023-10-30T10:40:33.093Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.19.07.19-1920x1080-02fce00b8a61c7cbe3b03ef3e4eb7cac_Snapshot.jpg",
+      "md5": "40952c5c3aaf26fb65c8bf021fe4e733",
+      "width": 150,
+      "height": 74,
+      "size": 6386,
+      "uploadedDate": "2023-10-30T10:40:33.474Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.19.18.41-1920x1080-893549a544de68fe35314c55cb4042b6_Snapshot.jpg",
+      "md5": "853dc5a9e8702ae3e63b731569e56a87",
+      "width": 150,
+      "height": 74,
+      "size": 7172,
+      "uploadedDate": "2023-10-30T10:40:33.877Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.30.35.89-1920x1080-84541d367a4e1f1d5dd75f313960efb2_Snapshot.jpg",
+      "md5": "98ead10d1feaf75242dd16079f70544f",
+      "width": 150,
+      "height": 74,
+      "size": 8552,
+      "uploadedDate": "2023-10-30T10:40:34.369Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.31.01.68-1920x1080-c9ce65450b5ab869d5bea1b3500b46f0_Snapshot.jpg",
+      "md5": "92e4246f65ad2e8c1a11524595e44587",
+      "width": 150,
+      "height": 74,
+      "size": 6622,
+      "uploadedDate": "2023-10-30T10:40:34.747Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.34.17.45-1920x1080-5323de289c8f3afeeeb42915103676c0_Snapshot.jpg",
+      "md5": "f207c94bd2e0d4f6be3908e23267e27c",
+      "width": 150,
+      "height": 74,
+      "size": 3939,
+      "uploadedDate": "2023-10-30T10:40:35.103Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 10.40.20.77-1920x1080-474bb828d8d37ba0b3cd8b05aa50900c_Snapshot.jpg",
+      "md5": "50d73aa5cfd9e790d8a8f78c5a0d0a1f",
+      "width": 150,
+      "height": 74,
+      "size": 7032,
+      "uploadedDate": "2023-10-30T10:40:35.564Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 11.28.33.41-1920x1080-5b353c284ba8101b992cb3ecd045109e_Snapshot.jpg",
+      "md5": "44f85ad9d260ca8016fd6268a6b80215",
+      "width": 150,
+      "height": 74,
+      "size": 3935,
+      "uploadedDate": "2023-10-30T10:40:35.967Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 11.28.40.13-1920x1080-7b59a1e987707ecadb4ce9462cea1c23_Snapshot.jpg",
+      "md5": "78ff0586f447411f292d655e94179858",
+      "width": 150,
+      "height": 74,
+      "size": 5708,
+      "uploadedDate": "2023-10-30T10:40:36.338Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 11.29.54.34-1920x1080-12445a81cfa7164fb1851f5ec48c236f_Snapshot.jpg",
+      "md5": "d7dfa4f959a6a4fc5a4c6052c88171bf",
+      "width": 150,
+      "height": 74,
+      "size": 4013,
+      "uploadedDate": "2023-10-30T10:40:36.796Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 11.30.12.56-1920x1080-8edb2a7548479b6646ba9ae45cf26628_Snapshot.jpg",
+      "md5": "ec0c9aa1463dfc8ac5f75a27fc206d26",
+      "width": 150,
+      "height": 74,
+      "size": 6415,
+      "uploadedDate": "2023-10-30T10:40:37.180Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 11.30.27.54-1920x1080-d0d74f3e26e7674c8301fe31cf977dfc_Snapshot.jpg",
+      "md5": "584bfc2c49c5be4aeb582b82b87a89f5",
+      "width": 150,
+      "height": 74,
+      "size": 6153,
+      "uploadedDate": "2023-10-30T10:40:37.570Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 11.34.20.38-1920x1080-1da6681f1fa3c2c25ab7e3156d1fda82_Snapshot.jpg",
+      "md5": "4567c0e8dad112f8162978207435adea",
+      "width": 150,
+      "height": 74,
+      "size": 6032,
+      "uploadedDate": "2023-10-30T10:40:37.944Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 11.35.03.35-1920x1080-c6b12215605cb6f7959e7c9076070713_Snapshot.jpg",
+      "md5": "fe3ebcda90843eebb5b55e106ca9ed19",
+      "width": 150,
+      "height": 74,
+      "size": 6348,
+      "uploadedDate": "2023-10-30T10:40:38.548Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2023.10.30 - 11.35.18.41-1920x1080-493ac68652bd951c811b9e7e7c1411d6_Snapshot.jpg",
+      "md5": "6b4fdbe5f78b4fcfe83f4e6135b5f3d5",
+      "width": 150,
+      "height": 74,
+      "size": 7036,
+      "uploadedDate": "2023-10-30T10:40:38.997Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template18-1920x1080-5cbdbc7dc4872c73c7955087edf1e74c_Snapshot.jpg",
+      "md5": "ad70cb80154ad7b2acb3fd12833786ea",
+      "width": 150,
+      "height": 74,
+      "size": 5817,
+      "uploadedDate": "2020-01-20T12:45:43.797Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template16-1920x1080-3270e74712f1756e3eeed4e7e6fba87a_Snapshot.jpg",
+      "md5": "f292c06e00cb9e672a8e062b647b83d1",
+      "width": 150,
+      "height": 74,
+      "size": 6904,
+      "uploadedDate": "2020-01-20T12:08:03.744Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template12-1920x1080-1c1d1a2bbd8e9551a90f77852ffb905a_Snapshot.jpg",
+      "md5": "ccae35a042f9aae4cc1381a1117aa3e2",
+      "width": 150,
+      "height": 74,
+      "size": 9306,
+      "uploadedDate": "2020-01-20T12:08:04.618Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template15-1920x1080-4c3db2fa753edc332736371244bad6f7_Snapshot.jpg",
+      "md5": "8f9d968a1c9ac375ca1941fef79b3a08",
+      "width": 150,
+      "height": 74,
+      "size": 8159,
+      "uploadedDate": "2020-01-20T12:08:05.416Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template13-1920x1080-89130393fde355d486084a1e1ec5ffc9_Snapshot.jpg",
+      "md5": "55863b9d7017cce6f728a3acfa34dd8b",
+      "width": 150,
+      "height": 74,
+      "size": 7461,
+      "uploadedDate": "2020-01-20T12:08:06.223Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template14-1920x1080-7c76fd9c18e65b142d5ecc7211ae120c_Snapshot.jpg",
+      "md5": "e29ca99f8992c466ce056c2f07580fe3",
+      "width": 150,
+      "height": 74,
+      "size": 6344,
+      "uploadedDate": "2020-01-20T12:08:07.059Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template17-1920x1080-2f21e7edc86a25c4fd3a1c657f8b3e56_Snapshot.jpg",
+      "md5": "d80825851f330437fedf11a5c6c8aea2",
+      "width": 150,
+      "height": 74,
+      "size": 6637,
+      "uploadedDate": "2020-01-20T12:08:07.882Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template10-1920x1080-c937593511a254c0940cc0e8760af029_Snapshot.jpg",
+      "md5": "d36db9976690d602797e8bbe01a785c4",
+      "width": 150,
+      "height": 74,
+      "size": 8355,
+      "uploadedDate": "2020-01-20T11:42:22.317Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template11-1920x1080-e2f83376f8201fe0e66e57f063d74b39_Snapshot.jpg",
+      "md5": "acbc6190a49eb6d7af52885245a1a958",
+      "width": 150,
+      "height": 74,
+      "size": 10574,
+      "uploadedDate": "2020-01-20T11:42:23.212Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2020.01.20 - 11.38.39.56-1920x1080-101a088f58fba48ff25aee4b0a7abdbd_Snapshot.jpg",
+      "md5": "da9ae105bad5e379683796725c05f7d9",
+      "width": 150,
+      "height": 74,
+      "size": 8704,
+      "uploadedDate": "2020-01-20T11:27:09.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template1-1920x1080-ceb94747292025ba256e7204a23c6a87_Snapshot.jpg",
+      "md5": "c19af02c57b44ff32d4053666b1ea05c",
+      "width": 150,
+      "height": 74,
+      "size": 7521,
+      "uploadedDate": "2020-01-20T11:27:10.761Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template2-1920x1080-ee9a1876feba193e06ec6b86be3a5a5c_Snapshot.jpg",
+      "md5": "6fef8e51e1894ded33c762d387647c62",
+      "width": 150,
+      "height": 74,
+      "size": 8513,
+      "uploadedDate": "2020-01-20T11:27:11.885Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template3-1920x1080-5fad3d3d31ce2132a6db51e32db09a0f_Snapshot.jpg",
+      "md5": "2da2da1cac2ef58605f522fabff1eb53",
+      "width": 150,
+      "height": 74,
+      "size": 7037,
+      "uploadedDate": "2020-01-20T11:27:12.817Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template4-1920x1080-2e2212f5fce823a9a3277c38ce55199e_Snapshot.jpg",
+      "md5": "ee79218e70f41d8b9b920c8937d4f29d",
+      "width": 150,
+      "height": 74,
+      "size": 9247,
+      "uploadedDate": "2020-01-20T11:27:13.719Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template5-1920x1080-0c820cab9824097762f6499286cad03d_Snapshot.jpg",
+      "md5": "2f2c38cf898c2db5fdd33741ea33630d",
+      "width": 150,
+      "height": 74,
+      "size": 8160,
+      "uploadedDate": "2020-01-20T11:27:14.645Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template6-1920x1080-f609e6384776a17680f222d2b4046568_Snapshot.jpg",
+      "md5": "f04088ff115449eb9f8585df4e280ee6",
+      "width": 150,
+      "height": 74,
+      "size": 6080,
+      "uploadedDate": "2020-01-20T11:27:15.589Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template7-1920x1080-c2e2d12f5af70c3d3a414684f835d04d_Snapshot.jpg",
+      "md5": "551dcac3631f248d1d19ffe7e89bd6bb",
+      "width": 150,
+      "height": 74,
+      "size": 6637,
+      "uploadedDate": "2020-01-20T11:27:16.483Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template8-1920x1080-b800bfb95667fa7ef49e2bfd776fb312_Snapshot.jpg",
+      "md5": "382a667a060aeb988de9123755b31f6f",
+      "width": 150,
+      "height": 74,
+      "size": 6238,
+      "uploadedDate": "2020-01-20T11:27:17.420Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Template9-1920x1080-9f38e8c0857901a6d2cf177dd9eb454c_Snapshot.jpg",
+      "md5": "662c1e0be4bf9759967f5b6f1c11ab17",
+      "width": 150,
+      "height": 74,
+      "size": 6662,
+      "uploadedDate": "2020-01-20T11:27:18.348Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.17.33.29-1920x1080-fb43c5f32a414e428fde5e95bf5d7530_Snapshot.jpg",
+      "md5": "a1a53f95d8d323156bd38f536dfde0ee",
+      "width": 150,
+      "height": 74,
+      "size": 7430,
+      "uploadedDate": "2019-11-16T15:51:10.872Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.18.25.36-1920x1080-c0d62669cc5a94bda4f380ef26a4e092_Snapshot.jpg",
+      "md5": "2f18b9d7abfb58a62547b05ca0aa2900",
+      "width": 150,
+      "height": 74,
+      "size": 4312,
+      "uploadedDate": "2019-11-16T15:51:11.200Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.20.45.00-1920x1080-f8043b30551151c9e32d3711948a031e_Snapshot.jpg",
+      "md5": "18859bc99c6446371ecfe325ce09a317",
+      "width": 150,
+      "height": 74,
+      "size": 5749,
+      "uploadedDate": "2019-11-16T15:51:11.535Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.28.07.81-1920x1080-93dbfe86436f881346d49301404f55f4_Snapshot.jpg",
+      "md5": "c7f6437077d05d4104938d8911772adf",
+      "width": 150,
+      "height": 74,
+      "size": 6612,
+      "uploadedDate": "2019-11-16T15:51:11.883Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.11 - 13.35.22.53-1920x1080-4a565262af6a471b473d6c3c1d93e2f9_Snapshot.jpg",
+      "md5": "de35d3d9d31fbae8f4428a27e88fc0ae",
+      "width": 150,
+      "height": 74,
+      "size": 5370,
+      "uploadedDate": "2019-11-16T14:13:36.299Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.17.33.29-1920x1080-fb43c5f32a414e428fde5e95bf5d7530_Snapshot.jpg",
+      "md5": "a1a53f95d8d323156bd38f536dfde0ee",
+      "width": 150,
+      "height": 74,
+      "size": 7430,
+      "uploadedDate": "2019-11-16T14:13:36.659Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.15 - 12.27.51.40-1920x1080-ea74df5228d8dd408b08275c6d0f2df7_Snapshot.jpg",
+      "md5": "2875220239d853550115859eeecddc2a",
+      "width": 150,
+      "height": 74,
+      "size": 5602,
+      "uploadedDate": "2019-11-16T14:13:37.009Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.14.15.72-1920x1080-8b40b46823adba3e986deef2d665e621_Snapshot.jpg",
+      "md5": "a92c8e1614eda207be2952fa483f2fdd",
+      "width": 150,
+      "height": 74,
+      "size": 5357,
+      "uploadedDate": "2019-11-16T14:13:37.347Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.14.32.57-1920x1080-0761b9d302d1d70f289bcba36d8f2d7d_Snapshot.jpg",
+      "md5": "5caf01df1fffbeb0018bad009968a1de",
+      "width": 150,
+      "height": 74,
+      "size": 5894,
+      "uploadedDate": "2019-11-16T14:13:37.725Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.14.55.98-1920x1080-efb944bc3906b0919bc0ed15029f8372_Snapshot.jpg",
+      "md5": "cc940287c155635c831da50f1d86e317",
+      "width": 150,
+      "height": 74,
+      "size": 6033,
+      "uploadedDate": "2019-11-16T14:13:38.142Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.15.12.45-1920x1080-b5400f658d329d6c81e2bff0371c4a51_Snapshot.jpg",
+      "md5": "32dcab534ab471ed0011e8b7eeece701",
+      "width": 150,
+      "height": 74,
+      "size": 6236,
+      "uploadedDate": "2019-11-16T14:13:38.590Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.15.40.45-1920x1080-7d1e818d4d923639a2653d9bf3b9e01c_Snapshot.jpg",
+      "md5": "fa14cf37767c776d98df7e5c32d864b2",
+      "width": 150,
+      "height": 74,
+      "size": 5663,
+      "uploadedDate": "2019-11-16T14:13:38.968Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.15.51.55-1920x1080-f84dfdca5c74d79c727a33ae12a52bf0_Snapshot.jpg",
+      "md5": "c092a1e96aa2f99ce237ac63d2545b01",
+      "width": 150,
+      "height": 74,
+      "size": 3602,
+      "uploadedDate": "2019-11-16T14:13:39.290Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.16.22.07-1920x1080-70f6b9b897193f223ec1abd0e5788985_Snapshot.jpg",
+      "md5": "45c2bb1ac18bb61dbe8372e965b72d76",
+      "width": 150,
+      "height": 74,
+      "size": 5046,
+      "uploadedDate": "2019-11-16T14:13:39.726Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.16.38.36-1920x1080-8e5e0eae45bb8502527c1b98fff2c377_Snapshot.jpg",
+      "md5": "b10eec509812bd7c35ab3357e5a6d4f4",
+      "width": 150,
+      "height": 74,
+      "size": 6045,
+      "uploadedDate": "2019-11-16T14:13:40.142Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.16.52.77-1920x1080-9a4070a35d7255b0d5791ebd26792e08_Snapshot.jpg",
+      "md5": "5eb93a5dda377c65ea2b41d62463537d",
+      "width": 150,
+      "height": 74,
+      "size": 7161,
+      "uploadedDate": "2019-11-16T14:13:40.548Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.17.16.97-1920x1080-ced16f12d6d0577479c7b10d6e7da418_Snapshot.jpg",
+      "md5": "f83ad319b1b61a1e4cf34aee0e23d786",
+      "width": 150,
+      "height": 74,
+      "size": 7597,
+      "uploadedDate": "2019-11-16T14:13:40.947Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.17.32.34-1920x1080-167f4a5e553ff2ed782292e187522d40_Snapshot.jpg",
+      "md5": "8fc6cb8fefe5be35d94b3083702a37bf",
+      "width": 150,
+      "height": 74,
+      "size": 6767,
+      "uploadedDate": "2019-11-16T14:13:41.325Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.18.25.36-1920x1080-c0d62669cc5a94bda4f380ef26a4e092_Snapshot.jpg",
+      "md5": "2f18b9d7abfb58a62547b05ca0aa2900",
+      "width": 150,
+      "height": 74,
+      "size": 4312,
+      "uploadedDate": "2019-11-16T14:13:41.728Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.18.50.93-1920x1080-e32dc8230475dfea96947df8d7d251b4_Snapshot.jpg",
+      "md5": "4361f7798bed4dca4c81ac71328fe985",
+      "width": 150,
+      "height": 74,
+      "size": 7005,
+      "uploadedDate": "2019-11-16T14:13:42.141Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.21.35.96-1920x1080-1fabb20776aaca93964de7eb4a8d4907_Snapshot.jpg",
+      "md5": "f04ab4fe0fe1f115c17a38f77e2bea28",
+      "width": 150,
+      "height": 74,
+      "size": 6070,
+      "uploadedDate": "2019-11-16T14:13:42.534Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.22.18.99-1920x1080-6c1e760028fe83bd6baa56d48ea620d8_Snapshot.jpg",
+      "md5": "c8a61ea367aa71f899d6db491223f162",
+      "width": 150,
+      "height": 74,
+      "size": 3773,
+      "uploadedDate": "2019-11-16T14:13:42.897Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.23.04.92-1920x1080-52f57678ac895fd6ecb633a090df84b5_Snapshot.jpg",
+      "md5": "7446caa359591dc6500c5c0a02715b10",
+      "width": 150,
+      "height": 74,
+      "size": 5639,
+      "uploadedDate": "2019-11-16T14:13:43.261Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.24.19.06-1920x1080-cee92bf6050d0139ab592377c7cd06d5_Snapshot.jpg",
+      "md5": "22390c318e7ad140030ca32a3f40d6a2",
+      "width": 150,
+      "height": 74,
+      "size": 6291,
+      "uploadedDate": "2019-11-16T14:13:43.607Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.25.49.33-1920x1080-dd8999888c2b5f38ffd18ff9b0824cdd_Snapshot.jpg",
+      "md5": "318fc0d0b3e1f8f560fc93161893f7c5",
+      "width": 150,
+      "height": 74,
+      "size": 5210,
+      "uploadedDate": "2019-11-16T14:13:43.972Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.28.07.81-1920x1080-93dbfe86436f881346d49301404f55f4_Snapshot.jpg",
+      "md5": "c7f6437077d05d4104938d8911772adf",
+      "width": 150,
+      "height": 74,
+      "size": 6612,
+      "uploadedDate": "2019-11-16T14:13:44.332Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.28.16.17-1920x1080-618ed6f96bb40f66666ee07fd76705f0_Snapshot.jpg",
+      "md5": "60abb3afde6b507e4f047d27975e78fd",
+      "width": 150,
+      "height": 74,
+      "size": 4280,
+      "uploadedDate": "2019-11-16T14:13:44.734Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.28.42.82-1920x1080-f6103d94d025e26ba5fb92157033690e_Snapshot.jpg",
+      "md5": "db640783225320d4f6b165e8e2ae6eb6",
+      "width": 150,
+      "height": 74,
+      "size": 8678,
+      "uploadedDate": "2019-11-16T14:13:45.111Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.11.16 - 14.29.26.71-1920x1080-d2410697b95376da3d25e62f2b9e70b0_Snapshot.jpg",
+      "md5": "93dff4f5be0fa2e632e2dc20015831c9",
+      "width": 150,
+      "height": 74,
+      "size": 3753,
+      "uploadedDate": "2019-11-16T14:13:45.422Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.10.31 - 15.23.08.100-1920x1080-e8ed86c69941934cf3c2515598c1f046_Snapshot.jpg",
+      "md5": "bd1124182360fea918ed352b955dc236",
+      "width": 150,
+      "height": 74,
+      "size": 5914,
+      "uploadedDate": "2019-10-31T14:34:31.507Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.10.31 - 15.29.10.09-1920x1080-aadc4b461c12a0bbfd62887a7cda1cc9_Snapshot.jpg",
+      "md5": "1ebd2363b4028b6391d1aa769dffa13b",
+      "width": 150,
+      "height": 74,
+      "size": 7514,
+      "uploadedDate": "2019-10-31T14:34:31.964Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.10.31 - 15.29.34.00-1920x1080-24f4456ad8bb21c1ce7494d7a3c2b213_Snapshot.jpg",
+      "md5": "5d655513c3d1bff0a7b4fcffa1b8f842",
+      "width": 150,
+      "height": 74,
+      "size": 6702,
+      "uploadedDate": "2019-10-31T14:34:32.336Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.10.31 - 15.29.52.79-1920x1080-f64339bb50dee00cba698ebed92846cd_Snapshot.jpg",
+      "md5": "e78acdda1595b232bf1475f25d54bcb7",
+      "width": 150,
+      "height": 74,
+      "size": 7595,
+      "uploadedDate": "2019-10-31T14:34:32.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Train01-1920x1080-99571ae3abdcb7efd8427dae421746f5_Snapshot.png",
+      "md5": "1c8c49734d178886e64559bcf804ab15",
+      "width": 150,
+      "height": 74,
+      "size": 5691,
+      "uploadedDate": "2019-10-31T14:20:59.522Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.10.31 - 15.04.28.71-1920x1080-bdc89490e26a30baf7def9f062d9d7dd_Snapshot.jpg",
+      "md5": "ddb3ae3afc6e94b9112a338f3904aca3",
+      "width": 150,
+      "height": 74,
+      "size": 7061,
+      "uploadedDate": "2019-10-31T14:21:00.145Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.10.31 - 15.04.39.13-1920x1080-6f85ce116f8e03a78460275a8ad65fb8_Snapshot.jpg",
+      "md5": "ea3245404388327ab27cdcab5fcc3594",
+      "width": 150,
+      "height": 74,
+      "size": 7651,
+      "uploadedDate": "2019-10-31T14:21:00.554Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.10.31 - 15.08.05.92-1920x1080-54bb284a7dfcdcb4c7511a8b948dd669_Snapshot.jpg",
+      "md5": "04438ecac3228c12063764796de682cd",
+      "width": 150,
+      "height": 74,
+      "size": 7891,
+      "uploadedDate": "2019-10-31T14:21:00.947Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.10.31 - 15.08.07.96-1920x1080-58d2e48d644c4859bbd288ed5ccd80f7_Snapshot.jpg",
+      "md5": "611292cd9f95c0fb7019a42f36d0ed9f",
+      "width": 150,
+      "height": 74,
+      "size": 8287,
+      "uploadedDate": "2019-10-31T14:21:01.380Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.09.20 - 10.01.20.09-1920x1080-53e3fae789e6cde6b4b16434ec23588c_Snapshot.png",
+      "md5": "8d750e178847a06678dd7db39d976613",
+      "width": 150,
+      "height": 74,
+      "size": 6707,
+      "uploadedDate": "2019-09-20T08:32:33.047Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.09.20 - 10.00.59.85-1920x1080-a4fe8a91bf163e6f2c3f983146e13460_Snapshot.png",
+      "md5": "6f1fd22102d325e72f3de4f9bcea1a87",
+      "width": 150,
+      "height": 74,
+      "size": 6960,
+      "uploadedDate": "2019-09-20T08:32:33.654Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.09.20 - 10.00.29.54-1920x1080-ade20b82bb222e360f7582cea0e3a6bd_Snapshot.png",
+      "md5": "c05bfe45b5cd58cf521bc70d394e2109",
+      "width": 150,
+      "height": 74,
+      "size": 7990,
+      "uploadedDate": "2019-09-20T08:32:34.257Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.09.20 - 10.00.21.75-1920x1080-b8cecac3e4a92595cf6041ed6f626756_Snapshot.png",
+      "md5": "ecfadbe90fdf7cf4578e0dbde52d4ded",
+      "width": 150,
+      "height": 74,
+      "size": 7841,
+      "uploadedDate": "2019-09-20T08:32:34.798Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.09.20 - 10.00.13.58-1920x1080-bd2021a23772bb9dbf6be616217181de_Snapshot.png",
+      "md5": "5abe28294b43cdeee7866ee4efde1046",
+      "width": 150,
+      "height": 74,
+      "size": 7557,
+      "uploadedDate": "2019-09-20T08:32:35.348Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.09.20 - 10.00.10.74-1920x1080-4d8cacc05e5890e093d6d08b6368197c_Snapshot.png",
+      "md5": "de93b4dcd367f81e4fc5dc4e7458eafe",
+      "width": 150,
+      "height": 74,
+      "size": 7154,
+      "uploadedDate": "2019-09-20T08:32:35.902Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.09.20 - 10.00.04.60-1920x1080-f8f9489f1a533d09a375a744a995a851_Snapshot.png",
+      "md5": "2d112b3f66f658de38f10ad3c89c6c8a",
+      "width": 150,
+      "height": 74,
+      "size": 7710,
+      "uploadedDate": "2019-09-20T08:32:36.484Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.09.20 - 09.59.50.17-1920x1080-7a84f7e058840828f2ee358b25cd419b_Snapshot.png",
+      "md5": "cc03edb97c0f659f253b2205edde2c2d",
+      "width": 150,
+      "height": 74,
+      "size": 7546,
+      "uploadedDate": "2019-09-20T08:32:37.117Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-11-19T13:54:17.118Z",
+  "lastModifiedDate": "2024-09-18T09:55:55.548Z",
+  "customAttributes": {},
+  "entitlementName": "c013f70cbbf945159340dcd675827507",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "8c92fcf8ace44bae9a710a2308c55640",
+      "appId": "TrainTemc013f70cbbf9V3",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-01-12T00:00:00.000Z",
+      "releaseNote": "New",
+      "versionTitle": "Train 4.22"
+    },
+    {
+      "id": "912ee40480b14c4cab68fb3a4372fa23",
+      "appId": "TrainTemc013f70cbbf9V1",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-09-20T00:00:00.000Z",
+      "releaseNote": "Updated",
+      "versionTitle": "Trains 4.23 V2"
+    },
+    {
+      "id": "00652aee57c84fe1ad62a91b57bd91ec",
+      "appId": "TrainTemc013f70cbbf9V2",
+      "compatibleApps": [
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-12-10T00:00:00.000Z",
+      "releaseNote": "Updated\n",
+      "versionTitle": "Trains 4.24 V1"
+    },
+    {
+      "id": "31f49076b92d4f839e2b3b3f9ffb2b24",
+      "appId": "TrainTemc013f70cbbf9V4",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-06-28T00:00:00.000Z",
+      "releaseNote": "Train Template V2 New updated project version\nHotfix 10:  03/13/2024\n",
+      "versionTitle": "Train 5.1 V2"
+    }
+  ],
+  "developer": "ZerstorenGames",
+  "developerId": "o-bkf3kxdvsarf99sprznlj2gj3fyqx4",
+  "endOfSupport": false,
+  "unsearchable": false
+}

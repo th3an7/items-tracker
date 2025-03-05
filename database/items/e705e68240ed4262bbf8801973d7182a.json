@@ -1,0 +1,339 @@
+{
+  "id": "e705e68240ed4262bbf8801973d7182a",
+  "title": "Orbit and Gravity System",
+  "description": "Apply Newtonian gravity to actors, simulate planet gravity, create orbits, and perform orbital mechanics calculations.",
+  "longDescription": "<p>Preview: <a href=\"https://www.youtube.com/watch?v&#61;sAdYLVvSE_g\" rel=\"nofollow\">youtube.com/watch?v&#61;sAdYLVvSE_g</a></p><p><br /></p><p>The Orbit and Gravity blueprint lets you create gravity sandboxes, place actors in orbit, and perform orbital mechanics calculations.</p><p><br /></p><p>The orbit system uses Newton’s Law of Gravity to apply a realistic gravitational force affected by distance and a gravitational size parameter. This system can be used to create orbiting bodies in a celestial environment (e.g. a solar system), set the orbit of a spaceship around a planet, or, for games set on the ground, create magnetism and levitation effects on actors (e.g. an anti-gravity floor or pneumatic tube).</p><p><br /></p><p>• (4.25 Update) ­Lagrange point calculations. Example video: <a href=\"https://www.youtube.com/watch?v&#61;FlfsJ98cwUk\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;FlfsJ98cwUk</a></p><p>• (5.3 Update) Improved support for large world coordinates.</p><p><br /></p><p><br /></p><p>Features:</p><p>• ­Three types of physics calculation modes (kinematic, Kepler, and blend)</p><p>• ­Elliptical, Parabolic, and Hyperbolic orbits supported</p><p>• ­Orbital prediction based on a future time</p><p>• ­50&#43; orbital mechanics calculations available (e.g. inclination, true anomaly)</p><p>• ­Orbits can be nested, for example, a moon orbiting a planet, while a planet orbits a star.</p><p>• ­Automatically incorporates player input as acceleration (delta V) if actor is possessed by a player</p><p>• ­Physics substepping (kinematic mode)</p><p>• ­Configurable time scale; use as real time or with a selected timestep</p><p>• ­Easily create projectiles (start velocity can be specified in local space)</p><p>• ­Anti­gravity (kinematic only)</p><p>• ­Calculate gravity from the center of the actor (e.g. a planet) or from the StaticMesh’s closest point (e.g. e.g. applying effect to a floor or wall)</p><p><br /></p>",
+  "technicalDetails": "<p>• Kinematic physics mode: Calculates the gravitational effect for every GravityMass actor in the scene, applies the change in velocity to each orbiting actor, and then updates the position. Kinematic can be used to incorporate gravity for multiple GravityMass actors, but the stability of the orbit is affected by how long each timestep is.</p><p>• Kepler physics mode: Generates a mathematically precise orbit based on one GravityMass. The orbit will stay consistent regardless of framerate. Numerical approximation is required so this will be more computationally intensive than other modes.</p><p>• Blend physics mode: Incorporates elements from both methods for more efficient calculations but slightly less precise than Kepler mode. Blend calculates the correct velocity and then updates the orbiting body kinematically. Maintains the correct distance from the GravityMass, but orbit timing may be less accurate than Kepler mode.</p><p><br /></p><p>Blueprints:</p><p>• (1) BP_OrbitMovement (an Actor Component)</p><p>• (1) BP_GravityMass Component (an Actor)</p><p>• (3) example actor blueprints (an example GravityMass, an example orbiting actor, and an example orbiting player pawn)</p><p>• (2) example maps (one showing a variety of orbit types, one that generates large number of orbiting bodies)</p><p>• (1) BP_Orbit object (stores orbit data, does calculations, and interacts with BP_OrbitMovement)</p><p>• (Over 50) orbital mechanical functions and parameters</p><p><br /></p><p>Documentation: Comments in blueprints</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/Store_BPOrbitMovement_screenshot_2-1920x1080-fad5a506cfac9fef1608c153d0237a6e.png",
+      "md5": "fad5a506cfac9fef1608c153d0237a6e",
+      "width": 1920,
+      "height": 1080,
+      "size": 316349,
+      "uploadedDate": "2016-02-05T14:30:42.634Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/Store_BPOrbitMovement_screenshot_1-1920x1080-b33555d238363cba971936cde3490e9f.png",
+      "md5": "b33555d238363cba971936cde3490e9f",
+      "width": 1920,
+      "height": 1080,
+      "size": 125633,
+      "uploadedDate": "2016-02-05T14:30:44.639Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/Store_BPOrbitMovement_screenshot_3-1920x1080-2e7559ef3a582a3945af8af95579a0be.png",
+      "md5": "2e7559ef3a582a3945af8af95579a0be",
+      "width": 1920,
+      "height": 1080,
+      "size": 77129,
+      "uploadedDate": "2016-02-05T14:30:40.889Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/Store_BPOrbitMovement_screenshot_4-1920x1080-d42193af662a35cdeb26de8cd5cf8dab.png",
+      "md5": "d42193af662a35cdeb26de8cd5cf8dab",
+      "width": 1920,
+      "height": 1080,
+      "size": 403961,
+      "uploadedDate": "2016-02-05T14:30:38.770Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/Store_BPOrbitMovement_screenshot_5-1920x1080-eb6ba729d2fbf848c5956136378969e3.png",
+      "md5": "eb6ba729d2fbf848c5956136378969e3",
+      "width": 1920,
+      "height": 1080,
+      "size": 454950,
+      "uploadedDate": "2016-02-05T14:30:35.399Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/Store_BPOrbitMovement_screenshot_6-1920x1080-ad362081cde81aabd452cda1c16e820b.png",
+      "md5": "ad362081cde81aabd452cda1c16e820b",
+      "width": 1920,
+      "height": 1080,
+      "size": 68161,
+      "uploadedDate": "2016-02-05T14:30:33.495Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/Store_BPOrbitMovement_screenshot_7-1920x1080-a2e4db67c6233c0ee74e2dca5372a935.png",
+      "md5": "a2e4db67c6233c0ee74e2dca5372a935",
+      "width": 1920,
+      "height": 1080,
+      "size": 50734,
+      "uploadedDate": "2016-02-05T14:30:31.624Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/Store_BPOrbitMovement_screenshot_8-1920x1080-09d5794162666d779fe53fedd2c88abb.png",
+      "md5": "09d5794162666d779fe53fedd2c88abb",
+      "width": 1920,
+      "height": 1080,
+      "size": 64587,
+      "uploadedDate": "2016-02-05T14:30:29.916Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/OrbitandGravityPlugin_thumb-284x284-d8e1c60d94333bb82e85a5c73229e7af.png",
+      "md5": "d8e1c60d94333bb82e85a5c73229e7af",
+      "width": 284,
+      "height": 284,
+      "size": 24768,
+      "uploadedDate": "2019-12-21T19:15:43.548Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/OrbitandGravitySystem_featured-894x488-793bfb78131c6b67a30f06ae6664e88e.png",
+      "md5": "793bfb78131c6b67a30f06ae6664e88e",
+      "width": 894,
+      "height": 488,
+      "size": 174961,
+      "uploadedDate": "2018-03-18T19:26:26.832Z"
+    },
+    {
+      "type": "NewFeatured",
+      "url": "https://cdn1.epicgames.com/ue/item/BPOrbitMovement_FeaturedNew-894x488-191374736da8e35f14eee00157fd5182.png",
+      "md5": "191374736da8e35f14eee00157fd5182",
+      "width": 894,
+      "height": 488,
+      "size": 39102,
+      "uploadedDate": "2016-02-05T14:30:47.241Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2016-02-05T14:31:18.225Z",
+  "lastModifiedDate": "2024-12-11T11:19:26.156Z",
+  "customAttributes": {},
+  "entitlementName": "e705e68240ed4262bbf8801973d7182a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "fe665ccea5e14e69ba6aa06f26da2926",
+      "appId": "BPOrbitMovement",
+      "compatibleApps": [
+        "UE_4.10",
+        "UE_4.11",
+        "UE_4.12"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-02-05T00:00:00.000Z",
+      "versionTitle": "BPOrbitMovement"
+    },
+    {
+      "id": "7bb9c1048a9d4f929443c2e0cbefcf05",
+      "appId": "BPOrbitMovement413",
+      "compatibleApps": [
+        "UE_4.13"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-09-06T00:00:00.000Z",
+      "versionTitle": "BPOrbitMovement413"
+    },
+    {
+      "id": "73de6460ff0f4c68849e5050a5ab4aee",
+      "appId": "BPOrbitMovement414",
+      "compatibleApps": [
+        "UE_4.14"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-11-22T00:00:00.000Z",
+      "versionTitle": "BPOrbitMovement414"
+    },
+    {
+      "id": "98c34322dfa544f38abbfae3cc84b701",
+      "appId": "BPOrbitMovement415",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-02-21T00:00:00.000Z",
+      "versionTitle": "BPOrbitMovement415"
+    },
+    {
+      "id": "c2bd77687ae749c783800aef5ab70548",
+      "appId": "BPOrbitMovement416",
+      "compatibleApps": [
+        "UE_4.16",
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-06-02T00:00:00.000Z",
+      "versionTitle": "BPOrbitMovement416"
+    },
+    {
+      "id": "fbdd806f57c8456ab371c2aac3ebc82e",
+      "appId": "Orbitande705e68240ed4262bbf8801973d7182aV1",
+      "compatibleApps": [
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-10-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "BPOrbitMovement418"
+    },
+    {
+      "id": "5062ed8d9c3b4266a2c27c336d725dff",
+      "appId": "Orbitande705e68240edV2",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-09-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "BPOrbitMovement423"
+    },
+    {
+      "id": "a0c50f26aa814c4e8998daad0c84998f",
+      "appId": "Orbitande705e68240edV3",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac"
+      ],
+      "dateAdded": "2019-12-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "BPOrbitMovement424"
+    },
+    {
+      "id": "ef3c5cfa53de4fd2b3c074e4e5884154",
+      "appId": "Orbitande705e68240edV4",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-05-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "BPOrbitMovement425"
+    },
+    {
+      "id": "224e12486257461dae7f90b8626767ca",
+      "appId": "Orbitande705e68240edV5",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Win32",
+        "Windows",
+        "Linux",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Nintendo Switch",
+        "Xbox One",
+        "Oculus",
+        "HoloLens 2",
+        "Gear VR",
+        "HTML5"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "BPOrbitMovement426"
+    },
+    {
+      "id": "befdbceb037a4bf3a7095694960b35af",
+      "appId": "Orbitande705e68240edV8",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-01-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "BPOrbitMovement50"
+    },
+    {
+      "id": "22e09b6e43c541f2811047f540e6660e",
+      "appId": "Orbitande705e68240edV9",
+      "compatibleApps": [
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "Nintendo Switch",
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "BPOrbitMovement53"
+    }
+  ],
+  "developer": "Ding",
+  "developerId": "o-afdddb61c749149740126784ff724b",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

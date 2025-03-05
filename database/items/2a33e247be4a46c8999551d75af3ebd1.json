@@ -1,0 +1,479 @@
+{
+  "id": "2a33e247be4a46c8999551d75af3ebd1",
+  "title": "Virtual Motion Matching Basic V3",
+  "description": "This is a simplified version of the VirtualRootMotion case, which includes pose matching, distance matching, realistic jumps, etc. Easily implement an AAA controller template for any motion capture animation assets.",
+  "longDescription": "<p><a href=\"https://drive.google.com/file/d/1rFHH7DIXhDdHpshpylayFudN-ysqoVy6/view?usp&#61;sharing\" rel=\"nofollow\">Demo</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;exNJ2Xm8Rmo&amp;list&#61;PLYP0ozRez419y40zOcD4rvcfIoebjep3h\" rel=\"nofollow\">Showcase-V1</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;O1fi455pJ1g\" rel=\"nofollow\">Showcase-V2-p1</a></p><p><a href=\"https://youtu.be/vDnj-EtD3gQ\" rel=\"nofollow\">Showcase-V2-p2</a></p><p><a href=\"https://www.bilibili.com/video/BV1vT4y1r7f2?spm_id_from&#61;333.999.0.0\" rel=\"nofollow\">Tutorial - V1 - Collectio- Bilibili</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;exNJ2Xm8Rmo&amp;list&#61;PLYP0ozRez419y40zOcD4rvcfIoebjep3h&amp;index&#61;1&amp;t&#61;1s\" rel=\"nofollow\">Tutorial - V1 - Collectio- YouTuBe</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;WlNNjiD6hYQ\" rel=\"nofollow\">Tutorial - V2- Collectio- YouTuBe</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;x5KjB79fKJA&amp;list&#61;PLYP0ozRez418TgeOFVmyJSd87FlEBTPrg&amp;index&#61;28\" rel=\"nofollow\">Pose Search Tutorial</a></p><p><a href=\"https://www.unrealengine.com/marketplace/zh-CN/product/virtual-animation-tools\" rel=\"nofollow\">VirtualAnimationTools</a> (This is the auxiliary plugin required by this plugin-VAT)</p><p><br /></p><p>Examples: &#xff08;The system is compatible with all motion capture animation packages in the marketplace&#xff09;</p><p><a href=\"https://www.youtube.com/watch?v&#61;1VxdxYzriAk\" rel=\"nofollow\">VRM Example</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;mSCbcGic5YE\" rel=\"nofollow\">Female Example</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;lm1L1WzPLVg\" rel=\"nofollow\">Bow Example</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;m-sn0Hxv_DI\" rel=\"nofollow\">Cover Example</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;DUj8EqC1I9E\" rel=\"nofollow\">Sword Example</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;gp4BZ8ZFO9Y\" rel=\"nofollow\">LongSword Example</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;9qOa5YR9pBU\" rel=\"nofollow\">Motus,MOB1,W2,W1 Example</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;3Wu_dDetkfQ\" rel=\"nofollow\">Kubold,Move,Rifle,Pistol Example</a></p><p><br /></p><p><strong>V3: </strong></p><p>(1) Add the function of Unarmed/Weapon switching</p><p> (2) Improve Combat/UnEasy rotation mode</p><p> (3) Add aim offset function</p><p> (4) Add the transition judgment of Stop-Pivot (this parameter can be found in Locomotion Data)</p><p> (5) Improve the eight-direction blended</p><p> (Because the engine restricts the root motion montage to not be blended according to the weight,</p><p> an extra parameter is added to control the server to correct the client&#39;s distance detection, </p><p>avoiding the server to correct the client frequently) </p><p>(This feature allows multiplayer mode to use root motion montage blending)</p><p> (6) Optimize the connection and other effects of case animations </p><p><br /></p><p><strong>V2: </strong></p><p>(1) Use GAS to reconstruct the framework, which will be compatible with skill systems such as combat, climbing, and ladder climbing</p><p>(2) All made by C&#43;&#43;, exposed blueprint nodes for scripting (currently only some nodes are open)</p><p>(3) Use the enhanced input plug-in, and add custom Input Mapping, Action, Trigger, batch key mapping script tools, etc.</p><p>(4) Lightweight framework to reduce unnecessary configuration data, such as complex animation notification state, etc.</p><p>(5) 4 Rotation Modes: Relaxed, UnEasy, Combat, Velocity (to prepare for the follow-up combat system)</p><p>(6) 2 Stance Modes: Crouching has been completed, and other states can be quickly realized through GameplayTag/GA</p><p>(7) 3 Gait Modes: Walk, Jog, Sprint</p><p>(8) Compatible with host and mobile terminal (currently only tested in the editor)</p><p>(9) New Camera Manager System &#xff08;FPP/TPP&#xff09;</p><p>(10) Prepare for subsequent animation multi-threading and compatible virtual root motion system (part of the framework is implemented)</p><p>Note: Since some functions are limited by the engine, EPIC personnel will be contacted to continue to iterate RootMotion or launch VirtualRootMotion</p><p><br /></p><p><strong><em><u>A-If you don&#39;t have VAT, you&#39;ll need to manually configure all curves, notifications, pose search data etc.</u></em></strong></p><p><strong><em><u>Please purchase the plug-in or VAT after understanding it clearly.</u></em></strong></p><p>&#xff08;Static pose search by VAT can optimize runtime pose matching to &lt; 0.01ms&#xff09;</p><p><br /></p><p><strong><em>B-Coming soon to use UE5&#39;s animation assets to make better motion systems.</em></strong></p><p><strong><em>(If you can provide better copyrighted animation assets, I&#39;d love to work with you)</em></strong></p><p><br /></p><p><strong><em>C-Provide the test animation required for the demo video, please find the corresponding text link in this directory:</em></strong></p><p><strong><em>VirtualMotionMatching\\Content\\Example\\ExampleAnimsLink</em></strong></p><p><br /></p><p><strong><em>D-Provide complete development documentation,Please find the corresponding text link in this directory:</em></strong></p><p><strong><em>VirtualMotionMatching\\Content\\Example\\VMMv1_Documentation</em></strong></p><p><br /></p><p>1. This is a simplified version of the VirtualRootMotion case, which includes pose matching, distance matching, real jumps, and more locomotion function.</p><p>2. No need to make a complex state machine, just configure a specific animated asset to DataAsset and use the VirtualAnimationTools to bake the asset data for &#34;plug and play&#34;.</p><p>3. This template is suitable for any network mode, standalone/listen server (LS)/dedicated server (DS).</p><p>In order for users to learn them better, use blueprints as much as possible (except for functions that are not open to blueprints).</p><p><br /></p><p><strong>Note: </strong>This is not using VirtualRootMotion, it is using EngineRootMotion, but it can still be used on multi-party networks (though VRM performance and server usage are much better than ERM)</p><p> </p><p><strong>Note: </strong>This template was created for the traditional motion capture animation process, which costs less to produce and performs better than traditional motion matching, and does not require recording specific motion capture animations etc. (It applies to all asset packs of motion capture animation in the market, and supports Independent/Small team/Company projects of any scale)</p><p> </p><p><strong>Note: </strong>Currently only &#39;Jog&#39; step animation is included, you can add it using any asset pack in the market.</p><p>(The income of this project will be used to produce the motion capture animation, and then update iteratively. Price will be increased a bit by each update. Animators or animation asset producers are welcome to cooperate.)</p><p><br /></p><p><strong><em>After that, vaulting, climbing, swimming, riding and other systems on the shelves are based on this template to create a comprehensive AAA animation system.</em></strong></p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Motion Matching</li><li>Pose Matching</li><li>Distance Matching (V2.5)</li><li>Optimized Pose Search</li><li>Simple State Machine</li><li>Network Curve Controller</li><li>Network Montage Controller</li><li>Network MotionMatching Node Controller (LATER)</li><li>Network Zombie and Human AI example</li><li>Data Registry&#xff08;V2&#xff09;</li><li>Enhanced Input&#xff08;V2&#xff09;</li><li>Gameplay Abilities &#xff08;V2&#xff09;</li></ul><p><br /></p><p>Code Modules:</p><ul><li> VirtualMotionMatching - Editor Module</li><li> VirtualMotionMatchingEditor - Editor Module</li></ul><p><br /></p><p>Communication / Support:</p><ul><li><a href=\"https://discord.gg/j4JwwUyG3m\" rel=\"nofollow\">Discord</a></li><li>QQGroup&#xff1a;881583389</li></ul><p><br /></p><p>Network Replicated: Yes</p><p>Number of Blueprints: 28</p><p>Number of C&#43;&#43; Classes: 29</p><p>Supported Development Platforms: Win32, Win64</p><p><br /></p><p><strong>Important/Additional Notes:</strong></p><p><em>1. I will support older engine versions if requested.</em></p><p><em>2. They will keep updated. If you want to add any function, please let me know.</em></p><p>3.ControlRig needs to be activated, for FootLock and FootIK.</p><p>4.Provide the test animation required for the demo video, please find the corresponding text link in this directory:</p><p>VirtualMotionMatching\\Content\\Example\\ExampleAnimsLink</p><p>5.Provide complete development documentation,<em>P</em>lease find the corresponding text link in this directory:</p><p>VirtualMotionMatching\\Content\\Example\\VMMv1_Documentation</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VMM000-1920x1080-1cf8b7fc6d09bfab1ded199ff3c4942a.png",
+      "md5": "1cf8b7fc6d09bfab1ded199ff3c4942a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2407320,
+      "uploadedDate": "2022-04-05T08:53:53.364Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Trajectory0021080P-1920x1080-c115bc6924974042bfb72735dcfc9794.png",
+      "md5": "c115bc6924974042bfb72735dcfc9794",
+      "width": 1920,
+      "height": 1080,
+      "size": 1665039,
+      "uploadedDate": "2022-04-27T03:52:17.637Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VMM008-1920x1080-46bb12ef3c467c90b8980ee012cc5f5d.png",
+      "md5": "46bb12ef3c467c90b8980ee012cc5f5d",
+      "width": 1920,
+      "height": 1080,
+      "size": 2170439,
+      "uploadedDate": "2022-04-05T08:53:54.885Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VMM009-1920x1080-513067e40d616edcb5edf109af115e1e.png",
+      "md5": "513067e40d616edcb5edf109af115e1e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1940062,
+      "uploadedDate": "2022-04-05T08:53:55.523Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DR003-1920x1080-f68483ed3f04459d03d545398df9af70.png",
+      "md5": "f68483ed3f04459d03d545398df9af70",
+      "width": 1920,
+      "height": 1080,
+      "size": 602534,
+      "uploadedDate": "2022-07-10T07:32:39.161Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AB-1-1920x1080-ce08f8fce8a30c0d97f49ba109cff9d6.png",
+      "md5": "ce08f8fce8a30c0d97f49ba109cff9d6",
+      "width": 1920,
+      "height": 1080,
+      "size": 280321,
+      "uploadedDate": "2022-07-10T07:32:39.551Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ab-002-1920x1080-a097d3507617fca37d1e3c1706027e95.png",
+      "md5": "a097d3507617fca37d1e3c1706027e95",
+      "width": 1920,
+      "height": 1080,
+      "size": 147162,
+      "uploadedDate": "2022-07-10T07:32:39.978Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ab-003-1920x1080-544b54c189e0e1651e4df61d250f67ce.png",
+      "md5": "544b54c189e0e1651e4df61d250f67ce",
+      "width": 1920,
+      "height": 1080,
+      "size": 423202,
+      "uploadedDate": "2022-07-10T07:32:40.371Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ab004-1920x1080-2c30b5bee1ae9fb2ccf687d1fde10baa.png",
+      "md5": "2c30b5bee1ae9fb2ccf687d1fde10baa",
+      "width": 1920,
+      "height": 1080,
+      "size": 176119,
+      "uploadedDate": "2022-07-10T07:32:40.733Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DA001-1920x1080-a01af6d61dccfa93906e1949e09321f9.png",
+      "md5": "a01af6d61dccfa93906e1949e09321f9",
+      "width": 1920,
+      "height": 1080,
+      "size": 147022,
+      "uploadedDate": "2022-07-10T07:32:41.098Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DA002-1920x1080-381b1ed31ef9da6a154778aa7accd601.png",
+      "md5": "381b1ed31ef9da6a154778aa7accd601",
+      "width": 1920,
+      "height": 1080,
+      "size": 175434,
+      "uploadedDate": "2022-07-10T07:32:41.460Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DR002-1920x1080-123d0468d73a887f715d4d3bc8610fa5.png",
+      "md5": "123d0468d73a887f715d4d3bc8610fa5",
+      "width": 1920,
+      "height": 1080,
+      "size": 113522,
+      "uploadedDate": "2022-07-10T07:32:41.845Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Input-001-1920x1080-5818c094a59cf3b44cde7bbf41db639e.png",
+      "md5": "5818c094a59cf3b44cde7bbf41db639e",
+      "width": 1920,
+      "height": 1080,
+      "size": 125676,
+      "uploadedDate": "2022-07-10T07:32:42.157Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Input-002-1920x1080-c25cdb1b82ffa525d21daa29739c2bda.png",
+      "md5": "c25cdb1b82ffa525d21daa29739c2bda",
+      "width": 1920,
+      "height": 1080,
+      "size": 100820,
+      "uploadedDate": "2022-07-10T07:32:42.487Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Input-003-1920x1080-fc1df04b96da72a04e27c81c83c40ac0.png",
+      "md5": "fc1df04b96da72a04e27c81c83c40ac0",
+      "width": 1920,
+      "height": 1080,
+      "size": 148654,
+      "uploadedDate": "2022-07-10T07:32:42.819Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CODE001-1920x1080-653494613714f1349bbc69e21bf732a4.png",
+      "md5": "653494613714f1349bbc69e21bf732a4",
+      "width": 1920,
+      "height": 1080,
+      "size": 514308,
+      "uploadedDate": "2022-07-10T07:32:43.216Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/VirtualMotionMatchingV2_thumb-284x284-00a003f13469d99fdc57ea0cd011eaee.png",
+      "md5": "00a003f13469d99fdc57ea0cd011eaee",
+      "width": 284,
+      "height": 284,
+      "size": 27094,
+      "uploadedDate": "2022-07-10T07:32:43.564Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/VirtualMotionMatchingV2_featured-894x488-70ae0b225b5fa6eec7c87af3d8c90343.png",
+      "md5": "70ae0b225b5fa6eec7c87af3d8c90343",
+      "width": 894,
+      "height": 488,
+      "size": 99481,
+      "uploadedDate": "2022-07-10T07:32:43.651Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DR003-1920x1080-f68483ed3f04459d03d545398df9af70_Snapshot.png",
+      "md5": "519b22c1d247bc4fbde0005a9f17a6cc",
+      "width": 150,
+      "height": 74,
+      "size": 5133,
+      "uploadedDate": "2022-07-10T07:32:39.464Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AB-1-1920x1080-ce08f8fce8a30c0d97f49ba109cff9d6_Snapshot.png",
+      "md5": "6af409c7772c4056264835028d9b0ee8",
+      "width": 150,
+      "height": 74,
+      "size": 4481,
+      "uploadedDate": "2022-07-10T07:32:39.805Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ab-002-1920x1080-a097d3507617fca37d1e3c1706027e95_Snapshot.png",
+      "md5": "4d09aeae9905d936bfe370a806753544",
+      "width": 150,
+      "height": 74,
+      "size": 3733,
+      "uploadedDate": "2022-07-10T07:32:40.220Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ab-003-1920x1080-544b54c189e0e1651e4df61d250f67ce_Snapshot.png",
+      "md5": "a9f51cdf8396bbb5ad021982c7ca54ed",
+      "width": 150,
+      "height": 74,
+      "size": 4857,
+      "uploadedDate": "2022-07-10T07:32:40.617Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ab004-1920x1080-2c30b5bee1ae9fb2ccf687d1fde10baa_Snapshot.png",
+      "md5": "9c8950c671bda2d75c32530a042cb08c",
+      "width": 150,
+      "height": 74,
+      "size": 3845,
+      "uploadedDate": "2022-07-10T07:32:40.984Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DA001-1920x1080-a01af6d61dccfa93906e1949e09321f9_Snapshot.png",
+      "md5": "56eef3d5458951cafc51bd409c538f2f",
+      "width": 150,
+      "height": 74,
+      "size": 4425,
+      "uploadedDate": "2022-07-10T07:32:41.341Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DA002-1920x1080-381b1ed31ef9da6a154778aa7accd601_Snapshot.png",
+      "md5": "b19faafd7e3a822600d0726513b2dbea",
+      "width": 150,
+      "height": 74,
+      "size": 3572,
+      "uploadedDate": "2022-07-10T07:32:41.702Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DR002-1920x1080-123d0468d73a887f715d4d3bc8610fa5_Snapshot.png",
+      "md5": "4332bc998465118d1275ad1b1c9b2f0d",
+      "width": 150,
+      "height": 74,
+      "size": 2622,
+      "uploadedDate": "2022-07-10T07:32:42.077Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Input-001-1920x1080-5818c094a59cf3b44cde7bbf41db639e_Snapshot.png",
+      "md5": "6a39681c06a5fcd336f4ea40f0205586",
+      "width": 150,
+      "height": 74,
+      "size": 2901,
+      "uploadedDate": "2022-07-10T07:32:42.400Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Input-002-1920x1080-c25cdb1b82ffa525d21daa29739c2bda_Snapshot.png",
+      "md5": "fb026adb69f5d6370475814e5a098a54",
+      "width": 150,
+      "height": 74,
+      "size": 2509,
+      "uploadedDate": "2022-07-10T07:32:42.727Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Input-003-1920x1080-fc1df04b96da72a04e27c81c83c40ac0_Snapshot.png",
+      "md5": "2cd41f5aecb52ea150c4f88d337a7028",
+      "width": 150,
+      "height": 74,
+      "size": 3240,
+      "uploadedDate": "2022-07-10T07:32:43.063Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CODE001-1920x1080-653494613714f1349bbc69e21bf732a4_Snapshot.png",
+      "md5": "0fdbcf906b154cc894116a429a0352ea",
+      "width": 150,
+      "height": 74,
+      "size": 4931,
+      "uploadedDate": "2022-07-10T07:32:43.470Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Trajectory0021080P-1920x1080-c115bc6924974042bfb72735dcfc9794_Snapshot.png",
+      "md5": "1f9ff1cbbba43f486009a8aac1d1ff3c",
+      "width": 150,
+      "height": 74,
+      "size": 4606,
+      "uploadedDate": "2022-04-27T03:52:18.028Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VMM000-1920x1080-1cf8b7fc6d09bfab1ded199ff3c4942a_Snapshot.png",
+      "md5": "307c77d40a37ef63c2a26eec6c59e1f4",
+      "width": 150,
+      "height": 74,
+      "size": 5522,
+      "uploadedDate": "2022-04-05T08:53:53.715Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VMM001-1920x1080-2949df8e1eafc28943956c1a164ce996_Snapshot.png",
+      "md5": "21cdbb2f86b0261f03a90111c17782e2",
+      "width": 150,
+      "height": 74,
+      "size": 5527,
+      "uploadedDate": "2022-04-05T08:53:54.258Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VMM002-1920x1080-ca38976a14bea7962e3e8d59d54985ef_Snapshot.png",
+      "md5": "3e6a8c7f403080b1e2fa358bc619dcd2",
+      "width": 150,
+      "height": 74,
+      "size": 6252,
+      "uploadedDate": "2022-04-05T08:53:54.736Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VMM008-1920x1080-46bb12ef3c467c90b8980ee012cc5f5d_Snapshot.png",
+      "md5": "36b52ad025fd4d62fed3cdadbf8ddcb1",
+      "width": 150,
+      "height": 74,
+      "size": 6484,
+      "uploadedDate": "2022-04-05T08:53:55.203Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VMM009-1920x1080-513067e40d616edcb5edf109af115e1e_Snapshot.png",
+      "md5": "4227d922c4ef5e6fbc5b2554f73dcc19",
+      "width": 150,
+      "height": 74,
+      "size": 5026,
+      "uploadedDate": "2022-04-05T08:53:55.940Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VMM003-1920x1080-c5a06dea925f1da1b3e52129a187b977_Snapshot.png",
+      "md5": "04fbd35691f4fb4f2a4034667f2990a9",
+      "width": 150,
+      "height": 74,
+      "size": 3913,
+      "uploadedDate": "2022-04-05T08:53:56.306Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VMM004-1920x1080-b39226696e76dd932d2238a03e8c81f4_Snapshot.png",
+      "md5": "8f803ad6bfabf7113f1dbedbdac2fb98",
+      "width": 150,
+      "height": 74,
+      "size": 5564,
+      "uploadedDate": "2022-04-05T08:53:56.739Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VMM005-1920x1080-81681eed1121713a248a50805890e0c1_Snapshot.png",
+      "md5": "aec454e7f5086cbb7519ed6055c102c0",
+      "width": 150,
+      "height": 74,
+      "size": 5936,
+      "uploadedDate": "2022-04-05T08:53:57.165Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VMM006-1920x1080-12c12d5edbe299665d9f2d7a63d98c8d_Snapshot.png",
+      "md5": "55aafa3f71b0c54234ac9a365dfd24b0",
+      "width": 150,
+      "height": 74,
+      "size": 4792,
+      "uploadedDate": "2022-04-05T08:53:57.557Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VMM007-1920x1080-b2e52aaf4d1fce143a7927f5eb269a9f_Snapshot.png",
+      "md5": "7be1ab714d542f256cbbd1ecaedebf13",
+      "width": 150,
+      "height": 74,
+      "size": 3355,
+      "uploadedDate": "2022-04-05T08:53:57.908Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-04-28T23:50:05.130Z",
+  "lastModifiedDate": "2025-02-16T08:35:32.164Z",
+  "customAttributes": {},
+  "entitlementName": "2a33e247be4a46c8999551d75af3ebd1",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "fb20100d7dde4515acce617fc1b43eb0",
+      "appId": "VirtualMotionMatching_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "VMM-V3 / 2022-07-12",
+      "versionTitle": "VirtualMotionMatching4.27"
+    },
+    {
+      "id": "da6304aad31544aeb7d5181bec67b95a",
+      "appId": "VirtualMotionMatching_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "VMM-V3 / 2022-07-12",
+      "versionTitle": "VirtualMotionMatching5.0"
+    },
+    {
+      "id": "9ab5c1bc768d454b833d25ab7816caa3",
+      "appId": "VirtualMotionMatching_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-04T00:00:00.000Z",
+      "releaseNote": "VMM-V3",
+      "versionTitle": "VMM-v3-5.1.0"
+    },
+    {
+      "id": "edc5fbe5fca64fefb39a83d4a80a85b6",
+      "appId": "VirtualMotionMatching_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-21T00:00:00.000Z",
+      "releaseNote": "VMM-V3 5.2",
+      "versionTitle": "VMM-v3-5.2.0"
+    },
+    {
+      "id": "1bddb9639c4a4d4bb2bc8bb95cf1e0d5",
+      "appId": "VirtualMotionMatching_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2023-12-20T00:00:00.000Z",
+      "releaseNote": "VMM - V3 , 5.3",
+      "versionTitle": "VMM-V3-5.3.0"
+    },
+    {
+      "id": "28f46ef514f84865b0d1d393c19667a5",
+      "appId": "VirtualMotionMatching_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "zhangruizi",
+  "developerId": "o-2a5cda8f7e41ec81a56bd9adf869dc",
+  "endOfSupport": false,
+  "unsearchable": false
+}

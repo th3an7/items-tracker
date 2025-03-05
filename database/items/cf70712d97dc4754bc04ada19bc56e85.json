@@ -1,0 +1,206 @@
+{
+  "id": "cf70712d97dc4754bc04ada19bc56e85",
+  "title": "Dynamic Picture Frames",
+  "description": "Resize the frame without borders distortion, set style, thickness, colors and more!",
+  "longDescription": "<p>Dynamic Picture Frames is a set of frames that, no matter how you resize it, you never get distorted borders and patterns. It comes with 6 frame styles that you can customize to an infinite variety. It also allows you to split the frame in more pieces to create very stylish environments.</p><p><br /></p><p>To use it, just drag the BP_DynamicFrame Blueprint in the DynamicPictureFrames folder into your level.</p><p><a href=\"https://www.youtube.com/watch?v&#61;A2UfNReo60o\" rel=\"nofollow\">Here&#39;s a demonstration video</a>.</p><p><br /></p><p>I shot the pictures myself, so you can use them without issues.</p><p>Everything is built using HISM for maximum performance, using the least possible draw calls, and it&#39;s static to work with static lighting.</p><p><br /></p><h1>Changelog:</h1><ul><li><strong>v2.4 - UE 5.4 - 2024/09/19</strong></li><li>Add support to TextureRenderTarget2D as picture by using Texture as type for the Picture property.</li><li>All meshes are Nanite-enabled. This fixes bad LODs on the frames.</li><li>Margins use primitive data parameters for their colors, for better instance batching when rendering. I.e.: less draw calls.</li><li>Reorganize materials for readability, using named reroutes.</li><li>Update example level fixing an issue with a dynamically set frame and set a frame as example of using render targets.</li><li><strong>v2.2</strong> - Canvas Emissive power per instance.</li><li><strong>v2.0</strong></li><li>Frame mobility (Static, Stationary and Movable) per instance;</li><li>Its picture and size can be set in runtime by calling the SetPicture_Simple function (only when it&#39;s Movable). These features require UE 4.22&#43;.</li><li><strong>v1.1</strong> - Added backside to the frames without additional draw calls. Backside color is customizable.</li></ul>",
+  "technicalDetails": "<h1>Features:</h1><ul><li>Change the picture</li><li>Resize without distorting the frame sides</li><li>Choose frame style and customize color</li><li>Set the frame thickness or remove it completely</li><li>Set different colors for the corners</li><li>Set margins size and color</li><li>Set backside (back plate) color</li><li>Toggle glass and its depth</li><li>Set canvas&#39; depth</li><li>Split canvas in separate pieces (the picture adapts)</li><li>Picture can be Texture2D or RenderTarget. Possibly media texture, with changes to the main material.</li><li>Optional collision: a box surrounding each canvas piece.</li></ul><h2><br /></h2><h1>Project contents:</h1><ul><li>1 Sample Map with frames examples</li><li>1 Blueprint class</li><li>11 Texture Maps and another 28 Picture Textures</li><li>14 Static Meshes</li><li>2 Master Materials and 16 Instances</li><li>1 Material Function</li><li>2 Structs</li><li>1 Enumerator</li></ul><p><br /></p><h1>Technical Specs:</h1><ul><li>Vertex Count: Average of 50~100, depending on frame style.</li><li>LODs: All meshes use Nanite. As fallback, at least 3 LODs for each frame model.</li><li>Supported Development Platforms: Windows, MacOS, Linux</li><li>Supported Target Build Platforms: Windows, MacOS, iOS, Android</li></ul><p><br /></p><p>Demonstration Video: <strong>https://www.youtube.com/watch?v&#61;A2UfNReo60o</strong></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DynamicPictureFrames_screenshot_01-1920x1080-cf71cc17f9b5972554aeb65198a9f887.png",
+      "md5": "cf71cc17f9b5972554aeb65198a9f887",
+      "width": 1920,
+      "height": 1080,
+      "size": 730167,
+      "uploadedDate": "2017-09-07T16:43:41.052Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DynamicPictureFrames_screenshot_02-1920x1080-011be97a994d8db11d59631ababa363c.png",
+      "md5": "011be97a994d8db11d59631ababa363c",
+      "width": 1920,
+      "height": 1080,
+      "size": 926494,
+      "uploadedDate": "2017-09-07T16:43:41.179Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DynamicPictureFrames_screenshot_03-1920x1080-d987022cda6527487851f5e85d23aaad.png",
+      "md5": "d987022cda6527487851f5e85d23aaad",
+      "width": 1920,
+      "height": 1080,
+      "size": 916003,
+      "uploadedDate": "2017-09-07T16:43:41.491Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DynamicPictureFrames_screenshot_04-1920x1080-45a2920d6dad54583ee490705df02cd7.png",
+      "md5": "45a2920d6dad54583ee490705df02cd7",
+      "width": 1920,
+      "height": 1080,
+      "size": 916538,
+      "uploadedDate": "2017-09-07T16:43:41.578Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DynamicPictureFrames_screenshot_05-1920x1080-e2d02c126db729a569710b7d14d15e96.png",
+      "md5": "e2d02c126db729a569710b7d14d15e96",
+      "width": 1920,
+      "height": 1080,
+      "size": 941188,
+      "uploadedDate": "2017-09-07T16:43:41.789Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DynamicPictureFrames_screenshot_06-1920x1080-d74d3287fae79f3f1fc766ee6d783d18.png",
+      "md5": "d74d3287fae79f3f1fc766ee6d783d18",
+      "width": 1920,
+      "height": 1080,
+      "size": 704660,
+      "uploadedDate": "2017-09-07T16:43:41.871Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DynamicPictureFrames_screenshot_07-1920x1080-f825afbcdd3e7d71aa8b987c30db657d.png",
+      "md5": "f825afbcdd3e7d71aa8b987c30db657d",
+      "width": 1920,
+      "height": 1080,
+      "size": 781828,
+      "uploadedDate": "2017-09-07T16:43:41.959Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DynamicPictureFramesResubmissioninReview_thumb-284x284-a6c5abee3c9ecab27ea45040148cf525.png",
+      "md5": "a6c5abee3c9ecab27ea45040148cf525",
+      "width": 284,
+      "height": 284,
+      "size": 176790,
+      "uploadedDate": "2017-09-07T16:43:42.011Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DynamicPictureFramesResubmissioninReview_featured-894x488-5e46eec03332f0c484ecb04e5a824ad1.png",
+      "md5": "5e46eec03332f0c484ecb04e5a824ad1",
+      "width": 894,
+      "height": 488,
+      "size": 950203,
+      "uploadedDate": "2017-09-07T16:43:42.122Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/archvis"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2017-09-07T16:44:17.364Z",
+  "lastModifiedDate": "2024-11-25T18:04:26.718Z",
+  "customAttributes": {},
+  "entitlementName": "cf70712d97dc4754bc04ada19bc56e85",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "89e9c96df5394ab69982d72c1717f3d8",
+      "appId": "DynamicPcf70712d97dc4754bc04ada19bc56e85V1",
+      "compatibleApps": [
+        "UE_4.16",
+        "UE_4.17",
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Mac",
+        "Android",
+        "Gear VR",
+        "Oculus",
+        "Win32"
+      ],
+      "dateAdded": "2017-09-19T18:40:22.576Z",
+      "releaseNote": "1.1 - With backside",
+      "versionTitle": "Launch"
+    },
+    {
+      "id": "4031c8d816c54fbd90e57c66dc27c34b",
+      "appId": "DynamicPcf70712d97dcV2",
+      "compatibleApps": [
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "SteamVR / HTC Vive",
+        "Mac",
+        "Windows",
+        "Win32",
+        "Gear VR",
+        "Oculus"
+      ],
+      "dateAdded": "2019-08-05T00:00:00.000Z",
+      "releaseNote": "2.2 - Fix emissive not working and add margin offset value.",
+      "versionTitle": "v2.3"
+    },
+    {
+      "id": "f8cbc645828a4cc2958a8a75e7280675",
+      "appId": "DynamicPcf70712d97dcV3",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2022-07-06T00:00:00.000Z",
+      "releaseNote": "Update project settings to use Lumen and virtual shadow maps",
+      "versionTitle": "v2.3 UE5"
+    },
+    {
+      "id": "8727ee66a71b4852b994372bb718d49e",
+      "appId": "DynamicPcf70712d97dcV4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Windows"
+      ],
+      "dateAdded": "2024-09-19T00:00:00.000Z",
+      "releaseNote": "RenderTarget compatibility, materials reorganize, Nanite for better LODs",
+      "versionTitle": "v2.4 - RT"
+    }
+  ],
+  "developer": "Rodrigo Villani",
+  "developerId": "o-ffe9233e1b48a4808007e38564ee46",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

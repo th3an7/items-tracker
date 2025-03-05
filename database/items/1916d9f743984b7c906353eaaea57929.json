@@ -1,0 +1,507 @@
+{
+  "id": "1916d9f743984b7c906353eaaea57929",
+  "title": "Incredible Earth 80K",
+  "description": "One Earth to rule them all. A realistic high-fidelity asset with feature rich shaders for orbital scenes and truly cinematic Earth close ups. Easy customization directly from blueprint parameters.",
+  "longDescription": "<p>Watch: <a href=\"https://youtu.be/jeoa708edXM\" rel=\"nofollow\">Cinematic Trailer</a> &amp; <a href=\"https://youtu.be/jmh3k1ndt6U\" rel=\"nofollow\">Features Rundown</a></p><p><br /></p><p>Update: New Aurora effect added. <a href=\"https://youtu.be/gginjN7FopM\" rel=\"nofollow\">Watch Demo</a></p><p><em>Unlike V1, the V2 is practically free to use on good GPU performance wise. V1 still included in the project. On this update some project parameters have also been adjusted for better compatibility</em></p><p><br /></p><p><br /></p><p><strong>Product Description:</strong></p><p><br /></p><p>Incredible Earth 80K is a realistic high-fidelity Earth for orbital scenes and cinematic close-ups of the Earth. It&#39;s configured as a blueprint with easy access to customize all the parameters in a single place, the details panel. For further and more precise control, the parameters have been exposed to cinematics, giving you a fast single-click approach to keyframing the values.</p><p><br /></p><p>The shader automation handles the big lifting, such as the day-night cycle in the background. Customizable parameters range from the look and details of the ground, clouds, sunset, and night to adjusting thunder and aurora. While the clouds are texture-based, the shader has multiple individually tileable layers with scale, offset, speed, formation, and noise modifiers to tweak on the blueprint. Create new combinations of clouds or interesting animated changes. Animating the layers with slight differences creates eye-twisting parallax illusions that increase the feeling of depth. Check the Features video for a visual presentation of the main features of the Incredible Earth 80K. Please also view the Cinematic Trailer with a focus on visuals and separate video for the Aurora V2.</p><p><br /></p><p>Both videos were rendered with MRQ, using 80K with Temporal Sampling. Minor color correction was done to Cinematic Trailer outside UE, while similar results could be achieved with UE post-process volume. Some detail is lost on MP4 compression. All sequences used to render these videos are included in the project to show how different settings work together. Few of the product gallery shots have been graded outside UE.</p><p><br /></p><p>The level is designed with spinners to rotate the Earth, sun, moon, and the universe, not only per actor but also all together in relation to the world zero. Use spinners to create perfect orbits flying around the Earth without moving the camera or the actors. It can be beneficial to have actions happen locally in a small controlled area rather than moving everything around the Earth.</p><p><br /></p><p>Incredible Earth 80K uses the UE&#39;s own atmosphere system.</p><p><br /></p><p><br /></p><p><strong>The Textures and the Work Done:</strong></p><p><br /></p><p>On top of creating the custom shaders in Unreal, hundreds of tedious hours were spent on fixing textures, matching, and converting data to develop an Earth asset that isn&#39;t just high resolution on marketing terms but the highest possible usable resolution.</p><p><br /></p><p>The color, water mask, and normal maps based on height data are from true 80K&#43; NASA sources. No upscaling was done. The color is a custom composite of multiple Blue Marbles to minimize errors. Some obscured information near the equator on the original data has been recreated. Unfortunately, the color has a directional blur style stretching towards the polar regions, and there&#39;s a limit on how much of it can be fixed. The height source data has an increasing number of scanlines in regions such as northern Siberia and Canada. While pixel peeping the newly created normal map can reveal smoothed scanlines, in actual use, lots of what is left of them disappear into the environment. If you need to focus on a specific area, ask before purchasing.</p><p><br /></p><p>Clouds&#39; texture has been rearranged and made tileable. Hundreds, if not thousands, of dead pixels and scanlines were fixed. A separate pole-optimized regular texture was created, and on the shader side, there&#39;s an option to project clouds on poles to avoid texture stretching or compression altogether. </p><p><br /></p><p>Night texture from Black Marble is used to create customizable procedural city detail for crisper night scenes. Other assistive textures, from height to different masks, are included.</p><p><br /></p><p><br /></p><p><strong>System Recommendation:</strong></p><p><br /></p><p>Use &#34;r.Streaming.Poolsize 10000&#34; to work on this project. If not switching between resolutions, 64K should work with 9000, 32K with 4000, and 80K VT with 3000. Therefore, for GPU, at least 3080 with 12GB VRAM just to open the project without other assets. VRAM requirements increase exponentially from that as output resolution is increased. You should have at least 32GB RAM with 250GB of free space on the system drive for memory swapping. Consider CPU in the level of 5900X.</p><p><br /></p><p><br /></p><p><strong>Limitations / Why this asset may not be for you:</strong></p><p><br /></p><ol><li>The Incredible Earth is not made to scale, nor is the moon or distances between. The atmosphere ground radius is 1080km (About 1:6th of real scale). While the scene spinner structure will help you keep your main actors near 0.0.0, please familiarize yourself with Unreal&#39;s large world coordinates (LWC) to make sure that whatever you are planning, is actually supported by UE.</li><li>If you haven&#39;t worked with virtual textures, please understand that the VT tiles may sometimes appear blurry when entering the frame before loading up. That&#39;s just how virtual textures work. If you migrate to a new project, check the VT tile, border, and feedback on the project settings. VT &#34;popping&#34; depends on the speed you move and your scene&#39;s total process heaviness compared to available system resources. Regular 32K/64K versions can be used without such limitations.</li><li>This is not an &#34;Earth Zoom Kit&#34;. Regardless of the model&#39;s scale, 80K on texture means that each pixel represents 500x500 meters. While there&#39;s a basic displacement for some control over the flatness. In reality, 80K textures aren&#39;t enough to go on altitudes to appreciate the height differences on the ground. Therefore, the Earth mesh is just a sphere. A detailed Earth model with individual mountains would require something around 256K or 512K textures to go with it.</li><li>Perceived resolution depends on both the color and normal detail. In areas where the ground is flat and normal detail is minimal, you may feel less clarity than in areas with height differences. Some areas are better than others due to differences in the source data quality. Single parameter values may produce different visual results at different parts of the Earth.</li><li>While many errors on the textures have been fixed, you will still find them. With 3 billion pixels per texture and some of the satellite data lacking information or being corrupted, it would be impossible to produce perfect results.</li><li>Some of the textures are 16K. While they exceed the marketplace guideline&#39;s 8K maximum size and are heavier to open on the first time, they help on delivering more resolution and save texture samplers for extra functionality. They also help to simplify the dynamic masking of tileable clouds&#39; movement.</li><li>Opening the levels, the Earth blueprint, or the materials for the first time in a project, may take a long time, depending on the number and size of the textures referred to within the opened asset. If your system runs out of memory, open each texture file one by one first</li><li>This project has Oodle Textures plugin disabled. If you need it, resize all 16K normal maps and the glow mask first to 8K. Otherwise, Oodle will crash. Oodle might be important to you if you wish to package a product.</li><li>TAA and TSR do not produce the same results as seen in the rendered videos. The result may also vary if you plan to use this asset on real-time products.</li><li>Aurora and thunder are game-time-based. You may need to preroll on renders to get the desired results.</li></ol>",
+  "technicalDetails": "<p><strong>Features: </strong></p><ul><li>Built into a blueprint with easy-to-access parameters on the details panel and exposable to cinematics</li><li>80/64/32K versions of ground, water mask, and normals. 32K tileable clouds</li><li>A huge number of errors on source data fixed to create textures unique to this project</li><li>Automatic day-night cycle with many adjustable settings on the feature-rich custom shaders</li><li>Multiple cloud layers with independent control. Additional local Z-axis projected layer with working normals</li><li>Enhanced night looks with procedural city details and glow masks</li><li>Spinner structure on the level to create perfect orbits around the Earth without needing to move the camera or actors</li><li>Utilizes UE&#39;s atmosphere system. Optional Niagara aurora, material thunder, chaos normal for ocean</li></ul><p><br /></p><p>Meshes: 7 (Just simple spheres)</p><p>Materials: 10 Masters, 7 Instances, 14 Material Functions</p><p>Textures: 39 Regular &#43; 4 VT of 25 UDIM tiles each. Total 139</p><p>Texture Resolutions: 16384x16384, 16384x8192 , 8192x8192, 8192x4096, 4096x2048, 2048x2048, 1024x1024, 512x512, 64x64</p><p>Disclaimer: The 16K textures exceed the Unreal Marketplace&#39;s guideline maximum size of 8192x8192</p><p>Supported Platforms: Windows (No other platforms tested. Nanite and Lumen not required)</p><p>Documentation: See the product description above. Linked video sequences included in the project for study. Material graphs with comments.</p><p><br /></p><p><strong>Important/Additional Notes:</strong></p><ul><li>Requires Oodle Textures Plugin to be disabled (or limiting the max size of certain textures)</li><li>Requires Virtual Textures to be enabled</li><li>Read the full product description above carefully. Understand the limitations and requirements</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/01 IncredibleEarthEurope-1920x1080-0eaec2bde2b45178cac57ef48c55cd7e.jpg",
+      "md5": "0eaec2bde2b45178cac57ef48c55cd7e",
+      "width": 1920,
+      "height": 1080,
+      "size": 569176,
+      "uploadedDate": "2023-03-16T10:23:42.687Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/IncredibleEarth01-1920x1080-bd359abb23010ac762c0fe2c05425e3a.jpg",
+      "md5": "bd359abb23010ac762c0fe2c05425e3a",
+      "width": 1920,
+      "height": 1080,
+      "size": 814494,
+      "uploadedDate": "2023-03-27T00:19:11.314Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/IncredibleEarth03-1920x1080-95d4ab1ffcd7c9d70290987f465fba27.jpg",
+      "md5": "95d4ab1ffcd7c9d70290987f465fba27",
+      "width": 1920,
+      "height": 1080,
+      "size": 733290,
+      "uploadedDate": "2023-03-27T00:19:12.116Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/IncredibleEarth02-1920x1080-98c2b0cf3026e2373e76f6279f295acc.jpg",
+      "md5": "98c2b0cf3026e2373e76f6279f295acc",
+      "width": 1920,
+      "height": 1080,
+      "size": 780151,
+      "uploadedDate": "2023-03-27T00:19:12.536Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/IncredibleEarth04-1920x1080-d1d10c078e6b7b21e0096a7fb90f1833.jpg",
+      "md5": "d1d10c078e6b7b21e0096a7fb90f1833",
+      "width": 1920,
+      "height": 1080,
+      "size": 644850,
+      "uploadedDate": "2023-03-27T00:19:13.404Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/IncredibleEarth07-1920x1080-ccbef2a008172ba208fac8c413c56c3a.jpg",
+      "md5": "ccbef2a008172ba208fac8c413c56c3a",
+      "width": 1920,
+      "height": 1080,
+      "size": 738135,
+      "uploadedDate": "2023-03-27T00:19:14.166Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AuroraV2-1920x1080-027bc1071774e4383c1c8d65d2cd8f1f.jpg",
+      "md5": "027bc1071774e4383c1c8d65d2cd8f1f",
+      "width": 1920,
+      "height": 1080,
+      "size": 517641,
+      "uploadedDate": "2023-12-07T09:51:40.918Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/06 IncredibleEarthWestCoast-1920x1080-8b1df2350e58bc1b5f87702a61ef89d1.jpg",
+      "md5": "8b1df2350e58bc1b5f87702a61ef89d1",
+      "width": 1920,
+      "height": 1080,
+      "size": 533322,
+      "uploadedDate": "2023-03-16T10:23:44.805Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/IncredibleEarthCaribbean copy-1920x1080-f06a2c423038cacdb0bd653d3ade6541.jpg",
+      "md5": "f06a2c423038cacdb0bd653d3ade6541",
+      "width": 1920,
+      "height": 1080,
+      "size": 515780,
+      "uploadedDate": "2023-05-13T02:11:05.969Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/07 IncredibleEarthEastAsiaDay-1920x1080-ce5c936a051487e1bf4bb693fa9c93d5.jpg",
+      "md5": "ce5c936a051487e1bf4bb693fa9c93d5",
+      "width": 1920,
+      "height": 1080,
+      "size": 927082,
+      "uploadedDate": "2023-03-16T10:23:45.227Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/08 IncredibleEarthEastAsiaDusk-1920x1080-9eb5c9c16bcb14bafcb8db4ffe86e8ff.jpg",
+      "md5": "9eb5c9c16bcb14bafcb8db4ffe86e8ff",
+      "width": 1920,
+      "height": 1080,
+      "size": 607150,
+      "uploadedDate": "2023-03-16T10:23:45.687Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/04 IncredibleEarthAfricanLakesNoon-1920x1080-e4eec028be9a0a05dd663ab54c7954fb.jpg",
+      "md5": "e4eec028be9a0a05dd663ab54c7954fb",
+      "width": 1920,
+      "height": 1080,
+      "size": 804856,
+      "uploadedDate": "2023-03-16T10:23:44.008Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/05 IncredibleEarthAfricanLakesDusk-1920x1080-6c073f4be6dd2ef6da6b0053388f0c40.jpg",
+      "md5": "6c073f4be6dd2ef6da6b0053388f0c40",
+      "width": 1920,
+      "height": 1080,
+      "size": 720305,
+      "uploadedDate": "2023-03-16T10:23:44.419Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/11 IncredibleEarthClouds-1920x1080-24558a8602c80b114e429f07f45eda8a.jpg",
+      "md5": "24558a8602c80b114e429f07f45eda8a",
+      "width": 1920,
+      "height": 1080,
+      "size": 807090,
+      "uploadedDate": "2023-03-16T10:23:46.973Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/12 IncredibleEarthCentralAmerica-1920x1080-344b7ee7be4b06684c257c5dd96f03e0.jpg",
+      "md5": "344b7ee7be4b06684c257c5dd96f03e0",
+      "width": 1920,
+      "height": 1080,
+      "size": 610606,
+      "uploadedDate": "2023-03-16T10:23:47.358Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/13 IncredibleEarthIndiaPakistanBorder-1920x1080-e0f4ee54abd5cffde5229ecd44409109.jpg",
+      "md5": "e0f4ee54abd5cffde5229ecd44409109",
+      "width": 1920,
+      "height": 1080,
+      "size": 683787,
+      "uploadedDate": "2023-03-16T10:23:47.760Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/15 IncredibleEarthWholeGlobe-1920x1080-9c5acb1f697cdb58201bbaaf650d9259.jpg",
+      "md5": "9c5acb1f697cdb58201bbaaf650d9259",
+      "width": 1920,
+      "height": 1080,
+      "size": 183134,
+      "uploadedDate": "2023-03-16T10:23:48.747Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/16 IncredibleEarthSunrise-1920x1080-26d515a0f4340f10e405f1b659ddd737.jpg",
+      "md5": "26d515a0f4340f10e405f1b659ddd737",
+      "width": 1920,
+      "height": 1080,
+      "size": 572781,
+      "uploadedDate": "2023-03-16T10:23:49.089Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/18 CloudsMaterial-1920x1080-ad52a863ad37482d8a0bf65e8f991e9c.jpg",
+      "md5": "ad52a863ad37482d8a0bf65e8f991e9c",
+      "width": 1920,
+      "height": 1080,
+      "size": 570692,
+      "uploadedDate": "2023-03-16T10:23:49.932Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/19 GroundMaterial-1920x1080-9adc23563d6cd76cf22b597fccc76a2d.jpg",
+      "md5": "9adc23563d6cd76cf22b597fccc76a2d",
+      "width": 1920,
+      "height": 1080,
+      "size": 559483,
+      "uploadedDate": "2023-03-16T10:23:50.305Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/IncredibleEarth80K_thumb-284x284-7283d37ef7b5f41edc8016c8477ffe33.png",
+      "md5": "7283d37ef7b5f41edc8016c8477ffe33",
+      "width": 284,
+      "height": 284,
+      "size": 160423,
+      "uploadedDate": "2023-03-16T10:23:50.768Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/IncredibleEarth80K_featured-894x488-b6a611204a1b69b25874c6c2c4bb5d2d.png",
+      "md5": "b6a611204a1b69b25874c6c2c4bb5d2d",
+      "width": 894,
+      "height": 488,
+      "size": 869520,
+      "uploadedDate": "2023-03-27T00:19:14.668Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AuroraV2-1920x1080-027bc1071774e4383c1c8d65d2cd8f1f_Snapshot.jpg",
+      "md5": "2ec525931bda72e61086ee6ad9fa3d77",
+      "width": 150,
+      "height": 74,
+      "size": 6719,
+      "uploadedDate": "2023-12-07T09:51:41.168Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/IncredibleEarthCaribbean copy-1920x1080-f06a2c423038cacdb0bd653d3ade6541_Snapshot.jpg",
+      "md5": "a01021ad9d2e90c944d2ce7d12abff6d",
+      "width": 150,
+      "height": 74,
+      "size": 5847,
+      "uploadedDate": "2023-05-13T02:11:06.519Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/IncredibleEarth01-1920x1080-bd359abb23010ac762c0fe2c05425e3a_Snapshot.jpg",
+      "md5": "b832aa860dedf4df39050da5aeaff2ae",
+      "width": 150,
+      "height": 74,
+      "size": 8829,
+      "uploadedDate": "2023-03-27T00:19:11.566Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/14-IncredibleEarthAustralia-1920x1080-5f14b391ee734d41581f97596fc8a4c0_Snapshot.jpg",
+      "md5": "52052894c1a70306df441f95785eaf47",
+      "width": 150,
+      "height": 74,
+      "size": 6659,
+      "uploadedDate": "2023-03-27T00:19:11.951Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/IncredibleEarth03-1920x1080-95d4ab1ffcd7c9d70290987f465fba27_Snapshot.jpg",
+      "md5": "b2640ed9cebb178bd90fd3f2b46132da",
+      "width": 150,
+      "height": 74,
+      "size": 7319,
+      "uploadedDate": "2023-03-27T00:19:12.397Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/IncredibleEarth02-1920x1080-98c2b0cf3026e2373e76f6279f295acc_Snapshot.jpg",
+      "md5": "f680879e4b7d9edabbea10e9fe8417a3",
+      "width": 150,
+      "height": 74,
+      "size": 7675,
+      "uploadedDate": "2023-03-27T00:19:12.811Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/20-Americas-1920x1080-6962122e43899fe36f5199bf2ae734c0_Snapshot.jpg",
+      "md5": "3013d05f67e4014ed116c934c0f6fe23",
+      "width": 150,
+      "height": 74,
+      "size": 5826,
+      "uploadedDate": "2023-03-27T00:19:13.239Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/IncredibleEarth04-1920x1080-d1d10c078e6b7b21e0096a7fb90f1833_Snapshot.jpg",
+      "md5": "b6da7167266969856cf4c6c8c0d6575f",
+      "width": 150,
+      "height": 74,
+      "size": 6325,
+      "uploadedDate": "2023-03-27T00:19:13.649Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10-IncredibleEarthNewZealand-1920x1080-f4a59bf0c291fdd844d0451ccaa8020d_Snapshot.jpg",
+      "md5": "a3a9608b188b955dcc54ba1221cb96a1",
+      "width": 150,
+      "height": 74,
+      "size": 7222,
+      "uploadedDate": "2023-03-27T00:19:14.017Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/IncredibleEarth07-1920x1080-ccbef2a008172ba208fac8c413c56c3a_Snapshot.jpg",
+      "md5": "f93e20e62fe74e93a5316160147bd003",
+      "width": 150,
+      "height": 74,
+      "size": 7802,
+      "uploadedDate": "2023-03-27T00:19:14.440Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01 IncredibleEarthEurope-1920x1080-0eaec2bde2b45178cac57ef48c55cd7e_Snapshot.jpg",
+      "md5": "5ede54614359909cc3a7b55a998b42c7",
+      "width": 150,
+      "height": 74,
+      "size": 6648,
+      "uploadedDate": "2023-03-16T10:23:42.944Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/02 IncredibleEarthCongo-1920x1080-6cc3bc7cdcc85d9d749acdf3ad544c8d_Snapshot.jpg",
+      "md5": "e21a00d74868a622ad2cda9b8e29889c",
+      "width": 150,
+      "height": 74,
+      "size": 8065,
+      "uploadedDate": "2023-03-16T10:23:43.341Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/03 IncredibleEarthKilimanjaro-1920x1080-95fe3358dc862e6d4c795b64b5b5a4fe_Snapshot.jpg",
+      "md5": "a3f84408be81bb11ec629f34219069a3",
+      "width": 150,
+      "height": 74,
+      "size": 6997,
+      "uploadedDate": "2023-03-16T10:23:43.856Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/04 IncredibleEarthAfricanLakesNoon-1920x1080-e4eec028be9a0a05dd663ab54c7954fb_Snapshot.jpg",
+      "md5": "611638fe8ee9900104fa61662762b0ef",
+      "width": 150,
+      "height": 74,
+      "size": 7365,
+      "uploadedDate": "2023-03-16T10:23:44.267Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/05 IncredibleEarthAfricanLakesDusk-1920x1080-6c073f4be6dd2ef6da6b0053388f0c40_Snapshot.jpg",
+      "md5": "95ddc3adf46975ad135a4740ea350562",
+      "width": 150,
+      "height": 74,
+      "size": 7024,
+      "uploadedDate": "2023-03-16T10:23:44.689Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/06 IncredibleEarthWestCoast-1920x1080-8b1df2350e58bc1b5f87702a61ef89d1_Snapshot.jpg",
+      "md5": "8b0f88a379dc8720c87cbfc8bcfcf2dc",
+      "width": 150,
+      "height": 74,
+      "size": 5378,
+      "uploadedDate": "2023-03-16T10:23:45.076Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/07 IncredibleEarthEastAsiaDay-1920x1080-ce5c936a051487e1bf4bb693fa9c93d5_Snapshot.jpg",
+      "md5": "32cf9cb73438e5e1ab881dbc909c1918",
+      "width": 150,
+      "height": 74,
+      "size": 7967,
+      "uploadedDate": "2023-03-16T10:23:45.542Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/08 IncredibleEarthEastAsiaDusk-1920x1080-9eb5c9c16bcb14bafcb8db4ffe86e8ff_Snapshot.jpg",
+      "md5": "72b9b4f0000aa09e9edfb0014939eb22",
+      "width": 150,
+      "height": 74,
+      "size": 6218,
+      "uploadedDate": "2023-03-16T10:23:45.943Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/09 IncredibleEarthCaribbean-1920x1080-fae5981e9bace1c7f45e12a0085d72b9_Snapshot.jpg",
+      "md5": "7821b80d3386e71ae622fe1b1a5cb350",
+      "width": 150,
+      "height": 74,
+      "size": 5572,
+      "uploadedDate": "2023-03-16T10:23:46.378Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10 IncredibleEarthNewZealand-1920x1080-7b368e9ab9359de65541321f2ff6d3da_Snapshot.jpg",
+      "md5": "d2f78b16499f69cce14d284303b05d94",
+      "width": 150,
+      "height": 74,
+      "size": 6708,
+      "uploadedDate": "2023-03-16T10:23:46.810Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11 IncredibleEarthClouds-1920x1080-24558a8602c80b114e429f07f45eda8a_Snapshot.jpg",
+      "md5": "f4752cadb3d12694b63ecf0500aa7a1d",
+      "width": 150,
+      "height": 74,
+      "size": 7411,
+      "uploadedDate": "2023-03-16T10:23:47.222Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/12 IncredibleEarthCentralAmerica-1920x1080-344b7ee7be4b06684c257c5dd96f03e0_Snapshot.jpg",
+      "md5": "1e0be5750f80cacca3304854f1de7f34",
+      "width": 150,
+      "height": 74,
+      "size": 6066,
+      "uploadedDate": "2023-03-16T10:23:47.615Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/13 IncredibleEarthIndiaPakistanBorder-1920x1080-e0f4ee54abd5cffde5229ecd44409109_Snapshot.jpg",
+      "md5": "f83b05bbe79726ba207e570947a4c6e8",
+      "width": 150,
+      "height": 74,
+      "size": 6410,
+      "uploadedDate": "2023-03-16T10:23:48.008Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/14 IncredibleEarthSahara-1920x1080-59b16a09e9b7ff287d954ca2189ed5c4_Snapshot.jpg",
+      "md5": "8553cd6bd19bcddec958f03c623dc096",
+      "width": 150,
+      "height": 74,
+      "size": 3564,
+      "uploadedDate": "2023-03-16T10:23:48.546Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/15 IncredibleEarthWholeGlobe-1920x1080-9c5acb1f697cdb58201bbaaf650d9259_Snapshot.jpg",
+      "md5": "3c50cfd23e293598c0c5785783f68816",
+      "width": 150,
+      "height": 74,
+      "size": 4021,
+      "uploadedDate": "2023-03-16T10:23:48.959Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/16 IncredibleEarthSunrise-1920x1080-26d515a0f4340f10e405f1b659ddd737_Snapshot.jpg",
+      "md5": "3b947492a21a565ae4aee98effb1ed3a",
+      "width": 150,
+      "height": 74,
+      "size": 5125,
+      "uploadedDate": "2023-03-16T10:23:49.328Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/17 ResolutionComparison-1920x1080-af9d720b7c6f75955d6818a23ea8ae7e_Snapshot.jpg",
+      "md5": "36a011c91812dd7ac232038338e5e867",
+      "width": 150,
+      "height": 74,
+      "size": 5896,
+      "uploadedDate": "2023-03-16T10:23:49.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/18 CloudsMaterial-1920x1080-ad52a863ad37482d8a0bf65e8f991e9c_Snapshot.jpg",
+      "md5": "a26680929f01ce0c5a369f43bf4d34b5",
+      "width": 150,
+      "height": 74,
+      "size": 6990,
+      "uploadedDate": "2023-03-16T10:23:50.161Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/19 GroundMaterial-1920x1080-9adc23563d6cd76cf22b597fccc76a2d_Snapshot.jpg",
+      "md5": "f81d5d4e70b5e002b0f545abed06e160",
+      "width": 150,
+      "height": 74,
+      "size": 6794,
+      "uploadedDate": "2023-03-16T10:23:50.542Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-03-26T07:13:01.501Z",
+  "lastModifiedDate": "2024-12-04T19:30:28.320Z",
+  "customAttributes": {},
+  "entitlementName": "1916d9f743984b7c906353eaaea57929",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "72d3052ccf364a0facf351745c5d9b69",
+      "appId": "Incredib1916d9f74398V1",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-03-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Incredible Earth 80K 231506"
+    }
+  ],
+  "developer": "MegaMammoth",
+  "developerId": "o-ky9e9zb9wulzelt7ahlym6wsqnjrv2",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

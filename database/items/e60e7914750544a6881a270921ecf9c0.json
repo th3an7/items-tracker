@@ -1,0 +1,287 @@
+{
+  "id": "e60e7914750544a6881a270921ecf9c0",
+  "title": "MasterSpawner / Wave Spawning System",
+  "description": "MasterSpawner is a easy to setup, drag and drop wave spawning system for Unreal Engine.",
+  "longDescription": "<p><a href=\"https://docs.google.com/document/d/1y75HTQxpUH5OOOejVoc1MP_I-4ESQnSj/edit\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;4Z-nKxksZik&amp;list&#61;PL6ftASd6AR1agoSqXLKMZyaz5vK31Z8rp\" rel=\"nofollow\">Video Tutorials</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;e83OqOGya4k\" rel=\"nofollow\">Asset Overview</a></p><p><br /></p><p><strong>BEST SUPPORT FROM DISCORD:</strong></p><p><a href=\"https://discord.gg/vbJ9YTa2RD\" rel=\"nofollow\">Support Discord</a></p><p><br /></p><p><strong>MasterSpawner</strong> is a C&#43;&#43; based wave spawning system. The main premise of this asset is that it&#39;s easy to use and implement. We tried to reduce all of the work from the user&#39;s side to give a smooth and easy experience. However, this doesn&#39;t mean that it&#39;s not customizable. For advanced users, all the necessary functions are exposed to a blueprint and can be used in any shape and form.</p><p><br /></p><p><strong>The spawning system is based on few components.</strong></p><ol><li><strong>MasterSpawner:</strong> This is the main blueprint that will be handling the spawning and control of everything. Some key components of the MasterSpawner.</li><li>ActiveSpawnLocations: These are the spawn locations that the spawner will be choosing from while spawning.</li><li>SpawnList: This is a struct array of AI classes and their probability to spawn. The classes in this array will be spawned in every round based on their probabilities.</li><li>ForceSpawnList: This is a struct array of AI classes and their spawning method (Instant, Random). You will use this list to spawn special AI&#39;s in that round (Bosses, Special Enemies).</li><li>SpawnCheckSphereRadius: The spawner checks that random location before spawning an ai there. The radius specifies how big the checking area should be.</li><li>ChannelToAvoidSpawning: The spawner will avoid the given channel while spawning AI&#39;s. You can use this to avoid obstacles in the spawning area.</li><li>And many more...</li><li><strong>SpawnLocation:</strong> They include a sphereCollision which indicates the area that the spawn location covers (Needs to have a SpawnNavAreaFilter on the areas that spawning is needed). If this spawn location is selected the AI will be spawned in a randomly suitable location within the sphere.</li><li><strong>SpawnActivator: </strong>They include an array of spawn locations. Overlapping with the activator will replace the ActiveSpawnLocations at the MasterSpawner with the ones that the SpawnActivator has.</li><li><strong>SpawnNavAreaFilter: </strong>This nav filter will be used to determine the spawnable areas.</li><li><strong>LocalSpawners: </strong>These are like MasterSpawners but their purpose is to host small challenges such as kill and survive challenges. Includes similar variables and components as the master spawner.</li><li><strong>KillCountArea: </strong>If an AI dies within the bounds of this area the kill count will increase and a function will be notified. You can use the kill count to create custom challenges.</li></ol>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li> Fully automated spawn system.</li><li> Fully dynamic spawn locations.</li><li> Sample level showcasing the system.</li><li>Probability-based spawning for AI variation</li><li>Fixed spawn ratio for large groups (Optimization)</li><li>Special notifies on RoundStarts, EnemySpawns, RoundEnds, etc...</li><li>Time breaks between rounds for players to prepare for the upcoming round.</li><li>Respawn system for left behind AI&#39;s</li><li>Special spawn list for Bosses and special AI&#39;s.</li><li>Location-based area checks to minimize the probability of spawning at a wrong location.</li><li>Customize Round Waiting Time, Number of AI&#39;s to Spawn, etc...</li><li>LocalSpawner to create minigames</li><li>Pause and Resume the spawner anytime.</li><li>Tag-based actor recognition</li></ul><p><br /></p><p><strong>Number of Blueprints:</strong> 5 [19 including the examples and widgets]</p><p><strong>Network Replicated: </strong>NO</p><p><strong>Supported Development Platforms:</strong> Windows</p><p><strong>Documentation:</strong> Fully Commented, Example Level, Youtube tutorials, Google Docs Documentation</p><p><strong>Additional: </strong>Editor and blueprint themes are not included in this asset and not owned by me. You can get them from.</p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/product/darker-nodes\" rel=\"nofollow\">Darker Nodes</a> <a href=\"https://www.unrealengine.com/marketplace/en-US/product/electronic-nodes\" rel=\"nofollow\">Electronic Nodes</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-c732ec3c5ea8b85c917b971a6740c9af.png",
+      "md5": "c732ec3c5ea8b85c917b971a6740c9af",
+      "width": 1920,
+      "height": 1080,
+      "size": 713893,
+      "uploadedDate": "2021-05-11T03:07:39.457Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Page8-1920x1080-f90616d85f0fdb8cdd47acaa908ec59c.png",
+      "md5": "f90616d85f0fdb8cdd47acaa908ec59c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1573313,
+      "uploadedDate": "2021-04-18T17:25:08.602Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-82d7ac0c351744a6a80b5cc1bfab96fe.png",
+      "md5": "82d7ac0c351744a6a80b5cc1bfab96fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 1366903,
+      "uploadedDate": "2021-05-11T03:07:39.923Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-3b95da66902be460055ed1d6e81f028e.png",
+      "md5": "3b95da66902be460055ed1d6e81f028e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1205813,
+      "uploadedDate": "2021-05-11T03:07:40.473Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-f0587e4f629a65b3901e574d8130ce1f.png",
+      "md5": "f0587e4f629a65b3901e574d8130ce1f",
+      "width": 1920,
+      "height": 1080,
+      "size": 408079,
+      "uploadedDate": "2021-05-11T03:07:40.875Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-5558c14abd6af189d21e0a859fba703d.png",
+      "md5": "5558c14abd6af189d21e0a859fba703d",
+      "width": 1920,
+      "height": 1080,
+      "size": 292051,
+      "uploadedDate": "2021-05-11T03:07:41.187Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Page1-1920x1080-a5f28ae63f1ca03969395a6d632347ce.png",
+      "md5": "a5f28ae63f1ca03969395a6d632347ce",
+      "width": 1920,
+      "height": 1080,
+      "size": 1154458,
+      "uploadedDate": "2021-04-18T17:25:10.379Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Page2-1920x1080-c0d7839245f5feb3e878051b52bd27a4.png",
+      "md5": "c0d7839245f5feb3e878051b52bd27a4",
+      "width": 1920,
+      "height": 1080,
+      "size": 197968,
+      "uploadedDate": "2021-04-18T17:25:10.800Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Untitled-1-1920x1080-474ac158cbe244c4714e23d475f1be57.png",
+      "md5": "474ac158cbe244c4714e23d475f1be57",
+      "width": 1920,
+      "height": 1080,
+      "size": 444224,
+      "uploadedDate": "2021-07-13T09:07:54.979Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Untitled-1-1920x1080-474ac158cbe244c4714e23d475f1be57_Snapshot.png",
+      "md5": "9f963f757dfbbc50692b7646e86fcb03",
+      "width": 150,
+      "height": 74,
+      "size": 5574,
+      "uploadedDate": "2021-07-13T09:07:55.249Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Untitled-2-1920x1080-768aa6d6962439b5faf9771ddb7863c6.png",
+      "md5": "768aa6d6962439b5faf9771ddb7863c6",
+      "width": 1920,
+      "height": 1080,
+      "size": 481604,
+      "uploadedDate": "2021-07-13T09:07:55.396Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Untitled-2-1920x1080-768aa6d6962439b5faf9771ddb7863c6_Snapshot.png",
+      "md5": "d127da1e263e6362da18e36c844e0138",
+      "width": 150,
+      "height": 74,
+      "size": 5632,
+      "uploadedDate": "2021-07-13T09:07:55.673Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MasterSpawnerWaveSpawningSystem_thumb-284x284-a5714865fa705958bd27eb7b2a33df19.png",
+      "md5": "a5714865fa705958bd27eb7b2a33df19",
+      "width": 284,
+      "height": 284,
+      "size": 103040,
+      "uploadedDate": "2021-04-18T17:25:12.516Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MasterSpawnerWaveSpawningSystem_featured-894x488-05899caa1f22142c8498e9dc4f411bde.png",
+      "md5": "05899caa1f22142c8498e9dc4f411bde",
+      "width": 894,
+      "height": 488,
+      "size": 535293,
+      "uploadedDate": "2021-04-18T17:25:12.614Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-c732ec3c5ea8b85c917b971a6740c9af_Snapshot.png",
+      "md5": "526391919dade219db694a6d31944ba1",
+      "width": 150,
+      "height": 74,
+      "size": 4729,
+      "uploadedDate": "2021-05-11T03:07:39.771Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-82d7ac0c351744a6a80b5cc1bfab96fe_Snapshot.png",
+      "md5": "84b0366461aa28f8394cbc19fea0a0ef",
+      "width": 150,
+      "height": 74,
+      "size": 6852,
+      "uploadedDate": "2021-05-11T03:07:40.262Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-3b95da66902be460055ed1d6e81f028e_Snapshot.png",
+      "md5": "07726e0128145c6bd565c54b4cc2ce1d",
+      "width": 150,
+      "height": 74,
+      "size": 7129,
+      "uploadedDate": "2021-05-11T03:07:40.806Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-f0587e4f629a65b3901e574d8130ce1f_Snapshot.png",
+      "md5": "1291349d1754e45756df94abed59ee42",
+      "width": 150,
+      "height": 74,
+      "size": 5702,
+      "uploadedDate": "2021-05-11T03:07:41.090Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-5558c14abd6af189d21e0a859fba703d_Snapshot.png",
+      "md5": "ca867475d387c8eae6a1b61d30764033",
+      "width": 150,
+      "height": 74,
+      "size": 4164,
+      "uploadedDate": "2021-05-11T03:07:41.388Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page8-1920x1080-f90616d85f0fdb8cdd47acaa908ec59c_Snapshot.png",
+      "md5": "a42197625b5d75afe3e840eaa0f05021",
+      "width": 150,
+      "height": 74,
+      "size": 7391,
+      "uploadedDate": "2021-04-18T17:25:09.000Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page7-1920x1080-4d2a425eb85b4e10a7e97aa826ed14a1_Snapshot.png",
+      "md5": "2cc4a455b34148dfa78f3b0504c2cfa3",
+      "width": 150,
+      "height": 74,
+      "size": 7535,
+      "uploadedDate": "2021-04-18T17:25:09.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page6-1920x1080-bdf3d5d29c959733e99fd885482510c8_Snapshot.png",
+      "md5": "7c6c0db149e0b8ca703c54420d2304ee",
+      "width": 150,
+      "height": 74,
+      "size": 7183,
+      "uploadedDate": "2021-04-18T17:25:10.168Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page1-1920x1080-a5f28ae63f1ca03969395a6d632347ce_Snapshot.png",
+      "md5": "0ea21fcbd2d54fef32f1ce90622ac724",
+      "width": 150,
+      "height": 74,
+      "size": 6737,
+      "uploadedDate": "2021-04-18T17:25:10.694Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page2-1920x1080-c0d7839245f5feb3e878051b52bd27a4_Snapshot.png",
+      "md5": "c7c6a9b28d7d70b4f5a5a49f8a755f20",
+      "width": 150,
+      "height": 74,
+      "size": 3611,
+      "uploadedDate": "2021-04-18T17:25:11.017Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page3-1920x1080-29242365c46ebdc9bca85d9721cd1d1f_Snapshot.png",
+      "md5": "6650141f293fedda821fbb70aed997cf",
+      "width": 150,
+      "height": 74,
+      "size": 5655,
+      "uploadedDate": "2021-04-18T17:25:11.362Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page4-1920x1080-86f2271c8f126081f4cbbdeb000145a5_Snapshot.png",
+      "md5": "f2feb5517191c282cb09fc11cd959e4e",
+      "width": 150,
+      "height": 74,
+      "size": 7393,
+      "uploadedDate": "2021-04-18T17:25:11.895Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page5-1920x1080-5a114f613ee1f38aca421ec453c543be_Snapshot.png",
+      "md5": "07682571d805837031457aa012a0fdc8",
+      "width": 150,
+      "height": 74,
+      "size": 6160,
+      "uploadedDate": "2021-04-18T17:25:12.408Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-05-06T23:51:49.259Z",
+  "lastModifiedDate": "2024-10-15T11:20:10.559Z",
+  "entitlementName": "e60e7914750544a6881a270921ecf9c0",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "eca4689d367d46ffa386edf2396992f1",
+      "appId": "MSWaveSpawner_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-04-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.0"
+    }
+  ],
+  "developer": "Vanreus",
+  "developerId": "o-bh2l29dgcpfyc82kkegvjevckb27dg",
+  "endOfSupport": false,
+  "unsearchable": false
+}

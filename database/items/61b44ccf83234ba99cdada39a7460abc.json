@@ -1,0 +1,415 @@
+{
+  "id": "61b44ccf83234ba99cdada39a7460abc",
+  "title": "Advanced Locomotion System V4",
+  "description": "An advanced bipedal locomotion and layering system focusing on high quality character animation with responsive movement. Built to be flexible, extendable, and to provide a solid starting point for new projects. Currently Singleplayer only. (100% BP)",
+  "longDescription": "<p><a href=\"https://youtu.be/ru1--3wP-F8\" rel=\"nofollow\"><strong>VIDEO</strong></a></p><p><a href=\"https://discord.gg/wYYMHFu\" rel=\"nofollow\"><strong>DISCORD</strong></a></p><p><br /></p><p><strong><em>IMPORTANT: IT IS HIGHLY ADVISED THAT YOU HAVE A GOOD UNDERSTANDING OF BLUEPRINTS AND ARE FAMILIAR WITH HOW GAME ANIMATION WORKS PRIOR TO YOUR PURCHASE OF THIS PACK. THIS IS NOT A PLUG AND PLAY SYSTEM, AND WORKING WITH IT CAN BE CONFUSING IF YOU ARE NEW TO UE4.</em></strong></p><p><br /></p><p><strong>Main Features</strong></p><ul><li>Simple yet flexible <strong>Base_Character BP</strong> with a curve driven approach to movement and rotation (No root motion, all movement except rolling is code driven).</li><li>Powerful Data Driven <strong>AnimBP</strong> with a smart approach to <strong>locomotion blending</strong>, and a robust <strong>layering system</strong> for the easy addition of game-play states and variation, without tons of extra animations. Other features include <strong>sprint impulse</strong>, <strong>additive leaning</strong>, <strong>land prediction</strong>, <strong>turn/rotate in place</strong>, <strong>Foot IK</strong> and more.</li><li>Fully dynamic <strong>Mantling System </strong>that uses simple traces to check for climbable geometry. Curve assets are used for smooth location/rotation alignment and movement.</li></ul><p><br /></p><p><strong>Secondary Features</strong></p><ul><li>Experimental Data Driven <strong>Camera system</strong> using an anim instance to piggy-back off of the state machine functionality, for easy and detailed camera behavior control with states, blends, and anim curves.</li><li>Basic but functional <strong>Ragdoll Blending </strong>system to blend seamlessly to and from a ragdoll state. Mostly just for fun ;)</li></ul>",
+  "technicalDetails": "<p><br /></p><p><strong>Main Stuff</strong></p><ul><li>1 <strong>Base_Character BP</strong> with 1 child.</li><li>1 <strong>AnimBP </strong>for all animation.</li><li>1 <strong>Player Controller </strong>and 3 <strong>Widgets </strong>for easy debugging functionality.</li><li>1 <strong>Player Camera Manager </strong>with an additional AnimBP for the camera system</li><li>4 <strong>Interfaces </strong>for easy communication between all the main systems.</li><li>1 <strong>Data Table </strong>and multiple <strong>curves</strong>, <strong>structs</strong>, and <strong>enums</strong> used throughout the systems.</li><li>1 new <strong>AnimMan </strong>character mesh<strong> </strong>with accompanying physics asset, great for prototyping, with easy coloring functionality (within child bp).</li><li>Over 100 key-framed <strong>Animation Examples</strong> with cycles, poses transitions, and more.</li></ul><p><br /></p><p><strong>Secondary Stuff</strong></p><ul><li>Many smaller and non essential things like <strong>AnimModifiers</strong>, <strong>AI Examples</strong>, <strong>Materials Props</strong>, and some simple <strong>BPs </strong>for creating happy looking test levels :)</li></ul><p><br /></p><p><strong><em>V1 - 4.14</em></strong></p><p><strong><em>V2 - 4.15 &gt; 4.17</em></strong></p><p><strong><em>V3 - 4.18 &gt; 4.19</em></strong></p><p><strong><em>V3.1 - 4.20 &gt; 4.23</em></strong></p><p><strong><em>V4 - 4.24.1 </em></strong>(Please make sure you have the <strong><em>24.1 hotfix</em></strong> installed to prevent a crash)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 01-1920x1080-ddf0e27fffb79bdf6f0c0bd55bf70227.png",
+      "md5": "ddf0e27fffb79bdf6f0c0bd55bf70227",
+      "width": 1920,
+      "height": 1080,
+      "size": 2336475,
+      "uploadedDate": "2020-01-08T13:02:28.688Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 11-1920x1080-e02136189e00e984e7fdca6f85690cac.png",
+      "md5": "e02136189e00e984e7fdca6f85690cac",
+      "width": 1920,
+      "height": 1080,
+      "size": 2267018,
+      "uploadedDate": "2020-01-08T13:02:29.216Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 02-1920x1080-ee012b898081cde029e8f9aea41db2cf.png",
+      "md5": "ee012b898081cde029e8f9aea41db2cf",
+      "width": 1920,
+      "height": 1080,
+      "size": 2600634,
+      "uploadedDate": "2020-01-08T13:02:29.864Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 05-1920x1080-e67a19c740716c10741e5a3e14be9d69.png",
+      "md5": "e67a19c740716c10741e5a3e14be9d69",
+      "width": 1920,
+      "height": 1080,
+      "size": 2451732,
+      "uploadedDate": "2020-01-08T13:02:30.602Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Sequence 01-1920x1080-59e8063198dc25c1465939d9d3ab4af7.png",
+      "md5": "59e8063198dc25c1465939d9d3ab4af7",
+      "width": 1920,
+      "height": 1080,
+      "size": 1869770,
+      "uploadedDate": "2020-01-08T13:02:31.354Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 06-1920x1080-93f5e2c393d056f8af4ae8efe7ddd0d6.png",
+      "md5": "93f5e2c393d056f8af4ae8efe7ddd0d6",
+      "width": 1920,
+      "height": 1080,
+      "size": 2240935,
+      "uploadedDate": "2020-01-08T13:02:32.018Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Sequence 02-1920x1080-b8f7ebf7e6015f260de4bf900d94bdb7.png",
+      "md5": "b8f7ebf7e6015f260de4bf900d94bdb7",
+      "width": 1920,
+      "height": 1080,
+      "size": 1961436,
+      "uploadedDate": "2020-01-08T13:02:32.659Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Sequence 03-1920x1080-62418c3251a2b7d0c8f7d6b736193c36.png",
+      "md5": "62418c3251a2b7d0c8f7d6b736193c36",
+      "width": 1920,
+      "height": 1080,
+      "size": 1879732,
+      "uploadedDate": "2020-01-08T13:02:33.297Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Sequence 05-1920x1080-6e6d1621e7f655923a3ebf4d7a1496dd.png",
+      "md5": "6e6d1621e7f655923a3ebf4d7a1496dd",
+      "width": 1920,
+      "height": 1080,
+      "size": 1724055,
+      "uploadedDate": "2020-01-08T13:02:33.914Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Sequence 04-1920x1080-8202ed3eb03a59bbd9fddb532d07ce1c.png",
+      "md5": "8202ed3eb03a59bbd9fddb532d07ce1c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1810750,
+      "uploadedDate": "2020-01-08T13:02:34.554Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 17-1920x1080-51a8f24975e0ae1e9fbd98bba658411f.png",
+      "md5": "51a8f24975e0ae1e9fbd98bba658411f",
+      "width": 1920,
+      "height": 1080,
+      "size": 2486276,
+      "uploadedDate": "2020-01-08T13:02:35.187Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 18-1920x1080-a1ccc638afaf538f341f20c4abd91e8b.png",
+      "md5": "a1ccc638afaf538f341f20c4abd91e8b",
+      "width": 1920,
+      "height": 1080,
+      "size": 614490,
+      "uploadedDate": "2020-01-08T13:02:35.715Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 19-1920x1080-cca44979548730566b4bcd85e66cb0a9.png",
+      "md5": "cca44979548730566b4bcd85e66cb0a9",
+      "width": 1920,
+      "height": 1080,
+      "size": 566026,
+      "uploadedDate": "2020-01-08T13:02:36.121Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 20-1920x1080-d3331a6a5368e2347a84a492c31d39f0.png",
+      "md5": "d3331a6a5368e2347a84a492c31d39f0",
+      "width": 1920,
+      "height": 1080,
+      "size": 642414,
+      "uploadedDate": "2020-01-08T13:02:36.516Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 21-1920x1080-ab7d7d5ff3837bc645f92db4e38c1c29.png",
+      "md5": "ab7d7d5ff3837bc645f92db4e38c1c29",
+      "width": 1920,
+      "height": 1080,
+      "size": 627222,
+      "uploadedDate": "2020-01-08T13:02:36.980Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AdvancedLocomotionSystemV4_thumb-284x284-5f11d81def27ce8073cb965036b8a8e3.png",
+      "md5": "5f11d81def27ce8073cb965036b8a8e3",
+      "width": 284,
+      "height": 284,
+      "size": 110418,
+      "uploadedDate": "2020-01-08T13:02:37.329Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AdvancedLocomotionSystemV4_featured-894x488-de15d8364dd16b6a8c2378c454973043.png",
+      "md5": "de15d8364dd16b6a8c2378c454973043",
+      "width": 894,
+      "height": 488,
+      "size": 492581,
+      "uploadedDate": "2020-01-08T13:02:37.448Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 01-1920x1080-ddf0e27fffb79bdf6f0c0bd55bf70227_Snapshot.png",
+      "md5": "60d9e27ae4f0be27cec9f148824bd2ae",
+      "width": 150,
+      "height": 74,
+      "size": 5035,
+      "uploadedDate": "2020-01-08T13:02:29.029Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 11-1920x1080-e02136189e00e984e7fdca6f85690cac_Snapshot.png",
+      "md5": "4d91befa668e8bff6829e1c675ccdd7e",
+      "width": 150,
+      "height": 74,
+      "size": 4354,
+      "uploadedDate": "2020-01-08T13:02:29.657Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 02-1920x1080-ee012b898081cde029e8f9aea41db2cf_Snapshot.png",
+      "md5": "2408a78f50d70e3e35c2bcf819d81add",
+      "width": 150,
+      "height": 74,
+      "size": 4680,
+      "uploadedDate": "2020-01-08T13:02:30.316Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 05-1920x1080-e67a19c740716c10741e5a3e14be9d69_Snapshot.png",
+      "md5": "d62c5b4069a2c7dc60a6145021c2fb6e",
+      "width": 150,
+      "height": 74,
+      "size": 4501,
+      "uploadedDate": "2020-01-08T13:02:31.032Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Sequence 01-1920x1080-59e8063198dc25c1465939d9d3ab4af7_Snapshot.png",
+      "md5": "badbbacf6a8c6b6a9ef77ba645bd16f1",
+      "width": 150,
+      "height": 74,
+      "size": 6470,
+      "uploadedDate": "2020-01-08T13:02:31.752Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 06-1920x1080-93f5e2c393d056f8af4ae8efe7ddd0d6_Snapshot.png",
+      "md5": "b2e3610e8712379b9a5485d619f6e7c5",
+      "width": 150,
+      "height": 74,
+      "size": 4428,
+      "uploadedDate": "2020-01-08T13:02:32.430Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Sequence 02-1920x1080-b8f7ebf7e6015f260de4bf900d94bdb7_Snapshot.png",
+      "md5": "35d94cb6560b9e69495fe2efc6ff12f3",
+      "width": 150,
+      "height": 74,
+      "size": 8080,
+      "uploadedDate": "2020-01-08T13:02:33.080Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Sequence 03-1920x1080-62418c3251a2b7d0c8f7d6b736193c36_Snapshot.png",
+      "md5": "c952f46e2fb18cc328ba5720438350dc",
+      "width": 150,
+      "height": 74,
+      "size": 6459,
+      "uploadedDate": "2020-01-08T13:02:33.693Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Sequence 05-1920x1080-6e6d1621e7f655923a3ebf4d7a1496dd_Snapshot.png",
+      "md5": "72e30e29ad1711d463ae05b3134650de",
+      "width": 150,
+      "height": 74,
+      "size": 6754,
+      "uploadedDate": "2020-01-08T13:02:34.364Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Sequence 04-1920x1080-8202ed3eb03a59bbd9fddb532d07ce1c_Snapshot.png",
+      "md5": "cf308155d09aec09f8979d9d69138c6e",
+      "width": 150,
+      "height": 74,
+      "size": 6020,
+      "uploadedDate": "2020-01-08T13:02:34.932Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 17-1920x1080-51a8f24975e0ae1e9fbd98bba658411f_Snapshot.png",
+      "md5": "425d5ebd7993632c4706314615ba6e32",
+      "width": 150,
+      "height": 74,
+      "size": 5526,
+      "uploadedDate": "2020-01-08T13:02:35.584Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 18-1920x1080-a1ccc638afaf538f341f20c4abd91e8b_Snapshot.png",
+      "md5": "c031bb3990fb5f7b36128d1da30f5911",
+      "width": 150,
+      "height": 74,
+      "size": 6622,
+      "uploadedDate": "2020-01-08T13:02:35.991Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 19-1920x1080-cca44979548730566b4bcd85e66cb0a9_Snapshot.png",
+      "md5": "3b20f706df40bedf9eee6fd6f856e365",
+      "width": 150,
+      "height": 74,
+      "size": 5685,
+      "uploadedDate": "2020-01-08T13:02:36.393Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 20-1920x1080-d3331a6a5368e2347a84a492c31d39f0_Snapshot.png",
+      "md5": "b05dcfd3f909ed4f1ac31fd1cfaf412a",
+      "width": 150,
+      "height": 74,
+      "size": 5983,
+      "uploadedDate": "2020-01-08T13:02:36.812Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 21-1920x1080-ab7d7d5ff3837bc645f92db4e38c1c29_Snapshot.png",
+      "md5": "3f45fa540a31b6ebc0190a77b6cd6539",
+      "width": 150,
+      "height": 74,
+      "size": 6211,
+      "uploadedDate": "2020-01-08T13:02:37.249Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2017-01-18T14:23:36.903Z",
+  "lastModifiedDate": "2024-10-09T07:34:27.398Z",
+  "customAttributes": {},
+  "entitlementName": "61b44ccf83234ba99cdada39a7460abc",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "05fa81cbc6164a8389afbb8ffa057dad",
+      "appId": "Advanced61b44ccf83234ba99cdada39a7460abcV1",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-10-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AdvancedLocomotionV3_4.18"
+    },
+    {
+      "id": "0d25bc15739e494288d2a314729c8b66",
+      "appId": "Advanced61b44ccf8323V7",
+      "compatibleApps": [
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2020-01-05T00:00:00.000Z",
+      "releaseNote": "V4.0 - UE4.24.1",
+      "versionTitle": "Advanced Locomotion V4"
+    },
+    {
+      "id": "627ed5e7246d4c68bc382659466a2e8d",
+      "appId": "Advanced61b44ccf8323V4",
+      "compatibleApps": [
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-07-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AdvancedLocomotionV3.1_4.20"
+    },
+    {
+      "id": "a0ae45182dcd4074a08e8c9221368e8b",
+      "appId": "AdvancedLocomotionV1",
+      "compatibleApps": [
+        "UE_4.14"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-01-18T00:00:00.000Z",
+      "versionTitle": "AdvancedLocomotionV1"
+    },
+    {
+      "id": "cd21ab66b25f4159ba658fd45680c3f6",
+      "appId": "Advanced61b44ccf8323V2",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-05-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AdvancedLocomotionV3_4.19"
+    },
+    {
+      "id": "d65f06dcef5d42f0afb1e4de0084c76c",
+      "appId": "AdvancedLocomotionV2415",
+      "compatibleApps": [
+        "UE_4.15",
+        "UE_4.16",
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-06-02T00:00:00.000Z",
+      "versionTitle": "AdvancedLocomotionV2415"
+    }
+  ],
+  "developer": "LongmireLocomotion",
+  "developerId": "o-338f3fa39e407fbe12d8f4ee6c1bdf",
+  "eulaIds": [],
+  "installModes": [],
+  "endOfSupport": false,
+  "ageGatings": {},
+  "applicationId": "",
+  "unsearchable": false
+}

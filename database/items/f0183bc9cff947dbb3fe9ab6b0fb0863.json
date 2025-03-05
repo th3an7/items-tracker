@@ -1,0 +1,354 @@
+{
+  "id": "f0183bc9cff947dbb3fe9ab6b0fb0863",
+  "title": "Frosted Glass",
+  "description": "UE4 & UE5 frosted glass material pack optimized for games and architectural visualization",
+  "longDescription": "<h2><a href=\"https://youtu.be/jBJigAL7vaI\" rel=\"nofollow\"><u>Watch Video Overview</u></a></h2><p><br /></p><p>The frosted glass shader is provided in two fundamental implementations, each with their benefits and drawbacks (they can be combined):</p><p><br /></p><p>Surface Material</p><ul><li>Supports per surface diffuse color (for effects like stained glass)</li><li>Supports per surface reflection color</li><li>Does not support rendering translucency behind the frosted surface</li><li>Supports mobile rendering (lower quality)</li></ul><p><br /></p><p>Post Process Material</p><ul><li>Supports per post process volume diffuse color</li><li>Supports per surface reflection color</li><li>Supports rendering translucency behind the frosted surface</li><li>Supports mobile rendering (full quality)</li></ul><p><br /></p><p>The best thing to do is look at the included showcase level to see how the different versions are used and how they can be used in combination to enable more complex effects like multiple layers of frosted glass. Most examples also have a note placed next to them in the level, that provides further information on that specific example.</p><p><br /></p><p><strong>How to use surface materials</strong></p><ol><li>Simply assign one of the frosted glass materials to your mesh and the effect will work immediately</li><li>If you choose to enable backface culling in the material instance (useful for removing self-overlapping artifacts on complex surfaces), make sure to enable &#34;Render CustomDepth Pass&#34; on the mesh</li></ol><p><br /></p><p><strong>How to use post process materials</strong></p><ol><li>In the Project Settings, set &#34;Custom Depth-Stencil Pass&#34; to &#34;Enabled with Stencil&#34;</li><li>Assign a regular glass material to your mesh</li><li>On your mesh, enable &#34;Render CustomDepth Pass&#34; and set &#34;CustomDepth Stencil Value&#34; to any value from 1-255</li><li>On your Post Process Volume, add a frosted glass post process material instance to the &#34;Post Process Materials&#34; section</li><li>You should now be able to see the effect on your glass - if you need more information, check out the <a href=\"https://docs.unrealengine.com/en-US/Engine/Rendering/PostProcessEffects/PostProcessMaterials/index.html\" rel=\"nofollow\"><u>official documentation on post process materials</u></a></li></ol><p><br /></p><p><strong>Notes on usage with UE5.0</strong></p><p>Because Lumen does not yet support mirror like reflections for glass surfaces, you may noticed the reflections look blurry. In such case I would recommend to turn off the lumen glass reflections and use cubemaps to get sharp reflections. The relevant command for that is &#34;r.Lumen.TranslucencyReflections.Enable 0&#34;</p><p><br /></p><p>Also if you wish to view the static lighting scene, set Global Illumination solution to Screen Space in project settings (this will allow lightmaps and reflections from captures to be shown like in UE4).</p><p><br /></p><p>Raytraced translucency only supports simple frosted glass where both reflected and transmitted light is scattered.</p>",
+  "technicalDetails": "<p><strong>Supported Platforms</strong></p><p>The effect is supported and tested on high end as well as mobile platforms. The post process version has the best compatibility across platforms and supports full quality and material feature set on mobile, compared to the surface version which falls back to a lower quality and limited feature set on mobile.</p><p><br /></p><p><strong>Rendering Compatibility</strong></p><p>Glass materials that are used in combination with the post process frosting version need to have &#34;Render after DOF&#34; / &#34;Mobile Separate Translucency&#34; enabled if they are meant to have sharp reflections or surface detail like dirt or detail normals. This relies on &#34;Separate Translucency&#34; to be enabled in the project settings, which is the case by default.</p><p><br /></p><p><strong>Included Content</strong></p><p>This product includes 4 master materials:</p><ul><li>M_FrostedGlass - fully featured and highly configurable frosted glass surface material</li><li>M_SimpleFrostedGlass - very simple and easy to expand on frosted glass surface material</li><li>M_Glass - regular glass material</li><li>MPP_FrostedGlass - post process material that adds the frosted effect to regular glass surfaces</li></ul><p><br /></p><p>The surface master materials all share the same material function and also come with a SSR variation that is pre-configured to have screen space reflections enabled.</p><p>Additionally there are 26 material instances included, most of which are used in the showcase level to provide examples of how the materials can be used.</p><p><br /></p><p><strong>Feedback</strong></p><p>Feel free to contact me at <a href=\"mailto:decal_portal459&#64;simplelogin.com\" rel=\"nofollow\">decal_portal459&#64;simplelogin.com</a> if you run into any issues or have any feature requests.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FrostedGlassSurface-1920x1080-6b0a5c94117c3ebe2b20fab3f31a4ec5.png",
+      "md5": "6b0a5c94117c3ebe2b20fab3f31a4ec5",
+      "width": 1920,
+      "height": 1080,
+      "size": 3140176,
+      "uploadedDate": "2021-06-20T19:35:30.275Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FrostedGlassScreenshotBathroom-1920x1080-3ade487dcbc98f045f17e6f3696edb45.jpg",
+      "md5": "3ade487dcbc98f045f17e6f3696edb45",
+      "width": 1920,
+      "height": 1080,
+      "size": 1089402,
+      "uploadedDate": "2021-06-21T12:45:19.054Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FrostedGlassScreenshotCabinet-1920x1080-e7376173bc797355ae9d5c4a532fc634.jpg",
+      "md5": "e7376173bc797355ae9d5c4a532fc634",
+      "width": 1920,
+      "height": 1080,
+      "size": 723423,
+      "uploadedDate": "2021-06-21T12:45:20.381Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FrostedGlassScreenshotOffice-1920x1080-2e7fd11dd051e582ab5e50ba43c2d417.jpg",
+      "md5": "2e7fd11dd051e582ab5e50ba43c2d417",
+      "width": 1920,
+      "height": 1080,
+      "size": 1052302,
+      "uploadedDate": "2021-06-21T12:45:21.362Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FrostedGlassScreenshotJars-1920x1080-7c3405d6d9159742b26786d03465c69a.jpg",
+      "md5": "7c3405d6d9159742b26786d03465c69a",
+      "width": 1920,
+      "height": 1080,
+      "size": 815155,
+      "uploadedDate": "2021-06-21T12:45:20.899Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/FrostedGlass_thumb-284x284-8183a0fa5abb92f631bf3826807d90bf.png",
+      "md5": "8183a0fa5abb92f631bf3826807d90bf",
+      "width": 284,
+      "height": 284,
+      "size": 72500,
+      "uploadedDate": "2021-06-20T14:47:23.229Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/FrostedGlass_featured-894x488-5a6b1651b9fd0bbff25958538085419a.png",
+      "md5": "5a6b1651b9fd0bbff25958538085419a",
+      "width": 894,
+      "height": 488,
+      "size": 238146,
+      "uploadedDate": "2021-06-20T19:35:30.802Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotBathroom-1920x1080-3ade487dcbc98f045f17e6f3696edb45_Snapshot.jpg",
+      "md5": "7e966a0011440adb327ad7d18689fc90",
+      "width": 150,
+      "height": 74,
+      "size": 5694,
+      "uploadedDate": "2021-06-21T12:45:19.337Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotTrain-1920x1080-8e57545c74a2f9a4ad45715bf8be4461_Snapshot.jpg",
+      "md5": "bdeb0ece9a09758d215be8cfe9c8103c",
+      "width": 150,
+      "height": 74,
+      "size": 5124,
+      "uploadedDate": "2021-06-21T12:45:19.744Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotBox-1920x1080-839456e9bab2062cbbb72b4cd550dd58_Snapshot.jpg",
+      "md5": "dc78a3d946777f409af0bde58f030c48",
+      "width": 150,
+      "height": 74,
+      "size": 5455,
+      "uploadedDate": "2021-06-21T12:45:20.284Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotCabinet-1920x1080-e7376173bc797355ae9d5c4a532fc634_Snapshot.jpg",
+      "md5": "56e5d9608da964dc1396ec6aa818c55c",
+      "width": 150,
+      "height": 74,
+      "size": 5289,
+      "uploadedDate": "2021-06-21T12:45:20.752Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotJars-1920x1080-7c3405d6d9159742b26786d03465c69a_Snapshot.jpg",
+      "md5": "5bb24e9c2ae204d8847ff0dd38280dfd",
+      "width": 150,
+      "height": 74,
+      "size": 6249,
+      "uploadedDate": "2021-06-21T12:45:21.212Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotOffice-1920x1080-2e7fd11dd051e582ab5e50ba43c2d417_Snapshot.jpg",
+      "md5": "e4940a3ac3c595a6bfd61005e0af1a01",
+      "width": 150,
+      "height": 74,
+      "size": 6465,
+      "uploadedDate": "2021-06-21T12:45:21.651Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassSurface-1920x1080-6b0a5c94117c3ebe2b20fab3f31a4ec5_Snapshot.png",
+      "md5": "ff5d2a9c38c9b9e61c7989f157b82276",
+      "width": 150,
+      "height": 74,
+      "size": 6720,
+      "uploadedDate": "2021-06-20T19:35:30.703Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassSurface-1920x1080-d09bae61f3862d20c4d655e9275741c3_Snapshot.png",
+      "md5": "c8d3b3b99a39e658d45f5d6eb73df709",
+      "width": 150,
+      "height": 74,
+      "size": 5861,
+      "uploadedDate": "2021-06-20T14:47:20.564Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotBathroom-1920x1080-d04a5543ec3e12fbeff2e3a698986d45_Snapshot.jpg",
+      "md5": "29d1a3511e2b6c31edbf403fb9818732",
+      "width": 150,
+      "height": 74,
+      "size": 5687,
+      "uploadedDate": "2021-06-20T14:47:21.033Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotTrain-1920x1080-2df416ff313df4d68a471fd86bda1592_Snapshot.jpg",
+      "md5": "331f8c42155f8b699b07c5761e750ae7",
+      "width": 150,
+      "height": 74,
+      "size": 5111,
+      "uploadedDate": "2021-06-20T14:47:21.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotBox-1920x1080-9160800bd020144f24774b37f85cb267_Snapshot.jpg",
+      "md5": "5c5c7d2ff3f360bc3effa808ddfc6b6b",
+      "width": 150,
+      "height": 74,
+      "size": 5450,
+      "uploadedDate": "2021-06-20T14:47:21.916Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotCabinet-1920x1080-f7029f1588556535500d974cfa969022_Snapshot.jpg",
+      "md5": "a033a7b1eb99f6d99262bd8ef654c660",
+      "width": 150,
+      "height": 74,
+      "size": 5282,
+      "uploadedDate": "2021-06-20T14:47:22.324Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotJars-1920x1080-c3c8d1244ec54225857d9db074bd425c_Snapshot.jpg",
+      "md5": "864828408f6d99d28be9fa3bcb61e4d7",
+      "width": 150,
+      "height": 74,
+      "size": 6241,
+      "uploadedDate": "2021-06-20T14:47:22.752Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FrostedGlassScreenshotOffice-1920x1080-c18ddc36cd1210b5b53622ade5215c33_Snapshot.jpg",
+      "md5": "715dc698387a1a3591ffd9469a1b03b4",
+      "width": 150,
+      "height": 74,
+      "size": 6455,
+      "uploadedDate": "2021-06-20T14:47:23.173Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/materials"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-06-24T10:51:16.621Z",
+  "lastModifiedDate": "2024-11-16T13:11:51.892Z",
+  "customAttributes": {},
+  "entitlementName": "f0183bc9cff947dbb3fe9ab6b0fb0863",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "e61edee746ba49e4aca2fb3ca384070f",
+      "appId": "FrostedGf0183bc9cff9V1",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-06-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.25-1.1.0"
+    },
+    {
+      "id": "37a22ae3d6f74031a9ba220c8bd38137",
+      "appId": "FrostedGf0183bc9cff9V2",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2021-06-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.26-1.1.0"
+    },
+    {
+      "id": "cb1d0612c86b4d2f89753daea9cf10d0",
+      "appId": "FrostedGf0183bc9cff9V3",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1"
+      ],
+      "platform": [
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One",
+        "Android"
+      ],
+      "dateAdded": "2022-11-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.00-1.2.0"
+    },
+    {
+      "id": "cef744313eed43fd8e86f16fca4dbf55",
+      "appId": "FrostedGf0183bc9cff9V4",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "Linux",
+        "iOS",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-05-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.20-1.2.0"
+    },
+    {
+      "id": "9e668383a2254ab4a84f73f7267db12e",
+      "appId": "FrostedGf0183bc9cff9V5",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2023-10-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.30-1.2.1"
+    },
+    {
+      "id": "1c9c9960bf3a40079f02fc7961ec7559",
+      "appId": "FrostedGf0183bc9cff9V7",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-05-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.40-1.2.2"
+    }
+  ],
+  "developer": "DecalPortal",
+  "developerId": "o-qu8fj9kf2qpsam5xk967u2p4wea4ex",
+  "endOfSupport": false,
+  "unsearchable": false
+}

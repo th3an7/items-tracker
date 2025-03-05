@@ -1,0 +1,461 @@
+{
+  "id": "817ecbd7489b4cc99fa248f8ffe24a47",
+  "title": "Tile Based Minimap",
+  "description": "A system that allows the creation of minimaps based on images broken into a tile grid; fully customizable with icons and GPS route support!",
+  "longDescription": "<p>&#x1f3a5; | <a href=\"https://youtu.be/zpsLFquDkeU\" rel=\"nofollow\">Demo Gameplay</a> | <a href=\"https://youtu.be/jSWHvyPz0JA\" rel=\"nofollow\">Plugin Showcase</a> | <a href=\"https://youtu.be/2vOWeY2RSP8\" rel=\"nofollow\">V2 Update Showcase </a>| <a href=\"https://youtu.be/igyT56KFmJc\" rel=\"nofollow\">V2 Basic Tutorial</a> | <a href=\"https://youtu.be/P8ANCcdkQ0c\" rel=\"nofollow\">(OLD V1) Tutorial</a> |</p><p>&#x1f517; | <a href=\"https://drive.google.com/file/d/1f7FhrnTLmOS3ZgVn_dBgN-7v8tQEaktq/view?usp&#61;sharing\" rel=\"nofollow\">Demo</a> | <a href=\"https://drive.google.com/file/d/1Ho7Q_1hBLA3RFi6YIenEbO1TApOrs3on/view?usp&#61;sharing\" rel=\"nofollow\">Example Project</a> | <a href=\"https://docs.google.com/document/d/1kfl0U6r2FKupaRGrhpfDvCs7EzNH7Oi3Q_n6ljVTGhg/edit?usp&#61;sharing\" rel=\"nofollow\">Quickstart</a> | <a href=\"https://drive.google.com/drive/folders/1-ej0d5Lq49CDghj4VgncwBkgrgCeV8_P?usp&#61;drive_link\" rel=\"nofollow\">Docs</a> | <a href=\"https://adi23041999.github.io/UE-Tile-Based-Minimap-API-Reference/\" rel=\"nofollow\">API Reference </a>| <a href=\"https://docs.google.com/document/d/1QVuIZEHq0AYLSGhglMEXu4eHbe8F4CsAwIAGR-WzP7o/edit?usp&#61;drive_link\" rel=\"nofollow\">Changelog</a> | <a href=\"https://forums.unrealengine.com/t/tile-based-minimap/1209411?u&#61;adrian23041999\" rel=\"nofollow\">Forum</a> | <a href=\"https://discord.gg/7uqwZ8QDgV\" rel=\"nofollow\">Discord</a> |</p><p>&#x1f4a5; | <a href=\"https://docs.google.com/document/d/16CDCTAG6BrOJN4tfMKTGH9x_zMYYmMIwLat_iEA2BbA/edit?usp&#61;drive_link\" rel=\"nofollow\">Packaging Fix</a> | &lt;&lt;&lt; follow this if your game crashes after packaging</p><p><strong>Note</strong>: the plugin is still compatible with UE 5.0 &amp; 5.1. Users need to download a newer version and recompile it or get verified to recieve a link.</p><p><br /></p><p><em>Latest Update: v2.1.1 - 06.08.24</em></p><p><br /></p><p><strong><em>Tile Based Minimap (TBM) </em></strong>lets you create ingame maps of your levels based on prerendered images of your level that are taken in editor and then broken into tiles that are loaded dynamically during gameplay. TBM also has many perks that other minimap systems on the market might not be able to hold up with, such as...</p><ul><li>The system is straightforward; it allows you to render top down images of your level within the unreal editor, allowing you to use them directly or export them into an image editing software.</li><li>The system is simple; It lets you easilly create blips and icons for your objects using data tables &amp; a single function from the provided subsystem. Multiple widgets can source the blip&#39;s information at once!</li><li>The system is customizable; it comes with a handy minimap widget that allows you to easily change the shape, rotation mode <em>(either fixed or dynamic rotation)</em>, zoom, tilt and an optional overridable tile texture path per minimap <em>(different textures for the same grid)</em>.</li><li>The system is dynamic; it allows you to create multiple grids in the same level and the system will dynamically switch between them based on the player location <em>(perfect for interiors or varying heights!)</em>.</li><li>The system gives you options on replication; The blips can be replicated either statically or dynamically thanks to the Blip Replicator component. Client blips have the ability to bind to their client-side source if it exists, or use the replicated values if it does not.</li><li>The system is optimized; it&#39;s not required to use any actors for the blips so the system doesn&#39;t use GetAllActorsOfClass to source the blip transform.</li><li>The system gets around; it takes an array of locations within the world and draws a route on the grid based on them, similar to how a GPS would create a route for the player to follow.</li><li>The system is illustrative; it features the ability to mark locations on the map, from placing icons and symbols to plotting out entire zones <em>(and it&#39;s dynamic, too!)</em>.</li><li>The system hates pixel jittering as much as you do; it comes with optional material based transformations for both the grids and blips at the cost of interaction, therefore greatly reducing the jitter!</li><li>The system is smooth; you can add scale and opacity controls to blips based on their distance so they can smoothly fade in and out based on their distance to the border of the minimap.</li><li>The system is endless; the whole plugin is exposed to blueprints, allowing you to customize it with the only limit being your imagination!</li></ul><p><br /></p><p>Still have doubts? No worries, check out the example project to see the system in action!</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Minimaps based on tile grids</li><li>Capture tile images in editor</li><li>Dynamic grid switching (interiors)</li><li>Dynamic tile loading</li><li>Blips (Replicated)</li><li>Circle or Rectangle zones</li><li>GPS draw route support (no route calculation; only draw support)</li></ul><p>Code Modules: (Please include a full list of each Plugin module and their module type (Runtime, Editor etc.))</p><ul><li> TileBasedMinimap (Runtime)</li></ul><p>Number of Blueprints: 3</p><p>Number of C&#43;&#43; Classes: 11</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64, Android</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/01-1920x1080-3e62e60041b08b004ab635c7010864ba.png",
+      "md5": "3e62e60041b08b004ab635c7010864ba",
+      "width": 1920,
+      "height": 1080,
+      "size": 117081,
+      "uploadedDate": "2023-06-21T11:26:39.285Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/02-1920x1080-4e13e73bab11c71dbc2bb606cdf79488.png",
+      "md5": "4e13e73bab11c71dbc2bb606cdf79488",
+      "width": 1920,
+      "height": 1080,
+      "size": 453903,
+      "uploadedDate": "2023-06-21T11:26:39.471Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/03-1920x1080-5bec963bf78d9d31dc563a50aa9fe5e3.png",
+      "md5": "5bec963bf78d9d31dc563a50aa9fe5e3",
+      "width": 1920,
+      "height": 1080,
+      "size": 465174,
+      "uploadedDate": "2023-06-21T11:26:39.624Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/04-1920x1080-3a874c0f3f83125ee8dc851cd043e0a9.png",
+      "md5": "3a874c0f3f83125ee8dc851cd043e0a9",
+      "width": 1920,
+      "height": 1080,
+      "size": 314222,
+      "uploadedDate": "2023-06-21T11:26:39.907Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/05-1920x1080-dd3c703b633d8b36a4563fe2a8474e5f.png",
+      "md5": "dd3c703b633d8b36a4563fe2a8474e5f",
+      "width": 1920,
+      "height": 1080,
+      "size": 536352,
+      "uploadedDate": "2023-06-21T11:26:40.132Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/06-1920x1080-8e3f10b12e136b9924dc9a922c7f2e55.png",
+      "md5": "8e3f10b12e136b9924dc9a922c7f2e55",
+      "width": 1920,
+      "height": 1080,
+      "size": 348586,
+      "uploadedDate": "2023-06-21T11:26:40.318Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/07-1920x1080-7daaf601367495ec90cd6b79afc0741b.png",
+      "md5": "7daaf601367495ec90cd6b79afc0741b",
+      "width": 1920,
+      "height": 1080,
+      "size": 414668,
+      "uploadedDate": "2023-06-21T11:26:40.526Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/08-1920x1080-cd814e6671476c138bbeb7256dbc8e16.png",
+      "md5": "cd814e6671476c138bbeb7256dbc8e16",
+      "width": 1920,
+      "height": 1080,
+      "size": 325376,
+      "uploadedDate": "2023-06-21T11:26:40.768Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/09-1920x1080-6235dce5380466ac21acb74110bcaefb.png",
+      "md5": "6235dce5380466ac21acb74110bcaefb",
+      "width": 1920,
+      "height": 1080,
+      "size": 315050,
+      "uploadedDate": "2023-06-21T11:26:40.946Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/10-1920x1080-2138e52d73549c0442cd44e461912c5b.png",
+      "md5": "2138e52d73549c0442cd44e461912c5b",
+      "width": 1920,
+      "height": 1080,
+      "size": 628191,
+      "uploadedDate": "2023-06-21T11:26:41.150Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/11-1920x1080-3143863c280429901463e4024153138b.png",
+      "md5": "3143863c280429901463e4024153138b",
+      "width": 1920,
+      "height": 1080,
+      "size": 482620,
+      "uploadedDate": "2023-06-21T11:26:41.378Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/12-1920x1080-00cf238aaa89f665ce466a599dc8e17b.png",
+      "md5": "00cf238aaa89f665ce466a599dc8e17b",
+      "width": 1920,
+      "height": 1080,
+      "size": 437106,
+      "uploadedDate": "2023-06-21T11:26:41.622Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/13-1920x1080-8660436375bc2b7234e703282a8af99b.png",
+      "md5": "8660436375bc2b7234e703282a8af99b",
+      "width": 1920,
+      "height": 1080,
+      "size": 430775,
+      "uploadedDate": "2023-06-21T11:26:41.858Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/14-1920x1080-fa28b718055be0d10bd69a0553400397.png",
+      "md5": "fa28b718055be0d10bd69a0553400397",
+      "width": 1920,
+      "height": 1080,
+      "size": 142335,
+      "uploadedDate": "2023-06-21T11:26:42.113Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/15-1920x1080-becf3e110e854f3100db94ad9e45c7e0.png",
+      "md5": "becf3e110e854f3100db94ad9e45c7e0",
+      "width": 1920,
+      "height": 1080,
+      "size": 601556,
+      "uploadedDate": "2023-06-21T11:26:42.361Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/16-1920x1080-e32bb8633c742a6e61d8215dd0e7509f.png",
+      "md5": "e32bb8633c742a6e61d8215dd0e7509f",
+      "width": 1920,
+      "height": 1080,
+      "size": 549444,
+      "uploadedDate": "2023-06-21T11:26:42.560Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/17-1920x1080-5cf9c9c479cedfcfa26ffb024269489a.png",
+      "md5": "5cf9c9c479cedfcfa26ffb024269489a",
+      "width": 1920,
+      "height": 1080,
+      "size": 154287,
+      "uploadedDate": "2023-06-21T11:26:42.895Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/18-1920x1080-29762402afb4dbdd83d733a523bddea9.png",
+      "md5": "29762402afb4dbdd83d733a523bddea9",
+      "width": 1920,
+      "height": 1080,
+      "size": 351239,
+      "uploadedDate": "2023-06-21T14:52:12.669Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/19-1920x1080-73fc5123a71c87ff4e3d96456d42a77c.png",
+      "md5": "73fc5123a71c87ff4e3d96456d42a77c",
+      "width": 1920,
+      "height": 1080,
+      "size": 126183,
+      "uploadedDate": "2023-06-21T14:52:12.833Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/20-1920x1080-76c85f21ea362e4a6a2da771ab670cb9.png",
+      "md5": "76c85f21ea362e4a6a2da771ab670cb9",
+      "width": 1920,
+      "height": 1080,
+      "size": 394069,
+      "uploadedDate": "2023-06-21T14:52:13.138Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TileBasedMinimap_thumb-284x284-fc6260f2742b31231fe3df59cbe7d820.png",
+      "md5": "fc6260f2742b31231fe3df59cbe7d820",
+      "width": 284,
+      "height": 284,
+      "size": 38427,
+      "uploadedDate": "2023-06-21T10:26:39.750Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TileBasedMinimap_featured-894x488-4c1fbed5d3262aa5679264b2e9b398dc.png",
+      "md5": "4c1fbed5d3262aa5679264b2e9b398dc",
+      "width": 894,
+      "height": 488,
+      "size": 104728,
+      "uploadedDate": "2023-06-21T10:26:39.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/18-1920x1080-29762402afb4dbdd83d733a523bddea9_Snapshot.png",
+      "md5": "820897f00c71d4e4e6bc2cd6645cd93a",
+      "width": 150,
+      "height": 74,
+      "size": 7527,
+      "uploadedDate": "2023-06-21T14:52:12.751Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/19-1920x1080-73fc5123a71c87ff4e3d96456d42a77c_Snapshot.png",
+      "md5": "dea743d6857af831d403295700184c2c",
+      "width": 150,
+      "height": 74,
+      "size": 5310,
+      "uploadedDate": "2023-06-21T14:52:12.910Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/20-1920x1080-76c85f21ea362e4a6a2da771ab670cb9_Snapshot.png",
+      "md5": "9dad2e801e9dde11b30e77544ff364ee",
+      "width": 150,
+      "height": 74,
+      "size": 5036,
+      "uploadedDate": "2023-06-21T14:52:13.217Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01-1920x1080-3e62e60041b08b004ab635c7010864ba_Snapshot.png",
+      "md5": "9fee97bf5918963683f6eb3271d48ca2",
+      "width": 150,
+      "height": 74,
+      "size": 6344,
+      "uploadedDate": "2023-06-21T11:26:39.350Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/02-1920x1080-4e13e73bab11c71dbc2bb606cdf79488_Snapshot.png",
+      "md5": "55202f5c064c8e838075baee5593cd52",
+      "width": 150,
+      "height": 74,
+      "size": 5213,
+      "uploadedDate": "2023-06-21T11:26:39.567Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/03-1920x1080-5bec963bf78d9d31dc563a50aa9fe5e3_Snapshot.png",
+      "md5": "a7257ec4424739f7e14c5591988747f9",
+      "width": 150,
+      "height": 74,
+      "size": 5272,
+      "uploadedDate": "2023-06-21T11:26:39.750Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/04-1920x1080-3a874c0f3f83125ee8dc851cd043e0a9_Snapshot.png",
+      "md5": "4e098d871284e8f576e183b5661e698f",
+      "width": 150,
+      "height": 74,
+      "size": 6119,
+      "uploadedDate": "2023-06-21T11:26:39.998Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/05-1920x1080-dd3c703b633d8b36a4563fe2a8474e5f_Snapshot.png",
+      "md5": "b481dd134419437082d28759422a9174",
+      "width": 150,
+      "height": 74,
+      "size": 5157,
+      "uploadedDate": "2023-06-21T11:26:40.215Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/06-1920x1080-8e3f10b12e136b9924dc9a922c7f2e55_Snapshot.png",
+      "md5": "4b279c8c226345f3402354c49dcc9929",
+      "width": 150,
+      "height": 74,
+      "size": 5942,
+      "uploadedDate": "2023-06-21T11:26:40.442Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/07-1920x1080-7daaf601367495ec90cd6b79afc0741b_Snapshot.png",
+      "md5": "6c79b147208ea34a1b90b3d9fb739d65",
+      "width": 150,
+      "height": 74,
+      "size": 6147,
+      "uploadedDate": "2023-06-21T11:26:40.653Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/08-1920x1080-cd814e6671476c138bbeb7256dbc8e16_Snapshot.png",
+      "md5": "50b39bfccc7df60d423382bb4ba58f77",
+      "width": 150,
+      "height": 74,
+      "size": 5941,
+      "uploadedDate": "2023-06-21T11:26:40.846Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/09-1920x1080-6235dce5380466ac21acb74110bcaefb_Snapshot.png",
+      "md5": "11604f061d7eddc0fc03d06b8ef7fd62",
+      "width": 150,
+      "height": 74,
+      "size": 6203,
+      "uploadedDate": "2023-06-21T11:26:41.043Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10-1920x1080-2138e52d73549c0442cd44e461912c5b_Snapshot.png",
+      "md5": "fb281f778db8a0af72505b7d1ddebd94",
+      "width": 150,
+      "height": 74,
+      "size": 4858,
+      "uploadedDate": "2023-06-21T11:26:41.241Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11-1920x1080-3143863c280429901463e4024153138b_Snapshot.png",
+      "md5": "c331c6d45a6aeb592b01c7bdc6b887d3",
+      "width": 150,
+      "height": 74,
+      "size": 5361,
+      "uploadedDate": "2023-06-21T11:26:41.459Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/12-1920x1080-00cf238aaa89f665ce466a599dc8e17b_Snapshot.png",
+      "md5": "f5edeef039c9e8dfbd7e30b26fee3d08",
+      "width": 150,
+      "height": 74,
+      "size": 6621,
+      "uploadedDate": "2023-06-21T11:26:41.756Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/13-1920x1080-8660436375bc2b7234e703282a8af99b_Snapshot.png",
+      "md5": "2e266f91150dd0c9171f2acb3d6b3457",
+      "width": 150,
+      "height": 74,
+      "size": 5860,
+      "uploadedDate": "2023-06-21T11:26:41.938Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/14-1920x1080-fa28b718055be0d10bd69a0553400397_Snapshot.png",
+      "md5": "1b1b6c9f6c13a5a115e054e77645cb38",
+      "width": 150,
+      "height": 74,
+      "size": 5310,
+      "uploadedDate": "2023-06-21T11:26:42.181Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/15-1920x1080-becf3e110e854f3100db94ad9e45c7e0_Snapshot.png",
+      "md5": "0f01507b2fc320066f7a66970fa50bc8",
+      "width": 150,
+      "height": 74,
+      "size": 3764,
+      "uploadedDate": "2023-06-21T11:26:42.463Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/16-1920x1080-e32bb8633c742a6e61d8215dd0e7509f_Snapshot.png",
+      "md5": "aa2d8dd94f486abaec075600d338f476",
+      "width": 150,
+      "height": 74,
+      "size": 4185,
+      "uploadedDate": "2023-06-21T11:26:42.666Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/17-1920x1080-5cf9c9c479cedfcfa26ffb024269489a_Snapshot.png",
+      "md5": "76374f9f24841de28d5b50de2af22f69",
+      "width": 150,
+      "height": 74,
+      "size": 6248,
+      "uploadedDate": "2023-06-21T11:26:42.965Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wip-1920x1080-eab2e5a7e972f8e71b7f1a911180f2f4_Snapshot.jpg",
+      "md5": "0756493ff4fbdd58c86ab8b2407b21a1",
+      "width": 150,
+      "height": 74,
+      "size": 4922,
+      "uploadedDate": "2023-06-02T23:19:10.105Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-06-24T18:31:48.146Z",
+  "lastModifiedDate": "2025-02-28T14:54:17.688Z",
+  "customAttributes": {},
+  "entitlementName": "817ecbd7489b4cc99fa248f8ffe24a47",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "945c653d85e34a2d85680bd6d74e3c8e",
+      "appId": "TBM_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2023-06-03T00:00:00.000Z",
+      "releaseNote": "2.1.1",
+      "versionTitle": "TBM_5_2"
+    },
+    {
+      "id": "66f715583b65472fafb5c0c492552a92",
+      "appId": "TBM_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "2.1.1",
+      "versionTitle": "TBM_5_3"
+    },
+    {
+      "id": "4503e00d8c0e419f83c825168f188c86",
+      "appId": "TBM_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2024-04-25T00:00:00.000Z",
+      "releaseNote": "2.1.1",
+      "versionTitle": "TBM_5_4"
+    }
+  ],
+  "developer": "Adi",
+  "developerId": "o-vfg7gaykl7drx9v4nmx99xzkv27rf6",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

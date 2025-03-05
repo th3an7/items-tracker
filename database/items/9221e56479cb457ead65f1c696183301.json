@@ -1,0 +1,448 @@
+{
+  "id": "9221e56479cb457ead65f1c696183301",
+  "title": "Combo Graph",
+  "description": "GAS (Gameplay Ability System) powered Combo System with a node-based editor, that lets you focus on Combo / Combat design with a custom graph to deliver a fast, flexible and enjoyable developer experience.",
+  "longDescription": "<p><a href=\"https://cutt.ly/AOrjQsH\" rel=\"nofollow\">Documentation</a> / <a href=\"https://github.com/combo-graph/demo/releases/latest\" rel=\"nofollow\">Demo Project</a> (<a href=\"https://github.com/combo-graph/demo/releases/latest/download/ComboGraph_Demo_Build.zip\" rel=\"nofollow\">Packaged Build</a>) / <a href=\"https://cutt.ly/cOrzD6b\" rel=\"nofollow\">WIP Videos</a> / <a href=\"https://combo-graph.github.io/changelog\" rel=\"nofollow\">Changelog </a>/ <a href=\"https://discord.gg/d4rs4vcX6t\" rel=\"nofollow\">Discord Server</a></p><p><br /></p><p><strong><em>Last Update: September 6th 2023 (1.3.6 for 5.3)</em></strong></p><p><br /></p><p>Combo Graph is an Unreal plugin based on GAS (Gameplay Ability System) that lets you focus on Combo / Combat design with a Custom Graph and node-based Editor to deliver a fast, flexible and enjoyable developer experience.</p><p><br /></p><p>The main idea behind this plugin is to try to cut down iteration times as much as possible when designing and prototyping a new combat system / combos.</p><p><br /></p><p>Paired with good animation packs, this plugin hopefully has everything a gameplay developer needs to quickly and efficiently build their own melee combat system.</p><p><br /></p><p><strong>Built with integration in mind</strong></p><p><br /></p><p>Built from the ground up with integration in mind, you don&#39;t need to know GAS to use or integrate Combo Graph. It uses GAS and Enhanced Input at its core to play combo animations and setup input transitions between each nodes, in an accessible and approachable way. A Combo Graph asset can be run from a Gameplay Ability via an Ability Task or elsewhere via a Gameplay Task, like from within a Character Blueprint or Behavior Tree Task.</p><p><br /></p><p><strong>Multiplayer Support</strong></p><p><br /></p><p>Building off the foundation of GAS and Enhanced Input, replication and multiplayer support were an integrant part of the plugin design and development process. Combo Graphs running within a Gameplay Ability, and using Ability Tasks to handle animation montage, you get proper local prediction and replication out of the bat.</p><p><br /></p><p>Just know that while you can use Animation Sequences directly within Combo Graphs (more information below), those are <em>not </em>properly replicated unlike Animation Montages. See the disclaimer section.</p><p><br /></p><p><a href=\"https://cutt.ly/POriND7\" rel=\"nofollow\"><strong>Combo Graph Assets</strong></a></p><p><br /></p><p>Combo Graph assets can be created in the Content Browser and can be edited inside a special Combo Graph Editor. It is a node-based editor (similar to Behavior Trees) where you can add any number of Combo nodes to produce combo strings, add your desired Input Actions to transition between those nodes, and configure each nodes to optionally apply Gameplay Effects Containers (or Damages for non GAS users) upon receiving successful hits notifications, Gameplay Effect costs, as well as Gameplay Cue Containers (for VFX / SFX to apply on hit impacts).</p><p><br /></p><p>Combo Graph supplies two types of Combo Node: Montage based and Sequence based, however you can create your own custom Combo Nodes through Blueprint to provide additional logic.</p><p><br /></p><p><a href=\"https://cutt.ly/eOrhd5d\" rel=\"nofollow\"><strong>Collision Component</strong></a></p><p><br /></p><p>While it is not the core focus of the plugin, Combo Graph does have a built in collision component. But it is not tightly integrated with the combo system. Combo Graph instead relies on gameplay events that your hit collision system sends to the owner of combo abilities when a hit is registered, along with proper payload information such as instigator / targets and hit result with target data.</p><p><br /></p><p>Doing so, it is fairly straight forward to integrate with third party collision system, or your own mechanism.</p><p><br /></p><p><em>ComboGraphCollisionComponent </em>is an Actor Component providing basic collision detection mechanism for registered meshes using traces. It implements simple logic for hit detection not meant to replace more robust solutions such as <a href=\"https://cutt.ly/uOrh8JL\" rel=\"nofollow\">Combat Components</a> or <a href=\"https://cutt.ly/3OrjrdX\" rel=\"nofollow\">AGR Pro</a> (Combat Manager in v4), but rather to provide a quick and easy way to handle collision for those not having or not willing to use aforementioned plugins, or not having a game-specific custom collision system already in place.</p><p><br /></p><p>Documentation also includes integration guides for both <a href=\"https://cutt.ly/WOrhAJT\" rel=\"nofollow\">Combat Components</a> and <a href=\"https://cutt.ly/uOrhLUI\" rel=\"nofollow\">AGR Pro</a>.</p><p><br /></p><p><a href=\"https://cutt.ly/HOroEGI\" rel=\"nofollow\"><strong>Auto Setup</strong></a></p><p><br /></p><p>Additionally, setting up animations to use in a combo system usually relies on a lot of Animation Notify States (ANS) for each Animation Montage, such as setting up Combo or Collision Windows. This plugin comes with an &#34;Auto Setup&#34; feature which lets you configure a set of Notify States to trigger when montages are playing, without having to edit each and every animation assets. However, you still have the possibility to further tune how those Notify States are used by defining them in animation assets like you would usually do (Auto Setup for a given ANS only takes place if the anim doesn&#39;t define it in its timeline).</p><p><br /></p><p>This is great for prototyping and saves a lot of time.</p><p><br /></p><p><a href=\"https://cutt.ly/lOrfA5j\" rel=\"nofollow\"><strong>Behavior Tree and AI Support</strong></a></p><p><br /></p><p>Combo Graph comes with a built Behavior Tree Task implemented in c&#43;&#43; to easily run a Combo Graph asset from within Behavior Trees.</p><p><br /></p><p>Both the demo project and documentation demonstrates how you can easily create your own Behavior Tree Task using the provided gameplay task, which includes all the necessary delegates for you to react to graphs ending their execution, as well as helpers to simulate combo inputs.</p><p><br /></p><p><strong>Disclaimer</strong></p><ul><li>When using sequence nodes, the montages are dynamically created before going through the play montage task. Dynamic montages from sequences are great for prototyping but currently does not work properly networked. If you&#39;re developing with multiplayer in mind, please convert your animation sequences to animation montages when you are done with the prototype phase and blocking out of the combo is finalized.</li><li>No animations are included, this plugin is about providing the underlying gameplay system to use with your existing animations or other animation packs from the marketplace.</li><li>This plugin has been tested exclusively on Windows on 4.26 / 4.27 / 5.0 early access versions of the engine. Mac or Linux platforms are <em>not</em> supported. This doesn&#39;t mean the plugin can&#39;t run on those platforms, but you may have to resolve compilation errors yourself, if there are any.</li></ul><p><br /></p><p><strong>Credits</strong></p><ul><li>The icons used to draw Glyphs/Icons for Input Action in Combo Graphs are coming from <a href=\"https://cutt.ly/eOrxHps\" rel=\"nofollow\">Xelu&#39;s Controllers &amp; Keyboard Prompts</a>. Huge thanks to Nicolae Berbece and &#34;Those Awesome Guys&#34; for releasing this pack in the public domain under Creative Commons 0 (CC0).</li><li>The sword icon used in the plugin thumbnail and asset icons is made by <a href=\"https://cutt.ly/6OrxMMe\" rel=\"nofollow\">Lorc</a> under <a href=\"https://cutt.ly/iOrx56S\" rel=\"nofollow\">CC BY 3.0</a> (<a href=\"https://cutt.ly/9Orct8w\" rel=\"nofollow\">link to original material</a>)</li><li>Started with <a href=\"https://cutt.ly/wOrcn3E\" rel=\"nofollow\"><strong>Generic Graph</strong></a> as a base learning material. Development of the plugin wouldn&#39;t have been possible without this fantastic resource.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li><a href=\"https://cutt.ly/AOrizFk\" rel=\"nofollow\">Custom Editor</a> - Highly customized Asset Editor with State Machine like graph and Persona (animation) viewport / preview.</li><li>Can use sequence or montages in the graph.</li><li><a href=\"https://cutt.ly/3OropFO\" rel=\"nofollow\">Enhanced Input</a> - Can define transition using Enhanced Inputs and have them displayed with keyboard / gamepad icons in the graph.</li><li><a href=\"https://cutt.ly/HOroEGI\" rel=\"nofollow\">Auto Setup</a> mechanism for animation notify states</li><li>Can define <a href=\"https://cutt.ly/EOrsn43\" rel=\"nofollow\">GE cost and Effect Containers</a> to apply (ex. damage) for each node.</li><li>Non GAS users can use similar containers to apply damage via <a href=\"https://cutt.ly/AOrpuUy\" rel=\"nofollow\">Unreal&#39;s Damage System</a>.</li><li>Can use combo graphs <a href=\"https://cutt.ly/sLAofGv\" rel=\"nofollow\">without Gameplay Abilities</a></li><li>Can define <a href=\"https://cutt.ly/VOrpzdL\" rel=\"nofollow\">Gameplay Cues Containers</a> to apply (for instance SFX / VFX for hit impacts) for each node.</li><li>Replicated and Multiplayer ready</li></ul><p><br /></p><p>Code Modules:</p><ul><li>ComboGraph (Runtime)</li><li>ComboGraphEditor (Editor)</li></ul><p><br /></p><p>Number of C&#43;&#43; Classes: 60</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Windows, Mac, Linux</p><p>Supported Target Build Platforms: Win64 / Mac / Linux</p><p>Version: <strong>1.3.6</strong> (5.3) / <strong>1.3.5</strong> (5.1 / 5.2) / <strong>1.3.1 </strong>(5.0 / 4.27) / <strong>1.1.0 </strong>(4.26)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192004-1920x1080-1e98871a9fb85550550ac9c71feb9cdf.png",
+      "md5": "1e98871a9fb85550550ac9c71feb9cdf",
+      "width": 1920,
+      "height": 1080,
+      "size": 207873,
+      "uploadedDate": "2022-01-20T18:57:16.229Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192002-1920x1080-c9125a07d426c534133dc8321068dc32.png",
+      "md5": "c9125a07d426c534133dc8321068dc32",
+      "width": 1920,
+      "height": 1080,
+      "size": 191207,
+      "uploadedDate": "2022-01-20T18:57:15.935Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192003-1920x1080-9fb98872415d1a74825caafd42ac512f.png",
+      "md5": "9fb98872415d1a74825caafd42ac512f",
+      "width": 1920,
+      "height": 1080,
+      "size": 205085,
+      "uploadedDate": "2022-01-20T18:57:16.110Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192005-1920x1080-d44c47f3a2cd3aced6916e5c9e2e6256.png",
+      "md5": "d44c47f3a2cd3aced6916e5c9e2e6256",
+      "width": 1920,
+      "height": 1080,
+      "size": 111705,
+      "uploadedDate": "2022-01-20T18:57:16.352Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192006-1920x1080-d43f322d5282aa23578c4c08dfbbd9c4.png",
+      "md5": "d43f322d5282aa23578c4c08dfbbd9c4",
+      "width": 1920,
+      "height": 1080,
+      "size": 194496,
+      "uploadedDate": "2022-01-20T18:57:16.573Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192007-1920x1080-fd5362c1ceef8473d312ff0290c853ea.png",
+      "md5": "fd5362c1ceef8473d312ff0290c853ea",
+      "width": 1920,
+      "height": 1080,
+      "size": 152354,
+      "uploadedDate": "2022-01-20T18:57:16.706Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192008-1920x1080-95f0aa918ca1bcaee8f485921320b663.png",
+      "md5": "95f0aa918ca1bcaee8f485921320b663",
+      "width": 1920,
+      "height": 1080,
+      "size": 199480,
+      "uploadedDate": "2022-01-20T18:57:16.894Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192009-1920x1080-6d3e5e814f5875e526d17b6540da9f56.png",
+      "md5": "6d3e5e814f5875e526d17b6540da9f56",
+      "width": 1920,
+      "height": 1080,
+      "size": 97187,
+      "uploadedDate": "2022-01-20T18:57:17.015Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192010-1920x1080-03e1ee9c88d5f5dc8c67519c8466293b.png",
+      "md5": "03e1ee9c88d5f5dc8c67519c8466293b",
+      "width": 1920,
+      "height": 1080,
+      "size": 200636,
+      "uploadedDate": "2022-01-20T18:57:17.219Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192011-1920x1080-e65620b0f6801efe9746e4a0ce28ff23.png",
+      "md5": "e65620b0f6801efe9746e4a0ce28ff23",
+      "width": 1920,
+      "height": 1080,
+      "size": 172342,
+      "uploadedDate": "2022-01-20T18:57:17.597Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192012-1920x1080-c626b6a7a95e0ff833b16bbbf24db524.png",
+      "md5": "c626b6a7a95e0ff833b16bbbf24db524",
+      "width": 1920,
+      "height": 1080,
+      "size": 138241,
+      "uploadedDate": "2022-01-20T18:57:17.818Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192013-1920x1080-83228f4a22d227b2517109227abf727c.png",
+      "md5": "83228f4a22d227b2517109227abf727c",
+      "width": 1920,
+      "height": 1080,
+      "size": 222196,
+      "uploadedDate": "2022-01-20T18:57:18.067Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192014-1920x1080-7b13e54ee8f6ca90b2b022fe1b47c248.png",
+      "md5": "7b13e54ee8f6ca90b2b022fe1b47c248",
+      "width": 1920,
+      "height": 1080,
+      "size": 227495,
+      "uploadedDate": "2022-01-20T18:57:18.258Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192015-1920x1080-184d142232f60c3a7b838618828ccd2c.png",
+      "md5": "184d142232f60c3a7b838618828ccd2c",
+      "width": 1920,
+      "height": 1080,
+      "size": 183454,
+      "uploadedDate": "2022-01-20T18:57:18.387Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot192016-1920x1080-559b454f23cda7ac6b6e30f1bdcc1fc5.png",
+      "md5": "559b454f23cda7ac6b6e30f1bdcc1fc5",
+      "width": 1920,
+      "height": 1080,
+      "size": 214067,
+      "uploadedDate": "2022-01-20T18:57:18.706Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/combographtests-1920x1080-e0ac90b1e5f273d644771c1a96e54172.png",
+      "md5": "e0ac90b1e5f273d644771c1a96e54172",
+      "width": 1920,
+      "height": 1080,
+      "size": 93201,
+      "uploadedDate": "2022-01-26T20:15:44.249Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ComboGraph_thumb-284x284-23f3ea8a4205263151a69038436b752d.png",
+      "md5": "23f3ea8a4205263151a69038436b752d",
+      "width": 284,
+      "height": 284,
+      "size": 16402,
+      "uploadedDate": "2022-01-20T14:00:11.535Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ComboGraph_featured-894x488-1103c8e2f3079cd7e3b4c8b3de87477c.png",
+      "md5": "1103c8e2f3079cd7e3b4c8b3de87477c",
+      "width": 894,
+      "height": 488,
+      "size": 151492,
+      "uploadedDate": "2022-02-07T15:31:52.001Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/combographtests-1920x1080-e0ac90b1e5f273d644771c1a96e54172_Snapshot.png",
+      "md5": "7803e60c90f69f8fdee064b9ee1ea70a",
+      "width": 150,
+      "height": 74,
+      "size": 3661,
+      "uploadedDate": "2022-01-26T20:15:44.322Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192002-1920x1080-c9125a07d426c534133dc8321068dc32_Snapshot.png",
+      "md5": "51482848affdc709eaf2016591606950",
+      "width": 150,
+      "height": 74,
+      "size": 5610,
+      "uploadedDate": "2022-01-20T18:57:16.053Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192003-1920x1080-9fb98872415d1a74825caafd42ac512f_Snapshot.png",
+      "md5": "9ec2641ce4c4a67d396984f870c80ef7",
+      "width": 150,
+      "height": 74,
+      "size": 6082,
+      "uploadedDate": "2022-01-20T18:57:16.179Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192004-1920x1080-1e98871a9fb85550550ac9c71feb9cdf_Snapshot.png",
+      "md5": "cb30785e34a022dc6c9c7e08df366029",
+      "width": 150,
+      "height": 74,
+      "size": 5644,
+      "uploadedDate": "2022-01-20T18:57:16.304Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192005-1920x1080-d44c47f3a2cd3aced6916e5c9e2e6256_Snapshot.png",
+      "md5": "5d80b7e16ca0795c18492701c0eed03a",
+      "width": 150,
+      "height": 74,
+      "size": 3825,
+      "uploadedDate": "2022-01-20T18:57:16.437Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192006-1920x1080-d43f322d5282aa23578c4c08dfbbd9c4_Snapshot.png",
+      "md5": "9ead577b2aa72269fd067040b14e3418",
+      "width": 150,
+      "height": 74,
+      "size": 5100,
+      "uploadedDate": "2022-01-20T18:57:16.642Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192007-1920x1080-fd5362c1ceef8473d312ff0290c853ea_Snapshot.png",
+      "md5": "dfed738a475625c586c53c364d2efb65",
+      "width": 150,
+      "height": 74,
+      "size": 4680,
+      "uploadedDate": "2022-01-20T18:57:16.779Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192008-1920x1080-95f0aa918ca1bcaee8f485921320b663_Snapshot.png",
+      "md5": "b8a8df1ad2e14060c4eacb0b42b4daf5",
+      "width": 150,
+      "height": 74,
+      "size": 5131,
+      "uploadedDate": "2022-01-20T18:57:16.966Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192009-1920x1080-6d3e5e814f5875e526d17b6540da9f56_Snapshot.png",
+      "md5": "8b482f2054d4702ba90e6fabc47f4276",
+      "width": 150,
+      "height": 74,
+      "size": 4234,
+      "uploadedDate": "2022-01-20T18:57:17.100Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192010-1920x1080-03e1ee9c88d5f5dc8c67519c8466293b_Snapshot.png",
+      "md5": "5ae8971fd00caff66fa4bcb85ef90bb1",
+      "width": 150,
+      "height": 74,
+      "size": 5430,
+      "uploadedDate": "2022-01-20T18:57:17.315Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192011-1920x1080-e65620b0f6801efe9746e4a0ce28ff23_Snapshot.png",
+      "md5": "46540b347ab654618b824060d1f55996",
+      "width": 150,
+      "height": 74,
+      "size": 5420,
+      "uploadedDate": "2022-01-20T18:57:17.671Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192012-1920x1080-c626b6a7a95e0ff833b16bbbf24db524_Snapshot.png",
+      "md5": "9c81274cfb540fbf1150d1203153c89a",
+      "width": 150,
+      "height": 74,
+      "size": 4318,
+      "uploadedDate": "2022-01-20T18:57:17.890Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192013-1920x1080-83228f4a22d227b2517109227abf727c_Snapshot.png",
+      "md5": "cae4a1ce4cbba2e43e22eac029bb998e",
+      "width": 150,
+      "height": 74,
+      "size": 5128,
+      "uploadedDate": "2022-01-20T18:57:18.157Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192014-1920x1080-7b13e54ee8f6ca90b2b022fe1b47c248_Snapshot.png",
+      "md5": "c41e45510aca58ca04cc0bfb38376fb7",
+      "width": 150,
+      "height": 74,
+      "size": 5480,
+      "uploadedDate": "2022-01-20T18:57:18.333Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192015-1920x1080-184d142232f60c3a7b838618828ccd2c_Snapshot.png",
+      "md5": "7e356a965ca7f28d20133e130b1f2a3e",
+      "width": 150,
+      "height": 74,
+      "size": 4758,
+      "uploadedDate": "2022-01-20T18:57:18.454Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot192016-1920x1080-559b454f23cda7ac6b6e30f1bdcc1fc5_Snapshot.png",
+      "md5": "8a45cb2b33d3b4524a4f107e9cfd51c0",
+      "width": 150,
+      "height": 74,
+      "size": 5936,
+      "uploadedDate": "2022-01-20T18:57:18.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot01-1920x1080-ed5eb9ca3d1e498cf58e2b6c5145db0c_Snapshot.png",
+      "md5": "7c57d346e72155278e86795f77ebaa71",
+      "width": 150,
+      "height": 74,
+      "size": 4881,
+      "uploadedDate": "2022-01-20T14:00:11.467Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-01-27T13:12:14.511Z",
+  "lastModifiedDate": "2024-11-23T07:15:25.334Z",
+  "customAttributes": {},
+  "entitlementName": "9221e56479cb457ead65f1c696183301",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "748073e5ef0849ef820b472de4ada44d",
+      "appId": "ComboGraph_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2022-01-20T00:00:00.000Z",
+      "releaseNote": "1.1.0-4.26 - Charge Attack Update (Changelog: https://combo-graph.netlify.app/changelog)",
+      "versionTitle": "1.1.0-4.26"
+    },
+    {
+      "id": "235618a572744273a1260955ce503803",
+      "appId": "ComboGraph_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2022-01-20T00:00:00.000Z",
+      "releaseNote": "1.3.1-4.27 - Adding Mac / Linux to supported platforms",
+      "versionTitle": "1.3.1-4.27"
+    },
+    {
+      "id": "992a471717f54cfc8249d56ec6ba9709",
+      "appId": "ComboGraph_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-09T00:00:00.000Z",
+      "releaseNote": "1.3.1-5.0 - Adding Mac / Linux to supported platforms",
+      "versionTitle": "1.3.1-5.0"
+    },
+    {
+      "id": "c1795589f7f4485194441026e15f67dc",
+      "appId": "ComboGraph_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "1.4.0 - https://github.com/combo-graph/combo-graph/releases/tag/1.4.0",
+      "versionTitle": "1.4.0-5.1"
+    },
+    {
+      "id": "7964604bdbcf4113a692d742e7554aee",
+      "appId": "ComboGraph_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2023-05-13T00:00:00.000Z",
+      "releaseNote": "1.4.0 - https://github.com/combo-graph/combo-graph/releases/tag/1.4.0",
+      "versionTitle": "1.4.0-5.2"
+    },
+    {
+      "id": "8a9191641ec8453cb73ba2b036e5fad1",
+      "appId": "ComboGraph_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "1.4.0 - https://github.com/combo-graph/combo-graph/releases/tag/1.4.0",
+      "versionTitle": "1.4.0-5.3"
+    },
+    {
+      "id": "3e67fa5e5f294e2aab02d57208da6f3a",
+      "appId": "ComboGraph_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2024-04-28T00:00:00.000Z",
+      "releaseNote": "5.4 build update",
+      "versionTitle": "1.4.1-5.4"
+    }
+  ],
+  "developer": "mklabs",
+  "developerId": "o-wb6e67ez838gnwv5286l3l9f74lmfj",
+  "endOfSupport": false,
+  "unsearchable": false
+}

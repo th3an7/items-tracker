@@ -1,0 +1,426 @@
+{
+  "id": "bc9d99e105ba4f7498f0f31cc687d071",
+  "title": "Conveyor Belt System",
+  "description": "An extensible Conveyor Belt System for factory automation games.",
+  "longDescription": "<p><strong>Videos</strong>: <a href=\"https://www.youtube.com/watch?v&#61;-LrZTu_TQ5k\" rel=\"nofollow\">Sandbox</a> | <a href=\"https://youtu.be/wIewO4viDlw\" rel=\"nofollow\">Showcase</a></p><p><br /></p><p>A plugin with code and supporting assets to build conveyor belts at runtime, and also manually in the Unreal Editor. Handles item production, movement (without physics), and consumption. Supports merging and chaining belts attached to a connector. Ships a ground support with variable height (1-way and 2-way), a hatch that can be integrated into existing buildings, a wall mount, merger and splitter distributors (using round-robin logic), and 5 conveyor belt types with configurable speed and item spacing. Provides a layout algorithm that&#39;s natural to players on factory automation games, and an API that coders can use to create their own implementations.</p><p><br /></p><p><br /></p><h2>Features</h2><ul><li>Layout of conveyor belts at runtime and in the editor.</li><li>Item production, movement, and consumption logic.</li><li>An extensible API so you can customize most behaviors.</li><li>Helper functionality to allow saving and restoring state.</li><li>Several validation parameters to control the build and layout operations.</li><li>Multiple connectors: ground support with variable height, hatch, wall mount, splitter, merger.</li><li>5 belt segment static meshes. You can also create and use your own.</li></ul>",
+  "technicalDetails": "<h2>Documentation</h2><ul><li><a href=\"https://github.com/i486dx2labs/UEConveyorBeltGame/wiki/Getting-started\" rel=\"nofollow\">Getting Started Guide</a></li><li><a href=\"https://github.com/i486dx2labs/UEConveyorBeltGame/wiki/Documentation\" rel=\"nofollow\">User Guide</a></li><li><a href=\"https://github.com/i486dx2labs/UEConveyorBeltGame\" rel=\"nofollow\">Example Project</a></li></ul><h2>Other information</h2><ul><li>Minimum Unreal Engine version: 5.3 (downgrading not possible)</li><li>Code Modules: ConveyorBeltSystem (Runtime)</li><li>Number of Blueprints: 20</li><li>Number of C&#43;&#43; Classes: 34</li><li>Network Replicated: No</li></ul><h2>Important/Additional Notes</h2><ul><li>The plugin does not provide functionality to handle user input to build the conveyor belts, as this is highly project-dependent. Refer to the example project to see a possible implementation.</li><li>Currently the item movement is done updating the item actors&#39; transform. Only the visible belts are updated every frame though.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-assets-01-1920x1080-c51a85fcaee8e5ec4423416cc7f23e24.png",
+      "md5": "c51a85fcaee8e5ec4423416cc7f23e24",
+      "width": 1920,
+      "height": 1080,
+      "size": 529556,
+      "uploadedDate": "2024-06-11T22:40:12.448Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-assets-02-1920x1080-8b251052eb4ab07bb259b92454f01e34.png",
+      "md5": "8b251052eb4ab07bb259b92454f01e34",
+      "width": 1920,
+      "height": 1080,
+      "size": 653353,
+      "uploadedDate": "2024-06-11T22:40:12.901Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-assets-03-1920x1080-151256df553aeb8e50428d28fc4e0ad5.png",
+      "md5": "151256df553aeb8e50428d28fc4e0ad5",
+      "width": 1920,
+      "height": 1080,
+      "size": 924455,
+      "uploadedDate": "2024-06-11T22:40:13.375Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-assets-04-1920x1080-f4e34d9d845aeed7fa5820f1eaf4cbe9.png",
+      "md5": "f4e34d9d845aeed7fa5820f1eaf4cbe9",
+      "width": 1920,
+      "height": 1080,
+      "size": 771166,
+      "uploadedDate": "2024-06-11T22:40:13.887Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-assets-05-1920x1080-0559bc798e4d40887c04e97cdc0a0ba5.png",
+      "md5": "0559bc798e4d40887c04e97cdc0a0ba5",
+      "width": 1920,
+      "height": 1080,
+      "size": 641715,
+      "uploadedDate": "2024-06-11T22:40:14.400Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-01-1920x1080-f3778d6269cdd40a649d42af929398ab.png",
+      "md5": "f3778d6269cdd40a649d42af929398ab",
+      "width": 1920,
+      "height": 1080,
+      "size": 758090,
+      "uploadedDate": "2024-04-24T23:46:59.099Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-02-1920x1080-1a745bad0788587e44517fe2a82ca0a3.png",
+      "md5": "1a745bad0788587e44517fe2a82ca0a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 979526,
+      "uploadedDate": "2024-04-24T23:46:59.599Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-03-1920x1080-c57b9e34e27b0346e39dc07ed7fbf392.png",
+      "md5": "c57b9e34e27b0346e39dc07ed7fbf392",
+      "width": 1920,
+      "height": 1080,
+      "size": 1274624,
+      "uploadedDate": "2024-04-24T23:47:00.145Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-04-1920x1080-09d098a07cbff2c7f5123ab449795cd4.png",
+      "md5": "09d098a07cbff2c7f5123ab449795cd4",
+      "width": 1920,
+      "height": 1080,
+      "size": 1262439,
+      "uploadedDate": "2024-04-24T23:47:00.694Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-05-1920x1080-730f831a593a7b0ac6fc873923d9938e.png",
+      "md5": "730f831a593a7b0ac6fc873923d9938e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1250368,
+      "uploadedDate": "2024-04-24T23:47:01.242Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-06-1920x1080-614e1a0c0306134beba83a3b355a4e63.png",
+      "md5": "614e1a0c0306134beba83a3b355a4e63",
+      "width": 1920,
+      "height": 1080,
+      "size": 1179818,
+      "uploadedDate": "2024-04-24T23:47:01.730Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-07-1920x1080-2fcb110ebc43daab23dcfd2e26394c01.png",
+      "md5": "2fcb110ebc43daab23dcfd2e26394c01",
+      "width": 1920,
+      "height": 1080,
+      "size": 1468931,
+      "uploadedDate": "2024-04-24T23:47:02.294Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery-08-1920x1080-3659f7b11a8d3ed139fee98e892c858c.png",
+      "md5": "3659f7b11a8d3ed139fee98e892c858c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1119766,
+      "uploadedDate": "2024-04-24T23:47:02.862Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ConveyorBeltSystem_thumb-284x284-c8ef5059ceb9525c73b6670d2bef1166.png",
+      "md5": "c8ef5059ceb9525c73b6670d2bef1166",
+      "width": 284,
+      "height": 284,
+      "size": 76589,
+      "uploadedDate": "2024-04-11T19:42:07.090Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ConveyorBeltSystem_featured-894x488-49335bb744ed6819cf6bd32871a3b02e.png",
+      "md5": "49335bb744ed6819cf6bd32871a3b02e",
+      "width": 894,
+      "height": 488,
+      "size": 312953,
+      "uploadedDate": "2024-04-11T19:42:07.248Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-assets-01-1920x1080-c51a85fcaee8e5ec4423416cc7f23e24_Snapshot.png",
+      "md5": "cde9076a62ee24307d3f7896fd83ea7f",
+      "width": 150,
+      "height": 74,
+      "size": 3843,
+      "uploadedDate": "2024-06-11T22:40:12.719Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-assets-02-1920x1080-8b251052eb4ab07bb259b92454f01e34_Snapshot.png",
+      "md5": "c05494550e8d11dd1961fcbed1a9f0d7",
+      "width": 150,
+      "height": 74,
+      "size": 4505,
+      "uploadedDate": "2024-06-11T22:40:13.183Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-assets-03-1920x1080-151256df553aeb8e50428d28fc4e0ad5_Snapshot.png",
+      "md5": "14f4b0a32c54bbee178c40e73119af44",
+      "width": 150,
+      "height": 74,
+      "size": 5561,
+      "uploadedDate": "2024-06-11T22:40:13.715Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-assets-04-1920x1080-f4e34d9d845aeed7fa5820f1eaf4cbe9_Snapshot.png",
+      "md5": "c40d171881353b6ba60917b6ce5a7074",
+      "width": 150,
+      "height": 74,
+      "size": 4695,
+      "uploadedDate": "2024-06-11T22:40:14.191Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-assets-05-1920x1080-0559bc798e4d40887c04e97cdc0a0ba5_Snapshot.png",
+      "md5": "6dfc4242049fa92faa709911f56d26ba",
+      "width": 150,
+      "height": 74,
+      "size": 4558,
+      "uploadedDate": "2024-06-11T22:40:14.696Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-01-1920x1080-f3778d6269cdd40a649d42af929398ab_Snapshot.png",
+      "md5": "ab04d7d4c3671c146d079941138a33f5",
+      "width": 150,
+      "height": 74,
+      "size": 5226,
+      "uploadedDate": "2024-04-24T23:46:59.397Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-02-1920x1080-1a745bad0788587e44517fe2a82ca0a3_Snapshot.png",
+      "md5": "4e3e12bf0e88b08dc55dc2f09e30f35d",
+      "width": 150,
+      "height": 74,
+      "size": 6014,
+      "uploadedDate": "2024-04-24T23:46:59.939Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-03-1920x1080-c57b9e34e27b0346e39dc07ed7fbf392_Snapshot.png",
+      "md5": "15d685600136e330c17026d01441a6a2",
+      "width": 150,
+      "height": 74,
+      "size": 5656,
+      "uploadedDate": "2024-04-24T23:47:00.485Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-04-1920x1080-09d098a07cbff2c7f5123ab449795cd4_Snapshot.png",
+      "md5": "ae50cd627c2aaae7959040a8781f4009",
+      "width": 150,
+      "height": 74,
+      "size": 5425,
+      "uploadedDate": "2024-04-24T23:47:01.037Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-05-1920x1080-730f831a593a7b0ac6fc873923d9938e_Snapshot.png",
+      "md5": "9d31255c75de01bf646e35fc628253d9",
+      "width": 150,
+      "height": 74,
+      "size": 5632,
+      "uploadedDate": "2024-04-24T23:47:01.569Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-06-1920x1080-614e1a0c0306134beba83a3b355a4e63_Snapshot.png",
+      "md5": "26c66c8a2f6ce0c43c2adf77482d1d30",
+      "width": 150,
+      "height": 74,
+      "size": 5319,
+      "uploadedDate": "2024-04-24T23:47:02.087Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-07-1920x1080-2fcb110ebc43daab23dcfd2e26394c01_Snapshot.png",
+      "md5": "71fd7f2b3de6b213ab3f5f263eb2042b",
+      "width": 150,
+      "height": 74,
+      "size": 6532,
+      "uploadedDate": "2024-04-24T23:47:02.649Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-08-1920x1080-3659f7b11a8d3ed139fee98e892c858c_Snapshot.png",
+      "md5": "a033ee6c98e7844337501ca58281f8c3",
+      "width": 150,
+      "height": 74,
+      "size": 5345,
+      "uploadedDate": "2024-04-24T23:47:03.205Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-09-1920x1080-f01e1956715f041d08cfb2c6acedfbe3_Snapshot.png",
+      "md5": "9ea2e65b44f4dcecc57f642a255ff8c9",
+      "width": 150,
+      "height": 74,
+      "size": 3373,
+      "uploadedDate": "2024-04-24T23:47:03.715Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-10-1920x1080-29c0eea32997ebd95a8e53632c324b07_Snapshot.png",
+      "md5": "908ff7f00b760134cb306ba5b71edd10",
+      "width": 150,
+      "height": 74,
+      "size": 3589,
+      "uploadedDate": "2024-04-24T23:47:04.272Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-11-1920x1080-c38db751ecb6696749a1410447ebfe36_Snapshot.png",
+      "md5": "24715e3675c7e2558a0c88bd707514df",
+      "width": 150,
+      "height": 74,
+      "size": 2924,
+      "uploadedDate": "2024-04-24T23:47:04.758Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-06-1920x1080-7c7a29c3366f0800eb62b9b9e85f1bd1_Snapshot.png",
+      "md5": "ebe36f3976f71a45e7432d86df213646",
+      "width": 150,
+      "height": 74,
+      "size": 6382,
+      "uploadedDate": "2024-04-11T19:42:04.010Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-02-1920x1080-452afbcd1bbc05e5deeaf61ba748afc7_Snapshot.png",
+      "md5": "a6a5c60f173dd8d66f4d252c5d28aefe",
+      "width": 150,
+      "height": 74,
+      "size": 5380,
+      "uploadedDate": "2024-04-11T19:42:04.636Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-03-1920x1080-90d34e9eddc344a9a6323e25e8532aa0_Snapshot.png",
+      "md5": "c1c166440c5738e80be33724cce22118",
+      "width": 150,
+      "height": 74,
+      "size": 6520,
+      "uploadedDate": "2024-04-11T19:42:05.289Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-04-1920x1080-2bd9e52912b9d5d1bafd960b53e7fe44_Snapshot.png",
+      "md5": "556b241eda700a0f874a92470693c6f9",
+      "width": 150,
+      "height": 74,
+      "size": 7619,
+      "uploadedDate": "2024-04-11T19:42:05.943Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-05-1920x1080-2ce7e6286e35b3796fcf929c394071b0_Snapshot.png",
+      "md5": "f6aa75d9c4703dce8f48f7c4ccccdd4e",
+      "width": 150,
+      "height": 74,
+      "size": 5443,
+      "uploadedDate": "2024-04-11T19:42:06.506Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-01-1920x1080-62d8382c64d62ddb0baf70900dfc7e03_Snapshot.png",
+      "md5": "12dca0ec929c335a53cf1ab388fc235f",
+      "width": 150,
+      "height": 74,
+      "size": 5115,
+      "uploadedDate": "2024-04-11T19:42:07.054Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery-01-1920x1080-85195bc703a39d0b85160b64855cb633_Snapshot.png",
+      "md5": "1ff834404d6d0e12b9ab29ead9207862",
+      "width": 150,
+      "height": 74,
+      "size": 827,
+      "uploadedDate": "2023-11-02T20:51:12.189Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-04-16T22:51:59.559Z",
+  "lastModifiedDate": "2025-03-01T17:09:26.078Z",
+  "customAttributes": {},
+  "entitlementName": "bc9d99e105ba4f7498f0f31cc687d071",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "66bad4c78e0242bd8ddc469cbad9fb76",
+      "appId": "ConveyorBeltSystem_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Gear VR",
+        "Android",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-11-02T00:00:00.000Z",
+      "releaseNote": "Latest version",
+      "versionTitle": "v9-UE5.3"
+    },
+    {
+      "id": "51ac96c0aa234d3caae259fe287520b7",
+      "appId": "ConveyorBeltSystem_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-04-25T00:00:00.000Z",
+      "releaseNote": "Latest version",
+      "versionTitle": "v9-UE5.4"
+    }
+  ],
+  "developer": "i486-dx2 labs",
+  "developerId": "o-x7rlaxww5qq4ar9syfdgh6dzrm27zr",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

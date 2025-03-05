@@ -1,0 +1,168 @@
+{
+  "id": "1a1e7949b70945789930fce99dc01664",
+  "title": "Maze Dungeon Generator Plugin",
+  "description": "Generate Complex, Multistory Dungeons with UWorlds for Rooms.",
+  "longDescription": "<p>Now Free. Have fun.</p><p>Github. https://github.com/ZacharyDK/MazeDungeonPlugin</p><p><br /></p><p>You can use the source to rebuild intermediates for 4.26, and this should fix the build error. </p><p><br /></p><p>Instead of creating huge levels, designers can create small rooms with Unreal’s built in map/level tools, and then have an object distribute those rooms properly, and handle scaling.</p><p><br /></p><p>Floor Generation General Algorithm: (More detailed description for the whole dungeon in the documentation)</p><ol><li>Build a maze that fits in a Grid of R rows and C columns.</li><li>Given the specified parameters, determine which cells will be part of a room and mark them</li><li>Mark walls we want doors to spawn. Doors will spawn on a wall that doesn&#39;t have a mesh. The particular wall wall is between a cell that is marked as a room, and a cell that isn’t marked as a room.</li><li>Draw the maze floor, except don&#39;t draw the cells that will be part of room.</li><li>Stream in ULevelInstances to fill the room holes. Scale the rooms after they have streamed in.</li></ol>",
+  "technicalDetails": "<p>Features:</p><ul><li>Create a dungeon with a 3D grid containing X rows, Y, columns, Z floors.</li><li>Floor, door, and wall mesh piece scaling handled by the generator. Just give the size of the meshes. They are scaled to your specified scale of each tile of the dungeon.</li><li>Distribute rooms as ULevelInstances* in the dungeon. Room scaling to the dungeon in the X,Y,Z and directions is also managed. Connections between rooms are handled by the generator. </li><li>Placement of doors to separate your rooms and the dungeon is automatically handled by the generator. </li><li>Build Mazes!</li><li>Generator written in C&#43;&#43;</li><li>HISM used for the dungeon walls for efficiency.</li><li>Asyc loading component for easily loading your soft pointers.</li></ul><p>Epic’s resources used</p><ul><li>Some Starter content architecture </li><li>Starter content door prop.  </li></ul><p>Code Modules:</p><ul><li> Module: MazeDungeonGeneratorPlugin. Type: Runtime.</li></ul><p>Number of Blueprints: 5</p><p>Number of C&#43;&#43; Classes: 4</p><p>Network Replicated: No</p><p>Supported Development &amp; Build Platforms: Windows 64 bit, Mac, Android, IOS,</p><p>Documentation: https://docs.google.com/document/d/1kgiY5R9nWiGMEXTcSwRCSEaGBtjUMuTnaYeIPLsCUI0/edit?usp&#61;sharing</p><p>Important/Additional Notes:</p><p>Change the singleton in the project settings to DungeonSingleton_BP, or level streaming for rooms and stairs won&#39;t work!</p><p><br /></p><p>Level Streaming/Level Instance creation and Door spawning are <strong>now</strong> available at editor time. This is a major feature of 1.1 update. </p><p><br /></p><p>Maps that represent rooms are unlit, and will appear completely black in the editor. Change the viewmode to unlit.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screen Shot 2020-10-10 at 3.13.46 PM-1920x1080-086bf054d839ee7bf12b762819b47d64.png",
+      "md5": "086bf054d839ee7bf12b762819b47d64",
+      "width": 1920,
+      "height": 1080,
+      "size": 1797380,
+      "uploadedDate": "2020-10-17T02:06:32.393Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screen Shot 2020-10-10 at 3.14.02 PM-1920x1080-d501adba3858a0796e349f8052a246b2.png",
+      "md5": "d501adba3858a0796e349f8052a246b2",
+      "width": 1920,
+      "height": 1080,
+      "size": 1904879,
+      "uploadedDate": "2020-10-17T02:06:32.986Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screen Shot 2020-10-10 at 3.15.36 PM-1920x1080-af58821e55ade375c38e40f7b8893108.png",
+      "md5": "af58821e55ade375c38e40f7b8893108",
+      "width": 1920,
+      "height": 1080,
+      "size": 1431370,
+      "uploadedDate": "2020-10-17T02:06:33.616Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screen Shot 2020-10-10 at 3.15.42 PM-1920x1080-d846085420c5d69aea13fe8be1b8f358.png",
+      "md5": "d846085420c5d69aea13fe8be1b8f358",
+      "width": 1920,
+      "height": 1080,
+      "size": 1433665,
+      "uploadedDate": "2020-10-17T02:06:34.149Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MazeDungeonGeneratorPlugin_thumb-284x284-c0fc940a72f324b2f4b63b71a84a51aa.png",
+      "md5": "c0fc940a72f324b2f4b63b71a84a51aa",
+      "width": 284,
+      "height": 284,
+      "size": 48248,
+      "uploadedDate": "2020-10-17T02:06:34.537Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MazeDungeonGeneratorPlugin_featured-894x488-3e5aed6e38488c24bb23247888a97dd5.png",
+      "md5": "3e5aed6e38488c24bb23247888a97dd5",
+      "width": 894,
+      "height": 488,
+      "size": 367834,
+      "uploadedDate": "2020-10-17T02:06:34.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen Shot 2020-10-10 at 3.13.46 PM-1920x1080-086bf054d839ee7bf12b762819b47d64_Snapshot.png",
+      "md5": "081aa35b77e9040a61825155bcd64d90",
+      "width": 150,
+      "height": 74,
+      "size": 6825,
+      "uploadedDate": "2020-10-17T02:06:32.768Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen Shot 2020-10-10 at 3.14.02 PM-1920x1080-d501adba3858a0796e349f8052a246b2_Snapshot.png",
+      "md5": "a9626595b4453fcfbb53f9614f881696",
+      "width": 150,
+      "height": 74,
+      "size": 6563,
+      "uploadedDate": "2020-10-17T02:06:33.414Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen Shot 2020-10-10 at 3.15.36 PM-1920x1080-af58821e55ade375c38e40f7b8893108_Snapshot.png",
+      "md5": "31ee279de5a6b380096e2b7e33a8b174",
+      "width": 150,
+      "height": 74,
+      "size": 5697,
+      "uploadedDate": "2020-10-17T02:06:33.994Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen Shot 2020-10-10 at 3.15.42 PM-1920x1080-d846085420c5d69aea13fe8be1b8f358_Snapshot.png",
+      "md5": "825731641c4b89a91daf86633129db70",
+      "width": 150,
+      "height": 74,
+      "size": 6012,
+      "uploadedDate": "2020-10-17T02:06:34.500Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-11-13T14:49:18.389Z",
+  "lastModifiedDate": "2024-10-15T06:54:25.017Z",
+  "entitlementName": "1a1e7949b70945789930fce99dc01664",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "0a0a53aabbc5477d976c216b77f09155",
+      "appId": "MazeDungeonGeneratorPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2021-08-21T00:00:00.000Z",
+      "releaseNote": "Bug Fix",
+      "versionTitle": "MazeDungeonPlugin 4.27"
+    },
+    {
+      "id": "a34249f4a91d4f7aa59930d41c7ac19f",
+      "appId": "MazeDungeonGeneratorPlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-05-04T00:00:00.000Z",
+      "releaseNote": "For Unreal Engine 5",
+      "versionTitle": "MazeDungeonPlugin 5.0.1"
+    },
+    {
+      "id": "535d29333782417691ee9cef544d5ea9",
+      "appId": "MazeDungeonGeneratorPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Mac",
+        "iOS"
+      ],
+      "dateAdded": "2023-03-05T00:00:00.000Z",
+      "releaseNote": "For Unreal 5.1",
+      "versionTitle": "MazeDungeonPlugin 5.1"
+    }
+  ],
+  "developer": "ZacharyKolansky",
+  "developerId": "o-gbp44tygtsu2plys4lj5l7wqdvxuvb",
+  "endOfSupport": false,
+  "unsearchable": false
+}

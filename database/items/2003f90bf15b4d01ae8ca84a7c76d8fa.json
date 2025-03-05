@@ -1,0 +1,350 @@
+{
+  "id": "2003f90bf15b4d01ae8ca84a7c76d8fa",
+  "title": "State Component - Organize Any Game Logic",
+  "description": "Write more structured code by enhancing it with states.",
+  "longDescription": "<p>-- 5.4 update pending --</p><p><br /></p><p>State component helps you to organize logic of your actors into states. Then you manage those in two ways. In code - by activating, deactivating, setting them on cooldown. In component - by defining static dependencies between states. The aim with the state component is to be simple and straightforward, and to be an extension for blueprints, instead of replacement for them. I&#39;ve created it for my game, and soon it became an essential tool. I use it to drive all AI and Player logic, and even for handling input.</p><p><br /></p><p>~~ STATE COMPONENT IS NOT REPLICATED ~~</p><p><br /></p><p><a href=\"https://youtu.be/O8ovmF7E8QA\" rel=\"nofollow\">Trailer #2</a></p><p><a href=\"https://youtu.be/7cDDBCcv_1A\" rel=\"nofollow\">Trailer</a></p><p><a href=\"https://youtu.be/BxUS69bqQAM\" rel=\"nofollow\">Example #1 - Player roll like in Dark Souls in less than 5 minutes</a></p><p><a href=\"https://youtu.be/xyMpicfKN7g\" rel=\"nofollow\">Example #2 - Treasure chest like in Legend of Zelda in less than 5 minutes</a></p><p><a href=\"https://youtu.be/V1DOSCZXoOQ\" rel=\"nofollow\">Example #3 - AI hostage extraction like in Call of Duty in less than 10 minutes</a></p><p><a href=\"https://youtu.be/bhYstplrK8Q\" rel=\"nofollow\">Example #4 - AI boss battle like in Dark Sould in 26 minutes</a></p><p><a href=\"https://youtu.be/RizGkWdGX0Y\" rel=\"nofollow\">Example #5 - Shooter game</a></p><p><a href=\"https://youtu.be/cQIAsHANbmM\" rel=\"nofollow\">Tutorial</a></p><p><a href=\"https://docs.google.com/document/d/1euUzAu8HJKlKtfYT4I8aueWsjoTvpK36tCqE7aOcdNI/edit?usp&#61;share_link\" rel=\"nofollow\">Changelog and migration guide btwn versions</a></p><p><a href=\"https://docs.google.com/document/d/17kSZGlgo8PtxKumZRpxapfnM0UxxuB8jtx1rhygFAwE/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://youtu.be/Dxw9v6M8CR8\" rel=\"nofollow\">My Game</a></p><p>support: dawid.buj&#64;gmail.com</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h1>Features of state component</h1><p><br /></p><ul><li><strong>Simplicity </strong>- Most solutions for managing and developing gameplay logic like Finite State Machine’s, Behaviour Trees and others force you to use dedicated editors (like BT editor), that you need to get familiar with. You may call it a feature, but <strong>for me</strong> it is not - there is already an editor to write gameplay logic and it’s called Blueprints. With State Component you write code like you used to - in Blueprints/C&#43;&#43;, but it makes it more organized and structured, so it protects you from writing spaghetti-like code.</li></ul><p><br /></p><ul><li><strong>No forced modularity </strong>- Most solutions force you to create a lot of assets. In Behavior Trees you frequently create decorators/tasks/services. Very often those consist of only a couple of nodes. Once again you may argue that this is a feature, but not <strong>for me.</strong> With SC, you may organize logic as you wish - put all states in blueprint, put only some (simple) in blueprint, but the more complex ones in separate components (and share those components between actors), put each/some in separate graphs, it’s up to you. </li></ul><p><br /></p><ul><li><strong>Saves you from coding - </strong>you can define dependencies between states in a table like structure. For example - you can state that the attack state blocks idle state from starting. You don’t need to express this in code by typing if (attack &#61;&#61; false) activate(idle). This means there is less branching in your code, it’s simpler. Also you can change dependencies between states just by editing a table (like structure) - you don’t need to write/change any code.</li></ul><p><br /></p><ul><li><strong>Debugging out of the box</strong> - state component lets you visualize which states are active/blocked/on cooldown. It also automatically records the history of all state transitions. All this can be presented in the form of debug prints or in gameplay debugger.</li></ul>",
+  "technicalDetails": "<p>Code Modules: GGStateComponentPlugin (Runtime)</p><p>Number of Blueprints: 0</p><p>Number of Components: 1</p><p>Number of C&#43;&#43; Classes: 5</p><p>Network Replicated: <strong>NO</strong></p><p>Supported Development Platforms: Should work on all but tested only on Win64</p><p>Documentation: <a href=\"https://docs.google.com/document/d/17kSZGlgo8PtxKumZRpxapfnM0UxxuB8jtx1rhygFAwE/edit?usp&#61;sharing\" rel=\"nofollow\">Link</a></p><p>Important/Additional Notes: GG State Component is <strong>NOT </strong>replicated</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Bez nazwy-1-1920x1080-95e9b0f4cb5b70296879437788a1e771.jpg",
+      "md5": "95e9b0f4cb5b70296879437788a1e771",
+      "width": 1920,
+      "height": 1080,
+      "size": 656369,
+      "uploadedDate": "2022-11-05T13:34:58.179Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Bez nazwy-2-1920x1080-10f463667dd6a79073208bd8fedcc1b2.jpg",
+      "md5": "10f463667dd6a79073208bd8fedcc1b2",
+      "width": 1920,
+      "height": 1080,
+      "size": 565156,
+      "uploadedDate": "2022-11-05T13:19:13.044Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Bez nazwy-3-1920x1080-987c010533c67c86c8fed8f333970ddc.jpg",
+      "md5": "987c010533c67c86c8fed8f333970ddc",
+      "width": 1920,
+      "height": 1080,
+      "size": 546350,
+      "uploadedDate": "2022-11-05T13:19:13.435Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Bez nazwy-4-1920x1080-f9703d4734d6deade81a82f6e4d44406.jpg",
+      "md5": "f9703d4734d6deade81a82f6e4d44406",
+      "width": 1920,
+      "height": 1080,
+      "size": 634480,
+      "uploadedDate": "2022-11-05T13:19:13.801Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Bez nazwy-5-1920x1080-87f24c55e65850212376b99569cf4235.jpg",
+      "md5": "87f24c55e65850212376b99569cf4235",
+      "width": 1920,
+      "height": 1080,
+      "size": 675202,
+      "uploadedDate": "2022-11-06T12:31:25.120Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Bez nazwy-6-1920x1080-4b65cea300eb118e08422c6b22ca8057.jpg",
+      "md5": "4b65cea300eb118e08422c6b22ca8057",
+      "width": 1920,
+      "height": 1080,
+      "size": 966731,
+      "uploadedDate": "2022-11-05T13:19:14.659Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Bez nazwy-7-1920x1080-336424266553a9ff794d56cd94e4b9cc.jpg",
+      "md5": "336424266553a9ff794d56cd94e4b9cc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1523595,
+      "uploadedDate": "2022-11-05T13:19:15.322Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/StateComponentOrganizeAnyGameLogic_thumb-284x284-06e9b49cd74c8924a44fcfc9034dbd6f.png",
+      "md5": "06e9b49cd74c8924a44fcfc9034dbd6f",
+      "width": 284,
+      "height": 284,
+      "size": 147187,
+      "uploadedDate": "2022-11-12T18:05:33.724Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/StateComponentOrganizeAnyGameLogic_featured-894x488-4e5a8da0f7b3a02b8635477cba929022.png",
+      "md5": "4e5a8da0f7b3a02b8635477cba929022",
+      "width": 894,
+      "height": 488,
+      "size": 534179,
+      "uploadedDate": "2022-11-15T15:42:18.009Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Bez nazwy-5-1920x1080-87f24c55e65850212376b99569cf4235_Snapshot.jpg",
+      "md5": "367178d1c5f148d52da36a0904570e62",
+      "width": 150,
+      "height": 74,
+      "size": 4329,
+      "uploadedDate": "2022-11-06T12:31:25.358Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Bez nazwy-1-1920x1080-95e9b0f4cb5b70296879437788a1e771_Snapshot.jpg",
+      "md5": "7d40f6437f5644d5013bcc5f0fecf28b",
+      "width": 150,
+      "height": 74,
+      "size": 3563,
+      "uploadedDate": "2022-11-05T13:34:58.444Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Bez nazwy-1-1920x1080-eaea1f8cf88e816e5a03845c01304550_Snapshot.jpg",
+      "md5": "b268a1b6632b12dd02f27d3c8445a60a",
+      "width": 150,
+      "height": 74,
+      "size": 3570,
+      "uploadedDate": "2022-11-05T13:19:12.773Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Bez nazwy-2-1920x1080-10f463667dd6a79073208bd8fedcc1b2_Snapshot.jpg",
+      "md5": "39d76636fd4d348ec8e3d5b6d238db23",
+      "width": 150,
+      "height": 74,
+      "size": 4295,
+      "uploadedDate": "2022-11-05T13:19:13.288Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Bez nazwy-3-1920x1080-987c010533c67c86c8fed8f333970ddc_Snapshot.jpg",
+      "md5": "b1e4675cf1ff4636f6a54d02911ae3ef",
+      "width": 150,
+      "height": 74,
+      "size": 4679,
+      "uploadedDate": "2022-11-05T13:19:13.663Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Bez nazwy-4-1920x1080-f9703d4734d6deade81a82f6e4d44406_Snapshot.jpg",
+      "md5": "34bc2e3c9756cdf7f98eda6957861fa5",
+      "width": 150,
+      "height": 74,
+      "size": 5829,
+      "uploadedDate": "2022-11-05T13:19:14.031Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Bez nazwy-5-1920x1080-3138e340e4a3f59e8d4444aadb980394_Snapshot.jpg",
+      "md5": "2297f2a191605f52f3a8131d14221320",
+      "width": 150,
+      "height": 74,
+      "size": 4105,
+      "uploadedDate": "2022-11-05T13:19:14.495Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Bez nazwy-6-1920x1080-4b65cea300eb118e08422c6b22ca8057_Snapshot.jpg",
+      "md5": "a5f010c5582221032e92f6a53b86f04e",
+      "width": 150,
+      "height": 74,
+      "size": 5585,
+      "uploadedDate": "2022-11-05T13:19:14.953Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Bez nazwy-7-1920x1080-336424266553a9ff794d56cd94e4b9cc_Snapshot.jpg",
+      "md5": "0bef358abb8b7cbf486a0935dff5fa0c",
+      "width": 150,
+      "height": 74,
+      "size": 5962,
+      "uploadedDate": "2022-11-05T13:19:15.658Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-d7a04c804417ad7f35e8702f86635a58_Snapshot.jpg",
+      "md5": "ed0bb37c61382e4f492c631b88a59354",
+      "width": 150,
+      "height": 74,
+      "size": 3765,
+      "uploadedDate": "2022-10-27T19:24:29.038Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-0e2022552c3fe28d585cf5098fe31bc4_Snapshot.jpg",
+      "md5": "30c1cb342ccb9e47f09325a627f79685",
+      "width": 150,
+      "height": 74,
+      "size": 5925,
+      "uploadedDate": "2022-10-17T14:39:52.093Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-1d83f061214f3656895783ab0be38f5c_Snapshot.jpg",
+      "md5": "1d53633eb8f47a64823eb543dbdb1414",
+      "width": 150,
+      "height": 74,
+      "size": 4958,
+      "uploadedDate": "2022-10-17T14:39:52.530Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-f01bb87dfb1c0dddf428736c01e7e523_Snapshot.jpg",
+      "md5": "57425120ea9093c1491191964f16d2b9",
+      "width": 150,
+      "height": 74,
+      "size": 3867,
+      "uploadedDate": "2022-10-17T14:39:53.025Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-ff87efbd196fb49c0d9333efaa8fc1ec_Snapshot.jpg",
+      "md5": "67f2b805e919af8659611e36062f0163",
+      "width": 150,
+      "height": 74,
+      "size": 3598,
+      "uploadedDate": "2022-10-17T14:39:53.378Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-72f5718cc398aff7c154ed83966ac71b_Snapshot.jpg",
+      "md5": "704e92c6d78659b488a368f7e958c921",
+      "width": 150,
+      "height": 74,
+      "size": 3522,
+      "uploadedDate": "2022-10-17T14:39:53.769Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-10-27T19:05:54.118Z",
+  "lastModifiedDate": "2024-11-23T01:21:18.672Z",
+  "customAttributes": {},
+  "entitlementName": "2003f90bf15b4d01ae8ca84a7c76d8fa",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "1b8cbf13daca43a2a02820e1f3c60c02",
+      "appId": "GGStateComponentPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Oculus",
+        "Linux",
+        "iOS",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2022-10-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "b24a0b35fd084924b5137e2da4c8015c",
+      "appId": "GGStateComponentPlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2022-10-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "7963d32de3c54283b89baf2414924447",
+      "appId": "GGStateComponentPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "a717a0586be846c6a1bddacf20189e6a",
+      "appId": "GGStateComponentPlugin_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "7a8acbd487f641869cd1b4edb3d2ffcd",
+      "appId": "GGStateComponentPlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "60927d7e3ef847a4a3e29699fb926391",
+      "appId": "GGStateComponentPlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Dawid Bujak",
+  "developerId": "o-7lcqpmd4txmvbdnh9d42kqpgp7bly5",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

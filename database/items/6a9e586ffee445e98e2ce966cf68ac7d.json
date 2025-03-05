@@ -1,0 +1,723 @@
+{
+  "id": "6a9e586ffee445e98e2ce966cf68ac7d",
+  "title": "Post Process Planetary Atmosphere",
+  "description": "With this post process material you can add the atmosphere to an existing planet which will look quite realistic, whether viewing from the planet surface or outer space.",
+  "longDescription": "<p>With this post process Material, you can add the atmosphere to an existing planet, which will look quite realistic, whether viewing from the planet surface or outer space. By adjusting the Scale parameter, the atmosphere can be added to planets of different sizes.</p><p><br /></p><p>The Material best interacts with rough surfaces adding sky light and light attenuation (reddish mountain peaks at sunsets) to them. Regular shapes with high gloss polished surfaces may look unnatural in the day time because they will receive reflections of the sky only via the <a href=\"https://docs.unrealengine.com/en-US/Resources/Showcases/Reflections/index.html#screenspacereflections\" rel=\"nofollow\">Screen Space Reflections</a> (although it can render a nice looking ocean surface). Currently the atmosphere receives no shadows from any objects except its own planet.</p><p><br /></p><p>For correct rendering of the brightness of the atmosphere, <a href=\"https://redirect.epicgames.com/?redirectTo&#61;https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/PostProcessEffects/AutomaticExposure/\" rel=\"nofollow\">Pre-Exposure</a> should be disabled in the project settings.</p><p><br /></p><p>Planetary Atmosphere Material utilizes certain averaging and simplification techniques to compute Rayleigh and Mie scattering, which require no precomputation but can give a realistic look of an atmosphere with reasonable performance impact. Please try the demo first to make sure this Material meets your performance requirements.</p><ul><li><a href=\"https://drive.google.com/open?id&#61;1YeTQ_aUDVKn6eCSSrRen-UwCNKkvD1xV\" rel=\"nofollow\">Demo, Docs, Screenshots</a></li><li><a href=\"https://youtu.be/0dQ7GiA2kBc\" rel=\"nofollow\">Quick Tutorial</a></li><li><a href=\"https://youtu.be/6Amizchunb4\" rel=\"nofollow\">Earth-sized planet footage</a></li><li><a href=\"https://youtu.be/YgtjA8-6F0c\" rel=\"nofollow\">Micromars footage</a></li><li><a href=\"https://youtu.be/w2Wim6s3RVA\" rel=\"nofollow\">Micromars - uncut HEO flight</a></li></ul>",
+  "technicalDetails": "<p><strong>Features and limitations of the <em>PlanetaryAtmosphere </em>Materials</strong>:</p><ul><li><strong>The prec-version of the atmosphere material fail to compile with ray tracing enabled</strong></li><li>Material domain is Post Process</li><li>Custom expression nodes are used</li></ul><p><strong>Texture Resolutions</strong>:</p><ul><li>6000x3000 The Milky Way</li><li>2048x2048 Landscape Textures</li></ul><p><strong>The main Materials</strong>: <em>PlanetaryAtmosphere</em>, <em>CelestialSphere </em>(Material instances are used)</p><p><strong>The main Blueprints</strong>: <em>PlanetaryAtmosphere, CelestialSphere, PlanetarySpectator</em></p><p><strong>Supported Target Build Platforms</strong>: Windows 64-bit</p><p><strong>Credits:</strong></p><ul><li>The Milky Way panorama licensed under a <a href=\"https://www.eso.org/public/outreach/copyright/\" rel=\"nofollow\">Creative Commons Attribution license</a>: ESO/S. Brunier (<a href=\"https://www.eso.org/public/images/eso0932a/\" rel=\"nofollow\">www.eso.org</a>)</li><li>Mars heightmap: MOLA Team (<a href=\"https://astrogeology.usgs.gov/search/details/Mars/GlobalSurveyor/MOLA/Mars_MGS_MOLA_DEM_mosaic_global_463m/cub\" rel=\"nofollow\">astrogeology.usgs.gov</a>)</li><li>Mars color: USGS Astrogeology Science Center (<a href=\"https://astrogeology.usgs.gov/search/map/Mars/Viking/Color/Mars_Viking_ClrMosaic_global_925m\" rel=\"nofollow\">astrogeology.usgs.gov</a>)</li><li>Mountains <a href=\"https://sketchfab.com/3d-models/moutain-landscape-a6289618b2144465b9a23826c8c4077b\" rel=\"nofollow\">3D-model</a> licensed under a <a href=\"https://creativecommons.org/licenses/by/4.0/\" rel=\"nofollow\">Creative Commons Attribution license</a> : Rispat Momit</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PALUT002-1920x1080-17f86be0e92d48e6df53141f9c6bb4fd.jpg",
+      "md5": "17f86be0e92d48e6df53141f9c6bb4fd",
+      "width": 1920,
+      "height": 1080,
+      "size": 312162,
+      "uploadedDate": "2019-10-29T21:22:58.683Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PAClouds028-1920x1080-308fb76b9c36a9bfb9ab26ec99ff6408.jpg",
+      "md5": "308fb76b9c36a9bfb9ab26ec99ff6408",
+      "width": 1920,
+      "height": 1080,
+      "size": 300724,
+      "uploadedDate": "2019-08-26T20:01:50.351Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PAClouds000-1920x1080-6e8dde1734571aea865829a89b6c7c3e.jpg",
+      "md5": "6e8dde1734571aea865829a89b6c7c3e",
+      "width": 1920,
+      "height": 1080,
+      "size": 177991,
+      "uploadedDate": "2019-08-26T20:01:42.102Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.06.30 - 20.46.12.99-1920x1080-fa0622a46b02e31816617f05d5e59128.jpg",
+      "md5": "fa0622a46b02e31816617f05d5e59128",
+      "width": 1920,
+      "height": 1080,
+      "size": 294651,
+      "uploadedDate": "2019-07-01T14:34:25.557Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.06.30 - 20.39.36.68-1920x1080-8acd96db7edcc201fd0e35b996433479.jpg",
+      "md5": "8acd96db7edcc201fd0e35b996433479",
+      "width": 1920,
+      "height": 1080,
+      "size": 210700,
+      "uploadedDate": "2019-07-01T14:34:24.366Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.06.30 - 20.58.13.94-1920x1080-be5e68e7a6cd25eaab3e1e2a074d690f.jpg",
+      "md5": "be5e68e7a6cd25eaab3e1e2a074d690f",
+      "width": 1920,
+      "height": 1080,
+      "size": 259187,
+      "uploadedDate": "2019-07-01T14:34:28.321Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PAClouds030-1920x1080-58375c6ae7d80ba833a2552ae593d2cf.jpg",
+      "md5": "58375c6ae7d80ba833a2552ae593d2cf",
+      "width": 1920,
+      "height": 1080,
+      "size": 236648,
+      "uploadedDate": "2019-08-26T20:01:51.159Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PALUT019-1920x1080-94f43c5b845a75979430e864cf8e8bfd.jpg",
+      "md5": "94f43c5b845a75979430e864cf8e8bfd",
+      "width": 1920,
+      "height": 1080,
+      "size": 435753,
+      "uploadedDate": "2019-10-29T21:22:59.595Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PAClouds014-1920x1080-c1b1cc33a0ed3c4b0e56b2f0a088e91d.jpg",
+      "md5": "c1b1cc33a0ed3c4b0e56b2f0a088e91d",
+      "width": 1920,
+      "height": 1080,
+      "size": 403020,
+      "uploadedDate": "2019-08-26T20:01:47.052Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PALUT017-1920x1080-2bc52014fd9bc8570d69396b22ebe705.jpg",
+      "md5": "2bc52014fd9bc8570d69396b22ebe705",
+      "width": 1920,
+      "height": 1080,
+      "size": 239001,
+      "uploadedDate": "2019-10-29T21:23:00.454Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PALUT020-1920x1080-670920e484a8cc787d78475dd75c0abe.jpg",
+      "md5": "670920e484a8cc787d78475dd75c0abe",
+      "width": 1920,
+      "height": 1080,
+      "size": 400045,
+      "uploadedDate": "2019-10-29T21:23:01.332Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PALUT004-1920x1080-dba9e2ba88c3e3ff92b8f4f51e5c10f3.jpg",
+      "md5": "dba9e2ba88c3e3ff92b8f4f51e5c10f3",
+      "width": 1920,
+      "height": 1080,
+      "size": 529162,
+      "uploadedDate": "2019-10-29T21:23:02.282Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PALUT008-1920x1080-91130c8c867d5cc46ab93a52db46ca99.jpg",
+      "md5": "91130c8c867d5cc46ab93a52db46ca99",
+      "width": 1920,
+      "height": 1080,
+      "size": 790203,
+      "uploadedDate": "2019-10-29T21:23:03.225Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PALUT022-1920x1080-948defd67663e02a54b08b6d83ba6b54.jpg",
+      "md5": "948defd67663e02a54b08b6d83ba6b54",
+      "width": 1920,
+      "height": 1080,
+      "size": 516137,
+      "uploadedDate": "2019-10-29T21:23:04.260Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.06.30 - 21.21.19.97-1920x1080-8c08ea258ae3780cf9327897fb57fc8f.jpg",
+      "md5": "8c08ea258ae3780cf9327897fb57fc8f",
+      "width": 1920,
+      "height": 1080,
+      "size": 360455,
+      "uploadedDate": "2019-07-01T14:34:34.462Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.06.30 - 21.35.59.01-1920x1080-05ae03cdc60f59ed6044e5e3c8553136.jpg",
+      "md5": "05ae03cdc60f59ed6044e5e3c8553136",
+      "width": 1920,
+      "height": 1080,
+      "size": 503437,
+      "uploadedDate": "2019-07-01T14:34:39.451Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.06.30 - 21.23.11.97-1920x1080-b41aa4853eb076052fed331a22e040a8.jpg",
+      "md5": "b41aa4853eb076052fed331a22e040a8",
+      "width": 1920,
+      "height": 1080,
+      "size": 303981,
+      "uploadedDate": "2019-07-01T14:34:35.708Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Desktop Screenshot 2019.06.30 - 21.27.46.98-1920x1080-598a6329df4ce8074af5ec8331395217.jpg",
+      "md5": "598a6329df4ce8074af5ec8331395217",
+      "width": 1920,
+      "height": 1080,
+      "size": 300698,
+      "uploadedDate": "2019-07-01T14:34:38.252Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PAClouds002-1920x1080-c3a71dfc1c094352d8fc01f622f0c193.jpg",
+      "md5": "c3a71dfc1c094352d8fc01f622f0c193",
+      "width": 1920,
+      "height": 1080,
+      "size": 363490,
+      "uploadedDate": "2019-08-26T20:01:42.849Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PAClouds005-1920x1080-62d8c57c2347dc8e2809d106fbb598b3.jpg",
+      "md5": "62d8c57c2347dc8e2809d106fbb598b3",
+      "width": 1920,
+      "height": 1080,
+      "size": 372430,
+      "uploadedDate": "2019-08-26T20:01:43.685Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PAClouds006-1920x1080-2ceef380d9cd3a4c91bb07334f774eee.jpg",
+      "md5": "2ceef380d9cd3a4c91bb07334f774eee",
+      "width": 1920,
+      "height": 1080,
+      "size": 449168,
+      "uploadedDate": "2019-08-26T20:01:44.504Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PAClouds010-1920x1080-b28f92992b7844130139a7f964189f95.jpg",
+      "md5": "b28f92992b7844130139a7f964189f95",
+      "width": 1920,
+      "height": 1080,
+      "size": 489132,
+      "uploadedDate": "2019-08-26T20:01:45.387Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PAClouds011-1920x1080-14b97678bf5f8ecf7b472f0e7e9094c4.jpg",
+      "md5": "14b97678bf5f8ecf7b472f0e7e9094c4",
+      "width": 1920,
+      "height": 1080,
+      "size": 462290,
+      "uploadedDate": "2019-08-26T20:01:46.216Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PAClouds043-1920x1080-b9bbeb7bbe54b2e82fe13431ddceeadf.jpg",
+      "md5": "b9bbeb7bbe54b2e82fe13431ddceeadf",
+      "width": 1920,
+      "height": 1080,
+      "size": 422658,
+      "uploadedDate": "2019-08-26T20:01:52.727Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PlanetaryAtmosphereMaterial-1920x1080-43c208e32bf5ff56e7a6bbe1e5dd2be5.jpg",
+      "md5": "43c208e32bf5ff56e7a6bbe1e5dd2be5",
+      "width": 1920,
+      "height": 1080,
+      "size": 761382,
+      "uploadedDate": "2019-07-01T14:34:13.349Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PostProcessPlanetaryAtmosphere_thumb-284x284-230129252dcaaa32ffb0c62ad883ee2b.png",
+      "md5": "230129252dcaaa32ffb0c62ad883ee2b",
+      "width": 284,
+      "height": 284,
+      "size": 109917,
+      "uploadedDate": "2019-08-26T20:21:53.544Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PostProcessPlanetaryAtmosphere_featured-894x488-e705a38144a72d9c73f8a264f54e8043.png",
+      "md5": "e705a38144a72d9c73f8a264f54e8043",
+      "width": 894,
+      "height": 488,
+      "size": 503070,
+      "uploadedDate": "2019-08-26T20:21:53.638Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PALUT002-1920x1080-17f86be0e92d48e6df53141f9c6bb4fd_Snapshot.jpg",
+      "md5": "9e119e5aef793496beced64c6b88a7c8",
+      "width": 150,
+      "height": 74,
+      "size": 4356,
+      "uploadedDate": "2019-10-29T21:22:59.298Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PALUT019-1920x1080-94f43c5b845a75979430e864cf8e8bfd_Snapshot.jpg",
+      "md5": "e72dbc224aa41632994d247ad6827957",
+      "width": 150,
+      "height": 74,
+      "size": 5569,
+      "uploadedDate": "2019-10-29T21:23:00.215Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PALUT017-1920x1080-2bc52014fd9bc8570d69396b22ebe705_Snapshot.jpg",
+      "md5": "6515734147660aba419a7903a7ff21c5",
+      "width": 150,
+      "height": 74,
+      "size": 3460,
+      "uploadedDate": "2019-10-29T21:23:01.018Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PALUT020-1920x1080-670920e484a8cc787d78475dd75c0abe_Snapshot.jpg",
+      "md5": "9178c67279135536b13c8571d8ed71e0",
+      "width": 150,
+      "height": 74,
+      "size": 4323,
+      "uploadedDate": "2019-10-29T21:23:01.958Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PALUT004-1920x1080-dba9e2ba88c3e3ff92b8f4f51e5c10f3_Snapshot.jpg",
+      "md5": "a1b9f8692b1fae33c5c8627f5cd7ba4e",
+      "width": 150,
+      "height": 74,
+      "size": 5053,
+      "uploadedDate": "2019-10-29T21:23:02.882Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PALUT008-1920x1080-91130c8c867d5cc46ab93a52db46ca99_Snapshot.jpg",
+      "md5": "c14cdde056c4f6a03f5a944afa7c7be8",
+      "width": 150,
+      "height": 74,
+      "size": 5124,
+      "uploadedDate": "2019-10-29T21:23:03.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PALUT022-1920x1080-948defd67663e02a54b08b6d83ba6b54_Snapshot.jpg",
+      "md5": "4c28c2d669d9c0fe06f1a777f329225f",
+      "width": 150,
+      "height": 74,
+      "size": 4204,
+      "uploadedDate": "2019-10-29T21:23:04.893Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds018-1920x1080-a471e8931df6b560aa1d11c1496b72cb_Snapshot.jpg",
+      "md5": "59c49cc2713239c3a12e0d32e1f148c8",
+      "width": 150,
+      "height": 74,
+      "size": 5879,
+      "uploadedDate": "2019-08-26T20:13:28.656Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds034-1920x1080-3c47021a2c62205976a53fc110546dfe_Snapshot.jpg",
+      "md5": "5f618fed044120dd9397812937cea365",
+      "width": 150,
+      "height": 74,
+      "size": 3910,
+      "uploadedDate": "2019-08-26T20:01:41.859Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds000-1920x1080-6e8dde1734571aea865829a89b6c7c3e_Snapshot.jpg",
+      "md5": "418a891355ef8d6c6dfef5d55affeb66",
+      "width": 150,
+      "height": 74,
+      "size": 3502,
+      "uploadedDate": "2019-08-26T20:01:42.588Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds002-1920x1080-c3a71dfc1c094352d8fc01f622f0c193_Snapshot.jpg",
+      "md5": "e587eb061dba01b7b8302d47f7d84a7a",
+      "width": 150,
+      "height": 74,
+      "size": 3997,
+      "uploadedDate": "2019-08-26T20:01:43.401Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds005-1920x1080-62d8c57c2347dc8e2809d106fbb598b3_Snapshot.jpg",
+      "md5": "03e944a76a38e250aefecad2cdd6ce36",
+      "width": 150,
+      "height": 74,
+      "size": 4519,
+      "uploadedDate": "2019-08-26T20:01:44.222Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds006-1920x1080-2ceef380d9cd3a4c91bb07334f774eee_Snapshot.jpg",
+      "md5": "2068ea2944a8218a150fe9e1178b077b",
+      "width": 150,
+      "height": 74,
+      "size": 4936,
+      "uploadedDate": "2019-08-26T20:01:45.041Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds010-1920x1080-b28f92992b7844130139a7f964189f95_Snapshot.jpg",
+      "md5": "83db93ee2824c084d06f50a134e3015a",
+      "width": 150,
+      "height": 74,
+      "size": 4199,
+      "uploadedDate": "2019-08-26T20:01:45.919Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds011-1920x1080-14b97678bf5f8ecf7b472f0e7e9094c4_Snapshot.jpg",
+      "md5": "7f026829072c89f7c5660cb2f1cba07c",
+      "width": 150,
+      "height": 74,
+      "size": 4435,
+      "uploadedDate": "2019-08-26T20:01:46.774Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds014-1920x1080-c1b1cc33a0ed3c4b0e56b2f0a088e91d_Snapshot.jpg",
+      "md5": "9f216687df69a41f8578815b532b4eb4",
+      "width": 150,
+      "height": 74,
+      "size": 3935,
+      "uploadedDate": "2019-08-26T20:01:47.647Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds017pp-1920x1080-52c05ab0b5934aae4923f9f4f1e2513a_Snapshot.jpg",
+      "md5": "c3de43e4d9c809f8504ad15109446d4e",
+      "width": 150,
+      "height": 74,
+      "size": 5553,
+      "uploadedDate": "2019-08-26T20:01:48.877Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds020-1920x1080-2ebfba01e9995814c72e5d850ad3f876_Snapshot.jpg",
+      "md5": "8d482d16e9160b96a80a9bf559fcf40b",
+      "width": 150,
+      "height": 74,
+      "size": 4511,
+      "uploadedDate": "2019-08-26T20:01:49.717Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds028-1920x1080-308fb76b9c36a9bfb9ab26ec99ff6408_Snapshot.jpg",
+      "md5": "47b0549487e1e4e0289f74474a33574a",
+      "width": 150,
+      "height": 74,
+      "size": 4771,
+      "uploadedDate": "2019-08-26T20:01:50.898Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds030-1920x1080-58375c6ae7d80ba833a2552ae593d2cf_Snapshot.jpg",
+      "md5": "c3e3f450b74581a4f4f181fe3b8cbc82",
+      "width": 150,
+      "height": 74,
+      "size": 3722,
+      "uploadedDate": "2019-08-26T20:01:51.666Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds032-1920x1080-2988c78869338d6cddfa719f5c447390_Snapshot.jpg",
+      "md5": "3ba07f4a61dbbf29264c4247e37b2f56",
+      "width": 150,
+      "height": 74,
+      "size": 4287,
+      "uploadedDate": "2019-08-26T20:01:52.464Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds043-1920x1080-b9bbeb7bbe54b2e82fe13431ddceeadf_Snapshot.jpg",
+      "md5": "1ce5bd0b659a4a0999cd36225c1e8dcf",
+      "width": 150,
+      "height": 74,
+      "size": 5332,
+      "uploadedDate": "2019-08-26T20:01:53.298Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PAClouds044-1920x1080-7730fa7b150ed8721890ef592b0c6c9b_Snapshot.jpg",
+      "md5": "3030c309caaadebe2b6c530d362646a8",
+      "width": 150,
+      "height": 74,
+      "size": 5082,
+      "uploadedDate": "2019-08-26T20:01:54.145Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PlanetaryAtmosphereMaterial-1920x1080-43c208e32bf5ff56e7a6bbe1e5dd2be5_Snapshot.jpg",
+      "md5": "4f2913fd4f0fbba00a41100fdf816fb5",
+      "width": 150,
+      "height": 74,
+      "size": 6018,
+      "uploadedDate": "2019-07-01T14:34:14.174Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 18.22.57.84-1920x1080-a5998d70d988d8a735f64ae9b417fa57_Snapshot.jpg",
+      "md5": "4177c60b1bb4266a821ca148f0395e83",
+      "width": 150,
+      "height": 74,
+      "size": 3749,
+      "uploadedDate": "2019-07-01T14:34:15.423Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 18.29.56.17-1920x1080-d2c5ccded2c99fd1e5a14cc1ba20ce5f_Snapshot.jpg",
+      "md5": "96b7942aee8ff0f47c4729deba17aca8",
+      "width": 150,
+      "height": 74,
+      "size": 4857,
+      "uploadedDate": "2019-07-01T14:34:16.636Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 18.31.45.40-1920x1080-3ab44f523f9a8d15c2bb0edde1c5d5a0_Snapshot.jpg",
+      "md5": "39e54815433a8b6d189f20b95be7549a",
+      "width": 150,
+      "height": 74,
+      "size": 4545,
+      "uploadedDate": "2019-07-01T14:34:17.871Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 18.33.43.57-1920x1080-b76f4d75c12037dea0536cffb3624b9f_Snapshot.jpg",
+      "md5": "430742580abea53f1542bde1a6e5e0f7",
+      "width": 150,
+      "height": 74,
+      "size": 4533,
+      "uploadedDate": "2019-07-01T14:34:19.129Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 18.37.50.25-1920x1080-50a368bd9bb63ecb3d04d4f218103a05_Snapshot.jpg",
+      "md5": "6db2e10e87f7aaee1eea240783def68e",
+      "width": 150,
+      "height": 74,
+      "size": 5435,
+      "uploadedDate": "2019-07-01T14:34:20.358Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 18.44.30.82-1920x1080-68dac3c327e8a7d657ca1ae2f7fba150_Snapshot.jpg",
+      "md5": "b73de936d37f7add609b404860c6775e",
+      "width": 150,
+      "height": 74,
+      "size": 4505,
+      "uploadedDate": "2019-07-01T14:34:21.590Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 20.33.57.76-1920x1080-e81448b6358a4429d21804f04124a9a5_Snapshot.jpg",
+      "md5": "02c240330f8424eefcc013def0e8e681",
+      "width": 150,
+      "height": 74,
+      "size": 2410,
+      "uploadedDate": "2019-07-01T14:34:22.705Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 20.39.09.16-1920x1080-5f3b2a4c5212dc1ffba1c61ec869da62_Snapshot.jpg",
+      "md5": "003a2141b2f11caf9dfd2a4cab7f3ad1",
+      "width": 150,
+      "height": 74,
+      "size": 3467,
+      "uploadedDate": "2019-07-01T14:34:23.925Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 20.39.36.68-1920x1080-8acd96db7edcc201fd0e35b996433479_Snapshot.jpg",
+      "md5": "933bfd8d8d91b8139359e9c3029aac48",
+      "width": 150,
+      "height": 74,
+      "size": 3595,
+      "uploadedDate": "2019-07-01T14:34:25.164Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 20.46.12.99-1920x1080-fa0622a46b02e31816617f05d5e59128_Snapshot.jpg",
+      "md5": "beeffb91e9f5ac477e44dd79f3d2f793",
+      "width": 150,
+      "height": 74,
+      "size": 4274,
+      "uploadedDate": "2019-07-01T14:34:26.348Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 20.57.39.30-1920x1080-6ce9e8cccede28e9f712494c752e0180_Snapshot.jpg",
+      "md5": "c4b2e93ddcf227231781cd200aebb015",
+      "width": 150,
+      "height": 74,
+      "size": 3763,
+      "uploadedDate": "2019-07-01T14:34:27.543Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 20.58.13.94-1920x1080-be5e68e7a6cd25eaab3e1e2a074d690f_Snapshot.jpg",
+      "md5": "9bdf7fab39489ec689ef93fa79bcc494",
+      "width": 150,
+      "height": 74,
+      "size": 3658,
+      "uploadedDate": "2019-07-01T14:34:29.177Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.02.20.10-1920x1080-698221dc185e97d69221b12ed5101b11_Snapshot.jpg",
+      "md5": "02ffbb512a09286b7f0338f451536e52",
+      "width": 150,
+      "height": 74,
+      "size": 3251,
+      "uploadedDate": "2019-07-01T14:34:30.444Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.04.39.97-1920x1080-16af29e2d89d1d8572aa23e805a769f6_Snapshot.jpg",
+      "md5": "42da94396c592f68344c653223bd410e",
+      "width": 150,
+      "height": 74,
+      "size": 3299,
+      "uploadedDate": "2019-07-01T14:34:31.649Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.09.48.95-1920x1080-d318643c1d9ce2f8836fc4fa28117702_Snapshot.jpg",
+      "md5": "f416c3ead5bae8a0799bf0df28f0e8bf",
+      "width": 150,
+      "height": 74,
+      "size": 3416,
+      "uploadedDate": "2019-07-01T14:34:32.875Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.15.05.10-1920x1080-0342cd3ff9d82a152f7b32f271805f96_Snapshot.jpg",
+      "md5": "559093c0864211c6881c6c84a1c5cd36",
+      "width": 150,
+      "height": 74,
+      "size": 2888,
+      "uploadedDate": "2019-07-01T14:34:34.093Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.21.19.97-1920x1080-8c08ea258ae3780cf9327897fb57fc8f_Snapshot.jpg",
+      "md5": "e658c847bd78083319f6dbedff5cc3da",
+      "width": 150,
+      "height": 74,
+      "size": 3778,
+      "uploadedDate": "2019-07-01T14:34:35.301Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.23.11.97-1920x1080-b41aa4853eb076052fed331a22e040a8_Snapshot.jpg",
+      "md5": "763d59fc4145452d724a908d3dd0a006",
+      "width": 150,
+      "height": 74,
+      "size": 4154,
+      "uploadedDate": "2019-07-01T14:34:36.514Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.26.28.47-1920x1080-676f83e939a0b9f543db86974e9e8342_Snapshot.jpg",
+      "md5": "a0474e858596f4f23ef54416fe01e096",
+      "width": 150,
+      "height": 74,
+      "size": 3452,
+      "uploadedDate": "2019-07-01T14:34:37.828Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.27.46.98-1920x1080-598a6329df4ce8074af5ec8331395217_Snapshot.jpg",
+      "md5": "f4bc6e560e076938a29cbb93c595cc87",
+      "width": 150,
+      "height": 74,
+      "size": 3909,
+      "uploadedDate": "2019-07-01T14:34:39.036Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.35.59.01-1920x1080-05ae03cdc60f59ed6044e5e3c8553136_Snapshot.jpg",
+      "md5": "e9367acd226c70ae8acdeb965f98bc42",
+      "width": 150,
+      "height": 74,
+      "size": 4351,
+      "uploadedDate": "2019-07-01T14:34:40.273Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.39.05.58-1920x1080-6751d5e1c0fb58d5922cab0b14165e2a_Snapshot.jpg",
+      "md5": "48c1292966fe2f99ffbabaa1452e7803",
+      "width": 150,
+      "height": 74,
+      "size": 3063,
+      "uploadedDate": "2019-07-01T14:34:41.550Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.40.19.69-1920x1080-4207e57245b145b8632322a072e010ff_Snapshot.jpg",
+      "md5": "04f703ddc20e236f02967c63f50a5ad7",
+      "width": 150,
+      "height": 74,
+      "size": 4091,
+      "uploadedDate": "2019-07-01T14:34:42.747Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Desktop Screenshot 2019.06.30 - 21.42.15.26-1920x1080-ebb23fb363d876a53d215f417fa42622_Snapshot.jpg",
+      "md5": "58a9e2a8d6067e187f3ba5948f2c13f8",
+      "width": 150,
+      "height": 74,
+      "size": 3697,
+      "uploadedDate": "2019-07-01T14:34:43.964Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-07-18T15:23:19.018Z",
+  "lastModifiedDate": "2024-09-22T16:24:30.928Z",
+  "entitlementName": "6a9e586ffee445e98e2ce966cf68ac7d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b22fdb66cb0a4e86ba2a78a1450ac65a",
+      "appId": "PostProc6a9e586ffee4V1",
+      "compatibleApps": [
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-07-01T00:00:00.000Z",
+      "releaseNote": "fix for _prec and _poly versions: Multiple Scattering Color computed in the blueprint should be multiplied by the Current Intensity Coefficient",
+      "versionTitle": "15a_PointToDirectional_fix"
+    }
+  ],
+  "developer": "zubetto",
+  "developerId": "o-ag9sga6xhbg4nypaemmh4fyuqy4gkt",
+  "endOfSupport": false,
+  "unsearchable": false
+}

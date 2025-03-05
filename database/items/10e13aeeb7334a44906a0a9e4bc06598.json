@@ -1,0 +1,339 @@
+{
+  "id": "10e13aeeb7334a44906a0a9e4bc06598",
+  "title": "GeoLocation",
+  "description": "Tools for working with geographically aware features on iOS and Android",
+  "longDescription": "<h2><strong>Deprecation Notice: This plugin is now free and released as open source</strong></h2><p><br /></p><p>GitHub Link: <a href=\"https://github.com/stevenjt/GeoLocation\" rel=\"nofollow\">https://github.com/stevenjt/GeoLocation</a></p><p>No more updates are planned for UE5, please see the README in the GitHub repo as to how to continue using it as a project plugin in existing UE4 projects. For UE5 the plugin does compile but it has not been tested on any devices.</p><p>----------------------------------------------------------------------</p><p><br /></p><p><strong>New in version 1.2 (UE 4.20&#43;)</strong>: New feature, Geo Heading Component. This provides the current heading of devices with magnetometers to Magnetic North on iOS/Android. On iOS and Android this component can also provide the current heading to True North.</p><p>GeoLocation provides components and tools that make developing geographically aware features easier in Unreal Engine 4. It can be used from both Blueprint and C&#43;&#43; with support for iOS and Android platforms. Geo location data will be as accurate as possible given what each platform/device hardware allows.</p><p>When running in the Unreal Editor a set of global functions are included that can set a simulated location for testing and development.</p><p>Components for the plugin can be found in the Add Component menu for Blueprints in the &#34;GeoLocation&#34; category. Global Blueprint functions can be found under the &#34;Geo Location&#34; category when adding a new node to a Blueprint graph.</p><p>The headers for the components and static function classes are accessible to use from C&#43;&#43;.</p><p><br /></p><p><strong>Note: The map and sphere in the example project are provided as simple examples of how this plugin could be used. The plugin does not provide a mapping/tile service, but it could be integrated with one.</strong></p><p><br /></p><p>Example project (Requires Microsoft Visual Studio to be installed): <a href=\"https://www.dropbox.com/s/kvpq4gfnskkgx2a/GeoLocationExample-1.3.1.zip?dl&#61;1\" rel=\"nofollow\">https://www.dropbox.com/s/kvpq4gfnskkgx2a/GeoLocationExample-1.3.1.zip?dl&#61;1</a></p>",
+  "technicalDetails": "<p>This plugin contains a single module &#34;GeoLocation&#34; which contains components for Geo Locations, Heading, Geo Fences and Distance Tracking. It also provides a set of global functions for utility functions relating to geo location data and setting platform specific settings for iOS and Android.</p><p>Geo Location Components can be added to actors to provide geo location data using update events.</p><p>Geo Location Positions are used for location data returned from the Geo Location Component and have Latitude and Longitude values as well as various other data returned from the device.</p><p>Geo Heading Components can provide the current heading of devices with magnetometers to Magnetic North on iOS/Android. On iOS and Android this component can also provide the current heading to True North.</p><p>There are 3 Geo Fence Components, Circle, Rectangle and Polygon. These can be used to define Geo Fence areas.</p><p>Distance Tracker Components can track the distance travelled by a device and provide the current speed they are travelling at based on the change of geo locations.</p><p><strong>Supported Platforms:</strong></p><p>- iOS</p><p>- Android</p><p><strong>iOS Specific Details:</strong></p><p>- iOS 10 requires a description of how an app will use location data access (NSLocationWhenInUseUsageDescription in the Plist). The plugin automatically sets this in the project settings for iOS (Project Settings -&gt; iOS -&gt; AdditionalPlistData). New values for the description will be kept and not overwritten by the plugin.</p><p><strong>Support Email:</strong> <a href=\"mailto:contact&#64;stevenjt.com\" rel=\"nofollow\">contact&#64;stevenjt.com</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/GeoLocation_screenshot1-1920x1080-cfd7abc0f6836dc07a20b80e601ad9bf.png",
+      "md5": "cfd7abc0f6836dc07a20b80e601ad9bf",
+      "width": 1920,
+      "height": 1080,
+      "size": 544595,
+      "uploadedDate": "2016-12-07T20:43:46.836Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GeoLocation1.2-1920x1080-483eb3b4550fde8e3fd9290ab6307fa6.png",
+      "md5": "483eb3b4550fde8e3fd9290ab6307fa6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1339742,
+      "uploadedDate": "2018-12-11T21:21:02.544Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/GeoLocation_screenshot2-1920x1080-bbb2088e103c57ea1245e701bb669fcc.png",
+      "md5": "bbb2088e103c57ea1245e701bb669fcc",
+      "width": 1920,
+      "height": 1080,
+      "size": 418814,
+      "uploadedDate": "2016-12-07T20:43:40.084Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/GeoLocation_screenshot3-1920x1080-6d814833db5acab9c594c143236db168.png",
+      "md5": "6d814833db5acab9c594c143236db168",
+      "width": 1920,
+      "height": 1080,
+      "size": 462052,
+      "uploadedDate": "2016-12-07T20:43:42.295Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/GeoLocation_screenshot4-1920x1080-2cbdd938160286e65129bc7d900390b7.png",
+      "md5": "2cbdd938160286e65129bc7d900390b7",
+      "width": 1920,
+      "height": 1080,
+      "size": 463073,
+      "uploadedDate": "2016-12-07T20:43:36.854Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/GeoLocation_screenshot5-1920x1080-4072d6d259e2a1d5235b3b248ba732a3.png",
+      "md5": "4072d6d259e2a1d5235b3b248ba732a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 379278,
+      "uploadedDate": "2016-12-07T20:43:44.473Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/item/GeoLocation_Thumbnail-284x284-b13fc630386e8fd36ddc77124a3acfbe.png",
+      "md5": "b13fc630386e8fd36ddc77124a3acfbe",
+      "width": 284,
+      "height": 284,
+      "size": 49383,
+      "uploadedDate": "2016-12-07T20:43:33.193Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/item/GeoLocation_Featured-476x246-56fc35b09a779ecadd062d415faba868.png",
+      "md5": "56fc35b09a779ecadd062d415faba868",
+      "width": 476,
+      "height": 246,
+      "size": 141983,
+      "uploadedDate": "2016-12-07T20:43:49.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GeoLocation1.2-1920x1080-483eb3b4550fde8e3fd9290ab6307fa6_Snapshot.png",
+      "md5": "ce1f5c31f38aa2814164023724d45bd2",
+      "width": 150,
+      "height": 74,
+      "size": 19200,
+      "uploadedDate": "2018-12-11T21:21:02.750Z"
+    },
+    {
+      "type": "NewFeatured",
+      "url": "https://cdn1.epicgames.com/ue/item/GeoLocation_NewFeatured-894x488-a76d9a99acaf8fa429fd4ada62ee5e6b.png",
+      "md5": "a76d9a99acaf8fa429fd4ada62ee5e6b",
+      "width": 894,
+      "height": 488,
+      "size": 461028,
+      "uploadedDate": "2016-12-07T20:43:48.479Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2016-12-07T20:49:29.929Z",
+  "lastModifiedDate": "2024-09-27T12:59:39.494Z",
+  "customAttributes": {},
+  "entitlementName": "10e13aeeb7334a44906a0a9e4bc06598",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "34d6c04d0c0042cda1f2e8afa854db04",
+      "appId": "GeoLocation_4.13",
+      "compatibleApps": [
+        "UE_4.13"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "HTML5"
+      ],
+      "dateAdded": "2016-12-07T00:00:00.000Z",
+      "versionTitle": "GeoLocation_4.13"
+    },
+    {
+      "id": "a6d7e87076f24d3a8ddcbb015b674e3b",
+      "appId": "GeoLocation_4.14",
+      "compatibleApps": [
+        "UE_4.14"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "HTML5"
+      ],
+      "dateAdded": "2016-12-07T00:00:00.000Z",
+      "versionTitle": "GeoLocation_4.14"
+    },
+    {
+      "id": "68d5a620c1a04bc3bd621843423fd4f8",
+      "appId": "GeoLocation_4.15",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "HTML5"
+      ],
+      "dateAdded": "2017-03-08T00:00:00.000Z",
+      "versionTitle": "GeoLocation_4.15"
+    },
+    {
+      "id": "5fb0e3b4209243b88028a988b630b171",
+      "appId": "GeoLocation_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "HTML5"
+      ],
+      "dateAdded": "2017-06-02T00:00:00.000Z",
+      "versionTitle": "GeoLocation_4.16"
+    },
+    {
+      "id": "52e183cae1f04667a4882bd844ac8f92",
+      "appId": "GeoLocation_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "HTML5"
+      ],
+      "dateAdded": "2017-09-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GeoLocation_4.17"
+    },
+    {
+      "id": "06d6e732bad14b57a7abcbf6a5f8d0e5",
+      "appId": "GeoLocation_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "HTML5"
+      ],
+      "dateAdded": "2017-12-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GeoLocation_4.18"
+    },
+    {
+      "id": "01ecb2b5724c425eacff59071460dfb9",
+      "appId": "GeoLocation_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "HTML5"
+      ],
+      "dateAdded": "2018-08-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GeoLocation_4.19"
+    },
+    {
+      "id": "429a70c15d22413493802905b9c08e7e",
+      "appId": "GeoLocation_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "HTML5"
+      ],
+      "dateAdded": "2018-08-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GeoLocation_4.20"
+    },
+    {
+      "id": "0b65ef6790ad46e599e64f9d3688e45f",
+      "appId": "GeoLocation_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "HTML5"
+      ],
+      "dateAdded": "2018-12-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GeoLocation_4.21"
+    },
+    {
+      "id": "128a5c77c5cf4d759795382ef4e14caf",
+      "appId": "GeoLocation_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "HTML5"
+      ],
+      "dateAdded": "2019-06-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GeoLocation_4.22"
+    },
+    {
+      "id": "eec188284af341a98b6c0d776dc9baf2",
+      "appId": "GeoLocation_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "HTML5"
+      ],
+      "dateAdded": "2019-10-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GeoLocation_4.23"
+    },
+    {
+      "id": "86f8505caa8e40fbbf3eace6d0d8d03e",
+      "appId": "GeoLocation_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-01-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GeoLocation_4.24"
+    },
+    {
+      "id": "574597a1066d437d97470322443e4749",
+      "appId": "GeoLocation_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-06-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GeoLocation_4.25"
+    },
+    {
+      "id": "037ca8a78f374448aa2d7c918b79a8c4",
+      "appId": "GeoLocation_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-12-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GeoLocation_4.26"
+    },
+    {
+      "id": "ca1d91945dc34c36880ef4f0c59dd1b9",
+      "appId": "GeoLocation_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2021-08-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GeoLocation_4.27"
+    }
+  ],
+  "developer": "Steven Thompson",
+  "developerId": "o-c0771d48444f38a5d4dd103d29f0ea",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

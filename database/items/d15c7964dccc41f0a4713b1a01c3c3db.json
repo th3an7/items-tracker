@@ -1,0 +1,204 @@
+{
+  "id": "d15c7964dccc41f0a4713b1a01c3c3db",
+  "title": "Material Blend Decal - Environmental Material Blend",
+  "description": "Enhances material blending using DBuffer Decals, bypassing Nanite's vertex painting limitations. It utilizes the specular channel to add blending effects like dirt, related to the underlaying surface material, and helps break up tiling repetition.",
+  "longDescription": "<p>Overview Video: <a href=\"https://youtu.be/EMgAJbEQcqU\" rel=\"nofollow\">Material Blend Decal</a></p><p>More infos at: <a href=\"https://www.a-maze.games/blog/material-blend-decal\" rel=\"nofollow\">https://www.a-maze.games/blog/material-blend-decal</a></p><p><br /></p><p><br /></p><p><strong><u>PROS</u></strong></p><ul><li>Pixel perfect Material Blend on across multiple Surfaces</li><li>Independent Data Layer to Manage details separate from scene geometry.</li><li>Can be procedurally placed and authored</li><li>Can be placed in prefabs &amp; instanced</li><li>No LOD flickering</li><li>Mesh decals can provide advanced shapes</li><li>Can be animated</li></ul><p><br /></p><p><strong><u>CONS</u></strong></p><ul><li>Decals will not add specular on surfaces - which is fine for 99% workflows</li><li>Just one gradient map - two are possible when decals don&#39;t need metallic</li><li>Decal Textures Resolution should be capped to 256px-512px to be game performant</li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h1><strong><u>Pipeline Setup</u></strong></h1><p>DBuffer Decals can be used for a wide variety of blending and material manipulation. I aimed to maintain all the usual decal behaviors, including dynamic gameplay applications like blood splatter and other common decal uses. To ensure compatibility with all pipelines, the Asset Pack only utilizes the specular channel, which is typically unused 99% of the time.</p><p>Depending on the trade-offs you are willing to make with the provided channels for other decals, you can further customize this approach. For example, if metallic decals are not required on certain surfaces, that decal channel can also be repurposed to create a second blend layer.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h3><strong>Important Steps for custom Setups:</strong></h3><ul><li>Disable DBuffer response in the Surface Materials you want to use Decal blending</li><li>Implement custom DBuffer response Material Function for all Materials you want to use it.</li><li>Copy the Blend part and use it for your custom Blending</li><li>ALL packed Displacement and Gradient Maps needs to be set to Mask compression in the Texture settings</li><li>The Material Blend Decal needs to have a Specular Value set at 1 to enable proper blending.</li><li>Set priority order to -1 as the Material Blend Decal needs to operate below all other decals to work as expected.</li><li>For all other decals, set the specular value to zero and layer above blend decals, unless a specific effect is desired. E.g. blending from a clean surface through dirt puddle, the specular should also be set to 1</li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h3><strong>Edge Cases:</strong></h3><p>The way Epic designed the Decal Render Pipeline means that writing to the specular channel will also write to roughness and metallic channel and vice versa.</p><p>For our Blend-Decal there are some edge cases where you see a harsh line on roughness blending. This can be solved by adjusting the roughness value of the Blend-Decal close to the surface roughness you are applying the blend on.</p>",
+  "technicalDetails": "<p><strong><u>Materials:</u></strong></p><p>1 - Surface Master Material with Height Blend Setup - ready to work with Megascans Texture - and several instances for testing</p><p>1 - Material Function for custom Decal response and several Instances to play with</p><p>1 - Material Blend Decal with advanced opacity and gradient controls</p><p><br /></p><p>1 - Debug Decal Material to visualize the maps</p><p>1 - Puddle Decal to test it within a standard roughness decal scenario</p><p> </p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h3><strong><u>Decal Texture-sets (gradient Maps):</u></strong></h3><p>57 unique Alpha Maps across 9 Categories - 1024px</p><p>Shapes | Concrete | Corrosion | Dripping | Grunge | Ice | Moss | Sand | Wood</p><p> </p><p>Each Category has 5 or more Texture maps in 1024 resolution - for performance focused scene reduce the decals to 256 or 512 and pack them in RGB Channels.</p><p><br /></p><p><br /></p><h2><br /></h2><p><strong><u>Environment Texture-Sets (Albedo / AO, Roughness, Displacement / Normal):</u></strong></p><p>6 Surface Texture - 2048px:</p><p>Brick Wall | Moss | Painted Wall | Stone Floor | Wood Planks | weathered Wood Planks</p><p><br /></p><p>Number of Unique Materials and Material Instances: 3</p><p>Number of Textures: 57</p><p>Texture Resolutions: 1024</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Yes</p><p>Documentation: https://www.a-maze.games/blog/material-blend-decal</p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1stPic2-1920x1080-79c752c57a4c325426696b061cbd0007.jpg",
+      "md5": "79c752c57a4c325426696b061cbd0007",
+      "width": 1920,
+      "height": 1080,
+      "size": 1821007,
+      "uploadedDate": "2024-05-31T14:50:15.667Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DecalTextures3-1920x1080-bc364327650ba8cceec61d95dca7b171.jpg",
+      "md5": "bc364327650ba8cceec61d95dca7b171",
+      "width": 1920,
+      "height": 1080,
+      "size": 248747,
+      "uploadedDate": "2024-05-31T14:50:16.610Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DecalTextures01-1920x1080-566b84923ae1424a669787cd9b62d999.jpg",
+      "md5": "566b84923ae1424a669787cd9b62d999",
+      "width": 1920,
+      "height": 1080,
+      "size": 267848,
+      "uploadedDate": "2024-05-31T14:50:17.127Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DecalTextures02-1920x1080-823762d6c6aa8ba6253860a3a8342520.jpg",
+      "md5": "823762d6c6aa8ba6253860a3a8342520",
+      "width": 1920,
+      "height": 1080,
+      "size": 302314,
+      "uploadedDate": "2024-05-31T14:50:17.596Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Textures01-1920x1080-90f19c7f66e91f9f5f7b725d89e567c8.png",
+      "md5": "90f19c7f66e91f9f5f7b725d89e567c8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2747244,
+      "uploadedDate": "2024-05-31T14:50:18.149Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DbufferDecal-1920x1080-456f55fb88df7ed40359c7115b8b0cec.jpg",
+      "md5": "456f55fb88df7ed40359c7115b8b0cec",
+      "width": 1920,
+      "height": 1080,
+      "size": 399483,
+      "uploadedDate": "2024-05-31T14:50:18.892Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MasterMaterial-1920x1080-ef5075419f1d88de7fe69f4598dd91d9.jpg",
+      "md5": "ef5075419f1d88de7fe69f4598dd91d9",
+      "width": 1920,
+      "height": 1080,
+      "size": 441727,
+      "uploadedDate": "2024-05-31T14:50:19.672Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MaterialBlendDecalEnvironmentalMaterialBlend_thumb-284x284-e29fb88967a0a4bc2316896c49a9c281.png",
+      "md5": "e29fb88967a0a4bc2316896c49a9c281",
+      "width": 284,
+      "height": 284,
+      "size": 202342,
+      "uploadedDate": "2024-05-31T14:50:20.310Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MaterialBlendDecalEnvironmentalMaterialBlend_featured-894x488-4362c11a25d6ef1a030096bf0c7fdfa1.png",
+      "md5": "4362c11a25d6ef1a030096bf0c7fdfa1",
+      "width": 894,
+      "height": 488,
+      "size": 1015066,
+      "uploadedDate": "2024-05-31T14:50:20.456Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1stPic2-1920x1080-79c752c57a4c325426696b061cbd0007_Snapshot.jpg",
+      "md5": "5b05e61d1fd662e378c6bbdf1f6329eb",
+      "width": 150,
+      "height": 74,
+      "size": 7193,
+      "uploadedDate": "2024-05-31T14:50:16.355Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DecalTextures3-1920x1080-bc364327650ba8cceec61d95dca7b171_Snapshot.jpg",
+      "md5": "efb3ff2b480abf4c1e1efb0fecddbadb",
+      "width": 150,
+      "height": 74,
+      "size": 4448,
+      "uploadedDate": "2024-05-31T14:50:16.933Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DecalTextures01-1920x1080-566b84923ae1424a669787cd9b62d999_Snapshot.jpg",
+      "md5": "5f1767bb1e9e19ffa393c1b0d231b14b",
+      "width": 150,
+      "height": 74,
+      "size": 5020,
+      "uploadedDate": "2024-05-31T14:50:17.448Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DecalTextures02-1920x1080-823762d6c6aa8ba6253860a3a8342520_Snapshot.jpg",
+      "md5": "a91942fd8a502037abd6cd4cbcc2994f",
+      "width": 150,
+      "height": 74,
+      "size": 5393,
+      "uploadedDate": "2024-05-31T14:50:17.947Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Textures01-1920x1080-90f19c7f66e91f9f5f7b725d89e567c8_Snapshot.png",
+      "md5": "ae2697edefb836ab0a47e2087f7d8112",
+      "width": 150,
+      "height": 74,
+      "size": 5707,
+      "uploadedDate": "2024-05-31T14:50:18.628Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DbufferDecal-1920x1080-456f55fb88df7ed40359c7115b8b0cec_Snapshot.jpg",
+      "md5": "4873c1004cb4015ac84aca1aabfc0549",
+      "width": 150,
+      "height": 74,
+      "size": 4266,
+      "uploadedDate": "2024-05-31T14:50:19.412Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MasterMaterial-1920x1080-ef5075419f1d88de7fe69f4598dd91d9_Snapshot.jpg",
+      "md5": "0858d4151e87845e60dbe6671a42bdbd",
+      "width": 150,
+      "height": 74,
+      "size": 3691,
+      "uploadedDate": "2024-05-31T14:50:20.216Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/materials"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-06-02T14:06:22.908Z",
+  "lastModifiedDate": "2025-01-02T12:19:25.406Z",
+  "customAttributes": {},
+  "entitlementName": "d15c7964dccc41f0a4713b1a01c3c3db",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "ada9fdc8eefe4259b97f483f58fbec54",
+      "appId": "Materiald15c7964dcccV2",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-06-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Material Blend Decal 5.3"
+    },
+    {
+      "id": "ca460ed457b9416a82b26b882bf12bde",
+      "appId": "Materiald15c7964dcccV3",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-06-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Material Blend Decal 5.4"
+    }
+  ],
+  "developer": "Maze Games",
+  "developerId": "o-xn4mcml8wp9mvu8ue5mx3hdxq8jyr3",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

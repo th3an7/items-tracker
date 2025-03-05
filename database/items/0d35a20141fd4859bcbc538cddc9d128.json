@@ -1,0 +1,233 @@
+{
+  "id": "0d35a20141fd4859bcbc538cddc9d128",
+  "title": "2D Widget Spacer Plugin For Actors and Items - Prevents Overlap",
+  "description": "Display widgets over actors in game, maintain them on screen and preventing them for overlapping. Overview video : https://youtu.be/0QQcKhEEyqU",
+  "longDescription": "<p>The Widget Spacer plugin, built entirely in C&#43;&#43;, allows you to automatically space any widgets placed on an overlay in your UI and prevents overlap. It is instrumental in situations with many actors like enemies, players, and items, which normally cause the text widgets to overlap and need to be completely legible or clickable. It also includes features allowing it to automatically place these widgets over the 3D position of an actor on screen and on the screen&#39;s border with an arrow pointing to its direction when the actor is off-screen.</p><p><br /></p><p>It&#39;s built with efficiency and optimization in mind for situations where even 50&#43; widgets can exist simultaneously on the screen without much FPS loss.</p><p><br /></p><p><strong>Typical example of usage:</strong></p><ul><li>RPG games where you want to display 2D messages or icons over NPCs (Bound-Actor mode)</li><li>Top-down games with lots of loot (items) and enemies</li><li>Complex UIs systems where you need to move over some widgets (Manual mode)</li><li>Flight games and simulators where you need to locate objects off-screen</li><li>Strategy games where you need 2D display over your and other player units (Bound-Actor mode)</li><li>Sports game where you need to display 2D UI over game elements</li><li>Displaying widgets on the border of the screen to indicate the direction of an actor that is out of sight (Bound-Actor mode)</li><li>etc.</li></ul><p><br /></p><p><strong>Plug-in objects:</strong></p><p>The plug-in defines the following C&#43;&#43; classes that are usable and blueprintable in your own project :</p><ul><li><strong>SpacerOverlay</strong>: Inherits from Overlay widget. This is the main component of the plug-in, it defines the zone within which the spaceable widgets will be placed. It hosts all the computations. It has two modes:</li></ul><p>\t\t\t\t &#43; <em>Manual </em>: Widgets can be freely placed by the developper (with SetIdealPosition method) and will be spaced from each other when calling SpaceWidgets method.</p><p>\t\t\t\t&#43; <em>ActorBound </em>: Allows to automatically place the 2D widgets over actors in the 3D game and space them.</p><ul><li><strong>SpaceableWidgetInterface:</strong> Interface to be implemented by all individual widgets to be added in the spacer overlay that should be spaced from each other.</li><li><strong>SpaceableWidgetBase: </strong>Parent class implementing SpaceableWidgetInterface than you can inherit to simply use the Manual mode.</li><li><strong>BoundActorWidgetBase: </strong>Parent class implementing SpaceableWidgetInterface than you can inherit to simply use the BoundActor mode.</li><li><strong>SpacerHelper:</strong> Class not made to be instanced, containing a bunch of helpful static methods.</li><li><strong>WidgetSpacer: </strong>Plug-in definition class. Not to be used.</li></ul><p><br /></p><p><strong>Overview video :</strong> <a href=\"https://youtu.be/0QQcKhEEyqU\" rel=\"nofollow\">https://youtu.be/0QQcKhEEyqU</a></p>",
+  "technicalDetails": "<ul><li><strong>Features:</strong></li><li>Spacing widgets from each other to prevent them from overlapping (main feature of the plug-in) </li><li>Force widgets to remain within the bounds of a rectangle (Overlay) - can be disabled</li><li>Automatically placing 2D widgets over a 3D actor in game (Bound Actor mode)</li><li>Blueprints events to change widget appearance depending on whether the bound actor is within sight and on which direction he is from player&#39;s camera focus (Bound Actor mode)</li></ul><p><strong>Code Modules:</strong></p><ul><li> WidgetSpacer (Runtime)</li></ul><p><br /></p><p><strong>Number of Blueprints:</strong> 0</p><p><strong>Number of C&#43;&#43; Classes:</strong> 6</p><p><strong>Network Replicated:</strong> No</p><p><strong>Supported Development Platforms:</strong> Windows 32-bit, Windows 64-bit, Linux, MacOS, iOS, Android</p><p><strong>Supported Target Build Platforms:</strong> Android, Gear VR, HoloLens 2, HTML5, iOS, Linux, MacOS, Nintendo Switch, Oculus, PlayStation 4, Steam VR, Windows 32-bit, Windows 64-bit, Xbox One</p><p><strong>Documentation:</strong> <a href=\"https://nuage.liiib.re/s/N5X5TF75yZbNCjM\" rel=\"nofollow\">https://nuage.liiib.re/s/N5X5TF75yZbNCjM</a></p><p><strong>Example Project:</strong> <a href=\"https://nuage.liiib.re/s/ieptF5Fnwkbc4sM\" rel=\"nofollow\">https://nuage.liiib.re/s/ieptF5Fnwkbc4sM</a> (does not include binaries so you will need to recompile it by yourself. Example project with binaries available on demand for those who work in editor only)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2-1920x1080-86515dd759ac66434d296619852081fe.jpg",
+      "md5": "86515dd759ac66434d296619852081fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 128703,
+      "uploadedDate": "2022-10-02T10:47:25.872Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot1-1920x1080-39bfdba697d8e26632fc0fd048c9be3d.jpg",
+      "md5": "39bfdba697d8e26632fc0fd048c9be3d",
+      "width": 1920,
+      "height": 1080,
+      "size": 160813,
+      "uploadedDate": "2022-10-02T10:47:26.747Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot3-1920x1080-d44faa5aecc1acf4d490d78fe62077b3.jpg",
+      "md5": "d44faa5aecc1acf4d490d78fe62077b3",
+      "width": 1920,
+      "height": 1080,
+      "size": 98154,
+      "uploadedDate": "2022-10-02T10:47:25.053Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/WidgetSpacer_thumb-284x284-5ba2406afaf75c902b269a11c5089e96.png",
+      "md5": "5ba2406afaf75c902b269a11c5089e96",
+      "width": 284,
+      "height": 284,
+      "size": 50781,
+      "uploadedDate": "2022-10-02T10:47:27.488Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/WidgetSpacer_featured-894x488-6762282e723f2f7cf5140adeaff8381b.png",
+      "md5": "6762282e723f2f7cf5140adeaff8381b",
+      "width": 894,
+      "height": 488,
+      "size": 192154,
+      "uploadedDate": "2022-10-02T10:47:27.620Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot3-1920x1080-d44faa5aecc1acf4d490d78fe62077b3_Snapshot.jpg",
+      "md5": "8bf7af068daa4d281b0c097246ea5787",
+      "width": 150,
+      "height": 74,
+      "size": 3108,
+      "uploadedDate": "2022-10-02T10:47:25.614Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2-1920x1080-86515dd759ac66434d296619852081fe_Snapshot.jpg",
+      "md5": "05608292a76eb5fc456df4d4e952e1bf",
+      "width": 150,
+      "height": 74,
+      "size": 4046,
+      "uploadedDate": "2022-10-02T10:47:26.446Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot1-1920x1080-39bfdba697d8e26632fc0fd048c9be3d_Snapshot.jpg",
+      "md5": "838142c6889daefe8f31b95a7a2cfde2",
+      "width": 150,
+      "height": 74,
+      "size": 5359,
+      "uploadedDate": "2022-10-02T10:47:27.333Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-10-07T20:22:09.983Z",
+  "lastModifiedDate": "2025-02-24T14:11:27.513Z",
+  "customAttributes": {},
+  "entitlementName": "0d35a20141fd4859bcbc538cddc9d128",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "bbfba2b72c2f4aed8d8f05fe4c12dc28",
+      "appId": "WidgetSpacer_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2022-11-28T00:00:00.000Z",
+      "releaseNote": "Widgets will not be shaky or wobly anymore.",
+      "versionTitle": "WidgetSpacer 1.4_UE4.27"
+    },
+    {
+      "id": "430890eda6124a51a91475f08532a91e",
+      "appId": "WidgetSpacer_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Win32",
+        "Linux",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Mac",
+        "Windows",
+        "Xbox One",
+        "Nintendo Switch",
+        "Gear VR",
+        "HoloLens 2",
+        "PS4"
+      ],
+      "dateAdded": "2022-10-02T00:00:00.000Z",
+      "releaseNote": "Widgets will not be shaky or wobly anymore.",
+      "versionTitle": "WidgetSpacer 1.4_UE5.0"
+    },
+    {
+      "id": "9792c9f8af0d465dba072e029b59893e",
+      "appId": "WidgetSpacer_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-11-27T00:00:00.000Z",
+      "releaseNote": "Widgets will not be shaky or wobly anymore.",
+      "versionTitle": "WidgetSpacer 1.4_UE5.1"
+    },
+    {
+      "id": "b747d57eb1a843cda2798a103bc2120a",
+      "appId": "WidgetSpacer_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-06-04T00:00:00.000Z",
+      "releaseNote": "Widgets will not be shaky or wobly anymore.",
+      "versionTitle": "WidgetSpacer 1.4_UE5.2"
+    },
+    {
+      "id": "f15550708cc4423db0b39e3ff245f89b",
+      "appId": "WidgetSpacer_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-10-14T00:00:00.000Z",
+      "releaseNote": "Widgets will not be shaky or wobly anymore.",
+      "versionTitle": "WidgetSpacer 1.4_UE5.3"
+    },
+    {
+      "id": "569eaa76717948cfbdf1e699377685ac",
+      "appId": "WidgetSpacer_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2024-05-18T00:00:00.000Z",
+      "releaseNote": "Widgets will not be shaky or wobly anymore.",
+      "versionTitle": "WidgetSpacer 1.4_UE5.4"
+    }
+  ],
+  "developer": "GB Studio",
+  "developerId": "o-emp5mdm3srxs3d8rh2g5xqbdk945u7",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

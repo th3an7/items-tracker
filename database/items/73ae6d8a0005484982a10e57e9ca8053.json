@@ -1,0 +1,617 @@
+{
+  "id": "73ae6d8a0005484982a10e57e9ca8053",
+  "title": "Hittables",
+  "description": "A multi-threaded, states based tool that can be used for anything that reacts to taking damage. You can make an explosive barrel within the editor only in a few steps.",
+  "longDescription": "<blockquote><a href=\"https://youtu.be/CkuvgCDQM4U\" rel=\"nofollow\"><strong>Demonstration Video</strong></a></blockquote><blockquote><a href=\"https://drive.google.com/file/d/1BAsezyBT8tv0hPcJZYaAAnq1CC5dYI7E/view?usp&#61;sharing\" rel=\"nofollow\"><strong>Playable Demo</strong></a></blockquote><blockquote><a href=\"https://sites.google.com/view/hittables/home\" rel=\"nofollow\"><strong>Documentation</strong></a></blockquote><blockquote><a href=\"https://drive.google.com/file/d/1u7Yr2WfOkCsV40abr8fZyzNDY5hCzhhr/view?usp&#61;sharing\" rel=\"nofollow\"><strong>Example Project</strong></a></blockquote><blockquote><a href=\"https://youtu.be/kVXPFthZ_tE\" rel=\"nofollow\"><strong>Quick Setup Tutorial</strong></a></blockquote><blockquote><a href=\"https://discord.gg/JVn8ZnVUGH\" rel=\"nofollow\"><strong>&#xfeff;Discord</strong></a></blockquote><p><br /></p><p>Anything that has a health and can be damaged and then will do something when its health goes less or equal to 0 is considered a <strong>Hittable</strong>.</p><p><br /></p><p>This plugin is made for the actors that can be hit by the player or environment, you can make any actor react to getting hit based on its health and state.</p><p>The plugin supports both static and skeletal meshes as the root component.</p><p>Each actor can have one or more states and each state is highly customizable with <strong>11 different effects </strong>for <strong>static mesh</strong> based hittables and <strong>16 different effects </strong>for <strong>skeletal mesh</strong> based hittables.</p><p><br /></p><p>You can make a monitor break when the player shoots it or you can make an explosive barrel within the editor only! Without writing any blueprint script or code.</p><p>You can make a skeletal mesh play an animation when the player shoots it or play a montage and so on without even adding a single node of blueprint.</p><p><br /></p><p>The plugin works with the unreal&#39;s <strong>damage system </strong>by default.</p><p><br /></p><p>It also contains 5 game-ready static mesh based props and 3 game-ready skeletal mesh based actors to spice things up.</p><p><br /></p><p>Make anything Hittable!</p><p><br /></p><p>There are 4 different hittable classes based on your needs</p><ol><li><strong>Static-Simple</strong>: Root component is a static mesh component and it&#39;s so user friendly, fast and easy to make.</li><li><strong>Static-Optimal</strong>: Root component is a static mesh component and memory friendly, takes pretty much less space than the simple version, it&#39;s best to use the optimal version all the time.</li><li><strong>Skeletal-Simple</strong>: Root component is a skeletal mesh component and it&#39;s so user friendly, fast and easy to make.</li><li><strong>Skeletal-Optimal</strong>: Root component is a skeletal mesh component and memory friendly, takes pretty much less space than the simple version, it&#39;s best to use the optimal version all the time.</li></ol><p><br /></p><p>You can add zero or more of listed effects below to each state of your hittable actor.</p><p><strong>List of Supported Effects for All Types of Hittables</strong></p><ul><li>Playing a Camera Shake</li><li>Applying Radial Damage</li><li>Physics (Simulation, Impulse and Radial Impulse)</li><li>Spawning Decal</li><li>Changing Mesh Component&#39;s Material</li><li>Changing the Mesh</li><li>Spawning Particle System</li><li>Spawning Niagara System</li><li>Playing a Sound (2D/3D)</li><li>Spawning an Actor</li><li>Emitting Noise (AI)</li></ul><p><br /></p><p><strong>List of Exclusive Skeletal Mesh Based Hittables Effects</strong></p><ul><li>Play an Animation Asset</li><li>Play an Animation Montage</li><li>Set Animation Blueprint</li><li>Set Physics Constraint Profile</li><li>Manipulate Bone (Hide, Show, Terminate)</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Easy to Use</li><li>Optimized</li><li>Flexible</li><li>Multi-Threaded</li><li>Both Skeletal and Static Meshes are Supported</li><li>11 Effects for Static Mesh based Hittables</li><li>16 Effects for Skeletal Mesh based Hittables</li><li>Up to 10 custom effects that can be implemented with blueprint</li><li>Unlimited States Support</li></ul><p>Code Modules:</p><ul><li> Hittables (Runtime)</li></ul><p>Number of Blueprints: 19</p><p>Number of C&#43;&#43; Classes: 7</p><p>Network Replicated: No</p><p>Supported Development Platforms: Almost All Platforms</p><p>Supported Target Build Platforms: Almost All Platforms</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery4-1920x1080-de865532e50a45aec3e3c362b2335162.png",
+      "md5": "de865532e50a45aec3e3c362b2335162",
+      "width": 1920,
+      "height": 1080,
+      "size": 1908681,
+      "uploadedDate": "2022-11-11T07:58:22.406Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery10-1920x1080-3781c80eeee722cdb93b5dbf81db9949.png",
+      "md5": "3781c80eeee722cdb93b5dbf81db9949",
+      "width": 1920,
+      "height": 1080,
+      "size": 383969,
+      "uploadedDate": "2022-11-11T07:58:15.844Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery15-1920x1080-c554d3ab360eadcd7bc66f8edb6a381e.png",
+      "md5": "c554d3ab360eadcd7bc66f8edb6a381e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1689879,
+      "uploadedDate": "2022-11-11T07:58:18.110Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery14-1920x1080-66dec19d83557f697d3fbe7ec680e90a.png",
+      "md5": "66dec19d83557f697d3fbe7ec680e90a",
+      "width": 1920,
+      "height": 1080,
+      "size": 331447,
+      "uploadedDate": "2022-11-11T07:58:17.573Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery13-1920x1080-83862a32bf066285e65338af036f1acd.png",
+      "md5": "83862a32bf066285e65338af036f1acd",
+      "width": 1920,
+      "height": 1080,
+      "size": 338143,
+      "uploadedDate": "2022-11-11T07:58:17.145Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery1-1920x1080-415a8c4a838ac356b91be6f1b7b73e18.png",
+      "md5": "415a8c4a838ac356b91be6f1b7b73e18",
+      "width": 1920,
+      "height": 1080,
+      "size": 1578430,
+      "uploadedDate": "2022-11-11T07:58:20.435Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery7-1920x1080-96194cae2532558b80ab1bc2585e9e84.png",
+      "md5": "96194cae2532558b80ab1bc2585e9e84",
+      "width": 1920,
+      "height": 1080,
+      "size": 349316,
+      "uploadedDate": "2022-11-11T07:58:14.261Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery2-1920x1080-6616b785c398e995d73bef59d5835e8c.png",
+      "md5": "6616b785c398e995d73bef59d5835e8c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1705906,
+      "uploadedDate": "2022-11-11T07:58:21.076Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery9-1920x1080-601e787f1d14f60b43117f6f0b17ef2a.png",
+      "md5": "601e787f1d14f60b43117f6f0b17ef2a",
+      "width": 1920,
+      "height": 1080,
+      "size": 358687,
+      "uploadedDate": "2022-11-11T07:58:15.221Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery3-1920x1080-3d54245aa30cefe696ffb35e585fae4c.png",
+      "md5": "3d54245aa30cefe696ffb35e585fae4c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2047936,
+      "uploadedDate": "2022-11-11T07:58:21.726Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery8-1920x1080-d8490934650234cd0c23bcbff229ab42.png",
+      "md5": "d8490934650234cd0c23bcbff229ab42",
+      "width": 1920,
+      "height": 1080,
+      "size": 383867,
+      "uploadedDate": "2022-11-11T07:58:14.720Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery5-1920x1080-63a0a2124058418946e5c194a3b67065.png",
+      "md5": "63a0a2124058418946e5c194a3b67065",
+      "width": 1920,
+      "height": 1080,
+      "size": 1466439,
+      "uploadedDate": "2022-11-11T07:58:23.040Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery6-1920x1080-dbf5562da6fc8a711ada768087b30407.png",
+      "md5": "dbf5562da6fc8a711ada768087b30407",
+      "width": 1920,
+      "height": 1080,
+      "size": 1685574,
+      "uploadedDate": "2022-11-11T07:58:23.645Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery11-1920x1080-4b66a51dd496c951b17a9e65783580ef.png",
+      "md5": "4b66a51dd496c951b17a9e65783580ef",
+      "width": 1920,
+      "height": 1080,
+      "size": 771841,
+      "uploadedDate": "2022-11-11T07:58:16.627Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery16-1920x1080-89e6600ff8a8c2c22b15301bf1c17c09.png",
+      "md5": "89e6600ff8a8c2c22b15301bf1c17c09",
+      "width": 1920,
+      "height": 1080,
+      "size": 1802037,
+      "uploadedDate": "2022-11-11T07:58:18.719Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery17-1920x1080-248d6b88dbc465334149a4b949bfe6b0.png",
+      "md5": "248d6b88dbc465334149a4b949bfe6b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1646220,
+      "uploadedDate": "2022-11-11T07:58:19.321Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery18-1920x1080-4ff72f636ed23117e9de1dadc6f1df43.png",
+      "md5": "4ff72f636ed23117e9de1dadc6f1df43",
+      "width": 1920,
+      "height": 1080,
+      "size": 323826,
+      "uploadedDate": "2022-11-11T07:58:19.863Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery12-1920x1080-cf38979aa392023ef9c93af0ef5fa299.png",
+      "md5": "cf38979aa392023ef9c93af0ef5fa299",
+      "width": 1920,
+      "height": 1080,
+      "size": 647134,
+      "uploadedDate": "2022-10-21T17:38:41.400Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Hittables_thumb-284x284-2bf57841141b66a49ffcd8f512e559b4.png",
+      "md5": "2bf57841141b66a49ffcd8f512e559b4",
+      "width": 284,
+      "height": 284,
+      "size": 58135,
+      "uploadedDate": "2022-11-02T22:28:36.524Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Hittables_featured-894x488-959861164fe8b8c80722d7cbaaed50a3.png",
+      "md5": "959861164fe8b8c80722d7cbaaed50a3",
+      "width": 894,
+      "height": 488,
+      "size": 232970,
+      "uploadedDate": "2023-01-07T13:20:24.208Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery7-1920x1080-96194cae2532558b80ab1bc2585e9e84_Snapshot.png",
+      "md5": "38d70870b3e33e8db30a4c9b6b1901e2",
+      "width": 150,
+      "height": 74,
+      "size": 5729,
+      "uploadedDate": "2022-11-11T07:58:14.560Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery8-1920x1080-d8490934650234cd0c23bcbff229ab42_Snapshot.png",
+      "md5": "81cf7a7553aed3942b100e0c00299d10",
+      "width": 150,
+      "height": 74,
+      "size": 6046,
+      "uploadedDate": "2022-11-11T07:58:15.008Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery9-1920x1080-601e787f1d14f60b43117f6f0b17ef2a_Snapshot.png",
+      "md5": "1463264d98b615acde03965a91cda199",
+      "width": 150,
+      "height": 74,
+      "size": 6083,
+      "uploadedDate": "2022-11-11T07:58:15.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery10-1920x1080-3781c80eeee722cdb93b5dbf81db9949_Snapshot.png",
+      "md5": "e2361af60fd4144141bfd4dd179b621d",
+      "width": 150,
+      "height": 74,
+      "size": 6382,
+      "uploadedDate": "2022-11-11T07:58:16.156Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery11-1920x1080-4b66a51dd496c951b17a9e65783580ef_Snapshot.png",
+      "md5": "df682d918804b0e14af810d79642908f",
+      "width": 150,
+      "height": 74,
+      "size": 6239,
+      "uploadedDate": "2022-11-11T07:58:16.950Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery13-1920x1080-83862a32bf066285e65338af036f1acd_Snapshot.png",
+      "md5": "2e1b8eeab6e0de6493b757c5432adf1c",
+      "width": 150,
+      "height": 74,
+      "size": 5539,
+      "uploadedDate": "2022-11-11T07:58:17.433Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery14-1920x1080-66dec19d83557f697d3fbe7ec680e90a_Snapshot.png",
+      "md5": "230ab13e9962b492f0e4e9cc261e032b",
+      "width": 150,
+      "height": 74,
+      "size": 5803,
+      "uploadedDate": "2022-11-11T07:58:17.889Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery15-1920x1080-c554d3ab360eadcd7bc66f8edb6a381e_Snapshot.png",
+      "md5": "a71447fcd877b0567bd2b2e2beecfba2",
+      "width": 150,
+      "height": 74,
+      "size": 7051,
+      "uploadedDate": "2022-11-11T07:58:18.512Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery16-1920x1080-89e6600ff8a8c2c22b15301bf1c17c09_Snapshot.png",
+      "md5": "b14afeb2155f69a439b81063ba403ee1",
+      "width": 150,
+      "height": 74,
+      "size": 7193,
+      "uploadedDate": "2022-11-11T07:58:19.109Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery17-1920x1080-248d6b88dbc465334149a4b949bfe6b0_Snapshot.png",
+      "md5": "a8727550ba58d8c08312ca1b95c2232c",
+      "width": 150,
+      "height": 74,
+      "size": 6790,
+      "uploadedDate": "2022-11-11T07:58:19.725Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery18-1920x1080-4ff72f636ed23117e9de1dadc6f1df43_Snapshot.png",
+      "md5": "95372e40653db6c45c2f0f591250e5b8",
+      "width": 150,
+      "height": 74,
+      "size": 6009,
+      "uploadedDate": "2022-11-11T07:58:20.207Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1-1920x1080-415a8c4a838ac356b91be6f1b7b73e18_Snapshot.png",
+      "md5": "422db7b6053d819f2a5cf926d760799a",
+      "width": 150,
+      "height": 74,
+      "size": 6765,
+      "uploadedDate": "2022-11-11T07:58:20.832Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery2-1920x1080-6616b785c398e995d73bef59d5835e8c_Snapshot.png",
+      "md5": "1f5d8448854dca5078ea0b4a31f77ae3",
+      "width": 150,
+      "height": 74,
+      "size": 6653,
+      "uploadedDate": "2022-11-11T07:58:21.463Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery3-1920x1080-3d54245aa30cefe696ffb35e585fae4c_Snapshot.png",
+      "md5": "c93b4059cd2c648d6a3a2297e2bba004",
+      "width": 150,
+      "height": 74,
+      "size": 7704,
+      "uploadedDate": "2022-11-11T07:58:22.107Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery4-1920x1080-de865532e50a45aec3e3c362b2335162_Snapshot.png",
+      "md5": "35840c6e291e82010c6b90db1df99220",
+      "width": 150,
+      "height": 74,
+      "size": 6831,
+      "uploadedDate": "2022-11-11T07:58:22.835Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery5-1920x1080-63a0a2124058418946e5c194a3b67065_Snapshot.png",
+      "md5": "913f8f3d9082a3fa89b39f2d27cbc3d5",
+      "width": 150,
+      "height": 74,
+      "size": 7931,
+      "uploadedDate": "2022-11-11T07:58:23.415Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery6-1920x1080-dbf5562da6fc8a711ada768087b30407_Snapshot.png",
+      "md5": "ff1890033848eefd7aa495a27dba6924",
+      "width": 150,
+      "height": 74,
+      "size": 7298,
+      "uploadedDate": "2022-11-11T07:58:24.078Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery12-1920x1080-cf38979aa392023ef9c93af0ef5fa299_Snapshot.png",
+      "md5": "09781330fbc5bc6730f093cffa91c781",
+      "width": 150,
+      "height": 74,
+      "size": 6367,
+      "uploadedDate": "2022-10-21T17:38:41.716Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1-1920x1080-6499c8d7486191601cae7874426a73c8_Snapshot.png",
+      "md5": "9f6e356663a0c0319eccc6af524a9bb7",
+      "width": 150,
+      "height": 74,
+      "size": 6582,
+      "uploadedDate": "2022-10-21T17:38:42.186Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery2-1920x1080-6564f4c079760de693bc5b8953304303_Snapshot.png",
+      "md5": "d11dc236ade79b16917ffb7cc681f7bb",
+      "width": 150,
+      "height": 74,
+      "size": 6527,
+      "uploadedDate": "2022-10-21T17:38:42.779Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery3-1920x1080-0694cf8a7f82325ddd4957fdd7b15b27_Snapshot.png",
+      "md5": "cb35b9e57e848d5639df3ea446b3b9de",
+      "width": 150,
+      "height": 74,
+      "size": 7494,
+      "uploadedDate": "2022-10-21T17:38:43.392Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery4-1920x1080-efcd8fcd7af143a16c4ae252df32c256_Snapshot.png",
+      "md5": "18aa8404f6f94687f63bf7c066ff5008",
+      "width": 150,
+      "height": 74,
+      "size": 6711,
+      "uploadedDate": "2022-10-21T17:38:44.086Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery5-1920x1080-c3da49a5de1ba631bd6d13585ac06a19_Snapshot.png",
+      "md5": "d3e2cb15ffa808d898f0f149c1bd957f",
+      "width": 150,
+      "height": 74,
+      "size": 7777,
+      "uploadedDate": "2022-10-21T17:38:44.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery6-1920x1080-f15aee7c7b32a747f05c6e5084383c34_Snapshot.png",
+      "md5": "0ac16ec87f063c5f798077fc448b5bab",
+      "width": 150,
+      "height": 74,
+      "size": 7114,
+      "uploadedDate": "2022-10-21T17:38:45.462Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery7-1920x1080-5dd310491a41976e040d553db13b1214_Snapshot.png",
+      "md5": "805916d416e3ccbeaf513eb51c890b65",
+      "width": 150,
+      "height": 74,
+      "size": 5593,
+      "uploadedDate": "2022-10-21T17:38:45.878Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery8-1920x1080-98fa69bcfe037c0a32c97e0fd272b06d_Snapshot.png",
+      "md5": "f2c8dd1c1708ee843651551c6cc38c5b",
+      "width": 150,
+      "height": 74,
+      "size": 5814,
+      "uploadedDate": "2022-10-21T17:38:46.342Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery9-1920x1080-601e787f1d14f60b43117f6f0b17ef2a_Snapshot.png",
+      "md5": "1463264d98b615acde03965a91cda199",
+      "width": 150,
+      "height": 74,
+      "size": 6083,
+      "uploadedDate": "2022-10-21T17:38:46.883Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery10-1920x1080-3781c80eeee722cdb93b5dbf81db9949_Snapshot.png",
+      "md5": "e2361af60fd4144141bfd4dd179b621d",
+      "width": 150,
+      "height": 74,
+      "size": 6382,
+      "uploadedDate": "2022-10-21T17:38:47.361Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery11-1920x1080-4b66a51dd496c951b17a9e65783580ef_Snapshot.png",
+      "md5": "df682d918804b0e14af810d79642908f",
+      "width": 150,
+      "height": 74,
+      "size": 6239,
+      "uploadedDate": "2022-10-21T17:38:47.875Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-11-14T18:36:52.498Z",
+  "lastModifiedDate": "2024-11-18T21:11:26.909Z",
+  "customAttributes": {},
+  "entitlementName": "73ae6d8a0005484982a10e57e9ca8053",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "21bdce72152e41c9b4119c93fd02ddbb",
+      "appId": "Hittables_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-11-11T00:00:00.000Z",
+      "releaseNote": "Bug Fix",
+      "versionTitle": "UE4"
+    },
+    {
+      "id": "2776c296eed6443581ff274be8c845c1",
+      "appId": "Hittables_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One",
+        "Gear VR"
+      ],
+      "dateAdded": "2022-10-21T00:00:00.000Z",
+      "releaseNote": "Bug Fix",
+      "versionTitle": "UE5"
+    },
+    {
+      "id": "b9ed4a68458f4917a1740685beddb8e6",
+      "appId": "Hittables_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Nintendo Switch",
+        "Mac",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Android",
+        "HoloLens 2",
+        "Gear VR",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "Packaging bug fix",
+      "versionTitle": "UE5.1"
+    },
+    {
+      "id": "abefb44feae445f789f792ce60d42f4a",
+      "appId": "Hittables_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Linux",
+        "iOS",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2023-05-19T00:00:00.000Z",
+      "releaseNote": "Packaging bug fix",
+      "versionTitle": "UE5.2"
+    },
+    {
+      "id": "12674bc4bcfb4a289e25ee710e04ac05",
+      "appId": "Hittables_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-10T00:00:00.000Z",
+      "releaseNote": "Packaging bug fix",
+      "versionTitle": "UE5.3"
+    },
+    {
+      "id": "5a447b6154f1471283bf1ab11a00062b",
+      "appId": "Hittables_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2024-04-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.4"
+    }
+  ],
+  "developer": "Restricted Studio",
+  "developerId": "o-sdzqrj99uetnz5hsfynw8lljdanzjt",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

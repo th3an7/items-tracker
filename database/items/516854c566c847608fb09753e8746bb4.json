@@ -1,0 +1,291 @@
+{
+  "id": "516854c566c847608fb09753e8746bb4",
+  "title": "Restyle",
+  "description": "Change the style of graph editor's elements",
+  "longDescription": "<p>Restyle is an comprehensive overhaul of Graph Editor elements such like Nodes, Pins, Input, Pin Connections.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2><strong>Features:</strong></h2><p><br /></p><p><strong>General</strong></p><p>- New SVG icons</p><p>- New widgets</p><p>- Almost everything is configurable with styles (Colors, Spacings, Sizes, Brushes, Buttons...)</p><p><br /></p><p><strong>Nodes</strong></p><p>- 3 States (Normal, Selected, Invalid)</p><p>- New title style</p><p>- Ability to disable &#34;Target Is&#34;</p><p><br /></p><p><strong>Variable Nodes</strong></p><p>- Ability to hide &#34;GET&#34; title [Optional]</p><p><br /></p><p><strong>Compact Nodes</strong></p><p>- New title style with ability to apply it if title length exceeds &lt;n&gt;</p><p>- Background icons for Function and Macro</p><p><br /></p><p><strong>Reroute</strong></p><p>- Shows &#34;drag&#34; boundaries on hover</p><p><br /></p><p><strong>Comments</strong></p><p>- New resizing method (which prevents cursor slide off comment)</p><p>- Opacity level is set by default (For normal, selected states)</p><p><br /></p><p><strong>Comment Bubbles (Its not bubble)</strong></p><p>- Buttons shows only if widget is hovered</p><p><br /></p><p><strong>Node Reports (error/warning etc.) and State (development/disabled)</strong></p><p>- Title is configurable</p><p><br /></p><p><strong>Pin Connections</strong></p><p>- New style for wires, featuring 45° &amp; 90° alignment</p><p>- Prioritizing in context of input/output pins for line length and/or position</p><p>(Works for left-&gt;right &amp; right-&gt;left transitions, also exec&lt;-&gt;reroute have their own prioritization)</p><p>- Squared, rounded corners</p><p>- Radius (up to 0.5 of length, visually shortens the path)</p><p>- Optimized for backward routing (has snap points)</p><p><br /></p><p><strong>Pins</strong></p><p>- Custom colors [Optional]</p><p>- Custom pin-constructors (Vector4 is only available atm)</p><p>- Vector that is Rotator may use new labels (RPY) [Optional]</p><p>- Custom text for &#34;Add Pin&#34; [Optional]</p><p><br /></p><p><strong>Zoom [Optional]</strong></p><p>- Ability to set or even generate zoom behavior</p><p><br /></p><p><br /></p><h2><br /></h2><h2><a href=\"https://github.com/agitoreiken/ue-restyle\" rel=\"nofollow\"><strong>GitHub </strong></a><strong>(Free Testing, Patch Notes, Feedback)</strong></h2><p>Public github repository is used for product management.</p><p>There you will know everything what happens about Restyle.</p><p>Got issues? Write it to repo. It&#39;ll be fixed as soon as possible.</p><p>Also it&#39;s completely fine to get files there first and test to ensure you would use this.</p><p>And if you do, make sure to come back here! :)</p><p><br /></p><p><br /></p><p><br /></p><h2><strong>First launch:</strong></h2><ol><li>Turn on &#34;Restyle&#34; plugin <strong>( Edit -&gt; Plugins )</strong></li><li>Restart engine</li><li>Enable &#34;factories&#34; in plugin settings ( <strong>Edit </strong>-&gt; <strong>Editor Preferences</strong> -&gt;<strong> [Plugins] </strong>-&gt; <strong>Restyle </strong>)</li></ol>",
+  "technicalDetails": "<p>How it&#39;s made?</p><p>Plugin registers Visual(Node|Pin|PinConnection) factories in FEdGraphUtilities at index 0 which override widget/connection implementations for specific classes. If any other existing factories want to register a widget, Restyle will allow it. But as the classes contain design implementation, having you registering your own version of widget will not bring new design to it. You may leave that behavior as it is or integrate restyle.</p><p><strong>(Integration isn&#39;t yet properly discussed nor properly implemented)</strong></p><p><br /></p><p>Code Modules: Restyle [Editor], RestyleShaders [DeveloperTool]</p><p>Number of classes: 72</p><p>Number of graphics assets: 36 [svg]</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WireComp1ERestyle-1920x1080-c9b5795c218a0ff5262b326efd781af2.png",
+      "md5": "c9b5795c218a0ff5262b326efd781af2",
+      "width": 1920,
+      "height": 1080,
+      "size": 111784,
+      "uploadedDate": "2022-11-29T08:09:21.271Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WireComp1DRestyle-1920x1080-fcddfe7dcc643b893285a2769b43a60e.png",
+      "md5": "fcddfe7dcc643b893285a2769b43a60e",
+      "width": 1920,
+      "height": 1080,
+      "size": 130716,
+      "uploadedDate": "2022-11-29T08:09:20.951Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WireComp2Restyle-1920x1080-5e12f0ac7e5850d1e8f41fc97d5e290c.png",
+      "md5": "5e12f0ac7e5850d1e8f41fc97d5e290c",
+      "width": 1920,
+      "height": 1080,
+      "size": 187170,
+      "uploadedDate": "2022-11-29T08:09:21.746Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FuncRestyle-1920x1080-94d97c60a81b34a04b40ba9f6d70fc08.png",
+      "md5": "94d97c60a81b34a04b40ba9f6d70fc08",
+      "width": 1920,
+      "height": 1080,
+      "size": 281134,
+      "uploadedDate": "2022-11-29T08:09:20.211Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DataRestyle-1920x1080-03e34dcb9ca70fe6e112acd929517349.png",
+      "md5": "03e34dcb9ca70fe6e112acd929517349",
+      "width": 1920,
+      "height": 1080,
+      "size": 216488,
+      "uploadedDate": "2022-11-29T08:09:19.515Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FlowControlRestyle-1920x1080-016bd854ecdc117f4d2503af62ef3c76.png",
+      "md5": "016bd854ecdc117f4d2503af62ef3c76",
+      "width": 1920,
+      "height": 1080,
+      "size": 122950,
+      "uploadedDate": "2022-11-29T08:09:19.841Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/OperatorsRestyle-1920x1080-ffb972db94ba39a185f7f6175825c80d.png",
+      "md5": "ffb972db94ba39a185f7f6175825c80d",
+      "width": 1920,
+      "height": 1080,
+      "size": 92403,
+      "uploadedDate": "2022-11-29T08:09:20.571Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ThemeSettingsRestyle-1920x1080-67deded0a300a11cf92add24407f5506.png",
+      "md5": "67deded0a300a11cf92add24407f5506",
+      "width": 1920,
+      "height": 1080,
+      "size": 120435,
+      "uploadedDate": "2022-11-29T09:27:01.297Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/NodeSettingsRestyle-1920x1080-7258f5dce2e14d93ff6a5ebc2eeb6d44.png",
+      "md5": "7258f5dce2e14d93ff6a5ebc2eeb6d44",
+      "width": 1920,
+      "height": 1080,
+      "size": 112317,
+      "uploadedDate": "2022-11-29T09:27:01.690Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PinSettingsRestyle-1920x1080-3eaf948cd0b7247ce27fe13405a54be2.png",
+      "md5": "3eaf948cd0b7247ce27fe13405a54be2",
+      "width": 1920,
+      "height": 1080,
+      "size": 112998,
+      "uploadedDate": "2022-11-29T09:27:02.088Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WireSettingsRestyle-1920x1080-948ab0d86b5b3cf0b344f8957f91cf57.png",
+      "md5": "948ab0d86b5b3cf0b344f8957f91cf57",
+      "width": 1920,
+      "height": 1080,
+      "size": 118239,
+      "uploadedDate": "2022-11-29T09:27:02.446Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Restyle_thumb-284x284-2d6bd857c58a9ae731a33c345774048c.png",
+      "md5": "2d6bd857c58a9ae731a33c345774048c",
+      "width": 284,
+      "height": 284,
+      "size": 93533,
+      "uploadedDate": "2022-11-29T08:09:22.044Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Restyle_featured-894x488-9ec47922fb77f35f7d2bdd4272b3f0a5.png",
+      "md5": "9ec47922fb77f35f7d2bdd4272b3f0a5",
+      "width": 894,
+      "height": 488,
+      "size": 459187,
+      "uploadedDate": "2022-11-29T08:09:22.166Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThemeSettingsRestyle-1920x1080-67deded0a300a11cf92add24407f5506_Snapshot.png",
+      "md5": "4d346cd4fe425afcba20e3f4c62a6e70",
+      "width": 150,
+      "height": 74,
+      "size": 3311,
+      "uploadedDate": "2022-11-29T09:27:01.599Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NodeSettingsRestyle-1920x1080-7258f5dce2e14d93ff6a5ebc2eeb6d44_Snapshot.png",
+      "md5": "16cf5ec426d95fca811ccc0d996d11d4",
+      "width": 150,
+      "height": 74,
+      "size": 3172,
+      "uploadedDate": "2022-11-29T09:27:01.945Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PinSettingsRestyle-1920x1080-3eaf948cd0b7247ce27fe13405a54be2_Snapshot.png",
+      "md5": "92a1c1165c8b4802c616b20c8be18fc2",
+      "width": 150,
+      "height": 74,
+      "size": 3103,
+      "uploadedDate": "2022-11-29T09:27:02.341Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WireSettingsRestyle-1920x1080-948ab0d86b5b3cf0b344f8957f91cf57_Snapshot.png",
+      "md5": "19d3276c9ebc50a859985e86907e8df8",
+      "width": 150,
+      "height": 74,
+      "size": 3339,
+      "uploadedDate": "2022-11-29T09:27:02.701Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DataRestyle-1920x1080-03e34dcb9ca70fe6e112acd929517349_Snapshot.png",
+      "md5": "c96b10370a02b6e69aa0ea405d2e2f4c",
+      "width": 150,
+      "height": 74,
+      "size": 3629,
+      "uploadedDate": "2022-11-29T08:09:19.764Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FlowControlRestyle-1920x1080-016bd854ecdc117f4d2503af62ef3c76_Snapshot.png",
+      "md5": "7521b1097144e9465d71dea66fca4241",
+      "width": 150,
+      "height": 74,
+      "size": 3221,
+      "uploadedDate": "2022-11-29T08:09:20.080Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FuncRestyle-1920x1080-94d97c60a81b34a04b40ba9f6d70fc08_Snapshot.png",
+      "md5": "4dc94a7d7a6d60fc4043cac1805b1459",
+      "width": 150,
+      "height": 74,
+      "size": 4463,
+      "uploadedDate": "2022-11-29T08:09:20.484Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/OperatorsRestyle-1920x1080-ffb972db94ba39a185f7f6175825c80d_Snapshot.png",
+      "md5": "8320762d6954f9ac346812eaee3a646b",
+      "width": 150,
+      "height": 74,
+      "size": 2796,
+      "uploadedDate": "2022-11-29T08:09:20.804Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WireComp1DRestyle-1920x1080-fcddfe7dcc643b893285a2769b43a60e_Snapshot.png",
+      "md5": "c918437f92c8394b243619b79b32964e",
+      "width": 150,
+      "height": 74,
+      "size": 3521,
+      "uploadedDate": "2022-11-29T08:09:21.192Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WireComp1ERestyle-1920x1080-c9b5795c218a0ff5262b326efd781af2_Snapshot.png",
+      "md5": "5f4a406b3830cd992618761944b59302",
+      "width": 150,
+      "height": 74,
+      "size": 3440,
+      "uploadedDate": "2022-11-29T08:09:21.519Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WireComp2Restyle-1920x1080-5e12f0ac7e5850d1e8f41fc97d5e290c_Snapshot.png",
+      "md5": "b8e090f5ba2b821189888945060b079d",
+      "width": 150,
+      "height": 74,
+      "size": 3969,
+      "uploadedDate": "2022-11-29T08:09:22.005Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/b1-1920x1080-7e73eecd62ff12be91a353267f56938e_Snapshot.png",
+      "md5": "b65b832183b8969d150c8cceb45f6a1c",
+      "width": 150,
+      "height": 74,
+      "size": 5609,
+      "uploadedDate": "2022-10-01T14:35:44.302Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/b2-1920x1080-b7bb48149d2d56e189f67dedc386bdb2_Snapshot.png",
+      "md5": "7432d99f7174e9a49fdd21f8d269f5a3",
+      "width": 150,
+      "height": 74,
+      "size": 4030,
+      "uploadedDate": "2022-10-01T14:35:44.744Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2022-12-18T19:34:45.587Z",
+  "lastModifiedDate": "2023-04-29T20:28:10.737Z",
+  "entitlementName": "516854c566c847608fb09753e8746bb4",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "8f6931f9b24e4b6dae08a7c6824cb719",
+      "appId": "Restyle_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-10-01T00:00:00.000Z",
+      "releaseNote": "v0.0.8",
+      "versionTitle": "v5.0"
+    },
+    {
+      "id": "8446221d2f594f0ca2554380a1c7729e",
+      "appId": "Restyle_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-13T00:00:00.000Z",
+      "releaseNote": "v0.0.8",
+      "versionTitle": "v5.1"
+    }
+  ],
+  "developer": "AgitoReiKen",
+  "developerId": "o-a72sfwde8ww3kekndgjl6y7u9ubjch",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

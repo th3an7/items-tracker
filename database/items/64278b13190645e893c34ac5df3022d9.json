@@ -1,0 +1,147 @@
+{
+  "id": "64278b13190645e893c34ac5df3022d9",
+  "title": "Async Load Anything",
+  "description": "System to easily use soft references to your assets instead of hard referencers",
+  "longDescription": "<p>Disclaimer</p><p><strong>[Please be aware that this plugin is currently in Beta and is under active development. If you encounter any issues or</strong></p><p><strong>bugs please write an e-mail to support&#64;fiquegnimaproductions.com. The plugin got heavily tested and should be ready for use.]</strong></p><p><br /></p><p>The official Fiquegnima Discord Server: <a href=\"https://discord.gg/sbhskfcrFF\" rel=\"nofollow\">Discord Link</a></p><p><br /></p><p><br /></p><p>Description</p><p>This plugin is meant to make the work with soft references easier and provides easy ways to add them to the system from the beginning of the development phase without the need of extra setup or writing a system to load all your assets for you.</p><p>Working with soft references improves a lot of areas of your game starting with the development process:</p><ul><li>Soft references do not need to get loaded when the map gets loaded, even in the editor, which decreases the loading time of your maps.</li><li>Soft references, when coupled with this plugin can almost get used as easy as hard references. Just call &#34;LoadSynchronous&#34; in C&#43;&#43; or BP to get the asset safely. If the asset is loaded this will just return the already in-memory asset, if not it will get loaded (this is just for safety reasons, if you think you don&#39;t need it you can call &#34;Get&#34; on the soft reference)</li><li>Working with soft references makes loading times and RAM usage optimization much easier since you can just unload soft references if they are not needed anymore.</li></ul><p>In short: <u>Work with soft references whenever you can! </u></p><p><br /></p><p><br /></p><p>How it works</p><p>The plugin reads all classes with the meta tag &#39;AsyncLoad&#39; and a value of a valid gameplay tag string. This gameplay tag does not need to get registered before, the plugin will add it if necessary.</p><p>After that it will track the asset(s) assign to the soft reference under that gameplay tag.</p><p>Since the default values of any gameplay tag assigned data is &#39;GameStartup&#39;, any soft reference will get loaded from the beginning of the game and the plugin will hold a hard reference to those after it got loaded, so that they won&#39;t get garbage collected if no other system has any reference to them. Because of those settings, any asset assigned to a soft reference which is tagged through the system will automatically get loaded without you needing to set up anything else.</p><p>The plugin will also add the possibility to add meta tags to soft references in blueprints, so it&#39;s just as easy to set up for blueprints as well as C&#43;&#43; Code.</p><p><br /></p><p>Loading options</p><p>While the plugin loads any soft reference assigned to it at game startup per default you can still adjust those settings. There is another predefined option &#39;MapLoading&#39; which lets you assign a map to a gameplay tag in the system which causes the system to load any asset assigned to the tag to load when the map gets loaded and to unload when the map gets left.</p><p>The last option is the &#39;Individual&#39; option which lets you set up your own loading behavior for any kind of loading optimization you want to do.</p><p><br /></p><p>Holding hard references</p><p>By default the plugin will hold a hard reference after the assets of a gameplay tag got loaded so that you don&#39;t need to hold a reference on your own. Sometimes that might not be the best option for you since you want release the asset at a certain point and want to handle that yourself. If you want to do that, there is the option that the plugin will not hold a hard reference after loading and you need to handle that yourself. But be aware of the garbage collector, it will unload the assets if there are no hard reference left.</p><p>You might wonder about holding a hard reference and ask youself &#34;What&#39;s the point of using this plugin, if it holds a hard reference in the end anyway?&#34;</p><p>The plugin makes it possible to async load any asset at any time and also unload any asset at any time via gameplay tags easily. The hard reference is only for the sake of the garbage collector not unloading the assets after loading until you decide when the asset isn&#39;t needed anymore.</p><p><br /></p><p>Features planned for the future:</p><ul><li>Manually adding gameplay tags without the need of the AsyncLoad meta tag anywhere</li><li>Manually adding assets to gameplay tags</li><li>Adding interfaces for custom asset lifetimes</li><li>GUI for in-game loading behavior of assets controlled by the plugin</li><li>Further enhancement of the GUI</li></ul><p><br /></p><p>It&#39;s also planned to upload an example project and a video explaining all this very soon so keep updated.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Gameplay tag based async loading of soft references</li><li> Possibility to add meta tags to blueprint soft references</li><li> Easily adjustable async loading options</li></ul><p>Code Modules: </p><ul><li> AsyncLoadAnything - Runtime</li><li> AsyncLoadAnythingEditor - Editor</li><li> SoftObjectVariableExtension - Editor</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 11</p><p>Network Replicated: (No)</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation: <a href=\"https://dev.azure.com/FiquegnimaProductions/AsyncLoadAnything%20Documentation/_wiki/wikis/AsyncLoadAnything-Documentation.wiki/48/Async-load-anything\" rel=\"nofollow\">Azure wiki </a></p><p>Important/Additional Notes: The current version of the plugin is in beta status and under development. Certain features might not work as intended.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AsyncLoader-1920x1080-f5e2a5b73f53526823bbe4378e35e9d3.png",
+      "md5": "f5e2a5b73f53526823bbe4378e35e9d3",
+      "width": 1920,
+      "height": 1080,
+      "size": 390579,
+      "uploadedDate": "2024-01-25T01:00:49.044Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlueprintMetaData-1920x1080-a1d43fa5ecfe8eeca09c0927fc68ef09.png",
+      "md5": "a1d43fa5ecfe8eeca09c0927fc68ef09",
+      "width": 1920,
+      "height": 1080,
+      "size": 62388,
+      "uploadedDate": "2024-01-25T01:00:49.453Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CPPMetaData-1920x1080-57fc01c44758194bdb50fc31a0f53505.png",
+      "md5": "57fc01c44758194bdb50fc31a0f53505",
+      "width": 1920,
+      "height": 1080,
+      "size": 132975,
+      "uploadedDate": "2024-01-25T01:00:49.884Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Settings-1920x1080-a06f06d6a7251ceae8e49e98aeacea1e.png",
+      "md5": "a06f06d6a7251ceae8e49e98aeacea1e",
+      "width": 1920,
+      "height": 1080,
+      "size": 46623,
+      "uploadedDate": "2024-01-25T01:00:50.292Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AsyncLoadAnything_thumb-284x284-06c60653eb797a3321ffffce657bf3a4.png",
+      "md5": "06c60653eb797a3321ffffce657bf3a4",
+      "width": 284,
+      "height": 284,
+      "size": 51936,
+      "uploadedDate": "2024-01-25T01:00:50.684Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AsyncLoadAnything_featured-894x488-33b8432e16984d889d30ce942f1a3db9.png",
+      "md5": "33b8432e16984d889d30ce942f1a3db9",
+      "width": 894,
+      "height": 488,
+      "size": 104641,
+      "uploadedDate": "2024-01-25T01:00:50.791Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AsyncLoader-1920x1080-f5e2a5b73f53526823bbe4378e35e9d3_Snapshot.png",
+      "md5": "63a21bd9df95c8aed2d011982ac045b1",
+      "width": 150,
+      "height": 74,
+      "size": 3892,
+      "uploadedDate": "2024-01-25T01:00:49.327Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlueprintMetaData-1920x1080-a1d43fa5ecfe8eeca09c0927fc68ef09_Snapshot.png",
+      "md5": "0ae7d93e406ffad317fb5c1f3800c9da",
+      "width": 150,
+      "height": 74,
+      "size": 1811,
+      "uploadedDate": "2024-01-25T01:00:49.739Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CPPMetaData-1920x1080-57fc01c44758194bdb50fc31a0f53505_Snapshot.png",
+      "md5": "eea329cd2a1c6b04f1b928886ecda0fe",
+      "width": 150,
+      "height": 74,
+      "size": 2116,
+      "uploadedDate": "2024-01-25T01:00:50.145Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings-1920x1080-a06f06d6a7251ceae8e49e98aeacea1e_Snapshot.png",
+      "md5": "83f2c228d82bdbc9e59d02f1f1efaabd",
+      "width": 150,
+      "height": 74,
+      "size": 2079,
+      "uploadedDate": "2024-01-25T01:00:50.548Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-01-27T17:47:15.591Z",
+  "lastModifiedDate": "2024-10-23T12:00:25.146Z",
+  "entitlementName": "64278b13190645e893c34ac5df3022d9",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3598bb6fe2ba4e72959355db8a999e1f",
+      "appId": "AsyncLoa64278b131906V3",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-01-31T00:00:00.000Z",
+      "releaseNote": "This version is the first released beta version and is under active development. Please report any issues at support@fiquegnimaproductions.com",
+      "versionTitle": "Beta-01_5.2"
+    },
+    {
+      "id": "818ea3d8404c43e6b89dcafc4aa6e1cd",
+      "appId": "AsyncLoadAnything_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-01-25T00:00:00.000Z",
+      "releaseNote": "This version is the first released beta version and is under active development. Please report any issues at support@fiquegnimaproductions.com",
+      "versionTitle": "Beta-0.1"
+    }
+  ],
+  "developer": "FiquegnimaProductions",
+  "developerId": "o-jmkzhyrznevbkdrwsjhy2fhlpqwy3d",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,451 @@
+{
+  "id": "4de20257a64844de8712e46ea71cb907",
+  "title": "GRILL DIS for Unreal",
+  "description": "GRILL DIS for Unreal adds in Distributed Interactive Simulation (DIS) support for Unreal Engine that utilizes Open-DIS libraries to provide this support.",
+  "longDescription": "<p>The GRILL DIS for Unreal plugin allows users to set up custom DIS entities through custom objects provided by the plugin. It also provides basic User Datagram Protocol (UDP) socket support and handles interpreting of DIS network traffic using Open-DIS libraries. The plugin uses the interpreted DIS data to create and update user specified DIS entities in Unreal Engine. The DIS plugin provides an interface for a user to add on custom functionality when specific DIS data is received. The plugin also supports sending DIS information through utilizing the Open-DIS libraries allowing DIS data to be sent out of Unreal Engine to other DIS-capable simulations.</p><p><br /></p><p>Core components of the GRILL DIS for Unreal plugin are decoupled to allow for custom functionality to easily be added. If custom UDP socket support, Protocol Data Unit (PDU) processing, or managing of DIS entities are desired, the basic, supplied components can easily be replaced by new components. Furthermore, the GRILL DIS for Unreal plugin is not tied down to a specific round earth model. The plugin provides its own geospatial conversion functions which utilize the <a href=\"https://docs.unrealengine.com/4.27/en-US/BuildingWorlds/Georeferencing/\" rel=\"nofollow\">Georeferencing plugin</a> made by Epic Games.</p><p><br /></p><p>The GRILL DIS for Unreal plugin currently has base functionality for a select few DIS PDUs. These include:</p><ul><li>Entity State</li><li>Entity State Update</li><li>Remove Entity</li><li>Fire</li><li>Detonation</li><li>Start Resume</li><li>Stop Freeze</li><li>Electromagnetic Emission</li><li>Signal</li></ul><p><br /></p><p>Links: <a href=\"https://drive.google.com/drive/folders/1tJSxbCZ5ao1CjX2_MW8_L_mJzKTssEkY?usp&#61;sharing\" rel=\"nofollow\">Documentation</a> | Example Project (<a href=\"https://github.com/AF-GRILL/DISForUnrealExample/tree/main\" rel=\"nofollow\">UE4</a>/<a href=\"https://github.com/AF-GRILL/DISForUnrealExample/tree/ue5\" rel=\"nofollow\">UE5</a>) | <a href=\"https://www.youtube.com/watch?v&#61;xfXgdrL5ZHQ\" rel=\"nofollow\">Demo Video</a></p><p><br /></p><p>Open Source:</p><ul><li>The plugin source code is hosted on <a href=\"https://github.com/AF-GRILL/DISPluginForUnreal\" rel=\"nofollow\">GitHub</a>. Community contributions to expanding the plugin are encouraged and greatly appreciated.</li></ul>",
+  "technicalDetails": "<p>This is GRILL DIS for Unreal v0.9.0, published 2024-09-25. See the changelog (<a href=\"https://github.com/AF-GRILL/DISPluginForUnreal/blob/main/CHANGELOG.md\" rel=\"nofollow\">UE4</a>/<a href=\"https://github.com/AF-GRILL/DISPluginForUnreal/blob/ue5/CHANGELOG.md\" rel=\"nofollow\">UE5</a>) to see what changed in each version.</p><p><br /></p><p>Features:</p><ul><li>UDP Subsystem</li><li>PDU Subsystem</li><li>DIS Game Manager</li><li>Blueprint Events to handle DIS updates</li><li>DIS Actor Components</li><li>DIS Blueprint Interface</li></ul><p>Code Modules:</p><ul><li>DISRuntime (Runtime)</li></ul><p>Number of C&#43;&#43; Classes: 32</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p><br /></p><p>Additional Notes:</p><ul><li>If using Unreal Engine 4.27, there will be potential loss of floating point data due to only 32-bit floating point support in the editor. Due to this, values are truncated at the last moment possible internally to be as accurate as possible.</li><li>The example project does NOT come with DIS playback scenarios. It shows usage of the DIS plugin and supplies models for various DIS entities. The user will need to generate their own DIS network traffic. One way this can be done is by spinning up two instances of the example project, one for sending and one for receiving.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DISReceiveComponent-1920x1080-b16b0ff74d38b92dcfa1f2702f7a7dd1.png",
+      "md5": "b16b0ff74d38b92dcfa1f2702f7a7dd1",
+      "width": 1920,
+      "height": 1080,
+      "size": 592212,
+      "uploadedDate": "2022-10-12T14:49:22.169Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DISReceiveComponentSettings-1920x1080-8666539b5a4ba7506b7e718e775ff084.png",
+      "md5": "8666539b5a4ba7506b7e718e775ff084",
+      "width": 1920,
+      "height": 1080,
+      "size": 292520,
+      "uploadedDate": "2022-10-12T14:49:22.646Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DISComponentEvents-1920x1080-8425b71525d4f1c923d947829f283ba8.png",
+      "md5": "8425b71525d4f1c923d947829f283ba8",
+      "width": 1920,
+      "height": 1080,
+      "size": 314900,
+      "uploadedDate": "2022-06-02T21:18:07.665Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DISSendComponent-1920x1080-bbc609dfc489cf91516d5833331093d5.png",
+      "md5": "bbc609dfc489cf91516d5833331093d5",
+      "width": 1920,
+      "height": 1080,
+      "size": 571190,
+      "uploadedDate": "2022-10-12T14:49:22.994Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DISEnumMappingsSettings-1920x1080-4a3557ef6d9d37b865eb0b0d035c23d7.png",
+      "md5": "4a3557ef6d9d37b865eb0b0d035c23d7",
+      "width": 1920,
+      "height": 1080,
+      "size": 667368,
+      "uploadedDate": "2022-06-02T21:18:08.469Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DISGameManagerFunctions-1920x1080-57f29d361f58d7e0dc04072aff7155a0.png",
+      "md5": "57f29d361f58d7e0dc04072aff7155a0",
+      "width": 1920,
+      "height": 1080,
+      "size": 397787,
+      "uploadedDate": "2022-06-02T21:18:08.826Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DeadReckoningBPFL-1920x1080-0a179eddace65528d43e79cbf9236c0c.png",
+      "md5": "0a179eddace65528d43e79cbf9236c0c",
+      "width": 1920,
+      "height": 1080,
+      "size": 369831,
+      "uploadedDate": "2022-10-12T14:49:23.826Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PDUConversions-1920x1080-ae3c64327a34fa94e04ce99576198336.png",
+      "md5": "ae3c64327a34fa94e04ce99576198336",
+      "width": 1920,
+      "height": 1080,
+      "size": 443556,
+      "uploadedDate": "2022-06-02T21:18:09.631Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PDUEvents-1920x1080-1142fe9de03cabdb4d4c6aa4de402ff9.png",
+      "md5": "1142fe9de03cabdb4d4c6aa4de402ff9",
+      "width": 1920,
+      "height": 1080,
+      "size": 507962,
+      "uploadedDate": "2022-06-02T21:18:10.033Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PDUFunctions-1920x1080-85e38bcab8ae93f97d4ea5c70dca389c.png",
+      "md5": "85e38bcab8ae93f97d4ea5c70dca389c",
+      "width": 1920,
+      "height": 1080,
+      "size": 317751,
+      "uploadedDate": "2022-06-02T21:18:10.454Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UDPEvents-1920x1080-032ff138c0cae9ffeb2bc4bc1b1d077f.png",
+      "md5": "032ff138c0cae9ffeb2bc4bc1b1d077f",
+      "width": 1920,
+      "height": 1080,
+      "size": 445827,
+      "uploadedDate": "2022-06-02T21:18:11.287Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UDPFunctions-1920x1080-b93df1af8839cc7e2ec56d8438d0bbdd.png",
+      "md5": "b93df1af8839cc7e2ec56d8438d0bbdd",
+      "width": 1920,
+      "height": 1080,
+      "size": 358783,
+      "uploadedDate": "2022-06-02T21:18:11.675Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DISSendComponentSettings-1920x1080-c8f306260174ccb3c71168a217ed6dbc.png",
+      "md5": "c8f306260174ccb3c71168a217ed6dbc",
+      "width": 1920,
+      "height": 1080,
+      "size": 162530,
+      "uploadedDate": "2024-09-18T15:55:29.181Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DISGameManagerSettings-1920x1080-cb68b920922df91916c2d19602dcb59d.png",
+      "md5": "cb68b920922df91916c2d19602dcb59d",
+      "width": 1920,
+      "height": 1080,
+      "size": 295761,
+      "uploadedDate": "2024-09-18T15:55:29.427Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BPFLFunctions-1920x1080-d2b14c7837bb5a90d65f86f2b4630c38.png",
+      "md5": "d2b14c7837bb5a90d65f86f2b4630c38",
+      "width": 1920,
+      "height": 1080,
+      "size": 556240,
+      "uploadedDate": "2024-09-25T19:38:22.083Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BPFLFunctions-1920x1080-d2b14c7837bb5a90d65f86f2b4630c38_Snapshot.png",
+      "md5": "91bac1418736f62873802788519f9a18",
+      "width": 150,
+      "height": 74,
+      "size": 6125,
+      "uploadedDate": "2024-09-25T19:38:22.327Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/GRILLDISforUnreal_thumb-284x284-3c84397d5b6aa7dd76d2a2ba4975808a.png",
+      "md5": "3c84397d5b6aa7dd76d2a2ba4975808a",
+      "width": 284,
+      "height": 284,
+      "size": 27849,
+      "uploadedDate": "2022-06-02T21:18:11.996Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/GRILLDISforUnreal_featured-894x488-bdf5081f4e47b7b046848589347a07c3.png",
+      "md5": "bdf5081f4e47b7b046848589347a07c3",
+      "width": 894,
+      "height": 488,
+      "size": 196187,
+      "uploadedDate": "2022-10-12T14:49:24.278Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISSendComponentSettings-1920x1080-c8f306260174ccb3c71168a217ed6dbc_Snapshot.png",
+      "md5": "02acc9a27d0a3b1f0d33ad055a91a54b",
+      "width": 150,
+      "height": 74,
+      "size": 4143,
+      "uploadedDate": "2024-09-18T15:55:29.284Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISGameManagerSettings-1920x1080-cb68b920922df91916c2d19602dcb59d_Snapshot.png",
+      "md5": "7ba44c50327cdfd9dde5ef88f290778f",
+      "width": 150,
+      "height": 74,
+      "size": 4305,
+      "uploadedDate": "2024-09-18T15:55:29.622Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISReceiveComponent-1920x1080-b16b0ff74d38b92dcfa1f2702f7a7dd1_Snapshot.png",
+      "md5": "7c784c5419e40bc729542ca57688bec8",
+      "width": 150,
+      "height": 74,
+      "size": 6483,
+      "uploadedDate": "2022-10-12T14:49:22.440Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISReceiveComponentSettings-1920x1080-8666539b5a4ba7506b7e718e775ff084_Snapshot.png",
+      "md5": "b0a96c46dc8e6c57058ed9b9fa5bea99",
+      "width": 150,
+      "height": 74,
+      "size": 4633,
+      "uploadedDate": "2022-10-12T14:49:22.897Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISSendComponent-1920x1080-bbc609dfc489cf91516d5833331093d5_Snapshot.png",
+      "md5": "cff58639578991ec62ee30050deed9c2",
+      "width": 150,
+      "height": 74,
+      "size": 6525,
+      "uploadedDate": "2022-10-12T14:49:23.258Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISSendComponentSettings-1920x1080-c47c43dbcec53794e9fec5c2aa0a7987_Snapshot.png",
+      "md5": "0dd4543a58c857f07ed9d86b76f1a527",
+      "width": 150,
+      "height": 74,
+      "size": 3145,
+      "uploadedDate": "2022-10-12T14:49:23.591Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DeadReckoningBPFL-1920x1080-0a179eddace65528d43e79cbf9236c0c_Snapshot.png",
+      "md5": "f98da763363ca6c3de52c5a3cd083408",
+      "width": 150,
+      "height": 74,
+      "size": 4925,
+      "uploadedDate": "2022-10-12T14:49:24.096Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BPFLFunctions-1920x1080-e702370ccb8808840b7310ec36cc0f6c_Snapshot.png",
+      "md5": "434d8e225b81b253fa2a048954fb2627",
+      "width": 150,
+      "height": 74,
+      "size": 5074,
+      "uploadedDate": "2022-06-02T21:18:07.129Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISComponent-1920x1080-e9df32ef216fafdf141780d98c1fdd13_Snapshot.png",
+      "md5": "2a70e8e51bbff71834f1e6c92c005b9c",
+      "width": 150,
+      "height": 74,
+      "size": 6261,
+      "uploadedDate": "2022-06-02T21:18:07.478Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISComponentEvents-1920x1080-8425b71525d4f1c923d947829f283ba8_Snapshot.png",
+      "md5": "2dddb23e4a5995fbf720577aa72f7b39",
+      "width": 150,
+      "height": 74,
+      "size": 5164,
+      "uploadedDate": "2022-06-02T21:18:07.947Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISComponentSettings-1920x1080-afe86af36b21804cf5de549ef63f03ca_Snapshot.png",
+      "md5": "af119a65c98dfddfcafaec9bca4b766f",
+      "width": 150,
+      "height": 74,
+      "size": 3241,
+      "uploadedDate": "2022-06-02T21:18:08.307Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISEnumMappingsSettings-1920x1080-4a3557ef6d9d37b865eb0b0d035c23d7_Snapshot.png",
+      "md5": "683581bc3e3b5419aa63bb8433f87fd1",
+      "width": 150,
+      "height": 74,
+      "size": 4662,
+      "uploadedDate": "2022-06-02T21:18:08.726Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISGameManagerFunctions-1920x1080-57f29d361f58d7e0dc04072aff7155a0_Snapshot.png",
+      "md5": "38cfb94506149194725d60949cd05b6a",
+      "width": 150,
+      "height": 74,
+      "size": 4367,
+      "uploadedDate": "2022-06-02T21:18:09.096Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DISGameManagerSettings-1920x1080-bde22fed96ca170b80b1946e428d6753_Snapshot.png",
+      "md5": "3efe314e6e00ef6daac3e1c3ce18d402",
+      "width": 150,
+      "height": 74,
+      "size": 3893,
+      "uploadedDate": "2022-06-02T21:18:09.474Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PDUConversions-1920x1080-ae3c64327a34fa94e04ce99576198336_Snapshot.png",
+      "md5": "8292fffa314771b2b1fd39e7bc2394f8",
+      "width": 150,
+      "height": 74,
+      "size": 5156,
+      "uploadedDate": "2022-06-02T21:18:09.881Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PDUEvents-1920x1080-1142fe9de03cabdb4d4c6aa4de402ff9_Snapshot.png",
+      "md5": "89159ad579c8e53593f03d006a2c448c",
+      "width": 150,
+      "height": 74,
+      "size": 5134,
+      "uploadedDate": "2022-06-02T21:18:10.302Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PDUFunctions-1920x1080-85e38bcab8ae93f97d4ea5c70dca389c_Snapshot.png",
+      "md5": "c7df7a2becfa65852d6f7d9cd3ddb043",
+      "width": 150,
+      "height": 74,
+      "size": 4107,
+      "uploadedDate": "2022-06-02T21:18:10.717Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Sending Example-1920x1080-0792867aa9cc0b3dd526d62d1762127e_Snapshot.png",
+      "md5": "e4cf97301c674c5ccd8560b473d72f55",
+      "width": 150,
+      "height": 74,
+      "size": 4293,
+      "uploadedDate": "2022-06-02T21:18:11.116Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UDPEvents-1920x1080-032ff138c0cae9ffeb2bc4bc1b1d077f_Snapshot.png",
+      "md5": "396c4e9a7e942a3e6e0760af8f8b783e",
+      "width": 150,
+      "height": 74,
+      "size": 5175,
+      "uploadedDate": "2022-06-02T21:18:11.538Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UDPFunctions-1920x1080-b93df1af8839cc7e2ec56d8438d0bbdd_Snapshot.png",
+      "md5": "5d2c5303e32579742be9fefa1c741ee6",
+      "width": 150,
+      "height": 74,
+      "size": 4287,
+      "uploadedDate": "2022-06-02T21:18:11.924Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-06-16T13:48:31.814Z",
+  "lastModifiedDate": "2024-11-22T07:33:56.461Z",
+  "customAttributes": {},
+  "entitlementName": "4de20257a64844de8712e46ea71cb907",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b4391797023c4c61a13cf7150a982890",
+      "appId": "GRILLDISForUnreal_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-06-02T00:00:00.000Z",
+      "releaseNote": "v0.4.1",
+      "versionTitle": "GRILL DIS for Unreal 4.27"
+    },
+    {
+      "id": "3f5ba95ca593423fbf4171b7df4465f4",
+      "appId": "GRILLDISForUnreal_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-06-02T00:00:00.000Z",
+      "releaseNote": "v0.4.1",
+      "versionTitle": "GRILL DIS for Unreal 5.0"
+    },
+    {
+      "id": "164674beee1d4ee5b3a5289a0facdd37",
+      "appId": "GRILLDISForUnreal_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-14T00:00:00.000Z",
+      "releaseNote": "v0.6.1",
+      "versionTitle": "GRILL DIS for Unreal 5.1"
+    },
+    {
+      "id": "564ae993123f48eb987d1edb7fed45c0",
+      "appId": "GRILLDISForUnreal_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-12T00:00:00.000Z",
+      "releaseNote": "v0.9.0",
+      "versionTitle": "GRILL DIS for Unreal 5.2"
+    },
+    {
+      "id": "7d9956838dff4678a843d298c5ba4633",
+      "appId": "GRILLDISForUnreal_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "v0.9.0",
+      "versionTitle": "GRILL DIS for Unreal 5.3"
+    },
+    {
+      "id": "b61261bebf7c4a738a8484fe4a118257",
+      "appId": "GRILLDISForUnreal_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-03T00:00:00.000Z",
+      "releaseNote": "v0.9.0",
+      "versionTitle": "GRILL DIS for Unreal 5.4"
+    }
+  ],
+  "developer": "Gaming Research Integration for Learning Lab",
+  "developerId": "o-2vwgqmy8hmeeejkxfayvx7x38j8kgq",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,545 @@
+{
+  "id": "b97e27c486cb42e19e640ff180880471",
+  "title": "K2 Aircraft Physics",
+  "description": "Custom C++ solution for creating rotor based aircraft physics using blueprint.",
+  "longDescription": "<p>Videos: | <a href=\"https://youtu.be/5Tn4feHnHbc\" rel=\"nofollow\">Showcase Video</a> | <a href=\"https://youtu.be/uvmZmnSRI3U\" rel=\"nofollow\">Setup Video</a> | <a href=\"https://youtu.be/i9LUjxGLsck\" rel=\"nofollow\">Thrust Vectoring Setup Video</a></p><p>Projects: <a href=\"https://drive.google.com/file/d/1MExKWsLmgYgtQccEaBlYP6PLDyPT59Fj/view?usp&#61;sharing\" rel=\"nofollow\">Example Project</a></p><p>Demos: <a href=\"https://drive.google.com/file/d/1J69PHrKP59pb8FIdiSXN-OEv-ZFq4jwi/view?usp&#61;sharing\" rel=\"nofollow\">Helicopter Runtime Demo</a></p><p>Help: <a href=\"https://docs.google.com/document/d/1qTZGORL9PD1ClC7AK3wcEpJL26ESRxvZDBRZKv3KtmE/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://marketplacehelp.epicgames.com/s/article/Can-I-share-products-with-my-team?language&#61;en_US\" rel=\"nofollow\">Team Licensing</a></p><p>&#x1f4ee; <a href=\"https://discord.gg/vQzh8uUeQQ\" rel=\"nofollow\">Discord</a> (August 2024)</p><p><br /></p><p>Introducing K2 Aircraft Physics for Unreal Engine 5: Where Imagination Meets the Skies! K2 is an aircraft physics solution for creating rotor based aircraft - entirely using blueprints! This system is fully exposed to blueprint - no C&#43;&#43; needed.</p><p><br /></p><p><strong>Unleash the Power of Rotors</strong></p><p>K2 Aircraft Physics empowers you to craft aircraft with an unlimited number of rotors, giving you the freedom to experiment with classic helicopter designs or push the boundaries of aerial innovation. Rotors can be set to cosmetic only, or produce thrust with physics enabled. The thrust parameter is exposed so that changes can be made during runtime for precise and absolute control over its behavior. Additionally, rotors can be independently controlled with separate input schemes. Modular rotor components can apply force in different directions, allowing for more realistic and complex flight dynamics. This enables the simulation of various types of rotor craft, from traditional helicopters to advanced VTOL (Vertical Take-Off and Landing) vehicles.</p><p><br /></p><p><strong>Swift 2-Minute Setup</strong></p><p>All the heavy lifting and setup is done in the custom classes, just drop in a mesh for the body, add some rotor components and off to the sky!</p><p><br /></p><p><strong>Total Performance Control</strong></p><p>All of the core parameters for stability and movement are exposed to blueprint - you have complete control over your aircraft&#39;s performance.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Create unlimited number of rotors</li><li>Dynamic stability system with completely customizable parameters </li><li>Fully customizable performance</li><li>Dynamic thrust vectoring control</li><li>Multiple coordinate systems and transform axes for perfect stabilization ability</li><li>Built-in functions for take-off and landing</li><li>Compatible with other movement replication systems like Smooth Sync or custom replication movement solution</li><li>Skeletal meshes supported</li></ul><p><br /></p><p>Extras:</p><ul><li>Modular aircraft mesh components</li><li>Exact helicopter setup from demo included in example project</li></ul><p>Code Modules:</p><ul><li> K2 Aircraft Physics, Runtime</li></ul><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Win64, MacOS, Linux</p><p>Supported Target Build Platforms: Win64, MacOS, Android, Linux</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 aircraft-1920x1080-13e43307964e083a83e34001d7891823.jpg",
+      "md5": "13e43307964e083a83e34001d7891823",
+      "width": 1920,
+      "height": 1080,
+      "size": 662988,
+      "uploadedDate": "2023-11-17T15:51:11.749Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 helicopter 2-1920x1080-a3a067f5744adb62de67c43c2dec1ded.jpg",
+      "md5": "a3a067f5744adb62de67c43c2dec1ded",
+      "width": 1920,
+      "height": 1080,
+      "size": 498000,
+      "uploadedDate": "2023-11-20T18:00:27.205Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/thrust mod-1920x1080-45b9a1544ac91d7819e6108146eb5af4.jpg",
+      "md5": "45b9a1544ac91d7819e6108146eb5af4",
+      "width": 1920,
+      "height": 1080,
+      "size": 487904,
+      "uploadedDate": "2023-11-17T12:05:08.682Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 advanced thrust vectoring-1920x1080-a62a9e509d6db607c0b9d1c5b1dffb1c.jpg",
+      "md5": "a62a9e509d6db607c0b9d1c5b1dffb1c",
+      "width": 1920,
+      "height": 1080,
+      "size": 414813,
+      "uploadedDate": "2023-11-17T15:21:29.421Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 quad-1920x1080-908113a28f762e8b0a5162fffab84c86.jpg",
+      "md5": "908113a28f762e8b0a5162fffab84c86",
+      "width": 1920,
+      "height": 1080,
+      "size": 473018,
+      "uploadedDate": "2023-11-18T22:11:07.615Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 modular blueprint-1920x1080-f6cf31c46b83a121c536ddb6137b5980.jpg",
+      "md5": "f6cf31c46b83a121c536ddb6137b5980",
+      "width": 1920,
+      "height": 1080,
+      "size": 280843,
+      "uploadedDate": "2023-11-17T12:18:12.940Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 modular -1920x1080-f35b9b8c14c2eab00a48570f15a01885.jpg",
+      "md5": "f35b9b8c14c2eab00a48570f15a01885",
+      "width": 1920,
+      "height": 1080,
+      "size": 454996,
+      "uploadedDate": "2023-11-17T12:18:13.947Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 initial setup-1920x1080-dbcdb999c434d402cbe9d139a3e50e8a.jpg",
+      "md5": "dbcdb999c434d402cbe9d139a3e50e8a",
+      "width": 1920,
+      "height": 1080,
+      "size": 196976,
+      "uploadedDate": "2023-11-17T16:22:43.143Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 bonus-1920x1080-e63b799542c1cd7573f0da9c6b89d96e.jpg",
+      "md5": "e63b799542c1cd7573f0da9c6b89d96e",
+      "width": 1920,
+      "height": 1080,
+      "size": 619010,
+      "uploadedDate": "2023-11-19T22:39:02.595Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 tooltips-1920x1080-502df4007393ec95bf28282b9d6d72e2.jpg",
+      "md5": "502df4007393ec95bf28282b9d6d72e2",
+      "width": 1920,
+      "height": 1080,
+      "size": 291585,
+      "uploadedDate": "2023-11-17T16:48:51.368Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0setup 1-1920x1080-f89e8b47dded2896ccc126b6fd19be20.jpg",
+      "md5": "f89e8b47dded2896ccc126b6fd19be20",
+      "width": 1920,
+      "height": 1080,
+      "size": 285857,
+      "uploadedDate": "2023-11-17T16:48:50.398Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 cargo-1920x1080-a38722bc0568a05147bc64764a1a8b74.jpg",
+      "md5": "a38722bc0568a05147bc64764a1a8b74",
+      "width": 1920,
+      "height": 1080,
+      "size": 612466,
+      "uploadedDate": "2023-11-17T12:14:24.585Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0hero-1920x1080-600976b6d6b01808808b566f767c572b.jpg",
+      "md5": "600976b6d6b01808808b566f767c572b",
+      "width": 1920,
+      "height": 1080,
+      "size": 777070,
+      "uploadedDate": "2023-11-17T16:33:08.022Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 quadrotor-1920x1080-cbfdf3c1223e62d38626e6818df37db3.jpg",
+      "md5": "cbfdf3c1223e62d38626e6818df37db3",
+      "width": 1920,
+      "height": 1080,
+      "size": 555059,
+      "uploadedDate": "2023-11-17T16:25:05.056Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0 linear thrust-1920x1080-985a535b39b5755e5586b04f6de96d3d.jpg",
+      "md5": "985a535b39b5755e5586b04f6de96d3d",
+      "width": 1920,
+      "height": 1080,
+      "size": 708051,
+      "uploadedDate": "2023-11-17T16:24:29.022Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/K2AircraftPhysics_thumb-284x284-1163b60391ce09373309e13170991256.png",
+      "md5": "1163b60391ce09373309e13170991256",
+      "width": 284,
+      "height": 284,
+      "size": 127421,
+      "uploadedDate": "2023-11-17T10:28:03.152Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/K2AircraftPhysics_featured-894x488-8379d413ed0c3ed049855c3c9e69219b.png",
+      "md5": "8379d413ed0c3ed049855c3c9e69219b",
+      "width": 894,
+      "height": 488,
+      "size": 688057,
+      "uploadedDate": "2024-01-24T16:13:52.813Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 helicopter 2-1920x1080-a3a067f5744adb62de67c43c2dec1ded_Snapshot.jpg",
+      "md5": "8e98ad9b83415f5f5a327c9667c38db9",
+      "width": 150,
+      "height": 74,
+      "size": 9696,
+      "uploadedDate": "2023-11-20T18:00:27.943Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 bonus-1920x1080-e63b799542c1cd7573f0da9c6b89d96e_Snapshot.jpg",
+      "md5": "2d32bb2c49429462e390d041e8484c2a",
+      "width": 150,
+      "height": 74,
+      "size": 5227,
+      "uploadedDate": "2023-11-19T22:39:03.113Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 quad-1920x1080-908113a28f762e8b0a5162fffab84c86_Snapshot.jpg",
+      "md5": "500ed7efb1e751cd3729308ed1059776",
+      "width": 150,
+      "height": 74,
+      "size": 6219,
+      "uploadedDate": "2023-11-18T22:11:08.403Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 bonus-1920x1080-6b929b5dba1fc1f989c11b374a761de6_Snapshot.jpg",
+      "md5": "4a68924f62eae31f50651941b83782df",
+      "width": 150,
+      "height": 74,
+      "size": 5219,
+      "uploadedDate": "2023-11-17T17:09:38.928Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0setup 1-1920x1080-f89e8b47dded2896ccc126b6fd19be20_Snapshot.jpg",
+      "md5": "1a95c29bbe3e619e56ca76d7aa63dfc4",
+      "width": 150,
+      "height": 74,
+      "size": 4680,
+      "uploadedDate": "2023-11-17T16:48:51.016Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 tooltips-1920x1080-502df4007393ec95bf28282b9d6d72e2_Snapshot.jpg",
+      "md5": "4436112d711d24d07730c1df60e6e9d2",
+      "width": 150,
+      "height": 74,
+      "size": 5128,
+      "uploadedDate": "2023-11-17T16:48:52.064Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0hero-1920x1080-600976b6d6b01808808b566f767c572b_Snapshot.jpg",
+      "md5": "a4a0fec7f8839c82e32459814ca3a32f",
+      "width": 150,
+      "height": 74,
+      "size": 6327,
+      "uploadedDate": "2023-11-17T16:33:08.786Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 quadrotor-1920x1080-cbfdf3c1223e62d38626e6818df37db3_Snapshot.jpg",
+      "md5": "23c12546db4df2b99f0355da44d1d4e5",
+      "width": 150,
+      "height": 74,
+      "size": 5496,
+      "uploadedDate": "2023-11-17T16:25:05.819Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 linear thrust-1920x1080-985a535b39b5755e5586b04f6de96d3d_Snapshot.jpg",
+      "md5": "2ffca0722244c1b72aa2944b30549754",
+      "width": 150,
+      "height": 74,
+      "size": 6171,
+      "uploadedDate": "2023-11-17T16:24:29.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 initial setup-1920x1080-dbcdb999c434d402cbe9d139a3e50e8a_Snapshot.jpg",
+      "md5": "c248e799ec60d5d6d0caf31c7ff6c539",
+      "width": 150,
+      "height": 74,
+      "size": 4012,
+      "uploadedDate": "2023-11-17T16:22:43.821Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 aircraft-1920x1080-13e43307964e083a83e34001d7891823_Snapshot.jpg",
+      "md5": "bd4ef102a7cc67574373d3d65f3f8446",
+      "width": 150,
+      "height": 74,
+      "size": 7393,
+      "uploadedDate": "2023-11-17T15:51:12.576Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 aircraft-1920x1080-dbb1cbb8dc4d8f8a225007b684b1c7ab_Snapshot.jpg",
+      "md5": "81671be5fa80fc3debf8845fac357408",
+      "width": 150,
+      "height": 74,
+      "size": 7344,
+      "uploadedDate": "2023-11-17T15:50:21.157Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 aircraft-1920x1080-0f6ad953e6a59c4900cfaa45cc733a66_Snapshot.jpg",
+      "md5": "29af42618c26f7f3bdd115cbf5a7a82c",
+      "width": 150,
+      "height": 74,
+      "size": 7463,
+      "uploadedDate": "2023-11-17T15:47:34.534Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 advanced thrust vectoring-1920x1080-a62a9e509d6db607c0b9d1c5b1dffb1c_Snapshot.jpg",
+      "md5": "0164b4d60ff0233f51b51ead22aa8416",
+      "width": 150,
+      "height": 74,
+      "size": 5559,
+      "uploadedDate": "2023-11-17T15:21:29.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bonus aircraft -1920x1080-a76b57431c24b09b75f356420195313a_Snapshot.jpg",
+      "md5": "fe1562db3355cdba787ae12999b6f9ee",
+      "width": 150,
+      "height": 74,
+      "size": 2122,
+      "uploadedDate": "2023-11-17T12:33:24.962Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 helicopter-1920x1080-fe44aecac97709511427631e5a01e3a2_Snapshot.jpg",
+      "md5": "0b69c9de6a2166a4e7cc14a6b0f2b712",
+      "width": 150,
+      "height": 74,
+      "size": 9709,
+      "uploadedDate": "2023-11-17T12:29:33.443Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 aircraft f-1920x1080-4ace1e368e9eea09602ab6961676d731_Snapshot.jpg",
+      "md5": "3e36a9a710592442478c7df7115cc099",
+      "width": 150,
+      "height": 74,
+      "size": 7150,
+      "uploadedDate": "2023-11-17T12:24:49.226Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 aircraft-1920x1080-4ace1e368e9eea09602ab6961676d731_Snapshot.jpg",
+      "md5": "3e36a9a710592442478c7df7115cc099",
+      "width": 150,
+      "height": 74,
+      "size": 7150,
+      "uploadedDate": "2023-11-17T12:24:22.275Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 aircraft-1920x1080-79dba16ee84af50992d74e5f207c6421_Snapshot.jpg",
+      "md5": "fb71587afb1738bb50eb492d50275770",
+      "width": 150,
+      "height": 74,
+      "size": 7187,
+      "uploadedDate": "2023-11-17T12:21:50.300Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 modular blueprint-1920x1080-f6cf31c46b83a121c536ddb6137b5980_Snapshot.jpg",
+      "md5": "c5736ee7e1fc6cc5944c2067e47e8717",
+      "width": 150,
+      "height": 74,
+      "size": 5737,
+      "uploadedDate": "2023-11-17T12:18:13.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 modular -1920x1080-f35b9b8c14c2eab00a48570f15a01885_Snapshot.jpg",
+      "md5": "7ba8a0bfee76d3e2a58441eff3e1d0da",
+      "width": 150,
+      "height": 74,
+      "size": 7082,
+      "uploadedDate": "2023-11-17T12:18:14.720Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0 cargo-1920x1080-a38722bc0568a05147bc64764a1a8b74_Snapshot.jpg",
+      "md5": "df6e32141e35c8352f2bfab928c3d622",
+      "width": 150,
+      "height": 74,
+      "size": 5527,
+      "uploadedDate": "2023-11-17T12:14:25.284Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/aircraft bonus-1920x1080-ddae6517367c021a4c3dfec1e10bd793_Snapshot.jpg",
+      "md5": "05edce9665aa6f379d5b3858a71fb282",
+      "width": 150,
+      "height": 74,
+      "size": 7084,
+      "uploadedDate": "2023-11-17T12:05:08.227Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/thrust mod-1920x1080-45b9a1544ac91d7819e6108146eb5af4_Snapshot.jpg",
+      "md5": "7ff4ea5e6bea116fe40df1991d79d6b5",
+      "width": 150,
+      "height": 74,
+      "size": 6779,
+      "uploadedDate": "2023-11-17T12:05:09.366Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/thrust mod-1920x1080-512feb1c67e6a46fde71e165c958cb4c_Snapshot.jpg",
+      "md5": "cff262dd3b5072f64b252946a907d1e6",
+      "width": 150,
+      "height": 74,
+      "size": 6851,
+      "uploadedDate": "2023-11-16T23:19:09.798Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/modular-1920x1080-2f9c7b39bd443430a566b03a289bf0fb_Snapshot.jpg",
+      "md5": "8c76ba77c777a55049e3dd6d9d1e5f23",
+      "width": 150,
+      "height": 74,
+      "size": 6914,
+      "uploadedDate": "2023-11-16T20:17:16.230Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-10-27 154429-BPSuperCopter-1920x1080-81a30d0f748cc92dd0a0fa508d36c197_Snapshot.jpg",
+      "md5": "ffe05d17b1396611bf51475f0fe226df",
+      "width": 150,
+      "height": 74,
+      "size": 4157,
+      "uploadedDate": "2023-10-27T14:05:49.020Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-10-27 155406-K2Helicopters - Unreal Editor-1920x1080-0980e3e03736013b3b4e6e3628c5d651_Snapshot.jpg",
+      "md5": "7915f08019cb80246b9c79b3b6d33a01",
+      "width": 150,
+      "height": 74,
+      "size": 5744,
+      "uploadedDate": "2023-10-27T14:05:50.092Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-10-27 155701-K2Helicopters - Unreal Editor-1920x1080-49dee8c24f9c1db008afa797a58d8841_Snapshot.jpg",
+      "md5": "314b8552831bf3b5d4999a99a522548f",
+      "width": 150,
+      "height": 74,
+      "size": 5738,
+      "uploadedDate": "2023-10-27T14:05:51.285Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-10-27 154518-K2Helicopters - Unreal Editor-1920x1080-131b2691947f46f884bc24cac718d03f_Snapshot.jpg",
+      "md5": "20d7c57a9bb0dd5366ad4de0d4b5a6b6",
+      "width": 150,
+      "height": 74,
+      "size": 4483,
+      "uploadedDate": "2023-10-27T14:05:52.344Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Main Icon-1920x1080-c61d3040d99ec65944dd3e368c03a5d3_Snapshot.png",
+      "md5": "659cbf9f174e814105393be143f1d598",
+      "width": 150,
+      "height": 74,
+      "size": 4133,
+      "uploadedDate": "2023-08-01T20:59:31.437Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Thumb Trucks and Vans 2-1920x1080-993e001aa1e03891457cfb58fdb8047a_Snapshot.jpg",
+      "md5": "df77c912f791524e9136cdfd97f856b2",
+      "width": 150,
+      "height": 74,
+      "size": 6571,
+      "uploadedDate": "2023-08-01T19:58:35.837Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-11-20T17:39:58.959Z",
+  "lastModifiedDate": "2025-01-29T14:20:32.304Z",
+  "customAttributes": {},
+  "entitlementName": "b97e27c486cb42e19e640ff180880471",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "67ab1463eb32473e829ac434df91b701",
+      "appId": "K2AircraftPhysics_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "Linux",
+        "iOS",
+        "Win32"
+      ],
+      "dateAdded": "2023-08-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "aeaef833f6724b01b9465334a624c9a9",
+      "appId": "K2AircraftPhysics_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "Win32",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-08-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "877ced8cd91844149bfd2a8a8ba88c42",
+      "appId": "K2AircraftPhysics_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "Win32",
+        "Linux",
+        "iOS"
+      ],
+      "dateAdded": "2023-10-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "6deaca960d144c078e1633c3c6866dd0",
+      "appId": "K2AircraftPhysics_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Win32",
+        "Linux",
+        "iOS",
+        "Android",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-04-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Kallisto",
+  "developerId": "o-s8f6ambpwfczy8vxapq9snmabkrqqc",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

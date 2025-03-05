@@ -1,0 +1,304 @@
+{
+  "id": "f8d628c8af2f467884353911990fea25",
+  "title": "ArchVis Tools",
+  "description": "ArchVis Tools is a plugin which provides Camera Actors with added functionality useful for architecture rendering like an automatic vertical lines correction for 2-point perspectives.",
+  "longDescription": "<h1>ArchVis Tools</h1><p>ArchVis Tools is a plugin that provides Camera Actors with added functionality useful for architecture rendering like an automatic vertical lines correction for 2-point perspectives.</p><p><br /></p><p>Other Marketplace Content used for the images but not included in this pack:</p><p>- First Person Template by Epic Games</p><p>- <a href=\"https://www.unrealengine.com/marketplace/en-US/product/soul-city\" rel=\"nofollow\">Soul: City</a> by Epic Games</p><p>- <a href=\"https://www.unrealengine.com/marketplace/en-US/product/6bb93c7515e148a1a0a0ec263db67d5b\" rel=\"nofollow\">Downtown West Modular Pack</a> by PurePolygons</p><p><br /></p><p>Quick links:</p><ul><li><a href=\"https://github.com/Voulz/ArchVisTools/wiki\" rel=\"nofollow\">Quickstart Guide</a></li><li><a href=\"https://github.com/Voulz/ArchVisTools/wiki/FAQ#troubleshooting\" rel=\"nofollow\">Troubleshooting</a></li></ul><p><br /></p><p>The plugin is built for UE 4.27, UE 5.0-5.4 !</p><p><br /></p><blockquote><strong><u>2024 10-21</u></strong></blockquote><p><strong><u>Uploaded version compatible with UE 5.5 Preview!</u></strong></p><p><strong><u>You will have to compile it manually until I can upload the final version when UE 5.5 is officially released.</u></strong></p><p><a href=\"https://github.com/Voulz/ArchVisTools/wiki/Manual-Compiling\" rel=\"nofollow\">https://github.com/Voulz/ArchVisTools/wiki/Manual-Compiling</a></p><p><br /></p><p>Note: this UE 5.5Preview version should work properly with MRQ, but will be limited in other aspects (Movie Render Graph) as I cannot have parts of the code working for both 5.4 and 5.5. Everything will work properly when 5.5 is released, so for now it is not recommended to switch your projects yet to 5.5. Please do prior testing if you still want to switch.</p><p><br /></p><p><br /></p><p><strong>The plugin will generally require an update after each engine update, so give me some to assess the changes and adjust accordingly before you update to the latest version.</strong></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2><br /></h2><h2>ArchVisCineCamera</h2><p>This plugin features an ArchVisCineCamera which can automatically correct the view to look like a 2-point perspective (with the vertical lines being truly vertical). The strength of the correction can be adjusted as required. The ArchVisCineCamera also has an experimental feature where we can set a custom NearClippingPlane distance per camera, which is useful for interior shots.</p><p>There is also an experimental &#96;ArchVisSceneCapture2D&#96; which allows the rendering of an ArchVisCineCamera to a texture.</p><p>All the properties are accessible in Blueprint and can be animated in Sequencer.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Movie Render Queue Passes</h2><p>To render the unique features of the ArchVisCineCamera, some custom Movie Render Queue Passes were created, based on the existing ones. The following are available:</p><ul><li>[ArchVis] Deferred Rendering</li><li>[ArchVis] Deferred Rendering (Unlit)</li><li>[ArchVis] Deferred Rendering (Detail Lighting)</li><li>[ArchVis] Deferred Rendering (Lighting Only)</li><li>[ArchVis] Deferred Rendering (Reflections Only)</li><li>[ArchVis] Path Tracer</li><li><strong>[ArchVis] Object Id (Limited) [since v1.1]</strong></li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Dataprep Operations</h2><p>Custom Dataprep Operations were created to provide more functionality. The following are available:</p><ul><li>Branch Merge [Operation]</li><li>Build Adjacency [Operation]</li><li>Explode [Operation]</li><li>Face Camera [Operation] (The operation doesn&#39;t currently work on UE5 Preview, but the component can be manually added)</li><li>Material Name [Filter]</li><li>Replace Camera [Operation]</li><li>Simplify Hierarchy [Operation]</li><li>Debug Operations [Operation]</li></ul><p><br /></p><p>Full description of all the available features on the GitHub Wiki Page: <a href=\"https://github.com/Voulz/ArchVisTools/wiki\" rel=\"nofollow\">https://github.com/Voulz/ArchVisTools/wiki</a></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Changelog</h2><p><br /></p><p><strong>v1.6.2 (2024 09-10):</strong></p><ul><li>[Fix] Allow Multi Camera export on UE 5.4</li></ul><p><strong>v1.6.1 (2024 07-24):</strong></p><ul><li>[Fix] Fixed an issue with Simulate and with GameMode on UE 5.4</li></ul><p><strong>v1.6.0 (2024 04-27):</strong></p><ul><li><strong>Compatible with UE 5.4</strong></li></ul><p><strong>v1.5.5 (2024 03-26):</strong></p><ul><li><strong>Compatible with UE 5.4 Preview</strong></li></ul><p><strong>v1.5.4 (2023 09-23):</strong></p><ul><li>[Fix] Fixed a packaging issue on UE 5.3</li></ul><p><strong>v1.5.3 (2023 09-10):</strong></p><ul><li><strong>Compatible with UE 5.3</strong></li></ul><p><strong>v1.5.1 (2023 04-03):</strong></p><ul><li><strong>Compatible with UE 5.2</strong></li></ul><p><strong>v1.5 (2022 11-20):</strong></p><ul><li><strong>Compatible with UE 5.1</strong></li><li><strong>Path Tracer not rendering with lower end graphic cards due to changes in the Engine.</strong> I am actually not able to test the Path Tracer pass anymore :(</li><li>Better support of NearClipPlane in the editor. Default CineCameras now have the property Custom Near Clip Plane that you should use instead but it currently cannot be animated. You can still use the property Override Near Clip Plane of the ArchVis Camera which is animatable.</li><li>[Fix] Fixed a bug where the render from the Movie Render Queue wasn&#39;t matching the viewport when the Filmback settings of the camera were different from the aspect ratio of the output.</li></ul><p><strong>v1.4.2 (2022 10-23):</strong></p><ul><li>Compatible with UE 5.1 Preview 2 (not Preview 1). Still issues with the default Movie Render Queue Passes ObjectID not exporting on exr (has been reported to Epic) and Path Tracer not rendering with lower end graphic cards.</li></ul><p><strong>v1.4.1 (2022 08-09):</strong></p><ul><li>Bug Fix on the Movie Render Queue Settings needing a manual reset when reloading a preset.</li><li>Small fixes on a few Dataprep recipies.</li></ul><p><strong>v1.4 (2022 04-19):</strong></p><ul><li>Now compatible with Unreal Engine 5.0 (5.0.0, 5.0.1 and 5.02)</li></ul><p><strong>v1.3 (2022 03-01):</strong></p><ul><li>Now compatible with Unreal Engine 5.0 Preview 1 and 2</li></ul><p><strong>v1.2 (2022 02-15):</strong></p><ul><li>Added support for High Res Rendering</li><li>The ArchVisCineCamera should now also be accessible through Place Actors &gt; Cinematic</li></ul><p><strong>v1.1 (2021 12-12):</strong></p><ul><li>Added the Movie Render Queue Pass <strong>[ArchVis] Object Id (Limited)</strong></li><li>Custom Dataprep Blueprints have been converted to C&#43;&#43;</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>An ArchVisCineCamera can automatically correct the view to look like a 2-point perspective.</li><li>Custom Movie Render Queue Passes to handle the perspective correction.</li><li>Custom Dataprep Operations to provide more functionality.</li><li>Full description of all the available features on the GitHub Wiki Page.</li></ul><p>Code Modules:</p><ul><li>Module ArchVisTools [Runtime] containing ArchVisCineCameraActor, ArchVisCineCameraComponent, and custom Movie Render Passes.</li><li>Module ArchVisToolsEditor [Editor] containing mostly Dataprep Operations.</li></ul><p>Number of C&#43;&#43; Classes: 11 [ArchVisTools], 14 [AchVisToolsEditor]</p><p>Network Replicated: NA/Not tested</p><p>Supported Development Platforms: Successfully packaged and tested for Windows only</p><p>Documentation: <a href=\"https://github.com/Voulz/ArchVisTools/wiki\" rel=\"nofollow\">https://github.com/Voulz/ArchVisTools/wiki</a></p><p>Example Project: <a href=\"https://github.com/Voulz/ArchVisTools/wiki/Sample-File\" rel=\"nofollow\">https://github.com/Voulz/ArchVisTools/wiki/Sample-File</a></p><p><strong>Important/Additional Notes:</strong></p><p>This plugin has been developed and tested for ArchVis, using Dataprep for import, Sequencer for animation, and Movie Render Queue for rendering. It should work fine for any other purpose (the plugin packages and works properly) but please contact me first if you have any particular use case in mind. </p><p>The Dataprep Operations were made and tested for Datasmith files coming from SketchUp. They should work similarly with Datasmith files coming from other software but feel free to contact me first if you have any particular questions.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CineCameraCombined-1920x1080-891f09a5b1bb244ee6c6f9c07e19bc61.png",
+      "md5": "891f09a5b1bb244ee6c6f9c07e19bc61",
+      "width": 1920,
+      "height": 1080,
+      "size": 1086444,
+      "uploadedDate": "2021-10-25T10:51:57.450Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CineCameraCorrection0.0-1920x1080-79b40eb6a4ef914dc9fc60cdc58e55be.png",
+      "md5": "79b40eb6a4ef914dc9fc60cdc58e55be",
+      "width": 1920,
+      "height": 1080,
+      "size": 927419,
+      "uploadedDate": "2021-10-25T10:51:57.652Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CineCameraCorrection0.5-1920x1080-ff1566a5f1af3a7306a19032b73e6a7c.png",
+      "md5": "ff1566a5f1af3a7306a19032b73e6a7c",
+      "width": 1920,
+      "height": 1080,
+      "size": 965967,
+      "uploadedDate": "2021-10-25T10:51:57.820Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CineCameraCorrection1.0-1920x1080-132835e0f8251b8727e36bf80d2d31d2.png",
+      "md5": "132835e0f8251b8727e36bf80d2d31d2",
+      "width": 1920,
+      "height": 1080,
+      "size": 987588,
+      "uploadedDate": "2021-10-25T10:51:58.139Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CineCameraProcess-1920x1080-541e265cad3637efd42c4be9f18c21a8.png",
+      "md5": "541e265cad3637efd42c4be9f18c21a8",
+      "width": 1920,
+      "height": 1080,
+      "size": 507800,
+      "uploadedDate": "2021-10-25T10:51:58.343Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MovieRenderQueue2-1920x1080-929c01f1b78d9e12d709ddb507e00993.png",
+      "md5": "929c01f1b78d9e12d709ddb507e00993",
+      "width": 1920,
+      "height": 1080,
+      "size": 817880,
+      "uploadedDate": "2021-10-25T10:51:58.496Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Dataprep-1920x1080-12d235b50b9e961f9d160d274ae5ebf4.png",
+      "md5": "12d235b50b9e961f9d160d274ae5ebf4",
+      "width": 1920,
+      "height": 1080,
+      "size": 93391,
+      "uploadedDate": "2021-10-25T10:51:58.639Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ArchVisTools_thumb-284x284-5f9d9f325b4761ff5b0521bf88e5184c.png",
+      "md5": "5f9d9f325b4761ff5b0521bf88e5184c",
+      "width": 284,
+      "height": 284,
+      "size": 76352,
+      "uploadedDate": "2021-10-24T10:16:01.585Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ArchVisTools_featured-894x488-eb7dddc687e60ec1eed4d2cf71c107ca.png",
+      "md5": "eb7dddc687e60ec1eed4d2cf71c107ca",
+      "width": 894,
+      "height": 488,
+      "size": 1030689,
+      "uploadedDate": "2021-10-24T10:16:01.705Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CineCameraCombined-1920x1080-891f09a5b1bb244ee6c6f9c07e19bc61_Snapshot.png",
+      "md5": "04272c0d68da0c965980611e65f849a7",
+      "width": 150,
+      "height": 74,
+      "size": 9958,
+      "uploadedDate": "2021-10-25T10:51:57.553Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CineCameraCorrection0.0-1920x1080-79b40eb6a4ef914dc9fc60cdc58e55be_Snapshot.png",
+      "md5": "92295445d637cc893c8700be494a8ad2",
+      "width": 150,
+      "height": 74,
+      "size": 9171,
+      "uploadedDate": "2021-10-25T10:51:57.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CineCameraCorrection0.5-1920x1080-ff1566a5f1af3a7306a19032b73e6a7c_Snapshot.png",
+      "md5": "0553e963694beb4a4e76ede556c7bc33",
+      "width": 150,
+      "height": 74,
+      "size": 9034,
+      "uploadedDate": "2021-10-25T10:51:57.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CineCameraCorrection1.0-1920x1080-132835e0f8251b8727e36bf80d2d31d2_Snapshot.png",
+      "md5": "cd8bada4c4967efe763375a01c60ea67",
+      "width": 150,
+      "height": 74,
+      "size": 9216,
+      "uploadedDate": "2021-10-25T10:51:58.237Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CineCameraProcess-1920x1080-541e265cad3637efd42c4be9f18c21a8_Snapshot.png",
+      "md5": "52938c9dd58f05f0ad6283b04779dfc1",
+      "width": 150,
+      "height": 74,
+      "size": 8859,
+      "uploadedDate": "2021-10-25T10:51:58.427Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MovieRenderQueue2-1920x1080-929c01f1b78d9e12d709ddb507e00993_Snapshot.png",
+      "md5": "7c5be934ff8e571351739d3bdcf8f99f",
+      "width": 150,
+      "height": 74,
+      "size": 8835,
+      "uploadedDate": "2021-10-25T10:51:58.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Dataprep-1920x1080-12d235b50b9e961f9d160d274ae5ebf4_Snapshot.png",
+      "md5": "294870f3968ae34f80b5e1074adbf410",
+      "width": 150,
+      "height": 74,
+      "size": 5177,
+      "uploadedDate": "2021-10-25T10:51:58.704Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CineCameraCombined-1920x1080-891f09a5b1bb244ee6c6f9c07e19bc61_Snapshot.png",
+      "md5": "04272c0d68da0c965980611e65f849a7",
+      "width": 150,
+      "height": 74,
+      "size": 9958,
+      "uploadedDate": "2021-10-24T10:16:00.785Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CineCameraCorrection0.0-1920x1080-79b40eb6a4ef914dc9fc60cdc58e55be_Snapshot.png",
+      "md5": "92295445d637cc893c8700be494a8ad2",
+      "width": 150,
+      "height": 74,
+      "size": 9171,
+      "uploadedDate": "2021-10-24T10:16:01.022Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CineCameraCorrection0.5-1920x1080-ff1566a5f1af3a7306a19032b73e6a7c_Snapshot.png",
+      "md5": "0553e963694beb4a4e76ede556c7bc33",
+      "width": 150,
+      "height": 74,
+      "size": 9034,
+      "uploadedDate": "2021-10-24T10:16:01.246Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CineCameraCorrection1.0-1920x1080-132835e0f8251b8727e36bf80d2d31d2_Snapshot.png",
+      "md5": "cd8bada4c4967efe763375a01c60ea67",
+      "width": 150,
+      "height": 74,
+      "size": 9216,
+      "uploadedDate": "2021-10-24T10:16:01.511Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery 1920x1080-1920x1080-ef3c4dc5070b317b05776f4a23120c88_Snapshot.jpeg",
+      "md5": "6b0c2dc0b525a58d6df1323cd009cb87",
+      "width": 150,
+      "height": 74,
+      "size": 7799,
+      "uploadedDate": "2021-10-23T03:59:29.569Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-11-09T08:11:53.277Z",
+  "lastModifiedDate": "2025-02-03T14:36:30.641Z",
+  "customAttributes": {},
+  "entitlementName": "f8d628c8af2f467884353911990fea25",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "72143a99b6ba4fc2a75c4233bdb33ec7",
+      "appId": "ArchVisTools_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-10-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ArchVisTools 1.4.1 for UE4.27"
+    },
+    {
+      "id": "29d42895807a4829aeca6c96a538149a",
+      "appId": "ArchVisTools_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2022-04-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ArchVisTools 1.5 for UE5.0"
+    },
+    {
+      "id": "c8639c4b036145afa7dff706a73a35bc",
+      "appId": "ArchVisTools_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2022-11-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ArchVisTools 1.5.2 for UE5.1"
+    },
+    {
+      "id": "471ab7028b204ed0aebba52cc2507a8e",
+      "appId": "ArchVisTools_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2023-05-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ArchVisTools 1.5.3 for UE5.2"
+    },
+    {
+      "id": "2a03e7b7648e478aa9afaec81ca861a8",
+      "appId": "ArchVisTools_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ArchVisTools 1.5.5 for UE5.3"
+    },
+    {
+      "id": "dc7ee076c5934d5da418d8d52dfae58c",
+      "appId": "ArchVisTools_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2024-04-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ArchVisTools 1.6.2 for UE5.4"
+    }
+  ],
+  "developer": "Voulz",
+  "developerId": "o-3844z84nuk9a8ltlb5crurdk4qxedr",
+  "endOfSupport": false,
+  "unsearchable": false
+}

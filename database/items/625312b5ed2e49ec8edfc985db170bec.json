@@ -1,0 +1,133 @@
+{
+  "id": "625312b5ed2e49ec8edfc985db170bec",
+  "title": "SaveGameable Do Once",
+  "description": "Do Once, but save-gameable",
+  "longDescription": "<p><strong>This plugin provides a blueprint node like &#34;Do Once&#34;, but can be saved.</strong></p><p><br /></p><p>If you want to use it in UE4.26\\4.27, you can clone source code and compile by your self.</p><p><a href=\"https://github.com/LingFengSBH/SaveGameableDoOnce\" rel=\"nofollow\"><strong>GitHub</strong></a></p><p><br /></p><p><a href=\"https://docs.google.com/document/d/1JMRQdr_A2txk5HMtfROjbZErElIZVKur/edit?usp&#61;sharing&amp;ouid&#61;112371780473520018513&amp;rtpof&#61;true&amp;sd&#61;true\" rel=\"nofollow\"><strong>Documentation</strong></a></p><p><br /></p><p><strong>Why to develop this plugin</strong></p><ul><li>Our team is developing a first-person story game, there are many &#34;Do Once&#34; in our project for some triggers to call events, play sequences and jump scares...We didn&#39;t realize how annoying it is until we start to build our save game system.</li><li>Native &#34;Do Once&#34; node doesn&#39;t support save game, if we want to save these &#34;Do Once&#34;, we need to create a Boolean for each of them and replace them with branches, and, traverse all of them when saving, initialize them after loading. Or, serialize these objects.</li><li>So I developed this plugin, and finished our save game system by simply replacing the blueprint of &#34;Do Once&#34; macro in engine:-)</li></ul><p><br /></p><h2>How It be Realized</h2><p><br /></p><h3>Main Idea</h3><ul><li>If we create a specific name for each &#34;SaveGameable Do Once&#34; node, and each time we execute it, we tell a manager that this node has been executed. Then, that manager will know who has excuted and we can add them to a map.</li><li>So that each time we call a &#34;SaveGameable Do Once&#34; node, we can find if this node is in that map? If not, it means this node hasn&#39;t been executed.</li></ul><h3><br /></h3><h3>How to Create a Specific Name</h3><ul><li>We only need to make sure that name is unique in one a blueprint graph. Because we can combine a object reference and this name.</li><li>UE&#39;s object name would be specific, and K2_Node is actually a UObject in blueprint graph.</li><li>So if we can get K2_Node&#39;s name as a UObject, we can use it as a unique key in a blueprint graph.</li><li>This node is inherited from &#34;K2Node&#34;,and use &#34;this-&gt;GetName()&#34; to get this name.</li></ul><h3><br /></h3><h3>How to Save This Name</h3><ul><li>As we know, K2_Node only exists in blueprint, and it will be expanded after compiling. So we can&#39;t use &#34;this-&gt;GetName()&#34; to get K2Node&#39;s object name.</li><li>But we can store it in a pin as default value.</li></ul>",
+  "technicalDetails": "<p>Features: </p><ul><li> There is nothing different from “SaveGameable Do Once” for you to use this node.</li><li> But you can get whether each &#34;SaveGameable Do Once&#34; has been executed.</li><li> Load &amp; Save game for these &#34;SaveGameable Do Once&#34;</li></ul><p>Code Modules: </p><ul><li> SaveGameableDoOnce (Runtime)</li><li> SGDoOnceEditorNode (Editor)</li></ul><p>Number of Blueprints:1</p><p>Number of C&#43;&#43; Classes:3</p><p>Network Replicated: (No)</p><p>Supported Development Platforms: (Win64)</p><p>Supported Target Build Platforms: (Win64)</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1JMRQdr_A2txk5HMtfROjbZErElIZVKur/edit?usp&#61;sharing&amp;ouid&#61;112371780473520018513&amp;rtpof&#61;true&amp;sd&#61;true\" rel=\"nofollow\">Link</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SGDOGallery-1920x1080-c1b1e59451c13a612652c9a4260049f0.png",
+      "md5": "c1b1e59451c13a612652c9a4260049f0",
+      "width": 1920,
+      "height": 1080,
+      "size": 237474,
+      "uploadedDate": "2023-07-07T11:24:54.545Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SGDOGallery1-1920x1080-8ed34724f1027da48ced66bf9b6764e4.png",
+      "md5": "8ed34724f1027da48ced66bf9b6764e4",
+      "width": 1920,
+      "height": 1080,
+      "size": 382297,
+      "uploadedDate": "2023-07-07T11:24:54.953Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SaveGameableDoOnce_thumb-284x284-3b82a3776941239459b9fa7ee3b76477.png",
+      "md5": "3b82a3776941239459b9fa7ee3b76477",
+      "width": 284,
+      "height": 284,
+      "size": 51577,
+      "uploadedDate": "2023-07-07T08:28:00.941Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SaveGameableDoOnce_featured-894x488-22c8d6da50c2da9f61fb3872a0d57464.png",
+      "md5": "22c8d6da50c2da9f61fb3872a0d57464",
+      "width": 894,
+      "height": 488,
+      "size": 135024,
+      "uploadedDate": "2023-07-07T11:32:09.791Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SGDOGallery-1920x1080-c1b1e59451c13a612652c9a4260049f0_Snapshot.png",
+      "md5": "6d644481a5aa74d77b2b98ae6e7a7d61",
+      "width": 150,
+      "height": 74,
+      "size": 4533,
+      "uploadedDate": "2023-07-07T11:24:54.821Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SGDOGallery1-1920x1080-8ed34724f1027da48ced66bf9b6764e4_Snapshot.png",
+      "md5": "95009db59836f714dfb92d02df20d8d3",
+      "width": 150,
+      "height": 74,
+      "size": 5431,
+      "uploadedDate": "2023-07-07T11:24:55.295Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SGDOGallery-1920x1080-c1b1e59451c13a612652c9a4260049f0_Snapshot.png",
+      "md5": "6d644481a5aa74d77b2b98ae6e7a7d61",
+      "width": 150,
+      "height": 74,
+      "size": 4533,
+      "uploadedDate": "2023-07-07T08:28:00.871Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-07-10T15:59:37.574Z",
+  "lastModifiedDate": "2024-10-15T05:42:24.560Z",
+  "entitlementName": "625312b5ed2e49ec8edfc985db170bec",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b7bc330b12d34081863f31c67be764a6",
+      "appId": "SaveGameableDoOnce_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-07-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.500"
+    },
+    {
+      "id": "369139aa8e48427784668b947abb3302",
+      "appId": "SaveGameableDoOnce_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-07-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.501"
+    },
+    {
+      "id": "4ef4a0a3599644e78e3d840506ef8a1b",
+      "appId": "SaveGameableDoOnce_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-07-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.502"
+    }
+  ],
+  "developer": "LingFeng",
+  "developerId": "o-82a9lncetgn3qguwzjtccels49srqr",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

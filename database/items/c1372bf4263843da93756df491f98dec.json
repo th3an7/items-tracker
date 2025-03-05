@@ -1,0 +1,491 @@
+{
+  "id": "c1372bf4263843da93756df491f98dec",
+  "title": "Texture Organizer",
+  "description": "Pack, scale and name textures or create normal maps with one click.",
+  "longDescription": "<p>New!: Extract Heightmaps from Packed Control Maps for Nanite Displacement with 1 click.</p><p><br /></p><h2>Save hours spent on textures</h2><p>TextureOrganizer makes the tedious manual steps when importing textures <strong><em>completely automatic</em></strong>. It creates standardized output, ready for use in your master material.</p><p><br /></p><p><a href=\"https://youtu.be/EiLl6anZtv8\" rel=\"nofollow\">Explainer Video (UE5)</a></p><p><br /></p><h2>True &#34;<em>one-drag, one-click</em>&#34; workflow:</h2><p>1. Drag a texture into a texture slot of the Blueprint Details panel</p><p>2. The tool automatically:</p><p>       a. searches and assigns matching texture files (diffuse, roughness, metalness, etc)</p><p>       b. proposes a 3/4 channel RGB(A) control texture</p><p>       c. proposes closest power-of-2 re-sizing if needed</p><p>       d. proposes standardized output naming (for example &#34;<em>T_MyMaterialName001_D_4K</em>&#34;)</p><p>3. Click &#34;Save Textures&#34; and a set of packed, renamed &amp; scaled textures is saved in the output folder</p><p><br /></p><h2>But also:</h2><ul><li>Preview the result in a &#34;<em>WYSIWYG</em>&#34; demo material box</li><li>Create Normal maps directly from Height maps</li><li>Combine Normal maps (adding scratches to a surface, for example)</li><li>Adjust control textures (invert, contrast, min/max) to fine-tune your material</li><li>Fine-tune maps with soft (non-destructive) changes</li><li>Create material variations by adding blur, contrast &amp; colour</li></ul><p><br /></p><h2>Why pack my textures?:</h2><p>a. Every texture on every material causes a draw call. This can really add up and have a negative impact on performance. In addition, 1 packed texture is usually smaller than 4 separate ones, saving on file sizes.</p><p>b. When combining normal maps you save quite a few instructions (compared to combining them in-material), on top of the benefits already mentioned.</p><p>c. When importing colour textures, by default it&#39;s read as sRGB curve. This leads to inaccurate results for control textures and needs to be set manually for every texture (unless you use the TextureOrganizer)</p><p><br /></p><p><a href=\"https://thisisvirtuality.com/texture-organizer-for-unreal-engine/\" rel=\"nofollow\">User Guide</a></p><p><a href=\"https://docs.google.com/document/d/1zz_eKu3O6fUdJkUcJOBUAazhbRvcm8PI99_aull54ow/edit?usp&#61;sharing\" rel=\"nofollow\">Version History</a></p><h2><br /></h2><h2>Typical Output Examples:</h2><ul><li>T_BrickTiles02_D_4K (sRGB curve, BC1 compression)</li><li>T_BrickTiles02_N_4K (Green Channel Flipped when needed)</li><li>T_BrickTiles02_SRAH_4K (Linear Curve, BC7 compression, Roughness in Green Channel for best results)</li></ul><p><strong>(t</strong>hese are just examples. No textures are provided with the TextureOrganizer)</p>",
+  "technicalDetails": "<h2>Automation Features:</h2><ul><li>Super easy to use with one blueprint in an empty map</li><li>Searches through the import folder using <strong>pattern-matching</strong>, putting each available texture in the right slot. To do this, it uses a customizable data table for patterns, &#34;<em>MyMaterialName001_R_4K</em>&#34;, &#34;<em>MyMaterialName001_Rough_4K</em>&#34;, &#34;<em>MyMaterialName001_Gloss_4K</em>&#34;, etc for a roughness texture.</li><li>Can recognize existing control textures and place its channels in the right slots</li><li>Fully customizable &#34;Control Texture&#34;. You decide which channel goes where and which formatting is used</li><li>Fully customizable output naming, using a &#34;prefix, base name, suffix, postfix&#34; framework</li></ul><p><br /></p><h2>Fine-tune textures before saving:</h2><ul><li>Adjust Diffuse, SubSurface and Emissive maps with a live preview</li><li>Adjust Control textures (Specular, Roughness, Metalness, Height, Ambient Occlusion) with a live preview</li><li>Adjust Normal Maps (Normal intensity, flip green channel, create from heightmap, merge with additional normal, scale/flip/swizzle additional normal)</li><li>Adjust Preview Material to see Parallax</li></ul><h2><br /></h2><h2>Note:</h2><p>This content is designed for use in the editor only. It will help you organize your textures by creating new texture files and saving them in an output folder. When you&#39;re done, the original input textures can be deleted.</p><p><br /></p><p>The tool always uses <em>the current names </em>of textures to identify them (ie. it knows if something is a Diffuse or Specular or Roughness texture by something in the name identifying it).</p><p><br /></p><p>Number of Blueprints: 1</p><p>Supported Development Platforms: Windows: (Yes) Mac/Linux: (Untested)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery 1-1920x1080-d4770b30470e5f1a2772959a5d39721f.png",
+      "md5": "d4770b30470e5f1a2772959a5d39721f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1793645,
+      "uploadedDate": "2021-09-10T08:43:44.340Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery 3-1920x1080-8c90d1a221fe05201aead9d98886777e.png",
+      "md5": "8c90d1a221fe05201aead9d98886777e",
+      "width": 1920,
+      "height": 1080,
+      "size": 2120191,
+      "uploadedDate": "2022-07-07T12:38:03.189Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Settingsv21-1920x1080-c12dfd77e6188737bc9dc8f4607730f7.png",
+      "md5": "c12dfd77e6188737bc9dc8f4607730f7",
+      "width": 1920,
+      "height": 1080,
+      "size": 231496,
+      "uploadedDate": "2022-07-07T12:37:59.341Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Settingsv22-1920x1080-1492a34f12775cc46173b0a04c626915.png",
+      "md5": "1492a34f12775cc46173b0a04c626915",
+      "width": 1920,
+      "height": 1080,
+      "size": 184852,
+      "uploadedDate": "2022-07-07T12:37:59.776Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Settingsv23-1920x1080-14ef855f1eb46dfe74bc52723fd688aa.png",
+      "md5": "14ef855f1eb46dfe74bc52723fd688aa",
+      "width": 1920,
+      "height": 1080,
+      "size": 221897,
+      "uploadedDate": "2022-07-07T12:38:00.171Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Settingsv24-1920x1080-76c3da90140bb59a9be6b0b401d28685.png",
+      "md5": "76c3da90140bb59a9be6b0b401d28685",
+      "width": 1920,
+      "height": 1080,
+      "size": 258447,
+      "uploadedDate": "2022-07-07T12:38:00.572Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Settingsv25-1920x1080-7129b438b2340201406e66245060bff3.png",
+      "md5": "7129b438b2340201406e66245060bff3",
+      "width": 1920,
+      "height": 1080,
+      "size": 438261,
+      "uploadedDate": "2022-07-07T12:38:00.958Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery 2-1920x1080-7befc28b35e2b8ccf24897cd1e276436.png",
+      "md5": "7befc28b35e2b8ccf24897cd1e276436",
+      "width": 1920,
+      "height": 1080,
+      "size": 1406306,
+      "uploadedDate": "2022-07-07T12:38:01.436Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Panel1v2-1920x1080-76ef802b28baf2327799bf8dd06fa646.png",
+      "md5": "76ef802b28baf2327799bf8dd06fa646",
+      "width": 1920,
+      "height": 1080,
+      "size": 208957,
+      "uploadedDate": "2022-07-07T12:38:01.859Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Panel2v2-1920x1080-4551e039bb1efb429df11b9d59b6b297.png",
+      "md5": "4551e039bb1efb429df11b9d59b6b297",
+      "width": 1920,
+      "height": 1080,
+      "size": 169727,
+      "uploadedDate": "2022-07-07T12:38:02.295Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Panel3v2-1920x1080-2476d8811014a8467e34a0ca9a22c1fa.png",
+      "md5": "2476d8811014a8467e34a0ca9a22c1fa",
+      "width": 1920,
+      "height": 1080,
+      "size": 163573,
+      "uploadedDate": "2022-07-07T12:38:02.710Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TextureOrganizer_thumb-284x284-b6f4eb1228f4b13a30a65289aa1a7730.png",
+      "md5": "b6f4eb1228f4b13a30a65289aa1a7730",
+      "width": 284,
+      "height": 284,
+      "size": 64251,
+      "uploadedDate": "2021-09-10T08:43:48.505Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TextureOrganizer_featured-894x488-d7060dfb2689fefeeeeb33951fe546e6.png",
+      "md5": "d7060dfb2689fefeeeeb33951fe546e6",
+      "width": 894,
+      "height": 488,
+      "size": 524206,
+      "uploadedDate": "2021-09-10T08:43:48.565Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settingsv21-1920x1080-c12dfd77e6188737bc9dc8f4607730f7_Snapshot.png",
+      "md5": "42422ac7db61f3c40406f6d919d8f91f",
+      "width": 150,
+      "height": 74,
+      "size": 5045,
+      "uploadedDate": "2022-07-07T12:37:59.621Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settingsv22-1920x1080-1492a34f12775cc46173b0a04c626915_Snapshot.png",
+      "md5": "fcfb99d81ed595cb84185e34922b90c4",
+      "width": 150,
+      "height": 74,
+      "size": 4405,
+      "uploadedDate": "2022-07-07T12:38:00.040Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settingsv23-1920x1080-14ef855f1eb46dfe74bc52723fd688aa_Snapshot.png",
+      "md5": "91afc18ac6f6e206613f7f62981a85d5",
+      "width": 150,
+      "height": 74,
+      "size": 4925,
+      "uploadedDate": "2022-07-07T12:38:00.439Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settingsv24-1920x1080-76c3da90140bb59a9be6b0b401d28685_Snapshot.png",
+      "md5": "d4ae9477287b8cb8fd41ebdd8235b810",
+      "width": 150,
+      "height": 74,
+      "size": 5069,
+      "uploadedDate": "2022-07-07T12:38:00.844Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settingsv25-1920x1080-7129b438b2340201406e66245060bff3_Snapshot.png",
+      "md5": "acd81a785ab73b0bfc755c90f8be0011",
+      "width": 150,
+      "height": 74,
+      "size": 6906,
+      "uploadedDate": "2022-07-07T12:38:01.243Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery 2-1920x1080-7befc28b35e2b8ccf24897cd1e276436_Snapshot.png",
+      "md5": "8829dc05d5da603019f15ad9f76f7688",
+      "width": 150,
+      "height": 74,
+      "size": 6779,
+      "uploadedDate": "2022-07-07T12:38:01.760Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel1v2-1920x1080-76ef802b28baf2327799bf8dd06fa646_Snapshot.png",
+      "md5": "49973647c7bb0c92576ec33218aedb8f",
+      "width": 150,
+      "height": 74,
+      "size": 5016,
+      "uploadedDate": "2022-07-07T12:38:02.122Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel2v2-1920x1080-4551e039bb1efb429df11b9d59b6b297_Snapshot.png",
+      "md5": "4c784b0a36e1591f00bda07645354ef7",
+      "width": 150,
+      "height": 74,
+      "size": 5122,
+      "uploadedDate": "2022-07-07T12:38:02.568Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel3v2-1920x1080-2476d8811014a8467e34a0ca9a22c1fa_Snapshot.png",
+      "md5": "6982fda69dcfe49176132aa939892fdf",
+      "width": 150,
+      "height": 74,
+      "size": 4887,
+      "uploadedDate": "2022-07-07T12:38:03.007Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery 3-1920x1080-8c90d1a221fe05201aead9d98886777e_Snapshot.png",
+      "md5": "10a6460c7c9fae4d902200c2e1595bd2",
+      "width": 150,
+      "height": 74,
+      "size": 7498,
+      "uploadedDate": "2022-07-07T12:38:03.565Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settingsv21-1920x1080-c12dfd77e6188737bc9dc8f4607730f7_Snapshot.png",
+      "md5": "42422ac7db61f3c40406f6d919d8f91f",
+      "width": 150,
+      "height": 74,
+      "size": 5045,
+      "uploadedDate": "2022-07-07T12:13:58.282Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settingsv22-1920x1080-3865190822774d820422bb09780a6622_Snapshot.png",
+      "md5": "9f04786e628be698437f3ccce9a3715f",
+      "width": 150,
+      "height": 74,
+      "size": 4376,
+      "uploadedDate": "2022-07-07T12:13:58.720Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settingsv23-1920x1080-14ef855f1eb46dfe74bc52723fd688aa_Snapshot.png",
+      "md5": "91afc18ac6f6e206613f7f62981a85d5",
+      "width": 150,
+      "height": 74,
+      "size": 4925,
+      "uploadedDate": "2022-07-07T12:13:59.102Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settingsv24-1920x1080-76c3da90140bb59a9be6b0b401d28685_Snapshot.png",
+      "md5": "d4ae9477287b8cb8fd41ebdd8235b810",
+      "width": 150,
+      "height": 74,
+      "size": 5069,
+      "uploadedDate": "2022-07-07T12:13:59.536Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settingsv25-1920x1080-e0ab1986b55f44379c30d147349ad30e_Snapshot.png",
+      "md5": "d544e0edbda993b5cf826d067db209d1",
+      "width": 150,
+      "height": 74,
+      "size": 6995,
+      "uploadedDate": "2022-07-07T12:13:59.927Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel1v2-1920x1080-a8eb31199a8344d99349a5359547c50f_Snapshot.png",
+      "md5": "d3d8d872a5734425aae3877de18091c3",
+      "width": 150,
+      "height": 74,
+      "size": 5060,
+      "uploadedDate": "2022-07-07T12:14:00.380Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel2v2-1920x1080-528c36810723524e63bb71e32b4bad4c_Snapshot.png",
+      "md5": "7fc79f009dc4006f1ce7a713927ba449",
+      "width": 150,
+      "height": 74,
+      "size": 5421,
+      "uploadedDate": "2022-07-07T12:14:00.783Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel3v2-1920x1080-9fdc7f88b73c33fc57cdad1ec47332cc_Snapshot.png",
+      "md5": "ecf7ee0dbc2378ed6fef5a3b9b39a82c",
+      "width": 150,
+      "height": 74,
+      "size": 4695,
+      "uploadedDate": "2022-07-07T12:14:01.296Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings3-1920x1080-d769b0e1ab4637fb72b283c8eeda1b4b_Snapshot.png",
+      "md5": "b055754af7d8d366cc46ef84ccdba241",
+      "width": 150,
+      "height": 74,
+      "size": 2999,
+      "uploadedDate": "2021-09-16T15:38:59.214Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel1-1920x1080-baf5e99fde11a9c235cc4de656300e3e_Snapshot.png",
+      "md5": "d853702dc21d2dea8f611309ff516ea0",
+      "width": 150,
+      "height": 74,
+      "size": 5033,
+      "uploadedDate": "2021-09-10T17:56:25.505Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel2-1920x1080-2a533425814a47053b9f5d684a4e865f_Snapshot.png",
+      "md5": "875ddf001ada6a4f696d5f9f91088a11",
+      "width": 150,
+      "height": 74,
+      "size": 5215,
+      "uploadedDate": "2021-09-10T17:56:25.902Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel3-1920x1080-d47bfb9ecfa18b57dcce83b97a3ec899_Snapshot.png",
+      "md5": "cc39875d4f7c709ec88fef8b9aa27509",
+      "width": 150,
+      "height": 74,
+      "size": 4504,
+      "uploadedDate": "2021-09-10T17:56:26.563Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings3-1920x1080-c5416a00eecc635089a228f8aa665e4c_Snapshot.png",
+      "md5": "12868f119dea2103d2b351d82efc9f32",
+      "width": 150,
+      "height": 74,
+      "size": 2754,
+      "uploadedDate": "2021-09-10T17:56:27.089Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery 1-1920x1080-d4770b30470e5f1a2772959a5d39721f_Snapshot.png",
+      "md5": "64a07ea120695c3d177623075776d992",
+      "width": 150,
+      "height": 74,
+      "size": 6817,
+      "uploadedDate": "2021-09-10T08:43:44.692Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery 2-1920x1080-7befc28b35e2b8ccf24897cd1e276436_Snapshot.png",
+      "md5": "8829dc05d5da603019f15ad9f76f7688",
+      "width": 150,
+      "height": 74,
+      "size": 6779,
+      "uploadedDate": "2021-09-10T08:43:45.225Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery 3-1920x1080-8c90d1a221fe05201aead9d98886777e_Snapshot.png",
+      "md5": "10a6460c7c9fae4d902200c2e1595bd2",
+      "width": 150,
+      "height": 74,
+      "size": 7498,
+      "uploadedDate": "2021-09-10T08:43:45.801Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel1-1920x1080-64341bdbf694e9b7b0da0e0848041814_Snapshot.png",
+      "md5": "76981d6c5aa1afc3693484a83c969245",
+      "width": 150,
+      "height": 74,
+      "size": 5059,
+      "uploadedDate": "2021-09-10T08:43:46.287Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel2-1920x1080-34edd4d5168b20b671f505846c26883f_Snapshot.png",
+      "md5": "f02ac2650888976417d48b4c50c32d22",
+      "width": 150,
+      "height": 74,
+      "size": 4582,
+      "uploadedDate": "2021-09-10T08:43:46.741Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Panel3-1920x1080-b6d0f4fb90e24ca092191f2c650c0681_Snapshot.png",
+      "md5": "6fab054ca4bdeb13c4740bd417567d06",
+      "width": 150,
+      "height": 74,
+      "size": 5017,
+      "uploadedDate": "2021-09-10T08:43:47.183Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings1-1920x1080-7b072838577239dd7cd81f72a254ab16_Snapshot.png",
+      "md5": "8a2046d7c0ff77d96acc974be0a268ce",
+      "width": 150,
+      "height": 74,
+      "size": 4870,
+      "uploadedDate": "2021-09-10T08:43:47.621Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings2-1920x1080-71416a94f8e366553974a782d6bea5e5_Snapshot.png",
+      "md5": "2c9c78a86e452b103d145efe0907d4ea",
+      "width": 150,
+      "height": 74,
+      "size": 4835,
+      "uploadedDate": "2021-09-10T08:43:48.006Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings3-1920x1080-42c7a22b8da3e240b1cf7ebd9ac32a1d_Snapshot.png",
+      "md5": "2ded76068f6c611e395819c0a9f095dd",
+      "width": 150,
+      "height": 74,
+      "size": 5202,
+      "uploadedDate": "2021-09-10T08:43:48.423Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-09-13T07:42:21.228Z",
+  "lastModifiedDate": "2024-10-27T07:32:41.114Z",
+  "customAttributes": {},
+  "entitlementName": "c1372bf4263843da93756df491f98dec",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "39c7c0fafc8540e08a574d103830255f",
+      "appId": "TextureOc1372bf42638V1",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-09-10T00:00:00.000Z",
+      "releaseNote": "1.05\nVarious improvements:\n - Added compression settings for Regular textures \n - Added support for Fuzz maps\n - See changelog for more details",
+      "versionTitle": "v1.05"
+    },
+    {
+      "id": "9ca637e56b4148d093f18ec5d500b6b7",
+      "appId": "TextureOc1372bf42638V2",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-06-07T00:00:00.000Z",
+      "releaseNote": "2.03 Enabled Lumen",
+      "versionTitle": "v2.03"
+    },
+    {
+      "id": "a6e935962d904288b245fd3c4d0cefa0",
+      "appId": "TextureOc1372bf42638V3",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-11-08T00:00:00.000Z",
+      "releaseNote": "2.05 Added Heightmap export for Nanite",
+      "versionTitle": "v2.05"
+    },
+    {
+      "id": "9c1b266670ce40f38f9dff943b83a0af",
+      "appId": "TextureOc1372bf42638V4",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-02-28T00:00:00.000Z",
+      "releaseNote": "2.06 \n - Improved workflow\n - Added emissive / subsurf preview\n - Various tweaks & fixes",
+      "versionTitle": "v2.06"
+    }
+  ],
+  "developer": "Virtuality",
+  "developerId": "o-7mgnuzg675v4ec9586e7dzmff4p29p",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,386 @@
+{
+  "id": "5e32f3d5e4094e48a8584e1426834008",
+  "title": "Miss No Hit",
+  "description": "Intuitive and Efficient Hit Detection System",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;LnBtH66Cz-g\" rel=\"nofollow\">Preview</a> | <a href=\"https://missnohit.gitbook.io/home\" rel=\"nofollow\">Documentation &amp; Tutorials</a> | <a href=\"https://discord.gg/U9zzpEGYUn\" rel=\"nofollow\">Discord</a></p><p>Miss No Hit performs traces against the entire volume of the Hitbox, leaving no gaps for missed hits. It is extremely optimized, uses cache-friendly, multithreaded core logic written in C&#43;&#43; that can process thousands of tracers!</p><p><br /></p><p>Traditional collision checks using overlap events may miss hits under fast movements or varying frame rates. Go-to solution generally involves running line traces between current and previous locations. Yet, these solutions bring their own problems, introducing additional processing burdens and still leaving gaps that can result in missed hits.</p><p><br /></p><p>Miss No Hits key features are as follows.</p><ul><li><strong>Built around the hardware</strong>, it utilizes multithreading, memory pooling and tick aggregation in its core. Allowing it to process thousands of tracers with minimal impact on game performance.</li><li><strong>Intuitive and friendly Blueprint API</strong>, system will automatically reveal relevant options and automatically hide irrelevant ones. Offering clear and concise details panel free of clutter.</li><li><strong>Exposes trace settings</strong>, allowing you precise control over how collisions should be checked.</li><li><strong>Customizable tick behavior.</strong> Can operate in tick-by-distance, fixed rate tick and match game tick modes.</li><li><strong>Hit filtering options.</strong> Allow for control over how system&#39;s hit registration works.</li><li><strong>Meets you where you need it.</strong> Can be controlled through C&#43;&#43;, Blueprints or Anim Notifies.</li></ul><p><br /></p><p>If you are interested in learning more about Miss No Hit, please refer to the documentation page.</p><p><br /></p><p><u>Update Change Log:</u></p><p>v1.3 (UE5.4 &amp; UE5.3)</p><ul><li>Updated properties system that has significantly improved support for inheritance and will allow for easier extension in future. Please port your tracers to Tracer Configs system.</li></ul><p>v1.2</p><ul><li>Anim Notify Tracers now support sockets.</li><li>Anim Notify Tracers hitbox can now be adjusted in world-space coordinates. This makes it far easier to adjust hitboxes.</li><li>Static Mesh Tracer: Automatically generates hitbox from two sockets on static mesh.</li><li>Skeletal Mesh Tracer: Similar to Static Mesh Tracer but will also adjust hitbox size at runtime.</li><li>Each substep now registers hit separately. This allows for more accurate damage over time calculation at low fps scenarios.</li><li>BP functions for adding new tracers at runtime.</li><li>BP functions for adding actors to ignored actors list.</li><li>Group Activation: Allows multiple tracers that share same tracer tag to be activated &amp; deactivated at same time. Grouped tracers must share same source object.</li><li>Runtime memory consumption of system reduced by ~20%</li><li>Revamped documentation page to offer better navigation experience.</li></ul><p>v.1.1:</p><ul><li>Added &#34;Use Precomputed Path&#34; for Anim Notify Tracers. This allows sub-stepping through animation data, which decouples trace paths from game fps completely, offering perfect trace paths regardless of FPS. However, it is not compatible with dynamic animation logic.</li><li>Added &#34;Static Mesh Sockets&#34; Tracer Source, allows for denotation of Hit Box via sockets on Static Meshes.</li><li>Miss No Hit core is now multi-threaded! Brings significant performance improvements, allowing Mnh to support over 1 million traces per second within few milliseconds of compute budget!</li></ul><p><br /></p><p>Important/Additional Notes:</p><p>If you have any suggestions, feedback, or encounter any issues, whether they be bugs or missing features that could enhance your experience, please don&#39;t hesitate to contact me at https://discord.gg/U9zzpEGYUn</p>",
+  "technicalDetails": "<p>Code Modules:</p><ul><li> MissNoHit Runtime Module</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 10&#43;</p><p>Network Replicated: (Yes/No): No (Replication should happen after MissNoHit event hooks fire)</p><p>Supported Development Platforms: Windows (Untested in other platforms)</p><p>Supported Target Build Platforms: Windows (Untested in other platforms)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-f49f2c04fbf9338cdbff79ea96fd5148.jpg",
+      "md5": "f49f2c04fbf9338cdbff79ea96fd5148",
+      "width": 1920,
+      "height": 1080,
+      "size": 560786,
+      "uploadedDate": "2024-03-10T16:02:36.378Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-68d52591205f625f96326109e8a19215.jpg",
+      "md5": "68d52591205f625f96326109e8a19215",
+      "width": 1920,
+      "height": 1080,
+      "size": 379247,
+      "uploadedDate": "2024-03-10T16:02:36.779Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-564d8a45b63a3eae369b08f9446ea254.jpg",
+      "md5": "564d8a45b63a3eae369b08f9446ea254",
+      "width": 1920,
+      "height": 1080,
+      "size": 202302,
+      "uploadedDate": "2024-03-10T16:02:37.182Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-09b7b4f14cb201128e8684eca5c3de97.jpg",
+      "md5": "09b7b4f14cb201128e8684eca5c3de97",
+      "width": 1920,
+      "height": 1080,
+      "size": 384825,
+      "uploadedDate": "2024-03-10T16:02:37.710Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-821e1589a2159be9eefa7542441d8b31.jpg",
+      "md5": "821e1589a2159be9eefa7542441d8b31",
+      "width": 1920,
+      "height": 1080,
+      "size": 265423,
+      "uploadedDate": "2024-03-10T16:02:38.050Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-34479983137a526c318f4a9b9bfcda59.jpg",
+      "md5": "34479983137a526c318f4a9b9bfcda59",
+      "width": 1920,
+      "height": 1080,
+      "size": 369271,
+      "uploadedDate": "2024-03-10T16:02:38.426Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7-1920x1080-365a98a547c2693c1b14f04333188ae1.jpg",
+      "md5": "365a98a547c2693c1b14f04333188ae1",
+      "width": 1920,
+      "height": 1080,
+      "size": 459472,
+      "uploadedDate": "2024-03-10T16:02:38.829Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8-1920x1080-8741f72c9000832816f2e6b90fa991e8.jpg",
+      "md5": "8741f72c9000832816f2e6b90fa991e8",
+      "width": 1920,
+      "height": 1080,
+      "size": 293408,
+      "uploadedDate": "2024-03-10T16:02:39.331Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MissNoHit_thumb-284x284-fc8288f8ee1ba91e03e4572868c6d2d1.png",
+      "md5": "fc8288f8ee1ba91e03e4572868c6d2d1",
+      "width": 284,
+      "height": 284,
+      "size": 147500,
+      "uploadedDate": "2024-01-25T14:17:14.796Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MissNoHit_featured-894x488-732625804840b4e1d46dfb76f382c70e.png",
+      "md5": "732625804840b4e1d46dfb76f382c70e",
+      "width": 894,
+      "height": 488,
+      "size": 629079,
+      "uploadedDate": "2024-01-22T10:20:14.290Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-f49f2c04fbf9338cdbff79ea96fd5148_Snapshot.jpg",
+      "md5": "fe6e383e110e695eb29a3859ada91be3",
+      "width": 150,
+      "height": 74,
+      "size": 6784,
+      "uploadedDate": "2024-03-10T16:02:36.639Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-68d52591205f625f96326109e8a19215_Snapshot.jpg",
+      "md5": "26c404d71badb09beaf6cc6dd78e76b5",
+      "width": 150,
+      "height": 74,
+      "size": 6647,
+      "uploadedDate": "2024-03-10T16:02:37.034Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-564d8a45b63a3eae369b08f9446ea254_Snapshot.jpg",
+      "md5": "6ed9188a664590a027d8bb41a986aed4",
+      "width": 150,
+      "height": 74,
+      "size": 4546,
+      "uploadedDate": "2024-03-10T16:02:37.447Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-09b7b4f14cb201128e8684eca5c3de97_Snapshot.jpg",
+      "md5": "6a7df87f347544ccebb5cd7e51993ab1",
+      "width": 150,
+      "height": 74,
+      "size": 6457,
+      "uploadedDate": "2024-03-10T16:02:37.951Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-821e1589a2159be9eefa7542441d8b31_Snapshot.jpg",
+      "md5": "53b03468b980afb8d59d2fc965164080",
+      "width": 150,
+      "height": 74,
+      "size": 5129,
+      "uploadedDate": "2024-03-10T16:02:38.296Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-34479983137a526c318f4a9b9bfcda59_Snapshot.jpg",
+      "md5": "7fbcb9f59624715afadb298c3378013b",
+      "width": 150,
+      "height": 74,
+      "size": 4955,
+      "uploadedDate": "2024-03-10T16:02:38.659Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-365a98a547c2693c1b14f04333188ae1_Snapshot.jpg",
+      "md5": "0ba1a180897934ab989138d464baf25f",
+      "width": 150,
+      "height": 74,
+      "size": 7156,
+      "uploadedDate": "2024-03-10T16:02:39.102Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-8741f72c9000832816f2e6b90fa991e8_Snapshot.jpg",
+      "md5": "f333d3246cb9d7ecd48ddf2100262daa",
+      "width": 150,
+      "height": 74,
+      "size": 6432,
+      "uploadedDate": "2024-03-10T16:02:39.562Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-ab573b365af4af77fa2107a20f603e28_Snapshot.png",
+      "md5": "a1d697f1a23f26a888c90b66ca72a5e9",
+      "width": 150,
+      "height": 74,
+      "size": 7064,
+      "uploadedDate": "2024-03-10T15:28:02.380Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-69d803af62405f3ff4b7d114ee1b49f7_Snapshot.png",
+      "md5": "e72c3c2b078a092328a4ecd33cf5f0e4",
+      "width": 150,
+      "height": 74,
+      "size": 6612,
+      "uploadedDate": "2024-03-10T15:28:02.785Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-0c3bca30fe2a746e6a44fbbf2fa99139_Snapshot.png",
+      "md5": "0cae150923748f14abd5cd119c614824",
+      "width": 150,
+      "height": 74,
+      "size": 4678,
+      "uploadedDate": "2024-03-10T15:28:03.143Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-62b050ce4bbb1f14435a7dee9c4de93f_Snapshot.png",
+      "md5": "ad312910ac932340f3be0b6182a335b9",
+      "width": 150,
+      "height": 74,
+      "size": 6693,
+      "uploadedDate": "2024-03-10T15:28:03.545Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-74bf13405640a76351716381282b3c0d_Snapshot.png",
+      "md5": "15dc30d0fcb55829cf230a6523150a95",
+      "width": 150,
+      "height": 74,
+      "size": 5252,
+      "uploadedDate": "2024-03-10T15:28:03.908Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-ed8a16be0c26394ab94e7720e32b2ec8_Snapshot.png",
+      "md5": "a78a06d3dc33ec00a19c9225066351c3",
+      "width": 150,
+      "height": 74,
+      "size": 5182,
+      "uploadedDate": "2024-03-10T15:28:04.293Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-630f3f775ab0df38598052cbf7309972_Snapshot.png",
+      "md5": "d364c6dc38bf0b9cf84b14870a5a01b0",
+      "width": 150,
+      "height": 74,
+      "size": 7283,
+      "uploadedDate": "2024-03-10T15:28:04.680Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-5210da75a6831e8b9b3976f81f17db28_Snapshot.png",
+      "md5": "5b123aecd67fdbff7d7e4d4b4d086642",
+      "width": 150,
+      "height": 74,
+      "size": 6538,
+      "uploadedDate": "2024-03-10T15:28:05.029Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/mnh5-1920x1080-25414dc44f20a2a7b4c258d6a6e40aa5_Snapshot.png",
+      "md5": "79bcda88d67124be816199c014a53370",
+      "width": 150,
+      "height": 74,
+      "size": 5918,
+      "uploadedDate": "2024-01-22T15:17:58.734Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/mnhmain-1920x1080-5f1379e5c9e7e9a4011c5d7e50a8ecdf_Snapshot.png",
+      "md5": "b698d070e94aadb6b06460aec54472ce",
+      "width": 150,
+      "height": 74,
+      "size": 7142,
+      "uploadedDate": "2024-01-22T10:20:11.157Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/mnh2-1920x1080-d3e7f235fa264469c7c9f971ddc11133_Snapshot.png",
+      "md5": "0719c5b8ddff6252c9ecf52202eaccf4",
+      "width": 150,
+      "height": 74,
+      "size": 6623,
+      "uploadedDate": "2024-01-22T10:20:11.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/mnh3-1920x1080-0572c26b179ee93f79ed04b58e71aeb9_Snapshot.png",
+      "md5": "0aeb170a4232aaf1fdf88b7121b00866",
+      "width": 150,
+      "height": 74,
+      "size": 4738,
+      "uploadedDate": "2024-01-22T10:20:11.975Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/mnh4-1920x1080-aa8378f24e109884766d998553974364_Snapshot.png",
+      "md5": "7c00e84746c80ebbf78f1a880f92e503",
+      "width": 150,
+      "height": 74,
+      "size": 6618,
+      "uploadedDate": "2024-01-22T10:20:12.444Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/mnh5-1920x1080-e2f40a9f8d460f6e73ad92bf50ec9912_Snapshot.png",
+      "md5": "3d1484dbc727e08d5f3c6dd67491d51f",
+      "width": 150,
+      "height": 74,
+      "size": 5884,
+      "uploadedDate": "2024-01-22T10:20:12.839Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/mnh6-1920x1080-c499ceec246a731ca0cb820ac06b8511_Snapshot.png",
+      "md5": "3acc17cafe337beda60080d15b1584f9",
+      "width": 150,
+      "height": 74,
+      "size": 5328,
+      "uploadedDate": "2024-01-22T10:20:13.232Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/mnh7-1920x1080-85c8e000e120b44c2b6adcc543a27051_Snapshot.png",
+      "md5": "fed1c8b68760a9c86be097b7c5714d89",
+      "width": 150,
+      "height": 74,
+      "size": 7183,
+      "uploadedDate": "2024-01-22T10:20:13.712Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/mnh8-1920x1080-3110a49ccb56c2ad97c2372a2d35719e_Snapshot.png",
+      "md5": "317063751e853877ea49cdff60943390",
+      "width": 150,
+      "height": 74,
+      "size": 6438,
+      "uploadedDate": "2024-01-22T10:20:14.122Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-01-24T17:08:32.235Z",
+  "lastModifiedDate": "2025-02-18T21:18:26.785Z",
+  "customAttributes": {},
+  "entitlementName": "5e32f3d5e4094e48a8584e1426834008",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "58cdb66bd9b34f0080f26cb40a593315",
+      "appId": "MissNoHit_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-01-25T00:00:00.000Z",
+      "releaseNote": "Fixed bug with Static Mesh Tracer parameters",
+      "versionTitle": "v1.22 UE5.2"
+    },
+    {
+      "id": "532d5d51ea184d16b4003eb49ae348b5",
+      "appId": "MissNoHit_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-01-22T00:00:00.000Z",
+      "releaseNote": "Fixed bug with Static Mesh Tracer parameters",
+      "versionTitle": "v1.36 UE5.3"
+    },
+    {
+      "id": "0bb4e784bff74f7fb318340c6be2f497",
+      "appId": "MissNoHit_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "Tracer Config 5.4 Update 3",
+      "versionTitle": "v1.36 UE5.4"
+    }
+  ],
+  "developer": "Balatkan Studios",
+  "developerId": "o-2cclz52783gabldyzv4qf9h9qrjadz",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

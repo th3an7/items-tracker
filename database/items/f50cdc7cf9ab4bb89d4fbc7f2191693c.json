@@ -1,0 +1,268 @@
+{
+  "id": "f50cdc7cf9ab4bb89d4fbc7f2191693c",
+  "title": "Top Down Rogue Lite Template",
+  "description": "C++ Top Down (Shooter) template focusing on accommodate roguelike gameplay styles, but not only!",
+  "longDescription": "<p><a href=\"https://github.com/Klian326/-Public-TopDownRogueLite/releases/tag/MajorUpdates_v0.3.0\" rel=\"nofollow\">Update v0.3.0</a></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/product/klian-s-gore-system-plugin\" rel=\"nofollow\">UEGoreSystem</a> (video) <a href=\"https://youtu.be/RaPkSWSOsHE\" rel=\"nofollow\">Demonstration</a> - <a href=\"https://youtu.be/yHM6LY4JJpU\" rel=\"nofollow\">Setup process</a></p><p><a href=\"https://github.com/Klian326/-Public-TopDownRogueLite\" rel=\"nofollow\">Try before buy (Trial version)</a></p><p><a href=\"https://github.com/Klian326/-Public-TopDownRogueLite/wiki\" rel=\"nofollow\">GitHub Wiki!</a></p><p>IMPORTANT: <a href=\"https://github.com/Klian326/-Public-TopDownRogueLite/releases/tag/GAS_Tags_v0.2.0\" rel=\"nofollow\">DefaultGameplayTags.ini</a></p><p><strong>Target audience</strong>: Small/Medium team, even talented solo developers.</p><p><strong>Objective</strong>: The introduction of a clean and optimized new template for Unreal. The idea is to get a fully functional tech demo which can be further developed into many different kind of games, sharing the same core mechanics. Compatibility with other Marketplace assets is a focal point.</p><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;sTVig5o5z9U\" rel=\"nofollow\">Test (Uncut Video)</a> (Old v0.1.0)</p><p><a href=\"https://github.com/Klian326/-Public-TopDownRogueLite/releases/tag/ZombiesProj\" rel=\"nofollow\">On going example project</a> (Download)</p><p><a href=\"https://www.youtube.com/watch?v&#61;OQqmVVXGPEw&amp;list&#61;PLqntlbsP-C3at9I6UdaVJWKtOVJNNnaGW\" rel=\"nofollow\">Example project playlist</a></p><p><a href=\"https://klian.itch.io/top-down-rogue-lite-plugin\" rel=\"nofollow\">Playable demo</a></p><p><br /></p><p>Features:</p><ul><li><strong>C&#43;&#43;</strong> Plugin entirely developed on <strong>UE5.1</strong> using many recent libraries and tools.</li><li>Fully exposed to <strong>blueprints</strong>.</li><li><strong>Minimalistic and neat project</strong>, like any template should be.</li><li>Use of <strong>physics</strong> as part of the gameplay.</li><li><strong>Custom UCharacterMovementComponent</strong> with an <strong>alternative walking speed</strong> (correctly replicated) which can be used for speed up (sprinting) or slow down (walking) the character movements, and a native, physical, <strong>Dash</strong> action.</li><li><strong>Main Weapon</strong> is the default weapon for a given character. By default the main weapon for this project is “Fists”, but you might want something different, where the equivalent would be an harvesting tool like the Pickaxe for other notorious games. This weapon can’t be dropped and will disappear with the character after death.</li><li><strong>Action Bar</strong> (main inventory) <strong>System</strong>, you can pickup/drop any item and it will be stored there. You can freely switch slots, or go back using the main weapon instead. If you select an empty slot, the main weapon will be used.</li><li><strong>AnimClassLayers</strong> used for different poses, depending on your weapon (similar to Lyra, greatly simplified).</li><li><strong>Camera Occlusion Management</strong>, you can decide which scene components might be hidden if they’re occluding the sight between the camera and the character capsule.</li><li><strong>Postprocess</strong> showing the <strong>player’s character shape</strong> when it’s behind something. The same material supports <strong>Custom Depth Stencils</strong> and can be further expanded. The same material is responsable for the (yellow) <strong>item outline</strong> when the character is ready to interact with the object.</li><li><strong>Player’s Line of Sight</strong>: a custom component for players. It uses the Global Post Process to mask the visibility for the player. Can decide which classes show/hide depending if they’re in sight or not (like Pawns, Items etc…).</li><li><strong>Custom material function</strong>, which will gather the alpha information from the player’s line of sight component and will apply them to its own material. This is cool for <strong>smoothly mask an entire mesh</strong> and not just make it disappear, but it has some limitations, for example <em>it doesn’t work very well with dynamic shadows</em>.</li><li>Both <strong>AIs and Players can control the same character class</strong>. This allow any type of gameplay where <strong>you can control enemies or just swap body</strong>.</li><li><strong>Gameplay Ability System</strong> for each character. It’s natively used for any player input, this way you can give or remove the ability to process any native input.</li><li><strong>Progressive Respawn System</strong>, when a Character overlaps a respawn volume the system will save the tag from that actor into its associated PlayerController. When you die, you can respawn and the latest (overlapped) spawn actor will be automatically chose. <strong>[Note]</strong> <em>Since the end goal is a Rogue Lite template, when you die you’ll drop all your weapons/items and you’ll restart with a fresh new character</em>.</li><li><strong>Cosmetic System</strong>, which uses the <a href=\"https://docs.unrealengine.com/5.1/en-US/API/Runtime/Engine/FSkeletalMeshMerge/\" rel=\"nofollow\">SkeletalMeshMerge</a> class to merge multiple skeletal meshes together. It’s natively replicated and works runtime. <strong>[Note]</strong> <em>This feature doesn’t support Morph Targets nor Clothing Simulation for now.</em></li><li><strong>Flexible AI</strong>, fully customizable. The <strong>AI structure is not rigid at all</strong>, the plugin mainly provides <strong>many different new Behavior Tree nodes</strong> you can use to build your own AI Behavior Trees. A generic Behavior Tree, created mainly for demonstrative purposes, is present in the plugin’s folder and should be used as starting point to understand each new functionality.</li><li>A <strong>few AI tools</strong> like an <strong>AISplineTool</strong>, used for patrolling a defined or random sequence of locations, and an <strong>AI Spawn System</strong> which can use triggers to spawn / remove AIs from the level. Currently, it just works progressively and, once the associated character is dead, the spawn will be disabled.</li><li><strong>Physically simulated</strong> (and replicated) <strong>doors</strong>. They’re optimized and won’t simulate physics unless a specified actor class (you can set a list of classes) is overlapping this actor’s trigger volume. They can be locked/unlocked runtime.</li><li><strong>Weapon system</strong> based on the Item inventory, with a melee and a firearm native c&#43;&#43; class. The firearm class is derived from the melee class, so your weapon can easily be an hybrid melee/firearm weapon.</li><li><strong>AIPerception system</strong>, using “hearing”, “sight” and “damage” perceptions.</li><li><strong>Vertical Aim</strong>, you’re not limited to 2 axis, by pressing a button (Alt by default) the character can aim up or down, depending where the mouse cursor is pointing, without interfering with the rest of the gameplay.</li><li><strong>Punch</strong>, <strong>Melee and Toss demo animations</strong> have been recorded using Rokoko Studio and Rokoko Suit Pro 2</li></ul><p><br /></p><p>v0.2.0</p><ul><li><strong>GrenadePouch</strong> / Throwing System</li><li><strong>Interaction interface</strong> (any actor) using the same system as &#34;Items&#34;</li><li><strong>Chaos destructables</strong> integration</li><li>Replicated <strong>progress bar</strong> (used for health in the example demo, can be used for anything)</li></ul>",
+  "technicalDetails": "<p><strong>Code Modules</strong>:</p><ul><li> TopDownRogueLite - Runtime</li><li> TopDownRogueLiteEditor - Editor</li></ul><p><br /></p><p><strong>Required dependencies</strong>:</p><ul><li>Niagara</li><li>AnimationWarping</li><li>AnimationLocomotionLibrary</li><li>RigLogic</li><li>GameplayAbilities</li></ul><p><br /></p><p><strong>Unmodified public domain content</strong>:</p><ul><li>Demo assets like sounds, items (3D models) and locomotion animations are from <a href=\"https://www.unrealengine.com/marketplace/en-US/product/lyra\" rel=\"nofollow\">Lyra</a> (Epic Games) (stripped to essential elements)</li><li>UE4 Mannequin and UE5 Manny</li></ul><p><br /></p><p><strong>Number of Blueprints</strong>: 60&#43;</p><p><strong>Number of C&#43;&#43; Classes</strong>: 55&#43;</p><p><strong>Network Replicated</strong>: Yes</p><p><strong>Supported Development Platforms</strong>: Windows</p><p><strong>Supported Target Build Platforms</strong>: Windows, Linux</p><p><strong>Documentation</strong>: <a href=\"https://github.com/Klian326/-Public-TopDownRogueLite/wiki\" rel=\"nofollow\">Wiki</a></p><p><strong>Example Project</strong>: <em><u>Plugins-&gt;TopDownRogueLite</u></em> or <em><u>Engine-&gt;Plugins-&gt;TopDownRogueLite</u></em> || <a href=\"https://github.com/Klian326/-Public-TopDownRogueLite/releases/tag/ZombiesProj\" rel=\"nofollow\">Here</a> using MetaHuman and Megascans assets</p><p><strong>Important/Additional Notes</strong>: This plugin is in active development, all the customers feedback will be greatly appreciated and taken in account to further improve the product. The price might vary, depending on the complexity of the new features implemented, after being notified on the product page (at least 1 week before) along side with the reasons/new features list.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00000-1920x1080-d59e2539c28b89eb5f8b0884b1e18fa1.png",
+      "md5": "d59e2539c28b89eb5f8b0884b1e18fa1",
+      "width": 1920,
+      "height": 1080,
+      "size": 1471796,
+      "uploadedDate": "2023-03-24T07:06:48.339Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/vlcsnap-2023-03-24-07h46m14s021-1920x1080-13cc8b1e0e0df3a25877552874b455fb.png",
+      "md5": "13cc8b1e0e0df3a25877552874b455fb",
+      "width": 1920,
+      "height": 1080,
+      "size": 1316658,
+      "uploadedDate": "2023-03-24T07:06:43.750Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/vlcsnap-2023-03-24-07h47m12s769-1920x1080-aa6b0dff5f3401e97bc8ed55bb94fa62.png",
+      "md5": "aa6b0dff5f3401e97bc8ed55bb94fa62",
+      "width": 1920,
+      "height": 1080,
+      "size": 1027546,
+      "uploadedDate": "2023-03-24T07:06:44.300Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/vlcsnap-2023-03-24-07h47m53s507-1920x1080-68871ef57c8717f5d6100809f28db1d9.png",
+      "md5": "68871ef57c8717f5d6100809f28db1d9",
+      "width": 1920,
+      "height": 1080,
+      "size": 2113702,
+      "uploadedDate": "2023-03-24T07:06:44.767Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/vlcsnap-2023-03-24-07h48m36s065-1920x1080-6d721d3b83b536e352edea0ccc6ecb8c.png",
+      "md5": "6d721d3b83b536e352edea0ccc6ecb8c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1863285,
+      "uploadedDate": "2023-03-24T07:06:45.377Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/vlcsnap-2023-03-24-07h49m41s496-1920x1080-0ff0b1ac73b5cf2425cd352047b4d3da.png",
+      "md5": "0ff0b1ac73b5cf2425cd352047b4d3da",
+      "width": 1920,
+      "height": 1080,
+      "size": 1866390,
+      "uploadedDate": "2023-03-24T07:06:46.555Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/vlcsnap-2023-03-24-07h50m13s132-1920x1080-e4d210166d77aaae947606569c40483f.png",
+      "md5": "e4d210166d77aaae947606569c40483f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1818042,
+      "uploadedDate": "2023-03-24T07:06:47.182Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/vlcsnap-2023-03-24-07h49m18s135-1920x1080-6ee28ceacbcb4f3c8753db37b4e3f9b2.png",
+      "md5": "6ee28ceacbcb4f3c8753db37b4e3f9b2",
+      "width": 1920,
+      "height": 1080,
+      "size": 1599079,
+      "uploadedDate": "2023-03-24T07:06:45.976Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/vlcsnap-2023-03-24-07h51m20s754-1920x1080-3097946c6280042c77b175ddf4382e3b.png",
+      "md5": "3097946c6280042c77b175ddf4382e3b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1377190,
+      "uploadedDate": "2023-03-24T07:06:47.783Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TopDownRogueLiteTemplate_thumb-284x284-14bfaea7dd62d05804ee9ae066b730dd.png",
+      "md5": "14bfaea7dd62d05804ee9ae066b730dd",
+      "width": 284,
+      "height": 284,
+      "size": 26482,
+      "uploadedDate": "2023-03-24T07:06:48.748Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TopDownRogueLiteTemplate_featured-894x488-b7a9cb43a1fe72707638809265695995.png",
+      "md5": "b7a9cb43a1fe72707638809265695995",
+      "width": 894,
+      "height": 488,
+      "size": 457275,
+      "uploadedDate": "2023-03-24T07:06:48.873Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/vlcsnap-2023-03-24-07h46m14s021-1920x1080-13cc8b1e0e0df3a25877552874b455fb_Snapshot.png",
+      "md5": "8922e9d4af288d4ca3dbbe0b3b5d32d9",
+      "width": 150,
+      "height": 74,
+      "size": 5382,
+      "uploadedDate": "2023-03-24T07:06:44.070Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/vlcsnap-2023-03-24-07h47m12s769-1920x1080-aa6b0dff5f3401e97bc8ed55bb94fa62_Snapshot.png",
+      "md5": "2372c05c897ff1dbbf7d56be437d2d2b",
+      "width": 150,
+      "height": 74,
+      "size": 4652,
+      "uploadedDate": "2023-03-24T07:06:44.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/vlcsnap-2023-03-24-07h47m53s507-1920x1080-68871ef57c8717f5d6100809f28db1d9_Snapshot.png",
+      "md5": "5b97cb8b71064d12a9ecc884d1aa36f5",
+      "width": 150,
+      "height": 74,
+      "size": 6333,
+      "uploadedDate": "2023-03-24T07:06:45.144Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/vlcsnap-2023-03-24-07h48m36s065-1920x1080-6d721d3b83b536e352edea0ccc6ecb8c_Snapshot.png",
+      "md5": "78bead39f399e08eb8eabbc9af21a8b9",
+      "width": 150,
+      "height": 74,
+      "size": 5322,
+      "uploadedDate": "2023-03-24T07:06:45.787Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/vlcsnap-2023-03-24-07h49m18s135-1920x1080-6ee28ceacbcb4f3c8753db37b4e3f9b2_Snapshot.png",
+      "md5": "153d8b8e51bf71a3173c302279669540",
+      "width": 150,
+      "height": 74,
+      "size": 6428,
+      "uploadedDate": "2023-03-24T07:06:46.320Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/vlcsnap-2023-03-24-07h49m41s496-1920x1080-0ff0b1ac73b5cf2425cd352047b4d3da_Snapshot.png",
+      "md5": "bf4e5c528eda8d56b7e4539c154419ee",
+      "width": 150,
+      "height": 74,
+      "size": 6672,
+      "uploadedDate": "2023-03-24T07:06:46.942Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/vlcsnap-2023-03-24-07h50m13s132-1920x1080-e4d210166d77aaae947606569c40483f_Snapshot.png",
+      "md5": "de0d29419b6f7bba6e2ab2dd9bccce1c",
+      "width": 150,
+      "height": 74,
+      "size": 6343,
+      "uploadedDate": "2023-03-24T07:06:47.548Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/vlcsnap-2023-03-24-07h51m20s754-1920x1080-3097946c6280042c77b175ddf4382e3b_Snapshot.png",
+      "md5": "b0959d3286b4a086eba03bb856789c96",
+      "width": 150,
+      "height": 74,
+      "size": 5761,
+      "uploadedDate": "2023-03-24T07:06:48.118Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00000-1920x1080-d59e2539c28b89eb5f8b0884b1e18fa1_Snapshot.png",
+      "md5": "aed1b87a6e7429c13f05a58f7caf395a",
+      "width": 150,
+      "height": 74,
+      "size": 3908,
+      "uploadedDate": "2023-03-24T07:06:48.651Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-03-27T08:54:51.930Z",
+  "lastModifiedDate": "2025-01-10T12:15:25.691Z",
+  "customAttributes": {},
+  "entitlementName": "f50cdc7cf9ab4bb89d4fbc7f2191693c",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "aa9008735b424ff092ec6ba34bebd7d5",
+      "appId": "TopDownRogueLite_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-03-24T00:00:00.000Z",
+      "releaseNote": "v0.4.0",
+      "versionTitle": "TDRL5.1"
+    },
+    {
+      "id": "da124aad051442b4b0292fb4df6ba824",
+      "appId": "TopDownRogueLite_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "v0.4.0",
+      "versionTitle": "TDRL5.2"
+    },
+    {
+      "id": "59f58715d0ec46d281452c4ce9679236",
+      "appId": "TopDownRogueLite_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "v0.4.0",
+      "versionTitle": "TDRL5.3"
+    },
+    {
+      "id": "181fe51841ec46a9932e6694ec78f444",
+      "appId": "TopDownRogueLite_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "v0.4.1",
+      "versionTitle": "TDRL5.4"
+    }
+  ],
+  "developer": "Klian",
+  "developerId": "o-206ff7e53b44d8ac9110db8d2b40d2",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

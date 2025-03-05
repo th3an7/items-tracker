@@ -1,0 +1,327 @@
+{
+  "id": "8bea299994c74accaf89f93b5485b2dd",
+  "title": "UberShader for Substrate: Material Pack",
+  "description": "The UberShader for Substrate Material Pack is modeled after the Arnold Standard Surface, and contains those same familiar controls, including base color, specular roughness, anisotropy, coat, sheen, thin-film, subsurface, bump, emission, and UV controls.",
+  "longDescription": "<h2>UberShader for Substrate: Material Pack</h2><p>Substrate (released as Experimental in 5.3) is a modular principled BRDF shader that will replace UE materials like Default Lit. The UberShader for Substrate Material Pack has been completely rebuilt for Substrate, taking advantage of its next-gen features to better emulate the Arnold Standard Surface, including specular color and IOR, a clear coat vertical layer, a full subsurface scattering implementation using mean free path (MFP) and phase anisotropy, sheen (fuzz), thin-film iridescence, stochastic flakes (glint), as well as familiar parameters from Mega Scans materials such as color corrections, and double roughness sliders from packed maps.</p><p><br /></p><p>IMPORTANT:</p><p>Substate must be enabled in the Project Settings. See the <a href=\"https://docs.unrealengine.com/5.3/en-US/overview-of-substrate-materials-in-unreal-engine/\" rel=\"nofollow\">Unreal Docs</a> for instructions.</p><p>Epic says of Substrate &#34;You can try out this Experimental feature, but we do not recommend shipping projects with it.&#34;</p><p><br /></p><p><br /></p><h2>Documentation</h2><p>Check out this video walk-through of the UberShader for Substrate Material Pack and all of its features:</p><h1><a href=\"https://youtu.be/UXEXoJhIAeE\" rel=\"nofollow\">UberShader for Substrate Video Walkthrough</a></h1><p><br /></p><h2><br /></h2><h2>Substrate Master Materials</h2><p>Five Substrate master materials are provided:</p><ul><li><strong>Uber Advanced Substrate (<em>M_UberAdv_sub)</em> - This is</strong> the main workhorse used to achieve a host of looks for opaque surfaces. It contains all of the parameters of an Arnold Standard Surface (see the parameter list in the Technical Details below), minus the Transmission section.</li><li><strong>Uber Advanced Substrate VT (<em>M_UberAdv_Sub_VT)</em> </strong>- Same as above, but with support for UDIM mapping,</li><li><strong>Uber Glass Substrate</strong> (<em>M_UberGlass_Sub) </em>- A Substrate glass material with rough refractions, tinted glass, and a vertical blend dirt layer.</li><li><strong>Uber Thin</strong> <strong>Substrate (<em>M_UberThin</em></strong><em>_Sub)</em><strong> </strong>- Substrate emulation of the Two-Sided Foliage<strong> </strong>material<strong> </strong>for thin-walled translucent objects such as plants and curtains.</li><li>Uber Layer <strong>Substrate (</strong><em>M_UberLayer_Sub)</em><strong> </strong>- Two UberShader Substrate slabs layered together with a horizontal blend driven by a packed map. This allows for separate control of the foreground and background material parameters.</li></ul><h2><br /></h2><h2><strong>Substrate Example Material Instances</strong></h2><p>All 27 example Material Instances from the original UberShader are included, each translated to Substrate. Additionally, 28 more have been added to demonstrate the new functionality of Substrate. These include examples with glint (snow, sand), thin-film iridescence (house fly, soap bubble), the layered shader (dry and wet dirt, metal and rust, snow and rock, and my favorite, cookie and chocolate chip! Check out the image gallery above for some eye candy.</p>",
+  "technicalDetails": "<p><strong><em>M_UberAdv_sub</em>: Substrate Material Parameters (see image gallery for full parameters, and above video link for walk-through):</strong></p><ul><li><strong>Base Color </strong></li><li><strong>Metalness </strong></li><li><strong>Color Corrections </strong></li><li>Subsurface (MFP color, radius, scale, phase)</li><li><strong>Bump</strong></li><li><strong>Emission</strong></li><li><strong>Sheen</strong> (fuzz and two-tone)</li><li><strong>Specular (with color and IOR)</strong></li><li><strong>Anisotropic (with rotation &amp; tangent mapping)</strong></li><li><strong>Coat (with color and IOR)</strong></li><li>Stochastic Flakes (Glint)</li><li>Thin Film Iridescence</li><li><strong>UV Control</strong>s (Optional separate UV controls for each<em> </em>Map)</li></ul><p><br /></p><p><strong>Additional Special Purpose Master Material Features</strong></p><ul><li><strong><em>M_UberAdv_Sub_VT</em></strong> - The Uber Shader, but with streaming virtual texture (SVT) support for UDIM multi-region texture maps.</li><li><em>M_UberLayer_Sub</em> - Two Substrate UberShader slabs combined with a horizontal mix.</li><li><strong><em>M_UberThin</em></strong><em>_Sub</em> - Substrate emulation of Two-Sided Foliage<strong> </strong>material<strong> </strong>for translucent plants.</li><li><em>M_UberGlass_Sub</em><strong><em> </em></strong>- A Substrate glass material with rough refractions, tinted glass, and dirt layer</li></ul><p>Number of Unique Materials: 5</p><p>Number of Unique Material Instances: 55</p><p>Number of Textures: 48</p><p>Texture Resolutions: 2048x2048, 1024x1024, 512x512, 256x256, 64x64, 1x1. </p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Yes (not tested)</p><p>Documentation: See the video tutorial link above</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/exampleTri1-1920x1080-8789c35cd16ce0f1c34fb613d08bc1ac.jpg",
+      "md5": "8789c35cd16ce0f1c34fb613d08bc1ac",
+      "width": 1920,
+      "height": 1080,
+      "size": 508022,
+      "uploadedDate": "2023-11-27T01:34:35.651Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/exampleTri2-1920x1080-5468bf18ff6de7a8e5ee1efdc779366d.jpg",
+      "md5": "5468bf18ff6de7a8e5ee1efdc779366d",
+      "width": 1920,
+      "height": 1080,
+      "size": 613624,
+      "uploadedDate": "2023-11-27T01:34:36.013Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/exampleTri3-1920x1080-2e33721022d5a529ae5235ef2c9eec5d.jpg",
+      "md5": "2e33721022d5a529ae5235ef2c9eec5d",
+      "width": 1920,
+      "height": 1080,
+      "size": 531277,
+      "uploadedDate": "2023-11-27T01:34:36.388Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/exampleTri4-1920x1080-0d0bf647d78a74cea5a56c1bedb0e040.jpg",
+      "md5": "0d0bf647d78a74cea5a56c1bedb0e040",
+      "width": 1920,
+      "height": 1080,
+      "size": 490571,
+      "uploadedDate": "2023-11-27T01:34:36.756Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/exampleTri5-1920x1080-e1a8916476020a7f1d00c67d4862ed71.jpg",
+      "md5": "e1a8916476020a7f1d00c67d4862ed71",
+      "width": 1920,
+      "height": 1080,
+      "size": 491713,
+      "uploadedDate": "2023-11-27T01:34:37.121Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/exampleTri6-1920x1080-6653dd408ea896acb8bbc9c30174caeb.jpg",
+      "md5": "6653dd408ea896acb8bbc9c30174caeb",
+      "width": 1920,
+      "height": 1080,
+      "size": 529050,
+      "uploadedDate": "2023-11-27T01:34:37.444Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/exampleTri7-1920x1080-58105925a38df8959cd2b9fa8f99b241.jpg",
+      "md5": "58105925a38df8959cd2b9fa8f99b241",
+      "width": 1920,
+      "height": 1080,
+      "size": 540500,
+      "uploadedDate": "2023-11-27T01:34:37.851Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/exampleTri8-1920x1080-6115495efa884e42fcb582815f65481c.jpg",
+      "md5": "6115495efa884e42fcb582815f65481c",
+      "width": 1920,
+      "height": 1080,
+      "size": 544980,
+      "uploadedDate": "2023-11-27T01:34:38.171Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/exampleTri9-1920x1080-b8453aacc706a466351a4f9fad20433b.jpg",
+      "md5": "b8453aacc706a466351a4f9fad20433b",
+      "width": 1920,
+      "height": 1080,
+      "size": 478815,
+      "uploadedDate": "2023-11-27T01:34:38.490Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UberExamplessub-1920x1080-d5f3d8d29ca984e6065ba0691807b85a.jpg",
+      "md5": "d5f3d8d29ca984e6065ba0691807b85a",
+      "width": 1920,
+      "height": 1080,
+      "size": 630025,
+      "uploadedDate": "2024-01-04T23:38:26.939Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Uber2.0instanceParametersv2-1920x1080-0901a36492ad70e214740803d174d83e.png",
+      "md5": "0901a36492ad70e214740803d174d83e",
+      "width": 1920,
+      "height": 1080,
+      "size": 279127,
+      "uploadedDate": "2024-01-04T23:38:27.354Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/UberShaderforSubstrateMaterialPack_thumb-284x284-ed17845152d447a263bc28a1fd528bc0.png",
+      "md5": "ed17845152d447a263bc28a1fd528bc0",
+      "width": 284,
+      "height": 284,
+      "size": 176197,
+      "uploadedDate": "2023-12-27T23:03:18.123Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/UberShaderforSubstrateMaterialPack_featured-894x488-d1b22fd96c8fca9c8add44169b3ce7e5.png",
+      "md5": "d1b22fd96c8fca9c8add44169b3ce7e5",
+      "width": 894,
+      "height": 488,
+      "size": 947304,
+      "uploadedDate": "2023-12-27T23:03:18.238Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UberExamplessub-1920x1080-d5f3d8d29ca984e6065ba0691807b85a_Snapshot.jpg",
+      "md5": "c201cd01670cb0be109273742350f69b",
+      "width": 150,
+      "height": 74,
+      "size": 8970,
+      "uploadedDate": "2024-01-04T23:38:27.195Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Uber2.0instanceParametersv2-1920x1080-0901a36492ad70e214740803d174d83e_Snapshot.png",
+      "md5": "c187872511c71873df505e57879bfacd",
+      "width": 150,
+      "height": 74,
+      "size": 3888,
+      "uploadedDate": "2024-01-04T23:38:27.618Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UberExamplessub-1920x1080-d5f3d8d29ca984e6065ba0691807b85a_Snapshot.jpg",
+      "md5": "c201cd01670cb0be109273742350f69b",
+      "width": 150,
+      "height": 74,
+      "size": 8970,
+      "uploadedDate": "2023-11-27T01:34:35.021Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Uber2.0instanceParameters-1920x1080-ad2d920c1de631c62680a26557b670aa_Snapshot.png",
+      "md5": "a3ecff06d0f13bec234554a302edbd64",
+      "width": 150,
+      "height": 74,
+      "size": 3710,
+      "uploadedDate": "2023-11-27T01:34:35.379Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/exampleTri1-1920x1080-8789c35cd16ce0f1c34fb613d08bc1ac_Snapshot.jpg",
+      "md5": "217de1072de2a3f73d450fc5ca9da65b",
+      "width": 150,
+      "height": 74,
+      "size": 8373,
+      "uploadedDate": "2023-11-27T01:34:35.881Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/exampleTri2-1920x1080-5468bf18ff6de7a8e5ee1efdc779366d_Snapshot.jpg",
+      "md5": "2bd4b3a5dd9c50d42d17a50b63733ae5",
+      "width": 150,
+      "height": 74,
+      "size": 8586,
+      "uploadedDate": "2023-11-27T01:34:36.219Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/exampleTri3-1920x1080-2e33721022d5a529ae5235ef2c9eec5d_Snapshot.jpg",
+      "md5": "93dbf0ba3638cb8fc6ba01753b66368e",
+      "width": 150,
+      "height": 74,
+      "size": 7956,
+      "uploadedDate": "2023-11-27T01:34:36.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/exampleTri4-1920x1080-0d0bf647d78a74cea5a56c1bedb0e040_Snapshot.jpg",
+      "md5": "70804b5146372935ebf19e0ef5730795",
+      "width": 150,
+      "height": 74,
+      "size": 7660,
+      "uploadedDate": "2023-11-27T01:34:36.940Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/exampleTri5-1920x1080-e1a8916476020a7f1d00c67d4862ed71_Snapshot.jpg",
+      "md5": "36f5373b814c0ef53392c1b88621271c",
+      "width": 150,
+      "height": 74,
+      "size": 7681,
+      "uploadedDate": "2023-11-27T01:34:37.299Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/exampleTri6-1920x1080-6653dd408ea896acb8bbc9c30174caeb_Snapshot.jpg",
+      "md5": "f855c75e54e8e71a10cbb1c41c290d5e",
+      "width": 150,
+      "height": 74,
+      "size": 8288,
+      "uploadedDate": "2023-11-27T01:34:37.728Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/exampleTri7-1920x1080-58105925a38df8959cd2b9fa8f99b241_Snapshot.jpg",
+      "md5": "c226a2be9fe42122db744d52712831ba",
+      "width": 150,
+      "height": 74,
+      "size": 7927,
+      "uploadedDate": "2023-11-27T01:34:38.025Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/exampleTri8-1920x1080-6115495efa884e42fcb582815f65481c_Snapshot.jpg",
+      "md5": "e40ed7435651dd4c9c0b9ef864d466ef",
+      "width": 150,
+      "height": 74,
+      "size": 8261,
+      "uploadedDate": "2023-11-27T01:34:38.364Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/exampleTri9-1920x1080-b8453aacc706a466351a4f9fad20433b_Snapshot.jpg",
+      "md5": "8e4ac838a9a980dfeb89932a5114e201",
+      "width": 150,
+      "height": 74,
+      "size": 8001,
+      "uploadedDate": "2023-11-27T01:34:38.732Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UberExamplessub-1920x1080-d5f3d8d29ca984e6065ba0691807b85a_Snapshot.jpg",
+      "md5": "c201cd01670cb0be109273742350f69b",
+      "width": 150,
+      "height": 74,
+      "size": 8970,
+      "uploadedDate": "2023-11-27T00:32:24.351Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Uber2.0GlassinstanceParameters-1920x1080-b43387ed175bdd9156b72482d6195d3c_Snapshot.png",
+      "md5": "beec7ce4c9a3a0df24e077c697420834",
+      "width": 150,
+      "height": 74,
+      "size": 3870,
+      "uploadedDate": "2023-11-27T00:32:24.705Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Uber2.0instanceParameters-1920x1080-ad2d920c1de631c62680a26557b670aa_Snapshot.png",
+      "md5": "a3ecff06d0f13bec234554a302edbd64",
+      "width": 150,
+      "height": 74,
+      "size": 3710,
+      "uploadedDate": "2023-11-27T00:32:25.093Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Uber2.0LyrinstanceParameters-1920x1080-db17841789a4f3ae7b0ed10b6aa3ba9d_Snapshot.png",
+      "md5": "ed5ec5c07ecb0bc5a0c5e876d24dec78",
+      "width": 150,
+      "height": 74,
+      "size": 3862,
+      "uploadedDate": "2023-11-27T00:32:25.478Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Uber2.0ThininstanceParameters-1920x1080-e35c639465ac3af5a2796e80ec93e32e_Snapshot.png",
+      "md5": "e98774e1c9b48aa9f0b3442b61a0cb24",
+      "width": 150,
+      "height": 74,
+      "size": 2849,
+      "uploadedDate": "2023-11-27T00:32:25.835Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/materials"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-01-01T17:13:38.081Z",
+  "lastModifiedDate": "2024-11-21T03:58:25.734Z",
+  "customAttributes": {},
+  "entitlementName": "8bea299994c74accaf89f93b5485b2dd",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "460ad85d2acf46b6b34a8acd4e3821ad",
+      "appId": "UberShad8bea299994c7V1",
+      "compatibleApps": [
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2023-11-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Uber for Substrate Mtl Pack"
+    }
+  ],
+  "developer": "sharktacos",
+  "developerId": "o-8ry7bvchuwzu2x9ej2288d4vj83sbs",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

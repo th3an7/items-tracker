@@ -1,0 +1,256 @@
+{
+  "id": "4827a4097eed4c0aaf33800229f3949f",
+  "title": "Enhanced Melee Trace",
+  "description": "Prevent melee collision misses with one node that utilizes traces to handle fast attacks and low FPS situations.",
+  "longDescription": "<p>Using Colliders for melee weapons can be less accurate than needed as they are framerate dependent, resulting in possible missed hits, and does not provide Hit Results, reducing the amount of information given from a collision.</p><p>Traces provide Hit Results but can also be also be framerate dependent and don&#39;t change size or rotation between their start and end position.</p><p><br /></p><p>This pack provides a single, easy to use, blueprint node that &#34;sweeps&#34; the trace over the distance covered in a frame making it easy to detect any possible missed collisions between frames. During the sweep any size and rotation changes from the start to the end are handled using interpolation, as well as a calculation of the necessary amount of traces needed to cover the distance to prevent overuse of checks. </p><p><br /></p><p>This was made with melee combat in mind to handle situations where colliders or normal traces would potentially skip over a hit. This can occur at low frame rates and/or fast moving melee attacks where the distance a weapon travels in one frame is larger than its collision size resulting in teleporting through objects.</p><p><br /></p><p>A demo map is included to demonstrate how these BP nodes works and how to use them. Examples are set up to show how it works in one frame and how it looks in motion, with adjustable FPS limits to better show what is happening.</p><p><br /></p><p>A set up with an example weapon is also included that shows a likely situation where one character attacks another and the hit character reacts to the hit by using physics animation to flinch and particles are played. This is done using the system and a set up of interfaces that lay the groundwork for a melee system by providing communication between the weapon, its owner, and the hit object.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Per-Frame Interpolated Traces</li><li>Supports Line, Box, Sphere, and Capsule Traces (single and multi trace versions)</li><li>Automatic Trace Count Calculation</li><li>Adjusts number of traces performed to only what is needed based on distance</li><li>Example map showing how the system works and how to use it</li><li>Includes mesh accurate collision checks, physical animation hit reactions, and spawning particles</li><li>Basic weapon interface system for communication between weapons, the weapon owner, and objects hit by the weapon</li><li>Example weapons showing interfaces and trace system in use</li></ul><p><br /></p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Yes</p><p>Documentation: See Enhanced Melee Trace Demo Map/Comments in BPs</p><p>Important/Additional Notes: Core Files in &#34;Melee Trace&#34; folder. All other folders are for examples.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-09-28 153721-1920x1080-527422fbc6a8b1b26cdb359000835a00.png",
+      "md5": "527422fbc6a8b1b26cdb359000835a00",
+      "width": 1920,
+      "height": 1080,
+      "size": 1684093,
+      "uploadedDate": "2024-09-30T00:05:06.857Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-09-28 153507-1920x1080-f1e5f2f0cae18b7f2d69a7f2cffa5e7e.png",
+      "md5": "f1e5f2f0cae18b7f2d69a7f2cffa5e7e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1681786,
+      "uploadedDate": "2024-09-30T00:05:07.610Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-09-28 153254-1920x1080-3067a1fb5dd5ce15495dbaa14950a125.png",
+      "md5": "3067a1fb5dd5ce15495dbaa14950a125",
+      "width": 1920,
+      "height": 1080,
+      "size": 1550799,
+      "uploadedDate": "2024-09-30T00:05:08.122Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-09-28 153337-1920x1080-6f8b48fa8cb67e1d84c2c3aa8f1321c8.png",
+      "md5": "6f8b48fa8cb67e1d84c2c3aa8f1321c8",
+      "width": 1920,
+      "height": 1080,
+      "size": 1592026,
+      "uploadedDate": "2024-09-30T00:05:08.675Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-09-28 000851-1920x1080-83b2b3656fab7c69566b470fd9c826d2.png",
+      "md5": "83b2b3656fab7c69566b470fd9c826d2",
+      "width": 1920,
+      "height": 1080,
+      "size": 315652,
+      "uploadedDate": "2024-09-30T00:05:09.255Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-09-29 145641-1920x1080-5fcbfe0df1728a7f3311b9886e8c25b8.png",
+      "md5": "5fcbfe0df1728a7f3311b9886e8c25b8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2458267,
+      "uploadedDate": "2024-09-30T00:05:09.737Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-09-28 000008-1920x1080-31d179f158177f9f82e7a309c8a1a172.png",
+      "md5": "31d179f158177f9f82e7a309c8a1a172",
+      "width": 1920,
+      "height": 1080,
+      "size": 2260925,
+      "uploadedDate": "2024-09-30T00:05:10.309Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-09-28 001407-1920x1080-1c09b20cb2054fd78a422f2d5a5eb142.png",
+      "md5": "1c09b20cb2054fd78a422f2d5a5eb142",
+      "width": 1920,
+      "height": 1080,
+      "size": 1656010,
+      "uploadedDate": "2024-09-30T00:05:10.889Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-09-28 000514-1920x1080-97d355a065a343c3bef86eee2eb0ff2a.png",
+      "md5": "97d355a065a343c3bef86eee2eb0ff2a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1447226,
+      "uploadedDate": "2024-09-30T00:05:11.494Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-09-27 235747-1920x1080-a913c0d50f9ac46c6299a7a5494c4cb9.png",
+      "md5": "a913c0d50f9ac46c6299a7a5494c4cb9",
+      "width": 1920,
+      "height": 1080,
+      "size": 2523045,
+      "uploadedDate": "2024-09-30T00:05:12.018Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/EnhancedMeleeTrace_thumb-284x284-cedfb567a9992919a7d5e2fa1df1ae4f.png",
+      "md5": "cedfb567a9992919a7d5e2fa1df1ae4f",
+      "width": 284,
+      "height": 284,
+      "size": 147505,
+      "uploadedDate": "2024-09-30T00:05:12.486Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/EnhancedMeleeTrace_featured-894x488-1769d3ede7248b76c1eed5e64aa6b0ef.png",
+      "md5": "1769d3ede7248b76c1eed5e64aa6b0ef",
+      "width": 894,
+      "height": 488,
+      "size": 595705,
+      "uploadedDate": "2024-09-30T00:05:12.633Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-09-28 153721-1920x1080-527422fbc6a8b1b26cdb359000835a00_Snapshot.png",
+      "md5": "bce7d794610527bccef36f147930ac09",
+      "width": 150,
+      "height": 74,
+      "size": 6397,
+      "uploadedDate": "2024-09-30T00:05:07.449Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-09-28 153507-1920x1080-f1e5f2f0cae18b7f2d69a7f2cffa5e7e_Snapshot.png",
+      "md5": "11c6b9f1b17afb1992b4e5a2a1fc85cf",
+      "width": 150,
+      "height": 74,
+      "size": 6425,
+      "uploadedDate": "2024-09-30T00:05:07.927Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-09-28 153254-1920x1080-3067a1fb5dd5ce15495dbaa14950a125_Snapshot.png",
+      "md5": "d128e51a0e306b8771c377f507621b0d",
+      "width": 150,
+      "height": 74,
+      "size": 6225,
+      "uploadedDate": "2024-09-30T00:05:08.442Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-09-28 153337-1920x1080-6f8b48fa8cb67e1d84c2c3aa8f1321c8_Snapshot.png",
+      "md5": "054636372a52753fda536b0ff9017d40",
+      "width": 150,
+      "height": 74,
+      "size": 6230,
+      "uploadedDate": "2024-09-30T00:05:08.979Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-09-28 000851-1920x1080-83b2b3656fab7c69566b470fd9c826d2_Snapshot.png",
+      "md5": "75c2d6bf7a8454cebc0199dd53968f07",
+      "width": 150,
+      "height": 74,
+      "size": 4600,
+      "uploadedDate": "2024-09-30T00:05:09.502Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-09-29 145641-1920x1080-5fcbfe0df1728a7f3311b9886e8c25b8_Snapshot.png",
+      "md5": "d6b022dea799c8382812290c61dac317",
+      "width": 150,
+      "height": 74,
+      "size": 6361,
+      "uploadedDate": "2024-09-30T00:05:10.122Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-09-28 000008-1920x1080-31d179f158177f9f82e7a309c8a1a172_Snapshot.png",
+      "md5": "ccf0866bf056f8fefcd2c7300d6426ba",
+      "width": 150,
+      "height": 74,
+      "size": 5786,
+      "uploadedDate": "2024-09-30T00:05:10.646Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-09-28 001407-1920x1080-1c09b20cb2054fd78a422f2d5a5eb142_Snapshot.png",
+      "md5": "c62a990cf2bd9c32b8e66358ecc293ad",
+      "width": 150,
+      "height": 74,
+      "size": 6734,
+      "uploadedDate": "2024-09-30T00:05:11.201Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-09-28 000514-1920x1080-97d355a065a343c3bef86eee2eb0ff2a_Snapshot.png",
+      "md5": "8617b1dd79793a9745f6cb8083e5de0a",
+      "width": 150,
+      "height": 74,
+      "size": 5593,
+      "uploadedDate": "2024-09-30T00:05:11.819Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-09-27 235747-1920x1080-a913c0d50f9ac46c6299a7a5494c4cb9_Snapshot.png",
+      "md5": "61912277bbb95ccd332d64c0fcee6926",
+      "width": 150,
+      "height": 74,
+      "size": 5822,
+      "uploadedDate": "2024-09-30T00:05:12.397Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-10-02T00:41:10.502Z",
+  "lastModifiedDate": "2024-10-04T14:50:35.672Z",
+  "customAttributes": {},
+  "entitlementName": "4827a4097eed4c0aaf33800229f3949f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "570b39826cc045f2a79dcd6f31935361",
+      "appId": "Enhanced4827a4097eedV1",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-09-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "PantheraDigital",
+  "developerId": "o-27w399k8txd8e44bmjp2qvlux6af59",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

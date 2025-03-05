@@ -1,0 +1,290 @@
+{
+  "id": "f5611ca2121e45a8b86aac4ee9083eb2",
+  "title": "Realistic Vehicle AI",
+  "description": "A realistic, flexible and extendable vehicle driving plugin based on cascaded PID.",
+  "longDescription": "<p>Change Log (see <a href=\"https://drive.google.com/file/d/1bHc4AUgxHemFD8RbFfloS3157fwerVJp/view?usp&#61;sharing\" rel=\"nofollow\">manual </a>&#39;s chapter 5 for details)</p><p>Update 1.1 New feature: Customize Driving Direction When Guided by UE Navigation System</p><p><br /></p><p>---</p><p><br /></p><p>The Realistic Vehicle AI plugin provides a PID(Proportional band, integral and derivative)-based driving solution.</p><p><br /></p><p><a href=\"https://youtu.be/VNYzdtBqaO4?si&#61;xNiEtlusK8SlQxiS\" rel=\"nofollow\">Here</a> is a showcase video. A playable win64 demo can be downloaded <a href=\"https://drive.google.com/file/d/1-79VbTSfwlz5NGGTq0UUFpibwCOz6eIM/view?usp&#61;sharing\" rel=\"nofollow\">Here</a>. For more details, you can read the <a href=\"https://drive.google.com/file/d/1bHc4AUgxHemFD8RbFfloS3157fwerVJp/view?usp&#61;sharing\" rel=\"nofollow\">manual </a>.</p><p><br /></p><p>This plugin is good for car racing games. It has a track-planning actor which can generate racing-line based on various standards. It works well on unflatten roads and be used for rally races. Its cascaded PID system provides a flexible and agile control interface. It can drive vehicles to run on racing-lines, overtake opponent vehicles, and try to avoid collisions. You can do more advanced control, like slowing down leading vehicles to create more overtaking opportunities to make the race more interesting. It controls vehicles only through throttle, brake, steer and handbrake, just same as human players. No data cheating will be done. You can use it as a coach to train human players, or as a data generator to do an initial training for deep-learning neural networks.</p><p><br /></p><p>Besides for car racing games, this plugin also has features for more general proposes. It is compatible with the UE navigation system, so vehicles can be driven to go to a location or follow an actor under navigation system guidance. Vehicles can also patrol by following a list of pre-set locations, or directly follow a target based on location.</p><p><br /></p><p>This plugin is easy to be extented. As the cascaded PID system provides a flexible control interface, many different work modes (or &#34;strategy&#34;) can be implemented above it. We will add new work modes if they are widely needed. You can write your own customized &#34;strategy&#34; by overriding the CustomStrategy function. We hope this plugin could be your one-stop solution for all driving vehicle needs.</p><p><br /></p><p>All logics is implemented in C&#43;&#43; and well-optimized. It has been tested for Win64, Android, MacOS, IOS and Linux. It should work on all platforms, since no platform-specified API is used. Its source code has a loose relationship with the physics engine, and can easily be used for non-chaos vehicles. The plugin has a clear architecture and many data visualization mechanisms, which are helpful for deep customization and secondary development.</p><p><br /></p><p>You do not need to write C&#43;&#43; code to use this plugin. The integration steps are automatized; tracks and racing-lines can be generated from landscape splines or spline components with a few clicks. To integrate to physically customized vehicles, you need to have some basic knowledge about PID tuning.</p><p><br /></p><p>Support: dragonlisoftwarelimited&#64;outlook.com or directly ask questions here.</p><p><em>All support requests are promised to be replied within 24 hours. Suggestions and feedbacks are also welcomed.&#xfeff;</em></p>",
+  "technicalDetails": "<p>Features:</p><ul><li> optimize racing-line for short-distance/minimum-curvature/customized-standard</li><li> overtake opponents and try to avoid collision</li><li>flexible and agile control vehicle speed and lateral offset; can dynamically and continuously change difficulties to make races more exciting</li><li>flexible pause and restart, can be used to train human players</li><li>support unflatten road and rally races</li><li>drive according to UE navigation system</li><li>automatically patrol through a list of locations</li><li>UI for data visualization and editing</li><li>A out-of-box mini-map</li></ul><p>Code Modules:</p><ul><li>DlRealisticVehicleAi (runtime)</li><li>DlMap (runtime)</li><li>DlParallel (runtime)</li><li>DlRealtimeLineChart (runtime)</li><li>DlSharedLib (runtime)</li><li>DlRealmTemplate (editor)</li></ul><p>Number of Blueprints: 98 uasset, with extra 146 uasset for demo.</p><p>Number of C&#43;&#43; Classes: 88 UClass, 104 UStruct, 28 UEnum</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: It has been tested for Win64, Android, MacOS, IOS and Linux. It should work on all platforms.</p><p>Documentation: <a href=\"https://drive.google.com/file/d/1bHc4AUgxHemFD8RbFfloS3157fwerVJp/view?usp&#61;sharing\" rel=\"nofollow\">Manual</a></p><p>Example Project: Examples are shipped together with the plugin in &#34;/DlRealisticVehicleAi/Demo/Level/&#34;. See Manual &#34;Appendix-2 Compile the Demo&#34; for more details.</p><p>Additional Notes: This plugin cannot be used together with our &#34;Real-time Line Chart&#34;, because it already contains DlRealtimeLineChart for data visualization. A compile error will happen if the two plugins appear in one project.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/p1-1920x1080-df239642ce2851562902aef96d7b6256.png",
+      "md5": "df239642ce2851562902aef96d7b6256",
+      "width": 1920,
+      "height": 1080,
+      "size": 2725214,
+      "uploadedDate": "2023-12-16T16:45:25.608Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/p10-1920x1080-e13454a963c12ba9ac5a3d0c07654e81.png",
+      "md5": "e13454a963c12ba9ac5a3d0c07654e81",
+      "width": 1920,
+      "height": 1080,
+      "size": 2708528,
+      "uploadedDate": "2023-12-16T16:51:55.278Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/p7-1920x1080-70d4fb2b885bf9d892cdb06dd303a8c2.png",
+      "md5": "70d4fb2b885bf9d892cdb06dd303a8c2",
+      "width": 1920,
+      "height": 1080,
+      "size": 3137617,
+      "uploadedDate": "2023-12-16T16:51:55.849Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/p8-1920x1080-4772197058ec79740f39b941e5d92472.png",
+      "md5": "4772197058ec79740f39b941e5d92472",
+      "width": 1920,
+      "height": 1080,
+      "size": 2717749,
+      "uploadedDate": "2023-12-16T16:45:26.288Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/p4-1920x1080-15f6282e502fa3b7b1ec4a4d72323ea7.png",
+      "md5": "15f6282e502fa3b7b1ec4a4d72323ea7",
+      "width": 1920,
+      "height": 1080,
+      "size": 2970065,
+      "uploadedDate": "2023-12-16T16:51:56.538Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/p5-1920x1080-d28d840f27674e28a588d3f5e96fed4a.png",
+      "md5": "d28d840f27674e28a588d3f5e96fed4a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2830509,
+      "uploadedDate": "2023-12-16T16:51:57.080Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/p2-1920x1080-b66d2f0eb98f2106369bbc29c566dab7.png",
+      "md5": "b66d2f0eb98f2106369bbc29c566dab7",
+      "width": 1920,
+      "height": 1080,
+      "size": 2698106,
+      "uploadedDate": "2023-12-16T16:45:24.395Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/p3-1920x1080-8c693352634801145ec18d1a65a760ba.png",
+      "md5": "8c693352634801145ec18d1a65a760ba",
+      "width": 1920,
+      "height": 1080,
+      "size": 2617987,
+      "uploadedDate": "2023-12-16T16:45:24.975Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Planning-1920x1080-915a709a014a8d08348864dd5713bf76.jpg",
+      "md5": "915a709a014a8d08348864dd5713bf76",
+      "width": 1920,
+      "height": 1080,
+      "size": 775247,
+      "uploadedDate": "2023-12-16T16:51:57.622Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Arch-1920x1080-660ea22c4d6e5196600763973b0cbc2a.png",
+      "md5": "660ea22c4d6e5196600763973b0cbc2a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1459957,
+      "uploadedDate": "2023-12-16T16:45:23.725Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RealisticVehicleAI_thumb-284x284-f1816802821f67d35204f99b163c6a71.png",
+      "md5": "f1816802821f67d35204f99b163c6a71",
+      "width": 284,
+      "height": 284,
+      "size": 114040,
+      "uploadedDate": "2023-12-16T00:24:12.332Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RealisticVehicleAI_featured-894x488-355bb4aa7a9ffe6f77be74ed12e92e59.png",
+      "md5": "355bb4aa7a9ffe6f77be74ed12e92e59",
+      "width": 894,
+      "height": 488,
+      "size": 482883,
+      "uploadedDate": "2023-12-16T00:24:12.491Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/p10-1920x1080-e13454a963c12ba9ac5a3d0c07654e81_Snapshot.png",
+      "md5": "631dbf4aa3f9772d0cd43c7618b30a67",
+      "width": 150,
+      "height": 74,
+      "size": 5640,
+      "uploadedDate": "2023-12-16T16:51:55.636Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/p7-1920x1080-70d4fb2b885bf9d892cdb06dd303a8c2_Snapshot.png",
+      "md5": "87dc0afaf6716fb57d26424f0059e074",
+      "width": 150,
+      "height": 74,
+      "size": 6588,
+      "uploadedDate": "2023-12-16T16:51:56.256Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/p4-1920x1080-15f6282e502fa3b7b1ec4a4d72323ea7_Snapshot.png",
+      "md5": "8ec61ce3df23b783dcb25eaa0b0d72ba",
+      "width": 150,
+      "height": 74,
+      "size": 2593,
+      "uploadedDate": "2023-12-16T16:51:56.923Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/p5-1920x1080-d28d840f27674e28a588d3f5e96fed4a_Snapshot.png",
+      "md5": "c46345b498395acc58e93923ad0330fc",
+      "width": 150,
+      "height": 74,
+      "size": 3423,
+      "uploadedDate": "2023-12-16T16:51:57.441Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Planning-1920x1080-915a709a014a8d08348864dd5713bf76_Snapshot.jpg",
+      "md5": "b328a8e857e11b944e61ce0f3b83b052",
+      "width": 150,
+      "height": 74,
+      "size": 6951,
+      "uploadedDate": "2023-12-16T16:51:57.948Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Arch-1920x1080-660ea22c4d6e5196600763973b0cbc2a_Snapshot.png",
+      "md5": "f97b8a7515699ebdd594bc990783592d",
+      "width": 150,
+      "height": 74,
+      "size": 7365,
+      "uploadedDate": "2023-12-16T16:45:24.111Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/p2-1920x1080-b66d2f0eb98f2106369bbc29c566dab7_Snapshot.png",
+      "md5": "74b716e8d3ba75795dbfe73848750060",
+      "width": 150,
+      "height": 74,
+      "size": 6495,
+      "uploadedDate": "2023-12-16T16:45:24.779Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/p3-1920x1080-8c693352634801145ec18d1a65a760ba_Snapshot.png",
+      "md5": "06413ed1a3b4e025a24df207ce901a70",
+      "width": 150,
+      "height": 74,
+      "size": 6620,
+      "uploadedDate": "2023-12-16T16:45:25.345Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/p1-1920x1080-df239642ce2851562902aef96d7b6256_Snapshot.png",
+      "md5": "f49c88747701da6bd4c66c7f314d2e94",
+      "width": 150,
+      "height": 74,
+      "size": 5907,
+      "uploadedDate": "2023-12-16T16:45:26.046Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/p8-1920x1080-4772197058ec79740f39b941e5d92472_Snapshot.png",
+      "md5": "d837add088785519c824a8bbfef8ce65",
+      "width": 150,
+      "height": 74,
+      "size": 6378,
+      "uploadedDate": "2023-12-16T16:45:26.655Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RvaUp1-1920x1080-7783aa760225484da93956aaee63c2a0_Snapshot.jpg",
+      "md5": "22da5b1785cf4c6d44a8d6306e79f4ee",
+      "width": 150,
+      "height": 74,
+      "size": 6091,
+      "uploadedDate": "2023-12-16T00:24:12.287Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-12-31T22:22:38.955Z",
+  "lastModifiedDate": "2025-01-08T07:56:24.866Z",
+  "customAttributes": {},
+  "entitlementName": "f5611ca2121e45a8b86aac4ee9083eb2",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "ba1582cd642f4472a3cbfa72376f6b90",
+      "appId": "RealisticVehicleAI_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2023-12-17T00:00:00.000Z",
+      "releaseNote": "Password for unzip:\nX/HZo3OPfW91kSXrPTr6znHHlFlGQcrcCRdH0k8sizI=",
+      "versionTitle": "DlRva5.2"
+    },
+    {
+      "id": "31f437d282b949ef8ca006a62deeb3b4",
+      "appId": "RealisticVehicleAI_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2023-12-16T00:00:00.000Z",
+      "releaseNote": "Password for unzip:\nX/HZo3OPfW91kSXrPTr6znHHlFlGQcrcCRdH0k8sizI=",
+      "versionTitle": "DlRva5.3"
+    },
+    {
+      "id": "8d54fa7d0e3c47579470841f951eec2e",
+      "appId": "RealisticVehicleAI_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2024-06-02T00:00:00.000Z",
+      "releaseNote": "Password for unzip:\nRzQciy0UfXQ6kY5BniBHryQtf8DnMPLt6jwDj9D9MKc=",
+      "versionTitle": "DlRva5.4"
+    }
+  ],
+  "developer": "Dragon Li Software Ltd.",
+  "developerId": "o-edktbba55s76lfjx8nfrnve4sdcqxh",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

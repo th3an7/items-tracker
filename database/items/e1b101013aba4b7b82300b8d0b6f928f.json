@@ -1,0 +1,201 @@
+{
+  "id": "e1b101013aba4b7b82300b8d0b6f928f",
+  "title": "Dynamic Datatable - Data Table Runtime Replacement",
+  "description": "Dynamic Datatable is a full Data Table replacement, allowing you to edit freely at runtime and even combine existing tables. It can Export and Import as CSV. You can simply add an existing Data Table to a dynamic one, so there's minimal change in workflow",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;KMevF0whPYo\" rel=\"nofollow\">[Demo Video Link]</a></p><p><strong>Discord</strong> - <a href=\"https://discord.gg/E7U8BC4h4y\" rel=\"nofollow\">https://discord.gg/E7U8BC4h4y</a></p><p>Dynamic Datatable is a full Data Table replacement blueprint library, allowing you to edit freely at runtime and even combine existing tables. It can Export and Import as CSV. You can simply add an existing Data Table to a dynamic one, so there&#39;s minimal change in workflow. Blueprint functions written in C&#43;&#43;, full source included (source code is undocumented).</p><p><br /></p><p><strong>NEW</strong></p><ul><li>now over 60 functions in total, new ones feature math evaluation, reinterpreting structs, caching, diff&#39;ing tables, adding all tables from a composite Data Table, a basic table editor, and async nodes. Each of these features have been tested. (written on feb 21, 2023)</li></ul><p><br /></p><p><strong>Use any Struct</strong></p><p>You can use any structure, it even tolerates &#39;casting&#39; to another struct with similar parameters. All struct pins are wildcards, simply connect a &#34;Break&#34; or &#34;Make&#34; node of the structure you want to use.</p><p><br /></p><p><strong>Combine Tables</strong></p><p>Combine tables simply by calling Add Rows From Data Table for each table. It will keep track of what row was added from which table, streamlining things like having 50 item type tables (swords, bows, axes, etc.) you&#39;d be able to tell what an item is, based on which table it came from.</p><p><br /></p><p><strong>CSV</strong></p><p>Make a CSV string with Convert Table To Csv String, the format is modeled after the built in Data Table CSV export. This may lose some data but should work for the great majority of variable types. This string can be used to fill a Data Table or a Dynamic Table using their respective methods, the dynamic one is Add Rows From Csv String. CSV is intended to work with Unreal, I cannot guarantee it&#39;ll work with spreadsheet software.</p><p><br /></p><p>Dynamic Datatable is meant to be used alongside built in Data Tables especially for data entry, but it can be used entirely separate from them as well.</p><p><br /></p><p><strong>QUICKSTART</strong></p><p>Show plugin content and engine content in the Content Browser</p><p>Find the DynamicDatatable Content folder and open the READ_ME file</p><p><br /></p><p><strong>TL;DR QUICKSTART</strong></p><p>Use &#34;Add Rows from Data Table&#34; and &#34;Get Row from Table&#34;. Simply right click on the Table pin to create a variable (Promote to Variable) All functions are in the category &#34;Dynamic Datatable&#34;</p><p><br /></p><p>Support: Vyrulentstudios&#64;gmail.com</p><p><br /></p><p>Functions List: ( int32&amp; are wildcards )</p><ul><li>void AddRowToTable(FDynamicTable&amp; Table, FName RowName, const int32&amp; Row, UDataTable* Source)</li><li>void GetRowFromTable(FDynamicTable&amp; Table, FName RowName, int32&amp; Row, UDataTable*&amp; Source)</li><li>void GetRowFromTable_Pure(FDynamicTable&amp; Table, FName RowName, int32&amp; Row)</li><li>void DeleteTableRow(FDynamicTable&amp; Table, FName RowName)</li><li>void DeleteTableRowAtIndex(FDynamicTable&amp; Table, int Index)</li><li>void ClearTable(FDynamicTable&amp; Table)</li><li>bool TableRowExists(FDynamicTable&amp; Table, FName RowName)</li><li>TArray&lt;FName&gt; GetRowNamesFromTable(FDynamicTable&amp; Table)</li><li>void AddRowsFromDataTable(FDynamicTable&amp; Table, UDataTable* Source)</li><li>int GetSizeOfTable(FDynamicTable&amp; Table)</li><li>int GetSizeFromSourceTable(FDynamicTable&amp; Table, UDataTable* Source)</li><li>TArray&lt;FName&gt; GetRowNamesFromSourceTable(FDynamicTable&amp; Table, UDataTable* Source)</li><li>FString ConvertTableToCsvString(FDynamicTable&amp; Table)</li><li>void AddRowsFromCsvString(FDynamicTable&amp; Table,FString&amp; Csv)</li><li>FDynamicTable CreateDynamicTable(int32&amp; BaseStruct)</li><li>void SetTableType(FDynamicTable&amp; Table,int32&amp; BaseStruct)</li><li>bool IsTableType(FDynamicTable&amp; Table,int32&amp; BaseStruct)</li><li>bool TableHasAnyType(FDynamicTable&amp; Table)</li><li>void GetRowFromTableAtIndex(FDynamicTable&amp; Table, int Index, int32&amp; Row, UDataTable*&amp; Source)</li><li>void GetRowFromTableAtIndex_Pure(FDynamicTable&amp; Table, int Index, int32&amp; Row)</li><li>void GetAllRowsFromTable(FDynamicTable&amp; Table, TArray&lt;int32&gt;&amp; Rows)</li><li>void GetAllRowsFromTableRowNames(FDynamicTable&amp; Table, TArray&lt;int32&gt;&amp; Rows,TArray&lt;FName&gt;&amp; RowNames)</li><li>TArray&lt;FName&gt; GetRowNamesFromSourceTableName(FDynamicTable&amp; Table, FString SourceName)</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li> Use any struct</li><li> Make CSV strings</li><li> Works at runtime</li></ul><p>Code Modules:</p><ul><li> DynamicDatatable (Runtime)</li></ul><p>Number of Blueprints: 1 (Read Me BP)</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: READ_ME blueprint at DynamicDatatable Content/READ_ME</p><p>Example Project: N/A</p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2023-01-05 041947-BPThirdPersonGameMode3-1920x1080-f97a4544e08836c68ae45d1b49270f7d.png",
+      "md5": "f97a4544e08836c68ae45d1b49270f7d",
+      "width": 1920,
+      "height": 1080,
+      "size": 734903,
+      "uploadedDate": "2023-01-05T10:57:10.055Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2023-01-05 031629-BPThirdPersonGameMode-1920x1080-b215dea62dfb051fbd0149090bc9768c.png",
+      "md5": "b215dea62dfb051fbd0149090bc9768c",
+      "width": 1920,
+      "height": 1080,
+      "size": 600782,
+      "uploadedDate": "2023-01-05T10:57:10.491Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DynamicDatatableDataTableReplacement_thumb-284x284-97ad23d1bd59be9b59c6b3d1b2db11d4.png",
+      "md5": "97ad23d1bd59be9b59c6b3d1b2db11d4",
+      "width": 284,
+      "height": 284,
+      "size": 44694,
+      "uploadedDate": "2023-01-05T09:29:24.118Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DynamicDatatableDataTableReplacement_featured-894x488-4bd88ff6ae74296093890fc902a5a726.png",
+      "md5": "4bd88ff6ae74296093890fc902a5a726",
+      "width": 894,
+      "height": 488,
+      "size": 279166,
+      "uploadedDate": "2023-01-05T09:29:24.241Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-01-05 041947-BPThirdPersonGameMode3-1920x1080-f97a4544e08836c68ae45d1b49270f7d_Snapshot.png",
+      "md5": "073a562aa7b5f81556b10f101768f306",
+      "width": 150,
+      "height": 74,
+      "size": 6086,
+      "uploadedDate": "2023-01-05T10:57:10.332Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-01-05 031629-BPThirdPersonGameMode-1920x1080-b215dea62dfb051fbd0149090bc9768c_Snapshot.png",
+      "md5": "009d741775001d53c26d16f184cf19c5",
+      "width": 150,
+      "height": 74,
+      "size": 5645,
+      "uploadedDate": "2023-01-05T10:57:10.813Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-01-05 041947-BPThirdPersonGameMode3-1920x1080-f97a4544e08836c68ae45d1b49270f7d_Snapshot.png",
+      "md5": "073a562aa7b5f81556b10f101768f306",
+      "width": 150,
+      "height": 74,
+      "size": 6086,
+      "uploadedDate": "2023-01-05T10:54:36.959Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-01-05 031629-BPThirdPersonGameMode-1920x1080-b66ff456d0bd1fcc7259d8508b157a8b_Snapshot.png",
+      "md5": "18fbf80d2af56c4856cf66ce9b5244b7",
+      "width": 150,
+      "height": 74,
+      "size": 5485,
+      "uploadedDate": "2023-01-05T10:54:37.449Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-01-05 041947-BPThirdPersonGameMode3-1920x1080-e68d652f0debc40222cf5aea87f10c29_Snapshot.png",
+      "md5": "b5e154a5bd6176086ee147bf998564e2",
+      "width": 150,
+      "height": 74,
+      "size": 6091,
+      "uploadedDate": "2023-01-05T10:25:12.943Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-01-05 031629-BPThirdPersonGameMode-1920x1080-b66ff456d0bd1fcc7259d8508b157a8b_Snapshot.png",
+      "md5": "18fbf80d2af56c4856cf66ce9b5244b7",
+      "width": 150,
+      "height": 74,
+      "size": 5485,
+      "uploadedDate": "2023-01-05T09:29:24.042Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-01-15T23:37:07.809Z",
+  "lastModifiedDate": "2025-01-12T22:18:25.415Z",
+  "customAttributes": {},
+  "entitlementName": "e1b101013aba4b7b82300b8d0b6f928f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "9389e73494cd4d92ae5d0db6a6b593e6",
+      "appId": "DynamicDatatable_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2023-01-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE4.27"
+    },
+    {
+      "id": "fd58153508ba4034bca7a04f7d8046da",
+      "appId": "DynamicDatatable_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-01-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.0"
+    },
+    {
+      "id": "e75bf29a8f354132b9c96ff075ba1dc0",
+      "appId": "DynamicDatatable_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-01-05T00:00:00.000Z",
+      "releaseNote": "v1.03",
+      "versionTitle": "UE5.1"
+    },
+    {
+      "id": "154a3e51edc94288aef0510234490efc",
+      "appId": "DynamicDatatable_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-16T00:00:00.000Z",
+      "releaseNote": "AddRow bugfix",
+      "versionTitle": "UE5.2"
+    },
+    {
+      "id": "83c4eacf7d514051a95232110b2c830d",
+      "appId": "DynamicDatatable_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-25T00:00:00.000Z",
+      "releaseNote": "AddRow bugfix",
+      "versionTitle": "UE5.3"
+    },
+    {
+      "id": "888097c4fd604389a683ea3e5bd8d6a1",
+      "appId": "DynamicDatatable_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "AddRow bugfix",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Vyrulent Studios",
+  "developerId": "o-3bfd17ba2f46fab8cabc5c83c3bdae",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,417 @@
+{
+  "id": "a05d2c38f6734d9c8bd50227962d9611",
+  "title": "Chatbot AI Unleashed",
+  "description": "Uses OpenAI API to generate text and images, requests for text edition, moderation and more!",
+  "longDescription": "<p>This plugin uses OpenAI API to generate text and images and does various other tasks.</p><p>It can do request both at editor-time and at runtime, so creating editor tools based on AI is easy!</p><p>The most prominent endpoints of the API are exposed to Blueprint via latent actions for easy use.</p><p><br /></p><p>As examples (and fun little features!), the plugin includes a simple chat room to have a conversation with the chatbot and a &#34;fun fact of the day&#34; feature that can inject some fun into everyday work on your upcoming projects.</p><p><br /></p><p>This is a Beta plugin, so depending on user feedback, I will orient development to add features and do QoL improvements on the already available features.</p><p><br /></p><p>Note: You need an OpenAI account to get an API key. With your free account, you get 3 months free with up to 18 usd$ worth of tokens. Afterward, you need to pay a price per usage. Here is the link for more information: https://openai.com/api/pricing/</p><p><br /></p><p>Version 1.1:</p><p>Introduced the Chat endpoint along with GPT-3.5!</p><p>Fixed some issues with request and response structures not being properly exposed to Blueprint.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Simple Prompt: A basic call to the conversation endpoint that sends a prompt and returns a single answer.</li><li>Advanced Prompt: A complete prompt to the conversation endpoint allowing for more advanced features.</li><li>Moderation Prompt: Sends a moderation request for an input string to verify text content.</li><li>Edit Instructions: Send an edit request, allowing for text to be edited in any number of ways.</li><li>List Models: Returns a list of all Models that can be used.</li><li>Retrieve Model Info: Return information on a given model.</li><li>Create Image Prompt: Create an image and returns the result in Base64 or in Url format.</li><li>Conversation: Keep track of an active conversation (using the completion endpoint) to create a more interesting conversation with the chatbot.</li><li>Chatbot Editor Utility Widget</li><li>Fun Fact of the Day feature!</li></ul><p>Code Modules:</p><ul><li> ChatbotAIUnleashed (Runtime)</li><li> ChatbotAIUnleashedEditor (UncookedOnly)</li></ul><p>Number of Blueprints: 3</p><p>Number of C&#43;&#43; Classes: 7</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64, probably any other platforms that support HttpRequests.</p><p>Documentation: A sample blueprint (ExampleBP) contains examples of how to use the Blueprint functionalities.</p><p>There is also a README.txt file at the root of the plugin.</p><p>Important/Additional Notes: To use the OpenAI API, you need to have an API key, which you can get by going to https://platform.openai.com/account/api-keys</p><p>Information about the API can be found here: https://platform.openai.com/docs/api-reference/introduction</p><p>This plugin is not at all endorsed by OpenAI; this is an independently made plugin, given out for free.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ChatRoom-1920x1080-20daaeedbf0979aff0172f84350e1277.png",
+      "md5": "20daaeedbf0979aff0172f84350e1277",
+      "width": 1920,
+      "height": 1080,
+      "size": 144584,
+      "uploadedDate": "2023-02-08T20:44:24.394Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ExampleBP-1920x1080-aebce3fbb2d059a9edef8871c77da94f.png",
+      "md5": "aebce3fbb2d059a9edef8871c77da94f",
+      "width": 1920,
+      "height": 1080,
+      "size": 320019,
+      "uploadedDate": "2023-02-08T20:44:26.531Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CompletionEndpoint-1920x1080-c60981aa80d95a92e2573b0b4eeadf0a.png",
+      "md5": "c60981aa80d95a92e2573b0b4eeadf0a",
+      "width": 1920,
+      "height": 1080,
+      "size": 221753,
+      "uploadedDate": "2023-02-08T20:44:24.765Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CreateImage-1920x1080-cfafddb086539ca4cd96f7dba85b71e7.png",
+      "md5": "cfafddb086539ca4cd96f7dba85b71e7",
+      "width": 1920,
+      "height": 1080,
+      "size": 403618,
+      "uploadedDate": "2023-02-08T20:44:25.859Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CompletionExample-1920x1080-d44f085a67006448af121cae69b5af83.png",
+      "md5": "d44f085a67006448af121cae69b5af83",
+      "width": 1920,
+      "height": 1080,
+      "size": 230101,
+      "uploadedDate": "2023-02-08T20:44:25.150Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Conversation-1920x1080-361af56b257bb4638067ddd106fc8306.png",
+      "md5": "361af56b257bb4638067ddd106fc8306",
+      "width": 1920,
+      "height": 1080,
+      "size": 287793,
+      "uploadedDate": "2023-02-08T20:44:25.488Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EditInstruction-1920x1080-6f0886053f3c3497331981d081d4856d.png",
+      "md5": "6f0886053f3c3497331981d081d4856d",
+      "width": 1920,
+      "height": 1080,
+      "size": 290091,
+      "uploadedDate": "2023-02-08T20:44:26.185Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FunFactOfTheDay-1920x1080-3945cbf2379379040c1bdced1fe6e6d0.png",
+      "md5": "3945cbf2379379040c1bdced1fe6e6d0",
+      "width": 1920,
+      "height": 1080,
+      "size": 660032,
+      "uploadedDate": "2023-02-08T20:44:26.926Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/LocalSettings-1920x1080-361022e4a0b3872fc68165acfcd8de89.png",
+      "md5": "361022e4a0b3872fc68165acfcd8de89",
+      "width": 1920,
+      "height": 1080,
+      "size": 95349,
+      "uploadedDate": "2023-02-08T20:44:27.258Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Moderation-1920x1080-ea11683c5a0522e308f4b634f43cebab.png",
+      "md5": "ea11683c5a0522e308f4b634f43cebab",
+      "width": 1920,
+      "height": 1080,
+      "size": 205550,
+      "uploadedDate": "2023-02-08T20:44:27.573Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Settings-1920x1080-f38630f0b648a6b0df67ccffb6cad311.png",
+      "md5": "f38630f0b648a6b0df67ccffb6cad311",
+      "width": 1920,
+      "height": 1080,
+      "size": 113407,
+      "uploadedDate": "2023-02-08T20:44:27.865Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ChatEndpointAdvancedChat-1920x1080-4dc9003bc127d0c2e73959b74241ed10.png",
+      "md5": "4dc9003bc127d0c2e73959b74241ed10",
+      "width": 1920,
+      "height": 1080,
+      "size": 242358,
+      "uploadedDate": "2023-03-16T20:03:04.085Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ChatEndpointSimpleChat-1920x1080-a8b01d0d300d00b9ace89e7c67285553.png",
+      "md5": "a8b01d0d300d00b9ace89e7c67285553",
+      "width": 1920,
+      "height": 1080,
+      "size": 261052,
+      "uploadedDate": "2023-03-16T20:03:04.442Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ChatbotAIUnleashed_thumb-284x284-92ef71a1a91225226c6547f371bbb4c4.png",
+      "md5": "92ef71a1a91225226c6547f371bbb4c4",
+      "width": 284,
+      "height": 284,
+      "size": 31396,
+      "uploadedDate": "2023-03-16T20:03:04.820Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ChatbotAIUnleashed_featured-894x488-47692268b6610a74016cb3429004d167.png",
+      "md5": "47692268b6610a74016cb3429004d167",
+      "width": 894,
+      "height": 488,
+      "size": 210644,
+      "uploadedDate": "2023-02-08T20:44:28.211Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ChatEndpointAdvancedChat-1920x1080-4dc9003bc127d0c2e73959b74241ed10_Snapshot.png",
+      "md5": "194368045095191e67647f8d397d4271",
+      "width": 150,
+      "height": 74,
+      "size": 4572,
+      "uploadedDate": "2023-03-16T20:03:04.323Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ChatEndpointSimpleChat-1920x1080-a8b01d0d300d00b9ace89e7c67285553_Snapshot.png",
+      "md5": "ac0085b6ec8e829915ba35678d15ca7f",
+      "width": 150,
+      "height": 74,
+      "size": 4690,
+      "uploadedDate": "2023-03-16T20:03:04.724Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ChatRoom-1920x1080-20daaeedbf0979aff0172f84350e1277_Snapshot.png",
+      "md5": "c4ba6f019a5d392ce1d43345c65a0f97",
+      "width": 150,
+      "height": 74,
+      "size": 3295,
+      "uploadedDate": "2023-02-08T20:44:24.600Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CompletionEndpoint-1920x1080-c60981aa80d95a92e2573b0b4eeadf0a_Snapshot.png",
+      "md5": "27f4a8df30a3fb360642e33d687e3e9c",
+      "width": 150,
+      "height": 74,
+      "size": 3683,
+      "uploadedDate": "2023-02-08T20:44:25.006Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CompletionExample-1920x1080-d44f085a67006448af121cae69b5af83_Snapshot.png",
+      "md5": "56e8963902a54c67e3579a1d1d5b46b0",
+      "width": 150,
+      "height": 74,
+      "size": 4167,
+      "uploadedDate": "2023-02-08T20:44:25.358Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Conversation-1920x1080-361af56b257bb4638067ddd106fc8306_Snapshot.png",
+      "md5": "6a4d8558ff629a723318e41908bb814c",
+      "width": 150,
+      "height": 74,
+      "size": 4110,
+      "uploadedDate": "2023-02-08T20:44:25.714Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CreateImage-1920x1080-cfafddb086539ca4cd96f7dba85b71e7_Snapshot.png",
+      "md5": "48b59e77229099ac921b0df5e822c7e6",
+      "width": 150,
+      "height": 74,
+      "size": 4699,
+      "uploadedDate": "2023-02-08T20:44:26.077Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EditInstruction-1920x1080-6f0886053f3c3497331981d081d4856d_Snapshot.png",
+      "md5": "4d389c6f82b57642144c12dee9c7afae",
+      "width": 150,
+      "height": 74,
+      "size": 4696,
+      "uploadedDate": "2023-02-08T20:44:26.419Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ExampleBP-1920x1080-aebce3fbb2d059a9edef8871c77da94f_Snapshot.png",
+      "md5": "dd1e2a038ea62956f842ac0357f9f7d4",
+      "width": 150,
+      "height": 74,
+      "size": 5293,
+      "uploadedDate": "2023-02-08T20:44:26.765Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FunFactOfTheDay-1920x1080-3945cbf2379379040c1bdced1fe6e6d0_Snapshot.png",
+      "md5": "bdc73903a98e217c099ff901b8948170",
+      "width": 150,
+      "height": 74,
+      "size": 4710,
+      "uploadedDate": "2023-02-08T20:44:27.166Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LocalSettings-1920x1080-361022e4a0b3872fc68165acfcd8de89_Snapshot.png",
+      "md5": "29f1cba4d0d214ef5fa1177c9faa739d",
+      "width": 150,
+      "height": 74,
+      "size": 2816,
+      "uploadedDate": "2023-02-08T20:44:27.467Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Moderation-1920x1080-ea11683c5a0522e308f4b634f43cebab_Snapshot.png",
+      "md5": "8ee4de52da6d242cfed4822e797fefa5",
+      "width": 150,
+      "height": 74,
+      "size": 4230,
+      "uploadedDate": "2023-02-08T20:44:27.782Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings-1920x1080-f38630f0b648a6b0df67ccffb6cad311_Snapshot.png",
+      "md5": "4d14be90f79f6c0c5fda7f92ea567030",
+      "width": 150,
+      "height": 74,
+      "size": 3684,
+      "uploadedDate": "2023-02-08T20:44:28.070Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ChatRoom-1920x1080-20daaeedbf0979aff0172f84350e1277_Snapshot.png",
+      "md5": "c4ba6f019a5d392ce1d43345c65a0f97",
+      "width": 150,
+      "height": 74,
+      "size": 3295,
+      "uploadedDate": "2023-02-08T04:42:29.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CompletionEndpoint-1920x1080-c60981aa80d95a92e2573b0b4eeadf0a_Snapshot.png",
+      "md5": "27f4a8df30a3fb360642e33d687e3e9c",
+      "width": 150,
+      "height": 74,
+      "size": 3683,
+      "uploadedDate": "2023-02-08T04:42:30.114Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CompletionExample-1920x1080-d44f085a67006448af121cae69b5af83_Snapshot.png",
+      "md5": "56e8963902a54c67e3579a1d1d5b46b0",
+      "width": 150,
+      "height": 74,
+      "size": 4167,
+      "uploadedDate": "2023-02-08T04:42:30.513Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Conversation-1920x1080-361af56b257bb4638067ddd106fc8306_Snapshot.png",
+      "md5": "6a4d8558ff629a723318e41908bb814c",
+      "width": 150,
+      "height": 74,
+      "size": 4110,
+      "uploadedDate": "2023-02-08T04:42:30.962Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CreateImage-1920x1080-cfafddb086539ca4cd96f7dba85b71e7_Snapshot.png",
+      "md5": "48b59e77229099ac921b0df5e822c7e6",
+      "width": 150,
+      "height": 74,
+      "size": 4699,
+      "uploadedDate": "2023-02-08T04:42:31.318Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EditInstruction-1920x1080-6f0886053f3c3497331981d081d4856d_Snapshot.png",
+      "md5": "4d389c6f82b57642144c12dee9c7afae",
+      "width": 150,
+      "height": 74,
+      "size": 4696,
+      "uploadedDate": "2023-02-08T04:42:31.642Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ExampleBP-1920x1080-260ad27fb012dca8ceacf6ab02c5ec5f_Snapshot.png",
+      "md5": "e7855e15aba9ff2bb36092d825c22683",
+      "width": 150,
+      "height": 74,
+      "size": 4759,
+      "uploadedDate": "2023-02-08T04:42:32.075Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FunFactOfTheDay-1920x1080-3945cbf2379379040c1bdced1fe6e6d0_Snapshot.png",
+      "md5": "bdc73903a98e217c099ff901b8948170",
+      "width": 150,
+      "height": 74,
+      "size": 4710,
+      "uploadedDate": "2023-02-08T04:42:32.478Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LocalSettings-1920x1080-08f2c75242460adc9e47c356315c2695_Snapshot.png",
+      "md5": "1dc885616079445d56127b72604a1f7a",
+      "width": 150,
+      "height": 74,
+      "size": 2886,
+      "uploadedDate": "2023-02-08T04:42:32.776Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Moderation-1920x1080-ea11683c5a0522e308f4b634f43cebab_Snapshot.png",
+      "md5": "8ee4de52da6d242cfed4822e797fefa5",
+      "width": 150,
+      "height": 74,
+      "size": 4230,
+      "uploadedDate": "2023-02-08T04:42:33.204Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings-1920x1080-5b6a1b64afaeab0553161719da365805_Snapshot.png",
+      "md5": "2e52df85a6dd9ef4ff08faaa3df8c01d",
+      "width": 150,
+      "height": 74,
+      "size": 3694,
+      "uploadedDate": "2023-02-08T04:42:33.525Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MarketplaceGallery01-1920x1080-37f9c60d749f02c64f093905e09c8cf0_Snapshot.png",
+      "md5": "3ba0680f98ebebd5248f5622055d9882",
+      "width": 150,
+      "height": 74,
+      "size": 2250,
+      "uploadedDate": "2023-01-13T01:50:52.801Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-02-12T15:41:23.705Z",
+  "lastModifiedDate": "2024-10-22T23:57:25.043Z",
+  "entitlementName": "a05d2c38f6734d9c8bd50227962d9611",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "19dca3e5bd0e4662801a30ef04bd0514",
+      "appId": "ChatbotAIUnleashed_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-02-06T00:00:00.000Z",
+      "releaseNote": "Adding GPT 3.5 Support, with the new Chat Endpoint",
+      "versionTitle": "UE 5.0 Version 1.1"
+    },
+    {
+      "id": "55744d2496354ca89e2cfc15afa8865a",
+      "appId": "ChatbotAIUnleashed_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-01-12T00:00:00.000Z",
+      "releaseNote": "Adding GPT 3.5 Support, with the new Chat Endpoint",
+      "versionTitle": "UE 5.1 Version 1.1"
+    }
+  ],
+  "developer": "Mick Dube",
+  "developerId": "o-gws3xhp85dy93hhvymwx7lgtjvyzrw",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

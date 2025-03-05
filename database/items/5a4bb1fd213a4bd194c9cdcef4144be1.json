@@ -1,0 +1,373 @@
+{
+  "id": "5a4bb1fd213a4bd194c9cdcef4144be1",
+  "title": "Quiet Runtime Editor",
+  "description": "Quiet Runtime Editor is designed to build and edit levels runtime. Version 3.1",
+  "longDescription": "<p>Quiet Runtime Editor is a framework project with related runtime features designed to create, save, load, and edit levels.  </p><p><br /></p><p><a href=\"https://youtu.be/u8c_VYY9trA\" rel=\"nofollow\">Overview</a></p><p><a href=\"https://youtu.be/T2iqGgbbPus\" rel=\"nofollow\">Runtime Import</a></p><p><a href=\"https://youtu.be/hcH70SyT04s\" rel=\"nofollow\">Runtime Spline Editor</a></p><p><br /></p><p>The editor works in two modes:</p><ul><li><strong>Edit Mode</strong> – to design scenes.</li><li><strong>Play Mode</strong> – to play in designed scenes with your player character.</li></ul><p><br /></p><p><strong>Main Feature</strong></p><p>The core of the project is the Runtime World Outliner. In the project&#39;s current version, the World Outliner&#39;s foundation is BP_QuietTreeManager. This actor needs to be placed in the level and initializes the entire system at startup.</p><p><br /></p><p><strong>BP_QuietTreeManager</strong>(Manager) stores the world tree, manages the history of actions, generates the user interface, and connects all the editor&#39;s features into a single working environment. It contains SerializerComponent and HistoryCompoent. Also, the Manager keeps the Router.</p><p><br /></p><p><strong>Serialization</strong></p><p>The project is based on the ability to serialize objects to JSON. This allows you to edit properties, copy, save to disk, and keep a history of actions for undo-redo.</p><p>You can serialize desired classes manually using the provided serialization pipeline.</p><p><a href=\"https://drive.google.com/file/d/1siK_1sJTuMcYszg_UnxWxqoRk9zDPtit/view?usp&#61;share_link\" rel=\"nofollow\">Details</a></p><p><br /></p><p><strong>Communications</strong></p><p>Different editor parts are independent and communicated through an intermediary object-router. The router registers objects by request and keeps them with the Gameplay Tag key. Thus, you can pass a command or request between any two system parts without accessing them directly. Also, you can wrap any data or objects with JSON and send them through the router.</p><p><br /></p><p><strong>Other Features</strong></p><p><br /></p><p><strong>Scene Save and Load System.</strong></p><p>The manager saves and loads scenes into the Documents/QuietRuntimeEditor/SaveGames folder in Json-file with the WBP_SceneManager widget. Also, you can rename and delete scenes with it.</p><p><br /></p><p><strong>Runtime Datasmith Import </strong>– You can import udatasmith, gltf, and glb files runtime.</p><p><br /></p><p><strong>Runtime Actor Details</strong> (WBP_DetailsWidget) – This feature allows you to edit the serialized properties of actors.</p><p><br /></p><p><strong>Runtime Content Browser </strong>(<em>WBP_QuietContentBrowser)</em><strong> </strong>– an important feature that allows you to add content to scenes. It grabs assets from the UserContent folder.</p><p><br /></p><p><strong>Runtime Material Editor</strong> (<em>WBP_QuietMaterialEditor)</em> – a widget for creating and editing Dynamic Materials. Users can create a dynamic material by dragging MaterialInstanceConstant from the ContentBrowser. Also, you can serialize your materials to represent their parameters as you want.</p><p><strong>Actions History</strong> – this feature registers user actions and stores needed data for Undo-Redo to Json-file.</p><p><br /></p><p><strong>Runtime Transformation Gizmo</strong> allows you to edit actor transforms at runtime.</p><p><strong>Actor Transform Tools </strong>– multiple tools to transform, align and populate actors.</p><p><br /></p><p><strong>Runtime Color Wheel</strong> (WBP_ColorPickerWindow) – this widget allows a user to select the desired color.</p><p><br /></p><p><strong>Examples:</strong></p><p>You can download example scenes <a href=\"https://drive.google.com/file/d/1eVGcaaRLWqSIk9OFUTOwMXBwGu_jXDnb/view?usp&#61;share_link\" rel=\"nofollow\"><strong>here</strong></a>. Place the SaveGames folder into the Documents/QuietRuntimeEditor folder.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Runtime World Outliner</li><li>Runtime Actor Details</li><li>Runtime Content Browser</li><li>Runtime Material Editor</li><li>Runtime Spline Editor</li><li>Actions History</li><li>Camera History</li><li>Scene save and load system</li><li>Runtime Transformation Gizmo</li><li>Runtime Datasmith Import</li><li>Warning Dialogs</li><li>Runtime Color Wheel</li><li>Asset Preview Maker</li><li>Actor Transform Tools</li><li>Scatter</li></ul><p><br /></p><p>Number of Blueprints: 128</p><p>Number of Blueprint Interfaces: 4</p><p>Number of Enums: 14</p><p>Number of Structures: 2</p><p>Number of Widget Blueprints: 99</p><p>Example Content (User Content Folder):</p><ul><li>Static Meshes: 67</li><li>LODs: No</li><li>Materials: 37</li><li>Textures: 48</li></ul><p> Used Plugins:</p><ul><li>JsonBlueprintUtilities</li><li>BlueprintFileUtils</li><li>EnhancedInput</li><li>DatasmithRuntime</li></ul><p>Input: Mouse, Keyboard</p><p>Network Replicated: No</p><p>Supported Development Platforms:</p><ul><li>Windows: Yes</li><li>Mac: Yes</li></ul><p>Documentation: <a href=\"https://quiettools.notion.site/ac3b9f5981084bd7a4f667754720cb58?v&#61;109aac6679dc458da7c56aa42e27408a\" rel=\"nofollow\">Link</a></p><p>Important/Additional Notes:</p><ul><li> Runtime Editor is built exclusively on blueprints, with some limitations and non-obvious solutions.</li><li>The Content Browser is built based on Asset Registry functions and does not work in Standalone Mode, where these functions are unavailable. However, in the packaged build, everything works well.</li><li>Path Tracer does not work in the shipping build.</li><li>Blueprints cannot auto-access class properties, so you have to serialize your classes with the provided serialization pipeline manually.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/QRE30-1920x1080-a97c2ed73f49f58f52913719a9fbf443.jpg",
+      "md5": "a97c2ed73f49f58f52913719a9fbf443",
+      "width": 1920,
+      "height": 1080,
+      "size": 1261365,
+      "uploadedDate": "2024-01-22T20:52:08.217Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/QRE302-1920x1080-dd4fffca48bf88018422cf2da8b0298f.jpg",
+      "md5": "dd4fffca48bf88018422cf2da8b0298f",
+      "width": 1920,
+      "height": 1080,
+      "size": 792942,
+      "uploadedDate": "2024-01-22T20:52:08.729Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/QRE303-1920x1080-db5e70ddfca87318c9d6e2e5c63d3dbf.jpg",
+      "md5": "db5e70ddfca87318c9d6e2e5c63d3dbf",
+      "width": 1920,
+      "height": 1080,
+      "size": 1144139,
+      "uploadedDate": "2024-01-22T20:52:09.216Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/QRE304-1920x1080-e675bfc7405aaf0470061d11263875f4.jpg",
+      "md5": "e675bfc7405aaf0470061d11263875f4",
+      "width": 1920,
+      "height": 1080,
+      "size": 868091,
+      "uploadedDate": "2024-01-22T20:52:09.682Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/QRE305-1920x1080-d42e1d2e3667f505575e63f6b1064db9.jpg",
+      "md5": "d42e1d2e3667f505575e63f6b1064db9",
+      "width": 1920,
+      "height": 1080,
+      "size": 943165,
+      "uploadedDate": "2024-01-22T20:52:10.148Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/QuietRuntimeEditor_thumb-284x284-5d1f12e7760195efd58006bf174d2d6e.png",
+      "md5": "5d1f12e7760195efd58006bf174d2d6e",
+      "width": 284,
+      "height": 284,
+      "size": 124178,
+      "uploadedDate": "2022-08-12T19:48:52.587Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/QuietRuntimeEditor_featured-894x488-74622367c608f2fda27e72f76cdd96a4.png",
+      "md5": "74622367c608f2fda27e72f76cdd96a4",
+      "width": 894,
+      "height": 488,
+      "size": 743093,
+      "uploadedDate": "2024-01-22T20:52:10.721Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/QRE30-1920x1080-a97c2ed73f49f58f52913719a9fbf443_Snapshot.jpg",
+      "md5": "3c7cdb57dd5dacce4b7dadcaa2d4ffcf",
+      "width": 150,
+      "height": 74,
+      "size": 8068,
+      "uploadedDate": "2024-01-22T20:52:08.572Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/QRE302-1920x1080-dd4fffca48bf88018422cf2da8b0298f_Snapshot.jpg",
+      "md5": "25028c0ce2551763c58746459dcec0e3",
+      "width": 150,
+      "height": 74,
+      "size": 6221,
+      "uploadedDate": "2024-01-22T20:52:09.052Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/QRE303-1920x1080-db5e70ddfca87318c9d6e2e5c63d3dbf_Snapshot.jpg",
+      "md5": "221c536eca8c22cebe64c072c097db3d",
+      "width": 150,
+      "height": 74,
+      "size": 7727,
+      "uploadedDate": "2024-01-22T20:52:09.498Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/QRE304-1920x1080-e675bfc7405aaf0470061d11263875f4_Snapshot.jpg",
+      "md5": "d31e288212d29c535634763cc1916641",
+      "width": 150,
+      "height": 74,
+      "size": 7328,
+      "uploadedDate": "2024-01-22T20:52:09.988Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/QRE305-1920x1080-d42e1d2e3667f505575e63f6b1064db9_Snapshot.jpg",
+      "md5": "fb488ad52ed7970c6c330f68acfd0a57",
+      "width": 150,
+      "height": 74,
+      "size": 7180,
+      "uploadedDate": "2024-01-22T20:52:10.417Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen12-1920x1080-14f4fd26dfa34b98575532d08673a858_Snapshot.jpg",
+      "md5": "34a19d3e36079d73bafb2b442d986a28",
+      "width": 150,
+      "height": 74,
+      "size": 8437,
+      "uploadedDate": "2023-04-01T15:24:53.547Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen13-1920x1080-bca14574e025fdd59bb1cf76c0f913f8_Snapshot.jpg",
+      "md5": "e37236e4ec9c1a452096abdb8fd79d82",
+      "width": 150,
+      "height": 74,
+      "size": 8036,
+      "uploadedDate": "2023-04-01T15:24:54.057Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen14-1920x1080-c0c929393149c4e4213d0929787ce54c_Snapshot.jpg",
+      "md5": "73000fb110647c0fa6b8ff7841d0b032",
+      "width": 150,
+      "height": 74,
+      "size": 8389,
+      "uploadedDate": "2023-04-01T15:24:54.631Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen15-1920x1080-bd69256aac492a2a718a928b3e69f355_Snapshot.jpg",
+      "md5": "c7b63e90ca4e1bea8359e6f7188fb293",
+      "width": 150,
+      "height": 74,
+      "size": 6641,
+      "uploadedDate": "2023-04-01T15:24:55.034Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen17-1920x1080-fa054ace2806815229ebef8129824d93_Snapshot.jpg",
+      "md5": "88ad244e09616fcae2239e239d88563f",
+      "width": 150,
+      "height": 74,
+      "size": 6704,
+      "uploadedDate": "2023-04-01T15:24:55.474Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen18-1920x1080-f6500926d3c6821a34b5b0c21d0024bd_Snapshot.jpg",
+      "md5": "977b84b2f8eedafa5b6cb43db332b091",
+      "width": 150,
+      "height": 74,
+      "size": 6584,
+      "uploadedDate": "2023-04-01T15:24:55.869Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen19-1920x1080-2d01fa255e678c3c8a93ca1d7e16ce1b_Snapshot.jpg",
+      "md5": "0ab1d4db27514a7e10eb47ade5ff4044",
+      "width": 150,
+      "height": 74,
+      "size": 7051,
+      "uploadedDate": "2023-04-01T15:24:56.266Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot20-1920x1080-0e5533aa48543bef29ed689f964b545a_Snapshot.jpg",
+      "md5": "0c988b883653685af5c07fdb8e05b8d3",
+      "width": 150,
+      "height": 74,
+      "size": 7796,
+      "uploadedDate": "2023-04-01T15:24:56.706Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot22-1920x1080-00a86f3ef3292207cde91ffc98f52d57_Snapshot.jpg",
+      "md5": "51f8fcd7ac79a66a227fe1dd92c9a60b",
+      "width": 150,
+      "height": 74,
+      "size": 7091,
+      "uploadedDate": "2023-04-01T15:24:57.133Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot5-1920x1080-01a608fbb057131b9e804f066e7b4efe_Snapshot.jpg",
+      "md5": "cf06a5b61b9d48f417d3815c628c573a",
+      "width": 150,
+      "height": 74,
+      "size": 7410,
+      "uploadedDate": "2022-08-12T19:48:44.413Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot1-1920x1080-d28ccc5b686a29035323298149bed4cd_Snapshot.jpg",
+      "md5": "76f6c4fb9f92fa42ebcf08444572f04f",
+      "width": 150,
+      "height": 74,
+      "size": 6287,
+      "uploadedDate": "2022-08-12T19:48:45.249Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot9-1920x1080-85f97ad1df68456e97707506388e96ff_Snapshot.jpg",
+      "md5": "ec67173bb4ef767eea43050abb3d716d",
+      "width": 150,
+      "height": 74,
+      "size": 7166,
+      "uploadedDate": "2022-08-12T19:48:46.297Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2-1920x1080-d55a99e1465aceb96a91b2e2508218cf_Snapshot.jpg",
+      "md5": "462d3ffa582e394907bde44f8bef2f39",
+      "width": 150,
+      "height": 74,
+      "size": 6200,
+      "uploadedDate": "2022-08-12T19:48:47.123Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot3-1920x1080-8ae8f9571b47260b0aa69b873663eeac_Snapshot.jpg",
+      "md5": "030e2ad508f2b39876d69a67bafae588",
+      "width": 150,
+      "height": 74,
+      "size": 6394,
+      "uploadedDate": "2022-08-12T19:48:47.978Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot4-1920x1080-3a5788bc49f749440c75fd0d89e57b2a_Snapshot.jpg",
+      "md5": "84408b42b44172f2463afa1a4983ffe1",
+      "width": 150,
+      "height": 74,
+      "size": 6977,
+      "uploadedDate": "2022-08-12T19:48:48.817Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot6-1920x1080-2bd6ef09abee41d2ba150584c97ba109_Snapshot.jpg",
+      "md5": "b9632b446fa14f7a183db2e79e183380",
+      "width": 150,
+      "height": 74,
+      "size": 7124,
+      "uploadedDate": "2022-08-12T19:48:49.965Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot7-1920x1080-9510d1a3700a6286ca49ebc88c81d038_Snapshot.jpg",
+      "md5": "8077f9f4823b3015ee4738c54312f277",
+      "width": 150,
+      "height": 74,
+      "size": 6872,
+      "uploadedDate": "2022-08-12T19:48:50.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot8-1920x1080-231ef1130d4373d9b1c0752c597862c2_Snapshot.jpg",
+      "md5": "900ac2f3bcf20b10f1ca14b32f1156bc",
+      "width": 150,
+      "height": 74,
+      "size": 6725,
+      "uploadedDate": "2022-08-12T19:48:51.692Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot10-1920x1080-d5d09b2b43bb34e59a3ff7f2ec376f53_Snapshot.jpg",
+      "md5": "fcb5d492b2463de0c30e3b69336f16cb",
+      "width": 150,
+      "height": 74,
+      "size": 5711,
+      "uploadedDate": "2022-08-12T19:48:52.531Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-08-21T18:59:21.529Z",
+  "lastModifiedDate": "2024-12-08T05:33:24.848Z",
+  "customAttributes": {},
+  "entitlementName": "5a4bb1fd213a4bd194c9cdcef4144be1",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b66b552bd67e40bdbc0ee6cf72fb7c27",
+      "appId": "QuietRun5a4bb1fd213aV1",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-08-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Quiet Runtime Editor 5.0 3.1"
+    },
+    {
+      "id": "446f8d6f63ed4eeb9a32f581d2543210",
+      "appId": "QuietRun5a4bb1fd213aV2",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-12-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Quiet Runtime Editor 5.1 3.1"
+    },
+    {
+      "id": "1114280ffed8471691fca5bc8ffc8461",
+      "appId": "QuietRun5a4bb1fd213aV3",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2023-06-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Quiet Runtime Editor 5.2 3.1"
+    },
+    {
+      "id": "c9031aa37bdb442fa844cfab86f52d3c",
+      "appId": "QuietRun5a4bb1fd213aV4",
+      "compatibleApps": [
+        "UE_5.3",
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Mac",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Quiet Runtime Editor 5.3 3.1"
+    }
+  ],
+  "developer": "Aleksandr Sidorov",
+  "developerId": "o-c70d30100843eda7b73634dcd26932",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

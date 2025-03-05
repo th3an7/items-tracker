@@ -1,0 +1,400 @@
+{
+  "id": "eb61ad23d7e843b98644ca3e8d5b8cad",
+  "title": "Rama's Melee Weapon Plugin",
+  "description": "This plugin adds a melee weapon system to your game with customizable per-bone collision detection!",
+  "longDescription": "<h2><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></h2><h2><strong>** The UE5 Update Is Complete!!!! **</strong></h2><h2><strong>~~~~~~~~~~~~~~~~~~~~~~~~~~~~</strong></h2><h2>UE5 Video: <a href=\"https://www.youtube.com/watch?v&#61;SH3yhIXEJQ0\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;SH3yhIXEJQ0</a></h2><h2><br /></h2><p>I had to do a full re-coding of the plugin to make the transition to the Joyful Chaos Engine, and do some fancy tricks under the hood to get everything working in this early UE5 release, but it is all done now! Woohooo! ♥ Rama</p><h2><br /></h2><h2>Plugin Tutorial Video Playlist</h2><p>https://www.youtube.com/watch?v&#61;aufEB4TCf30&amp;list&#61;PLanD4oBjFkL9PMvxrUJIzvrIBxuw_Pbpi&amp;ab_channel&#61;RamaUE4Plugins</p><h2><br /></h2><h1><strong>Sample Project for UE5</strong></h1><p><br /></p><p>Unreal Engine 5 Sample Project That Demonstrates New Features (Requires That You Have The Plugin Already)</p><p><a href=\"http://www.lightningfitness.org/ue4code/RamaMeleeWeapon_Project_UE5_requiresplugin.zip\" rel=\"nofollow\">http://www.lightningfitness.org/ue4code/RamaMeleeWeapon_Project_UE5_requiresplugin.zip</a></p><p><br /></p><p>1. Press the v key to change between 3 weapons using only data assets, and a single Rama Melee Weapon Component!</p><p><br /></p><p>2. The new DataAsset feature I&#39;ve added, along with the function SetRamaMeleeWeapon, makes it easy for you to have 100s of weapons available on a single actual Rama Melee Component, and also make your full weapon inventory available to every Blueprint of Every Character, with a single variable!</p><p><br /></p><p>3. Initial Overlaps on SwingStart (The SwingStart happens when the shapes are already within another actor) can now be included using the new feature, see Tech Specs for more exact info!</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h1><strong>Rama Entertainment Videos (REVs)</strong></h1><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2><strong>UE5 Video With Chaos Engine C&#43;&#43; Code Explanation</strong></h2><h2><a href=\"https://www.youtube.com/watch?v&#61;SH3yhIXEJQ0\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;SH3yhIXEJQ0</a></h2><p><br /></p><p>This video is a must-watch for those of you transitioning to UE5! I explain the new features I added in UE5!</p><p><br /></p><p>Annnnd,</p><p><br /></p><p>For all you Lovely Unreal Engine C&#43;&#43; programmers, or those interested in learning C&#43;&#43;, I give you a description of the code changes I had to make, a full rewrite of the plugin, to work with UE5&#39;s Chaos Engine!</p><p><br /></p><p>Enjoy!</p><p><br /></p><p>♥</p><p><br /></p><p>Rama</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2><strong>UE4</strong></h2><p>Preview: <a href=\"https://www.youtube.com/watch?v&#61;aufEB4TCf30\" rel=\"nofollow\">youtube.com/watch?v&#61;aufEB4TCf30</a></p><p><br /></p><p>Video Documentation</p><p>• <a href=\"https://www.youtube.com/watch?v&#61;aufEB4TCf30\" rel=\"nofollow\">Intro</a></p><p>• <a href=\"https://www.youtube.com/watch?v&#61;IPPgDeM9Hv8\" rel=\"nofollow\">Part 1</a></p><p>• <a href=\"https://www.youtube.com/watch?v&#61;gjW_jQSuJ2Q\" rel=\"nofollow\">Part 2</a></p><p>• <a href=\"https://www.youtube.com/watch?v&#61;h2lk-NH6HqY\" rel=\"nofollow\">Part 3</a></p><p><br /></p><p><strong>Updates: </strong></p><p>See Technical info section</p><p><br /></p><p>Rama&#39;s Melee Weapon plugin has these powerful Features:</p><p><br /></p><p>1. Ability to specify exactly which parts of a weapon’s physics asset deal damage.</p><p><br /></p><p>2. Complete control over which parts of a swing animation deal the damage, allowing you to ignore the wind up and wind down from a swing animation, through the use of UE4 animation notifies.</p><p><br /></p><p>3. Per-bone accuracy, so you can know exactly which bones of a character mesh were hit by the weapon!</p><p><br /></p><p>4. My very own custom PhysX core coding, so that efficient volume shapes are used to represent the weapon’s collision as it swings through the air. I went deep into Nvidia’s PhysX system and wrote a lot of custom code to make this system as efficient and customizeable as possible! I added a lot of code to draw PhysX shapes in the editor and during runtime so you can see exactly what my Rama Melee Plugin is doing!</p><p><br /></p><p>5. The whole system can be utilized entirely in Blueprints, but my plugin includes all the source code so you can extend every part of my system, including the hardcore PhysX coding! I have many videos demonstrating the usefulness and mechanics of this plugin <a href=\"http://ue4code.com/melee_weapon_system_plugin_per_bone_collision_accuracy\" rel=\"nofollow\">here</a>.</p>",
+  "technicalDetails": "<p>Intended Platforms: Any platform the UE5 Chaos Engine works with :)</p><p>Platforms Tested: Desktop</p><p><br /></p><p><strong>Important\\Additional Notes</strong>: Entire C&#43;&#43; source code is included!</p><p><br /></p><p>Updates:</p><p>6/7/2016 ~ Hit results now return the physical material that was struck by the melee weapon!</p><p><br /></p><p>8/27/2016 ~ The physics asset shape index is now returned with the Weapon Hit event so you can apply custom damage amounts based on which weapon shape made contact!</p><p><br /></p><p>5/13/2018 ~ Deep Tracing is now an optional feature for use with weapons that pass through everything they hit very fast and you want to report all hits, even within a single trace tick (think Lightning Sword). See related Product Picture for more info! ♥ Rama</p><p><br /></p><p>~~~ UE5 ~~~</p><p>4/22/2022</p><p>Include Initial Overlaps During Swing Start ~ allows you to return a hit event if SwingStart happens when the melee weapon is already inside of a target actor, you can turn this feature on or off during runtime!</p><p><br /></p><p>Draw Shape Indices ~ Makes setting up the damage map much more intuitive!</p><p><br /></p><p>New Data Assets ~ So that you can have just a single Rama Melee Component, and change the mesh/DamageMap using SetRamaMeleeWeapon function</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/RamaMeleePlugin_Screenshot01-1920x1080-0f9d359964f0dec8d2fbab1e9d6dd4a7.png",
+      "md5": "0f9d359964f0dec8d2fbab1e9d6dd4a7",
+      "width": 1920,
+      "height": 1080,
+      "size": 422055,
+      "uploadedDate": "2016-05-03T17:29:36.335Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/RamaMeleePlugin_Screenshot02-1920x1080-19883fecd189a4296d5c448a5e8d390e.png",
+      "md5": "19883fecd189a4296d5c448a5e8d390e",
+      "width": 1920,
+      "height": 1080,
+      "size": 300295,
+      "uploadedDate": "2016-05-03T17:29:33.806Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/RamaMeleePlugin_Screenshot03-1920x1080-1f2f21ba99ed51c94aec00b2a2be34a4.png",
+      "md5": "1f2f21ba99ed51c94aec00b2a2be34a4",
+      "width": 1920,
+      "height": 1080,
+      "size": 368323,
+      "uploadedDate": "2016-05-03T17:29:32.063Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/RamaMeleePlugin_Screenshot04-1920x1080-8f60a7754e5f5e3458b093a64aaeca01.png",
+      "md5": "8f60a7754e5f5e3458b093a64aaeca01",
+      "width": 1920,
+      "height": 1080,
+      "size": 869281,
+      "uploadedDate": "2016-05-03T17:29:30.311Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/RamaMeleePlugin_Screenshot05-1920x1080-d4924433def1fa4b0a2d5d0a49811498.png",
+      "md5": "d4924433def1fa4b0a2d5d0a49811498",
+      "width": 1920,
+      "height": 1080,
+      "size": 909603,
+      "uploadedDate": "2016-05-03T17:29:28.301Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DeepTrace-1920x1080-343f44078e9ee28ec2f684c42df83443.jpg",
+      "md5": "343f44078e9ee28ec2f684c42df83443",
+      "width": 1920,
+      "height": 1080,
+      "size": 389209,
+      "uploadedDate": "2018-05-13T21:15:51.793Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/item/RamaMeleePlugin_Thumb-284x284-64a1ad16ef6151beec16d0470c70d17f.png",
+      "md5": "64a1ad16ef6151beec16d0470c70d17f",
+      "width": 284,
+      "height": 284,
+      "size": 210383,
+      "uploadedDate": "2016-05-03T17:29:25.495Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/item/RamaMeleePlugin_Featured-476x246-8f4255bfcb802fa6b4ac05d7b5b95767.png",
+      "md5": "8f4255bfcb802fa6b4ac05d7b5b95767",
+      "width": 476,
+      "height": 246,
+      "size": 323895,
+      "uploadedDate": "2016-05-03T17:29:39.612Z"
+    },
+    {
+      "type": "NewFeatured",
+      "url": "https://cdn1.epicgames.com/ue/item/RamaMeleePlugin_FeaturedNew-894x488-d8c9842bea02cd91ed9ab4dc6ee56267.png",
+      "md5": "d8c9842bea02cd91ed9ab4dc6ee56267",
+      "width": 894,
+      "height": 488,
+      "size": 217110,
+      "uploadedDate": "2016-05-03T17:29:37.982Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2016-02-12T16:02:58.225Z",
+  "lastModifiedDate": "2024-10-15T14:33:39.254Z",
+  "customAttributes": {},
+  "entitlementName": "eb61ad23d7e843b98644ca3e8d5b8cad",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "c5ca61f4cffd4e40bf494a4269bc9383",
+      "appId": "RamaMeleePlugin_4.11",
+      "compatibleApps": [
+        "UE_4.11"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-05-04T00:00:00.000Z",
+      "versionTitle": "RamaMeleePlugin_4.11"
+    },
+    {
+      "id": "7fb00d257ac5415394e8b06c6008cf7c",
+      "appId": "RamaMeleePlugin_4.12",
+      "compatibleApps": [
+        "UE_4.12"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-06-07T00:00:00.000Z",
+      "versionTitle": "RamaMeleePlugin_4.12"
+    },
+    {
+      "id": "f8120460f3d4466199444bdf8b44efbc",
+      "appId": "RamaMeleePlugin_4.13",
+      "compatibleApps": [
+        "UE_4.13"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-09-12T00:00:00.000Z",
+      "versionTitle": "RamaMeleePlugin_4.13"
+    },
+    {
+      "id": "ebf15e81686e4700a6dc97e99bbfcd93",
+      "appId": "RamaMeleePlugin_4.14",
+      "compatibleApps": [
+        "UE_4.14"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-11-17T00:00:00.000Z",
+      "versionTitle": "RamaMeleePlugin_4.14"
+    },
+    {
+      "id": "6eef3f3fa4b34c98bd784c521916409a",
+      "appId": "RamaMeleePlugin_4.15",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-02-22T00:00:00.000Z",
+      "versionTitle": "RamaMeleePlugin_4.15"
+    },
+    {
+      "id": "a40d0aab278844e2afeec89de733927c",
+      "appId": "RamaMeleePlugin_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-05-25T00:00:00.000Z",
+      "versionTitle": "RamaMeleePlugin_4.16"
+    },
+    {
+      "id": "63f80bcea31f45ff9d6e676f0f972bc9",
+      "appId": "RamaMeleePlugin_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-08-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_4.17"
+    },
+    {
+      "id": "23710d29ba854313b4399d24a4416e4a",
+      "appId": "RamaMeleePlugin_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-10-25T00:00:00.000Z",
+      "releaseNote": "Yay for 4.18!",
+      "versionTitle": "RamaMeleePlugin_4.18"
+    },
+    {
+      "id": "d858324e6bd347d898f4048bdf4725e2",
+      "appId": "RamaMeleePlugin_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-03-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_4.19"
+    },
+    {
+      "id": "d4ed9638267042308f1e6b77d583ef08",
+      "appId": "RamaMeleePlugin_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-07-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_4.20"
+    },
+    {
+      "id": "911af0cb1c494dde9b3d4b318c9470e4",
+      "appId": "RamaMeleePlugin_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-11-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_4.21"
+    },
+    {
+      "id": "45bb504395c849d39cca946173f0d018",
+      "appId": "RamaMeleePlugin_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_4.22"
+    },
+    {
+      "id": "5304115a2a604a8b81f58b6f82031e21",
+      "appId": "RamaMeleePlugin_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_4.23"
+    },
+    {
+      "id": "a1fe8cbee41b4f17bd4670a9c679889d",
+      "appId": "RamaMeleePlugin_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-12-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_4.24"
+    },
+    {
+      "id": "2023bb8c06804a03b0d50062f5f86db8",
+      "appId": "RamaMeleePlugin_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2020-05-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_4.25"
+    },
+    {
+      "id": "285f23f08c8c49c89e58f9be38d64d1a",
+      "appId": "RamaMeleePlugin_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2020-12-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_4.26"
+    },
+    {
+      "id": "707f1cad4a574ddeb80529b8d2e5daf0",
+      "appId": "RamaMeleePlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_4.27"
+    },
+    {
+      "id": "79217657a03645b78813ee11220c0030",
+      "appId": "RamaMeleePlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_5_no_thumbs.db"
+    },
+    {
+      "id": "524c995218734d3d8a200ee0fdc61b30",
+      "appId": "RamaMeleePlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMeleePlugin_5.1"
+    },
+    {
+      "id": "4ddeaef12d5c4247976d2a081357ded9",
+      "appId": "RamaMeleePlugin_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMelee5.2"
+    },
+    {
+      "id": "5bce8558a539463bb682f113f1dfea1b",
+      "appId": "RamaMeleePlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RMP_5.3"
+    },
+    {
+      "id": "954d8b48cf4447a390f06958e3aeb7f2",
+      "appId": "RamaMeleePlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RamaMelee5.4"
+    }
+  ],
+  "developer": "Rama",
+  "developerId": "o-c86000a278413184b89c0633cf7a2f",
+  "eulaIds": [],
+  "installModes": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

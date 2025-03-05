@@ -1,0 +1,414 @@
+{
+  "id": "893fe924a34a45daa98a0b93917fa761",
+  "title": "AutoLightmapUEr",
+  "description": "Automatically assigns lightmap sizes to all static mesh actors (or all actors with static mesh components) based on a selected preset which details the sizes and resolutions the user wants used.",
+  "longDescription": "Version 1.2: <br />- You can now also use the actual surface area of the actor&#39;s static mesh for calculations, if you prefer. <br />Note that none of the default presets were made with this in mind, so you&#39;ll have to roll your own. <br />(The plugin lists all surface areas it&#39;s calculated in the output log to give you an idea of the values to use)<br /><br />AutoLightmapUEr is an Unreal Engine editor plugin that allows you to easily enforce consistency of lightmap density across your level, saving precious memory and reducing lighting build times.<br /><br />AutoLightmapUEr goes through your level and adjusts every mesh&#39;s lightmap resolution according to its size in the world and the preset values you specify. Need a new preset for a specific project? You can add your own, finetuned to work just the way you need.<br /><br />- Reduce your lighting build times with minimal visual impact <br />- Keep static shadow sharpness consistent across all your level&#39;s props <br />- Instantly save untold memory and file size (ideal for mobile games)",
+  "technicalDetails": "Version 1.1: <br />- &#34;All&#34; mode now also works correctly on (Hierarchical) Instanced Static Mesh Components. <br />Before, UE returned the extents of the surrounding volume of *all* the instances together, apparently. <br />- &#34;All&#34; mode now also works with freshly added blueprint actors. <br />Blueprint actors that were freshly added to a map return multiple copies for an AActor Iterator (seemingly one per component?), <br />which could lead to sometimes picking the wrong lightmap size if only some components were scaled. <br />- &#34;Clear tags&#34; button moved and changed from just an &#34;X&#34; to a clearer label <br />- Cleared up how the values are used, with expanded tooltips: the &#34;extent&#34; values are the half-length from the center by default. <br />There is now also a new option that switches calculation to full-length, if you prefer, for your own presets. <br />(Note that the values for the 2 default presets don&#39;t get changed when you switch to full-length) <br />- You can now use folder names to override the currently selected preset. <br />Actors inside a endpoint folder (read: A\\B\\C C is checked, A and B aren&#39;t) whose name matches that of a preset, will use that preset to calculate lightmap sizes. <br />- New &#34;Go deep&#34; toggle that will propagate the lightmap change to the meshes themselves, and their various LOD levels. <br />Was added because some people encountered strange unreproducible effects with lightmap overrides working backwards for lower LOD levels. <br />You shouldn&#39;t need this, normally, but if you run into any trouble, you might maybe give it a try?<br /><br />- Editor plugin <br />- No third party code <br /><br />Platforms Tested: Windows",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AutoLightmapUEr_Screenshot_01-1920x1080-983e40f8a2cc7ef681457da8c817ecc8.png",
+      "md5": "983e40f8a2cc7ef681457da8c817ecc8",
+      "width": 1920,
+      "height": 1080,
+      "size": 458345,
+      "uploadedDate": "2016-09-19T18:38:03.336Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AutoLightmapUEr_Screenshot_02-1920x1080-ce41ec07435bbdbe23c5f024a209e2b4.png",
+      "md5": "ce41ec07435bbdbe23c5f024a209e2b4",
+      "width": 1920,
+      "height": 1080,
+      "size": 717695,
+      "uploadedDate": "2016-09-19T18:38:01.859Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AutoLightmapUEr_Screenshot_03-1920x1080-acf7dfc4bdeab38d70f4e903bc32ee1f.png",
+      "md5": "acf7dfc4bdeab38d70f4e903bc32ee1f",
+      "width": 1920,
+      "height": 1080,
+      "size": 708584,
+      "uploadedDate": "2016-09-19T18:37:59.436Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AutoLightmapUEr_Screenshot_04-1920x1080-4868bc4888a4654236a08ea6e0b5608c.png",
+      "md5": "4868bc4888a4654236a08ea6e0b5608c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1208112,
+      "uploadedDate": "2016-09-19T18:38:15.171Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AutoLightmapUEr_Screenshot_05-1920x1080-defdcb0768f61c9fd74b04a623f5cccd.png",
+      "md5": "defdcb0768f61c9fd74b04a623f5cccd",
+      "width": 1920,
+      "height": 1080,
+      "size": 1078397,
+      "uploadedDate": "2016-09-19T18:37:56.013Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/item/AutoLightmapUEr_Thumb-284x284-a72ce3803b440e6e85f5ccf3abba7ffb.png",
+      "md5": "a72ce3803b440e6e85f5ccf3abba7ffb",
+      "width": 284,
+      "height": 284,
+      "size": 91246,
+      "uploadedDate": "2016-09-19T18:37:53.768Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/item/AutoLightmapUEr_Featured-476x246-37ec1a2524b0c1481e56aede1865b543.png",
+      "md5": "37ec1a2524b0c1481e56aede1865b543",
+      "width": 476,
+      "height": 246,
+      "size": 122444,
+      "uploadedDate": "2016-09-19T18:38:06.744Z"
+    },
+    {
+      "type": "NewFeatured",
+      "url": "https://cdn1.epicgames.com/ue/item/AutoLightmapUEr_FeaturedNew-894x488-70d9162bd82a7de8b6c92273ad3fe49d.png",
+      "md5": "70d9162bd82a7de8b6c92273ad3fe49d",
+      "width": 894,
+      "height": 488,
+      "size": 439007,
+      "uploadedDate": "2016-09-19T18:38:04.733Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2016-08-09T15:49:30.281Z",
+  "lastModifiedDate": "2024-12-26T01:20:34.185Z",
+  "customAttributes": {},
+  "entitlementName": "893fe924a34a45daa98a0b93917fa761",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "2a54c7897c354f02a5125a38e57429ef",
+      "appId": "LightMapUEr_4.11",
+      "compatibleApps": [
+        "UE_4.11"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-09-19T00:00:00.000Z",
+      "versionTitle": "LightMapUEr_411"
+    },
+    {
+      "id": "31de1d32fead4c4cb3aec7444056e274",
+      "appId": "LightMapUEr_4.12",
+      "compatibleApps": [
+        "UE_4.12"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-09-19T00:00:00.000Z",
+      "versionTitle": "LightMapUEr_412"
+    },
+    {
+      "id": "c130863ae96241ebba24d194d9174b1c",
+      "appId": "LightMapUEr_4.13",
+      "compatibleApps": [
+        "UE_4.13"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-09-19T00:00:00.000Z",
+      "versionTitle": "LightMapUEr_413"
+    },
+    {
+      "id": "1811f3e057954bcc9fe349404ade04f6",
+      "appId": "LightMapUEr_4.14",
+      "compatibleApps": [
+        "UE_4.14"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2016-11-16T00:00:00.000Z",
+      "versionTitle": "LightMapUEr_414"
+    },
+    {
+      "id": "504008e6f7a14d78b86eccf3a08a6cc2",
+      "appId": "LightMapUEr_4.15",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-02-22T00:00:00.000Z",
+      "versionTitle": "LightMapUEr_415"
+    },
+    {
+      "id": "32991b1332fe4dddaf461edf7638eb11",
+      "appId": "LightMapUEr_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-06-01T00:00:00.000Z",
+      "versionTitle": "LightMapUEr_416"
+    },
+    {
+      "id": "7f8df5873e36473b8124d93d36a3996b",
+      "appId": "LightMapUEr_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-08-11T18:07:43.971Z",
+      "versionTitle": "LightMapUEr_417"
+    },
+    {
+      "id": "84e1fe64ecd947468c942f00c88d46eb",
+      "appId": "LightMapUEr_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-10-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_418"
+    },
+    {
+      "id": "fbc8bcaa989f49688ea274f752cc5d2b",
+      "appId": "LightMapUEr_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-04-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_419"
+    },
+    {
+      "id": "994eb59b1be644b8893a5b089f90e0b2",
+      "appId": "LightMapUEr_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2018-08-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_420"
+    },
+    {
+      "id": "13f078e3d8a84bfc9bd5a19eb9d50826",
+      "appId": "LightMapUEr_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2019-01-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightmapUEr_421"
+    },
+    {
+      "id": "89bdc569c8a4440a8dbe2e563e195f08",
+      "appId": "LightMapUEr_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2019-05-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_422"
+    },
+    {
+      "id": "04b59d057bad46c39b18d5db088cee30",
+      "appId": "LightMapUEr_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2019-09-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_423"
+    },
+    {
+      "id": "29cb0f797a1f4cd3a6a6250a2e7c8331",
+      "appId": "LightMapUEr_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2020-01-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_4.24"
+    },
+    {
+      "id": "906412931d524b74b3bb43ea648b22d6",
+      "appId": "LightMapUEr_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2020-06-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_425"
+    },
+    {
+      "id": "da2e9095009e454c8c06004f59cab6bf",
+      "appId": "LightMapUEr_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Win32",
+        "Linux"
+      ],
+      "dateAdded": "2021-02-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_426"
+    },
+    {
+      "id": "4cbfdaae3ffd45a48d9a6b56a081edfe",
+      "appId": "LightMapUEr_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2021-10-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_427"
+    },
+    {
+      "id": "00f388487e8545e6affb2c556e8ae7cf",
+      "appId": "LightMapUEr_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-04-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_500"
+    },
+    {
+      "id": "a256facdeb384949b5167ef36258218c",
+      "appId": "LightMapUEr_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-12-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LihtMapUEr_510"
+    },
+    {
+      "id": "5fa60c549e424be59ba201ced35eb6df",
+      "appId": "LightMapUEr_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-06-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_520"
+    },
+    {
+      "id": "63416d7287b24895a269a863b130f943",
+      "appId": "LightMapUEr_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2023-09-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_530"
+    },
+    {
+      "id": "6d803591e9db4c0e815e27f8e61963a2",
+      "appId": "LightMapUEr_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-05-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LightMapUEr_541"
+    }
+  ],
+  "developer": "NT Entertainment",
+  "developerId": "o-a07591008b4f74bada481ca6572def",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

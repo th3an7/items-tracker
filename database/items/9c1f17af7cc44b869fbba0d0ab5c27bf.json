@@ -1,0 +1,137 @@
+{
+  "id": "9c1f17af7cc44b869fbba0d0ab5c27bf",
+  "title": "Steam DLC Blueprint Chinese",
+  "description": "在Steam中，判断玩家是否拥有DLC或游戏本体 In Steam, determine if the player has DLC or game ontology",
+  "longDescription": "<p>使用简体中文&#xff0c;将steamDLC的功能提供给蓝图&#xff0c;还支持了在steam中快速打开网页的功能</p><p>请注意&#xff0c;开启本插件前&#xff0c;需打开虚幻引擎自带的 OnlineSubsystemSteam 插件&#xff0c;并且设置正确的appID才可以获取正确数据</p><p><br /></p><p>插件玩法&#xff1a;您可以把游戏和DLC内容全部整合到一起上传到steam&#xff0c;通过判断用户是否拥有DLC来解锁游戏内容。如果用户没有拥有DLC&#xff0c;则可以通过 打开DLC页面的蓝图节点&#xff0c;引导玩家购买DLC</p><p><br /></p><h2>首次使用请根据官方文档设置启用OnlineSubsystemSteam&#xff0c;在<strong>DefaultEngine.ini中&#xff0c;</strong>设置正确SteamDevAppId&#xff0c;否则“拥有游戏”和“拥有DLC”的两个蓝图节点将返回错误的信息&#xff1a;</h2><h2><a href=\"https://docs.unrealengine.com/5.3/zh-CN/online-subsystem-steam-interface-in-unreal-engine/\" rel=\"nofollow\">虚幻引擎Online Subsystem Steam接口 |虚幻引擎5.3文档 (unrealengine.com)</a></h2><p><br /></p><p>或者直接复制以下内容&#xff0c;将“你的游戏ID”修改为你steam对应的游戏ID&#xff0c;然后粘贴到Config\\DefaultEngine.ini文件内即可&#xff01;</p><p>[/Script/Engine.GameEngine]</p><p>    &#43;NetDriverDefinitions&#61;(DefName&#61;&#34;GameNetDriver&#34;,DriverClassName&#61;&#34;OnlineSubsystemSteam.SteamNetDriver&#34;,DriverClassNameFallback&#61;&#34;OnlineSubsystemUtils.IpNetDriver&#34;)</p><p><br /></p><p>[OnlineSubsystem]</p><p>DefaultPlatformService&#61;Steam</p><p><br /></p><p>[OnlineSubsystemSteam]</p><p>bEnabled&#61;true</p><p>SteamDevAppId&#61;你的游戏ID</p><p><br /></p><p>; If using Sessions</p><p>bInitServerOnClient&#61;true</p><p><br /></p><p>[/Script/OnlineSubsystemSteam.SteamNetDriver]</p><p>NetConnectionClassName&#61;&#34;OnlineSubsystemSteam.SteamNetConnection&#34;</p><p><br /></p><p>以下是英文介绍&#xff1a;</p><p><br /></p><p>Using Simplified Chinese, the functionality of Steam DLC is provided to the blueprint, and it also supports the ability to quickly open web pages in Steam</p><p>Please note that before starting this plugin, you need to open the OnlineSubsystemSteam plugin that comes with the Unreal Engine and set the correct appID to obtain the correct data using Simplified Chinese. This provides the Steam DLC function for the blueprint and also supports the ability to quickly open web pages in Steam</p>",
+  "technicalDetails": "<p>功能&#xff1a;</p><ul><li> 只需1个蓝图节点&#xff0c;检查DLC或游戏是否已购买并安装在玩家的steam帐户上</li><li>只需1个蓝图节点&#xff0c;能够打开任何网页&#xff0c;如你的游戏网站</li><li>一共提供了4个蓝图节点&#xff0c;如商店图所示</li><li>您还可以通过DLC或游戏验证&#xff0c;进行steam在线防盗版验证</li></ul><p>代码模块&#xff1a;</p><ul><li>调用官方 steamAPI 以确定玩家是否拥有游戏</li><li>调用官方 steamAPI 判断播放器是否有 DLC</li><li>调用官方 Steam API 打开 Steam 游戏商城</li></ul><p>蓝图数量&#xff1a;4</p><p>C&#43;&#43;类的数量&#xff1a;2</p><p><br /></p><p>Features:</p><ul><li>Just one blueprint node is needed to check if DLC or game has been purchased and installed on the player&#39;s Steam account</li><li>With just one blueprint node, you can open any webpage, such as your game website</li><li>A total of 4 blueprint nodes are provided, as shown in the store diagram</li><li>You can also verify the Steam online anti-theft version through DLC or game verification</li></ul><p>Code Modules:</p><ul><li> Call the official steamAPI to determine if the player owns the game</li><li>Call the official steamAPI to determine if the player has DLC</li><li>Call the official Steam API to open the Steam Game Mall</li></ul><p>Number of Blueprints:4</p><p>Number of C&#43;&#43; Classes:2</p><p>Network Replicated: (No)</p><p>Supported Development Platforms: (Windows)</p><p>Supported Target Build Platforms: (Windows)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-0e70bda1ff0299d10ea433caa34f7e29.jpg",
+      "md5": "0e70bda1ff0299d10ea433caa34f7e29",
+      "width": 1920,
+      "height": 1080,
+      "size": 475149,
+      "uploadedDate": "2023-08-09T14:18:56.349Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SteamDLCBlueprintChinese_thumb-284x284-90d7e50abcc278c035942637353ca74f.png",
+      "md5": "90d7e50abcc278c035942637353ca74f",
+      "width": 284,
+      "height": 284,
+      "size": 91442,
+      "uploadedDate": "2023-06-16T22:45:32.835Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SteamDLCBlueprintChinese_featured-894x488-14734666d87160a01931cb3acf449902.png",
+      "md5": "14734666d87160a01931cb3acf449902",
+      "width": 894,
+      "height": 488,
+      "size": 322750,
+      "uploadedDate": "2023-06-16T22:45:33.046Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-0e70bda1ff0299d10ea433caa34f7e29_Snapshot.jpg",
+      "md5": "baeeab80c83daa735df9489214fa0d6c",
+      "width": 150,
+      "height": 74,
+      "size": 4279,
+      "uploadedDate": "2023-08-09T14:18:56.601Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-4d403018d97be5664f8fe0dfb6412279_Snapshot.jpg",
+      "md5": "a4f8c4ef7b576a81e89033975e94f7fc",
+      "width": 150,
+      "height": 74,
+      "size": 3648,
+      "uploadedDate": "2023-06-16T22:45:32.691Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2023-06-25T18:05:11.888Z",
+  "lastModifiedDate": "2024-08-27T15:57:16.656Z",
+  "customAttributes": {},
+  "entitlementName": "9c1f17af7cc44b869fbba0d0ab5c27bf",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3a21b053e11b4668a6644da729dbb98a",
+      "appId": "SteamDLCBlueprintChinese_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-06-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1 Release 1.1 UTF-8"
+    },
+    {
+      "id": "912705882cad44159d3a6b69fa9fcd38",
+      "appId": "SteamDLCBlueprintChinese_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-06-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2 Release 1.1 UTF-8"
+    },
+    {
+      "id": "32b1a9a88b6247e7b9d65f89849433af",
+      "appId": "SteamDLCBlueprintChinese_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Mac",
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3 Release 1.1 UTF-8"
+    },
+    {
+      "id": "22f47a9a13a44231b36de435b9e4dad3",
+      "appId": "SteamDLCBlueprintChinese_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4 Release 1.1 UTF-8"
+    }
+  ],
+  "developer": "ZhangLiang002",
+  "developerId": "o-k6ty87vef2cbhj9zgd83mwfttk2d3n",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

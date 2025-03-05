@@ -1,0 +1,380 @@
+{
+  "id": "ab57356824334a069a308a915b671255",
+  "title": "Vertex Animation Manager",
+  "description": "Vertex Animation Texture (VAT) generation from skeletal meshes, including components for playback with sockets and notifications",
+  "longDescription": "<p>Introducing the Vertex Animation Manager for Unreal Engine 4 and 5! This plugin allows the generation of vertex animation textures directly within the Unreal Engine editor, without the need for any additional tools. It comes with included components for the playback of Static Meshes, Instanced Static Meshes (ISM) and Hierarchical Instanced Static Meshes (HISM).</p><p><br /></p><p>The plugin provides access to sockets and bones from both C&#43;&#43; and Blueprint code, allowing for the retrieval of socket transform, location, and rotation. You can easily setup your Blueprint actors and attach components by using the sockets. The runtime component can update the transforms automatically during the playback if you enable this option. The animation can also be played back without the need for any ticking enabled, as everything is controlled by time. Even if you have set up your skeletal mesh with notifications, these can still be used for the playback of animations by the vertex animation runtime components.</p><p><br /></p><p>Discord Q&amp;A and support: <a href=\"https://discord.gg/tu6ZNgwAb9\" rel=\"nofollow\">https://discord.gg/tu6ZNgwAb9</a></p><p><br /></p><p>Update 1.12 (UE5.4):</p><ul><li><strong>NEW</strong>: ISM previous transforms (UE5.4&#43;)</li><li><strong>NEW: </strong>HISM Async Build-Tree (UE5.4&#43;)</li><li><strong>NEW</strong>: Static Mesh Sockets from non-animated VAISM/VAHISM</li></ul><p>Update 1.11 (UE5.2&#43;):</p><ul><li><strong>NEW</strong>: Perfected Nanite workflow and support for all meshes</li><li><strong>NEW:</strong> Reduction tool for automatic influence optimizations in editor</li><li><strong>NEW: </strong>Ultra-precision profile setting for 32-bit float texture data</li></ul><p>Update 1.10:</p><ul><li><strong>NEW</strong>: Two-Phased Game Loop, For game loop optimizations and multi-threaded processing</li><li><strong>NEW</strong>: VAISM/VAHISM visibility flag adds and removes instances on the fly</li><li><strong>NEW:</strong> VAMovementComponent to integrate Nav Mesh path finding with root motion</li></ul><p>Update 1.9:</p><ul><li><strong>NEW</strong>: Full support up to UE5.3</li></ul><p>Update 1.8:</p><ul><li><strong>NEW</strong>: VAT Physics Feature</li><li><strong>NEW</strong>: VAT Normal Mapping</li><li><strong>NEW</strong>: VAT Async Loading</li><li><strong>NEW</strong>: VAT Morph Target Export to Texture</li></ul><p>Update 1.7:</p><ul><li><strong>NEW</strong>: Full support up to UE5.2</li><li><strong>NEW</strong>: Root Motion System</li><li><strong>NEW</strong>: No frame limits, &gt;500000 frames with 100 bones in one texture</li><li><strong>NEW</strong>: Modular characters with one control</li><li><strong>NEW</strong>: Sync with fully dynamic cloth systems</li><li><strong>NEW</strong>: Support of TAA, MotionBlur and more with velocity data on ISM and HISM</li><li><strong>NEW</strong>: Variations asset for multiple meshes on shared profiles</li><li><strong>NEW</strong>: Scripted Action Assets for batch processes</li><li><strong>NEW</strong>: Pause/Resume World</li></ul><p>Update 1.3:</p><ul><li>Tick-less Animation Blueprint to control animations</li><li>SyncMarkers and SyncGroups</li><li>Switch to RagDoll Skeletal Mesh</li></ul><p>Update 1.2:</p><ul><li>Nanite enabled for bone animations (UE 5.1&#43;)</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Generate Vertex Animation Textures (VAT) inside the editor for any Skeletal Mesh animation</li><li>Profiles that you can safe with your Skeletal Mesh assets</li><li>Fully works from the preview of your Blueprints to your Shipping Builds</li><li>Included Runtime Components to easily playback in C&#43;&#43; and/or Blueprints</li><li>Included Material Functions to playback in the material</li><li>Included Material Function to easily plug-in into any of your existing materials</li><li>Included Auto-Instancing for ISM and HISM VAT components</li><li>Included Notification Components to use in the editor and play events driven by the VAT</li><li>Included ready-made Niagara Notification Components</li></ul><p>Code Modules:</p><ul><li> VertexAnimationEditor (Editor)</li><li> VertexAnimationManager (Runtime)</li></ul><p><br /></p><p>Number of Blueprints: 3</p><p>Number of C&#43;&#43; Classes: 13</p><p>Network Replicated: No</p><p>Supported Development Platforms: All</p><p>Supported Target Build Platforms: All</p><p>Documentation: <a href=\"https://drive.google.com/file/d/1_ekKL2hLWzBcOC0TmH1_fbrOSarwhhn0/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/1_ekKL2hLWzBcOC0TmH1_fbrOSarwhhn0/view?usp&#61;sharing</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VAMP-Screen-001-1920x1080-85632fdd19f14fd1ee5b5f2ebb56c715.png",
+      "md5": "85632fdd19f14fd1ee5b5f2ebb56c715",
+      "width": 1920,
+      "height": 1080,
+      "size": 854426,
+      "uploadedDate": "2024-09-09T03:24:51.413Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VAMP-Screen-003-1920x1080-c466bff32173c2d62650cc986878225a.png",
+      "md5": "c466bff32173c2d62650cc986878225a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1502012,
+      "uploadedDate": "2024-09-09T03:15:52.907Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VAMP-Screen-002-1920x1080-e9f52622d3b63b1f9bfbb7f2f21736eb.png",
+      "md5": "e9f52622d3b63b1f9bfbb7f2f21736eb",
+      "width": 1920,
+      "height": 1080,
+      "size": 1704185,
+      "uploadedDate": "2024-09-09T02:54:09.566Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/asset-002-1920x1080-b8544711f6e71185c0a04e696aa32f75.png",
+      "md5": "b8544711f6e71185c0a04e696aa32f75",
+      "width": 1920,
+      "height": 1080,
+      "size": 847069,
+      "uploadedDate": "2023-01-20T19:23:02.995Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/asset-004-1920x1080-b570cfb72c4035d897d9aab2afabce57.png",
+      "md5": "b570cfb72c4035d897d9aab2afabce57",
+      "width": 1920,
+      "height": 1080,
+      "size": 676658,
+      "uploadedDate": "2023-01-20T19:23:02.157Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/asset-005-1920x1080-ef6e35cfbbe73c46dee5a574d764fbcb.png",
+      "md5": "ef6e35cfbbe73c46dee5a574d764fbcb",
+      "width": 1920,
+      "height": 1080,
+      "size": 724716,
+      "uploadedDate": "2023-01-20T19:40:09.365Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/VertexAnimationManager_thumb-284x284-f8cf0bf278b62b27f4e04cb3e2736b23.png",
+      "md5": "f8cf0bf278b62b27f4e04cb3e2736b23",
+      "width": 284,
+      "height": 284,
+      "size": 26068,
+      "uploadedDate": "2023-01-11T05:40:26.246Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/VertexAnimationManager_featured-894x488-8dcbf760e35c8ef9909948821b24e7a8.png",
+      "md5": "8dcbf760e35c8ef9909948821b24e7a8",
+      "width": 894,
+      "height": 488,
+      "size": 364251,
+      "uploadedDate": "2024-09-09T03:24:51.847Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAMP-Screen-001-1920x1080-85632fdd19f14fd1ee5b5f2ebb56c715_Snapshot.png",
+      "md5": "1b203715716422a23737a8cb43dc878d",
+      "width": 150,
+      "height": 74,
+      "size": 4121,
+      "uploadedDate": "2024-09-09T03:24:51.693Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAMP-Screen-003-1920x1080-c466bff32173c2d62650cc986878225a_Snapshot.png",
+      "md5": "3b12c529d4aea4b1e2dce3dd91f80f93",
+      "width": 150,
+      "height": 74,
+      "size": 4122,
+      "uploadedDate": "2024-09-09T03:15:53.247Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAMP-Screen-001-1920x1080-0104a5c9f70ef327a4550d92c3213faf_Snapshot.png",
+      "md5": "60cf13226b2d7708b78c41729cf34d2c",
+      "width": 150,
+      "height": 74,
+      "size": 3927,
+      "uploadedDate": "2024-09-09T03:02:23.641Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAMP-Screen-002-1920x1080-e9f52622d3b63b1f9bfbb7f2f21736eb_Snapshot.png",
+      "md5": "6361cdabb70e94348d18b3eeff871971",
+      "width": 150,
+      "height": 74,
+      "size": 4583,
+      "uploadedDate": "2024-09-09T02:54:09.859Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VAMP-Screen-001-1920x1080-832df444798ecfcea3304f98d3d84f93_Snapshot.png",
+      "md5": "60db3ddb33f110aafc5de4048a004b17",
+      "width": 150,
+      "height": 74,
+      "size": 3636,
+      "uploadedDate": "2024-09-09T02:27:32.418Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asset-001-new-1920x1080-c41d34f679b353d1a121e24686badb68_Snapshot.png",
+      "md5": "6f4948e9a85a2eaab1912eaaabd8eebe",
+      "width": 150,
+      "height": 74,
+      "size": 3832,
+      "uploadedDate": "2023-02-23T12:27:35.266Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asset-001a-1920x1080-512a4805676563ca082bd8038c70aa4e_Snapshot.png",
+      "md5": "eefea84ccc2cef680df837ef0973c5c2",
+      "width": 150,
+      "height": 74,
+      "size": 3455,
+      "uploadedDate": "2023-01-28T00:57:38.611Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asset-005-1920x1080-ef6e35cfbbe73c46dee5a574d764fbcb_Snapshot.png",
+      "md5": "5562f458ae657e9ea89560b8c7d555fe",
+      "width": 150,
+      "height": 74,
+      "size": 3475,
+      "uploadedDate": "2023-01-20T19:40:09.679Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asset-004-1920x1080-b570cfb72c4035d897d9aab2afabce57_Snapshot.png",
+      "md5": "0f01a162f3f53943c7f030ae94ce5635",
+      "width": 150,
+      "height": 74,
+      "size": 2900,
+      "uploadedDate": "2023-01-20T19:23:02.388Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asset-003-1920x1080-996c86d9c06ee25e36eea416c247e86f_Snapshot.png",
+      "md5": "5643f43b7e1c0fd38eb6c1961b59b4d2",
+      "width": 150,
+      "height": 74,
+      "size": 4032,
+      "uploadedDate": "2023-01-20T19:23:02.839Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asset-002-1920x1080-b8544711f6e71185c0a04e696aa32f75_Snapshot.png",
+      "md5": "f1535ae292e5ef4604b7cf28d4939619",
+      "width": 150,
+      "height": 74,
+      "size": 4100,
+      "uploadedDate": "2023-01-20T19:23:03.275Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asset-002-1920x1080-c2f41a259139a7b9a694ce5fb4be7d5b_Snapshot.png",
+      "md5": "75e3ae0a180b355f6a66de91777b6645",
+      "width": 150,
+      "height": 74,
+      "size": 3842,
+      "uploadedDate": "2023-01-20T19:09:44.079Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/asset-001-1920x1080-a0a4a0674952c88e362f8e08e9a9da24_Snapshot.png",
+      "md5": "b977f17c25134e1ca1969556e6a73b9c",
+      "width": 150,
+      "height": 74,
+      "size": 3787,
+      "uploadedDate": "2023-01-20T18:55:39.314Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image-1920x1080-ca25e2c1b29c7500f8d738055b3c1c51_Snapshot.png",
+      "md5": "70dd93cc2bc4f1932476425c2e8bc220",
+      "width": 150,
+      "height": 74,
+      "size": 5393,
+      "uploadedDate": "2023-01-11T05:40:26.202Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-01-26T20:41:07.725Z",
+  "lastModifiedDate": "2025-01-30T01:41:38.059Z",
+  "customAttributes": {},
+  "entitlementName": "ab57356824334a069a308a915b671255",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "acd7af5986ef439a89f456aa2c770add",
+      "appId": "VertexAnimationManager_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One",
+        "Win32"
+      ],
+      "dateAdded": "2023-01-11T00:00:00.000Z",
+      "releaseNote": "1.4",
+      "versionTitle": "Vertex Animation Manager UE427"
+    },
+    {
+      "id": "4ed0dbacb614465cbef1f638a975fae0",
+      "appId": "VertexAnimationManager_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-01-11T00:00:00.000Z",
+      "releaseNote": "1.7",
+      "versionTitle": "Vertex Animation Manager UE500"
+    },
+    {
+      "id": "efe90ea638fd44ed90102e510f6cdf50",
+      "appId": "VertexAnimationManager_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Gear VR",
+        "Android",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One",
+        "Win32"
+      ],
+      "dateAdded": "2023-01-11T00:00:00.000Z",
+      "releaseNote": "1.10",
+      "versionTitle": "Vertex Animation Manager UE501"
+    },
+    {
+      "id": "2e2feeae356d48dab009cb5a6b4c269e",
+      "appId": "VertexAnimationManager_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-05-13T00:00:00.000Z",
+      "releaseNote": "1.11",
+      "versionTitle": "Vertex Animation Manager UE502"
+    },
+    {
+      "id": "14e4b9cc28eb4ec5bb599ed9976412cb",
+      "appId": "VertexAnimationManager_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-10-17T00:00:00.000Z",
+      "releaseNote": "1.11",
+      "versionTitle": "Vertex Animation Manager UE503"
+    },
+    {
+      "id": "c03d316fabb349969bcea7007e34ba4c",
+      "appId": "VertexAnimationManager_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-05-31T00:00:00.000Z",
+      "releaseNote": "1.12",
+      "versionTitle": "Vertex Animation Manager UE504"
+    }
+  ],
+  "developer": "Thomas Schneider",
+  "developerId": "o-jsg85b24y6aprfzf6fux7m7w6cq6bd",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

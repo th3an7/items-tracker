@@ -1,0 +1,459 @@
+{
+  "id": "5c471369510a459e828ab807f8c42970",
+  "title": "Multiplayer FPS Procedural Animation Toolkit",
+  "description": "Control common animations procedurally without making animations! Check the list below.",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;33j8SKgrbV4&amp;ab_channel&#61;SneakyKittyGameDev\" rel=\"nofollow\"><strong>Showcase</strong></a> / <a href=\"https://docs.google.com/document/d/1PEe83T26kNwl6FDCiWxW2MOPpZ-J3GTZ2uObA5C73Wg/edit?usp&#61;sharing\" rel=\"nofollow\"><strong>Documentation (Google Doc)</strong></a><strong> </strong>/ <a href=\"https://discord.gg/W5g6pZXfjh\" rel=\"nofollow\"><strong>Support Discord</strong></a></p><p><br /></p><p><strong>Current Version: 1.2</strong></p><p><br /></p><h2>What is this plugin:</h2><p>This plugin is designed to be completely character independent so you can use your own characters with the system. The goal is to take a lot of the difficulty out of the animation process and bring you a smooth system that handles most of the common animations procedurally, while also being fully replicated for multiplayer use. The system is written in C&#43;&#43; with everything exposed to blueprint to give you ease of use with blueprint while being more performant than the competitions. I provide examples for everything required which is an example firearm, character, and animation blueprint which can easily be retargeted to your own character. Every procedural aspect of this system is customizable through either graphs, variables, or both. For example recoil. Recoil is controlled through two graphs, one for the location and one for the rotation of each shot. Then it has a series of variables so you can get a random result with each shot that is unique per firearm. To perform recoil you call PerformProceduralRecoil on the firearm or animbp. This function takes in a multiplier so you scale up/down your recoil effortlessly based on your stance such as standing/crouching/prone.</p><p><br /></p><h2>How does this plugin work:</h2><p>This plugin works through a component. Provided is a character component which you simply add to your character. To set it up all you have to do is call the Init function in BeginPlay and the system is ready to go. The character component acts as an interface for the system. For example if you want to lean left/right, you call LeanLeft and LeanRight from the character component and the system takes care of it for you with full replication. I provide a firearm base class which holds all of the needed information and customization required. If you want to add a sight to aim with all you have to do is add a static or skeletal mesh component to the firearm and give it the component tag FPSAnim. After that add a socket with the name S_Aim (this is the default name, set it to what you want in the firearm) where you want to aim and you are finished. This allows you to aim with anything such as a sight, magnified optic, light/laser, even the magazine and you can do so in less than 2 minutes! If you already have existing firearms all you have to do is reparent them to my firearm class and simply add the component tag to the firearm mesh FPSAnimFirearm and your done! Its that easy.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Adjustable poses for both first and third person view independently (using the same or separate meshes)</li><li>Procedural Aiming with the ability to aim and cycle between any sight or mesh on your firearm</li><li>Procedural Recoil that&#39;s fully customizable through graphs and variables for randomization</li><li>Procedural Leaning left/right</li><li>Procedural Looking up/down</li><li>Procedural High/Low ready</li><li>Procedural Movement/Rotation lag</li><li>Procedural Sway</li><li>Procedural Breathing</li><li>Procedural Sprinting</li><li>Procedural weapon shake</li><li>Left Hand IK</li><li>Control your camera FOV changing amount and speed while aiming/un-aiming</li><li>Aim at your sight with a dynamic or fixed distance</li><li>Firearm Collision System</li><li>Short stocking</li><li>Adjustable base pose without the need to edit the animation</li><li>Control your grip offset so any firearm can be attached to hand_r in the mannequin or other grip bones without the need for many sockets</li><li>Fully control all of the above individually for each firearm</li><li>Much More!</li></ul><p><br /></p><p>Code Modules:</p><ul><li> ProceduralFPSAnimation, Runtime </li></ul><p><br /></p><p>Number of Blueprints: 3</p><p>Number of C&#43;&#43; Classes: 3</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1PEe83T26kNwl6FDCiWxW2MOPpZ-J3GTZ2uObA5C73Wg/edit?usp&#61;sharing\" rel=\"nofollow\">https://docs.google.com/document/d/1PEe83T26kNwl6FDCiWxW2MOPpZ-J3GTZ2uObA5C73Wg/edit?usp&#61;sharing</a></p><p>Support Email: sneakykittygamedev&#64;gmail.com</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPATthumbnail01-1920x1080-2dd3829d6f53aa5256df5d2bcc7ea018.png",
+      "md5": "2dd3829d6f53aa5256df5d2bcc7ea018",
+      "width": 1920,
+      "height": 1080,
+      "size": 1370869,
+      "uploadedDate": "2022-04-04T13:55:41.116Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPATthumbnail08-1920x1080-0b1922aaa3f0d6f6f04900c3e88e2781.png",
+      "md5": "0b1922aaa3f0d6f6f04900c3e88e2781",
+      "width": 1920,
+      "height": 1080,
+      "size": 1989274,
+      "uploadedDate": "2022-04-04T13:47:08.654Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPATthumbnail03-1920x1080-6a115ab0686d1c446cd4d4d4a49a3eb8.png",
+      "md5": "6a115ab0686d1c446cd4d4d4a49a3eb8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2117326,
+      "uploadedDate": "2022-04-04T13:47:06.433Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPATthumbnail11-1920x1080-a9ca7ef139a24e73eff3cee7f7363841.png",
+      "md5": "a9ca7ef139a24e73eff3cee7f7363841",
+      "width": 1920,
+      "height": 1080,
+      "size": 1692045,
+      "uploadedDate": "2022-04-04T13:47:09.948Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPATthumbnail05-1920x1080-146c3f9ede5fb0f148a0a0719e2a4b38.png",
+      "md5": "146c3f9ede5fb0f148a0a0719e2a4b38",
+      "width": 1920,
+      "height": 1080,
+      "size": 2166907,
+      "uploadedDate": "2022-04-04T13:47:07.298Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPATthumbnail07-1920x1080-1d73597fe8158d5c1988b7349df0442c.png",
+      "md5": "1d73597fe8158d5c1988b7349df0442c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1732829,
+      "uploadedDate": "2022-04-04T13:47:08.178Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPATthumbnail09-1920x1080-93c12c832e9b6f52b837910e45500f49.png",
+      "md5": "93c12c832e9b6f52b837910e45500f49",
+      "width": 1920,
+      "height": 1080,
+      "size": 2038548,
+      "uploadedDate": "2022-04-04T13:47:09.125Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPATthumbnail02-1920x1080-bdc9c5a51aa3b209a77ddb106f09ec87.png",
+      "md5": "bdc9c5a51aa3b209a77ddb106f09ec87",
+      "width": 1920,
+      "height": 1080,
+      "size": 2080177,
+      "uploadedDate": "2022-04-04T13:47:05.993Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPATthumbnail10-1920x1080-d928bf01307d953a4218aa8164b774de.png",
+      "md5": "d928bf01307d953a4218aa8164b774de",
+      "width": 1920,
+      "height": 1080,
+      "size": 2166720,
+      "uploadedDate": "2022-04-04T13:47:09.539Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPATthumbnail04fix-1920x1080-053ecd9b53347855e2dcf9c039e06911.png",
+      "md5": "053ecd9b53347855e2dcf9c039e06911",
+      "width": 1920,
+      "height": 1080,
+      "size": 2295512,
+      "uploadedDate": "2022-04-04T13:47:06.877Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPATthumbnail06-1920x1080-7f2451fcf2dc03aeda0db839cb5387e0.png",
+      "md5": "7f2451fcf2dc03aeda0db839cb5387e0",
+      "width": 1920,
+      "height": 1080,
+      "size": 2313467,
+      "uploadedDate": "2022-04-04T13:47:07.719Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MultiplayerFPSProceduralAnimationToolkit_thumb-284x284-d54b7628d5008894e68c78f4e9c03868.png",
+      "md5": "d54b7628d5008894e68c78f4e9c03868",
+      "width": 284,
+      "height": 284,
+      "size": 84203,
+      "uploadedDate": "2022-04-04T14:07:42.121Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MultiplayerFPSProceduralAnimationToolkit_featured-894x488-c8011023fd6e0d384473c33070ef08bb.png",
+      "md5": "c8011023fd6e0d384473c33070ef08bb",
+      "width": 894,
+      "height": 488,
+      "size": 295815,
+      "uploadedDate": "2022-04-04T13:55:41.502Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail01-1920x1080-2dd3829d6f53aa5256df5d2bcc7ea018_Snapshot.png",
+      "md5": "22a1c6beceba916b94d888642f70dea6",
+      "width": 150,
+      "height": 74,
+      "size": 4407,
+      "uploadedDate": "2022-04-04T13:55:41.386Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail02-1920x1080-bdc9c5a51aa3b209a77ddb106f09ec87_Snapshot.png",
+      "md5": "c21e4008e9c34100f80647aa224ff2b7",
+      "width": 150,
+      "height": 74,
+      "size": 5381,
+      "uploadedDate": "2022-04-04T13:47:06.276Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail03-1920x1080-6a115ab0686d1c446cd4d4d4a49a3eb8_Snapshot.png",
+      "md5": "6d1b3c91f040293d35957ffa59eb5162",
+      "width": 150,
+      "height": 74,
+      "size": 6236,
+      "uploadedDate": "2022-04-04T13:47:06.734Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail04fix-1920x1080-053ecd9b53347855e2dcf9c039e06911_Snapshot.png",
+      "md5": "d395f3353f1d0c54d25bea7185053c18",
+      "width": 150,
+      "height": 74,
+      "size": 6145,
+      "uploadedDate": "2022-04-04T13:47:07.166Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail05-1920x1080-146c3f9ede5fb0f148a0a0719e2a4b38_Snapshot.png",
+      "md5": "adb2314ea7c45242d9619834255aba49",
+      "width": 150,
+      "height": 74,
+      "size": 3720,
+      "uploadedDate": "2022-04-04T13:47:07.582Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail06-1920x1080-7f2451fcf2dc03aeda0db839cb5387e0_Snapshot.png",
+      "md5": "64fb321417f858b5a204279d89efd91a",
+      "width": 150,
+      "height": 74,
+      "size": 5094,
+      "uploadedDate": "2022-04-04T13:47:08.006Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail07-1920x1080-1d73597fe8158d5c1988b7349df0442c_Snapshot.png",
+      "md5": "a42fc6672c03c645ee18735587abf547",
+      "width": 150,
+      "height": 74,
+      "size": 4310,
+      "uploadedDate": "2022-04-04T13:47:08.473Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail08-1920x1080-0b1922aaa3f0d6f6f04900c3e88e2781_Snapshot.png",
+      "md5": "81f8cd87f31b1eb628df054300334072",
+      "width": 150,
+      "height": 74,
+      "size": 4234,
+      "uploadedDate": "2022-04-04T13:47:08.945Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail09-1920x1080-93c12c832e9b6f52b837910e45500f49_Snapshot.png",
+      "md5": "d844780bfb6590fa4733949cb197c449",
+      "width": 150,
+      "height": 74,
+      "size": 4202,
+      "uploadedDate": "2022-04-04T13:47:09.406Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail10-1920x1080-d928bf01307d953a4218aa8164b774de_Snapshot.png",
+      "md5": "5fb39aa787b64feaacc30e655aca2e72",
+      "width": 150,
+      "height": 74,
+      "size": 4254,
+      "uploadedDate": "2022-04-04T13:47:09.830Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail11-1920x1080-a9ca7ef139a24e73eff3cee7f7363841_Snapshot.png",
+      "md5": "b499e25fc91b47c7389d9d6083ff6747",
+      "width": 150,
+      "height": 74,
+      "size": 3925,
+      "uploadedDate": "2022-04-04T13:47:10.215Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPATthumbnail01-1920x1080-a4a108ee0fe52e7d8eacc66841756c11_Snapshot.png",
+      "md5": "df929ef40dcb77e53833e69118ccb09b",
+      "width": 150,
+      "height": 74,
+      "size": 3667,
+      "uploadedDate": "2022-04-04T13:46:45.771Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/high low ready-1920x1080-d268a7ddddc1fe6bd22371b43626f44d_Snapshot.jpg",
+      "md5": "77f9e79fe840bfcc235b11db6547d51a",
+      "width": 150,
+      "height": 74,
+      "size": 6756,
+      "uploadedDate": "2022-03-28T22:15:29.771Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/firearm collision-1920x1080-d8fecd0fec5a54d58d0dedb23f32d9c8_Snapshot.jpg",
+      "md5": "777c88172ec1ba49d47ff87520b87663",
+      "width": 150,
+      "height": 74,
+      "size": 6108,
+      "uploadedDate": "2022-03-28T22:15:30.330Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/procedural recoil with randomization-1920x1080-167ddddc4a58d5b5e08a5fd82910ae08_Snapshot.jpg",
+      "md5": "5a638a6653aba71f0a64640f061dc526",
+      "width": 150,
+      "height": 74,
+      "size": 4888,
+      "uploadedDate": "2022-03-28T22:15:30.823Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Reload While Aiming-1920x1080-60b5a83f9fe3591a06f501e76ff8b6a1_Snapshot.jpg",
+      "md5": "3b41088b9918a81ea5259bbb4222183a",
+      "width": 150,
+      "height": 74,
+      "size": 6191,
+      "uploadedDate": "2022-03-28T22:06:27.046Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/easy to use bp examples-1920x1080-79a5730a8b098eb1121d20f6e28a7361_Snapshot.jpg",
+      "md5": "46d109e7b0458a07d09284a979ecc45e",
+      "width": 150,
+      "height": 74,
+      "size": 7139,
+      "uploadedDate": "2022-03-28T22:06:27.665Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/full control every detail-1920x1080-e3f4e2ae81ca2c3dc0b9ae172aaa4868_Snapshot.jpg",
+      "md5": "76e3ecbff6ba3dff5a7fd48c265e6c59",
+      "width": 150,
+      "height": 74,
+      "size": 6590,
+      "uploadedDate": "2022-03-28T22:06:28.191Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/cycle sights-1920x1080-afe0d6794a3434bc6ed35634330e7db6_Snapshot.jpg",
+      "md5": "f35984f034d09da8fe2edecc7c740a39",
+      "width": 150,
+      "height": 74,
+      "size": 7660,
+      "uploadedDate": "2022-03-28T22:06:28.741Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/procedural aiming-1920x1080-2a12d4f6d8b1cc4dff7e58b8d41378f7_Snapshot.jpg",
+      "md5": "8695b675d1e6d0396dcf5c6fa2dd642e",
+      "width": 150,
+      "height": 74,
+      "size": 7236,
+      "uploadedDate": "2022-03-28T21:54:31.816Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/procedural Leaning-1920x1080-de726a7f0a3c6de39f3155156412a740_Snapshot.jpg",
+      "md5": "c77b620b02e1b0c1102a9614ac64a2a4",
+      "width": 150,
+      "height": 74,
+      "size": 5121,
+      "uploadedDate": "2022-03-28T21:54:32.381Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/45ADS-1920x1080-0f40b9fce93582e284be7f40dc5a595b_Snapshot.jpg",
+      "md5": "ac25e238afe908bb28376bc1acb10788",
+      "width": 150,
+      "height": 74,
+      "size": 6327,
+      "uploadedDate": "2022-03-28T21:54:32.995Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UMFPS0-1920x1080-db64f30ec9ce3289dc1d9b70e646fcf3_Snapshot.png",
+      "md5": "2d0b226d22255e335790a7d6f8913d51",
+      "width": 150,
+      "height": 74,
+      "size": 3583,
+      "uploadedDate": "2022-03-27T21:14:25.757Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-04-01T15:32:18.030Z",
+  "lastModifiedDate": "2024-11-15T00:34:27.010Z",
+  "customAttributes": {},
+  "entitlementName": "5c471369510a459e828ab807f8c42970",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "2884f6df90ed4fb19fc5984b2294597f",
+      "appId": "MultiplayerFPSProceduralAnimationToolkit_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-03-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.2 4.26"
+    },
+    {
+      "id": "d9ce8df1cc754b24b18d5743db548a4b",
+      "appId": "MultiplayerFPSProceduralAnimationToolkit_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-03-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.2 4.27"
+    },
+    {
+      "id": "18077e127954417981725a8d0516a805",
+      "appId": "MultiplayerFPSProceduralAnimationToolkit_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.2 5.0"
+    },
+    {
+      "id": "548c31d434f243c58c26cf4cd03b0b8a",
+      "appId": "MultiplayerFPSProceduralAnimationToolkit_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-11-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.2 5.1"
+    },
+    {
+      "id": "b42cc2530338436ba72a7f4d0a137b7d",
+      "appId": "MultiplayerFPSProceduralAnimationToolkit_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.2 5.2"
+    },
+    {
+      "id": "750e78dbf96f4bfbb11af72d510054e5",
+      "appId": "MultiplayerFPSProceduralAnimationToolkit_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.2 5.3"
+    },
+    {
+      "id": "596172a0828f48e8aee40045cf5d1043",
+      "appId": "MultiplayerFPSProceduralAnimationToolkit_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.2 5.4"
+    }
+  ],
+  "developer": "Sneaky Kitty Game Dev",
+  "developerId": "o-6wmq4ef76gq5yweewddyjrkvbld3tm",
+  "endOfSupport": false,
+  "unsearchable": false
+}

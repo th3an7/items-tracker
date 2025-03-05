@@ -1,0 +1,227 @@
+{
+  "id": "1a12b1a2419f4345b881086321b32860",
+  "title": "Native Subtitles into UMG",
+  "description": "Hooks into the existing subtitle system that reroutes result into UMG TextBlock or RichTextBlock",
+  "longDescription": "<p>The UMG Subtitle Hook plugin utilizes the native subtitle system, but instead of it being rendered via slate with very little control over font, size and colour, this reroutes the final subtitle into 2 UMG components - a SubtitleTextBlock, and a SubtitleRichTextBlock. This lets you better customize the subtitles to provide better control and readability.</p><p><br /></p><p>The system is drag and drop, just add a SubtitleTextBlock into your hud, and use subtitles as normal.</p><p><br /></p><p>Note that as we are leveraging the native subtitle system, if your not already familiar, you should read up on how they work with dialogue waves etc. A working example widget is provided using RichText in the plugins content folder. (Content Browser &gt; View Options &gt; Enable Plugins &amp; Engine Content, then navigate to <em>SubtitleHookUMG </em>folder)</p><p><br /></p><p>Since this system lets you route into UMG, it should also be usable in VR titles with the correct widget setup.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Reroutes subtitles into the UMG widget, when this widget is running, the native render will not occur.</li><li> Also has a delegate for when subtitles are received, if you want to handle them differently.</li></ul><p>Code Modules:</p><ul><li> SubtitleHookUMG - Runtime</li></ul><p>Number of Blueprints: 1 (Example)</p><p>Number of C&#43;&#43; Classes: 2 (SubtitleTextBlock &amp; SubtitleRichTextBlock)</p><p>Network Replicated: N/A</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Win64, Win32, Android, IOS. Should work on all platforms.</p><p>Documentation: <a href=\"https://youtu.be/iM5UqLvBS2E\" rel=\"nofollow\">Link</a></p><p>Example Project: Examples included in Plugins content folder</p><p>Important/Additional Notes: Using the RichText option may require additional learning on how the RichText system works. Native subtitle system also requires some additional learning if you have not used before.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screen01-1920x1080-4a73ab68d0aa3d55131c23ac76b8350a.png",
+      "md5": "4a73ab68d0aa3d55131c23ac76b8350a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2366274,
+      "uploadedDate": "2021-03-28T16:26:14.008Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screen02-1920x1080-6565051542e71cf3b163f57c94341e0a.png",
+      "md5": "6565051542e71cf3b163f57c94341e0a",
+      "width": 1920,
+      "height": 1080,
+      "size": 282966,
+      "uploadedDate": "2021-03-28T16:26:14.499Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screen03-1920x1080-c8ab66a53a8053474995b4e20a214655.png",
+      "md5": "c8ab66a53a8053474995b4e20a214655",
+      "width": 1920,
+      "height": 1080,
+      "size": 423376,
+      "uploadedDate": "2021-03-28T16:26:15.027Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/NativeSubtitlesintoUMG_thumb-284x284-3014099b86660fe7aa3acfeb0f0323dc.png",
+      "md5": "3014099b86660fe7aa3acfeb0f0323dc",
+      "width": 284,
+      "height": 284,
+      "size": 8187,
+      "uploadedDate": "2021-03-28T16:26:15.314Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/NativeSubtitlesintoUMG_featured-894x488-e9bad2c94eb610f217390dc99df6fc47.png",
+      "md5": "e9bad2c94eb610f217390dc99df6fc47",
+      "width": 894,
+      "height": 488,
+      "size": 22799,
+      "uploadedDate": "2021-03-28T16:26:15.364Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen01-1920x1080-4a73ab68d0aa3d55131c23ac76b8350a_Snapshot.png",
+      "md5": "760fa0001a68f572d7d002cc19316a15",
+      "width": 150,
+      "height": 74,
+      "size": 4056,
+      "uploadedDate": "2021-03-28T16:26:14.359Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen02-1920x1080-6565051542e71cf3b163f57c94341e0a_Snapshot.png",
+      "md5": "bcbece3b55d6f64c8de30215c33eb5a7",
+      "width": 150,
+      "height": 74,
+      "size": 3902,
+      "uploadedDate": "2021-03-28T16:26:14.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen03-1920x1080-c8ab66a53a8053474995b4e20a214655_Snapshot.png",
+      "md5": "9dc76132fe5f413fe97a94b3440ae058",
+      "width": 150,
+      "height": 74,
+      "size": 4790,
+      "uploadedDate": "2021-03-28T16:26:15.275Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-03-29T17:23:51.072Z",
+  "lastModifiedDate": "2024-11-21T02:35:25.916Z",
+  "customAttributes": {},
+  "entitlementName": "1a12b1a2419f4345b881086321b32860",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "47d16cc7487b41f093771a5758f25227",
+      "appId": "SubtitleHookUMG_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "iOS",
+        "Win32",
+        "Windows",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Android"
+      ],
+      "dateAdded": "2021-03-28T00:00:00.000Z",
+      "releaseNote": "updated lighting and copyright",
+      "versionTitle": "V1"
+    },
+    {
+      "id": "91f47e9aa06141ea872ab74671ca877c",
+      "appId": "SubtitleHookUMG_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android",
+        "iOS",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2021-09-17T00:00:00.000Z",
+      "releaseNote": "v1",
+      "versionTitle": "V1 4.27"
+    },
+    {
+      "id": "54fa8885ba6149e2b5400976667c5e5f",
+      "appId": "SubtitleHookUMG_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-05-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "1be07893460849dbbb60cf6e2f0a3c76",
+      "appId": "SubtitleHookUMG_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2022-12-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "661a15ab1ced446fba085991fe3791ba",
+      "appId": "SubtitleHookUMG_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2023-05-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "271682f5132146bbab077954d08ae615",
+      "appId": "SubtitleHookUMG_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Android",
+        "iOS",
+        "Win32"
+      ],
+      "dateAdded": "2023-10-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "6fd28f37a7cd4892886fa496e0d95369",
+      "appId": "SubtitleHookUMG_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Windows",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Mac"
+      ],
+      "dateAdded": "2024-05-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Zenith Digital",
+  "developerId": "o-db129d784341e3b6c3aa2fa1698d37",
+  "endOfSupport": false,
+  "unsearchable": false
+}

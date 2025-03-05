@@ -1,0 +1,294 @@
+{
+  "id": "7d8e59cc35fa4d10bf9d44ffb4a5a6e0",
+  "title": "Simple Replicated Ragdoll System",
+  "description": "Easily add a multiplayer-ready ragdoll to your game!",
+  "longDescription": "<h1>sRRS - simple Replicated Ragdoll System</h1><p><strong>Every Multiplayer Game could benefit from replicated ragdolls!</strong></p><p><u>Demo</u></p><p>Demo Video: <a href=\"https://youtu.be/kcftPEsg5fw\" rel=\"nofollow\">YouTube Link</a></p><p>Download the demo here: <a href=\"https://drive.google.com/file/d/1XFyWddf_zITjn_ORwIW5A0EyvxXzKfN5/view?usp&#61;sharing\" rel=\"nofollow\">Google Drive Link</a></p><p><em><u>When will this be useful?</u></em></p><ul><li>Something explodes near the player</li><li>The character trips or falls</li><li>Character gets knocked out / Hit by object or weapon</li><li>Character dies, but gets revived</li></ul><p>No matter the situation, sRRS will make sure that the Actors’ location stays roughly¹ replicated on all clients during ragdoll simulation.</p><p>¹ should stay within 1 meter of the server position</p><p><em><u>How does it work?</u></em></p><p>sRRS handles the ragdoll calculation on the server and returns the updated ragdoll position to each client when possible. The client will then interpolate the local mesh position to that location as smoothly as possible while locally simulating the ragdoll effect. While this does result in the ragdoll not being 100% similar on all clients, this greatly improves network performance while keeping the location roughly replicated on all clients.</p><p><em><u>Why sRRS?</u></em></p><ul><li><strong>100 % Blueprints</strong></li><li><strong>Easy to implement into your project</strong></li><li><strong>Works with all server-setups</strong></li><li><strong>Easy to modify</strong></li><li><strong>Features Recovery-Logic</strong></li><li><strong>Works with any character/skeleton</strong></li><li><strong>Features Example Logic (Only 4.24 or later)</strong></li><li><strong>Debugging / Testing built in</strong></li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li> <strong>Easy to implement into your project:</strong> All necessary functions in one component!</li><li> <strong>Works with all server-setups:</strong> whether you’re using P2P, dedicated servers or simply want an easy solution to add a ragdoll to your Single-Player game, the sRRS will work.</li><li><strong>Easy to modify:</strong> 100 % developed using documented Blueprints.</li><li><strong>Features Recovery-Logic:</strong> After the player is revived or gets up on his own, he can then continue with normal gameplay.</li><li><strong>Works with any character / skeleton: </strong>animations are built using the default Unreal Engine Skeleton, but the sRRS component will work for all characters, no matter their skeleton. Set up a physics asset and you are ready to go!</li><li><strong>Features Example Logic:</strong> In the provided demo map, the player can punch other characters, throw grenades, get catapulted by a geyser and heal other characters. (Grenade / Geyser are only available for 4.24 or later)</li><li><strong>Debugging / Testing built in:</strong> Can simulate a bad connection and display the accuracy of the replication.</li></ul><p>Number of Blueprints: 1 Component (all versions), 3 Blueprints containing example logic (only 1 for 4.23 or earlier)</p><p>Input: Gamepad, Keyboard &amp; Mouse</p><p>Network Replicated: Yes</p><p>Supported Platforms: should work on all, but only tested on Windows</p><p>Support: help.coregames&#64;gmail.com</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1HtLHH-xIuKOXZLK7_eptZUFZV7_QGCSra0ijyDjGHV4\" rel=\"nofollow\">Implementation Guide (Google Docs)</a></p><p>Important/Additional Notes: The exact ragdoll pose can vary between clients, as it is not replicated bone by bone.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/title-1920x1080-86eb5db10dc7470f50ee2e5e6ff86f55.png",
+      "md5": "86eb5db10dc7470f50ee2e5e6ff86f55",
+      "width": 1920,
+      "height": 1080,
+      "size": 1870643,
+      "uploadedDate": "2020-08-12T14:14:59.902Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/easy-1920x1080-73bdf7760f97bed82c952b1b8f5e2f15.png",
+      "md5": "73bdf7760f97bed82c952b1b8f5e2f15",
+      "width": 1920,
+      "height": 1080,
+      "size": 1275592,
+      "uploadedDate": "2020-08-12T14:15:00.527Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/example-1920x1080-9877b375ba31bc075b190996e697a615.png",
+      "md5": "9877b375ba31bc075b190996e697a615",
+      "width": 1920,
+      "height": 1080,
+      "size": 1710297,
+      "uploadedDate": "2020-08-12T14:15:01.148Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/revive-1920x1080-82d264198e679b5eeaf1b6856dac2bda.png",
+      "md5": "82d264198e679b5eeaf1b6856dac2bda",
+      "width": 1920,
+      "height": 1080,
+      "size": 1437832,
+      "uploadedDate": "2020-08-12T14:15:01.780Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/overview-1920x1080-caf1fa767a4d041d9f755f9ca95c46ec.png",
+      "md5": "caf1fa767a4d041d9f755f9ca95c46ec",
+      "width": 1920,
+      "height": 1080,
+      "size": 863044,
+      "uploadedDate": "2020-08-12T14:15:02.429Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/netcode-1920x1080-6d1ece1db67f656fd9edc90f18d5dd31.png",
+      "md5": "6d1ece1db67f656fd9edc90f18d5dd31",
+      "width": 1920,
+      "height": 1080,
+      "size": 1441799,
+      "uploadedDate": "2020-08-12T14:15:03.052Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SimpleReplicatedRagdollSystem_thumb-284x284-ea47c5e7a4eaaa29b70d4cbec80d9fc9.png",
+      "md5": "ea47c5e7a4eaaa29b70d4cbec80d9fc9",
+      "width": 284,
+      "height": 284,
+      "size": 100605,
+      "uploadedDate": "2020-08-12T14:15:03.567Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SimpleReplicatedRagdollSystem_featured-894x488-f47463cf1cba0cec9ada6e215c624b37.png",
+      "md5": "f47463cf1cba0cec9ada6e215c624b37",
+      "width": 894,
+      "height": 488,
+      "size": 389066,
+      "uploadedDate": "2020-08-12T14:15:03.679Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/title-1920x1080-86eb5db10dc7470f50ee2e5e6ff86f55_Snapshot.png",
+      "md5": "c47e9aa0cc15aab2cf518c202bee0b7e",
+      "width": 150,
+      "height": 74,
+      "size": 6160,
+      "uploadedDate": "2020-08-12T14:15:00.313Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/easy-1920x1080-73bdf7760f97bed82c952b1b8f5e2f15_Snapshot.png",
+      "md5": "653a9d300bfc8c435bf0c68ba03b20d6",
+      "width": 150,
+      "height": 74,
+      "size": 4658,
+      "uploadedDate": "2020-08-12T14:15:00.923Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/example-1920x1080-9877b375ba31bc075b190996e697a615_Snapshot.png",
+      "md5": "576d8d881cffdf3528f5dd25b02ac7d5",
+      "width": 150,
+      "height": 74,
+      "size": 5802,
+      "uploadedDate": "2020-08-12T14:15:01.619Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/revive-1920x1080-82d264198e679b5eeaf1b6856dac2bda_Snapshot.png",
+      "md5": "9a407ce97c10e3380e0d2af9791bfa2a",
+      "width": 150,
+      "height": 74,
+      "size": 4276,
+      "uploadedDate": "2020-08-12T14:15:02.219Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/overview-1920x1080-caf1fa767a4d041d9f755f9ca95c46ec_Snapshot.png",
+      "md5": "162c5d875456717f38c26bcb30716fe7",
+      "width": 150,
+      "height": 74,
+      "size": 6090,
+      "uploadedDate": "2020-08-12T14:15:02.830Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/netcode-1920x1080-6d1ece1db67f656fd9edc90f18d5dd31_Snapshot.png",
+      "md5": "5ceaea51328542166e3473f405c268f2",
+      "width": 150,
+      "height": 74,
+      "size": 5846,
+      "uploadedDate": "2020-08-12T14:15:03.527Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main42-1920x1080-8215b15274c6741b5050381aede9348f_Snapshot.png",
+      "md5": "247564f7821c79c0471cdedf71be5bbd",
+      "width": 150,
+      "height": 74,
+      "size": 6708,
+      "uploadedDate": "2020-05-12T21:15:01.282Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main23-1920x1080-5fea7c72b61d0c1e1eb4175a8dfd03eb_Snapshot.png",
+      "md5": "f98d367103e83b5fd877145040e204ac",
+      "width": 150,
+      "height": 74,
+      "size": 5768,
+      "uploadedDate": "2020-05-12T21:15:01.889Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main32-1920x1080-e25ecfbe52e38c397ad9fac1a4bbd217_Snapshot.png",
+      "md5": "52493332aa7f5727c15082463bca3f26",
+      "width": 150,
+      "height": 74,
+      "size": 4942,
+      "uploadedDate": "2020-05-12T21:15:02.473Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main42-1920x1080-6a679f9fa7279a89711ed81ccfff2125_Snapshot.png",
+      "md5": "64e69fcfd7afac83fbddaf2a8f5a91f6",
+      "width": 150,
+      "height": 74,
+      "size": 6845,
+      "uploadedDate": "2020-05-12T20:58:38.293Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main42-1920x1080-123668426a187fdcedd6389dd9bd1ba1_Snapshot.png",
+      "md5": "c87b8c5bd1aef32800218644a97a2e24",
+      "width": 150,
+      "height": 74,
+      "size": 6743,
+      "uploadedDate": "2020-05-12T20:57:04.502Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main22-1920x1080-04cf9dcc68613ce23e1304789b611d81_Snapshot.png",
+      "md5": "fa721210183197f6db003269bc5d5e56",
+      "width": 150,
+      "height": 74,
+      "size": 5621,
+      "uploadedDate": "2020-04-14T21:29:13.914Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main4-1920x1080-5b329bf1992d1535d2492ace14fde665_Snapshot.png",
+      "md5": "6559fdca0d98acf85574ef91915e21e0",
+      "width": 150,
+      "height": 74,
+      "size": 4832,
+      "uploadedDate": "2020-04-14T21:22:15.731Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main3-1920x1080-05247aa3a8edd954a57526a0f3390f8e_Snapshot.png",
+      "md5": "32860793f3d04531a8f8db6d651b2d16",
+      "width": 150,
+      "height": 74,
+      "size": 3535,
+      "uploadedDate": "2020-04-14T21:22:16.109Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/main2-1920x1080-20e3f6f671d417926b408ce6c374e8c2_Snapshot.png",
+      "md5": "1243631e41a7dcc9d3b265497bd8e2bd",
+      "width": 150,
+      "height": 74,
+      "size": 5277,
+      "uploadedDate": "2020-04-14T21:22:16.625Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/compilation-1920x1080-9f5c77c194fd309e55f87867ce0300bf_Snapshot.png",
+      "md5": "6d217d02347796d22888f505977c882b",
+      "width": 150,
+      "height": 74,
+      "size": 6104,
+      "uploadedDate": "2020-04-14T21:22:17.127Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-05-12T21:16:58.173Z",
+  "lastModifiedDate": "2024-11-19T16:45:08.126Z",
+  "customAttributes": {},
+  "entitlementName": "7d8e59cc35fa4d10bf9d44ffb4a5a6e0",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "5bfb63064da9411fabd32c012371cf5f",
+      "appId": "SimpleRe7d8e59cc35faV1",
+      "compatibleApps": [
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "Oculus",
+        "PS4",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-07-01T00:00:00.000Z",
+      "releaseNote": "Does not contain the same demo blueprints (Grenade / Geyser) as the version for 4.24 or later.",
+      "versionTitle": "sRRS v1.3 light 4.21 - 4.23"
+    },
+    {
+      "id": "9e1c3f15b678412181cab377f174bbc0",
+      "appId": "SimpleRe7d8e59cc35faV2",
+      "compatibleApps": [
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac",
+        "PS4",
+        "Oculus",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-05-08T00:00:00.000Z",
+      "releaseNote": "fixed an issue where the splash screen image would be overridden by this content pack.",
+      "versionTitle": "sRRS v1.3a 4.24 - latest"
+    }
+  ],
+  "developer": "coregames",
+  "developerId": "o-b35t9s74llhxvqqhh3jbw2fa4f46u7",
+  "endOfSupport": false,
+  "unsearchable": false
+}

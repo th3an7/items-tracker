@@ -1,0 +1,575 @@
+{
+  "id": "23e1a11ed3ef47718311fccd4250c625",
+  "title": "Automatic game updater / patcher for pre-launch",
+  "description": "Plug and Play Automatic game updates into your application prior to approval for the Epic Marketplace. Allow both your in-house testers as well as any community testers to simply open the game and ALWAYS have the latest version.",
+  "longDescription": "<p>Discord: <a href=\"https://discord.com/invite/SSuPG8e\" rel=\"nofollow\">https://discord.com/invite/SSuPG8e</a></p><p>Showcase video: <a href=\"https://vimeo.com/794209247\" rel=\"nofollow\">https://vimeo.com/794209247</a></p><p><br /></p><p>OPatcher is a currently unrivaled option for your game testers to receive new iterations automagically. Instead of having to send a new URL to each individual tester, the UE Game will trigger a sequence of checks to ensure the tester is using your latest distribution. Never again will you have the concern whether or not bug reports are made using stale code. While this might not be a common issue during in-house testing, it gets combined with the power of ease of use when switching into closed alpha and other sorts of community testing.</p><p><br /></p><p>You don&#39;t even need to get them to open a separate application and hope that they don&#39;t have a direct shortcut saved elsewhere. It&#39;s your very game&#39;s OWN code that verifies the game during the booting stage to ensure version checks ALWAYS happen. Should you desire to make the update optional: simply place the &#34;Update Game&#34; blueprint node in a location other than defined in the instructions, instantly moving the patch trigger to your desired point in execution.</p><p><br /></p><p>While I can only speak from personal experience (as can anyone), this code addition has been essential during my time with UE, both during solo development and team-based cooperations. As a result it has been built, tested, confirmed and verified dozens, if not thousands of times, in my own personal development processes when distributing builds to friends, family members, in-house testers, community members, and even to myself in all honesty. It&#39;s just easier to hit Play than to create a new installer, even if I&#39;m the only one needing it.</p><p><br /></p><p>Patcher has been specifically designed to function with the default UE packaging configuration. Specific files (namely &#39;.exe&#39;, &#39;.pak&#39; and &#39;.ucas&#39;) are extracted into a separate patch file to allow for multi-layered updates without needing to download GBs for every missed patch. All files that match the aforementioned extension filter will only be downloaded for the latest patch. Note that while there&#39;s no security in place, you can invalidate all previous download links by switching ports. The port call is hard-wired into the distributed version via BP node and as such isn&#39;t easily modifiable client-side.</p><p><br /></p><p>Finally, the patcher supports any type of game or genre regardless of whether you&#39;re working on a massive scale MMORPG like the baboon that I am, a fun little card game or even just a server manager application. Those are simply some of the examples that I&#39;ve been using the Patcher for personally. Furthermore, Orode Productions holds no data from your patches. Your data is never uploaded to any of our servers, nor do we see your content or have any clue how many patches you have created. All we do is assume you abide by the Terms set forth in the Epic Games Marketplace. Beyond that purchase button, 0 data of your company or your game is collected nor sent to us. While that provides you with the ultimate security as per design, it also means we cannot recover any lost files or data. Keep this in mind when deleting content!!</p><p><br /></p><p>---------------------------------------------------------</p><p><br /></p><p>FAQ:</p><p>--- Q: Why does the Patcher not support more platforms?</p><p>A: Mobile devices do not allow applications to self-patch. They&#39;re restricted to direct links and their respective stores. Same applies for macOS devices where an application is never even actually installed but simply present. Since that encompasses essentially 99% of all non-Windows development devices, Windows has become the go-to solution for sending patches during rapid development.</p><p>--- Q: Is the Patcher supported for post-release?</p><p>A: While the code should pose no problems whatsoever when deployed on a larger scale, we recommend using a more robust distribution platform such as the Epic Marketplace. There are no authenticity measures in this Patcher and as such any player ever acquiring a game folder will be able to request updates INDEFINITELY. I cannot repeat it enough: Please protect yourself and use a proper distribution platform!!!</p><p>--- Q: My external IP changes rapidly and thus my testers are unable to connect long-term. How do I fix this?</p><p>A: Use a search engine, such as Bing or Google, to browse using &#34;free dynamic DNS&#34; as the search term. Register with any DDNS and place the value they give you in the Blueprint Node&#39;s IP input field instead. (example: http://test.exampleddns.com/ )</p><p>--- Q: Will this prevent players from playing my game after I&#39;ve stopped supporting it?</p><p>A: Absolutely not in any way. Should the server be unavailable, players will merely experience a small delay on first tick. The patcher will automatically be closed after anywhere between 1 to 30 seconds and eventually time out. Game will resume when the Patcher has completed its connection attempt. We recommend putting &#34;Checking for updates...&#34; on-screen for first tick in both the Patcher application as well as your game&#39;s User Interface. The showcase video illustrates this.</p><p>--- Q: Given that you have no competition, why don&#39;t you charge considerably more?</p><p>A: This code has been functional, in use and unchanged for the better part of 2 years for updating Cards of Yore&#39;s testing stages ( https://www.cardsofyore/ ). While the lack of competition could allow me to charge near the 100 dollar mark, that&#39;s not what this was made for. This is my first product making it to the Marketplace. Having people enjoy my software is by far and wide more important to me than the short burst of financial gain. I sincerely hope you and many others can enjoy the devOps that this code provides. Price will slowly increase over 2023 and 2024 to adjust for inflation and demand.</p><p>--- Q: I don&#39;t have access to my router and thus can&#39;t execute the steps in SETUP.</p><p>A: Skip the &#34;Network Setup&#34; step, then utilize LAN simulation software (search engine: &#34;create LAN network over internet&#34;) to set up a Local Area Network between your testers and your hosting device. Then proceed with &#34;Application Setup&#34;, &#34;Creating a Patch&#34; and &#34;Final Steps&#34; as normal. Enter the host device&#39;s IP as provided by the LAN software into the &#34;UpdateGame&#34; node.</p><p>--- Q: Do you have any intent to allow the server to be replaced by a file hosting server such as GoogleDrive/Dropbox/OneDrive/etc.?</p><p>A: It&#39;s outside my area of knowledge, but that&#39;s not a valid argument long-term. If there&#39;s enough developers requesting the ability to host patches without a live server, then so it is decreed.</p><p>--- Q: Do you have any support for accessibility software such as screen readers?</p><p>A: We have made sure to launch the Patcher entirely irrelevant of user input. No additional prompts on top of the admin access request are visualised. This means that a visually impaired player will always be able to update the application without needing third-party participation. Should there be any additional request for accessibility I will make sure to implement them as soon as possible. Accessibility in games should always be considered a high priority by anyone.</p><p><br /></p><p>---------------------------------------------------------</p><p><br /></p><p>I am available for your questions on Discord. Your positive reviews and comments are the fuel for the next game&#39;s updates. It&#39;s lovely to be able to aid my like-minded humans. GAME DEV 4 LIFE</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Seamless player experience: When playing on the latest version the player will barely notice the patcher exists</li><li>Click &amp; Play focus; Only 1 blueprint node needs added into your code</li><li>Easy to use &amp; maintain; New patches can be made by simply dragging some files around and running OPatcher_Builder</li><li>Delayed elevated permissions; Client device will only request admin access if an update is found. Patcher is booted in game&#39;s elevation when checking to avoid user interaction.</li><li>Live patching; Patches can be made while OPatcher_Server is running and in use. Client devices will receive the new version upon next boot of their local game.</li><li>Blueprint additions: Alongside &#34;UpdateGame&#34;, BP nodes IsRanInEditor, IsWindows, IsAndroid and IsMac are added to expose C&#43;&#43; macros.</li></ul><p>---------------------------------------------------------</p><p>Code Modules: OPatcher [Runtime]</p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 1</p><p>Network Replicated: N/A</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: &#34;&lt;PluginFolder&gt;/OPatcher/instructions patcher.txt&#34; (Default &lt;PluginFolder&gt; &#61; C:/Program Files/Epic Games/UE_5.1/Engine/Plugins/Marketplace where UE_5.1 matches your current version )</p><p>Example Project: Download &amp; unzip, then continue with &#34;instructions demo.txt&#34;: <a href=\"https://drive.google.com/drive/folders/1ym1rqaOHW4pPavaVwbzw1Do6EmtwUk-8\" rel=\"nofollow\">https://drive.google.com/drive/folders/1ym1rqaOHW4pPavaVwbzw1Do6EmtwUk-8</a></p><p>Important/Additional Notes:</p><p>- A Windows device is required to be running the OPatcher_Server.</p><p>- Router access required for easy use.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf.png",
+      "md5": "ad6dc8462b428d2aa01501ea564d80bf",
+      "width": 1920,
+      "height": 1080,
+      "size": 115273,
+      "uploadedDate": "2023-02-28T11:50:37.844Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2Example-1920x1080-f6da988da238174e73412d50d658f177.png",
+      "md5": "f6da988da238174e73412d50d658f177",
+      "width": 1920,
+      "height": 1080,
+      "size": 237510,
+      "uploadedDate": "2023-02-28T11:50:38.179Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3ServerInstructions-1920x1080-94449ced32852b422a1fdb799d29f975.png",
+      "md5": "94449ced32852b422a1fdb799d29f975",
+      "width": 1920,
+      "height": 1080,
+      "size": 77951,
+      "uploadedDate": "2023-02-28T11:50:38.635Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4PatchBuilderFolder-1920x1080-9dbfc40910afa55d4e4ca6cf439db4bc.png",
+      "md5": "9dbfc40910afa55d4e4ca6cf439db4bc",
+      "width": 1920,
+      "height": 1080,
+      "size": 63371,
+      "uploadedDate": "2023-02-28T11:50:38.938Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5SourceCode-1920x1080-d39d4cfe66d453c2dd5e6f0499429b56.png",
+      "md5": "d39d4cfe66d453c2dd5e6f0499429b56",
+      "width": 1920,
+      "height": 1080,
+      "size": 293702,
+      "uploadedDate": "2023-02-28T11:50:39.267Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Automaticgameupdaterforprelaunch_thumb-284x284-c5e31ae85d2fef86818331fa168bf29b.png",
+      "md5": "c5e31ae85d2fef86818331fa168bf29b",
+      "width": 284,
+      "height": 284,
+      "size": 32742,
+      "uploadedDate": "2022-12-18T11:18:52.574Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Automaticgameupdaterforprelaunch_featured-894x488-cf77745d4b7f237976de5dfe5d314af9.png",
+      "md5": "cf77745d4b7f237976de5dfe5d314af9",
+      "width": 894,
+      "height": 488,
+      "size": 91013,
+      "uploadedDate": "2022-12-20T13:04:21.313Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf_Snapshot.png",
+      "md5": "596a78f93281defe9ff258c43c89bb71",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2023-02-28T11:50:38.045Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2Example-1920x1080-f6da988da238174e73412d50d658f177_Snapshot.png",
+      "md5": "c9ebcf20cb53f86a565a27526dfd0f05",
+      "width": 150,
+      "height": 74,
+      "size": 3195,
+      "uploadedDate": "2023-02-28T11:50:38.408Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3ServerInstructions-1920x1080-94449ced32852b422a1fdb799d29f975_Snapshot.png",
+      "md5": "94a098c12016c4013f355dea02f45436",
+      "width": 150,
+      "height": 74,
+      "size": 3168,
+      "uploadedDate": "2023-02-28T11:50:38.832Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4PatchBuilderFolder-1920x1080-9dbfc40910afa55d4e4ca6cf439db4bc_Snapshot.png",
+      "md5": "9c49a914071e230fad5c880269fde7fa",
+      "width": 150,
+      "height": 74,
+      "size": 2505,
+      "uploadedDate": "2023-02-28T11:50:39.139Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5SourceCode-1920x1080-d39d4cfe66d453c2dd5e6f0499429b56_Snapshot.png",
+      "md5": "847a6335f61d05232f337146d927208d",
+      "width": 150,
+      "height": 74,
+      "size": 4368,
+      "uploadedDate": "2023-02-28T11:50:39.496Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf_Snapshot.png",
+      "md5": "596a78f93281defe9ff258c43c89bb71",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2023-01-28T11:30:05.398Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2Example-1920x1080-348726b1a49bdcd98ca950bde21fcbb5_Snapshot.png",
+      "md5": "f72b4394de27a65ec9436955937fe860",
+      "width": 150,
+      "height": 74,
+      "size": 3075,
+      "uploadedDate": "2023-01-28T11:30:05.794Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3ServerInstructions-1920x1080-94449ced32852b422a1fdb799d29f975_Snapshot.png",
+      "md5": "94a098c12016c4013f355dea02f45436",
+      "width": 150,
+      "height": 74,
+      "size": 3168,
+      "uploadedDate": "2023-01-28T11:30:06.067Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4PatchBuilderFolder-1920x1080-9dbfc40910afa55d4e4ca6cf439db4bc_Snapshot.png",
+      "md5": "9c49a914071e230fad5c880269fde7fa",
+      "width": 150,
+      "height": 74,
+      "size": 2505,
+      "uploadedDate": "2023-01-28T11:30:06.373Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5SourceCode-1920x1080-d39d4cfe66d453c2dd5e6f0499429b56_Snapshot.png",
+      "md5": "847a6335f61d05232f337146d927208d",
+      "width": 150,
+      "height": 74,
+      "size": 4368,
+      "uploadedDate": "2023-01-28T11:30:06.691Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf_Snapshot.png",
+      "md5": "596a78f93281defe9ff258c43c89bb71",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2023-01-28T11:28:36.533Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2Example-1920x1080-348726b1a49bdcd98ca950bde21fcbb5_Snapshot.png",
+      "md5": "f72b4394de27a65ec9436955937fe860",
+      "width": 150,
+      "height": 74,
+      "size": 3075,
+      "uploadedDate": "2023-01-28T11:28:36.910Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3PatchBuilderFolder-1920x1080-9dbfc40910afa55d4e4ca6cf439db4bc_Snapshot.png",
+      "md5": "9c49a914071e230fad5c880269fde7fa",
+      "width": 150,
+      "height": 74,
+      "size": 2505,
+      "uploadedDate": "2023-01-28T11:28:37.256Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4ServerInstructions-1920x1080-94449ced32852b422a1fdb799d29f975_Snapshot.png",
+      "md5": "94a098c12016c4013f355dea02f45436",
+      "width": 150,
+      "height": 74,
+      "size": 3168,
+      "uploadedDate": "2023-01-28T11:28:37.531Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5SourceCode-1920x1080-d39d4cfe66d453c2dd5e6f0499429b56_Snapshot.png",
+      "md5": "847a6335f61d05232f337146d927208d",
+      "width": 150,
+      "height": 74,
+      "size": 4368,
+      "uploadedDate": "2023-01-28T11:28:37.913Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf_Snapshot.png",
+      "md5": "596a78f93281defe9ff258c43c89bb71",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2022-12-20T13:05:47.123Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2Example-1920x1080-348726b1a49bdcd98ca950bde21fcbb5_Snapshot.png",
+      "md5": "f72b4394de27a65ec9436955937fe860",
+      "width": 150,
+      "height": 74,
+      "size": 3075,
+      "uploadedDate": "2022-12-20T13:05:47.471Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3PatchBuilderFolder-1920x1080-13aa3829de676b8e6635c32a9281d326_Snapshot.png",
+      "md5": "b5297ed5a81620812830653997b96302",
+      "width": 150,
+      "height": 74,
+      "size": 2307,
+      "uploadedDate": "2022-12-20T13:05:47.749Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4ServerInstructions-1920x1080-365f44651caaacbcd7b468c8bcb170d7_Snapshot.png",
+      "md5": "863700f3437d5208de75e3ed2952f324",
+      "width": 150,
+      "height": 74,
+      "size": 5318,
+      "uploadedDate": "2022-12-20T13:05:48.049Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5SourceCode-1920x1080-6e39540ba66dc9e19dbf9e000bf37a44_Snapshot.png",
+      "md5": "3f17d0b185c109e2a7e632eb54796914",
+      "width": 150,
+      "height": 74,
+      "size": 3895,
+      "uploadedDate": "2022-12-20T13:05:48.424Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf_Snapshot.png",
+      "md5": "596a78f93281defe9ff258c43c89bb71",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2022-12-20T13:05:22.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2Example-1920x1080-348726b1a49bdcd98ca950bde21fcbb5_Snapshot.png",
+      "md5": "f72b4394de27a65ec9436955937fe860",
+      "width": 150,
+      "height": 74,
+      "size": 3075,
+      "uploadedDate": "2022-12-20T13:05:22.841Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1Example-1920x1080-348726b1a49bdcd98ca950bde21fcbb5_Snapshot.png",
+      "md5": "f72b4394de27a65ec9436955937fe860",
+      "width": 150,
+      "height": 74,
+      "size": 3075,
+      "uploadedDate": "2022-12-20T13:04:19.988Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf_Snapshot.png",
+      "md5": "596a78f93281defe9ff258c43c89bb71",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2022-12-20T13:04:20.271Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3PatchBuilderFolder-1920x1080-13aa3829de676b8e6635c32a9281d326_Snapshot.png",
+      "md5": "b5297ed5a81620812830653997b96302",
+      "width": 150,
+      "height": 74,
+      "size": 2307,
+      "uploadedDate": "2022-12-20T13:04:20.558Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4ServerInstructions-1920x1080-365f44651caaacbcd7b468c8bcb170d7_Snapshot.png",
+      "md5": "863700f3437d5208de75e3ed2952f324",
+      "width": 150,
+      "height": 74,
+      "size": 5318,
+      "uploadedDate": "2022-12-20T13:04:20.905Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5SourceCode-1920x1080-6e39540ba66dc9e19dbf9e000bf37a44_Snapshot.png",
+      "md5": "3f17d0b185c109e2a7e632eb54796914",
+      "width": 150,
+      "height": 74,
+      "size": 3895,
+      "uploadedDate": "2022-12-20T13:04:21.263Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1Example-1920x1080-348726b1a49bdcd98ca950bde21fcbb5_Snapshot.png",
+      "md5": "f72b4394de27a65ec9436955937fe860",
+      "width": 150,
+      "height": 74,
+      "size": 3075,
+      "uploadedDate": "2022-12-18T11:21:29.145Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf_Snapshot.png",
+      "md5": "596a78f93281defe9ff258c43c89bb71",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2022-12-18T11:21:29.468Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3PatchBuilderFolder-1920x1080-cb35112b9e0fae92673d83694ee71dd0_Snapshot.png",
+      "md5": "9b137167fa99ebcddaa5c9a4f5ec8139",
+      "width": 150,
+      "height": 74,
+      "size": 2329,
+      "uploadedDate": "2022-12-18T11:21:29.876Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4ServerInstructions-1920x1080-cb9e6784e0c01d12f6635700f7d953fe_Snapshot.png",
+      "md5": "b85b3667530e36b1ecf03d45081c9ae0",
+      "width": 150,
+      "height": 74,
+      "size": 4908,
+      "uploadedDate": "2022-12-18T11:21:30.247Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5SourceCode-1920x1080-6e39540ba66dc9e19dbf9e000bf37a44_Snapshot.png",
+      "md5": "3f17d0b185c109e2a7e632eb54796914",
+      "width": 150,
+      "height": 74,
+      "size": 3895,
+      "uploadedDate": "2022-12-18T11:21:30.590Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1Example-1920x1080-348726b1a49bdcd98ca950bde21fcbb5_Snapshot.png",
+      "md5": "f72b4394de27a65ec9436955937fe860",
+      "width": 150,
+      "height": 74,
+      "size": 3075,
+      "uploadedDate": "2022-12-18T11:20:59.182Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1Example-1920x1080-f5d54f060edf485d8563bb9f48e599cd_Snapshot.png",
+      "md5": "c88de53d5b9777dd0699a911c2601270",
+      "width": 150,
+      "height": 74,
+      "size": 3042,
+      "uploadedDate": "2022-12-18T11:18:51.236Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf_Snapshot.png",
+      "md5": "596a78f93281defe9ff258c43c89bb71",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2022-12-18T11:18:51.511Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3PatchBuilderFolder-1920x1080-cb35112b9e0fae92673d83694ee71dd0_Snapshot.png",
+      "md5": "9b137167fa99ebcddaa5c9a4f5ec8139",
+      "width": 150,
+      "height": 74,
+      "size": 2329,
+      "uploadedDate": "2022-12-18T11:18:51.800Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4ServerInstructions-1920x1080-cb9e6784e0c01d12f6635700f7d953fe_Snapshot.png",
+      "md5": "b85b3667530e36b1ecf03d45081c9ae0",
+      "width": 150,
+      "height": 74,
+      "size": 4908,
+      "uploadedDate": "2022-12-18T11:18:52.179Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5SourceCode-1920x1080-6e39540ba66dc9e19dbf9e000bf37a44_Snapshot.png",
+      "md5": "3f17d0b185c109e2a7e632eb54796914",
+      "width": 150,
+      "height": 74,
+      "size": 3895,
+      "uploadedDate": "2022-12-18T11:18:52.536Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf_Snapshot.png",
+      "md5": "596a78f93281defe9ff258c43c89bb71",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2022-12-18T08:56:57.480Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2SourceCode-1920x1080-f1f12b434c7d479181014b1334fa9ff5_Snapshot.png",
+      "md5": "ef5c2cb8dfbb98ee5ed75a3baa95e55d",
+      "width": 150,
+      "height": 74,
+      "size": 3906,
+      "uploadedDate": "2022-12-18T08:56:57.899Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2SourceCode-1920x1080-f1f12b434c7d479181014b1334fa9ff5_Snapshot.png",
+      "md5": "ef5c2cb8dfbb98ee5ed75a3baa95e55d",
+      "width": 150,
+      "height": 74,
+      "size": 3906,
+      "uploadedDate": "2022-12-18T08:56:40.571Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf_Snapshot.png",
+      "md5": "596a78f93281defe9ff258c43c89bb71",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2022-12-18T08:56:40.876Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SourceCode-1920x1080-f1f12b434c7d479181014b1334fa9ff5_Snapshot.png",
+      "md5": "ef5c2cb8dfbb98ee5ed75a3baa95e55d",
+      "width": 150,
+      "height": 74,
+      "size": 3906,
+      "uploadedDate": "2022-12-18T08:54:41.054Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CallCommand-1920x1080-ad6dc8462b428d2aa01501ea564d80bf_Snapshot.png",
+      "md5": "596a78f93281defe9ff258c43c89bb71",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2022-12-18T08:54:41.416Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-02-28T11:52:44.836Z",
+  "lastModifiedDate": "2025-01-24T13:59:44.946Z",
+  "customAttributes": {},
+  "entitlementName": "23e1a11ed3ef47718311fccd4250c625",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "6cd0e5f1fb5944a392a7f9e60f3f78d1",
+      "appId": "OPatcher_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2022-12-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "de8bd62bf1f641e688ae847d1ee7d99f",
+      "appId": "OPatcher_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2022-12-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "09fee00d545140a2951805ed4758b899",
+      "appId": "OPatcher_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2022-12-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "1146afd510704a78b0439186023979e7",
+      "appId": "OPatcher_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2023-06-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "1726cd53efc54cf1b99cb0d6809525d9",
+      "appId": "OPatcher_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "a02145e7b8114f1692a7dc79e41937e1",
+      "appId": "OPatcher_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2024-05-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Orode Productions",
+  "developerId": "o-y7ejr7r6plja37ay3d7gk8gu9gvdzr",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,251 @@
+{
+  "id": "8a9250876415461bad2c53e05d44e0cd",
+  "title": "SideScroller3D - Unreal Gameplay Ability System",
+  "description": "SideScroller3D 2.0 - Unreal Gameplay Ability System",
+  "longDescription": "<p>This is a 3D SideScroller Template which is created with the Unreal Engine.</p><p>This Plugin inlcudes the RTSUnit Class (not the RTS/Topdown Camera).</p><p><br /></p><p>The Plugin has the following Functions:</p><ul><li>Create different Enemys (Meele or Ranged, with a lot of different Properties)</li><li>A SideScroller Character (with different Abilitys and Properties)</li><li>A seperate CameraBase which follows the Character (Zoom &#43; Rotation)</li><li>A Controller for Keyboard and GamePad (Video on XBox Controller)</li></ul><p><br /></p><p>This Product is OpenSource:</p><p>https://github.com/SilvanTeufel/SideScroller3D</p><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;MuWEssLl8i0\" rel=\"nofollow\"><u>Check the Video for a Preview</u></a></p><p><a href=\"https://youtu.be/MuWEssLl8i0?t&#61;753\" rel=\"nofollow\"><u>Check the Video for the Menu</u></a></p><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;yB-wIUuQccI\" rel=\"nofollow\">VIDEO FOR QUICKSTART</a></p><p><br /></p><p>Or check the <a href=\"http://wiki.teufel-engineering.com/\" rel=\"nofollow\">Documentation</a>:</p><p>http://wiki.teufel-engineering.com/</p><p><br /></p><p><strong>ALL 3D-Models, Animations and Sounds are changeable via Blueprint. You also have to setup the Weapons in the Weapontable. No Weapon Models are supplied with this Plugin. 3D-Models and Animations are Epic-Games Content.</strong></p><p><br /></p><p><strong>The easiest Start is just to duplicate my Blueprints and copy to your Project Folder.</strong></p><p><br /></p><p><strong>For a Quick play you only have to set the Controls. Got to the </strong><a href=\"https://github.com/SilvanTeufel/SideScroller3D_ReadMe\" rel=\"nofollow\"><strong>Documentation</strong></a><strong> to the Topic &#34;Enhanced Keyboard Settings&#34; and set the AssetManagerBase and EnhancedInputComponentBase. Or check the </strong><a href=\"https://www.youtube.com/watch?v&#61;yB-wIUuQccI&amp;t\" rel=\"nofollow\"><strong>Video</strong></a><strong> to Setup. You also have to Restart the Project after this Steps.</strong></p><p>V2.3.0 - Update to Unreal 5.4 - 27.05.2024</p><p><u>V 2.2.0 - Added Gameplay Ability System - 04.03.2024</u></p><ul><li>Added AttributeSets for Character</li><li>Added RTSUnit with Gameplay Ability System</li><li>Unit can LevelUp (also Enemy Units)</li><li>Unit can have Abilitys (with Interface choose 4 out of 16) (also Enemy Units)</li><li>Unit has Talentpoints to Invest (also Enemy Units)</li><li>Projectile &#43; EffectArea Abilitys (Examples)</li><li>EffectArea with Root Example</li><li>Jump &#43; Glider Abilitys</li><li>Fixed Bugs in Unitbehaviour</li><li>Ai is using UE Pathfinding</li><li>Reworked Camera</li><li>Tab Targeting System</li></ul><p><br /></p><p><u>V 1.1.0 - Bugfix Cooking and Creating Package Project </u></p><p><br /></p><p>Parentclasses are:</p><p>Actors:</p><ul><li>Component</li><li>Projectile</li><li>ScatterBall</li><li>ScatterMine</li><li>SelectedIcon</li><li>Glider</li><li>Shield</li><li>UIWeaponIndicator</li><li>Waypoint</li><li>WeaponBase</li></ul><p>Animations:</p><ul><li>UnitBaseAnimInstance ( Usable with Blenspaces via DataTable )</li></ul><p>Characters:</p><ul><li>CameraBase ( A Small SideScroller Camera with Rotation, ZoomOut, ZoomIn and Setting Angles and more)</li><li>UnitBase ( Used for Enemys - Ranged, Meele, Flying Units - Propertys like MaxHealth, Attackspeeed, Walkspeed are Adaptable)</li><li>ExtendedUnitBase ( Child of UnitBase. Is the SideScroller Character. Even more Adjustable Propertys. Can use WeaponTable, ScatterMine Shield, and different Jumps)</li></ul><p>Controller:</p><ul><li>ControllerBase (Your Soul)</li><li>CameraControllerBase (Child of ControllerBase)</li><li>UnitControllerBase (Soul of the UnitBase)</li><li>ExtendedUnitControllerBase (Extends the Soul of the UnitBase for the ExtendedUnitBase)</li><li>MouseBotControllerBase (Soul of the MouseBot)</li></ul><p>GameMode:</p><ul><li>ComponentGeneratorGameMode (Can be used for Random Level Generator and Mob-Spawning - see LevelTwo)</li></ul><p>Hud:</p><ul><li>HUDBase</li></ul><p>Widgets:</p><ul><li>UnitBaseActionBar ( Used to show Stats of the ExtendedUnitBase - Set in CameraBase )</li><li>UnitBaseHealthBar ( The Healthbar for the UnitBase and the ExtendedUnitBase)</li></ul>",
+  "technicalDetails": "<p><strong>Features: </strong></p><p>Actors:</p><ul><li>Component</li><li>Projectile</li><li>ScatterBall</li><li>ScatterMine</li><li>SelectedIcon</li><li>Shield</li><li>UIWeaponIndicator</li><li>Waypoint</li><li>WeaponBase</li></ul><p>Animations:</p><ul><li>UnitBaseAnimInstance</li></ul><p>Characters:</p><ul><li>CameraBase</li><li>UnitBase</li><li>ExtendedUnitBase</li></ul><p>Controller:</p><ul><li>ControllerBase (Your Soul)</li><li>CamerControllerBase (Child of ControllerBase)</li><li>UnitControllerBase (Soul of the UnitBase)</li><li>ExtendedUnitControllerBase (Extends the Soul of the UnitBase for the ExtendedUnitBase)</li><li>MouseBotControllerBase (Soul of the MouseBot)</li></ul><p>Hud:</p><ul><li>HUDBase</li></ul><p>Widgets:</p><ul><li>UnitBaseActionBar (Used mainly for the Extended UnitBase)</li><li>UnitBaseHealthBar</li></ul><p>Code Modules:</p><ul><li>SideScroller3D [Runtime]</li></ul><p>Dependency Modules:</p><ul><li>Core, CoreUObject, Engine, InputCore, EnhancedInput, GameplayTags</li><li>HeadMountedDisplay, NavigationSystem</li><li>AIModule</li><li>UMG</li></ul><p>Number of Blueprints: 15 (Most times based on C&#43;&#43; Class)</p><p>Number of C&#43;&#43; Classes: 20</p><p>Network Replicated: No</p><p>Supported Development Platforms: Tested in Windows</p><p>Supported Target Build Platforms: Tested in Windows</p><p>Documentation: http://wiki.teufel-engineering.com/</p><p>Example Project: https://www.youtube.com/watch?v&#61;lZoHMoj-IeI</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/pic3-1920x1080-fe60e2f39400180a9f429643633f0970.jpg",
+      "md5": "fe60e2f39400180a9f429643633f0970",
+      "width": 1920,
+      "height": 1080,
+      "size": 204808,
+      "uploadedDate": "2023-01-31T10:15:20.941Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/pic2-1920x1080-7df0ef99fe321621190e39e33d53794d.jpg",
+      "md5": "7df0ef99fe321621190e39e33d53794d",
+      "width": 1920,
+      "height": 1080,
+      "size": 151532,
+      "uploadedDate": "2023-01-31T10:15:21.231Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Animations-1920x1080-3ffbaa20c77f3123d01cdb2add311847.jpg",
+      "md5": "3ffbaa20c77f3123d01cdb2add311847",
+      "width": 1920,
+      "height": 1080,
+      "size": 346277,
+      "uploadedDate": "2023-01-31T10:15:21.586Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraBaseUnitBase-1920x1080-ef0bc97a50de30c382fd8082e6dab205.jpg",
+      "md5": "ef0bc97a50de30c382fd8082e6dab205",
+      "width": 1920,
+      "height": 1080,
+      "size": 300726,
+      "uploadedDate": "2023-01-31T10:15:21.937Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ExtendedUnitWeaponTable-1920x1080-e315fc62e2c8d46ba5282a5c6ae1b2b7.jpg",
+      "md5": "e315fc62e2c8d46ba5282a5c6ae1b2b7",
+      "width": 1920,
+      "height": 1080,
+      "size": 336015,
+      "uploadedDate": "2023-01-31T10:15:22.243Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Actors-1920x1080-a87337c5b3e11a3e2d0a9f9340d78f56.jpg",
+      "md5": "a87337c5b3e11a3e2d0a9f9340d78f56",
+      "width": 1920,
+      "height": 1080,
+      "size": 406096,
+      "uploadedDate": "2023-01-31T10:15:22.588Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/pic5-1920x1080-5ca969db37033ec08f3c34a097d9d863.jpg",
+      "md5": "5ca969db37033ec08f3c34a097d9d863",
+      "width": 1920,
+      "height": 1080,
+      "size": 201881,
+      "uploadedDate": "2023-01-31T10:15:22.958Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/pic1-1920x1080-9c0103135dea93a76b7b6a3c49fe85fe.jpg",
+      "md5": "9c0103135dea93a76b7b6a3c49fe85fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 139016,
+      "uploadedDate": "2023-01-31T10:15:23.298Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/pic4-1920x1080-3d5703dc5c31251715c6efae049120f9.jpg",
+      "md5": "3d5703dc5c31251715c6efae049120f9",
+      "width": 1920,
+      "height": 1080,
+      "size": 186141,
+      "uploadedDate": "2023-01-31T10:15:23.658Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SideScroller3DUnrealGameplayAbilitySystem_thumb-284x284-321b812b83a81a069903e85a6e4e9c54.png",
+      "md5": "321b812b83a81a069903e85a6e4e9c54",
+      "width": 284,
+      "height": 284,
+      "size": 55026,
+      "uploadedDate": "2024-03-21T07:34:21.395Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SideScroller3DGameTemplatewithCameraCharacterEnemys_featured-894x488-ff67812257d274c1d723dd11a337ef75.png",
+      "md5": "ff67812257d274c1d723dd11a337ef75",
+      "width": 894,
+      "height": 488,
+      "size": 156455,
+      "uploadedDate": "2023-01-31T10:15:24.064Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/pic3-1920x1080-fe60e2f39400180a9f429643633f0970_Snapshot.jpg",
+      "md5": "8dee28dc90259e72589cc1ea3bf9a3f1",
+      "width": 150,
+      "height": 74,
+      "size": 5027,
+      "uploadedDate": "2023-01-31T10:15:21.161Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/pic2-1920x1080-7df0ef99fe321621190e39e33d53794d_Snapshot.jpg",
+      "md5": "fdc0cdefa1a9b92ac7a988c45566ebc7",
+      "width": 150,
+      "height": 74,
+      "size": 4105,
+      "uploadedDate": "2023-01-31T10:15:21.443Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Animations-1920x1080-3ffbaa20c77f3123d01cdb2add311847_Snapshot.jpg",
+      "md5": "fc737287b7a37bd8ab012eebfc8da2a5",
+      "width": 150,
+      "height": 74,
+      "size": 5919,
+      "uploadedDate": "2023-01-31T10:15:21.825Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraBaseUnitBase-1920x1080-ef0bc97a50de30c382fd8082e6dab205_Snapshot.jpg",
+      "md5": "5fa80cb0a3a695af71d4e5689f46c706",
+      "width": 150,
+      "height": 74,
+      "size": 4419,
+      "uploadedDate": "2023-01-31T10:15:22.150Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ExtendedUnitWeaponTable-1920x1080-e315fc62e2c8d46ba5282a5c6ae1b2b7_Snapshot.jpg",
+      "md5": "975f0c87b308671ffe5024fbb733dd3f",
+      "width": 150,
+      "height": 74,
+      "size": 4711,
+      "uploadedDate": "2023-01-31T10:15:22.459Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Actors-1920x1080-a87337c5b3e11a3e2d0a9f9340d78f56_Snapshot.jpg",
+      "md5": "65a0c2f6782183842f8515529b51ff62",
+      "width": 150,
+      "height": 74,
+      "size": 5867,
+      "uploadedDate": "2023-01-31T10:15:22.811Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/pic5-1920x1080-5ca969db37033ec08f3c34a097d9d863_Snapshot.jpg",
+      "md5": "5d3ab649019bb7b5a0c0f7ec47c632ea",
+      "width": 150,
+      "height": 74,
+      "size": 5690,
+      "uploadedDate": "2023-01-31T10:15:23.173Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/pic1-1920x1080-9c0103135dea93a76b7b6a3c49fe85fe_Snapshot.jpg",
+      "md5": "e8bbf48c261ee1a42e2debe6c53cb4d1",
+      "width": 150,
+      "height": 74,
+      "size": 4552,
+      "uploadedDate": "2023-01-31T10:15:23.533Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/pic4-1920x1080-3d5703dc5c31251715c6efae049120f9_Snapshot.jpg",
+      "md5": "b0ec19b019acbe0445c1b4c70cca18d8",
+      "width": 150,
+      "height": 74,
+      "size": 4702,
+      "uploadedDate": "2023-01-31T10:15:23.902Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-02-13T07:54:36.908Z",
+  "lastModifiedDate": "2024-10-19T11:19:25.045Z",
+  "customAttributes": {},
+  "entitlementName": "8a9250876415461bad2c53e05d44e0cd",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "2207221148f246eeb8423275ad81e035",
+      "appId": "SideScroller3D_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-01-31T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "SideScroller3D_1.1.0"
+    },
+    {
+      "id": "9c153f45468b46ddbcd53d3080f27a0c",
+      "appId": "SideScroller3D_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-30T00:00:00.000Z",
+      "releaseNote": "Added SkeletalMesh import.",
+      "versionTitle": "SideScroller3D_2.2.0"
+    },
+    {
+      "id": "596eb9c6fa3c4e548b649635ed2fd052",
+      "appId": "SideScroller3D_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-26T00:00:00.000Z",
+      "releaseNote": "Update to 5.4 -",
+      "versionTitle": "SideScroller3D_2.4.0"
+    }
+  ],
+  "developer": "Silvan Teufel",
+  "developerId": "o-c23yjldgpngkl34xmytfm89qemzycb",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

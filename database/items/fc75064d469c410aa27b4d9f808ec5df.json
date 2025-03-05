@@ -1,0 +1,299 @@
+{
+  "id": "fc75064d469c410aa27b4d9f808ec5df",
+  "title": "MMO Kit",
+  "description": "MMO Kit is a modular, component-based template written entirely in Blueprints, with a Persistence Server written in C#.",
+  "longDescription": "<p>This is a full remaster of MMO Starter Kit that came out back in 2014, at the dawn of UE4.</p><p><br /></p><p>The project was rewritten from scratch in December 2022 for a more modern approach to most systems. The gameplay part is written <strong>entirely in Blueprints</strong> and relies heavily on Components, Interfaces and Event Dispatchers for architecture. The project depends on a free plugin <a href=\"https://www.unrealengine.com/marketplace/en-US/product/mmo-kit-code\" rel=\"nofollow\">MMO Kit Code</a>.</p><p><br /></p><p><a href=\"https://discord.gg/9X7fy4m85w\" rel=\"nofollow\">Discord server</a></p><p><a href=\"https://docs.google.com/document/d/1CLO_Ei3eQ0CDXsOMbObNsZM2PB-Y_suxOl2Z8De8-xY/edit\" rel=\"nofollow\">Documentation</a></p><p>Demo on Steam: steam://install/2090870</p><p>(copy paste the link into a new window in browser)</p><p><br /></p><p>MMO Kit is compatible with <a href=\"https://www.unrealengine.com/marketplace/en-US/product/easydss-for-mmo-kit\" rel=\"nofollow\">EasyDSS</a>, a separate, optional product by a different author. EDSS automatically launches server instances on demand for dungeons and Open World zones, allowing your game to support any number of players.</p><p><br /></p><p><br /></p><h1>Key features of the project</h1><ul><li>Gameplay written entirely in Blueprints with Unreal acting as an authoritative server.</li><li>A C# Persistence Server - it takes on a few roles, such as relaying messages (whispers, shouts) and ensuring persistence (saves/retrieves characters from DB), login, guilds, etc,.. and in the future it will be used for other meta features, e.g. Auction Houses.</li><li>If you&#39;re not overly familiar with C#, the Persistence Server is structured in a way that you don&#39;t have to worry about its underlying mechanics. All you have to do is write simple scripts on top of a solid foundation. The ones already written are short and expressive, and will serve as an example. A basic C# knowledge is sufficient to extend its functionality. But you also don&#39;t have to touch it at all, as long as you work on gameplay in UE5.</li><li>Two database systems for you to choose from: MySQL and SQLite, both preconfigured. SQLite works out of the box, no setup is necessary. Switch over to MySQL later in development when database speed starts to matter.</li><li>Two login systems: one is login/password-based, another Steam-based. Test your game with simple logins/passwords, start using Steam login after you&#39;re ready to deploy a first serious demo.</li><li>Steam integration and a thorough guide, including the sometimes difficult steps, such as building, deployment and depot management.</li></ul><p><br /></p><p><br /></p><h1>Gameplay features</h1><ul><li><strong>Four gameplay control schemes: First Person, Third Person (over the shoulder), WoW-Style, Point-n-Click (NavMesh-based, Diablo-style).</strong></li><li><strong>Two combat modes: target-based and aim-based</strong>. Aim-based automatically works with First Person and Third Person. Target-based works with WoW-style. Mixing them is a possibility.</li><li><strong>Inventory/Storage </strong>system. MMO Kit was made with flexibility in mind. Even though you get a grid based inventory by default, it&#39;s just a special implementation of a Storage class. Inherit from it to create your own inventory depending on your game’s needs. The documentation will explain it in more details.</li><li><strong>Equipment</strong>. The system is simple as of right now, with only three slots: Head, Right Hand and Left Hand. Documentation illustrates how to extend it to any number of slots.</li><li>Basic <strong>Stats Component</strong>, extendable. Two example classes - fighter and mage. For a classless system, simply ignore the classes in your game logic.</li><li>A powerful <strong>Ability System</strong> that&#39;s easy to understand and expand. Not the UE5&#39;s Ability Component System, while it&#39;s still buggy. MMO Kit may switch to it later on.</li><li><strong>Mobs</strong> with with three reaction types: friendly, neutral and hostile. Basic AI that pursues the player and fights. Mob stats system. Two basic AI behavior trees: roaming and stationary mobs.</li><li>Basic <strong>aggro mechanics</strong>: you can pull aggro from other players.</li><li><strong>Loot </strong>in the form of World Containers. Mobs will themselves become lootable in the next updates.</li><li><strong>Drop</strong> items to the ground and pick them back up.</li><li><strong>World usable objects</strong>, e.g. interact with a chest, it gives you an item (or performs any other logic, e.g. teleports you).</li><li><strong>Player chat</strong> (say/whisper/global/guild/officer). Say messages are vicinity-based.</li><li><strong>Guilds</strong> (since 5.2) with ranks, guild &amp; officer chat, invites/kicks/promotes/demotes, etc.</li><li><strong>Two example species: Human &amp; Mannequin</strong>, both species sharing the same skeleton. The human (there&#39;s both male &amp; female) meshes have dozens of morph targets, which will allow the creation of a facial and body character editor in later updates. If you have animations that work well on a Mannequin, they&#39;ll likely work well on the human characters, too. If not, you can make use of the animation IK retargeters, which are provided.</li><li><strong>Appearance system</strong>. Have you ever played WoW and got impressed by the transmog system or the numerous toys that turn your character into other creatures? I have. MMO Kit&#39;s appearance systems will allow you to write logic that will make your characters look any way you want.</li><li><strong>Assets are loaded asynchronously</strong> and on demand, the implication being that your game can have thousands of items or mobs, but only the ones needed will be loaded into memory and there will be no hiccups in a crowded scenario. These assets will be unloaded from memory as soon as they become unnecessary.</li><li><strong>Persistency Component</strong> (since 5.3): attach it to any non-character Actor and it automatically saves it to the DB. Useful for games with crafting to save buildings, etc.</li><li><strong>Buffs System</strong> (since 5.4): a feature-rich system. Use OnBuffApplied &amp; OnBuffEnd for gameplay or cosmetic effects. Use BuffTick with adjustable frequency, e.g. for DoTs. Buffs can sign-up to events, e.g. &#34;do something when character&#39;s HP reaches 20%&#34;. Buffs can give numeric and status effects.</li><li><strong>DM client</strong> (since 5.4): No-aggro, DM invisibility, Immortality, Spawn Monster, Create Item, etc.</li></ul><p><br /></p><p>And much more to come..! MMO Kit is being actively developed and many features are planned. As more features come out, MMO Kit&#39;s price will gradually increase to reflect the changes.</p><p><br /></p><p>You can hop on the Discord server and vote on features that you think should be implemented next. Or ask for help if you get stuck.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Authoritative dedicated server in UE5</li><li>Persistence server written in C# - sources are provided</li><li>Depends on a free plugin <a href=\"https://www.unrealengine.com/marketplace/en-US/product/mmo-kit-code\" rel=\"nofollow\">MMO Kit Code</a></li></ul><p>Number of Blueprints: 91 Blueprints, 38 Widgets</p><p>Input: Keyboard, Mouse, partially Gamepad</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Windows, Linux, Mac</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1CLO_Ei3eQ0CDXsOMbObNsZM2PB-Y_suxOl2Z8De8-xY/\" rel=\"nofollow\">Link</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1 - creation-1920x1080-9502989144927cdd67a6862e7e67a808.png",
+      "md5": "9502989144927cdd67a6862e7e67a808",
+      "width": 1920,
+      "height": 1080,
+      "size": 1492955,
+      "uploadedDate": "2022-12-25T17:55:15.853Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-23d4032a7f3ee94f974d71f1b19ebd14.png",
+      "md5": "23d4032a7f3ee94f974d71f1b19ebd14",
+      "width": 1920,
+      "height": 1080,
+      "size": 2503560,
+      "uploadedDate": "2024-06-07T10:47:43.652Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-678b07d48ec25058ec6d87b4d432456d.png",
+      "md5": "678b07d48ec25058ec6d87b4d432456d",
+      "width": 1920,
+      "height": 1080,
+      "size": 2417748,
+      "uploadedDate": "2022-12-25T17:55:17.180Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-b2cd8680275cf59d4a907fe86df202ee.png",
+      "md5": "b2cd8680275cf59d4a907fe86df202ee",
+      "width": 1920,
+      "height": 1080,
+      "size": 2127526,
+      "uploadedDate": "2022-12-25T17:55:17.860Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-4adbe212a9550239787f2d9cb52a7e6f.png",
+      "md5": "4adbe212a9550239787f2d9cb52a7e6f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1863262,
+      "uploadedDate": "2022-12-25T17:55:18.494Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-6cf0b7528a5a7614cbc01a99d763f17d.png",
+      "md5": "6cf0b7528a5a7614cbc01a99d763f17d",
+      "width": 1920,
+      "height": 1080,
+      "size": 2625844,
+      "uploadedDate": "2022-12-25T17:55:19.123Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7-1920x1080-5fa83823e6648d463c302e7a595a85b6.png",
+      "md5": "5fa83823e6648d463c302e7a595a85b6",
+      "width": 1920,
+      "height": 1080,
+      "size": 796558,
+      "uploadedDate": "2022-12-25T17:55:19.752Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8-1920x1080-8d6fcbf816b31d62756032251e13105b.png",
+      "md5": "8d6fcbf816b31d62756032251e13105b",
+      "width": 1920,
+      "height": 1080,
+      "size": 2452892,
+      "uploadedDate": "2022-12-25T17:55:20.326Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/9-1920x1080-fd78e312b7cac4684839c79a097980de.png",
+      "md5": "fd78e312b7cac4684839c79a097980de",
+      "width": 1920,
+      "height": 1080,
+      "size": 2724359,
+      "uploadedDate": "2022-12-25T17:55:21.015Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/10-1920x1080-89b0a8fe91c82554f2eac31527da74b7.png",
+      "md5": "89b0a8fe91c82554f2eac31527da74b7",
+      "width": 1920,
+      "height": 1080,
+      "size": 1391309,
+      "uploadedDate": "2022-12-25T17:55:21.657Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MMOKit_thumb-284x284-715a59bfdcddf1b6ec5197c8120a3a8c.png",
+      "md5": "715a59bfdcddf1b6ec5197c8120a3a8c",
+      "width": 284,
+      "height": 284,
+      "size": 95982,
+      "uploadedDate": "2022-12-25T17:55:22.065Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MMOKit_featured-894x488-4b9a18b4b0e7e0c82d65c6a04137430b.png",
+      "md5": "4b9a18b4b0e7e0c82d65c6a04137430b",
+      "width": 894,
+      "height": 488,
+      "size": 345576,
+      "uploadedDate": "2022-12-25T17:55:22.167Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-23d4032a7f3ee94f974d71f1b19ebd14_Snapshot.png",
+      "md5": "b64c0af3da3567ca8ea428901f198194",
+      "width": 150,
+      "height": 74,
+      "size": 7317,
+      "uploadedDate": "2024-06-07T10:47:44.113Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1 - creation-1920x1080-9502989144927cdd67a6862e7e67a808_Snapshot.png",
+      "md5": "bfe3832650b78af3acf0543b22e93387",
+      "width": 150,
+      "height": 74,
+      "size": 3663,
+      "uploadedDate": "2022-12-25T17:55:16.185Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-b2e5459495aa5f3218ac9b6ca889dc16_Snapshot.png",
+      "md5": "ff33f815f5a3949c6ff43d806a1f4853",
+      "width": 150,
+      "height": 74,
+      "size": 7298,
+      "uploadedDate": "2022-12-25T17:55:16.900Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-678b07d48ec25058ec6d87b4d432456d_Snapshot.png",
+      "md5": "fe266c73fc796a761d04fdf808c709b7",
+      "width": 150,
+      "height": 74,
+      "size": 5607,
+      "uploadedDate": "2022-12-25T17:55:17.658Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-b2cd8680275cf59d4a907fe86df202ee_Snapshot.png",
+      "md5": "6f3e0ade6d279733233de4a9531cd4b8",
+      "width": 150,
+      "height": 74,
+      "size": 6099,
+      "uploadedDate": "2022-12-25T17:55:18.267Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-4adbe212a9550239787f2d9cb52a7e6f_Snapshot.png",
+      "md5": "5d96cfd00cc9944046b0147cdaedb615",
+      "width": 150,
+      "height": 74,
+      "size": 7013,
+      "uploadedDate": "2022-12-25T17:55:18.843Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-6cf0b7528a5a7614cbc01a99d763f17d_Snapshot.png",
+      "md5": "1dfa2c9accc808e1a7ac7bf3503296d8",
+      "width": 150,
+      "height": 74,
+      "size": 5747,
+      "uploadedDate": "2022-12-25T17:55:19.579Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-5fa83823e6648d463c302e7a595a85b6_Snapshot.png",
+      "md5": "d3383af71f2e34dadc675b5108d29991",
+      "width": 150,
+      "height": 74,
+      "size": 7535,
+      "uploadedDate": "2022-12-25T17:55:20.040Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-8d6fcbf816b31d62756032251e13105b_Snapshot.png",
+      "md5": "f5a30353bfde51844e5022a6bf81db47",
+      "width": 150,
+      "height": 74,
+      "size": 5574,
+      "uploadedDate": "2022-12-25T17:55:20.775Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-fd78e312b7cac4684839c79a097980de_Snapshot.png",
+      "md5": "a98f5ddf217e02a548e7bb1b28f595b9",
+      "width": 150,
+      "height": 74,
+      "size": 5640,
+      "uploadedDate": "2022-12-25T17:55:21.485Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10-1920x1080-89b0a8fe91c82554f2eac31527da74b7_Snapshot.png",
+      "md5": "a43ba38040ca6abd783263ae72069a73",
+      "width": 150,
+      "height": 74,
+      "size": 3406,
+      "uploadedDate": "2022-12-25T17:55:21.970Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-12-30T11:28:43.065Z",
+  "lastModifiedDate": "2025-02-28T15:35:32.066Z",
+  "customAttributes": {},
+  "entitlementName": "fc75064d469c410aa27b4d9f808ec5df",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "44280188c4cc4ae88e71eb87dc4e2c23",
+      "appId": "MMOKitfc75064d469cV1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2022-12-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MMOKitBP_VER_1_6"
+    },
+    {
+      "id": "9812bf93fcb24320bb4903eaec2a9a41",
+      "appId": "MMOKitfc75064d469cV2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2023-05-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MMOKitBP_UE_5_2"
+    },
+    {
+      "id": "8de9ded8c45440478a8eb014c4abe444",
+      "appId": "MMOKitfc75064d469cV3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MMOKitBP_UE_5_3"
+    },
+    {
+      "id": "f7e2e2630f714f7eac6299be72cf394a",
+      "appId": "MMOKitfc75064d469cV4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MMOKitBP_UE_5_4"
+    }
+  ],
+  "developer": "CodeSpartan",
+  "developerId": "o-a2a5d53f4e432ab33d6972004144f5",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

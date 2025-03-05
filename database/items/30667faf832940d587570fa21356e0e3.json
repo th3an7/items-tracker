@@ -1,0 +1,314 @@
+{
+  "id": "30667faf832940d587570fa21356e0e3",
+  "title": "Distance Field Outline",
+  "description": "Create all sorts of outline effects using the power of distance fields!",
+  "longDescription": "<p>Create outlines with more effects than your typical, few-pixel, outline with a bit of blur.</p><p>Create outlines that animate, outlines thick enough they could cover the entire screen and even outlines that span across several objects with different stencil values.</p><p>This doesn&#39;t just apply to video games, it can even be used with motion graphics thanks to UE 5.4. You could upload an SVG of text and use this plugin to create a stroke around the text.</p><p><br /></p><p>Thanks to the various optimisations made available, which can drastically improve performance (at the cost of quality) you can get your highly stylised outline to run in the game without a huge performance penalty. The optimisations even improve the performance of the simple outline method that is also available with the plugin.</p><p><br /></p><p>For those who might not know and are asking, what is a distance field and how does it work? The answer is pretty simple. For this plugin, distance fields are images where each pixel contains the distance to the nearest edge. In Unreal Engine 5&#43; distance fields are also used with lighting calculations as they tell the render engine the distance to the nearest surface, which is great for speeding up ray traces. In images, when you have this distance you can create an outline with some simple math (shown in the example materials that come with the plugin) or an if statement. Combine distance with time to create the final side in the triangle, &#34;speed&#34;, or in this case, effects that animate.</p><p><br /></p><p>The distance fields created by this plugin work in the 0-1 range as the distance is calculated from UV coordinates. 0 represents the edge of your stencil/render target data. The edge is also always 2 pixels thick, with one pixel just inside and one pixel just outside, this helps with accuracy.</p><p><br /></p><p>You can then use either Unreal Insights or RenderDoc to profile performance, to see what works best. Performance can vary depending on the resolution and the optimisations chosen.</p><p><br /></p><p>Future development plans <a href=\"https://github.com/RyanSweeney987/distance-field-outline-docs/wiki#future-development\" rel=\"nofollow\">here</a>.</p><p><br /></p><h1>Performance - v1.2</h1><p>In progress.</p><p><br /></p><h1>Performance - v1.1</h1><p>You can find some performance values <a href=\"https://github.com/RyanSweeney987/distance-field-outline-docs/wiki/Performance#performance-testing\" rel=\"nofollow\">here</a>. Distance Fields can be expensive but when you start trying to create thicker outlines, the cost benefits can be great compared to some traditional pixel-based methods.</p><p>The values shown were captured on a laptop featuring a GTX 1070 at 3 resolutions, 1080p, 2k and 4k.</p><p><br /></p><h1>Changelog</h1><p><br /></p><h2>1.2.4 - In Development</h2><ul><li>Fixed issue with custom DFO material expression causing a crash</li><li>Fixed issue with stencil being blocked by process mask on non-check or non-half JFA modes</li><li>No longer runs the DF passes for viewports like editor previews</li></ul><p><br /></p><h2>1.2.3 - Released</h2><h2><br /></h2><ul><li>Fixed issue with process mask not working properly with checkerboard JFA</li><li>Fixed issue causing the render target source to fail validation, meaning it wouldn&#39;t go through the distance field passes</li><li>Added option to DFO custom material expression to have a 1px offset when choosing outside/inside only - can help with lower-quality DF</li><li>Changed shaders to include the entire stencil regardless of process mask</li></ul><p><br /></p><h2>1.2.2 - Released</h2><h2><br /></h2><ul><li>Improved Active Stencil Check reliability</li><li>Fixed issue with Half JFA algorithm and process mask</li><li>Optimised Checkerboard JFA pass</li></ul><p><br /></p><h2>1.2.1 - Released</h2><ul><li>Bug fixes that inconsistently impacted packaging</li><li>Reduced logging spam</li><li>Updated text found in the plugin settings</li><li>Added missing blueprint library function</li><li>Fixed issue caused by refreshing the distance fields after changing the resolution during runtime in a compiled game</li></ul><p><br /></p><h2>1.2 - Released</h2><ul><li>Added automatic toggling of render passes based on the stencil values existing in the previous frame</li><li>Added checkerboard rendering as an optimisation method (works similar to Half JFA but less aggressive) - improves performance at the cost of accuracy</li><li>Added process mask to distance field output texture to help improve the performance of post-process materials</li><li>Always creates an outline (smallest level of process mask) process mask, this improves performance on all simple outlines and initial outline pass for the JFA</li><li>Refactored the process mask creation to improve maintainability</li><li>Added option to scale the render target down to 1% of the base resolution - improves performance at the cost of quality</li><li>Added option to specify a group of stencils that can be merged for a single distance field outline</li><li>Supports UE 5.4</li><li>Added option to use a render target instead of a stencil as a source</li><li>Can now render every frame, at a targeted frame rate or completely on demand</li><li>Improved example materials making them simpler</li></ul><p><br /></p><p>Breaking changes:</p><ul><li>Changes to config settings include the name along with more values - Fix: Recreate settings</li><li>Removed Single In, Single Out and Double. Replaced with Simple. To get Single In, Out or Double use OutlineSide on the Distance Field Material node. - Fix: Recreate material node</li><li>Changed DistanceFieldSide in the Distance Field Material node to OutlineSide. May cause errors. - Fix: Recreate material node</li><li>UpdateResolution no longer exists - Fix: Remove BP node</li><li>RefreshResolution renamed to RefreshDistanceFieldResolution - Fix: Delete and add new BP node</li></ul><p><br /></p><h2>1.1 - Released</h2><ul><li>Added optimisations, Max Process Distance &amp; Half JFA</li><li>Added more BP functions to change the settings from the game thread</li></ul><p><br /></p><h2>1.0</h2><ul><li>Initial release-ready product</li></ul>",
+  "technicalDetails": "<h2>Features:</h2><ul><li>Quickly create an outline, using the custom material expressions and example materials.</li><li>Create outlines of any size, with various effects like a shrinking or growing outline, or use the distance field as a way to create a distortion effect.</li><li>If faster outlines are needed, choose between Single Pixel Inside/Outside and Double Pixel sized outlines.</li><li>Logging support for both Unreal Insights and RenderDoc.</li><li>Several optimisations for better performance.</li><li>Deferred renderer ONLY</li></ul><p><br /></p><h2>Code Modules:</h2><ul><li> DistanceFieldOutline - Runtime</li><li> DistanceFIeldOutlineEditor - Editor</li><li> DistanceFieldOutlineSettings - Runtime</li><li>DistanceFieldOutlineMaterial - Runtime</li></ul><p><br /></p><p>Number of C&#43;&#43; Classes: 20&#43;</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows x64</p><p>Supported Target Build Platforms: Windows x64</p><p>Documentation: <a href=\"https://github.com/RyanSweeney987/distance-field-outline-docs/wiki\" rel=\"nofollow\">Home · RyanSweeney987/distance-field-outline-docs Wiki (github.com)</a></p><p>Demo v1.2: <a href=\"https://mega.nz/file/868ExRZK#UN4qKcrIiF7ux-zttDWU7zaY_FoHoxZJ4YJ3QK6zVc4\" rel=\"nofollow\">Download link</a></p><p>Important/Additional Notes: Be sure to read the documentation before use. If you want to use the example post-process materials, you need to use the config settings found on the <a href=\"https://github.com/RyanSweeney987/distance-field-outline-docs/wiki/Quick-Setup\" rel=\"nofollow\">Quick Setup page</a> of the documentation. The purpose of this plugin is only to provide a tool to create such outlines, not to provide the outline effects themselves.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/01Main-1920x1080-be4a9a39a9ca9749470da0bdf1751c1b.jpeg",
+      "md5": "be4a9a39a9ca9749470da0bdf1751c1b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1865890,
+      "uploadedDate": "2024-05-11T16:08:47.824Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/02HowitWorks-1920x1080-ee481efdb5c44a8317433d88e0b37c49.png",
+      "md5": "ee481efdb5c44a8317433d88e0b37c49",
+      "width": 1920,
+      "height": 1080,
+      "size": 2016436,
+      "uploadedDate": "2024-05-11T16:08:48.438Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/03Examples-1920x1080-616b0b2e39be25f7e0ebdf9b18af051e.png",
+      "md5": "616b0b2e39be25f7e0ebdf9b18af051e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1893109,
+      "uploadedDate": "2024-05-11T16:08:49.119Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/04PerfOpt-1920x1080-0493389ac98a6332d8fd57228d6ea48e.png",
+      "md5": "0493389ac98a6332d8fd57228d6ea48e",
+      "width": 1920,
+      "height": 1080,
+      "size": 2374715,
+      "uploadedDate": "2024-05-11T16:08:49.901Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/05StencilGroups-1920x1080-844f6257b38f957793dfc34329c89f5a.png",
+      "md5": "844f6257b38f957793dfc34329c89f5a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2372098,
+      "uploadedDate": "2024-05-11T16:08:50.652Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/06CustomMatExpressions-1920x1080-7180b4def29c40c441c6ac0048a829f2.png",
+      "md5": "7180b4def29c40c441c6ac0048a829f2",
+      "width": 1920,
+      "height": 1080,
+      "size": 2275805,
+      "uploadedDate": "2024-05-11T16:08:51.386Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/07BPFunctions-1920x1080-6466750ed2dc4a20b5f29964caf830ff.png",
+      "md5": "6466750ed2dc4a20b5f29964caf830ff",
+      "width": 1920,
+      "height": 1080,
+      "size": 2108524,
+      "uploadedDate": "2024-05-11T16:08:52.091Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/08Profiling-1920x1080-b090b9303e40e660689a287fd0430b08.png",
+      "md5": "b090b9303e40e660689a287fd0430b08",
+      "width": 1920,
+      "height": 1080,
+      "size": 494699,
+      "uploadedDate": "2024-05-11T16:08:52.727Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DistanceFieldOutline_thumb-284x284-d99cc536751644455c856d8a77416953.png",
+      "md5": "d99cc536751644455c856d8a77416953",
+      "width": 284,
+      "height": 284,
+      "size": 142832,
+      "uploadedDate": "2024-05-11T16:08:53.232Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DistanceFieldOutline_featured-894x488-333da35dbb4aaf867d1a8df0570525a4.png",
+      "md5": "333da35dbb4aaf867d1a8df0570525a4",
+      "width": 894,
+      "height": 488,
+      "size": 983875,
+      "uploadedDate": "2024-05-11T16:08:53.342Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01Main-1920x1080-be4a9a39a9ca9749470da0bdf1751c1b_Snapshot.jpeg",
+      "md5": "a572b599bdaa7a5daaa9afe62d6d6cf2",
+      "width": 150,
+      "height": 74,
+      "size": 9730,
+      "uploadedDate": "2024-05-11T16:08:48.152Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/02HowitWorks-1920x1080-ee481efdb5c44a8317433d88e0b37c49_Snapshot.png",
+      "md5": "c5291d14c69bb26d5120bd4da031a6b3",
+      "width": 150,
+      "height": 74,
+      "size": 8801,
+      "uploadedDate": "2024-05-11T16:08:48.886Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/03Examples-1920x1080-616b0b2e39be25f7e0ebdf9b18af051e_Snapshot.png",
+      "md5": "7807b90602d2e8e5fa22f83f340528b1",
+      "width": 150,
+      "height": 74,
+      "size": 8147,
+      "uploadedDate": "2024-05-11T16:08:49.552Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/04PerfOpt-1920x1080-0493389ac98a6332d8fd57228d6ea48e_Snapshot.png",
+      "md5": "228d1c25fe0ec680df8a553ccce481b1",
+      "width": 150,
+      "height": 74,
+      "size": 8864,
+      "uploadedDate": "2024-05-11T16:08:50.381Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/05StencilGroups-1920x1080-844f6257b38f957793dfc34329c89f5a_Snapshot.png",
+      "md5": "32043fd3b7b8a6973f16a5c28a60fef5",
+      "width": 150,
+      "height": 74,
+      "size": 10634,
+      "uploadedDate": "2024-05-11T16:08:51.157Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/06CustomMatExpressions-1920x1080-7180b4def29c40c441c6ac0048a829f2_Snapshot.png",
+      "md5": "607a2e0207298cc8be3f475f40569174",
+      "width": 150,
+      "height": 74,
+      "size": 9128,
+      "uploadedDate": "2024-05-11T16:08:51.849Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/07BPFunctions-1920x1080-6466750ed2dc4a20b5f29964caf830ff_Snapshot.png",
+      "md5": "cf8acd4edb23ae8e0c0d1947eb5cb789",
+      "width": 150,
+      "height": 74,
+      "size": 9151,
+      "uploadedDate": "2024-05-11T16:08:52.552Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/08Profiling-1920x1080-b090b9303e40e660689a287fd0430b08_Snapshot.png",
+      "md5": "29edd74a3c8c5b475d5c4d8cc1cf5b2a",
+      "width": 150,
+      "height": 74,
+      "size": 7984,
+      "uploadedDate": "2024-05-11T16:08:53.081Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery6-1920x1080-ead99b364b1af42607790c6a51639052_Snapshot.png",
+      "md5": "23ae972646e7a09ed173cfb235a54775",
+      "width": 150,
+      "height": 74,
+      "size": 5217,
+      "uploadedDate": "2024-01-27T00:45:22.436Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery7-1920x1080-8d411f4eed84452c358af41e44e4fe91_Snapshot.png",
+      "md5": "018693b2729a8bcbe39d5f4237c12b36",
+      "width": 150,
+      "height": 74,
+      "size": 4876,
+      "uploadedDate": "2024-01-27T00:45:22.879Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery5-1920x1080-3c69b8579bb667deac24198ffaeff351_Snapshot.png",
+      "md5": "954281adf18e929d59a677d536f12fe6",
+      "width": 150,
+      "height": 74,
+      "size": 7768,
+      "uploadedDate": "2024-01-27T00:45:23.322Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery0-1920x1080-2b3feac5a278e82c4dd73dc861f9d526_Snapshot.png",
+      "md5": "f8c2f8dd05127c569a0af4ab99420a50",
+      "width": 150,
+      "height": 74,
+      "size": 5017,
+      "uploadedDate": "2024-01-16T19:39:38.390Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1-1920x1080-b4eb585d9247442a995624e048998834_Snapshot.png",
+      "md5": "64f391fc1055428968b69626de0b2435",
+      "width": 150,
+      "height": 74,
+      "size": 6547,
+      "uploadedDate": "2024-01-16T19:39:39.001Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery2-1920x1080-dbecf8e180adebc49e76085e1959f3db_Snapshot.png",
+      "md5": "81757a430b73bc2b73747fa18dbf6fbc",
+      "width": 150,
+      "height": 74,
+      "size": 5888,
+      "uploadedDate": "2024-01-16T19:39:39.599Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery3-1920x1080-6bd9500cbbfea5d9762e2a37757e7794_Snapshot.png",
+      "md5": "a6cebc5cfbc28e4c278f64031fae5511",
+      "width": 150,
+      "height": 74,
+      "size": 7853,
+      "uploadedDate": "2024-01-16T19:39:40.232Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery4-1920x1080-36e79d3e9187f731bd4c32d24975a7dc_Snapshot.png",
+      "md5": "f071d58d2dcf41e9f0c8b2b12abae4b5",
+      "width": 150,
+      "height": 74,
+      "size": 7020,
+      "uploadedDate": "2024-01-16T19:39:40.843Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1-1920x1080-b4eb585d9247442a995624e048998834_Snapshot.png",
+      "md5": "64f391fc1055428968b69626de0b2435",
+      "width": 150,
+      "height": 74,
+      "size": 6547,
+      "uploadedDate": "2024-01-16T17:28:31.289Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-01-30T12:25:00.285Z",
+  "lastModifiedDate": "2024-12-18T17:55:24.886Z",
+  "customAttributes": {},
+  "entitlementName": "30667faf832940d587570fa21356e0e3",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "adb31e159ace418ab903a0ea8136378d",
+      "appId": "DistanceFieldOutline_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-01-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.2 1.2.3"
+    },
+    {
+      "id": "ed1f5e0d5751426ab03fd386c7945569",
+      "appId": "DistanceFieldOutline_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-01-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.3 1.2.3"
+    },
+    {
+      "id": "a8a73c418cde4bb88758381e8d720dc5",
+      "appId": "DistanceFieldOutline_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE5.4 1.2.3"
+    }
+  ],
+  "developer": "Sweenus987",
+  "developerId": "o-tyvshgluscwn5nhyjeapcjjsyn8nah",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

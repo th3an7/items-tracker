@@ -1,0 +1,295 @@
+{
+  "id": "af5ed6ea397d40008337ee5d84c26a77",
+  "title": "Image Similarity Recognition",
+  "description": "A variety of methods to calculate the similarity of pictures.",
+  "longDescription": "<p>My other plug-in &#34;<a href=\"https://unrealengine.com/marketplace/en-US/product/similarityrecognition\" rel=\"nofollow\">Similarity Recognition</a>&#34; is mainly for objects such as shapes and symbols.</p><p><br /></p><blockquote><strong>In UE5, you need to add plugin content in Additional Asset Directories to Cook in the project settings. Otherwise, it will crash when used after packaging. And when loading pictures, try to use PNG pictures, JPG still has problems that have not been solved.</strong></blockquote><p><br /></p><p><br /></p><blockquote>Open the Content Browser window, in the upper right corner of the Content Browser, click the Settings button, This will open a menu where you can adjust various settings for the current instance of the Content Browser, Under the View category, check the Show Plugin Content option, Find the Image Similarity Recognition-&gt;Content-&gt;Image Similarity Recognition directory, There are sample levels and related assets inside.</blockquote><p><br /></p><p>Several recognition functions are implemented in this plug-in based on OpenCV:</p><p><br /></p><p> PHA (perceptual hash algorithm). Its function is to generate a &#34;fingerprint&#34; string for each image, and then compare the fingerprints of different images. The closer the results, the more similar the images.</p><p><br /></p><p> PSNR (Peak Signal to Noise Ratio). It is a full reference image quality evaluation index. The most common and widely used image objective evaluation index, but it is based on the error between corresponding pixels, that is, based on error-sensitive image quality evaluation. Since the visual characteristics of the human eye are not considered (the human eye is more sensitive to the contrast difference with lower spatial frequency, the human eye is more sensitive to the brightness contrast difference than the chromaticity, and the human eye&#39;s perception of an area will be affected. The impact of its surrounding neighboring areas, etc.), so the evaluation results often appear inconsistent with people&#39;s subjective feelings.</p><p><br /></p><p> SSIM (structural similarity). It is a structural similarity and a full-reference image quality evaluation index. It measures image similarity from three aspects: brightness, contrast, and structure.</p><p><br /></p><p><strong>Change log</strong> : (2022/04)</p><p>Support 5.0 version</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> RecognitionP_PHA、RecognitionT_PHA ----Perceptual hash algorithm function, the parameters are the image disk path and Txture2D.</li><li> RecognitionP_PSNR、RecognitionT_PSNR----Peak Signal to Noise Ratio function, the parameters are the image disk path and Txture2D.</li><li> RecognitionP_MSSIM、RecognitionT_MSSIM----Structural similarity function, the parameters are the image disk path and Txture2D.</li><li>LoadFileToTexture2D----Read the file from the disk to Texture2D.</li><li>SaveTexture2DToFile----Save Texture2D to disk file.</li></ul><p>Code Modules:</p><ul><li> ImageSimilarityRecognition [Runtime]</li></ul><p><br /></p><p><strong>Check out ywt20&#39;s other products here </strong>: <a href=\"https://www.unrealengine.com/marketplace/en-US/profile/YWT20\" rel=\"nofollow\">https://www.unrealengine.com/marketplace/en-US/profile/YWT20</a></p><p><br /></p><p>Number of Blueprints: 1</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: (No)</p><p>Supported Development Platforms: (“Windows”)</p><p>Supported Target Build Platforms: (&#34;Win64&#34;, &#34;Win32&#34;)</p><p>Documentation: <a href=\"https://kdocs.cn/l/spoa1D67bgVG\" rel=\"nofollow\">Link</a></p><p>Example Project: <a href=\"https://1drv.ms/u/s!ArUXKe9rc5cykQ51wSrjJCF9inXv?e&#61;pqSclk\" rel=\"nofollow\">Link</a></p><p>Important/Additional Notes:<strong>Please note that if you want to use the Texture2D file included in the project, we need to set the value of CompressionSettings to UserInterface2D and the value of MipGenSettings to NoMipmaps. If it is a picture file loaded from a disk, there is no problem.</strong></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ISR-1920x1080-f0bcf2e119afafc2851fbb48eed6aefe.png",
+      "md5": "f0bcf2e119afafc2851fbb48eed6aefe",
+      "width": 1920,
+      "height": 1080,
+      "size": 204181,
+      "uploadedDate": "2022-04-26T02:33:56.094Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0-1920x1080-232037960d02c8ccdb8c5930331bfbca.jpg",
+      "md5": "232037960d02c8ccdb8c5930331bfbca",
+      "width": 1920,
+      "height": 1080,
+      "size": 212088,
+      "uploadedDate": "2021-03-03T08:05:26.388Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0-1920x1080-b4ca42540ac44ce480fddcc33c5f0dac.jpg",
+      "md5": "b4ca42540ac44ce480fddcc33c5f0dac",
+      "width": 1920,
+      "height": 1080,
+      "size": 130456,
+      "uploadedDate": "2021-03-15T10:20:18.124Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-6ce390ac3be6bed373bf25919899cbde.jpg",
+      "md5": "6ce390ac3be6bed373bf25919899cbde",
+      "width": 1920,
+      "height": 1080,
+      "size": 155586,
+      "uploadedDate": "2021-03-03T08:05:27.281Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-b8ea782b390411960a18b2f19ae0ddf1.jpg",
+      "md5": "b8ea782b390411960a18b2f19ae0ddf1",
+      "width": 1920,
+      "height": 1080,
+      "size": 234774,
+      "uploadedDate": "2021-03-03T08:05:28.079Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-5387fa8fcca2460e1975beac52b5f0f5.jpg",
+      "md5": "5387fa8fcca2460e1975beac52b5f0f5",
+      "width": 1920,
+      "height": 1080,
+      "size": 330778,
+      "uploadedDate": "2021-03-03T08:05:29.789Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-0ff8c0c2ca157731aa51874bc162b916.jpg",
+      "md5": "0ff8c0c2ca157731aa51874bc162b916",
+      "width": 1920,
+      "height": 1080,
+      "size": 271562,
+      "uploadedDate": "2021-03-03T08:05:28.940Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-5b6205367c3a7d6fd603023efc51b16a.jpg",
+      "md5": "5b6205367c3a7d6fd603023efc51b16a",
+      "width": 1920,
+      "height": 1080,
+      "size": 256263,
+      "uploadedDate": "2021-03-03T08:05:30.679Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ImageSimilarityRecognition_thumb-284x284-cb752806b0442ac87ea7f82d0bbf53b2.png",
+      "md5": "cb752806b0442ac87ea7f82d0bbf53b2",
+      "width": 284,
+      "height": 284,
+      "size": 109520,
+      "uploadedDate": "2021-03-02T14:55:19.680Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ImageSimilarityRecognition_featured-894x488-6546ea79a6c3a563145287fe8cb93005.png",
+      "md5": "6546ea79a6c3a563145287fe8cb93005",
+      "width": 894,
+      "height": 488,
+      "size": 536293,
+      "uploadedDate": "2021-03-02T14:55:19.798Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ISR-1920x1080-f0bcf2e119afafc2851fbb48eed6aefe_Snapshot.png",
+      "md5": "d987235070dfece9d7173b45b5b40846",
+      "width": 150,
+      "height": 74,
+      "size": 4798,
+      "uploadedDate": "2022-04-26T02:33:56.333Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0-1920x1080-b4ca42540ac44ce480fddcc33c5f0dac_Snapshot.jpg",
+      "md5": "b8d902bb0b837ca8005aa77ec49d2324",
+      "width": 150,
+      "height": 74,
+      "size": 4078,
+      "uploadedDate": "2021-03-15T10:20:18.321Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0-1920x1080-232037960d02c8ccdb8c5930331bfbca_Snapshot.jpg",
+      "md5": "614b5e848a0cacfa44eea03e7b0d72d9",
+      "width": 150,
+      "height": 74,
+      "size": 1874,
+      "uploadedDate": "2021-03-03T08:05:27.022Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-6ce390ac3be6bed373bf25919899cbde_Snapshot.jpg",
+      "md5": "4da459114a9c231849357e4d5fe53c19",
+      "width": 150,
+      "height": 74,
+      "size": 4393,
+      "uploadedDate": "2021-03-03T08:05:27.815Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-b8ea782b390411960a18b2f19ae0ddf1_Snapshot.jpg",
+      "md5": "4fe6ec9dd0c92302bbabd84c3ddf7938",
+      "width": 150,
+      "height": 74,
+      "size": 4316,
+      "uploadedDate": "2021-03-03T08:05:28.642Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-0ff8c0c2ca157731aa51874bc162b916_Snapshot.jpg",
+      "md5": "01f5d0390dc1105dd429a3e291157f5a",
+      "width": 150,
+      "height": 74,
+      "size": 4630,
+      "uploadedDate": "2021-03-03T08:05:29.465Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-5387fa8fcca2460e1975beac52b5f0f5_Snapshot.jpg",
+      "md5": "46a672676970fc9a80bcafe0d5e0f927",
+      "width": 150,
+      "height": 74,
+      "size": 4442,
+      "uploadedDate": "2021-03-03T08:05:30.364Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-5b6205367c3a7d6fd603023efc51b16a_Snapshot.jpg",
+      "md5": "ab4d862e844a8f178e8237e975f7b100",
+      "width": 150,
+      "height": 74,
+      "size": 4582,
+      "uploadedDate": "2021-03-03T08:05:31.299Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0-1920x1080-1bcbf1e123fd4ecce8b6d27cfa294e3f_Snapshot.jpg",
+      "md5": "491029ca0053820fdf112199dba96773",
+      "width": 150,
+      "height": 74,
+      "size": 5111,
+      "uploadedDate": "2021-03-02T14:55:19.632Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-04-05T12:52:27.825Z",
+  "lastModifiedDate": "2024-11-23T05:34:24.698Z",
+  "customAttributes": {},
+  "entitlementName": "af5ed6ea397d40008337ee5d84c26a77",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "89c6187e5f1542caaf0ac9e37eb52bf5",
+      "appId": "ImageSimilarityRecognition_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-03-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ISR_4.26"
+    },
+    {
+      "id": "0a52c8547fa84285859afdcb5b3315dc",
+      "appId": "ImageSimilarityRecognition_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-08-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ISR_4.27"
+    },
+    {
+      "id": "a81f15b1ea6a4e509fa9e39f211540a8",
+      "appId": "ImageSimilarityRecognition_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "3b272cb257fc42efbcb6dbfa4744366c",
+      "appId": "ImageSimilarityRecognition_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "23066928e3db4cfeb3a24d0bcc24975a",
+      "appId": "ImageSimilarityRecognition_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "3531e87a646f4ca8a598905f8c25f40d",
+      "appId": "ImageSimilarityRecognition_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "24e9141697b04ad88e9b3245e6d8cff8",
+      "appId": "ImageSimilarityRecognition_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "YWT20",
+  "developerId": "o-36kebp2nggyevt5yn43s4ef7qv4rm9",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,283 @@
+{
+  "id": "dfb63859424b408495e756d21008dd31",
+  "title": "Procedural Elevator",
+  "description": "A blueprint meant to procedurally generate and animate an elevator.",
+  "longDescription": "<p>Bug reports or feature suggestion: erosa3d&#64;gmail.com</p><p><br /></p><p>Update 22-05-30:</p><ul><li>Fixed First Person interaction to reduce complexity;</li></ul><p>Update 22-06-15:</p><ul><li>Added 2D interaction option to the blueprint (BP_Elevator &gt; Elevator &gt; Setup &gt; 2D Interaction), allowing the elevator to be used regardless of the player type (First Person, Third Person, etc).</li></ul><p>Update 22-09-24:</p><ul><li>Added option to support different floor heights in the same Blueprint;</li><li>Change elevator speed parameter to Meters per Second;</li></ul><p>Update 22-10-11:</p><ul><li>Fixed a bug causing the elevator position to reset to 0 after reaching the top floor;</li></ul><p>Update 22-10-13:</p><ul><li>Removed test nodes from level blueprint;</li></ul><p><br /></p><p>Youtube preview: https://youtu.be/eaB38MgJ0DI</p><p>Demo application: shorturl.at/iFNV8</p><p><br /></p><p>This elevator blueprint is meant to generate and animate elevators based on a few simple parameters, such as floor height and amount of floors. You can also change a few &#34;key speeds&#34;, and have a procedurally generated internal panel (limited to 50 floors), fully functional but still customizable to your needs, from the mesh to the triggering methods (although this might require some experience with Blueprints). It also includes a material which procedurally generates numbers up to 999, using a single texture to do so.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>&#34;Keep it Simple&#34; option, to hide everything that&#39;s not essential;</li><li>Modular system allowing you to fully replace the default meshes with your own;</li><li>Procedural adjustment of animations and meshes to match floor height and amount of floors;</li><li>Automatic rearrangement of floors based on the current direction in which the elevator is moving (similarly to real-life elevators);</li><li>Parameters to control the speed of the elevator, the speed in which the doors close and the time the doors stay open when reaching the target floor;</li><li>Procedural materials to allow the numbers and floor indicators to work flawlessly up to floor 999;</li><li>Procedural placement of meshes to allow it to have an internal panel working flawlessly to a maximum of 50 floors (it will automatically be turned off above that to avoid having too many meshes in a very tight space);</li><li>Procedural placement of triggers and binding them to an internal activation method;</li><li>Fully commented blueprints and materials, to make it easy to adapt to your needs;</li><li>A single actor (BP_Elevators_Manager) will be automatically spawned at the <em>Begin Play</em> to run all the Elevators, keeping it easy on your CPU;</li><li>No C&#43;&#43; used, blueprints only.</li></ul><p><br /></p><p>Number of Blueprints: 3</p><p>Input: Demo character uses default movement keys and left mouse click to interact.</p><p>Network Replicated: No</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Yes</p><p>Documentation: https://drive.google.com/file/d/1hpAROHN9a42T-l0Aqof3_3KaCuDOEIzK/view?usp&#61;sharing</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/00-1920x1080-979e6cdb7a86e06f7b145ca643da8128.png",
+      "md5": "979e6cdb7a86e06f7b145ca643da8128",
+      "width": 1920,
+      "height": 1080,
+      "size": 2702687,
+      "uploadedDate": "2020-11-30T20:29:36.943Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/50bdd835df80fb53510b4066b6b34e9c-1920x1080-d6f0be14b0607982eccf90a64b9a2b4e.jpg",
+      "md5": "d6f0be14b0607982eccf90a64b9a2b4e",
+      "width": 1920,
+      "height": 1080,
+      "size": 311004,
+      "uploadedDate": "2020-12-05T21:19:29.364Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/603791313adff77e02a3a256161e04d5-1920x1080-ca0a9650a5568f12eafa964451a5ffc7.jpg",
+      "md5": "ca0a9650a5568f12eafa964451a5ffc7",
+      "width": 1920,
+      "height": 1080,
+      "size": 401368,
+      "uploadedDate": "2020-12-05T21:19:29.658Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ac534d03c0fce340a95b9c89794d7268-1920x1080-ce1669f32ab243ae125705f7e8d70caa.jpg",
+      "md5": "ce1669f32ab243ae125705f7e8d70caa",
+      "width": 1920,
+      "height": 1080,
+      "size": 353598,
+      "uploadedDate": "2020-12-05T21:19:30.119Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/c45486b853b4177bb2cebe47611cf063-1920x1080-246f7d00a5c5dd501769e5af128fe828.jpg",
+      "md5": "246f7d00a5c5dd501769e5af128fe828",
+      "width": 1920,
+      "height": 1080,
+      "size": 384657,
+      "uploadedDate": "2020-12-05T21:19:30.467Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/dde7c57b109dd644ecb7e1fa690b587e-1920x1080-3809905f4cd9b4fce71888c56ecd0f3c.jpg",
+      "md5": "3809905f4cd9b4fce71888c56ecd0f3c",
+      "width": 1920,
+      "height": 1080,
+      "size": 381330,
+      "uploadedDate": "2020-12-05T21:19:30.770Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00001-1920x1080-8dc55d752fce6815009d39f9a9367e6f.png",
+      "md5": "8dc55d752fce6815009d39f9a9367e6f",
+      "width": 1920,
+      "height": 1080,
+      "size": 2244300,
+      "uploadedDate": "2020-12-05T21:19:31.183Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ProceduralElevator_thumb-284x284-b2dc7b637f5397f7842830a2603ed0af.png",
+      "md5": "b2dc7b637f5397f7842830a2603ed0af",
+      "width": 284,
+      "height": 284,
+      "size": 120562,
+      "uploadedDate": "2020-11-30T20:29:40.514Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ProceduralElevator_featured-894x488-0212e8bbe2e6abfd939e0d0ae9ad9ef8.png",
+      "md5": "0212e8bbe2e6abfd939e0d0ae9ad9ef8",
+      "width": 894,
+      "height": 488,
+      "size": 547833,
+      "uploadedDate": "2020-11-30T20:29:40.641Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/50bdd835df80fb53510b4066b6b34e9c-1920x1080-d6f0be14b0607982eccf90a64b9a2b4e_Snapshot.jpg",
+      "md5": "06be656cf5c421a5435e6c970b8bbf8f",
+      "width": 150,
+      "height": 74,
+      "size": 4855,
+      "uploadedDate": "2020-12-05T21:19:29.576Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/603791313adff77e02a3a256161e04d5-1920x1080-ca0a9650a5568f12eafa964451a5ffc7_Snapshot.jpg",
+      "md5": "a515d5c552f8123ebfe2b255f61b957a",
+      "width": 150,
+      "height": 74,
+      "size": 5107,
+      "uploadedDate": "2020-12-05T21:19:29.873Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ac534d03c0fce340a95b9c89794d7268-1920x1080-ce1669f32ab243ae125705f7e8d70caa_Snapshot.jpg",
+      "md5": "f92a74851d7ac50bc317e9ba05bdd743",
+      "width": 150,
+      "height": 74,
+      "size": 5014,
+      "uploadedDate": "2020-12-05T21:19:30.334Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/c45486b853b4177bb2cebe47611cf063-1920x1080-246f7d00a5c5dd501769e5af128fe828_Snapshot.jpg",
+      "md5": "ea50674208760a96b440fc0d8ab585d3",
+      "width": 150,
+      "height": 74,
+      "size": 4939,
+      "uploadedDate": "2020-12-05T21:19:30.694Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/dde7c57b109dd644ecb7e1fa690b587e-1920x1080-3809905f4cd9b4fce71888c56ecd0f3c_Snapshot.jpg",
+      "md5": "7ef39a08fc28f5645dee5858fb29b5f5",
+      "width": 150,
+      "height": 74,
+      "size": 5524,
+      "uploadedDate": "2020-12-05T21:19:31.032Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-8dc55d752fce6815009d39f9a9367e6f_Snapshot.png",
+      "md5": "4fef56c62915f4edbcafe65b3772f911",
+      "width": 150,
+      "height": 74,
+      "size": 5087,
+      "uploadedDate": "2020-12-05T21:19:31.704Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/00-1920x1080-979e6cdb7a86e06f7b145ca643da8128_Snapshot.png",
+      "md5": "b8acfbaeb918722b958cc7b7a3d1eaab",
+      "width": 150,
+      "height": 74,
+      "size": 5871,
+      "uploadedDate": "2020-11-30T20:29:37.275Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01-1920x1080-d49313978027489858f77a4bc27bb9bd_Snapshot.jpg",
+      "md5": "aff30a8e4f87dd60f441915b592865b8",
+      "width": 150,
+      "height": 74,
+      "size": 5968,
+      "uploadedDate": "2020-11-30T20:29:37.678Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/02-1920x1080-4410b59acd307c3ac4cf3f9b57f4b0ed_Snapshot.jpg",
+      "md5": "6e8bde7f71aa8b993223ea4e02894271",
+      "width": 150,
+      "height": 74,
+      "size": 5226,
+      "uploadedDate": "2020-11-30T20:29:38.088Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/03-1920x1080-33be2d6bb3e6f6e6987eb50e31617a67_Snapshot.jpg",
+      "md5": "44c22beb58c0a0ad8ea2d6808e16d357",
+      "width": 150,
+      "height": 74,
+      "size": 5753,
+      "uploadedDate": "2020-11-30T20:29:38.429Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/04-1920x1080-5951c2bb3df470f25292459d5dc2fe59_Snapshot.jpg",
+      "md5": "717680a0b777975f13e12484330952f3",
+      "width": 150,
+      "height": 74,
+      "size": 5448,
+      "uploadedDate": "2020-11-30T20:29:38.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/05-1920x1080-722b89214e9d979f65780c0e2eaba880_Snapshot.jpg",
+      "md5": "e6ddf97487b8d9abeb9190c233a28f32",
+      "width": 150,
+      "height": 74,
+      "size": 5800,
+      "uploadedDate": "2020-11-30T20:29:39.203Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/06-1920x1080-cf19dadaf437c5299bf0032647bf6681_Snapshot.jpg",
+      "md5": "dd93c3962960729d2ebb15e9b4b74f29",
+      "width": 150,
+      "height": 74,
+      "size": 5628,
+      "uploadedDate": "2020-11-30T20:29:39.720Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/07-1920x1080-79fb8c7ea1161d538a32f3970e36288b_Snapshot.jpg",
+      "md5": "b050deaf8187d7a3c7af945fe7f87740",
+      "width": 150,
+      "height": 74,
+      "size": 3443,
+      "uploadedDate": "2020-11-30T20:29:40.071Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/08-1920x1080-cf482c9f392f8eae572655c97ba9bdab_Snapshot.jpg",
+      "md5": "0facc7275a6f31316cd52cd53004dd03",
+      "width": 150,
+      "height": 74,
+      "size": 4801,
+      "uploadedDate": "2020-11-30T20:29:40.418Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-12-07T20:18:49.373Z",
+  "lastModifiedDate": "2024-09-24T19:08:57.731Z",
+  "customAttributes": {},
+  "entitlementName": "dfb63859424b408495e756d21008dd31",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "f1927c0505fc47a68113036af60afe71",
+      "appId": "Procedurdfb63859424bV1",
+      "compatibleApps": [
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Oculus",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2020-11-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE422"
+    }
+  ],
+  "developer": "Emerson Rosa",
+  "developerId": "o-b7zqrnx32sksmb4ep7kperqu6tyu8y",
+  "endOfSupport": false,
+  "unsearchable": false
+}

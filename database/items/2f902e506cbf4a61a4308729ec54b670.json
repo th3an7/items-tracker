@@ -1,0 +1,180 @@
+{
+  "id": "2f902e506cbf4a61a4308729ec54b670",
+  "title": "Storyline Importer",
+  "description": "Storyline Importer allows user to import Storyline Editor data to Unreal Engine Data Tables",
+  "longDescription": "<h1>STORYLINE IMPORTER</h1><p><br /></p><p><a href=\"https://www.youtube.com/playlist?list&#61;PLukJdog_m6IB-a7Kt3rZFezjuOLoMHK4s\" rel=\"nofollow\">TUTORIAL</a></p><p><a href=\"https://github.com/klauth86/UE_Plugin_StorylineImporter\" rel=\"nofollow\">EXAMPLE/SOURCE CODE</a></p><p><a href=\"https://github.com/klauth86/UE_Plugin_StorylineImporter/wiki\" rel=\"nofollow\">DOCUMENTATION</a></p><p><a href=\"https://www.paypal.com/paypalme/ArturKhairullin\" rel=\"nofollow\">DONATE&#x1f44d;</a></p><p><br /></p><p>STORYLINE IMPORTER is ready to use and easy to customize Dialogue System. This plugin is working in pair with <a href=\"https://github.com/klauth86/StorylineEditor/tree/mainWPF\" rel=\"nofollow\"><strong>Storyline Editor</strong></a>. Narrative elements can be created in <a href=\"https://github.com/klauth86/StorylineEditor/tree/mainWPF\" rel=\"nofollow\"><strong>Storyline Editor</strong></a> app and after can be imported to <strong>Unreal Engine</strong> via this plugin.</p><p><br /></p><p>Mappings from <a href=\"https://github.com/klauth86/StorylineEditor/tree/mainWPF\" rel=\"nofollow\"><strong>Storyline Editor</strong></a> tabs to <strong>Unreal Engine</strong> Data Tables:</p><ul><li>Characters &#61;&gt; DT_CharacterM</li><li>Items &#61;&gt; DT_ItemM</li><li>Quests &#61;&gt; DT_QuestM</li><li>Dialogs &#61;&gt; DT_DialogM</li><li>Replicas &#61;&gt; DT_ReplicaM</li><li>Nodes (from Quests, Dialogs, Replcias) &#61;&gt; DT_NodeM</li><li>GameEvents (from all Nodes) &#61;&gt; DT_GameEventM</li><li>DT_GameEventMImpl accumulates unique types of Game Events used</li><li>Predicates (from all Nodes) &#61;&gt; DT_PredicateM</li><li>DT_PredicateMImpl accumulates unique types of Predicates used</li><li>DT_RichTextM accumulates different decorations in <strong>Storyline Editor</strong> Rich Text Boxes</li></ul><p><br /></p><p>Some of Data Tables above contains basic data and some allows customization. Hints for customization:</p><ul><li>DT_CharacterM has <strong>ActorClass</strong> field to link abstract character from <strong>Storyline Editor</strong> with Actor class that is used in <strong>Unreal Engine</strong> for that character</li><li>DT_ItemM has <strong>ActorClass</strong> field to link abstract item from <strong>StorylineEditor</strong> with Actor class that is used in <strong>Unreal Engine</strong> for that item</li><li>DT_GameEventMImpl has <strong>GameEventClass</strong> field to link abstract Game Event type from <strong>Storyline Editor</strong> with <strong>GE_Base</strong> subclass that executes logic for that Game Event type in <strong>Unreal Engine</strong></li><li>DT_PredicateMImpl has <strong>PredicateClass</strong> field to link abstract Predicate type from <strong>Storyline Editor</strong> with <strong>P_Base</strong> subclass that executes logic for that Predicate type in <strong>Unreal Engine</strong></li><li>DT_RichTextM can be used to apply decorations in <strong>Unreal Engine</strong> Rich Text Boxes according to decorations in <strong>Storyline Editor</strong> Rich Text Boxes</li></ul><p><br /></p><p>Plugin contains Blueprint Function Library and complete set of abstract classes and interfaces to build custom Dialogue System with Quest subsystem around <a href=\"https://github.com/klauth86/StorylineEditor/tree/mainWPF\" rel=\"nofollow\"><strong>Storyline Editor</strong></a> data:</p><ul><li>IStorylineSource is interface for getting Data Tables</li><li>IStorylineContext is interface for getting/setting context of your storyline (it should provide data for Predicates check, apply changes from Game Events, store historical data for Dialogs, Quests, etc.)</li><li>UStorylineServiceBFL is globally accessible Blueprint Function Library for main operations with imported data</li></ul><p><br /></p><p><a href=\"https://discord.gg/BrCtnDK4EU\" rel=\"nofollow\">SUPPORT/FEEDBACK</a></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Pentangle&#43;St.\" rel=\"nofollow\">CHECK OTHER PLUGINS BY US</a></p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Migration of <a href=\"https://github.com/klauth86/StorylineEditor/tree/mainWPF\" rel=\"nofollow\">StorylineEditor</a> data to Unreal Engine Data Tables…</li><li>Using/customizing plugin classes to build Dialog System around <a href=\"https://github.com/klauth86/StorylineEditor/tree/mainWPF\" rel=\"nofollow\">StorylineEditor</a> data</li></ul><p>Code Modules:</p><ul><li>StorylineImporter [Runtime]</li><li>StorylineImporterEditor [Editor]</li></ul><p>Number of Blueprints: 11</p><p>Number of C&#43;&#43; Classes: 18</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64, Mac, Linux</p><p>Supported Target Build Platforms: Win64, Mac, Linux</p><p>Documentation: <a href=\"https://github.com/klauth86/UE_Plugin_StorylineImporter/wiki\" rel=\"nofollow\">HERE</a></p><p>Example Project: <a href=\"https://github.com/klauth86/UE_Plugin_StorylineImporter\" rel=\"nofollow\">HERE</a></p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Import01-1920x1080-7d4f96bbbc69bed2a999650bcf67e5b9.jpg",
+      "md5": "7d4f96bbbc69bed2a999650bcf67e5b9",
+      "width": 1920,
+      "height": 1080,
+      "size": 218281,
+      "uploadedDate": "2023-06-17T05:32:18.727Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Import02-1920x1080-ce3cbf6f18ed5b65ed64a51f9bf049bc.jpg",
+      "md5": "ce3cbf6f18ed5b65ed64a51f9bf049bc",
+      "width": 1920,
+      "height": 1080,
+      "size": 300275,
+      "uploadedDate": "2023-06-17T05:32:19.676Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Import03-1920x1080-46673ed7a0cc8bd4edab60e3ef444265.jpg",
+      "md5": "46673ed7a0cc8bd4edab60e3ef444265",
+      "width": 1920,
+      "height": 1080,
+      "size": 224416,
+      "uploadedDate": "2023-06-17T05:32:20.824Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Import04-1920x1080-865d89ad1ce90d46b02c35455fa123ed.jpg",
+      "md5": "865d89ad1ce90d46b02c35455fa123ed",
+      "width": 1920,
+      "height": 1080,
+      "size": 249373,
+      "uploadedDate": "2023-06-17T05:32:21.825Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/StorylineImporter_thumb-284x284-1bdc15985da39f02faabefefee7ef47b.png",
+      "md5": "1bdc15985da39f02faabefefee7ef47b",
+      "width": 284,
+      "height": 284,
+      "size": 164380,
+      "uploadedDate": "2023-06-17T05:32:22.530Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/StorylineImporter_featured-894x488-190bfafe1fd0d7c8d0d1ea13335f22bb.png",
+      "md5": "190bfafe1fd0d7c8d0d1ea13335f22bb",
+      "width": 894,
+      "height": 488,
+      "size": 126602,
+      "uploadedDate": "2023-06-17T05:32:22.585Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Import01-1920x1080-7d4f96bbbc69bed2a999650bcf67e5b9_Snapshot.jpg",
+      "md5": "242e4a7863e6f0897f1fe107c1445b44",
+      "width": 150,
+      "height": 74,
+      "size": 5567,
+      "uploadedDate": "2023-06-17T05:32:19.338Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Import02-1920x1080-ce3cbf6f18ed5b65ed64a51f9bf049bc_Snapshot.jpg",
+      "md5": "6a3274b883a514a6ae460dee12c4ade2",
+      "width": 150,
+      "height": 74,
+      "size": 5170,
+      "uploadedDate": "2023-06-17T05:32:20.313Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Import03-1920x1080-46673ed7a0cc8bd4edab60e3ef444265_Snapshot.jpg",
+      "md5": "cd5e448ccd80001d6b289a1503336669",
+      "width": 150,
+      "height": 74,
+      "size": 5387,
+      "uploadedDate": "2023-06-17T05:32:21.503Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Import04-1920x1080-865d89ad1ce90d46b02c35455fa123ed_Snapshot.jpg",
+      "md5": "41bba106a641fd1b3c49451136d45381",
+      "width": 150,
+      "height": 74,
+      "size": 5757,
+      "uploadedDate": "2023-06-17T05:32:22.437Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-06-26T17:16:24.487Z",
+  "lastModifiedDate": "2024-09-26T06:06:58.744Z",
+  "customAttributes": {},
+  "entitlementName": "2f902e506cbf4a61a4308729ec54b670",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3ff1c6e6747542cd83ca8a324716f270",
+      "appId": "StorylineImporter_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-06-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.4_5.1"
+    },
+    {
+      "id": "f2500839ac1841219e289f0c92bb7702",
+      "appId": "StorylineImporter_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-06-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.5_5.2"
+    },
+    {
+      "id": "89777abb25ce414cbb88c952d517b171",
+      "appId": "StorylineImporter_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.5_5.3"
+    },
+    {
+      "id": "d0a3b832b5c6477180805a35ebf74f18",
+      "appId": "Storylin2f902e506cbfV5",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-09-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.5_5.4"
+    }
+  ],
+  "developer": "Pentangle St.",
+  "developerId": "o-uljepgj3r9qhqvt365cxemcuyqhawj",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

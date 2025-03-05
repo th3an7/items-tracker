@@ -1,0 +1,292 @@
+{
+  "id": "3ca3ce96e5e948769077de6eefdcb6ce",
+  "title": "Lumen with Runtime Meshes",
+  "description": "Make the meshes loaded at runtime fully support Lumen global illumination rather than only having screen-space Raytracing.",
+  "longDescription": "<p>The models loaded by UE at runtime have always only had screen-space Lumen, making the picture relatively unrealistic. The rendering effect has always been much worse than the models cooked and packaged in the UE Editor. But now this plugin (AZLumenRuntime) has successfully transplanted the generation process of Mesh&#39;s SDF and MeshCard to the runtime environment. Just by turning on Runtime Mesh monitoring in the runtime environment, smooth SDF and MeshCard calculations can be generated for the new StaticMesh entering the Level in the background thread queue. Once the generation is completed, the perfect Lumen global illumination can be presented immediately, instead of the deceptive screen-space Lumen.</p><p><br /></p><p><strong>However, there is a limitation here. Without modifying the UE source code, the graphics card needs to support HardwareRaytracing to function correctly. If you have the ability to modify the UE source code (see the subsequent document link, which indicates the source code modification location), you can break this limitation and present Lumen global illumination perfectly on the models loaded at runtime without enabling HardwareRaytracing.</strong></p><p><br /></p><p>Video: <a href=\"https://www.bilibili.com/video/BV1AubCeZEYW\" rel=\"nofollow\">Video1</a> <a href=\"https://www.bilibili.com/video/BV13vbae3Evm\" rel=\"nofollow\">Video2</a></p><p><br /></p><p>Other versions of the plugin can also be provided. The UE version number is required to be greater than or equal to 5.1. You can inquire by emailing me.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Build the SDF and MeshCard of StaticMesh in the background at runtime.</li><li> Support modifying <strong>DistanceFieldResolutionScale</strong> and <strong>MaxLumenMeshCards</strong> at runtime to freely adjust the quality of Lumen.</li><li> The background thread builds SDF and MeshCard, and the building process does not cause stuttering in rendering.</li><li>Support serialization and deserialization of the already computed SDF and MeshCards in the Level.</li></ul><p>Code Modules:</p><ul><li> AZLumenRuntime</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 3</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation: <a href=\"https://www.dropbox.com/scl/fi/djh3yz9ha8s24louf5b36/Lumen-with-Runtime-Meshes.pdf?rlkey&#61;l7e15o01uipfntet0i4km06uh&amp;st&#61;1pl8tfw5&amp;dl&#61;0\" rel=\"nofollow\">DropBox</a> <a href=\"https://zhuanlan.zhihu.com/p/709460396\" rel=\"nofollow\">知乎</a></p><p>Example Project: <a href=\"https://www.dropbox.com/scl/fi/cgef4lx3tcbypnj5rz1yh/LumenRuntimeDemo-ue5.4.zip?rlkey&#61;k2hcdqvjx50vut06kfekexyse&amp;st&#61;dklciye4&amp;dl&#61;0\" rel=\"nofollow\">DropBox</a> <a href=\"https://pan.baidu.com/s/1J76WVmduMKdrrUmfHs9fug?pwd&#61;s0ye\" rel=\"nofollow\">百度网盘</a></p><p>Important/Additional Notes: If the UE source code is not modified (see the documentation for specific modifications), your graphics card needs to support <strong>HardwareRaytracing</strong>.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Snipaste2024-07-1815-11-07-1920x1080-fa2f68c22e4ea61a437b6ad4fc122190.png",
+      "md5": "fa2f68c22e4ea61a437b6ad4fc122190",
+      "width": 1920,
+      "height": 1080,
+      "size": 2486351,
+      "uploadedDate": "2024-07-18T08:42:43.339Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Snipaste2024-07-1815-09-48-1920x1080-41d5ca819791f2b39656bcedeaae1389.png",
+      "md5": "41d5ca819791f2b39656bcedeaae1389",
+      "width": 1920,
+      "height": 1080,
+      "size": 2584399,
+      "uploadedDate": "2024-07-18T08:15:22.542Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Snipaste2024-07-1815-11-16-1920x1080-71267db828578f7e46f609b5cbf146b3.png",
+      "md5": "71267db828578f7e46f609b5cbf146b3",
+      "width": 1920,
+      "height": 1080,
+      "size": 2523839,
+      "uploadedDate": "2024-07-18T08:42:44.012Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Snipaste2024-07-1815-10-22-1920x1080-6cd5bc2e1cb0b322780522e4ad39d55a.png",
+      "md5": "6cd5bc2e1cb0b322780522e4ad39d55a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2583267,
+      "uploadedDate": "2024-07-18T08:15:23.914Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Snipaste2024-07-1815-11-26-1920x1080-e5b0eb0ea4fb34cc42920d1346452d97.png",
+      "md5": "e5b0eb0ea4fb34cc42920d1346452d97",
+      "width": 1920,
+      "height": 1080,
+      "size": 1697607,
+      "uploadedDate": "2024-07-18T08:42:44.644Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Snipaste2024-07-1815-10-34-1920x1080-7fb34876866429fec48e82379172c221.png",
+      "md5": "7fb34876866429fec48e82379172c221",
+      "width": 1920,
+      "height": 1080,
+      "size": 2245812,
+      "uploadedDate": "2024-07-18T08:15:25.090Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Snipaste2024-07-1815-11-36-1920x1080-394ed72285e1d5636ddc16e340472ea3.png",
+      "md5": "394ed72285e1d5636ddc16e340472ea3",
+      "width": 1920,
+      "height": 1080,
+      "size": 2100542,
+      "uploadedDate": "2024-07-18T08:42:45.224Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Snipaste2024-07-1815-10-53-1920x1080-e712518e52d6e66d7c5783cb93da974b.png",
+      "md5": "e712518e52d6e66d7c5783cb93da974b",
+      "width": 1920,
+      "height": 1080,
+      "size": 2146761,
+      "uploadedDate": "2024-07-18T08:15:26.211Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Snipaste2024-07-1815-11-54-1920x1080-bfbf0638611773d937fa1e6cf690f925.png",
+      "md5": "bfbf0638611773d937fa1e6cf690f925",
+      "width": 1920,
+      "height": 1080,
+      "size": 1281973,
+      "uploadedDate": "2024-07-18T08:15:26.819Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/-1920x1080-e106a11b7fc57012e1e5b23028fe3d58.png",
+      "md5": "e106a11b7fc57012e1e5b23028fe3d58",
+      "width": 1920,
+      "height": 1080,
+      "size": 2652568,
+      "uploadedDate": "2024-07-19T14:18:37.971Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/LumenwithRuntimeMeshes_thumb-284x284-d96b429f160b35b04fe765c502d8a2c8.png",
+      "md5": "d96b429f160b35b04fe765c502d8a2c8",
+      "width": 284,
+      "height": 284,
+      "size": 73976,
+      "uploadedDate": "2024-07-20T05:26:13.930Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/LumenwithRuntimeMeshes_featured-894x488-48f8ca694f84b4cfe3cc3a0b83e37517.png",
+      "md5": "48f8ca694f84b4cfe3cc3a0b83e37517",
+      "width": 894,
+      "height": 488,
+      "size": 266656,
+      "uploadedDate": "2024-07-20T02:23:13.504Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/-1920x1080-e106a11b7fc57012e1e5b23028fe3d58_Snapshot.png",
+      "md5": "c5d6db675a836dad486a172d7c841e8b",
+      "width": 150,
+      "height": 74,
+      "size": 6809,
+      "uploadedDate": "2024-07-19T14:18:38.341Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-11-07-1920x1080-fa2f68c22e4ea61a437b6ad4fc122190_Snapshot.png",
+      "md5": "62c23574f46cd789b919946521af039c",
+      "width": 150,
+      "height": 74,
+      "size": 6221,
+      "uploadedDate": "2024-07-18T08:42:43.734Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-11-16-1920x1080-71267db828578f7e46f609b5cbf146b3_Snapshot.png",
+      "md5": "30f9b44204dda61031f0defb9ebd98cf",
+      "width": 150,
+      "height": 74,
+      "size": 4984,
+      "uploadedDate": "2024-07-18T08:42:44.391Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-11-26-1920x1080-e5b0eb0ea4fb34cc42920d1346452d97_Snapshot.png",
+      "md5": "0730a384adff916464c25297acb59435",
+      "width": 150,
+      "height": 74,
+      "size": 4555,
+      "uploadedDate": "2024-07-18T08:42:44.969Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-11-36-1920x1080-394ed72285e1d5636ddc16e340472ea3_Snapshot.png",
+      "md5": "84bdec6c97de81d0702fdcadbecd9a87",
+      "width": 150,
+      "height": 74,
+      "size": 5079,
+      "uploadedDate": "2024-07-18T08:42:45.607Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-11-07-1920x1080-57340632ffc2a5375818ce9dbd375f41_Snapshot.png",
+      "md5": "aa8a1fba638e7c4be90fb0fb7038b0c7",
+      "width": 150,
+      "height": 74,
+      "size": 6290,
+      "uploadedDate": "2024-07-18T08:15:22.306Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-09-48-1920x1080-41d5ca819791f2b39656bcedeaae1389_Snapshot.png",
+      "md5": "181e8d9bf8d52f09859900609a6d0584",
+      "width": 150,
+      "height": 74,
+      "size": 6356,
+      "uploadedDate": "2024-07-18T08:15:22.972Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-11-16-1920x1080-aac2dd7202f864b7dfc27c1834f79605_Snapshot.png",
+      "md5": "26e67971241ae7410ed96b1d47a91dd2",
+      "width": 150,
+      "height": 74,
+      "size": 5039,
+      "uploadedDate": "2024-07-18T08:15:23.662Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-10-22-1920x1080-6cd5bc2e1cb0b322780522e4ad39d55a_Snapshot.png",
+      "md5": "aec141d39bf758932acda2dbe7bc67b7",
+      "width": 150,
+      "height": 74,
+      "size": 5079,
+      "uploadedDate": "2024-07-18T08:15:24.302Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-11-26-1920x1080-77fb43380933674ee176a1c1104a508f_Snapshot.png",
+      "md5": "9e3cee07077ef260c70d73f4e0bb5f1e",
+      "width": 150,
+      "height": 74,
+      "size": 4745,
+      "uploadedDate": "2024-07-18T08:15:24.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-10-34-1920x1080-7fb34876866429fec48e82379172c221_Snapshot.png",
+      "md5": "7472318ff101d71219d7650101ce910e",
+      "width": 150,
+      "height": 74,
+      "size": 4627,
+      "uploadedDate": "2024-07-18T08:15:25.453Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-11-36-1920x1080-bf3e3a9499099957b68db31e0f92c062_Snapshot.png",
+      "md5": "07e4b6db9b2dca3ce22877f79ed94cb9",
+      "width": 150,
+      "height": 74,
+      "size": 5124,
+      "uploadedDate": "2024-07-18T08:15:26.021Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-10-53-1920x1080-e712518e52d6e66d7c5783cb93da974b_Snapshot.png",
+      "md5": "707ab5d6b4c1c22dd0007527d8836aee",
+      "width": 150,
+      "height": 74,
+      "size": 5725,
+      "uploadedDate": "2024-07-18T08:15:26.601Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Snipaste2024-07-1815-11-54-1920x1080-bfbf0638611773d937fa1e6cf690f925_Snapshot.png",
+      "md5": "36ed61d21c2a42d8a5769a9441acb38e",
+      "width": 150,
+      "height": 74,
+      "size": 5796,
+      "uploadedDate": "2024-07-18T08:15:27.167Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-07-19T13:49:24.302Z",
+  "lastModifiedDate": "2024-12-05T18:02:17.281Z",
+  "customAttributes": {},
+  "entitlementName": "3ca3ce96e5e948769077de6eefdcb6ce",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b27391018cb344e187374c3a186bcd65",
+      "appId": "AZLumenRuntime_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-07-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AZLumenRuntime-UE5.3"
+    },
+    {
+      "id": "320f1ca9f2c54cf9949cfb932b5e5595",
+      "appId": "AZLumenRuntime_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-07-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AZLumenRuntime-UE5.4"
+    }
+  ],
+  "developer": "azureyes",
+  "developerId": "o-tqbtem3n3dbznk3k4z7auc6paxrq2v",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

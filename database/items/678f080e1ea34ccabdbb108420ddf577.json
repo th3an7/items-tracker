@@ -1,0 +1,560 @@
+{
+  "id": "678f080e1ea34ccabdbb108420ddf577",
+  "title": "Texture Painter",
+  "description": "This pack gives you the ability to paint directly onto assets. There are 2 versions. An in-editor version with lots of options for baking out textures you paint, and a game-ready version which you can use to either paint colours, or drive effects.",
+  "longDescription": "<p>This pack allows you to paint Diffuse, Metallic, Specular, Roughness, Emissive, Opacity, Normalmap and Displacement map textures directly inside the Unreal engine and export the textures, Or use a Colour and MSR texture in game to control different aspects of your materials.</p><p><br /></p><p>** In Game Painter **</p><p>This is similar to the editors painter, but it has simplified basics for performance reasons. You can pick your texture size and if you want to bake 1 or 2 textures out. By default these are a Colour texture, and an MSR texture (Metal, Specular, Roughness). However, you can use these channels in various ways to achieve different effects on your object. The blueprint that is used for this painting also supports mobility, so you can have physics objects that interact with the world leaving a trail behind it, or painting on its own surface.</p><p>There are a variety of examples provided to show different ways this setup can be used.</p><p><br /></p><p>Features of the In-Game version</p><ul><li>Impact on surfaces, allowing painting to be passed on. The painting devise stores the effect, so the values can be different depending on the tools used.</li><li>here are about 8 different painting tools to choose from, with the freedom to expand it as needed. Pencil, pen, chalk, paintbrush, paintroller, paintball, paintcan, markers.</li><li>These tools can be set up to be used for other impact elements such as bullets if you&#39;d like. You can apply a &#39;tag&#39; to check for, and if the impacting object doesn&#39;t have a matching tag, it will be ignored. This is great for making armor on a mech that can be shot for example.</li><li>There are 9 new blueprints. The main one is the &#34;BP_PaintableGeometry-GameReady&#34; Blueprint. In the test level, this is the main blueprint used to allow you to paint on nearly every surface (Just to show what can be done with it).</li><li>Paint brushes and paint rollers can have their colours changed on the fly. I have provided a paint bucket and a paint can to allow for this.</li></ul><p>You can see a full run-through of the features for the in-game version at this link: <a href=\"https://youtu.be/YrPYBHriHjM\" rel=\"nofollow\">Youtube Link</a></p><p><br /></p><p>** In Editor Painter **</p><p>A variety of options are available to use. There is a undo-redo system in place allowing you to add up to 15 undo&#39;s if needed. Brushes are fully customizable (you can add custom brushes as well), and a variety of brushes are included to give you some options on how to interact with the colour/height/normalmap information. There is a built in &#39;mirroring&#39; function for the X, Y and Z axis, and each individual texture can be exported as a .EXR files. These files can be imported directly into Unreal, or Photoshop for further editing. There is also an option to combine various black and white textures into a single image using the RG and B channels individually.</p><p><br /></p><p>Features of the In-Editor version</p><ul><li> Brushes: Painting, Additive, Smoothing, and Flatten.</li><li> Mirroring options for the X, Y and Z axis.</li><li> Preview menu to see the texture you&#39;re painting, and the corresponding UV&#39;s.</li><li>Textures can be baked out with a resolution ranging up to 4K.</li><li>The skybox has variables exposed to allow the lighting and skybox textures to change at runtime, as well as locking the skybox to maintain a constant lighting angle on the painting asset.</li><li>Full exporting options to export everything, or just individual textures.</li><li>A blueprint exists to allow for quick previewing of saved textures.</li></ul><p><br /></p><p>Important Note: If you open the test level and experience weird visual issues with the post processing, you might need to enable &#34;Custom Depth-Stencil Pass&#34;. To do this, go into your projects settings, go to &#34;Rendering&#34;, and under &#39;Post Processing&#39; you&#39;ll see an option to enable &#34;Custom Depth-Stencil Pass&#34;. Be  sure to pick &#34;Enable with Stencil&#34;. This will allow the post processing to work correctly.</p><p><br /></p><p>You can see a full run-through of all the features available for the &#39;In Editor Painter&#39; version at this link: <a href=\"https://www.youtube.com/watch?v&#61;HPzAkTuvx4k\" rel=\"nofollow\">Youtube Link</a></p>",
+  "technicalDetails": "<p>Features: The ability to paint diffuse, metallic, specular, roughness, emissive, opacity, normal maps and displacement maps directly within the editor, or paint a diffuse and MSR texture during gameplay.</p><p><br /></p><p>The following features are available.</p><ul><li> Brushes: Painting, Additive, Smoothing, and Flatten.</li><li> Mirroring options for the X, Y and Z axis.</li><li> Preview menu to see the texture you&#39;re painting, and the corresponding UV&#39;s.</li><li>Textures can be baked out with a resolution ranging up to 4K.</li><li>The skybox has variables exposed to allow the lighting and skybox textures to change at runtime, as well as locking the skybox to maintain a constant lighting angle on the painting asset.</li><li>Full exporting options to export everything, or just individual textures.</li></ul><p><br /></p><p>The game version is simplified, but fast. It allows for 2 textures to be baked, but limits a few features compared to the in-editor version to allow for better performance within the game itself.</p><p><br /></p><p>Number of Blueprints: 12</p><p>Network Replicated: No</p><p><br /></p><p>Documentation: You can find an hour long flythrough of the In-Engine painting tool here: <a href=\"https://youtu.be/HPzAkTuvx4k\" rel=\"nofollow\">Youtube Link</a></p><p>And a flythrough of the In-Game painting tool here: <a href=\"https://youtu.be/YrPYBHriHjM\" rel=\"nofollow\">Youtube Link</a></p><p><br /></p><p>You can get further details on the tool at my website here: <a href=\"https://www.chrisalbeluhn.com/texturepainterpack-main\" rel=\"nofollow\">Texture Painter Link</a></p><p><br /></p><p>Important/Additional Notes: HDR images are sourced from HDRIHaven.com</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery21-1920x1080-5d7411638933c14a3353e48ded8a826c.jpg",
+      "md5": "5d7411638933c14a3353e48ded8a826c",
+      "width": 1920,
+      "height": 1080,
+      "size": 792696,
+      "uploadedDate": "2021-08-02T15:59:45.266Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery12-1920x1080-b9707809c1f57e770a540cbeeb01e46a.jpg",
+      "md5": "b9707809c1f57e770a540cbeeb01e46a",
+      "width": 1920,
+      "height": 1080,
+      "size": 783527,
+      "uploadedDate": "2021-08-02T15:59:44.853Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery13-1920x1080-606f98e5901c8780bb5403d51e34a5cf.jpg",
+      "md5": "606f98e5901c8780bb5403d51e34a5cf",
+      "width": 1920,
+      "height": 1080,
+      "size": 673556,
+      "uploadedDate": "2021-08-02T15:59:45.725Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery14-1920x1080-50714f51adea420774552b16a7f9ef28.jpg",
+      "md5": "50714f51adea420774552b16a7f9ef28",
+      "width": 1920,
+      "height": 1080,
+      "size": 886183,
+      "uploadedDate": "2021-08-02T15:59:46.526Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery17-1920x1080-8225b9863d23531fa420358f5b3b2370.jpg",
+      "md5": "8225b9863d23531fa420358f5b3b2370",
+      "width": 1920,
+      "height": 1080,
+      "size": 662001,
+      "uploadedDate": "2021-08-02T15:59:47.337Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery16-1920x1080-bf2e8acc5e142c6b3bed85b7985a11e5.jpg",
+      "md5": "bf2e8acc5e142c6b3bed85b7985a11e5",
+      "width": 1920,
+      "height": 1080,
+      "size": 889983,
+      "uploadedDate": "2021-08-02T15:59:46.117Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery15-1920x1080-9a028c2686c1da8c083f630a9e2afa71.jpg",
+      "md5": "9a028c2686c1da8c083f630a9e2afa71",
+      "width": 1920,
+      "height": 1080,
+      "size": 993792,
+      "uploadedDate": "2021-08-02T15:59:46.939Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery19-1920x1080-8999e2620f0e359169893350e0faa398.jpg",
+      "md5": "8999e2620f0e359169893350e0faa398",
+      "width": 1920,
+      "height": 1080,
+      "size": 881657,
+      "uploadedDate": "2021-08-02T15:59:47.684Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery20-1920x1080-19502a64fd73c8d6caeed8410353d2e6.jpg",
+      "md5": "19502a64fd73c8d6caeed8410353d2e6",
+      "width": 1920,
+      "height": 1080,
+      "size": 839277,
+      "uploadedDate": "2021-08-02T15:59:48.104Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery18-1920x1080-9bc3984277427b76a57929df4a48a37f.jpg",
+      "md5": "9bc3984277427b76a57929df4a48a37f",
+      "width": 1920,
+      "height": 1080,
+      "size": 605834,
+      "uploadedDate": "2021-08-02T15:59:48.499Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery01-1920x1080-a76bd7e7ef5a11ebde131315884baa79.jpg",
+      "md5": "a76bd7e7ef5a11ebde131315884baa79",
+      "width": 1920,
+      "height": 1080,
+      "size": 722335,
+      "uploadedDate": "2021-08-03T17:54:54.952Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery02-1920x1080-ec36558d6090ed6406258d55cc0ceaab.jpg",
+      "md5": "ec36558d6090ed6406258d55cc0ceaab",
+      "width": 1920,
+      "height": 1080,
+      "size": 688211,
+      "uploadedDate": "2021-08-03T17:54:55.382Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery03-1920x1080-707db8b2af9ffa8f9098fcf395bac81c.jpg",
+      "md5": "707db8b2af9ffa8f9098fcf395bac81c",
+      "width": 1920,
+      "height": 1080,
+      "size": 613576,
+      "uploadedDate": "2021-08-03T17:54:55.779Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery04-1920x1080-b55b19d6d88368bb9d88d2a0ee325578.jpg",
+      "md5": "b55b19d6d88368bb9d88d2a0ee325578",
+      "width": 1920,
+      "height": 1080,
+      "size": 724862,
+      "uploadedDate": "2021-08-03T17:54:56.140Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery05-1920x1080-5d267a968540d85d9582d25efa2fba4f.jpg",
+      "md5": "5d267a968540d85d9582d25efa2fba4f",
+      "width": 1920,
+      "height": 1080,
+      "size": 637971,
+      "uploadedDate": "2021-08-03T17:54:56.532Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery06-1920x1080-36ff8d5e435779fde84b7868c24f8ea9.jpg",
+      "md5": "36ff8d5e435779fde84b7868c24f8ea9",
+      "width": 1920,
+      "height": 1080,
+      "size": 627727,
+      "uploadedDate": "2021-08-03T17:54:56.925Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery07-1920x1080-1b04cf176aca333cb175df62666c978d.jpg",
+      "md5": "1b04cf176aca333cb175df62666c978d",
+      "width": 1920,
+      "height": 1080,
+      "size": 648004,
+      "uploadedDate": "2021-08-03T17:54:57.321Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery08-1920x1080-546773d4b03988264fd6ffd532067f3d.jpg",
+      "md5": "546773d4b03988264fd6ffd532067f3d",
+      "width": 1920,
+      "height": 1080,
+      "size": 761928,
+      "uploadedDate": "2021-08-03T17:54:57.756Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery09-1920x1080-8a99b1310dd03041ffe94e19bf1ac810.jpg",
+      "md5": "8a99b1310dd03041ffe94e19bf1ac810",
+      "width": 1920,
+      "height": 1080,
+      "size": 751657,
+      "uploadedDate": "2021-08-03T17:54:58.177Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery10-1920x1080-6748d45d965da2736c0490099306377f.jpg",
+      "md5": "6748d45d965da2736c0490099306377f",
+      "width": 1920,
+      "height": 1080,
+      "size": 722383,
+      "uploadedDate": "2021-08-03T17:54:58.568Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery11-1920x1080-f6df5008ac5da5833122464c9c0ee124.jpg",
+      "md5": "f6df5008ac5da5833122464c9c0ee124",
+      "width": 1920,
+      "height": 1080,
+      "size": 632012,
+      "uploadedDate": "2021-08-03T17:54:58.960Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TexturePainter_thumb-284x284-d84398c000be7f9fc6543b6ff0a8bded.png",
+      "md5": "d84398c000be7f9fc6543b6ff0a8bded",
+      "width": 284,
+      "height": 284,
+      "size": 100675,
+      "uploadedDate": "2021-03-28T22:53:21.283Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TexturePainter_featured-894x488-6982153943c8bd42e2d7795a2b86d687.png",
+      "md5": "6982153943c8bd42e2d7795a2b86d687",
+      "width": 894,
+      "height": 488,
+      "size": 655704,
+      "uploadedDate": "2021-08-04T03:59:48.831Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery01-1920x1080-a76bd7e7ef5a11ebde131315884baa79_Snapshot.jpg",
+      "md5": "94db099f7502d1ce43e9281c683a4bd1",
+      "width": 150,
+      "height": 74,
+      "size": 7237,
+      "uploadedDate": "2021-08-03T17:54:55.223Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery02-1920x1080-ec36558d6090ed6406258d55cc0ceaab_Snapshot.jpg",
+      "md5": "f1ff305abed485e9bae5a2b7782602ff",
+      "width": 150,
+      "height": 74,
+      "size": 6487,
+      "uploadedDate": "2021-08-03T17:54:55.625Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery03-1920x1080-707db8b2af9ffa8f9098fcf395bac81c_Snapshot.jpg",
+      "md5": "5c3af7045e514c8b10d125d1c336cac8",
+      "width": 150,
+      "height": 74,
+      "size": 5475,
+      "uploadedDate": "2021-08-03T17:54:56.013Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery04-1920x1080-b55b19d6d88368bb9d88d2a0ee325578_Snapshot.jpg",
+      "md5": "461177c44c9a1f5389565cceeca90c68",
+      "width": 150,
+      "height": 74,
+      "size": 6464,
+      "uploadedDate": "2021-08-03T17:54:56.379Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery05-1920x1080-5d267a968540d85d9582d25efa2fba4f_Snapshot.jpg",
+      "md5": "16317d8106ab5c75144533afb98bedda",
+      "width": 150,
+      "height": 74,
+      "size": 6412,
+      "uploadedDate": "2021-08-03T17:54:56.779Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery06-1920x1080-36ff8d5e435779fde84b7868c24f8ea9_Snapshot.jpg",
+      "md5": "d9a600efa1f22b05cfa2da2b7cf90079",
+      "width": 150,
+      "height": 74,
+      "size": 6199,
+      "uploadedDate": "2021-08-03T17:54:57.166Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery07-1920x1080-1b04cf176aca333cb175df62666c978d_Snapshot.jpg",
+      "md5": "067e981de31ec0ecb03d0f23f711a32f",
+      "width": 150,
+      "height": 74,
+      "size": 6334,
+      "uploadedDate": "2021-08-03T17:54:57.592Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery08-1920x1080-546773d4b03988264fd6ffd532067f3d_Snapshot.jpg",
+      "md5": "7c806123dd0e7b642e5fd5d71ae31dcb",
+      "width": 150,
+      "height": 74,
+      "size": 7135,
+      "uploadedDate": "2021-08-03T17:54:58.021Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery09-1920x1080-8a99b1310dd03041ffe94e19bf1ac810_Snapshot.jpg",
+      "md5": "6b6ffff065f490553a04e6e27e7ea7e8",
+      "width": 150,
+      "height": 74,
+      "size": 7006,
+      "uploadedDate": "2021-08-03T17:54:58.423Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery10-1920x1080-6748d45d965da2736c0490099306377f_Snapshot.jpg",
+      "md5": "a08be2baac29c53ccb030bbf5204b2db",
+      "width": 150,
+      "height": 74,
+      "size": 7394,
+      "uploadedDate": "2021-08-03T17:54:58.811Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery11-1920x1080-f6df5008ac5da5833122464c9c0ee124_Snapshot.jpg",
+      "md5": "5d637c80a41ece2da344605fa997fb15",
+      "width": 150,
+      "height": 74,
+      "size": 7012,
+      "uploadedDate": "2021-08-03T17:54:59.212Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery12-1920x1080-b9707809c1f57e770a540cbeeb01e46a_Snapshot.jpg",
+      "md5": "a0f837f67d88d40b52100a256767d891",
+      "width": 150,
+      "height": 74,
+      "size": 5014,
+      "uploadedDate": "2021-08-02T15:59:45.122Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery21-1920x1080-5d7411638933c14a3353e48ded8a826c_Snapshot.jpg",
+      "md5": "4a11c3fa7d7ba54194f431c2057ccd70",
+      "width": 150,
+      "height": 74,
+      "size": 7140,
+      "uploadedDate": "2021-08-02T15:59:45.549Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery13-1920x1080-606f98e5901c8780bb5403d51e34a5cf_Snapshot.jpg",
+      "md5": "c04e5d13b5aceae6197c94916e86914f",
+      "width": 150,
+      "height": 74,
+      "size": 4700,
+      "uploadedDate": "2021-08-02T15:59:45.970Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery16-1920x1080-bf2e8acc5e142c6b3bed85b7985a11e5_Snapshot.jpg",
+      "md5": "bf66ad40ce532ade64a86cc08bcb5d2f",
+      "width": 150,
+      "height": 74,
+      "size": 7424,
+      "uploadedDate": "2021-08-02T15:59:46.387Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery14-1920x1080-50714f51adea420774552b16a7f9ef28_Snapshot.jpg",
+      "md5": "2a58b1b147a39968a496178d080820cc",
+      "width": 150,
+      "height": 74,
+      "size": 5852,
+      "uploadedDate": "2021-08-02T15:59:46.784Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery15-1920x1080-9a028c2686c1da8c083f630a9e2afa71_Snapshot.jpg",
+      "md5": "515ae19a3d2a7a51d6aceafac78138be",
+      "width": 150,
+      "height": 74,
+      "size": 7079,
+      "uploadedDate": "2021-08-02T15:59:47.203Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery17-1920x1080-8225b9863d23531fa420358f5b3b2370_Snapshot.jpg",
+      "md5": "5f3cc94e4d3a1bae4a5f9b4c5609cab0",
+      "width": 150,
+      "height": 74,
+      "size": 5236,
+      "uploadedDate": "2021-08-02T15:59:47.583Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery19-1920x1080-8999e2620f0e359169893350e0faa398_Snapshot.jpg",
+      "md5": "e3b71277e1dad5f5f4c042a7d8b55dad",
+      "width": 150,
+      "height": 74,
+      "size": 5436,
+      "uploadedDate": "2021-08-02T15:59:47.964Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery20-1920x1080-19502a64fd73c8d6caeed8410353d2e6_Snapshot.jpg",
+      "md5": "85fca4f95128445c6122992661dce064",
+      "width": 150,
+      "height": 74,
+      "size": 5953,
+      "uploadedDate": "2021-08-02T15:59:48.362Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery18-1920x1080-9bc3984277427b76a57929df4a48a37f_Snapshot.jpg",
+      "md5": "2481dc013a1a53b9943e3069d8415e7f",
+      "width": 150,
+      "height": 74,
+      "size": 4731,
+      "uploadedDate": "2021-08-02T15:59:48.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery01-1920x1080-a76bd7e7ef5a11ebde131315884baa79_Snapshot.jpg",
+      "md5": "94db099f7502d1ce43e9281c683a4bd1",
+      "width": 150,
+      "height": 74,
+      "size": 7237,
+      "uploadedDate": "2021-03-23T09:47:34.285Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery02-1920x1080-ec36558d6090ed6406258d55cc0ceaab_Snapshot.jpg",
+      "md5": "f1ff305abed485e9bae5a2b7782602ff",
+      "width": 150,
+      "height": 74,
+      "size": 6487,
+      "uploadedDate": "2021-03-23T09:47:34.661Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery06-1920x1080-36ff8d5e435779fde84b7868c24f8ea9_Snapshot.jpg",
+      "md5": "d9a600efa1f22b05cfa2da2b7cf90079",
+      "width": 150,
+      "height": 74,
+      "size": 6199,
+      "uploadedDate": "2021-03-23T09:47:35.029Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery07-1920x1080-1b04cf176aca333cb175df62666c978d_Snapshot.jpg",
+      "md5": "067e981de31ec0ecb03d0f23f711a32f",
+      "width": 150,
+      "height": 74,
+      "size": 6334,
+      "uploadedDate": "2021-03-23T09:47:35.614Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery03-1920x1080-707db8b2af9ffa8f9098fcf395bac81c_Snapshot.jpg",
+      "md5": "5c3af7045e514c8b10d125d1c336cac8",
+      "width": 150,
+      "height": 74,
+      "size": 5475,
+      "uploadedDate": "2021-03-23T09:47:35.972Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery04-1920x1080-b55b19d6d88368bb9d88d2a0ee325578_Snapshot.jpg",
+      "md5": "461177c44c9a1f5389565cceeca90c68",
+      "width": 150,
+      "height": 74,
+      "size": 6464,
+      "uploadedDate": "2021-03-23T09:47:36.366Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery05-1920x1080-5d267a968540d85d9582d25efa2fba4f_Snapshot.jpg",
+      "md5": "16317d8106ab5c75144533afb98bedda",
+      "width": 150,
+      "height": 74,
+      "size": 6412,
+      "uploadedDate": "2021-03-23T09:47:36.766Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery09-1920x1080-8a99b1310dd03041ffe94e19bf1ac810_Snapshot.jpg",
+      "md5": "6b6ffff065f490553a04e6e27e7ea7e8",
+      "width": 150,
+      "height": 74,
+      "size": 7006,
+      "uploadedDate": "2021-03-23T09:47:37.097Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery08-1920x1080-546773d4b03988264fd6ffd532067f3d_Snapshot.jpg",
+      "md5": "7c806123dd0e7b642e5fd5d71ae31dcb",
+      "width": 150,
+      "height": 74,
+      "size": 7135,
+      "uploadedDate": "2021-03-23T09:47:37.816Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery10-1920x1080-6748d45d965da2736c0490099306377f_Snapshot.jpg",
+      "md5": "a08be2baac29c53ccb030bbf5204b2db",
+      "width": 150,
+      "height": 74,
+      "size": 7394,
+      "uploadedDate": "2021-03-23T09:47:38.225Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery11-1920x1080-f6df5008ac5da5833122464c9c0ee124_Snapshot.jpg",
+      "md5": "5d637c80a41ece2da344605fa997fb15",
+      "width": 150,
+      "height": 74,
+      "size": 7012,
+      "uploadedDate": "2021-03-23T09:47:38.598Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-03-26T02:55:46.510Z",
+  "lastModifiedDate": "2024-10-02T07:00:56.502Z",
+  "customAttributes": {},
+  "entitlementName": "678f080e1ea34ccabdbb108420ddf577",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "189cdf971a94432a8a6d99bffd794a34",
+      "appId": "TextureP678f080e1ea3V1",
+      "compatibleApps": [
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-03-23T00:00:00.000Z",
+      "releaseNote": "Version 2.1 introduces the ability to play at run time in your game. Various blueprints are provided to get the user started.",
+      "versionTitle": "Texture Painter V2.15"
+    },
+    {
+      "id": "7528b3e1e6b240dc81a5b0dab959a317",
+      "appId": "TextureP678f080e1ea3V2",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-04-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Texture Painter V2.15 UE5"
+    }
+  ],
+  "developer": "Christopher Albeluhn",
+  "developerId": "o-759f3df2504a999841d58cd4fdf415",
+  "endOfSupport": false,
+  "unsearchable": false
+}

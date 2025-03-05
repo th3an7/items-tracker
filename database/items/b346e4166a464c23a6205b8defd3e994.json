@@ -1,0 +1,570 @@
+{
+  "id": "b346e4166a464c23a6205b8defd3e994",
+  "title": "Roji File Utilities",
+  "description": "File utilities to manage the filesystem, import and export files using Text, Config and CSV formats with Encryption.",
+  "longDescription": "<p>The Roji File Utilities Plugin includes ~150 Blueprint nodes to Save and Load data using Text (.txt), CSV and Configuration(.ini) files using native datatypes. CSV files can exported to external programs (like MS-Excel, ploty, chartio, etc.) or imported directly into Unreal datatypes. The plugin includes Utility Functions to perform routine disk operations and filesystem maintenance. The Roji File Utilities Plugin [Runtime] is compatible with Unreal Engines 5.2-5.4.</p><p><br /></p><h2>Encryption coming soon!  Free upgrade.</h2><p> </p><p>No C&#43;&#43; knowledge is required. The File Utilities Plugin adds nodes to the Blueprint Editor. The plugin add new Blueprint functions to perform the following functions.</p><p> </p><p>Text, Config and CSV files (.txt, .ini and .csv) Functions:</p><ul><li>Save Value</li><li>Save Config Value</li><li>Save Array of Values</li><li>Save Array of CSV Values</li><li>Save Array of Config Values</li><li>Save CSV Values (String, double, int)</li><li>Load Value</li><li>Load Config Value</li><li>Load Array of Values</li><li>Load Array of CSV Values</li><li>Load Array of Config Values</li></ul><p> </p><p>Utility Functions:</p><ul><li>Make Directory</li><li>Rename File</li><li>Copy File Advanced</li><li>Copy File</li><li>Copy File and Rename</li><li>Move File</li><li>Move File and Rename</li><li>Find Files</li><li>Find Files Recursive</li><li>Delete File</li><li>Delete Directory</li><li>Get Date and Time</li><li>Get Date and Time String</li><li>Get Long Date and Time String</li></ul><p> </p><p>Supported Datatypes (Save, Save Array, Save Config, Save Array of Config):</p><ul><li>double, int, int64, Byte, bool, Vector, Vector3f, IntVector, IntPoint, Vector2D, Rotator, Transform, Object, LinearColor, FName, Matrix, String.</li></ul><p>  </p><p>Supported Platforms:</p><ul><li>Unreal Engine 5.2-5.4: Windows 10/11 PC x64 Unreal Win64</li></ul><p> </p><p>Development Environment Used:</p><ul><li>Visual Studio 2022, Windows Pro x64, Unreal Engine 5.2-5.4.</li></ul>",
+  "technicalDetails": "<p>No C&#43;&#43; knowledge required. A fast and easy way to add file save and load operations to any project with a few Blueprint nodes . A comprehensive solution, supporting a wide variety of datatypes, including functions to:</p><ul><li>Export - Values, Arrays of Values, Config Values, Arrays of Config Values, Arrays of CSV Values.</li><li>Import - Values, Array of Values, Config Values, Array of Config Values.</li><li>Directory - Create, Delete.</li><li>File - Rename, Copy, Move (w/ rename), Delete, Find (w/recursion).</li><li>Encrypt/Decrypt of text files (Coming soon!)</li></ul><p> </p><p>Supported Datatypes:</p><ul><li>double, int, int64, byte, bool, Vector, Vector3f, IntVector, IntPoint, Vector2D, Rotator, Transform, Object, LinearColor, FName, Matrix, String.</li></ul><p> </p><p>Code Modules:</p><ul><li> Roji File Utilities Blueprint Library Plugin [Runtime]</li></ul><p> </p><p>Number of Blueprint Nodes: 150&#43;</p><p>Number of C&#43;&#43; Classes: 1 (URojiFileUtilitiesBPLibrary)</p><p>Network Replicated: No</p><p><br /></p><p>Supported Target Build Platforms:</p><ul><li>PC Windows (x64) UE5 Win64</li></ul><p><br /></p><p>Documentation: <a href=\"https://www.dropbox.com/scl/fi/iypr00sqrbtc8id5tdxdw/Roji-Sodium-File-Utilities-Manual-v2.0.pdf?rlkey&#61;06t5atffwn7fge26wxs3ar931&amp;st&#61;tnzp90b1&amp;dl&#61;0\" rel=\"nofollow\">Manual v2.0</a></p><p>Example Project: <a href=\"https://www.dropbox.com/scl/fi/rm6jt2my7l3easgguboln/Example54.zip?rlkey&#61;zyzjpsikxn7teylevazzg0ry4&amp;st&#61;8n2n846m&amp;dl&#61;0\" rel=\"nofollow\">UE5.4 Example</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/01 - Save Array CSV Example-1920x1080-12918d8b32446aa4e7b2cb3b84b97fcd.png",
+      "md5": "12918d8b32446aa4e7b2cb3b84b97fcd",
+      "width": 1920,
+      "height": 1080,
+      "size": 2413323,
+      "uploadedDate": "2022-07-20T17:41:04.488Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/01 - Load Config Value Example-1920x1080-f41550a22ed13932bf08f23504fc3b6a.png",
+      "md5": "f41550a22ed13932bf08f23504fc3b6a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1603222,
+      "uploadedDate": "2022-07-20T17:41:05.032Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/02 - Config Array Example-1920x1080-943d39fd43bfc110a6a407ea48ebfaff.png",
+      "md5": "943d39fd43bfc110a6a407ea48ebfaff",
+      "width": 1920,
+      "height": 1080,
+      "size": 1661454,
+      "uploadedDate": "2022-07-20T17:41:05.525Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/04 - Data Extraction to CSV Example-1920x1080-e8e73debf5766963604e5fe0be1dbb49.png",
+      "md5": "e8e73debf5766963604e5fe0be1dbb49",
+      "width": 1920,
+      "height": 1080,
+      "size": 1916028,
+      "uploadedDate": "2022-07-20T17:41:05.984Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/101 - Utility Functions-1920x1080-05db38674cc0f2194f1a5ddbebacecd3.png",
+      "md5": "05db38674cc0f2194f1a5ddbebacecd3",
+      "width": 1920,
+      "height": 1080,
+      "size": 207923,
+      "uploadedDate": "2022-07-20T17:41:06.458Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/102 - Save Functions-1920x1080-5d08e90779fb68ac4fb47fecd4783538.png",
+      "md5": "5d08e90779fb68ac4fb47fecd4783538",
+      "width": 1920,
+      "height": 1080,
+      "size": 199451,
+      "uploadedDate": "2022-07-20T17:41:06.814Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/103 - Save Array Functions-1920x1080-0ea57aa04bfce530ba905a07215002a6.png",
+      "md5": "0ea57aa04bfce530ba905a07215002a6",
+      "width": 1920,
+      "height": 1080,
+      "size": 212566,
+      "uploadedDate": "2022-07-20T17:41:07.174Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/104 - Save Array CSV Functions-1920x1080-fc206420b890a4cef12ecd05b6f564ef.png",
+      "md5": "fc206420b890a4cef12ecd05b6f564ef",
+      "width": 1920,
+      "height": 1080,
+      "size": 132723,
+      "uploadedDate": "2022-07-20T17:41:07.504Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/105 - Save Config Functions-1920x1080-5a1e92f55e8dd47fdb64d97176d87bef.png",
+      "md5": "5a1e92f55e8dd47fdb64d97176d87bef",
+      "width": 1920,
+      "height": 1080,
+      "size": 229655,
+      "uploadedDate": "2022-07-20T17:41:07.894Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/106 - Save Config Array Functions-1920x1080-81ec8beaeb629d74a8f013c3487d37e7.png",
+      "md5": "81ec8beaeb629d74a8f013c3487d37e7",
+      "width": 1920,
+      "height": 1080,
+      "size": 290589,
+      "uploadedDate": "2022-07-20T17:41:08.310Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/107 - Load Functions-1920x1080-e76a43935de1bb96e3767a0a1bee60a4.png",
+      "md5": "e76a43935de1bb96e3767a0a1bee60a4",
+      "width": 1920,
+      "height": 1080,
+      "size": 207810,
+      "uploadedDate": "2022-07-20T17:41:08.709Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/108 - Load Array Functions-1920x1080-2de71b9268d8d1e182b6267fb6dae9bf.png",
+      "md5": "2de71b9268d8d1e182b6267fb6dae9bf",
+      "width": 1920,
+      "height": 1080,
+      "size": 216569,
+      "uploadedDate": "2022-07-20T17:41:09.131Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/109 - Load Array CSV Functions-1920x1080-7bc1c996d405100d475207d80063e85d.png",
+      "md5": "7bc1c996d405100d475207d80063e85d",
+      "width": 1920,
+      "height": 1080,
+      "size": 155834,
+      "uploadedDate": "2022-07-20T17:41:09.491Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/110 - Load Config Functions-1920x1080-d845a2b17f333906e2f92eaa144ca06d.png",
+      "md5": "d845a2b17f333906e2f92eaa144ca06d",
+      "width": 1920,
+      "height": 1080,
+      "size": 252356,
+      "uploadedDate": "2022-07-20T17:41:09.881Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/111 - Load Config Array Functions-1920x1080-31d85ca8e74121c0aa23ab9f69b11d51.png",
+      "md5": "31d85ca8e74121c0aa23ab9f69b11d51",
+      "width": 1920,
+      "height": 1080,
+      "size": 268783,
+      "uploadedDate": "2022-07-20T17:41:10.297Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/112 - Load Array Column CSV Functions-1920x1080-c0c93a6fe9c1c3208cd9829ec8e5e763.png",
+      "md5": "c0c93a6fe9c1c3208cd9829ec8e5e763",
+      "width": 1920,
+      "height": 1080,
+      "size": 181733,
+      "uploadedDate": "2022-07-20T17:41:10.672Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/113 - Enable Encryption - Copy-1920x1080-aa6e6ef67e68e86f6f023c6ef5b3d4d4.png",
+      "md5": "aa6e6ef67e68e86f6f023c6ef5b3d4d4",
+      "width": 1920,
+      "height": 1080,
+      "size": 235945,
+      "uploadedDate": "2024-09-28T17:59:29.573Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/114 - Encryption Nodes - Copy-1920x1080-a2fadb7414f07fb61dc672654c6d134c.png",
+      "md5": "a2fadb7414f07fb61dc672654c6d134c",
+      "width": 1920,
+      "height": 1080,
+      "size": 614802,
+      "uploadedDate": "2024-09-28T17:59:29.950Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RojiFileUtilities_thumb-284x284-9731885a7a08dcfc0f3be7d3088f8f97.png",
+      "md5": "9731885a7a08dcfc0f3be7d3088f8f97",
+      "width": 284,
+      "height": 284,
+      "size": 43924,
+      "uploadedDate": "2022-07-20T17:41:11.086Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RojiFileUtilities_featured-894x488-9713cb43591f660ca1d2d573a21089ea.png",
+      "md5": "9713cb43591f660ca1d2d573a21089ea",
+      "width": 894,
+      "height": 488,
+      "size": 480479,
+      "uploadedDate": "2022-07-08T15:47:31.915Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/113 - Enable Encryption - Copy-1920x1080-aa6e6ef67e68e86f6f023c6ef5b3d4d4_Snapshot.png",
+      "md5": "74dbb774f84cfac73252db32d3d0f6f8",
+      "width": 150,
+      "height": 74,
+      "size": 4321,
+      "uploadedDate": "2024-09-28T17:59:29.815Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/114 - Encryption Nodes - Copy-1920x1080-a2fadb7414f07fb61dc672654c6d134c_Snapshot.png",
+      "md5": "6e8799b5848ac8477dc31304e6de22e9",
+      "width": 150,
+      "height": 74,
+      "size": 5780,
+      "uploadedDate": "2024-09-28T17:59:30.226Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/114 - Encryption Nodes-1920x1080-8ed720df6114d12ca6e7e47e51e742ad_Snapshot.png",
+      "md5": "b8293bfe5d8d9e77e47d50dcc92f6c16",
+      "width": 150,
+      "height": 74,
+      "size": 5519,
+      "uploadedDate": "2024-09-26T20:55:49.380Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/113 - Enable Encryption-1920x1080-60586547b21a8a683ebaf0b90b8730fd_Snapshot.png",
+      "md5": "f4ce4f1771e4cfb3e76024a38700c95e",
+      "width": 150,
+      "height": 74,
+      "size": 3968,
+      "uploadedDate": "2024-09-26T20:55:49.732Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01 - Save Array CSV Example-1920x1080-12918d8b32446aa4e7b2cb3b84b97fcd_Snapshot.png",
+      "md5": "95915c449083d56ee15925fbb9d9e03c",
+      "width": 150,
+      "height": 74,
+      "size": 7159,
+      "uploadedDate": "2022-07-20T17:41:04.844Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01 - Load Config Value Example-1920x1080-f41550a22ed13932bf08f23504fc3b6a_Snapshot.png",
+      "md5": "041ddff5d52b33f2abe9aba00300947d",
+      "width": 150,
+      "height": 74,
+      "size": 5938,
+      "uploadedDate": "2022-07-20T17:41:05.337Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/02 - Config Array Example-1920x1080-943d39fd43bfc110a6a407ea48ebfaff_Snapshot.png",
+      "md5": "b052d0d80c2afa35d72b94872bd0e2b0",
+      "width": 150,
+      "height": 74,
+      "size": 6406,
+      "uploadedDate": "2022-07-20T17:41:05.840Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/04 - Data Extraction to CSV Example-1920x1080-e8e73debf5766963604e5fe0be1dbb49_Snapshot.png",
+      "md5": "929a178189e4b96bc08fd7ca26ac19cc",
+      "width": 150,
+      "height": 74,
+      "size": 8392,
+      "uploadedDate": "2022-07-20T17:41:06.343Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/101 - Utility Functions-1920x1080-05db38674cc0f2194f1a5ddbebacecd3_Snapshot.png",
+      "md5": "8bddeaa5723d965e5e978ee81dc8a0f8",
+      "width": 150,
+      "height": 74,
+      "size": 3078,
+      "uploadedDate": "2022-07-20T17:41:06.696Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/102 - Save Functions-1920x1080-5d08e90779fb68ac4fb47fecd4783538_Snapshot.png",
+      "md5": "eb83ba630055e2dd8e9a93652ce8cb3e",
+      "width": 150,
+      "height": 74,
+      "size": 3306,
+      "uploadedDate": "2022-07-20T17:41:07.057Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/103 - Save Array Functions-1920x1080-0ea57aa04bfce530ba905a07215002a6_Snapshot.png",
+      "md5": "40b97de1522e4213f538d82792923962",
+      "width": 150,
+      "height": 74,
+      "size": 3262,
+      "uploadedDate": "2022-07-20T17:41:07.420Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/104 - Save Array CSV Functions-1920x1080-fc206420b890a4cef12ecd05b6f564ef_Snapshot.png",
+      "md5": "b369870aaa8e6e07be9afc00ea752ba2",
+      "width": 150,
+      "height": 74,
+      "size": 2430,
+      "uploadedDate": "2022-07-20T17:41:07.740Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/105 - Save Config Functions-1920x1080-5a1e92f55e8dd47fdb64d97176d87bef_Snapshot.png",
+      "md5": "905afb40144246a9bb85bbe4f643b040",
+      "width": 150,
+      "height": 74,
+      "size": 3707,
+      "uploadedDate": "2022-07-20T17:41:08.132Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/106 - Save Config Array Functions-1920x1080-81ec8beaeb629d74a8f013c3487d37e7_Snapshot.png",
+      "md5": "bdf4f07417ee296611d9e5494829a53a",
+      "width": 150,
+      "height": 74,
+      "size": 4017,
+      "uploadedDate": "2022-07-20T17:41:08.565Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/107 - Load Functions-1920x1080-e76a43935de1bb96e3767a0a1bee60a4_Snapshot.png",
+      "md5": "f4e9d8d10d3b41a3d282c34ef3efb860",
+      "width": 150,
+      "height": 74,
+      "size": 3195,
+      "uploadedDate": "2022-07-20T17:41:08.974Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/108 - Load Array Functions-1920x1080-2de71b9268d8d1e182b6267fb6dae9bf_Snapshot.png",
+      "md5": "7691cc41c54e550e43ad11de1183feab",
+      "width": 150,
+      "height": 74,
+      "size": 3498,
+      "uploadedDate": "2022-07-20T17:41:09.376Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/109 - Load Array CSV Functions-1920x1080-7bc1c996d405100d475207d80063e85d_Snapshot.png",
+      "md5": "6c2d2e59aaff7847d1d8cfe0babd7e23",
+      "width": 150,
+      "height": 74,
+      "size": 3357,
+      "uploadedDate": "2022-07-20T17:41:09.730Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/110 - Load Config Functions-1920x1080-d845a2b17f333906e2f92eaa144ca06d_Snapshot.png",
+      "md5": "792de2c205fc096fce5d5dac5ee0ba45",
+      "width": 150,
+      "height": 74,
+      "size": 3630,
+      "uploadedDate": "2022-07-20T17:41:10.122Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/111 - Load Config Array Functions-1920x1080-31d85ca8e74121c0aa23ab9f69b11d51_Snapshot.png",
+      "md5": "b212943278928a8c618ec6712e7840b2",
+      "width": 150,
+      "height": 74,
+      "size": 3715,
+      "uploadedDate": "2022-07-20T17:41:10.552Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/112 - Load Array Column CSV Functions-1920x1080-c0c93a6fe9c1c3208cd9829ec8e5e763_Snapshot.png",
+      "md5": "9ac58a6423d5feb16c2b0d322aa1ab90",
+      "width": 150,
+      "height": 74,
+      "size": 3399,
+      "uploadedDate": "2022-07-20T17:41:10.930Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01 - Save Array CSV Example-1920x1080-12918d8b32446aa4e7b2cb3b84b97fcd_Snapshot.png",
+      "md5": "95915c449083d56ee15925fbb9d9e03c",
+      "width": 150,
+      "height": 74,
+      "size": 7159,
+      "uploadedDate": "2022-07-08T15:47:26.833Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01 - Load Config Value Example-1920x1080-f41550a22ed13932bf08f23504fc3b6a_Snapshot.png",
+      "md5": "041ddff5d52b33f2abe9aba00300947d",
+      "width": 150,
+      "height": 74,
+      "size": 5938,
+      "uploadedDate": "2022-07-08T15:47:27.325Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/02 - Config Array Example-1920x1080-943d39fd43bfc110a6a407ea48ebfaff_Snapshot.png",
+      "md5": "b052d0d80c2afa35d72b94872bd0e2b0",
+      "width": 150,
+      "height": 74,
+      "size": 6406,
+      "uploadedDate": "2022-07-08T15:47:27.815Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/04 - Data Extraction to CSV Example-1920x1080-e8e73debf5766963604e5fe0be1dbb49_Snapshot.png",
+      "md5": "929a178189e4b96bc08fd7ca26ac19cc",
+      "width": 150,
+      "height": 74,
+      "size": 8392,
+      "uploadedDate": "2022-07-08T15:47:28.343Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/101 - Utility Functions-1920x1080-05db38674cc0f2194f1a5ddbebacecd3_Snapshot.png",
+      "md5": "8bddeaa5723d965e5e978ee81dc8a0f8",
+      "width": 150,
+      "height": 74,
+      "size": 3078,
+      "uploadedDate": "2022-07-08T15:47:28.646Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/102 - Save Functions-1920x1080-5d08e90779fb68ac4fb47fecd4783538_Snapshot.png",
+      "md5": "eb83ba630055e2dd8e9a93652ce8cb3e",
+      "width": 150,
+      "height": 74,
+      "size": 3306,
+      "uploadedDate": "2022-07-08T15:47:28.990Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/103 - Save Array Functions-1920x1080-0ea57aa04bfce530ba905a07215002a6_Snapshot.png",
+      "md5": "40b97de1522e4213f538d82792923962",
+      "width": 150,
+      "height": 74,
+      "size": 3262,
+      "uploadedDate": "2022-07-08T15:47:29.297Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/104 - Save Array CSV Functions-1920x1080-fc206420b890a4cef12ecd05b6f564ef_Snapshot.png",
+      "md5": "b369870aaa8e6e07be9afc00ea752ba2",
+      "width": 150,
+      "height": 74,
+      "size": 2430,
+      "uploadedDate": "2022-07-08T15:47:29.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/105 - Save Config Functions-1920x1080-5a1e92f55e8dd47fdb64d97176d87bef_Snapshot.png",
+      "md5": "905afb40144246a9bb85bbe4f643b040",
+      "width": 150,
+      "height": 74,
+      "size": 3707,
+      "uploadedDate": "2022-07-08T15:47:29.952Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/106 - Save Config Array Functions-1920x1080-81ec8beaeb629d74a8f013c3487d37e7_Snapshot.png",
+      "md5": "bdf4f07417ee296611d9e5494829a53a",
+      "width": 150,
+      "height": 74,
+      "size": 4017,
+      "uploadedDate": "2022-07-08T15:47:30.312Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/107 - Load Functions-1920x1080-e76a43935de1bb96e3767a0a1bee60a4_Snapshot.png",
+      "md5": "f4e9d8d10d3b41a3d282c34ef3efb860",
+      "width": 150,
+      "height": 74,
+      "size": 3195,
+      "uploadedDate": "2022-07-08T15:47:30.665Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/108 - Load Array Functions-1920x1080-2de71b9268d8d1e182b6267fb6dae9bf_Snapshot.png",
+      "md5": "7691cc41c54e550e43ad11de1183feab",
+      "width": 150,
+      "height": 74,
+      "size": 3498,
+      "uploadedDate": "2022-07-08T15:47:31.030Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/109 - Load Config Functions-1920x1080-d845a2b17f333906e2f92eaa144ca06d_Snapshot.png",
+      "md5": "792de2c205fc096fce5d5dac5ee0ba45",
+      "width": 150,
+      "height": 74,
+      "size": 3630,
+      "uploadedDate": "2022-07-08T15:47:31.369Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/110 - Load Config Array Functions-1920x1080-31d85ca8e74121c0aa23ab9f69b11d51_Snapshot.png",
+      "md5": "b212943278928a8c618ec6712e7840b2",
+      "width": 150,
+      "height": 74,
+      "size": 3715,
+      "uploadedDate": "2022-07-08T15:47:31.742Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-07-15T23:52:47.706Z",
+  "lastModifiedDate": "2024-12-02T10:45:32.758Z",
+  "customAttributes": {},
+  "entitlementName": "b346e4166a464c23a6205b8defd3e994",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "8eae1353c39b4e23bd3cdaeccc5b2fef",
+      "appId": "RojiFileUtilities_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-07-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Roji 5.1 v1.1.5"
+    },
+    {
+      "id": "3bd3d1b1be8f4af6a03751b4f4280754",
+      "appId": "RojiFileUtilities_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Roji 5.2 v2.0"
+    },
+    {
+      "id": "49f361d67ee1421b90bc21eb823b09ac",
+      "appId": "RojiFileUtilities_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-07-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Roji 5.3 v2.0"
+    },
+    {
+      "id": "07e20e6a244a4f06a9ea57d7b2169f23",
+      "appId": "RojiFileUtilities_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-07-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Roji 5.4 v2.0"
+    }
+  ],
+  "developer": "Michael Lustig",
+  "developerId": "o-vyv4nyzgzd7pmxmhvevkn7mewqn6p9",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

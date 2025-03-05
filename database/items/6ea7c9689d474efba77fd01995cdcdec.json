@@ -1,0 +1,214 @@
+{
+  "id": "6ea7c9689d474efba77fd01995cdcdec",
+  "title": "World Director Actor - Just optimize your world!",
+  "description": "The World Director Actor plugin is ideal for creating games that have a lot of busy actors in the world at the same time.  You can model a whole world from thousands of busy actors. Plugin is easy to use. There is support for multiplayer.",
+  "longDescription": "<p>Demo <a href=\"https://youtu.be/r11CPwsV8AE\" rel=\"nofollow\">Video</a></p><p>Free support for our products in <a href=\"https://discord.gg/DN4PhbmShg\" rel=\"nofollow\">Discord</a>.</p><p><br /></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Craft&#43;Assets&#43;Studio&#43;%28CAS%29?count&#61;100&amp;sortBy&#61;effectiveDate&amp;sortDir&#61;DESC&amp;start&#61;0\" rel=\"nofollow\">OUR ASSETS</a></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Kopnina?count&#61;20&amp;sortBy&#61;effectiveDate&amp;sortDir&#61;DESC&amp;start&#61;0\" rel=\"nofollow\">OUR ASSETS 2</a></p><p><br /></p><p><strong>Update 1.1.1</strong> - Fixed crash issue with Niagara components.</p><p><strong>World Director Actor</strong> - now work with <strong>World Composition.</strong></p><p><br /></p><p>The <strong>World Director Actor</strong> plugin is ideal for creating games that have a lot of busy actors in the world at the same time. The data of your actors, their location, scale, rotation will always be saved. You can model a whole world from thousands of busy actors. You can create a whole city with working mechanisms. Plugin is easy to use. There is support for multiplayer. All calculations are done on the server side.</p><p>This is a complex system for optimizing a large number of Actors in locations. <strong>World Director Actor</strong> is ideal for creating open world games of any size. You no longer have to think about optimizing actors that the player does not see at the moment and their work is not needed. On my system with an AMD 2700X processor, I hit 200,000&#43; actors at 120&#43; fps. When the character returns to the same location, the actors return to the world with the same characteristics (strength, name.).</p><p>Now I will explain how it works. The system is divided into 2 optimization levels that work simultaneously to achieve the best FPS performance. Moreover, the first level has an extended optimization complex.</p><p><strong>Level 1</strong> - if the actor is out of view of the camera, all its components and skeletal meshes are disconnected from rendering, and a set of optimization measures are applied, such as animation playback and tick frequency. It&#39;s all customizable. You can disable the tick altogether to improve performance. You do not need to calculate the laser beam from the weapon if it is far away. All this will be done by the <strong>World Director Actor</strong>.</p><p><strong>Level 2</strong> - if the actor is further from the character than you set in the settings of the <strong>World Director Actor</strong> plug-in, he is destroyed from the world, saving his data until you come closer.</p><p>At level 2, the actors cannot compute according to your code, but they don&#39;t need to. You will be able to specify which actors to optimize and which not.</p><p>All calculations for hidden actors in level 2 are done using multithreading for better FPS.</p><p><br /></p><p>This plugin does not work with Pawn and Character, use the World Director NPC plugin for them.</p><p><br /></p><p><a href=\"https://docs.google.com/spreadsheets/d/16MSWoehDN1RObaASA8HxMzkg9hFC2NrhjfbB8_RXuSg/edit?usp&#61;sharing\" rel=\"nofollow\">Comparison</a> with <a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc\" rel=\"nofollow\">World Director NPC</a> and <a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc-pro-now-with-multiplayer\" rel=\"nofollow\">World Director PRO</a></p><p><br /></p><p>All plugins for optimizing your project:</p><ol><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/loot-generator-full-control-on-loot\" rel=\"nofollow\">Loot Generator</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc-pro-now-with-multiplayer\" rel=\"nofollow\">World Director PRO</a> (included World Director Actor and World Director NPC)</li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc\" rel=\"nofollow\">World Director NPC</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-actor-just-optimize-your-world\" rel=\"nofollow\">World Director Actor</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/population-control-populate-your-world\" rel=\"nofollow\">Population Control</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/foliage-assistant-pro\" rel=\"nofollow\">Foliage Assistant PRO</a></li></ol><p><br /></p><p><br /></p><p><strong>&#xfeff;Disclaimer</strong>: don&#39;t forget this is just an optimization tool and you need to understand why you need it. For example, if all your actors are at the same point or very close to each other, then they will all be in the same frame, which means they all have to work and execute your code and there will be no optimization.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> <strong>Level 1</strong> - if the actor is out of view of the camera, all its components and skeletal meshes are disconnected from rendering, and a set of optimization measures are applied, such as animation playback and tick frequency. It&#39;s all customizable. You can disable the tick altogether to improve performance. You do not need to calculate the laser beam from the weapon if it is far away. All this will be done by the <strong>World Director Actor</strong>.</li><li> <strong>Level 2</strong> - if the actor is further from the character than you set in the settings of the <strong>World Director Actor</strong> plug-in, he is destroyed from the world, saving his data until you come closer.</li><li>At level 2, the actors cannot compute according to your code, but they don&#39;t need to. You will be able to specify which actors to optimize and which not.</li><li> All calculations for hidden actors in level 2 are done using multithreading for better FPS.</li><li>On my system with an AMD 2700X processor, I hit 200,000&#43; actors at 120&#43; fps</li></ul><p>Code Modules:</p><ul><li> AWorldDirectorActor(Type: Runtime)</li><li> UWDActorComponent(Type: Runtime)</li></ul><p>Number of Blueprints: 2</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1cdWPEIOP_0ZWM5zNZfCsGrGn45nB96TmXSlB72HhjfM/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a>, <a href=\"https://discord.gg/DN4PhbmShg\" rel=\"nofollow\">Discord</a></p><p>Example Project: Included</p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00006-1920x1080-a290fa5033402cd17eec210b7990105f.jpg",
+      "md5": "a290fa5033402cd17eec210b7990105f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1055953,
+      "uploadedDate": "2021-02-19T08:57:46.200Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blueprint-1920x1080-22f50c447762d7d8434cd9fc54fd9281.jpg",
+      "md5": "22f50c447762d7d8434cd9fc54fd9281",
+      "width": 1920,
+      "height": 1080,
+      "size": 154482,
+      "uploadedDate": "2021-02-26T11:28:31.721Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/WorldDirectorActorJustoptimizeyourworld_thumb-284x284-82917d6fc8b471b312b8a908bec5354f.png",
+      "md5": "82917d6fc8b471b312b8a908bec5354f",
+      "width": 284,
+      "height": 284,
+      "size": 152845,
+      "uploadedDate": "2022-08-29T09:42:28.751Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/WorldDirectorActorJustoptimizeyourworld_featured-894x488-86193b7a3130347be713791abbc20db0.png",
+      "md5": "86193b7a3130347be713791abbc20db0",
+      "width": 894,
+      "height": 488,
+      "size": 564671,
+      "uploadedDate": "2022-08-29T09:42:28.856Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint-1920x1080-22f50c447762d7d8434cd9fc54fd9281_Snapshot.jpg",
+      "md5": "ff11cdb6e4bf6917fbcfd358cc11d021",
+      "width": 150,
+      "height": 74,
+      "size": 5423,
+      "uploadedDate": "2021-02-26T11:28:31.956Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00006-1920x1080-a290fa5033402cd17eec210b7990105f_Snapshot.jpg",
+      "md5": "8b0bd3e4e5fe5c725cdefca4fa91657a",
+      "width": 150,
+      "height": 74,
+      "size": 7320,
+      "uploadedDate": "2021-02-19T08:57:46.475Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-02-26T11:42:55.249Z",
+  "lastModifiedDate": "2025-01-08T11:44:24.616Z",
+  "customAttributes": {},
+  "entitlementName": "6ea7c9689d474efba77fd01995cdcdec",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "68b894eb911f409ebbdc726fc8b2924d",
+      "appId": "WorldDirectorActor_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-07-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WorldDirectorActor 1.1.1 425"
+    },
+    {
+      "id": "f39c48affd7b44ae92b9f652e68e5f50",
+      "appId": "WorldDirectorActor_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-02-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WorldDirectorActor 1.1.1 426"
+    },
+    {
+      "id": "7efc730b9a6349aab7a6994f13e954a5",
+      "appId": "WorldDirectorActor_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-08-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD Actor 1.1.2 427"
+    },
+    {
+      "id": "ef2c51db402842dda2dcae3d9bae01a5",
+      "appId": "WorldDirectorActor_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD Actor ue5 1.1.6"
+    },
+    {
+      "id": "1d5d1c19847a44239f80f2e569c19874",
+      "appId": "WorldDirectorActor_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD Actor ue51 1.1.7"
+    },
+    {
+      "id": "d844d38993774621acb4d0ce16cef428",
+      "appId": "WorldDirectorActor_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD Actor ue52 1.1.7"
+    },
+    {
+      "id": "1cc04d61bd2549feace17f3a7c1d20e7",
+      "appId": "WorldDirectorActor_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD Actor ue53 1.1.7"
+    },
+    {
+      "id": "7a996622f60847ffaccf35ca17c4572e",
+      "appId": "WorldDirectorActor_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Android",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "PS4",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD Actor ue54 1.1.7"
+    }
+  ],
+  "developer": "Craft Assets Studio (CAS)",
+  "developerId": "o-ff78aff15e4a0d9314b2e452451aca",
+  "endOfSupport": false,
+  "unsearchable": false
+}

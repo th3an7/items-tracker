@@ -1,0 +1,132 @@
+{
+  "id": "2f10892ccd74470e8205f4d1d4453494",
+  "title": "Blueprintable Actors Pooling",
+  "description": "A very basic and expandable implementation of custom actors pooling. A single manager in the level that hold each pool and can be accessed to request actors.",
+  "longDescription": "<p>Object pooling is a technique used to lower the performance cost of spawning actors during gameplay by spawning a set number of actors beforehand. When an actor is needed during gameplay, instead of spawning a new one, the developer can simply ask one that has already been spawned and stored in the pool that is not currently active and set key properties for it (such as location, rotation, materials, etc..).</p><p><br /></p><p>This plugin is a really basic implmentation that is intended to be expanded upon without requiring any c&#43;&#43; change, everything is exposed to blueprint.</p><p><br /></p><p>A main actor that manage every pool you want to create need to be placed in the level, then assign each pool you want in the array.</p><p>Every pool manage objects with very simple behaviours through the use of 2 blueprint events and 1 function that need to be called to return actors to the pool:</p><p>SetActorActive: Execute behaviour to get the actor you want (for example the niagara system, the location, rotation, etc.).</p><p>SetActorInactive: Restore the data of the actor before hiding it from the level.</p><p>PoolActor: Is the function that need to be called when the actor is &#39;expired&#39;(such as when a particle has ended, or an actor timer has expired).</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Actors pooling.</li><li> Simple activation and deactivation logic.</li><li> Logic is stripped from the actor, instead is all defined in the pool itself to keep the actor clean (In case of actors that expire after some time, in the example I provided one that has the LifeTime on the actor itself and the other that set the LifeTime dynamically (Decals)).</li><li>Handle cases when the pool has no more actors to provide by optionally spawning a fresh one.</li><li>Classes are written in c&#43;&#43; and exposed to blueprint for logic.</li><li>Example function library to access and request actors from the pools.</li><li>Adding new pools for new actors is easy and can be done in the editor without touching c&#43;&#43; code.</li><li> Pooled actors are spawned in organized folders inside the scene outliner.</li></ul><p>Code Modules:</p><ul><li> PoolingManagerRuntime</li></ul><p>Number of Blueprints: 5</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: Network agnostic</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation: https://drive.google.com/file/d/14ghrqQLDuHdh9jssb5m06rCjIFMIPBJM/view?usp&#61;sharing</p><p>Important/Additional Notes: Do not hesitate to contact me for any bug or help</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery1-1920x1080-159671a783ccdab93697511e57488d21.png",
+      "md5": "159671a783ccdab93697511e57488d21",
+      "width": 1920,
+      "height": 1080,
+      "size": 947236,
+      "uploadedDate": "2021-12-11T18:21:45.381Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/EasyActorsPooling_thumb-284x284-6f877153f423c1643f11c36091f49600.png",
+      "md5": "6f877153f423c1643f11c36091f49600",
+      "width": 284,
+      "height": 284,
+      "size": 64094,
+      "uploadedDate": "2021-12-11T18:21:45.689Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/EasyActorsPooling_featured-894x488-818ace89443051467317a06d80112fef.png",
+      "md5": "818ace89443051467317a06d80112fef",
+      "width": 894,
+      "height": 488,
+      "size": 171237,
+      "uploadedDate": "2021-12-11T18:21:45.789Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1-1920x1080-159671a783ccdab93697511e57488d21_Snapshot.png",
+      "md5": "f348657dde87fbf459c080b8a0ced8ab",
+      "width": 150,
+      "height": 74,
+      "size": 5411,
+      "uploadedDate": "2021-12-11T18:21:45.622Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-12-12T19:23:56.191Z",
+  "lastModifiedDate": "2024-09-28T15:54:45.489Z",
+  "customAttributes": {},
+  "entitlementName": "2f10892ccd74470e8205f4d1d4453494",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "fbdc484244b145a19f141decbca965f4",
+      "appId": "PoolingManager_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-06-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Easy Actors Pooling 4.x"
+    },
+    {
+      "id": "7d58df83adfa4d94b95cb022f82d425f",
+      "appId": "PoolingManager_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Easy Actors Pooling 5.0"
+    },
+    {
+      "id": "c2bf60803ddb44fa82d414975a15154e",
+      "appId": "PoolingManager_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-08-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Easy Actors Pooling 5.2"
+    },
+    {
+      "id": "286ca6a391e349168626e7f17c20d003",
+      "appId": "PoolingManager_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Easy Actors Pooling 5.3"
+    },
+    {
+      "id": "01bc95160c0e458793c65109d49870dc",
+      "appId": "PoolingManager_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-28T00:00:00.000Z",
+      "releaseNote": "Fixed .rar missing Content folder",
+      "versionTitle": "Easy Actors Pooling 5.4"
+    }
+  ],
+  "developer": "defaltdobrasao",
+  "developerId": "o-qdn4p9xgqhvek6vzfwxr3w9cghyvam",
+  "endOfSupport": false,
+  "unsearchable": false
+}

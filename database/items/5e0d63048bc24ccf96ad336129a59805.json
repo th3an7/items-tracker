@@ -1,0 +1,219 @@
+{
+  "id": "5e0d63048bc24ccf96ad336129a59805",
+  "title": "World Director NPC - PRO. Now with multiplayer",
+  "description": "The World Director NPC - PRO plugin is ideal for creating games where there are many pawns in the world at the same time. You can simulate a whole world of thousands of pawns. You can create an entire populated city. Now with multiplayer.",
+  "longDescription": "<p>Demo <a href=\"https://youtu.be/hQKkkubSz1s\" rel=\"nofollow\">Video</a>, <a href=\"https://youtu.be/wnoMaB3Lk4M\" rel=\"nofollow\">Video with multiplayer.</a> <a href=\"https://youtu.be/PDaZlHEqsCU\" rel=\"nofollow\">Video 2.0</a></p><p><a href=\"https://youtu.be/zQKmYdvpROI\" rel=\"nofollow\">Video 2.0_2</a></p><p><a href=\"https://youtu.be/b0NukvDHNJc\" rel=\"nofollow\">Videos 2.0_3</a></p><p><br /></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Craft&#43;Assets&#43;Studio&#43;%28CAS%29?count&#61;100&amp;sortBy&#61;effectiveDate&amp;sortDir&#61;DESC&amp;start&#61;0\" rel=\"nofollow\">OUR ASSETS</a></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Kopnina?count&#61;20&amp;sortBy&#61;effectiveDate&amp;sortDir&#61;DESC&amp;start&#61;0\" rel=\"nofollow\">OUR ASSETS 2</a></p><p>Free support for our products in <a href=\"https://discord.gg/DN4PhbmShg\" rel=\"nofollow\">Discord</a>.</p><p>World Director PRO - <a href=\"https://docs.google.com/document/d/1BAI3753pqr2SSb52gh14sZRB4GHyH8kZW5HD106HvqM/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p>World Director PRO &#43; Population Control - <a href=\"https://docs.google.com/document/d/1LT6-_uaqMMi5iQUjMP3ljuRJk908f7Mmmvn5FX3j4bA/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p>Please pay your attention to the <a href=\"https://www.unrealengine.com/marketplace/en-US/product/global-world-optimization-framework-pro-max-with-multiplayer\" rel=\"nofollow\">GWOF</a> plugin. It supports most of the functionality of <a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc-pro-now-with-multiplayer\" rel=\"nofollow\">WD-PRO</a> and <a href=\"https://www.unrealengine.com/marketplace/en-US/product/population-control-populate-your-world\" rel=\"nofollow\">PC-PRO</a> but with more powerful optimization algorithms and more flexible configuration. However, it does not currently support NPCs wandering around in the background.</p><p>Attention! After upgrading from UE 4.26 to 4.26.1, when the project starts in the editor and finishes, the editor may crash. Please see the documentation on how to get around this.</p><p><strong>Update 2.0 for UE-5</strong></p><p>&#43; Added the ability to display background NPCs using static meshes. This way it looks great when simulating cities and has little to no effect on your FPS. (This option does not work in multiplayer)</p><p>&#43; Added 2 modes Editor and Shipping (In Editor mode, there are no more crashes from the NavSystem request on the thread, as the request is now on the main game thread. At shipping mode is still available for maximum performance, use this mode for the finished project.)</p><p>&#43; Added roads.(NPCs in the background will now be able to walk on roads. You can specify specific roads for each NPC. You can specify the chance of using the road. For each NPC, you can specify the range of the search for the road. After using the road, the NPC will choose the next road again. With roads, you can simulate a whole life in a city.)</p><p>&#43; Added points of interest. (For points of interest, you can specify the chance of attracting NPCs. NPCs will walk around points of interest with a given radius. After the end of the walk, the NPC will again look for a way or points of interest. Points of interest can be used to simulate city squares or parks.)</p><p>&#43; Minor optimization has been done.</p><p><br /></p><p>Update 1.2.0</p><p>&#43; Added Save and Load System.</p><p>&#43; Optimization.</p><p>&#43; Fixed some bugs.</p><p>Update 1.1<strong> - </strong> Now compatible with <a href=\"https://www.unrealengine.com/marketplace/en-US/product/population-control-populate-your-world\" rel=\"nofollow\"><strong>Population Control</strong></a></p><p>1. &#43; Add offset parameter to layers. This removes the shaking when the actor is on the boundaries of the optimization layers.</p><p>2. &#43; Added override the global parameters of the layers. All settings in the component.</p><p>Now you can adjust the radius separately for each actor and NPC.</p><p>For example, you can spawn small objects much closer, which gives additional optimization.</p><p>After all, a rabbit is smaller than a dinosaur and it is not necessary to see it at a distance of several hundred meters.</p><p>And the wind generator is bigger than a flashlight.</p><p><br /></p><p>The World Director NPC PRO<strong> </strong>plugin is ideal for creating games where there are many pawns in the world at the same time. The level of your pawns, their location, scale, the rotation will always be preserved, as well as they will always move, even if you are very far away, which creates a simulation of the living world. You can simulate a whole world of thousands of pawns. You can create an entire populated city. The plugin is easy to use.</p><p>This is a comprehensive system for optimizing a large number of NPCs in locations. <strong>World Director NPC PRO </strong>is perfect for creating open-world games of any size. You will no longer have to think about spawning characters and removing pawns if your character has come or gone from the place where the pawns should be. If you spawn pawns near the character and leave this place, the pawns continue to move and they do not affect the FPS. On my system with an AMD 2700X processor, I achieved 200000&#43; pawns at 120&#43;FPS. When the character returns to the same location, the pawns return to the world with the same characteristics (health, level.).</p><p>Now I&#39;ll explain how it works. The system is divided into 4 optimization levels that work simultaneously for the best FPS performance. </p><p><strong>Level 1</strong> - if the pawn is out of the camera&#39;s view, all its components and skeletal meshes are disabled from the render, and a set of optimization measures is applied, such as animation playback and tick rate. </p><p><strong>Level 2</strong> - if the pawn is further away from the character than you set in the settings of The <strong>World Director NPC PRO </strong>plugin, it is deprecated while retaining all its settings. At this level, this pawn is calculated for its position in the world, as well as finding a way to walk. The search takes place in the radius you set completely randomly. All calculations are based on your Navigation Mesh. Pawns will also bypass walls and obstacles. </p><p><strong>Level 3</strong> - If the pawn is even further away, on the border of level 3. the number of simultaneously walking pawns is further reduced for optimization. </p><p><strong>Level 4</strong> - at this level, the pawn stops moving, but still continues to exist. And if your character gets closer, the pawn gets to level 3 and starts moving.</p><p>While at level 2.3.4, pawns can&#39;t act according to the Behavior Tree, but they can still walk.</p><p>All calculations for hidden pawns at level 2.3.4 occur using multithreading for better FPS.</p><p>Now with multiplayer. All calculations take place on the server-side!</p><p>All plugins for optimizing your project:</p><ol><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/loot-generator-full-control-on-loot\" rel=\"nofollow\">Loot Generator</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc-pro-now-with-multiplayer\" rel=\"nofollow\">World Director PRO</a> (included World Director Actor and World Director NPC)</li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc\" rel=\"nofollow\">World Director NPC</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-actor-just-optimize-your-world\" rel=\"nofollow\">World Director Actor</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/population-control-populate-your-world\" rel=\"nofollow\">Population Control</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/foliage-assistant-pro\" rel=\"nofollow\">Foliage Assistant PRO</a></li></ol><p><strong>Disclaimer</strong>: don&#39;t forget this is just an optimization tool and you need to understand why you need it. For example, if all your actors are at the same point or very close to each other, then they will all be in the same frame, which means they all have to work and execute your code and there will be no optimization.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>The system is divided into 4 optimization levels that work simultaneously for the best FPS performance.</li><li>At level 1 if the pawn is out of the camera&#39;s view, all its components and skeletal meshes are disabled from the render, and a set of optimization measures is applied, such as animation playback and tick rate. While at level 2.3.4, pawns can&#39;t act according to the Behavior Tree, but they can still walk.</li><li>On my system with an AMD 2700X processor, I achieved 200000&#43; pawns at 120&#43;FPS.</li><li>All calculations for hidden pawns at level 2.3.4 occur using multithreading for better FPS.</li><li>Save and Load System</li><li>If the pawn is out of the camera&#39;s view, all its components and skeletal meshes are disabled from the render.</li><li>The plugin is easy to use.</li></ul><p>Code Modules:</p><ul><li> AWorldDirectorNpcPRO(Type: Runtime)</li><li> UNpcDataProComponent(Type: Runtime)</li></ul><p>Number of Blueprints: 3</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1BAI3753pqr2SSb52gh14sZRB4GHyH8kZW5HD106HvqM/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a>, <a href=\"https://discord.gg/DN4PhbmShg\" rel=\"nofollow\">Discord</a>, <a href=\"https://drive.google.com/file/d/1q2dnrSfZ4Zr6oyAglGqC_HrXGQ3StxHD/view?usp&#61;sharing\" rel=\"nofollow\">Demo Build</a></p><p>Example Project: Included</p><p>Important/Additional Notes: <a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc\" rel=\"nofollow\">World Director NPC - Simple version without multiplayer.</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blueprint-1920x1080-3c0c73cd8917fe3687445f8840c78877.jpg",
+      "md5": "3c0c73cd8917fe3687445f8840c78877",
+      "width": 1920,
+      "height": 1080,
+      "size": 232553,
+      "uploadedDate": "2020-12-24T10:59:45.125Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00003-1920x1080-239587341b46649f958a9b578a9ffe30.jpg",
+      "md5": "239587341b46649f958a9b578a9ffe30",
+      "width": 1920,
+      "height": 1080,
+      "size": 1118508,
+      "uploadedDate": "2020-12-24T10:59:45.521Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00002-1920x1080-7ae9f3b2e18de00c4142da2b583f1077.jpg",
+      "md5": "7ae9f3b2e18de00c4142da2b583f1077",
+      "width": 1920,
+      "height": 1080,
+      "size": 1261293,
+      "uploadedDate": "2020-12-24T10:59:45.953Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/WorldDirectorNPCPRONowwithmultiplayer_thumb-284x284-108dc9627aeb4f950feb8148ed7120e1.png",
+      "md5": "108dc9627aeb4f950feb8148ed7120e1",
+      "width": 284,
+      "height": 284,
+      "size": 162538,
+      "uploadedDate": "2022-08-29T09:38:49.268Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/WorldDirectorNPCPRONowwithmultiplayer_featured-894x488-63b5a3cf382c48b52670cda314fab17b.png",
+      "md5": "63b5a3cf382c48b52670cda314fab17b",
+      "width": 894,
+      "height": 488,
+      "size": 606131,
+      "uploadedDate": "2022-08-29T09:38:49.450Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint-1920x1080-3c0c73cd8917fe3687445f8840c78877_Snapshot.jpg",
+      "md5": "47c44385d331beaa1ddf91e10b50ba4f",
+      "width": 150,
+      "height": 74,
+      "size": 7975,
+      "uploadedDate": "2020-12-24T10:59:45.379Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00003-1920x1080-239587341b46649f958a9b578a9ffe30_Snapshot.jpg",
+      "md5": "1158823b1940ca9d28d741448cd2ae25",
+      "width": 150,
+      "height": 74,
+      "size": 5549,
+      "uploadedDate": "2020-12-24T10:59:45.797Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-7ae9f3b2e18de00c4142da2b583f1077_Snapshot.jpg",
+      "md5": "3a6d1c963d612de08649c13df7cb54f3",
+      "width": 150,
+      "height": 74,
+      "size": 5173,
+      "uploadedDate": "2020-12-24T10:59:46.302Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-01-03T15:07:08.456Z",
+  "lastModifiedDate": "2025-01-08T11:37:45.716Z",
+  "customAttributes": {},
+  "entitlementName": "5e0d63048bc24ccf96ad336129a59805",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "cdfcfa2b925f4ddbbf1d2dd757187edf",
+      "appId": "WorldDirectorPRO_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-01-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD-PRO 426 1.1.6"
+    },
+    {
+      "id": "9ce21e0a69f6406db7a708f1d091651e",
+      "appId": "WorldDirectorPRO_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-08-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD-PRO 427 1.2.1"
+    },
+    {
+      "id": "7a930cdde4a94f3599fda84e44ce6208",
+      "appId": "WorldDirectorPRO_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD-PRO UE5 2.0"
+    },
+    {
+      "id": "2c517c1b241e4db8a0a78973600fe20d",
+      "appId": "WorldDirectorPRO_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD-PRO UE51 2.0.2"
+    },
+    {
+      "id": "4a6a8c11a0a94522931d5523436fc133",
+      "appId": "WorldDirectorPRO_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD-PRO UE52 2.1"
+    },
+    {
+      "id": "5db19ba251074398ac488a284e420c15",
+      "appId": "WorldDirectorPRO_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "Linux",
+        "iOS"
+      ],
+      "dateAdded": "2023-09-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD-PRO UE53 2.1"
+    },
+    {
+      "id": "e98154c2c6114eac9bd7a88ae499fd98",
+      "appId": "WorldDirectorPRO_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "WD-PRO UE54 2.2.1"
+    }
+  ],
+  "developer": "Craft Assets Studio (CAS)",
+  "developerId": "o-ff78aff15e4a0d9314b2e452451aca",
+  "endOfSupport": false,
+  "unsearchable": false
+}

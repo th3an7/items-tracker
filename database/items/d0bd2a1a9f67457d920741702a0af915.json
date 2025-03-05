@@ -1,0 +1,368 @@
+{
+  "id": "d0bd2a1a9f67457d920741702a0af915",
+  "title": "Farming And Mining Pack",
+  "description": "A package containing animations and meshes for use in mining and farming.",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;NU8PvUDVrec\" rel=\"nofollow\">Products Demo Video</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;GsSf6Rx6_aA\" rel=\"nofollow\">Axe Update Demo</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;vlPtFlOqpf0\" rel=\"nofollow\">Pick Update Video</a></p><p><a href=\"https://youtu.be/Tfk0irPYMKE\" rel=\"nofollow\">Set Master Pose Workaround Tutorial</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;N47uj2_q3Bo\" rel=\"nofollow\">Adding Bones In Blender Tutorial</a></p><p><br /></p><p>This pack contains an assortment of animations for holding and using a variety of mining and farming tools. There are four groups of animations, the first being for hoes and rakes, the second for a shovel, the third for a pickaxe or backhoe, and the fourth the axe. This means that all 3 hoe meshes, and the rake mesh, are made to use the same animations. And the pickaxe and backhoe also use the same animations for the most part.</p><p>These consist of idle animations.</p><p>Transition animations to move into action ready pose.</p><p>Action animations for digging or raking or such.</p><p>And then relax animations for returning to the idle position when done.</p><p>This doesn&#39;t cover all of the animations, but is the general structure most of them fall under.</p><p><br /></p><p>There are also eight tools included in this pack, a triangle hoe, a square hoe, a hoola hoe, a rake, a shovel, a pickaxe, a backhoe, and an axe. There are 3 different texture sets for each of them, plus on extra for the axe , and the materials are set up to support some basic customization and options so you may be able to tweak them a bit further to match your needs.</p><p><br /></p><p>NOTE: In order to fully use the animations, you will likely want to modify your meshes to have the Tool_R_Hand and Tool_R_Hand_Effect bones in them. Since if a bone was not included in a meshes skinning when imported, it will just ignore that bone even if it is present on the skeleton it&#39;s using in engine.</p><p>As a workaround, you can just hide the provided mannequin and use it as a reference pose to avoid modifying your own meshes externally, but this is a bit messy so I&#39;d just modify the bones externally if you can in most cases. Details are in the documentation.</p><p>For a simple reference, there is a mannequin included in the projects main meshes folder that you can export into your 3D software, and use as a reference for the position of the bones while in the default T pose used by the mannequin. All you need to do is add these bones to the skin modifier of your mesh, even if not weighted to any vertices it should still show up in unreal and allow it to make use of the tool bones animations. These are used since when swinging a pickaxe, or certain other types of movement, the tool is not rigidly held fixed in the hand, but may slide forward, backward, or be spun around for better handling/angling. While not required for all of the animations, it is used to an extent in most.</p><p>Also keep in mind these are rather precise animations, so your character must have similar proportions to the base UE4 Male Mannequin or the hands may start to drift from the desired locations on your own characters, or force them to be contorted a bit to fit properly.</p><p>For UE5 Mannequins, while it is possible to retarget animations, you&#39;ll need to add the Hand_R_Tool bone onto the UE5 skeleton, and add it to the retargeting rig so it gets copied over as well with the rest of the animation. If you don&#39;t feel comfortable using the Animation retargeting rig, it&#39;s best to assume this wont be usable for UE5 mannequin skeleton characters.</p><p>Also note that UE5 mannequins are, inherently having slightly different proportions so the results are generally not quite as good looking as with the UE4 mannequin. Also be warned there is currently a bug in UE 5/5.1 that can cause crashes when you try to import a character mesh that has a new one, such as trying to add the Tool_R_Hand bone onto your manny or quinns skeleton. So it&#39;s best to test this step before buying this pack if that&#39;s your plan to confirm your build of unreal engine will allow you to (this is an Unreal Engine bug, not something I can fix or help with myself sadly).</p><p>(tutorial on this in Q and A section at end of documentation to help people in step by step process)</p><p><br /></p><p>Details can be found in the <a href=\"https://docs.google.com/document/d/1qJ3vqYSzhbhAMoFfBa-L45FlydUxheX7Jl91YamgWtw/edit?usp&#61;sharing\" rel=\"nofollow\">documentation</a>.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> This pack contains animations for using various types of farm or mining equipment, as well as the equipment itself.</li><li> A demo map with a farming character that is set up to perform digging or farming or cutting animations with simple commands, including a prepared animation blueprint and various set up montages to allow for you to quickly understand how the animations can go together or be set up and used. And as quickly as possible brought into your own projects.</li><li> A series of texture variations for visual options on the tools, to let them appear as an older or newer design, with some further customization parameters inbuilt into the included materials.</li></ul><p><br /></p><p>Scaled to Epic skeleton: Yes</p><p>Animated: Yes</p><p>Meshes: 20 static meshes (8 complete tool meshes, 12 tool part meshes), 1 skeletal mesh (mannequin modified with extra tool bones).</p><p>Texture Resolutions: 1K*4K through 4K*4K.</p><p>Number of Animations: 45&#43; main animations, plus 22 animations that can be used with an alternative idle pose if you want, these are mostly just transition animations, but going to/from a different idle pose with a more upright posture than the leaning over legs spread third person idle one the others transition to/from).</p><p><br /></p><p>Animation types (Root Motion/In-place): 1 Root motion, all others in place.</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: https://docs.google.com/document/d/1qJ3vqYSzhbhAMoFfBa-L45FlydUxheX7Jl91YamgWtw/edit?usp&#61;sharing</p><p>Important/Additional Notes: There is an extra bone on the character used for holding the tool, do to this you may need to add that bone into other character meshes to get full use of all of these animations on your own characters.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot1-1920x1080-880f27958bd366d4a277cbef96432218.png",
+      "md5": "880f27958bd366d4a277cbef96432218",
+      "width": 1920,
+      "height": 1080,
+      "size": 876291,
+      "uploadedDate": "2019-04-04T00:04:12.812Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2-1920x1080-e023ec7e314bf5c15a9aca8cb96f7e3d.png",
+      "md5": "e023ec7e314bf5c15a9aca8cb96f7e3d",
+      "width": 1920,
+      "height": 1080,
+      "size": 839921,
+      "uploadedDate": "2019-04-04T00:04:13.096Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot3-1920x1080-9ce1b0014c20c29e421110472e9f4364.png",
+      "md5": "9ce1b0014c20c29e421110472e9f4364",
+      "width": 1920,
+      "height": 1080,
+      "size": 957536,
+      "uploadedDate": "2019-04-04T00:04:13.356Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot4-1920x1080-fc82f586079805d076583584022a3edd.png",
+      "md5": "fc82f586079805d076583584022a3edd",
+      "width": 1920,
+      "height": 1080,
+      "size": 1149227,
+      "uploadedDate": "2019-04-04T00:04:13.629Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot5-1920x1080-6004fef7f85274a553e244d083e828c6.png",
+      "md5": "6004fef7f85274a553e244d083e828c6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1095549,
+      "uploadedDate": "2019-04-04T00:04:13.965Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot6-1920x1080-92dd9c2506b4840c6ea0856095f09d16.png",
+      "md5": "92dd9c2506b4840c6ea0856095f09d16",
+      "width": 1920,
+      "height": 1080,
+      "size": 1322105,
+      "uploadedDate": "2019-04-04T00:04:14.268Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot7-1920x1080-b45c3a9a5704021b8fc15de40914fbe6.png",
+      "md5": "b45c3a9a5704021b8fc15de40914fbe6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1281735,
+      "uploadedDate": "2019-04-04T00:04:14.611Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot8-1920x1080-c78280b03216eb395e49bc5e7adf7fd8.png",
+      "md5": "c78280b03216eb395e49bc5e7adf7fd8",
+      "width": 1920,
+      "height": 1080,
+      "size": 1292308,
+      "uploadedDate": "2019-04-04T00:04:14.929Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot11-1920x1080-5b0c66d30536d9ce39e3d6a5eaaaf3b0.png",
+      "md5": "5b0c66d30536d9ce39e3d6a5eaaaf3b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1196898,
+      "uploadedDate": "2019-04-04T00:04:16.165Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot12-1920x1080-6f776740fa501c9c396cfd2c2613ed7e.png",
+      "md5": "6f776740fa501c9c396cfd2c2613ed7e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1203072,
+      "uploadedDate": "2019-04-04T00:04:16.494Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screanshot15-1920x1080-2e7b89d1189415b38b7d3b0703a7c63f.png",
+      "md5": "2e7b89d1189415b38b7d3b0703a7c63f",
+      "width": 1920,
+      "height": 1080,
+      "size": 921791,
+      "uploadedDate": "2020-10-28T18:28:56.390Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screanshot14-1920x1080-9c7fd84dee22e533ac0e3c9fa3462c6b.png",
+      "md5": "9c7fd84dee22e533ac0e3c9fa3462c6b",
+      "width": 1920,
+      "height": 1080,
+      "size": 951663,
+      "uploadedDate": "2020-10-28T18:28:56.567Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screanshot17-1920x1080-ab3a470a47bd76ac0bbb37026a74f4ed.png",
+      "md5": "ab3a470a47bd76ac0bbb37026a74f4ed",
+      "width": 1920,
+      "height": 1080,
+      "size": 814005,
+      "uploadedDate": "2020-10-28T18:28:56.817Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screanshot16-1920x1080-6f1ca4a600a62ed7f94e9ce199cfe5c8.png",
+      "md5": "6f1ca4a600a62ed7f94e9ce199cfe5c8",
+      "width": 1920,
+      "height": 1080,
+      "size": 969933,
+      "uploadedDate": "2020-10-28T18:28:56.977Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screanshot18-1920x1080-34e4d22def451767b217820e7684c277.png",
+      "md5": "34e4d22def451767b217820e7684c277",
+      "width": 1920,
+      "height": 1080,
+      "size": 786143,
+      "uploadedDate": "2021-05-01T16:21:03.394Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/FarmingAndMiningPack_thumb-284x284-90ec64ec37b403fe57f277a66e684cd3.png",
+      "md5": "90ec64ec37b403fe57f277a66e684cd3",
+      "width": 284,
+      "height": 284,
+      "size": 72911,
+      "uploadedDate": "2019-04-04T00:04:16.672Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/FarmingAndMiningPack_featured-894x488-43081d06571c797fc5ea47a5b59746bc.png",
+      "md5": "43081d06571c797fc5ea47a5b59746bc",
+      "width": 894,
+      "height": 488,
+      "size": 359293,
+      "uploadedDate": "2019-04-04T00:04:16.756Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screanshot18-1920x1080-34e4d22def451767b217820e7684c277_Snapshot.png",
+      "md5": "1a3d60f635d38be41fd00f4bb8511dce",
+      "width": 150,
+      "height": 74,
+      "size": 3567,
+      "uploadedDate": "2021-05-01T16:21:03.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screanshot15-1920x1080-2e7b89d1189415b38b7d3b0703a7c63f_Snapshot.png",
+      "md5": "4a8e1423c7b08467508253ebcd335526",
+      "width": 150,
+      "height": 74,
+      "size": 4754,
+      "uploadedDate": "2020-10-28T18:28:56.486Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screanshot14-1920x1080-9c7fd84dee22e533ac0e3c9fa3462c6b_Snapshot.png",
+      "md5": "5ee42b13a2dfcf35430a04e832e6b56e",
+      "width": 150,
+      "height": 74,
+      "size": 4381,
+      "uploadedDate": "2020-10-28T18:28:56.696Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screanshot17-1920x1080-ab3a470a47bd76ac0bbb37026a74f4ed_Snapshot.png",
+      "md5": "17e09d6145961c5e677769f0b70de240",
+      "width": 150,
+      "height": 74,
+      "size": 4249,
+      "uploadedDate": "2020-10-28T18:28:56.907Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screanshot16-1920x1080-6f1ca4a600a62ed7f94e9ce199cfe5c8_Snapshot.png",
+      "md5": "94e7e8dec9f3a6942d2cd19215896d4a",
+      "width": 150,
+      "height": 74,
+      "size": 3814,
+      "uploadedDate": "2020-10-28T18:28:57.075Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot1-1920x1080-880f27958bd366d4a277cbef96432218_Snapshot.png",
+      "md5": "1ddeaf573746158f5f165fa1ed9669f9",
+      "width": 150,
+      "height": 74,
+      "size": 11806,
+      "uploadedDate": "2019-04-04T00:04:12.954Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2-1920x1080-e023ec7e314bf5c15a9aca8cb96f7e3d_Snapshot.png",
+      "md5": "4dcb94b25042f2d0ac5693f5fc49443f",
+      "width": 150,
+      "height": 74,
+      "size": 12002,
+      "uploadedDate": "2019-04-04T00:04:13.238Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot3-1920x1080-9ce1b0014c20c29e421110472e9f4364_Snapshot.png",
+      "md5": "3ce393cac706a3b3ede3e1ae874b3c7a",
+      "width": 150,
+      "height": 74,
+      "size": 13305,
+      "uploadedDate": "2019-04-04T00:04:13.504Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot4-1920x1080-fc82f586079805d076583584022a3edd_Snapshot.png",
+      "md5": "f1b3f9063f6fc11923f5d182150e7b83",
+      "width": 150,
+      "height": 74,
+      "size": 13285,
+      "uploadedDate": "2019-04-04T00:04:13.766Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot5-1920x1080-6004fef7f85274a553e244d083e828c6_Snapshot.png",
+      "md5": "312886f33f525ef3bdbd3603dbfe04d1",
+      "width": 150,
+      "height": 74,
+      "size": 13350,
+      "uploadedDate": "2019-04-04T00:04:14.118Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot6-1920x1080-92dd9c2506b4840c6ea0856095f09d16_Snapshot.png",
+      "md5": "0f47031732948952d9d8323d3a229917",
+      "width": 150,
+      "height": 74,
+      "size": 12071,
+      "uploadedDate": "2019-04-04T00:04:14.463Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot7-1920x1080-b45c3a9a5704021b8fc15de40914fbe6_Snapshot.png",
+      "md5": "602de43a729218b5104a817768d6e84b",
+      "width": 150,
+      "height": 74,
+      "size": 12144,
+      "uploadedDate": "2019-04-04T00:04:14.797Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot8-1920x1080-c78280b03216eb395e49bc5e7adf7fd8_Snapshot.png",
+      "md5": "e045459698db0357096d4f8f75a764cf",
+      "width": 150,
+      "height": 74,
+      "size": 13191,
+      "uploadedDate": "2019-04-04T00:04:15.093Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot9-1920x1080-5ab32c4fac9436586a5033e1608500e8_Snapshot.png",
+      "md5": "1482e57e55085bc23b8a1ad93f3a9251",
+      "width": 150,
+      "height": 74,
+      "size": 11445,
+      "uploadedDate": "2019-04-04T00:04:15.439Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot10-1920x1080-f8a124264d27b3e27d258ee4c4dd2190_Snapshot.png",
+      "md5": "d4d544b814cd1bb4435b6daa90ac4269",
+      "width": 150,
+      "height": 74,
+      "size": 10033,
+      "uploadedDate": "2019-04-04T00:04:16.022Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot11-1920x1080-5b0c66d30536d9ce39e3d6a5eaaaf3b0_Snapshot.png",
+      "md5": "4dfa4617238d9b844a7cf9592ba3f0a4",
+      "width": 150,
+      "height": 74,
+      "size": 11017,
+      "uploadedDate": "2019-04-04T00:04:16.310Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot12-1920x1080-6f776740fa501c9c396cfd2c2613ed7e_Snapshot.png",
+      "md5": "080dcb0e5e10bb438eaa4f90cfbfb3f0",
+      "width": 150,
+      "height": 74,
+      "size": 10820,
+      "uploadedDate": "2019-04-04T00:04:16.625Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/animations"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-05-01T16:55:09.519Z",
+  "lastModifiedDate": "2024-11-22T05:16:56.688Z",
+  "customAttributes": {},
+  "entitlementName": "d0bd2a1a9f67457d920741702a0af915",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "dbb79e92a1f14069a1e943029a570220",
+      "appId": "FarmingAd0bd2a1a9f67V1",
+      "compatibleApps": [
+        "UE_4.15",
+        "UE_4.16",
+        "UE_4.17",
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "Added \"miss\" animations for the axe.",
+      "versionTitle": "Mining_And_Farming 4.15"
+    }
+  ],
+  "developer": "Sean Dachtler",
+  "developerId": "o-5b3e61c1f64a79abf802cee6df7f61",
+  "endOfSupport": false,
+  "unsearchable": false
+}

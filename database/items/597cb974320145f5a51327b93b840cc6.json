@@ -1,0 +1,480 @@
+{
+  "id": "597cb974320145f5a51327b93b840cc6",
+  "title": "Blob Serialization",
+  "description": "Allows usage of Blobs, blueprint variables that can contain anything! Also adds advanced serialization utilities in C++ to easily read and write unreal objects into any format.",
+  "longDescription": "<p>BlobSerialization is a powerful utility plugin that allows you to create a BLOB blueprint variable that can contain anything! This is a form of polymorphism that adds much-needed flexibility to blueprints. Where you had to create a UObject before to contain different types of data, you can now use a Blob! This will allow you to build more powerful and reusable systems which can manipulate different types of data.</p><p><br /></p><p>BLOB stands for <a href=\"https://en.wikipedia.org/wiki/Binary_large_object\" rel=\"nofollow\">Binary Large Object</a>. Using binary serialization, blobs can be written with any type of data and the data can be retrieved later when reading. Blobs are not a replacement for UObject polymorphism, but a different approach, with its pros and cons. Blobs are safe to pass in the network when using the Net behavior, this means they can be used as a replicated variable or a parameter in a RPC for you to create your own network protocols.</p><p><br /></p><p>BlobSerialization also adds a series of code utilities designed to make serialization of Unreal objects easy and safe for typical use cases, including serializing for debugging, serializing to an external storage such as a database, or serializing over the network. This allows you to read and write UObjects, UStructs, or any arbitrary data, and convert them in any format you desire. These are advanced programming features that require a good understanding of Unreal&#39;s Object System.</p><p><br /></p><p>Features:</p><ul><li>Blobs can contain any blueprint Struct or UObject</li><li>Blobs have several predefined serialization behaviors to choose from (including for persistent storage, SaveGame, Binary or Network)</li><li>Typed Blobs contain type information to allow polymorphic logic</li><li>UObjects can be fully serialized with type information for fully polymorphic UObject serialization</li><li>Write UObjects and structs to Json string</li><li>Write UObjects and structs in text or binary form to files</li><li>Blobs can be used from code more freely using FBlobWriter and FBlobReader, to serialize arbitrary data</li><li>Blobs are safe to pass in the network as replicated variables or RPC parameters</li><li>Blueprint functionality is extended with more structs and function libraries</li><li>Tutorial blueprints, code examples, and unit tests are included in the plugin</li></ul>",
+  "technicalDetails": "<p>Code Modules:</p><ul><li> BlobSerialization (Runtime)</li><li> BlobSerializationEditor (Editor)</li></ul><p>Number of Blueprints: 13 Tutorial and Helper Blueprints</p><p>Number of C&#43;&#43; Classes: 4 Public Classes and Structs, New Blueprint Nodes associated</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: All</p><p>Supported Target Build Platforms: All</p><p>Code Documentation: see README.md, Blob.h, BlobFunctionLibrary.h, Serialization.h, NetSerialization.h, TextSerialization.h, usage examples in BlobSerializationTests.cpp.</p><p>Blueprint Documentation: see BlobTutorialMap and BP_BlobTurorial</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1 - Main usage 1.0-1920x1080-cea492ccbb64a81079ad621d23909222.png",
+      "md5": "cea492ccbb64a81079ad621d23909222",
+      "width": 1920,
+      "height": 1080,
+      "size": 279567,
+      "uploadedDate": "2021-04-06T22:26:47.725Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2 - Features-1920x1080-a14508a630b863b1158e6310865f375c.png",
+      "md5": "a14508a630b863b1158e6310865f375c",
+      "width": 1920,
+      "height": 1080,
+      "size": 249819,
+      "uploadedDate": "2021-04-06T22:26:48.094Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8 - All the nodes-1920x1080-a7f521fd19acd6111861d254f9862f1e.png",
+      "md5": "a7f521fd19acd6111861d254f9862f1e",
+      "width": 1920,
+      "height": 1080,
+      "size": 421503,
+      "uploadedDate": "2021-04-06T22:26:48.518Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3- Tutorial-1920x1080-d9f901dc10e2fa9e078b15777cf87a85.png",
+      "md5": "d9f901dc10e2fa9e078b15777cf87a85",
+      "width": 1920,
+      "height": 1080,
+      "size": 562343,
+      "uploadedDate": "2021-03-14T20:00:46.670Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4- Utilities-1920x1080-beb4551b4c6369b6efc1e88a3cb9e359.png",
+      "md5": "beb4551b4c6369b6efc1e88a3cb9e359",
+      "width": 1920,
+      "height": 1080,
+      "size": 302289,
+      "uploadedDate": "2021-03-14T20:00:47.118Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2- Typed Nodes-1920x1080-acac65cff61dcc86bd3d4e20aac48c3d.png",
+      "md5": "acac65cff61dcc86bd3d4e20aac48c3d",
+      "width": 1920,
+      "height": 1080,
+      "size": 218391,
+      "uploadedDate": "2021-03-14T20:00:46.249Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5- Code-1920x1080-78f4e6094009d06783e19d2d6d06b159.png",
+      "md5": "78f4e6094009d06783e19d2d6d06b159",
+      "width": 1920,
+      "height": 1080,
+      "size": 384719,
+      "uploadedDate": "2021-03-14T20:00:47.608Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6- Unit Tests-1920x1080-57c9f16884693211a5a7e41202660cae.png",
+      "md5": "57c9f16884693211a5a7e41202660cae",
+      "width": 1920,
+      "height": 1080,
+      "size": 294134,
+      "uploadedDate": "2021-03-14T20:00:48.110Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/More-1920x1080-92033114b0cb442e1e5141ca50be48d2.png",
+      "md5": "92033114b0cb442e1e5141ca50be48d2",
+      "width": 1920,
+      "height": 1080,
+      "size": 456431,
+      "uploadedDate": "2021-04-06T22:44:34.482Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BlobSerialization_thumb-284x284-a35037975476392c0f8907daf2365505.png",
+      "md5": "a35037975476392c0f8907daf2365505",
+      "width": 284,
+      "height": 284,
+      "size": 33972,
+      "uploadedDate": "2021-03-28T16:58:26.858Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/BlobSerialization_featured-894x488-677bdd1f68b1f97d1b6c0835626d5cdd.png",
+      "md5": "677bdd1f68b1f97d1b6c0835626d5cdd",
+      "width": 894,
+      "height": 488,
+      "size": 123535,
+      "uploadedDate": "2021-03-14T20:00:48.873Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/More-1920x1080-92033114b0cb442e1e5141ca50be48d2_Snapshot.png",
+      "md5": "2c64b525fd687a9cc67c5694fdc8acba",
+      "width": 150,
+      "height": 74,
+      "size": 4336,
+      "uploadedDate": "2021-04-06T22:44:34.795Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1 - Main usage 1.0-1920x1080-cea492ccbb64a81079ad621d23909222_Snapshot.png",
+      "md5": "0764d70d0b8a5edf51f919e6bad08b93",
+      "width": 150,
+      "height": 74,
+      "size": 5341,
+      "uploadedDate": "2021-04-06T22:26:47.998Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2 - Features-1920x1080-a14508a630b863b1158e6310865f375c_Snapshot.png",
+      "md5": "2e1feb04235e9d7da9e97ef0d9591d33",
+      "width": 150,
+      "height": 74,
+      "size": 5055,
+      "uploadedDate": "2021-04-06T22:26:48.356Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8 - All the nodes-1920x1080-a7f521fd19acd6111861d254f9862f1e_Snapshot.png",
+      "md5": "78fc3684dcff46124d01f98cda211ab2",
+      "width": 150,
+      "height": 74,
+      "size": 6798,
+      "uploadedDate": "2021-04-06T22:26:48.806Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9 - Coming Soon 1.0-1920x1080-cff8a4f3891eccd4dd59573dd7ff8a3e_Snapshot.png",
+      "md5": "d02dbcc2282c6bea94691734ba456e75",
+      "width": 150,
+      "height": 74,
+      "size": 4199,
+      "uploadedDate": "2021-04-06T22:26:49.293Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1- Main usage-1920x1080-2d82784f22c7e0bb0d828e4a697826f7_Snapshot.png",
+      "md5": "c2d1302ae6357b87e4308c9011cd3911",
+      "width": 150,
+      "height": 74,
+      "size": 4217,
+      "uploadedDate": "2021-03-14T20:00:46.127Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2- Typed Nodes-1920x1080-acac65cff61dcc86bd3d4e20aac48c3d_Snapshot.png",
+      "md5": "b57f6f7daeb1b54c71dd580d92bb9d5c",
+      "width": 150,
+      "height": 74,
+      "size": 4415,
+      "uploadedDate": "2021-03-14T20:00:46.509Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3- Tutorial-1920x1080-d9f901dc10e2fa9e078b15777cf87a85_Snapshot.png",
+      "md5": "ed5fe06979cb6717296e7c5e47fb2c55",
+      "width": 150,
+      "height": 74,
+      "size": 6232,
+      "uploadedDate": "2021-03-14T20:00:46.946Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4- Utilities-1920x1080-beb4551b4c6369b6efc1e88a3cb9e359_Snapshot.png",
+      "md5": "66855ec7e7ada0bbc82353bbf58c10ab",
+      "width": 150,
+      "height": 74,
+      "size": 5674,
+      "uploadedDate": "2021-03-14T20:00:47.400Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5- Code-1920x1080-78f4e6094009d06783e19d2d6d06b159_Snapshot.png",
+      "md5": "77bbd316f1bb9e6cbf2aecf36bf9a7a6",
+      "width": 150,
+      "height": 74,
+      "size": 4877,
+      "uploadedDate": "2021-03-14T20:00:47.904Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6- Unit Tests-1920x1080-57c9f16884693211a5a7e41202660cae_Snapshot.png",
+      "md5": "d6f126fa85557d03a6f0728d6e7de0b8",
+      "width": 150,
+      "height": 74,
+      "size": 5397,
+      "uploadedDate": "2021-03-14T20:00:48.362Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7- Coming Soon-1920x1080-27ddf4de76694d680db1286070df7b30_Snapshot.png",
+      "md5": "bd9e28dce149fbeee1020cb7327bda41",
+      "width": 150,
+      "height": 74,
+      "size": 4371,
+      "uploadedDate": "2021-03-14T20:00:48.781Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ph2-1920x1080-8a65529c14846b985c626cbb8a9b254e_Snapshot.png",
+      "md5": "5c73f97e9fe6cce4a37380016fc35acb",
+      "width": 150,
+      "height": 74,
+      "size": 878,
+      "uploadedDate": "2021-02-07T18:29:09.110Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-03-24T20:54:16.415Z",
+  "lastModifiedDate": "2024-11-17T16:49:30.909Z",
+  "customAttributes": {},
+  "entitlementName": "597cb974320145f5a51327b93b840cc6",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "bdfbf9c01f05430faf82b813675417b4",
+      "appId": "BlobSerialization_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Nintendo Switch",
+        "Oculus",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-03-14T00:00:00.000Z",
+      "releaseNote": "Version 0.1.0. See README.md for full details.",
+      "versionTitle": "BlobSerialization 4.24"
+    },
+    {
+      "id": "d563658023ed490a9d315d0f1f4755f2",
+      "appId": "BlobSerialization_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-03-14T00:00:00.000Z",
+      "releaseNote": "Version 1.0.1. See README.md for full details.",
+      "versionTitle": "BlobSerialization 4.25"
+    },
+    {
+      "id": "5525b3a2015e4578a6f205dff3833597",
+      "appId": "BlobSerialization_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-03-14T00:00:00.000Z",
+      "releaseNote": "Version 2.1.0. See README.md for full details.",
+      "versionTitle": "BlobSerialization 4.26"
+    },
+    {
+      "id": "a0a57c45be8d4f13b072fb2534ca43cb",
+      "appId": "BlobSerialization_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-08-23T00:00:00.000Z",
+      "releaseNote": "Version 2.1.0. See README.md for full details.",
+      "versionTitle": "BlobSerialization 4.27"
+    },
+    {
+      "id": "885f2346438e4915a9d640a680b3bed1",
+      "appId": "BlobSerialization_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2022-04-11T00:00:00.000Z",
+      "releaseNote": "Version 2.1.0. See README.md for full details.",
+      "versionTitle": "BlobSerialization 5.0"
+    },
+    {
+      "id": "de9c1d8504b743cbb6d217b5cb24aae3",
+      "appId": "BlobSerialization_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Android",
+        "Gear VR"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "Version 2.1.2. See README.md for full details.",
+      "versionTitle": "BlobSerialization 5.1"
+    },
+    {
+      "id": "bdd2916a000c4886b6bb511f77ed8dc2",
+      "appId": "BlobSerialization_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Linux",
+        "HTML5",
+        "iOS",
+        "HoloLens 2",
+        "Gear VR",
+        "Android",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2023-05-18T00:00:00.000Z",
+      "releaseNote": "Version 2.1.2. See README.md for full details.",
+      "versionTitle": "BlobSerialization 5.2"
+    },
+    {
+      "id": "27d9c399f4b048e69fad1cc17df818fe",
+      "appId": "BlobSerialization_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-09-20T00:00:00.000Z",
+      "releaseNote": "Version 2.1.2. See README.md for full details.",
+      "versionTitle": "BlobSerialization 5.3"
+    },
+    {
+      "id": "abe73f9f019a42d0a81937ea31f38cab",
+      "appId": "BlobSerialization_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-05-29T00:00:00.000Z",
+      "releaseNote": "Version 2.1.2. See README.md for full details.",
+      "versionTitle": "BlobSerialization 5.4"
+    }
+  ],
+  "developer": "Kahncode",
+  "developerId": "o-euyhpejk4tbmnvrprwtyuu47ek7rfs",
+  "endOfSupport": false,
+  "unsearchable": false
+}

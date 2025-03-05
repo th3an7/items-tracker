@@ -1,0 +1,529 @@
+{
+  "id": "1a2fe7f096394c50b68361378ddb4fe7",
+  "title": "2D Procedural Water System With Buoyancy",
+  "description": "Package contains procedurally generated water mesh with vertices manipulated using Hooke's law and simulates Buoyancy, and supports reflection, Just swap water material for personalized look.",
+  "longDescription": "<p>This package contains two Blueprints, One for the Procedurally generated 2D water mesh and the other for the Floatable Sprites, Floatable Blueprint has an interface implemented on it which of course is included, also there is a Blueprint Function which I created for its reusability and hence is easily customizable, hence this function can be re-implemented in various scenarios according to your needs.</p><p><br /></p><p>Tutorial</p><p><a href=\"https://youtu.be/N6BPQ_Vu7CY\" rel=\"nofollow\">https://youtu.be/N6BPQ_Vu7CY</a></p><p>Guide</p><p><a href=\"https://youtu.be/QiSlMn4SGqA\" rel=\"nofollow\">https://youtu.be/QiSlMn4SGqA</a></p><p>Reflection Feature Setup Guide</p><p><a href=\"https://youtu.be/CVngyqMsPoQ\" rel=\"nofollow\">https://youtu.be/CVngyqMsPoQ</a></p><p><br /></p><p>I have also included comments inside blueprints where possible, also below are some pointers to help you along.</p><p><br /></p><p>If For any Reasons want to manipulate Verties of the mesh The Procedural Mesh is Generated as bellow:-</p><p><br /></p><p> 1 * * * 3        </p><p> *   *</p><p> *   *</p><p>0 * * * * * 2* * * * * 4</p><p><br /></p><p>2. Material for the water mesh is included and its instance has been applied on the Demo, the instance gives you the option to apply any texture you want and hence is dynamic.</p><p><br /></p><p>3. When using Floating Object, add some pontoon array elements to it usually 1-3 will do the trick, for convenience, I have made them instance editable with 3d widgets shown, so it will be quite easy to manipulate from the editor itself.</p><p><br /></p><p>4. When Using Floatable Objects keep in mind to add mass more than at least 600 since the mass has been used in alpha calculations of the force, and also you don&#39;t want your player to send your floatable object into multiverse just by touching it :).</p><p><br /></p><p>5. All the manipulative variables have been created to be instance editable.</p><p>6. 2 Materials one for reflection and the other for normal water (Tileable and scalable).</p><p><br /></p><p>Update Log:</p><p>V_2.0: Improved performance and Frame rate independence.</p><ol><li>Frame rate independence achieved (Tested at 15-60&#43; FPS).</li><li>Timer by event rate depends on the delta time (OVERLAPPING&#61; (0.8 * Delta time) &amp; IDLE &#61; (1.0 * Delta time) and caps at &#34;0.03&#34;.</li><li>Texture Tilling or stretching Feature available.</li></ol><p>V_3.0</p><ol><li>Reflection feature added.</li><li>Few minor Improvements.</li></ol><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p>Note:-</p><ol><li>Try to keep the no of iterations variable in the procedural mesh low as it can easily add up.</li><li>Procedural mesh uses a Custom collision Object Channel Named &#34;Water_Body&#34;, to be traced only for this specific type from Floatable Actor Blueprint, an instance editable variable has been defined for convenience.</li></ol><p>Steps to define New Collision Channel:</p><p><br /></p><p>Edit-&gt;Project_Settings-&gt; Collision -&gt; Object Channel-&gt;New Object Channnel-&gt; Name &#34;Water_Body&#34;-&gt;Type &#34;Overlap&#34;.</p>",
+  "technicalDetails": "<ol><li>Procedurally generated water mesh (Length and Hight User dependent).</li></ol><p>2. Custom Designed Buoyancy, Using Blueprint Function.</p><p>3. Water Vertices manipulation using Hooke&#39;s Law (Highly Customizable.)</p><p>4. Works out of the box.</p><p>5. Works dynamically with editor exposed Variables.</p><p>6. Cost-effective (Uses Custom tick Type Event which Fires at max every 0.03sec.</p><p>7. Two Modes of water Displacement</p><p>                                * Idle-&gt; Water moves with randomly applying small forces along vertices imitating motion.</p><p>                                 *Overlapped-&gt; Stops the idle Movements when overlapping starts moves according to the disturbance caused.</p><p>8. Highly customizable reflection feature, with dynamic render texture.</p><p><br /></p><p>(Currently set in such a way that, Idle state is reached only if no overlapping occurs or 10 Sec after all overlapping end)</p><p><br /></p><p><br /></p><p><br /></p><p>Number of Blueprints: 2</p><p>Number of Blueprint Functions: 1</p><p>Number of Interfaces: 1</p><p>Number of Sprites: 4</p><p>Number of Textures: 7</p><p>Number of Materials: 2</p><p>Material Instances: 1</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 110-1920x1080-c70495fd02fbb58bd5ea55bdc425908d.png",
+      "md5": "c70495fd02fbb58bd5ea55bdc425908d",
+      "width": 1920,
+      "height": 1080,
+      "size": 493773,
+      "uploadedDate": "2022-03-26T13:24:15.060Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 133-1920x1080-1ec083e2e84f4a31b8f9de198c0c5336.png",
+      "md5": "1ec083e2e84f4a31b8f9de198c0c5336",
+      "width": 1920,
+      "height": 1080,
+      "size": 480801,
+      "uploadedDate": "2022-03-26T13:10:43.711Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 126-1920x1080-bdcb4c43f7ea28e529600dfded6281e2.png",
+      "md5": "bdcb4c43f7ea28e529600dfded6281e2",
+      "width": 1920,
+      "height": 1080,
+      "size": 478610,
+      "uploadedDate": "2022-03-26T13:10:44.055Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 123-1920x1080-d422bcfd4ecdfae803f56f106e0b725f.png",
+      "md5": "d422bcfd4ecdfae803f56f106e0b725f",
+      "width": 1920,
+      "height": 1080,
+      "size": 408488,
+      "uploadedDate": "2022-03-26T13:10:44.482Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 106-1920x1080-5974b6ade780783bca457ff9dcd98c6e.png",
+      "md5": "5974b6ade780783bca457ff9dcd98c6e",
+      "width": 1920,
+      "height": 1080,
+      "size": 482183,
+      "uploadedDate": "2022-03-26T13:24:15.323Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 116-1920x1080-90a65d541e81f490916ab67be13d01a3.png",
+      "md5": "90a65d541e81f490916ab67be13d01a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 520251,
+      "uploadedDate": "2022-03-26T13:10:44.267Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 132-1920x1080-6be8df6916e2b5b81eab1dee2e405109.png",
+      "md5": "6be8df6916e2b5b81eab1dee2e405109",
+      "width": 1920,
+      "height": 1080,
+      "size": 462422,
+      "uploadedDate": "2022-03-26T13:10:44.700Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 135-1920x1080-404fdfcc188b6c27b7a60f399b4f8b5d.png",
+      "md5": "404fdfcc188b6c27b7a60f399b4f8b5d",
+      "width": 1920,
+      "height": 1080,
+      "size": 417630,
+      "uploadedDate": "2022-03-26T13:10:43.901Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 118-1920x1080-ce68285d9a65601bfefd1b8b2c1798d9.png",
+      "md5": "ce68285d9a65601bfefd1b8b2c1798d9",
+      "width": 1920,
+      "height": 1080,
+      "size": 442644,
+      "uploadedDate": "2022-03-26T13:10:44.884Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 130-1920x1080-16afc5543b3f996c2186752c41399c7a.png",
+      "md5": "16afc5543b3f996c2186752c41399c7a",
+      "width": 1920,
+      "height": 1080,
+      "size": 475204,
+      "uploadedDate": "2022-03-26T13:10:45.067Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 119-1920x1080-4b512d8e6ec91bdfd29a34923d70523a.png",
+      "md5": "4b512d8e6ec91bdfd29a34923d70523a",
+      "width": 1920,
+      "height": 1080,
+      "size": 454129,
+      "uploadedDate": "2022-03-26T13:10:45.301Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 121-1920x1080-e715e4a98aa77ad79e6cfa2c6c352a49.png",
+      "md5": "e715e4a98aa77ad79e6cfa2c6c352a49",
+      "width": 1920,
+      "height": 1080,
+      "size": 477612,
+      "uploadedDate": "2022-03-26T13:10:45.526Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 128-1920x1080-698e25f855d1b6876795e0a4e70c415b.png",
+      "md5": "698e25f855d1b6876795e0a4e70c415b",
+      "width": 1920,
+      "height": 1080,
+      "size": 509230,
+      "uploadedDate": "2022-03-26T13:10:45.683Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 131-1920x1080-d00e374ae18537495b7d4dfd473f60bb.png",
+      "md5": "d00e374ae18537495b7d4dfd473f60bb",
+      "width": 1920,
+      "height": 1080,
+      "size": 446117,
+      "uploadedDate": "2022-03-26T13:10:45.898Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 134-1920x1080-186368dbaafada8f782ad9cedf37caaa.png",
+      "md5": "186368dbaafada8f782ad9cedf37caaa",
+      "width": 1920,
+      "height": 1080,
+      "size": 424180,
+      "uploadedDate": "2022-03-26T13:10:46.100Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 108-1920x1080-6ca96adea2933294282e09c89421f4b0.png",
+      "md5": "6ca96adea2933294282e09c89421f4b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 523844,
+      "uploadedDate": "2022-03-26T13:24:15.559Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 119-1920x1080-4b512d8e6ec91bdfd29a34923d70523a.png",
+      "md5": "4b512d8e6ec91bdfd29a34923d70523a",
+      "width": 1920,
+      "height": 1080,
+      "size": 454129,
+      "uploadedDate": "2022-03-26T13:24:15.779Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/2DProceduralWaterSystemWithBuoyancy_thumb-284x284-083edcefd4d197a35410d8908df2360a.png",
+      "md5": "083edcefd4d197a35410d8908df2360a",
+      "width": 284,
+      "height": 284,
+      "size": 147074,
+      "uploadedDate": "2022-03-26T17:31:42.603Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/2DProceduralWaterSystemWithBuoyancy_featured-894x488-34fbd2569e6cc32d7035fe49bb3b0182.png",
+      "md5": "34fbd2569e6cc32d7035fe49bb3b0182",
+      "width": 894,
+      "height": 488,
+      "size": 583731,
+      "uploadedDate": "2022-03-26T17:31:42.729Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 110-1920x1080-c70495fd02fbb58bd5ea55bdc425908d_Snapshot.png",
+      "md5": "977afb389eed82374e510cf7dc03b67e",
+      "width": 150,
+      "height": 74,
+      "size": 7002,
+      "uploadedDate": "2022-03-26T13:24:15.193Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 106-1920x1080-5974b6ade780783bca457ff9dcd98c6e_Snapshot.png",
+      "md5": "10b031bd0f68e530b4d17d6303d20901",
+      "width": 150,
+      "height": 74,
+      "size": 6537,
+      "uploadedDate": "2022-03-26T13:24:15.442Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 108-1920x1080-6ca96adea2933294282e09c89421f4b0_Snapshot.png",
+      "md5": "f5a0de192041ee4f7bb8ac89aa004864",
+      "width": 150,
+      "height": 74,
+      "size": 6842,
+      "uploadedDate": "2022-03-26T13:24:15.677Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 119-1920x1080-4b512d8e6ec91bdfd29a34923d70523a_Snapshot.png",
+      "md5": "048db9e1e9f74a83d1eb6615dd2b4f0b",
+      "width": 150,
+      "height": 74,
+      "size": 6680,
+      "uploadedDate": "2022-03-26T13:24:15.895Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 133-1920x1080-1ec083e2e84f4a31b8f9de198c0c5336_Snapshot.png",
+      "md5": "4ec571af1a93b9d0323495917fdac216",
+      "width": 150,
+      "height": 74,
+      "size": 6922,
+      "uploadedDate": "2022-03-26T13:10:43.813Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 135-1920x1080-404fdfcc188b6c27b7a60f399b4f8b5d_Snapshot.png",
+      "md5": "bcab3d13505ac46128c2e2c0864efad6",
+      "width": 150,
+      "height": 74,
+      "size": 6369,
+      "uploadedDate": "2022-03-26T13:10:43.988Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 126-1920x1080-bdcb4c43f7ea28e529600dfded6281e2_Snapshot.png",
+      "md5": "7592309b9ccb43ebd0bd357d3b166524",
+      "width": 150,
+      "height": 74,
+      "size": 6166,
+      "uploadedDate": "2022-03-26T13:10:44.155Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 116-1920x1080-90a65d541e81f490916ab67be13d01a3_Snapshot.png",
+      "md5": "70e1e8cf12660aff6a08bdd1a1b08d0a",
+      "width": 150,
+      "height": 74,
+      "size": 7091,
+      "uploadedDate": "2022-03-26T13:10:44.356Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 123-1920x1080-d422bcfd4ecdfae803f56f106e0b725f_Snapshot.png",
+      "md5": "911eb31bc5a21067f8364a4bacc573f7",
+      "width": 150,
+      "height": 74,
+      "size": 5949,
+      "uploadedDate": "2022-03-26T13:10:44.567Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 132-1920x1080-6be8df6916e2b5b81eab1dee2e405109_Snapshot.png",
+      "md5": "8edfc770e00d91e0c25ca1e265dd15b0",
+      "width": 150,
+      "height": 74,
+      "size": 6621,
+      "uploadedDate": "2022-03-26T13:10:44.779Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 118-1920x1080-ce68285d9a65601bfefd1b8b2c1798d9_Snapshot.png",
+      "md5": "4a6dcb8eafeba7d37e86d5e29a493e70",
+      "width": 150,
+      "height": 74,
+      "size": 6763,
+      "uploadedDate": "2022-03-26T13:10:44.966Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 130-1920x1080-16afc5543b3f996c2186752c41399c7a_Snapshot.png",
+      "md5": "142e4b78f8fba8a9dc83054e574a34e5",
+      "width": 150,
+      "height": 74,
+      "size": 6790,
+      "uploadedDate": "2022-03-26T13:10:45.150Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 119-1920x1080-4b512d8e6ec91bdfd29a34923d70523a_Snapshot.png",
+      "md5": "048db9e1e9f74a83d1eb6615dd2b4f0b",
+      "width": 150,
+      "height": 74,
+      "size": 6680,
+      "uploadedDate": "2022-03-26T13:10:45.385Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 121-1920x1080-e715e4a98aa77ad79e6cfa2c6c352a49_Snapshot.png",
+      "md5": "5d4045ee82a093c09d71e6de0467478f",
+      "width": 150,
+      "height": 74,
+      "size": 6708,
+      "uploadedDate": "2022-03-26T13:10:45.614Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 128-1920x1080-698e25f855d1b6876795e0a4e70c415b_Snapshot.png",
+      "md5": "129248286a1e588a3b158b2569a9f2e5",
+      "width": 150,
+      "height": 74,
+      "size": 6427,
+      "uploadedDate": "2022-03-26T13:10:45.776Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 131-1920x1080-d00e374ae18537495b7d4dfd473f60bb_Snapshot.png",
+      "md5": "78b7850952d03648569a9eed8d497f60",
+      "width": 150,
+      "height": 74,
+      "size": 6604,
+      "uploadedDate": "2022-03-26T13:10:45.982Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 134-1920x1080-186368dbaafada8f782ad9cedf37caaa_Snapshot.png",
+      "md5": "e402a874e7d8ba219f8ce4e6301cd18b",
+      "width": 150,
+      "height": 74,
+      "size": 6715,
+      "uploadedDate": "2022-03-26T13:10:46.197Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 37-1920x1080-5b0e19e96eddf913d92b0359514ad3d5_Snapshot.png",
+      "md5": "522b23a234f8fdfe55167175ee3ec7d9",
+      "width": 150,
+      "height": 74,
+      "size": 7162,
+      "uploadedDate": "2022-02-22T18:32:39.932Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 5-1920x1080-a5c4a9878e59b9e4b373d15f2eade81a_Snapshot.png",
+      "md5": "b040996a1e7f5e9f753777eb87047230",
+      "width": 150,
+      "height": 74,
+      "size": 6676,
+      "uploadedDate": "2022-02-22T18:32:40.670Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 7-1920x1080-e12a55da5e21b3099c34b7016638a603_Snapshot.png",
+      "md5": "980235a7c8bbe93b57106618e695a020",
+      "width": 150,
+      "height": 74,
+      "size": 6608,
+      "uploadedDate": "2022-02-22T18:32:41.202Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 16-1920x1080-6075ca67f3722fd543681bceab72203a_Snapshot.png",
+      "md5": "63489a1b1324615b95679d70674a6b1a",
+      "width": 150,
+      "height": 74,
+      "size": 6488,
+      "uploadedDate": "2022-02-22T18:32:41.720Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 36-1920x1080-96923f4be3c2b7b345676e9c029448c0_Snapshot.png",
+      "md5": "20989af5789eb60a7768b0d671c0b9e6",
+      "width": 150,
+      "height": 74,
+      "size": 7206,
+      "uploadedDate": "2022-02-22T18:32:42.274Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 35-1920x1080-12221ea040d0ad868a6204cdbe3e0c50_Snapshot.png",
+      "md5": "3281dee5e2bbdf2c1f8ea44d92ebc67a",
+      "width": 150,
+      "height": 74,
+      "size": 7138,
+      "uploadedDate": "2022-02-22T18:32:42.841Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 12-1920x1080-244e061e334f7a9ec07938dc8039e8bf_Snapshot.png",
+      "md5": "cf14721f9a6e85c733b970e9c0645509",
+      "width": 150,
+      "height": 74,
+      "size": 6697,
+      "uploadedDate": "2022-02-22T18:32:43.424Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 15-1920x1080-687fd01bac7516460d202e722d850c00_Snapshot.png",
+      "md5": "2e785d5bd101d6215a42054766b492cc",
+      "width": 150,
+      "height": 74,
+      "size": 7100,
+      "uploadedDate": "2022-02-22T18:32:44.018Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 31-1920x1080-97af75358349e733f3eba96df0ea9993_Snapshot.png",
+      "md5": "56b576b62727134e4d1271795c6978ab",
+      "width": 150,
+      "height": 74,
+      "size": 7216,
+      "uploadedDate": "2022-02-22T18:32:44.553Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 32-1920x1080-66702217c350d353b0f9e90f41d70263_Snapshot.png",
+      "md5": "8d128c8402c044537f076e44518daf28",
+      "width": 150,
+      "height": 74,
+      "size": 6845,
+      "uploadedDate": "2022-02-22T18:32:45.113Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-02-24T04:00:36.704Z",
+  "lastModifiedDate": "2023-07-25T15:45:29.186Z",
+  "entitlementName": "1a2fe7f096394c50b68361378ddb4fe7",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "1789e54a03704325b726c8d2027c6392",
+      "appId": "2DProced1a2fe7f09639V3",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2022-03-11T00:00:00.000Z",
+      "releaseNote": "UE 4.26",
+      "versionTitle": "UE_4.26_V_3.0"
+    },
+    {
+      "id": "05a9b72379f6474aa81cd2bc64645d91",
+      "appId": "2DProced1a2fe7f09639V2",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2022-02-22T00:00:00.000Z",
+      "releaseNote": "UE4.27",
+      "versionTitle": "UE_4.27_V_3.0"
+    },
+    {
+      "id": "b65d863373444290aa1dc276f7ce1f7f",
+      "appId": "2DProced1a2fe7f09639V5",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2022-04-07T00:00:00.000Z",
+      "releaseNote": "UE 5.00\n",
+      "versionTitle": "UE_5.00_V_3.0"
+    },
+    {
+      "id": "abd586b1ed884fb1aae210556cb564d4",
+      "appId": "2DProced1a2fe7f09639V6",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2023-01-21T00:00:00.000Z",
+      "releaseNote": "UE 5.1",
+      "versionTitle": "UE_5.1_V_3.0"
+    },
+    {
+      "id": "cd6fc907851e462a8a7b48c475f16e89",
+      "appId": "2DProced1a2fe7f09639V7",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-07-25T00:00:00.000Z",
+      "releaseNote": "UE 5.2",
+      "versionTitle": "UE_5.2_V_3.0"
+    }
+  ],
+  "developer": "Let's-Create",
+  "developerId": "o-yp52xe8emc7mwbehj2yp47z5b67fa7",
+  "endOfSupport": false,
+  "unsearchable": false
+}

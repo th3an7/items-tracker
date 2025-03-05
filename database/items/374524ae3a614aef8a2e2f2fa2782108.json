@@ -1,0 +1,334 @@
+{
+  "id": "374524ae3a614aef8a2e2f2fa2782108",
+  "title": "Topographic Map 3D Terrain Generator",
+  "description": "Topographic Map Editor that Renders Custom Heightmaps",
+  "longDescription": "<p>The TopoTool takes your topographic map inputs, drawn via splines on the Editor Utility Widget, and renders them into a binary heightmap file. That heightmap file (extension .r16) can then be loaded into the Unreal Engine Landscape Tool for creation as a fully editable landscape geometry.</p><p>The Tool provides inputs for peaks and valleys, topographic lines, rivers, and roads.</p><p>On Render, the Tool gives the user the ability to add realism via Perlin Noise and Hydraulic Erosion.</p><p>Promo Video: <a href=\"https://youtu.be/MYtW8a5nyUU\" rel=\"nofollow\">https://youtu.be/MYtW8a5nyUU </a></p><p>Features:</p><ul><li>Topographic Lines</li><li>Roads</li><li>Rivers</li><li>Peaks/Valleys</li><li> Altitude specification for Peaks/Valleys and Topographic Lines</li><li>Width specification for Roads and Rivers</li><li>Depth specification for Rivers</li><li>Catmull-Rom Spline implementation for drawing the Topography, Rivers, and Roads</li><li>Ability to load a background image for tracing</li><li>Keyboard shortcuts to ease use</li><li>Perlin noise algorithm on render</li><li>Erosion algorithm on render</li><li>Heightmap generated from render in .r16 format for full 16 bit height depth</li><li>Save and Load heightmaps using built-in Unreal Engine save game blueprints</li><li>Undo functionality</li><li>Click and drag points</li><li>Color specification for use on dark and multicolored backgrounds</li><li>Copy and Paste features</li><li>Resize whole feature using keyboard shortcut and mouse drag</li></ul>",
+  "technicalDetails": "<p>Updates:</p><ul><li>4.4 Added Copy and Paste, Scale whole feature, optimized base interpolation method 2/18/20</li><li>4.5 (only UE4.25&#43;): Ability to scale down resolution of lines</li></ul><p>Features in the Future:</p><ul><li>UI updates</li><li>Process improvements</li><li>Erosion memory usage <strong>(16gb RAM recommended for using erosion)</strong></li></ul><p>Code Modules:</p><ul><li> TopoToolPlugin -- Editor Plugin with Content</li></ul><p>Number of Blueprints: 1</p><p>Number of C&#43;&#43; Classes: 3</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows 64 bit Desktop</p><p>Documentation: Tutorial Video: <a href=\"https://youtu.be/3vN1z32PsgU\" rel=\"nofollow\">https://youtu.be/3vN1z32PsgU</a></p><p>Advanced Options: <a href=\"https://youtu.be/WkcOuoTlpks\" rel=\"nofollow\">https://youtu.be/WkcOuoTlpks </a></p><p>Updated video coming soon</p><p>Notes:</p><p>To begin, right click the TopoWidget and select &#34;Run Editor Utility Widget&#34;.</p><p>This is a tool that is run in the native Unreal environment and does not need to have a game or level active to use.</p><p>Settings and Help provide options for color changing and keyboard shortcuts.</p><p>Generate is the button to bring up the render window to choose where the file is saved.</p><p>Topography can be saved and loaded later, as it utilizes Unreal&#39;s save game functions.</p><p>Thumbnail Photo by <a href=\"https://unsplash.com/&#64;pantiumforce?utm_source&#61;unsplash&amp;utm_medium&#61;referral&amp;utm_content&#61;creditCopyText\" rel=\"nofollow\">Muhammad Haikal Sjukri</a> on <a href=\"https://unsplash.com/s/photos/map?utm_source&#61;unsplash&amp;utm_medium&#61;referral&amp;utm_content&#61;creditCopyText\" rel=\"nofollow\">Unsplash</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WideMapSized-1920x1080-c546b87b121412c52dbb6ab2578983e8.png",
+      "md5": "c546b87b121412c52dbb6ab2578983e8",
+      "width": 1920,
+      "height": 1080,
+      "size": 249676,
+      "uploadedDate": "2019-12-04T02:56:51.551Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/map1Sized-1920x1080-d4a87e6a2f581efc14bab084948cc25d.png",
+      "md5": "d4a87e6a2f581efc14bab084948cc25d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1782658,
+      "uploadedDate": "2019-12-04T02:56:47.296Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/rivers and roadsSized-1920x1080-a3e611a9bb763f029360d756bf4a8a4b.png",
+      "md5": "a3e611a9bb763f029360d756bf4a8a4b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1705135,
+      "uploadedDate": "2019-12-04T02:56:49.024Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/map2Sized-1920x1080-1c0c7c4309bd17cff40614013d1d3a17.png",
+      "md5": "1c0c7c4309bd17cff40614013d1d3a17",
+      "width": 1920,
+      "height": 1080,
+      "size": 1739220,
+      "uploadedDate": "2019-12-04T02:56:47.958Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RunningtheWidgetSized-1920x1080-2fc631f53b95dccb2ae41e01d8fccfea.png",
+      "md5": "2fc631f53b95dccb2ae41e01d8fccfea",
+      "width": 1920,
+      "height": 1080,
+      "size": 997849,
+      "uploadedDate": "2019-12-04T02:56:49.643Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/rendersized-1920x1080-dafdeeb98eef0c6a0262931dae7cba4b.png",
+      "md5": "dafdeeb98eef0c6a0262931dae7cba4b",
+      "width": 1920,
+      "height": 1080,
+      "size": 156109,
+      "uploadedDate": "2019-12-04T02:56:48.544Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ImportSized-1920x1080-3dcd16f0100d4060c985746b50e0c14d.png",
+      "md5": "3dcd16f0100d4060c985746b50e0c14d",
+      "width": 1920,
+      "height": 1080,
+      "size": 942067,
+      "uploadedDate": "2019-12-04T02:56:45.651Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HomePageSized-1920x1080-441808dcebecc7c9ee5298a94cd5ee8f.png",
+      "md5": "441808dcebecc7c9ee5298a94cd5ee8f",
+      "width": 1920,
+      "height": 1080,
+      "size": 122510,
+      "uploadedDate": "2019-12-04T02:56:45.133Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/keyboardshortcutsSized-1920x1080-89480fd3476040ee277435d3d9499dcd.png",
+      "md5": "89480fd3476040ee277435d3d9499dcd",
+      "width": 1920,
+      "height": 1080,
+      "size": 262979,
+      "uploadedDate": "2019-12-04T02:56:46.149Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/settingsSized-1920x1080-990380994d8dfdf4967fd62cb289b41e.png",
+      "md5": "990380994d8dfdf4967fd62cb289b41e",
+      "width": 1920,
+      "height": 1080,
+      "size": 181744,
+      "uploadedDate": "2019-12-04T02:56:50.720Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/loadSized-1920x1080-ac0632d9ea786e960cf211428a682f2d.png",
+      "md5": "ac0632d9ea786e960cf211428a682f2d",
+      "width": 1920,
+      "height": 1080,
+      "size": 132115,
+      "uploadedDate": "2019-12-04T02:56:46.615Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SaveSized-1920x1080-4a2416a762cac7070f1f5ff8e80c9db6.png",
+      "md5": "4a2416a762cac7070f1f5ff8e80c9db6",
+      "width": 1920,
+      "height": 1080,
+      "size": 138706,
+      "uploadedDate": "2019-12-04T02:56:50.249Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HeroMakerLogoSized-1920x1080-67b9f7aaa131fca909f026ccb95f204d.png",
+      "md5": "67b9f7aaa131fca909f026ccb95f204d",
+      "width": 1920,
+      "height": 1080,
+      "size": 652895,
+      "uploadedDate": "2019-12-04T02:56:44.476Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TopographicMap3DTerrainGenerator_thumb-284x284-e652f80e28521d9c2d8eb5304bd065fe.png",
+      "md5": "e652f80e28521d9c2d8eb5304bd065fe",
+      "width": 284,
+      "height": 284,
+      "size": 171548,
+      "uploadedDate": "2019-12-04T02:56:52.028Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TopographicMap3DTerrainGenerator_featured-894x488-7691f1885487d1c24b52582f4e4b9bb6.png",
+      "md5": "7691f1885487d1c24b52582f4e4b9bb6",
+      "width": 894,
+      "height": 488,
+      "size": 83601,
+      "uploadedDate": "2019-12-04T02:56:52.373Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HeroMakerLogoSized-1920x1080-67b9f7aaa131fca909f026ccb95f204d_Snapshot.png",
+      "md5": "5562cceda0d1189608a301f58f55b583",
+      "width": 150,
+      "height": 74,
+      "size": 5207,
+      "uploadedDate": "2019-12-04T02:56:44.897Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HomePageSized-1920x1080-441808dcebecc7c9ee5298a94cd5ee8f_Snapshot.png",
+      "md5": "845894cb1ae82f0f562d47e9bc5d7487",
+      "width": 150,
+      "height": 74,
+      "size": 2544,
+      "uploadedDate": "2019-12-04T02:56:45.434Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ImportSized-1920x1080-3dcd16f0100d4060c985746b50e0c14d_Snapshot.png",
+      "md5": "0de92c3867d81bab8c4c76046fdf9e92",
+      "width": 150,
+      "height": 74,
+      "size": 6226,
+      "uploadedDate": "2019-12-04T02:56:46.009Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/keyboardshortcutsSized-1920x1080-89480fd3476040ee277435d3d9499dcd_Snapshot.png",
+      "md5": "371701b3d865c454b13eee7877accaa6",
+      "width": 150,
+      "height": 74,
+      "size": 3329,
+      "uploadedDate": "2019-12-04T02:56:46.492Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/loadSized-1920x1080-ac0632d9ea786e960cf211428a682f2d_Snapshot.png",
+      "md5": "09577a284eb9ac7ff411cec4cccc1d4d",
+      "width": 150,
+      "height": 74,
+      "size": 2815,
+      "uploadedDate": "2019-12-04T02:56:47.094Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/map1Sized-1920x1080-d4a87e6a2f581efc14bab084948cc25d_Snapshot.png",
+      "md5": "597a144ce4c90ef2e4622b68c00b1687",
+      "width": 150,
+      "height": 74,
+      "size": 4949,
+      "uploadedDate": "2019-12-04T02:56:47.759Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/map2Sized-1920x1080-1c0c7c4309bd17cff40614013d1d3a17_Snapshot.png",
+      "md5": "559656a38bbd8204e73f3fb58b44898d",
+      "width": 150,
+      "height": 74,
+      "size": 5005,
+      "uploadedDate": "2019-12-04T02:56:48.425Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rendersized-1920x1080-dafdeeb98eef0c6a0262931dae7cba4b_Snapshot.png",
+      "md5": "efb7abcc20d7dfd7c8393995d7152a63",
+      "width": 150,
+      "height": 74,
+      "size": 2935,
+      "uploadedDate": "2019-12-04T02:56:48.829Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rivers and roadsSized-1920x1080-a3e611a9bb763f029360d756bf4a8a4b_Snapshot.png",
+      "md5": "343358b52aac698e2b0007a45357ec97",
+      "width": 150,
+      "height": 74,
+      "size": 4986,
+      "uploadedDate": "2019-12-04T02:56:49.459Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RunningtheWidgetSized-1920x1080-2fc631f53b95dccb2ae41e01d8fccfea_Snapshot.png",
+      "md5": "fc3d2bf820e9c8c28ae80f5da92da71a",
+      "width": 150,
+      "height": 74,
+      "size": 5779,
+      "uploadedDate": "2019-12-04T02:56:50.118Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SaveSized-1920x1080-4a2416a762cac7070f1f5ff8e80c9db6_Snapshot.png",
+      "md5": "f97e9d4ce23b76cdc1bf1a4210c74065",
+      "width": 150,
+      "height": 74,
+      "size": 2667,
+      "uploadedDate": "2019-12-04T02:56:50.538Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/settingsSized-1920x1080-990380994d8dfdf4967fd62cb289b41e_Snapshot.png",
+      "md5": "640c35631b9f224d93f57f69e92e159d",
+      "width": 150,
+      "height": 74,
+      "size": 3661,
+      "uploadedDate": "2019-12-04T02:56:51.016Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WideMapSized-1920x1080-c546b87b121412c52dbb6ab2578983e8_Snapshot.png",
+      "md5": "1c56a90f5f3909fe55049af1bb0d6502",
+      "width": 150,
+      "height": 74,
+      "size": 3818,
+      "uploadedDate": "2019-12-04T02:56:51.864Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2019-12-10T22:53:15.146Z",
+  "lastModifiedDate": "2021-09-22T05:22:34.534Z",
+  "entitlementName": "374524ae3a614aef8a2e2f2fa2782108",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "8ab7f18120e24ba5bfdacb04284c970a",
+      "appId": "TopoToolPlugin_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-02-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TopoToolPluginv4_23v4_4"
+    },
+    {
+      "id": "46fe7010c91b461f9ef4ff776046a905",
+      "appId": "TopoToolPlugin_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-12-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TopoToolPluginv4_24v4_4"
+    },
+    {
+      "id": "0c3f22189053431a82f9ef7b71d94dca",
+      "appId": "TopoToolPlugin_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-05-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TopoToolPluginv4_25v4_5"
+    },
+    {
+      "id": "13a1b2ff00b94c7c851fed98b8e59948",
+      "appId": "TopoToolPlugin_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-12-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TopoToolPlugin4_26v4_5"
+    }
+  ],
+  "developer": "HeroMaker LLC",
+  "developerId": "o-l8mkvc5lhcdwsrn5ltg2dtdugk7xww",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,537 @@
+{
+  "id": "66d32007384a45648550d96353360126",
+  "title": "Parametric Rail Modelling Tool (PRMT)",
+  "description": "A flexible tool for creating spline-based objects (e.g. rail track, handrail), props (e.g. chairs, lamp posts, trees) and shapes (e.g. stairs) within minutes using hierarchical instanced static meshes and spline meshes. Works in both editor and runtime.",
+  "longDescription": "<p>*****</p><p><strong>Note to existing PRMT users</strong> - unfortunately I am not currently developing PRMT any more and the product is no longer listed in the marketplace. However, I would be happy to answer any questions  you might have when using/looking to modify the tool for your project. <strong>Please email me instead of posting questions in marketplace</strong> as I am not able to make a reply. </p><p>If you are intending to use PRMT in UE5, please note that it is not fully compatible. I tried to upgrade previously but experienced an issue in packaged build. I have managed to narrow down the issue which seems to be relating to rebuilding the meshes in realtime only (i.e. if you are using the in-game edit UMG/functionalities). Simply using PRMT to populate your scene in editor should be ok. But please make sure to test by building and running the project at earliest possible. </p><p><strong>Thanks for your support on the tool.</strong></p><p>*****</p><p><br /></p><p>PRMT is a highly flexible tool for generating meshes along a spline. A range of objects can be generated using even just simple meshes. The example objects, including a rail track, handrail, staircase, giant keyboard, and lightwire were created in minutes using basic cube, cylinder, sphere only. You can also use this tool to generate more sophisticated objects using your own props and assets. PRMT provides options of using spline meshes and hierarchical instanced static meshes to optimise performance.  </p><p>You can add multiple elements within a single blueprint to generate an object. For example, the rail track example consists of two ‘line elements’ (left rail, right rail) and one ‘point element’ (sleeper). There are multiple parameters you can use to place the meshes the way you needed. </p><p><br /></p><p>Key Features: </p><p>-- Point &amp; Line Elements with Enhanced Spline Offset --</p><p>Two types of elements and multiple placement modes for different situations. PRMT also has an enhanced spline offset solution which can handle offset of spline that contains corner points (i.e. spline that is made of series of linear points) </p><p>-- Edit Spline by Data Table (In-Editor only) --</p><p>If you are creating a spline from another software, you can export the points to a Data Table and PRMT will generate the spline accordingly.  </p><p>-- Runtime Editor --</p><p>PRMT includes a controller blueprint and user widgets to handle the functionalities in runtime which means you can allow users to create/edit the spline and PRMT objects in your packaged project. </p>",
+  "technicalDetails": "<p>See user guides below for full technical details. Note that latest update is for 4.25&#43; only, 4.22-4.24 is still supported but will stay at v2.</p><p>For PRMT v3 (4.25&#43;): <a href=\"https://youtu.be/rMGQADNSgjI\" rel=\"nofollow\">Demo video</a> | <a href=\"https://drive.google.com/file/d/197bkY_m6p4JC9fSQBabzEUKl7re3ryf-/view?usp&#61;sharing\" rel=\"nofollow\">Sample packaged build</a> | <a href=\"https://drive.google.com/file/d/1uqtJXpRpqIBMXpD8FAUpVFvy-L3AHKMm/view?usp&#61;sharing\" rel=\"nofollow\">User guide</a></p><p>For PRMT v2 (4.22 - 4.24): <a href=\"https://youtu.be/_a6uwj4dz1c\" rel=\"nofollow\">Demo video</a> | <a href=\"https://drive.google.com/file/d/1rt6-_SIjOTKSkk5C5VfX_BN3R-6_ab8F/view?usp&#61;sharing\" rel=\"nofollow\">Sample packaged build</a> | <a href=\"https://drive.google.com/file/d/1zMi2LiE27QHVdDYb8e5vsViftwsCs0dp/view?usp&#61;sharing\" rel=\"nofollow\">User guide</a></p><p><br /></p><p>Latest Release (see <a href=\"https://docs.google.com/document/d/15iT2KVoAvPvTFZ4_rM25H9yQbYuz3RayK9COQTBqOpQ/edit?usp&#61;sharing\" rel=\"nofollow\">Changelog</a> for full details and before updating existing project):</p><p>v3.2 (13 Feb 2022) - new features and improvements</p><p><br /></p><p><strong>Number of Blueprints Actors: </strong> 2</p><p><strong>Supported Development Platforms:</strong> Windows</p><p><strong>Supported Target Build Platforms:</strong> Windows</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3-2Gallery01-1920x1080-59b74a99b57d9347bc5cc1186e5ea967.jpg",
+      "md5": "59b74a99b57d9347bc5cc1186e5ea967",
+      "width": 1920,
+      "height": 1080,
+      "size": 493413,
+      "uploadedDate": "2022-02-13T22:43:45.737Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery02-1920x1080-af86d60699d5b8be0b104918af0481da.jpg",
+      "md5": "af86d60699d5b8be0b104918af0481da",
+      "width": 1920,
+      "height": 1080,
+      "size": 265121,
+      "uploadedDate": "2021-02-09T09:34:03.005Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery03-1920x1080-66614b792ad67d40d37a6b7ae9405120.jpg",
+      "md5": "66614b792ad67d40d37a6b7ae9405120",
+      "width": 1920,
+      "height": 1080,
+      "size": 140292,
+      "uploadedDate": "2021-02-09T09:34:03.399Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery04-1920x1080-882d377a3873e6fdd47ec55283e5a4d2.jpg",
+      "md5": "882d377a3873e6fdd47ec55283e5a4d2",
+      "width": 1920,
+      "height": 1080,
+      "size": 151268,
+      "uploadedDate": "2021-03-07T16:41:41.029Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery05-1920x1080-6724376883d8bb83ee7fc3b4d238baed.jpg",
+      "md5": "6724376883d8bb83ee7fc3b4d238baed",
+      "width": 1920,
+      "height": 1080,
+      "size": 179701,
+      "uploadedDate": "2021-02-09T09:34:04.075Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery06-1920x1080-af1625792351fa767fb538f04bdc2367.jpg",
+      "md5": "af1625792351fa767fb538f04bdc2367",
+      "width": 1920,
+      "height": 1080,
+      "size": 247001,
+      "uploadedDate": "2021-02-09T09:34:04.400Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery07-1920x1080-5bf2a6c8d137db4e118b47d83afbb464.jpg",
+      "md5": "5bf2a6c8d137db4e118b47d83afbb464",
+      "width": 1920,
+      "height": 1080,
+      "size": 459479,
+      "uploadedDate": "2021-02-09T09:34:04.773Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3-2Gallery07SnapToFloor-1920x1080-fc059d83330ad8fb0ad65418de3cb652.jpg",
+      "md5": "fc059d83330ad8fb0ad65418de3cb652",
+      "width": 1920,
+      "height": 1080,
+      "size": 528252,
+      "uploadedDate": "2022-02-13T22:43:46.089Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3-2Gallery09-1920x1080-3e94387a6da10a7b20ccbc3d184535a1.jpg",
+      "md5": "3e94387a6da10a7b20ccbc3d184535a1",
+      "width": 1920,
+      "height": 1080,
+      "size": 196502,
+      "uploadedDate": "2022-02-13T22:43:46.438Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery08-1920x1080-6da4ab37f4902a894481ac401baed084.jpg",
+      "md5": "6da4ab37f4902a894481ac401baed084",
+      "width": 1920,
+      "height": 1080,
+      "size": 355268,
+      "uploadedDate": "2021-02-09T09:34:05.127Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery10-1920x1080-e703da6e47ddde5782193ce6272b479f.jpg",
+      "md5": "e703da6e47ddde5782193ce6272b479f",
+      "width": 1920,
+      "height": 1080,
+      "size": 294389,
+      "uploadedDate": "2021-02-09T09:35:51.521Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery11-1920x1080-92d1d1bdf0a2b84c20e571f35aaae85a.jpg",
+      "md5": "92d1d1bdf0a2b84c20e571f35aaae85a",
+      "width": 1920,
+      "height": 1080,
+      "size": 166589,
+      "uploadedDate": "2021-02-09T09:35:51.852Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery12-1920x1080-6b5e8acf053eb811d0d3b467eb1a4ba1.jpg",
+      "md5": "6b5e8acf053eb811d0d3b467eb1a4ba1",
+      "width": 1920,
+      "height": 1080,
+      "size": 156533,
+      "uploadedDate": "2021-02-09T09:35:52.200Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery13-1920x1080-d109df48d76dacafbcc209a3f68f76a4.jpg",
+      "md5": "d109df48d76dacafbcc209a3f68f76a4",
+      "width": 1920,
+      "height": 1080,
+      "size": 159052,
+      "uploadedDate": "2021-02-09T09:35:52.531Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery14-1920x1080-c3c2b40b574d1f32a07d774e725f587f.jpg",
+      "md5": "c3c2b40b574d1f32a07d774e725f587f",
+      "width": 1920,
+      "height": 1080,
+      "size": 176321,
+      "uploadedDate": "2021-02-09T09:35:52.909Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery15-1920x1080-9b64e36e359747a27fcb9241277a14ab.jpg",
+      "md5": "9b64e36e359747a27fcb9241277a14ab",
+      "width": 1920,
+      "height": 1080,
+      "size": 419926,
+      "uploadedDate": "2021-02-09T09:35:53.269Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery16-1920x1080-3bcab06cd216cf2837482751c32597ca.jpg",
+      "md5": "3bcab06cd216cf2837482751c32597ca",
+      "width": 1920,
+      "height": 1080,
+      "size": 154677,
+      "uploadedDate": "2021-02-09T09:35:53.590Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery17-1920x1080-3a9122681150cf3011a95887414f9d8f.jpg",
+      "md5": "3a9122681150cf3011a95887414f9d8f",
+      "width": 1920,
+      "height": 1080,
+      "size": 209720,
+      "uploadedDate": "2021-02-09T09:35:53.932Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PRMTv3Gallery18-1920x1080-1af9343ef941fd7708ba819c4d72a3fa.jpg",
+      "md5": "1af9343ef941fd7708ba819c4d72a3fa",
+      "width": 1920,
+      "height": 1080,
+      "size": 171716,
+      "uploadedDate": "2021-02-09T09:35:54.286Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ParametricRailModellingToolPRMT_thumb-284x284-32ab70a5778408ef35a0624d928b98fa.png",
+      "md5": "32ab70a5778408ef35a0624d928b98fa",
+      "width": 284,
+      "height": 284,
+      "size": 121703,
+      "uploadedDate": "2022-02-13T22:43:46.721Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ParametricRailModellingToolPRMT_featured-894x488-f4ab6887fc82b3a889626bdb012c48a5.png",
+      "md5": "f4ab6887fc82b3a889626bdb012c48a5",
+      "width": 894,
+      "height": 488,
+      "size": 424677,
+      "uploadedDate": "2021-02-09T09:25:47.263Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3-2Gallery01-1920x1080-59b74a99b57d9347bc5cc1186e5ea967_Snapshot.jpg",
+      "md5": "9fab8e2ad218dc5fdb66c4ca14c90b95",
+      "width": 150,
+      "height": 74,
+      "size": 7629,
+      "uploadedDate": "2022-02-13T22:43:45.961Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3-2Gallery07SnapToFloor-1920x1080-fc059d83330ad8fb0ad65418de3cb652_Snapshot.jpg",
+      "md5": "7bea02f9b83a2d69c3601b37c66a15ab",
+      "width": 150,
+      "height": 74,
+      "size": 7543,
+      "uploadedDate": "2022-02-13T22:43:46.330Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3-2Gallery09-1920x1080-3e94387a6da10a7b20ccbc3d184535a1_Snapshot.jpg",
+      "md5": "e7224a71e8c31dacb48883545423302d",
+      "width": 150,
+      "height": 74,
+      "size": 4992,
+      "uploadedDate": "2022-02-13T22:43:46.645Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery04-1920x1080-882d377a3873e6fdd47ec55283e5a4d2_Snapshot.jpg",
+      "md5": "60df8c552bffe4383434bbc3fc61e113",
+      "width": 150,
+      "height": 74,
+      "size": 5131,
+      "uploadedDate": "2021-03-07T16:41:41.239Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery09-1920x1080-7da20d7f061e1a729245e46c0a18a8d5_Snapshot.jpg",
+      "md5": "92d01608bfaf7bc7f864833a2a347649",
+      "width": 150,
+      "height": 74,
+      "size": 5183,
+      "uploadedDate": "2021-02-09T09:35:51.369Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery10-1920x1080-e703da6e47ddde5782193ce6272b479f_Snapshot.jpg",
+      "md5": "e4bec5339bd78266733ffde089bff5a0",
+      "width": 150,
+      "height": 74,
+      "size": 7772,
+      "uploadedDate": "2021-02-09T09:35:51.734Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery11-1920x1080-92d1d1bdf0a2b84c20e571f35aaae85a_Snapshot.jpg",
+      "md5": "09c23e9d5a5531530414417e1fed2442",
+      "width": 150,
+      "height": 74,
+      "size": 5301,
+      "uploadedDate": "2021-02-09T09:35:52.083Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery12-1920x1080-6b5e8acf053eb811d0d3b467eb1a4ba1_Snapshot.jpg",
+      "md5": "f8fe028bde28eb0893966fd2c2295c38",
+      "width": 150,
+      "height": 74,
+      "size": 4841,
+      "uploadedDate": "2021-02-09T09:35:52.423Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery13-1920x1080-d109df48d76dacafbcc209a3f68f76a4_Snapshot.jpg",
+      "md5": "eebda418d080d7b3e92ead07d60e4a87",
+      "width": 150,
+      "height": 74,
+      "size": 4766,
+      "uploadedDate": "2021-02-09T09:35:52.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery14-1920x1080-c3c2b40b574d1f32a07d774e725f587f_Snapshot.jpg",
+      "md5": "7eb0bbe71395d1307379504aaf2c5bb4",
+      "width": 150,
+      "height": 74,
+      "size": 5678,
+      "uploadedDate": "2021-02-09T09:35:53.143Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery15-1920x1080-9b64e36e359747a27fcb9241277a14ab_Snapshot.jpg",
+      "md5": "51fde66824bc266d81a6d90b5624b6da",
+      "width": 150,
+      "height": 74,
+      "size": 6917,
+      "uploadedDate": "2021-02-09T09:35:53.491Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery16-1920x1080-3bcab06cd216cf2837482751c32597ca_Snapshot.jpg",
+      "md5": "0695da9435bda6c1dd2090d68daaa89d",
+      "width": 150,
+      "height": 74,
+      "size": 4781,
+      "uploadedDate": "2021-02-09T09:35:53.797Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery17-1920x1080-3a9122681150cf3011a95887414f9d8f_Snapshot.jpg",
+      "md5": "d2f70a90db6c0731f175461d5a62ff5c",
+      "width": 150,
+      "height": 74,
+      "size": 5522,
+      "uploadedDate": "2021-02-09T09:35:54.182Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery18-1920x1080-1af9343ef941fd7708ba819c4d72a3fa_Snapshot.jpg",
+      "md5": "665b94b310c01d624ea63d897f347832",
+      "width": 150,
+      "height": 74,
+      "size": 4629,
+      "uploadedDate": "2021-02-09T09:35:54.541Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery01-1920x1080-816332f1007017a56eb686e7589689ce_Snapshot.jpg",
+      "md5": "e596cecb8b7690c5a8bb81703d3e77a1",
+      "width": 150,
+      "height": 74,
+      "size": 6474,
+      "uploadedDate": "2021-02-09T09:34:02.882Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery02-1920x1080-af86d60699d5b8be0b104918af0481da_Snapshot.jpg",
+      "md5": "360e0ec9375210623724eaeb3c33888a",
+      "width": 150,
+      "height": 74,
+      "size": 7060,
+      "uploadedDate": "2021-02-09T09:34:03.240Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery03-1920x1080-66614b792ad67d40d37a6b7ae9405120_Snapshot.jpg",
+      "md5": "704dbf6f3adc36889195647a6985402c",
+      "width": 150,
+      "height": 74,
+      "size": 4017,
+      "uploadedDate": "2021-02-09T09:34:03.614Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery04-1920x1080-2ff9bfa0e66a115132cd23f6fff1082b_Snapshot.jpg",
+      "md5": "62bde0210ef67998aaa069f934fdef6e",
+      "width": 150,
+      "height": 74,
+      "size": 5125,
+      "uploadedDate": "2021-02-09T09:34:03.950Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery05-1920x1080-6724376883d8bb83ee7fc3b4d238baed_Snapshot.jpg",
+      "md5": "2c4c9bd11ad054639106df837fee9dc5",
+      "width": 150,
+      "height": 74,
+      "size": 6081,
+      "uploadedDate": "2021-02-09T09:34:04.293Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery06-1920x1080-af1625792351fa767fb538f04bdc2367_Snapshot.jpg",
+      "md5": "55c9db5a5922ecd0f1560b1fb0556e8f",
+      "width": 150,
+      "height": 74,
+      "size": 6177,
+      "uploadedDate": "2021-02-09T09:34:04.619Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery07-1920x1080-5bf2a6c8d137db4e118b47d83afbb464_Snapshot.jpg",
+      "md5": "7bbc0dffa63422706910b26f29c1a3ee",
+      "width": 150,
+      "height": 74,
+      "size": 7424,
+      "uploadedDate": "2021-02-09T09:34:04.996Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery08-1920x1080-6da4ab37f4902a894481ac401baed084_Snapshot.jpg",
+      "md5": "9a1a1437d6767013787b86f4bad98d98",
+      "width": 150,
+      "height": 74,
+      "size": 8228,
+      "uploadedDate": "2021-02-09T09:34:05.391Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTv3Gallery12-1920x1080-6b5e8acf053eb811d0d3b467eb1a4ba1_Snapshot.jpg",
+      "md5": "f8fe028bde28eb0893966fd2c2295c38",
+      "width": 150,
+      "height": 74,
+      "size": 4841,
+      "uploadedDate": "2021-02-09T09:32:58.204Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTGallery01b.PNG-1920x1080-1d79905da8a7b9960b3e2b5c088c37d0_Snapshot.jpg",
+      "md5": "f1cde2e2b068d605e4eb3d584518550c",
+      "width": 150,
+      "height": 74,
+      "size": 7146,
+      "uploadedDate": "2020-10-06T22:36:38.884Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTGallery07-1920x1080-5b9401b7c8eb798f71999ad0f9c3c263_Snapshot.png",
+      "md5": "530d753dd680f0c695229123d475a78b",
+      "width": 150,
+      "height": 74,
+      "size": 6097,
+      "uploadedDate": "2020-10-06T22:36:39.321Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTGallery00-1920x1080-d872f5877cdedc2ad3e68734c7177c10_Snapshot.png",
+      "md5": "729547bd141da3b16bb0bea1ebc62e4f",
+      "width": 150,
+      "height": 74,
+      "size": 5612,
+      "uploadedDate": "2019-06-09T09:59:21.942Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTGallery01-1920x1080-d3ed5f83f2ecff2833a5ab131e2c3240_Snapshot.PNG",
+      "md5": "cbd0a7b4793fe95f33218406cb274634",
+      "width": 150,
+      "height": 74,
+      "size": 5803,
+      "uploadedDate": "2019-06-09T09:59:22.357Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTGallery02-1920x1080-32a14abef46f8c9311fe390489925d4f_Snapshot.png",
+      "md5": "15ebf2a1a1c226b5a2e8b6830f8e3fce",
+      "width": 150,
+      "height": 74,
+      "size": 4355,
+      "uploadedDate": "2019-06-09T09:59:22.791Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTGallery03-1920x1080-47a0486213b62320ab889a8b52acfdb3_Snapshot.png",
+      "md5": "bbfef233bfb38463a17babee4c66cd08",
+      "width": 150,
+      "height": 74,
+      "size": 4427,
+      "uploadedDate": "2019-06-09T09:59:23.229Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTGallery04-1920x1080-a3409b69f335fe5dd3566818d648ece2_Snapshot.png",
+      "md5": "44662856c629bd3282decc7cced10282",
+      "width": 150,
+      "height": 74,
+      "size": 5224,
+      "uploadedDate": "2019-06-09T09:59:23.644Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTGallery05-1920x1080-0e0e6c41db503bcd085e18059497af62_Snapshot.png",
+      "md5": "e64664be7970ec6bffdeedab2dda6ed0",
+      "width": 150,
+      "height": 74,
+      "size": 5178,
+      "uploadedDate": "2019-06-09T09:59:24.059Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PRMTGallery06-1920x1080-dcf5a2183d10d7a3985a851f0e7b88e7_Snapshot.png",
+      "md5": "2c379eba10e110a4c3105642b8df1af0",
+      "width": 150,
+      "height": 74,
+      "size": 4176,
+      "uploadedDate": "2019-06-09T09:59:24.448Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2019-07-01T17:48:34.286Z",
+  "lastModifiedDate": "2022-08-17T11:26:54.899Z",
+  "entitlementName": "66d32007384a45648550d96353360126",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "26437dd5d44842d4a3522ea58078bf01",
+      "appId": "Parametr66d32007384aV1",
+      "compatibleApps": [
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-09-28T00:00:00.000Z",
+      "releaseNote": "Upgrade with additional blueprint (PRMT_Controller) and UMGs for spawning, editing and deleting the PRMT_BP in runtime",
+      "versionTitle": "v02"
+    },
+    {
+      "id": "f6fa5e9ba2fa47838fa60c67d597475e",
+      "appId": "Parametr66d32007384aV2",
+      "compatibleApps": [
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-02-04T00:00:00.000Z",
+      "releaseNote": "v3.2",
+      "versionTitle": "v03b"
+    }
+  ],
+  "developer": "Genkic",
+  "developerId": "o-vut4euz2lbcp3gsjh46gcpjmvm8v6p",
+  "endOfSupport": false,
+  "unsearchable": false
+}

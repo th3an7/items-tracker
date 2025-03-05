@@ -1,0 +1,220 @@
+{
+  "id": "b607192055424902bf21a4bc2f3fc26d",
+  "title": "Influence System Plugin",
+  "description": "Spatial reasoning system utilising a 2D grid to store and query data at both design and runtime",
+  "longDescription": "<p>The Influence System Plugin is a spatial reasoning system, primarily designed for use with AI pawns (Allows for many many other uses), to allow fast queries of both simple and complex information tied to locations in the game world.</p><p> </p><p>Influence can be generated both at design time and runtime to allow both static and dynamic (runtime) information about the game world to be queried.</p><p> </p><p>Queries are customizable in blueprint and fully extendable in c&#43;&#43; to fit the users need of query complexity. Built in queries include filtering by Influence Map, Source and adding weighting of influence maps.</p><p> </p><p>The system comes with runtime features such as:</p><ul><li>an easy to use blueprint interface for generating influence events and querying influence</li><li>a custom EQS test for querying influence using EQS</li><li>a virtual NavigationQueryFilter utilising the underlying Influence Grid to calculate path costs - In other words, the system can influence HOW pawns reach their goal, not just where they decide to go.</li></ul><p> </p><p>Static influence events can be generated at design time using blueprint implementable influence generators and baked into influence maps for runtime querying.</p><p> </p><p>The system is fully extendable in C&#43;&#43; and has blueprint implementations of classes such as Influence Value Calculation which handles calculating values over event lifetimes.</p><p>The plugin is built as a framework and comes with a default implementation of a 2D Grid influence system. The system supports multiple grids in a single level.</p><p> </p><p>The system is multithreaded and very fast.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>2D Grid influence system implementation</li><li>Generation of, shape based, influence events in editor and runtime in C&#43;&#43; and Blueprint</li><li>Filtered Querying of influence data at runtime in C&#43;&#43; and Blueprint</li><li>Serialization of influence data</li><li>Extendable framework in C&#43;&#43;</li><li>Custom influence value calculation in Blueprint</li><li>Parameterized influence queries exposed to Blueprint</li><li>Visual Debugger (visible in screenshots above)</li><li>Custom EQS Test and Navigation Query Filter with parameters exposed to Blueprint</li></ul><p> </p><p>Code Modules: (Please include a full list of each Plugin module and their module type (Runtime, Editor etc.))</p><ul><li>InfluenceSystemPlugin (Runtime Module)</li><li>InfluenceSystemEditor (Editor Module)</li></ul><p><br /></p><p>Number of Blueprints: 1 Blueprint (editor tool), 1 Debug Material &amp; Textures</p><p>Number of C&#43;&#43; Classes: 46 Classes &amp; 43 Structs</p><p>Network Replicated: No, System is server only by design</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: <a href=\"http://www.goatmountaindevelopment.com\" rel=\"nofollow\">www.goatmountaindevelopment.com</a> (Click Documentation)</p><p>Example Project: <a href=\"http://www.goatmountaindevelopment.com\" rel=\"nofollow\">www.goatmountaindevelopment.com</a> (Click Documentation)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/0Screen1-1920x1080-e517851a4fbeb84a1e79ebcb2ddcb8b8.png",
+      "md5": "e517851a4fbeb84a1e79ebcb2ddcb8b8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2549516,
+      "uploadedDate": "2020-09-09T07:07:00.740Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1Screen2-1920x1080-97e2266d6dbae675f800b98c2d4c412c.png",
+      "md5": "97e2266d6dbae675f800b98c2d4c412c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2245916,
+      "uploadedDate": "2020-09-09T07:07:01.367Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2Screen3-1920x1080-e1bdb5c17e3e56065a1032b91fba7309.png",
+      "md5": "e1bdb5c17e3e56065a1032b91fba7309",
+      "width": 1920,
+      "height": 1080,
+      "size": 2975586,
+      "uploadedDate": "2020-09-09T07:07:02.152Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3Screen4-1920x1080-22c6bd8d963498be942007204e89fc8c.png",
+      "md5": "22c6bd8d963498be942007204e89fc8c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2414985,
+      "uploadedDate": "2020-09-09T07:07:02.855Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4BPNodes.PNG-1920x1080-d18640d16c6a962830b49f93b18372ad.jpg",
+      "md5": "d18640d16c6a962830b49f93b18372ad",
+      "width": 1920,
+      "height": 1080,
+      "size": 307215,
+      "uploadedDate": "2020-09-09T07:07:03.462Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5InfluenceBuilder.PNG-1920x1080-e82268bc0691b04646960e130e28a6ab.jpg",
+      "md5": "e82268bc0691b04646960e130e28a6ab",
+      "width": 1920,
+      "height": 1080,
+      "size": 1398364,
+      "uploadedDate": "2020-09-09T07:07:03.924Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6EQS.PNG-1920x1080-ec2335762677b65e4ab9c0c06013045e.jpg",
+      "md5": "ec2335762677b65e4ab9c0c06013045e",
+      "width": 1920,
+      "height": 1080,
+      "size": 147655,
+      "uploadedDate": "2020-09-09T07:07:04.375Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7NavQuery.PNG-1920x1080-f89ecc521fe258f7b80b53fc26e9a755.jpg",
+      "md5": "f89ecc521fe258f7b80b53fc26e9a755",
+      "width": 1920,
+      "height": 1080,
+      "size": 79140,
+      "uploadedDate": "2020-09-09T07:07:04.830Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/InfluenceSystemPlugin_thumb-284x284-79026e4d703338804ca783296b383dfc.png",
+      "md5": "79026e4d703338804ca783296b383dfc",
+      "width": 284,
+      "height": 284,
+      "size": 56232,
+      "uploadedDate": "2020-09-09T07:07:05.121Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/InfluenceSystemPlugin_featured-894x488-40d646343e8869ab17081a51ed90b159.png",
+      "md5": "40d646343e8869ab17081a51ed90b159",
+      "width": 894,
+      "height": 488,
+      "size": 384197,
+      "uploadedDate": "2020-09-09T07:07:05.177Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0Screen1-1920x1080-e517851a4fbeb84a1e79ebcb2ddcb8b8_Snapshot.png",
+      "md5": "82e895d0e293f8f071b3612d311f27c8",
+      "width": 150,
+      "height": 74,
+      "size": 6573,
+      "uploadedDate": "2020-09-09T07:07:01.148Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1Screen2-1920x1080-97e2266d6dbae675f800b98c2d4c412c_Snapshot.png",
+      "md5": "817aa7d72487c54abb1aa1b7ff0be19e",
+      "width": 150,
+      "height": 74,
+      "size": 6352,
+      "uploadedDate": "2020-09-09T07:07:01.781Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2Screen3-1920x1080-e1bdb5c17e3e56065a1032b91fba7309_Snapshot.png",
+      "md5": "08bb3b3f031222e16a18efb817760c27",
+      "width": 150,
+      "height": 74,
+      "size": 7189,
+      "uploadedDate": "2020-09-09T07:07:02.604Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3Screen4-1920x1080-22c6bd8d963498be942007204e89fc8c_Snapshot.png",
+      "md5": "9eb917d983854d668e4f41e411487f83",
+      "width": 150,
+      "height": 74,
+      "size": 5511,
+      "uploadedDate": "2020-09-09T07:07:03.312Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4BPNodes.PNG-1920x1080-d18640d16c6a962830b49f93b18372ad_Snapshot.jpg",
+      "md5": "c35341129e00a236295f771140cb6e2d",
+      "width": 150,
+      "height": 74,
+      "size": 3451,
+      "uploadedDate": "2020-09-09T07:07:03.730Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5InfluenceBuilder.PNG-1920x1080-e82268bc0691b04646960e130e28a6ab_Snapshot.jpg",
+      "md5": "8d36bdd81d44c9fa06dbc5a36df6b006",
+      "width": 150,
+      "height": 74,
+      "size": 5275,
+      "uploadedDate": "2020-09-09T07:07:04.282Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6EQS.PNG-1920x1080-ec2335762677b65e4ab9c0c06013045e_Snapshot.jpg",
+      "md5": "f9b682a039fc4de9f605975c8fd2e05a",
+      "width": 150,
+      "height": 74,
+      "size": 3983,
+      "uploadedDate": "2020-09-09T07:07:04.647Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7NavQuery.PNG-1920x1080-f89ecc521fe258f7b80b53fc26e9a755_Snapshot.jpg",
+      "md5": "aa561e63398a96f089f984a1e98afdb3",
+      "width": 150,
+      "height": 74,
+      "size": 2457,
+      "uploadedDate": "2020-09-09T07:07:05.065Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2020-09-16T05:37:04.389Z",
+  "lastModifiedDate": "2020-12-11T13:59:38.757Z",
+  "entitlementName": "b607192055424902bf21a4bc2f3fc26d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "cb3e493cc1b94360bc74b452173b12f6",
+      "appId": "InfluenceSystemPlugin_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2020-09-10T00:00:00.000Z",
+      "releaseNote": "V1.0.1",
+      "versionTitle": "INF424V101"
+    },
+    {
+      "id": "93460cbeac7745048231e2ca4ce4cb86",
+      "appId": "InfluenceSystemPlugin_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2020-09-10T00:00:00.000Z",
+      "releaseNote": "V1.0.1",
+      "versionTitle": "INF425V101"
+    }
+  ],
+  "developer": "Goat Mountain Development",
+  "developerId": "o-4krndtyc3tqdxgs63medx535d3exvj",
+  "endOfSupport": false,
+  "unsearchable": false
+}

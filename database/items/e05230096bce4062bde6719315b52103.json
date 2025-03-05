@@ -1,0 +1,785 @@
+{
+  "id": "e05230096bce4062bde6719315b52103",
+  "title": "RPG Engine ToolKit",
+  "description": "The RPG Engine Toolkit is a SQLite 3 driven RPG Solution. Uses a Database Manager for creating Classes, Actors, Items, Event flows and more. Paired with a demo project with implemented RPG Elements and a new Action RPG System.",
+  "longDescription": "<p>Playable Demo - <a href=\"https://drive.google.com/file/d/1WpSTN0u9GTqZKnPCwgARwTde-IpXxwHU/view?usp&#61;sharing\" rel=\"nofollow\">New Action RPG Demo HERE</a>- Updated 6/18/2023</p><p>NOTE: Demo will be redone once the toolkit is fully complete for a new optimized level with more Battle Class examples.</p><p><a href=\"https://drive.google.com/file/d/1ABGOEjNR2tx0YGZDfWfF4T43eSoj9qRw/view?usp&#61;sharing\" rel=\"nofollow\">UE4 Side Documentation</a></p><p><a href=\"https://drive.google.com/file/d/1JeuP-lHrkQqDlm2uB9B_XJj-RjmBXfUv/view?usp&#61;sharing\" rel=\"nofollow\">Database Manager Documentation</a></p><p><a href=\"https://www.youtube.com/playlist?list&#61;PLuRYaYx0HZe3Uq3aEzWjWbzA28moTDIXU\" rel=\"nofollow\">RPG Engine Toolkit V4 Video Series</a> &lt;&#61; Please look through this to see how the system operates.</p><p>Facebook Page for Updates and Implementation Help and Quick Responses <a href=\"https://www.facebook.com/12-CatBlack-Studios-152913014823124/?ref&#61;bookmarks\" rel=\"nofollow\">HERE</a></p><p>Comes with the <a href=\"https://bit.ly/2mhHjMZ\" rel=\"nofollow\">Auto Terrain Cover</a> Toolkit contains V4 of the Auto Terrain Cover not yet released.</p><p><br /></p><p>5.3 / 5.4 News 5.3 is submitted but I am learning Design Patterns and wish to redesign my whole toolkit using SOLID principles and the things I&#39;ve learned. I will try to bring the complexity of the system down. I also want to keep the project in the Megs and Not the Gigs. I will keep everything streamed line. Until I get everything implemented and used in my own project I may not update this. I did not want to start a new project as I want all who invested in my project to have full access to the new design. So instead of de-listing this I have gone this route. Thank you for the support over the years as I seek my desire to create my own RPG. </p><p><br /></p><p>This is a tool I have been working on since 2014, every thing I&#39;ve learned about UE4, System Design, and Reverse engineering ideas from beloved RPGs are all concentrated with in this product. I am not an artist but I am a Engineering Lead for a few years at a job where my main position is redesigning systems. I&#39;ve converted and redesigned systems from flash to Unreal Engine and Unity. There are a ton of things I&#39;ve learned over the years about making modular systems. I&#39;ve taken that knowledge to help me improve this system over the years.</p><p><br /></p><p>5.1 Changes:</p><p>·        Removed the old battle circle. Too much overhead.</p><p>·        Calculated battle quadrants will be used instead with a Close/Mid/Ranged length.</p><p>·        Each character class can be configured for a Close/Mid/Ranged battle range for the class.</p><p>·        Rail Grinding states added.</p><p>·        Added UseRootMotion to the class definition for the AI that has root motion animations.</p><p>o  Root motion can be used for jumping as well it assumes that when jumping the player enters fly mode so ZMotion is added to the motion. I have tested Forward/Z motion for root motion jumps and this helps when setting up walking running and in place jump motion. Make sure root motion from everything is enabled for the jump blends to take effect.</p><p>·        Changed the USkeletalMeshComponents and Mesh Components that hold weapons to be dynamic to reduce actor overhead cost.</p><p>·        IFrame, Stagger Frames, Casting frames, Recover frames etc are now defined by animation state data. This allows the AI to look at an attacker or target and see what state they are currently in to help steer battle decisions will add more logic to this later to see how good it can work with difficulty level settings for certain AI Classes.</p><p>·        Moved Battle logic out of Button Mapping function to help eventually remap actions and reconfigure initial action buttons.</p><p>·        Updated how AI party follows you, I think my initial calculations followed pathing segment points incorrectly. For instance if I quickly rounded a small wall the AI tried to walk through the wall, now it will go around to catch up.</p><p>·        Changed how the enemy and AI Party/Enemies react when attacking. The AI should focus and backoff after finishing an attack string to allow room for other AI to enter and to allow room for recovery.</p><p>·        AI Dodging in was adjusted to not be as excessive. Dodge percentage is now configurable by class parameters.</p><p>·        Adjusted the targeting code to make sure the target its going for is prioritized. Target VS revenge targets. No enmity list as of yet.</p><p>·        Fixed issue where the enemy could not find the target and got stuck in states. Cause a little bit by the recover animation and stuck/struck code triggering.</p><p>·        Since Matinee was removed I need to make sure my cutscene workflow is redone and still works with the event system to include dialog during sequences and pausing / skipping still works.</p><p>o  Using The event Manager in Sequencer to fire event flow event back to the event system has been verified. In the store room right before the end of the demo room there is now a old dialog sequence that will play. It also has a Tree Split based on user input to skip to certain parts of the sequence playing as well as activating certain events based on event path.</p><p>·        You can now use Upper body animation and Full body animation by just marking the correct slot for the animation in the animation montage. Update the RPGAnim Blueprint with the proper logic to handle this.</p><p>·        The city test map was lost from corruption when I lost my operation drive. I will remake this later when I remove the Pantheon characters and replace this with characters of my own with better example animations. </p>",
+  "technicalDetails": "<p>RPG Database Manager: C# Application</p><p><br /></p><p>The database manager is used to create Items, Weapon, Armor, Actor definitions. You can also define classes with customizable stat progression. Extended sections of the manager includes defining monster groups, Map listing, as well as defining default settings and initial party makeup.</p><p><br /></p><p>Event flows can also be created and branched for decision making. The modular building allows you to create a building layout in layers and generate them in editor.</p><p><br /></p><p>The RPG Engine Toolkit:</p><p><br /></p><p>Houses the RPG Data Manage the main interface to the database. With this are smart objects for world creation, AI Mob, NPC AI, PC Hero, Character Generator / Randomizer with modular actor data, Battle and Roaming AI, Battle Logic, NPC Crowd Spawner,Monster spawner, Zones Triggers,Treasure Chest,Cut Scene Actors,Hover Board, and Spell Example, NPC Point of interest and many more.</p><p><br /></p><p>Platforms Tested: Windows</p><p><br /></p><p>Updates: Please work on a separate copy of the plugin as updates to the engine can overwrite your engine changes. So please copy the plugin to your local project to keep your engine edits. </p><p><br /></p><p>As always if you are stuck hit me up on my facebook page or via email. Comments on the store do not notify me (They sometimes do now). I&#39;m always online so let me know. Happy developing!</p><p><br /></p><p>Support and updates:</p><p>As I find better and innovative ways to improve the system I will release more updates to this system.</p><p>The system is near complete with all the features I&#39;ve wanted to include as an example. The last few things will be added and implemented as I enter in the final phase of my tech demo for my own game. </p><p><br /></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/kevin-mitchell-highresscreenshot00010-1920x1080-52fa86b09a0ba8ae6879cb0e4d3315e5.jpg",
+      "md5": "52fa86b09a0ba8ae6879cb0e4d3315e5",
+      "width": 1920,
+      "height": 1080,
+      "size": 285785,
+      "uploadedDate": "2022-01-09T01:31:45.469Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/RPGETK_Screenshot_1-1168x793-7b19967cd95bff2477853735cdfedd5c.png",
+      "md5": "7b19967cd95bff2477853735cdfedd5c",
+      "width": 1168,
+      "height": 793,
+      "size": 30970,
+      "uploadedDate": "2016-08-01T14:16:13.422Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4574589220383932862750781272561619682983936o-1920x1080-64dedd4fd8da8f417d16bccd85ac00e4.png",
+      "md5": "64dedd4fd8da8f417d16bccd85ac00e4",
+      "width": 1920,
+      "height": 1080,
+      "size": 252421,
+      "uploadedDate": "2018-11-23T01:36:30.964Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/kevin-mitchell-highresscreenshot00009-1920x1080-b2408523e2ce919234c9bdf9f0b5bd4c.jpg",
+      "md5": "b2408523e2ce919234c9bdf9f0b5bd4c",
+      "width": 1920,
+      "height": 1080,
+      "size": 455709,
+      "uploadedDate": "2022-01-09T01:31:44.575Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/RPGETK_Screenshot_2-1168x793-a6c6754788a6ba0ee9629fc25756f110.png",
+      "md5": "a6c6754788a6ba0ee9629fc25756f110",
+      "width": 1168,
+      "height": 793,
+      "size": 34035,
+      "uploadedDate": "2016-08-01T14:16:10.591Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot10-1920x1080-52b11ee762a4b0e407756dfb36810cf1.jpg",
+      "md5": "52b11ee762a4b0e407756dfb36810cf1",
+      "width": 1920,
+      "height": 1080,
+      "size": 1080736,
+      "uploadedDate": "2022-01-09T01:31:37.649Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/RPGETK_Screenshot_3-1168x793-27d334ac744e13e8a5abbd072d02156a.png",
+      "md5": "27d334ac744e13e8a5abbd072d02156a",
+      "width": 1168,
+      "height": 793,
+      "size": 33167,
+      "uploadedDate": "2016-08-01T14:16:08.829Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot22-1920x1080-42ae6fc6cfffaba587a248de84cad663.jpg",
+      "md5": "42ae6fc6cfffaba587a248de84cad663",
+      "width": 1920,
+      "height": 1080,
+      "size": 1218922,
+      "uploadedDate": "2022-01-09T01:31:35.853Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot18-1920x1080-fb81ac36801840a341794e4efd001db2.jpg",
+      "md5": "fb81ac36801840a341794e4efd001db2",
+      "width": 1920,
+      "height": 1080,
+      "size": 1519108,
+      "uploadedDate": "2022-01-09T01:31:36.336Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/RPGETK_Screenshot_4-1168x793-6add7288bb79c6da9f9acaf3504df469.png",
+      "md5": "6add7288bb79c6da9f9acaf3504df469",
+      "width": 1168,
+      "height": 793,
+      "size": 36684,
+      "uploadedDate": "2016-08-01T14:16:07.146Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot20-1920x1080-ffa1f96bd6810074bfe7dd094aa2631d.jpg",
+      "md5": "ffa1f96bd6810074bfe7dd094aa2631d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1373831,
+      "uploadedDate": "2022-01-09T01:31:36.808Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot16-1920x1080-5cd558466152d21d313d5842d5c674ff.jpg",
+      "md5": "5cd558466152d21d313d5842d5c674ff",
+      "width": 1920,
+      "height": 1080,
+      "size": 1416223,
+      "uploadedDate": "2022-01-09T01:31:37.191Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot12-1920x1080-6cad7b0deaeab536d17e7855d9678c67.jpg",
+      "md5": "6cad7b0deaeab536d17e7855d9678c67",
+      "width": 1920,
+      "height": 1080,
+      "size": 1840618,
+      "uploadedDate": "2022-01-09T01:31:38.079Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot19-1920x1080-958834e6b66f8e23a6fdf3c9652f850d.jpg",
+      "md5": "958834e6b66f8e23a6fdf3c9652f850d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1296408,
+      "uploadedDate": "2022-01-09T01:31:38.597Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot23-1920x1080-8d9c711c4f47e7b5bec56363439ae3ca.jpg",
+      "md5": "8d9c711c4f47e7b5bec56363439ae3ca",
+      "width": 1920,
+      "height": 1080,
+      "size": 1256723,
+      "uploadedDate": "2022-01-09T01:31:39.256Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot8-1920x1080-011bc86be70512dbcd33b9b00b69cd9b.jpg",
+      "md5": "011bc86be70512dbcd33b9b00b69cd9b",
+      "width": 1920,
+      "height": 1080,
+      "size": 789650,
+      "uploadedDate": "2022-01-09T01:31:39.707Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot4-1920x1080-591f732e36b26e5c6f2dddaf83314c5d.jpg",
+      "md5": "591f732e36b26e5c6f2dddaf83314c5d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1150309,
+      "uploadedDate": "2022-01-09T01:31:40.112Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/kevin-mitchell-highresscreenshot00000-1920x1080-1fe7337a9ada1b9d69de9182c11bcfce.jpg",
+      "md5": "1fe7337a9ada1b9d69de9182c11bcfce",
+      "width": 1920,
+      "height": 1080,
+      "size": 261008,
+      "uploadedDate": "2022-01-09T01:31:40.608Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/kevin-mitchell-highresscreenshot00004-1920x1080-f1b6fce223132bcabd033ecf80cb7e65.jpg",
+      "md5": "f1b6fce223132bcabd033ecf80cb7e65",
+      "width": 1920,
+      "height": 1080,
+      "size": 458236,
+      "uploadedDate": "2022-01-09T01:31:41.384Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/kevin-mitchell-highresscreenshot00006-1920x1080-369f16c739da1837c84348915ca7cc03.jpg",
+      "md5": "369f16c739da1837c84348915ca7cc03",
+      "width": 1920,
+      "height": 1080,
+      "size": 393535,
+      "uploadedDate": "2022-01-09T01:31:42.356Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/kevin-mitchell-highresscreenshot00008-1920x1080-84ecf82d4df7a452d44dd8c165bac2a0.jpg",
+      "md5": "84ecf82d4df7a452d44dd8c165bac2a0",
+      "width": 1920,
+      "height": 1080,
+      "size": 400880,
+      "uploadedDate": "2022-01-09T01:31:43.412Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/kevin-mitchell-highresscreenshot00011-1920x1080-6aa7f55f67a3ded6e15c6264ccad94ca.jpg",
+      "md5": "6aa7f55f67a3ded6e15c6264ccad94ca",
+      "width": 1920,
+      "height": 1080,
+      "size": 389679,
+      "uploadedDate": "2022-01-09T01:31:46.229Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RPGEngineToolKit_thumb-284x284-5e9f15f2f6f9674498c6317ea814470a.png",
+      "md5": "5e9f15f2f6f9674498c6317ea814470a",
+      "width": 284,
+      "height": 284,
+      "size": 190016,
+      "uploadedDate": "2022-01-09T01:31:46.921Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RPGEngineToolKit_featured-894x488-17f6bfa589240e9f8476b5c24b7fa727.png",
+      "md5": "17f6bfa589240e9f8476b5c24b7fa727",
+      "width": 894,
+      "height": 488,
+      "size": 857117,
+      "uploadedDate": "2022-01-09T01:31:47.037Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot22-1920x1080-42ae6fc6cfffaba587a248de84cad663_Snapshot.jpg",
+      "md5": "bb0a6165f4a9bad91ed95352c9bc27b3",
+      "width": 150,
+      "height": 74,
+      "size": 7402,
+      "uploadedDate": "2022-01-09T01:31:36.132Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot18-1920x1080-fb81ac36801840a341794e4efd001db2_Snapshot.jpg",
+      "md5": "ce078792771ad3e8b28c102fd03c8693",
+      "width": 150,
+      "height": 74,
+      "size": 7961,
+      "uploadedDate": "2022-01-09T01:31:36.635Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot20-1920x1080-ffa1f96bd6810074bfe7dd094aa2631d_Snapshot.jpg",
+      "md5": "92726aec930699019d0512acd12c6b25",
+      "width": 150,
+      "height": 74,
+      "size": 7212,
+      "uploadedDate": "2022-01-09T01:31:37.077Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot16-1920x1080-5cd558466152d21d313d5842d5c674ff_Snapshot.jpg",
+      "md5": "0c3992a5eaea9c19f0bb802611b65a9f",
+      "width": 150,
+      "height": 74,
+      "size": 7825,
+      "uploadedDate": "2022-01-09T01:31:37.462Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot10-1920x1080-52b11ee762a4b0e407756dfb36810cf1_Snapshot.jpg",
+      "md5": "395a41a56303e576277414831c1c8a17",
+      "width": 150,
+      "height": 74,
+      "size": 7037,
+      "uploadedDate": "2022-01-09T01:31:37.898Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot12-1920x1080-6cad7b0deaeab536d17e7855d9678c67_Snapshot.jpg",
+      "md5": "6fadcc423a03d1006d9d452f8b82ce4a",
+      "width": 150,
+      "height": 74,
+      "size": 9421,
+      "uploadedDate": "2022-01-09T01:31:38.364Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot19-1920x1080-958834e6b66f8e23a6fdf3c9652f850d_Snapshot.jpg",
+      "md5": "6d0f3fceedbf575e15a015ccd7e337c5",
+      "width": 150,
+      "height": 74,
+      "size": 7296,
+      "uploadedDate": "2022-01-09T01:31:39.065Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot23-1920x1080-8d9c711c4f47e7b5bec56363439ae3ca_Snapshot.jpg",
+      "md5": "619aaf6ee046fde77dbb5c08c2b4008e",
+      "width": 150,
+      "height": 74,
+      "size": 7069,
+      "uploadedDate": "2022-01-09T01:31:39.514Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot8-1920x1080-011bc86be70512dbcd33b9b00b69cd9b_Snapshot.jpg",
+      "md5": "0b930ba6552341b097ed26fe3bf39dc6",
+      "width": 150,
+      "height": 74,
+      "size": 5244,
+      "uploadedDate": "2022-01-09T01:31:39.946Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot4-1920x1080-591f732e36b26e5c6f2dddaf83314c5d_Snapshot.jpg",
+      "md5": "c74458d9f14782f1a4a8bbebe71da2f6",
+      "width": 150,
+      "height": 74,
+      "size": 7039,
+      "uploadedDate": "2022-01-09T01:31:40.366Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/kevin-mitchell-highresscreenshot00000-1920x1080-1fe7337a9ada1b9d69de9182c11bcfce_Snapshot.jpg",
+      "md5": "7d7dbd1694df4ec669801f1bf698f158",
+      "width": 150,
+      "height": 74,
+      "size": 4837,
+      "uploadedDate": "2022-01-09T01:31:41.084Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/kevin-mitchell-highresscreenshot00004-1920x1080-f1b6fce223132bcabd033ecf80cb7e65_Snapshot.jpg",
+      "md5": "17f17eee8d28eb498a144d39f2d82857",
+      "width": 150,
+      "height": 74,
+      "size": 7381,
+      "uploadedDate": "2022-01-09T01:31:41.992Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/kevin-mitchell-highresscreenshot00006-1920x1080-369f16c739da1837c84348915ca7cc03_Snapshot.jpg",
+      "md5": "ceff785b4be28c80f8753b973910d967",
+      "width": 150,
+      "height": 74,
+      "size": 6756,
+      "uploadedDate": "2022-01-09T01:31:43.015Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/kevin-mitchell-highresscreenshot00008-1920x1080-84ecf82d4df7a452d44dd8c165bac2a0_Snapshot.jpg",
+      "md5": "4c272f5903948f090cc6b42f4f0a6e6f",
+      "width": 150,
+      "height": 74,
+      "size": 5816,
+      "uploadedDate": "2022-01-09T01:31:44.198Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/kevin-mitchell-highresscreenshot00009-1920x1080-b2408523e2ce919234c9bdf9f0b5bd4c_Snapshot.jpg",
+      "md5": "fc40dfc02f809cf46ec6ba3ad381fe8d",
+      "width": 150,
+      "height": 74,
+      "size": 7789,
+      "uploadedDate": "2022-01-09T01:31:45.229Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/kevin-mitchell-highresscreenshot00010-1920x1080-52fa86b09a0ba8ae6879cb0e4d3315e5_Snapshot.jpg",
+      "md5": "3027ccb5046101037438ab7e4ad485fe",
+      "width": 150,
+      "height": 74,
+      "size": 5288,
+      "uploadedDate": "2022-01-09T01:31:45.937Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/kevin-mitchell-highresscreenshot00011-1920x1080-6aa7f55f67a3ded6e15c6264ccad94ca_Snapshot.jpg",
+      "md5": "3a3465c418262c2f8f6f36ceecfd9b32",
+      "width": 150,
+      "height": 74,
+      "size": 5834,
+      "uploadedDate": "2022-01-09T01:31:46.815Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2-1920x1080-1e9292b5cb4eaa46dac5e887b38a16ec_Snapshot.jpg",
+      "md5": "66ccc30bca3d735be09ad62f15c12e59",
+      "width": 150,
+      "height": 74,
+      "size": 3015,
+      "uploadedDate": "2018-11-23T01:40:05.720Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot3-1920x1080-7352a4386cdae5a9c18521060042ba49_Snapshot.png",
+      "md5": "75ef705d8f7f927c38d69141af538d25",
+      "width": 150,
+      "height": 74,
+      "size": 6822,
+      "uploadedDate": "2018-11-23T01:40:05.933Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4562891520383936329417102245668829474586624o-1920x1080-70b1b41cd80e659d759b48e95c948b29_Snapshot.jpg",
+      "md5": "c9efe6ac4088fa84e6ea71a3933b2c13",
+      "width": 150,
+      "height": 74,
+      "size": 2880,
+      "uploadedDate": "2018-11-23T01:37:31.579Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4563645020383944396082962542628812554764288o-1920x1080-1a1cdabc1f1be52f8a589f99516929ef_Snapshot.jpg",
+      "md5": "bd7acd9ea565787175bcca058075c141",
+      "width": 150,
+      "height": 74,
+      "size": 3062,
+      "uploadedDate": "2018-11-23T01:37:31.935Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4565089020383939462750128032328308039352320o-1920x1080-11ba201d3844d268e23a4bb265f9a789_Snapshot.jpg",
+      "md5": "336cd2e02ca0a02996b6fed99d52dfe0",
+      "width": 150,
+      "height": 74,
+      "size": 2805,
+      "uploadedDate": "2018-11-23T01:37:32.301Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4567127420383938496083558861016503768580096o-1920x1080-63da2112b3beea11827be7b0ec4d78c2_Snapshot.jpg",
+      "md5": "5ebbc6545fdbddd7a291200446aaa719",
+      "width": 150,
+      "height": 74,
+      "size": 2951,
+      "uploadedDate": "2018-11-23T01:37:32.728Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot95-1920x1080-5cde9ba2d44cf94589a717320a5c6a9a_Snapshot.jpg",
+      "md5": "87e318e9a8831eabe72bc6fc1b4d9673",
+      "width": 150,
+      "height": 74,
+      "size": 3630,
+      "uploadedDate": "2018-11-23T01:37:33.081Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4574589220383932862750781272561619682983936o-1920x1080-64dedd4fd8da8f417d16bccd85ac00e4_Snapshot.png",
+      "md5": "d10ae4964b120819266d87397e8f2e01",
+      "width": 150,
+      "height": 74,
+      "size": 4691,
+      "uploadedDate": "2018-11-23T01:36:31.048Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/459019392038393489608391687797441465942016o-1920x1080-f0db4c5ad8aa8e3eb96990191f2b0f1e_Snapshot.png",
+      "md5": "0329e8f4bdef34963fa0b2de4f2c04dc",
+      "width": 150,
+      "height": 74,
+      "size": 4508,
+      "uploadedDate": "2018-11-23T01:36:31.210Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4567127420383938496083558861016503768580096o-1920x1080-d3b1d9f2f0ba24f782e3dd5a73dc0149_Snapshot.png",
+      "md5": "a5526a87b386a950568f3b8dc3f1e7f9",
+      "width": 150,
+      "height": 74,
+      "size": 5436,
+      "uploadedDate": "2018-11-23T01:36:31.427Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4572601420383946029416138383606957260406784o-1920x1080-fcf92739abde512f5be7ba1deb7edd25_Snapshot.png",
+      "md5": "356fc8b56df57beb377aac208724e64c",
+      "width": 150,
+      "height": 74,
+      "size": 6286,
+      "uploadedDate": "2018-11-23T01:36:31.645Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4565089020383939462750128032328308039352320o-1920x1080-47cfefd60a8a2cdebafd4ad3f97ffef4_Snapshot.png",
+      "md5": "ddc7a0263320e6ad386f584073e442bc",
+      "width": 150,
+      "height": 74,
+      "size": 5662,
+      "uploadedDate": "2018-11-23T01:36:33.167Z"
+    },
+    {
+      "type": "NewFeatured",
+      "url": "https://cdn1.epicgames.com/ue/item/RPGETK_FeaturedNew-894x488-afc5a7649a5bf865aefbfac9be5e2b0a.png",
+      "md5": "afc5a7649a5bf865aefbfac9be5e2b0a",
+      "width": 894,
+      "height": 488,
+      "size": 784324,
+      "uploadedDate": "2016-08-01T14:16:16.819Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2016-07-25T20:06:12.810Z",
+  "lastModifiedDate": "2024-10-21T16:06:56.722Z",
+  "customAttributes": {},
+  "entitlementName": "e05230096bce4062bde6719315b52103",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "568a778908da4942a2c82e285251d49f",
+      "appId": "RPGEngineToolKit_4.11",
+      "compatibleApps": [
+        "UE_4.11"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-09-06T00:00:00.000Z",
+      "versionTitle": "RPGEngineToolKit 411"
+    },
+    {
+      "id": "9faa5d37a93e40eaadcdd6bb994fc597",
+      "appId": "RPGEngineToolKit_4.12",
+      "compatibleApps": [
+        "UE_4.12"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-09-06T00:00:00.000Z",
+      "versionTitle": "RPGEngineToolKit 412"
+    },
+    {
+      "id": "8d48a260579a43038592a20df51dbf26",
+      "appId": "RPGEngineToolKit_4.13",
+      "compatibleApps": [
+        "UE_4.13"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-09-06T00:00:00.000Z",
+      "versionTitle": "RPGEngineToolKit 413"
+    },
+    {
+      "id": "c04c88ee66c64d9fa66da060e182ac0f",
+      "appId": "RPGEngineToolKit_4.14",
+      "compatibleApps": [
+        "UE_4.14"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-09-06T00:00:00.000Z",
+      "versionTitle": "RPGEngineToolKit 414"
+    },
+    {
+      "id": "43f082c07b5446e284a6a8144dfebf35",
+      "appId": "RPGEngineToolKit_4.15",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-09-06T00:00:00.000Z",
+      "versionTitle": "RPGEngineToolKit 415"
+    },
+    {
+      "id": "094792c2bce54de9a888f9625d505454",
+      "appId": "RPGEngineToolKit_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-09-06T00:00:00.000Z",
+      "versionTitle": "RPGEngineToolKit 416"
+    },
+    {
+      "id": "6fb5c4530b724a3a929aa6f5d7c26ff1",
+      "appId": "RPGEngineToolKit_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-09-19T00:00:00.000Z",
+      "releaseNote": "Can you push this update i fixed the issue that removed my extra folders by adding back my filter.ini for the extra folder. ",
+      "versionTitle": "RPGEngineToolKit_4.17"
+    },
+    {
+      "id": "5df571345bd34191830035acb88e8ba5",
+      "appId": "RPGEngineToolKit_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-11-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RPGEngineToolkit 4.18"
+    },
+    {
+      "id": "3867a9f00b84460aaeda3b8a1ed91784",
+      "appId": "RPGEngineToolKit_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-03-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RPGEngineToolkit 4.19"
+    },
+    {
+      "id": "acefa01ad7244bf49051fd3538691d1f",
+      "appId": "RPGEngineToolKit_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-07-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RPGEngineToolKit 4.20"
+    },
+    {
+      "id": "5cca903a522e4d25a3ea5c118a16fa2a",
+      "appId": "RPGEngineToolKit_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-11-22T00:00:00.000Z",
+      "releaseNote": "Filter ini was reset and removed the extra data files ",
+      "versionTitle": "RPGEngineToolKit V4.0 421"
+    },
+    {
+      "id": "12d2f50798d642219866c1e1e9280824",
+      "appId": "RPGEngineToolKit_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-04-26T00:00:00.000Z",
+      "releaseNote": "Update to fix AI Mob create list. ",
+      "versionTitle": "RPGEngineToolKit 422"
+    },
+    {
+      "id": "0e77d025cd37442b8bd5f6c3644b699b",
+      "appId": "RPGEngineToolKit_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-09-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RPGEngineToolKit 423"
+    },
+    {
+      "id": "0caac62470b64c369a72c56bb37c1d67",
+      "appId": "RPGEngineToolKit_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-12-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RPGEngineToolKit 424"
+    },
+    {
+      "id": "42b3a1581a1543748d7067de03ab1238",
+      "appId": "RPGEngineToolKit_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-05-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RPGEngineToolKit 425"
+    },
+    {
+      "id": "cdd276829478424bbda0a464e06328fa",
+      "appId": "RPGEngineToolKit_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-12-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RPGEngineToolKit 426"
+    },
+    {
+      "id": "4baf270ba19e4b94a73c88f69b962903",
+      "appId": "RPGEngineToolKit_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-01-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RPGEngineToolKit 427"
+    },
+    {
+      "id": "697c92194b4f471a8406534ad064d75c",
+      "appId": "RPGEngineToolKit_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RPGEngineToolKit 500"
+    },
+    {
+      "id": "480dc4f7adc4414e81270384f9294ac3",
+      "appId": "RPGEngineToolKit_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-04-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RPGEngineToolKit 51"
+    },
+    {
+      "id": "342e61a52cff477fbe58bebb24792dd7",
+      "appId": "RPGEngineToolKit_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-06-17T00:00:00.000Z",
+      "releaseNote": "Found that FSkeletalMaterial can only be used with a different header vs what is in the documentation. ",
+      "versionTitle": "RPGEngineToolKit 52"
+    },
+    {
+      "id": "5a831700bab94c13a18b44b8e9191357",
+      "appId": "RPGEngineToolKit_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-03-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RPGEngineToolKit 53"
+    }
+  ],
+  "developer": "Kevin Mitchell",
+  "developerId": "o-b6b4a61f51422aaf251669b7f709ff",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

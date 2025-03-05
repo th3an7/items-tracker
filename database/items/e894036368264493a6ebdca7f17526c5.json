@@ -1,0 +1,581 @@
+{
+  "id": "e894036368264493a6ebdca7f17526c5",
+  "title": "Accretion Disk",
+  "description": "Volumetric shaders imitating such astrophysical structures and phenomena as accretion disks, jets and supernovae through which you can fly or orbit around them, are the core of this project.",
+  "longDescription": "<p>The main volumetric shaders are implemented as <a href=\"https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/PostProcessEffects/PostProcessMaterials/\" rel=\"nofollow\">Post Process Materials</a> that blend well with opaque objects in a scene, but objects with translucent materials require special care, because the correctness of the final image depends on relative positions of volumetric shapes and translucent objects. In this project, the main post process materials are rendered before translucency and thus should be farther from the camera than translucent objects (see <a href=\"https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/PostProcessEffects/PostProcessMaterials/\" rel=\"nofollow\">Blendable Location</a> if you want to change this rendering order).</p><p><br /></p><p><a href=\"https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/Materials/Functions/\" rel=\"nofollow\">Material Functions</a> are integral to this project as they are building blocks of most materials thereby providing modularity and great possibilities for customization. The purpose of some of them is specific to this project, while others are of a general purpose and can be useful in any work.</p><p><br /></p><p>Another essential part is the special blueprints intended to facilitate the setting of certain parameters of the volumetric materials and adding these materials to the scene. Also you can find auxiliary blueprints that were used to make the demo level more interactive and entertaining.</p><p><br /></p><p>Textures used in the volumetric materials are generated procedurally. This project includes all the materials and blueprints needed to create such textures.</p><p><br /></p><p>Performance impact and visual quality can vary greatly depending on the material complexity and the number of samples. Moreover, the image quality depends on the distance that the camera rays travel within the volume, and therefore the quality can change noticeably depending on the position of the camera and the angle of view. <strong>Additionally, setting the <em>Default RHI</em> to <em>DirectX 12</em> may significantly reduce performance when rendering volumetric materials</strong>. Please, try the <a href=\"https://drive.google.com/file/d/1IHZGTellXPX0ItQPMaaAhojzl3CbCvgA/view?usp&#61;sharing\" rel=\"nofollow\">demo</a> first to assess the balance between performance impact and visual quality and decide if this suits your needs (in the demo level press <em>Ctrl &#43; Num 1</em> to toggle the <em>FPS counter</em> and then try different visual settings which can be accessed by pressing the <em>M</em> key).</p><p><br /></p><p>Please note that there is some trade-off in functionality between UE versions 5.0 and 5.1-5.4 (see technical details below).</p><p><br /></p><ul><li><a href=\"https://drive.google.com/drive/folders/1inTRuuwX0QEUIOICQYhyf-WEmvM35vkZ?usp&#61;sharing\" rel=\"nofollow\">Demo and Screenshots</a></li><li><a href=\"https://youtu.be/OhBoZhMCImY\" rel=\"nofollow\">Material Customization</a></li><li><a href=\"https://youtu.be/18SEx_R94IA\" rel=\"nofollow\">Presentation Video</a></li><li><a href=\"https://youtu.be/HvMIBIOnZCo\" rel=\"nofollow\">Sky Overlay Video (UE 5.0)</a></li><li><a href=\"https://www.artstation.com/artwork/KOxvbx\" rel=\"nofollow\">Sky Overlay Screenshots (UE 5.0)</a></li><li><a href=\"https://youtu.be/RA38booZFTo\" rel=\"nofollow\">Flying Through Disks</a></li><li><a href=\"https://youtu.be/OKWWfSyzSRU\" rel=\"nofollow\">Stellar Effects</a></li><li><a href=\"https://youtu.be/ucVX0n76MUk\" rel=\"nofollow\">Exploring the Planetarium</a></li></ul><p><br /></p><p>Forum threads:</p><ul><li><a href=\"https://forums.unrealengine.com/t/ue5-double-precision-vector-parameter-in-post-process-materials/676001\" rel=\"nofollow\">UE 5.0 : the issue with LWC in post process materials</a></li><li><a href=\"https://forums.unrealengine.com/t/ue5-add-force-issue/529446\" rel=\"nofollow\">UE 5.0 : the issue with small accelerations</a></li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li> the main volumetric shaders are implemented as post process materials</li><li>textures used in the volumetric materials are generated procedurally</li></ul><p>Number of Main Volumetric Materials: 7</p><p>Number of Main Volumetric Material Instances: 10</p><p>Number of Unique Materials (including architectural): 39</p><p>Number of Textures 2D: 8</p><p>Number of Textures 3D: 3</p><p>Texture Resolutions: from 512 to 4096x2048</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: No</p><p>Documentation: <a href=\"https://drive.google.com/drive/folders/1UoMtcu5nohu6OMTe84CZrL4nxiit3xuj?usp&#61;sharing\" rel=\"nofollow\">Project Description</a></p><p><br /></p><p><strong>Important Notes</strong>: </p><ul><li>To correctly render the brightness of the post process materials in UE versions prior to 5, it might be necessary to disable <a href=\"https://redirect.epicgames.com/?redirectTo&#61;https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/PostProcessEffects/AutomaticExposure/#pre-exposure\" rel=\"nofollow\">Pre-Exposure</a> in the project settings;</li><li>Materials not tested with Hardware Ray Tracing;</li><li>In UE 5.0, the old Screen Space Reflection effect is blended quite well with the reflections captured by the Sky Light, as you can see in the Sky Overlay video and screenshots. In UE 5.1, the Sky Light reflections require enabling Lumen reflections which have certain distance limitations. On the other hand, in UE 5.1, the issue with LWC in post process materials and the issue with small accelerations were fixed (see links to related forum threads in the description above). </li><li><strong>Activating SM6 may significantly reduce performance</strong>.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk097-1920x1080-04e900b4a5e03d5fc8d4de7b63dcd455.jpg",
+      "md5": "04e900b4a5e03d5fc8d4de7b63dcd455",
+      "width": 1920,
+      "height": 1080,
+      "size": 250456,
+      "uploadedDate": "2021-12-01T20:28:21.219Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk098-1920x1080-711b12e883581b14335ddcf177399c39.jpg",
+      "md5": "711b12e883581b14335ddcf177399c39",
+      "width": 1920,
+      "height": 1080,
+      "size": 266690,
+      "uploadedDate": "2021-12-01T20:28:22.010Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk099-1920x1080-1b2034797b6b3c1009bdae494a0cb9d5.jpg",
+      "md5": "1b2034797b6b3c1009bdae494a0cb9d5",
+      "width": 1920,
+      "height": 1080,
+      "size": 251302,
+      "uploadedDate": "2021-12-01T20:28:23.178Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk100-1920x1080-dad33b274c609fb0c496c8fb7cb03f0b.jpg",
+      "md5": "dad33b274c609fb0c496c8fb7cb03f0b",
+      "width": 1920,
+      "height": 1080,
+      "size": 232928,
+      "uploadedDate": "2021-12-01T20:28:23.970Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk101-1920x1080-ffdc33746202d5630db1728e1e27d5fd.jpg",
+      "md5": "ffdc33746202d5630db1728e1e27d5fd",
+      "width": 1920,
+      "height": 1080,
+      "size": 194678,
+      "uploadedDate": "2021-12-01T20:28:24.768Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk052-1920x1080-e68c01d18330963220727e0775fd71fd.jpg",
+      "md5": "e68c01d18330963220727e0775fd71fd",
+      "width": 1920,
+      "height": 1080,
+      "size": 224902,
+      "uploadedDate": "2021-12-01T20:28:26.484Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk103-1920x1080-1f0caed696099e4926db27d0337d5e8c.jpg",
+      "md5": "1f0caed696099e4926db27d0337d5e8c",
+      "width": 1920,
+      "height": 1080,
+      "size": 192470,
+      "uploadedDate": "2021-12-01T20:28:27.367Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk108-1920x1080-845fce0b29730c63e285de9ce8536b4d.jpg",
+      "md5": "845fce0b29730c63e285de9ce8536b4d",
+      "width": 1920,
+      "height": 1080,
+      "size": 179782,
+      "uploadedDate": "2021-12-01T20:28:28.170Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk104-1920x1080-3db86f434353a2f231b4ec28e00bd4a7.jpg",
+      "md5": "3db86f434353a2f231b4ec28e00bd4a7",
+      "width": 1920,
+      "height": 1080,
+      "size": 176660,
+      "uploadedDate": "2021-12-01T20:28:29.119Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk111-1920x1080-87da31b1130ffa9f92ce8aef9e4f4d23.jpg",
+      "md5": "87da31b1130ffa9f92ce8aef9e4f4d23",
+      "width": 1920,
+      "height": 1080,
+      "size": 278003,
+      "uploadedDate": "2021-12-01T20:28:29.999Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk112-1920x1080-3b140c4b994b269437547a15c3dc82e2.jpg",
+      "md5": "3b140c4b994b269437547a15c3dc82e2",
+      "width": 1920,
+      "height": 1080,
+      "size": 273677,
+      "uploadedDate": "2021-12-01T20:28:30.870Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk113-1920x1080-749cb6b8fe3c47c915cc73fb0d0b1e25.jpg",
+      "md5": "749cb6b8fe3c47c915cc73fb0d0b1e25",
+      "width": 1920,
+      "height": 1080,
+      "size": 289504,
+      "uploadedDate": "2021-12-01T20:28:31.740Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk114-1920x1080-2d88a4b0a12c71bf00dd6cac1a996810.jpg",
+      "md5": "2d88a4b0a12c71bf00dd6cac1a996810",
+      "width": 1920,
+      "height": 1080,
+      "size": 413536,
+      "uploadedDate": "2021-12-01T20:28:32.610Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk051-1920x1080-fa0e0af24459bc94a552df0b5c306ebc.jpg",
+      "md5": "fa0e0af24459bc94a552df0b5c306ebc",
+      "width": 1920,
+      "height": 1080,
+      "size": 265088,
+      "uploadedDate": "2021-12-01T20:28:33.481Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk116-1920x1080-eccc485c61eef26fa9f16ecee68c2c1a.jpg",
+      "md5": "eccc485c61eef26fa9f16ecee68c2c1a",
+      "width": 1920,
+      "height": 1080,
+      "size": 415108,
+      "uploadedDate": "2021-12-01T20:28:34.364Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk123-1920x1080-30ae63932fe73da99fc8bf6e9365f791.jpg",
+      "md5": "30ae63932fe73da99fc8bf6e9365f791",
+      "width": 1920,
+      "height": 1080,
+      "size": 260725,
+      "uploadedDate": "2021-12-01T20:28:35.240Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk124-1920x1080-c4723f04465adb92a998bc7ea3c5924a.jpg",
+      "md5": "c4723f04465adb92a998bc7ea3c5924a",
+      "width": 1920,
+      "height": 1080,
+      "size": 195912,
+      "uploadedDate": "2021-12-01T20:28:36.040Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk077-1920x1080-c1d97b2087dbb03d0f2010d08e453b07.jpg",
+      "md5": "c1d97b2087dbb03d0f2010d08e453b07",
+      "width": 1920,
+      "height": 1080,
+      "size": 450382,
+      "uploadedDate": "2021-12-01T20:28:36.857Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk036-1920x1080-605f3b8272b6cf4fec590299ad243698.jpg",
+      "md5": "605f3b8272b6cf4fec590299ad243698",
+      "width": 1920,
+      "height": 1080,
+      "size": 289300,
+      "uploadedDate": "2021-12-01T20:28:37.700Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk160-1920x1080-d2eaa7253d95727aa8ec83e76e9bfe2d.jpg",
+      "md5": "d2eaa7253d95727aa8ec83e76e9bfe2d",
+      "width": 1920,
+      "height": 1080,
+      "size": 329166,
+      "uploadedDate": "2021-12-01T20:28:41.200Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDiskSkyOverlayUE500005-1920x1080-6ebfc304aee5564314b572eb4a230234.jpg",
+      "md5": "6ebfc304aee5564314b572eb4a230234",
+      "width": 1920,
+      "height": 1080,
+      "size": 1001484,
+      "uploadedDate": "2022-12-13T16:44:39.785Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDiskSkyOverlayUE500003-1920x1080-9dea35c4dc998521c1be751fd532732a.jpg",
+      "md5": "9dea35c4dc998521c1be751fd532732a",
+      "width": 1920,
+      "height": 1080,
+      "size": 639351,
+      "uploadedDate": "2022-12-13T16:44:40.212Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDiskSkyOverlayUE500028-1920x1080-4f523370d4b21267a73e57fc8867258a.jpg",
+      "md5": "4f523370d4b21267a73e57fc8867258a",
+      "width": 1920,
+      "height": 1080,
+      "size": 775454,
+      "uploadedDate": "2022-12-13T16:44:40.694Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDiskSkyOverlayUE500029-1920x1080-0bc6c06ad475c487c3cff0de5ca20aa7.jpg",
+      "md5": "0bc6c06ad475c487c3cff0de5ca20aa7",
+      "width": 1920,
+      "height": 1080,
+      "size": 899001,
+      "uploadedDate": "2022-12-13T16:44:41.180Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AccretionDisk149-1920x1080-3d485f1ba004e1d90cbde8970e9f6487.jpg",
+      "md5": "3d485f1ba004e1d90cbde8970e9f6487",
+      "width": 1920,
+      "height": 1080,
+      "size": 292633,
+      "uploadedDate": "2021-12-01T20:28:42.012Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AccretionDisk_thumb-284x284-5b8b97cd5a08f5c3b5be647f39fe7172.png",
+      "md5": "5b8b97cd5a08f5c3b5be647f39fe7172",
+      "width": 284,
+      "height": 284,
+      "size": 110053,
+      "uploadedDate": "2021-12-01T20:28:42.591Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AccretionDisk_featured-894x488-497b561f91fd854e5c8289aec9bed2e8.png",
+      "md5": "497b561f91fd854e5c8289aec9bed2e8",
+      "width": 894,
+      "height": 488,
+      "size": 579987,
+      "uploadedDate": "2021-12-01T20:28:42.721Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDiskSkyOverlayUE500005-1920x1080-6ebfc304aee5564314b572eb4a230234_Snapshot.jpg",
+      "md5": "d29c0aa1b5936088fd7cd8a848883dd6",
+      "width": 150,
+      "height": 74,
+      "size": 5029,
+      "uploadedDate": "2022-12-13T16:44:40.049Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDiskSkyOverlayUE500003-1920x1080-9dea35c4dc998521c1be751fd532732a_Snapshot.jpg",
+      "md5": "02bd956ff9858b45f4125e48d61e40c2",
+      "width": 150,
+      "height": 74,
+      "size": 4258,
+      "uploadedDate": "2022-12-13T16:44:40.517Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDiskSkyOverlayUE500028-1920x1080-4f523370d4b21267a73e57fc8867258a_Snapshot.jpg",
+      "md5": "b68dbb3cbf9d255f74d0131c308c274d",
+      "width": 150,
+      "height": 74,
+      "size": 4674,
+      "uploadedDate": "2022-12-13T16:44:40.958Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDiskSkyOverlayUE500029-1920x1080-0bc6c06ad475c487c3cff0de5ca20aa7_Snapshot.jpg",
+      "md5": "002f3c71c987f64d477b57d384910456",
+      "width": 150,
+      "height": 74,
+      "size": 4409,
+      "uploadedDate": "2022-12-13T16:44:41.479Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk097-1920x1080-04e900b4a5e03d5fc8d4de7b63dcd455_Snapshot.jpg",
+      "md5": "4e1dc3cb3a730cf0b6216d06e3c6ffd5",
+      "width": 150,
+      "height": 74,
+      "size": 3380,
+      "uploadedDate": "2021-12-01T20:28:21.754Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk098-1920x1080-711b12e883581b14335ddcf177399c39_Snapshot.jpg",
+      "md5": "7d483e909b5508d44b234a56f583325f",
+      "width": 150,
+      "height": 74,
+      "size": 3529,
+      "uploadedDate": "2021-12-01T20:28:22.885Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk099-1920x1080-1b2034797b6b3c1009bdae494a0cb9d5_Snapshot.jpg",
+      "md5": "bb5a21868e03da34e686a6260023ab60",
+      "width": 150,
+      "height": 74,
+      "size": 3476,
+      "uploadedDate": "2021-12-01T20:28:23.729Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk100-1920x1080-dad33b274c609fb0c496c8fb7cb03f0b_Snapshot.jpg",
+      "md5": "9ffbd4c48186f7a9adec33c20d0f73cd",
+      "width": 150,
+      "height": 74,
+      "size": 3727,
+      "uploadedDate": "2021-12-01T20:28:24.499Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk101-1920x1080-ffdc33746202d5630db1728e1e27d5fd_Snapshot.jpg",
+      "md5": "3adca239a94503a580b7c6fd486ac46f",
+      "width": 150,
+      "height": 74,
+      "size": 2788,
+      "uploadedDate": "2021-12-01T20:28:25.299Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk102-1920x1080-15d12c002f9e42f4f1f28adbbcd21070_Snapshot.jpg",
+      "md5": "dc89251286bf4ad4e76eb7c1f576b7a5",
+      "width": 150,
+      "height": 74,
+      "size": 3430,
+      "uploadedDate": "2021-12-01T20:28:26.184Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk052-1920x1080-e68c01d18330963220727e0775fd71fd_Snapshot.jpg",
+      "md5": "8843887138f8866d101dfc4d79f1a34e",
+      "width": 150,
+      "height": 74,
+      "size": 3616,
+      "uploadedDate": "2021-12-01T20:28:27.042Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk103-1920x1080-1f0caed696099e4926db27d0337d5e8c_Snapshot.jpg",
+      "md5": "c3750b2983c84d509e55269d5ff5955a",
+      "width": 150,
+      "height": 74,
+      "size": 2585,
+      "uploadedDate": "2021-12-01T20:28:27.883Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk108-1920x1080-845fce0b29730c63e285de9ce8536b4d_Snapshot.jpg",
+      "md5": "0b3f2e6e86d44aaf7f90c978432261e3",
+      "width": 150,
+      "height": 74,
+      "size": 3468,
+      "uploadedDate": "2021-12-01T20:28:28.690Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk104-1920x1080-3db86f434353a2f231b4ec28e00bd4a7_Snapshot.jpg",
+      "md5": "4a084a821bae3e40ca160cde31072771",
+      "width": 150,
+      "height": 74,
+      "size": 3311,
+      "uploadedDate": "2021-12-01T20:28:29.721Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk111-1920x1080-87da31b1130ffa9f92ce8aef9e4f4d23_Snapshot.jpg",
+      "md5": "a0b6ec449999e740e06133d9fec9de58",
+      "width": 150,
+      "height": 74,
+      "size": 4072,
+      "uploadedDate": "2021-12-01T20:28:30.566Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk112-1920x1080-3b140c4b994b269437547a15c3dc82e2_Snapshot.jpg",
+      "md5": "59c6833e2633edaf231add0204b63049",
+      "width": 150,
+      "height": 74,
+      "size": 3729,
+      "uploadedDate": "2021-12-01T20:28:31.408Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk113-1920x1080-749cb6b8fe3c47c915cc73fb0d0b1e25_Snapshot.jpg",
+      "md5": "632ef58bdd68801787009f00af1a870f",
+      "width": 150,
+      "height": 74,
+      "size": 3760,
+      "uploadedDate": "2021-12-01T20:28:32.289Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk114-1920x1080-2d88a4b0a12c71bf00dd6cac1a996810_Snapshot.jpg",
+      "md5": "519b9ad3f3d0a8fa13ec69bd09b79535",
+      "width": 150,
+      "height": 74,
+      "size": 5282,
+      "uploadedDate": "2021-12-01T20:28:33.196Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk051-1920x1080-fa0e0af24459bc94a552df0b5c306ebc_Snapshot.jpg",
+      "md5": "9849bb923b6b5dd029f85530516598b9",
+      "width": 150,
+      "height": 74,
+      "size": 4028,
+      "uploadedDate": "2021-12-01T20:28:34.026Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk116-1920x1080-eccc485c61eef26fa9f16ecee68c2c1a_Snapshot.jpg",
+      "md5": "c592d6f3c877b6d99b25d4be23d2cba0",
+      "width": 150,
+      "height": 74,
+      "size": 3951,
+      "uploadedDate": "2021-12-01T20:28:34.929Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk123-1920x1080-30ae63932fe73da99fc8bf6e9365f791_Snapshot.jpg",
+      "md5": "78615da76a2bcd630def72632724460d",
+      "width": 150,
+      "height": 74,
+      "size": 3010,
+      "uploadedDate": "2021-12-01T20:28:35.776Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk124-1920x1080-c4723f04465adb92a998bc7ea3c5924a_Snapshot.jpg",
+      "md5": "bbda04a02a6fe40d3d85e907a2c2eade",
+      "width": 150,
+      "height": 74,
+      "size": 2995,
+      "uploadedDate": "2021-12-01T20:28:36.570Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk077-1920x1080-c1d97b2087dbb03d0f2010d08e453b07_Snapshot.jpg",
+      "md5": "5375fd270af5550181830ba18e927899",
+      "width": 150,
+      "height": 74,
+      "size": 5707,
+      "uploadedDate": "2021-12-01T20:28:37.409Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk036-1920x1080-605f3b8272b6cf4fec590299ad243698_Snapshot.jpg",
+      "md5": "bd1f71989d7e12bf4805efd3ede0f6e8",
+      "width": 150,
+      "height": 74,
+      "size": 4541,
+      "uploadedDate": "2021-12-01T20:28:38.257Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk092-1920x1080-d4304f1630fe7cdcdc374a8e0f4623f2_Snapshot.jpg",
+      "md5": "eb3d6c0cc92983f42816a9ad2b2478dc",
+      "width": 150,
+      "height": 74,
+      "size": 6528,
+      "uploadedDate": "2021-12-01T20:28:39.105Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk155-1920x1080-4ccaf055779d84f84db4282c91539e7e_Snapshot.jpg",
+      "md5": "28705a08d294c5c0c0092efc367e7d68",
+      "width": 150,
+      "height": 74,
+      "size": 6718,
+      "uploadedDate": "2021-12-01T20:28:40.007Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk151-1920x1080-00ff26b00e8c25aa82ae3ad5db927404_Snapshot.jpg",
+      "md5": "5c399c456a73e8431c5b879f0af3827a",
+      "width": 150,
+      "height": 74,
+      "size": 4867,
+      "uploadedDate": "2021-12-01T20:28:40.887Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk160-1920x1080-d2eaa7253d95727aa8ec83e76e9bfe2d_Snapshot.jpg",
+      "md5": "16a540726c38d2cb216bfeabfb7ea42a",
+      "width": 150,
+      "height": 74,
+      "size": 4985,
+      "uploadedDate": "2021-12-01T20:28:41.744Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AccretionDisk149-1920x1080-3d485f1ba004e1d90cbde8970e9f6487_Snapshot.jpg",
+      "md5": "7e7116aa821a808c8eaaf2690ff0b08a",
+      "width": 150,
+      "height": 74,
+      "size": 5443,
+      "uploadedDate": "2021-12-01T20:28:42.546Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-12-03T19:47:39.659Z",
+  "lastModifiedDate": "2024-09-22T17:30:49.487Z",
+  "customAttributes": {},
+  "entitlementName": "e894036368264493a6ebdca7f17526c5",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "a199aba3c683410797710e0fa2cf399f",
+      "appId": "Accretioe89403636826V1",
+      "compatibleApps": [
+        "UE_4.22",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-12-02T00:00:00.000Z",
+      "releaseNote": "+ Volwizard Physical Scale, accelerometer",
+      "versionTitle": "Accretion Disk 05"
+    },
+    {
+      "id": "40d13e7f22cc43329382775bf8388145",
+      "appId": "Accretioe89403636826V2",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-10-05T00:00:00.000Z",
+      "releaseNote": "LWC support and Sky Overlay level",
+      "versionTitle": "UE500_04_SM6"
+    },
+    {
+      "id": "d335533c87884e9fbdfd41af685d56b1",
+      "appId": "Accretioe89403636826V3",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-08T00:00:00.000Z",
+      "releaseNote": "Activation of SM6 does not cause compilation errors, but significantly reduces performance",
+      "versionTitle": "UE501_04_SM6"
+    }
+  ],
+  "developer": "zubetto",
+  "developerId": "o-ag9sga6xhbg4nypaemmh4fyuqy4gkt",
+  "endOfSupport": false,
+  "unsearchable": false
+}

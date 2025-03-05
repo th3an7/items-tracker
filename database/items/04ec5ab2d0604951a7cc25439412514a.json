@@ -1,0 +1,395 @@
+{
+  "id": "04ec5ab2d0604951a7cc25439412514a",
+  "title": "CSW Auto-save plugin V3",
+  "description": "Auto Save and Load Actors into a compressed file. Just add a component to any Actor you want to save! Easy save variables, AI state, Widgets, etc. in Level Streaming or across multiple Levels.",
+  "longDescription": "<p><strong>Plugin Showcase</strong>: <a href=\"https://www.youtube.com/watch?v&#61;TVkNYuB-XIo&amp;list&#61;PL7Se41ZzAKZmPVJGCaFxv1bPMXqPgEOQa\" rel=\"nofollow\">Link</a></p><p><strong>Tutorials Playlist</strong>: <a href=\"https://www.youtube.com/watch?v&#61;IMySm5q617o&amp;index&#61;2&amp;list&#61;PL7Se41ZzAKZmPVJGCaFxv1bPMXqPgEOQa\" rel=\"nofollow\">Link</a></p><p><strong>Example Project: </strong><a href=\"https://drive.google.com/drive/folders/12RqLEgfkT8x0Ek8IqkiANZTNwBTxP2wQ?usp&#61;sharing\" rel=\"nofollow\">Link</a></p><p>*** Changes in UE5.3&#43; ***</p><ul><li>Added new methods for Saving/Loading the game that intends to replace the existing ones (This change doesn&#39;t affect projects using older versions of the plugin). <strong>Note that using the new methods is completely optional but recommended for new projects.</strong></li><li>The new methods now all use the &#96;.sav&#96; extension for all save files, the &#96;.csav&#96; extension was removed since the plugin auto detects if a save file is compressed or not automatically now.</li><li>The new methods can handle corrupted files gracefully (for example, &#96;CSW::LoadGameFromSlot()&#96; will return an &#96;IO error&#96; if it tries to load a corrupted/invalid file, without crashing the program).</li><li>&#96;CSW::SaveGameToSlot()&#96; can save backups automatically (The amount of backups is customizable). These backups are saved under the &#96;.bakx&#96; extension.</li><li>The saving methods can now select a &#96;PathMode&#96;, to either save/load files to relative paths on the save folder or any path in the platform system. Different platforms may have different restrictions, so this is exposed to give better control on where to save the game.</li><li>Added new methods to handle the backups (&#96;GetFirstBackupForSlot()&#96;, &#96;MoveBackupToSlot&#96;, &#96;GetBackupIndexesForSlot()&#96;) that can be used to load backup files, for example, if something went wrong after attempting to load a save file.</li><li>Added a &#96;MigrateSaveFileFrom2.0To3.0&#96; method that can be used to migrate save files created with the old saving methods so they can be used with the new methods.</li><li><strong>Added a new example on how to use these new methods to the project example linked in the description (5.3&#43;). The example is located in &#96;Content/Maps/zzAutoBackups&#96;</strong></li></ul><p>*** - ***</p><p><strong>*** Change in UE5.0&#43; ***</strong></p><p>Since UE5, &#34;CSW::LoadGameFromSlot()&#34; does no longer need a SaveGame object reference input. This change will require a small modification in the logic as the node will throw an error (only in UE5.0 for users moving from UE4). Please note that the following link shows the current recommended way of using the &#34;CSW::LoadGameFromSlot()&#34; node.</p><p><a href=\"https://imgur.com/6nGt4oh\" rel=\"nofollow\">Link</a></p><p>Additionally, the example project has been updated to UE5 as well.</p><p>*** - ***</p><p><br /></p><p>Save Actors, Character, Components, AI State, Widget State, etc. Add a custom component to any Actor and save the entire data of it. Save Actors across multiple levels or while using level streaming into a single and compressed file. Highly Customizable plugin! Async save also supported!</p><p>This plugin extends the functionality of the Save and Load system from the engine to ensure compatibility. Also, this C&#43;&#43; plugin is exposed to Blueprints. This allows saving and loading hundred of actors in a blink of an eye thanks to the power of C&#43;&#43; while, thanks to the versatility of Blueprints, no programming knowledge is needed in order to use this plugin.</p>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li>Compression support. Test: 2,273KB to only 113KB. Compressed files can&#39;t easily be edited in hex editors.</li><li>Async Save and Load support.</li><li>Auto Backups support.</li><li>Level streaming support.</li><li>BP Structures support.</li><li>Save to custom Folder support.</li><li>Any variable can be saved.</li><li>Customizable. Save only certain components of an Actor.</li><li>This plugin doesn&#39;t destroy an recreates the Actors in the world. They only update their data.</li><li>A project doesn&#39;t need to be adapted in order to use this plugin. This plugin focuses on doing things similarly to the Engine&#39;s default save system, and extends on top of it.</li><li>GameInstance autosave supported.</li><li>Data from multiple levels can be saved into a single file.</li></ul><p><strong>Code Modules: </strong></p><ul><li>CSWAutoSaveAndLoadSystem (Runtime)</li></ul><p><strong>Number of Blueprints:</strong> 1</p><p><strong>Number of C&#43;&#43; Classes: </strong>11</p><p><strong>Network Replicated:</strong> Supported.</p><p><strong>Supported Development Platforms:</strong> Windows.</p><p><strong>Supported Target Build Platforms: </strong>Windows, Android. [Other platforms require manual compilation]</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Auto Save and Load System with Compression Screenshot01-1920x1080-42fefb14e19d6668326732e37c0ee7ec.png",
+      "md5": "42fefb14e19d6668326732e37c0ee7ec",
+      "width": 1920,
+      "height": 1080,
+      "size": 587793,
+      "uploadedDate": "2017-10-01T07:15:21.144Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery1-1920x1080-f3d64f2646db1992a80bf9f536b9fb41.png",
+      "md5": "f3d64f2646db1992a80bf9f536b9fb41",
+      "width": 1920,
+      "height": 1080,
+      "size": 1383786,
+      "uploadedDate": "2018-07-02T08:34:54.719Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery2-1920x1080-a622d20169a568e34500333ab5343903.png",
+      "md5": "a622d20169a568e34500333ab5343903",
+      "width": 1920,
+      "height": 1080,
+      "size": 1272449,
+      "uploadedDate": "2018-07-02T08:34:55.323Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Auto Save and Load System with Compression Screenshot03-1920x1080-215b94f1ac1f51ca6b518ed29de39edf.png",
+      "md5": "215b94f1ac1f51ca6b518ed29de39edf",
+      "width": 1920,
+      "height": 1080,
+      "size": 470447,
+      "uploadedDate": "2017-10-01T07:15:21.460Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Auto Save and Load System with Compression Screenshot04-1920x1080-fcb30802d1bef4d807be9a7ef6c1963f.png",
+      "md5": "fcb30802d1bef4d807be9a7ef6c1963f",
+      "width": 1920,
+      "height": 1080,
+      "size": 404904,
+      "uploadedDate": "2017-10-01T07:15:21.610Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Auto Save and Load System with Compression Screenshot05-1920x1080-ea27fcde75f910d0432c56a148b0c58a.png",
+      "md5": "ea27fcde75f910d0432c56a148b0c58a",
+      "width": 1920,
+      "height": 1080,
+      "size": 572646,
+      "uploadedDate": "2017-10-01T07:15:22.008Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/CSWAutosaveandLoadSystemv2_thumb-284x284-65e8ac77ec08f3470ce66e675a54b101.png",
+      "md5": "65e8ac77ec08f3470ce66e675a54b101",
+      "width": 284,
+      "height": 284,
+      "size": 53261,
+      "uploadedDate": "2018-07-02T08:22:18.336Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/CSWAutosaveandloadsystemwcompressionResubmissionforReview_featured-894x488-7326ecef31e3191394986b169f6d0e78.png",
+      "md5": "7326ecef31e3191394986b169f6d0e78",
+      "width": 894,
+      "height": 488,
+      "size": 247027,
+      "uploadedDate": "2017-10-01T07:15:22.393Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery1-1920x1080-f3d64f2646db1992a80bf9f536b9fb41_Snapshot.png",
+      "md5": "5888d845479373f582f0c2f8a9a41308",
+      "width": 150,
+      "height": 74,
+      "size": 14681,
+      "uploadedDate": "2018-07-02T08:34:55.121Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery2-1920x1080-a622d20169a568e34500333ab5343903_Snapshot.png",
+      "md5": "c7311489482613947cb33bf1c6c0c61a",
+      "width": 150,
+      "height": 74,
+      "size": 17289,
+      "uploadedDate": "2018-07-02T08:34:55.666Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2017-10-04T09:59:12.245Z",
+  "lastModifiedDate": "2024-12-07T14:20:39.798Z",
+  "customAttributes": {},
+  "entitlementName": "04ec5ab2d0604951a7cc25439412514a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "8947de35d86c4716be155c27c3005f0d",
+      "appId": "CSWAutoSaveAndLoadSystem_4.15",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Win32"
+      ],
+      "dateAdded": "2017-10-04T09:59:12.213Z",
+      "releaseNote": "",
+      "versionTitle": "415"
+    },
+    {
+      "id": "dbd00fefb9bb47928817a093e7be0ea8",
+      "appId": "CSWAutoSaveAndLoadSystem_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Win32"
+      ],
+      "dateAdded": "2017-10-04T09:59:12.213Z",
+      "releaseNote": "",
+      "versionTitle": "416"
+    },
+    {
+      "id": "77f8b1d757cb4ecea1cd97704128952e",
+      "appId": "CSWAutoSaveAndLoadSystem_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "iOS",
+        "Android",
+        "Xbox One",
+        "Linux"
+      ],
+      "dateAdded": "2017-10-04T09:59:12.213Z",
+      "releaseNote": "",
+      "versionTitle": "417"
+    },
+    {
+      "id": "a9dd25c260904a5997c7242b25939ef7",
+      "appId": "CSWAutoSaveAndLoadSystem_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "iOS",
+        "Android",
+        "Xbox One",
+        "Linux"
+      ],
+      "dateAdded": "2017-10-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "418"
+    },
+    {
+      "id": "40938b118ddb494499176dcba0163214",
+      "appId": "CSWAutoSaveAndLoadSystem_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2018-03-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "419"
+    },
+    {
+      "id": "f632e10732774508a7aab2905bbc51d5",
+      "appId": "CSWAutoSaveAndLoadSystem_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2018-07-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "420"
+    },
+    {
+      "id": "5815d35b0df947d69f0cfb369e71a908",
+      "appId": "CSWAutoSaveAndLoadSystem_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2018-11-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "421"
+    },
+    {
+      "id": "a462ed3311d942bda50e2736f565f995",
+      "appId": "CSWAutoSaveAndLoadSystem_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2019-04-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "422"
+    },
+    {
+      "id": "e6720debdde449799ac15c83f9c46323",
+      "appId": "CSWAutoSaveAndLoadSystem_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Android",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2019-10-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "423"
+    },
+    {
+      "id": "52ba72f0bb0f48f18d956b116e765372",
+      "appId": "CSWAutoSaveAndLoadSystem_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Android",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-12-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "424"
+    },
+    {
+      "id": "662018b83ef6459aaed0003f3ca34b1b",
+      "appId": "CSWAutoSaveAndLoadSystem_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2020-05-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "425"
+    },
+    {
+      "id": "ce6a729f6fd74eb080b98cfb378bb116",
+      "appId": "CSWAutoSaveAndLoadSystem_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android"
+      ],
+      "dateAdded": "2020-12-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "426"
+    },
+    {
+      "id": "ade964ede19149e5b3e40668557ca6a1",
+      "appId": "CSWAutoSaveAndLoadSystem_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "427"
+    },
+    {
+      "id": "8c720d67a9fe43cb904872bd5210abf4",
+      "appId": "CSWAutoSaveAndLoadSystem_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-04-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "500"
+    },
+    {
+      "id": "562fccc64da94761991cc4bbd9b82f70",
+      "appId": "CSWAutoSaveAndLoadSystem_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-11-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "501"
+    },
+    {
+      "id": "84f3c53944a24ee5852763daf4e71af4",
+      "appId": "CSWAutoSaveAndLoadSystem_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android"
+      ],
+      "dateAdded": "2023-05-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "502"
+    },
+    {
+      "id": "db8083599c3b4f7c966719b29e458b2d",
+      "appId": "CSWAutoSaveAndLoadSystem_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android"
+      ],
+      "dateAdded": "2023-09-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "503"
+    },
+    {
+      "id": "fde967e1b1ca49149814d7443719ec3f",
+      "appId": "CSWAutoSaveAndLoadSystem_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2024-04-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "504"
+    }
+  ],
+  "developer": "Cronofear Softworks",
+  "developerId": "o-0717f1fab84a05a4211c4bd7df0426",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

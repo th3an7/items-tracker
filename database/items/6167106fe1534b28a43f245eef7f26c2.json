@@ -1,0 +1,333 @@
+{
+  "id": "6167106fe1534b28a43f245eef7f26c2",
+  "title": "Anamorphic Depth of Field for Cinematics",
+  "description": "An Anamorphic Cine Camera with Anamorphic Depth of Field",
+  "longDescription": "<p>Anamorphic Depth of Field for Cinematics is an Anamorphic Cine Camera Blueprint emulating the Depth of Field of an Anamorphic Lens.</p><p><br /></p><p>With Bokeh customization options, you can choose between a few different combinations of attributes.</p><p><br /></p><p>Example and Tutorial Here(Updated): https://www.youtube.com/watch?v&#61;2c0vKss-4RE</p><p><br /></p><p>Example of Depth Sample Rejection added on the 27th April: https://www.youtube.com/watch?v&#61;xgCbfT65dJk</p><p><br /></p><p>New Features added in version 8: https://youtu.be/S2yFBnt7_t8</p><p><br /></p><p>The Depth of Field component is a custom DOF blur written in HLSL, and is physically based, meaning focus values are equivalent to standard Unreal Cine Camera Depth of Field settings.</p><p><br /></p><p>This is intended for use in Cinematic Renders through the Movie Render Queue at 100% screen percentage, It it possible to use this in a real time situation but due to the TemporalAA jitter baked into the scene color in the post process material chain you may see some flickering on thin or distance details when out of focus. In this case you can use the &#34;After Tonemapping&#34; version of the material that is included but it will look less lively in terms of bokeh.</p><p><br /></p><p>Known Issues:</p><p><br /></p><ul><li>In some cases when using UE5 with a heavily screen trace reliant scene Lumen contribution blows out as it seems to trace against the blurred scene color, I am currently investigating this.</li><li>In some cases when using UE5 and not using TSR as the anti aliasing setting, some NaN values will appear on the right and bottom edge of the viewport, this is an intermittent issue and does not happen in UE4, I am currently investigating this issue.</li><li>When using Auto Exposure, the Anamorphic Cine Camera usually appears brighter than a normal cine camera, I&#39;d always recommend to use Manual Exposure for Cinematics but if you must use Auto Exposure I am currently looking into this issue.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li> Anamorphic Cine Camera Blueprint Actor</li><li>HLSL based Anamorphic Depth of Field </li><li> Physically Based Focus Calculation</li></ul><p>Number of Blueprints:</p><p>Input: (If any, please include which methods of input are preconfigured (Gamepad, Keyboard, Mouse... etc.))</p><p>Network Replicated: No</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Documentation: https://www.youtube.com/watch?v&#61;2c0vKss-4RE</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/bokehnew copy-1920x1080-59d9ebb4c1a819652c5a09f55fa24882.jpg",
+      "md5": "59d9ebb4c1a819652c5a09f55fa24882",
+      "width": 1920,
+      "height": 1080,
+      "size": 108735,
+      "uploadedDate": "2022-04-18T06:02:39.068Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00011 copy-1920x1080-f632fe60e16577be78f8be7255a3af11.png",
+      "md5": "f632fe60e16577be78f8be7255a3af11",
+      "width": 1920,
+      "height": 1080,
+      "size": 1510579,
+      "uploadedDate": "2022-04-27T21:10:36.169Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/edge copy-1920x1080-c98cf4572e70ea21037cbdffc7debb43.jpg",
+      "md5": "c98cf4572e70ea21037cbdffc7debb43",
+      "width": 1920,
+      "height": 1080,
+      "size": 104257,
+      "uploadedDate": "2022-04-27T21:10:40.829Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ana5 copy-1920x1080-867b3b93b3b183be7398f61cd241c362.jpg",
+      "md5": "867b3b93b3b183be7398f61cd241c362",
+      "width": 1920,
+      "height": 1080,
+      "size": 166822,
+      "uploadedDate": "2022-04-27T21:10:38.490Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ana1 copy-1920x1080-bead618f4cf7cda0fb3c45591297de28.jpg",
+      "md5": "bead618f4cf7cda0fb3c45591297de28",
+      "width": 1920,
+      "height": 1080,
+      "size": 128643,
+      "uploadedDate": "2022-04-27T21:10:40.021Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00011 copy - Copy-1920x1080-75dd630c4e9212675d411c5532978cab.jpg",
+      "md5": "75dd630c4e9212675d411c5532978cab",
+      "width": 1920,
+      "height": 1080,
+      "size": 97407,
+      "uploadedDate": "2022-04-18T06:02:39.747Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00010 copy - Copy-1920x1080-c453c73c922000a510964e3aef302c62.jpg",
+      "md5": "c453c73c922000a510964e3aef302c62",
+      "width": 1920,
+      "height": 1080,
+      "size": 106493,
+      "uploadedDate": "2022-04-18T06:02:40.446Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ana6 copy-1920x1080-5340d06163d9801446327413d5b3610e.jpg",
+      "md5": "5340d06163d9801446327413d5b3610e",
+      "width": 1920,
+      "height": 1080,
+      "size": 135299,
+      "uploadedDate": "2022-04-27T21:10:37.671Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00009 copy - Copy-1920x1080-b7a241df5fa68ddd2e7beb4ff3e1ab7c.jpg",
+      "md5": "b7a241df5fa68ddd2e7beb4ff3e1ab7c",
+      "width": 1920,
+      "height": 1080,
+      "size": 121277,
+      "uploadedDate": "2022-04-18T06:02:41.123Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00007 copy - Copy-1920x1080-5cb48288a551190ce5ce7602e164daef.jpg",
+      "md5": "5cb48288a551190ce5ce7602e164daef",
+      "width": 1920,
+      "height": 1080,
+      "size": 171807,
+      "uploadedDate": "2022-04-18T06:02:41.813Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00006 copy - Copy-1920x1080-6305b0a7580e803c9038d96a4b9ae261.jpg",
+      "md5": "6305b0a7580e803c9038d96a4b9ae261",
+      "width": 1920,
+      "height": 1080,
+      "size": 180755,
+      "uploadedDate": "2022-04-18T06:02:42.535Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00012 copy-1920x1080-8c698af43fd05ec22b2326e3679fbd73.jpg",
+      "md5": "8c698af43fd05ec22b2326e3679fbd73",
+      "width": 1920,
+      "height": 1080,
+      "size": 117614,
+      "uploadedDate": "2022-04-27T21:10:36.934Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ana4 copy-1920x1080-84c62530e023409b862b58ddb570cd48.jpg",
+      "md5": "84c62530e023409b862b58ddb570cd48",
+      "width": 1920,
+      "height": 1080,
+      "size": 136450,
+      "uploadedDate": "2022-04-27T21:10:39.292Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RainyDay.0011-1920x1080-be67a26d3dca1bc7fd1e6999e26ae479.jpeg",
+      "md5": "be67a26d3dca1bc7fd1e6999e26ae479",
+      "width": 1920,
+      "height": 1080,
+      "size": 593043,
+      "uploadedDate": "2022-04-27T21:10:41.449Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AnamorphicDepthofFieldforCinematics_thumb-284x284-a59e4c7239a7a0bc38688fef8284b8a2.png",
+      "md5": "a59e4c7239a7a0bc38688fef8284b8a2",
+      "width": 284,
+      "height": 284,
+      "size": 120415,
+      "uploadedDate": "2022-04-27T21:10:41.764Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AnamorphicDepthofFieldforCinematics_featured-894x488-2fc4abaed60a4c8a0de2aa1771440c3d.png",
+      "md5": "2fc4abaed60a4c8a0de2aa1771440c3d",
+      "width": 894,
+      "height": 488,
+      "size": 608777,
+      "uploadedDate": "2022-04-27T21:10:41.882Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00011 copy-1920x1080-f632fe60e16577be78f8be7255a3af11_Snapshot.png",
+      "md5": "806266460612c377fad13a10aa303e91",
+      "width": 150,
+      "height": 74,
+      "size": 4739,
+      "uploadedDate": "2022-04-27T21:10:36.491Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00012 copy-1920x1080-8c698af43fd05ec22b2326e3679fbd73_Snapshot.jpg",
+      "md5": "b06f6075956ca56286e860028bdb4d29",
+      "width": 150,
+      "height": 74,
+      "size": 4576,
+      "uploadedDate": "2022-04-27T21:10:37.402Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ana6 copy-1920x1080-5340d06163d9801446327413d5b3610e_Snapshot.jpg",
+      "md5": "d897bdc6490f19b23ba6be510b4bee20",
+      "width": 150,
+      "height": 74,
+      "size": 4587,
+      "uploadedDate": "2022-04-27T21:10:38.174Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ana5 copy-1920x1080-867b3b93b3b183be7398f61cd241c362_Snapshot.jpg",
+      "md5": "bf9ddd63838fa44c27e2286cbc44c831",
+      "width": 150,
+      "height": 74,
+      "size": 5726,
+      "uploadedDate": "2022-04-27T21:10:39.067Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ana4 copy-1920x1080-84c62530e023409b862b58ddb570cd48_Snapshot.jpg",
+      "md5": "c76cbbb8034862a83e64252a34859383",
+      "width": 150,
+      "height": 74,
+      "size": 4525,
+      "uploadedDate": "2022-04-27T21:10:39.792Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ana1 copy-1920x1080-bead618f4cf7cda0fb3c45591297de28_Snapshot.jpg",
+      "md5": "266d471077ff5acfe27b5a28783c6a29",
+      "width": 150,
+      "height": 74,
+      "size": 4539,
+      "uploadedDate": "2022-04-27T21:10:40.578Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/edge copy-1920x1080-c98cf4572e70ea21037cbdffc7debb43_Snapshot.jpg",
+      "md5": "ba5f16d89b4608b525fc96f8e7d47d04",
+      "width": 150,
+      "height": 74,
+      "size": 4513,
+      "uploadedDate": "2022-04-27T21:10:41.317Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RainyDay.0011-1920x1080-be67a26d3dca1bc7fd1e6999e26ae479_Snapshot.jpeg",
+      "md5": "bbe95f83d744e64b8fccf268c9e44d23",
+      "width": 150,
+      "height": 74,
+      "size": 4456,
+      "uploadedDate": "2022-04-27T21:10:41.702Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bokehnew copy-1920x1080-59d9ebb4c1a819652c5a09f55fa24882_Snapshot.jpg",
+      "md5": "e9cfb6a432ae59b3a191dd665671edbc",
+      "width": 150,
+      "height": 74,
+      "size": 4517,
+      "uploadedDate": "2022-04-18T06:02:39.555Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00011 copy - Copy-1920x1080-75dd630c4e9212675d411c5532978cab_Snapshot.jpg",
+      "md5": "2a58df2b8bb1ecdc83b2cf40d64c21f7",
+      "width": 150,
+      "height": 74,
+      "size": 4240,
+      "uploadedDate": "2022-04-18T06:02:40.199Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00010 copy - Copy-1920x1080-c453c73c922000a510964e3aef302c62_Snapshot.jpg",
+      "md5": "11bea075014a3a93e3b403feeb95dbbe",
+      "width": 150,
+      "height": 74,
+      "size": 4636,
+      "uploadedDate": "2022-04-18T06:02:40.923Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00009 copy - Copy-1920x1080-b7a241df5fa68ddd2e7beb4ff3e1ab7c_Snapshot.jpg",
+      "md5": "1773f17ecd060bd21218051ee6cef1ed",
+      "width": 150,
+      "height": 74,
+      "size": 4826,
+      "uploadedDate": "2022-04-18T06:02:41.582Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00007 copy - Copy-1920x1080-5cb48288a551190ce5ce7602e164daef_Snapshot.jpg",
+      "md5": "209852ae68b0b1cbc187850d9e4bd0c4",
+      "width": 150,
+      "height": 74,
+      "size": 4925,
+      "uploadedDate": "2022-04-18T06:02:42.281Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00006 copy - Copy-1920x1080-6305b0a7580e803c9038d96a4b9ae261_Snapshot.jpg",
+      "md5": "2196aaef61b7828c976a5d2fc5ac4cf3",
+      "width": 150,
+      "height": 74,
+      "size": 6373,
+      "uploadedDate": "2022-04-18T06:02:43.015Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-04-21T21:04:53.351Z",
+  "lastModifiedDate": "2024-11-13T06:31:57.411Z",
+  "customAttributes": {},
+  "entitlementName": "6167106fe1534b28a43f245eef7f26c2",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "93391af33b704d4fbbe5ba0af4e4c506",
+      "appId": "Anamorph6167106fe153V1",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-04-18T00:00:00.000Z",
+      "releaseNote": "Added Extra tweakable options",
+      "versionTitle": "AnamorphicDOF UE427"
+    },
+    {
+      "id": "bdf5c2b4f1b84da88d70b3dd37b5be10",
+      "appId": "Anamorph6167106fe153V2",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-04-18T00:00:00.000Z",
+      "releaseNote": "Added Extra tweakable options",
+      "versionTitle": "AnamorphicDOF UE5"
+    }
+  ],
+  "developer": "Bluray Addict",
+  "developerId": "o-khz42p6cqr824mtg2dvuywvpearma9",
+  "endOfSupport": false,
+  "unsearchable": false
+}

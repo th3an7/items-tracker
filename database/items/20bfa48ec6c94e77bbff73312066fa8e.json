@@ -1,0 +1,304 @@
+{
+  "id": "20bfa48ec6c94e77bbff73312066fa8e",
+  "title": "Ambient Wind System",
+  "description": "This ambient wind system works with physics, Apex cloth and Speedtree, with particle effects and the simple grass vertex shader.",
+  "longDescription": "<h2><a href=\"https://www.youtube.com/playlist?list&#61;PL4UXbXvzKxGLJ3wukw61cqDZQ-1vLRahi\" rel=\"nofollow\">Videos here</a></h2><h2><a href=\"https://www.youtube.com/playlist?list&#61;PL4UXbXvzKxGLJ3wukw61cqDZQ-1vLRahi\" rel=\"nofollow\">https://www.youtube.com/playlist?list&#61;PL4UXbXvzKxGLJ3wukw61cqDZQ-1vLRahi</a></h2><p><br /></p><p>The Unreal Engine&#39;s native wind object &#34;Wind directional source&#34; will only affect apex cloth and speedtree objects.</p><p>This wind system affects all possible kinds of actors and objects.</p><p>Also, wind affected physical actors will be audible when moving. It is possible to trigger rolling or swinging movement sounds as also &#34;OnHit&#34; sounds.</p><p><br /></p><p>The Windsystem works with an unbound wind zone and wind actors that react to this wind.</p><p>The wind zone is the class that creates the wind force. The wind actors are affected by the wind.</p><p>To actually have a physical object react to the wind it has to have a new &#34;WindComponent&#34; added to its blueprint components</p><p><br /></p><p>Since the possible affected wind objects are all different object classes, a few different approaches are needed to project the wind.</p><p>For the physical actors, the wind is driven by add force, whilst the windload on each wind affected actor is calculated by the objects projected surface area and the objects material density.</p><p><br /></p><p>Cloth is driven by a spawned &#34;Wind Directional Source&#34; that is synchronized to the generated blueprint wind.</p><p>PFX and the Grass shader take their wind strength directly from the wind curves and go through multipliers.</p><p>Where the PFX wind result drives an emitter parameter and the foliage wind goes into a material parameter value that drives additional World Position Offsets in the foliage shader.</p><p><br /></p><p>Explanation videos on how to setup the different object types can be found on the products documentation page, which is linked below.</p>",
+  "technicalDetails": "<p>Documentation:</p><p>http://saschahenrichs.blogspot.de/p/marketplace.html</p><p><br /></p><p>The features of the wind zone are:</p><p><br /></p><p>set global wind intensities for physical objects, cloth, PFX and grass/vertex shader </p><p>toggle random wind direction changes </p><p>modulated wind sound by wind intensity </p><p>add user created windcurves that define the wind intensities over a timeline. Those windcurves are randomly played one after another.</p><p><br /></p><p>Additional features of the windzone: </p><p>Randomly spawn wind affected actors inside the windzone. This is useful for ambient actors like the tumbleweeds. </p><p>Define the spawned actor amount and apply random scalings. </p><p>Spawn from an array of selected actor classes </p><p>Mask out spawning areas by defining classes where actors are allowed to spawn on. Default is &#34;landscape&#34;.</p><p><br /></p><p>The windactor base class has a smaller feature set: </p><p>The mesh can be set </p><p>Its angular and linear damping are editable </p><p>An estimated surface area can be defined. This is used for wind load calculations. A larger value will apply more windforce to the object. </p><p>A wind movement sound can be set. </p><p>It has a switch &#34;Is using sound loop&#34; </p><p>Looped sounds are used for continuous moving objects, like the tumbleweeds, swinging signs. </p><p>These need to be special sound cues and will be modulated in volume by the objects velocity. </p><p>&#34;One shot&#34; sounds will typically be used for objects that only collide on impact and do not roll or sway. </p><p>Like lightweight objects that fall over when the wind hits them.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AmbientWindSystem_Screenshot1-1920x1080-bc2d17e64676fc976224ffb893843b70.png",
+      "md5": "bc2d17e64676fc976224ffb893843b70",
+      "width": 1920,
+      "height": 1080,
+      "size": 889791,
+      "uploadedDate": "2016-11-23T15:13:49.082Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AmbientWindSystem_Screenshot3-1920x1080-d3f6be2b65e5975629cff672c7bb30fb.png",
+      "md5": "d3f6be2b65e5975629cff672c7bb30fb",
+      "width": 1920,
+      "height": 1080,
+      "size": 954365,
+      "uploadedDate": "2016-11-23T15:13:55.970Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AmbientWindSystem_Screenshot5-1920x1080-da826009903e7a0025c78e86356c1a52.png",
+      "md5": "da826009903e7a0025c78e86356c1a52",
+      "width": 1920,
+      "height": 1080,
+      "size": 835740,
+      "uploadedDate": "2016-11-23T15:14:00.611Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AmbientWindSystem_Screenshot6-1920x1080-02fc3ff5faa520741737cc25389b56a8.png",
+      "md5": "02fc3ff5faa520741737cc25389b56a8",
+      "width": 1920,
+      "height": 1080,
+      "size": 833471,
+      "uploadedDate": "2016-11-23T15:14:02.949Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AmbientWindSystem_Screenshot8-1920x1080-cb5995aaf14f567411f81ec7da7f199c.png",
+      "md5": "cb5995aaf14f567411f81ec7da7f199c",
+      "width": 1920,
+      "height": 1080,
+      "size": 988954,
+      "uploadedDate": "2016-11-23T15:14:09.680Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AmbientWindSystem_Screenshot9-1920x1080-38f62b58a97603de35601c5b454c0788.png",
+      "md5": "38f62b58a97603de35601c5b454c0788",
+      "width": 1920,
+      "height": 1080,
+      "size": 839784,
+      "uploadedDate": "2016-11-23T15:14:11.708Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AmbientWindSystem_Screenshot10-1920x1080-57dc81de9fc32ac30ae6364093159255.png",
+      "md5": "57dc81de9fc32ac30ae6364093159255",
+      "width": 1920,
+      "height": 1080,
+      "size": 1130605,
+      "uploadedDate": "2016-11-23T15:14:14.983Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/AmbientWindSystem_Screenshot11-1920x1080-c697012107f26d03835e1ddc62a4ac1c.png",
+      "md5": "c697012107f26d03835e1ddc62a4ac1c",
+      "width": 1920,
+      "height": 1080,
+      "size": 887091,
+      "uploadedDate": "2016-11-23T15:14:16.906Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Untitled-2-1920x1080-e7b2ace597ca97d6e0e3f5c9a009d62c.jpg",
+      "md5": "e7b2ace597ca97d6e0e3f5c9a009d62c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1277118,
+      "uploadedDate": "2020-01-18T05:33:05.821Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Untitled-1-1920x1080-d97297d280c34f610a8fad46b60c8d84.jpg",
+      "md5": "d97297d280c34f610a8fad46b60c8d84",
+      "width": 1920,
+      "height": 1080,
+      "size": 1354901,
+      "uploadedDate": "2020-01-18T05:33:06.283Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AmbientWindSystem_thumb-284x284-4e1be3256275bbd56e5386b70cbb5f9d.png",
+      "md5": "4e1be3256275bbd56e5386b70cbb5f9d",
+      "width": 284,
+      "height": 284,
+      "size": 154086,
+      "uploadedDate": "2020-01-18T05:33:06.729Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/item/AmbientWindSystem_FeaturedNew-894x488-347660dc82b98a46c79125195484f6a4.png",
+      "md5": "347660dc82b98a46c79125195484f6a4",
+      "width": 894,
+      "height": 488,
+      "size": 216273,
+      "uploadedDate": "2016-11-23T15:13:43.717Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Untitled-2-1920x1080-e7b2ace597ca97d6e0e3f5c9a009d62c_Snapshot.jpg",
+      "md5": "a4fd2827b3531c786ed4fd419ad6d285",
+      "width": 150,
+      "height": 74,
+      "size": 5632,
+      "uploadedDate": "2020-01-18T05:33:06.125Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Untitled-1-1920x1080-d97297d280c34f610a8fad46b60c8d84_Snapshot.jpg",
+      "md5": "8dfeebfe94ffcfb2a3265f1aa612134b",
+      "width": 150,
+      "height": 74,
+      "size": 5641,
+      "uploadedDate": "2020-01-18T05:33:06.596Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/fx"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2016-11-23T15:14:27.799Z",
+  "lastModifiedDate": "2024-10-28T16:33:27.054Z",
+  "customAttributes": {},
+  "entitlementName": "20bfa48ec6c94e77bbff73312066fa8e",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "59e937f44986494480f380d3a34bf86b",
+      "appId": "AmbientW20bfa48ec6c9V1",
+      "compatibleApps": [
+        "UE_4.13"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-09-13T00:00:00.000Z",
+      "versionTitle": "AmbientwindSystem413"
+    },
+    {
+      "id": "5291bdde03834e0d932eb581edb2aba9",
+      "appId": "AmbientW20bfa48ec6c9V2",
+      "compatibleApps": [
+        "UE_4.14"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-09-13T00:00:00.000Z",
+      "versionTitle": "AmbientwindSystem"
+    },
+    {
+      "id": "bebfaf30860f4ad7a8d238606e67fe51",
+      "appId": "AmbientW20bfa48ec6c9V3",
+      "compatibleApps": [
+        "UE_4.15",
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-09-13T00:00:00.000Z",
+      "versionTitle": "AmbientWindSystem415"
+    },
+    {
+      "id": "32a7f4d1db9a4121ad75dc8f892f0322",
+      "appId": "AmbientW20bfa48ec6c9V4",
+      "compatibleApps": [
+        "UE_4.17",
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2017-09-15T18:41:12.834Z",
+      "releaseNote": "",
+      "versionTitle": "AmbientWindSystem417"
+    },
+    {
+      "id": "e7be052860db46c3976f9f43601b8eaf",
+      "appId": "AmbientW20bfa48ec6c9V5",
+      "compatibleApps": [
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-05-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AmbientWindSystem419"
+    },
+    {
+      "id": "53f3e3dfe5284715b1aeee6a074f4ad1",
+      "appId": "AmbientW20bfa48ec6c9V6",
+      "compatibleApps": [
+        "UE_4.22",
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-06-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AmbientWind_422"
+    },
+    {
+      "id": "b96e8690c0e146ab97c2fe7079346f43",
+      "appId": "AmbientW20bfa48ec6c9V7",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-01-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AmbientWind_424"
+    },
+    {
+      "id": "705fdcffea3943938dbb63ede04833fc",
+      "appId": "AmbientW20bfa48ec6c9V8",
+      "compatibleApps": [
+        "UE_4.25",
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-07-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AmbientWindSystem425"
+    },
+    {
+      "id": "89122b7eca4d4109a04f1a7abc11b266",
+      "appId": "AmbientW20bfa48ec6c9V9",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-11-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AmbientWind_427"
+    },
+    {
+      "id": "7ada9c51f2354a41aba16593f9629350",
+      "appId": "AmbientW20bfa48ec6c9V10",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AmbientWindSystem51"
+    },
+    {
+      "id": "1762e3d01bd54ddf9ed22883d635a7ef",
+      "appId": "AmbientW20bfa48ec6c9V11",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AmbientWindSystem53"
+    }
+  ],
+  "developer": "Sascha Henrichs",
+  "developerId": "o-a2a7a97bb149e28da81e4650f1cceb",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

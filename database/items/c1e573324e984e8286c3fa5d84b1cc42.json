@@ -1,0 +1,500 @@
+{
+  "id": "c1e573324e984e8286c3fa5d84b1cc42",
+  "title": "Building Generator",
+  "description": "Procedurally generate a single building or a city with a click of a button. Control the shape of the building using a simple spline system then add your meshes and let the algorithm handle the rest!",
+  "longDescription": "<p>UE 5.4 will benefit from this console command: <em>Editor.ComponentVisualizer.AutoSelectComponent false</em></p><p><br /></p><p>Building Generator is a blueprint-based building generator which can be used to quickly generate buildings. It only requires meshes and then the spline-based algorithm will take care of the rest. Because it is based on splines you have full control over the primary shape of the building. The blueprint is also capable of generating several buildings at once which are based on a grid making it possible to create entire blocks or cities quickly. Floors and stairs can now be generated as well! Generate the buildings at runtime or bake them using Unreal&#39;s merge tool.</p><p><br /></p><p><a href=\"https://youtu.be/xy30a3TfTT8\" rel=\"nofollow\">Showcase.</a></p><p><a href=\"https://youtu.be/-_YSiW5fN9Y\" rel=\"nofollow\">Latest update.</a></p><p><a href=\"https://youtu.be/sInCy9kT7ZY\" rel=\"nofollow\">Video walkthrough.</a></p><p><a href=\"https://youtu.be/eNdTCqlmE_k\" rel=\"nofollow\">Adding Quixel content.</a></p><p><a href=\"https://drive.google.com/file/d/1KWFFAWI5SaOZrziZMCaZ2UQhDFB5O3bJ/view?usp&#61;sharing\" rel=\"nofollow\">Documentation.</a></p><p><a href=\"https://youtu.be/yfNhV_a-3Ok\" rel=\"nofollow\">Merge buildings.</a></p><p><br /></p><p>The buildings are generated from the ground up during each cycle based on the properties given. The generation method is deterministic (seed based) meaning that the exact generation can be regenerated given the same seed and properties. Building length, width and height can be determined prior to generation whilst adding random values. Likewise, the properties of each building can be altered. These properties include, but are not limited to, roof, cornice, curb, gutter, entrances, signs etc. Both Lumen and Nanite are compatible, and collision can either be simple or complex. Generation during runtime is possible. The buildings are game ready in terms of draw calls as they are utilizing Unreal&#39;s HISM (Hierarchical Instanced Static Mesh) which also support LODs. The roofs, curbs, sidewalks and cornices are all generated using procedural meshes.</p><p><br /></p><p>Features:</p><ul><li>All meshes are interchangeable (note, not the procedural meshes - curbs, cornices and roofs).</li><li>Single or multiple building generation.</li><li>Easy to control spline system that dynamically adjusts to the terrain.</li><li>Adjust building height, width and length.</li><li>Four procedural roof types, gable, hip, shed and flat roofs.</li><li>Courtyards.</li><li>Terraced buildings.</li><li>Spawn as BP option for certain meshes.</li><li>Free-form mode allowing for control over each individual spline point allowing for a custom building footprint.</li><li>Simple interior support - Floors and Stairs.</li><li>Async generation during runtime.</li><li>Automatically scale meshes to fit perfectly or utilize the non-scale circle-circle intersection method for non-scaled building meshes.</li><li>Custom data on building meshes, signs and socket meshes.</li><li>Slanted or flat procedural mesh roofs.</li><li>Curb and cornice custom profiles using curves.</li><li>Spawn meshes per building mesh based on sockets.</li><li>Balconies, gutters, roof meshes, curbs, signs, trees, street meshes and more.</li><li>Per building procedural meshes allow for variance in materials.</li><li><a href=\"https://youtu.be/yfNhV_a-3Ok\" rel=\"nofollow\">Bake buildings down to static meshes using Unreal&#39;s merge tool.</a></li><li>Automatic forward axis on building meshes.</li></ul><p><br /></p><p>Limitations:</p><ul><li>Tri-planar texturing is advised on the procedural meshes due to the UV-unwrapping method (per face).</li><li>Roofs are procedurally generated meaning that you cannot use your own mesh. The types of roofs are as follows: Gable, Hip, Flat, and Shed.</li><li>Roofs do not support smooth shading or beveled edges.</li><li>Procedural meshes do not support Mesh Distance Field Generation and can produce non-optimal Lumen results when inside a building.</li><li>Roof tile generation is yet an experimental feature and can produce some wacky results if the buildings angles are not right.</li></ul><p><br /></p><p>Noteworthy:</p><ul><li>When generating large cities, it can be required to increase the &#34;Maximum Loop Iteration Count&#34; in the project settings.</li><li>The included meshes are meant as placeholders and are low poly.</li></ul><p><br /></p><p>Support:</p><ul><li><a href=\"https://discord.gg/hkQuFeUKKu\" rel=\"nofollow\">Discord</a></li><li>aulden.carter&#64;gmail.com</li></ul><p><br /></p><p>Update history:</p><p>V15</p><ul><li>Added &#34;Foundation Depth&#34; for controlling how deep the foundation goes into the ground.</li><li>Fixed bug causing the foundations normals to flip when going to far negative.</li><li>Fixed bug causing terraced houses to fail when too close to each other.</li><li>Fixed UVs on in-between floors.</li></ul><p>V14</p><ul><li>Added &#34;CornerPillarPivotTop&#34; allowing the usage of corner pillars with pivots on the bottom of the mesh.</li><li>Added &#34;CornerPillarZ Offset&#34; which shifts the peak of the corner pillar up or down.</li><li>Fixed bug causing &#34;FirstFloorZ Offset&#34; not to work with courtyard buildings.</li></ul><p>V13A</p><ul><li>Fixed bug causing &#34;AlignToGround&#34; making the spline a closed loop despite single building.</li><li>Fixed bug causing corner pillars to not properly spawn on two story buildings.</li><li>Fixed rotating chimney actor.</li></ul><p>V13</p><ul><li>Added Terraced building bool in properties.</li><li>Added SpawnAsActor for most mesh types. Useful for spawning actors like chimneys or doors which require logic or movement.</li><li>Added CorniceMesh? which allows you to specify a mesh instead of procedurally generating the cornice. Separate cornices for bot, mid and top are available.</li><li>Added Seperate meshes for corner pillars, bot, mid and top.</li><li>Added a blueprint (BP_SpawnBuildingGeneratorExample) which showcases how you can spawn a building generator from an external blueprint.</li><li>Added &#34;Styles&#34; - Data assets which you add only the meshes you want in the style. Then drag and drop the Style on the building generator and it will convert its meshes to those of the Style.</li><li>Fixed issue when baking where collision was not working (all meshes are required to be complex as simple in order to use complex collision).</li><li>Fixed bug where the hip roof height was not seeded.</li><li>Fixed Z-fighting on building meshes, in the corners.</li><li>Fixed issue where warnings would appear if a mesh array was left empty.</li><li>Fixed so that corner pillars do not overlap building meshes (only works in auto scale).</li><li>Replaced CorniceScale and CorniceScaleRandom with a single variable.</li><li>Removed CornerPillarOffsetZ (no longer compatible with new formula).</li></ul><p>V12A</p><ul><li>Fixed the procedural mesh component not being visible.</li><li>Fixed persistent buildings causing a lag spike when selecting them.</li></ul><p>V12 <a href=\"https://youtu.be/-_YSiW5fN9Y\" rel=\"nofollow\">Video</a></p><ul><li>Added new roof type, &#34;hip roof&#34;.</li><li>Added new roof type, &#34;shed roof&#34;.</li><li>Added courtyards.</li><li>Added free-form single building allowing you to freely decide the footprint of the building using spline points, experimental feature.</li><li>Added &#34;Async?&#34; and &#34;AsyncFast?&#34; which reduces lag when generating during runtime.</li><li>Persistent buildings now have persistent procedural meshes.</li><li>&#34;PerBuildingProceduralMeshes&#34; is now deprecated, all buildings are now their own entities, ie they have there own HISMs and procedural mesh components.</li><li>Random building width, height and roof slanted height are now condensed into one variable each.</li><li>Added option &#34;AutoAlignSplinePoints&#34; which turns on or off the automatic terrain adjustment.</li><li>Reworked the roof tile formula, should be a lot cleaner now (still not perfect).</li><li>Added &#34;RoofTileAngle&#34; which allows you to fine tune the angle of tiles.</li><li>Added &#34;RoofTileApexZOffset&#34; which allows you to offset the apex tiles up and down.</li><li>Added intermediate apex tiles for the gable roof.</li><li>Added &#34;RoofTileCastShadow&#34; which switches on or off shadow casting for roof tiles.</li><li>Fixed bug causing random sidewalk material to not work.</li><li>Fixed bug causing streetlights not spawning when &#34;RemoveSomeStreetLights&#34; was active.</li><li>Fixed bug causing corner pillars to not reach the ground when building on a slope.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Spline based building generation.</li><li>Deterministic (seed based generation).</li><li>Modular (add your own meshes).</li><li>HISM (LODs and few draw calls).</li><li>Procedural Mesh generation for roofs, cornices, sidewalks and curbs.</li><li><a href=\"https://youtu.be/yfNhV_a-3Ok\" rel=\"nofollow\">Export buildings using Unreal Engine&#39;s Merge/Export.</a></li></ul><p>Number of Blueprints: 1</p><p>Number of Meshes: 55</p><p>Number of Materials: 3</p><p>Network Replicated: No</p><p>Supported Development Platforms: All platforms should be supported (only Windows has been tested).</p><p><a href=\"https://drive.google.com/file/d/1KWFFAWI5SaOZrziZMCaZ2UQhDFB5O3bJ/view?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 8-1920x1080-5eb3cb80d4a9ae312815ae89d6e618d6.jpg",
+      "md5": "5eb3cb80d4a9ae312815ae89d6e618d6",
+      "width": 1920,
+      "height": 1080,
+      "size": 444922,
+      "uploadedDate": "2022-09-10T18:29:54.947Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 9-1920x1080-c349e4084923a29e5954ca79b6a2de9f.jpg",
+      "md5": "c349e4084923a29e5954ca79b6a2de9f",
+      "width": 1920,
+      "height": 1080,
+      "size": 365773,
+      "uploadedDate": "2022-09-10T18:29:55.416Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 10-1920x1080-881a6bed72228a54fb9deac17fe34254.jpg",
+      "md5": "881a6bed72228a54fb9deac17fe34254",
+      "width": 1920,
+      "height": 1080,
+      "size": 249038,
+      "uploadedDate": "2022-09-10T18:29:55.870Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 7-1920x1080-6219d5c973751156357d84d1b6a443e9.jpg",
+      "md5": "6219d5c973751156357d84d1b6a443e9",
+      "width": 1920,
+      "height": 1080,
+      "size": 206255,
+      "uploadedDate": "2023-04-16T18:45:39.075Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 8-1920x1080-3cfd60446f7ce06441fd4210d4ed1ae2.jpg",
+      "md5": "3cfd60446f7ce06441fd4210d4ed1ae2",
+      "width": 1920,
+      "height": 1080,
+      "size": 177079,
+      "uploadedDate": "2023-04-16T18:45:38.647Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text-1920x1080-282ea2ee2b204e7848e0e2ffa3e493ac.jpg",
+      "md5": "282ea2ee2b204e7848e0e2ffa3e493ac",
+      "width": 1920,
+      "height": 1080,
+      "size": 1364237,
+      "uploadedDate": "2022-12-07T18:19:21.806Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 11-1920x1080-378476dd3f50568ab6186c2b8bebeaa5.jpg",
+      "md5": "378476dd3f50568ab6186c2b8bebeaa5",
+      "width": 1920,
+      "height": 1080,
+      "size": 242490,
+      "uploadedDate": "2022-09-10T18:44:28.607Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots-1920x1080-0122c0e85ac2b78efe8788e729613f91.jpg",
+      "md5": "0122c0e85ac2b78efe8788e729613f91",
+      "width": 1920,
+      "height": 1080,
+      "size": 152142,
+      "uploadedDate": "2022-07-20T10:18:05.337Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 3-1920x1080-4d76342e6a482a1eeb6c131fbdea83fb.jpg",
+      "md5": "4d76342e6a482a1eeb6c131fbdea83fb",
+      "width": 1920,
+      "height": 1080,
+      "size": 236833,
+      "uploadedDate": "2022-07-20T10:18:05.748Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 5-1920x1080-50a2480b21d80f131b831c7b35e5e79c.jpg",
+      "md5": "50a2480b21d80f131b831c7b35e5e79c",
+      "width": 1920,
+      "height": 1080,
+      "size": 418593,
+      "uploadedDate": "2022-12-21T11:44:03.643Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 4-1920x1080-e552b9029b9983ccfec05ca97207fead.jpg",
+      "md5": "e552b9029b9983ccfec05ca97207fead",
+      "width": 1920,
+      "height": 1080,
+      "size": 409175,
+      "uploadedDate": "2022-12-21T11:44:04.146Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 2-1920x1080-a5c9485966044f43390ade189eaec848.jpg",
+      "md5": "a5c9485966044f43390ade189eaec848",
+      "width": 1920,
+      "height": 1080,
+      "size": 391280,
+      "uploadedDate": "2022-12-21T11:44:05.059Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 3-1920x1080-d0eeb84303c66d695650d08c567d225a.jpg",
+      "md5": "d0eeb84303c66d695650d08c567d225a",
+      "width": 1920,
+      "height": 1080,
+      "size": 397484,
+      "uploadedDate": "2022-12-21T11:44:04.615Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshots w text 6-1920x1080-e6c012edf1a7c1c6d6e8d313a5e59201.jpg",
+      "md5": "e6c012edf1a7c1c6d6e8d313a5e59201",
+      "width": 1920,
+      "height": 1080,
+      "size": 363059,
+      "uploadedDate": "2022-12-21T11:44:03.192Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BuildingGenerator_thumb-284x284-8a3299a2db1c5a4b1c6397f956c7a5d3.png",
+      "md5": "8a3299a2db1c5a4b1c6397f956c7a5d3",
+      "width": 284,
+      "height": 284,
+      "size": 117221,
+      "uploadedDate": "2023-06-11T17:57:19.448Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SimpleProceduralBuildingGenerator_featured-894x488-09aa47f0a473e76fb0e7853454de5ab9.png",
+      "md5": "09aa47f0a473e76fb0e7853454de5ab9",
+      "width": 894,
+      "height": 488,
+      "size": 304794,
+      "uploadedDate": "2022-08-26T12:12:51.310Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 8-1920x1080-3cfd60446f7ce06441fd4210d4ed1ae2_Snapshot.jpg",
+      "md5": "4fa01d0296da7139b1ce7c981241f4b7",
+      "width": 150,
+      "height": 74,
+      "size": 4029,
+      "uploadedDate": "2023-04-16T18:45:38.914Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 7-1920x1080-6219d5c973751156357d84d1b6a443e9_Snapshot.jpg",
+      "md5": "4665f9e5ddbdacbf2579cef94366d2d4",
+      "width": 150,
+      "height": 74,
+      "size": 4737,
+      "uploadedDate": "2023-04-16T18:45:39.361Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 6-1920x1080-e6c012edf1a7c1c6d6e8d313a5e59201_Snapshot.jpg",
+      "md5": "e8d1a52568110a79090ac2b879e36f6a",
+      "width": 150,
+      "height": 74,
+      "size": 5987,
+      "uploadedDate": "2022-12-21T11:44:03.476Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 5-1920x1080-50a2480b21d80f131b831c7b35e5e79c_Snapshot.jpg",
+      "md5": "276eeac7204299b44dc6e136f660d9e3",
+      "width": 150,
+      "height": 74,
+      "size": 7950,
+      "uploadedDate": "2022-12-21T11:44:03.944Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 4-1920x1080-e552b9029b9983ccfec05ca97207fead_Snapshot.jpg",
+      "md5": "19e605923f9e8df359da845428b1aad3",
+      "width": 150,
+      "height": 74,
+      "size": 7692,
+      "uploadedDate": "2022-12-21T11:44:04.433Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 3-1920x1080-d0eeb84303c66d695650d08c567d225a_Snapshot.jpg",
+      "md5": "43f6e4187f5ced2bac3dcaa7c2618d55",
+      "width": 150,
+      "height": 74,
+      "size": 7894,
+      "uploadedDate": "2022-12-21T11:44:04.896Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 2-1920x1080-a5c9485966044f43390ade189eaec848_Snapshot.jpg",
+      "md5": "e720f3b20d2934a842b1187bddc5091d",
+      "width": 150,
+      "height": 74,
+      "size": 7135,
+      "uploadedDate": "2022-12-21T11:44:05.342Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text-1920x1080-282ea2ee2b204e7848e0e2ffa3e493ac_Snapshot.jpg",
+      "md5": "375ead37bf7564c453710b9250601043",
+      "width": 150,
+      "height": 74,
+      "size": 7310,
+      "uploadedDate": "2022-12-07T18:19:22.170Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 11-1920x1080-378476dd3f50568ab6186c2b8bebeaa5_Snapshot.jpg",
+      "md5": "f352be627d5fd5ece959b4566105a657",
+      "width": 150,
+      "height": 74,
+      "size": 5363,
+      "uploadedDate": "2022-09-10T18:44:28.896Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 7-1920x1080-a5b6ad6643a551e9ae460d3313020c4d_Snapshot.jpg",
+      "md5": "f9479abe978c509941cff2769fba4a16",
+      "width": 150,
+      "height": 74,
+      "size": 5354,
+      "uploadedDate": "2022-09-10T18:41:45.878Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 8-1920x1080-5eb3cb80d4a9ae312815ae89d6e618d6_Snapshot.jpg",
+      "md5": "0f5deb8b848854514e8dae071f5ecef7",
+      "width": 150,
+      "height": 74,
+      "size": 6328,
+      "uploadedDate": "2022-09-10T18:29:55.244Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 9-1920x1080-c349e4084923a29e5954ca79b6a2de9f_Snapshot.jpg",
+      "md5": "d02aab1512b3dbfbfe901c3955b243bc",
+      "width": 150,
+      "height": 74,
+      "size": 5421,
+      "uploadedDate": "2022-09-10T18:29:55.712Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 10-1920x1080-881a6bed72228a54fb9deac17fe34254_Snapshot.jpg",
+      "md5": "e3034cb05fa972c5ed8dfc96e146c9d7",
+      "width": 150,
+      "height": 74,
+      "size": 5464,
+      "uploadedDate": "2022-09-10T18:29:56.156Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text-1920x1080-265396265cf053978bf3141273fac540_Snapshot.jpg",
+      "md5": "e4346c52625856fc0af49726081cf954",
+      "width": 150,
+      "height": 74,
+      "size": 4915,
+      "uploadedDate": "2022-07-20T10:18:03.806Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 1-1920x1080-51d6cdb79df31ec83e420cecaaa42d69_Snapshot.jpg",
+      "md5": "3686ded58c9b91a9b048c267692adadf",
+      "width": 150,
+      "height": 74,
+      "size": 4114,
+      "uploadedDate": "2022-07-20T10:18:04.214Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 2-1920x1080-df78879af50569ad464fb7f8b5f1a55e_Snapshot.jpg",
+      "md5": "9b2ec4314e1049b22b885ac831098c45",
+      "width": 150,
+      "height": 74,
+      "size": 6167,
+      "uploadedDate": "2022-07-20T10:18:04.719Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 4-1920x1080-611018cda74416d4c6ceb93f62c9ba47_Snapshot.jpg",
+      "md5": "5fbb787c4300ef24548ea82904714981",
+      "width": 150,
+      "height": 74,
+      "size": 4380,
+      "uploadedDate": "2022-07-20T10:18:05.162Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots-1920x1080-0122c0e85ac2b78efe8788e729613f91_Snapshot.jpg",
+      "md5": "41cd3069567548cc6e4b004392141f5e",
+      "width": 150,
+      "height": 74,
+      "size": 4866,
+      "uploadedDate": "2022-07-20T10:18:05.617Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots w text 3-1920x1080-4d76342e6a482a1eeb6c131fbdea83fb_Snapshot.jpg",
+      "md5": "91ef7ba073aaa2a62ace19a276920ae9",
+      "width": 150,
+      "height": 74,
+      "size": 5150,
+      "uploadedDate": "2022-07-20T10:18:06.049Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 1-1920x1080-fa2d8acc271ef616a8ba14020098c3f6_Snapshot.jpg",
+      "md5": "df060d5c49063c8f2e077ab6451c2106",
+      "width": 150,
+      "height": 74,
+      "size": 4632,
+      "uploadedDate": "2022-07-20T10:18:06.563Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots-1920x1080-614c09f2f4138b53ed3562412b088f97_Snapshot.jpg",
+      "md5": "b7255168d3c0676538bbd9703de3202f",
+      "width": 150,
+      "height": 74,
+      "size": 4277,
+      "uploadedDate": "2022-07-10T16:47:26.330Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 9-1920x1080-30537fdb5a6a1205e0d5baf8944b3506_Snapshot.jpg",
+      "md5": "31a68046eb06339307a94834d09664c9",
+      "width": 150,
+      "height": 74,
+      "size": 5908,
+      "uploadedDate": "2022-07-10T16:47:26.916Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 1-1920x1080-fa2d8acc271ef616a8ba14020098c3f6_Snapshot.jpg",
+      "md5": "df060d5c49063c8f2e077ab6451c2106",
+      "width": 150,
+      "height": 74,
+      "size": 4632,
+      "uploadedDate": "2022-07-10T16:47:27.464Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 3-1920x1080-e1d6800a716a4702d593e3977e7fc401_Snapshot.jpg",
+      "md5": "ceaf93ea3e0640b4dd7eb4601736cca4",
+      "width": 150,
+      "height": 74,
+      "size": 4617,
+      "uploadedDate": "2022-07-10T16:47:28.021Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 2-1920x1080-d641e0165f5550ea228452046553b20b_Snapshot.jpg",
+      "md5": "27d5c0b618115ecb529c8b6d2ac0cc32",
+      "width": 150,
+      "height": 74,
+      "size": 4574,
+      "uploadedDate": "2022-07-10T16:47:28.568Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 13-1920x1080-090d6385664d76b8f680af2d55cbfce4_Snapshot.jpg",
+      "md5": "a5423cff5bb3ade50173cc2a00c7f531",
+      "width": 150,
+      "height": 74,
+      "size": 4303,
+      "uploadedDate": "2022-07-10T16:47:29.202Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 11-1920x1080-6ced45844192e3698bd6cdee60930e6e_Snapshot.jpg",
+      "md5": "40c2d0983f6d6534bd374373938adef4",
+      "width": 150,
+      "height": 74,
+      "size": 4593,
+      "uploadedDate": "2022-07-10T16:47:29.795Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 10-1920x1080-a04a4e68a5603bbc829aff49c66706d5_Snapshot.jpg",
+      "md5": "40a2fd1c1573eb2c3363490e7d0c243a",
+      "width": 150,
+      "height": 74,
+      "size": 3813,
+      "uploadedDate": "2022-07-10T16:47:30.352Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 12-1920x1080-f006d4020dbb2c3d7282ab3589946f43_Snapshot.jpg",
+      "md5": "b17ac97e018073297d06998aaf001f9f",
+      "width": 150,
+      "height": 74,
+      "size": 4588,
+      "uploadedDate": "2022-07-10T16:47:30.906Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 4-1920x1080-f9941fd310c95a0e3c0953702f2890b3_Snapshot.jpg",
+      "md5": "c83cc66b1d69facbddb04155b560c2ba",
+      "width": 150,
+      "height": 74,
+      "size": 4850,
+      "uploadedDate": "2022-07-10T16:47:31.347Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 8-1920x1080-f7e8ab8413a8d355ef0ad01f3170ce66_Snapshot.jpg",
+      "md5": "8b302a4b47aef83d9e16847f659861ee",
+      "width": 150,
+      "height": 74,
+      "size": 7251,
+      "uploadedDate": "2022-07-10T16:47:31.947Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 7-1920x1080-bb8b3ef571ebdf04ed6a609a3e392165_Snapshot.jpg",
+      "md5": "14cae35b0fb718414bb5d3886de84336",
+      "width": 150,
+      "height": 74,
+      "size": 9204,
+      "uploadedDate": "2022-07-10T16:47:32.484Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 5-1920x1080-db0ac0971ada630a31aea567834894ec_Snapshot.jpg",
+      "md5": "c742c99d5906fb8f650876cabd1c7f34",
+      "width": 150,
+      "height": 74,
+      "size": 7836,
+      "uploadedDate": "2022-07-10T16:47:33.034Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshots 6-1920x1080-03d1520580a4f824f6995cf86ce2d23f_Snapshot.jpg",
+      "md5": "155712cda30ccbe2a7dbcf48e3609548",
+      "width": 150,
+      "height": 74,
+      "size": 6541,
+      "uploadedDate": "2022-07-10T16:47:33.616Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-07-17T15:59:09.138Z",
+  "lastModifiedDate": "2025-01-19T14:22:24.722Z",
+  "customAttributes": {},
+  "entitlementName": "c1e573324e984e8286c3fa5d84b1cc42",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "67bd34a707ac4d3dbcbe7143ce36636d",
+      "appId": "Procedurc1e573324e98V1",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-07-10T00:00:00.000Z",
+      "releaseNote": "fixed foundation\nadded \"foundation depth\"\nfixed bug causing terraced houses to be messed up when too close to each other\nfixed uvs on between floors",
+      "versionTitle": "V15"
+    }
+  ],
+  "developer": "Aulden Carter",
+  "developerId": "o-4zr9hhf6y5g4vawwdvck3sde4zayla",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

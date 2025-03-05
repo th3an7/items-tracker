@@ -1,0 +1,317 @@
+{
+  "id": "97b1a15996424c77ae7209a43014bafe",
+  "title": "Improved Quest System",
+  "description": "The Improved Quest System allows you to quickly create in-game quests that players can receive and complete from NPCs or from in-game events. Quest objectives can be displayed on screen and minimap/compass user widgets",
+  "longDescription": "<p>The Improved Quest System allows you to quickly create quests, set up complex quests consisting of completing any number of different quest objectives, as well as multiple consecutive quest steps. Quest objectives are shown on the player screen and user widgets. Compass, quest log and <strong>texture-based minimap</strong> user widgets are included.</p><p><br /></p><p><strong>Texture-based minimap</strong> method will solve all possible problems with creating a minimap in your project: you don&#39;t need to render your scene twice as other products offer. In addition, you can make levels with any degree of illumination (including night levels) and this will not affect your minimap in any way.</p><p><br /></p><p>Preview (Youtube): <a href=\"https://youtu.be/p80TlwXmcnQ?si&#61;qqr4QpkF890uWXpR\" rel=\"nofollow\">https://youtu.be/p80TlwXmcnQ?si&#61;qqr4QpkF890uWXpR</a></p><p>Preview (exe): <a href=\"https://drive.google.com/file/d/1wnQYoTMcFtw1x0erQk-bbTYPEZgfPMf6/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/1wnQYoTMcFtw1x0erQk-bbTYPEZgfPMf6/view?usp&#61;sharing</a></p><p>Documentation (pdf): <a href=\"https://drive.google.com/file/d/1AA45vwikW0GEnkLfW4VLeS_cCYwboZuD/view\" rel=\"nofollow\">https://drive.google.com/file/d/1AA45vwikW0GEnkLfW4VLeS_cCYwboZuD/view</a></p><p><br /></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/product/607885cfa08b4bc3aa3d625e17107354\" rel=\"nofollow\">Link to Blueprint-version of the project (supports <strong>UE4.24&#43;</strong>)</a></p><p><br /></p><p>Features:</p><ul><li>Quickly create quests, set up complex quests consisting of completing any number of different quest objectives, as well as multiple consecutive quest steps.</li><li>Includes a Minimap User Widget (<strong>texture-based minimap</strong>) with the possibility to display quest objectives. You can scale the minimap and change a rotation method (your game level may need to change the landscape and actor coordinates to use this option).</li><li>The system provides a full-featured changeable user interface widgets for interacting with a NPC and possibility to accept and complete unlimited amount of Quests.</li><li>Upon accepting/completing a Quests, you can show game cinematics to the players.</li><li>The system provides a methods to displaying the goals of the Quests (and places for taking/completing quests) - on the screen, on the minimap, on the compass.</li><li>System includes an interactive changeable Quest Log widget, which allows the player to read the Quest text, track/untrack the Quests and cancels the Quests.</li><li>You can use any type of quest completion methods (any possible in Unreal Engine interactions with the items, killing the enemies, reaching a targets and so on).</li><li>Player can interact with an unlimited quests goals at once, even if it is not selected as &#34;tracked&#34; in the quest log. </li><li>Each Quest can consist of a different number of Quest Sequences. You can change the game world with Quests Steps progression.</li><li>Depending on the settings, some Quests can be available to the player only if the previous chain Quests are completed.</li><li>Accepting/turning in Quests can trigger events that change the game world, for example, you can make escort quests.</li><li>The possibility of issuing in-game rewards to players after Quests completion is provided.</li><li>The system supports the possibility of transitions between game levels with any number of nested levels (showing the location of the doors to the levels on which the Quest is performed).</li><li>The system supports a multiplayer games in the mode of cooperative walkthrough - general quests for the player group (quest progress replication implemented by using a demo Player Controller replicated Custom Events).</li><li>Save/load game progress is supported.</li><li>The possibility to change map texture for a caves and building floors.</li><li>The possibility to customize icons for Quests and objectives.</li><li>Support for large open levels with WorldPartition and WorldComposition systems.</li><li>Support for non-linearity - the ability to select the Quest being performed with a complete or partial change in the further walkthrough. Also, the non-linearity of the walkthrough can be applied through interaction with game actors or user widgets.</li><li>Full GamePad support (all widgets are usable via GamePad).</li><li>The possibility to use the system in projects of any type (first-person view, third-person view, TopDownTemplate, quest, horror, racing, etc). Quest System settings available as BP component variables and Quest Table variables.</li><li>The possibility to use the system as a Player Controller Blueprint component which is available anywhere in your project.</li><li>The project includes a detailed training video guide that demonstrates the how to use the system in detail (4 hours&#43;).</li><li>Support for localization of Quests text and user interface into any number of languages.</li><li>The possibility to easily transfer all the plugin user widgets to your own user widgets. The method for this is reviewed in the video guide is provided.</li><li>There is the possibility of a usage Improved Quest System with a dialog system (the dialog system is not included in the project).</li></ul><p><br /></p><p><strong>-Updates-</strong></p><p>Version 1.6 (21.03.2024)</p><p>- <u>documentation updated, new sections added</u></p><p>- all tick logic of the plugin is implemented with C&#43;&#43;</p><p>- quest objective actor interface is implemented with C&#43;&#43;</p><p>- added function for updating the objectives of a tracked quest for world actors loaded/unloaded using World Partition/World Composition</p><p>- Improved smoothness of appearance/disappearance of quest markers for the zone map and screen</p><p>- added the possibility to customize objectives icons for the tracked quests widget</p><p>- added animation of smooth screen darkening when passing through doors between game levels</p><p>- added the ability to receive numerical rewards for quests (gold/experience).</p><p><br /></p><p>Version 1.5.1 (14.03.2024).</p><p>- compass widget tick functions is implemented with C&#43;&#43;.</p><p><br /></p><p><em>Version 1.5 (07.03.2024).</em></p><p>- fog of war feature added.</p><p>- zone map feature added.</p><p><br /></p><p><em>Version 1.4 (29.02.2024).</em></p><p>- added automatic calculation of marker positions on the map (no need to select coefficients &#34;MinimapMarksScale(Min/Max)&#34; for each level anymore).</p><p>- significantly improved component performance with a large number of quests used (tested on 10,000&#43; quests).</p><p>- improved smoothness of quest markers disappearing from the screen during the quest.</p><p>- improved UI of the quest log and compass widgets.</p><p>- the &#34;Quest Complete&#34; message now appears when the player reaches the quest goal rather than when the player turns in the quest to an NPC.</p><p>- added optimized interface functions for game actors (Quest Complete Interf, Get Quest State Interf etc). This will greatly optimize RAM usage at game levels.</p><p>- the names of the component blueprints classes have been changed, for example &#34;BP_PlayerController&#34; to &#34;BP_IQS_PlayerController&#34; (<strong>attention</strong>, perhaps when updating the project to a new version you will need to change the names of the blueprints used in your project to the new ones).</p><p>- Fixed some issues in the display of Quest markers on the minimap.</p><p>- Fixed an issues due to which screen marks sometimes disappeared from the screen after talking with an NPC.</p><p><br /></p><p><em>Version 1.3 (11.10.2023).</em></p><p>- added multiplatform support (checked on the Android phone Redmi Note 7).</p><p>- fixed incorrect display of markers for quests awaiting completion in the compass widget.</p><p>- fixed debug settings methods for calculating the minimap marker positions in the example player controller.</p><p><br /></p><p><em>Version 1.2 (30.09.2023).</em></p><p>- improved plugin performance.</p><p>- fixed a bug that caused the quest objective not be removed from the compass widget in some cases.</p><p>- added functions that improves the debug settings of marker positions for the minimap widget.</p><p>- improved smoothness of the disappearance of achieved quest steps from the compass.</p><p>- improved a garbage collection functions.</p><p><br /></p><p><em>Version 1.1 (15.09.2023).</em></p><p>- added Unreal Engine 5.3 version support.</p><p><br /></p><p><strong>Important</strong>: if on the demo level the quest with an escort NPC Mary is not working correctly then you need to calculate the navigations on the levels L_Demonstration, L_Cave and L_House0.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Core of a system is developed with a C&#43;&#43;, widgets and example actors is developed with a Blueprints.</li><li>Compass, quest log and texture-based minimap widgets are included.</li><li>Possibility to use the system as Player Controller blueprint component.</li><li>Settings is available as Blueprints component variables.</li></ul><p><br /></p><p>Code Modules:</p><ul><li> ImprovedQuestSystem [Runtime]</li></ul><p><br /></p><p>Number of Blueprints: 43 (example actors, user widgets and child C&#43;&#43; classes)</p><p>Number of C&#43;&#43; Classes: 18</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Win64, Android, Win32 (other platforms are not checked)</p><p>Supported Target Build Platforms: Win64, Android, Win32</p><p>Documentation: the project includes a detailed training video guide that demonstrates the how to use the system in detail</p><p>Example Project: <a href=\"https://drive.google.com/file/d/1wnQYoTMcFtw1x0erQk-bbTYPEZgfPMf6/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/1wnQYoTMcFtw1x0erQk-bbTYPEZgfPMf6/view?usp&#61;sharing</a></p><p>Video: <a href=\"https://youtu.be/p80TlwXmcnQ?si&#61;qqr4QpkF890uWXpR\" rel=\"nofollow\">https://youtu.be/p80TlwXmcnQ?si&#61;qqr4QpkF890uWXpR</a></p><p>Documentation (pdf): <a href=\"https://drive.google.com/file/d/1AA45vwikW0GEnkLfW4VLeS_cCYwboZuD/view\" rel=\"nofollow\">https://drive.google.com/file/d/1AA45vwikW0GEnkLfW4VLeS_cCYwboZuD/view</a></p><p>Please report any issues you find to email <strong>w4ee44&#64;gmail.com</strong></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-88db1617b6bf5fbb59b65c935e1ace38.png",
+      "md5": "88db1617b6bf5fbb59b65c935e1ace38",
+      "width": 1920,
+      "height": 1080,
+      "size": 1083943,
+      "uploadedDate": "2024-03-17T16:44:43.798Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-1c6751412fa3ea28366c4fdf62a147cf.png",
+      "md5": "1c6751412fa3ea28366c4fdf62a147cf",
+      "width": 1920,
+      "height": 1080,
+      "size": 2020199,
+      "uploadedDate": "2024-03-17T16:44:44.312Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-76861f0eb643cc27dd822ab5bd84cfce.png",
+      "md5": "76861f0eb643cc27dd822ab5bd84cfce",
+      "width": 1920,
+      "height": 1080,
+      "size": 1765933,
+      "uploadedDate": "2024-03-17T16:44:44.796Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-f8dea25d562bc293fc9c96a5201e291a.png",
+      "md5": "f8dea25d562bc293fc9c96a5201e291a",
+      "width": 1920,
+      "height": 1080,
+      "size": 684851,
+      "uploadedDate": "2024-03-17T16:44:45.332Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-5dd7781ebbfac9c3242bf39e1f52ae11.png",
+      "md5": "5dd7781ebbfac9c3242bf39e1f52ae11",
+      "width": 1920,
+      "height": 1080,
+      "size": 765610,
+      "uploadedDate": "2024-03-17T16:44:45.722Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-b78e198117f82c9206777b6412f2939a.png",
+      "md5": "b78e198117f82c9206777b6412f2939a",
+      "width": 1920,
+      "height": 1080,
+      "size": 643619,
+      "uploadedDate": "2024-03-17T16:44:46.066Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ImprovedQuestSystem_thumb-284x284-7ee11002cbd977df070da07d9ee572e8.png",
+      "md5": "7ee11002cbd977df070da07d9ee572e8",
+      "width": 284,
+      "height": 284,
+      "size": 101703,
+      "uploadedDate": "2023-08-30T13:50:55.414Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ImprovedQuestSystem_featured-894x488-bbc6c3c88d539458b805e40143e8c967.png",
+      "md5": "bbc6c3c88d539458b805e40143e8c967",
+      "width": 894,
+      "height": 488,
+      "size": 528901,
+      "uploadedDate": "2023-08-30T13:50:55.546Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-88db1617b6bf5fbb59b65c935e1ace38_Snapshot.png",
+      "md5": "15f0e5037cf51aa72d3975b2eb6fb496",
+      "width": 150,
+      "height": 74,
+      "size": 5394,
+      "uploadedDate": "2024-03-17T16:44:44.086Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-1c6751412fa3ea28366c4fdf62a147cf_Snapshot.png",
+      "md5": "4c0a85707e193a1637ecb99190e36c88",
+      "width": 150,
+      "height": 74,
+      "size": 5068,
+      "uploadedDate": "2024-03-17T16:44:44.608Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-76861f0eb643cc27dd822ab5bd84cfce_Snapshot.png",
+      "md5": "3a8ac8643d4a43003c9127c14c5893db",
+      "width": 150,
+      "height": 74,
+      "size": 6517,
+      "uploadedDate": "2024-03-17T16:44:45.190Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-f8dea25d562bc293fc9c96a5201e291a_Snapshot.png",
+      "md5": "139c0262e48df39a28a2eb9603ab4d90",
+      "width": 150,
+      "height": 74,
+      "size": 4889,
+      "uploadedDate": "2024-03-17T16:44:45.576Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-5dd7781ebbfac9c3242bf39e1f52ae11_Snapshot.png",
+      "md5": "5ffc6693078081ffc1f470376aa70b10",
+      "width": 150,
+      "height": 74,
+      "size": 4848,
+      "uploadedDate": "2024-03-17T16:44:45.958Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-b78e198117f82c9206777b6412f2939a_Snapshot.png",
+      "md5": "1cea9710d4b486958820b721917c9418",
+      "width": 150,
+      "height": 74,
+      "size": 4239,
+      "uploadedDate": "2024-03-17T16:44:46.296Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TIQSLogo-1920x1080-c057cf2563d7de3b94cb12b49422b2ea_Snapshot.png",
+      "md5": "8af4e67bb7bb7720428f54b1fffe834f",
+      "width": 150,
+      "height": 74,
+      "size": 5426,
+      "uploadedDate": "2023-09-03T16:37:28.237Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/111-1-1920x1080-f01817ab0b32a71a93b7fc6bae9b42f5_Snapshot.png",
+      "md5": "ea0084a60c68617097cadee5bf391a74",
+      "width": 150,
+      "height": 74,
+      "size": 6535,
+      "uploadedDate": "2023-09-03T16:37:28.572Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3333-1920x1080-573734e9cce2871cd0eb135314cbec64_Snapshot.png",
+      "md5": "5a260454e188c45f6df1a7d3ec43e407",
+      "width": 150,
+      "height": 74,
+      "size": 4913,
+      "uploadedDate": "2023-09-03T16:37:29.035Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4444-1920x1080-0291cc48fcb9f85d44a2aea7f5a802ce_Snapshot.png",
+      "md5": "ac273898eb3b2a277654fc4e0ef31376",
+      "width": 150,
+      "height": 74,
+      "size": 4872,
+      "uploadedDate": "2023-09-03T16:37:29.482Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5555-1920x1080-769c517997e6958c3da880e078f38972_Snapshot.png",
+      "md5": "c3adef4549ee6efbd673cc41d05febd2",
+      "width": 150,
+      "height": 74,
+      "size": 4229,
+      "uploadedDate": "2023-09-03T16:37:29.812Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TIQSLogo-1920x1080-c057cf2563d7de3b94cb12b49422b2ea_Snapshot.png",
+      "md5": "8af4e67bb7bb7720428f54b1fffe834f",
+      "width": 150,
+      "height": 74,
+      "size": 5426,
+      "uploadedDate": "2023-09-03T16:33:54.574Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/111-1-1920x1080-f01817ab0b32a71a93b7fc6bae9b42f5_Snapshot.png",
+      "md5": "ea0084a60c68617097cadee5bf391a74",
+      "width": 150,
+      "height": 74,
+      "size": 6535,
+      "uploadedDate": "2023-09-03T16:33:54.994Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/111-1920x1080-c9c8378a77addd4417bdba1b1efccba7_Snapshot.png",
+      "md5": "d4947793d520605be9c129669ce6a73d",
+      "width": 150,
+      "height": 74,
+      "size": 6548,
+      "uploadedDate": "2023-08-30T13:50:53.965Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3333-1920x1080-573734e9cce2871cd0eb135314cbec64_Snapshot.png",
+      "md5": "5a260454e188c45f6df1a7d3ec43e407",
+      "width": 150,
+      "height": 74,
+      "size": 4913,
+      "uploadedDate": "2023-08-30T13:50:54.440Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4444-1920x1080-0291cc48fcb9f85d44a2aea7f5a802ce_Snapshot.png",
+      "md5": "ac273898eb3b2a277654fc4e0ef31376",
+      "width": 150,
+      "height": 74,
+      "size": 4872,
+      "uploadedDate": "2023-08-30T13:50:54.993Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5555-1920x1080-769c517997e6958c3da880e078f38972_Snapshot.png",
+      "md5": "c3adef4549ee6efbd673cc41d05febd2",
+      "width": 150,
+      "height": 74,
+      "size": 4229,
+      "uploadedDate": "2023-08-30T13:50:55.353Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-09-03T16:29:30.444Z",
+  "lastModifiedDate": "2024-11-19T19:34:48.306Z",
+  "customAttributes": {},
+  "entitlementName": "97b1a15996424c77ae7209a43014bafe",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3364f02cc8084cbfb1b344b22370c572",
+      "appId": "ImprovedQuestSystem_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Win32"
+      ],
+      "dateAdded": "2023-08-30T00:00:00.000Z",
+      "releaseNote": "password: w3eew3ee",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "5c470fc6cfd8484b97b41865466f5b24",
+      "appId": "ImprovedQuestSystem_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Win32"
+      ],
+      "dateAdded": "2023-08-30T00:00:00.000Z",
+      "releaseNote": "password: w3eew3ee",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "671cb354b3434a7294abeeed99a0891a",
+      "appId": "ImprovedQuestSystem_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Win32"
+      ],
+      "dateAdded": "2023-09-15T00:00:00.000Z",
+      "releaseNote": "password: w3eew3ee",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "726facd0ccc24f339ff3fd92f09cb4e6",
+      "appId": "ImprovedQuestSystem_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "password: w3eew3ee",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "ANRw Studios",
+  "developerId": "o-naldfeuvy3jqfezvdws7dysunth2fs",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

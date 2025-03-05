@@ -1,0 +1,196 @@
+{
+  "id": "87deea5aa3d84675b4b62a8e4217a1e6",
+  "title": "Dynamic Books",
+  "description": "Framework to allow custom-made books to automatically reflect text onto their pages. In addition, it allows the use of the same book model to contain different text.",
+  "longDescription": "<p>This framework allows users to incorporate customizable books into their game world without constraints on the length of the text used. When a player interacts with the book actor, a second and identical book spawns and approaches the player’s camera. Once in front of the player’s camera, it opens, revealing the text printed onto the book pages.</p><p>This system works mainly through two different blueprints (BPs):</p><ol><li>Static Mesh BP (BP_Book_Template_Static): It represents the actor placed in the world by the game creator. It is composed by a single static mesh that includes the book binding and pages.</li><li>Skeletal Mesh BP (BP_Book_Template_Dynamic): It represents the book that spawns when the player interacts with the book actor. It is composed by 5 skeletal meshes: i) book binding; ii) book’s base pages; and iii) 3 pages that will have the text printed onto them.</li></ol><p>The 3 pages will cycle and change position in order to simulate the existence of several additional pages in the book. This enables each book to support very lengthy texts. Obviously, the use of very lengthy texts will cause hiccups on the system when the book is initially interacted with (e.g., I tried this with about the first 100 thousand characters from the Holy Bible). Once it is loaded, you can go to the next and previous page at will, and no further hiccups should occur. <strong>A limitation of this methodology is that you are not able to add images, only text is parsed.</strong></p><p>Finally, a book can be created or modified through 3D software like Blender to create unique designs that complement your game environment (simplest method is to modify the book binding, and leave the pages unchanged). The project currently includes an example notebook made of leather.</p><p><br /></p><p><strong>Change log:</strong></p><p><u>Version 1.4</u></p><ul><li>Changed the roughness and metalness textures of the Lit material to be Linear Grayscale.</li><li>Updated to Unreal Engine 5.4.</li></ul><p><br /></p><p><u>Version 1.3</u></p><ul><li>Further cleaned up the nodes in the base unlit material (no impact).</li><li>Added several additional symbols/marks as potential line splitters, namely: <strong>,</strong>, <strong>;</strong>, <strong>?</strong>, <strong>!</strong>, <strong>&#34;</strong> and <strong>:</strong>.</li><li>Update to Unreal Engine 5.4 is on hold until 5.4.2, since there is a known issue with String Tables that does not allow the use of String Tables without errors (https://forums.unrealengine.com/t/string-tables-missing-string-table-entry-inside-datatables-after-updating-to-ue-5-4/1819257).</li></ul><p><br /></p><p><u>Version 1.2</u></p><ul><li>Corrected the Emission node in the base unlit material.</li><li>Added a maximum value for the parameter Emission Color Mix.</li><li>Changed the default alpha value of the parameter Emissive Color to 1.</li><li>Corrected a bug that could lead the last word of a sentence to be transferred to a new line even if there was still space available within a line.</li></ul><p><br /></p><p><u>Version 1.1</u></p><ul><li>The materials have been corrected to make proper use of PBR textures.</li><li>The name of the root bones of the 3 skeletal meshes were updated to remove previously defined prefixes.</li><li>An unused node was identified and removed.</li><li>The flipping page diffuse texture will be properly used, instead of a pre-defined colour.</li></ul>",
+  "technicalDetails": "<p><strong>Features</strong></p><ul><li>Allows the use of the same book model in the world with different text.</li><li>Text is automatically parsed and rendered on the book&#39;s pages.</li><li>No limitations on the length of the text.</li><li>Implementation is fairly straightforward, and the process to create additional book bindings is simple (see documentation).</li></ul><p><br /></p><p><strong>Asset Statistics</strong></p><p>Animation Assets: 5</p><p>Audio Assets: 3 sounds and 3 sound cues</p><p>Blueprints: 5</p><p>Materials: 2 materials and 4 material instances</p><p>Textures: 9</p><p>Static Meshes: 1</p><p>Skeletal Meshes: 3 (&#43; 3 Physic Assets)</p><p>Demo Assets: 3 blueprints, 9 input-related, 1 level, 1 texture, and 1 widget blueprint</p><p><br /></p><p><strong>Other information</strong></p><p>Input: In the demo, you press E to interact with the book, and to flip to the next page once a book is open. To close a book, you press TAB, and you press Q to flip to the previous page.</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows: Yes / Mac: Not tested</p><p>Documentation: <a href=\"https://ln5.sync.com/dl/ca53628c0/s3eqzd2a-b6v6u5bt-esrui2bp-c66wy7p2\" rel=\"nofollow\">Link</a></p><p>Showcase: <a href=\"https://ln5.sync.com/dl/a2cb53060/xptxiure-c9iwkfxy-3p2kuacn-5tt5kn75\" rel=\"nofollow\">Link</a> (<a href=\"https://youtu.be/WVXmUXnm84s\" rel=\"nofollow\">Video</a>)</p><p>Important/Additional Notes:</p><ul><li>It is not possible to fill in the book pages images, or any other kind of media. Only text can be used.</li><li>This project was developed to be integrated in Moore&#39;s RPG Template (<a href=\"https://www.unrealengine.com/marketplace/en-US/product/rpg-user-interface-kit\" rel=\"nofollow\">Link</a>)</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery01-1920x1080-c37a311add32eb9557e540f96c3200e4.png",
+      "md5": "c37a311add32eb9557e540f96c3200e4",
+      "width": 1920,
+      "height": 1080,
+      "size": 2421985,
+      "uploadedDate": "2024-03-24T22:42:52.444Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery02-1920x1080-122023092fbfe12f81adbe63c392a85e.png",
+      "md5": "122023092fbfe12f81adbe63c392a85e",
+      "width": 1920,
+      "height": 1080,
+      "size": 2533258,
+      "uploadedDate": "2024-03-24T22:42:52.998Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery03-1920x1080-de2b7be912464f051a8ac79079a95749.png",
+      "md5": "de2b7be912464f051a8ac79079a95749",
+      "width": 1920,
+      "height": 1080,
+      "size": 2589260,
+      "uploadedDate": "2024-03-24T22:42:53.588Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery04-1920x1080-f7a87efbde1db1b89235bcdce14e44ea.png",
+      "md5": "f7a87efbde1db1b89235bcdce14e44ea",
+      "width": 1920,
+      "height": 1080,
+      "size": 2682779,
+      "uploadedDate": "2024-03-24T22:42:54.166Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery05-1920x1080-c8e3a2da2d47871f03fc9f281af72186.png",
+      "md5": "c8e3a2da2d47871f03fc9f281af72186",
+      "width": 1920,
+      "height": 1080,
+      "size": 2551687,
+      "uploadedDate": "2024-03-24T22:42:54.773Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery06-1920x1080-3ed797af7a0164cd452a81ee1c8d8328.png",
+      "md5": "3ed797af7a0164cd452a81ee1c8d8328",
+      "width": 1920,
+      "height": 1080,
+      "size": 2551257,
+      "uploadedDate": "2024-03-24T22:42:55.335Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DynamicBooks_thumb-284x284-afacd9baf9d95d8cb873400a08974bd8.png",
+      "md5": "afacd9baf9d95d8cb873400a08974bd8",
+      "width": 284,
+      "height": 284,
+      "size": 24719,
+      "uploadedDate": "2024-03-24T22:38:56.447Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DynamicBooks_featured-894x488-1bb0d8f44a03aa8fc7bfb0957edf4a5a.png",
+      "md5": "1bb0d8f44a03aa8fc7bfb0957edf4a5a",
+      "width": 894,
+      "height": 488,
+      "size": 548750,
+      "uploadedDate": "2024-03-24T23:56:25.744Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery01-1920x1080-c37a311add32eb9557e540f96c3200e4_Snapshot.png",
+      "md5": "c0aad15dbed6503dba9d9ecbed15eec2",
+      "width": 150,
+      "height": 74,
+      "size": 4543,
+      "uploadedDate": "2024-03-24T22:42:52.809Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery02-1920x1080-122023092fbfe12f81adbe63c392a85e_Snapshot.png",
+      "md5": "8f7fa2834ae857d6c62c0539d8b6c368",
+      "width": 150,
+      "height": 74,
+      "size": 4629,
+      "uploadedDate": "2024-03-24T22:42:53.388Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery03-1920x1080-de2b7be912464f051a8ac79079a95749_Snapshot.png",
+      "md5": "b93962afc84396e10ff09cafb925f724",
+      "width": 150,
+      "height": 74,
+      "size": 4640,
+      "uploadedDate": "2024-03-24T22:42:53.944Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery04-1920x1080-f7a87efbde1db1b89235bcdce14e44ea_Snapshot.png",
+      "md5": "f18d9bc686ef3f21bea9100ff8135e68",
+      "width": 150,
+      "height": 74,
+      "size": 4870,
+      "uploadedDate": "2024-03-24T22:42:54.528Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery05-1920x1080-c8e3a2da2d47871f03fc9f281af72186_Snapshot.png",
+      "md5": "2b2ec590f2f5724c6ffeb5c711da8ab4",
+      "width": 150,
+      "height": 74,
+      "size": 5205,
+      "uploadedDate": "2024-03-24T22:42:55.129Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery06-1920x1080-3ed797af7a0164cd452a81ee1c8d8328_Snapshot.png",
+      "md5": "b67d95f66271a7e58139a484ab601ccd",
+      "width": 150,
+      "height": 74,
+      "size": 5180,
+      "uploadedDate": "2024-03-24T22:42:55.712Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery-1920x1080-023e56ba357a47a8fc31bbfe7a4bf256_Snapshot.jpg",
+      "md5": "1ff834404d6d0e12b9ab29ead9207862",
+      "width": 150,
+      "height": 74,
+      "size": 827,
+      "uploadedDate": "2024-03-23T14:28:51.808Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-03-29T09:48:59.142Z",
+  "lastModifiedDate": "2024-11-16T23:42:35.446Z",
+  "customAttributes": {},
+  "entitlementName": "87deea5aa3d84675b4b62a8e4217a1e6",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "e78f91712b414a9e88ac83a44dfe9880",
+      "appId": "DynamicB87deea5aa3d8V1",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2024-03-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE 5.3 - Version 1.4"
+    },
+    {
+      "id": "de934bd96cab4e678e69eebc23765658",
+      "appId": "DynamicB87deea5aa3d8V2",
+      "compatibleApps": [
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2024-06-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE 5.4 - Version 1.4"
+    }
+  ],
+  "developer": "esuriddick's Products",
+  "developerId": "o-lmwjatl7nt8uuk3w37lxjpqt2djbel",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

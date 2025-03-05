@@ -1,0 +1,481 @@
+{
+  "id": "5e32cd6cd2324eac9214670a21ba753f",
+  "title": "Symbol Recognizer 3D/VR",
+  "description": "This plugin is designed for recognizing drawn patterns in gameplay. It creates and trains neural networks that can recognize player's input as Vector 2D/3D and test it against learned patterns.",
+  "longDescription": "<p>WARNING: Refresh Asset registry if saved profiles doesn&#39;t show up after engine update. In content browser find <em>Plugins/SymbolRecognizerVR/</em><strong><em>Runtime</em> </strong>and rename the folder Runtime to RuntimeTemp and <strong>rename it back to Runtime</strong>.</p><p><br /></p><p>The tool provides an environment for recording patterns that can be recognized during game, e.g. unlock doors or cast a spell if the drawing is accurate enough.</p><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;goZJxw8e21o\" rel=\"nofollow\">Showcase Video</a></p><p>Demo Project Video: <a href=\"https://www.youtube.com/watch?v&#61;KRAmnj8M4ic\" rel=\"nofollow\">Link</a> , <a href=\"https://youtu.be/G1uBKLdN-hw\" rel=\"nofollow\">SpellCaster2Hands</a></p><p>Tutorial Video: <a href=\"https://www.youtube.com/watch?v&#61;G43LA8ovJhs&amp;list&#61;PLG_MAloxEjJ5tGiCopZrgsefp7F9rkrKn\" rel=\"nofollow\">Playlist</a> - <a href=\"https://www.youtube.com/watch?v&#61;G43LA8ovJhs\" rel=\"nofollow\">1. Editor</a>, <a href=\"https://www.youtube.com/watch?v&#61;lkAqnVCMcnc&amp;t&#61;7s\" rel=\"nofollow\">2. Runtime</a>, <a href=\"https://www.youtube.com/watch?v&#61;jouOlfEeONU\" rel=\"nofollow\">3. Game</a></p><p>Demo Project: <a href=\"https://drive.google.com/file/d/1za-qaBxecPpL-TIwpQBZO_V5qe3olNRy/view?usp&#61;drive_link\" rel=\"nofollow\">SrVrDemo</a> ( <a href=\"https://drive.google.com/file/d/12zslTcX9PvUXawhGEqlvWxrnTZywHNJ8/view?usp&#61;share_link\" rel=\"nofollow\">Link</a> to older version)</p><p>Discord: <a href=\"https://discord.gg/HdxazTQC\" rel=\"nofollow\">SymbolRecognizer</a></p><p>The plugin is divided into four sections that guide users through the process of creating a neural network:</p><ol><li>Profile - This section allows users to create an asset to store their neural network and settings.</li><li>Record - Users can record 2D/3D inputs to train their neural network with the help of this simple tool.</li><li>Train - This section enables users to feed their neural network with previously gathered input data.</li><li>Test - Users can select a trained neural network and draw a pattern to test its accuracy against &#39;symbols&#39; that were fed into the network.</li></ol><p><br /></p><p>Once a profile with working neural network is complete, users can do a simple gameplay setup in blueprints or code. The idea is to record the user&#39;s input in-game as Vector2D for mouse or Vector3D for motion controller, and then identify which learned pattern matches the user&#39;s drawing.</p><p><br /></p><p>All of the gameplay functionality is exposed to the blueprints by a global object &#39;<em>SrVRRecognizer</em>&#39; and a basic implementation may follow those steps:</p><ol><li>Grab <em>SrVRRecognizer </em>and call the function &#39;<em>StartRecording</em>&#39; when the TRIGGER button is pressed.</li><li>Check a flag &#39;<em>IsRecording</em>&#39; in Tick and if true, call &#39;<em>RecordData</em>&#39; passing motion controller world location.</li><li>Call &#39;<em>StopRecording</em>&#39; when TRIGGER button is released.</li><li>Call &#39;<em>GetAccuracyList</em>&#39; once recording has stopped, which gives ratio (0-1) for each trained symbol. If the accuracy for an expected symbol is high enough (close to 1), then cast a spell (spawn emitter?)</li><li>Call <em>ResetRecording</em> once you are done with current recording and want to do a test for a new one.</li></ol><p><br /></p><p><em>Note: Even though there are simple examples in the tool showing how to paint in 3D using Niagara or 2D onto a mesh with CanvasRenderTarget, the plugin is not about visualizing a drawing effect in-game and it&#39;s up to the user to add any visual effects if necessary. The core feature is about recording player&#39;s input as Vector 2D/3D and testing it against trained neural network.</em></p>",
+  "technicalDetails": "<p>Features:</p><ul><li> New Editor Mode &#39;SymbolRecognizerVR&#39;</li><li> Simple drawing tool for 2D and 3D input</li><li> Multiple parameters exposed to tweak Neural Network</li><li>Recognize patterns in 2D (screen space) or 3D (world space)</li><li>Testing neural network tool</li><li>Simple visualization of neural network learning progress</li><li>Tutorial inside the plugin</li><li>Demo showcasing a &#39;Spell Caster&#39; and &#39;Painter&#39; gameplay scenarios</li></ul><p><br /></p><p>Code Modules:</p><ul><li> SymbolRecognizerVR (Runtime)</li><li> SymbolRecognizerVREditor (Editor)</li></ul><p><br /></p><p>Number of Blueprints: 15</p><p>Number of C&#43;&#43; Classes: 35</p><p>Network Replicated: No</p><p>Documentation: Inside the plugin as a tutorial displayed in the details panel.</p><p>Example Project: <a href=\"https://drive.google.com/file/d/12zslTcX9PvUXawhGEqlvWxrnTZywHNJ8/view?usp&#61;share_link\" rel=\"nofollow\">SrVRDemo</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G31-1920x1080-8fc5c07f7727c77de564ed7ed279aa83.png",
+      "md5": "8fc5c07f7727c77de564ed7ed279aa83",
+      "width": 1920,
+      "height": 1080,
+      "size": 579147,
+      "uploadedDate": "2022-11-04T21:06:37.331Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G14-1920x1080-af0f6d7fe8117b0a85f6364574640367.png",
+      "md5": "af0f6d7fe8117b0a85f6364574640367",
+      "width": 1920,
+      "height": 1080,
+      "size": 1458080,
+      "uploadedDate": "2022-11-04T21:06:37.668Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G15-1920x1080-dfe0386d358b71957eac80232bc16661.png",
+      "md5": "dfe0386d358b71957eac80232bc16661",
+      "width": 1920,
+      "height": 1080,
+      "size": 1527515,
+      "uploadedDate": "2022-11-04T21:06:38.163Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G24-1920x1080-d68579ac8bd2692660d519f92dbe0dfb.png",
+      "md5": "d68579ac8bd2692660d519f92dbe0dfb",
+      "width": 1920,
+      "height": 1080,
+      "size": 1059381,
+      "uploadedDate": "2022-11-04T21:06:38.656Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G23-1920x1080-317b5fb89eb06b45852964ee1906c646.png",
+      "md5": "317b5fb89eb06b45852964ee1906c646",
+      "width": 1920,
+      "height": 1080,
+      "size": 1161711,
+      "uploadedDate": "2022-11-04T21:06:39.091Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G33-1920x1080-4b3c59025d31d90dc4a174518e8096fd.png",
+      "md5": "4b3c59025d31d90dc4a174518e8096fd",
+      "width": 1920,
+      "height": 1080,
+      "size": 486858,
+      "uploadedDate": "2022-11-04T21:06:39.490Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G19-1920x1080-ce0638653b71fea78cb5588e862091a0.png",
+      "md5": "ce0638653b71fea78cb5588e862091a0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1540037,
+      "uploadedDate": "2022-11-04T21:06:39.904Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G41-1920x1080-d606117678a4e7202844d58cee563792.png",
+      "md5": "d606117678a4e7202844d58cee563792",
+      "width": 1920,
+      "height": 1080,
+      "size": 356250,
+      "uploadedDate": "2022-11-04T21:06:40.326Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G18-1920x1080-de49bc6665b75a98e0c33308e2201502.png",
+      "md5": "de49bc6665b75a98e0c33308e2201502",
+      "width": 1920,
+      "height": 1080,
+      "size": 520084,
+      "uploadedDate": "2022-11-04T21:06:40.624Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G16-1920x1080-ed8880f13990fde8e6d5fdd485effabc.png",
+      "md5": "ed8880f13990fde8e6d5fdd485effabc",
+      "width": 1920,
+      "height": 1080,
+      "size": 638125,
+      "uploadedDate": "2022-11-04T21:06:41.050Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G36-1920x1080-72c33e4bc259396ea431936299ebd836.png",
+      "md5": "72c33e4bc259396ea431936299ebd836",
+      "width": 1920,
+      "height": 1080,
+      "size": 376884,
+      "uploadedDate": "2022-11-04T21:06:41.420Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/G37-1920x1080-8c8b994f018131bda6260431f1e7f978.png",
+      "md5": "8c8b994f018131bda6260431f1e7f978",
+      "width": 1920,
+      "height": 1080,
+      "size": 485300,
+      "uploadedDate": "2022-11-04T21:06:41.604Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SymbolRecognizerVR_thumb-284x284-b38c8f555f479df2531dbbaf2d6e086e.png",
+      "md5": "b38c8f555f479df2531dbbaf2d6e086e",
+      "width": 284,
+      "height": 284,
+      "size": 88398,
+      "uploadedDate": "2022-11-04T21:06:41.734Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SymbolRecognizerVR_featured-894x488-ffce2d73925049b569fe4d43991a4647.png",
+      "md5": "ffce2d73925049b569fe4d43991a4647",
+      "width": 894,
+      "height": 488,
+      "size": 318924,
+      "uploadedDate": "2022-11-04T21:06:41.816Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G31-1920x1080-8fc5c07f7727c77de564ed7ed279aa83_Snapshot.png",
+      "md5": "19b029f929ae18d49df5e1b59f6b8271",
+      "width": 150,
+      "height": 74,
+      "size": 6654,
+      "uploadedDate": "2022-11-04T21:06:37.490Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G14-1920x1080-af0f6d7fe8117b0a85f6364574640367_Snapshot.png",
+      "md5": "a748be73d8d7a032b7f0cbb7d5691a3c",
+      "width": 150,
+      "height": 74,
+      "size": 5985,
+      "uploadedDate": "2022-11-04T21:06:37.965Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G15-1920x1080-dfe0386d358b71957eac80232bc16661_Snapshot.png",
+      "md5": "dca692cba71b08589bf3b1ff0475886e",
+      "width": 150,
+      "height": 74,
+      "size": 6106,
+      "uploadedDate": "2022-11-04T21:06:38.462Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G24-1920x1080-d68579ac8bd2692660d519f92dbe0dfb_Snapshot.png",
+      "md5": "42956aab9ccb0dc10a95d791d1382a66",
+      "width": 150,
+      "height": 74,
+      "size": 4972,
+      "uploadedDate": "2022-11-04T21:06:38.925Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G23-1920x1080-317b5fb89eb06b45852964ee1906c646_Snapshot.png",
+      "md5": "32d18524b2d055e2150cd25aa0ced969",
+      "width": 150,
+      "height": 74,
+      "size": 6065,
+      "uploadedDate": "2022-11-04T21:06:39.396Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G33-1920x1080-4b3c59025d31d90dc4a174518e8096fd_Snapshot.png",
+      "md5": "9b550b761d8210d16ef2c9d8b76c715f",
+      "width": 150,
+      "height": 74,
+      "size": 7318,
+      "uploadedDate": "2022-11-04T21:06:39.603Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G37-1920x1080-8c8b994f018131bda6260431f1e7f978_Snapshot.png",
+      "md5": "2089ac76066808b574ca66ab20c30bbe",
+      "width": 150,
+      "height": 74,
+      "size": 7081,
+      "uploadedDate": "2022-11-04T21:06:39.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G19-1920x1080-ce0638653b71fea78cb5588e862091a0_Snapshot.png",
+      "md5": "a28d48885d65b8a9caa60d40f27f366a",
+      "width": 150,
+      "height": 74,
+      "size": 6736,
+      "uploadedDate": "2022-11-04T21:06:40.212Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G41-1920x1080-d606117678a4e7202844d58cee563792_Snapshot.png",
+      "md5": "7482a56c9bcb029b13854486c3c6a266",
+      "width": 150,
+      "height": 74,
+      "size": 6711,
+      "uploadedDate": "2022-11-04T21:06:40.444Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G18-1920x1080-de49bc6665b75a98e0c33308e2201502_Snapshot.png",
+      "md5": "41ee05a4bfd6bb18f68b9fd39f07e578",
+      "width": 150,
+      "height": 74,
+      "size": 5157,
+      "uploadedDate": "2022-11-04T21:06:40.932Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G16-1920x1080-ed8880f13990fde8e6d5fdd485effabc_Snapshot.png",
+      "md5": "249c10612b26ff4f973852e6aaa546da",
+      "width": 150,
+      "height": 74,
+      "size": 5921,
+      "uploadedDate": "2022-11-04T21:06:41.302Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G36-1920x1080-72c33e4bc259396ea431936299ebd836_Snapshot.png",
+      "md5": "c12bb68e4740aead56d8ec2af9c67c6f",
+      "width": 150,
+      "height": 74,
+      "size": 7513,
+      "uploadedDate": "2022-11-04T21:06:41.499Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G37-1920x1080-8c8b994f018131bda6260431f1e7f978_Snapshot.png",
+      "md5": "2089ac76066808b574ca66ab20c30bbe",
+      "width": 150,
+      "height": 74,
+      "size": 7081,
+      "uploadedDate": "2022-11-04T21:06:41.686Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G13-1920x1080-6dd1eb7f728735fa21bb9b3c63f542e0_Snapshot.png",
+      "md5": "c4cb330eb658e58a44cb2c124db9c970",
+      "width": 150,
+      "height": 74,
+      "size": 6809,
+      "uploadedDate": "2022-10-12T12:22:01.779Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G14-1920x1080-af0f6d7fe8117b0a85f6364574640367_Snapshot.png",
+      "md5": "a748be73d8d7a032b7f0cbb7d5691a3c",
+      "width": 150,
+      "height": 74,
+      "size": 5985,
+      "uploadedDate": "2022-10-12T12:22:02.212Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G15-1920x1080-dfe0386d358b71957eac80232bc16661_Snapshot.png",
+      "md5": "dca692cba71b08589bf3b1ff0475886e",
+      "width": 150,
+      "height": 74,
+      "size": 6106,
+      "uploadedDate": "2022-10-12T12:22:02.650Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G16-1920x1080-ed8880f13990fde8e6d5fdd485effabc_Snapshot.png",
+      "md5": "249c10612b26ff4f973852e6aaa546da",
+      "width": 150,
+      "height": 74,
+      "size": 5921,
+      "uploadedDate": "2022-10-12T12:22:03.028Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G17-1920x1080-7847c5a3f3ad42e37f59f716885de7b8_Snapshot.png",
+      "md5": "df290ca7c4dbf4cbfdfd64ff5cff9ba3",
+      "width": 150,
+      "height": 74,
+      "size": 7435,
+      "uploadedDate": "2022-10-12T12:22:03.477Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G18-1920x1080-de49bc6665b75a98e0c33308e2201502_Snapshot.png",
+      "md5": "41ee05a4bfd6bb18f68b9fd39f07e578",
+      "width": 150,
+      "height": 74,
+      "size": 5157,
+      "uploadedDate": "2022-10-12T12:22:03.954Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G19-1920x1080-ce0638653b71fea78cb5588e862091a0_Snapshot.png",
+      "md5": "a28d48885d65b8a9caa60d40f27f366a",
+      "width": 150,
+      "height": 74,
+      "size": 6736,
+      "uploadedDate": "2022-10-12T12:22:04.385Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G20-1920x1080-3a9f1de0fc6bf07a232b31af4510b720_Snapshot.png",
+      "md5": "2e0b2ceb85d31d6baaa234fdaf6317ff",
+      "width": 150,
+      "height": 74,
+      "size": 6506,
+      "uploadedDate": "2022-10-12T12:22:04.849Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G21-1920x1080-f3248f21a5e79210616a45d81cd3b8f2_Snapshot.png",
+      "md5": "d2699c935211f33121e2e04352baad4d",
+      "width": 150,
+      "height": 74,
+      "size": 7756,
+      "uploadedDate": "2022-10-12T12:22:05.387Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G22-1920x1080-ccbfd8f05b3ab442af3e226b4a98d4db_Snapshot.png",
+      "md5": "64435ad188fc30a060b1d550447e8d2e",
+      "width": 150,
+      "height": 74,
+      "size": 6992,
+      "uploadedDate": "2022-10-12T12:22:05.894Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G23-1920x1080-317b5fb89eb06b45852964ee1906c646_Snapshot.png",
+      "md5": "32d18524b2d055e2150cd25aa0ced969",
+      "width": 150,
+      "height": 74,
+      "size": 6065,
+      "uploadedDate": "2022-10-12T12:22:06.292Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G24-1920x1080-d68579ac8bd2692660d519f92dbe0dfb_Snapshot.png",
+      "md5": "42956aab9ccb0dc10a95d791d1382a66",
+      "width": 150,
+      "height": 74,
+      "size": 4972,
+      "uploadedDate": "2022-10-12T12:22:06.669Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G25-1920x1080-919b40638b6abffae7fcf1e7a8a1a301_Snapshot.png",
+      "md5": "34d8fec75990ccf6447cba88c1c8a8e0",
+      "width": 150,
+      "height": 74,
+      "size": 6891,
+      "uploadedDate": "2022-10-12T12:22:07.206Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/G26-1920x1080-8598ca216f69bbe441e657d86af9df98_Snapshot.png",
+      "md5": "b1af161c52fc7f50a2249b8f3307a7e2",
+      "width": 150,
+      "height": 74,
+      "size": 5976,
+      "uploadedDate": "2022-10-12T12:22:07.717Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-11-06T17:17:50.263Z",
+  "lastModifiedDate": "2024-12-02T00:13:47.717Z",
+  "customAttributes": {},
+  "entitlementName": "5e32cd6cd2324eac9214670a21ba753f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "72f8f61a6f424d64b2247213a8395deb",
+      "appId": "SymbolRecognizerVR_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Android"
+      ],
+      "dateAdded": "2022-10-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.0"
+    },
+    {
+      "id": "e95a1e6d804343a79ac961e6ed7b9253",
+      "appId": "SymbolRecognizerVR_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "- fix debug 2d symbol drawing crash\n- use line batcher for debug 3d drawing",
+      "versionTitle": "2.0.1"
+    },
+    {
+      "id": "c3c7ffe7f9324311bfb7828e17ea5af2",
+      "appId": "SymbolRecognizerVR_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2023-06-19T00:00:00.000Z",
+      "releaseNote": "5.2 update",
+      "versionTitle": "3.0.0"
+    },
+    {
+      "id": "642a5bc733ab4d408a2a1ae04d6e0ce9",
+      "appId": "SymbolRecognizerVR_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Windows",
+        "Oculus",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2023-09-18T00:00:00.000Z",
+      "releaseNote": "5.3 update",
+      "versionTitle": "4.0.0"
+    },
+    {
+      "id": "51877c7982344aac82f5f001481fa628",
+      "appId": "SymbolRecognizerVR_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-10T00:00:00.000Z",
+      "releaseNote": "- 5.4 update\n- alllow simultaneously recording\n- coord options for motion controllers\n- fix save import profiles after update\n- refactor calculations",
+      "versionTitle": "5.4.2"
+    }
+  ],
+  "developer": "pmacharzewski",
+  "developerId": "o-x56bncbfm38jql72gspeehwpxrxy5s",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

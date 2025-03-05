@@ -1,0 +1,238 @@
+{
+  "id": "1b68eeda3f6f417fb87b0022c4de5d8d",
+  "title": "Mesh Ops Lite - Mesh Operations Plugin",
+  "description": "Mesh Ops Lite is a collection of 100+ Blueprint functions written in C++, Mesh Booleans, Mesh Generation and much more!",
+  "longDescription": "<h2>This is the Lite version of Mesh Ops, which has fewer functions than the full Mesh Ops Plugin <a href=\"https://www.unrealengine.com/marketplace/en-US/product/84e127de57ed4e12877b1337b4e25ad1\" rel=\"nofollow\">which can be found here</a>!</h2><p>Notably, functions involving selection, brushes, icon generation, mirroring, smoothing (and others) have been trimmed out for this Lite version. Over 100 functions including Mesh Booleans, slicing, extruding splines, importing/exporting obj, saving/loading data are all available still in the Lite version. Compare the functions lists for more details. The full Mesh Ops Plugin also receives updates and new functions from time to time, the Lite one will only get bugfixes. Almost everything is named the same between versions so If you need to upgrade to the full plugin, it should be possible to swap the plugin folders but this is currently untested.</p><p><br /></p><p>Some of the following information and links may reference features in the full plugin, please look at the functions list or <a href=\"mailto:vyrulentstudios&#64;gmail.com\" rel=\"nofollow\">email us</a> if you have any questions.</p><h2><br /></h2><h2><a href=\"https://youtu.be/IQsq99kfLtE\" rel=\"nofollow\"><strong>OVERVIEW VIDEO</strong></a></h2><p><a href=\"https://vyrulent.com/MeshOpsDemo.zip\" rel=\"nofollow\"><strong>DEMO MAP DOWNLOAD</strong></a></p><p><a href=\"https://vyrulent.com/CutGameDemo.zip\" rel=\"nofollow\"><strong>&#39;CUT GAME&#39; DEMO DOWNLOAD</strong></a></p><p><br /></p><p>Mesh Ops Lite is a collection of 100&#43; Blueprint Node Functions written in C&#43;&#43;, allowing for a wide variety of advanced Procedural Mesh edits and generation. Included are several example blueprints of how to chain together these nodes to accomplish many different things. Most functions are construction script tested/safe (when used as intended, please backup your work.)</p><p><a href=\"https://www.youtube.com/channel/UCsQYyYcol61E0mugdalhhaA\" rel=\"nofollow\"><strong>Youtube</strong></a><strong> </strong>We may provide tutorials in the future, stay tuned.</p><p><strong>4.26 / UE5 / Questions / Requests - </strong><a href=\"mailto:vyrulentstudios&#64;gmail.com\" rel=\"nofollow\">vyrulentstudios&#64;gmail.com</a></p><p><strong>Documentation (Auto Generated from full plugin) </strong><a href=\"https://vyrulent.com/MeshOps/Documentation/MeshOpsPluginBPLibrary/MeshOpsPluginBPLibrary.html\" rel=\"nofollow\">https://vyrulent.com/MeshOps/Documentation/MeshOpsPluginBPLibrary/MeshOpsPluginBPLibrary.html</a></p><p><br /></p><p><strong>INCLUDED DEMO GAME</strong></p><p>&#39;Cut Game&#39; is included as an example of how this plugin could be integrated into gameplay. Roll around and slice into the floor as you go, once you cross back over your path it cuts out a section of the floor for a limited amount of time. The goal is to knock as many point spheres into the holes you make as you can within the time limit, green spheres are worth points, red subtract from your total points, and blue spheres increase the remaining time.</p><p><br /></p><p><strong>Note</strong>: The Mesh Boolean function and some of the related code are from an engine plugin called Geometry Processing, included in Unreal since 4.26, but not exposed to blueprints on its own. If you only need the mesh boolean functions from this, I would recommend another (free) plugin from gradientspace.com - https://github.com/getnamo/RuntimeGeometryUtils</p><p>(Gradientspace is also a great resource to learn about the Geometry Processing plugin, not affiliated/associated) Mesh Booleans on simple meshes are very fast - enough to be done in real-time, i.e. every frame, but for more complex meshes it takes much longer, we provide methods to save and load the data so it doesn&#39;t have to be generated at runtime, or regenerated.</p><p><br /></p><p>Most of the functions operate on an entire mesh at once and/or use a loop of vertices - fine mesh &#39;modeling&#39; type editing is not available in the Lite version and currently limited in the full version.</p><p><br /></p><p><strong>QUICK START</strong></p><p>You should be able to right-click in a blueprint and type Mesh Ops, to find all the nodes available. Mesh Data is the structure that holds procedural mesh data. Read on for more.</p><p><br /></p><p><strong>GETTING STARTED</strong></p><ol><li>Enable Show Plugin Content (and possibly Show Engine Content) in the Content Browser</li><li>Find the MeshOpsPlugin Content folder in the Content Browser</li><li>I&#39;d recommend opening the Content/READ_ME blueprint, it&#39;s a good idea to familiarize yourself with the nodes</li><li>Or open the Content/Maps/MeshOpsDemo map and press play</li></ol><p><br /></p><p><strong>Dependencies</strong></p><ol><li>After installing the plugin and enabling it for your project, ensure the following plugins are enabled as well: Geometry Processing, and Procedural Mesh Component (should be enabled automatically when enabling this plugin)</li><li>C&#43;&#43; users: &#34;ProceduralMeshComponent&#34;, &#34;GeometricObjects&#34;, &#34;DynamicMesh&#34; might be needed in your build.cs file</li></ol><p><br /></p><p><strong>Raw Functions List</strong></p><p>Add Loop to Multi Loop Array, Add to Bounds, Append Mesh Data, Auto UVs, Bridge Loop to Center, Bridge Loops, Byte Array to String, Calc Mesh Data Bounds, Calc Storage Bounds, Clear Mesh Data, Color Mesh, Create Empty Texture, Create Strip, Create Texture from Pixel Array, Cut Loop, Delete Triangle, Distance to Mesh Surface, Expand Loop, Expand Mesh Data by Normals, Extrude Mesh Data, Fast Dist, Fast Normalize, Fill Hole Loop, Generate Circle Loop, Generate Cube Mesh, Generate Disk, Generate Grid Mesh, Generate Rectangle Loop, Generate Sphere Mesh, Get All Edge Loops from Mesh Data, Get Bounds, Get Bounds Extent, Get Center Of Loop, Get Center Of Mass, Get Closest Point in Vector Array, Get Closest Point on Loop, Get Closest Vert, Get Edge Loop from Mesh Data, Get Loop Distances, Get Loop Distances from Start, Get Mesh Data from Static Mesh, Get Mesh Volume, Get Pixel at UV, Get Pixels as Linear Color, Get Pixels from Texture, Get Proc Mesh All Data, Get Proc Mesh Section Data, Get Storage Bounds, Get Storage Bounds Extent, Get Triangle, Get Vertex Neighbors, Gradient Color Mesh, Index 2 XY, Interp Move Mesh Data To, Inv Tri Normal, Is Loop Closed, Line Intersect 2DPoly, Line Intersect 3D, Line Intersection, Load Mesh Data from Obj, Load Mesh Sections from Obj, Localize Mesh Data, Loop Is Clockwise, Loop to Loop Struct, Mesh Boolean, Now, Pack Mesh Data Into Bytes, Pack Mesh Data Into String, Pack Mesh Data Storage Into Bytes, Planar Project UVs, Point Inside 2DPoly, Point Inside 2DTriangle, Point Inside Mesh, Point Inside Triangle, Procedural Mesh from Mesh Data, Procedural Mesh from Mesh Data Array, Project Point to Tri, Project Vector to Tri, Pull Data From, Random Shift Mesh Data Verts, Read from File, Rediscover Verts, Remove Mesh Data, Remove Mesh Storage, Remove Unused Verts, Retrieve Mesh Data, Retrieve Mesh Storage, Rotate Loop Indexes, Rotate Loop Struct Indexes, Rotate Mesh Data Around Axis, Save Mesh Data as Obj, Save Mesh Sections as Obj, Set Mesh Data Color, Set Normals to Face, Slice Loop, Slice Mesh Data, Slice Mesh Data Storage, Snap Point to Mesh, Sphere Project UVs, Spherize Mesh, Split Vertexes, Store Mesh Data, Store Mesh Storage, String to Byte Array, Subdivide Mesh Data, Subdivide Tri, Total Loop Length, Transform Loop, Transform Loop Struct, Transform Mesh Data, Transform UVs, Traverse Loop Until Intersect, Tri Normal, Tri UVTo Bary, Triangle Area, Triangulate Poly, Troubleshoot Mesh Data, Unify Triangles, Unpack Mesh Data Storage from Bytes, Unpack Mesh Data from Bytes, Unpack Mesh Data from String, Unwrap UVs, Update Procedural Mesh from Mesh Data, Update Texture from Pixel Array, Walk Pixels, Weld Mesh Data, Write to File, XY 2Index</p><p><br /></p><p><strong>DOCUMENTATION</strong> - <a href=\"https://vyrulent.com/MeshOps/Documentation/MeshOpsPluginBPLibrary/MeshOpsPluginBPLibrary.html\" rel=\"nofollow\">https://vyrulent.com/MeshOps/Documentation/MeshOpsPluginBPLibrary/MeshOpsPluginBPLibrary.html</a></p><p>And Enable Show Plugin Content, find MeshOpsPlugin Content/READ_ME</p><p><br /></p><p>UE4 built-in Booleans, etc. C&#43;&#43; doc - <a href=\"https://docs.unrealengine.com/4.27/en-US/API/Plugins/DynamicMesh/\" rel=\"nofollow\">https://docs.unrealengine.com/4.27/en-US/API/Plugins/DynamicMesh/</a></p><p>C&#43;&#43; files for built-in GP plugin - Program Files\\Epic Games\\UE_4.27\\ Engine\\Plugins\\Experimental\\GeometryProcessing\\Source\\</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Mesh Booleans, saving/loading, exporting/importing, generating, runtime, and real-time applications, mesh animations not possible by any other means, and much more.</li><li> Possible applications: Cutting meshes dynamically, destruction, cutaway diagrams, meshes from images, real bullet holes (optimizing for a multiplayer shooter game may be challenging though), meshes from splines or &#39;hand drawn&#39; outlines</li><li>For more, see the Functions List above.</li><li>Functions/nodes are made to be very modular, and easy to understand how they work together.</li><li>Example blueprints for a variety of applications, showing how to chain nodes together to achieve different things.</li><li>Includes a demo game &#34;Cut Game&#34;, roll around cutting through the floor and knocking point balls into the holes you make. Demonstrates the fundamentals of retaining data for consecutive mesh operations.</li><li>Full C&#43;&#43; source code included.</li></ul><p>Code Modules:</p><ul><li> MeshOpsPlugin - Editor Plugin</li></ul><p>Number of Blueprints: 25 (mostly example blueprints)</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows, likely others (untested)</p><p>Documentation: MeshOpsPlugin Content/READ_ME</p><p>Auto-Generated Documentation: (Full Version)</p><p> <a href=\"https://vyrulent.com/MeshOps/Documentation/MeshOpsPluginBPLibrary/MeshOpsPluginBPLibrary.html\" rel=\"nofollow\">https://vyrulent.com/MeshOps/Documentation/.</a>..</p><p>Link to the Full Version:</p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/product/84e127de57ed4e12877b1337b4e25ad1\" rel=\"nofollow\">https://www.unrealengine.com/marketplace/.</a>..</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00027 Copy-1920x1080-c269552e3c73ec540890d87995a02403.png",
+      "md5": "c269552e3c73ec540890d87995a02403",
+      "width": 1920,
+      "height": 1080,
+      "size": 2237926,
+      "uploadedDate": "2022-03-08T07:52:53.900Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00024 Copy-1920x1080-1006f05dc4237740c79dabf7d704781c.png",
+      "md5": "1006f05dc4237740c79dabf7d704781c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2189772,
+      "uploadedDate": "2022-03-08T07:52:54.353Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MeshOpsDemoGame-1920x1080-0441373295aec1afbdb8a46e2fc96f9d.png",
+      "md5": "0441373295aec1afbdb8a46e2fc96f9d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1932342,
+      "uploadedDate": "2022-03-08T07:52:54.898Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MeshOpsetu-1920x1080-733baad4d5ff70600bab5fb74b298f41.png",
+      "md5": "733baad4d5ff70600bab5fb74b298f41",
+      "width": 1920,
+      "height": 1080,
+      "size": 452674,
+      "uploadedDate": "2022-03-08T07:52:55.486Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MeshOpsFuncs-1920x1080-51cc1cf287eabb7af28a50d3caedb94a-1920x1080-c486be44d7a26c0c4663cb9d7442ac18-1920x1080-2f692389094d9005f398fbb9f1b84295.jpg",
+      "md5": "2f692389094d9005f398fbb9f1b84295",
+      "width": 1920,
+      "height": 1080,
+      "size": 267688,
+      "uploadedDate": "2022-03-08T07:52:56.039Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00029 Copy-1920x1080-b79a1cba6a93fd6936f2bc2787b6b902.png",
+      "md5": "b79a1cba6a93fd6936f2bc2787b6b902",
+      "width": 1920,
+      "height": 1080,
+      "size": 2424512,
+      "uploadedDate": "2022-03-08T07:52:56.832Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00033 Copy-1920x1080-ce7e7581782aff01983cab1978c270d5.png",
+      "md5": "ce7e7581782aff01983cab1978c270d5",
+      "width": 1920,
+      "height": 1080,
+      "size": 1850517,
+      "uploadedDate": "2022-03-08T07:52:57.416Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00030 Copy-1920x1080-2d791e17a18f086ce9be97e89d6293a3.png",
+      "md5": "2d791e17a18f086ce9be97e89d6293a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 2519034,
+      "uploadedDate": "2022-03-08T07:52:57.865Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00019 Copy-1920x1080-e7d9ddefafda8cf6725634175b3f7d11.png",
+      "md5": "e7d9ddefafda8cf6725634175b3f7d11",
+      "width": 1920,
+      "height": 1080,
+      "size": 1671959,
+      "uploadedDate": "2022-03-08T07:52:58.322Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MeshOpsLiteMeshOperationsPlugin_thumb-284x284-ab010edb07bf86549a25217d6af4a459.png",
+      "md5": "ab010edb07bf86549a25217d6af4a459",
+      "width": 284,
+      "height": 284,
+      "size": 124561,
+      "uploadedDate": "2022-03-08T19:25:16.936Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MeshOpsLiteMeshOperationsPlugin_featured-894x488-0f32de91e47cea08bdf6c87779d0f489.png",
+      "md5": "0f32de91e47cea08bdf6c87779d0f489",
+      "width": 894,
+      "height": 488,
+      "size": 535217,
+      "uploadedDate": "2022-03-08T07:52:58.714Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00027 Copy-1920x1080-c269552e3c73ec540890d87995a02403_Snapshot.png",
+      "md5": "1de55c23459c74b41d8f3eb9ccfb1a7f",
+      "width": 150,
+      "height": 74,
+      "size": 7429,
+      "uploadedDate": "2022-03-08T07:52:54.207Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00024 Copy-1920x1080-1006f05dc4237740c79dabf7d704781c_Snapshot.png",
+      "md5": "2120564fd91cbf5b3be3ba8b40cc9b51",
+      "width": 150,
+      "height": 74,
+      "size": 7430,
+      "uploadedDate": "2022-03-08T07:52:54.660Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MeshOpsDemoGame-1920x1080-0441373295aec1afbdb8a46e2fc96f9d_Snapshot.png",
+      "md5": "462e5ecd10341a1e19aacdad79e96871",
+      "width": 150,
+      "height": 74,
+      "size": 8071,
+      "uploadedDate": "2022-03-08T07:52:55.316Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MeshOpsetu-1920x1080-733baad4d5ff70600bab5fb74b298f41_Snapshot.png",
+      "md5": "28e9375ac11aa5c788105390b378ec04",
+      "width": 150,
+      "height": 74,
+      "size": 4887,
+      "uploadedDate": "2022-03-08T07:52:55.741Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MeshOpsFuncs-1920x1080-51cc1cf287eabb7af28a50d3caedb94a-1920x1080-c486be44d7a26c0c4663cb9d7442ac18-1920x1080-2f692389094d9005f398fbb9f1b84295_Snapshot.jpg",
+      "md5": "0c1f1efcfc550b048a9da58513318db7",
+      "width": 150,
+      "height": 74,
+      "size": 7611,
+      "uploadedDate": "2022-03-08T07:52:56.605Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00029 Copy-1920x1080-b79a1cba6a93fd6936f2bc2787b6b902_Snapshot.png",
+      "md5": "e04059ce607a8e18228dceea8518827a",
+      "width": 150,
+      "height": 74,
+      "size": 8168,
+      "uploadedDate": "2022-03-08T07:52:57.155Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00033 Copy-1920x1080-ce7e7581782aff01983cab1978c270d5_Snapshot.png",
+      "md5": "3e209935823dc406c5fe6faefb307d0b",
+      "width": 150,
+      "height": 74,
+      "size": 5601,
+      "uploadedDate": "2022-03-08T07:52:57.709Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00030 Copy-1920x1080-2d791e17a18f086ce9be97e89d6293a3_Snapshot.png",
+      "md5": "7fff58490d3e108cfe23164ddba4451a",
+      "width": 150,
+      "height": 74,
+      "size": 8935,
+      "uploadedDate": "2022-03-08T07:52:58.180Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00019 Copy-1920x1080-e7d9ddefafda8cf6725634175b3f7d11_Snapshot.png",
+      "md5": "4c2546608bcfc0ea285c16c5b4291c85",
+      "width": 150,
+      "height": 74,
+      "size": 5995,
+      "uploadedDate": "2022-03-08T07:52:58.606Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2022-03-08T19:08:14.088Z",
+  "lastModifiedDate": "2022-04-30T12:45:48.300Z",
+  "entitlementName": "1b68eeda3f6f417fb87b0022c4de5d8d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "66bc09f7a18d46d298905be4e433c5ae",
+      "appId": "MeshOpsL1b68eeda3f6fV2",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2022-03-31T00:00:00.000Z",
+      "releaseNote": "4.26",
+      "versionTitle": "4.26"
+    },
+    {
+      "id": "44beaf5b0a47420a81a0d114696018e2",
+      "appId": "MeshOpsLite_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2022-03-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.0"
+    }
+  ],
+  "developer": "Vyrulent Studios",
+  "developerId": "o-3bfd17ba2f46fab8cabc5c83c3bdae",
+  "endOfSupport": false,
+  "unsearchable": false
+}

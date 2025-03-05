@@ -1,0 +1,458 @@
+{
+  "id": "188d4f3cb5614038871f4d02c325d704",
+  "title": "EasyActions",
+  "description": "Easily manage time-based actions (tweening animations) such as move, rotate, scale, blend, and fade with various ease-in/out functions. Full Blueprint support.",
+  "longDescription": "<p><a href=\"https://youtu.be/PNbQEZXUGlg\" rel=\"nofollow\">DEMO</a> | <a href=\"https://youtu.be/869IMYMYBoU\" rel=\"nofollow\">TUTORIAL</a> | <a href=\"https://youtu.be/gzrl_QMcgeg\" rel=\"nofollow\">SAMPLE</a></p><p><br /></p><p>* Version 1.9:</p><p>Added ability to get &#34;OnSweep&#34; Delegate when object is hit.</p><p>Affected Actions: Move, Rotate and Follow.</p><p><br /></p><p><strong><em>EasyActions</em></strong> is an easy to use plugin that allows you to manage various time-based actions with various ease-in/out functions. In addition you can use this plugin in your blueprint project without the need of writing a single line of code!</p><p> </p><p>There are various actions you can manage:</p><ul><li>Actor actions – move, rotate, scale, follow Bezier curve (path).</li><li>Dynamic material actions – blend between colors, fade in/out (requires dynamic material with matching vector properties).</li></ul><p> </p><p>These actions are interpolating the Actor’s/Material’s properties <em>OVER TIME</em> (Duration) with various Ease In/Out functions.</p><p> </p><p>These actions are evaluated by <em>UActionManagerComponent</em> or <em>AActionManager</em>.</p><p>Each time you add an action to the <em>Manager</em> it starts to execute within the next frame immediately. Adding more than one action to the <em>Manager</em> will result in execution of multiple actions at the same time (e.g. if you want to rotate and move the same Actor simultaneously - just add a <em>RotateBy</em> action and <em>MoveBy</em> action to the Manager).</p><p>Each Action has a Unique Id property which can be used to remove a specific action from the <em>Manager</em>.</p>",
+  "technicalDetails": "<p><strong>Example project:</strong></p><p>4.24 : <a href=\"https://drive.google.com/file/d/1EzXGuK8hRX7RFDxfscJESE2XAriBahjo/view?usp&#61;drivesdk\" rel=\"nofollow\">https://drive.google.com/file/d/1EzXGuK8hRX7RFDxfscJESE2XAriBahjo/view?usp&#61;drivesdk</a></p><p><br /></p><p>Some actions include other actions as children:</p><ul><li>A <em>SequnceAction</em> has multiple <em>child</em> actions. Each action in the Sequence begins after the previous action ends.</li><li>A <em>RepeatAction</em> stores a single <em>child</em> action. When the <em>child</em> action completes, it restarts.</li><li><em>SequenceAction</em> and <em>RepeatAction</em> can be nested. The ability to combine actions together allows you to add more sophisticated animations/behaviors.</li></ul><p> </p><p><em>*Note</em>: Actions hold a pointer to an <em>Actor/DynamicMaterial</em> they are animating.</p><p><br /></p><p><strong>Ease In/Out functions:</strong></p><ul><li>Linear</li><li>Quadratic</li><li>Cubic</li><li>Quart</li><li>Quint</li><li>Elastic</li><li>Bounce</li></ul><p>** Version 1.5:</p><p>Added ability to use UCurveFloat as an interpolation function.</p><p>Added Destroy action</p><p>Added Delegate action</p><p><br /></p><p>Number of Classes: 15</p><p>Network Replicated: No</p><p>Supported Development Platforms: Mac, iOS, Linux, Android(4.18), Win32, Win64</p><p>Supported Target Build Platforms: Mac, iOS, Linux, Android(4.18), Win32, Win64</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 01-1920x1080-c4e5759c6758f248273705561ef828f0.jpg",
+      "md5": "c4e5759c6758f248273705561ef828f0",
+      "width": 1920,
+      "height": 1080,
+      "size": 386982,
+      "uploadedDate": "2022-01-11T11:42:33.750Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 02-1920x1080-b8dcd09cc33e36f2ade29c83cc7d96e2.jpg",
+      "md5": "b8dcd09cc33e36f2ade29c83cc7d96e2",
+      "width": 1920,
+      "height": 1080,
+      "size": 339212,
+      "uploadedDate": "2022-01-11T11:42:34.099Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 03-1920x1080-2b0b4a59c37d47acf8515ad0d2d52b5a.jpg",
+      "md5": "2b0b4a59c37d47acf8515ad0d2d52b5a",
+      "width": 1920,
+      "height": 1080,
+      "size": 367170,
+      "uploadedDate": "2022-01-11T11:42:34.419Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 04-1920x1080-79e93da8f579a4e0b7440391a5b1c045.jpg",
+      "md5": "79e93da8f579a4e0b7440391a5b1c045",
+      "width": 1920,
+      "height": 1080,
+      "size": 341271,
+      "uploadedDate": "2022-01-11T11:42:34.780Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 05-1920x1080-3ea0281eb73d87e00470fbbb207d8c55.jpg",
+      "md5": "3ea0281eb73d87e00470fbbb207d8c55",
+      "width": 1920,
+      "height": 1080,
+      "size": 328611,
+      "uploadedDate": "2022-01-11T11:42:35.061Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/EasyActions_thumb-284x284-17dbfd04f19d2879995a7aa8bb2863b5.png",
+      "md5": "17dbfd04f19d2879995a7aa8bb2863b5",
+      "width": 284,
+      "height": 284,
+      "size": 124971,
+      "uploadedDate": "2022-01-11T11:42:35.330Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/EasyActions_featured-894x488-9279542539ea9ab4fc6c33d49c761c9e.png",
+      "md5": "9279542539ea9ab4fc6c33d49c761c9e",
+      "width": 894,
+      "height": 488,
+      "size": 406919,
+      "uploadedDate": "2022-01-11T11:42:35.474Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 01-1920x1080-c4e5759c6758f248273705561ef828f0_Snapshot.jpg",
+      "md5": "deaa4ba54983d5390a737aefc9dd159d",
+      "width": 150,
+      "height": 74,
+      "size": 6401,
+      "uploadedDate": "2022-01-11T11:42:33.961Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 02-1920x1080-b8dcd09cc33e36f2ade29c83cc7d96e2_Snapshot.jpg",
+      "md5": "919c166767a364f5e92d1d98b5f45597",
+      "width": 150,
+      "height": 74,
+      "size": 4571,
+      "uploadedDate": "2022-01-11T11:42:34.307Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 03-1920x1080-2b0b4a59c37d47acf8515ad0d2d52b5a_Snapshot.jpg",
+      "md5": "1ec9ab72cbb28b8231e8801d1a344703",
+      "width": 150,
+      "height": 74,
+      "size": 6308,
+      "uploadedDate": "2022-01-11T11:42:34.633Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 04-1920x1080-79e93da8f579a4e0b7440391a5b1c045_Snapshot.jpg",
+      "md5": "13e18b608899107da78a803395510427",
+      "width": 150,
+      "height": 74,
+      "size": 5282,
+      "uploadedDate": "2022-01-11T11:42:34.993Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 05-1920x1080-3ea0281eb73d87e00470fbbb207d8c55_Snapshot.jpg",
+      "md5": "ebd7e02b5ae2b18d91e5a22cec8529e7",
+      "width": 150,
+      "height": 74,
+      "size": 4818,
+      "uploadedDate": "2022-01-11T11:42:35.267Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2017-10-05T18:10:54.024Z",
+  "lastModifiedDate": "2024-12-16T12:09:24.997Z",
+  "customAttributes": {},
+  "entitlementName": "188d4f3cb5614038871f4d02c325d704",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "c311b78de95743589427a567fbea0bba",
+      "appId": "EasyActionPlugin_4.15",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2017-10-05T18:10:53.995Z",
+      "releaseNote": "Version 1.5\nAdded ability to perform actions on Components\nAdded Destroy AActor/USceneComponent Action\nAdded CallDelegateAction\nAdded Ability to interpolate actions by custom UCurveFloat",
+      "versionTitle": "EasyActions4_15"
+    },
+    {
+      "id": "02f3b0afc9e14e5896b0e1a2bdbcbc9e",
+      "appId": "EasyActionPlugin_4.16",
+      "compatibleApps": [
+        "UE_4.16"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "HTML5",
+        "iOS"
+      ],
+      "dateAdded": "2017-10-05T18:10:53.995Z",
+      "releaseNote": "Version 1.9.1",
+      "versionTitle": "EasyActions4_16"
+    },
+    {
+      "id": "94749c13bc0b4b76a541946fadcae931",
+      "appId": "EasyActionPlugin_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "HTML5",
+        "iOS"
+      ],
+      "dateAdded": "2017-10-05T18:10:53.995Z",
+      "releaseNote": "Version 1.9.2",
+      "versionTitle": "EasyActions4_17"
+    },
+    {
+      "id": "d2b757f0a9584f8ba33165bdc91a6fde",
+      "appId": "EasyActionPlugin_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "iOS",
+        "Android",
+        "Linux",
+        "HTML5"
+      ],
+      "dateAdded": "2017-10-27T00:00:00.000Z",
+      "releaseNote": "Version 1.9.2",
+      "versionTitle": "EasyActions4_18"
+    },
+    {
+      "id": "6fa60920f40f4ba1a952342232722ef3",
+      "appId": "EasyActionPlugin_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "iOS",
+        "Android",
+        "HTML5",
+        "Linux"
+      ],
+      "dateAdded": "2018-03-15T00:00:00.000Z",
+      "releaseNote": "Version 1.9.2",
+      "versionTitle": "EasyActions4_19"
+    },
+    {
+      "id": "2fa2838a5ed44cd19078d8e2ce2df87b",
+      "appId": "EasyActionPlugin_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "HTML5",
+        "Linux",
+        "iOS",
+        "Android",
+        "Mac",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2018-07-20T00:00:00.000Z",
+      "releaseNote": "Engine Update to 4.20",
+      "versionTitle": "EasyActions4_20"
+    },
+    {
+      "id": "b3582411e646425db94410296e1e4274",
+      "appId": "EasyActionPlugin_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "HTML5",
+        "Linux",
+        "Android",
+        "iOS",
+        "Windows",
+        "Mac",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-15T00:00:00.000Z",
+      "releaseNote": "Engine Version Update",
+      "versionTitle": "4.21"
+    },
+    {
+      "id": "a6c89bb2192f49bc8c0c43d3c290a25e",
+      "appId": "EasyActionPlugin_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "Android",
+        "Win32"
+      ],
+      "dateAdded": "2019-04-06T00:00:00.000Z",
+      "releaseNote": "Engine Version Update",
+      "versionTitle": "4_22"
+    },
+    {
+      "id": "5e3709500e424006a01d1a24163b5058",
+      "appId": "EasyActionPlugin_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "Android"
+      ],
+      "dateAdded": "2019-09-13T00:00:00.000Z",
+      "releaseNote": "Engine Version Update",
+      "versionTitle": "4.23"
+    },
+    {
+      "id": "0decf238d4df4e05a34db5b8fd5301bb",
+      "appId": "EasyActionPlugin_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2019-12-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.24"
+    },
+    {
+      "id": "cb298a952ff449e69baaae84343e5c65",
+      "appId": "EasyActionPlugin_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2020-05-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.25"
+    },
+    {
+      "id": "29104910c4b24e43a89e41fdb8dcae31",
+      "appId": "EasyActionPlugin_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2020-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4_26"
+    },
+    {
+      "id": "dedb5e722dfa45f980bfe5fe05825bac",
+      "appId": "EasyActionPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Linux",
+        "iOS",
+        "Android",
+        "Mac",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-08-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "baf5e5bad82744719bc5f08de6bad722",
+      "appId": "EasyActionPlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-04-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyActions_5"
+    },
+    {
+      "id": "b2f2f09dcde743da94b3dfa79c4d3dbf",
+      "appId": "EasyActionPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "Win32",
+        "Linux",
+        "iOS"
+      ],
+      "dateAdded": "2022-11-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5_1"
+    },
+    {
+      "id": "9a11fd8147a143fea1cc6b98984c81bd",
+      "appId": "EasyActionPlugin_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-06-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5_2_1"
+    },
+    {
+      "id": "05122bd6430e4c01bd2a82142e1da42a",
+      "appId": "EasyActionPlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2023-10-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "EasyActions_5_3"
+    },
+    {
+      "id": "aa7bdc2042654facbeafea5ccb131dfb",
+      "appId": "EasyActionPlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2024-05-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Mashmashu Studio",
+  "developerId": "o-a64a8579f148a6bcc00b8527ec9b55",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

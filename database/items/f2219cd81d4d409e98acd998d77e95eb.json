@@ -1,0 +1,520 @@
+{
+  "id": "f2219cd81d4d409e98acd998d77e95eb",
+  "title": "World Spawner - Optimization Framework",
+  "description": "An advanced toolkit designed for massive games in Unreal Engine, allowing you to spawn, manage and optimize thousands dynamic object like NPC and Items.",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;1dl94zhC518\" rel=\"nofollow\">Trailer</a> | <a href=\"https://www.youtube.com/watch?v&#61;l2LuTA5gK1I&amp;t&#61;38s\" rel=\"nofollow\">How it Works</a> | <a href=\"https://drive.google.com/file/d/1PrziNzYFzt5Gl5K8a0vX4WLY8T38ZOOA/view?usp&#61;sharing\" rel=\"nofollow\">Performance Test (Playable)</a> | <a href=\"https://youtu.be/DgueBYZUXgE\" rel=\"nofollow\">Performance Test (Video)</a> | <a href=\"https://github.com/GameRec-Dev/WSpawnerExample-V2\" rel=\"nofollow\">Example Project</a> | <a href=\"https://www.youtube.com/watch?v&#61;h_xiVNxWKiA\" rel=\"nofollow\">Started Tutorial</a></p><p>For Support &amp; Suggestions please visit our <a href=\"https://discord.gg/2PdkWZhJYd\" rel=\"nofollow\">Discord</a></p><p><strong>Showcase product between June 13 to June 27, 2023.</strong></p><p>&#xfeff;<a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Blueprint&#43;House?count&#61;20&amp;sortBy&#61;effectiveDate&amp;sortDir&#61;DESC&amp;start&#61;0\" rel=\"nofollow\">Check out our other products</a></p><p><br /></p><p><strong>NOTE</strong>: The V2 update is only for UE5.1&#43;.</p><p>Built from the ground up with multiplayer in mind, it&#39;s perfect for any style of games: RPG, Survival, MMO, and more. Easy to use and integrate with any other AI behavior system.</p><p><br /></p><p>World Spawner contains three main systems with dozens of parameters and integration functions to suit your project:</p><ul><li><strong>Fast Population:</strong> Allows efficient and fast population of levels with NPCs, loot and items.</li><li><strong>Optimization:</strong> Sector-based streaming system, customizable LOD system, FOV for actors.</li><li><strong>Path and Waypoint:</strong> Contains its own movement and avoidance system that guarantees seamless transitions between optimization levels for <strong>ground</strong> and <strong>flying </strong>AI. Compatible with Character (Character Movement Component), Pawn (Floating Pawn Movement) or simple actors, all with multiple settings</li></ul><p><br /></p><p><strong>Features:</strong></p><ul><li>Auto and Manual Spawning (Customize the spawning to fit your game&#39;s needs)</li><li>Collision Detection (Adjustable parameters for surface detection/blocking)</li><li>Randomization Settings (Introduce variety with random rotation and location)</li><li>Collection Creation (Reuse multiple spawner data setups across different levels)</li><li>Optimization Modes (Choose from multiple modes and levels for optimal performance)</li><li>Temporary Data Storage (Manage game data like health and states smoothly)</li><li>Synchronized Movement (Ensure coordinated movement between levels)</li><li>Integration (Work seamlessly with Behavior Trees and Blueprints)</li><li>Vertex Animation Support (Create cheap animations for objects and NPCs) <strong>This feature doesn&#39;t work in multiplayer</strong></li><li>Waypoint System (Implement a wander system for movement within defined areas)</li><li>Path System (Enable traversal along random-width spline paths)</li><li>Tag and Weight System (Control movement priorities with tagged waypoints and paths)</li></ul><p><br /></p><p><strong>Update 2.0:</strong></p><ul><li>Added function library for the creation and management of actors</li><li>Updated the path system to avoid obstacles (nav mesh)</li><li>New distance based LOD system</li><li>ID system for spawner and agents</li></ul><p><br /></p><p><strong>Update 1.3:</strong></p><ul><li>Added <strong>agent parameters</strong>, useful for initializing custom data from each spawner, creating new possibilities in spawning.</li><li>Added 2 new examples to the showcase (self-registration and Custom Data Object).</li><li>Optimized the self-registration system to prevent the destruction of the object when it is registered in the system.</li></ul><p><br /></p><p><strong>Update 1.1 - 1.2:</strong></p><ul><li>Added self-registration for control without using Spawner Manager (useful for inventory systems where objects are dropped on the ground and these are automatically registered in the optimization control system to be persistent without affecting game performance)</li><li>Updated movement system to spherical interpolation (avoids sharp turns in reverse directions and makes rotation more smooth and realistic)</li><li>Added rotation towards speed for Character and Pawn</li><li>Updated Try Fill Up option, for 100 times faster processing (very useful when you need to spawn exact amounts of objects on surfaces with physical materials)</li><li>Added MaterialParameterAssociation for vertex animations (so it&#39;s easier to integrate with any kind of material function you use)</li><li>High actor class position fixes for debugging</li></ul>",
+  "technicalDetails": "<p>Code Modules:</p><ul><li> WorldSpawner(Type: Runtime)</li></ul><p><br /></p><p>Number of Blueprints: 6 (Plus a few for the examples)</p><p>Number of C&#43;&#43; Classes: 15</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Windows (not tested but it should be fine with all other platforms)</p><p>Supported Target Build Platforms: Windows (not tested but it should be fine with all other platforms)</p><p>Documentation: <a href=\"https://docs.google.com/document/d/16VcHqmPmLDh8G-3ojkAlNzKJF48cA0aFhhxaixeCTYg/edit\" rel=\"nofollow\">Documentation</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GALLERY0-1920x1080-bc3ea81a0fc21b1d6415992d9addab1b.png",
+      "md5": "bc3ea81a0fc21b1d6415992d9addab1b",
+      "width": 1920,
+      "height": 1080,
+      "size": 2276090,
+      "uploadedDate": "2023-07-26T21:49:28.110Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GALLERY2-1920x1080-71b8999d92d32b4a18c3ee14a04b2158.png",
+      "md5": "71b8999d92d32b4a18c3ee14a04b2158",
+      "width": 1920,
+      "height": 1080,
+      "size": 1856090,
+      "uploadedDate": "2023-07-26T21:49:28.820Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GALLERY3-1920x1080-8f2ea1ad71a76f9ccf29d6d1e4aa446a.png",
+      "md5": "8f2ea1ad71a76f9ccf29d6d1e4aa446a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2161097,
+      "uploadedDate": "2023-12-22T17:52:00.703Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GALLERY4-1920x1080-4f1e46b8f512a614e66c65ee8f86d4c6.png",
+      "md5": "4f1e46b8f512a614e66c65ee8f86d4c6",
+      "width": 1920,
+      "height": 1080,
+      "size": 2539419,
+      "uploadedDate": "2023-07-26T21:49:30.355Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GALLERY5-1920x1080-f7d0389befd141cf3f0e4198cc3aa795.png",
+      "md5": "f7d0389befd141cf3f0e4198cc3aa795",
+      "width": 1920,
+      "height": 1080,
+      "size": 297071,
+      "uploadedDate": "2023-12-22T17:52:01.122Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GALLERY6-1920x1080-8ec6cb3fb6745a9f5aff6219bd3d6ada.png",
+      "md5": "8ec6cb3fb6745a9f5aff6219bd3d6ada",
+      "width": 1920,
+      "height": 1080,
+      "size": 179758,
+      "uploadedDate": "2023-07-26T21:49:31.454Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GALLERY7-1920x1080-04c2bfe106fbcc49ec0ee0f9b672d29a.png",
+      "md5": "04c2bfe106fbcc49ec0ee0f9b672d29a",
+      "width": 1920,
+      "height": 1080,
+      "size": 331803,
+      "uploadedDate": "2023-12-22T17:52:01.582Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GALLERY1-1920x1080-33899a200016989a93bbd9c3cf5da089.png",
+      "md5": "33899a200016989a93bbd9c3cf5da089",
+      "width": 1920,
+      "height": 1080,
+      "size": 2024561,
+      "uploadedDate": "2023-07-26T21:49:32.044Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/WorldSpawner_thumb-284x284-c60ea16fe46ce2260a25ab967960ca3c.png",
+      "md5": "c60ea16fe46ce2260a25ab967960ca3c",
+      "width": 284,
+      "height": 284,
+      "size": 126640,
+      "uploadedDate": "2023-07-25T22:51:35.852Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/WorldSpawner_featured-894x488-f3d6c8f3f2657bb5271f2df8e545601d.png",
+      "md5": "f3d6c8f3f2657bb5271f2df8e545601d",
+      "width": 894,
+      "height": 488,
+      "size": 524420,
+      "uploadedDate": "2023-07-25T22:41:14.740Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY3-1920x1080-8f2ea1ad71a76f9ccf29d6d1e4aa446a_Snapshot.png",
+      "md5": "67fe457b6ae62a8d3af90f942419bc36",
+      "width": 150,
+      "height": 74,
+      "size": 5973,
+      "uploadedDate": "2023-12-22T17:52:01.042Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY5-1920x1080-f7d0389befd141cf3f0e4198cc3aa795_Snapshot.png",
+      "md5": "a9b53fbfffea6da655139209c103fe2c",
+      "width": 150,
+      "height": 74,
+      "size": 4979,
+      "uploadedDate": "2023-12-22T17:52:01.395Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY7-1920x1080-04c2bfe106fbcc49ec0ee0f9b672d29a_Snapshot.png",
+      "md5": "507868394aa35f9b3553f7a1faf1836d",
+      "width": 150,
+      "height": 74,
+      "size": 6352,
+      "uploadedDate": "2023-12-22T17:52:01.786Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY0-1920x1080-bc3ea81a0fc21b1d6415992d9addab1b_Snapshot.png",
+      "md5": "7507ae6fe6194e21b331e89e7f8c14ce",
+      "width": 150,
+      "height": 74,
+      "size": 7271,
+      "uploadedDate": "2023-07-26T21:49:28.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY2-1920x1080-71b8999d92d32b4a18c3ee14a04b2158_Snapshot.png",
+      "md5": "a9007abfedfafa208518edd4b710a2e3",
+      "width": 150,
+      "height": 74,
+      "size": 6289,
+      "uploadedDate": "2023-07-26T21:49:29.263Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY3-1920x1080-6da13efa1af837558e49411d2556488d_Snapshot.png",
+      "md5": "3d59b091bf07466fa52479b952df2a2a",
+      "width": 150,
+      "height": 74,
+      "size": 4828,
+      "uploadedDate": "2023-07-26T21:49:30.033Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY4-1920x1080-4f1e46b8f512a614e66c65ee8f86d4c6_Snapshot.png",
+      "md5": "f8aa693084e9b5ae908ec2ad59c4d46b",
+      "width": 150,
+      "height": 74,
+      "size": 4413,
+      "uploadedDate": "2023-07-26T21:49:30.870Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY5-1920x1080-753116c10922cc96d79868abe5657d53_Snapshot.png",
+      "md5": "1552b80a8563af6a5b1bc9f3abb520d6",
+      "width": 150,
+      "height": 74,
+      "size": 5425,
+      "uploadedDate": "2023-07-26T21:49:31.300Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY6-1920x1080-8ec6cb3fb6745a9f5aff6219bd3d6ada_Snapshot.png",
+      "md5": "90c4c6a4675d0d4ec2c8990cb00e5a17",
+      "width": 150,
+      "height": 74,
+      "size": 4642,
+      "uploadedDate": "2023-07-26T21:49:31.757Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY1-1920x1080-33899a200016989a93bbd9c3cf5da089_Snapshot.png",
+      "md5": "46aa32013d94cfb52d6d78d0df1a023d",
+      "width": 150,
+      "height": 74,
+      "size": 4353,
+      "uploadedDate": "2023-07-26T21:49:32.479Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY0-1920x1080-bc3ea81a0fc21b1d6415992d9addab1b_Snapshot.png",
+      "md5": "7507ae6fe6194e21b331e89e7f8c14ce",
+      "width": 150,
+      "height": 74,
+      "size": 7271,
+      "uploadedDate": "2023-07-26T21:40:02.874Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY2-1920x1080-8d17d78dca52778052881a0dfdb391c3_Snapshot.png",
+      "md5": "d9cf04aa35ada67c3c40b8c4fc262baf",
+      "width": 150,
+      "height": 74,
+      "size": 6412,
+      "uploadedDate": "2023-07-26T21:40:03.652Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY3-1920x1080-6da13efa1af837558e49411d2556488d_Snapshot.png",
+      "md5": "3d59b091bf07466fa52479b952df2a2a",
+      "width": 150,
+      "height": 74,
+      "size": 4828,
+      "uploadedDate": "2023-07-26T21:40:04.093Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY4-1920x1080-d7e5dc8c026b5bebd81c663242f44090_Snapshot.png",
+      "md5": "b8a3016adb79666a65dd749652f4665d",
+      "width": 150,
+      "height": 74,
+      "size": 4372,
+      "uploadedDate": "2023-07-26T21:40:04.887Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY5-1920x1080-6adb92376d0d9d5f0a4464fbec22afb9_Snapshot.png",
+      "md5": "4db7543937f5c78a45d36faee6d50c57",
+      "width": 150,
+      "height": 74,
+      "size": 5403,
+      "uploadedDate": "2023-07-26T21:40:05.275Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY6-1920x1080-b1a9275e2889377a8f7490a2e0555341_Snapshot.png",
+      "md5": "281d696b1b086c4833e0f352435bac2e",
+      "width": 150,
+      "height": 74,
+      "size": 4610,
+      "uploadedDate": "2023-07-26T21:40:05.669Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY1-1920x1080-33899a200016989a93bbd9c3cf5da089_Snapshot.png",
+      "md5": "46aa32013d94cfb52d6d78d0df1a023d",
+      "width": 150,
+      "height": 74,
+      "size": 4353,
+      "uploadedDate": "2023-07-26T21:40:06.342Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY0-1920x1080-606c5837b86c09caf967aae9c5ed40bf_Snapshot.png",
+      "md5": "05244292779fab4c837d60ba560dbafb",
+      "width": 150,
+      "height": 74,
+      "size": 6244,
+      "uploadedDate": "2023-07-25T22:39:31.011Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY3-1920x1080-49aac7b4c3b2c86611a22a7bdb67102b_Snapshot.png",
+      "md5": "97eeebfdfad791aa714af2ccd0972901",
+      "width": 150,
+      "height": 74,
+      "size": 5917,
+      "uploadedDate": "2023-06-01T22:08:52.591Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY1-1920x1080-f4f7f1cbd3eb879251856b5c51f22136_Snapshot.png",
+      "md5": "5c84dffe0d8b93212079e03c8eba2628",
+      "width": 150,
+      "height": 74,
+      "size": 4903,
+      "uploadedDate": "2023-06-01T22:08:53.322Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY2-1920x1080-781b2506e5c69314e4fd0c2b4b34f24f_Snapshot.png",
+      "md5": "727274c6b249633c2f5d4d47adfd8f3e",
+      "width": 150,
+      "height": 74,
+      "size": 5000,
+      "uploadedDate": "2023-06-01T22:08:54.017Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY0-1920x1080-9c142b5f1d3acf779925e04ba0db306f_Snapshot.png",
+      "md5": "d062ac027b571bcb05a12d3c112f8bc1",
+      "width": 150,
+      "height": 74,
+      "size": 6519,
+      "uploadedDate": "2023-05-31T22:23:49.718Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY1-1920x1080-1221e9dbd41fcd7b55be2734e98a1d8a_Snapshot.png",
+      "md5": "35c9e91947f8a6da1f1f868ca7e596af",
+      "width": 150,
+      "height": 74,
+      "size": 4354,
+      "uploadedDate": "2023-05-31T22:23:50.384Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY2-1920x1080-c3bb3f33d6ba717095dcd65c9b0a464b_Snapshot.png",
+      "md5": "defafd97a52140f0a281c7609735a199",
+      "width": 150,
+      "height": 74,
+      "size": 5985,
+      "uploadedDate": "2023-05-31T22:23:51.099Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY5-1920x1080-41fc95d7fdab0ca786acc8fe16ecb844_Snapshot.png",
+      "md5": "cf97d0456fcd75a4c78a38cd0ee2a241",
+      "width": 150,
+      "height": 74,
+      "size": 5936,
+      "uploadedDate": "2023-05-31T22:23:51.567Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY6-1920x1080-f1aa38db42e6fa6d4516201f424c8f02_Snapshot.png",
+      "md5": "54b26aff5da40fc7f5f5574497ae71f0",
+      "width": 150,
+      "height": 74,
+      "size": 4417,
+      "uploadedDate": "2023-05-31T22:23:52.062Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY0-1920x1080-3e532a60cb2f8e4b393e18cd7244af7a_Snapshot.png",
+      "md5": "df4163d5d9d69d462a1818e55abc9142",
+      "width": 150,
+      "height": 74,
+      "size": 7294,
+      "uploadedDate": "2023-05-12T18:09:02.712Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY1-1920x1080-e1a446f990dad0cb8dedc474ab1a45d0_Snapshot.png",
+      "md5": "52873c955b4deb153fcf99a1fb9ed427",
+      "width": 150,
+      "height": 74,
+      "size": 4430,
+      "uploadedDate": "2023-05-12T18:09:03.364Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY2-1920x1080-6560474d671770fe903ce88d5fc85873_Snapshot.png",
+      "md5": "240cddf6ec82ea06972a0b94052780dc",
+      "width": 150,
+      "height": 74,
+      "size": 3848,
+      "uploadedDate": "2023-05-12T18:09:04.050Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY3-1920x1080-c883cfa9c843e081a5cb34bf048dc9c6_Snapshot.png",
+      "md5": "cf5915925173abf0fa35b7f01e324f6e",
+      "width": 150,
+      "height": 74,
+      "size": 5466,
+      "uploadedDate": "2023-05-12T18:09:04.718Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY6-1920x1080-de95afefd05ffd1bc6f7aec6a3b2c7ec_Snapshot.png",
+      "md5": "07cf84d7322c69510313858c94797948",
+      "width": 150,
+      "height": 74,
+      "size": 4570,
+      "uploadedDate": "2023-05-12T18:09:05.089Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY6-1920x1080-850978ee43e7e8337e8ed43ead0f0159_Snapshot.png",
+      "md5": "d2fb2b4a5f3114bf145bdc9a84800436",
+      "width": 150,
+      "height": 74,
+      "size": 4283,
+      "uploadedDate": "2023-05-07T21:51:18.307Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY5-1920x1080-301118e164de6c8b1721f6384dbfb49a_Snapshot.png",
+      "md5": "33822be3dc31a32b6a2711df97be2a58",
+      "width": 150,
+      "height": 74,
+      "size": 6196,
+      "uploadedDate": "2023-05-07T21:51:18.749Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY4-1920x1080-9acbd2e82c166c40cedf1d995032a1ac_Snapshot.png",
+      "md5": "3ff969f8242b5529b89edf0b2ec4386a",
+      "width": 150,
+      "height": 74,
+      "size": 4959,
+      "uploadedDate": "2023-05-07T21:51:19.375Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY3-1920x1080-7a8977f74ec644471be8376a78a2e9bd_Snapshot.png",
+      "md5": "e69bfa96e00907cf21cc242b4ed47859",
+      "width": 150,
+      "height": 74,
+      "size": 5316,
+      "uploadedDate": "2023-05-07T21:51:20.010Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY2-1920x1080-149c15524751eb2ce8970e4e8d0b1c2e_Snapshot.png",
+      "md5": "8814156369bf482baa94718baf7d2455",
+      "width": 150,
+      "height": 74,
+      "size": 3875,
+      "uploadedDate": "2023-05-07T21:51:20.652Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GALLERY1-1920x1080-d90d64886ffd7ccc115029dae21f9b53_Snapshot.png",
+      "md5": "c32580d1242e6085a0d77cfff5c71f14",
+      "width": 150,
+      "height": 74,
+      "size": 5327,
+      "uploadedDate": "2023-05-07T21:51:21.261Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-05-14T02:27:57.957Z",
+  "lastModifiedDate": "2024-11-15T22:33:33.622Z",
+  "customAttributes": {},
+  "entitlementName": "f2219cd81d4d409e98acd998d77e95eb",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3d3753b4a11443859b8184913d47a40d",
+      "appId": "WorldSpawner_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-07T00:00:00.000Z",
+      "releaseNote": "Update 1.9\n- Path fixes\n- Separate Demo\n",
+      "versionTitle": "WorldSpawner 5.0"
+    },
+    {
+      "id": "eedf49dc00db46bc84a0a051000b892b",
+      "appId": "WorldSpawner_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-07T00:00:00.000Z",
+      "releaseNote": "Update 2.3.2\n- Fixes\n",
+      "versionTitle": "WorldSpawner 5.1"
+    },
+    {
+      "id": "373b13577d0f4ecdb15567cdef8254b4",
+      "appId": "WorldSpawner_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-12T00:00:00.000Z",
+      "releaseNote": "Update 2.3.2\n- Fixes",
+      "versionTitle": "WorldSpawner 5.2"
+    },
+    {
+      "id": "9477c05238f54141a7cc03877cdcc73b",
+      "appId": "WorldSpawner_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "Update 2.3.2\n- Fixes",
+      "versionTitle": "WorldSpawner 5.3"
+    },
+    {
+      "id": "58e90246401747058d704b8d64886f2a",
+      "appId": "WorldSpawner_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "Update 2.3.2\n- Fixes\n- 5.4 target",
+      "versionTitle": "WorldSpawner 5.4"
+    }
+  ],
+  "developer": "GameRec Studios",
+  "developerId": "o-gc3bgghcfxmx7r25pltw492w38bwxr",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

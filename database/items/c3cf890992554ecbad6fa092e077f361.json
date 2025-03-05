@@ -1,0 +1,308 @@
+{
+  "id": "c3cf890992554ecbad6fa092e077f361",
+  "title": "Token Manager - Synchronised AI Behaviour",
+  "description": "Token Manager plugin allows synchronization between enemies actions. Cooperation is achieved through tokens granting or restricting particular behaviors. Tokens are granted based on their amount, cooldown or cost calculated globally or per instance.",
+  "longDescription": "<p>&#x1f3ac; <a href=\"https://youtu.be/qbKE9b5NBpA\" rel=\"nofollow\">Overview Video</a></p><p>&#x1f393; <a href=\"https://docs.google.com/document/d/1QZWpCU6qrf6riAPzVd_pp8nBDTfcS4urwASBOloJ9pw/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p>&#x1f3ae; <a href=\"https://drive.google.com/file/d/1lg34h8nQZ-armdH6srvLrNAOWXaR4naG/view?usp&#61;drive_link\" rel=\"nofollow\">Sample Project (from Overview Video)</a></p><p>❓ <a href=\"https://discord.gg/Q2NkZzTytE\" rel=\"nofollow\">Have a question? Would you like to request new features or report a bug? Join Discord community</a></p><p><br /></p><p>Token Manager plugin allows users to create team behavior and synchronization between AIs/enemies actions. Cooperation is achieved through tokens functionality granting or restricting particular behaviors, skills or abilities. Whether or not to grant a specific token connected with a particular action is based on previously configured token’s parameters and its current values. Those parameters are connected with the amount, cooldown or cost calculated on a global or an instance basis. Instance based actions were splitted into two categories: source and target, which can correspond to e.g.: enemy squad or player respectively. Global actions on the other hand do not take into consideration any specific objects or actors.</p><p><strong>By using the plugin it is possible to restrict amount of particular actions aimed towards specific target happening at the same time (e.g.: two enemies executing the same attack aimed towards the player simultaneously), add cooldown preventing action from triggering to often (e.g.: members of the same squad constantly throwing grenade one after another) or restrict maximum cost of specific actions (e.g.: aggressive ones to make sure that summary cost of all of the aggressive actions (shooting, throwing grenade) aimed at a particular target will not exceed specified limit, making the target feel overwhelmed).</strong></p><p>The plugin includes built-in blackboard and behavior tree integration, which allows using token’s logic inside the behavior tree based AI decision making process. Usage of the plugin is not restricted solely to behavior trees, as all of the provided functions are available from everywhere in the project thanks to the static methods implemented inside the TokenManager world subsystem. The whole plugin’s functionality was designed in mind to be easy to use no matter what kind of game type it is used in.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Blueprints and C&#43;&#43; support</li><li>Implemented fully in C&#43;&#43; with core functionality provided as a Developer Settings and World Subsystem</li><li>Easy and all in one place configuration possibilities stored inside Developer Settings tab</li><li>Tokens and token&#39;s parameters based on Gameplay Tags for more versatility</li><li>Granting tokens based on their amount, cooldown and summary cost</li><li>Tokens&#39; parameters splitted into Global and Instanced Ones to cover more use cases scenarios</li><li>Differentiating instanced tokens between source (squad) and target (player) based</li><li>No Tick function used</li><li>World subsystem spawns only on Listen/Dedicated server (plugin was successfully used in online co-op games)</li><li>Out of the box behavior tree integration and easy to integrate with other decision making systems</li><li>Built-in debugging tool</li></ul><p><br /></p><p>Number of C&#43;&#43; Classes: 3</p><p>Supported Development Platforms: [Windows 64-bit]</p><p>Supported Target Build Platforms: [Windows 64-bit, MacOS, iOS, Android, Nintendo Switch, Playstation 4/5, Xbox One/Series]</p><p>Code Modules: [TokenManagerPlugin(Runtime)]</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TMMainFullHD-1920x1080-c4dde174e35919205dcf4402c0792d0e.png",
+      "md5": "c4dde174e35919205dcf4402c0792d0e",
+      "width": 1920,
+      "height": 1080,
+      "size": 2112666,
+      "uploadedDate": "2023-03-22T20:31:40.756Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/developersettingsconfig-1920x1080-ca72c1af75a38e6b9e21a8bffbbd5cf7.png",
+      "md5": "ca72c1af75a38e6b9e21a8bffbbd5cf7",
+      "width": 1920,
+      "height": 1080,
+      "size": 243506,
+      "uploadedDate": "2023-03-23T19:14:31.220Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TMmanagerfunctions-1920x1080-9c436b7cf65db033f55ee21ec0182a60.png",
+      "md5": "9c436b7cf65db033f55ee21ec0182a60",
+      "width": 1920,
+      "height": 1080,
+      "size": 392326,
+      "uploadedDate": "2023-03-23T19:10:05.950Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BTsupportnewtasks-1920x1080-fa56ed38b7144349a0a3c0fc8aeae562.png",
+      "md5": "fa56ed38b7144349a0a3c0fc8aeae562",
+      "width": 1920,
+      "height": 1080,
+      "size": 268236,
+      "uploadedDate": "2023-03-28T18:42:14.886Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Debuggersupport-1920x1080-e247e1d32260fa9201b0d3fb58abf457.png",
+      "md5": "e247e1d32260fa9201b0d3fb58abf457",
+      "width": 1920,
+      "height": 1080,
+      "size": 3078427,
+      "uploadedDate": "2023-03-27T18:51:29.066Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TokenManagerSynchronisedAIBehaviour_thumb-284x284-f375331129912d3dbefc3466252cd026.png",
+      "md5": "f375331129912d3dbefc3466252cd026",
+      "width": 284,
+      "height": 284,
+      "size": 102403,
+      "uploadedDate": "2023-03-22T21:14:26.748Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TokenManagerSynchronisedAIBehaviour_featured-894x488-677ced2373f9ec7f37cb0838f1e74f3e.png",
+      "md5": "677ced2373f9ec7f37cb0838f1e74f3e",
+      "width": 894,
+      "height": 488,
+      "size": 438245,
+      "uploadedDate": "2023-03-22T21:03:34.305Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BTsupportnewtasks-1920x1080-fa56ed38b7144349a0a3c0fc8aeae562_Snapshot.png",
+      "md5": "e312d7a95fa7095e0abaabe5ca590eef",
+      "width": 150,
+      "height": 74,
+      "size": 4983,
+      "uploadedDate": "2023-03-28T18:42:15.086Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Debuggersupport-1920x1080-e247e1d32260fa9201b0d3fb58abf457_Snapshot.png",
+      "md5": "b3dcfda13f59e0e919504917ab78ac75",
+      "width": 150,
+      "height": 74,
+      "size": 7228,
+      "uploadedDate": "2023-03-27T18:51:29.383Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BTsupport-1920x1080-1b0d92b8f641b41d5d65cc20647e6503_Snapshot.png",
+      "md5": "516f0f7427ddf39d428137238ed4e4d0",
+      "width": 150,
+      "height": 74,
+      "size": 4742,
+      "uploadedDate": "2023-03-27T17:27:16.763Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/developersettingsconfig-1920x1080-ca72c1af75a38e6b9e21a8bffbbd5cf7_Snapshot.png",
+      "md5": "e54d893e92f4a54389f9530f294e5479",
+      "width": 150,
+      "height": 74,
+      "size": 5076,
+      "uploadedDate": "2023-03-23T19:14:31.427Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TMmanagerfunctions-1920x1080-9c436b7cf65db033f55ee21ec0182a60_Snapshot.png",
+      "md5": "b4d7f20d0c1bc2b65d00a49737a78e36",
+      "width": 150,
+      "height": 74,
+      "size": 5957,
+      "uploadedDate": "2023-03-23T19:10:06.175Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TMBTsupport-1920x1080-9ce2cc09530f6da37f6f2fddfa2b98c6_Snapshot.png",
+      "md5": "ac9f5ab17ba7a07eb8968a0091ab7153",
+      "width": 150,
+      "height": 74,
+      "size": 5244,
+      "uploadedDate": "2023-03-23T19:00:45.648Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/developersettingsconfig-1920x1080-4979e38d5d560e3b59675f535f5d575a_Snapshot.png",
+      "md5": "9c73455d8c59302e75cf25f5ae662c41",
+      "width": 150,
+      "height": 74,
+      "size": 5071,
+      "uploadedDate": "2023-03-23T18:45:12.346Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TMMainFullHD-1920x1080-c4dde174e35919205dcf4402c0792d0e_Snapshot.png",
+      "md5": "1a14b3d1c3f3e37ca620bfaddd01482b",
+      "width": 150,
+      "height": 74,
+      "size": 7225,
+      "uploadedDate": "2023-03-22T20:31:41.097Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/aitokensystemmainscreen-1920x1080-9380815268d3f59bb45323d9d9084012_Snapshot.png",
+      "md5": "945921f34f7dbb6ba00b07b7db6ebdca",
+      "width": 150,
+      "height": 74,
+      "size": 2860,
+      "uploadedDate": "2023-01-21T19:01:38.887Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/aiticketingsystemmainscreen-1920x1080-ee4bde0ac52135a3f6339cdab75076f9_Snapshot.png",
+      "md5": "15e8f3d85bc82242e2f7b5ee7d6f77ad",
+      "width": 150,
+      "height": 74,
+      "size": 2804,
+      "uploadedDate": "2023-01-15T20:26:55.578Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/unifiedtagsmainscreen-1920x1080-4f486cd457342a53022d9fa09d86bef7_Snapshot.png",
+      "md5": "0c3b75857f51233f340966070f42c725",
+      "width": 150,
+      "height": 74,
+      "size": 3323,
+      "uploadedDate": "2023-01-15T08:47:06.853Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-04-16T18:31:35.118Z",
+  "lastModifiedDate": "2024-12-05T18:03:11.409Z",
+  "customAttributes": {},
+  "entitlementName": "c3cf890992554ecbad6fa092e077f361",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "37c1123b478841f08e06b277943a6843",
+      "appId": "TokenManagerPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Nintendo Switch",
+        "Xbox One",
+        "PS4"
+      ],
+      "dateAdded": "2023-03-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Token_Manager_UE_4_27"
+    },
+    {
+      "id": "ce9822fc19cd4b69b07e28fd9e3106bb",
+      "appId": "TokenManagerPlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Nintendo Switch",
+        "Xbox One",
+        "PS4"
+      ],
+      "dateAdded": "2023-03-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Token_Manager_UE_5_0_V_2_0"
+    },
+    {
+      "id": "09822078eb974f2d813e2fa103416fb6",
+      "appId": "TokenManagerPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Xbox One",
+        "Nintendo Switch",
+        "PS4"
+      ],
+      "dateAdded": "2023-01-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Token_Manager_UE_5_1_V_3_0"
+    },
+    {
+      "id": "7bb7d4760bad48dcb8265ceae00ba88b",
+      "appId": "TokenManagerPlugin_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Nintendo Switch",
+        "Xbox One",
+        "PS4"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Token_Manager_UE_5_2_V_5_0"
+    },
+    {
+      "id": "f4d2a3a26b654cad9eb1ed219451a561",
+      "appId": "TokenManagerPlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Token_Manager_UE_5_3_V_5_0"
+    },
+    {
+      "id": "da1babdaea7749dea198009de0230277",
+      "appId": "TokenManagerPlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Android",
+        "iOS",
+        "Mac",
+        "Nintendo Switch",
+        "PS4"
+      ],
+      "dateAdded": "2024-04-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Token_Manager_UE_5_4_V_5_0"
+    }
+  ],
+  "developer": "MateoPlugins",
+  "developerId": "o-xw79dc9r4z2kbg45k5hk74hqf9c6nm",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

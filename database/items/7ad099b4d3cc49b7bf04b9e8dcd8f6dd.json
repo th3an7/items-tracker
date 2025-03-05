@@ -1,0 +1,243 @@
+{
+  "id": "7ad099b4d3cc49b7bf04b9e8dcd8f6dd",
+  "title": "GeometryCacheCollision",
+  "description": "Add collision for Alembic GeometryCache animation.",
+  "longDescription": "<p>Build simple or complex collisions for Alembic GeometryCache animation, and the collision can be updated when the animation is playing.</p><p><br /></p><p>Packaged Demo:[<a href=\"https://drive.google.com/file/d/1aCDOA9VgQRkX-F92GckY3BXrGbNBSoIn/view?usp&#61;sharing\" rel=\"nofollow\">link</a>]</p><p>Demo Project:[<a href=\"https://drive.google.com/file/d/1T2sXF8AN3qo0qQG-yhTv6Sne4UmZU5zi/view?usp&#61;sharing\" rel=\"nofollow\">link</a>] (4.27, need the plugin installed)</p><p>Demo Video:[<a href=\"https://www.youtube.com/watch?v&#61;vlMjdFL73Qk\" rel=\"nofollow\">link</a>]</p><p>Documentation: [<a href=\"https://docs.google.com/document/d/1XSfxta3tAdCNQuOS-1GG0K6PfG6xFxhqCDYImfoB8G0/edit?usp&#61;sharing\" rel=\"nofollow\">link</a>]</p><p>Tutorial: [<a href=\"https://www.youtube.com/watch?v&#61;RPzpIVn94IA\" rel=\"nofollow\">link</a>]</p><p>Forums Service: [<a href=\"https://forums.unrealengine.com/t/qibos-alembic-geometrycache-series-plugins-collision-attachment-etc/773431/5\" rel=\"nofollow\">link</a>]</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Features</h2><p><strong>Easy to use</strong>:</p><ul><li>Only need to attach the &#34;Geometry Cache Collision&#34; component to GeometryCacheActor.</li></ul><p><strong>Show collision geometry</strong></p><ul><li>The collision geometry can be shown in the editor&#39;s viewport when &#34;Show-&gt; Collision&#34; is checked.</li><li>The collision geometry can be shown at runtime when the component&#39;s &#34;Detail-&gt;Debug-&gt;ShowCollisionWireFrame&#34; is checked, it is very useful for debugging.</li></ul><p><strong>Simple collision</strong></p><ul><li>Auto build box or sphere shape simple collision.</li><li>You can choose to build simple collision for every enabled track or merge all the tracks as a large one.</li></ul><p><strong>Complex collision</strong></p><ul><li>Support returns UV info from a hit result when &#34;PhysicsSettings-&gt;bSupportUVFromHitResults&#34; is checked and there is UV info in your GeometryCache.</li><li>Support returns GeometryCache&#39;s hit track info and material info from a hit result.</li></ul><p><strong>Multitracks GeometryCache</strong></p><ul><li>Support creating collisions only for enabled tracks.</li></ul><p><strong>Update collision</strong></p><ul><li>You can choose to update GeometryCache&#39;s collision manually or by Tick.</li><li>When updated by tick, the collision will be updated immediately when the animation changed.</li><li>When updated manually, the collision can be updated by calling the blueprint function &#34;UpdateCollisionManually&#34;.</li><li>Support binds a blueprint callback event when the collision is updated.</li></ul><p><strong>Collision Async Cooking</strong></p><ul><li>You can choose whether to do the physics cooking in the game thread.</li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2><strong>Precautions before buying</strong></h2><p>1. You should be very very careful when updating complex collisions by tick. As building complex collisions need large amounts of computation, it will make your program slow. Some advice for building complex collisions:</p><ul><li>You can update complex collisions manually in Blueprint only when needed.</li><li>You can reduce enabled tracks for geometry cache with multi-tracks.</li><li>You can build a special track for your GeometryCache, which is with fewer triangle numbers and is only used for creating collisions.</li></ul><p>In my test, the triangle number for complex collisions should be less than 5000 for keeping 60fps when updating complex collisions on every frame.</p><p><br /></p><p>2. An issue with UE5&#39;s collision system:</p><p>If the original geometry for the alembic is very small, and a very large scale has been applied to the alembic animation in the scene. UE5 may have errors for this kind of Collision. You can solve the issue by adjusting the alembic&#39; geometry size by DCC software and reimporting it to Unreal. The issue did not exist in UE4.27.</p><p><br /></p><p>3. Groom or Hair</p><p>This plugin can not add collisions for groom assets. </p><p>Unreal&#39;s groom (hair) system only supports simple collisions with the Skeletal Mesh component, so the collisions built with this plugin could not work with hair.</p>",
+  "technicalDetails": "<p>Code Modules: </p><ul><li> GeometryCacheCollision - Runtime</li><li> GeometryCacheCollisionEditor - Editor</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 5</p><p>Network Replicated: (Yes/No) No</p><p>Supported Development Platforms: Win64, Win32</p><p>Supported Target Build Platforms: Win64, Win32</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/g1-1920x1080-90593549236fa62b3d0dc40d75cf64fa.png",
+      "md5": "90593549236fa62b3d0dc40d75cf64fa",
+      "width": 1920,
+      "height": 1080,
+      "size": 2171011,
+      "uploadedDate": "2022-05-05T02:59:17.420Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/g2-1920x1080-1fb89f39e10bd91ed8aa460f1118d82a.png",
+      "md5": "1fb89f39e10bd91ed8aa460f1118d82a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1721171,
+      "uploadedDate": "2022-05-05T02:59:17.914Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/g3-1920x1080-f4e7bf028f86c91164d729c8966014da.png",
+      "md5": "f4e7bf028f86c91164d729c8966014da",
+      "width": 1920,
+      "height": 1080,
+      "size": 1362404,
+      "uploadedDate": "2022-05-05T02:59:18.408Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/g4-1920x1080-2739d0c4ad535d1db3f13612b9448595.png",
+      "md5": "2739d0c4ad535d1db3f13612b9448595",
+      "width": 1920,
+      "height": 1080,
+      "size": 747438,
+      "uploadedDate": "2022-05-05T02:59:18.868Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/g5-1920x1080-73aafd15aafd2fc7ecf271b104267edf.png",
+      "md5": "73aafd15aafd2fc7ecf271b104267edf",
+      "width": 1920,
+      "height": 1080,
+      "size": 179308,
+      "uploadedDate": "2022-05-05T02:59:19.250Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/g6-1920x1080-11f26da9858e3afdae3768bb450b11ee.png",
+      "md5": "11f26da9858e3afdae3768bb450b11ee",
+      "width": 1920,
+      "height": 1080,
+      "size": 231079,
+      "uploadedDate": "2022-05-05T02:59:19.577Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/GeometryCacheCollision_thumb-284x284-0ff2fca3d582db3b22cff8a9b1d84ddd.png",
+      "md5": "0ff2fca3d582db3b22cff8a9b1d84ddd",
+      "width": 284,
+      "height": 284,
+      "size": 137816,
+      "uploadedDate": "2022-05-05T02:59:19.891Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/GeometryCacheCollision_featured-894x488-58ee4f47697b78b6f8ff1cbc7757828f.png",
+      "md5": "58ee4f47697b78b6f8ff1cbc7757828f",
+      "width": 894,
+      "height": 488,
+      "size": 526973,
+      "uploadedDate": "2022-05-05T02:59:20.011Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/g1-1920x1080-90593549236fa62b3d0dc40d75cf64fa_Snapshot.png",
+      "md5": "9c34dc502ffd60e91edace95ffb09421",
+      "width": 150,
+      "height": 74,
+      "size": 4436,
+      "uploadedDate": "2022-05-05T02:59:17.734Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/g2-1920x1080-1fb89f39e10bd91ed8aa460f1118d82a_Snapshot.png",
+      "md5": "21c7e7129f9c8e501a01bd0230bb10b5",
+      "width": 150,
+      "height": 74,
+      "size": 5385,
+      "uploadedDate": "2022-05-05T02:59:18.225Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/g3-1920x1080-f4e7bf028f86c91164d729c8966014da_Snapshot.png",
+      "md5": "c633ddb30085681464f65015e4cb803a",
+      "width": 150,
+      "height": 74,
+      "size": 6223,
+      "uploadedDate": "2022-05-05T02:59:18.727Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/g4-1920x1080-2739d0c4ad535d1db3f13612b9448595_Snapshot.png",
+      "md5": "3e05ccf5cdfcb39128b97a301b685e15",
+      "width": 150,
+      "height": 74,
+      "size": 4855,
+      "uploadedDate": "2022-05-05T02:59:19.142Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/g5-1920x1080-73aafd15aafd2fc7ecf271b104267edf_Snapshot.png",
+      "md5": "028a6286750056ef18c089fa78cc7533",
+      "width": 150,
+      "height": 74,
+      "size": 3646,
+      "uploadedDate": "2022-05-05T02:59:19.502Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/g6-1920x1080-11f26da9858e3afdae3768bb450b11ee_Snapshot.png",
+      "md5": "70e3f4884dc5c0eba36e6cc5a7a2e47a",
+      "width": 150,
+      "height": 74,
+      "size": 3617,
+      "uploadedDate": "2022-05-05T02:59:19.814Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-05-11T01:55:12.727Z",
+  "lastModifiedDate": "2024-11-27T17:38:41.386Z",
+  "customAttributes": {},
+  "entitlementName": "7ad099b4d3cc49b7bf04b9e8dcd8f6dd",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "0e1c136a98eb4dc7a164863675f70ed7",
+      "appId": "GeometryCacheCollision_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2022-05-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "450f64a642214d6aaaca335240ee359d",
+      "appId": "GeometryCacheCollision_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2022-05-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "7f72a050fab64731815a250801721724",
+      "appId": "GeometryCacheCollision_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2022-11-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "1924c7621a6443a8a8ba76e9a08ef566",
+      "appId": "GeometryCacheCollision_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-05-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "e6951bd0bdb746fab674108744655782",
+      "appId": "GeometryCacheCollision_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-09-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "0ef9a9589d564902b1f31d9cb40f2b27",
+      "appId": "GeometryCacheCollision_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Qibo",
+  "developerId": "o-9x2ryn2saktuexbrpgfqdks7qd2jb2",
+  "endOfSupport": false,
+  "unsearchable": false
+}

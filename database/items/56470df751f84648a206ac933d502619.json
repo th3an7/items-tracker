@@ -1,0 +1,271 @@
+{
+  "id": "56470df751f84648a206ac933d502619",
+  "title": "Network Lerp Movement",
+  "description": "Smooth interpolation for server-owned actors between two transforms over a specified duration. Say goodbye to jitter.",
+  "longDescription": "<p>Anyone who have tried to lerp an actor and used Unreal&#39;s built-in Replicate Movement may have exhibit jitter in both normal and high-latency situations. The Network Lerp Movement plugin utilizes local prediction to ensure seamless and reliable interpolation. No more jitter!</p><p><br /></p><blockquote><a href=\"https://youtu.be/vf5K29q0idY\" rel=\"nofollow\">Latency &amp; Packet Loss Tests</a></blockquote><blockquote><a href=\"https://youtu.be/JBratkgdEPk\" rel=\"nofollow\">Tutorial</a></blockquote><blockquote><a href=\"https://discord.gg/azWURcymGY\" rel=\"nofollow\">Discord</a></blockquote><blockquote><a href=\"https://docs.google.com/document/d/e/2PACX-1vSfagfYhhzqO1rrz80gDY9z3RBr_bxBuTdCCHitDFYTc_kw1rf_T2Ahpkqy9Nxmv5geSl_57igK-fXR/pub\" rel=\"nofollow\">Documentation</a></blockquote><p><br /></p><p><br /></p><p><br /></p><h1><em>What does this plugin offer?</em></h1><p><br /></p><ol><li><strong>Smooth and Accurate Movement</strong>: The Network Lerp Movement plugin provides a reliable solution for lerping your server-owned actors in your multiplayer game. Smooth transitions between two transforms, allowing for seamless animations and immersive gameplay.</li><li><strong>Flexible Usage</strong>: Use it to create dynamic moving platforms, elevators, tilting surfaces, rotating objects, and much more. The possibilities are endless!</li><li><strong>Adjustable Duration and Looping</strong>: Customize the duration of the movement to suit your specific needs. Whether you require quick movements or slow, deliberate transitions, the Network Lerp Movement plugin offers the flexibility to achieve your desired effect. Additionally, you can enable looping functionality to create back-and-forth movements between two transforms.</li><li><strong>Local Prediction</strong>: By utilizing local prediction, Network Lerp Movement mitigates the issues caused by network latency. Enjoy smooth and consistent movement across multiplayer environments, ensuring that your players&#39; experiences remain immersive and enjoyable.</li><li><strong>Easy To Use</strong>: Integrating the Network Lerp Movement plugin into your project is a breeze. Simply attach the component to your desired actor, configure the necessary parameters, call the LerpBetween function on the server and witness the magic of smooth, network-friendly movement in action.</li><li><strong>CurveFloat Supported</strong>: More animation control with enhanced interpolation options, including cubic interpolation.</li></ol><p><br /></p>",
+  "technicalDetails": "<p>Features:</p><ul><li> NetworkLerpComponent, an actor component that will lerp on both clients and server. While the server keep the clients in sync.</li><li> Smooth interpolation in multiplayer environment.</li><li>Accessible in Blueprint.</li><li> Full control of server´s correction updates and the clients out of sync tolerance.</li><li>Works with Actor Relevancy.</li><li>Can be used with CurveFloat.</li><li>Instead of frequently sending the 40byte transform to the clients, this plugin will only send a 5byte struct.</li></ul><p><br /></p><p>Cons:</p><ul><li>Does not work with physics actors.</li></ul><p><br /></p><p>Code Modules:</p><ul><li> NetworkLerpMovement, Runtime</li></ul><p><br /></p><p>Number of Blueprints: 7</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Windows, Mac, Linux, IOS, Android. (Only Windows tested, should work on other platforms)</p><p>Supported Target Build Platforms: Windows, Mac, Linux, IOS, Android. (Only Windows tested, should work on other platforms)</p><p>Documentation: <a href=\"https://docs.google.com/document/d/e/2PACX-1vSfagfYhhzqO1rrz80gDY9z3RBr_bxBuTdCCHitDFYTc_kw1rf_T2Ahpkqy9Nxmv5geSl_57igK-fXR/pub\" rel=\"nofollow\">https://docs.google.com/document/d/e/2PACX-1vSfagfYhhzqO1rrz80gDY9z3RBr_bxBuTdCCHitDFYTc_kw1rf_T2Ahpkqy9Nxmv5geSl_57igK-fXR/pub</a></p><p><strong>Example Project</strong>: <em><u>Engine-&gt;Plugins-&gt;NetworkLerpMovement-&gt;ExampleLevel</u></em></p><p>Important/Additional Notes: This plugin has been tested in normal and bad network condition. Packet loss more than 5-10% will still cause lag spikes, delayed actions or even out of sync.</p><p>You can contact me here: <a href=\"https://discord.gg/azWURcymGY\" rel=\"nofollow\">https://discord.gg/azWURcymGY</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image1-1920x1080-a127797aac458d00e0ad0d7fbfe90b55.jpg",
+      "md5": "a127797aac458d00e0ad0d7fbfe90b55",
+      "width": 1920,
+      "height": 1080,
+      "size": 252998,
+      "uploadedDate": "2023-07-09T00:15:21.740Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image2-1920x1080-26917b54ad41e9ebc28482dc8fca5fc6.jpg",
+      "md5": "26917b54ad41e9ebc28482dc8fca5fc6",
+      "width": 1920,
+      "height": 1080,
+      "size": 197640,
+      "uploadedDate": "2023-07-09T00:15:22.703Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image3-1920x1080-f84d0b30cee20932b2afdec632d09e23.jpg",
+      "md5": "f84d0b30cee20932b2afdec632d09e23",
+      "width": 1920,
+      "height": 1080,
+      "size": 350310,
+      "uploadedDate": "2023-07-09T00:15:23.679Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image4-1920x1080-216310e535c108daca0850bc4805e42f.jpg",
+      "md5": "216310e535c108daca0850bc4805e42f",
+      "width": 1920,
+      "height": 1080,
+      "size": 167776,
+      "uploadedDate": "2023-07-09T00:15:24.685Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image6-1920x1080-ba602458f06aa2cdda8c7b2eafa8a59b.jpg",
+      "md5": "ba602458f06aa2cdda8c7b2eafa8a59b",
+      "width": 1920,
+      "height": 1080,
+      "size": 163780,
+      "uploadedDate": "2023-07-09T00:15:25.633Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image5-1920x1080-83bbd225915b0db9ededb86a7a5b5c7a.jpg",
+      "md5": "83bbd225915b0db9ededb86a7a5b5c7a",
+      "width": 1920,
+      "height": 1080,
+      "size": 167667,
+      "uploadedDate": "2023-07-09T00:15:26.578Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/NetworkLerpMovement_thumb-284x284-2d764b6e718725061ea646a08d53f6b4.png",
+      "md5": "2d764b6e718725061ea646a08d53f6b4",
+      "width": 284,
+      "height": 284,
+      "size": 36635,
+      "uploadedDate": "2023-07-04T00:09:25.624Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/NetworkLerpMovement_featured-894x488-5203afea6e008fa7dd83a6942f4a74c0.png",
+      "md5": "5203afea6e008fa7dd83a6942f4a74c0",
+      "width": 894,
+      "height": 488,
+      "size": 105139,
+      "uploadedDate": "2023-07-04T00:09:25.673Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image1-1920x1080-a127797aac458d00e0ad0d7fbfe90b55_Snapshot.jpg",
+      "md5": "2d4faa01fa19fc4241099b8200eb44f9",
+      "width": 150,
+      "height": 74,
+      "size": 5429,
+      "uploadedDate": "2023-07-09T00:15:22.362Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image2-1920x1080-26917b54ad41e9ebc28482dc8fca5fc6_Snapshot.jpg",
+      "md5": "44794e65a7b357e8f82016999a3b258b",
+      "width": 150,
+      "height": 74,
+      "size": 5344,
+      "uploadedDate": "2023-07-09T00:15:23.327Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image3-1920x1080-f84d0b30cee20932b2afdec632d09e23_Snapshot.jpg",
+      "md5": "8273c57bbfcd9304b4cc6b4977475e30",
+      "width": 150,
+      "height": 74,
+      "size": 6452,
+      "uploadedDate": "2023-07-09T00:15:24.304Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image4-1920x1080-216310e535c108daca0850bc4805e42f_Snapshot.jpg",
+      "md5": "210d9f06bf29205d6f8cc584f0f01263",
+      "width": 150,
+      "height": 74,
+      "size": 6158,
+      "uploadedDate": "2023-07-09T00:15:25.281Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image6-1920x1080-ba602458f06aa2cdda8c7b2eafa8a59b_Snapshot.jpg",
+      "md5": "d076a285c924ece58b136067059bd80a",
+      "width": 150,
+      "height": 74,
+      "size": 5822,
+      "uploadedDate": "2023-07-09T00:15:26.239Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image5-1920x1080-83bbd225915b0db9ededb86a7a5b5c7a_Snapshot.jpg",
+      "md5": "9a67fee5c6d525a4e1d9a3691fdd9cd4",
+      "width": 150,
+      "height": 74,
+      "size": 5879,
+      "uploadedDate": "2023-07-09T00:15:27.193Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image1-1920x1080-d5b387f140cfb55b095b88105c323f10_Snapshot.jpg",
+      "md5": "0d09a128dc7671cf0abb8c6dc76232a2",
+      "width": 150,
+      "height": 74,
+      "size": 5559,
+      "uploadedDate": "2023-07-04T00:09:21.804Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image2-1920x1080-c4f0bb526497e6a25c7aac770144a2c8_Snapshot.jpg",
+      "md5": "18648434cd3fb12362f463b9dd7bf89f",
+      "width": 150,
+      "height": 74,
+      "size": 5099,
+      "uploadedDate": "2023-07-04T00:09:22.721Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image3-1920x1080-0c907234a4cf4c9deaa81e0c430cc12d_Snapshot.jpg",
+      "md5": "a8a7043e8e392184b01b7d7b8f368e42",
+      "width": 150,
+      "height": 74,
+      "size": 6271,
+      "uploadedDate": "2023-07-04T00:09:23.690Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image4-1920x1080-86a2d25aade2f87bfdf3c9a2b4c1f04e_Snapshot.jpg",
+      "md5": "6f527132edeaba0e2cd18db90e505e92",
+      "width": 150,
+      "height": 74,
+      "size": 6079,
+      "uploadedDate": "2023-07-04T00:09:24.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image5-1920x1080-4a02d3dda3645eb557b56b2274f87ec0_Snapshot.jpg",
+      "md5": "9a67fee5c6d525a4e1d9a3691fdd9cd4",
+      "width": 150,
+      "height": 74,
+      "size": 5879,
+      "uploadedDate": "2023-07-04T00:09:25.530Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-07-12T16:57:54.355Z",
+  "lastModifiedDate": "2024-12-11T06:16:24.898Z",
+  "customAttributes": {},
+  "entitlementName": "56470df751f84648a206ac933d502619",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "f2041607191b43f7a080085a15a33734",
+      "appId": "NetworkLerpMovement_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-07-09T00:00:00.000Z",
+      "releaseNote": "All structs can now be used in blueprint.\nNew Function: GetPredictedTransform, Get predicted transform at certain point in time.",
+      "versionTitle": "V1.02 5.1"
+    },
+    {
+      "id": "10137a00ba0548c3be25cd898bba32e2",
+      "appId": "NetworkLerpMovement_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Mac",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-07-04T00:00:00.000Z",
+      "releaseNote": "All structs can now be used in blueprint.\nNew Function: GetPredictedTransform, Get predicted transform at certain point in time.",
+      "versionTitle": "V1.02 5.2"
+    },
+    {
+      "id": "b16f6f2461bc4780bd9debdd69583774",
+      "appId": "NetworkLerpMovement_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.02 5.3"
+    },
+    {
+      "id": "4d4b2622e67e400d93ff53be7befd4cd",
+      "appId": "NetworkLerpMovement_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Linux",
+        "iOS",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-05-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.02 5.4"
+    }
+  ],
+  "developer": "Sandwich Cake Studios",
+  "developerId": "o-wtglvqdzftwqqxvkgsqjadryx6kdnl",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

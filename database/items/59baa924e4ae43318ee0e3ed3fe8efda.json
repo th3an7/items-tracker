@@ -1,0 +1,789 @@
+{
+  "id": "59baa924e4ae43318ee0e3ed3fe8efda",
+  "title": "Virtual Animation Tools V6",
+  "description": "Create the most complete animation tools. It can save you a lot of time.",
+  "longDescription": "<p><strong>Showcase: </strong></p><ul><li><a href=\"https://www.bilibili.com/video/BV1Ra411i7hB?spm_id_from&#61;333.999.0.0\" rel=\"nofollow\"><strong>Bilibili Showcase V3</strong></a></li><li><a href=\"https://www.youtube.com/watch?v&#61;sYDbaSlt30E&amp;list&#61;PLYP0ozRez418TgeOFVmyJSd87FlEBTPrg&amp;index&#61;1\" rel=\"nofollow\"><strong>Youtube Showcase V3</strong></a></li><li><a href=\"https://www.youtube.com/watch?v&#61;jG4byWSJkIY&amp;list&#61;PLYP0ozRez418TgeOFVmyJSd87FlEBTPrg&amp;index&#61;2\" rel=\"nofollow\"><strong>Mirror V4</strong></a></li><li><a href=\"https://www.youtube.com/watch?v&#61;-as0FLCxCdQ\" rel=\"nofollow\"><strong>FootLock V4</strong> </a></li><li><a href=\"https://www.youtube.com/watch?v&#61;1v-APYXYzGA\" rel=\"nofollow\"><strong>Retarget V4</strong> </a></li></ul><p><strong>Tutorial: </strong></p><ul><li><a href=\"https://www.bilibili.com/video/BV1nS4y127iM/?spm_id_from&#61;333.788\" rel=\"nofollow\"><strong>Bilibili Tutorial V3</strong></a></li><li><a href=\"https://www.youtube.com/watch?v&#61;jG4byWSJkIY&amp;list&#61;PLYP0ozRez418TgeOFVmyJSd87FlEBTPrg&amp;index&#61;2\" rel=\"nofollow\"><strong>Youtube Tutorial V3</strong></a></li></ul><p><strong>Examples: </strong></p><ul><li><a href=\"https://www.youtube.com/playlist?list&#61;PLYP0ozRez41-YqspKaxbzFR-4TY2njq2j\" rel=\"nofollow\">VirtualControlRig</a></li><li><a href=\"https://www.youtube.com/playlist?list&#61;PLYP0ozRez418uI_BVG3UIqGtYoZRhbGDH\" rel=\"nofollow\">VirtualAnimationSkills</a></li><li><a href=\"https://www.unrealengine.com/marketplace/zh-CN/product/virtual-motion-matching-v1\" rel=\"nofollow\">VirtualMotionMatching</a></li></ul><p><strong>Documentation: (</strong>discord has full development progress&#xff09;</p><ul><li><a href=\"https://forums.unrealengine.com/t/virtual-animation-tools-plugin-create-the-most-complete-animation-tools/229411?u&#61;leaguetopryze\" rel=\"nofollow\">Forums V2</a></li></ul><p><strong>Release Notes: </strong><a href=\"https://discord.com/channels/842419482755989505/848394605870972929\" rel=\"nofollow\"><strong>Discord</strong></a></p><p><br /></p><p><strong><em>Are you tired of repetitive manual configuration?</em></strong></p><p><strong><em>Are you working on tens of thousands of animations?</em></strong></p><p><strong><em>Do you want bone layer blended for animation?</em></strong></p><p><strong><em>Do you want a more accurate distance matching curve?</em></strong></p><p><strong><em>Do you want to generate foot step Pos/Lock/IK curves(notify) automatically?</em></strong></p><p><strong><em>Do you want a tool that includes all the animation features?</em></strong></p><p><strong><em>Let “Virtual Animation Tools” help you solve them!</em></strong></p><p><br /></p><p><strong>BoneTools: </strong></p><ul><li>Add Bone &#xff08;Add weapon bones, IK bones, camera bones and other unskinned weight bones&#xff09;</li><li>Remove Bone &#xff08; Remove unskinned weight bones&#xff09;</li><li>Add Animation Bone Data &#xff08;Add or fix the bone data on the animation, such as adding the initial data of the fixed camera&#xff09;</li><li>Modify Animation Bone Data &#xff08;You can modify each frame of animation data, such as repairing animation jumping caused by too much value change&#xff09;</li><li>Remove Animation Bone Data</li><li>Baking Bone Data</li></ul><p>&lt;1&gt; Bake animation attack frame for low frame rate client or server</p><p>&lt;2&gt; Bake the specified bones. On the server, we can use this data to simulate the head and torso positions of crouching, crawling, etc.</p><ul><li>Blend Animation Bone Layer &#xff08;Similar to the animation node Layered Blend Per Bone&#xff09;</li></ul><p>&lt;1&gt; Convert arm animation to full body animation (FPS to TPS)</p><p>&lt;2&gt; Blend with other animations, such as repairing missing hand animations in motion capture animations, etc.</p><ul><li>Constraint</li></ul><p>&lt;1&gt; Constraining IK and FK bones.</p><p>&lt;2&gt; Copy the data on the IK weapon bone to the hand weapon bone.</p><p><br /></p><p><strong>CurveTools: </strong></p><ul><li>Motion Curve &#xff08;Distance matching curve, sample per-axis data on the root bone for distance matching&#xff09;</li><li>Bone Curve &#xff08;Support vector, transform curves&#xff09;</li><li>Copy Curves</li><li>Transfer Curves</li><li>Sort Curve &#xff08;Sort the curves in the initial order&#xff09;</li><li>Remove Curve &#xff08;Delete specified or clear all curves&#xff09;</li><li>Output Curve &#xff08;Export the specified animation curves data to an external curve asset,support float curve, vector curve&#xff09;</li></ul><p><br /></p><p><strong>Notify Tools: </strong></p><ul><li>Add Notifies &#xff08;It is an instantiated data, which means you can modify your custom variable data here&#xff09;</li><li>Modify Notifies&#xff08;You can collect animation notifications used by current animation assets and modify their positions, variable parameters, etc.&#xff09;</li><li>Remove Notifies&#xff08;The specified animation notification class, location, notification track, etc. can be deleted in batches&#xff09;</li><li>Add Notify Track</li><li>Modify Notify Track&#xff08;You can capture the animation notification track names used by the current animation asset and modify them&#xff09;</li><li>Remove Notify Track &#xff08;it will delete all animation notifications on that track&#xff09;</li><li>Generate FootStep Notifies&#xff08;You can use this feature to automatically generate an animated notification that plays footstep sounds&#xff09;</li></ul><p><br /></p><p><strong>Montage Tools: </strong></p><ul><li>Montage Slot Modifier&#xff08;Can be added, modified, deleted like the source engine&#xff09;</li><li>Montage Loop Section &#xff08;Set the section marked &#34;Loop&#34; fragment as a loop fragment, if the character is not found, set all fragments as a loop&#xff09;</li></ul><p><br /></p><p><strong>Asset Tools: </strong></p><ul><li>Crop&#xff08;Can delete any range of frames&#xff09;</li><li>Insert&#xff08;Can insert a specified continuous pose to any frame&#xff09;</li><li>Resize&#xff08;Resize animation sample frame rate and length&#xff09;</li><li>Composite&#xff08;Multiple animation assets can be merged and blended&#xff09;</li><li>Replace animation pose frames (which can fix animation assets that do not match the poses of the first and last loops)</li><li>Rate Modifier: Modify animation play rate and output the one rate asset.</li><li>Sample Motion Data</li></ul><p>&lt;1&gt; Convert the motion capture animation to the root motion animation.</p><p>&lt;2&gt; Convert root motion animation to motion capture animation.</p><p>&lt;3&gt; Data of motion capture can be sampled and baked into the root motion after secondary adjustment</p><ul><li>Convert Root Motion Data&#xff08;Can scale the size of the root motion data, or sample the root motion data curves and perform secondary adjustment&#xff09;</li><li>Motion Capture Reset To Zero&#xff08;The initial position of the motion capture animation can be reset to the origin&#xff09;</li><li>Generate LODs</li></ul><p>&lt;1&gt; Can generate LOD with deformed data.</p><p>&lt;2&gt; Batch generation of LODs for multiple skeletal meshes.</p><ul><li>Remove LODs&#xff08;Batches&#xff09;</li><li>Export&#xff08;Export resampled animation assets, refer to the engine recording&#xff09;</li></ul><p><br /></p><p><strong>Mirror Tools: </strong></p><ul><li>Sample</li></ul><p>&lt;1&gt; Mirrored bones can be selected, full body/upper body/local body</p><p>&lt;2&gt; Can choose to overwrite or create a new asset</p><ul><li>Bone Tree&#xff08;Automatically sample bone data to generate a mirrored bone tree, eliminating the need to manually configure bone information&#xff09;</li></ul><p><br /></p><p><strong>Retarget Tools: </strong></p><ul><li>Pose</li></ul><p><br /></p><p><strong>PoseSearch Tools: </strong></p><ul><li>Distance&#xff08;It will generate a unique value for each pose, which is a compressed pose password&#xff09;</li><li>Animations&#xff08;Each frame of animation A will be generated corresponding to the position of animation B&#xff09;</li></ul><p><br /></p><p><strong>GameFramework Tools: </strong></p><ul><li>Foot IK&#xff08;Generate disabled or enabled footsteps IK alpha curve&#xff09;</li><li>Foot Lock&#xff08;Generate footsteps Lock alpha curve&#xff09;</li><li>Foot Offset (which can be used to determine whether the footstep has shifted or not)</li><li>Foot Weight&#xff08;Generate footsteps weights curve&#xff0c;Indicates whether it can meet the connection Stop animation, etc.&#xff09;</li><li>Foot Position&#xff08;Generate footsteps position curve&#xff0c;often used to distinguish between left foot or right foot&#xff09;</li></ul>",
+  "technicalDetails": "<p>VAT plugin is made in C&#43;&#43;, I hope it helps every animation technician.</p><p><br /></p><p><strong>Features: </strong></p><ul><li>Bone Tools</li><li>Curve Tools</li><li>Notify Tools</li><li>Montage Tools</li><li>Asset Tools</li><li>Root Motion Tools</li><li>Motion Capture Tools</li><li>Mirror Tools</li><li>Retarget Tools</li><li>Pose Search Tools</li><li>Game Framework Tools</li><li>Curve Runtime Library &#xff08;Get Animation Curves Data&#xff09;</li><li>Pose Search Runtime Library &#xff08;Support Animation And Montage&#xff09;</li></ul><p><br /></p><p>Communication / Support:</p><ul><li><a href=\"https://discord.gg/j4JwwUyG3m\" rel=\"nofollow\">Discord</a></li><li><strong>QQ Group: 881583389 (China)</strong></li></ul><p><br /></p><p>Code Modules:</p><ul><li> VirtualAnimationTools - Runtime Module</li><li> VirtualAnimationToolsEditor - Editor Module</li></ul><p><br /></p><p>Number of Blueprints: 2</p><p>Number of C&#43;&#43; Classes: 70</p><p>Supported Development Platforms: Win32, Win64</p><p><br /></p><p><strong>Important/Additional Notes:</strong></p><p>&#xff08;1&#xff09;The plug-in will remain updated and maintained (including slate, which will be combined with the animation editor in the future).</p><p>&#xff08;2&#xff09;You can set the initialized VAT data class in the project plugin setting.</p><p>&#xff08;3&#xff09;Every time a large version is updated (a lot of content is added), the price has some increase.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/-1920x1080-7dc7af3e310563b430f3b7b9eb24a016.png",
+      "md5": "7dc7af3e310563b430f3b7b9eb24a016",
+      "width": 1920,
+      "height": 1080,
+      "size": 1264978,
+      "uploadedDate": "2022-04-11T16:29:15.967Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-2594db4a73c7e1159aceaf6371d2c099.png",
+      "md5": "2594db4a73c7e1159aceaf6371d2c099",
+      "width": 1920,
+      "height": 1080,
+      "size": 853458,
+      "uploadedDate": "2022-04-11T16:29:16.480Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-178c9cf978ee8eb7d45c16cda1283544.png",
+      "md5": "178c9cf978ee8eb7d45c16cda1283544",
+      "width": 1920,
+      "height": 1080,
+      "size": 1207837,
+      "uploadedDate": "2022-04-11T16:29:16.957Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-2689f8666ad7712c7fc8356a00521255.png",
+      "md5": "2689f8666ad7712c7fc8356a00521255",
+      "width": 1920,
+      "height": 1080,
+      "size": 891293,
+      "uploadedDate": "2022-04-11T16:29:17.474Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-b95f2e36d195a36527e03722a41db24a.png",
+      "md5": "b95f2e36d195a36527e03722a41db24a",
+      "width": 1920,
+      "height": 1080,
+      "size": 657677,
+      "uploadedDate": "2022-04-11T16:29:17.939Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-f367ee59d2004d4f25d064d578bdb3fc.png",
+      "md5": "f367ee59d2004d4f25d064d578bdb3fc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1101861,
+      "uploadedDate": "2022-04-11T16:29:18.352Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-923940bba46f4f577051e4af0b08cf84.png",
+      "md5": "923940bba46f4f577051e4af0b08cf84",
+      "width": 1920,
+      "height": 1080,
+      "size": 448314,
+      "uploadedDate": "2022-04-11T16:29:18.819Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-9532d27c1bf8bc683996c951814c042a.png",
+      "md5": "9532d27c1bf8bc683996c951814c042a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1229407,
+      "uploadedDate": "2022-04-11T16:29:19.237Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-21fec5cdd08aa58722286dd95d516e9b.png",
+      "md5": "21fec5cdd08aa58722286dd95d516e9b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1384523,
+      "uploadedDate": "2022-04-11T16:29:19.694Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-0979b4b403e2eefa556391005da8d93c.png",
+      "md5": "0979b4b403e2eefa556391005da8d93c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1246440,
+      "uploadedDate": "2022-04-11T16:29:20.162Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-953906da77a758f52e6b284fc531cfd5.png",
+      "md5": "953906da77a758f52e6b284fc531cfd5",
+      "width": 1920,
+      "height": 1080,
+      "size": 781990,
+      "uploadedDate": "2022-04-11T16:29:20.650Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-84358c99ded732adde25004ef79ba81f.png",
+      "md5": "84358c99ded732adde25004ef79ba81f",
+      "width": 1920,
+      "height": 1080,
+      "size": 891024,
+      "uploadedDate": "2022-04-11T16:29:21.083Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-06b94e35c425e39e0866d7cf381e8ac6.png",
+      "md5": "06b94e35c425e39e0866d7cf381e8ac6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1306748,
+      "uploadedDate": "2022-04-11T16:29:21.499Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-a45ae488804e750a4824d8c0b524728f.png",
+      "md5": "a45ae488804e750a4824d8c0b524728f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1327502,
+      "uploadedDate": "2022-04-11T16:29:22.147Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-a9b40f571ab043e88cfd8433cf2496b4.png",
+      "md5": "a9b40f571ab043e88cfd8433cf2496b4",
+      "width": 1920,
+      "height": 1080,
+      "size": 873421,
+      "uploadedDate": "2022-04-11T16:29:22.836Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-f47ba2a80ba8cb8ad951e44f7fd24b18.png",
+      "md5": "f47ba2a80ba8cb8ad951e44f7fd24b18",
+      "width": 1920,
+      "height": 1080,
+      "size": 1291892,
+      "uploadedDate": "2022-04-11T16:29:23.328Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/-IK-1920x1080-7f98cabdc890a474db17c56d7c77ffc7.png",
+      "md5": "7f98cabdc890a474db17c56d7c77ffc7",
+      "width": 1920,
+      "height": 1080,
+      "size": 989306,
+      "uploadedDate": "2022-04-11T16:29:23.774Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-10e3a655cdd485cb7e3b698754f4001c.png",
+      "md5": "10e3a655cdd485cb7e3b698754f4001c",
+      "width": 1920,
+      "height": 1080,
+      "size": 980756,
+      "uploadedDate": "2022-04-11T16:29:24.168Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-839fcd61932a306a1c0c968b242ad697.png",
+      "md5": "839fcd61932a306a1c0c968b242ad697",
+      "width": 1920,
+      "height": 1080,
+      "size": 1014130,
+      "uploadedDate": "2022-04-11T16:29:24.663Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/--1920x1080-524adce89fa57057ede696566167fdb0.png",
+      "md5": "524adce89fa57057ede696566167fdb0",
+      "width": 1920,
+      "height": 1080,
+      "size": 996982,
+      "uploadedDate": "2022-04-11T16:29:25.078Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/003-1920x1080-58dd8394db7827d05f138eabaefa0689.png",
+      "md5": "58dd8394db7827d05f138eabaefa0689",
+      "width": 1920,
+      "height": 1080,
+      "size": 1270301,
+      "uploadedDate": "2022-04-11T16:40:27.227Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/VirtualAnimationToolsV4_thumb-284x284-350ce5195451b365ad32e264bea4c513.png",
+      "md5": "350ce5195451b365ad32e264bea4c513",
+      "width": 284,
+      "height": 284,
+      "size": 105168,
+      "uploadedDate": "2022-05-16T04:36:19.132Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/VirtualAnimationToolsV4_featured-894x488-79e428e299eb85307d91765ec60fa1c2.png",
+      "md5": "79e428e299eb85307d91765ec60fa1c2",
+      "width": 894,
+      "height": 488,
+      "size": 363777,
+      "uploadedDate": "2022-05-16T04:36:19.226Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/003-1920x1080-58dd8394db7827d05f138eabaefa0689_Snapshot.png",
+      "md5": "e806f5b5f69616efd1d9d9ba6af662a0",
+      "width": 150,
+      "height": 74,
+      "size": 5737,
+      "uploadedDate": "2022-04-11T16:40:27.568Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/-1920x1080-7dc7af3e310563b430f3b7b9eb24a016_Snapshot.png",
+      "md5": "e040b7ee496b79e423e9fdbfa94412b5",
+      "width": 150,
+      "height": 74,
+      "size": 6143,
+      "uploadedDate": "2022-04-11T16:29:16.308Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-2594db4a73c7e1159aceaf6371d2c099_Snapshot.png",
+      "md5": "a978ec76c18b893601229e778a8c233f",
+      "width": 150,
+      "height": 74,
+      "size": 5682,
+      "uploadedDate": "2022-04-11T16:29:16.735Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-178c9cf978ee8eb7d45c16cda1283544_Snapshot.png",
+      "md5": "97156df53950e7f0f29685f23d274e56",
+      "width": 150,
+      "height": 74,
+      "size": 5784,
+      "uploadedDate": "2022-04-11T16:29:17.299Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-2689f8666ad7712c7fc8356a00521255_Snapshot.png",
+      "md5": "0a49bf24ce09178e512d134370cdc7de",
+      "width": 150,
+      "height": 74,
+      "size": 5993,
+      "uploadedDate": "2022-04-11T16:29:17.726Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-b95f2e36d195a36527e03722a41db24a_Snapshot.png",
+      "md5": "a12daca502074c52126d4489de5676e7",
+      "width": 150,
+      "height": 74,
+      "size": 5853,
+      "uploadedDate": "2022-04-11T16:29:18.178Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-f367ee59d2004d4f25d064d578bdb3fc_Snapshot.png",
+      "md5": "e1bc1799c5646cc0d148dc82f7fdb647",
+      "width": 150,
+      "height": 74,
+      "size": 5805,
+      "uploadedDate": "2022-04-11T16:29:18.680Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-923940bba46f4f577051e4af0b08cf84_Snapshot.png",
+      "md5": "3a98764e3303748e2da18989a1cdf0bc",
+      "width": 150,
+      "height": 74,
+      "size": 4079,
+      "uploadedDate": "2022-04-11T16:29:19.051Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-9532d27c1bf8bc683996c951814c042a_Snapshot.png",
+      "md5": "c0b8e2ef58981b00d7f2cbf29c624e41",
+      "width": 150,
+      "height": 74,
+      "size": 5971,
+      "uploadedDate": "2022-04-11T16:29:19.540Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-21fec5cdd08aa58722286dd95d516e9b_Snapshot.png",
+      "md5": "f830cba21accb88fa4ddac482b83afdc",
+      "width": 150,
+      "height": 74,
+      "size": 6584,
+      "uploadedDate": "2022-04-11T16:29:19.998Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-0979b4b403e2eefa556391005da8d93c_Snapshot.png",
+      "md5": "45112c7971030a1d04b7a226337b0583",
+      "width": 150,
+      "height": 74,
+      "size": 5891,
+      "uploadedDate": "2022-04-11T16:29:20.439Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-953906da77a758f52e6b284fc531cfd5_Snapshot.png",
+      "md5": "a6eaf324250c5a44788aeabda59357c1",
+      "width": 150,
+      "height": 74,
+      "size": 5272,
+      "uploadedDate": "2022-04-11T16:29:20.928Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-84358c99ded732adde25004ef79ba81f_Snapshot.png",
+      "md5": "2d305d24876685c1ca95609a59ab82f2",
+      "width": 150,
+      "height": 74,
+      "size": 5743,
+      "uploadedDate": "2022-04-11T16:29:21.338Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-06b94e35c425e39e0866d7cf381e8ac6_Snapshot.png",
+      "md5": "ebae2296d6fbe570f15889c87f567146",
+      "width": 150,
+      "height": 74,
+      "size": 5963,
+      "uploadedDate": "2022-04-11T16:29:21.796Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-a45ae488804e750a4824d8c0b524728f_Snapshot.png",
+      "md5": "e7932f579e16b48c7b170252491c1d96",
+      "width": 150,
+      "height": 74,
+      "size": 6092,
+      "uploadedDate": "2022-04-11T16:29:22.425Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-a9b40f571ab043e88cfd8433cf2496b4_Snapshot.png",
+      "md5": "2880a0c872b117f2d56adecf03e222b4",
+      "width": 150,
+      "height": 74,
+      "size": 5371,
+      "uploadedDate": "2022-04-11T16:29:23.091Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-f47ba2a80ba8cb8ad951e44f7fd24b18_Snapshot.png",
+      "md5": "3a006eb5ca84f5082633d41054f94aa9",
+      "width": 150,
+      "height": 74,
+      "size": 6180,
+      "uploadedDate": "2022-04-11T16:29:23.604Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/-IK-1920x1080-7f98cabdc890a474db17c56d7c77ffc7_Snapshot.png",
+      "md5": "e4e2ed83f2ec974e91be4536d43527cc",
+      "width": 150,
+      "height": 74,
+      "size": 5783,
+      "uploadedDate": "2022-04-11T16:29:24.040Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-10e3a655cdd485cb7e3b698754f4001c_Snapshot.png",
+      "md5": "41b2840e9c2a15cd32471b9d9d2ce0d1",
+      "width": 150,
+      "height": 74,
+      "size": 5783,
+      "uploadedDate": "2022-04-11T16:29:24.491Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-839fcd61932a306a1c0c968b242ad697_Snapshot.png",
+      "md5": "ed89c7b5d795d6ab1704f581d6e2829d",
+      "width": 150,
+      "height": 74,
+      "size": 5773,
+      "uploadedDate": "2022-04-11T16:29:24.922Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/--1920x1080-524adce89fa57057ede696566167fdb0_Snapshot.png",
+      "md5": "5b891dd66688eb0a7580dc6408eea867",
+      "width": 150,
+      "height": 74,
+      "size": 5785,
+      "uploadedDate": "2022-04-11T16:29:25.544Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE51-1920x1080-b97c5d0cdf0005c00dbcc8d659cca4fc_Snapshot.png",
+      "md5": "f3a1da5005ae15aa28f5e2984f89e21d",
+      "width": 150,
+      "height": 74,
+      "size": 5467,
+      "uploadedDate": "2022-04-06T15:32:42.523Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE501-1920x1080-97a7796364cc755b8662905487eaa8e5_Snapshot.png",
+      "md5": "da66fb4adb5d9b8d6de836db91cfdfb4",
+      "width": 150,
+      "height": 74,
+      "size": 5370,
+      "uploadedDate": "2022-04-06T15:32:42.986Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE502-1920x1080-42aac7375dab30150bf8560ed8e066fd_Snapshot.png",
+      "md5": "043ebced94f1aadf07bf79e60dd39722",
+      "width": 150,
+      "height": 74,
+      "size": 5237,
+      "uploadedDate": "2022-04-06T15:32:43.423Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE503-1920x1080-a5ad7a1de55e62c1b1815c25566b3252_Snapshot.png",
+      "md5": "6b03a3af883abdc8f89d315bd614fd35",
+      "width": 150,
+      "height": 74,
+      "size": 5017,
+      "uploadedDate": "2022-04-06T15:32:43.876Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE504-1920x1080-a157fab0013fbb2f2c9cdd9a788efeba_Snapshot.png",
+      "md5": "2498ded2c92990061944dab1dc2ff859",
+      "width": 150,
+      "height": 74,
+      "size": 5412,
+      "uploadedDate": "2022-04-06T15:32:44.360Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE505-1920x1080-c647d893d7452c2485c76e05c283fd8b_Snapshot.png",
+      "md5": "36fdbd73f696fdaa84f64ca0050811c0",
+      "width": 150,
+      "height": 74,
+      "size": 4969,
+      "uploadedDate": "2022-04-06T15:32:44.849Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/A01-1920x1080-0625d44840cb465bc152e1a184f2188c_Snapshot.jpg",
+      "md5": "dcf1cbc9915f40cfeae81c921c82dcb8",
+      "width": 150,
+      "height": 74,
+      "size": 3995,
+      "uploadedDate": "2021-10-13T12:23:36.293Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/008-1920x1080-06464ddb5026d4101d5072ec160337c2_Snapshot.png",
+      "md5": "7de56b1aad1683b2dfb14c79e86ae303",
+      "width": 150,
+      "height": 74,
+      "size": 5164,
+      "uploadedDate": "2021-10-13T12:23:36.694Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/009-1920x1080-73e81e2e4851a4c9a30d19fda39d1cf1_Snapshot.png",
+      "md5": "d1769d57076f17a53d07632f18d5670c",
+      "width": 150,
+      "height": 74,
+      "size": 5011,
+      "uploadedDate": "2021-10-13T12:23:37.066Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/010-1920x1080-8753f3e64c9d59fd9334ffeb56395365_Snapshot.png",
+      "md5": "32f26c26c9f480726fd248d483aac470",
+      "width": 150,
+      "height": 74,
+      "size": 4363,
+      "uploadedDate": "2021-10-13T12:23:37.444Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VATV2-1920x1080-9c1673b1938f94e05c4f5cc496697b61_Snapshot.png",
+      "md5": "d73e79b3c7946d44fd94b044c9320a37",
+      "width": 150,
+      "height": 74,
+      "size": 5776,
+      "uploadedDate": "2021-09-20T05:53:26.311Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Retarget1080P-1920x1080-21cf08bd26cc46f8e10d10dadd0b1a8d_Snapshot.png",
+      "md5": "1230b76c89cdc65cbde34dd7d2aae038",
+      "width": 150,
+      "height": 74,
+      "size": 7675,
+      "uploadedDate": "2021-06-16T16:58:13.053Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VATImage1080P-1920x1080-570422b7c5464dffe217028443edff19_Snapshot.png",
+      "md5": "828d05a31f0c3c721df2778484b1e34c",
+      "width": 150,
+      "height": 74,
+      "size": 3270,
+      "uploadedDate": "2021-05-15T15:24:36.983Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BoneTool-1920x1080-d1c405352b974b6c17f7301433e5fac1_Snapshot.png",
+      "md5": "cee5e965a8c52c697d84f4b8aad0ee11",
+      "width": 150,
+      "height": 74,
+      "size": 4442,
+      "uploadedDate": "2021-05-15T15:24:37.331Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BonePreview-1920x1080-19517a004b24cccccc4cc0053475f7c3_Snapshot.png",
+      "md5": "836bceb29bbeaab226af4a483eaf3ce1",
+      "width": 150,
+      "height": 74,
+      "size": 6602,
+      "uploadedDate": "2021-05-15T15:24:37.838Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BakeBonePreview-1920x1080-102d7fd31275ba6884a76cdd3bf07c55_Snapshot.png",
+      "md5": "d722c9edb8b881f1b56101ac5798b1d1",
+      "width": 150,
+      "height": 74,
+      "size": 4976,
+      "uploadedDate": "2021-05-15T15:24:38.305Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CurveTool-1920x1080-8948010238dabe6070f4919cc095dd9b_Snapshot.png",
+      "md5": "68214219d742630ae22014c2763fb8a2",
+      "width": 150,
+      "height": 74,
+      "size": 4906,
+      "uploadedDate": "2021-05-15T15:24:38.654Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BakeCurvePreview-1920x1080-5abfd495529077fa5c419160bcfd4b4a_Snapshot.png",
+      "md5": "52305e6abc841d51508ddb94dc832809",
+      "width": 150,
+      "height": 74,
+      "size": 5102,
+      "uploadedDate": "2021-05-15T15:24:39.072Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VRMPreview-1920x1080-e24bbdd84c9302a9294d7bba3f6d4ea6_Snapshot.png",
+      "md5": "71e537c7763953964367146a99dc11e5",
+      "width": 150,
+      "height": 74,
+      "size": 4939,
+      "uploadedDate": "2021-05-15T15:24:39.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ClimbPreview-1920x1080-5a0a14aa8dacbed811b694cfddbcb652_Snapshot.png",
+      "md5": "ab13e0303e13dedf7e9246a6f267b13e",
+      "width": 150,
+      "height": 74,
+      "size": 5126,
+      "uploadedDate": "2021-05-15T15:24:39.975Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NotifyTool-1920x1080-3eeb32541d54a8fa77ce1f91d26d76d6_Snapshot.png",
+      "md5": "42ee56815d0ec6918414e242248e9780",
+      "width": 150,
+      "height": 74,
+      "size": 3653,
+      "uploadedDate": "2021-05-15T15:24:40.353Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FootStepPreview-1920x1080-a503d5a960b3b118b90a4b215251e7f2_Snapshot.png",
+      "md5": "cdcf33be2d3cd4bd84b44827a3dff771",
+      "width": 150,
+      "height": 74,
+      "size": 4992,
+      "uploadedDate": "2021-05-15T15:24:40.787Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MontageTool-1920x1080-8ba25bbafbb1b3c76ace6a4b7214cafd_Snapshot.png",
+      "md5": "7015437f0493dd25a1c96281d2684e51",
+      "width": 150,
+      "height": 74,
+      "size": 3779,
+      "uploadedDate": "2021-05-15T15:24:41.124Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AssetTool-1920x1080-2f6e55fc6a8eda55f6a37a2d0d09fc9c_Snapshot.png",
+      "md5": "4d8fc6a8dd42da9f3e88c483707f5b1e",
+      "width": 150,
+      "height": 74,
+      "size": 3016,
+      "uploadedDate": "2021-05-15T15:24:41.494Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MotionPreview-1920x1080-69da40ce4ccbaf52d5f4f677cd8eb68c_Snapshot.png",
+      "md5": "a1f9c43dd7e1edf52092bd4edc46c987",
+      "width": 150,
+      "height": 74,
+      "size": 6813,
+      "uploadedDate": "2021-05-15T15:24:41.917Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MirrorTool-1920x1080-f5e5e629f10d6ffa7947c120942ada0b_Snapshot.png",
+      "md5": "6fa49f1af05223fe9e01914fa1df4d66",
+      "width": 150,
+      "height": 74,
+      "size": 3662,
+      "uploadedDate": "2021-05-15T15:24:42.240Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MirrorPreview-1920x1080-6e9ce86a77f8b6a520c761e76bb343eb_Snapshot.png",
+      "md5": "eca1b4fa73f252618db99ae52b4ebcd0",
+      "width": 150,
+      "height": 74,
+      "size": 6453,
+      "uploadedDate": "2021-05-15T15:24:42.763Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RetargetTool-1920x1080-b3a9750051e5a4a730dc709c3e280690_Snapshot.png",
+      "md5": "54459427b28a74ff41779d74c240e0a7",
+      "width": 150,
+      "height": 74,
+      "size": 2816,
+      "uploadedDate": "2021-05-15T15:24:43.099Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VATCode-1920x1080-686af5b5c52ab1ba2812c74aadebbdae_Snapshot.png",
+      "md5": "69bfe949026a7d60e3a1ed88bf38b275",
+      "width": 150,
+      "height": 74,
+      "size": 5705,
+      "uploadedDate": "2021-05-15T15:24:43.481Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VATBP-1920x1080-c77994056e490d064d427bd747888539_Snapshot.png",
+      "md5": "f542c233c513aaea23c8b3e61f931706",
+      "width": 150,
+      "height": 74,
+      "size": 6283,
+      "uploadedDate": "2021-05-15T15:24:43.905Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-05-16T18:06:57.637Z",
+  "lastModifiedDate": "2024-11-21T19:05:25.706Z",
+  "customAttributes": {},
+  "entitlementName": "59baa924e4ae43318ee0e3ed3fe8efda",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "680a035878d54577867eab52abe3f48d",
+      "appId": "VirtualAnimationTools_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-09-20T00:00:00.000Z",
+      "releaseNote": "V5.0.0 Update 2022-06-18",
+      "versionTitle": "VA3_v5-4.26"
+    },
+    {
+      "id": "f797a0618fce44b98abea6d40e7a23fb",
+      "appId": "VirtualAnimationTools_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-05-15T00:00:00.000Z",
+      "releaseNote": "V5.0.0 Update 2022-06-18",
+      "versionTitle": "VAT_v5-4.27"
+    },
+    {
+      "id": "412dc63201c841bf869c8c597a896075",
+      "appId": "VirtualAnimationTools_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "V5.0.0 Update 2022-06-18",
+      "versionTitle": "VAT_v5-5.0.0"
+    },
+    {
+      "id": "e30283300cf947a5823bd0de4b57e4c8",
+      "appId": "VirtualAnimationTools_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-04T00:00:00.000Z",
+      "releaseNote": "V6.0, fix curve baked and mirror error",
+      "versionTitle": "VAT3_v6-5.1.0"
+    },
+    {
+      "id": "5587bc9a2c0744b48e636f35630a09f1",
+      "appId": "VirtualAnimationTools_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2023-06-26T00:00:00.000Z",
+      "releaseNote": "v6.2 fix layer per bone crash2",
+      "versionTitle": "VAT_v6.2 5.2"
+    },
+    {
+      "id": "6c73e7ffaa7149c992608332c6548ffa",
+      "appId": "VirtualAnimationTools_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-12T00:00:00.000Z",
+      "releaseNote": "5.3",
+      "versionTitle": "VAT_V6.1  - 5.3"
+    },
+    {
+      "id": "3504e13dc1754e27ad172f6d92cf0c09",
+      "appId": "VirtualAnimationTools_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-07-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VAT 5.4"
+    }
+  ],
+  "developer": "zhangruizi",
+  "developerId": "o-2a5cda8f7e41ec81a56bd9adf869dc",
+  "endOfSupport": false,
+  "unsearchable": false
+}

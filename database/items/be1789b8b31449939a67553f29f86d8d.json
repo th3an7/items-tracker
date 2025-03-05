@@ -1,0 +1,910 @@
+{
+  "id": "be1789b8b31449939a67553f29f86d8d",
+  "title": "Planetopia",
+  "description": "Through blueprints, the plugin generates programmable pipeline terrestrial and gaseous planets in the runtime.",
+  "longDescription": "<p>The preview image uses graphics from Quixel Megascans and the plugins <a href=\"https://www.unrealengine.com/marketplace/en-US/product/desert-vegetation-hq-desert-plants\" rel=\"nofollow\">Desert Vegetation (HQ Desert Plants)</a>, <a href=\"https://www.unrealengine.com/marketplace/en-US/product/rain-forest-pack\" rel=\"nofollow\">Rain Forest Pack</a>, <a href=\"https://www.unrealengine.com/marketplace/en-US/product/semi-arid-desert-environment\" rel=\"nofollow\">Semi-Arid Desert Environment</a>, and <a href=\"https://www.unrealengine.com/marketplace/en-US/product/palms-pack-02-phoenix-canariensis\" rel=\"nofollow\">Palms Pack 02 (Phoenix canariensis)</a>. This graphic is not included in the plugin.</p><p><br /></p><p>The plugin generates terrestrial or gaseous planets with a programmable blueprint pipeline. Generation is done in the background by a task queue in the tick function of the planet. It works in runtime by using a seed to allow you to generate unlimited versions of programmed planet templates. Textures are generated to render targets with or without MIPS, you can choose. It uses temperature and rainfall maps, which can be modified to archive special planet details like lava and special biomes. You can generate height maps with mountains, ravines, plateaus, craters, etc. You can create up to 13 (20 is planned) biomes on the planets, lava glow, ocean, static and dynamic clouds, lighting, and atmospheres.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Possible uses:</h2><p><strong><u>Static Generation</u></strong></p><ul><li> The plugin generates up to 16k x 8k resolution of textures or renders targets with or without MIPS.</li><li> Plugin support composite planets, 1 x 1, 2 x 2, 4 x 4 tiles. Tiles are used for the main planet map&#39;s diffuse color and normal.</li><li> The maximal resolution of the planet&#39;s diffuse color and normal is 64k x 32k.</li><li>Textures and render targets can be streamed.</li><li>Other textures like clouds for static clouds or initial dynamic clouds, ocean, emissive (lava, energy sources), and cities have a maximal resolution of 16k x 8k.</li><li>A powerful graphic card is needed for generation large resolution, or you must set the variable Create Subtiles in the resolution structure to true for a less powerful graphic card.</li></ul><p><br /></p><p><strong><u>Dynamic Generation</u></strong></p><ul><li>The plugin allows you to walk on a dynamically generated planet, 1:1 in size with the real Earth.</li><li>The plugin enables the generation of foliage and grass in individual biomes. It allows you to set parts of the biome as convex (mountains) and concave (valley) areas or on the sides, as well as according to altitude and slope.</li><li>The surface of the planet is textured, each biome has an auto material that textures according to the slope. It is also possible to set a normal map of large areas and a noise map so that the surface does not look uniform. There is a cascade mapping that changes the density of tiles according to the distance.</li><li>Dynamic generation is constantly being developed and we are removing bugs and lags. If you buy the plugin, contact us at support&#64;jeniksoft.cz and we will adjust the plugin directly to your needs. So that it is as good as possible for your use, of course, free of charge.</li></ul><p><br /></p><p>NEW! - Here is a downloadable demo of the new version of Planetopia, which should be released in the fall. It can be landed on the surface of the planet. Each plant or rock is firmly assigned to a given place. The planet&#39;s appearance is given by the seed above the given planet template. It is necessary to have 32GB of RAM and it is recommended to have the fastest possible GPU and 16 logical core CPU.</p><p><a href=\"https://unreal.m-factory.cz/Planetopia_cz.html\" rel=\"nofollow\"><u>PLANETOPIA DEMO</u></a></p><p><a href=\"https://drive.google.com/file/d/10jSlHz6fRb9UwT9I67vm4taBBGJSxG1I/view?usp&#61;sharing\" rel=\"nofollow\">The previous version was for free.</a></p>",
+  "technicalDetails": "<p>Features:</p><p>Possible uses:</p><p>        <strong> Static Generation</strong></p><p><strong>        Dynamic Generation - terrestrial planet only.</strong></p><p><br /></p><p>Code Modules:</p><ul><li> Planetopia2 [runtime]</li><li> PlanetopiaEditor[editor]</li></ul><p>Supported Development Platforms: Win 64, other platforms are not tested.</p><p>Supported Target Build Platforms: Win 64, other platforms are not tested.</p><p><br /></p><p>The plugin does not support mobile platforms because it uses too many texture samplers in shaders and mobile does not support shared samplers.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 16-1920x1080-31dae1a96983b16f02016391775e3ea3.jpg",
+      "md5": "31dae1a96983b16f02016391775e3ea3",
+      "width": 1920,
+      "height": 1080,
+      "size": 1730112,
+      "uploadedDate": "2023-11-01T20:27:17.444Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 13-1920x1080-c995e4e7e3698f019b74e525c385135e.jpg",
+      "md5": "c995e4e7e3698f019b74e525c385135e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1801990,
+      "uploadedDate": "2023-11-01T20:27:18.045Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 14-1920x1080-aa34defad95d97d22b1ed600ebc77599.jpg",
+      "md5": "aa34defad95d97d22b1ed600ebc77599",
+      "width": 1920,
+      "height": 1080,
+      "size": 1752838,
+      "uploadedDate": "2023-11-01T20:27:18.589Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 15-1920x1080-72d44eec6d067e8f36c4761c97243837.jpg",
+      "md5": "72d44eec6d067e8f36c4761c97243837",
+      "width": 1920,
+      "height": 1080,
+      "size": 2044545,
+      "uploadedDate": "2023-11-01T20:27:19.094Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 15-1920x1080-4cbfff26d3fc2a13f1433d339f25f128.jpg",
+      "md5": "4cbfff26d3fc2a13f1433d339f25f128",
+      "width": 1920,
+      "height": 1080,
+      "size": 1761060,
+      "uploadedDate": "2023-11-01T20:27:19.584Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 11-1920x1080-24c49d53c979f576064d1fe1c067f5e2.jpg",
+      "md5": "24c49d53c979f576064d1fe1c067f5e2",
+      "width": 1920,
+      "height": 1080,
+      "size": 1735472,
+      "uploadedDate": "2023-11-01T20:27:20.214Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 12-1920x1080-e5dae86e684d83c911e9f4dfd707db4a.jpg",
+      "md5": "e5dae86e684d83c911e9f4dfd707db4a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1673681,
+      "uploadedDate": "2023-11-01T20:27:20.760Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 22-1920x1080-ce3b374d1420999d52530a64d5e3e759.jpg",
+      "md5": "ce3b374d1420999d52530a64d5e3e759",
+      "width": 1920,
+      "height": 1080,
+      "size": 1978441,
+      "uploadedDate": "2023-11-01T20:27:21.311Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 08-1920x1080-5b26336693c896ccb5d14eedafed7c43.jpg",
+      "md5": "5b26336693c896ccb5d14eedafed7c43",
+      "width": 1920,
+      "height": 1080,
+      "size": 1387924,
+      "uploadedDate": "2023-11-01T20:27:21.964Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 26-1920x1080-cb707dd613ad9c1add0ca9aa78d0dc6a.jpg",
+      "md5": "cb707dd613ad9c1add0ca9aa78d0dc6a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1405816,
+      "uploadedDate": "2023-11-01T20:27:22.453Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 01-1920x1080-ef78ad337e7512c5a77ef698087a5fdd.jpg",
+      "md5": "ef78ad337e7512c5a77ef698087a5fdd",
+      "width": 1920,
+      "height": 1080,
+      "size": 1504536,
+      "uploadedDate": "2023-11-01T20:27:22.982Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 18-1920x1080-8433d3d609d89d7cf0e99d4c85933370.jpg",
+      "md5": "8433d3d609d89d7cf0e99d4c85933370",
+      "width": 1920,
+      "height": 1080,
+      "size": 1308578,
+      "uploadedDate": "2023-11-01T20:27:23.576Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 04-1920x1080-7cfc283b409503cf45327cb0917b24d0.jpg",
+      "md5": "7cfc283b409503cf45327cb0917b24d0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1666253,
+      "uploadedDate": "2023-11-01T20:27:24.041Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 19-1920x1080-dc813b9d05f959cb50f0a0b7697f89bb.jpg",
+      "md5": "dc813b9d05f959cb50f0a0b7697f89bb",
+      "width": 1920,
+      "height": 1080,
+      "size": 1447240,
+      "uploadedDate": "2023-11-01T20:27:24.665Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Schrnka 05-1920x1080-fc2d3e29599304f1ef532d679a97b9ab.jpg",
+      "md5": "fc2d3e29599304f1ef532d679a97b9ab",
+      "width": 1920,
+      "height": 1080,
+      "size": 1538711,
+      "uploadedDate": "2023-11-01T20:27:25.138Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Planetopia_thumb-284x284-f6c995a9e6fde45f8b7cb472b97ce02f.png",
+      "md5": "f6c995a9e6fde45f8b7cb472b97ce02f",
+      "width": 284,
+      "height": 284,
+      "size": 124218,
+      "uploadedDate": "2023-11-01T20:50:54.679Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Planetopia_featured-894x488-6add7476a386bb827e71a318400cddbd.png",
+      "md5": "6add7476a386bb827e71a318400cddbd",
+      "width": 894,
+      "height": 488,
+      "size": 844647,
+      "uploadedDate": "2023-11-01T20:27:25.589Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 16-1920x1080-31dae1a96983b16f02016391775e3ea3_Snapshot.jpg",
+      "md5": "d0e48321548ef5ac48fff32261ba640e",
+      "width": 150,
+      "height": 74,
+      "size": 7436,
+      "uploadedDate": "2023-11-01T20:27:17.829Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 13-1920x1080-c995e4e7e3698f019b74e525c385135e_Snapshot.jpg",
+      "md5": "c2fbb7d14c4b2e737aaadbc48c1b5537",
+      "width": 150,
+      "height": 74,
+      "size": 8419,
+      "uploadedDate": "2023-11-01T20:27:18.402Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 14-1920x1080-aa34defad95d97d22b1ed600ebc77599_Snapshot.jpg",
+      "md5": "59287184067e27676b087f6594603d21",
+      "width": 150,
+      "height": 74,
+      "size": 7764,
+      "uploadedDate": "2023-11-01T20:27:18.881Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 15-1920x1080-72d44eec6d067e8f36c4761c97243837_Snapshot.jpg",
+      "md5": "40954090716e7c77b2b8ee7852e4686a",
+      "width": 150,
+      "height": 74,
+      "size": 8256,
+      "uploadedDate": "2023-11-01T20:27:19.396Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 15-1920x1080-4cbfff26d3fc2a13f1433d339f25f128_Snapshot.jpg",
+      "md5": "fecf5048256fa7c7fb477da4af904e74",
+      "width": 150,
+      "height": 74,
+      "size": 7222,
+      "uploadedDate": "2023-11-01T20:27:19.877Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 11-1920x1080-24c49d53c979f576064d1fe1c067f5e2_Snapshot.jpg",
+      "md5": "467d3fc9810ea9fb1d9058e28eccec36",
+      "width": 150,
+      "height": 74,
+      "size": 8088,
+      "uploadedDate": "2023-11-01T20:27:20.547Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 12-1920x1080-e5dae86e684d83c911e9f4dfd707db4a_Snapshot.jpg",
+      "md5": "76dd743c5b12b4d6962f0c6d278b83e1",
+      "width": 150,
+      "height": 74,
+      "size": 7275,
+      "uploadedDate": "2023-11-01T20:27:21.101Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 22-1920x1080-ce3b374d1420999d52530a64d5e3e759_Snapshot.jpg",
+      "md5": "9b4b1d82c39ab4e9f8f3131e02a2b27b",
+      "width": 150,
+      "height": 74,
+      "size": 9134,
+      "uploadedDate": "2023-11-01T20:27:21.705Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 08-1920x1080-5b26336693c896ccb5d14eedafed7c43_Snapshot.jpg",
+      "md5": "e5066ab99ec2ace3d8fdda64ae47219b",
+      "width": 150,
+      "height": 74,
+      "size": 6242,
+      "uploadedDate": "2023-11-01T20:27:22.254Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 26-1920x1080-cb707dd613ad9c1add0ca9aa78d0dc6a_Snapshot.jpg",
+      "md5": "f0bfbdb1376ee8d4ab6f83d25aa30bac",
+      "width": 150,
+      "height": 74,
+      "size": 6153,
+      "uploadedDate": "2023-11-01T20:27:22.779Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 01-1920x1080-ef78ad337e7512c5a77ef698087a5fdd_Snapshot.jpg",
+      "md5": "2395b87054888c4549367ee97c57d6fe",
+      "width": 150,
+      "height": 74,
+      "size": 6552,
+      "uploadedDate": "2023-11-01T20:27:23.272Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 18-1920x1080-8433d3d609d89d7cf0e99d4c85933370_Snapshot.jpg",
+      "md5": "1653d0f571c544f591d79efd9a34995d",
+      "width": 150,
+      "height": 74,
+      "size": 5314,
+      "uploadedDate": "2023-11-01T20:27:23.865Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 04-1920x1080-7cfc283b409503cf45327cb0917b24d0_Snapshot.jpg",
+      "md5": "c7851290436e1caa29de0964c27dbd02",
+      "width": 150,
+      "height": 74,
+      "size": 8217,
+      "uploadedDate": "2023-11-01T20:27:24.361Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 19-1920x1080-dc813b9d05f959cb50f0a0b7697f89bb_Snapshot.jpg",
+      "md5": "cd81672b70460010f7f06c86671def08",
+      "width": 150,
+      "height": 74,
+      "size": 6148,
+      "uploadedDate": "2023-11-01T20:27:24.959Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Schrnka 05-1920x1080-fc2d3e29599304f1ef532d679a97b9ab_Snapshot.jpg",
+      "md5": "bfb62da7ecd6bfd6cafd1e43ae54a993",
+      "width": 150,
+      "height": 74,
+      "size": 6702,
+      "uploadedDate": "2023-11-01T20:27:25.442Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/001-1920x1080-fa6095df915ee948bf980b438282654f_Snapshot.jpg",
+      "md5": "3c5bb848533cd17848189d2e17101b5a",
+      "width": 150,
+      "height": 74,
+      "size": 3738,
+      "uploadedDate": "2020-06-07T18:04:11.639Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/22-1920x1080-0e732473c1c1f39900b5edac94343264_Snapshot.jpg",
+      "md5": "3e252fd37f91741697ed292b260c3526",
+      "width": 150,
+      "height": 74,
+      "size": 4324,
+      "uploadedDate": "2020-06-07T18:04:12.014Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/23-1920x1080-44f3da2ae7d80be8f68fab4ecbc64432_Snapshot.jpg",
+      "md5": "19c47138a3e39f20953d9811276d3ddb",
+      "width": 150,
+      "height": 74,
+      "size": 4463,
+      "uploadedDate": "2020-06-07T18:04:12.449Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/24-1920x1080-ede335f5580bcd8fb49d6140f2da762d_Snapshot.jpg",
+      "md5": "0974792e98197fb4190e3a873fe5a22e",
+      "width": 150,
+      "height": 74,
+      "size": 5974,
+      "uploadedDate": "2020-06-07T18:04:12.877Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/16-1920x1080-4464c091b15f4a528b63169ed57730e4_Snapshot.jpg",
+      "md5": "10f6d5259048ad672ea0d6d38340407a",
+      "width": 150,
+      "height": 74,
+      "size": 4943,
+      "uploadedDate": "2020-06-07T18:04:13.251Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/17-1920x1080-f39017ca035d0c9f2526f0cb7bb7e02f_Snapshot.jpg",
+      "md5": "5b9109c1a66edf321df85bc1bacc2317",
+      "width": 150,
+      "height": 74,
+      "size": 3459,
+      "uploadedDate": "2020-06-07T18:04:13.576Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/18-1920x1080-07c3519877130a067cc82d32a0cd45c5_Snapshot.jpg",
+      "md5": "fc0feabf9ec57a31921e198c4dfa6f8c",
+      "width": 150,
+      "height": 74,
+      "size": 4580,
+      "uploadedDate": "2020-06-07T18:04:14.104Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/13-1920x1080-8f8482854be0097e73c563f659d15b69_Snapshot.jpg",
+      "md5": "0082d14f2cbe8e3e200c1cb3524db5eb",
+      "width": 150,
+      "height": 74,
+      "size": 3821,
+      "uploadedDate": "2020-06-07T18:04:14.459Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/14-1920x1080-17faf0cded06bdbaf55299fd902f590f_Snapshot.jpg",
+      "md5": "5050baea2003a190ed6a2baf39ae29b9",
+      "width": 150,
+      "height": 74,
+      "size": 3438,
+      "uploadedDate": "2020-06-07T18:04:14.903Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/15-1920x1080-e97ae412269417332883d7c5525d2bb1_Snapshot.jpg",
+      "md5": "1373e6b1213d0ee531b0bf9cc72a4933",
+      "width": 150,
+      "height": 74,
+      "size": 4218,
+      "uploadedDate": "2020-06-07T18:04:15.351Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10-1920x1080-c97301b0c275cb4795eb2e2ae47728f4_Snapshot.jpg",
+      "md5": "8165f4dfda0c17a765001a9b411e2940",
+      "width": 150,
+      "height": 74,
+      "size": 3995,
+      "uploadedDate": "2020-06-07T18:04:15.738Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11-1920x1080-fc514b87b8e651fd00cec9f391016887_Snapshot.jpg",
+      "md5": "02a57a8e2fa570832acc5489cd3c403e",
+      "width": 150,
+      "height": 74,
+      "size": 3364,
+      "uploadedDate": "2020-06-07T18:04:16.344Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/12-1920x1080-bd7dfd6cd85145592570ad0e774ed88d_Snapshot.jpg",
+      "md5": "a982aceae5c012e5374566d5bb9793f3",
+      "width": 150,
+      "height": 74,
+      "size": 4001,
+      "uploadedDate": "2020-06-07T18:04:16.786Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/07-1920x1080-84118f63cf7d83798ef215cd86ed40b3_Snapshot.jpg",
+      "md5": "7905f7764784f35d418389548ebdc7f3",
+      "width": 150,
+      "height": 74,
+      "size": 4093,
+      "uploadedDate": "2020-06-07T18:04:17.351Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/08-1920x1080-85fed0b89d193fb15746373e40e9d8df_Snapshot.jpg",
+      "md5": "b974e0ee663360e83f904357152879f0",
+      "width": 150,
+      "height": 74,
+      "size": 4135,
+      "uploadedDate": "2020-06-07T18:04:17.694Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/09-1920x1080-7871d70dc037438b108b0402e98de9f7_Snapshot.jpg",
+      "md5": "22722e0d13d48086c6353bf9223606e9",
+      "width": 150,
+      "height": 74,
+      "size": 5670,
+      "uploadedDate": "2020-06-07T18:04:18.146Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/04-1920x1080-b936d37435fa52c7d335efd47db1a0f0_Snapshot.jpg",
+      "md5": "3edba17845e4d68ea74773560c8ee3a6",
+      "width": 150,
+      "height": 74,
+      "size": 2980,
+      "uploadedDate": "2020-06-07T18:04:18.470Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/05-1920x1080-00e0ddba5f47059aa0a39959a4d03626_Snapshot.jpg",
+      "md5": "207c7928c4392ff4f5d8595c2f6294c9",
+      "width": 150,
+      "height": 74,
+      "size": 2589,
+      "uploadedDate": "2020-06-07T18:04:18.920Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/06-1920x1080-4da1d91a4af20038e344385de27eb18d_Snapshot.jpg",
+      "md5": "abb9456ebf887486bc7c2b0c0a9c5bd4",
+      "width": 150,
+      "height": 74,
+      "size": 2370,
+      "uploadedDate": "2020-06-07T18:04:19.328Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01-1920x1080-6bc8025a8911e767ea3d4c261449d877_Snapshot.jpg",
+      "md5": "6a01de9c9c4a7b119a9515063194ae52",
+      "width": 150,
+      "height": 74,
+      "size": 3287,
+      "uploadedDate": "2020-06-07T18:04:19.725Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/02-1920x1080-f5629b729e350833d9817f95d0e324db_Snapshot.jpg",
+      "md5": "d4510cd74b6a56e13087d7f1f5a7aef8",
+      "width": 150,
+      "height": 74,
+      "size": 3745,
+      "uploadedDate": "2020-06-07T18:04:20.101Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/03-1920x1080-5ce13315731783e261c114e10cf65e51_Snapshot.jpg",
+      "md5": "3a6b0152cae4674ce6803d0f25dcf418",
+      "width": 150,
+      "height": 74,
+      "size": 4105,
+      "uploadedDate": "2020-06-07T18:04:20.571Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/004-1920x1080-c5914d8476d117f2d04c81666f1f01f2_Snapshot.jpg",
+      "md5": "e2ecfef9a97731732dc19791032eef30",
+      "width": 150,
+      "height": 74,
+      "size": 3489,
+      "uploadedDate": "2020-06-07T18:04:21.024Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0045-1920x1080-7728a611883adb1978278e739e4e4590_Snapshot.jpg",
+      "md5": "78baad39934fd0b006bd0c1ff8e127ac",
+      "width": 150,
+      "height": 74,
+      "size": 4848,
+      "uploadedDate": "2020-06-07T18:04:21.514Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/22-1920x1080-0e732473c1c1f39900b5edac94343264_Snapshot.jpg",
+      "md5": "3e252fd37f91741697ed292b260c3526",
+      "width": 150,
+      "height": 74,
+      "size": 4324,
+      "uploadedDate": "2020-06-07T18:04:21.926Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/00-1920x1080-d4959166aff71caff800fdae447c6882_Snapshot.jpg",
+      "md5": "973bbaadefba3377212a752a2cc7b27c",
+      "width": 150,
+      "height": 74,
+      "size": 3956,
+      "uploadedDate": "2020-02-06T21:42:46.080Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01-1920x1080-53fc7c9063d29bb6cb6193036208b579_Snapshot.jpg",
+      "md5": "d59d08f53c246be1105b6a9d5b2e6e95",
+      "width": 150,
+      "height": 74,
+      "size": 4330,
+      "uploadedDate": "2020-02-06T21:42:46.505Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Clipboard44-1920x1080-a544db60bf9a7e9bccfcea8aaec7f63c_Snapshot.jpg",
+      "md5": "c6bf2bc4c20917dfd72e3ea72fba845d",
+      "width": 150,
+      "height": 74,
+      "size": 2786,
+      "uploadedDate": "2020-02-06T21:42:46.854Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Clipboard43-1920x1080-04cad4bf5118b536de7a4f287c0d81be_Snapshot.jpg",
+      "md5": "fb90b81bfbc47fd3319359efdaf64906",
+      "width": 150,
+      "height": 74,
+      "size": 4014,
+      "uploadedDate": "2020-02-06T21:42:47.278Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Clipboard42-1920x1080-5b8db16a1e778f90e7f8ccea79e2268b_Snapshot.jpg",
+      "md5": "40b814cdf8e8eeb3193b8398b493f07e",
+      "width": 150,
+      "height": 74,
+      "size": 4330,
+      "uploadedDate": "2020-02-06T21:42:47.628Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/02-1920x1080-9b5827c3fa4cfefefadf5fc6dcd38b3d_Snapshot.jpg",
+      "md5": "8e84d148eee74f9ff2f2070a6f9c367d",
+      "width": 150,
+      "height": 74,
+      "size": 2919,
+      "uploadedDate": "2020-02-06T21:42:48.020Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/03-1920x1080-d9898869e4213e3d810fce150c52aae1_Snapshot.jpg",
+      "md5": "b56941753c84da244dc9727f6da52a1a",
+      "width": 150,
+      "height": 74,
+      "size": 3285,
+      "uploadedDate": "2020-02-06T21:42:48.387Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/04-1920x1080-4c924d65dbd103fad1f4f6ae2d81671a_Snapshot.jpg",
+      "md5": "6e60254fd3c3a8dc67d8ab627709ecfd",
+      "width": 150,
+      "height": 74,
+      "size": 6826,
+      "uploadedDate": "2020-02-06T21:42:48.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/05-1920x1080-f5bce7472e8acbc0047977d77da42a98_Snapshot.jpg",
+      "md5": "2dd67b2a509a013d5017c5216fff6dae",
+      "width": 150,
+      "height": 74,
+      "size": 3983,
+      "uploadedDate": "2020-02-06T21:42:49.178Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/06-1920x1080-61217bb0dd2c8a5b08c238ab7f317f49_Snapshot.jpg",
+      "md5": "f3be7b31937e24d4e9ccee0a202bbeba",
+      "width": 150,
+      "height": 74,
+      "size": 4526,
+      "uploadedDate": "2020-02-06T21:42:49.609Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/07-1920x1080-12649632066f0581c1d300de4011c09a_Snapshot.jpg",
+      "md5": "2ec3633620ae9475f9b40e77656a9f18",
+      "width": 150,
+      "height": 74,
+      "size": 2518,
+      "uploadedDate": "2020-02-06T21:42:49.984Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/08-1920x1080-737446771b1bef063ffdc0b20164ead7_Snapshot.jpg",
+      "md5": "6906fb43b04b1886a77dfc3c0f4c7c70",
+      "width": 150,
+      "height": 74,
+      "size": 3819,
+      "uploadedDate": "2020-02-06T21:42:50.379Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/09-1920x1080-a7581fd19fdc459b415c4e4a6ddbe0c5_Snapshot.jpg",
+      "md5": "d27b766f2c4ba45c7f067f7e9698e52c",
+      "width": 150,
+      "height": 74,
+      "size": 4687,
+      "uploadedDate": "2020-02-06T21:42:50.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/010-1920x1080-ff4e0bba7e72ba5e6db0032b166a1f13_Snapshot.jpg",
+      "md5": "1615cc39454473093a3a09a8a4074d0e",
+      "width": 150,
+      "height": 74,
+      "size": 5854,
+      "uploadedDate": "2020-02-06T21:42:51.184Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T191542535Z-1920x1080-74879620505ebeb854e36d5623dca35c_Snapshot.jpg",
+      "md5": "61b2492cd97167285e641ca8576685bf",
+      "width": 150,
+      "height": 74,
+      "size": 8014,
+      "uploadedDate": "2020-01-16T21:59:59.617Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T191609601Z-1920x1080-d3678dfb0f4547aaff54ea45e561cfd7_Snapshot.jpg",
+      "md5": "2a7fceb052ea07570a79814de0f2b2e4",
+      "width": 150,
+      "height": 74,
+      "size": 8197,
+      "uploadedDate": "2020-01-16T22:00:00.052Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T191638577Z-1920x1080-3b322031318e76026200d8c033bef0c3_Snapshot.jpg",
+      "md5": "954580a7569dd4f917124bc488ea985f",
+      "width": 150,
+      "height": 74,
+      "size": 8597,
+      "uploadedDate": "2020-01-16T22:00:00.494Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T191712947Z-1920x1080-c5ffc530d7fc0b043d6879bca4826570_Snapshot.jpg",
+      "md5": "1e0e62db89d44f11606ac5a4bcf69e61",
+      "width": 150,
+      "height": 74,
+      "size": 5231,
+      "uploadedDate": "2020-01-16T22:00:00.933Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T191736885Z-1920x1080-6f5e405edb480baf59a36bf0d22708db_Snapshot.jpg",
+      "md5": "a45d36ccbea533b3286b4fb701bfbddb",
+      "width": 150,
+      "height": 74,
+      "size": 5960,
+      "uploadedDate": "2020-01-16T22:00:01.346Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T191821366Z-1920x1080-df5ffbdb3a3507948757eae86b599332_Snapshot.jpg",
+      "md5": "be422b5b355a7898e599dd417956cd70",
+      "width": 150,
+      "height": 74,
+      "size": 4746,
+      "uploadedDate": "2020-01-16T22:00:01.875Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T191846251Z-1920x1080-620c9ece09a466182edc152eb6e4b61e_Snapshot.jpg",
+      "md5": "abba279f098d18d68ae372de62a1fb78",
+      "width": 150,
+      "height": 74,
+      "size": 4752,
+      "uploadedDate": "2020-01-16T22:00:02.441Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T191903099Z-1920x1080-ee4a6c6d7a979e5e73b5247326151d72_Snapshot.jpg",
+      "md5": "ff2ce8b6458b6a641d8c6cd59667d3a9",
+      "width": 150,
+      "height": 74,
+      "size": 9755,
+      "uploadedDate": "2020-01-16T22:00:02.985Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T191926884Z-1920x1080-e4acccba6ca619411857ff73be559287_Snapshot.jpg",
+      "md5": "68dda53f69278fe862ec70c5e8727f8c",
+      "width": 150,
+      "height": 74,
+      "size": 5375,
+      "uploadedDate": "2020-01-16T22:00:03.410Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T191956882Z-1920x1080-191ecd0320579a9d3af047546ae1e3b2_Snapshot.jpg",
+      "md5": "cf7ba7e7d6654ad7e75b26e11bbba799",
+      "width": 150,
+      "height": 74,
+      "size": 6257,
+      "uploadedDate": "2020-01-16T22:00:03.883Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T192011546Z-1920x1080-97283bbab93b2d8422e13a08dd1bddba_Snapshot.jpg",
+      "md5": "165999b5095632d3bb935f157244180d",
+      "width": 150,
+      "height": 74,
+      "size": 6814,
+      "uploadedDate": "2020-01-16T22:00:04.347Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T192030365Z-1920x1080-e20ed1bb44452922771eff4ca146b422_Snapshot.jpg",
+      "md5": "cd5059bc1165444e4951f5533bb43e89",
+      "width": 150,
+      "height": 74,
+      "size": 6925,
+      "uploadedDate": "2020-01-16T22:00:04.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T192055638Z-1920x1080-b2267ab3752e48dff74862f81a62d147_Snapshot.jpg",
+      "md5": "3d4461c9217dc29b65d9b233d133bd6f",
+      "width": 150,
+      "height": 74,
+      "size": 4950,
+      "uploadedDate": "2020-01-16T22:00:05.299Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T192122867Z-1920x1080-754e5286500789a4b54502d02ed372ba_Snapshot.jpg",
+      "md5": "3f76168bfef14568f7b474cde07bb41e",
+      "width": 150,
+      "height": 74,
+      "size": 6551,
+      "uploadedDate": "2020-01-16T22:00:05.731Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T192144349Z-1920x1080-fc1798e513147a9067d79b81afe00c60_Snapshot.jpg",
+      "md5": "7edbcf228acf8b17304b97cb6dab936d",
+      "width": 150,
+      "height": 74,
+      "size": 4705,
+      "uploadedDate": "2020-01-16T22:00:06.137Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T192208765Z-1920x1080-7c227e1a1fc083d925a9254c0ffbd9ef_Snapshot.jpg",
+      "md5": "95cb3b9d77ce76b13c7c6199d7000e3e",
+      "width": 150,
+      "height": 74,
+      "size": 7465,
+      "uploadedDate": "2020-01-16T22:00:06.591Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T192235535Z-1920x1080-a5d30618f5c3fddcbed4697573ed01a7_Snapshot.jpg",
+      "md5": "13728e954f48b54587cf9b7682d36ec1",
+      "width": 150,
+      "height": 74,
+      "size": 6202,
+      "uploadedDate": "2020-01-16T22:00:07.017Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/image20200116T192255651Z-1920x1080-2211ef49363ce07faf8ed85c55451d81_Snapshot.jpg",
+      "md5": "25f16ec497402a04ee371eadce3cb1f1",
+      "width": 150,
+      "height": 74,
+      "size": 6668,
+      "uploadedDate": "2020-01-16T22:00:07.422Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-02-06T21:48:34.485Z",
+  "lastModifiedDate": "2025-02-14T14:53:53.898Z",
+  "customAttributes": {},
+  "entitlementName": "be1789b8b31449939a67553f29f86d8d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "75e5379725da436e8953f581482014d2",
+      "appId": "Planetopia_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-01-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Planetopia v1.0"
+    },
+    {
+      "id": "a43cb82167f54672b56f62d52709ce4e",
+      "appId": "Planetopia_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-06-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Planetopia v2.1.2"
+    },
+    {
+      "id": "b289c29b9b524e6d84bfa45ca8d21633",
+      "appId": "Planetopia_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Planetopia v2.1.3"
+    },
+    {
+      "id": "37000325184c4dfa9670ea968d6d981d",
+      "appId": "Planetopia_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-08-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Planetopia v2.1.3 UE4.27"
+    },
+    {
+      "id": "71fb8e9c4a6549e6874ea92c5026d3f3",
+      "appId": "Planetopia_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-11-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Planetopia v3.0.2-UE 5.3"
+    },
+    {
+      "id": "50eb3884fa014fc89ec77de9656e3d73",
+      "appId": "Planetopia_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Planetopia UE 5.4"
+    }
+  ],
+  "developer": "M-Factory",
+  "developerId": "o-2urpe7keyysln5uuuhy4937zps5gbj",
+  "endOfSupport": false,
+  "unsearchable": false
+}

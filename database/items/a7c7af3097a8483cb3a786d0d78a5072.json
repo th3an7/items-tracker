@@ -1,0 +1,341 @@
+{
+  "id": "a7c7af3097a8483cb3a786d0d78a5072",
+  "title": "Shadow Map Material Function",
+  "description": "This is independent shadow system with high performance on mobile device, can cast dynamic shadow without light.",
+  "longDescription": "<p><strong>Android Sample APK (Benchmark):</strong></p><p><a href=\"https://drive.google.com/open?id&#61;1JgTWAChTGT1hW9mpTMeCEMTcM4koefh6\" rel=\"nofollow\">https://drive.google.com/open?id&#61;1JgTWAChTGT1hW9mpTMeCEMTcM4koefh6</a></p><p><br /></p><p><strong>New Features:</strong></p><ul><li>Add [Very Low] and [Very High] Quality.</li><li>Support [Morph Target].</li><li>Support [Geometry Cache].</li></ul><p><br /></p><p><strong>Features:</strong></p><ul><li>Independent shadow system, draw dynamic shadow by material function without light.</li><li>Work well without [Mobile HDR], [Mobile HDR] is necessary for [Modulated Shadows] of UE4.</li><li>Work well with [GoogleVR], [GoogleVR] must disable [Mobile HDR].</li><li>Enable [Mobile HDR] is OK.</li><li>Shadow caster can recive shadow. (Self Shadow)</li><li>Good performance for slower mobile device.</li><li>Good compatibility for old mobile device.</li><li>Supported Windows, Mac, iOS and Android.</li><li>Shadow Mapping depth comparison.</li><li>Shadow Map Antialiasing by Percentage-Closer Filtering.</li><li>Pack depth float into a RGBA render target texture, compatible with older mobile device.</li></ul>",
+  "technicalDetails": "<h2><strong>Content:</strong></h2><p><strong>ShadowCaptureBP :</strong></p><p>Blueprint Actor, place to scene to capture shadow, follows location of [ShadowMapTargetComponent], X-axis of ShadowCaptureBP is virtual light direction.</p><p><strong>ShadowMapTargetComponent :</strong></p><p>Component, ShadowCapture follows location of ShadowMapTargetComponent.</p><p><strong>CastShadowMapComponent :</strong></p><p>Component, Actor with this component cast shadow.</p><p><strong>ShadowMapMultiply :</strong></p><p>Material Function, material with ShadowMapMultiply recive shadow;</p><p><br /></p><p><br /></p><h2><strong>Quickstart:</strong></h2><ol><li>Create a map which have a DirectionalLight. Disable [Cast Dynamic Shadows] in DirectionalLight;</li><li>Add ShadowCapture to scene and edit ShadowCapture propertys.</li><li>Attach CastShadowMapComponent to Actors which cast shadow.</li><li>Attach ShadowMapTargetComponent to Actor which be followed by ShadowCapture.</li><li>Add ShadowMapMultiply node in material which recive shadow, it should be the final node before Base Color.</li></ol><p><br /></p><p>Number of Blueprints: 1</p><p>Number of C&#43;&#43; Classes: 5</p><p>Supported Devlopment Platforms:Win64, macOS</p><p>Supported Target Build Platforms: Win32, Win64, macOS, iOS, Android</p><p><br /></p><p>Documentation: <a href=\"https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/README.md\" rel=\"nofollow\">Documentation</a></p><p>Example Project: <a href=\"https://github.com/quickzero/ShadowMapMaterialFunctionExample\" rel=\"nofollow\">Github</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot20180128-153110-1920x1080-13b203f869e00ab599f8fa90ea18312e.png",
+      "md5": "13b203f869e00ab599f8fa90ea18312e",
+      "width": 1920,
+      "height": 1080,
+      "size": 221831,
+      "uploadedDate": "2018-01-28T12:08:16.832Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot20180128-154536-1920x1080-9ef0bd325da85d5641054cf76d48f576.png",
+      "md5": "9ef0bd325da85d5641054cf76d48f576",
+      "width": 1920,
+      "height": 1080,
+      "size": 473900,
+      "uploadedDate": "2018-01-28T12:08:16.978Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MaterialEditor02-1920x1080-cbd6e85f8af45a20e8a606cacafadc6a.jpg",
+      "md5": "cbd6e85f8af45a20e8a606cacafadc6a",
+      "width": 1920,
+      "height": 1080,
+      "size": 832293,
+      "uploadedDate": "2018-01-28T12:08:17.188Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/05-1920x1080-b21d7968780d3b09c9dc36252c154cae.PNG",
+      "md5": "b21d7968780d3b09c9dc36252c154cae",
+      "width": 1920,
+      "height": 1080,
+      "size": 517011,
+      "uploadedDate": "2018-01-28T12:08:17.310Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ShadowMapMaterialFunction_thumb-284x284-652cdc5e576ce5a47fcde1df7ea070ff.png",
+      "md5": "652cdc5e576ce5a47fcde1df7ea070ff",
+      "width": 284,
+      "height": 284,
+      "size": 78622,
+      "uploadedDate": "2018-01-28T12:08:17.340Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ShadowMapMaterialFunction_featured-894x488-bb26d76e7ce4d357834df459fae6a13e.png",
+      "md5": "bb26d76e7ce4d357834df459fae6a13e",
+      "width": 894,
+      "height": 488,
+      "size": 286673,
+      "uploadedDate": "2018-01-28T12:08:17.426Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-02-11T02:13:53.991Z",
+  "lastModifiedDate": "2024-12-24T00:19:52.790Z",
+  "customAttributes": {},
+  "entitlementName": "a7c7af3097a8483cb3a786d0d78a5072",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "7411005a8adc4eeb8102ebf785d89653",
+      "appId": "ShadowMapMaterialFunction_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2018-03-28T00:00:00.000Z",
+      "releaseNote": "Self Shadow\nBoost Material",
+      "versionTitle": "4.17.1.6"
+    },
+    {
+      "id": "1ba876a41e9a49fc846c2bf00ce02734",
+      "appId": "ShadowMapMaterialFunction_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2018-01-28T00:00:00.000Z",
+      "releaseNote": "Add Very Low",
+      "versionTitle": "4.18.1.7"
+    },
+    {
+      "id": "769f4c3ee0e9437080956af89b935a53",
+      "appId": "ShadowMapMaterialFunction_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "iOS"
+      ],
+      "dateAdded": "2018-03-28T00:00:00.000Z",
+      "releaseNote": "Fix Geometry Cache\nFix Skinmesh + Morth cause crash",
+      "versionTitle": "4.19.1.10"
+    },
+    {
+      "id": "8b14bce42b0348e59bb43ce47667db20",
+      "appId": "ShadowMapMaterialFunction_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2018-07-26T00:00:00.000Z",
+      "releaseNote": "Fix Geometry Cache\nFix Skinmesh + Morth cause crash",
+      "versionTitle": "4.20.1.10"
+    },
+    {
+      "id": "1830b66c31064364b13da7a07dbf0e30",
+      "appId": "ShadowMapMaterialFunction_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2018-11-11T00:00:00.000Z",
+      "releaseNote": "Fix Geometry Cache\nFix Skinmesh + Morth cause crash",
+      "versionTitle": "4.21.1.10"
+    },
+    {
+      "id": "d9f5818fc5294dfba9a6c7ad3969467e",
+      "appId": "ShadowMapMaterialFunction_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2019-04-07T00:00:00.000Z",
+      "releaseNote": "Support 4.22",
+      "versionTitle": "4.22.1.10"
+    },
+    {
+      "id": "597f1d505fb148d189efb3543185ac41",
+      "appId": "ShadowMapMaterialFunction_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2019-09-13T00:00:00.000Z",
+      "releaseNote": "Fix Geometry Cache\nFix Skinmesh + Morth cause crash",
+      "versionTitle": "4.23.1.10"
+    },
+    {
+      "id": "09c5c972c40947588f3f581fe3f7de67",
+      "appId": "ShadowMapMaterialFunction_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2019-12-12T00:00:00.000Z",
+      "releaseNote": "Fix Geometry Cache\nFix Skinmesh + Morth cause crash",
+      "versionTitle": "4.24.1.10"
+    },
+    {
+      "id": "084144bb9e2046fc8d32667373a36b1a",
+      "appId": "ShadowMapMaterialFunction_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2020-05-30T00:00:00.000Z",
+      "releaseNote": "for version 4.25\n",
+      "versionTitle": "4.25.1.10"
+    },
+    {
+      "id": "31f5fbc675fd4625bf0d05dcd9e75d9e",
+      "appId": "ShadowMapMaterialFunction_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2020-12-11T00:00:00.000Z",
+      "releaseNote": "support UE4.26",
+      "versionTitle": "4.26.1.10"
+    },
+    {
+      "id": "58550cc5db744377bf8b58cf945ecca4",
+      "appId": "ShadowMapMaterialFunction_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2021-10-10T00:00:00.000Z",
+      "releaseNote": "Support UE 4.27.",
+      "versionTitle": "4.27.1.10"
+    },
+    {
+      "id": "8dc9d48fb32847afa41314efa3a75306",
+      "appId": "ShadowMapMaterialFunction_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "iOS"
+      ],
+      "dateAdded": "2022-04-07T00:00:00.000Z",
+      "releaseNote": "Support UE 5.0",
+      "versionTitle": "5.0.1.10"
+    },
+    {
+      "id": "ba195e12c9634741822ef42029de8f23",
+      "appId": "ShadowMapMaterialFunction_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2022-12-05T00:00:00.000Z",
+      "releaseNote": "Support UE 5.1",
+      "versionTitle": "5.1.1.10"
+    },
+    {
+      "id": "514f1f6712f945b8a59c39f0027eb2c8",
+      "appId": "ShadowMapMaterialFunction_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2023-07-07T00:00:00.000Z",
+      "releaseNote": "Support UE 5.2",
+      "versionTitle": "5.2.1.10"
+    },
+    {
+      "id": "87294da8a66744c1ad309b90b1a90617",
+      "appId": "ShadowMapMaterialFunction_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2023-10-23T00:00:00.000Z",
+      "releaseNote": "Support UE 5.3",
+      "versionTitle": "5.3.1.10"
+    },
+    {
+      "id": "0658f1a291884de9b81b2cd07eeb07ba",
+      "appId": "ShadowMapMaterialFunction_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-06-04T00:00:00.000Z",
+      "releaseNote": "Support UE 5.4",
+      "versionTitle": "5.4.1.10"
+    }
+  ],
+  "developer": "Ether Code",
+  "developerId": "o-cdcd00019646aa83fc47b113e05247",
+  "endOfSupport": false,
+  "unsearchable": false
+}

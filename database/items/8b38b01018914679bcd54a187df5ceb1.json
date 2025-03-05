@@ -1,0 +1,338 @@
+{
+  "id": "8b38b01018914679bcd54a187df5ceb1",
+  "title": "Optimization Tools Plugin",
+  "description": "This plugin offers powerful features that effectively optimize game FPS, particularly when handling a large number of actors in 3D scenes or complex Blueprint logic.",
+  "longDescription": "<p>&#x1f4d8; <a href=\"https://docs.google.com/document/d/1Jp9vPlcd9QunrkrfBJaK0ZbCy4_A30wa3bH818mhXls\" rel=\"nofollow\">Documentation</a> | &#x1f31f; <a href=\"https://drive.google.com/file/d/13gCbJ2Yn5knry5A5QMnzuKLWZfC91BtS/view\" rel=\"nofollow\">Example Project</a> | &#x1f6a7; <a href=\"https://trello.com/b/b2Gnsymh/optimization-tools-roadmap\" rel=\"nofollow\">Roadmap</a> | &#x1f6e0;️ <a href=\"https://docs.google.com/document/d/11hYeiEVX97ZOmvcPC-nH7iEPF4gJsSDBhkZy8awmm1c\" rel=\"nofollow\">Devlog</a> | &#x1f4e2; <a href=\"https://discord.com/invite/FaHFJDZN3e\" rel=\"nofollow\">Discord</a></p><p><strong>Plugin Version : 1.1</strong></p><p><br /></p><p>Our plugin is a unique solution on the Marketplace, offering a suite of Blueprint tools to improve game performance and simplify development. It’s well-suited for both small and large 3D scenes with numerous actors, designed to optimize Blueprint workflows. Includes all C&#43;&#43; source files.</p><p><br /></p><p><strong>Optimization Tools:</strong></p><p><br /></p><ul><li><strong><u>Significance System</u>:</strong> Assess the importance of 3D Actors based on their presence on screen and/or distance from the player. This feature enables dynamic adjustment of the Tick interval and other settings based on an Actor&#39;s significance, optimizing performance by prioritizing which Actors receive updates.</li></ul><p><br /></p><ul><li><strong><u>Asynchronous Tasks</u>:</strong> Execute logic without overloading the GameThread by utilizing parallel threads. This ensures that the game remains responsive while tasks, such as complex calculations, are processed in the background. For maximum flexibility, asynchronous tasks can be accessed in Blueprints through a latent Blueprint node or a delegated event.</li></ul><p><br /></p><ul><li><strong><u>Pool Ticking</u>:</strong> Efficiently manage Actor updates by processing them in groups, one at a time. This industry-standard method distributes the GPU’s computational load across frames, resulting in a smoother gameplay experience.</li></ul><p><br /></p><ul><li><strong><u>Animation Update Rate</u>:</strong> Modify the animation update rate settings directly in Blueprints using our exposed functions to optimize the performance of SkeletalMeshes. We also recommend using the <strong>Animation Sharing Plugin</strong> and the <strong>Animation Budget Allocator</strong> for optimal performance.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Easily execute asynchronous actions or events in Blueprints.</li><li>Detect when asynchronous actions finish or fail.</li><li>Optimize Actor and ActorComponent ticks based on distance or visibility using Significance.</li><li>Use exposed Significance callbacks to handle any custom logic for distance or visibility.</li><li>Group Actors and ActorComponents for efficient tick management with Pool Ticking.</li><li>Boost FPS significantly by combining the plugin’s three main features.</li><li>Update Animation Update Rate directly in Blueprints</li></ul><p><br /></p><p>Code Modules:</p><ul><li> OptimizationTools (Runtime)</li></ul><p><br /></p><p>Number of Blueprints: 7</p><p>Number of C&#43;&#43; Classes: 7</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: All</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3a-1920x1080-6d2a74c0816da2ea1afd0a83818ee58e.png",
+      "md5": "6d2a74c0816da2ea1afd0a83818ee58e",
+      "width": 1920,
+      "height": 1080,
+      "size": 2424399,
+      "uploadedDate": "2024-09-29T21:31:27.107Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-9e2f6f4261ca01722a78ec56b69451db.png",
+      "md5": "9e2f6f4261ca01722a78ec56b69451db",
+      "width": 1920,
+      "height": 1080,
+      "size": 1156280,
+      "uploadedDate": "2024-09-29T21:31:27.528Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-d903a3936fbc3cb7ada35701257a5afd.png",
+      "md5": "d903a3936fbc3cb7ada35701257a5afd",
+      "width": 1920,
+      "height": 1080,
+      "size": 405550,
+      "uploadedDate": "2024-09-29T21:31:27.884Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-3b12b4bba8104f08730208856eb43cca.png",
+      "md5": "3b12b4bba8104f08730208856eb43cca",
+      "width": 1920,
+      "height": 1080,
+      "size": 349763,
+      "uploadedDate": "2024-09-29T21:31:28.253Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-743a06f787bd27d564c10a8360e57d5f.png",
+      "md5": "743a06f787bd27d564c10a8360e57d5f",
+      "width": 1920,
+      "height": 1080,
+      "size": 428486,
+      "uploadedDate": "2024-09-29T21:31:28.524Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7-1920x1080-1178395188c515b99d57ef7cfef52946.png",
+      "md5": "1178395188c515b99d57ef7cfef52946",
+      "width": 1920,
+      "height": 1080,
+      "size": 1595200,
+      "uploadedDate": "2024-09-30T14:04:22.557Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-801a3aa00193e85106dad047e83143fd.png",
+      "md5": "801a3aa00193e85106dad047e83143fd",
+      "width": 1920,
+      "height": 1080,
+      "size": 1361887,
+      "uploadedDate": "2024-09-29T21:31:29.244Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8-1920x1080-165bc2052c31ff17c5f11db804e5adb8.png",
+      "md5": "165bc2052c31ff17c5f11db804e5adb8",
+      "width": 1920,
+      "height": 1080,
+      "size": 1595838,
+      "uploadedDate": "2024-10-06T17:01:58.674Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/OptimizationToolsPlugin_thumb-284x284-11cccc1b131f00aac38546d2e39fa339.png",
+      "md5": "11cccc1b131f00aac38546d2e39fa339",
+      "width": 284,
+      "height": 284,
+      "size": 48931,
+      "uploadedDate": "2024-09-23T19:25:50.158Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/OptimizationToolsPlugin_featured-894x488-4f76608187c4208b641f97b39523b8ce.png",
+      "md5": "4f76608187c4208b641f97b39523b8ce",
+      "width": 894,
+      "height": 488,
+      "size": 439867,
+      "uploadedDate": "2024-09-29T21:31:29.511Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-165bc2052c31ff17c5f11db804e5adb8_Snapshot.png",
+      "md5": "955d734ac70ab875b0ba71a3766ea00f",
+      "width": 150,
+      "height": 74,
+      "size": 8048,
+      "uploadedDate": "2024-10-06T17:01:58.999Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-1178395188c515b99d57ef7cfef52946_Snapshot.png",
+      "md5": "f5d773ef9e4f49ec2259f269295f95fd",
+      "width": 150,
+      "height": 74,
+      "size": 7558,
+      "uploadedDate": "2024-09-30T14:04:22.851Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3a-1920x1080-6d2a74c0816da2ea1afd0a83818ee58e_Snapshot.png",
+      "md5": "0d9590cf1d495bf8306c645d7a7a1dfe",
+      "width": 150,
+      "height": 74,
+      "size": 8463,
+      "uploadedDate": "2024-09-29T21:31:27.365Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-9e2f6f4261ca01722a78ec56b69451db_Snapshot.png",
+      "md5": "9242ed86bd98fef861b807ede4ed0a86",
+      "width": 150,
+      "height": 74,
+      "size": 7380,
+      "uploadedDate": "2024-09-29T21:31:27.734Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-d903a3936fbc3cb7ada35701257a5afd_Snapshot.png",
+      "md5": "33e493c2cc49f3d2ae721513fd55b670",
+      "width": 150,
+      "height": 74,
+      "size": 5197,
+      "uploadedDate": "2024-09-29T21:31:28.069Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-3b12b4bba8104f08730208856eb43cca_Snapshot.png",
+      "md5": "bf01e143aa3f76376c52f772f9744fcc",
+      "width": 150,
+      "height": 74,
+      "size": 4876,
+      "uploadedDate": "2024-09-29T21:31:28.436Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-743a06f787bd27d564c10a8360e57d5f_Snapshot.png",
+      "md5": "99631efec58c39f70f01009279a8de58",
+      "width": 150,
+      "height": 74,
+      "size": 5210,
+      "uploadedDate": "2024-09-29T21:31:28.732Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-1178395188c515b99d57ef7cfef52946_Snapshot.png",
+      "md5": "f5d773ef9e4f49ec2259f269295f95fd",
+      "width": 150,
+      "height": 74,
+      "size": 7558,
+      "uploadedDate": "2024-09-29T21:31:29.078Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-801a3aa00193e85106dad047e83143fd_Snapshot.png",
+      "md5": "cc5f74f334bb95d3cebebcf63844c439",
+      "width": 150,
+      "height": 74,
+      "size": 7268,
+      "uploadedDate": "2024-09-29T21:31:29.462Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-c2b04aa93b45314bcea44d5340dbdf62_Snapshot.png",
+      "md5": "a9c423cc821cc2c71e11728600b09763",
+      "width": 150,
+      "height": 74,
+      "size": 5036,
+      "uploadedDate": "2024-09-23T19:25:48.133Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-8cede7f5b6ceb918ba9e421d384f6af1_Snapshot.png",
+      "md5": "2420bad4ced20855f7046e606337fada",
+      "width": 150,
+      "height": 74,
+      "size": 4590,
+      "uploadedDate": "2024-09-23T19:25:48.735Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-dbaa29f0d97e604dbf36c9edbeac377d_Snapshot.png",
+      "md5": "5012b51841e4049841485b47ffc9fcdb",
+      "width": 150,
+      "height": 74,
+      "size": 6718,
+      "uploadedDate": "2024-09-23T19:25:49.259Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-256ecbcab65c6fea480b3d663e5889cd_Snapshot.png",
+      "md5": "d2457a8f24cac89b4cfca70e61b9a3e0",
+      "width": 150,
+      "height": 74,
+      "size": 5240,
+      "uploadedDate": "2024-09-23T19:25:49.631Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-801a3aa00193e85106dad047e83143fd_Snapshot.png",
+      "md5": "cc5f74f334bb95d3cebebcf63844c439",
+      "width": 150,
+      "height": 74,
+      "size": 7268,
+      "uploadedDate": "2024-09-23T19:25:50.120Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-85286060ed28dc8b737febc87fec90d9_Snapshot.png",
+      "md5": "2116ea1a06f547179195e78a1b866b16",
+      "width": 150,
+      "height": 74,
+      "size": 4973,
+      "uploadedDate": "2024-09-14T13:54:43.035Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-7fb3065e99e758d48207633f5afb10ed_Snapshot.png",
+      "md5": "e2485bccc142302e7763046c27fde927",
+      "width": 150,
+      "height": 74,
+      "size": 4505,
+      "uploadedDate": "2024-09-14T13:54:43.436Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-532ed327eace7909dbecdb758565485c_Snapshot.png",
+      "md5": "66f9d14d15c7c45d97c23fe53b64fbc4",
+      "width": 150,
+      "height": 74,
+      "size": 6636,
+      "uploadedDate": "2024-09-14T13:54:43.800Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-adae7d710afff0a953b1ab2f584a7a4e_Snapshot.png",
+      "md5": "9809acfd65b16566177f185761f2b8cd",
+      "width": 150,
+      "height": 74,
+      "size": 5179,
+      "uploadedDate": "2024-09-14T13:54:44.100Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-e4b52d3a419f7aff5b5580d8c456d73b_Snapshot.png",
+      "md5": "7c986aa32797096f1b8d8ce4a62dc3ab",
+      "width": 150,
+      "height": 74,
+      "size": 7167,
+      "uploadedDate": "2024-09-14T13:54:44.452Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-09-23T19:30:39.619Z",
+  "lastModifiedDate": "2025-01-27T20:34:27.057Z",
+  "customAttributes": {},
+  "entitlementName": "8b38b01018914679bcd54a187df5ceb1",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "2657b64cf5424e7091d925a4ccf10ce1",
+      "appId": "Optimiza2c8029506b06V3_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2024-09-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.5.2"
+    },
+    {
+      "id": "e8ad5e5d369a40b79b7cf9d18a1bf0a0",
+      "appId": "Optimiza850ccedc8443V4_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-09-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.5.3"
+    },
+    {
+      "id": "9040ac97004a473dad939adb4fbdc779",
+      "appId": "Optimiza421ff074d458V5_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2024-09-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.5.4"
+    }
+  ],
+  "developer": "Creative Elicya",
+  "developerId": "o-c8n52nmm2e4afk5xy7w2trpsrcwnb5",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

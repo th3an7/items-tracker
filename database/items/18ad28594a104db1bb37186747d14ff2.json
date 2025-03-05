@@ -1,0 +1,364 @@
+{
+  "id": "18ad28594a104db1bb37186747d14ff2",
+  "title": "VR Hands Solver",
+  "description": "Hand and arm solver for VR, and universal fingers solver to capture fingers animation.",
+  "longDescription": "<p>The plugin includes two components and one animation node.</p><ol><li>Custom <strong>Hand Skeletal Mesh</strong> component for implementing hands in VR. Fingers solver allow to switch between fingers poses, to trace world to grab objects, to receive input from Oculus Touch/Valve Knuckles/VR gloves (with 1 DOF). It supports skeletal meshes with or without arm bones. <u>See documentation for skeleton requirements</u>.</li><li><strong>Body Solver</strong>, actor component to predict spine orientation. it&#39;s responsible for shoulders placement and hands scaling. Requires two-steps body calibration.</li><li><strong>Fingers Solver</strong>: animation node to control humanoid fingers at any skeletal mesh (including full-body models). It works as a separate system and isn&#39;t needed for <strong>Hand Skeletal Mesh</strong> component, but useful to implement unified input from motion controllers with fingers tracking (Oculus Touch, Valve Knuckles) or VR gloves.</li></ol><p><br /></p><p>Fingers Solver also can be used to capture fingers animationin Unreal Editor and blend it to existing full-body animation.</p><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;El1ImJ0Bf9U\" rel=\"nofollow\">Video #1</a> | <a href=\"https://www.youtube.com/watch?v&#61;UCDDIto2xmA\" rel=\"nofollow\">Video #2</a> (demo with Valve Knuckles) | <a href=\"https://www.youtube.com/watch?v&#61;ltirUEGiKeU\" rel=\"nofollow\">Video #3</a> (OpenXR features)</p><p><a href=\"https://www.youtube.com/watch?v&#61;0cW9yifwcTE\" rel=\"nofollow\">Video tutorial: Fingers Solver for any skeletal mesh</a></p><p>Video: <a href=\"https://www.youtube.com/watch?v&#61;OeeNxiUspHw\" rel=\"nofollow\">Fingers mocap in Unreal Editor</a></p>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li>input from VR gloves and controllers with fingers tracking</li><li>arms prediction works in room space VR (360 degrees tracking)</li><li>easy setup of finger poses</li><li>fingers tracing to grab objects</li><li>supports mirrored skeletal meshes</li></ul><p><strong>Code Modules:</strong></p><ul><li>VRHandsSolver (Runtime) </li><li>VRHandsSolverEditor (Editor)</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 4</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows x64, Linux</p><p>Supported Target Build Platforms: Windows x64, Linux, Android (Oculus Quest)</p><p>Documentation: <a href=\"https://drive.google.com/open?id&#61;18_8C0msxjulwfBNc7BZPCwnBtskz2Qig\" rel=\"nofollow\">PDF</a> | <a href=\"https://www.youtube.com/playlist?list&#61;PLl4Fsvk8JAxJj8SONL5SUqrk1xPX8OMm7\" rel=\"nofollow\">Fingers Mocap</a></p><p>Example Project: <a href=\"https://drive.google.com/file/d/1Pc4_TLOpgb8JSbxdtzzfkNnYpfAIeXJe/view?usp&#61;sharing\" rel=\"nofollow\">5.2-5.4</a> | <a href=\"https://drive.google.com/file/d/1zeHCj4H36UIZahl5UPp7Rk2KY6vgPgiE/view?usp&#61;share_link\" rel=\"nofollow\">5.1</a> | <a href=\"https://drive.google.com/file/d/1_fMu8fVPoQo-iofrqkmHLr79NbkWPfy4/view?usp&#61;sharing\" rel=\"nofollow\">4.27&#43;</a> | <a href=\"https://github.com/AntiAnti/FingersMocapMP/releases\" rel=\"nofollow\">Fingers Mocap 5.2</a></p><p>Executable Demo: <a href=\"https://drive.google.com/file/d/1SaypupKRG1URDBWpQ_RBfvEz0_7bB5Jf/view?usp&#61;sharing\" rel=\"nofollow\">ZIP</a></p><p>Important/Additional Notes: Known issue - upperarms can jump around with late update enabled in motion controllers.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/scr00-1920x1080-0073366928de69a0ed689b80cff0c652.jpg",
+      "md5": "0073366928de69a0ed689b80cff0c652",
+      "width": 1920,
+      "height": 1080,
+      "size": 463009,
+      "uploadedDate": "2018-12-12T15:43:59.907Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/scr01-1920x1080-851b3ed51e5282f4a929af2b5462e73f.jpg",
+      "md5": "851b3ed51e5282f4a929af2b5462e73f",
+      "width": 1920,
+      "height": 1080,
+      "size": 568422,
+      "uploadedDate": "2018-12-12T15:44:00.123Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/scr02-1920x1080-9ed153a72ca965686d93ee6865d2539b.jpg",
+      "md5": "9ed153a72ca965686d93ee6865d2539b",
+      "width": 1920,
+      "height": 1080,
+      "size": 476949,
+      "uploadedDate": "2018-12-12T15:44:00.349Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/scr03-1920x1080-c3464cd58ffeb0878f064cccb7b42637.jpg",
+      "md5": "c3464cd58ffeb0878f064cccb7b42637",
+      "width": 1920,
+      "height": 1080,
+      "size": 478041,
+      "uploadedDate": "2018-12-12T15:44:00.655Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/scr05-1920x1080-4a8b696b0e9e73a1994f8cebe5cb2019.jpg",
+      "md5": "4a8b696b0e9e73a1994f8cebe5cb2019",
+      "width": 1920,
+      "height": 1080,
+      "size": 541518,
+      "uploadedDate": "2018-12-12T15:44:00.882Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/VRHandsSolver_thumb-284x284-9b96f92744665aad36b01b72d97de61d.png",
+      "md5": "9b96f92744665aad36b01b72d97de61d",
+      "width": 284,
+      "height": 284,
+      "size": 136902,
+      "uploadedDate": "2018-12-12T15:44:01.069Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/VRHandsSolver_featured-894x488-3ee5c3177ca8a84e5a5c6770287c14cc.png",
+      "md5": "3ee5c3177ca8a84e5a5c6770287c14cc",
+      "width": 894,
+      "height": 488,
+      "size": 523130,
+      "uploadedDate": "2018-12-12T15:44:01.234Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/scr00-1920x1080-0073366928de69a0ed689b80cff0c652_Snapshot.jpg",
+      "md5": "0c6eaf3a91454f36141fe61f9a0e8530",
+      "width": 150,
+      "height": 74,
+      "size": 2544,
+      "uploadedDate": "2018-12-12T15:44:00.038Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/scr01-1920x1080-851b3ed51e5282f4a929af2b5462e73f_Snapshot.jpg",
+      "md5": "a82b4ca1814d939d52911e3e229f3df1",
+      "width": 150,
+      "height": 74,
+      "size": 3162,
+      "uploadedDate": "2018-12-12T15:44:00.261Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/scr02-1920x1080-9ed153a72ca965686d93ee6865d2539b_Snapshot.jpg",
+      "md5": "d6536a196d88858247064e15854e06a4",
+      "width": 150,
+      "height": 74,
+      "size": 2518,
+      "uploadedDate": "2018-12-12T15:44:00.532Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/scr03-1920x1080-c3464cd58ffeb0878f064cccb7b42637_Snapshot.jpg",
+      "md5": "e308a332a71bd12fdf484d3149d9261b",
+      "width": 150,
+      "height": 74,
+      "size": 2481,
+      "uploadedDate": "2018-12-12T15:44:00.778Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/scr05-1920x1080-4a8b696b0e9e73a1994f8cebe5cb2019_Snapshot.jpg",
+      "md5": "3e8ca1534129230f55e6a93500161c7f",
+      "width": 150,
+      "height": 74,
+      "size": 3184,
+      "uploadedDate": "2018-12-12T15:44:01.004Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-12-27T13:07:58.348Z",
+  "lastModifiedDate": "2025-01-18T14:54:24.797Z",
+  "customAttributes": {},
+  "entitlementName": "18ad28594a104db1bb37186747d14ff2",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "1cdb50055d7349ec98d48e29f3739a3f",
+      "appId": "VRHandsSolver_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2019-02-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VRHS_419"
+    },
+    {
+      "id": "9c1bcea12c854948afbfef62f9440931",
+      "appId": "VRHandsSolver_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Oculus",
+        "Linux"
+      ],
+      "dateAdded": "2019-02-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VRHS_420"
+    },
+    {
+      "id": "cfcbc6f332e84a96b75a28567865638e",
+      "appId": "VRHandsSolver_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Linux"
+      ],
+      "dateAdded": "2018-12-12T00:00:00.000Z",
+      "releaseNote": "new elbow solver",
+      "versionTitle": "VRHS_421"
+    },
+    {
+      "id": "f4119dee89fe47548126426b31c37b45",
+      "appId": "VRHandsSolver_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "grip pose for FingersSolver",
+      "versionTitle": "VRHS_422"
+    },
+    {
+      "id": "2b89f61c9ca340279410ca2f09c4c2c1",
+      "appId": "VRHandsSolver_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2019-09-05T00:00:00.000Z",
+      "releaseNote": "grip pose for FingersSolver",
+      "versionTitle": "VRHS_423"
+    },
+    {
+      "id": "a122a3835d534b6e800aa8ae144ef44d",
+      "appId": "VRHandsSolver_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2019-12-10T00:00:00.000Z",
+      "releaseNote": "grip pose for FingersSolver",
+      "versionTitle": "VRHS_424"
+    },
+    {
+      "id": "73b41e617f444979a0e6231666969c46",
+      "appId": "VRHandsSolver_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2020-05-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VRHS_425"
+    },
+    {
+      "id": "2d3e8f399f4f435ab2e215f2a62da070",
+      "appId": "VRHandsSolver_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Linux"
+      ],
+      "dateAdded": "2020-12-03T00:00:00.000Z",
+      "releaseNote": "detailed input + world tracing",
+      "versionTitle": "VRHS_426"
+    },
+    {
+      "id": "982ad0e7ff9a402ba825f471521d1013",
+      "appId": "VRHandsSolver_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "fingers replication",
+      "versionTitle": "VRHS_427"
+    },
+    {
+      "id": "13377dca412745d0a694e4b2a4416b15",
+      "appId": "VRHandsSolver_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Linux",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Windows"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "fingers replication",
+      "versionTitle": "VRHS_50"
+    },
+    {
+      "id": "9fd3f05603044423bea9f9f2283e455e",
+      "appId": "VRHandsSolver_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Linux"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "fingers replication",
+      "versionTitle": "VRHS_51"
+    },
+    {
+      "id": "a6cbfd1d0cf1466990df4a637670ef1c",
+      "appId": "VRHandsSolver_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "minor changes for fingers mocap",
+      "versionTitle": "VRHS_52"
+    },
+    {
+      "id": "142630cd064e4962b0cf34bd724809a2",
+      "appId": "VRHandsSolver_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VRHS_53"
+    },
+    {
+      "id": "c70dceba65ab47dc929d51621c6b29e1",
+      "appId": "VRHandsSolver_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Oculus",
+        "SteamVR / HTC Vive",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VRHS_54"
+    }
+  ],
+  "developer": "Yuri N Kalinin",
+  "developerId": "o-8ba954a7a34115b5479ff854fbfe78",
+  "endOfSupport": false,
+  "unsearchable": false
+}

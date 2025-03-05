@@ -1,0 +1,474 @@
+{
+  "id": "c4c4e39d02ab4fb798f941717f42b526",
+  "title": "UMG File Manager Kit",
+  "description": "A flexible UMG framework for implementing in-game file manager. 2 out-of-box UMG file manager samples are included.",
+  "longDescription": "<p>FAQ:</p><p>1. Q: Where are the demo samples?</p><p>A: All three demo maps are in the plugin&#39;s content folder /DlFileManager/DlFM/Demo/ . If you set your project&#39;s GameDefaultMap to /DlFileManager/DlFM/Demo/DemoMap_Desktop.DemoMap_Desktop and build as Windows-Shipping, you can get an EXACTLY SAME result as <a href=\"https://drive.google.com/drive/folders/1MFHKi8jJtfFzesFWXTGpP1mwswIf882X?usp&#61;sharing\" rel=\"nofollow\">Win64 demos</a> .</p><p><br /></p><p>---</p><p>Update (2023/09/27) New API for preview each file with customized image textures. (The 11th picture in the gallery is a showcase and configure example.)</p><p>Update (2023/06/16) Tested platforms include Mac and IOS since UE5.2. As UE starts to support Apple Silicons officially from version 5.2, now we have IDE to test this plugin on Mac and IOS; this plugin should also work on all legacy or other environments, but we do not have IDEs to test all of them.</p><p>Update 1.1 (2022/08/23) Performance optimization. <em>If you have already built customized file managers based on previous version, see the </em><a href=\"https://drive.google.com/file/d/1LvoVYG8jO2mUembJSgTRTChzxv1LYmMc/view?usp&#61;sharing\" rel=\"nofollow\"><em>Document</em></a><em> &#39;s &#34;Update Tutorial&#34; to migrate to new version plugin.</em></p><p><br /></p><p>* * *</p><p>This plugin provides a UMG framework for developing various in-game file managers.</p><p><br /></p><p><strong>The C&#43;&#43; code implements all file management logics</strong>, including browse, search, sort, multiselect, cut/copy-paste, rename, create new folders/files, delete, refresh, filter browse/search result by file type, and so on. This should have covered majority functions of modern file manager/browser/explorer. If you need something more and it is common, please contact me and I may add it to this pack. </p><p><br /></p><p><em><u>To implement your own file manager, simply create Blueprints inheriting the C&#43;&#43; classes. You can focus on the art and UI style; no C&#43;&#43; knowledge is required.</u></em></p><p><br /></p><p><strong>Two out-of-box sample file managers are included in the plugin</strong>. The first one is fully-functional and suitable for high-resolution horizontal desktop screen. The second one is functionally-simplified, suitable for small vertical mobile screen. There is also a demo map where the two samples are placed into 3D scene, which can be used as a reference for VR games. We developed these two significantly different style samples to demonstrate the plugin is very flexible, modular and robust. Functions and widgets can be chose or removed, UI can be designed in any styles. You do not need to worry that you change some tiny things and the whole project is corrupted astonishingly. </p><p><br /></p><p>This plugin only depends on UE&#39;s UMG, math and file library. No platform-specified code exist. It has been tested on windows and android, and it should work on all platforms.</p><p><br /></p><p>Please try the <a href=\"https://drive.google.com/drive/folders/1MFHKi8jJtfFzesFWXTGpP1mwswIf882X?usp&#61;sharing\" rel=\"nofollow\">Win64 demos</a> . There are many cases where we want players interact with local file systems during game, like selecting position to save/load game, using local pictures/3D-models/videos/music, and many other things. See the potential wide usages of a full-functional file manager, and the non-interruptive game experience it can bring.</p><p><br /></p><p>Support: dragonlisoftwarelimited&#64;outlook.com or directly ask questions here.</p><p><em>All support requests are promised to be replied within 24 hours. Suggestions and feedbacks are also welcomed.</em></p><p><br /></p><p>Please be noticed that the plugin does NOT contain much art assets, and the UI of default samples are merely white-black-blur. With <a href=\"https://www.unrealengine.com/marketplace/en-US/item/8ea6f7ffd86b4f199112701c68e39f1b\" rel=\"nofollow\">GUI Kit - Scifi Blue</a> we built the deep blue file manager shown in 3rd and 4th pictures; With <a href=\"https://www.unrealengine.com/marketplace/en-US/item/bc580168b9e64ad4a6b837c734a4fd77\" rel=\"nofollow\">GUI PRO Kit - Casual Game</a> we built the casual style file manager shown in 7th and 8th pictures. It is suggested to use your UI art assets together with this plugin, meanwhile you certainly can directly integrated the default sample file managers into your project.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>browse folders</li><li>search in folders</li><li>show folder/file details including name/path/access time/create time/extension/size/whether read-only</li><li>sort items by name/time/type/size</li><li>navigate to: selected folder/parent folder/forward/backward/location of selected search result</li><li>multiselect, select/unselect all with one click</li><li>cut/copy-paste files/folder(folder with same name will be recursively merged)</li><li>rename</li><li>create new folders/files, filter invalid characters in name</li><li>delete</li><li>filter browse/search result by file type</li><li>refresh</li><li>interactive dialogues for deleting/file-overwrite/creating new files/folders</li></ul><p>Additional features (can be used for general propose, see document for details):</p><ul><li>widget resize/drag-drop on canvas panel</li><li>Customized widgets to show external luminous effect.</li></ul><p>Number of Blueprints: 27</p><p>Number of C&#43;&#43; Classes: 17</p><p>Network Replicated: No</p><p>Documentation: <a href=\"https://drive.google.com/file/d/1LvoVYG8jO2mUembJSgTRTChzxv1LYmMc/view?usp&#61;sharing\" rel=\"nofollow\">Here</a></p><p>Example Project: <a href=\"https://drive.google.com/drive/folders/1MFHKi8jJtfFzesFWXTGpP1mwswIf882X?usp&#61;sharing\" rel=\"nofollow\">Win64_Built_demo</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/OS0-1920x1080-dcc78644e34a64a6af5e59dfdebb7c88.png",
+      "md5": "dcc78644e34a64a6af5e59dfdebb7c88",
+      "width": 1920,
+      "height": 1080,
+      "size": 802597,
+      "uploadedDate": "2022-08-27T06:18:46.087Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/M2-1920x1080-ea4351d395d44cfe90e9bed7f585a50f.png",
+      "md5": "ea4351d395d44cfe90e9bed7f585a50f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1330520,
+      "uploadedDate": "2022-07-08T04:28:52.426Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/M3-1920x1080-c21f9d56fe8909c9f30297fa87b52916.png",
+      "md5": "c21f9d56fe8909c9f30297fa87b52916",
+      "width": 1920,
+      "height": 1080,
+      "size": 875786,
+      "uploadedDate": "2022-07-08T04:28:52.946Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/M4-1920x1080-d8f89810305165fe0492d03be2fe82e1.png",
+      "md5": "d8f89810305165fe0492d03be2fe82e1",
+      "width": 1920,
+      "height": 1080,
+      "size": 839290,
+      "uploadedDate": "2022-07-08T04:28:53.851Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/M5-1920x1080-5e31e88410a996b519a6f60563ae35ba.png",
+      "md5": "5e31e88410a996b519a6f60563ae35ba",
+      "width": 1920,
+      "height": 1080,
+      "size": 2128055,
+      "uploadedDate": "2022-07-08T04:28:54.441Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/M6-1920x1080-ea42c5422bad503ea18b3ee1baf589a6.png",
+      "md5": "ea42c5422bad503ea18b3ee1baf589a6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1952745,
+      "uploadedDate": "2022-07-08T04:28:55.014Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/M7-1920x1080-5265dce8acd077945696c243ecc7cc0b.png",
+      "md5": "5265dce8acd077945696c243ecc7cc0b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1472320,
+      "uploadedDate": "2022-07-08T04:28:55.642Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/M8-1920x1080-7e8b3571b5a7a6ded87a05abf24b0605.png",
+      "md5": "7e8b3571b5a7a6ded87a05abf24b0605",
+      "width": 1920,
+      "height": 1080,
+      "size": 1457001,
+      "uploadedDate": "2022-07-08T04:28:56.238Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/M9-1920x1080-5e42e7b49cd5cd9c1e816323f7905ef6.png",
+      "md5": "5e42e7b49cd5cd9c1e816323f7905ef6",
+      "width": 1920,
+      "height": 1080,
+      "size": 2336283,
+      "uploadedDate": "2022-07-08T04:28:57.003Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Ma-1920x1080-3d31556a04fea19618388dc677514a8a.png",
+      "md5": "3d31556a04fea19618388dc677514a8a",
+      "width": 1920,
+      "height": 1080,
+      "size": 338954,
+      "uploadedDate": "2022-07-08T04:32:58.524Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UMGAPI-1920x1080-8de79c275234db1258510458a48763d8.png",
+      "md5": "8de79c275234db1258510458a48763d8",
+      "width": 1920,
+      "height": 1080,
+      "size": 1023269,
+      "uploadedDate": "2024-04-11T09:04:38.384Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-04-26 191521-1920x1080-3a6e08953006589cf3b1dad73799c872.png",
+      "md5": "3a6e08953006589cf3b1dad73799c872",
+      "width": 1920,
+      "height": 1080,
+      "size": 300019,
+      "uploadedDate": "2024-04-26T11:18:56.034Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/UMGFileManagerKit_thumb-284x284-9afb7515022b799d02601f6151355242.png",
+      "md5": "9afb7515022b799d02601f6151355242",
+      "width": 284,
+      "height": 284,
+      "size": 63720,
+      "uploadedDate": "2022-07-08T04:28:57.432Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/UMGFileManagerKit_featured-894x488-4a66bb9ccfd38eb9456941a84f5800fe.png",
+      "md5": "4a66bb9ccfd38eb9456941a84f5800fe",
+      "width": 894,
+      "height": 488,
+      "size": 318155,
+      "uploadedDate": "2022-07-08T04:28:57.558Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-04-26 191521-1920x1080-3a6e08953006589cf3b1dad73799c872_Snapshot.png",
+      "md5": "8c1a5a34ee28eb41cfac82029d398718",
+      "width": 150,
+      "height": 74,
+      "size": 5027,
+      "uploadedDate": "2024-04-26T11:18:56.287Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UMGAPI-1920x1080-8de79c275234db1258510458a48763d8_Snapshot.png",
+      "md5": "654c5fee9ad62a63d57dd6dade20eb3b",
+      "width": 150,
+      "height": 74,
+      "size": 5696,
+      "uploadedDate": "2024-04-11T09:04:38.651Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UMGAPI-1920x1080-ab8fc98dbe52ad901a015d7cff0b4584_Snapshot.png",
+      "md5": "61d16e5485ce2cc42ac719ce5b4a9848",
+      "width": 150,
+      "height": 74,
+      "size": 5686,
+      "uploadedDate": "2024-04-11T08:54:40.930Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/OS0-1920x1080-dcc78644e34a64a6af5e59dfdebb7c88_Snapshot.png",
+      "md5": "d97534d25245f2ba3d744cc8753948c1",
+      "width": 150,
+      "height": 74,
+      "size": 7723,
+      "uploadedDate": "2022-08-27T06:18:46.417Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Ma-1920x1080-3d31556a04fea19618388dc677514a8a_Snapshot.png",
+      "md5": "8b7456751b855f349b10ee2909f92922",
+      "width": 150,
+      "height": 74,
+      "size": 3933,
+      "uploadedDate": "2022-07-08T04:32:58.755Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/M1-1920x1080-18d1fe570f09b2e29399a77436a06191_Snapshot.png",
+      "md5": "0a78004850af2d60804d55cb7f0df0fa",
+      "width": 150,
+      "height": 74,
+      "size": 5410,
+      "uploadedDate": "2022-07-08T04:28:52.216Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/M2-1920x1080-ea4351d395d44cfe90e9bed7f585a50f_Snapshot.png",
+      "md5": "e4d2e2cfa70fa780ebba24247f878cb8",
+      "width": 150,
+      "height": 74,
+      "size": 5436,
+      "uploadedDate": "2022-07-08T04:28:52.712Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/M3-1920x1080-c21f9d56fe8909c9f30297fa87b52916_Snapshot.png",
+      "md5": "06529798a9b0700ae1a801fed779a493",
+      "width": 150,
+      "height": 74,
+      "size": 6002,
+      "uploadedDate": "2022-07-08T04:28:53.649Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/M4-1920x1080-d8f89810305165fe0492d03be2fe82e1_Snapshot.png",
+      "md5": "e08e316060c557d66a02724e28163cca",
+      "width": 150,
+      "height": 74,
+      "size": 5067,
+      "uploadedDate": "2022-07-08T04:28:54.197Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/M5-1920x1080-5e31e88410a996b519a6f60563ae35ba_Snapshot.png",
+      "md5": "0caec7e4af581b8ad2b2122e01055170",
+      "width": 150,
+      "height": 74,
+      "size": 5165,
+      "uploadedDate": "2022-07-08T04:28:54.767Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/M6-1920x1080-ea42c5422bad503ea18b3ee1baf589a6_Snapshot.png",
+      "md5": "1109a898cb48ea0dd41f618f30c248da",
+      "width": 150,
+      "height": 74,
+      "size": 4942,
+      "uploadedDate": "2022-07-08T04:28:55.334Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/M7-1920x1080-5265dce8acd077945696c243ecc7cc0b_Snapshot.png",
+      "md5": "19d2c62324e67f76ace3ca4b90e79ccf",
+      "width": 150,
+      "height": 74,
+      "size": 6171,
+      "uploadedDate": "2022-07-08T04:28:56.021Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/M8-1920x1080-7e8b3571b5a7a6ded87a05abf24b0605_Snapshot.png",
+      "md5": "3f2c424f4e3776fc9bd056bc5bf0bf9d",
+      "width": 150,
+      "height": 74,
+      "size": 6004,
+      "uploadedDate": "2022-07-08T04:28:56.614Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/M9-1920x1080-5e42e7b49cd5cd9c1e816323f7905ef6_Snapshot.png",
+      "md5": "4ef81d733b04324747866f455ca99d60",
+      "width": 150,
+      "height": 74,
+      "size": 6464,
+      "uploadedDate": "2022-07-08T04:28:57.363Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20220703233156-1920x1080-fd9c72f92f6d940893c1ad8b9bd3bb9d_Snapshot.png",
+      "md5": "161ca72b499f861312264cf4b42e2e06",
+      "width": 150,
+      "height": 74,
+      "size": 5968,
+      "uploadedDate": "2022-07-04T22:14:44.515Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20220703233445-1920x1080-a7b0c6464a29536b78abffcf78d50cbc_Snapshot.png",
+      "md5": "a106714f6555568e8669e6dd84401cba",
+      "width": 150,
+      "height": 74,
+      "size": 5015,
+      "uploadedDate": "2022-07-04T22:14:44.932Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20220703233734-1920x1080-a6885cec420b5d4d5dc11ab79573599c_Snapshot.png",
+      "md5": "546e5e7617f5a38f8f3e5e75884b0d44",
+      "width": 150,
+      "height": 74,
+      "size": 5988,
+      "uploadedDate": "2022-07-04T22:14:45.344Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20220704000925-1920x1080-9d136494697e8d61551e7c9709806186_Snapshot.png",
+      "md5": "0bf3ac9248b8a2553fd3cf70abce16ff",
+      "width": 150,
+      "height": 74,
+      "size": 5950,
+      "uploadedDate": "2022-07-04T22:14:45.839Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20220704001101-1920x1080-bef7d220b9c93b859cc3dd82a970c6ae_Snapshot.png",
+      "md5": "44e94c45b36e0525ed3afd2d7288556c",
+      "width": 150,
+      "height": 74,
+      "size": 6115,
+      "uploadedDate": "2022-07-04T22:14:46.331Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20220704001528-1920x1080-c93c9a555635c1800396dfebb8a46a0f_Snapshot.png",
+      "md5": "4d7b7b18a528818706b75a15bbe5d4e7",
+      "width": 150,
+      "height": 74,
+      "size": 5693,
+      "uploadedDate": "2022-07-04T22:14:46.830Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20220704002137-1920x1080-463433b009607170cba74054fc1d708a_Snapshot.png",
+      "md5": "a404ab361139fe4847ccb039f4adc1a2",
+      "width": 150,
+      "height": 74,
+      "size": 6116,
+      "uploadedDate": "2022-07-04T22:14:47.359Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20220704002719-1920x1080-3d31556a04fea19618388dc677514a8a_Snapshot.png",
+      "md5": "8b7456751b855f349b10ee2909f92922",
+      "width": 150,
+      "height": 74,
+      "size": 3933,
+      "uploadedDate": "2022-07-04T22:14:47.723Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20220704003025-1920x1080-a2a731e4c1ae1e4c5c93768fc3119bff_Snapshot.png",
+      "md5": "9f97fac2fdc0603cfe9ed50b3dcaf647",
+      "width": 150,
+      "height": 74,
+      "size": 6316,
+      "uploadedDate": "2022-07-04T22:14:48.208Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-07-12T19:24:28.241Z",
+  "lastModifiedDate": "2025-01-02T08:05:26.948Z",
+  "customAttributes": {},
+  "entitlementName": "c4c4e39d02ab4fb798f941717f42b526",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "95e83714a5554ea49b6e827160dfef2d",
+      "appId": "DlFileManager_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-07-15T00:00:00.000Z",
+      "releaseNote": "Do not need to update, as plugins for UE4.26 is not supported for update.",
+      "versionTitle": "DlFileManager1.2_For4.26_0715"
+    },
+    {
+      "id": "c36efa8a226040488fab1e0fbf6d49bc",
+      "appId": "DlFileManager_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android"
+      ],
+      "dateAdded": "2022-07-05T00:00:00.000Z",
+      "releaseNote": "Do not need to update; only add UE5.1 version this time.",
+      "versionTitle": "DlFileManager1.2_For4.27_0710"
+    },
+    {
+      "id": "7e94e10deb85404cbd5a4f75a4a3ef64",
+      "appId": "DlFileManager_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-07-05T00:00:00.000Z",
+      "releaseNote": "Do not need to update; only add UE5.1 version this time.",
+      "versionTitle": "DlFileManager1.2_For5.0_0710"
+    },
+    {
+      "id": "ed85f9384d624de58985356dc042d842",
+      "appId": "DlFileManager_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "v1.3 Add new API for file preview; Password for unzip with 7z:\nU8ueIq/FbPWWLODPL6TQuGJatw7iyIXRgpj/YV4P8N4=",
+      "versionTitle": "DlFm_For5.1"
+    },
+    {
+      "id": "a6d8f092f48c41318bf14615ed5cbfbf",
+      "appId": "DlFileManager_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "Linux",
+        "iOS",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2023-06-16T00:00:00.000Z",
+      "releaseNote": "v1.3 Add new API for file preview; Password for unzip, using 7z:\nU8ueIq/FbPWWLODPL6TQuGJatw7iyIXRgpj/YV4P8N4=",
+      "versionTitle": "DlFm_For5.2"
+    },
+    {
+      "id": "b3964c3cb926470dafc1ad9e72079a49",
+      "appId": "DlFileManager_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2023-11-21T00:00:00.000Z",
+      "releaseNote": "Password for unzip:\nOIQxoG++QQ+v7zEqo7LAM1wNBHbLi0KtwXf8SYwM85o=",
+      "versionTitle": "DlFm_For5.3"
+    },
+    {
+      "id": "e1272d728ac44ff983eb580171ad1fc8",
+      "appId": "DlFileManager_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2024-05-06T00:00:00.000Z",
+      "releaseNote": "Password for unzip:\nE4AfKeGLBKWAMD6azwXnji673a76WLCda5DL3Ei73Yk=",
+      "versionTitle": "DlFm_For5.4"
+    }
+  ],
+  "developer": "Dragon Li Software Ltd.",
+  "developerId": "o-edktbba55s76lfjx8nfrnve4sdcqxh",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

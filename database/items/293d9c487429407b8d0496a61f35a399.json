@@ -1,0 +1,401 @@
+{
+  "id": "293d9c487429407b8d0496a61f35a399",
+  "title": "Save Game Library",
+  "description": "Provides a list of blueprint functions and an interface to make saving and loading games and values easier",
+  "longDescription": "<p>Provides a list of blueprint functions for storing and retrieving values, spawning stored actors, and creating, loading, and deleting save slots. It also provides an interface for blueprint implementable events, and an entry to project settings to change project-wide settings, like the name of the .sav file, multithreading, and whether to use a single file for all slots or a different file for each slot.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Adds a blueprint function library with nodes to make saving and loading easier</li><li>Adds a Project Settings entry under Plugins called Save Game Settings</li><li>No C&#43;&#43; Required: just start adding nodes from the library to your blueprints after project settings are set</li><li>No additional blueprints required: no unnecessary middle-man object to run functions from</li><li>Less setup with more power so that you don&#39;t have to build an entire system for saved games</li><li>Saving can run on a separate thread so it doesn&#39;t interrupt the game</li><li>Structs exposed to blueprints so you can manually manage the data you need to</li><li>Values can be erased so tasks can be automated with arrays without worrying about edge cases</li><li>An interface can be added in blueprints or C&#43;&#43; for events such as PreSave, PostSave, PreLoad, and PostLoad</li></ul><p><br /></p><p>Extra Features:</p><ul><li>A blueprint or C&#43;&#43; subclass can be made from SaveGameObject or ExpandedSaveGameLibrary</li><li>Save each slot in a single .sav file, or a separate .sav file for each save slot</li><li>Multithreading</li><li>Multi-user support</li><li>Wildcard pins to automate saving/loading complex structures, including maps</li></ul><p><br /></p><p>Core Modules: SaveGameLibrary(Runtime)</p><p>Number of C&#43;&#43; Classes: 16</p><p>Supported Development and Target Build Platforms: Win64</p><p><a href=\"https://docs.google.com/document/d/101P2iVjR5nzQWJs3bXWqplyEPoWYbjfU_ITdRhlpZYc/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://drive.google.com/file/d/11PJLBLgShmKwvHLxNohux1Ldui7jHGPd/view?usp&#61;sharing\" rel=\"nofollow\">Demo Project</a></p><p><a href=\"https://discord.gg/xtGQjpYxv2\" rel=\"nofollow\">Discord</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/NewSaveLoad-1920x1080-dfb1f5b3e4c26651828c3eced16fd556.png",
+      "md5": "dfb1f5b3e4c26651828c3eced16fd556",
+      "width": 1920,
+      "height": 1080,
+      "size": 571722,
+      "uploadedDate": "2024-09-20T01:40:28.053Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NewSaveLoad-1920x1080-dfb1f5b3e4c26651828c3eced16fd556_Snapshot.png",
+      "md5": "de6737edb9fcfbca812f494c6629efc2",
+      "width": 150,
+      "height": 74,
+      "size": 5864,
+      "uploadedDate": "2024-09-20T01:40:28.346Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SaveLoadData-1920x1080-602517db15e7d38eeb69f1031fc7cc45.png",
+      "md5": "602517db15e7d38eeb69f1031fc7cc45",
+      "width": 1920,
+      "height": 1080,
+      "size": 489896,
+      "uploadedDate": "2024-09-20T01:40:28.598Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SaveLoadData-1920x1080-602517db15e7d38eeb69f1031fc7cc45_Snapshot.png",
+      "md5": "a57bece767b8642617baa751611ea47c",
+      "width": 150,
+      "height": 74,
+      "size": 5348,
+      "uploadedDate": "2024-09-20T01:40:28.886Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/StoreLoadErase-1920x1080-2e2851da4a0f9613929a669894409155.png",
+      "md5": "2e2851da4a0f9613929a669894409155",
+      "width": 1920,
+      "height": 1080,
+      "size": 1144084,
+      "uploadedDate": "2024-09-20T01:40:29.086Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StoreLoadErase-1920x1080-2e2851da4a0f9613929a669894409155_Snapshot.png",
+      "md5": "645c50b513403068d80718d329dd805f",
+      "width": 150,
+      "height": 74,
+      "size": 6468,
+      "uploadedDate": "2024-09-20T01:40:29.336Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SaveGameEventsInterface-1920x1080-bb21636a74067bcf20b33bd663ef5cb7.png",
+      "md5": "bb21636a74067bcf20b33bd663ef5cb7",
+      "width": 1920,
+      "height": 1080,
+      "size": 312264,
+      "uploadedDate": "2024-09-20T01:40:29.530Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SaveGameEventsInterface-1920x1080-bb21636a74067bcf20b33bd663ef5cb7_Snapshot.png",
+      "md5": "17b6950906d23fe0923a4635162d7685",
+      "width": 150,
+      "height": 74,
+      "size": 6288,
+      "uploadedDate": "2024-09-20T01:40:29.770Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Categories-1920x1080-3f96b371c33e26285cffc1cf361b75e7.png",
+      "md5": "3f96b371c33e26285cffc1cf361b75e7",
+      "width": 1920,
+      "height": 1080,
+      "size": 498950,
+      "uploadedDate": "2024-09-20T01:40:29.926Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Categories-1920x1080-3f96b371c33e26285cffc1cf361b75e7_Snapshot.png",
+      "md5": "6dbd736a205083e6094e104cc0ecdb66",
+      "width": 150,
+      "height": 74,
+      "size": 5276,
+      "uploadedDate": "2024-09-20T01:40:30.195Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PluginSettings-1920x1080-29a4650f349765689bb1e4785799afc3.png",
+      "md5": "29a4650f349765689bb1e4785799afc3",
+      "width": 1920,
+      "height": 1080,
+      "size": 146320,
+      "uploadedDate": "2024-09-20T01:40:30.378Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PluginSettings-1920x1080-29a4650f349765689bb1e4785799afc3_Snapshot.png",
+      "md5": "d531c7b26ebc20cc91e18876d62d8b9b",
+      "width": 150,
+      "height": 74,
+      "size": 3934,
+      "uploadedDate": "2024-09-20T01:40:30.608Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SaveGameLibrary_thumb-284x284-be2841b41b3487c81b8294a5e9181cd5.png",
+      "md5": "be2841b41b3487c81b8294a5e9181cd5",
+      "width": 284,
+      "height": 284,
+      "size": 54451,
+      "uploadedDate": "2024-05-29T17:46:52.334Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SaveGameLibrary_featured-894x488-244df4d0bf87b7a29098a1e0aca54eef.png",
+      "md5": "244df4d0bf87b7a29098a1e0aca54eef",
+      "width": 894,
+      "height": 488,
+      "size": 216530,
+      "uploadedDate": "2024-05-29T17:46:52.472Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5PluginSettings-1920x1080-80d09bd208c98515c5b44b6164f1ee47_Snapshot.png",
+      "md5": "6c97cb053ff69c4b378b1f27e00b1e92",
+      "width": 150,
+      "height": 74,
+      "size": 3285,
+      "uploadedDate": "2024-01-10T01:06:32.904Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2-1920x1080-e7c0d4cc33a61adfb75eb0f2a9162673_Snapshot.png",
+      "md5": "dbb3a83b118dd440c0f1981e0c0f51dc",
+      "width": 150,
+      "height": 74,
+      "size": 7256,
+      "uploadedDate": "2024-01-10T01:02:52.936Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/savegameplugin1920x1080-1920x1080-7e5f0e10f52e3b05eb527a01031af38d_Snapshot.png",
+      "md5": "01669dddc61365ffc7d4bb019a2e345e",
+      "width": 150,
+      "height": 74,
+      "size": 7617,
+      "uploadedDate": "2023-07-31T11:16:03.601Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot21-1920x1080-959d9b51d02980fc24d9f343979f0a69_Snapshot.png",
+      "md5": "ba17e338d9f0b7756534ece4a84d5618",
+      "width": 150,
+      "height": 74,
+      "size": 3459,
+      "uploadedDate": "2023-07-31T11:16:04.119Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot20-1920x1080-a1bb280d078c5b72fecb68e3ff325eb7_Snapshot.png",
+      "md5": "48a5ba035732ff04a2a173ce39b44de5",
+      "width": 150,
+      "height": 74,
+      "size": 3804,
+      "uploadedDate": "2023-07-31T11:16:04.595Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1StoreAndLoad-1920x1080-f164118b542b1e18023d6bcc07a336cf_Snapshot.png",
+      "md5": "5044fabe0e3446c3fbd821a61a1a9e04",
+      "width": 150,
+      "height": 74,
+      "size": 4934,
+      "uploadedDate": "2022-02-24T15:19:31.209Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2MoreFunctions-1920x1080-ad0188a80f2d09bd08308d4979a0a648_Snapshot.png",
+      "md5": "e28732225587dc709e74277c38e2bae9",
+      "width": 150,
+      "height": 74,
+      "size": 4908,
+      "uploadedDate": "2022-02-24T15:19:31.655Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3Events-1920x1080-5ed5e2581850c826669bf25e9afb8aed_Snapshot.png",
+      "md5": "1a6009a74fdd60340cce7f2f1c4164cf",
+      "width": 150,
+      "height": 74,
+      "size": 5010,
+      "uploadedDate": "2022-02-24T15:19:31.974Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4RightClickMenu-1920x1080-ac7229a8df4383b989df279ae0638c63_Snapshot.png",
+      "md5": "f22dda18812a5d7d4e0bb62043c18eb3",
+      "width": 150,
+      "height": 74,
+      "size": 3646,
+      "uploadedDate": "2022-02-24T15:19:32.316Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5PluginSettings-1920x1080-ac5be3b86e1eb12af49e38791b2413ef_Snapshot.png",
+      "md5": "ed8e52f951f40449eb8075d397c684f4",
+      "width": 150,
+      "height": 74,
+      "size": 3136,
+      "uploadedDate": "2022-02-24T15:19:32.627Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6MissingFiles-1920x1080-845f2cea5c6940e226eb5b2fa7bff007_Snapshot.png",
+      "md5": "88f38e536385bb1d6ebf9c5f5833dc08",
+      "width": 150,
+      "height": 74,
+      "size": 5014,
+      "uploadedDate": "2022-02-24T15:19:33.018Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1StoreAndLoad-1920x1080-f164118b542b1e18023d6bcc07a336cf_Snapshot.png",
+      "md5": "5044fabe0e3446c3fbd821a61a1a9e04",
+      "width": 150,
+      "height": 74,
+      "size": 4934,
+      "uploadedDate": "2022-02-22T17:35:13.344Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2MoreFunctions-1920x1080-ad0188a80f2d09bd08308d4979a0a648_Snapshot.png",
+      "md5": "e28732225587dc709e74277c38e2bae9",
+      "width": 150,
+      "height": 74,
+      "size": 4908,
+      "uploadedDate": "2022-02-22T17:35:13.851Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3Events-1920x1080-5ed5e2581850c826669bf25e9afb8aed_Snapshot.png",
+      "md5": "1a6009a74fdd60340cce7f2f1c4164cf",
+      "width": 150,
+      "height": 74,
+      "size": 5010,
+      "uploadedDate": "2022-02-22T17:35:14.238Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4RightClickMenu-1920x1080-ac7229a8df4383b989df279ae0638c63_Snapshot.png",
+      "md5": "f22dda18812a5d7d4e0bb62043c18eb3",
+      "width": 150,
+      "height": 74,
+      "size": 3646,
+      "uploadedDate": "2022-02-22T17:35:14.568Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5PluginSettings-1920x1080-417159ca080c95df50a0c41a95141ade_Snapshot.png",
+      "md5": "804a22f96ffe4dffcda3f7a4558adf85",
+      "width": 150,
+      "height": 74,
+      "size": 3032,
+      "uploadedDate": "2022-02-22T17:35:15.070Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6MissingFiles-1920x1080-845f2cea5c6940e226eb5b2fa7bff007_Snapshot.png",
+      "md5": "88f38e536385bb1d6ebf9c5f5833dc08",
+      "width": 150,
+      "height": 74,
+      "size": 5014,
+      "uploadedDate": "2022-02-22T17:35:15.541Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-02-27T01:26:00.242Z",
+  "lastModifiedDate": "2024-09-20T02:38:37.172Z",
+  "customAttributes": {},
+  "entitlementName": "293d9c487429407b8d0496a61f35a399",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "d9a49eff669347d28711eb955e5366f9",
+      "appId": "SaveGameLibrary_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-02-22T00:00:00.000Z",
+      "releaseNote": "-Added Project Version to SavedData that is updated with the Project Version in Project Settings when a slot is saved",
+      "versionTitle": "4.26"
+    },
+    {
+      "id": "871f2b585b2e43de9f230888e4f445d7",
+      "appId": "SaveGameLibrary_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-02-22T00:00:00.000Z",
+      "releaseNote": "->Added nodes\n->Fixed crash with NewSaveGame and SaveGame\n->Separated nodes into subcategories",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "88d2f885021d448493255ff9c3317d2d",
+      "appId": "SaveGameLibrary_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-21T00:00:00.000Z",
+      "releaseNote": "->Added nodes\n->Fixed crash with NewSaveGame and SaveGame\n->Separated nodes into subcategories",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "5f006920ea3b456ab50820f909dfb418",
+      "appId": "SaveGameLibrary_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-29T00:00:00.000Z",
+      "releaseNote": "- Added and renamed some nodes\n- Fixed some bugs\n- Organized things better\n- Made documentation",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "45105f3173e945c6bba73b575ef11abe",
+      "appId": "SaveGameLibrary_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-07-31T00:00:00.000Z",
+      "releaseNote": "- StoreValue and GetValue work on anything\n- Actors are now renamed when spawned\n- Added setting to print logs\n- Prepended SGL to all functions",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "5f3cc629d8584a1c955592838810ce0f",
+      "appId": "SaveGameLibrary_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-01-07T00:00:00.000Z",
+      "releaseNote": "- StoreValue and GetValue work on anything\n- Actors are now renamed when spawned\n- Added setting to print logs\n- Prepended SGL to all functions",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "1605d180aac5443097c80b7413a52bb7",
+      "appId": "SaveGameLibrary_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-28T00:00:00.000Z",
+      "releaseNote": "- StoreValue and GetValue work on anything\n- Actors are now renamed when spawned\n- Added setting to print logs\n- Prepended SGL to all functions",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Thomas Jensen",
+  "developerId": "o-vnngeu3c2fevddwfumkyj3b8aq8dl4",
+  "endOfSupport": false,
+  "unsearchable": false
+}

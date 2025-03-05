@@ -1,0 +1,240 @@
+{
+  "id": "a255ec360e314b958da8436a4498e2df",
+  "title": "Spline Navigation plug-in",
+  "description": "Follow navigation pathes with smooth trajectories",
+  "longDescription": "<p><strong>Overview video</strong> : <a href=\"https://youtu.be/yKddqb5F8BU\" rel=\"nofollow\">https://youtu.be/yKddqb5F8BU</a></p><p><strong>Tutorial video :</strong> <a href=\"https://youtu.be/9KSDJ6k_W1I\" rel=\"nofollow\">https://youtu.be/9KSDJ6k_W1I</a></p><p><br /></p><p>Have your vehicles use <strong>path-finding</strong>, with nicely curved and <strong>smooth trajectories</strong>.</p><p><br /></p><p>This plug-in adds components that you can add to your assets to make them able to follow navigation pathes from path-finding system by tracing smooth splines as trajectories to follow along the path points. It will also allow you to limit their rotation speed, making them slow down in the turns and accelerate in straight lines. Finally, the SplineMoveTo task will allow you to set the final orientation of the trajectory.</p><p><br /></p><p>Its main component is SplinePathFollowingComponent is a component that will replace the PathFollowingComponent of your AI Controller. It will trace a spline using the path points given by the path-finding system and will give the right input to movevement compoennts to follow it.</p><p><br /></p><p>This may be used either with the included movement components and Move AI task or with your own.</p><p><br /></p><p>The whole plug-in is coded in C&#43;&#43; but is both usable in blueprint-only projects, and delivered with fully documented source code and adjustable / modifiable for C&#43;&#43; project.</p>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li> Spline tracing according to navigation path</li><li> Path-following with limited rotation speed (in degrees per seconds), both position-based and acceleration-based</li><li> MoveTo AI Task with expected final rotation</li></ul><p><strong>Code Modules:</strong></p><ul><li> This plug-in adds a SplinePathFollowingComponent and SplineMovementComponent classes that will trace a spline using the path points given by the path-finding system and that will follow it. And a &#34;SplineMoveTo&#34; behavior tree task that allows to use it.</li><li>There are two possible movement components (one position-based, one acceleration based). Both have three characteristics : max speed (uu per seconds), acceleration (uu per seconds square) and maximum rotation speed (degrees per seconds) and it will follow the spline the fastest it can respecting these constraints. This is a position-based movement component.</li><li>The &#34;SplineMoveTo&#34; BT task is basically a move to task that also allows to define the desired final rotation to achieve. The spline trajectory will be adjusted to maneuver and arrive to destination from the correct direction.</li></ul><p><strong>Number of Blueprints:</strong> 0</p><p><strong>Number of C&#43;&#43; Classes:</strong> 5</p><p><strong>Network Replicated:</strong> No</p><p><strong>Supported Development Platforms:</strong> Windows</p><p><strong>Supported Target Build Platforms:</strong> Any</p><p><strong>Documentation:</strong> <a href=\"https://nuage.liiib.re/s/zXkYXpJNX9NJJq3\" rel=\"nofollow\">https://nuage.liiib.re/s/zXkYXpJNX9NJJq3</a></p><p><strong>Example Project:</strong> <a href=\"https://nuage.liiib.re/s/pZ6RNbbPSaSGNfD\" rel=\"nofollow\">https://nuage.liiib.re/s/pZ6RNbbPSaSGNfD</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SplineNavigation1-1920x1080-8a516df8671b02c60124f746c075e599.png",
+      "md5": "8a516df8671b02c60124f746c075e599",
+      "width": 1920,
+      "height": 1080,
+      "size": 888188,
+      "uploadedDate": "2021-03-15T20:43:11.635Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SplineNavigation2-1920x1080-e27f4f948b518a1666f7f894d5e36105.png",
+      "md5": "e27f4f948b518a1666f7f894d5e36105",
+      "width": 1920,
+      "height": 1080,
+      "size": 905303,
+      "uploadedDate": "2021-03-15T20:43:12.153Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SplineNavigationplugin_thumb-284x284-eacd00819d423f6eeee536232364da61.png",
+      "md5": "eacd00819d423f6eeee536232364da61",
+      "width": 284,
+      "height": 284,
+      "size": 59099,
+      "uploadedDate": "2022-10-19T19:11:34.623Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SplineNavigationplugin_featured-894x488-7fe19e2fc83be7a0ea9024b40f38fd6d.png",
+      "md5": "7fe19e2fc83be7a0ea9024b40f38fd6d",
+      "width": 894,
+      "height": 488,
+      "size": 179142,
+      "uploadedDate": "2022-10-19T19:11:34.785Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SplineNavigation1-1920x1080-8a516df8671b02c60124f746c075e599_Snapshot.png",
+      "md5": "67582f3bc3c87cb51d11eb10df0e67e0",
+      "width": 150,
+      "height": 74,
+      "size": 4441,
+      "uploadedDate": "2021-03-15T20:43:11.959Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SplineNavigation2-1920x1080-e27f4f948b518a1666f7f894d5e36105_Snapshot.png",
+      "md5": "5f1fbcca1ead89cfb9c1fa4e63dd6b41",
+      "width": 150,
+      "height": 74,
+      "size": 4686,
+      "uploadedDate": "2021-03-15T20:43:12.483Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-03-18T16:27:13.799Z",
+  "lastModifiedDate": "2025-02-22T18:10:24.933Z",
+  "customAttributes": {},
+  "entitlementName": "a255ec360e314b958da8436a4498e2df",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "f10d7bf978b348aba4b6036309ab67e2",
+      "appId": "SplineNavigation_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-03-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Release 4.26"
+    },
+    {
+      "id": "dcdd6be94e874401b0104764ce3d67ad",
+      "appId": "SplineNavigation_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2021-10-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Release 4.27"
+    },
+    {
+      "id": "2b1dacf3e3e34709802ccaa49c050b6d",
+      "appId": "SplineNavigation_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-08-31T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Release 5.0"
+    },
+    {
+      "id": "7875869cb3ee4427b02c961329633e0b",
+      "appId": "SplineNavigation_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-11-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Release 5.1"
+    },
+    {
+      "id": "782d3a0efb0d4f27ae5098f9818d2d33",
+      "appId": "SplineNavigation_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-06-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Release 5.2"
+    },
+    {
+      "id": "07385a7969934e3591978aa86a4571cd",
+      "appId": "SplineNavigation_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2023-10-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Release 5.3"
+    },
+    {
+      "id": "355c9b5d91de45e9ae44b774a4973cdd",
+      "appId": "SplineNavigation_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2024-05-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Release 5.4"
+    }
+  ],
+  "developer": "GB Studio",
+  "developerId": "o-emp5mdm3srxs3d8rh2g5xqbdk945u7",
+  "endOfSupport": false,
+  "unsearchable": false
+}

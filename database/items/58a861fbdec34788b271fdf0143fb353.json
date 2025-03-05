@@ -1,0 +1,343 @@
+{
+  "id": "58a861fbdec34788b271fdf0143fb353",
+  "title": "Interactable Door Multiplayer Ready and Highly customizable",
+  "description": "Multiplayer ready doors that have a large amount of options to suit the needs in your game on a budget!",
+  "longDescription": "<p>V2.5 Update:</p><p>Small misc improvements since the initial release of 2.4 along with the ability to peek the doors (rotate slowly) via blueprint as well.</p><p><br /></p><p>V2.4 Update:</p><p>Added ability to lock doors through the switch with the options to either Toggle the lock state (independent of each door, if locked it will be unlocked) by calling ToggleDoorsLock() or by forcing the door locks to a specific state by calling LockDoors(bool) and passing in true/false depending on the state you wish to have. Both are blueprint callable under the Interactable Door category.</p><p><br /></p><p>V2.3 Update:</p><p>Added auto closing doors.</p><p>WIP Added the ability to incrementally open/close doors (example given in the c&#43;&#43; on how to use it) with the DoorStandard_Static door, please report any issues with this feature if you use it! There is more work to be done on it.</p><p>Fixed a potential crash.</p><p><br /></p><p>V2.2 Update: https://www.youtube.com/watch?v&#61;kp5LtsdUoFA&amp;ab_channel&#61;SneakyKittyGaming</p><p>Multiplayer ready doors that are built to be easily and highly customizable and accessed via blueprint for an affordable price. This plugin comes with a custom door along with its animations and sounds to play for opening, closing, locking, and unlocking. The goal behind these doors is to have them be easily setup in nearly every possible way to cover whatever need you have for your doors while being both performance and network efficient. If you have a skeletal mesh with no animations, no problem just drive your doors via code (handled by default for you). If you want to use a static mesh for your doors, no problem just drive them by code (handled by default for you). Currently this is the first release with most major features implemented, however I do plan to add more based on your suggestions/wishes!</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Multiplayer Ready</li><li>Control doors via switch</li><li>Rotating Doors</li><li>Sliding Doors</li><li> Lock/Unlock door</li><li>Set door to start locked</li><li>Peek doors via mouse wheel</li><li>Control door rotation via code OR animation</li><li>Control door via physics</li><li>Set door to open away from the player or rotate clockwise/counterclockwise</li><li>Control door sliding via code OR animation</li><li>Adjust door rotation speed, angle, sliding speed, and type (linear or non linear (start fast end slowly)) when driven by code</li><li>Events setup to be triggered in blueprint (listed below)</li><li>DoorFinishedRotating (fully open/closed), DoorStateChanged (opened/closed), DoorLockStateChanged (locked/unlocked). Each event returns an Enum, for the door state the Enum values are (OpenedClockwise, OpenedCounterClockwise, ClosedClockwise, ClosedCounterClockwise), for the door lock state the Enum values are (Unlocked, Locked), DoorFinishedSliding, DoorSlidingStateChanged</li><li>Example characters using the door, One in C&#43;&#43; and One in Blueprint</li></ul><p>Content:</p><ul><li>Custom Door Meshes and Textures</li><li>Custom Door Animations</li><li>Custom Door Sounds (Lock sounds included)</li></ul><p>Code Modules:</p><ul><li> InteractableDoor, Runtime</li></ul><p>Number of Blueprints: 8</p><p>Number of C&#43;&#43; Classes: 8</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Contact: <a href=\"https://discord.gg/W5g6pZXfjh\" rel=\"nofollow\">https://discord.gg/W5g6pZXfjh</a></p><p>Documentation: https://www.youtube.com/watch?v&#61;YEOwwdbcC9I&amp;ab_channel&#61;SneakyKittyGaming</p><p>Support Email: sneakykittygamedev&#64;gmail.com</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BPDoorSimple-1920x1080-a696838e6039601a00ba691aa98d16cb.png",
+      "md5": "a696838e6039601a00ba691aa98d16cb",
+      "width": 1920,
+      "height": 1080,
+      "size": 704036,
+      "uploadedDate": "2020-11-02T19:10:49.985Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BPDoorSliding-1920x1080-85f5da1bd414cfea608c7e519b27b8ba.png",
+      "md5": "85f5da1bd414cfea608c7e519b27b8ba",
+      "width": 1920,
+      "height": 1080,
+      "size": 716791,
+      "uploadedDate": "2020-11-02T19:10:50.417Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BPDoorSlidingStatic-1920x1080-3d505f7faae3bb95d84ce61833ce1cd3.png",
+      "md5": "3d505f7faae3bb95d84ce61833ce1cd3",
+      "width": 1920,
+      "height": 1080,
+      "size": 821119,
+      "uploadedDate": "2020-11-02T19:10:50.812Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BPDoorStandard-1920x1080-47be0687ebab62d77c6f0f40bf664dba.png",
+      "md5": "47be0687ebab62d77c6f0f40bf664dba",
+      "width": 1920,
+      "height": 1080,
+      "size": 676970,
+      "uploadedDate": "2020-11-02T19:10:51.216Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BPDoorStandardStatic-1920x1080-272b259abd5acc09e32ca251ee51879c.png",
+      "md5": "272b259abd5acc09e32ca251ee51879c",
+      "width": 1920,
+      "height": 1080,
+      "size": 664794,
+      "uploadedDate": "2020-11-02T19:10:51.643Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenShot00001-1920x1080-27141c4f0550f755b1f4d2b881f4a0fd.png",
+      "md5": "27141c4f0550f755b1f4d2b881f4a0fd",
+      "width": 1920,
+      "height": 1080,
+      "size": 2274862,
+      "uploadedDate": "2020-11-02T19:28:43.420Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/CustomizableMultiplayerInteractableDoors_thumb-284x284-0454a98ea3b9fad299f2d62a12f66cb4.png",
+      "md5": "0454a98ea3b9fad299f2d62a12f66cb4",
+      "width": 284,
+      "height": 284,
+      "size": 88342,
+      "uploadedDate": "2020-10-22T05:56:20.921Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/InteractableDoorMultiplayerreadyandHighlycustomizable_featured-894x488-5352edfbaca8ebeee26e7145ed6f372d.png",
+      "md5": "5352edfbaca8ebeee26e7145ed6f372d",
+      "width": 894,
+      "height": 488,
+      "size": 477603,
+      "uploadedDate": "2020-11-02T19:11:43.277Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00001-1920x1080-27141c4f0550f755b1f4d2b881f4a0fd_Snapshot.png",
+      "md5": "6da8dd630a7b30cd976fae60168985d4",
+      "width": 150,
+      "height": 74,
+      "size": 4643,
+      "uploadedDate": "2020-11-02T19:28:43.776Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BPDoorSimple-1920x1080-a696838e6039601a00ba691aa98d16cb_Snapshot.png",
+      "md5": "b5db0d8c5c5c2b1fbd7f87de373fe19d",
+      "width": 150,
+      "height": 74,
+      "size": 4733,
+      "uploadedDate": "2020-11-02T19:10:50.269Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BPDoorSliding-1920x1080-85f5da1bd414cfea608c7e519b27b8ba_Snapshot.png",
+      "md5": "aaca8449c5c07a122a95c1c3c119c332",
+      "width": 150,
+      "height": 74,
+      "size": 4896,
+      "uploadedDate": "2020-11-02T19:10:50.664Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BPDoorSlidingStatic-1920x1080-3d505f7faae3bb95d84ce61833ce1cd3_Snapshot.png",
+      "md5": "fa345b3be5f3f65c55659a3ab1dfe48d",
+      "width": 150,
+      "height": 74,
+      "size": 5129,
+      "uploadedDate": "2020-11-02T19:10:51.071Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BPDoorStandard-1920x1080-47be0687ebab62d77c6f0f40bf664dba_Snapshot.png",
+      "md5": "5c1b8c02f731357a41db1d0a6f877b85",
+      "width": 150,
+      "height": 74,
+      "size": 4609,
+      "uploadedDate": "2020-11-02T19:10:51.460Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BPDoorStandardStatic-1920x1080-272b259abd5acc09e32ca251ee51879c_Snapshot.png",
+      "md5": "9539c74430d240bd6ef202a697a3187a",
+      "width": 150,
+      "height": 74,
+      "size": 4712,
+      "uploadedDate": "2020-11-02T19:10:51.912Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00001-1920x1080-27141c4f0550f755b1f4d2b881f4a0fd_Snapshot.png",
+      "md5": "6da8dd630a7b30cd976fae60168985d4",
+      "width": 150,
+      "height": 74,
+      "size": 4643,
+      "uploadedDate": "2020-11-02T19:10:52.485Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image Doors-1920x1080-b6b90bb203d725808c407e559f9ff318_Snapshot.png",
+      "md5": "188bb9b262d3651f6ac3e8fe4776e616",
+      "width": 150,
+      "height": 74,
+      "size": 3910,
+      "uploadedDate": "2020-11-01T05:46:44.119Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings 1-1920x1080-108b302f14969fce76ccefff3a8a8a4e_Snapshot.png",
+      "md5": "7f083578d0f256d4cb71f55d44336ad8",
+      "width": 150,
+      "height": 74,
+      "size": 4350,
+      "uploadedDate": "2020-10-16T18:06:34.149Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings 2-1920x1080-732046b72dc568b73285129075868dea_Snapshot.png",
+      "md5": "162310035dbeca80a40624397f68e53d",
+      "width": 150,
+      "height": 74,
+      "size": 4209,
+      "uploadedDate": "2020-10-16T18:06:34.495Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ENUMS-1920x1080-a1f5eb849b3696940280bd25a90a293c_Snapshot.png",
+      "md5": "ea25a477a84e441d73d0f6ae9cba8c64",
+      "width": 150,
+      "height": 74,
+      "size": 4640,
+      "uploadedDate": "2020-10-16T18:06:34.812Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Door Options-1920x1080-133033c7970b5d6788ad7b1288abe020_Snapshot.png",
+      "md5": "8bc51b90b271310ebc887a75d1cbed77",
+      "width": 150,
+      "height": 74,
+      "size": 4965,
+      "uploadedDate": "2020-10-16T00:39:30.074Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image Doors-1920x1080-7c2a116153b6305dc7c9ee9252c039be_Snapshot.png",
+      "md5": "8c757c9de9b745ede6a8df25ee6dd88b",
+      "width": 150,
+      "height": 74,
+      "size": 4332,
+      "uploadedDate": "2020-10-16T00:39:30.528Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-10-18T22:01:12.599Z",
+  "lastModifiedDate": "2024-06-18T18:28:48.060Z",
+  "customAttributes": {},
+  "entitlementName": "58a861fbdec34788b271fdf0143fb353",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "69ecfa611bb74b5b939ede9d0aeeaa20",
+      "appId": "CustomizableMultiplayerInteractableDoors_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-10-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V2.5 4.24"
+    },
+    {
+      "id": "eb24f00ae8294777947dd2f6c95bf872",
+      "appId": "CustomizableMultiplayerInteractableDoors_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-10-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V2.5 4.25"
+    },
+    {
+      "id": "88cff570456d4f418f8a399a449b05c1",
+      "appId": "CustomizableMultiplayerInteractableDoors_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V2.5 4.26"
+    },
+    {
+      "id": "8677ad21975844cba49f8d6d250b65f3",
+      "appId": "CustomizableMultiplayerInteractableDoors_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V2.5 4.27"
+    },
+    {
+      "id": "eac500af13a64df7b35189b8a5a548f7",
+      "appId": "CustomizableMultiplayerInteractableDoors_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V2.5 5.0"
+    },
+    {
+      "id": "f1fab5ebba814cbdb921bcb42ce8c385",
+      "appId": "CustomizableMultiplayerInteractableDoors_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V2.5 5.1"
+    },
+    {
+      "id": "8b4f3b69693a40dc9161a5381dbc3fce",
+      "appId": "CustomizableMultiplayerInteractableDoors_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V2.5 5.2"
+    },
+    {
+      "id": "1019fb6f622b4dfab8bfba9b24f303b5",
+      "appId": "CustomizableMultiplayerInteractableDoors_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V2.5 5.3"
+    },
+    {
+      "id": "822f79dd085a4373a35160df28de9dd3",
+      "appId": "CustomizableMultiplayerInteractableDoors_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "PS4",
+        "Nintendo Switch",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V2.5 5.4"
+    }
+  ],
+  "developer": "Sneaky Kitty Game Dev",
+  "developerId": "o-6wmq4ef76gq5yweewddyjrkvbld3tm",
+  "endOfSupport": false,
+  "unsearchable": false
+}

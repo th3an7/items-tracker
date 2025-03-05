@@ -1,0 +1,316 @@
+{
+  "id": "dddb4db4027c43029442a2a2fb36d6bc",
+  "title": "Neo Kinect",
+  "description": "Gain easy access to the Kinect v2 capabilities in your games",
+  "longDescription": "<p>With the <strong>Neo Kinect</strong> plugin you can use the Kinect v2 sensor advanced capabilities within Unreal Engine, with easy to use Blueprint nodes, all nicely commented, or directly through the C&#43;&#43; methods. And starting with Unreal Engine 5, the plugin is fully compatible with DX12 and all its perks, like ray tracing and Lumen.</p><p><br /></p><h1>Examples and Quick Start doc</h1><p><strong>Quick Start guide:</strong> <a href=\"https://files.rvillani.com/neokinect/NeoKinect-QuickStart.pdf\" rel=\"nofollow\">NeoKinect-QuickStart.pdf</a></p><p><br /></p><p><strong>Example Project for Unreal Engine 5:</strong> <a href=\"https://files.rvillani.com/neokinect/NeoKinectExamples.zip\" rel=\"nofollow\">NeoKinectExamples.zip</a>.</p><ul><li>This example is not yet using the new demo room from UE5, only the new skeleton (the UE4 one is still there as well).</li></ul><p><br /></p><p><strong>Example Project for Unreal Engine 4:</strong> <a href=\"https://files.rvillani.com/neokinect/NeoKinectExamples_UE4.zip\" rel=\"nofollow\">NeoKinectExamples_UE4.zip</a>.</p><ul><li><a href=\"https://files.rvillani.com/neokinect/AvateeringDemo_Smoothed.zip\" rel=\"nofollow\">Updated AvateeringDemo Blueprint</a> with joint smoothing for UE 4.26&#43; (replace the asset on the example project).</li></ul><p><br /></p><p><strong>Videos </strong>of projects made with this plugin:</p><p><a href=\"https://redirect.epicgames.com/?redirectTo&#61;https://www.youtube.com/watch?v&#61;RyDmDAZYbAE\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;RyDmDAZYbAE</a></p><p><a href=\"https://redirect.epicgames.com/?redirectTo&#61;https://www.youtube.com/watch?v&#61;x0RH_-xRhFU\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;x0RH_-xRhFU</a></p><p><a href=\"https://redirect.epicgames.com/?redirectTo&#61;https://www.youtube.com/watch?v&#61;59fnWYRQN88\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;59fnWYRQN88</a></p><p><br /></p><p><strong>FAQ</strong></p><p>If you have a question about a problem with the plugin, maybe it&#39;s been answered <a href=\"https://forums.unrealengine.com/t/neo-kinect-easy-access-to-the-kinect-v2-capabilities-in-your-games/\" rel=\"nofollow\">here</a>, at the end of the first post, in the <strong>FAQ</strong> section.</p><p><br /></p><h1>Release Notes</h1><p>Minor engine version updates are not listed here as changes. Only changes related to functionality and fixes.</p><p><br /></p><h2>Unreal 5.0 release (April 4, 2022)</h2><p>Front-end (project and Blueprints):</p><ul><li>Frames are now returned as TextureRenderTarget2D from SetUseFrame. Widgets accessing the frame textures need to be updated as before a cast to a custom texture format was required. That custom format no longer exists as its customizations are no longer needed. As a bonus, that enables the next item in this list.</li><li>Now compatible with DX12 and all its perks, like Ray Tracing, Lumen and so on!</li></ul><p>Code:</p><ul><li>Fixed a memory leak when enabling frame types.</li><li>Lots of IWYU improvements, with less included clutter in public headers.</li></ul><p><br /></p><h1>Features Overview</h1><p><br /></p><h2>Robust and fast</h2><p>The plugin was created with performance and usability in mind, so you can track all 6 possible users, their faces and enable all of the Kinect&#39;s frame types (color, depth, infrared etc) at the same time with almost no hit in performance. Sensor polling is made in its own thread. The frames textures (color camera, depth camera, IR and their variations) are TextureRenderTarget2D (UE5&#43; only. A custom texture format was used on UE4), which is compatible with materials, UMG Widgets and whatnot. There are functions to access the textures pixel values from Blueprint as well.</p><p><br /></p><h2>No need for components</h2><p>The sensor is unique, no matter how many Actors or Widgets are using it. So, instead of needing to add components, you just call functions like with a function library. That way you can control the device from any Blueprint, including Widgets.</p><p><br /></p><h2>Advanced Remapping</h2><p>Besides access to the standard Microsoft Kinect API coordinate remapping methods, the plugin also comes with other remapping features that facilitate AR applications, like getting the location of a joint in the Color frame without losing its depth information. Every location and orientation was adapted to Unreal&#39;s coordinate system and Joints transforms are compatible with the Engine&#39;s Mannequin character rig.</p><p><br /></p><h2>Fully production proven</h2><p>I&#39;ve used Neo Kinect a lot (more than a year) before releasing to the public and removed all bugs found so far, besides making a lot of performance improvements. It was used in applications that go through a whole day without crashing and packages without problems.</p>",
+  "technicalDetails": "<h2>Body tracking:</h2><ul><li>Tracking of up to 6 simultaneous users&#39;s skeletons, with 25 joints each</li><li>Users leaning angle, tracking confidence, Body edge clipping, hands states</li><li>Per Body found/lost events</li></ul><p><br /></p><h2>Face tracking:</h2><ul><li>Location and orientation of up to 6 simultaneous users&#39;s faces</li><li>Face points (left and right eyes, nose and left and right mouth corners) in 3D and 2D (Color and Infrared space)</li><li>Faces bounding boxes in Color and Infrared frames space</li><li>Expressions reading (Engaged, Happy, Looking Away, Mouth Moved, Mouth Open and Left and Right Eyes Open/Closed) and if users are Wearing glasses or not</li><li>Per Face found/lost events</li></ul><p><br /></p><h2>Sensor control:</h2><ul><li>Global bodies/faces tracking events (found/lost)</li><li>Init/Uninit sensor</li><li>Get sensor tilt, ground plane normal and sensor height</li></ul><p><br /></p><h2>Remapping:</h2><ul><li>3D camera location to Color texture (optionally with depth) and to Depth texture</li><li>Find depth of a Color texture location</li><li>Depth point to Color point and to 3D location</li></ul><p><br /></p><h2>Frames (textures):</h2><ul><li>Get each frame FOV and dimensions</li><li>Toggle frames usage individually</li><li>Sample a pixel value from the Depth frame and find the depth of a Color pixel</li></ul><p><br /></p><p><strong>Network Replicated:</strong> No</p><p><strong>Platform:</strong> Win64 only</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Avateering-1920x1080-93c9738517d572f550dc31957793d605.jpg",
+      "md5": "93c9738517d572f550dc31957793d605",
+      "width": 1920,
+      "height": 1080,
+      "size": 248226,
+      "uploadedDate": "2018-01-25T12:03:44.082Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FaceTracking-1920x1080-b8f128332ede4ee9003470fca3c759b9.jpg",
+      "md5": "b8f128332ede4ee9003470fca3c759b9",
+      "width": 1920,
+      "height": 1080,
+      "size": 309806,
+      "uploadedDate": "2018-01-25T12:03:44.379Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Remapping-1920x1080-a0668b7f8f8dc239809865c865e39bd5.jpg",
+      "md5": "a0668b7f8f8dc239809865c865e39bd5",
+      "width": 1920,
+      "height": 1080,
+      "size": 282427,
+      "uploadedDate": "2018-01-25T12:03:44.520Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Frames-1920x1080-a89c52f7efb93d0873b6d69564eb5996.jpg",
+      "md5": "a89c52f7efb93d0873b6d69564eb5996",
+      "width": 1920,
+      "height": 1080,
+      "size": 238247,
+      "uploadedDate": "2018-01-25T12:03:44.651Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ContentExamples-1920x1080-70941ca972b559167f68c20a457b408e.jpg",
+      "md5": "70941ca972b559167f68c20a457b408e",
+      "width": 1920,
+      "height": 1080,
+      "size": 263070,
+      "uploadedDate": "2018-01-25T12:03:44.781Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ProductionProven-1920x1080-ce31203fdbe96c2d0d398fdd3cfe2a8f.jpg",
+      "md5": "ce31203fdbe96c2d0d398fdd3cfe2a8f",
+      "width": 1920,
+      "height": 1080,
+      "size": 438292,
+      "uploadedDate": "2018-01-25T12:03:44.218Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlueprintNodes-1920x1080-9cefbf619c34b1e18a957368893bd0a3.jpg",
+      "md5": "9cefbf619c34b1e18a957368893bd0a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 467273,
+      "uploadedDate": "2018-01-25T12:29:34.039Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WidgetTextures-1920x1080-eb40a495463b8406782fe54586f2b7c0.jpg",
+      "md5": "eb40a495463b8406782fe54586f2b7c0",
+      "width": 1920,
+      "height": 1080,
+      "size": 227848,
+      "uploadedDate": "2018-02-15T21:04:13.667Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/NeoKinect_thumb-284x284-bdd90c670f055aa40633c4b211db1d9c.png",
+      "md5": "bdd90c670f055aa40633c4b211db1d9c",
+      "width": 284,
+      "height": 284,
+      "size": 137526,
+      "uploadedDate": "2018-01-25T12:03:44.862Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/NeoKinect_featured-894x488-2989d0839e47830798a115f0c4241767.png",
+      "md5": "2989d0839e47830798a115f0c4241767",
+      "width": 894,
+      "height": 488,
+      "size": 549489,
+      "uploadedDate": "2018-01-25T12:03:45.021Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-02-15T19:39:09.654Z",
+  "lastModifiedDate": "2024-11-25T17:57:28.202Z",
+  "customAttributes": {},
+  "entitlementName": "dddb4db4027c43029442a2a2fb36d6bc",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "43e3b6ab663842b5b2e672a513bf0803",
+      "appId": "NeoKinectUnreal_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-01-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Launch - 4.18"
+    },
+    {
+      "id": "0b549ad8675446fbb69be274c876e4e6",
+      "appId": "NeoKinectUnreal_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-03-15T00:00:00.000Z",
+      "releaseNote": "There are no source changes. I just need Epic to create a new build with the binaries for UE 4.19, so the user's editor won't complain about the dlls version.",
+      "versionTitle": "Update Binaries to 4.19"
+    },
+    {
+      "id": "8bc1bd9f0cba4d5fa259f1a36e68e73c",
+      "appId": "NeoKinectUnreal_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-07-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Source update to 4.20"
+    },
+    {
+      "id": "12be001ffc0749ebbfad33e49afafb79",
+      "appId": "NeoKinectUnreal_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-11-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Source update to 4.21"
+    },
+    {
+      "id": "790ee314948244238e0a7c04f1a7bce0",
+      "appId": "NeoKinectUnreal_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Source update to 4.22"
+    },
+    {
+      "id": "766416aac484453186a03ffa9b43292c",
+      "appId": "NeoKinectUnreal_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-10-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Source update to 4.23"
+    },
+    {
+      "id": "5ee4f47fd187407e8ab920f5c2d772df",
+      "appId": "NeoKinectUnreal_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-12-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Source update to 4.24"
+    },
+    {
+      "id": "6ce8e212a5f743ddae6e0c1a2525365c",
+      "appId": "NeoKinectUnreal_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-05-31T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Source update to 4.25"
+    },
+    {
+      "id": "3a35de0f2a94487c977566feda694f91",
+      "appId": "NeoKinectUnreal_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-01-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Source update to 4.26"
+    },
+    {
+      "id": "55c84918f2884b95b902b71fb609f0bf",
+      "appId": "NeoKinectUnreal_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-09-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Source update to 4.27"
+    },
+    {
+      "id": "9063f949ed7949a0b05fac61e3dd4137",
+      "appId": "NeoKinectUnreal_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Unreal 5.0"
+    },
+    {
+      "id": "38ca49429c31400ab1c6b105ec9b5555",
+      "appId": "NeoKinectUnreal_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Unreal 5.1"
+    },
+    {
+      "id": "889ca414aa5046eaba53107eb15af1d0",
+      "appId": "NeoKinectUnreal_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Unreal 5.2"
+    },
+    {
+      "id": "879a2cd7ffc84060b7f5a7c27049ca4a",
+      "appId": "NeoKinectUnreal_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-28T00:00:00.000Z",
+      "releaseNote": "Fix a crash",
+      "versionTitle": "Unreal 5.3.0"
+    },
+    {
+      "id": "25b1c1d942aa4ad0a683655e97c74777",
+      "appId": "NeoKinectUnreal_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Rodrigo Villani",
+  "developerId": "o-ffe9233e1b48a4808007e38564ee46",
+  "endOfSupport": false,
+  "unsearchable": false
+}

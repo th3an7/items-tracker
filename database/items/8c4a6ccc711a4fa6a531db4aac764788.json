@@ -1,0 +1,240 @@
+{
+  "id": "8c4a6ccc711a4fa6a531db4aac764788",
+  "title": "Character Wound System",
+  "description": "Character Wound System let you shoot/hit enemies and create a blood mask where you hit it",
+  "longDescription": "<p>This system uses a blood mask (texture) used to create blood effects in your characters, you can shoot/hit them in animation or in ragdoll mode. No c&#43;&#43; required, it uses a SceneCapture2D to render the blood mask texture only when a new hit is requested, it have no extra performance cost and no additional draw calls when not adding new hits.</p><p><br /></p><p><strong>Videos:</strong></p><p><a href=\"https://www.youtube.com/watch?v&#61;SQIjaKjAsRg\" rel=\"nofollow\">Main Video</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;S-ol97kTgDw\" rel=\"nofollow\">Tutorial Video (blood mask method)</a></p><p><strong>Download Demo:</strong></p><p><a href=\"https://drive.google.com/open?id&#61;1yrQcjBPLVF0WuGt-nH-MzTJgNw35PYW1\" rel=\"nofollow\">CWS_v1.2.0_demo.zip</a></p><p><br /></p><p><strong>Support:</strong></p><p><a href=\"https://discord.gg/QFFWV7w\" rel=\"nofollow\">Discord</a></p>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li> Full body damage system for characters, while playing animations or in ragdoll mode</li><li> Uses a texture mask, so it&#39;s easy to implement your own blood shaders</li><li> All blueprint, no C&#43;&#43; required</li></ul><p><br /></p><p><strong>Number of Blueprints:</strong> 1</p><p><strong>Input:</strong> Gamepad, Keyboard, Mouse</p><p><strong>Network Replicated:</strong> No</p><p><strong>There are assets created by Epic</strong>: Yes</p><p><strong>Supported Development Platforms:</strong> Windows, Linux</p><p><strong>Documentation:</strong> <a href=\"https://docs.google.com/document/d/1TM0w9nkT-RDTlqHT99oKisSjsWpBNHHFLqGaqkLITpg/edit\" rel=\"nofollow\">https://docs.google.com/document/d/1TM0w9nkT-RDTlqHT99oKisSjsWpBNHHFLqGaqkLITpg</a></p><p><br /></p><p><strong>Important/Additional Notes:</strong></p><ul><li>It uses a &#34;SceneCapture2D&#34; for rendering the hit location and an additional &#34;Render Material to RenderTarget&#34; for dilating the blood mask for removing possible UV seams. It only renders when you request a new hit in the mesh, the character shader doesn&#39;t have any additional performance cost other than just having an extra texture in your material.</li><li>It requires your mesh to have a second UV (lightmap UV) that have a full body UV with no overlaping UVs for the blood mask to work. (you need to be able to edit your mesh UVs in a DCC software like Blender or Maya)</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SC01-1920x1080-89b8fe2910f24e2325fd64b3463037b6.png",
+      "md5": "89b8fe2910f24e2325fd64b3463037b6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1928922,
+      "uploadedDate": "2020-03-14T06:29:26.233Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Example01-1920x1080-ecbde3fef6555dab823afb8106be87eb.png",
+      "md5": "ecbde3fef6555dab823afb8106be87eb",
+      "width": 1920,
+      "height": 1080,
+      "size": 2309797,
+      "uploadedDate": "2020-03-14T07:40:17.621Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Example02-1920x1080-33f8ca27757d6dc23af720ba22fd4e6a.png",
+      "md5": "33f8ca27757d6dc23af720ba22fd4e6a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2523152,
+      "uploadedDate": "2020-03-14T07:40:18.085Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Example03-1920x1080-76c730c94f86e2096b8908089c43c521.png",
+      "md5": "76c730c94f86e2096b8908089c43c521",
+      "width": 1920,
+      "height": 1080,
+      "size": 2384012,
+      "uploadedDate": "2020-03-14T07:43:32.582Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Example04-1920x1080-fac06046da77a7dd2f64dbd90450cd17.png",
+      "md5": "fac06046da77a7dd2f64dbd90450cd17",
+      "width": 1920,
+      "height": 1080,
+      "size": 2955877,
+      "uploadedDate": "2020-03-14T07:40:19.543Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/proj2x-1920x1080-deb769a9888d9cfb493b38e4b6dc5d68.png",
+      "md5": "deb769a9888d9cfb493b38e4b6dc5d68",
+      "width": 1920,
+      "height": 1080,
+      "size": 2040402,
+      "uploadedDate": "2020-08-12T03:34:29.065Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/soaking-1920x1080-1f61b196022236691b4830eda7124f8e.png",
+      "md5": "1f61b196022236691b4830eda7124f8e",
+      "width": 1920,
+      "height": 1080,
+      "size": 2080380,
+      "uploadedDate": "2020-08-12T03:39:06.238Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/CharacterWoundSystem_thumb-284x284-884a081f6170843800aafd8b50eb425b.png",
+      "md5": "884a081f6170843800aafd8b50eb425b",
+      "width": 284,
+      "height": 284,
+      "size": 111034,
+      "uploadedDate": "2023-06-06T09:11:55.690Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/CharacterWoundSystem_featured-894x488-929b8593b5210350029ffe554d31b8bd.png",
+      "md5": "929b8593b5210350029ffe554d31b8bd",
+      "width": 894,
+      "height": 488,
+      "size": 404695,
+      "uploadedDate": "2020-03-14T06:29:26.805Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/soaking-1920x1080-1f61b196022236691b4830eda7124f8e_Snapshot.png",
+      "md5": "e5e35a9734d913b90efa8cde070c2740",
+      "width": 150,
+      "height": 74,
+      "size": 7015,
+      "uploadedDate": "2020-08-12T03:39:06.533Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/proj2x-1920x1080-deb769a9888d9cfb493b38e4b6dc5d68_Snapshot.png",
+      "md5": "17c6c7387eb5a51bef6f69b3be9d998f",
+      "width": 150,
+      "height": 74,
+      "size": 7303,
+      "uploadedDate": "2020-08-12T03:34:29.428Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example03-1920x1080-76c730c94f86e2096b8908089c43c521_Snapshot.png",
+      "md5": "f148ec2e679d2f2b42ba1a2cf5027e3f",
+      "width": 150,
+      "height": 74,
+      "size": 5794,
+      "uploadedDate": "2020-03-14T07:43:33.022Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example01-1920x1080-ecbde3fef6555dab823afb8106be87eb_Snapshot.png",
+      "md5": "81d53a8f5a5b395aaf7aa6c210bade58",
+      "width": 150,
+      "height": 74,
+      "size": 4545,
+      "uploadedDate": "2020-03-14T07:40:17.941Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example02-1920x1080-33f8ca27757d6dc23af720ba22fd4e6a_Snapshot.png",
+      "md5": "449848968fdb5385e14b598ed99f9b52",
+      "width": 150,
+      "height": 74,
+      "size": 5179,
+      "uploadedDate": "2020-03-14T07:40:18.392Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example03-1920x1080-dce9e35b992809d9a249491168ac9104_Snapshot.png",
+      "md5": "24f60ee0082f0d8e7b99d8a3ebe837d0",
+      "width": 150,
+      "height": 74,
+      "size": 5797,
+      "uploadedDate": "2020-03-14T07:40:19.088Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example04-1920x1080-fac06046da77a7dd2f64dbd90450cd17_Snapshot.png",
+      "md5": "2207d8e36de439f13446018c8950920c",
+      "width": 150,
+      "height": 74,
+      "size": 8122,
+      "uploadedDate": "2020-03-14T07:40:20.057Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example05-1920x1080-84bb0f103f5c4a012ad01c62bfebfaac_Snapshot.png",
+      "md5": "58659b846c28c3e55b071704393aeab4",
+      "width": 150,
+      "height": 74,
+      "size": 5748,
+      "uploadedDate": "2020-03-14T07:40:20.548Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example06-1920x1080-ed78779d0adde60e0d499cae97dcd3a7_Snapshot.png",
+      "md5": "f9abdee748c5893c4aea203d111ad9e7",
+      "width": 150,
+      "height": 74,
+      "size": 5713,
+      "uploadedDate": "2020-03-14T07:40:21.067Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SC01-1920x1080-89b8fe2910f24e2325fd64b3463037b6_Snapshot.png",
+      "md5": "b585faab7645148d97e1e6356e533771",
+      "width": 150,
+      "height": 74,
+      "size": 4733,
+      "uploadedDate": "2020-03-14T06:29:26.699Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-04-07T17:28:27.537Z",
+  "lastModifiedDate": "2024-10-19T01:54:24.994Z",
+  "customAttributes": {},
+  "entitlementName": "8c4a6ccc711a4fa6a531db4aac764788",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "2d9d5629ad144fd6adef0f9c03e8523f",
+      "appId": "Characte8c4a6ccc711aV1",
+      "compatibleApps": [
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0"
+      ],
+      "platform": [
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2020-03-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE421-427_v1.3.1"
+    },
+    {
+      "id": "d2c3095cc2d94cc395850f9c038b733e",
+      "appId": "Characte8c4a6ccc711aV3",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-11-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE501-x_v1.3.1"
+    }
+  ],
+  "developer": "indvdl software",
+  "developerId": "o-pxn6rs95sqdvxtu23vbavpbvzxu2zx",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,318 @@
+{
+  "id": "059217d2de7d497887753e99df2b439f",
+  "title": "Vertex Animator",
+  "description": "Convert skeletal mesh animations to Vertex Animation with ease.",
+  "longDescription": "<p><a href=\"https://youtu.be/skP68byWACg\" rel=\"nofollow\">Youtube Tutorial</a></p><p><a href=\"https://docs.google.com/document/d/1ChJquNQSpHa95MO2XzCY0iWSobNbjockT3D9nb8qups/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://drive.google.com/file/d/1pOU-X7TOVS2AMm0xvM9XM0Hd4LgmmmC2/view\" rel=\"nofollow\">Demo Project</a></p><p><br /></p><p>For version 5.0, send me <a href=\"mailto:erosa3d&#64;gmail.com\" rel=\"nofollow\">an email</a> (I can&#39;t publish for older versions of the engine).</p><p><br /></p><p>This plugin was developed as an alternative to Skeletal Meshes, and more optimized than the traditional VertexAnimation that bakes all vertex positions, allowing it to use LODs or even Nanite with the trade off of a slightly lower visual quality.</p><p><br /></p><p>It basically requires a regular rig, a few adjustments on a 3D software of your choice and the setup inside the plugin afterwards. The plugin allows you to bake several animations at once as well as editing the StaticMesh bounds and reduction settings.</p><p><br /></p><p>This trade off offers a huge benefit in performance, as most of the information is delegated to the GPU at runtime (as after baking the animation is read by a shader). Ideal solution for large crowds.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Bake Skeletal animations onto VertexAnimation</li><li> Save/load rigs for further baking</li><li> VAManager component can be used to swap animations at runtime</li><li>Animations can easily be out of sync with a simple Primitive Float Parameter</li></ul><p>Code Modules:</p><ul><li> VertexAnimator (Editor)</li></ul><p>Number of Blueprints: 10</p><p>Number of C&#43;&#43; Classes: 3</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows 64 (untested on others)</p><p>Supported Target Build Platforms: Any (runtime only requires Content assets)</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1ChJquNQSpHa95MO2XzCY0iWSobNbjockT3D9nb8qups/edit\" rel=\"nofollow\">Link</a></p><p>Example Project: <a href=\"https://drive.google.com/file/d/1pOU-X7TOVS2AMm0xvM9XM0Hd4LgmmmC2/view?usp&#61;sharing\" rel=\"nofollow\">Link</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-02-25 201023-1920x1080-af25457021a85c938146ee091d67683c.png",
+      "md5": "af25457021a85c938146ee091d67683c",
+      "width": 1920,
+      "height": 1080,
+      "size": 89791,
+      "uploadedDate": "2024-02-27T17:51:07.451Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-02-25 201109-1920x1080-dd5efffcf65453cf649a22dc9b545a15.png",
+      "md5": "dd5efffcf65453cf649a22dc9b545a15",
+      "width": 1920,
+      "height": 1080,
+      "size": 673476,
+      "uploadedDate": "2024-02-27T17:51:07.870Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-02-25 201156-1920x1080-1132b5a2385c1a8195324cfeec27f859.png",
+      "md5": "1132b5a2385c1a8195324cfeec27f859",
+      "width": 1920,
+      "height": 1080,
+      "size": 719777,
+      "uploadedDate": "2024-02-27T17:51:08.284Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-02-25 201220-1920x1080-0b056d53082755b698a25daaa373b059.png",
+      "md5": "0b056d53082755b698a25daaa373b059",
+      "width": 1920,
+      "height": 1080,
+      "size": 1071813,
+      "uploadedDate": "2024-02-27T17:51:08.753Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-02-25 201247-1920x1080-a6809f1b8b7167e66140fcb6905871e6.png",
+      "md5": "a6809f1b8b7167e66140fcb6905871e6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1042763,
+      "uploadedDate": "2024-02-27T17:51:09.303Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-02-25 201329-1920x1080-6765ec76ea08e7db8c37cfd19deebf34.png",
+      "md5": "6765ec76ea08e7db8c37cfd19deebf34",
+      "width": 1920,
+      "height": 1080,
+      "size": 829135,
+      "uploadedDate": "2024-02-27T17:51:09.716Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-02-25 201759-1920x1080-f6f3d583fdbe91f9a5f0ded8bb07fd6c.png",
+      "md5": "f6f3d583fdbe91f9a5f0ded8bb07fd6c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1720480,
+      "uploadedDate": "2024-02-27T17:51:10.178Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot 2024-02-25 202154-1920x1080-20bc9d973b3e755684049807f70d9996.png",
+      "md5": "20bc9d973b3e755684049807f70d9996",
+      "width": 1920,
+      "height": 1080,
+      "size": 2903499,
+      "uploadedDate": "2024-02-27T17:51:10.666Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/VertexAnimator_thumb-284x284-214dd0667f8b38d6c50aefad68f6936d.png",
+      "md5": "214dd0667f8b38d6c50aefad68f6936d",
+      "width": 284,
+      "height": 284,
+      "size": 13603,
+      "uploadedDate": "2024-02-26T18:13:19.267Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/VertexAnimator_featured-894x488-6e15df784c47047300504632013e55d1.png",
+      "md5": "6e15df784c47047300504632013e55d1",
+      "width": 894,
+      "height": 488,
+      "size": 949506,
+      "uploadedDate": "2024-02-26T18:13:19.484Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201023-1920x1080-af25457021a85c938146ee091d67683c_Snapshot.png",
+      "md5": "7ebc3216723a1ad4e996640fda4417cc",
+      "width": 150,
+      "height": 74,
+      "size": 2386,
+      "uploadedDate": "2024-02-27T17:51:07.673Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201109-1920x1080-dd5efffcf65453cf649a22dc9b545a15_Snapshot.png",
+      "md5": "0c669609926440d56f28e949115766cf",
+      "width": 150,
+      "height": 74,
+      "size": 5009,
+      "uploadedDate": "2024-02-27T17:51:08.123Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201156-1920x1080-1132b5a2385c1a8195324cfeec27f859_Snapshot.png",
+      "md5": "1dda0dbc48f8be0bcc4f9c42b9ce7cbf",
+      "width": 150,
+      "height": 74,
+      "size": 5913,
+      "uploadedDate": "2024-02-27T17:51:08.542Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201220-1920x1080-0b056d53082755b698a25daaa373b059_Snapshot.png",
+      "md5": "d605759f209bd239c486f8c67817ae1b",
+      "width": 150,
+      "height": 74,
+      "size": 5946,
+      "uploadedDate": "2024-02-27T17:51:09.094Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201247-1920x1080-a6809f1b8b7167e66140fcb6905871e6_Snapshot.png",
+      "md5": "23a858d2aadfbfbf688e94f83b839a99",
+      "width": 150,
+      "height": 74,
+      "size": 5452,
+      "uploadedDate": "2024-02-27T17:51:09.575Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201329-1920x1080-6765ec76ea08e7db8c37cfd19deebf34_Snapshot.png",
+      "md5": "e922fb7049f613ed3d969f4ef1086105",
+      "width": 150,
+      "height": 74,
+      "size": 5481,
+      "uploadedDate": "2024-02-27T17:51:09.983Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201759-1920x1080-f6f3d583fdbe91f9a5f0ded8bb07fd6c_Snapshot.png",
+      "md5": "66fdfee9847994ab62ed0d2aa8cce8dd",
+      "width": 150,
+      "height": 74,
+      "size": 6991,
+      "uploadedDate": "2024-02-27T17:51:10.459Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 202154-1920x1080-20bc9d973b3e755684049807f70d9996_Snapshot.png",
+      "md5": "48eea28c79152c3743a03956ba14fcc3",
+      "width": 150,
+      "height": 74,
+      "size": 7989,
+      "uploadedDate": "2024-02-27T17:51:11.028Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201023-1920x1080-a03ca23e84eecbe90d7d1200fb39c362_Snapshot.png",
+      "md5": "ba4f03c445a2a8d88fdda93ba3efd7d1",
+      "width": 150,
+      "height": 74,
+      "size": 2796,
+      "uploadedDate": "2024-02-26T18:13:16.295Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201109-1920x1080-a7a71b1ab34ade7d18c95e2de4d52baf_Snapshot.png",
+      "md5": "044c3675f66838834441fd852b3519aa",
+      "width": 150,
+      "height": 74,
+      "size": 5322,
+      "uploadedDate": "2024-02-26T18:13:16.682Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201156-1920x1080-7f59b62d8993f70b64b6e2273a0ca758_Snapshot.png",
+      "md5": "bc4e3f5f38393bba257711553c4cbaaa",
+      "width": 150,
+      "height": 74,
+      "size": 6074,
+      "uploadedDate": "2024-02-26T18:13:17.129Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201220-1920x1080-e846053d3be5dde3043229378a7630a6_Snapshot.png",
+      "md5": "3aab38bd93fccbe7253901277e5d9c63",
+      "width": 150,
+      "height": 74,
+      "size": 6277,
+      "uploadedDate": "2024-02-26T18:13:17.480Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201247-1920x1080-61ac7cb9e0e2d0cc00021c6c0634854c_Snapshot.png",
+      "md5": "8646c583f2f623a314d05b304e58985c",
+      "width": 150,
+      "height": 74,
+      "size": 5780,
+      "uploadedDate": "2024-02-26T18:13:17.849Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201329-1920x1080-0d0947daaeb4cb2bdad96241fc798bb6_Snapshot.png",
+      "md5": "19139f6be1af94fce9351d7047e2cb05",
+      "width": 150,
+      "height": 74,
+      "size": 5772,
+      "uploadedDate": "2024-02-26T18:13:18.262Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 201759-1920x1080-d662c34b46c7e3a4017ed4fc22e97079_Snapshot.png",
+      "md5": "26f784d8e896a4558cbef9a39d6eab4a",
+      "width": 150,
+      "height": 74,
+      "size": 7237,
+      "uploadedDate": "2024-02-26T18:13:18.679Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot 2024-02-25 202154-1920x1080-6a16cb82358949572639e5f0cf658e81_Snapshot.png",
+      "md5": "0f0668e75bf35f69d2929f86edca92e8",
+      "width": 150,
+      "height": 74,
+      "size": 7898,
+      "uploadedDate": "2024-02-26T18:13:19.196Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-03-02T04:16:06.632Z",
+  "lastModifiedDate": "2024-09-24T18:23:48.633Z",
+  "customAttributes": {},
+  "entitlementName": "059217d2de7d497887753e99df2b439f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "161efa9a83d548129447d329d8c5acea",
+      "appId": "VertexAnimator_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-02-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ue51 v3"
+    },
+    {
+      "id": "ff8353fffe594fff970597885a28f27a",
+      "appId": "VertexAnimator_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-02-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ue52 v3"
+    },
+    {
+      "id": "2673082cdbe749dea0aac3c3e7dcc19e",
+      "appId": "VertexAnimator_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-02-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ue53 v3"
+    },
+    {
+      "id": "f76bfbddd5b74ea09ef7eb271b5c1344",
+      "appId": "VertexAnimator_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ue54 v3"
+    }
+  ],
+  "developer": "Emerson Rosa",
+  "developerId": "o-b7zqrnx32sksmb4ep7kperqu6tyu8y",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

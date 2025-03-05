@@ -1,0 +1,571 @@
+{
+  "id": "87a4ce10e9fd44af9e3a7e9b9271b9dc",
+  "title": "Open World Bakery landscape generator",
+  "description": "Geologically accurate realistic landscapes generator for both editor and runtime",
+  "longDescription": "<p><strong>Terrain features</strong></p><ul><li>Terrain generation based on geology (perlit noise included too, in case you need it)</li><li>From 100% random to 100% predefined layout</li><li>Gravity erosion (landslides. etc)</li><li>Water erosion (with respect to rock/soil, soil deposit, etc)</li><li>Water fill calculation, lakes deployment (customisable lake/swamp sensitivity)</li><li>Water flow calculation: rivers/dry riverbeds</li><li>Rain simulation or manual liquid source positioning</li><li>Liquid depth, flow speed and direction provided</li><li>Realistic river beds digging with accordance to amount of water, slope, etc</li><li>23 types of surface, including RiverShore, RockWall, RockFlat, Forest, Swamp, etc</li></ul><p><strong>Tools provided</strong></p><ul><li>Robust and flexible landscape “Blueprint brush” for the Editor</li><li>Blueprint-controlled plugin for the Editor to optimise your workflow</li><li>Available in runtime through C&#43;&#43;/Blueprint</li><li>Reasonable “realtime” performance for modern CPUs for maps up to ~1500*1500</li></ul><p><strong>Works with other plugins</strong></p><p>Bakery is out-of-the-box ready to work with:</p><ul><li>“Voxel Plugin FREE/PRO”, see free plugin <a href=\"https://github.com/gribuser/OWB_VoxelPlugin\" rel=\"nofollow\">OWB_VoxelPlugin</a></li></ul><p><br /></p><p><a href=\"https://primitive.game/OWB_Wiki/\" rel=\"nofollow\">Project Homepage</a></p><p><a href=\"https://www.youtube.com/playlist?list&#61;PL6ubCZVzGWMVBHbASZwTy63fYVVTH4sGf\" rel=\"nofollow\">Video-instructions/demo</a></p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Multithreaded asynchronous background baking</li><li>Visual editing of terrain in Editor</li><li>Realtime preview in place (in the Editor) before baking final 8km*8km terrain</li><li>Full control over relief generation, erosion and material mapping process from Blueprints/C&#43;&#43;</li><li>Sample landscape material to utilize Bakery terrain mapping included</li><li>Set of sample landscapes</li><li>Set of common-usage baking preset (amount of errosion, etc)</li></ul><p>Code Modules:</p><ul><li>OpenWorldBakery (Runtime)</li><li>OpenWorldBakeryEditor (Editor) </li></ul><p>Number of Blueprints: One Editor Landscape Blueprint Brush, 7 example blueprint functions to generate world 5 common baking setups. Many examples are available as separate projects on the github (see <a href=\"https://primitive.game/OWB_Wiki/Open_World_Bakery_Examples\" rel=\"nofollow\">examples</a>).</p><p>Number of C&#43;&#43; Classes: 14 runtime classes, 4 editor-only classes, 40&#43; files, 7000&#43; lines of code</p><p>Network Replicated: No</p><p>Supported Development Platforms: MacOS, Windows, Linux</p><p>Supported Target Build Platforms: Android, Linux, Oculus, PS4, Windows, XBox One, Steam VR, Gear VR,</p><p><br /></p><p>Documentation:<a href=\"https://primitive.game/OWB_Wiki/\" rel=\"nofollow\"> https://primitive.game/OWB_Wiki/</a></p><p>Example Project: <a href=\"https://primitive.game/OWB_Wiki/Open_World_Bakery_Examples\" rel=\"nofollow\">https://primitive.game/OWB_Wiki/Open_World_Bakery_Examples</a></p><p>YouTube: <a href=\"https://www.youtube.com/playlist?list&#61;PL6ubCZVzGWMVBHbASZwTy63fYVVTH4sGf\" rel=\"nofollow\">https://www.youtube.com/playlist?list&#61;PL6ubCZVzGWMVBHbASZwTy63fYVVTH4sGf</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Editor3-1920x1080-2591900d30e0997345bcca2fafb5d854.jpg",
+      "md5": "2591900d30e0997345bcca2fafb5d854",
+      "width": 1920,
+      "height": 1080,
+      "size": 335188,
+      "uploadedDate": "2020-07-25T06:09:33.057Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/valley2-1920x1080-8dfa747052359fe854fc24a81f00c130.jpg",
+      "md5": "8dfa747052359fe854fc24a81f00c130",
+      "width": 1920,
+      "height": 1080,
+      "size": 247730,
+      "uploadedDate": "2020-07-25T06:09:33.454Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/valley-1920x1080-7b6f63e7685e6cbae10e35aae81dc321.jpg",
+      "md5": "7b6f63e7685e6cbae10e35aae81dc321",
+      "width": 1920,
+      "height": 1080,
+      "size": 193464,
+      "uploadedDate": "2020-07-25T06:09:33.793Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/valley4-1920x1080-a5b488db50093ba2711f1404c39bb8db.jpg",
+      "md5": "a5b488db50093ba2711f1404c39bb8db",
+      "width": 1920,
+      "height": 1080,
+      "size": 212371,
+      "uploadedDate": "2020-07-25T06:09:34.169Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/valley3-1920x1080-7faf052d757f9db16ab249b3aa93ffcf.jpg",
+      "md5": "7faf052d757f9db16ab249b3aa93ffcf",
+      "width": 1920,
+      "height": 1080,
+      "size": 331649,
+      "uploadedDate": "2020-07-25T06:09:34.570Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Volcanoraw-1920x1080-7a00aa7df11d4d77fa52f370eaf5bb02.jpg",
+      "md5": "7a00aa7df11d4d77fa52f370eaf5bb02",
+      "width": 1920,
+      "height": 1080,
+      "size": 179430,
+      "uploadedDate": "2020-07-25T06:09:34.917Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Volcanoclean-1920x1080-f0f78d392d9402a8c0d3d4054f848dfe.jpg",
+      "md5": "f0f78d392d9402a8c0d3d4054f848dfe",
+      "width": 1920,
+      "height": 1080,
+      "size": 227151,
+      "uploadedDate": "2020-07-25T06:09:35.259Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-d person-1920x1080-f414a7ce0e5ae1c4636f709eb843534e.jpg",
+      "md5": "f414a7ce0e5ae1c4636f709eb843534e",
+      "width": 1920,
+      "height": 1080,
+      "size": 256734,
+      "uploadedDate": "2020-07-25T06:09:35.611Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/fjord-1920x1080-686d5f812fa15a98287c09c531a7e8c4.jpg",
+      "md5": "686d5f812fa15a98287c09c531a7e8c4",
+      "width": 1920,
+      "height": 1080,
+      "size": 242851,
+      "uploadedDate": "2020-07-25T06:09:36.026Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/island-1920x1080-78a1d55bdaecc7a4386880a9629051c1.jpg",
+      "md5": "78a1d55bdaecc7a4386880a9629051c1",
+      "width": 1920,
+      "height": 1080,
+      "size": 162936,
+      "uploadedDate": "2020-07-25T06:09:36.364Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/river-1920x1080-98b1314e7f504913df9414f35c9a36a3.jpg",
+      "md5": "98b1314e7f504913df9414f35c9a36a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 169992,
+      "uploadedDate": "2020-07-25T06:09:36.686Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Editor2-1920x1080-45dad0310481979b1bd116484ddcd9a7.jpg",
+      "md5": "45dad0310481979b1bd116484ddcd9a7",
+      "width": 1920,
+      "height": 1080,
+      "size": 310113,
+      "uploadedDate": "2020-07-25T06:09:37.106Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Editor1-1920x1080-a2b790e40f8aca160fd43d5e74d141a0.jpg",
+      "md5": "a2b790e40f8aca160fd43d5e74d141a0",
+      "width": 1920,
+      "height": 1080,
+      "size": 270856,
+      "uploadedDate": "2020-07-25T06:09:37.589Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blueprint-1920x1080-bbf25043444ffa61bcf2732488dc229c.jpg",
+      "md5": "bbf25043444ffa61bcf2732488dc229c",
+      "width": 1920,
+      "height": 1080,
+      "size": 279864,
+      "uploadedDate": "2020-07-25T06:09:38.011Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blueprint1-1920x1080-5bfa8c29c42ebb71170129263f954388.jpg",
+      "md5": "5bfa8c29c42ebb71170129263f954388",
+      "width": 1920,
+      "height": 1080,
+      "size": 283092,
+      "uploadedDate": "2020-07-25T06:09:38.370Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blueprint2-1920x1080-16138f3f780792fdda2df932cdb36cd2.jpg",
+      "md5": "16138f3f780792fdda2df932cdb36cd2",
+      "width": 1920,
+      "height": 1080,
+      "size": 283335,
+      "uploadedDate": "2020-07-25T06:09:38.779Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Blueprint3-1920x1080-b08a906e342a005961dcb744617636eb.jpg",
+      "md5": "b08a906e342a005961dcb744617636eb",
+      "width": 1920,
+      "height": 1080,
+      "size": 291313,
+      "uploadedDate": "2020-07-25T06:09:39.166Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/options-1920x1080-f0609db819b4fe2d0fbd8d6e5d749b6b.jpg",
+      "md5": "f0609db819b4fe2d0fbd8d6e5d749b6b",
+      "width": 1920,
+      "height": 1080,
+      "size": 591562,
+      "uploadedDate": "2020-07-25T06:09:39.716Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Bitmaps-1920x1080-30ad51dcabbc7d5bcaef5af879c897fe.jpg",
+      "md5": "30ad51dcabbc7d5bcaef5af879c897fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 745052,
+      "uploadedDate": "2020-07-25T06:15:06.610Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/OpenWorldBakerylandscapegenerator_thumb-284x284-013d85cdd53204044ffbe418143c9028.png",
+      "md5": "013d85cdd53204044ffbe418143c9028",
+      "width": 284,
+      "height": 284,
+      "size": 150270,
+      "uploadedDate": "2020-08-14T04:15:03.085Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/OpenWorldBakerylandscapegenerator_featured-894x488-70dd2d66b43db169e042498b0bd4255a.png",
+      "md5": "70dd2d66b43db169e042498b0bd4255a",
+      "width": 894,
+      "height": 488,
+      "size": 612798,
+      "uploadedDate": "2020-07-25T15:41:41.076Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Bitmaps-1920x1080-30ad51dcabbc7d5bcaef5af879c897fe_Snapshot.jpg",
+      "md5": "5116c4a1bd772bf29b127b4a850e2c24",
+      "width": 150,
+      "height": 74,
+      "size": 5744,
+      "uploadedDate": "2020-07-25T06:15:06.843Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Editor3-1920x1080-2591900d30e0997345bcca2fafb5d854_Snapshot.jpg",
+      "md5": "f1bc48f6a22e70192a2fee15ec088eef",
+      "width": 150,
+      "height": 74,
+      "size": 7383,
+      "uploadedDate": "2020-07-25T06:09:33.328Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/valley2-1920x1080-8dfa747052359fe854fc24a81f00c130_Snapshot.jpg",
+      "md5": "8c651253d944a26ec6447d1a9e7734ae",
+      "width": 150,
+      "height": 74,
+      "size": 6531,
+      "uploadedDate": "2020-07-25T06:09:33.674Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/valley-1920x1080-7b6f63e7685e6cbae10e35aae81dc321_Snapshot.jpg",
+      "md5": "f71b2214e33c537e2e1c63f7e844011d",
+      "width": 150,
+      "height": 74,
+      "size": 6045,
+      "uploadedDate": "2020-07-25T06:09:34.039Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/valley4-1920x1080-a5b488db50093ba2711f1404c39bb8db_Snapshot.jpg",
+      "md5": "4787e4761569c0b1d1cbee7881047d1f",
+      "width": 150,
+      "height": 74,
+      "size": 6344,
+      "uploadedDate": "2020-07-25T06:09:34.453Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/valley3-1920x1080-7faf052d757f9db16ab249b3aa93ffcf_Snapshot.jpg",
+      "md5": "1647d1bcecdba1d38dad91f9caf26251",
+      "width": 150,
+      "height": 74,
+      "size": 7549,
+      "uploadedDate": "2020-07-25T06:09:34.826Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Volcanoraw-1920x1080-7a00aa7df11d4d77fa52f370eaf5bb02_Snapshot.jpg",
+      "md5": "9cbb451b2501def8de3db1f20e497a42",
+      "width": 150,
+      "height": 74,
+      "size": 6123,
+      "uploadedDate": "2020-07-25T06:09:35.129Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Volcanoclean-1920x1080-f0f78d392d9402a8c0d3d4054f848dfe_Snapshot.jpg",
+      "md5": "915a4e28089ace7cf245f9819446ede9",
+      "width": 150,
+      "height": 74,
+      "size": 7125,
+      "uploadedDate": "2020-07-25T06:09:35.477Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-d person-1920x1080-f414a7ce0e5ae1c4636f709eb843534e_Snapshot.jpg",
+      "md5": "a8bcadb38156a0e992cbf54d729257ea",
+      "width": 150,
+      "height": 74,
+      "size": 6595,
+      "uploadedDate": "2020-07-25T06:09:35.832Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/fjord-1920x1080-686d5f812fa15a98287c09c531a7e8c4_Snapshot.jpg",
+      "md5": "f4df574ba0e0ef00a69e7bca824f3ae1",
+      "width": 150,
+      "height": 74,
+      "size": 6795,
+      "uploadedDate": "2020-07-25T06:09:36.248Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/island-1920x1080-78a1d55bdaecc7a4386880a9629051c1_Snapshot.jpg",
+      "md5": "fe010a5ab370961b14486e09da119d28",
+      "width": 150,
+      "height": 74,
+      "size": 6502,
+      "uploadedDate": "2020-07-25T06:09:36.610Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/river-1920x1080-98b1314e7f504913df9414f35c9a36a3_Snapshot.jpg",
+      "md5": "2e4dc94408b1469eac1cef1a194cb490",
+      "width": 150,
+      "height": 74,
+      "size": 6590,
+      "uploadedDate": "2020-07-25T06:09:36.927Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Editor2-1920x1080-45dad0310481979b1bd116484ddcd9a7_Snapshot.jpg",
+      "md5": "29c8fb56b8ea7b1f7d1e91ec55ec0727",
+      "width": 150,
+      "height": 74,
+      "size": 6835,
+      "uploadedDate": "2020-07-25T06:09:37.324Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Editor1-1920x1080-a2b790e40f8aca160fd43d5e74d141a0_Snapshot.jpg",
+      "md5": "29d3f2e5f4013251352d8d75fb897cc3",
+      "width": 150,
+      "height": 74,
+      "size": 6867,
+      "uploadedDate": "2020-07-25T06:09:37.808Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint-1920x1080-bbf25043444ffa61bcf2732488dc229c_Snapshot.jpg",
+      "md5": "b422d91d2e72bad2e2eb7236e5560c4d",
+      "width": 150,
+      "height": 74,
+      "size": 3912,
+      "uploadedDate": "2020-07-25T06:09:38.226Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint1-1920x1080-5bfa8c29c42ebb71170129263f954388_Snapshot.jpg",
+      "md5": "b868771b736e1fdc44424aac12d01611",
+      "width": 150,
+      "height": 74,
+      "size": 4441,
+      "uploadedDate": "2020-07-25T06:09:38.613Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint2-1920x1080-16138f3f780792fdda2df932cdb36cd2_Snapshot.jpg",
+      "md5": "a3a6494bea80c132a1196055e066ad7d",
+      "width": 150,
+      "height": 74,
+      "size": 4574,
+      "uploadedDate": "2020-07-25T06:09:39.051Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Blueprint3-1920x1080-b08a906e342a005961dcb744617636eb_Snapshot.jpg",
+      "md5": "1fbecbc3bfc54519e500f6d212294f86",
+      "width": 150,
+      "height": 74,
+      "size": 6255,
+      "uploadedDate": "2020-07-25T06:09:39.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/options-1920x1080-f0609db819b4fe2d0fbd8d6e5d749b6b_Snapshot.jpg",
+      "md5": "a75c2ca034e64655206d6a7270acfd36",
+      "width": 150,
+      "height": 74,
+      "size": 7155,
+      "uploadedDate": "2020-07-25T06:09:39.943Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot10-1920x1080-9b8a77701fd2498e70bb1bcb9345e020_Snapshot.jpg",
+      "md5": "42f30cd190a47d1a7e5e40a58799d5a4",
+      "width": 150,
+      "height": 74,
+      "size": 7440,
+      "uploadedDate": "2020-06-09T03:57:58.043Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot11-1920x1080-eca00380bb61cacb64405d77d0c6da2c_Snapshot.jpg",
+      "md5": "1e99fe09b662a2b03c6192edb9578619",
+      "width": 150,
+      "height": 74,
+      "size": 7761,
+      "uploadedDate": "2020-06-09T03:57:58.440Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot13-1920x1080-635b384c19a3ae039df6aef6170df13d_Snapshot.jpg",
+      "md5": "7e3a50b56a57d02305c4c42aafd391ad",
+      "width": 150,
+      "height": 74,
+      "size": 7575,
+      "uploadedDate": "2020-06-09T03:57:58.794Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot12-1920x1080-9295b3febfcbac3316a66e6519d1977d_Snapshot.jpg",
+      "md5": "2bc8e44ab5ce732523a087f42701337d",
+      "width": 150,
+      "height": 74,
+      "size": 6268,
+      "uploadedDate": "2020-06-09T03:57:59.145Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-08-02T17:18:55.720Z",
+  "lastModifiedDate": "2024-10-23T01:46:25.387Z",
+  "customAttributes": {},
+  "entitlementName": "87a4ce10e9fd44af9e3a7e9b9271b9dc",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "13016adad6aa4cdf9bc0481f3ed1d074",
+      "appId": "OpenWorldBakery_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "PS4",
+        "Xbox One",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2020-06-08T00:00:00.000Z",
+      "releaseNote": "Minor code cleanup, 4.26 compatible",
+      "versionTitle": "0.15_425"
+    },
+    {
+      "id": "f5ea256059024b9bb23cee44410b13a7",
+      "appId": "OpenWorldBakery_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "PS4",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2020-12-06T00:00:00.000Z",
+      "releaseNote": "Initial 4.26 release",
+      "versionTitle": "0.15_426"
+    },
+    {
+      "id": "67d543fe463542cfb9e2d7b4060c5281",
+      "appId": "OpenWorldBakery_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "PS4",
+        "Mac",
+        "Linux",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-07-16T00:00:00.000Z",
+      "releaseNote": "Initial 4.27 release",
+      "versionTitle": "0.15_427"
+    },
+    {
+      "id": "46c7b9baa2064d2c9941392188bb18a6",
+      "appId": "OpenWorldBakery_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Linux",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "PS4"
+      ],
+      "dateAdded": "2022-07-16T00:00:00.000Z",
+      "releaseNote": "Initial 5.0 release",
+      "versionTitle": "0.15_50"
+    },
+    {
+      "id": "9a196eee9f094f8e865bbb8bd32e3ffe",
+      "appId": "OpenWorldBakery_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-03-25T00:00:00.000Z",
+      "releaseNote": "Foliage slots added to the surface + 5.1 adaptation",
+      "versionTitle": "0.17_51"
+    },
+    {
+      "id": "51b094d660164d7dbc2fa1475180ce99",
+      "appId": "OpenWorldBakery_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2023-07-27T00:00:00.000Z",
+      "releaseNote": "5.2 release",
+      "versionTitle": "0.15_52"
+    },
+    {
+      "id": "e44f9da20e914867b123c3354a18deb3",
+      "appId": "OpenWorldBakery_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-09-09T00:00:00.000Z",
+      "releaseNote": "5.3 release\nExport heightmap as a Texture2D",
+      "versionTitle": "0.18_53"
+    },
+    {
+      "id": "dd52635f4a694991872f589f55f2d565",
+      "appId": "OpenWorldBakery_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2024-06-30T00:00:00.000Z",
+      "releaseNote": "5.4 support",
+      "versionTitle": "0.18_54"
+    }
+  ],
+  "developer": "Dmitry Gribov",
+  "developerId": "o-atryjp9j7vtfetke4ytc887yvhzh9c",
+  "endOfSupport": false,
+  "unsearchable": false
+}

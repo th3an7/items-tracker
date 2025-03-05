@@ -1,0 +1,169 @@
+{
+  "id": "f7585ceeb4c04c00b878f8cd9eda0822",
+  "title": "Spherical Shader",
+  "description": "Spherical Shader uses a material function which plugs into the World Position Offsets of materials to create the illusion that levels are round and spherical.",
+  "longDescription": "<p><strong>Preview:</strong> <a href=\"https://youtu.be/HVSlC3Dm624\" rel=\"nofollow\">https://youtu.be/HVSlC3Dm624</a></p><p><strong>User Guide:</strong> <a href=\"https://www.nightshiftstudios.com/spherical-shader-guide\" rel=\"nofollow\">Spherical Shader User Guide</a></p><p><br /></p><p>Spherical Shader is a vertex shader that allows you to create the illusion of a spherical world by simply using a Material Function and a Blueprint Component. The curvature is controlled by a Material Parameter Collection, but its parameters do not need to be directly set. They are controlled by the Blueprint Component. (Note: This is a vertex shader which affects the way vertices are rendered and does not affect collision or physics.)</p><p><br /></p><p>Please note:</p><ul><li>The spherical effect only calculates a <strong>hemisphere</strong>, the top half of the sphere based on where the player is standing. This is a limitation of the math used and prevents things far away on the horizon from wrapping under and back around behind the player.</li><li>Keep in mind that the actual world, gameplay space and collision, remains flat. This shader simply offsets the vertices at render time to make them appear as if spherical from the player&#39;s perspective.</li><li>This material function affects vertices only and <em>not </em>collision or physics. As such, certain gameplay mechanics, such as those using line traces from the camera, might not appear to match up with geometry when this shader is used.</li></ul>",
+  "technicalDetails": "<p><strong>Includes</strong>:</p><ul><li><strong>Material Function</strong> with all the logic to create the sphere effect</li><li><strong>Material Parameter Collection</strong> that adjusts parameters in the Material Function (though these values do not need to be manually adjusted)</li><li><strong>Blueprint Component</strong> which is added to the player character or actor which the sphere effect should move with</li></ul><p><br /></p><p><strong>Demo Content Includes:</strong></p><ul><li>Demo map with Spherical Shader applied to static meshs, foliage, and landscape</li><li>Static Meshes (1 floor, 1 pillar, 3 walls, and 1 stairs with diffuse and normal textures)</li><li>Foliage (1 static mesh and diffuse texture)</li><li>2 terrain textures with normal maps</li><li>3 example materials with Spherical Shader applied</li><li>Spherical Shader blueprint component applied to the player character</li></ul><p><br /></p><p><strong>To Use the Shader:</strong></p><ol><li>Add the included Material Function to the World Position Offsets of your materials</li><li>Add the included Blueprint Component to your player character</li></ol><p><br /></p><p><strong>Important/Additional Notes:</strong></p><ul><li>This shader requires enough vertices on meshes to allow them to be deformed spherically. Very low poly meshes such as basic primitives will need extra subdivisions for them to appear round.</li><li>This shader works in Mobile Preview and has been verified to work on several Android devices. It has not been tested on iOS hardware.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Spherical05-1920x1080-ae02be626005ab233c885df20011cf3b.png",
+      "md5": "ae02be626005ab233c885df20011cf3b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1871622,
+      "uploadedDate": "2019-03-28T06:51:23.745Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Spherical04-1920x1080-db5e0066c23943be103470df2ea62a83.png",
+      "md5": "db5e0066c23943be103470df2ea62a83",
+      "width": 1920,
+      "height": 1080,
+      "size": 2759077,
+      "uploadedDate": "2019-03-28T06:51:24.345Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Spherical03-1920x1080-7e86ae34557676b2fdf094920ab4d101.png",
+      "md5": "7e86ae34557676b2fdf094920ab4d101",
+      "width": 1920,
+      "height": 1080,
+      "size": 2328635,
+      "uploadedDate": "2019-03-28T06:51:24.801Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Spherical02-1920x1080-d565f2f9845dbfafeec0c3b13fb4506f.png",
+      "md5": "d565f2f9845dbfafeec0c3b13fb4506f",
+      "width": 1920,
+      "height": 1080,
+      "size": 2854261,
+      "uploadedDate": "2019-03-28T06:51:25.263Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Spherical06-1920x1080-41702abeda5ca3299c002588e95fd631.png",
+      "md5": "41702abeda5ca3299c002588e95fd631",
+      "width": 1920,
+      "height": 1080,
+      "size": 2885734,
+      "uploadedDate": "2019-03-28T10:40:21.685Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SphericalShader_thumb-284x284-c1923d5f4146018e3d7446b9fca75c6b.png",
+      "md5": "c1923d5f4146018e3d7446b9fca75c6b",
+      "width": 284,
+      "height": 284,
+      "size": 137072,
+      "uploadedDate": "2019-03-28T06:51:26.257Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SphericalShader_featured-894x488-a8df55d91fec11c48b5ca07a434f03e9.png",
+      "md5": "a8df55d91fec11c48b5ca07a434f03e9",
+      "width": 894,
+      "height": 488,
+      "size": 582075,
+      "uploadedDate": "2019-03-28T10:40:22.135Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Spherical06-1920x1080-41702abeda5ca3299c002588e95fd631_Snapshot.png",
+      "md5": "6a83f66e2dfdb461d69b0a894b8d863c",
+      "width": 150,
+      "height": 74,
+      "size": 26365,
+      "uploadedDate": "2019-03-28T10:40:22.046Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Spherical05-1920x1080-ae02be626005ab233c885df20011cf3b_Snapshot.png",
+      "md5": "2833de95398b88d23d4b018948bd06c9",
+      "width": 150,
+      "height": 74,
+      "size": 18577,
+      "uploadedDate": "2019-03-28T06:51:23.928Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Spherical04-1920x1080-db5e0066c23943be103470df2ea62a83_Snapshot.png",
+      "md5": "f7e531d0d89fea164d22486a496681ae",
+      "width": 150,
+      "height": 74,
+      "size": 18733,
+      "uploadedDate": "2019-03-28T06:51:24.664Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Spherical03-1920x1080-7e86ae34557676b2fdf094920ab4d101_Snapshot.png",
+      "md5": "0c4b28aef24012eee85c9d711c1ce336",
+      "width": 150,
+      "height": 74,
+      "size": 23596,
+      "uploadedDate": "2019-03-28T06:51:25.050Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Spherical02-1920x1080-d565f2f9845dbfafeec0c3b13fb4506f_Snapshot.png",
+      "md5": "51fed5fa1f149893cd8d8e819b1e429e",
+      "width": 150,
+      "height": 74,
+      "size": 24402,
+      "uploadedDate": "2019-03-28T06:51:25.610Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Spherical01-1920x1080-26ca24fda8bec98f0a434e894068a2fa_Snapshot.png",
+      "md5": "1f33e8f0926cfb7357ac000da538a548",
+      "width": 150,
+      "height": 74,
+      "size": 25764,
+      "uploadedDate": "2019-03-28T06:51:26.176Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/materials"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-04-26T16:03:52.045Z",
+  "lastModifiedDate": "2024-10-07T17:04:57.784Z",
+  "customAttributes": {},
+  "entitlementName": "f7585ceeb4c04c00b878f8cd9eda0822",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "87af02ee1f95458087ff690d07410ace",
+      "appId": "Sphericaf7585ceeb4c0V1",
+      "compatibleApps": [
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2019-03-27T00:00:00.000Z",
+      "releaseNote": "Dropbox link PW: UE4isGREAT",
+      "versionTitle": "SphericalShader0100"
+    }
+  ],
+  "developer": "Nightshift Studios",
+  "developerId": "o-nbn55zjz6jxkhdw4wr5rbk4akujkpb",
+  "endOfSupport": false,
+  "unsearchable": false
+}

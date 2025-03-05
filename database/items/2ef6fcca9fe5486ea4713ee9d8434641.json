@@ -1,0 +1,338 @@
+{
+  "id": "2ef6fcca9fe5486ea4713ee9d8434641",
+  "title": "NNEngine - Neural Network Engine",
+  "description": "Easy, accelerated ML inference from BP and C++ using ONNX Runtime native library.",
+  "longDescription": "<p>Demo video: <a href=\"https://youtu.be/6mTJ3ZceVrs\" rel=\"nofollow\">Overview</a>, <a href=\"https://youtu.be/glq34Wdi_3w\" rel=\"nofollow\">Monocular depth estimation demo</a>, <a href=\"https://youtu.be/_v0ZNogoK6w\" rel=\"nofollow\">Artistic style transfer demo</a></p><p>Tutorial video: <a href=\"https://youtu.be/sTSlhYOePDE\" rel=\"nofollow\">Implement depth estimation</a></p><p>Documentation: <a href=\"https://akiya-research-institute.github.io/NNEngine-API/en\" rel=\"nofollow\">Link</a></p><p><br /></p><p><strong>By simply calling a few Blueprint nodes, </strong>you can load and run cutting-edge AI.</p><p><br /></p><p>This plugin supports ONNX (Open Neural Network Exchange), which is an open-source machine learning model format widely used.</p><p>Many ML frameworks such as PyTorch and TensorFlow can <a href=\"https://github.com/onnx/tutorials#converting-to-onnx-format\" rel=\"nofollow\">export its model in ONNX format</a>.</p><p><strong>Many trained models are available</strong> on <a href=\"https://github.com/onnx/models\" rel=\"nofollow\">ONNX Model Zoo</a>.</p><p><br /></p><p><strong>Performance is our first consideration.</strong></p><p>This plugin supports model optimization at runtime and GPU accelerations on various hardware as well as this plugin itself is optimized.</p><p><br /></p><p><a href=\"https://github.com/Akiya-Research-Institute/NNEngine-Demo\" rel=\"nofollow\">Demo Project</a> contains practical examples of</p><ul><li>Human detection</li><li>Human pose estimation</li><li>Face detection</li><li>Facial landmark estimation</li><li>Eye tracking</li></ul><p>using a single RGB camera.</p><p>Also, example projects for</p><ul><li><a href=\"https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4\" rel=\"nofollow\">Depth estimation using a monocular RGB camera</a></li><li><a href=\"https://github.com/Akiya-Research-Institute/Artistic-Style-Transfer-on-UE4\" rel=\"nofollow\">Arbitrary artistic style transfer</a></li></ul><p>are available.</p><p><br /></p><h2><strong>Prerequisite to use with CUDA and TensorRT</strong></h2><p>To use with CUDA and TensorRT, you need to install the following versions of CUDA, cuDNN, and TensorRT. </p><p><br /></p><p><strong>Windows:</strong></p><p>The versions of cuDNN and TensorRT are different for RTX30** series and others. We only tested GTX1080Ti, RTX2070, RTX3060Ti and RTX3070. Others are not tested.</p><p><br /></p><p>Versions for other than RTX30** series (RTX20**, GTX10**)</p><ul><li>CUDA: 11.0.3</li><li>cuDNN: 8.0.2 (July 24th, 2020), for CUDA 11.0</li><li>TensorRT: 7.1.3.4 for CUDA 11.0</li></ul><p>Versions for RTX30** series</p><ul><li>CUDA: 11.0.3</li><li>cuDNN: 8.0.5 (November 9th, 2020), for CUDA 11.0</li><li>TensorRT: 7.2.2.3 for CUDA 11.0</li></ul><p><br /></p><p><strong>Ubuntu:</strong></p><ul><li>CUDA: 11.4.2 for Linux x86_64 Ubuntu 18.04</li><li>cuDNN: 8.2.4 (September 2nd, 2021), for CUDA 11.4, Linux x86_64</li><li>TensorRT: 8.2.3.0 (8.2 GA Update 2) for Linux x86_64, CUDA 11.0-11.5</li></ul><p><br /></p><p>To use with TensorRT, it is recommended to add the following environment variables to cache TensorRT Engine:</p><ul><li>&#34;ORT_TENSORRT_ENGINE_CACHE_ENABLE&#34; and set its value to &#34;1&#34;.</li><li>&#34;ORT_TENSORRT_CACHE_PATH&#34; and set its value to any path where you want to save the cache, for example &#34;C:\\temp&#34;.</li></ul><p><br /></p><h1>Change log </h1><p><strong>v1.4 (Mar 18, 2022)</strong></p><p>- Update OnnxRuntime module</p><p>  - Add an option to <a href=\"https://akiya-research-institute.github.io/NNEngine-API/en/tips-build/#disable-opencv\" rel=\"nofollow\">disable dependency on OpenCV</a>.</p><p><br /></p><p><strong>v1.3 (Mar 4, 2022)</strong></p><p>- Updated OnnxRuntime module</p><p>  - Add a Blueprint callable function to construct &#34;Onnx Tensor Info&#34;. Use this function to <a href=\"https://akiya-research-institute.github.io/NNEngine-API/en/tips-dynamic-shape/\" rel=\"nofollow\">dynamically specify the shape of input/output tensors</a>.</p><p><br /></p><p><strong>v1.2 (Feb 18, 2022)</strong></p><p>- Updated TextureProcessing module</p><p>  - Added a component to convert UTexture to float array. (&#96;TextureProcessFloatComponent&#96;)</p><p>  - Added functions to create UTexture from arrays of byte or float.</p><p>  - Fixed a bug that some UTexture cannot be processed by &#96;TextureProcessComponent&#96;.</p><p>    - Now &#96;BP_TextureProcessComponent&#96; is deprecated. Use &#96;TextureProcessComponent&#96; instead.</p><p>- Updated CustomizedOpenCV module</p><p>  - Removed OpenCV&#39;s &#96;check&#96; function to avoid conflict with UE4&#39;s &#96;check&#96; macro.</p><p>- Added example projects for</p><p>-<a href=\"https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4\" rel=\"nofollow\"> Depth estimation using a monocular RGB camera</a></p><p>-<a href=\"https://github.com/Akiya-Research-Institute/Artistic-Style-Transfer-on-UE4\" rel=\"nofollow\"> Arbitrary artistic style transfer</a></p><p><br /></p><p><strong>v1.1 (Feb 11, 2022)</strong></p><p>  - Added support for Ubuntu 18.04.6 Desktop 64bit</p><p>    - GPU accelerations by CUDA and TensorRT are supported.</p><p>      - You need an NVIDIA GPU which supports CUDA, cuDNN, and TensorRT.</p><p>      - You need to install CUDA ver 11.4.2, cuDNN ver 8.2.4, and TensorRT ver 8.2.3.0.</p><p>      - DNN models which contain unsupported operators cannot be loaded when TensorRT is enabled.  </p><p>       See <a href=\"https://github.com/onnx/onnx-tensorrt/blob/85e79f629fb546a75d61e3027fb259a9529144fe/docs/operators.md\" rel=\"nofollow\">the official document</a> for supported operators.</p><p>       (NNEngine uses TensorRT 8.2 as backend on Linux)</p><p>    - Tested environment:</p><p>      - Unreal Engine: 4.26.2, 4.27.2</p><p>      - Vulkan utils: 1.1.70&#43;dfsg1-1ubuntu0.18.04.1</p><p>      - .NET SDK: 6.0.101-1</p><p>      - OS: Ubuntu 18.04.6 Desktop 64bit</p><p>      - CPU: Intel i3-8350K</p><p>      - GPU: NVIDIA GeForce GTX 1080 Ti</p><p>        - Driver: 470.130.01</p><p>        - CUDA: 11.4.2-1</p><p>        - cuDNN: 8.2.4</p><p>        - TensorRT: 8.2.3.0</p><p>  - Added EXPERIMENTAL support for Android as target build</p><p>    - Tested environment:</p><p>      - Device: Xiaomi Redmi Note 9S</p><p>      - Android version: 10 QKQ1.191215.002</p><p>    - Note:</p><p>      - You need to convert your model to ORT format.  </p><p>       See <a href=\"https://onnxruntime.ai/docs/reference/ort-model-format.html\" rel=\"nofollow\">the official document</a> for the details.</p><p>      - There are some DNN models which cannot be loaded on Android.</p><p>      - NNEngine uses ONNX Runtime Mobile ver 1.8.1 on Android.</p><p>    - GPU acceleration by NNAPI is not tested yet.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Loads ONNX models at runtime. Automatically optimizes the model when loaded.</li><li>Runs ONNX models.</li><li>(On Windows) Supports hardware acceleration by DirectML on DirectX 12 capable GPUs.</li><li>(On Windows) Supports hardware acceleration by CUDA and TensorRT on supported NVIDIA GPUs.</li><li>(On Windows) Gets a list of GPU names available on the system.</li><li>Processes (resize, crop, rotate) UTexture and converts it to int8 array.</li></ul><p>Code Modules:</p><ul><li>OnnxRuntime (Runtime)</li><li>TextureProcessing (Runtime)</li><li>CustomizedOpenCV (Runtime)</li><li>DirectXUtility (Runtime)</li></ul><p>Number of Blueprints: 3</p><p>Number of C&#43;&#43; Classes: 7&#43;</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows 10 64bit</p><p>Supported Target Build Platforms: Windows 10 64bit</p><p>Documentation: <a href=\"https://akiya-research-institute.github.io/NNEngine-API\" rel=\"nofollow\">Link</a></p><p>Example Project:</p><ol><li><a href=\"https://github.com/Akiya-Research-Institute/NNEngine-Demo\" rel=\"nofollow\">Human pose estimation and facial capture using a single RGB camera</a></li><li><a href=\"https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4\" rel=\"nofollow\">Depth estimation using a monocular RGB camera</a></li><li><a href=\"https://github.com/Akiya-Research-Institute/Artistic-Style-Transfer-on-UE4\" rel=\"nofollow\">Arbitrary artistic style transfer</a></li></ol><p>Important/Additional Notes:</p><ul><li>Demo Project 1 is distributed as a C&#43;&#43; project. You need to install Visual Studio to compile it.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/systemOverview-1920x1080-80a2bd26ff1bc50ac73a167cc6dde1d2.png",
+      "md5": "80a2bd26ff1bc50ac73a167cc6dde1d2",
+      "width": 1920,
+      "height": 1080,
+      "size": 81823,
+      "uploadedDate": "2021-10-24T07:40:00.476Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Easy-to-use-1920x1080-eaf66ba6791c86bdbf4b7ddadd1aabeb.png",
+      "md5": "eaf66ba6791c86bdbf4b7ddadd1aabeb",
+      "width": 1920,
+      "height": 1080,
+      "size": 475525,
+      "uploadedDate": "2021-10-24T07:40:00.832Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/With-parctical-examples-1920x1080-7736fa5a2d11b3dd71696ec5ccebe268.png",
+      "md5": "7736fa5a2d11b3dd71696ec5ccebe268",
+      "width": 1920,
+      "height": 1080,
+      "size": 2225425,
+      "uploadedDate": "2021-10-24T07:40:01.294Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Doc-1920x1080-9c4f743dc34f76e7e9437c04c0535df7.png",
+      "md5": "9c4f743dc34f76e7e9437c04c0535df7",
+      "width": 1920,
+      "height": 1080,
+      "size": 496525,
+      "uploadedDate": "2021-10-24T07:40:01.772Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ClassDiagramOverview-1920x1080-ec91d42c7c09c112fe917347fa4b4662.png",
+      "md5": "ec91d42c7c09c112fe917347fa4b4662",
+      "width": 1920,
+      "height": 1080,
+      "size": 82068,
+      "uploadedDate": "2021-10-26T02:19:43.584Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Artistic style transfer example1-1920x1080-fc7393e144a7674a4fb8c80a8a86dc1d.png",
+      "md5": "fc7393e144a7674a4fb8c80a8a86dc1d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1513563,
+      "uploadedDate": "2022-02-18T02:50:13.495Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Artistic style transfer example2-1920x1080-a7bb96a1aba4e7dbf6c2c16008927093.png",
+      "md5": "a7bb96a1aba4e7dbf6c2c16008927093",
+      "width": 1920,
+      "height": 1080,
+      "size": 1391712,
+      "uploadedDate": "2022-02-18T02:50:13.950Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Monocular Depth estimation example-1920x1080-8ec541b07281178c24c106c0f308bbc8.png",
+      "md5": "8ec541b07281178c24c106c0f308bbc8",
+      "width": 1920,
+      "height": 1080,
+      "size": 997344,
+      "uploadedDate": "2022-02-18T03:39:27.499Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/NNEngineNeuralNetworkEngine_thumb-284x284-2fa14de0230dbe1b0bf46ee88f8a6592.png",
+      "md5": "2fa14de0230dbe1b0bf46ee88f8a6592",
+      "width": 284,
+      "height": 284,
+      "size": 23630,
+      "uploadedDate": "2021-12-21T08:34:29.108Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/NNEngineNeuralNetworkEngine_featured-894x488-a40536eff36dd9eb6a2a95c0639d4721.png",
+      "md5": "a40536eff36dd9eb6a2a95c0639d4721",
+      "width": 894,
+      "height": 488,
+      "size": 207129,
+      "uploadedDate": "2021-12-21T08:39:11.548Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Monocular Depth estimation example-1920x1080-8ec541b07281178c24c106c0f308bbc8_Snapshot.png",
+      "md5": "00702a1c73458d9fa2b619cd2c5a11bf",
+      "width": 150,
+      "height": 74,
+      "size": 6169,
+      "uploadedDate": "2022-02-18T03:39:27.720Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Artistic style transfer example1-1920x1080-fc7393e144a7674a4fb8c80a8a86dc1d_Snapshot.png",
+      "md5": "025d26d7769adcaf8d626e6b6170e7c1",
+      "width": 150,
+      "height": 74,
+      "size": 7271,
+      "uploadedDate": "2022-02-18T02:50:13.749Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Artistic style transfer example2-1920x1080-a7bb96a1aba4e7dbf6c2c16008927093_Snapshot.png",
+      "md5": "901c262ef1b73970a138f0c20debc9d8",
+      "width": 150,
+      "height": 74,
+      "size": 7718,
+      "uploadedDate": "2022-02-18T02:50:14.221Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ClassDiagramOverview-1920x1080-ec91d42c7c09c112fe917347fa4b4662_Snapshot.png",
+      "md5": "ec2ba608fed1bdb4752ea595e393601c",
+      "width": 150,
+      "height": 74,
+      "size": 4678,
+      "uploadedDate": "2021-10-26T02:19:43.774Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/systemOverview-1920x1080-80a2bd26ff1bc50ac73a167cc6dde1d2_Snapshot.png",
+      "md5": "955d1199a8dd9e4b168754ca90f934f7",
+      "width": 150,
+      "height": 74,
+      "size": 4238,
+      "uploadedDate": "2021-10-24T07:40:00.738Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Easy-to-use-1920x1080-eaf66ba6791c86bdbf4b7ddadd1aabeb_Snapshot.png",
+      "md5": "293b9cd1ea3b861a3fd49e222c6602d9",
+      "width": 150,
+      "height": 74,
+      "size": 4735,
+      "uploadedDate": "2021-10-24T07:40:01.046Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/With-parctical-examples-1920x1080-7736fa5a2d11b3dd71696ec5ccebe268_Snapshot.png",
+      "md5": "596fa45d57561acd40f322cf1116f24d",
+      "width": 150,
+      "height": 74,
+      "size": 6971,
+      "uploadedDate": "2021-10-24T07:40:01.626Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Doc-1920x1080-9c4f743dc34f76e7e9437c04c0535df7_Snapshot.png",
+      "md5": "57f4d92e9da6ef02b82e3eda4d49d281",
+      "width": 150,
+      "height": 74,
+      "size": 4279,
+      "uploadedDate": "2021-10-24T07:40:02.083Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ClassDiagramOverview-1920x1080-68c5c20b454988680fecd0a19edccf38_Snapshot.png",
+      "md5": "6a36d18295fe51675c28199b447f061b",
+      "width": 150,
+      "height": 74,
+      "size": 4438,
+      "uploadedDate": "2021-10-24T07:40:02.446Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/explainInOneImage-1920x1080-30dd1145246e14a38597767c2c505b7f_Snapshot.png",
+      "md5": "757c5d7a7fbaebde7c5ae9d751a54e53",
+      "width": 150,
+      "height": 74,
+      "size": 8077,
+      "uploadedDate": "2021-10-20T10:59:49.312Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Easy-to-use-1920x1080-eaf66ba6791c86bdbf4b7ddadd1aabeb_Snapshot.png",
+      "md5": "293b9cd1ea3b861a3fd49e222c6602d9",
+      "width": 150,
+      "height": 74,
+      "size": 4735,
+      "uploadedDate": "2021-10-20T10:59:49.616Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/With-parctical-examples-1920x1080-7736fa5a2d11b3dd71696ec5ccebe268_Snapshot.png",
+      "md5": "596fa45d57561acd40f322cf1116f24d",
+      "width": 150,
+      "height": 74,
+      "size": 6971,
+      "uploadedDate": "2021-10-20T10:59:50.151Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Doc-1920x1080-9c4f743dc34f76e7e9437c04c0535df7_Snapshot.png",
+      "md5": "57f4d92e9da6ef02b82e3eda4d49d281",
+      "width": 150,
+      "height": 74,
+      "size": 4279,
+      "uploadedDate": "2021-10-20T10:59:50.426Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ClassDiagramOverview-1920x1080-f8e278aab375ee1088f1a39a5822c605_Snapshot.png",
+      "md5": "71b1f97be435717206fc80552dba0957",
+      "width": 150,
+      "height": 74,
+      "size": 4136,
+      "uploadedDate": "2021-10-20T10:59:50.714Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-12-21T00:49:34.780Z",
+  "lastModifiedDate": "2024-11-18T08:34:24.717Z",
+  "customAttributes": {},
+  "entitlementName": "2ef6fcca9fe5486ea4713ee9d8434641",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "af5a77b4068945b599a2c175c2e4365c",
+      "appId": "NNEngine_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-10-20T00:00:00.000Z",
+      "releaseNote": "v1.5",
+      "versionTitle": "v1.5.0-4.26"
+    },
+    {
+      "id": "680763ee9d7e40c5a928fa6c7b4985c2",
+      "appId": "NNEngine_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-10-24T00:00:00.000Z",
+      "releaseNote": "v1.6",
+      "versionTitle": "v1.6.0-4.27"
+    },
+    {
+      "id": "bba41c45b96148e89d097ad483eb6d21",
+      "appId": "NNEngine_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-07T00:00:00.000Z",
+      "releaseNote": "v1.6",
+      "versionTitle": "v1.6.0-5.0"
+    },
+    {
+      "id": "57f4a28d66fb42e0a2643d02cb47703b",
+      "appId": "NNEngine_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-01-26T00:00:00.000Z",
+      "releaseNote": "v1.6 no change in the content. Just submitting again",
+      "versionTitle": "v1.6.0-5.1"
+    },
+    {
+      "id": "bd095e64d07d419d9c535af827beb8cc",
+      "appId": "NNEngine_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-06-19T00:00:00.000Z",
+      "releaseNote": "v1.7.1 for UE5.2\n- fix bug for Linker error \"Unresolved external symbol\" for members of FOnnxTensorInfo structure\n- add option for onnxruntime 1.15.1",
+      "versionTitle": "v1.7.1-5.2"
+    },
+    {
+      "id": "3f23c45ef711467cad1430a85d2adcb1",
+      "appId": "NNEngine_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-12-12T00:00:00.000Z",
+      "releaseNote": "v1.7.1 for ue5.3\nTested on only Windows 64bit",
+      "versionTitle": "v1.7.1-5.3"
+    },
+    {
+      "id": "605d75a3b7334486938d913d2f059eb1",
+      "appId": "NNEngine_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-13T00:00:00.000Z",
+      "releaseNote": "v1.7.1 for UE5.4",
+      "versionTitle": "v1.7.1-5.4"
+    }
+  ],
+  "developer": "Akiya Research Institute",
+  "developerId": "o-8ddnkezjdadpvsjej6lb58e8u96xgs",
+  "endOfSupport": false,
+  "unsearchable": false
+}

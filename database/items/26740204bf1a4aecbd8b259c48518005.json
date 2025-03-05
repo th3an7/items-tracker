@@ -1,0 +1,224 @@
+{
+  "id": "26740204bf1a4aecbd8b259c48518005",
+  "title": "Population Control PRO - Populate your world",
+  "description": "Population Control is a universal NPC spawner that will completely solve all issues with the NPC spawning in the world.",
+  "longDescription": "<p>Demo <a href=\"https://youtu.be/7_T4iizSoLI\" rel=\"nofollow\"><strong>Video</strong></a></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Craft&#43;Assets&#43;Studio&#43;%28CAS%29?count&#61;100&amp;sortBy&#61;effectiveDate&amp;sortDir&#61;DESC&amp;start&#61;0\" rel=\"nofollow\">OUR ASSETS</a></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Kopnina?count&#61;20&amp;sortBy&#61;effectiveDate&amp;sortDir&#61;DESC&amp;start&#61;0\" rel=\"nofollow\">OUR ASSETS 2</a></p><p><br /></p><p>Population Control is a universal NPC spawner that will completely solve all issues with the NPC spawning in the world. It can work both on small sizes, such as rooms in houses, and on huge spaces. The system keeps track of each spawned NPC and if he was destroyed then she can spawn him again after the right time. The system is very easy to use. The system can work together with <a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc\" rel=\"nofollow\">World Director NPC</a> and <a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc-pro-now-with-multiplayer\" rel=\"nofollow\">World Director PRO</a>, this completely closes the issue of spawn, respawn and optimization of the NPC. Together with <a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc\" rel=\"nofollow\">World Director NPC</a> or <a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc-pro-now-with-multiplayer\" rel=\"nofollow\">PRO</a>, the whole world is populated in a few mouse clicks and it will always be alive and optimized.</p><p><br /></p><p>Please pay your attention to the <a href=\"https://www.unrealengine.com/marketplace/en-US/product/global-world-optimization-framework-pro-max-with-multiplayer\" rel=\"nofollow\">GWOF</a> plugin. It supports most of the functionality of <a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc-pro-now-with-multiplayer\" rel=\"nofollow\">WD-PRO</a> and <a href=\"https://www.unrealengine.com/marketplace/en-US/product/population-control-populate-your-world\" rel=\"nofollow\">PC-PRO</a> but with more powerful optimization algorithms and more flexible configuration. However, it does not currently support NPCs wandering around in the background.</p><p><br /></p><p>World Director (NPC/PRO) &#43; Population Control - <a href=\"https://docs.google.com/document/d/1LT6-_uaqMMi5iQUjMP3ljuRJk908f7Mmmvn5FX3j4bA/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p>Update 1.5</p><p>&#43; Added random correction for spawn height.</p><p>&#43; Added functions for stopping and starting the spawner.</p><p>Update 1.4</p><p>&#43;Added curved spawn system. You can specify spawn chance and time on the curve. This makes the spawn system even more flexible.</p><p><br /></p><p><strong>The following features are supported:</strong> </p><ol><li>The calculation of the spawn occurs directly in the editor, you can see where and how much the NPC will spawn. </li><li>Spawn Time (The ability to set the spawn time, for example, spawn NPCs only between 12:30 and 16:00.)</li><li>Runtime Spawner (Added spawner version for Runtime. You can now spawn NPCs on generated levels. NavMesh is required.)</li><li>Save and Load (Now you can save the current state of the spawners.)</li><li>A parameter that determines the time of shuffling the spawn points among themselves to create more unique locations.</li><li>The ability to set the chance of spawn for each NPC. </li><li>You can increase the chance of spawn every time the NPC was not spawned due to the low chance of spawn. After spawning, the real value of the chance to spawn is reset to the initial value.</li><li>The lifetime parameter of the NPC in the background. If the NPC was destroyed due to a large distance to you, then it will be destroyed after this time and will spawn again at the original point.</li><li>You can spawn flying NPCs. </li><li>Can be spawned taking into account NavMesh. </li><li>You can specify blocking zones for spawn. </li><li>Prohibit spawn if the player is close to the spawn point (That would not be spawn in front of the player)</li><li>The size of the spawn box point can be changed (the spawn inside the box point is random). </li><li>You can configure each NPC separately, the respawn time, the number of NPCs, the distance to the spawn (for example, small NPCs spawn when you get closer, and large NPCs can be spawned with large distances). </li><li>Ability to despawn those who are too far away. </li><li>Search for another spawn point if a collision occurs.</li><li>You can select a list of supported collisions. </li><li>Support for multiplayer.</li></ol><p><br /></p><p><strong>Update 1.3 </strong></p><p>1. Spawn Time (The ability to set the spawn time, for example, spawn NPCs only between 12:30 and 16:00.)</p><p>2. Runtime Spawner (Added spawner version for Runtime. You can now spawn NPCs on generated levels. NavMesh is required.)</p><p>3. Save and Load (Now you can save the current state of the spawners.)</p><p>4. Fixed a problem with the rotation of the PopulationControlSpawner actor</p><p>5. Code refactoring</p><p>6. Fixed some bugs</p><p><strong>Update 1.2 - Upgrade to PRO</strong></p><p>Added:</p><p>1. The ability to set the chance of spawn for each NPC. If the NPC was not spawned, then after the respawn time it will again be checked for spawn.</p><p>2. The parameter increases the chance of spawn every time the NPC was not spawned due to the low chance of spawn. After spawning, the real value of the chance to spawn is reset to the initial value.</p><p>3. A parameter that determines the time of shuffling the spawn points among themselves to create more unique locations.</p><p>4. The parameter respawn from the last position when the NPC was destroyed because it was far away. Previously, he only spawned at the spawn point. Now if the NPC was chasing you and you ran away, he will appear in the same place where you lost him.</p><p>5. The lifetime parameter of the NPC in the background. If the NPC was destroyed due to a large distance to you, then it will be destroyed after this time and will spawn again at the original point. (Leave zero if you do not want to destroy the NPC in the background).</p><p>6. Added the ability to exclude an NPC from the Population Control system or return it back. For example, you spawn boats and want to control one of them, you can exclude it from the system. There is also a function to check whether the NPC is now in the Population Control system or has been excluded.</p><p>7. Added the ability to clean a specific NPC from the system. Unlike exclusion, after clearing the NPC, the slot in the Population Control system will be free and it will be able to spawn a new NPC.</p><p>Fix:</p><p>1. Fixed the respawn issue. NPCs continued to spawn again even if respawn was disabled.</p><p>2. Small fix related to saving.</p><p><br /></p><p>Update 1.1.1<strong> </strong>- Improved performance in runtime.</p><p>Update 1.1 <strong>- </strong><a href=\"https://youtu.be/ZltlmAT1McE\" rel=\"nofollow\">Video comparison</a></p><p>1. Added the ability to spawn any Actors.</p><p>2. Added button Save and clear cache - Saving large maps is now even faster. It also reduced disk space usage by 60%&#43;.</p><p>Update 1.0.5<strong> </strong>- Improved performance when saving in the editor.</p><p><a href=\"https://yadi.sk/d/EJzLr9Gfpd4Fag\" rel=\"nofollow\">Template WD-PRO&#43;PC UE4.26</a></p><p>All plugins for optimizing your project:</p><ol><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/loot-generator-full-control-on-loot\" rel=\"nofollow\">Loot Generator</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc-pro-now-with-multiplayer\" rel=\"nofollow\">World Director PRO</a> (included World Director Actor and World Director NPC)</li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-npc\" rel=\"nofollow\">World Director NPC</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/world-director-actor-just-optimize-your-world\" rel=\"nofollow\">World Director Actor</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/population-control-populate-your-world\" rel=\"nofollow\">Population Control</a></li><li><a href=\"https://www.unrealengine.com/marketplace/en-US/product/foliage-assistant-pro\" rel=\"nofollow\">Foliage Assistant PRO</a></li></ol>",
+  "technicalDetails": "<p>Features:</p><ul><li>Spawn Time (The ability to set the spawn time, for example, spawn NPCs only between 12:30 and 16:00.)</li><li>The calculation of the spawn occurs directly in the editor, you can see where and how much the NPC will spawn.</li><li>You can select a list of supported collisions.</li><li> You can spawn flying NPCs.</li><li> Can be spawned taking into account NavMesh.</li><li>You can specify blocking zones for spawn.</li><li>Prohibit spawn if the player is close to the spawn point (That would not be spawn in front of the player)</li><li>The size of the spawn box point can be changed (the spawn inside the box point is random).</li><li>You can turn on spawn only if it is active on the net (in runtime)</li><li>You can configure each NPC separately, the respawn time, the number of NPCs, the distance to the spawn (for example, small NPCs spawn when you get closer, and large NPCs can be spawned with large distances).</li><li>Ability to despawn those who are too far away.</li><li>Search for another spawn point if a collision occurs.</li><li>Support for multiplayer.</li><li>The plugin is easy to use.</li></ul><p>Code Modules:</p><ul><li>APopulationControlSpawner(Type: Runtime)</li><li>ABlockZonePC(Type: Runtime)</li></ul><p>Number of Blueprints: 2</p><p>Number of C&#43;&#43; Classes: 2</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1-lwJNCrO0ko7b6zkU_08HwzJKMGDm4qzUyfqXigFlkc/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a>, <a href=\"https://discord.gg/DN4PhbmShg\" rel=\"nofollow\">Discord</a></p><p>Example Project: Included</p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-25bb1857f7c6d8c5b3806531fbd0baba.jpg",
+      "md5": "25bb1857f7c6d8c5b3806531fbd0baba",
+      "width": 1920,
+      "height": 1080,
+      "size": 649049,
+      "uploadedDate": "2021-03-10T14:05:12.103Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-d4cf5f13198fab68aeba450c6c96a823.jpg",
+      "md5": "d4cf5f13198fab68aeba450c6c96a823",
+      "width": 1920,
+      "height": 1080,
+      "size": 472427,
+      "uploadedDate": "2021-03-10T14:05:12.521Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-ec75986b4d745c5c97ab80b6f3536531.jpg",
+      "md5": "ec75986b4d745c5c97ab80b6f3536531",
+      "width": 1920,
+      "height": 1080,
+      "size": 215272,
+      "uploadedDate": "2021-03-10T14:05:13.002Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PopulationControlPROPopulateyourworld_thumb-284x284-e64ce632b4ce77f1ac947a467d506d98.png",
+      "md5": "e64ce632b4ce77f1ac947a467d506d98",
+      "width": 284,
+      "height": 284,
+      "size": 175540,
+      "uploadedDate": "2023-10-17T10:36:25.012Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PopulationControlPROPopulateyourworld_featured-894x488-fee8e57d61efc4ad19f877a6fa9ffdc3.png",
+      "md5": "fee8e57d61efc4ad19f877a6fa9ffdc3",
+      "width": 894,
+      "height": 488,
+      "size": 802216,
+      "uploadedDate": "2023-10-17T10:36:25.170Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-25bb1857f7c6d8c5b3806531fbd0baba_Snapshot.jpg",
+      "md5": "545d56e9f50e51858671eee6bbf9faf1",
+      "width": 150,
+      "height": 74,
+      "size": 6948,
+      "uploadedDate": "2021-03-10T14:05:12.394Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-d4cf5f13198fab68aeba450c6c96a823_Snapshot.jpg",
+      "md5": "40136da604dc414dda9dc488529e79d7",
+      "width": 150,
+      "height": 74,
+      "size": 6452,
+      "uploadedDate": "2021-03-10T14:05:12.866Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-ec75986b4d745c5c97ab80b6f3536531_Snapshot.jpg",
+      "md5": "afe259a6660f4ae42ff940537b66217d",
+      "width": 150,
+      "height": 74,
+      "size": 5281,
+      "uploadedDate": "2021-03-10T14:05:13.231Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-03-11T18:55:16.631Z",
+  "lastModifiedDate": "2025-01-08T11:37:58.412Z",
+  "customAttributes": {},
+  "entitlementName": "26740204bf1a4aecbd8b259c48518005",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "9d8a229dc38644569a8f0bc34f3f8a3a",
+      "appId": "PopulationControl_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2021-03-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PopCtrl PRO 1.2 426"
+    },
+    {
+      "id": "e11504752315427b808e7691f569f39e",
+      "appId": "PopulationControl_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Mac",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2021-08-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PopCtrl PRO 427 1.4.3"
+    },
+    {
+      "id": "c43db9da66bb45dc93b10a4bd85ee66f",
+      "appId": "PopulationControl_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Mac",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PopCtrl PRO 5 1.4.4"
+    },
+    {
+      "id": "3a1915bc14f74ce7b78fef7732215ac7",
+      "appId": "PopulationControl_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PopCtrl PRO ue51 1.4.5"
+    },
+    {
+      "id": "d5b4fca648e74f58be85d7a8191e36e4",
+      "appId": "PopulationControl_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PopCtrl PRO ue52 1.4.5"
+    },
+    {
+      "id": "3e913d3159e14975a7b3d3ba31071aa8",
+      "appId": "PopulationControl_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PopCtrl PRO ue53 1.5.0"
+    },
+    {
+      "id": "b749dcfd9a484a53a40e213a39d13282",
+      "appId": "PopulationControl_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "PS4",
+        "Win32",
+        "Mac",
+        "Android",
+        "Linux",
+        "iOS",
+        "SteamVR / HTC Vive",
+        "Oculus"
+      ],
+      "dateAdded": "2024-04-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PopCtrl PRO ue54 1.6.0"
+    }
+  ],
+  "developer": "Craft Assets Studio (CAS)",
+  "developerId": "o-ff78aff15e4a0d9314b2e452451aca",
+  "endOfSupport": false,
+  "unsearchable": false
+}

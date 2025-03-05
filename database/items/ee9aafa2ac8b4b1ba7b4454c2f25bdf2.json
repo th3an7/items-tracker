@@ -1,0 +1,405 @@
+{
+  "id": "ee9aafa2ac8b4b1ba7b4454c2f25bdf2",
+  "title": "Advanced Swinging",
+  "description": "Grapple style swinging system with Third Person and Side Scroll examples for P.C. and Mobile",
+  "longDescription": "<h1>UPDATED: NOW INCLUDES BOTH THIRD PERSON AND SIDE SCROLL EXAMPLES</h1><p>An advanced grapple style swinging system with Third Person and Side Scroll examples included. Includes a basic health bar, fall damage, and simple death. Easily adjustable tracers with color matching spheres to adjust rope length and stiffness. Tracers enable/disable automatically based on distance from swing point. You can adjust the amount of fall damage based on height in the blueprint. You can move up/down (lengthen/shorten rope) while swinging. This system is complex but also kept as simple as possible for easy transfer to your character. No functions, macros, timers, curves, montages, interfaces, etc.. It does come with animations but they are meant to be examples and are not perfect. As with any other asset, you can modify to match your own style/needs.</p><p><br /></p><p>Example Video: http://jbgameworks.com/index.php/asset-vids/</p><p>Hanging physics rope swing- Rope Swing &amp; Climb: https://www.unrealengine.com/marketplace/en-US/product/2dbf5aec379340078adfab2c10ff916b</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Grapple style swinging</li><li>Move up/down (lengthen/shorten rope) while swinging</li><li> Health bar and fall damage, simple death, and death trigger box</li><li> Easily adjust rope length (how far you can throw rope), max rope length (while swinging), and stiffness</li><li>Tracers are enabled/disabled automatically based on distance to swing point</li><li>Uses the Epic skeleton</li></ul><p><br /></p><p>Number of Blueprints: 5</p><p>Input: Gamepad, keyboard</p><p>Network Replicated: Not tested</p><p>Supported Development Platforms: PC, Mobile</p><p>Windows: Yes</p><p>Mac: Not tested</p><p>Documentation: http://jbgameworks.com</p><p>Notes: Will be updated for new engine versions</p><p><br /></p><p><br /></p><p>ATTENTION: Instructions- You will need to create a new collision object in your project settings called &#34;Swing&#34; if you migrate to your own project. Of coarse you can rename this or just use any built in collision object or channel if you prefer. This is just used by the tracers and swing points so the tracers wont attach the grapple to unwanted objects. After creating the new collision object, set your swing points to that object type, then go to the swinging section of the character blueprint and change the tracers to hit the new object type. You should also create a socket on one hand for the rope particles to attach to. Everything else is pretty straight forward and mostly just variables with a few events. But do pay attention to the Anim Notifies in the animation blueprint. There are two events triggered when an animation starts or finishes. Nothing complicated, just easy to overlook.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1tracers adjust-1920x1080-d7ca3aaec7e0800ed55d7782e1de1c0a.JPG",
+      "md5": "d7ca3aaec7e0800ed55d7782e1de1c0a",
+      "width": 1920,
+      "height": 1080,
+      "size": 824708,
+      "uploadedDate": "2020-02-09T16:30:07.706Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2forward-trace-1920x1080-840ca00dc475321548fe309b47b0db41.jpg",
+      "md5": "840ca00dc475321548fe309b47b0db41",
+      "width": 1920,
+      "height": 1080,
+      "size": 116830,
+      "uploadedDate": "2020-02-09T16:30:08.087Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3stiff-trace-down-1920x1080-8bae60473844c6e8a767faa7259b37d2.jpg",
+      "md5": "8bae60473844c6e8a767faa7259b37d2",
+      "width": 1920,
+      "height": 1080,
+      "size": 90446,
+      "uploadedDate": "2020-02-09T16:30:08.468Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4groundTrace-1920x1080-7856c16ef1ffbb0686d529d5107c42aa.jpg",
+      "md5": "7856c16ef1ffbb0686d529d5107c42aa",
+      "width": 1920,
+      "height": 1080,
+      "size": 114765,
+      "uploadedDate": "2020-02-09T16:30:08.797Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5ground-trace-2-1920x1080-4f33a1b6966c829c0db6135b5ec9e883.jpg",
+      "md5": "4f33a1b6966c829c0db6135b5ec9e883",
+      "width": 1920,
+      "height": 1080,
+      "size": 137344,
+      "uploadedDate": "2020-02-09T16:30:09.122Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-9851de14888b2ecb435c7680d0629662.jpg",
+      "md5": "9851de14888b2ecb435c7680d0629662",
+      "width": 1920,
+      "height": 1080,
+      "size": 102732,
+      "uploadedDate": "2020-02-09T16:30:09.462Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/animbp-1920x1080-dcb49acf74e6661dfea60ffbe8d71bf4.JPG",
+      "md5": "dcb49acf74e6661dfea60ffbe8d71bf4",
+      "width": 1920,
+      "height": 1080,
+      "size": 539727,
+      "uploadedDate": "2020-02-09T16:30:12.247Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/swingpoint-1920x1080-73a02f3c19232dd6a01d4219984f16ab.jpg",
+      "md5": "73a02f3c19232dd6a01d4219984f16ab",
+      "width": 1920,
+      "height": 1080,
+      "size": 382047,
+      "uploadedDate": "2020-02-20T20:50:33.418Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/13-1920x1080-9597a376502d5e7458d7a0c11f4931fe.jpg",
+      "md5": "9597a376502d5e7458d7a0c11f4931fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 343173,
+      "uploadedDate": "2020-03-24T22:04:01.065Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7-1920x1080-ccb251390fa3a7d5cb35d6357b83c95c.jpg",
+      "md5": "ccb251390fa3a7d5cb35d6357b83c95c",
+      "width": 1920,
+      "height": 1080,
+      "size": 378908,
+      "uploadedDate": "2020-03-24T22:04:01.547Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8-1920x1080-b2f717c6e7c1e9f25f361e4bb7996ecd.jpg",
+      "md5": "b2f717c6e7c1e9f25f361e4bb7996ecd",
+      "width": 1920,
+      "height": 1080,
+      "size": 110506,
+      "uploadedDate": "2020-03-24T22:04:01.987Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/9-1920x1080-f9bf8eb408c150397ad657d6cfdfd9a5.jpg",
+      "md5": "f9bf8eb408c150397ad657d6cfdfd9a5",
+      "width": 1920,
+      "height": 1080,
+      "size": 118333,
+      "uploadedDate": "2020-03-24T22:04:02.277Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/10-1920x1080-f05188bee1f881fce2211a17be5cb2e9.jpg",
+      "md5": "f05188bee1f881fce2211a17be5cb2e9",
+      "width": 1920,
+      "height": 1080,
+      "size": 160154,
+      "uploadedDate": "2020-03-24T22:04:02.576Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/11-1920x1080-9a3abcd37182238007175b59176eb334.jpg",
+      "md5": "9a3abcd37182238007175b59176eb334",
+      "width": 1920,
+      "height": 1080,
+      "size": 126715,
+      "uploadedDate": "2020-03-24T22:04:02.998Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/12-1920x1080-ea2ae0dc21d8db0e45178fc33c3a0cfb.jpg",
+      "md5": "ea2ae0dc21d8db0e45178fc33c3a0cfb",
+      "width": 1920,
+      "height": 1080,
+      "size": 131546,
+      "uploadedDate": "2020-03-24T22:04:03.328Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AdvancedSwinging_thumb-284x284-de9d83b27862a2c3b6669182e6b1e80e.png",
+      "md5": "de9d83b27862a2c3b6669182e6b1e80e",
+      "width": 284,
+      "height": 284,
+      "size": 65806,
+      "uploadedDate": "2020-03-24T22:04:03.578Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AdvancedSwinging_featured-894x488-2f049f4f78a9d575609bc395c1db811f.png",
+      "md5": "2f049f4f78a9d575609bc395c1db811f",
+      "width": 894,
+      "height": 488,
+      "size": 191118,
+      "uploadedDate": "2020-03-24T22:04:03.649Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/13-1920x1080-9597a376502d5e7458d7a0c11f4931fe_Snapshot.jpg",
+      "md5": "37ddfba9b6490459aa8ab9492e97c6be",
+      "width": 150,
+      "height": 74,
+      "size": 3585,
+      "uploadedDate": "2020-03-24T22:04:01.401Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-ccb251390fa3a7d5cb35d6357b83c95c_Snapshot.jpg",
+      "md5": "0f3992be87876446973ed7674bc690d7",
+      "width": 150,
+      "height": 74,
+      "size": 3892,
+      "uploadedDate": "2020-03-24T22:04:01.832Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-b2f717c6e7c1e9f25f361e4bb7996ecd_Snapshot.jpg",
+      "md5": "e70c93a0e08c8ecd4069f3f861ffed1d",
+      "width": 150,
+      "height": 74,
+      "size": 3586,
+      "uploadedDate": "2020-03-24T22:04:02.201Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-f9bf8eb408c150397ad657d6cfdfd9a5_Snapshot.jpg",
+      "md5": "e9927d8d467d7fd70f750af7b3e52cf1",
+      "width": 150,
+      "height": 74,
+      "size": 3838,
+      "uploadedDate": "2020-03-24T22:04:02.506Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10-1920x1080-f05188bee1f881fce2211a17be5cb2e9_Snapshot.jpg",
+      "md5": "49729d9bbd5a55dc04b8bc912ebc8dc4",
+      "width": 150,
+      "height": 74,
+      "size": 3915,
+      "uploadedDate": "2020-03-24T22:04:02.846Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11-1920x1080-9a3abcd37182238007175b59176eb334_Snapshot.jpg",
+      "md5": "ac0446959eadce132a014eb641bb548b",
+      "width": 150,
+      "height": 74,
+      "size": 3912,
+      "uploadedDate": "2020-03-24T22:04:03.211Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/12-1920x1080-ea2ae0dc21d8db0e45178fc33c3a0cfb_Snapshot.jpg",
+      "md5": "384257bbbcc446a8e861ecc1484f2588",
+      "width": 150,
+      "height": 74,
+      "size": 4084,
+      "uploadedDate": "2020-03-24T22:04:03.540Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/swingpoint-1920x1080-73a02f3c19232dd6a01d4219984f16ab_Snapshot.jpg",
+      "md5": "9725cfc0376f57122135eff5c5626e98",
+      "width": 150,
+      "height": 74,
+      "size": 3696,
+      "uploadedDate": "2020-02-20T20:50:33.653Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1tracers adjust-1920x1080-d7ca3aaec7e0800ed55d7782e1de1c0a_Snapshot.JPG",
+      "md5": "42d7472c097513e01a34a8ae36c327ab",
+      "width": 150,
+      "height": 74,
+      "size": 6756,
+      "uploadedDate": "2020-02-09T16:30:07.965Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2forward-trace-1920x1080-840ca00dc475321548fe309b47b0db41_Snapshot.jpg",
+      "md5": "c2028a0a56102681395875e46d325106",
+      "width": 150,
+      "height": 74,
+      "size": 3845,
+      "uploadedDate": "2020-02-09T16:30:08.365Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3stiff-trace-down-1920x1080-8bae60473844c6e8a767faa7259b37d2_Snapshot.jpg",
+      "md5": "598fbfdd33641507ba41901c6839d6ca",
+      "width": 150,
+      "height": 74,
+      "size": 2378,
+      "uploadedDate": "2020-02-09T16:30:08.689Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4groundTrace-1920x1080-7856c16ef1ffbb0686d529d5107c42aa_Snapshot.jpg",
+      "md5": "b602a7296fe3b24e697ea1d64eabaff0",
+      "width": 150,
+      "height": 74,
+      "size": 3233,
+      "uploadedDate": "2020-02-09T16:30:09.006Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5ground-trace-2-1920x1080-4f33a1b6966c829c0db6135b5ec9e883_Snapshot.jpg",
+      "md5": "0e0a2b39530900d4e1b1255e1a0169e8",
+      "width": 150,
+      "height": 74,
+      "size": 3850,
+      "uploadedDate": "2020-02-09T16:30:09.365Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-9851de14888b2ecb435c7680d0629662_Snapshot.jpg",
+      "md5": "d9bf83b10e55df3dd40c377b925a59f8",
+      "width": 150,
+      "height": 74,
+      "size": 3347,
+      "uploadedDate": "2020-02-09T16:30:09.726Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-ccb251390fa3a7d5cb35d6357b83c95c_Snapshot.jpg",
+      "md5": "0f3992be87876446973ed7674bc690d7",
+      "width": 150,
+      "height": 74,
+      "size": 3892,
+      "uploadedDate": "2020-02-09T16:30:10.114Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-b2f717c6e7c1e9f25f361e4bb7996ecd_Snapshot.jpg",
+      "md5": "e70c93a0e08c8ecd4069f3f861ffed1d",
+      "width": 150,
+      "height": 74,
+      "size": 3586,
+      "uploadedDate": "2020-02-09T16:30:10.435Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-f9bf8eb408c150397ad657d6cfdfd9a5_Snapshot.jpg",
+      "md5": "e9927d8d467d7fd70f750af7b3e52cf1",
+      "width": 150,
+      "height": 74,
+      "size": 3838,
+      "uploadedDate": "2020-02-09T16:30:10.750Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10-1920x1080-f05188bee1f881fce2211a17be5cb2e9_Snapshot.jpg",
+      "md5": "49729d9bbd5a55dc04b8bc912ebc8dc4",
+      "width": 150,
+      "height": 74,
+      "size": 3915,
+      "uploadedDate": "2020-02-09T16:30:11.043Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11-1920x1080-9a3abcd37182238007175b59176eb334_Snapshot.jpg",
+      "md5": "ac0446959eadce132a014eb641bb548b",
+      "width": 150,
+      "height": 74,
+      "size": 3912,
+      "uploadedDate": "2020-02-09T16:30:11.375Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/12-1920x1080-ea2ae0dc21d8db0e45178fc33c3a0cfb_Snapshot.jpg",
+      "md5": "384257bbbcc446a8e861ecc1484f2588",
+      "width": 150,
+      "height": 74,
+      "size": 4084,
+      "uploadedDate": "2020-02-09T16:30:11.755Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/13-1920x1080-9597a376502d5e7458d7a0c11f4931fe_Snapshot.jpg",
+      "md5": "37ddfba9b6490459aa8ab9492e97c6be",
+      "width": 150,
+      "height": 74,
+      "size": 3585,
+      "uploadedDate": "2020-02-09T16:30:12.123Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/animbp-1920x1080-dcb49acf74e6661dfea60ffbe8d71bf4_Snapshot.JPG",
+      "md5": "d79d4fbfa808ef268c4ccf5732d53f13",
+      "width": 150,
+      "height": 74,
+      "size": 4621,
+      "uploadedDate": "2020-02-09T16:30:12.489Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-03-03T22:52:01.078Z",
+  "lastModifiedDate": "2024-10-08T21:16:29.775Z",
+  "entitlementName": "ee9aafa2ac8b4b1ba7b4454c2f25bdf2",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "6fcc8c158b694471a8f3d54915ae3b49",
+      "appId": "Advancedee9aafa2ac8bV1",
+      "compatibleApps": [
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Win32",
+        "Windows",
+        "iOS"
+      ],
+      "dateAdded": "2020-02-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Advanced Swinging 1.2"
+    }
+  ],
+  "developer": "JB Gameworks",
+  "developerId": "o-auc5um4grtq26dzrp4s2nw6mvaezu7",
+  "endOfSupport": false,
+  "unsearchable": false
+}

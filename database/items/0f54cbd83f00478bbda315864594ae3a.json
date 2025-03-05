@@ -1,0 +1,168 @@
+{
+  "id": "0f54cbd83f00478bbda315864594ae3a",
+  "title": "Tickify",
+  "description": "Make blueprint events and functions update per tick flexibly through an optimized and user-friendly workflow.",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;kZtg0whK8Oc\" rel=\"nofollow\">Quick setup video and in editor performance comparison.</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;SPp-o4_7hbk\" rel=\"nofollow\">Video about the Tickify custom delegate pin.</a></p><p><br /></p><p>Have you ever worried about <strong>performance </strong>when adding so<strong> much</strong> of these <strong>ticking features</strong> you only need to run under certain <strong>condition</strong>?</p><p>Have you ever wanted to avoid adding an<strong> extra branch</strong> in a sequence <strong>in the event tick</strong> just <strong>for little things</strong> like a <strong>smooth interpolation</strong>?</p><p>Have you ever wanted a <strong>UObject </strong>to have a <strong>tickable function</strong>?</p><p>Does your project involve <strong>hundreds of actors</strong> with small ticking tasks?</p><p>Have you ever wanted to perform <strong>different functions</strong> per tick depending on the <strong>LOD </strong>of a Skeletal Mesh?</p><p><br /></p><p>If you are looking for a <strong>solution</strong> to any of the above, this plugin can fulfill your needs!</p><p><br /></p><p><br /></p><h2><br /></h2><p><br /></p><p><br /></p><p><br /></p><h1>What does Tickify do?</h1><p><br /></p><p>Tickify provides nodes that <strong>subscribe</strong> the bound <strong>function/event</strong> to the <strong>tick </strong>when they are called, allowing you to <strong>dispense </strong>with the <strong>Actor Tick</strong>. This way, it <strong>eliminates </strong>the running <strong>cost </strong>of the Event Tick when none of the functions are enabled, or <strong>saves </strong>you the <strong>time </strong>of creating a system to determine when to disable/enable this Actor Tick.</p><p><br /></p><p><strong>Creating </strong>a<strong> tick</strong> is done by calling a <a href=\"https://tickify.carrd.co/#tickify-node\" rel=\"nofollow\"><strong>Tickify </strong>node</a> with a valid bound Tickify Tick function.</p><p><strong>Stopping </strong>a<strong> tick </strong>is done by calling the <a href=\"https://tickify.carrd.co/#untickify\" rel=\"nofollow\"><strong>Untickify </strong>function</a><strong> </strong>from the desired tick handle.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h1>How fast is implementation?</h1><p><br /></p><p>One of the goals for this plugin was to make it really <strong>fast </strong>to work with.</p><p><br /></p><ul><li><a href=\"https://tickify.carrd.co/#tickify-handle\" rel=\"nofollow\"><strong>Handle variable</strong></a>: When you create a new Tickify node, it automatically creates a handle <strong>variable </strong>for the tick to make it <strong>faster </strong>to locate the tick. </li></ul><p><br /></p><ul><li><a href=\"https://tickify.carrd.co/#tickify-delegate\" rel=\"nofollow\"><strong>Custom delegate</strong></a>: Tickify nodes use a <strong>custom delegate</strong> that allows you to quickly <strong>create a function or event</strong> that matches the name you gave to the Tickify node. It also allows you to quickly <strong>navigate </strong>to the bound function by pressing the link button or double-clicking the Tickify node.</li></ul><p><br /></p><ul><li><strong>Naming</strong>: You can change the name of the tick from the variable or by modifying the Tick Name field in the details panel when a Tickify node is selected. This name will automatically be used only as a prefix when creating functions/events from the drop-down list.</li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h1>How are exceptions handled?</h1><p><br /></p><ul><li><strong>Removed bound function</strong>: If a Tickify node had a function bound in some of its delegates, it will generate a <strong>compiler error</strong> from which you can <strong>navigate</strong> to the node with the error. Additionally, the custom delegate pin will <strong>turn red</strong>.</li></ul><p><br /></p><ul><li><strong>Owner of the function destroyed at runtime</strong>:<strong> </strong>Tickify <strong>checks</strong> if the actor owning the function <strong>is valid</strong> before calling the bound function, if it is no longer valid, Tickify will <strong>schedule</strong> the tick <strong>removal</strong>.</li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h1>How to get the best performance when using Tickify?</h1><p><br /></p><ul><li><strong>Unconditional tick functions:</strong> For those ticking functions that you need to run every tick, it is <strong>better to wrap</strong> them into a <strong>single</strong> Tickify <strong>tick </strong>function. Tickify is <strong>faster </strong>than Unreal&#39;s tick due to its <strong>simplicity</strong> for use in blueprints, but it still has a complexity of O(n). <strong>Minimizing</strong> the number of ticks you use, if they will be running all the time, is the <strong>best </strong>way to <strong>improve</strong> your <strong>performance</strong>.</li></ul><p><br /></p><ul><li><strong>Calling the Tickify node once:</strong> If you want to activate the tick, avoid calling the Tickify nodes per tick. If you have a scenario like this, you want to wrap the logic you have in the Tickify Tick function into a separate function and call it directly per tick instead of calling the Tickify node. </li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h1>What about migrating projects to new Unreal Engine versions when using Tickify?</h1><p><br /></p><p>After opening a migrated project, you should <strong>avoid saving any changes</strong> if you have not yet installed the <strong>latest version of the plugin</strong> corresponding to the version of the engine to which you are migrating the project. If you do, you will <strong>lose</strong> all the nodes that come with Tickify. First <strong>activate </strong>the plugin from the plugins window, restart it <strong>without saving</strong> any changes, and you should be good to go.</p><p><br /></p><p>Although updating a project that uses Tickify following the instructions above is proven and <strong>completely safe</strong>, as a precautionary measure, it would be best to follow <a href=\"https://www.youtube.com/watch?v&#61;ixW1ca8KGEc\" rel=\"nofollow\">this tutorial</a> by &#64;JonathanWinbush to <strong>permanently enable</strong> Tickify, or any other plugin your project uses, <strong>before</strong> opening the project so that there is no chance of losing data.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h1>Why to force the use of a variable?</h1><p><br /></p><p>This handle variable is required to quickly <strong>locate</strong> and modify the tick via the handle, eliminating the need for containers that require <strong>costly</strong> operations such as rehashing or O(n) complexity iterators.</p><p><br /></p><p>In addition, Tickify provides an alternative node called <strong>Tickify Glider</strong>, which performs an output execution pin per tick and does not create a handle variable in your object.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Make <strong>tickable</strong> functions/events.</li><li> Custom, <strong>optimized </strong>nodes.</li><li> <strong>Faster </strong>than Unreal&#39;s Tick.</li><li> Modify the <strong>execution order</strong> for the functions/events to be performed.</li><li> Set the <strong>ticking group</strong> where the functions/events will be performed.</li><li> Set a <strong>lifetime </strong>value for a function or event, allowing it to tick for a finite period of time.</li><li> Perform <strong>different functions</strong> per tick depending on the <strong>LOD </strong>of a Skeletal Mesh</li></ul><p>Code Modules:</p><ul><li> Tickify (Runtime)</li><li> TickifyEd (Editor)</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 27</p><p>Network Replicated: No (You can make any RPC event tickable if it has a signature that is compatible with the delegate, although neither class implements any replication logic)</p><p>Supported Development Platforms: Windows 64, Linux</p><p>Supported Target Build Platforms: Windows 64, Linux</p><p>Documentation: <a href=\"https://tickify.carrd.co/#documentation\" rel=\"nofollow\">Tickify - Documentation</a></p><p>Example Project: <a href=\"https://tickify.carrd.co/#example-project\" rel=\"nofollow\">Tickify - Example Project</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BetterRegularTickPerformance-1920x1080-bd5a720e10269ba416586a007ae37114.jpg",
+      "md5": "bd5a720e10269ba416586a007ae37114",
+      "width": 1920,
+      "height": 1080,
+      "size": 346046,
+      "uploadedDate": "2024-05-12T09:28:50.103Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MultipleTicks-1920x1080-450bf1a86ee9e04bf74eedff15ef0c67.jpg",
+      "md5": "450bf1a86ee9e04bf74eedff15ef0c67",
+      "width": 1920,
+      "height": 1080,
+      "size": 473037,
+      "uploadedDate": "2024-05-12T09:28:50.522Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CustomPin-1920x1080-2e0b1cf68c224c11e26450e8786670d7.jpg",
+      "md5": "2e0b1cf68c224c11e26450e8786670d7",
+      "width": 1920,
+      "height": 1080,
+      "size": 429308,
+      "uploadedDate": "2024-05-12T09:28:50.927Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ExecutionOrder-1920x1080-8772f47c1128927ff81c1f237e29a4a9.jpg",
+      "md5": "8772f47c1128927ff81c1f237e29a4a9",
+      "width": 1920,
+      "height": 1080,
+      "size": 528764,
+      "uploadedDate": "2024-05-12T09:28:51.394Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ChooseTheRIghtTickGroup-1920x1080-9b6a5099dd085a034c2b2c7abf0be5a6.jpg",
+      "md5": "9b6a5099dd085a034c2b2c7abf0be5a6",
+      "width": 1920,
+      "height": 1080,
+      "size": 471781,
+      "uploadedDate": "2024-05-12T09:28:51.908Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Tickify_thumb-284x284-9fc4133c013ca9502628b20b05f6e481.png",
+      "md5": "9fc4133c013ca9502628b20b05f6e481",
+      "width": 284,
+      "height": 284,
+      "size": 39805,
+      "uploadedDate": "2024-05-12T09:28:52.305Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Tickify_featured-894x488-cfca75183ded1b958ced01c96d09a280.png",
+      "md5": "cfca75183ded1b958ced01c96d09a280",
+      "width": 894,
+      "height": 488,
+      "size": 169200,
+      "uploadedDate": "2024-05-12T09:28:52.390Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BetterRegularTickPerformance-1920x1080-bd5a720e10269ba416586a007ae37114_Snapshot.jpg",
+      "md5": "133d5eab045010dbf5ca7c984e2c7c52",
+      "width": 150,
+      "height": 74,
+      "size": 3762,
+      "uploadedDate": "2024-05-12T09:28:50.398Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MultipleTicks-1920x1080-450bf1a86ee9e04bf74eedff15ef0c67_Snapshot.jpg",
+      "md5": "3505058c3f5a7fa5912995e1c46150f0",
+      "width": 150,
+      "height": 74,
+      "size": 4301,
+      "uploadedDate": "2024-05-12T09:28:50.765Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CustomPin-1920x1080-2e0b1cf68c224c11e26450e8786670d7_Snapshot.jpg",
+      "md5": "2c868c59f28d5e5e1c27d620908844a5",
+      "width": 150,
+      "height": 74,
+      "size": 3276,
+      "uploadedDate": "2024-05-12T09:28:51.234Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ExecutionOrder-1920x1080-8772f47c1128927ff81c1f237e29a4a9_Snapshot.jpg",
+      "md5": "e9207f8fde5d06678737643fda56d4e6",
+      "width": 150,
+      "height": 74,
+      "size": 4035,
+      "uploadedDate": "2024-05-12T09:28:51.730Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ChooseTheRIghtTickGroup-1920x1080-9b6a5099dd085a034c2b2c7abf0be5a6_Snapshot.jpg",
+      "md5": "6854558ee4057517924f55fc103ded68",
+      "width": 150,
+      "height": 74,
+      "size": 3718,
+      "uploadedDate": "2024-05-12T09:28:52.238Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-05-19T14:15:40.976Z",
+  "lastModifiedDate": "2024-12-25T05:32:33.701Z",
+  "customAttributes": {},
+  "entitlementName": "0f54cbd83f00478bbda315864594ae3a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "129fca89eece4b49b9ec5fbdd25a70aa",
+      "appId": "Tickify_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2024-05-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TickifyPlugin_UE5_3"
+    },
+    {
+      "id": "5e91e5bb208346a1ae76d3139157df30",
+      "appId": "Tickify_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2024-05-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "TickifyPlugin_UE5_4"
+    }
+  ],
+  "developer": "Alex Verdu Llavines",
+  "developerId": "o-jxuu44fyzv9v7k9crw4zjbl2z3zzn5",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

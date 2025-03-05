@@ -1,0 +1,414 @@
+{
+  "id": "9cd72576137f414389c8437bab672702",
+  "title": "Json to Struct and Json or Csv to datatable",
+  "description": "Read the Json or CSV string into the DataTable at runtime, and then you can convert the content into a matching structure.",
+  "longDescription": "<p>Get a Json or CSV string from a file or network or anywhere, read it into a DataTable at runtime, and then convert the content into a matching structure.The values in the structure can be all data types supported by the Unreal system.</p><p><br /></p><p><strong>V2 version of Json and Struct conversion function has fixed these problems, but if it is converted to DataTable, still need to pay attention.</strong></p><p><s>Json or CSV data needs a matching structure.(The field name must not be &#34;Name&#34; or a system reserved name)</s></p><p><s>Please avoid spaces in the field names, because after the project is packaged, the spaces in the field names will be modified in the Unreal system. </s></p><p>As a result, the fields with spaces cannot be parsed correctly after the project is packaged. This issue was raised by &#34;CedkM&#34; and Test it out together.</p><p><br /></p><blockquote>Open the Content Browser window, in the upper right corner of the Content Browser, click the Settings button, This will open a menu where you can adjust various settings for the current instance of the Content Browser, Under the View category, check the Show Plugin Content option, Find the Json to Struct and Json or Csv to datatable-&gt;Content-&gt;Json to Struct and Json or Csv to datatable directory, There are sample levels and related assets inside.</blockquote><p><br /></p><p><strong>Change log : (2021/12)</strong></p><p>Add function &#34;UrlEncode&#34;, Returns a percent-encoded version of the passed in string.</p><p>Add function &#34;StructToJsonObjectStringV2&#34;;</p><p>Add function &#34;StructArrayToJsonObjectStringV2&#34;;</p><p>Increase the function &#34;JsonStringToStructV2&#34;;</p><p>Add function &#34;JsonStringToStructArrayV2&#34;;</p><p>These new Json and Struct conversion functions fix several problems in the old version:</p><p>1. Now you can use the keyword &#34;name&#34;,</p><p>2. Now it is possible that the Json and Struct fields are not completely matched, and the redundant missing and wrong fields will be ignored.</p><p><br /></p><p><strong>Change log : (2021/11)</strong></p><p>Added function &#34;CreateDataTable&#34;. Support to create an empty DataTable.</p><p>Added function &#34;ClearDataTable&#34;. Support to clear a DataTable.</p><p><br /></p><p><strong>Change log : (2021/09)</strong></p><p>Support 4.27 version</p><p>Added function &#34;AddDataTableRow&#34;. Supports adding a row of data to the DataTable at runtime, and modifying this data if the name already exists.</p><p>Added function &#34;RemoveDataTableRow&#34;. Support to remove a row of data for DataTable at runtime.</p><p>Added function &#34;JsonStringToStructArray&#34;. Support converting Json data into structure array.</p><p>Added function &#34;StructArrayToJsonObjectString&#34;. Support converting structure arrays into Json data.</p><p><br /></p><p><strong>Change log : (2020/12)</strong></p><p>Support 4.26 version</p><p><br /></p><p><strong>Change log : (2020/07)</strong></p><p>Support 4.22 version</p><p>Version 4.21 is supported, but it cannot be uploaded due to Unreal Market rules. Please contact me if you need it.</p><p>Add the EncodingOptions parameter of the SaveStringToFile function to select the encoding format for file storage. (Guess: It was found that the parameter was judged incorrectly in the UE code system during the test, and the UTF8 and UTF8BOM options are opposite to the actual ones)</p><p><br /></p><p><strong>Change log : (2020/05)</strong></p><p>Support 4.25 version</p><p><br /></p><p><strong>Change log : (2020/04)</strong></p><p>Fix bug of nested structure field name.</p><p>Added function save strings to a file. (.json | .csv | .*)</p><p>Fixed user feedback error when packaging IOS.</p><p>Support 4.23 version</p><p><br /></p><p><strong>Change log : (2020/03)</strong></p><p>Can easily copy the output directly to the clipboard</p><p>Add function CopyMessageToClipboard;</p><p>Add function PasteMessageFromClipboard;</p><p>Added Parse JSON string into a struct function.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Parse JSON or CSV string into a DataTable</li><li> Parse DataTable into JSON or CSV string</li><li> Parse struct into a JSON string</li><li> Parse JSON string into a struct</li><li> Read file as string</li></ul><p>Code Modules:</p><ul><li> JsonCsvToDataTableToStruct (Runtime)</li></ul><p><br /></p><p><strong>Check out ywt20&#39;s other products here </strong>: <a href=\"https://www.unrealengine.com/marketplace/en-US/profile/YWT20?count&#61;20&amp;sortBy&#61;effectiveDate&amp;sortDir&#61;DESC&amp;start&#61;0\" rel=\"nofollow\">https://www.unrealengine.com/marketplace/en-US/profile/YWT20</a></p><p><br /></p><p>Number of C&#43;&#43; Classes:1</p><p>Network Replicated: (No)</p><p>Supported Development Platforms: (“Windows”,“Mac”)</p><p>Supported Target Build Platforms: ( &#34;Win64&#34;,  &#34;Mac&#34;, &#34;Linux&#34;)</p><p>note&#xff1a;In theory it should work on all platforms, but I have no equipment to test it, if you have problems using it, please let me know.</p><p>Example Project: <a href=\"https://1drv.ms/u/s!ArUXKe9rc5cykkgto-o1d1Yla_im?e&#61;siRA45\" rel=\"nofollow\">Link</a></p><p>Documentation: <a href=\"https://docs.google.com/document/d/e/2PACX-1vSgQCTz5b5ThH2rsRls7OyGnEQM7g0mhKdG5JhSYQOr8miM-O5ZzyznX2FEUu5SUnQaPp-AZwbZTQWh/pub\" rel=\"nofollow\">Link</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/f-1920x1080-0b602de688475f68917bb524f4b4c816.jpg",
+      "md5": "0b602de688475f68917bb524f4b4c816",
+      "width": 1920,
+      "height": 1080,
+      "size": 106822,
+      "uploadedDate": "2021-12-23T16:03:44.289Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/e-1920x1080-9c4412481e7eddeee0fa72d72fcf3383.jpg",
+      "md5": "9c4412481e7eddeee0fa72d72fcf3383",
+      "width": 1920,
+      "height": 1080,
+      "size": 757752,
+      "uploadedDate": "2021-12-23T09:38:10.879Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/a-1920x1080-2386ce67f25d5b6851705bfe757c1437.jpg",
+      "md5": "2386ce67f25d5b6851705bfe757c1437",
+      "width": 1920,
+      "height": 1080,
+      "size": 739044,
+      "uploadedDate": "2020-02-12T02:35:57.495Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/b-1920x1080-ad03126dd54966f7dae1dd6d42bb7a50.jpg",
+      "md5": "ad03126dd54966f7dae1dd6d42bb7a50",
+      "width": 1920,
+      "height": 1080,
+      "size": 760332,
+      "uploadedDate": "2020-06-25T00:07:56.621Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/c-1920x1080-b31234c750884bfc03ea0e89fef98650.jpg",
+      "md5": "b31234c750884bfc03ea0e89fef98650",
+      "width": 1920,
+      "height": 1080,
+      "size": 709701,
+      "uploadedDate": "2020-04-02T14:23:57.282Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/d-1920x1080-d5f7c0850bdf2c5bd8d0857de01d8abe.jpg",
+      "md5": "d5f7c0850bdf2c5bd8d0857de01d8abe",
+      "width": 1920,
+      "height": 1080,
+      "size": 516567,
+      "uploadedDate": "2020-02-27T13:13:36.902Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/c-1920x1080-a06192273963ce5cc799cffa913bddfd.jpg",
+      "md5": "a06192273963ce5cc799cffa913bddfd",
+      "width": 1920,
+      "height": 1080,
+      "size": 736479,
+      "uploadedDate": "2021-09-18T02:39:59.093Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/JsonorCsvtoDataTabletoStruct_thumb-284x284-58d08335f0b04f3c4dca32d960d29c83.png",
+      "md5": "58d08335f0b04f3c4dca32d960d29c83",
+      "width": 284,
+      "height": 284,
+      "size": 53518,
+      "uploadedDate": "2020-02-12T03:44:39.300Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/JsonorCsvtoDataTabletoStruct_featured-894x488-38ba6e1093d4ecf8ee7e465515eed6d1.png",
+      "md5": "38ba6e1093d4ecf8ee7e465515eed6d1",
+      "width": 894,
+      "height": 488,
+      "size": 242008,
+      "uploadedDate": "2020-02-12T03:44:39.397Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/f-1920x1080-0b602de688475f68917bb524f4b4c816_Snapshot.jpg",
+      "md5": "cc8a703d02f152db33c5d20fcf7b2f54",
+      "width": 150,
+      "height": 74,
+      "size": 3479,
+      "uploadedDate": "2021-12-23T16:03:44.561Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/e-1920x1080-9c4412481e7eddeee0fa72d72fcf3383_Snapshot.jpg",
+      "md5": "3684328ed4b94ef64194ceb94a65ceed",
+      "width": 150,
+      "height": 74,
+      "size": 5733,
+      "uploadedDate": "2021-12-23T09:38:11.098Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/c-1920x1080-a06192273963ce5cc799cffa913bddfd_Snapshot.jpg",
+      "md5": "f467d218066b990ffbf1ec552a42e73e",
+      "width": 150,
+      "height": 74,
+      "size": 5749,
+      "uploadedDate": "2021-09-18T02:39:59.335Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/b-1920x1080-ad03126dd54966f7dae1dd6d42bb7a50_Snapshot.jpg",
+      "md5": "c722279868d6c62ced6ae1b63b1e3a13",
+      "width": 150,
+      "height": 74,
+      "size": 4873,
+      "uploadedDate": "2020-06-25T00:07:56.851Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/c-1920x1080-b31234c750884bfc03ea0e89fef98650_Snapshot.jpg",
+      "md5": "22cda8c976505e41900f41d2d0c17b28",
+      "width": 150,
+      "height": 74,
+      "size": 4903,
+      "uploadedDate": "2020-04-02T14:23:57.527Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/d-1920x1080-d5f7c0850bdf2c5bd8d0857de01d8abe_Snapshot.jpg",
+      "md5": "bdc0b023f0fc0837ce612b929838e4f4",
+      "width": 150,
+      "height": 74,
+      "size": 4473,
+      "uploadedDate": "2020-02-27T13:13:37.135Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/b-1920x1080-6f49e8ac834bf5537629e3736fb55a83_Snapshot.jpg",
+      "md5": "84db9ff0d7abf35db87131ddc139bcd5",
+      "width": 150,
+      "height": 74,
+      "size": 4679,
+      "uploadedDate": "2020-02-27T13:12:27.922Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/0-1920x1080-acc545baf3d845a7b0e96a772db286b3_Snapshot.jpg",
+      "md5": "8c9e6277ae2ded1ed7fabcf88d711c70",
+      "width": 150,
+      "height": 74,
+      "size": 2794,
+      "uploadedDate": "2020-02-25T02:26:56.537Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/a-1920x1080-2386ce67f25d5b6851705bfe757c1437_Snapshot.jpg",
+      "md5": "f2d05b2141b3aea99543a7af02aac081",
+      "width": 150,
+      "height": 74,
+      "size": 4737,
+      "uploadedDate": "2020-02-12T02:35:57.744Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/b-1920x1080-6f49e8ac834bf5537629e3736fb55a83_Snapshot.jpg",
+      "md5": "84db9ff0d7abf35db87131ddc139bcd5",
+      "width": 150,
+      "height": 74,
+      "size": 4679,
+      "uploadedDate": "2020-02-12T02:35:58.298Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/c-1920x1080-58f52fed8ef0ce65a1a22996281655a4_Snapshot.jpg",
+      "md5": "e5b983446a7df50e72801b375f9bef55",
+      "width": 150,
+      "height": 74,
+      "size": 4166,
+      "uploadedDate": "2020-02-12T02:35:58.750Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-757df60a152c38ad7e6ccba0769cdb17_Snapshot.png",
+      "md5": "c523028d16b4387b9499cb19c769c7b4",
+      "width": 150,
+      "height": 74,
+      "size": 6650,
+      "uploadedDate": "2020-02-11T15:55:05.677Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-02-25T01:37:03.561Z",
+  "lastModifiedDate": "2024-11-22T20:11:24.868Z",
+  "customAttributes": {},
+  "entitlementName": "9cd72576137f414389c8437bab672702",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "7c72e31012954a4096e5d9928909498c",
+      "appId": "JsonCsvToDataTableToStruct_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2020-07-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.22"
+    },
+    {
+      "id": "8dee68241bd24ac29d4d27b5a1671d80",
+      "appId": "JsonCsvToDataTableToStruct_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Linux",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2020-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.23"
+    },
+    {
+      "id": "29dacdf5358b47d690e812ee017a845f",
+      "appId": "JsonCsvToDataTableToStruct_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2020-02-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.24"
+    },
+    {
+      "id": "67627e962aab4bde84ac387684f86927",
+      "appId": "JsonCsvToDataTableToStruct_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2020-05-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.25"
+    },
+    {
+      "id": "022c5d1f892c4b3ba261787b9bb747bb",
+      "appId": "JsonCsvToDataTableToStruct_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Win32",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.26"
+    },
+    {
+      "id": "422cf9c1652d405bae796919e7405f9a",
+      "appId": "JsonCsvToDataTableToStruct_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-08-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "bad266c6c7604ae5ad938a1436c85a5e",
+      "appId": "JsonCsvToDataTableToStruct_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "a24b8d5ae0be44fb992df7f7a4cc27f2",
+      "appId": "JsonCsvToDataTableToStruct_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-11-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "22bbfce63d314769b326463a6e9baa40",
+      "appId": "JsonCsvToDataTableToStruct_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2023-05-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "213bc88c216c4e65b68832a6bdc13152",
+      "appId": "JsonCsvToDataTableToStruct_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "Linux",
+        "iOS"
+      ],
+      "dateAdded": "2023-09-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "919d4073c7b8425ab679948734fc56d6",
+      "appId": "JsonCsvToDataTableToStruct_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "Linux",
+        "iOS"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "YWT20",
+  "developerId": "o-36kebp2nggyevt5yn43s4ef7qv4rm9",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

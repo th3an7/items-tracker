@@ -1,0 +1,187 @@
+{
+  "id": "8fdded25d715436da8e82a7a7f273f1e",
+  "title": "Gameplay Tag Listener (GTL)",
+  "description": "Trigger Events based on Gameplay Tag changes from a target actor's Gameplay Tag Container.",
+  "longDescription": "<p><a href=\"https://drive.google.com/file/d/14CSHQHraYjrdOLgwUTehmXE6TfMg7FKs/view?usp&#61;drive_link\" rel=\"nofollow\">Playable Demo</a></p><p>Playable demo is the example map packaged for Windows. You can see the flow of Events based on the Gameplay Tags that the player collects, and GTL condition checks. Warning: There is no sound until the final GTL is triggered, then a little 16-bit tune will play. Version 1.1 now replicated! Test for yourself! Replace the placeholder IP with the IP of the listener</p><p><br /></p><p>Server:</p><p>GTL_5_4.exe ExampleMap?Listen -game</p><p>Client:</p><p>GTL_5_4.exe 123.123.12.1 -game</p><p><br /></p><p><strong><u>About GTL:</u></strong></p><p>Gameplay Tag Listener (GTL) is an Event triggering system built on the Gameplay Tag subsystem. GTL will &#34;listen&#34; for a change in a Gameplay Tag Container on a targeted actor (current example uses Player Controller, but this can easily be set to a Character, Pawn, or any Actor that has a Gameplay Tag Container and the included Blueprint Interface). Once GTL &#34;hears&#34; this change based on the specified Gameplay Tag query, it will execute logic accordingly.</p><p><br /></p><p>The idea behind this is it will allow you to setup interesting gameplay events, quickly and efficiently, all while being built on a system that any Actor will already have access to, Gameplay Tags! Influence gameplay events and changes from anywhere! If you do not already use Gameplay Tags, I hope my series of assets will help to show the benefits of how Gameplay Tags, with data driven game design, allows for an endless amount of possibilities for any game developer.</p><p><br /></p><p><strong><u>Built for reusability and expandability: </u></strong></p><p>GTL is 100% Blueprint and includes an Actor Component for easy integration into any project, as well as an Actor for building a GTL actor from scratch. These use an included Blueprint Interface, and Gameplay Tag Data Table for quick setup in any project. Both the Actor and Actor Component are built to be easily readable with easy to follow logic, including comments and tooltips everywhere! GTL also has an extremely small footprint, making it perfect for easy to setup, but complex gameplay events!</p><p><br /></p><p><strong><u>Flexibility:</u></strong></p><p>Both the Actor and Actor Component versions of GTL include several options allowing for more flexibility in what can be done with the system out-of-the-box. GTL can be configured to be listening from Event BeginPlay (default), set to start listening when a proximity trigger is hit (range configurable), specify the actor class or character class that is required to trigger the proxy as well as specific amounts for each. For example, a GTL can be configured to only start listening if 2 boxes and 1 third person character are overlapping the proxy. There are also options for the listener to be always on, for even more dynamic interactions.</p><p><br /></p><p><strong><u>Best practice standards:</u></strong></p><p>GTL follows several best practices with its construction. This results in a very small foot print, and a system that is extremely light weight on memory. Not only are the Blueprints constructed to be easy to follow, things like soft references are used to avoid unnecessary hard references, leading to unnecessary memory consumption.</p><p><br /></p><p><strong><u>Detailed documentation available upon verification:</u></strong></p><p>Along with the comments and tooltips found within the asset itself, there is a 42 page User and Reference Guide that is available in the Discord, once verification steps have been completed.</p><p><br /></p><p><strong><u>Discord community:</u></strong></p><p>Have any questions about GTL? Want to just hang out and hear all about data driven game design around Gameplay Tags? We have a <a href=\"https://discord.gg/9s4aM69fQW\" rel=\"nofollow\">Discord!</a></p><p>To have access to the full documentation, as well as the support channels, please leave a question or review with your Discord username, including the tag. Example UserName#1234.</p><p><br /></p><p>Version 1.3 update:</p><p>Engine Version:</p><ul><li>5.4&#43; only due to new timer setting used exposed in 5.4</li></ul><p>Changes:</p><ul><li>All timers now only execute once per tick</li></ul><p><br /></p><p>Version 1.2 update:</p><p>Bug fixes:</p><ul><li>Actor Component checks updated to properly return the correct value. Was previously just checking for true and then returning that. This now matches the GTL Actor checks.</li></ul><p>Changes:</p><ul><li>Rebuilt BP resulting in some small optimizations</li></ul><p><br /></p><p>Version 1.1 update:</p><p>Bug fixes:</p><ul><li>Fixed AlwaysOn not working, and AlwaysOn Proxy based not resetting proxy trigger properly</li></ul><p>Changes:</p><ul><li>Backported to 4.26! Can now migrate properly to UE 5.0EA</li><li>Replicated: Actors and necessary (only 2) variables are replicated. Example and all demo BP have been updated for, and tested with replication.</li><li>Clean up: Removed unused variables, cleaned up redundant functions, and added comments and some tool tips to example BPs</li><li>ExampleMap rebuilt, more interactive example of listener action and flow.</li></ul>",
+  "technicalDetails": "<p>Features: GTL includes the following</p><ul><li> GTL Actor Component</li><li> GTL Actor</li><li> GTL Blueprint Interface</li><li>Data Table - Gameplay Tags</li><li>Optional fancy WPO text for GTL Actor</li><li>Example map with demo Blueprints and GTL actors</li></ul><p>Number of Blueprints: 15</p><p>1 Actor Component</p><p>1 Actor</p><p>1 Interface</p><p>12 example BP</p><p>Input: N/A</p><p>Network Replicated: Yes! Playable demo and instructions at the top!</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Yes</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1uGaFJGypZavgLvORsfCFYbrqAphVnYfhDXd8gqTPpVs/edit?usp&#61;sharing\" rel=\"nofollow\">Quick Start Guide</a></p><p>Important/Additional Notes: <a href=\"https://discord.gg/9s4aM69fQW\" rel=\"nofollow\">Discord</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery01-1920x1080-fa74d218f330e60a5d686104ad1100a3.png",
+      "md5": "fa74d218f330e60a5d686104ad1100a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 1232065,
+      "uploadedDate": "2022-01-29T17:33:48.252Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery02-1920x1080-fc4b02ff4d1f1b3596e1a514b806ce9f.png",
+      "md5": "fc4b02ff4d1f1b3596e1a514b806ce9f",
+      "width": 1920,
+      "height": 1080,
+      "size": 483050,
+      "uploadedDate": "2022-01-29T19:05:11.100Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery03-1920x1080-5adad775839041985a452d563275f6e8.png",
+      "md5": "5adad775839041985a452d563275f6e8",
+      "width": 1920,
+      "height": 1080,
+      "size": 624367,
+      "uploadedDate": "2022-01-29T19:05:11.475Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery04-1920x1080-5bac116604f513caef8884b0b42d814d.png",
+      "md5": "5bac116604f513caef8884b0b42d814d",
+      "width": 1920,
+      "height": 1080,
+      "size": 402792,
+      "uploadedDate": "2022-01-29T20:58:06.025Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/GameplayTagListenerGTL_thumb-284x284-954786503421022b65f9f522a084aaf3.png",
+      "md5": "954786503421022b65f9f522a084aaf3",
+      "width": 284,
+      "height": 284,
+      "size": 65610,
+      "uploadedDate": "2022-01-29T17:33:48.595Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/GameplayTagListenerGTL_featured-894x488-bbd643d0f0b441d84df65f256ad30ed6.png",
+      "md5": "bbd643d0f0b441d84df65f256ad30ed6",
+      "width": 894,
+      "height": 488,
+      "size": 505654,
+      "uploadedDate": "2022-01-29T17:33:48.700Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery04-1920x1080-5bac116604f513caef8884b0b42d814d_Snapshot.png",
+      "md5": "ffbf6142978122321d257380c9987f9e",
+      "width": 150,
+      "height": 74,
+      "size": 6130,
+      "uploadedDate": "2022-01-29T20:58:06.256Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery02-1920x1080-fc4b02ff4d1f1b3596e1a514b806ce9f_Snapshot.png",
+      "md5": "a986f1a4e9f3b5903e4c0b8162ada004",
+      "width": 150,
+      "height": 74,
+      "size": 7112,
+      "uploadedDate": "2022-01-29T19:05:11.338Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery03-1920x1080-5adad775839041985a452d563275f6e8_Snapshot.png",
+      "md5": "bea49f5bebefd42c42441b9ea288b93b",
+      "width": 150,
+      "height": 74,
+      "size": 6577,
+      "uploadedDate": "2022-01-29T19:05:11.717Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery04-1920x1080-8e541f08d4a086ace8de2ac3d1b47b8b_Snapshot.png",
+      "md5": "89a7ba28aac7cc9750bc22a5e43f7abb",
+      "width": 150,
+      "height": 74,
+      "size": 5271,
+      "uploadedDate": "2022-01-29T19:05:12.043Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery01-1920x1080-fa74d218f330e60a5d686104ad1100a3_Snapshot.png",
+      "md5": "80332fff87dc3d5aa1281585711b2392",
+      "width": 150,
+      "height": 74,
+      "size": 6379,
+      "uploadedDate": "2022-01-29T17:33:48.555Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-01-29T21:46:32.604Z",
+  "lastModifiedDate": "2024-10-10T22:00:24.841Z",
+  "customAttributes": {},
+  "entitlementName": "8fdded25d715436da8e82a7a7f273f1e",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "4db154a9ed6346198ab8c787eb780e45",
+      "appId": "Gameplay8fdded25d715V3",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "HTML5",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "Linux",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-07-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GTL 1.2"
+    },
+    {
+      "id": "6b50b564fbdd43218bdeb38b562b311f",
+      "appId": "Gameplay8fdded25d715V1",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "Mac",
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-01-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "GTL 1.3"
+    }
+  ],
+  "developer": "Mad Tea Party",
+  "developerId": "o-qas6glyrq9lbzd9f28caqwwrqf73jn",
+  "endOfSupport": false,
+  "unsearchable": false
+}

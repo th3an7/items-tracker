@@ -1,0 +1,137 @@
+{
+  "id": "635c2d2dc27e41f48bf25c3119aa63c5",
+  "title": "Pose Driver Connect",
+  "description": "Tools for creating secondary animation in Maya and importing into Unreal Engine. ",
+  "longDescription": "<p>This plugin consists of two tools: <strong>PoseWrangler</strong> and <strong>Pose Driver Connect</strong>.</p>\n<p><strong>PoseWrangler</strong> is a Maya Python tool for interfacing with the <strong>MayaUERBFPlugin</strong>. The RBF plugin allows users to author complex secondary animation in Maya leveraging a driver/driven relationship to smoothly blend between n number of poses or transformations.</p>\n<p>For example, to fix problematic areas of deformation like shoulders, elbows, thighs and knees you can create a list/set of poses and tweak the secondary joint transformations to fix the deformations in each pose.</p>\n<p><strong>PoseWrangler</strong> provides a Python API and user interface to simplify the creation/management of RBF setups and export the RBF data to intermediate files that <strong>Pose Driver Connect</strong> can read inside Unreal.</p>\n<p><strong>Pose Driver Connect</strong> is a C++ Unreal plugin that can take the exported data from <strong>PoseWrangler</strong> and create a network of PoseDrivers in an existing AnimBlueprint which results in secondary deformation that is a one to one match with the deformation authored in Maya.</p>\n<b>UE-Only Content</b> - Licensed for Use Only with Unreal Engine-based Products",
+  "technicalDetails": "<p><strong>PoseWrangler Features:</strong></p><ul><li>Supports Maya scenes created with the UERBFSolverNode and provides an upgrade path for older UE4RBFSolverNode scenes.</li><li>Multiple Driver Support</li><li>Support for custom mirror mappings to allow for rigs with naming conventions that deviate from the default UE5 conventions</li><li>Fully automatable via Python and MayaPy</li><li>Serialization/deserialization of RBF parameters to dictionary or JSON file, export poses as FBX.</li><li>Support for custom extensions and context menu actions</li><li>Supports Maya 2020-2023, Python2 &amp; Python3</li></ul><p><strong>How to install PoseWrangler for Maya:</strong></p>\nMarketplace will download PoseDriverConnect.zip to <code>&lt;UE5 install location&gt;\\Engine\\Plugins\\Marketplace\\PoseDriverConnect\\Content</code>\n\n<strong><p>Extract PoseDriverConnect.zip to your maya/modules folder:</p></strong><ul><li>Windows: <code>C:\\Users\\&lt;username&gt;\\Documents\\Maya\\modules</code></li><li>Linux: <code>~/maya/modules</code></li></ul>Restart Maya. You can now run PoseWrangler from the script editor with the following Python code:\nfrom epic_pose_wrangler import main\npose_wrangler_instance = main.PoseWrangler()\n\n<strong>Pose Driver Connect Features:</strong><ul><li>UE 5.1 or newer</li><li>C++  plugin, exposes out functionality to Blueprint/Python to:<ul><li>Create PoseDriver nodes in an AnimBlueprint</li><li>Query existing PoseDriver nodes by Tag/Driver joints</li><li>Import PoseDrivers from PoseWrangler JSON/FBX files and setup inside an existing AnimBlueprint</li></ul></li></ul>",
+  "keyImages": [
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/item/ue/Featured_894x488-b764a5401530c8f228813c35baae5a29",
+      "md5": "b764a5401530c8f228813c35baae5a29",
+      "width": 894,
+      "height": 488,
+      "size": 349094,
+      "uploadedDate": "2023-11-02T17:31:56.367Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/item/ue/MayaPoseWrangler_1920x1080-07ae3f1b18d2a0312345d915902d92d8",
+      "md5": "07ae3f1b18d2a0312345d915902d92d8",
+      "width": 1920,
+      "height": 1080,
+      "size": 518657,
+      "uploadedDate": "2023-11-02T17:32:16.384Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/item/ue/PoseRetargeting_1920x1080-3838b5aa2cc1dbc0a79202c70a5915d5",
+      "md5": "3838b5aa2cc1dbc0a79202c70a5915d5",
+      "width": 1920,
+      "height": 1080,
+      "size": 695870,
+      "uploadedDate": "2023-11-02T17:32:36.812Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/item/ue/PoseDriverConnect_1920x1080-4cd1564154b3137d16cb102090cccce8",
+      "md5": "4cd1564154b3137d16cb102090cccce8",
+      "width": 1920,
+      "height": 1080,
+      "size": 697334,
+      "uploadedDate": "2023-11-02T17:32:49.248Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/item/ue/MayaPoseWrangler_1920x1080-07ae3f1b18d2a0312345d915902d92d8",
+      "md5": "07ae3f1b18d2a0312345d915902d92d8",
+      "width": 1920,
+      "height": 1080,
+      "size": 518657,
+      "uploadedDate": "2023-11-02T17:33:10.458Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/item/ue/Thumbnail_284x284-f6863840cdd5a2974f4f390f57d26b6a",
+      "md5": "f6863840cdd5a2974f4f390f57d26b6a",
+      "width": 284,
+      "height": 284,
+      "size": 27916,
+      "uploadedDate": "2023-11-02T17:31:10.703Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-11-01T13:00:44.008Z",
+  "lastModifiedDate": "2024-11-19T18:22:28.858Z",
+  "customAttributes": {},
+  "entitlementName": "635c2d2dc27e41f48bf25c3119aa63c5",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "4fe57cb7127044ea9a7602a2b34bf4d3",
+      "appId": "PoseDriverConnect_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-11-01T13:50:00.000Z",
+      "versionTitle": "PoseDriverConnect_5.1"
+    },
+    {
+      "id": "425c03da575c4ca8be86506917ccaac1",
+      "appId": "PoseDriverConnect_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-11-01T13:50:00.000Z",
+      "versionTitle": "PoseDriverConnect_5.2"
+    },
+    {
+      "id": "dd54de7945e9457a8eb8c2ef4f1c2baf",
+      "appId": "PoseDriverConnect_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-11-01T13:00:00.000Z",
+      "versionTitle": "PoseDriverConnect_5.3"
+    },
+    {
+      "id": "f1b6dfa758e74df196dfebfb67d77184",
+      "appId": "PoseDriverConnect_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-23T13:58:00.000Z",
+      "versionTitle": "PoseDriverConnect_5.4"
+    }
+  ],
+  "developer": "Epic Games",
+  "developerId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "ageGatings": {},
+  "applicationId": "",
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,239 @@
+{
+  "id": "18d966e504224f8fa3a22259148d3af9",
+  "title": "EasyMorph",
+  "description": "Easily create Skeletal Morph and Morph Target Animations, and Dismember Body Parts with a simple Component.",
+  "longDescription": "<p><strong>EasyMorph Component</strong></p><p>EasyMorph is a tool designed to streamline and expand animation and morphing capabilities within the Unreal Engine ecosystem.</p><p><br /></p><p>Check out our <a href=\"https://youtu.be/b7_kCpmd650\" rel=\"nofollow\">EasyMorph Trailer</a> &amp; <a href=\"https://youtube.com/playlist?list&#61;PL6HdfTfhMnPoYjZ2hRnFU0jz_ibD5MkEM&amp;feature&#61;shared\" rel=\"nofollow\">Easy Morph Playlist</a> (We add new showcases regularly),</p><p>our <a href=\"https://entrancegames.com/EasyMorph/\" rel=\"nofollow\">Documentation</a>,</p><p>and our playable <a href=\"https://entrancegames.sharepoint.com/sites/admin/_layouts/15/guestaccess.aspx?share&#61;ESTb0iGG2O5Hhu4fauxO4VIB0pwQlU_cpatd6TQ0S29Lcw&amp;e&#61;WtgcfU\" rel=\"nofollow\">Demo Level</a>.</p><p>Post any of your questions on our <a href=\"https://discord.gg/SwAZFD9ZRJ\" rel=\"nofollow\">Discord</a> or here on the Marketplace, and we will help you to the best of our ability.</p><p><br /></p><p><strong>EasyMorph Features Overview</strong></p><p><br /></p><p><strong>Skeletal Morph Target Creation</strong></p><p>EasyMorph facilitates the creation of skeletal morph targets, allowing developers to adjust and manipulate character models and animations with precision. This feature is particularly useful for achieving nuanced character expressions or dynamic transformations.</p><p><br /></p><p><strong>Seamless Morph Transitions</strong></p><p>With EasyMorph, developers can smoothly transition between different morphs and play morph animations using a single node. This simplifies the morphing workflow, eliminating the need for complex setups and reducing development time.</p><p>  </p><p><br /></p><p><strong>Dynamic Setup and Integration</strong></p><p>EasyMorph enables dynamic animation setups, allowing developers to trigger morph animations in response to in-game events. For example, morph animations can be activated when a player picks up an item or unlocks a new ability, enhancing immersion and gameplay dynamics. EasyMorph functionality can also be triggered within the Sequencer.</p><p> </p><p><br /></p><p><strong>Body Part Definition and Limb Dismemberment</strong></p><p>Developers can define specific body parts and accurately represent cut-off limbs using particle systems or skeletal meshes. This feature adds a layer of realism to character interactions, such as combat or environmental hazards, by dynamically dismembering character models based on in-game actions.</p><p> </p><p><br /></p><p><strong>Ease of use &amp; Compatibility</strong></p><p>EasyMorph can be used on any Actor that has a Skeletal Mesh Component. It can easily be integrated into your existing Animation Blueprints and Inverse Kinematics (IK) setups. You only need to add a single component to your actor to get access to all features.</p><p><br /></p><p><strong>Changelog</strong></p><p>Update 1.001 - 2024-05-09<a href=\"https://entrancegames.com/EasyMorph/docs/changelog#update-1001---2024-05-09\" rel=\"nofollow\">​</a></p><ul><li>All Unreal Versions: We fixed a small number of Networking-related Bugs that slipped through our test during the initial release and improved the behavior of automatic Capsule Collider adjustments while replicating. The Collider will now smoothly update on Clients instead of only adjusting its size at the end of the animation.</li><li>Fixed the &#34;GetSkeletalMesh Node is deprecated&#34; Warning on the EasyMorph Component in Unreal Engine 5.1&#43; by replacing it with the newly introduced Node, ensuring compatibility with future Versions.</li></ul><p>Update 1.002 - 2024-06-20<a href=\"https://entrancegames.com/EasyMorph/docs/changelog#update-1002---2024-06-20\" rel=\"nofollow\">​</a></p><ul><li>All Unreal Versions: Added the ability to play Morph Target Animation on all Skeletal Meshes of the actor that has the Easy Morph Component attached to it.</li><li>All Unreal Versions: Added two publicly available functions that were created to enable the new feature: <a href=\"https://entrancegames.com/EasyMorph/docs/functions-and-events/morph-target-animations/does-skeletal-mesh-component-have-morph-target\" rel=\"nofollow\">Does Skeletal Mesh Component Have Morph Target</a> and <a href=\"https://entrancegames.com/EasyMorph/docs/functions-and-events/morph-target-animations/find-skeletal-components-with-morph-target\" rel=\"nofollow\">Find Skeletal Components with Morph Target</a></li></ul><p>Update 1.003 - 2024-07-30<a href=\"https://entrancegames.com/EasyMorph/docs/changelog#update-1003---2024-07-30\" rel=\"nofollow\">​</a></p><ul><li>All Unreal Versions: Added functionality to facilitate the creation of Player Customization/Character Editors. This includes new examples as well as new functions: <a href=\"https://entrancegames.com/EasyMorph/docs/functions-and-events/morph-target-animations/get-all-current-morph-target-values\" rel=\"nofollow\">Get All Current Morph Target Values</a>, <a href=\"https://entrancegames.com/EasyMorph/docs/functions-and-events/morph-target-animations/get-all-current-morph-target-values-as-options-string\" rel=\"nofollow\">Get All Current Morph Target Values As Options String</a>, <a href=\"https://entrancegames.com/EasyMorph/docs/functions-and-events/morph-target-animations/set-morph-target-values-from-options-string\" rel=\"nofollow\">Set Morph Target Values From Options String</a>, <a href=\"https://entrancegames.com/EasyMorph/docs/functions-and-events/skeletal-morphing/get-all-current-skeletal-morph-values-as-options-string\" rel=\"nofollow\">Get All Current Skeletal Morph Values As Options String</a>, and <a href=\"https://entrancegames.com/EasyMorph/docs/functions-and-events/skeletal-morphing/set-skeletal-morph-values-from-options-string\" rel=\"nofollow\">Set Skeletal Morph Values From Options String</a></li><li>Some older functions like Instant Skeletal Morph have been modified, but all changes should be transparent and not lead to any change in behaviour.</li></ul><p><br /></p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Create Skeletal (Bones) Morph Targets.</li><li>Play Animations and Morph Transitions with a single Node.</li><li>Dynamically add Morph Setups and new Morph Animations (On pickup, Ability unlock, etc.)</li><li>Define Body parts and use Skeletal Meshes to represent cut-off limbs.</li><li>Works with any Actor with a Skeletal Mesh Component (Not limited to Characters).</li><li>Can be combined with your existing IK solutions.</li><li>Can be used with the Sequencer</li></ul><p><br /></p><p>Number of Blueprints:</p><ul><li>Core: 1 Component, 4 Structs, 1 Interface</li><li>Examples: 25&#43; -&gt; 1 GameMode, 1 PlayerController, 1 Widget, 2 Pickup Examples, 10&#43; Animation Blueprints, 10&#43; Example Mannequins</li></ul><p><br /></p><p>Input: Direct Key Binding for Example Content</p><p><br /></p><p>Network Replicated: Yes</p><p><br /></p><p>Supported Development Platforms: Windows &amp; Mac, other platforms are untested, but should work just fine if they can use Morph Targets &#43; Bone Transforms.</p><p><br /></p><p>Documentation: <a href=\"https://entrancegames.com/EasyMorph/\" rel=\"nofollow\">entrancegames.com/EasyMorph/</a></p><p><br /></p><p>Important Notes/Disclaimer:</p><p>We use Niagara Systems (Blood, etc.) to enhance Dismemberment. Therefore EasyMorph <strong>depends </strong>on the <strong>Niagara</strong> Plugin. Checkout the <a href=\"https://entrancegames.com/EasyMorph/docs/faq\" rel=\"nofollow\">FAQ</a> if you want to <strong>remove this dependency</strong>.</p><p>While we optimized performance, we can not guarantee it will work with a large number of simultaneous Morphs. Modern PCs will handle 10&#43; simultaneous Skeletal Morph Animations (Check out Example Map/Demo). Performance impact after a Morph has finished is minimal.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ShowcaseImageFeatureImage16901-1920x1080-989e83e4d8161fcca6e8ff936f677245.png",
+      "md5": "989e83e4d8161fcca6e8ff936f677245",
+      "width": 1920,
+      "height": 1080,
+      "size": 1270679,
+      "uploadedDate": "2024-04-15T15:02:08.373Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ShowcaseImageAllMorphes16901-1920x1080-309c3257c21bc4279c92379aee256672.png",
+      "md5": "309c3257c21bc4279c92379aee256672",
+      "width": 1920,
+      "height": 1080,
+      "size": 1354827,
+      "uploadedDate": "2024-04-15T15:02:08.981Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ShowcaseCharacterCustomization copy-1920x1080-383b71919d88be5eea142ba37f67f1fe.png",
+      "md5": "383b71919d88be5eea142ba37f67f1fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 680265,
+      "uploadedDate": "2024-08-03T08:20:07.132Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ShowcaseMultiplayer0116901-1920x1080-a3d1bde11fec3a7eefd26a019425a6e9.png",
+      "md5": "a3d1bde11fec3a7eefd26a019425a6e9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1756037,
+      "uploadedDate": "2024-04-15T15:02:10.816Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ShowcaseDismemberment116901 copy-1920x1080-8a518dd7fe13d227af8b849927172cd6.png",
+      "md5": "8a518dd7fe13d227af8b849927172cd6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1799349,
+      "uploadedDate": "2024-04-15T15:02:09.601Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ShowcaseCinemorph116901 copy-1920x1080-ab18b3e09e14d5dc538badb06dab97c0.png",
+      "md5": "ab18b3e09e14d5dc538badb06dab97c0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1536451,
+      "uploadedDate": "2024-04-15T15:02:10.169Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ShowcaseDocumentation116901 copy-1920x1080-d4d307ad47df10e1d3d6db8da3dddee9.png",
+      "md5": "d4d307ad47df10e1d3d6db8da3dddee9",
+      "width": 1920,
+      "height": 1080,
+      "size": 631018,
+      "uploadedDate": "2024-04-15T15:02:11.375Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ShowcaseExamples116901 copy-1920x1080-88e6f7c01430a34e7af1afec72cd3364.png",
+      "md5": "88e6f7c01430a34e7af1afec72cd3364",
+      "width": 1920,
+      "height": 1080,
+      "size": 1825024,
+      "uploadedDate": "2024-04-15T15:02:11.891Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/EasyMorph_thumb-284x284-d795c28909ff3f64304614f7c9bcd335.png",
+      "md5": "d795c28909ff3f64304614f7c9bcd335",
+      "width": 284,
+      "height": 284,
+      "size": 120267,
+      "uploadedDate": "2024-04-15T15:02:12.317Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/EasyMorph_featured-894x488-4ef99f645adf74b854682cd12e05df56.png",
+      "md5": "4ef99f645adf74b854682cd12e05df56",
+      "width": 894,
+      "height": 488,
+      "size": 357768,
+      "uploadedDate": "2024-04-15T15:02:12.461Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShowcaseCharacterCustomization copy-1920x1080-383b71919d88be5eea142ba37f67f1fe_Snapshot.png",
+      "md5": "ebd0ed04696a8ac6e70df0509f3cdd8c",
+      "width": 150,
+      "height": 74,
+      "size": 6188,
+      "uploadedDate": "2024-08-03T08:20:07.408Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShowcaseImageFeatureImage16901-1920x1080-989e83e4d8161fcca6e8ff936f677245_Snapshot.png",
+      "md5": "bb94f5a041aaba2f69dca32b4aefc499",
+      "width": 150,
+      "height": 74,
+      "size": 5880,
+      "uploadedDate": "2024-04-15T15:02:08.759Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShowcaseImageAllMorphes16901-1920x1080-309c3257c21bc4279c92379aee256672_Snapshot.png",
+      "md5": "b580dd26a1c93fe1a16268120ea98cd3",
+      "width": 150,
+      "height": 74,
+      "size": 5489,
+      "uploadedDate": "2024-04-15T15:02:09.327Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShowcaseDismemberment116901 copy-1920x1080-8a518dd7fe13d227af8b849927172cd6_Snapshot.png",
+      "md5": "3308a348077b1c8e0d5e8cbabe28ce6e",
+      "width": 150,
+      "height": 74,
+      "size": 5771,
+      "uploadedDate": "2024-04-15T15:02:09.943Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShowcaseCinemorph116901 copy-1920x1080-ab18b3e09e14d5dc538badb06dab97c0_Snapshot.png",
+      "md5": "4c219b03f2c5c7d3f238e7165d6c8f02",
+      "width": 150,
+      "height": 74,
+      "size": 7423,
+      "uploadedDate": "2024-04-15T15:02:10.555Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShowcaseMultiplayer0116901-1920x1080-a3d1bde11fec3a7eefd26a019425a6e9_Snapshot.png",
+      "md5": "32a01d314830bdfcda1a5e0da384bed0",
+      "width": 150,
+      "height": 74,
+      "size": 6306,
+      "uploadedDate": "2024-04-15T15:02:11.204Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShowcaseDocumentation116901 copy-1920x1080-d4d307ad47df10e1d3d6db8da3dddee9_Snapshot.png",
+      "md5": "0695fdab6b55e41bd8693099526af2ec",
+      "width": 150,
+      "height": 74,
+      "size": 6953,
+      "uploadedDate": "2024-04-15T15:02:11.650Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShowcaseExamples116901 copy-1920x1080-88e6f7c01430a34e7af1afec72cd3364_Snapshot.png",
+      "md5": "ea74ee79d5f25176c6419cd1baabbde5",
+      "width": 150,
+      "height": 74,
+      "size": 5909,
+      "uploadedDate": "2024-04-15T15:02:12.271Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-04-30T20:27:34.797Z",
+  "lastModifiedDate": "2024-12-10T04:46:01.108Z",
+  "customAttributes": {},
+  "entitlementName": "18d966e504224f8fa3a22259148d3af9",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "cfc04754d5044dbcbe78318b64c728b6",
+      "appId": "EasyMorp18d966e50422V1",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-04-15T00:00:00.000Z",
+      "releaseNote": "Latest Changes:\n- All Unreal Versions: Added functionality to facilitate the creation of Player Customization/Character Editors.",
+      "versionTitle": "EasyMorph 4.27.003"
+    },
+    {
+      "id": "2d86499dd13e4b52a91b1456ed863a26",
+      "appId": "EasyMorp18d966e50422V2",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-04-15T00:00:00.000Z",
+      "releaseNote": "Latest Changes:\n- All Unreal Versions: Added functionality to facilitate the creation of Player Customization/Character Editors.",
+      "versionTitle": "EasyMorph 5.0.003"
+    },
+    {
+      "id": "5035c7e9f0504c5ab0d5cdc0c8a1ab4e",
+      "appId": "EasyMorp18d966e50422V3",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-05T00:00:00.000Z",
+      "releaseNote": "Latest Changes:\n- All Unreal Versions: Added functionality to facilitate the creation of Player Customization/Character Editors.",
+      "versionTitle": "EasyMorph 5.1.003"
+    }
+  ],
+  "developer": "Entrance Games",
+  "developerId": "o-gza2lbcjm6tdybemw4cqwu5p4jsgf6",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,258 @@
+{
+  "id": "20d2c89583f14e269e42ff06e307fc9c",
+  "title": "Texture Resizer Tool",
+  "description": "A Blueprint Utility meant to resize Textures directly in the Editor to any resolution power of two (from 2 to 4096, with support for different Aspect Ratios)",
+  "longDescription": "<p>Bug reports or feature suggestion: erosa3d&#64;gmail.com</p><p><br /></p><p>UPDATE 01-03-2024:</p><ul><li>Fixed crashes in 5.2 and 5.3;</li></ul><p><br /></p><p>LATEST UPDATES:</p><ul><li>Added &#34;Skip non-power of two&#34; option, when using the &#34;Per Texture Resolution&#34;;</li><li>Added functionality to set all sizes to half of the current value, when using the &#34;Per Texture Resolution&#34;;</li><li>Added missing 16x16 input.</li><li>In the &#34;non-per texture resolution&#34; mode, textures aren&#39;t being upscaled anymore, if the input resolution is higher than the texture resolution. In the per-texture mode you can still upscale if you wish.</li></ul><p><br /></p><p>UPDATE 10-08-2022:</p><ul><li>Added progress bar and small delay between processing, to avoid overloading the memory and crashing;</li></ul><p><br /></p><p>IMPORTANT: Use it with caution when dealing with multiple files in big projects, sometimes the engine doesn&#39;t fully load the texture before reducing, so it&#39;s important to double-check before saving (you can revert them before saving in case you notice reducing issues).</p><p><br /></p><p>This blueprint utility allows you to resize textures directly in the editor, without the need of exporting, editing and importing again. It includes the options to:</p><p><br /></p><ul><li>Choose a resolution from 2 to 4096 (with support for different aspect ratios);</li><li>Use a &#34;per texture resolution&#34; option, which allows you to go one by one at the selected textures and choose the desired resolution. This option will also automatically round textures not power of two to the nearest power of two (Example: 1525x2456 will become 1024x2048).</li><li>&#34;Auto-reload&#34; option will reload all materials or assets in which the resized texture is being used to reload its &#34;preview&#34;. With this option disabled you might need to restart your project to get the same effect (Although it might speed up the resizing process).</li></ul><p><br /></p><p>To open the utility, right-click on the file &#34;BU_TextureResizer&#34; and select &#34;Run Editor Utility Widget&#34;.</p><p><br /></p><p>IMPORTANT: Check the product images to be sure to enabled the required plugins.</p>",
+  "technicalDetails": "<p>Features:</p><p><br /></p><ul><li>&#34;Resolution&#34; option allows you to choose a resolution from 2 to 4096;</li><li>&#34;Lock Aspect Ratio&#34; will keep your textures always 1:1, if you uncheck it you will be able to input different aspect ratios;</li><li>&#34;Auto-reload Asset&#34; option will reload all materials or assets in which the resized texture is being used to reload its &#34;preview&#34;. With this option disabled you might need to restart your project to get the same effect (Although it might speed up the resizing process).</li><li>&#34;Per Texture Resolution&#34; option allows you to go through one by one of the selected textures and choose the desired resolution. This option will also automatically round textures not power of two to the nearest power of two (Example: 1525x2456 will become 1024x2048).</li></ul><p><br /></p><p>Number of Blueprints: 2</p><p>Input: None</p><p>Network Replicated: No</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Yes</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/00-1920x1080-950ca707733db45589df68c9744e0b31.png",
+      "md5": "950ca707733db45589df68c9744e0b31",
+      "width": 1920,
+      "height": 1080,
+      "size": 333997,
+      "uploadedDate": "2021-01-20T11:23:09.853Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/07-1920x1080-bbfbc9496129ff822e76af98cff4815e.png",
+      "md5": "bbfbc9496129ff822e76af98cff4815e",
+      "width": 1920,
+      "height": 1080,
+      "size": 573944,
+      "uploadedDate": "2021-01-24T12:23:46.931Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/04-1920x1080-a20313ba31810dfa2d8c32ea73edb1fc.jpg",
+      "md5": "a20313ba31810dfa2d8c32ea73edb1fc",
+      "width": 1920,
+      "height": 1080,
+      "size": 688213,
+      "uploadedDate": "2021-01-22T20:39:26.246Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/05-1920x1080-bbdb20abe1fb61c49717c287e6633b37.jpg",
+      "md5": "bbdb20abe1fb61c49717c287e6633b37",
+      "width": 1920,
+      "height": 1080,
+      "size": 641241,
+      "uploadedDate": "2021-01-22T20:39:26.670Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/01-1920x1080-865c96e9ed14870ae4e90beb7cfa28b4.png",
+      "md5": "865c96e9ed14870ae4e90beb7cfa28b4",
+      "width": 1920,
+      "height": 1080,
+      "size": 1497017,
+      "uploadedDate": "2021-01-22T20:39:27.086Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/06-1920x1080-2fd76c5c930f436244861855c65ee552.png",
+      "md5": "2fd76c5c930f436244861855c65ee552",
+      "width": 1920,
+      "height": 1080,
+      "size": 989666,
+      "uploadedDate": "2021-01-22T20:39:27.573Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/02-1920x1080-34b743907e263627f60b0ca854f585ba.png",
+      "md5": "34b743907e263627f60b0ca854f585ba",
+      "width": 1920,
+      "height": 1080,
+      "size": 1141688,
+      "uploadedDate": "2021-01-22T20:39:28.054Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/03-1920x1080-8efd569f812c4a0453eb75b577177156.png",
+      "md5": "8efd569f812c4a0453eb75b577177156",
+      "width": 1920,
+      "height": 1080,
+      "size": 818365,
+      "uploadedDate": "2021-01-22T20:39:28.469Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TextureResizerTool_thumb-284x284-2d27b160ca0de54759aae0b1d40c925e.png",
+      "md5": "2d27b160ca0de54759aae0b1d40c925e",
+      "width": 284,
+      "height": 284,
+      "size": 24678,
+      "uploadedDate": "2021-01-20T11:23:10.141Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TextureResizerTool_featured-894x488-de051b3bb301d556149a0627d22c6ed8.png",
+      "md5": "de051b3bb301d556149a0627d22c6ed8",
+      "width": 894,
+      "height": 488,
+      "size": 84865,
+      "uploadedDate": "2021-01-20T11:23:10.241Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/07-1920x1080-bbfbc9496129ff822e76af98cff4815e_Snapshot.png",
+      "md5": "94f2a2bb2aec580b151cad000c44714f",
+      "width": 150,
+      "height": 74,
+      "size": 6021,
+      "uploadedDate": "2021-01-24T12:23:47.240Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01-1920x1080-2e0e651dc7a9e5024df7cf2bb1ef156c_Snapshot.png",
+      "md5": "4fe80d423736247d9693c747a89bc88b",
+      "width": 150,
+      "height": 74,
+      "size": 6739,
+      "uploadedDate": "2021-01-23T18:49:55.360Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/04-1920x1080-a20313ba31810dfa2d8c32ea73edb1fc_Snapshot.jpg",
+      "md5": "dfbd7969d09f130bfb1d081a5acbbe0b",
+      "width": 150,
+      "height": 74,
+      "size": 8575,
+      "uploadedDate": "2021-01-22T20:39:26.471Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/05-1920x1080-bbdb20abe1fb61c49717c287e6633b37_Snapshot.jpg",
+      "md5": "6c936a42965f4e9d38777bfa0b79b8f0",
+      "width": 150,
+      "height": 74,
+      "size": 8388,
+      "uploadedDate": "2021-01-22T20:39:26.933Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01-1920x1080-865c96e9ed14870ae4e90beb7cfa28b4_Snapshot.png",
+      "md5": "823f49086d91c4d289f58425752f81de",
+      "width": 150,
+      "height": 74,
+      "size": 7369,
+      "uploadedDate": "2021-01-22T20:39:27.364Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/06-1920x1080-2fd76c5c930f436244861855c65ee552_Snapshot.png",
+      "md5": "0a84ed0499cbde8b7da5c8961ac7061f",
+      "width": 150,
+      "height": 74,
+      "size": 8341,
+      "uploadedDate": "2021-01-22T20:39:27.877Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/02-1920x1080-34b743907e263627f60b0ca854f585ba_Snapshot.png",
+      "md5": "d7467c219cb1ba1c9ec2abdd965be9ab",
+      "width": 150,
+      "height": 74,
+      "size": 6872,
+      "uploadedDate": "2021-01-22T20:39:28.325Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/03-1920x1080-8efd569f812c4a0453eb75b577177156_Snapshot.png",
+      "md5": "df6acd2b0b12d920dd67024aa0b44773",
+      "width": 150,
+      "height": 74,
+      "size": 6312,
+      "uploadedDate": "2021-01-22T20:39:28.733Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/00-1920x1080-950ca707733db45589df68c9744e0b31_Snapshot.png",
+      "md5": "2fd1df62144a265fcc4d334885aa15fa",
+      "width": 150,
+      "height": 74,
+      "size": 4986,
+      "uploadedDate": "2021-01-20T11:23:10.083Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-01-23T17:18:48.629Z",
+  "lastModifiedDate": "2024-09-24T19:08:55.560Z",
+  "customAttributes": {},
+  "entitlementName": "20d2c89583f14e269e42ff06e307fc9c",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "f6f2a9fdbf8a484b932ff0b8a4a52ba7",
+      "appId": "TextureR20d2c89583f1V1",
+      "compatibleApps": [
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2021-01-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V422"
+    },
+    {
+      "id": "8c17f4307431400396f3dcddfd13451b",
+      "appId": "TextureR20d2c89583f1V2",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-02-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v500"
+    },
+    {
+      "id": "a8c69e2345b441e393b4d6e7c68144b9",
+      "appId": "TextureR20d2c89583f1V3",
+      "compatibleApps": [
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-03-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v520"
+    }
+  ],
+  "developer": "Emerson Rosa",
+  "developerId": "o-b7zqrnx32sksmb4ep7kperqu6tyu8y",
+  "endOfSupport": false,
+  "unsearchable": false
+}

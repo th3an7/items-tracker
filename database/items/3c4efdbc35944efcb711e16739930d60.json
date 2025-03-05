@@ -1,0 +1,529 @@
+{
+  "id": "3c4efdbc35944efcb711e16739930d60",
+  "title": "Weapon FOV",
+  "description": "Material node that implements separate Weapon FOV for FPP/FPS games.",
+  "longDescription": "<p><a href=\"https://youtu.be/JupoGQSElEM\" rel=\"nofollow\">[Video]</a></p><p><br /></p><p>Weapon FOV is a useful material node that improves the immersion of holding weapons in a first-person camera. This package will take your FPP camera view to industry standards without any noticeable additional cost.</p><p><br /></p><ul><li><strong>Separate weapon FOV - </strong>You can set a custom field of view per weapon. This fixes the weapon stretching when changing the game FOV and is useful for calibrating weapon size on the screen independently of the camera.</li><li><strong>Weapon depth priority</strong> - Weapon scale in camera Z-axis (depth). This feature fixes the intersection of weapons with walls. The player capsule radius can be smaller, and the weapons can be rendered in the environment.</li><li><strong>Near clip plane </strong>- Modify the near clip plane to see more/less mesh in the camera.</li><li><strong>Weapon offset </strong>- Applies a custom position of the weapon in camera space.</li><li><strong>Effect blending - </strong>Implements the transition between FOV space and world space. It is useful for projectiles and the character&#39;s body that is standing on the ground.</li><li><strong>Material node</strong> - Can be customized per weapon or controlled in global material parameter collection.</li><li><strong>Efficient - </strong>The effect is calculated per vertex. There is no need to use a separate pass to fix problems with a weapon.</li><li><strong>Zooming </strong>- Change the camera FOV when the weapon stays the same. That makes the scope zoom effect easy to implement.</li><li><strong>Sniper scope</strong> - Multiple parameters: lens refraction, aberration, overlays, etc.</li><li><strong>Bullet time</strong> - bullet camera with a slow-motion effect.</li><li><strong>3D hud</strong> - Rendering meshes on screen.</li></ul>",
+  "technicalDetails": "<p><strong>Common technical issues!</strong></p><ul><li>Sometimes, occlusion culling marks meshes as invisible, so they are not rendered. This can be fixed by increasing the size of the bounds in the mesh component (Bounds Scale) or mesh asset (Bounds Extension).</li><li>This package is intended only for use in first-person camera games.</li><li>Meshes can&#39;t receive shadows properly.</li></ul><p><br /></p><p>Materials: 5 examples of using material nodes (Weapon/Hands/Projectile)</p><p>Functions: 3 (blend, default, scope)</p><p>Target Platforms: All platforms but not for VR</p><p>Documentation: <a href=\"http://imaginaryblend.com/2018/10/16/weapon-fov/\" rel=\"nofollow\">Yes</a></p><p>Demo: <a href=\"https://bit.ly/47RomDa\" rel=\"nofollow\">Download</a></p><p><br /></p><p><strong>Demo controls:</strong></p><p>WSAD - Movement</p><p>LMB - Fire</p><p>RMB/E - Zoom mode</p><p>Mouse Wheel Up/Down - Change zoom</p><p>Q - sniper sight</p><p><br /></p><p><strong>Update 1.1</strong></p><ul><li>updated example map</li><li>material layer</li><li>zooming mode, laser</li></ul><p><strong>Update 1.2</strong></p><ul><li>sniper weapon scope</li><li>example 3d hud mesh</li></ul><p><strong>Update 1.3</strong></p><ul><li>bullet camera example</li><li>physical reactions on hit and blood</li><li>muzzle flash particles</li></ul><p><br /></p><p>Easy to integrate with a great <a href=\"https://unrealengine.com/marketplace/en-US/product/weapon-kit\" rel=\"nofollow\">Weapon Kit</a></p><p><br /></p><p><strong>Additional Notes: </strong>The package<em> DEMO folder contains example content from Epic (Starter Content, Shooter Game) used only for demonstration purposes. </em></p><p><br /></p><p>Ready for your requests. Remember that your positive rating and comments are my fuel for the next update.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV18-1920x1080-ad0c6d1770a81fbfa08f67c3db8f9da6.jpg",
+      "md5": "ad0c6d1770a81fbfa08f67c3db8f9da6",
+      "width": 1920,
+      "height": 1080,
+      "size": 378365,
+      "uploadedDate": "2019-09-16T22:05:08.006Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV23-1920x1080-8e3f0e55cff43214f078ae6972139ee7.jpg",
+      "md5": "8e3f0e55cff43214f078ae6972139ee7",
+      "width": 1920,
+      "height": 1080,
+      "size": 284674,
+      "uploadedDate": "2019-10-06T12:29:34.427Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV15-1920x1080-083ac4412c4f506b792293e9121f1676.jpg",
+      "md5": "083ac4412c4f506b792293e9121f1676",
+      "width": 1920,
+      "height": 1080,
+      "size": 199088,
+      "uploadedDate": "2019-09-16T22:05:07.702Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV20-1920x1080-01f3c801fa28bec0fe2ffd4d430e8334.jpg",
+      "md5": "01f3c801fa28bec0fe2ffd4d430e8334",
+      "width": 1920,
+      "height": 1080,
+      "size": 228821,
+      "uploadedDate": "2019-09-16T22:32:22.221Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV13-1920x1080-ad85e6be1db27bc33b9b235a7e715217.jpg",
+      "md5": "ad85e6be1db27bc33b9b235a7e715217",
+      "width": 1920,
+      "height": 1080,
+      "size": 216208,
+      "uploadedDate": "2019-09-16T22:05:10.864Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV10-1920x1080-8d8ae3cf28060370d356f1e0dd6b80bb.jpg",
+      "md5": "8d8ae3cf28060370d356f1e0dd6b80bb",
+      "width": 1920,
+      "height": 1080,
+      "size": 165350,
+      "uploadedDate": "2019-09-16T22:05:09.864Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV03-1920x1080-a9646594cde1044d90111afdd01f916a.jpg",
+      "md5": "a9646594cde1044d90111afdd01f916a",
+      "width": 1920,
+      "height": 1080,
+      "size": 404356,
+      "uploadedDate": "2018-10-16T01:16:11.120Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV24-1920x1080-817c6368637f7f620a0f0ad6cb706fae.jpg",
+      "md5": "817c6368637f7f620a0f0ad6cb706fae",
+      "width": 1920,
+      "height": 1080,
+      "size": 133524,
+      "uploadedDate": "2019-10-06T12:29:34.818Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV04-1920x1080-08c7bc528360e53b0c819aecc838a3c5.jpg",
+      "md5": "08c7bc528360e53b0c819aecc838a3c5",
+      "width": 1920,
+      "height": 1080,
+      "size": 313607,
+      "uploadedDate": "2018-10-17T00:42:08.940Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV12-1920x1080-e7f2d267e60387de93a4c460f4f471f0.jpg",
+      "md5": "e7f2d267e60387de93a4c460f4f471f0",
+      "width": 1920,
+      "height": 1080,
+      "size": 259817,
+      "uploadedDate": "2019-09-16T22:05:10.517Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV06-1920x1080-4da91a3a470e0a1ab7cd2a8958f1dae3.jpg",
+      "md5": "4da91a3a470e0a1ab7cd2a8958f1dae3",
+      "width": 1920,
+      "height": 1080,
+      "size": 175318,
+      "uploadedDate": "2019-09-16T22:05:08.366Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV09-1920x1080-bfd6d3d7370dd41f66c253779a329d05.jpg",
+      "md5": "bfd6d3d7370dd41f66c253779a329d05",
+      "width": 1920,
+      "height": 1080,
+      "size": 196985,
+      "uploadedDate": "2019-09-16T22:05:09.480Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV11-1920x1080-dd589232c821786dbcc9c6bbaa5c53ef.jpg",
+      "md5": "dd589232c821786dbcc9c6bbaa5c53ef",
+      "width": 1920,
+      "height": 1080,
+      "size": 223236,
+      "uploadedDate": "2019-09-16T22:05:10.178Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV08-1920x1080-3356b57118f9ef18ef2883bab261aa96.jpg",
+      "md5": "3356b57118f9ef18ef2883bab261aa96",
+      "width": 1920,
+      "height": 1080,
+      "size": 181041,
+      "uploadedDate": "2019-09-16T22:05:09.149Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV05-1920x1080-6ddf480c2efbec66ab515e781b0394ce.jpg",
+      "md5": "6ddf480c2efbec66ab515e781b0394ce",
+      "width": 1920,
+      "height": 1080,
+      "size": 232267,
+      "uploadedDate": "2018-10-17T00:42:08.659Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV22-1920x1080-f009aca31548eb0d6b022a088fae134e.jpg",
+      "md5": "f009aca31548eb0d6b022a088fae134e",
+      "width": 1920,
+      "height": 1080,
+      "size": 219045,
+      "uploadedDate": "2019-09-16T22:32:21.891Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV25-1920x1080-9081afae8867ef72d056c1e04f2246d3.jpg",
+      "md5": "9081afae8867ef72d056c1e04f2246d3",
+      "width": 1920,
+      "height": 1080,
+      "size": 204223,
+      "uploadedDate": "2019-10-06T12:29:35.138Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV26-1920x1080-7047c9fef1475fa22878e209fb12225b.jpg",
+      "md5": "7047c9fef1475fa22878e209fb12225b",
+      "width": 1920,
+      "height": 1080,
+      "size": 195941,
+      "uploadedDate": "2019-10-06T12:29:35.466Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WeaponFOV27-1920x1080-3b1dadffe35846e9d592bd584954d3e3.jpg",
+      "md5": "3b1dadffe35846e9d592bd584954d3e3",
+      "width": 1920,
+      "height": 1080,
+      "size": 216905,
+      "uploadedDate": "2019-10-06T12:29:35.761Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screen001-1920x1080-0668a0a013a65f37feefc01edd3399bd.jpg",
+      "md5": "0668a0a013a65f37feefc01edd3399bd",
+      "width": 1920,
+      "height": 1080,
+      "size": 309389,
+      "uploadedDate": "2021-01-01T18:17:33.528Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screen002-1920x1080-8061c7e025710baeb3c9ad988642edbe.jpg",
+      "md5": "8061c7e025710baeb3c9ad988642edbe",
+      "width": 1920,
+      "height": 1080,
+      "size": 531240,
+      "uploadedDate": "2021-01-01T18:17:33.873Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screen003-1920x1080-7bc59993831379cec1a85248d6fc1f60.jpg",
+      "md5": "7bc59993831379cec1a85248d6fc1f60",
+      "width": 1920,
+      "height": 1080,
+      "size": 262700,
+      "uploadedDate": "2021-01-01T18:17:34.245Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/WeaponFOV_thumb-284x284-12e76b083987fdac09546444f6c2bdbc.png",
+      "md5": "12e76b083987fdac09546444f6c2bdbc",
+      "width": 284,
+      "height": 284,
+      "size": 105066,
+      "uploadedDate": "2020-12-31T16:03:18.225Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/WeaponFOV_featured-894x488-cba29f9ce5fea9eb499befa7ba341cc8.png",
+      "md5": "cba29f9ce5fea9eb499befa7ba341cc8",
+      "width": 894,
+      "height": 488,
+      "size": 593738,
+      "uploadedDate": "2021-01-01T18:17:34.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen001-1920x1080-0668a0a013a65f37feefc01edd3399bd_Snapshot.jpg",
+      "md5": "35ea3a144bd37a34e5f0d659908ffe0e",
+      "width": 150,
+      "height": 74,
+      "size": 3078,
+      "uploadedDate": "2021-01-01T18:17:33.744Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen002-1920x1080-8061c7e025710baeb3c9ad988642edbe_Snapshot.jpg",
+      "md5": "52bc436f99cc8a2a4697aaef17f19544",
+      "width": 150,
+      "height": 74,
+      "size": 6094,
+      "uploadedDate": "2021-01-01T18:17:34.136Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screen003-1920x1080-7bc59993831379cec1a85248d6fc1f60_Snapshot.jpg",
+      "md5": "c94880d379a981dff2110b2da79951ad",
+      "width": 150,
+      "height": 74,
+      "size": 3868,
+      "uploadedDate": "2021-01-01T18:17:34.472Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV23-1920x1080-8e3f0e55cff43214f078ae6972139ee7_Snapshot.jpg",
+      "md5": "15bb16325c86ddf317d122dbd06130a1",
+      "width": 150,
+      "height": 74,
+      "size": 6418,
+      "uploadedDate": "2019-10-06T12:29:34.692Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV24-1920x1080-817c6368637f7f620a0f0ad6cb706fae_Snapshot.jpg",
+      "md5": "3d99ec79b7b60f7280ea1ebe241612ac",
+      "width": 150,
+      "height": 74,
+      "size": 5469,
+      "uploadedDate": "2019-10-06T12:29:35.014Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV25-1920x1080-9081afae8867ef72d056c1e04f2246d3_Snapshot.jpg",
+      "md5": "4a4fe03f7ef4ca13c72d6832ae310ffa",
+      "width": 150,
+      "height": 74,
+      "size": 6311,
+      "uploadedDate": "2019-10-06T12:29:35.356Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV26-1920x1080-7047c9fef1475fa22878e209fb12225b_Snapshot.jpg",
+      "md5": "e3d12bc2e3ebff1478b803d5c6a7b3bf",
+      "width": 150,
+      "height": 74,
+      "size": 6478,
+      "uploadedDate": "2019-10-06T12:29:35.666Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV27-1920x1080-3b1dadffe35846e9d592bd584954d3e3_Snapshot.jpg",
+      "md5": "949265c60b65e34631b47fae9badc998",
+      "width": 150,
+      "height": 74,
+      "size": 6327,
+      "uploadedDate": "2019-10-06T12:29:36.000Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV22-1920x1080-f009aca31548eb0d6b022a088fae134e_Snapshot.jpg",
+      "md5": "285c6dde9ad95783fc442a0d86eb0419",
+      "width": 150,
+      "height": 74,
+      "size": 6904,
+      "uploadedDate": "2019-09-16T22:32:22.096Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV20-1920x1080-01f3c801fa28bec0fe2ffd4d430e8334_Snapshot.jpg",
+      "md5": "c719301f8aa3584db0459d9752e3661e",
+      "width": 150,
+      "height": 74,
+      "size": 6535,
+      "uploadedDate": "2019-09-16T22:32:22.418Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV15-1920x1080-083ac4412c4f506b792293e9121f1676_Snapshot.jpg",
+      "md5": "2ba7d1a01f28c43135cd3f2870dbc5fb",
+      "width": 150,
+      "height": 74,
+      "size": 5026,
+      "uploadedDate": "2019-09-16T22:05:07.896Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV18-1920x1080-ad0c6d1770a81fbfa08f67c3db8f9da6_Snapshot.jpg",
+      "md5": "0c6920101546d94b1ac79de7974c6b27",
+      "width": 150,
+      "height": 74,
+      "size": 7456,
+      "uploadedDate": "2019-09-16T22:05:08.229Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV06-1920x1080-4da91a3a470e0a1ab7cd2a8958f1dae3_Snapshot.jpg",
+      "md5": "84232af8a185b82a1e313fba14cd4790",
+      "width": 150,
+      "height": 74,
+      "size": 4822,
+      "uploadedDate": "2019-09-16T22:05:08.576Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV07-1920x1080-b378e155b3e8c5d72c04183e859c10f8_Snapshot.jpg",
+      "md5": "32ae7e664376af1afa4ba5ee628da905",
+      "width": 150,
+      "height": 74,
+      "size": 5758,
+      "uploadedDate": "2019-09-16T22:05:08.980Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV08-1920x1080-3356b57118f9ef18ef2883bab261aa96_Snapshot.jpg",
+      "md5": "763f871f43c0765910109ae886a6c08d",
+      "width": 150,
+      "height": 74,
+      "size": 4798,
+      "uploadedDate": "2019-09-16T22:05:09.352Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV09-1920x1080-bfd6d3d7370dd41f66c253779a329d05_Snapshot.jpg",
+      "md5": "a15a53e0e1d132a6903b9897c098720e",
+      "width": 150,
+      "height": 74,
+      "size": 4956,
+      "uploadedDate": "2019-09-16T22:05:09.736Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV10-1920x1080-8d8ae3cf28060370d356f1e0dd6b80bb_Snapshot.jpg",
+      "md5": "e19da3b24aadd446d3ebd7364f1381ed",
+      "width": 150,
+      "height": 74,
+      "size": 4612,
+      "uploadedDate": "2019-09-16T22:05:10.059Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV11-1920x1080-dd589232c821786dbcc9c6bbaa5c53ef_Snapshot.jpg",
+      "md5": "97f212caa9f5527da7b8092bf317f272",
+      "width": 150,
+      "height": 74,
+      "size": 5867,
+      "uploadedDate": "2019-09-16T22:05:10.373Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV12-1920x1080-e7f2d267e60387de93a4c460f4f471f0_Snapshot.jpg",
+      "md5": "33bc43709038febce64318fccf6f5671",
+      "width": 150,
+      "height": 74,
+      "size": 6864,
+      "uploadedDate": "2019-09-16T22:05:10.715Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV13-1920x1080-ad85e6be1db27bc33b9b235a7e715217_Snapshot.jpg",
+      "md5": "eeb74ef5a7976973ae56c3485dcc51da",
+      "width": 150,
+      "height": 74,
+      "size": 5430,
+      "uploadedDate": "2019-09-16T22:05:11.064Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV05-1920x1080-6ddf480c2efbec66ab515e781b0394ce_Snapshot.jpg",
+      "md5": "81aceec512bdd53862656dfd5ba7a15a",
+      "width": 150,
+      "height": 74,
+      "size": 3578,
+      "uploadedDate": "2018-10-17T00:42:08.833Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV04-1920x1080-08c7bc528360e53b0c819aecc838a3c5_Snapshot.jpg",
+      "md5": "88ceac56a10783562ce8ab69c86c0cbe",
+      "width": 150,
+      "height": 74,
+      "size": 2712,
+      "uploadedDate": "2018-10-17T00:42:09.111Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV01-1920x1080-a211f594e2dd8b4e08b02605600c492e_Snapshot.jpg",
+      "md5": "6b03ec3b6450a898c5274a88f038db91",
+      "width": 150,
+      "height": 74,
+      "size": 3243,
+      "uploadedDate": "2018-10-16T01:16:10.628Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV02-1920x1080-5ba91ccc636a62ea6a354d8d3b5e418e_Snapshot.jpg",
+      "md5": "1b9ef159b186772bc8f2d7b2af470703",
+      "width": 150,
+      "height": 74,
+      "size": 3598,
+      "uploadedDate": "2018-10-16T01:16:10.942Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponFOV03-1920x1080-a9646594cde1044d90111afdd01f916a_Snapshot.jpg",
+      "md5": "80b37da168756e8e0b53f312b01f401b",
+      "width": 150,
+      "height": 74,
+      "size": 3942,
+      "uploadedDate": "2018-10-16T01:16:11.313Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/materials"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-10-29T14:18:52.478Z",
+  "lastModifiedDate": "2024-11-27T00:11:29.402Z",
+  "customAttributes": {},
+  "entitlementName": "3c4efdbc35944efcb711e16739930d60",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "98af539215f349249a64a6edc52d96ca",
+      "appId": "WeaponFO3c4efdbc3594V1",
+      "compatibleApps": [
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "Xbox One",
+        "Android",
+        "iOS",
+        "HTML5",
+        "Linux",
+        "Win32",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2018-10-16T00:00:00.000Z",
+      "releaseNote": "Unreal 5.4 support, fixed BP errors, added constant ration parameter",
+      "versionTitle": "Weapon FOV 1.3.3"
+    },
+    {
+      "id": "1245f6546c1d45dcbecb4b2d91e849ed",
+      "appId": "WeaponFO3c4efdbc3594V3",
+      "compatibleApps": [
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-05-27T00:00:00.000Z",
+      "releaseNote": "Horizontal and vertical FOV, blueprint functions updated.",
+      "versionTitle": "Weapon FOV 1.3.4"
+    }
+  ],
+  "developer": "Krystian Komisarek",
+  "developerId": "o-7af88f2df248b3a566214c0924ac91",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,155 @@
+{
+  "id": "5f8c19e80a834533859a508658b34848",
+  "title": "Ase Importer",
+  "description": "Allows you to import and automatically generate your animations (textures, sprites and flipbooks) from an Aseprite save file (.aseprite).",
+  "longDescription": "<p>Ase importer plugin allows you to import and automatically generate your animations (textures, sprites and flipbooks) from an Aseprite save file (.aseprite).</p><p><br /></p><p>How it works?</p><p>Just drag and drop<strong> </strong>an .aseprite file in the content browser. The plugin will generate texture atlases for all the frames in the aseprite file automatically for you. After that, for each tag found in the aseprite file, the plugin will create a PaperFlipbook animation with all the PaperSprites for each frame in that aseprite tag automatically.</p><p><br /></p><p>If you have an aseprite file without tags inside it will treat ALL the frames in the aseprite file as a single animation. (It will only create a single PaperFlibook with all the PaperSprites (frames) of the aseprite file.</p><p><br /></p><p><strong><u>Documentation (FAQ):</u></strong></p><p><br /></p><p><strong>How to import an aseprite file? </strong></p><p>Just drag and drop the .aseprite file to the content browser.</p><p><br /></p><p><strong>How animations (flipbooks) will be created?</strong></p><p>The importer has two modes of operation, with tags/without tags:</p><ul><li><strong>Without aseprite tags:</strong></li></ul><p>It will create only one flipbook animation that will contain all the PaperSprites (frames) of the entire aseprite file.</p><ul><li><strong>With aseprite tags:</strong></li></ul><p>It will create a flipbook animation for each tag found in the aseprite file.</p><p><br /></p><p><strong>Can I set the animation (flipbook) speed (fps) from aseprite?</strong></p><p>&#34;Yes&#34;. Currently Unreal Engine doesn&#39;t support per frame duration animations in PaperFlipbooks like aseprite. In order to set the flipbook fps, the importer will look at the FIRST frame duration of each aseprite tag.</p><p><br /></p><p><strong>Can I reimport the assets from the same aseprite file without losing my flipbook references in the editor?</strong></p><p>&#34;Yes&#34;. Just drag and drop again the new aseprite file. If you are using the same tags, the importer will not create new assets. It will just modify the existing ones with the new data from the aseprite file.</p>",
+  "technicalDetails": "<p><strong>DOCUMENTATION:</strong> <a href=\"https://docs.google.com/document/d/14ekUcQ-NTG0z9OHPoe2Ur9hoWwOUS67h-JihiG4otqc/edit?usp&#61;sharing\" rel=\"nofollow\">https://docs.google.com/document/d/14ekUcQ-NTG0z9OHPoe2Ur9hoWwOUS67h-JihiG4otqc/edit?usp&#61;sharing</a></p><p>Features:</p><ul><li>Generates texture atlases with all the frames of all the animations in the aseprite file. (if the atlas is greater than 2048x2048 will create another texture atlas).</li><li>Generates PaperSprite assets of all the frames in the aseprite file.</li><li>Generates a PaperFlipbook animation for each tag found in the aseprite file.</li><li>Generates a PaperFlipbook animation for ALL the frames in the aseprite file if no tag is found.</li><li>Supports aseprite version 1.2 and 1.3</li><li>Suports &#34;reimporting&#34;. if you drag and drop the same aseprite file multiple times, instead of generating new assets, will look up existing ones and update them. This prevents losing references if you just only changed the texture.</li><li>Supports setting the FPS of the animation tag (Flipbook). Unreal flipbooks doesn&#39;t support per frame times like aseprite. So the importer will look at the FIRST frame duration from aseprite to set the fps speed of the unreal flipbook.</li></ul><p><br /></p><p>Supported:</p><ul><li>Only the &#34;normal&#34; blend mode for layers is supported.</li><li>Maximum aseprite layers per file: 64</li><li>Maximum aseprite tags per file: 256</li></ul><p><br /></p><p>Not Supported:</p><ul><li>Aseprite sRGB and ICC profiles.</li><li>Aseprite Grayscale, Indexed modes. (unreal doesn&#39;t support this)</li><li>Aseprite Slices.</li></ul><p><br /></p><p><br /></p><p>Code Modules:</p><ul><li> APAseEditorModule (Editor)</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Importer2-1920x1080-580db00f28ba99fcbfbe8094490e8057.png",
+      "md5": "580db00f28ba99fcbfbe8094490e8057",
+      "width": 1920,
+      "height": 1080,
+      "size": 263466,
+      "uploadedDate": "2023-03-23T15:22:07.237Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Importer1-1920x1080-c05a59e2c86906020de4ae59e0541ab7.png",
+      "md5": "c05a59e2c86906020de4ae59e0541ab7",
+      "width": 1920,
+      "height": 1080,
+      "size": 213216,
+      "uploadedDate": "2023-03-23T15:22:07.571Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Importer3-1920x1080-7d7ab76e9df4c6ce30932be2447e2f14.png",
+      "md5": "7d7ab76e9df4c6ce30932be2447e2f14",
+      "width": 1920,
+      "height": 1080,
+      "size": 185178,
+      "uploadedDate": "2023-03-23T15:22:07.940Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AseImporter_thumb-284x284-47aabeb4b81738e37b755dc40ebee8e8.png",
+      "md5": "47aabeb4b81738e37b755dc40ebee8e8",
+      "width": 284,
+      "height": 284,
+      "size": 4876,
+      "uploadedDate": "2023-03-23T15:22:08.236Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AseImporter_featured-894x488-60978d4b95b917c1fb0ce8fe2d804696.png",
+      "md5": "60978d4b95b917c1fb0ce8fe2d804696",
+      "width": 894,
+      "height": 488,
+      "size": 63224,
+      "uploadedDate": "2023-03-23T15:22:08.315Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Importer2-1920x1080-580db00f28ba99fcbfbe8094490e8057_Snapshot.png",
+      "md5": "58576912959aa9030bb48cd5ca94f14f",
+      "width": 150,
+      "height": 74,
+      "size": 5800,
+      "uploadedDate": "2023-03-23T15:22:07.461Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Importer1-1920x1080-c05a59e2c86906020de4ae59e0541ab7_Snapshot.png",
+      "md5": "77aba3fe61fcea9db8f6aa75be567ce3",
+      "width": 150,
+      "height": 74,
+      "size": 4316,
+      "uploadedDate": "2023-03-23T15:22:07.811Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Importer3-1920x1080-7d7ab76e9df4c6ce30932be2447e2f14_Snapshot.png",
+      "md5": "b00df9a4c535f62a246089cad04e773c",
+      "width": 150,
+      "height": 74,
+      "size": 3589,
+      "uploadedDate": "2023-03-23T15:22:08.200Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-10-26T12:18:20.640Z",
+  "lastModifiedDate": "2024-10-09T17:57:29.131Z",
+  "customAttributes": {},
+  "entitlementName": "5f8c19e80a834533859a508658b34848",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "0c0f2dce18074931ae42d1be59b51e58",
+      "appId": "APAseImporter_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Windows",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2023-03-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.0-51"
+    },
+    {
+      "id": "81c76680bef1498991fcaf19d1392579",
+      "appId": "APAseImporter_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "Linux",
+        "iOS"
+      ],
+      "dateAdded": "2023-10-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.0-53"
+    },
+    {
+      "id": "8b977a7c3c8a4cbfae4487d3aeb861dd",
+      "appId": "APAseImporter_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.0-54"
+    }
+  ],
+  "developer": "AstralPixel",
+  "developerId": "o-m7k42t9pb3brqhlczsywgfvyn9d8qf",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

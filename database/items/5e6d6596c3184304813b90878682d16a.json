@@ -1,0 +1,538 @@
+{
+  "id": "5e6d6596c3184304813b90878682d16a",
+  "title": "PP Multi-Window",
+  "description": "Easy to create subwindow at runtime or editor. And can paint UMG to created window",
+  "longDescription": "<p>Can quickly create sub windows during program runtime and add rendering UI through the Handle heap form. </p><p>Support binding windows with the world to automatically destroy forms when uninstalling levels. </p><p>UMG can be added through various methods, including easy-to-use blueprint nodes. </p><p>A component inherited from SceneCapture2D can automatically create a window and define its position on the selected monitor. </p><p>Simultaneously defined a static method library to obtain all monitor information on the host.</p>",
+  "technicalDetails": "<p>Update:</p><ul><li>2024/4/23: Change &#34;PMWDisplayComponent&#34; create window method,use &#34;bNewDisplay&#34; to select create new add to a created window.</li><li>2024/5/9\t:\tAdd function to capture input event in created window.</li></ul><p><br /></p><p>Features:</p><ul><li>Easy to use by blueprint.</li><li>Create global window by create params at all engine or game life-time .</li><li>Can create window create params at monitor coordinate position.</li><li>Easy to create sub window by monitor to set windowmode&#61;fullscreenwindow.Needn&#39;t to set more params.</li><li>Get created window handle by window index.</li><li>Can get primary monitor info ,or all monitor info. Display Info can print by string format</li><li>Can get global coordinate rect size, There have method to transform relative pos to global, or reverse transform.</li><li>Create UserWidget by WidgetType and add to created window, and remove from window.</li><li>Add a constructed userwidget to created window, and remove from window.</li><li>Window can auto destroy by level unload,or global destroy by manual.</li><li>Window can add SWidget to content and remove from display.</li><li>Window can bind event on window closed.</li><li>A component inherited from SceneCapture2D can automatically create window at monitor index.</li></ul><p><br /></p><p>Code Modules:</p><ul><li> PPMultiWindow(Runtime)</li></ul><p>Number of Blueprints:0</p><p>Number of C&#43;&#43; Classes:11</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: <a href=\"https://github.com/lesii/PPMultiWindowGuide\" rel=\"nofollow\">Simple To Use</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8-1920x1080-be6d8a804414d7f8fa797e407abd2304.png",
+      "md5": "be6d8a804414d7f8fa797e407abd2304",
+      "width": 1920,
+      "height": 1080,
+      "size": 1659068,
+      "uploadedDate": "2024-04-13T04:07:58.435Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-48d37cfb5f51efe715b89c6b7b571ef9.png",
+      "md5": "48d37cfb5f51efe715b89c6b7b571ef9",
+      "width": 1920,
+      "height": 1080,
+      "size": 399309,
+      "uploadedDate": "2024-04-13T04:07:59.376Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-776aedb104d3babe3756d1de9341562f.png",
+      "md5": "776aedb104d3babe3756d1de9341562f",
+      "width": 1920,
+      "height": 1080,
+      "size": 264438,
+      "uploadedDate": "2024-04-13T04:07:59.703Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-d438b00998cd2483a5eb1fe78e33e289.png",
+      "md5": "d438b00998cd2483a5eb1fe78e33e289",
+      "width": 1920,
+      "height": 1080,
+      "size": 341101,
+      "uploadedDate": "2024-04-13T04:07:59.994Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-c942461b172b63a87d0117da786a1c5c.png",
+      "md5": "c942461b172b63a87d0117da786a1c5c",
+      "width": 1920,
+      "height": 1080,
+      "size": 196783,
+      "uploadedDate": "2024-04-13T04:08:00.380Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-ee5630e8f9bd0a6a52a053cd0ef5e6d9.png",
+      "md5": "ee5630e8f9bd0a6a52a053cd0ef5e6d9",
+      "width": 1920,
+      "height": 1080,
+      "size": 283998,
+      "uploadedDate": "2024-04-13T04:08:00.614Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-48214170d8f57443c70a7923198f10a8.png",
+      "md5": "48214170d8f57443c70a7923198f10a8",
+      "width": 1920,
+      "height": 1080,
+      "size": 233526,
+      "uploadedDate": "2024-04-13T04:08:00.916Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7-1920x1080-f4b9a1075a30dc1f755ac486b008cffd.png",
+      "md5": "f4b9a1075a30dc1f755ac486b008cffd",
+      "width": 1920,
+      "height": 1080,
+      "size": 1781525,
+      "uploadedDate": "2024-04-13T04:08:01.348Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PPMultiWindow_thumb-284x284-a8ad58790883af4c0a2244b1d0777999.png",
+      "md5": "a8ad58790883af4c0a2244b1d0777999",
+      "width": 284,
+      "height": 284,
+      "size": 157648,
+      "uploadedDate": "2024-04-09T14:36:07.729Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PPMultiWindow_featured-894x488-da7496eb9ddb86ae8ac53402c64eea36.png",
+      "md5": "da7496eb9ddb86ae8ac53402c64eea36",
+      "width": 894,
+      "height": 488,
+      "size": 668263,
+      "uploadedDate": "2024-04-09T14:36:07.851Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-be6d8a804414d7f8fa797e407abd2304_Snapshot.png",
+      "md5": "20ff55f23216d9727f0cb48c75b1e42b",
+      "width": 150,
+      "height": 74,
+      "size": 7357,
+      "uploadedDate": "2024-04-13T04:07:58.702Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-e32936d89b3ea2dcaf1bef9e9f073605_Snapshot.png",
+      "md5": "47af0d2228dcd725856377b2462b6e56",
+      "width": 150,
+      "height": 74,
+      "size": 9136,
+      "uploadedDate": "2024-04-13T04:07:59.247Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-48d37cfb5f51efe715b89c6b7b571ef9_Snapshot.png",
+      "md5": "f3328dd495b2220ca5f02bf7817d9df0",
+      "width": 150,
+      "height": 74,
+      "size": 5808,
+      "uploadedDate": "2024-04-13T04:07:59.569Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-776aedb104d3babe3756d1de9341562f_Snapshot.png",
+      "md5": "1fad8349341036806c670232bf747289",
+      "width": 150,
+      "height": 74,
+      "size": 3579,
+      "uploadedDate": "2024-04-13T04:07:59.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-d438b00998cd2483a5eb1fe78e33e289_Snapshot.png",
+      "md5": "fae980ca431d2548ea2e4eadebba0455",
+      "width": 150,
+      "height": 74,
+      "size": 3718,
+      "uploadedDate": "2024-04-13T04:08:00.202Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-c942461b172b63a87d0117da786a1c5c_Snapshot.png",
+      "md5": "c5376b97ff0ee60e7ed76090ca68e16e",
+      "width": 150,
+      "height": 74,
+      "size": 2969,
+      "uploadedDate": "2024-04-13T04:08:00.550Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-ee5630e8f9bd0a6a52a053cd0ef5e6d9_Snapshot.png",
+      "md5": "77506a7cf05d3e369bbbfce36caced96",
+      "width": 150,
+      "height": 74,
+      "size": 3370,
+      "uploadedDate": "2024-04-13T04:08:00.793Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-48214170d8f57443c70a7923198f10a8_Snapshot.png",
+      "md5": "9bc296d60bf7c7188ce9bafe060a0f47",
+      "width": 150,
+      "height": 74,
+      "size": 3413,
+      "uploadedDate": "2024-04-13T04:08:01.094Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-f4b9a1075a30dc1f755ac486b008cffd_Snapshot.png",
+      "md5": "8928530e6bc86bb79f64e1d2c0bd57f7",
+      "width": 150,
+      "height": 74,
+      "size": 5311,
+      "uploadedDate": "2024-04-13T04:08:01.619Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-be6d8a804414d7f8fa797e407abd2304_Snapshot.png",
+      "md5": "20ff55f23216d9727f0cb48c75b1e42b",
+      "width": 150,
+      "height": 74,
+      "size": 7357,
+      "uploadedDate": "2024-04-13T04:07:22.116Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-e32936d89b3ea2dcaf1bef9e9f073605_Snapshot.png",
+      "md5": "47af0d2228dcd725856377b2462b6e56",
+      "width": 150,
+      "height": 74,
+      "size": 9136,
+      "uploadedDate": "2024-04-13T04:07:22.566Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-48d37cfb5f51efe715b89c6b7b571ef9_Snapshot.png",
+      "md5": "f3328dd495b2220ca5f02bf7817d9df0",
+      "width": 150,
+      "height": 74,
+      "size": 5808,
+      "uploadedDate": "2024-04-13T04:07:22.943Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-be6d8a804414d7f8fa797e407abd2304_Snapshot.png",
+      "md5": "20ff55f23216d9727f0cb48c75b1e42b",
+      "width": 150,
+      "height": 74,
+      "size": 7357,
+      "uploadedDate": "2024-04-13T04:06:23.104Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-e32936d89b3ea2dcaf1bef9e9f073605_Snapshot.png",
+      "md5": "47af0d2228dcd725856377b2462b6e56",
+      "width": 150,
+      "height": 74,
+      "size": 9136,
+      "uploadedDate": "2024-04-13T04:06:23.530Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-776aedb104d3babe3756d1de9341562f_Snapshot.png",
+      "md5": "1fad8349341036806c670232bf747289",
+      "width": 150,
+      "height": 74,
+      "size": 3579,
+      "uploadedDate": "2024-04-13T04:06:23.961Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-d438b00998cd2483a5eb1fe78e33e289_Snapshot.png",
+      "md5": "fae980ca431d2548ea2e4eadebba0455",
+      "width": 150,
+      "height": 74,
+      "size": 3718,
+      "uploadedDate": "2024-04-13T04:06:24.286Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-c942461b172b63a87d0117da786a1c5c_Snapshot.png",
+      "md5": "c5376b97ff0ee60e7ed76090ca68e16e",
+      "width": 150,
+      "height": 74,
+      "size": 2969,
+      "uploadedDate": "2024-04-13T04:06:24.525Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-ee5630e8f9bd0a6a52a053cd0ef5e6d9_Snapshot.png",
+      "md5": "77506a7cf05d3e369bbbfce36caced96",
+      "width": 150,
+      "height": 74,
+      "size": 3370,
+      "uploadedDate": "2024-04-13T04:06:24.949Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-48214170d8f57443c70a7923198f10a8_Snapshot.png",
+      "md5": "9bc296d60bf7c7188ce9bafe060a0f47",
+      "width": 150,
+      "height": 74,
+      "size": 3413,
+      "uploadedDate": "2024-04-13T04:06:25.284Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-48d37cfb5f51efe715b89c6b7b571ef9_Snapshot.png",
+      "md5": "f3328dd495b2220ca5f02bf7817d9df0",
+      "width": 150,
+      "height": 74,
+      "size": 5808,
+      "uploadedDate": "2024-04-13T04:06:25.651Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-f4b9a1075a30dc1f755ac486b008cffd_Snapshot.png",
+      "md5": "8928530e6bc86bb79f64e1d2c0bd57f7",
+      "width": 150,
+      "height": 74,
+      "size": 5311,
+      "uploadedDate": "2024-04-13T04:06:26.143Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-776aedb104d3babe3756d1de9341562f_Snapshot.png",
+      "md5": "1fad8349341036806c670232bf747289",
+      "width": 150,
+      "height": 74,
+      "size": 3579,
+      "uploadedDate": "2024-04-13T04:05:38.472Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-d438b00998cd2483a5eb1fe78e33e289_Snapshot.png",
+      "md5": "fae980ca431d2548ea2e4eadebba0455",
+      "width": 150,
+      "height": 74,
+      "size": 3718,
+      "uploadedDate": "2024-04-13T04:05:38.736Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-c942461b172b63a87d0117da786a1c5c_Snapshot.png",
+      "md5": "c5376b97ff0ee60e7ed76090ca68e16e",
+      "width": 150,
+      "height": 74,
+      "size": 2969,
+      "uploadedDate": "2024-04-13T04:05:39.064Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-ee5630e8f9bd0a6a52a053cd0ef5e6d9_Snapshot.png",
+      "md5": "77506a7cf05d3e369bbbfce36caced96",
+      "width": 150,
+      "height": 74,
+      "size": 3370,
+      "uploadedDate": "2024-04-13T04:05:39.387Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-48214170d8f57443c70a7923198f10a8_Snapshot.png",
+      "md5": "9bc296d60bf7c7188ce9bafe060a0f47",
+      "width": 150,
+      "height": 74,
+      "size": 3413,
+      "uploadedDate": "2024-04-13T04:05:39.707Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-48d37cfb5f51efe715b89c6b7b571ef9_Snapshot.png",
+      "md5": "f3328dd495b2220ca5f02bf7817d9df0",
+      "width": 150,
+      "height": 74,
+      "size": 5808,
+      "uploadedDate": "2024-04-13T04:05:40.083Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-f4b9a1075a30dc1f755ac486b008cffd_Snapshot.png",
+      "md5": "8928530e6bc86bb79f64e1d2c0bd57f7",
+      "width": 150,
+      "height": 74,
+      "size": 5311,
+      "uploadedDate": "2024-04-13T04:05:40.597Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-be6d8a804414d7f8fa797e407abd2304_Snapshot.png",
+      "md5": "20ff55f23216d9727f0cb48c75b1e42b",
+      "width": 150,
+      "height": 74,
+      "size": 7357,
+      "uploadedDate": "2024-04-13T04:05:41.183Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-be6d8a804414d7f8fa797e407abd2304_Snapshot.png",
+      "md5": "20ff55f23216d9727f0cb48c75b1e42b",
+      "width": 150,
+      "height": 74,
+      "size": 7357,
+      "uploadedDate": "2024-04-09T14:36:07.120Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9-1920x1080-e32936d89b3ea2dcaf1bef9e9f073605_Snapshot.png",
+      "md5": "47af0d2228dcd725856377b2462b6e56",
+      "width": 150,
+      "height": 74,
+      "size": 9136,
+      "uploadedDate": "2024-04-09T14:36:07.621Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-776aedb104d3babe3756d1de9341562f_Snapshot.png",
+      "md5": "1fad8349341036806c670232bf747289",
+      "width": 150,
+      "height": 74,
+      "size": 3579,
+      "uploadedDate": "2024-04-08T11:51:09.759Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-d438b00998cd2483a5eb1fe78e33e289_Snapshot.png",
+      "md5": "fae980ca431d2548ea2e4eadebba0455",
+      "width": 150,
+      "height": 74,
+      "size": 3718,
+      "uploadedDate": "2024-04-08T11:51:10.195Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-c942461b172b63a87d0117da786a1c5c_Snapshot.png",
+      "md5": "c5376b97ff0ee60e7ed76090ca68e16e",
+      "width": 150,
+      "height": 74,
+      "size": 2969,
+      "uploadedDate": "2024-04-08T11:51:10.525Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-ee5630e8f9bd0a6a52a053cd0ef5e6d9_Snapshot.png",
+      "md5": "77506a7cf05d3e369bbbfce36caced96",
+      "width": 150,
+      "height": 74,
+      "size": 3370,
+      "uploadedDate": "2024-04-08T11:51:10.909Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-48214170d8f57443c70a7923198f10a8_Snapshot.png",
+      "md5": "9bc296d60bf7c7188ce9bafe060a0f47",
+      "width": 150,
+      "height": 74,
+      "size": 3413,
+      "uploadedDate": "2024-04-08T11:51:11.380Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-48d37cfb5f51efe715b89c6b7b571ef9_Snapshot.png",
+      "md5": "f3328dd495b2220ca5f02bf7817d9df0",
+      "width": 150,
+      "height": 74,
+      "size": 5808,
+      "uploadedDate": "2024-04-08T11:51:11.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-f4b9a1075a30dc1f755ac486b008cffd_Snapshot.png",
+      "md5": "8928530e6bc86bb79f64e1d2c0bd57f7",
+      "width": 150,
+      "height": 74,
+      "size": 5311,
+      "uploadedDate": "2024-04-08T11:51:12.353Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-10a2cf4a25fbf56ac0a931821b5bcecc_Snapshot.png",
+      "md5": "a496caaa634bf0c52d1a64d6854324e2",
+      "width": 150,
+      "height": 74,
+      "size": 5058,
+      "uploadedDate": "2024-04-08T11:51:12.899Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-04-13T04:08:50.268Z",
+  "lastModifiedDate": "2024-10-23T04:49:24.646Z",
+  "customAttributes": {
+    "promotionalContent": {
+      "type": "STRING",
+      "value": "true"
+    }
+  },
+  "entitlementName": "5e6d6596c3184304813b90878682d16a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "af49ff6ce0d643f394476a56496bb316",
+      "appId": "PPMultiWindow_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2024-04-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PPMultiWindow 5.1"
+    },
+    {
+      "id": "95348f0d3f284b738fe56510338ff11e",
+      "appId": "PPMultiWindow_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2024-04-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PPMultiWindow 5.2"
+    },
+    {
+      "id": "e2448c946217433aabc70cd695b43972",
+      "appId": "PPMultiWindow_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2024-04-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PPMultiWindow 5.3"
+    },
+    {
+      "id": "9dd60bb211a74148b0ec1148f5ff0065",
+      "appId": "PPMultiWindow_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "PPMultiWindow 5.4"
+    }
+  ],
+  "developer": "Le Sii",
+  "developerId": "o-56sh9lw7pz34r2hkmu4dr4yg32qk4v",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

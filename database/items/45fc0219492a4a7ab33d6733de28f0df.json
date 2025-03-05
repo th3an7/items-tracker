@@ -1,0 +1,328 @@
+{
+  "id": "45fc0219492a4a7ab33d6733de28f0df",
+  "title": "glTFRuntime",
+  "description": "Load glTF Assets at Runtime",
+  "longDescription": "<p>This plugin extends Unreal Engine capabilities by adding runtime Assets loading (Static and Skeletal Meshes, Curve and Skeletal-based Animations, Materials, Textures) from standard glTF Files.</p><p>Assets can be loaded from filesystem, HTTP servers, commandlines output, the clipboard or built from JSON strings.</p><p>The main goal is to allow project graphics modding, but can be used in any scenario requiring you to load/view/manipulate assets after the game has been packaged.</p><p>GLTF 2.0 (Embedded and Binary) is supported.</p><p><br /></p><p>The plugin is extensible to support more features and file formats.</p><p><br /></p><p>Extensions for OBJ, STL, FBX and MagicaVoxel are available on github.</p><p><br /></p><p>In addition to Runtime, Assets can be loaded in Editor too for simplifying testing and fixing.</p><p>Functions (both Blueprint and C&#43;&#43;) for modifying Assets structures (like bone hierarchy) are included.</p><p><br /></p><p>The Project is fully open source (MIT License), but it is available in the Epic Marketplace too, allowing users to sponsor the project by buying ready-to-use packages.</p><p><br /></p><p>Join the Discord Server for support: <a href=\"https://discord.gg/DzS7MHy\" rel=\"nofollow\">https://discord.gg/DzS7MHy</a></p><p><br /></p><p>The glTF Runtime Logo has been designed by Silvia Sicks (<a href=\"https://silviasicks.wordpress.com/\" rel=\"nofollow\">https://silviasicks.wordpress.com/</a>)</p><p><br /></p><p>The glTF Sample Models shown in screenshots are under the following licenses:</p><p><br /></p><p>DamagedHelmet: theblueturtle_ Creative Commons Attribution-NonCommercial license</p><p>BoxAnimated, CesiumMilkTruck, CesiumMan: Donated by Cesium, CC Attribution 4.0 International License</p><p>AlphaBlendModeTest: Copyright 2018 Analytical Graphics, Inc. CC-BY 4.0</p><p>BrainStem: Created by Keith Hunter, owned by Smith Micro Software, Inc, Poser Pro EULA</p><p>Collada Duck: SCEA Shared Source License, Version 1.0</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Parses glTF 2.0 (Embedded and Binary) files and exposes their scene/nodes structures</li><li>Low-Level API for extracting informations from GLTF files (and any JSON file)</li><li>Loads Static Meshes as well as Materials and Textures</li><li>Loads Skeletal Meshes with various setups (included reusing skeletons)</li><li>Loads Animations as simple Curves or standard Skeletal ones</li><li>Collisions management (for both Static and SkeletalMeshes)</li><li>Includes a ready-to-use Actor able to load and view glTF scenes (included animations)</li><li>Allows to build/modify/retarget Skeletons with various strategies</li><li>Loads Cameras (included animations)</li><li>Allows to change the pivot of StaticMeshes to the top/center/bottom of the bounding box</li><li>MorphTargets</li><li>Support for gzip/lz4 compressed assets and zip archives (even password protected ones)</li><li>KHR_materials_pbrSpecularGlossiness</li><li>Audio support</li><li>Vertex Colors</li><li>VRM Extensions</li><li>Various meshes merge/split features</li><li>Public C&#43;&#43; API for extending the plugin: extensions already available for Draco (https://github.com/rdeioris/glTFRuntimeDraco) and many others</li></ul><p><br /></p><p>Code Modules:</p><ul><li> glTFRuntime [Runtime]</li><li> glTFRuntimeEditor [Editor]</li></ul><p><br /></p><p>Number of Blueprints: 3</p><p>Number of C&#43;&#43; Classes: 8</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows, Mac, Linux</p><p>Supported Target Build Platforms: Windows, Mac, Linux, Android, iOS, Hololens2, Linux Arm64</p><p>Documentation: <a href=\"https://github.com/rdeioris/glTFRuntime-docs/blob/master/README.md\" rel=\"nofollow\">https://github.com/rdeioris/glTFRuntime-docs/blob/master/README.md</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00001FullHD-1920x1080-692f52b594c24a1115c300dac9224e3e.png",
+      "md5": "692f52b594c24a1115c300dac9224e3e",
+      "width": 1920,
+      "height": 1080,
+      "size": 2794185,
+      "uploadedDate": "2020-06-30T10:18:57.133Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CurveBasedAnimationFullHD-1920x1080-fc43b843b6affaa12f9aaed8ac4223b3.PNG",
+      "md5": "fc43b843b6affaa12f9aaed8ac4223b3",
+      "width": 1920,
+      "height": 1080,
+      "size": 1042332,
+      "uploadedDate": "2020-06-30T10:18:55.669Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/LoadAssetFromUrlFullHD-1920x1080-45b2377002adb065671585d482778f82.PNG",
+      "md5": "45b2377002adb065671585d482778f82",
+      "width": 1920,
+      "height": 1080,
+      "size": 351018,
+      "uploadedDate": "2020-06-30T10:18:56.171Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/glTFRuntimeL1-1920x1080-3f8ff5d5c31cdbbe4e9b841bc3a4b635.jpg",
+      "md5": "3f8ff5d5c31cdbbe4e9b841bc3a4b635",
+      "width": 1920,
+      "height": 1080,
+      "size": 538342,
+      "uploadedDate": "2020-06-30T10:18:56.606Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00002FullHD-1920x1080-e7b76771e2770e536f10f601474cc937.png",
+      "md5": "e7b76771e2770e536f10f601474cc937",
+      "width": 1920,
+      "height": 1080,
+      "size": 2920305,
+      "uploadedDate": "2020-06-30T10:18:57.729Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00003FullHD-1920x1080-d811b8b0da7a44cd305e9a596937d6a2.png",
+      "md5": "d811b8b0da7a44cd305e9a596937d6a2",
+      "width": 1920,
+      "height": 1080,
+      "size": 2733218,
+      "uploadedDate": "2020-06-30T10:18:58.389Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00005FullHD-1920x1080-eeb7103bc45270fc9676fb2ed94ef449.png",
+      "md5": "eeb7103bc45270fc9676fb2ed94ef449",
+      "width": 1920,
+      "height": 1080,
+      "size": 2612180,
+      "uploadedDate": "2020-06-30T10:18:59.043Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/glTFRuntime_thumb-284x284-e1917d61602534c94e2e37791a62a610.png",
+      "md5": "e1917d61602534c94e2e37791a62a610",
+      "width": 284,
+      "height": 284,
+      "size": 176831,
+      "uploadedDate": "2020-06-16T13:26:13.057Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/glTFRuntime_featured-894x488-3993768c38eeb30fa248442d756be337.png",
+      "md5": "3993768c38eeb30fa248442d756be337",
+      "width": 894,
+      "height": 488,
+      "size": 797797,
+      "uploadedDate": "2020-06-16T13:26:13.239Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CurveBasedAnimationFullHD-1920x1080-fc43b843b6affaa12f9aaed8ac4223b3_Snapshot.PNG",
+      "md5": "c44f286de45251caf60c6a8421d9d2fa",
+      "width": 150,
+      "height": 74,
+      "size": 5783,
+      "uploadedDate": "2020-06-30T10:18:56.022Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LoadAssetFromUrlFullHD-1920x1080-45b2377002adb065671585d482778f82_Snapshot.PNG",
+      "md5": "dee949762c2c2f8d03f356e5ad0cbb84",
+      "width": 150,
+      "height": 74,
+      "size": 4052,
+      "uploadedDate": "2020-06-30T10:18:56.444Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/glTFRuntimeL1-1920x1080-3f8ff5d5c31cdbbe4e9b841bc3a4b635_Snapshot.jpg",
+      "md5": "59c0f1bab80fa3a325598ea3b63e9089",
+      "width": 150,
+      "height": 74,
+      "size": 8202,
+      "uploadedDate": "2020-06-30T10:18:56.837Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001FullHD-1920x1080-692f52b594c24a1115c300dac9224e3e_Snapshot.png",
+      "md5": "4775d0e1a31cc21a2b42d84a0bf629dc",
+      "width": 150,
+      "height": 74,
+      "size": 5901,
+      "uploadedDate": "2020-06-30T10:18:57.552Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002FullHD-1920x1080-e7b76771e2770e536f10f601474cc937_Snapshot.png",
+      "md5": "06787796ef35295d500cbb7a90894b7d",
+      "width": 150,
+      "height": 74,
+      "size": 5844,
+      "uploadedDate": "2020-06-30T10:18:58.152Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00003FullHD-1920x1080-d811b8b0da7a44cd305e9a596937d6a2_Snapshot.png",
+      "md5": "8914d81f2c2c3a98772940c6f349d6d7",
+      "width": 150,
+      "height": 74,
+      "size": 5294,
+      "uploadedDate": "2020-06-30T10:18:58.773Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00005FullHD-1920x1080-eeb7103bc45270fc9676fb2ed94ef449_Snapshot.png",
+      "md5": "35f3b2850a04f696667bb685eea527f6",
+      "width": 150,
+      "height": 74,
+      "size": 5066,
+      "uploadedDate": "2020-06-30T10:18:59.383Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/glTFRuntimeL-1920x1080-3f8ff5d5c31cdbbe4e9b841bc3a4b635_Snapshot.jpg",
+      "md5": "59c0f1bab80fa3a325598ea3b63e9089",
+      "width": 150,
+      "height": 74,
+      "size": 8202,
+      "uploadedDate": "2020-06-16T13:26:12.979Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-07-18T05:44:18.608Z",
+  "lastModifiedDate": "2024-11-23T08:04:24.920Z",
+  "customAttributes": {},
+  "entitlementName": "45fc0219492a4a7ab33d6733de28f0df",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "d504573cc997429489ea009127da6221",
+      "appId": "glTFRuntime_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2020-07-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "20210914_425"
+    },
+    {
+      "id": "b67266e341074d5d958cef88a922d631",
+      "appId": "glTFRuntime_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-12-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "20220823_426"
+    },
+    {
+      "id": "1bcf74acfefc49059f2b5855d5f788b0",
+      "appId": "glTFRuntime_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2021-08-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "20230225_427"
+    },
+    {
+      "id": "2ca1e423d000457292f7ee16c98af395",
+      "appId": "glTFRuntime_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "iOS",
+        "Linux",
+        "Android",
+        "Windows",
+        "Mac",
+        "Oculus",
+        "HoloLens 2"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "20230706_50"
+    },
+    {
+      "id": "8c5d2c0c213d4a04bd23d1d53ff139ef",
+      "appId": "glTFRuntime_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android",
+        "Oculus",
+        "HoloLens 2"
+      ],
+      "dateAdded": "2022-12-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "20230907_51"
+    },
+    {
+      "id": "5edd877f52c8450c92f99db62b13189a",
+      "appId": "glTFRuntime_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Oculus",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2023-05-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "20240430_52"
+    },
+    {
+      "id": "8913f9ee02394eacbfa71fde8b642f24",
+      "appId": "glTFRuntime_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HoloLens 2",
+        "Android",
+        "Oculus"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "20240430_53"
+    },
+    {
+      "id": "2e543351938f49c792b1372cb8d5db64",
+      "appId": "glTFRuntime_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Android",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Oculus"
+      ],
+      "dateAdded": "2024-04-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "20240430_54"
+    }
+  ],
+  "developer": "Roberto De Ioris",
+  "developerId": "o-c8b5pdpdwej65hzs73cxr7dm4jszrb",
+  "endOfSupport": false,
+  "unsearchable": false
+}

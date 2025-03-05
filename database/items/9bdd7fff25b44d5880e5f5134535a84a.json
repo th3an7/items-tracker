@@ -1,0 +1,179 @@
+{
+  "id": "9bdd7fff25b44d5880e5f5134535a84a",
+  "title": "Pawn Swapper",
+  "description": "A component that lets you easily replace your active pawn with another, and even save and load some values to/from them as they get swapped out.",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;xY_yhqjdJwY\" rel=\"nofollow\">Demo Video</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;5vWZBhnmCwg\" rel=\"nofollow\">Tutorial Video</a></p><p><br /></p><p>Hello and welcome! The core of this system is the Pawn_Swapper_BP component, meant to be added into player controllers. Then with a single message node, you can tell the player controller to replace the current pawn with any other one on demand, or from a list of various pawns you can make in advance.</p><p>If you set up the info for a list of possible pawns in advance, then you can also have it manage custom info being saved and sent to pawns when destroyed or spawned, such as possibly saving health when a pawn is removed, and sending it the previous copy of itself saved health value when it’s next spawned, as well as the values from the previous pawn it was swapped from. While if using multiple pawns in a game you swap between I’d recommend putting most such systems for UI, inventory, etc… in the player controller itself, this can help with handling stuff on the actor side when needed. Note you’ll need to manually plug in the variables you want to save, or load, so some blueprint work is required to hook this up properly.</p><p>This package also includes a blueprint interface that allows for a standardized method of sending pawn swap requests from other actors, so you can easily set up level events or other triggers to force a change. For the full details on all the options included and exactly how to use this product, read on.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> A component you can add to a player controller to handle swapping out one pawn for another with a single message node.</li><li>A system for saving variables and info from a despawned pawn, and updating newly spawned ones with their previously submitted values, allowing for actor side systems like health, inventory, etc… to be more easily kept consistent across pawn changes.</li></ul><p>Number of Blueprints: 1 blueprint, 1 enum, 2 structs, 1 data table.</p><p>Input: Example uses keyboard and mouse.</p><p>Network Replicated: Yes</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: No</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1PIRPkUfCkG8mmLXoAIye6dLF6TonFOAz_KN5HqtmGTs/edit?usp&#61;sharing\" rel=\"nofollow\">https://docs.google.com/document/d/1PIRPkUfCkG8mmLXoAIye6dLF6TonFOAz_KN5HqtmGTs/edit?usp&#61;sharing</a></p><p>Important/Additional Notes: Remember that not all pawns/player controllers support having different controllers/pawns. So if you are using some premade game templates and the pawn requires a specific controller to work, or the controller wants a specific pawn to work, that will still throw errors if you swap pawns using my product or not.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot4-1920x1080-370bc6aabdf226efddde2b228ef904c9.png",
+      "md5": "370bc6aabdf226efddde2b228ef904c9",
+      "width": 1920,
+      "height": 1080,
+      "size": 462677,
+      "uploadedDate": "2024-05-11T19:47:22.528Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot3-1920x1080-990b27bca397acbcd69e7baf76a2d4e5.png",
+      "md5": "990b27bca397acbcd69e7baf76a2d4e5",
+      "width": 1920,
+      "height": 1080,
+      "size": 173323,
+      "uploadedDate": "2024-05-11T19:47:22.752Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot5-1920x1080-ee66e24f39ba054e127b570ab377666c.png",
+      "md5": "ee66e24f39ba054e127b570ab377666c",
+      "width": 1920,
+      "height": 1080,
+      "size": 216182,
+      "uploadedDate": "2024-05-11T19:47:22.976Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot6-1920x1080-a0b0ab1a2b4aac9fef9c8835e8156279.png",
+      "md5": "a0b0ab1a2b4aac9fef9c8835e8156279",
+      "width": 1920,
+      "height": 1080,
+      "size": 138442,
+      "uploadedDate": "2024-05-11T19:47:23.097Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot1-1920x1080-83d2036f1ee2e28af62f8e0f28ed5706.png",
+      "md5": "83d2036f1ee2e28af62f8e0f28ed5706",
+      "width": 1920,
+      "height": 1080,
+      "size": 645848,
+      "uploadedDate": "2024-05-11T19:47:23.277Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2-1920x1080-16d5b2614e5cf94255999029c9d404fe.png",
+      "md5": "16d5b2614e5cf94255999029c9d404fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 668650,
+      "uploadedDate": "2024-05-11T19:47:23.528Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PawnSwapper_thumb-284x284-5bb4a84a8823a109f48098004c2a0968.png",
+      "md5": "5bb4a84a8823a109f48098004c2a0968",
+      "width": 284,
+      "height": 284,
+      "size": 95677,
+      "uploadedDate": "2024-05-11T19:47:23.662Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PawnSwapper_featured-894x488-32d3163caea72ad58aa469275c06e947.png",
+      "md5": "32d3163caea72ad58aa469275c06e947",
+      "width": 894,
+      "height": 488,
+      "size": 308793,
+      "uploadedDate": "2024-05-11T19:47:23.794Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot4-1920x1080-370bc6aabdf226efddde2b228ef904c9_Snapshot.png",
+      "md5": "d4d13cfda50d37fdcd38b8d699ed0f0e",
+      "width": 150,
+      "height": 74,
+      "size": 3381,
+      "uploadedDate": "2024-05-11T19:47:22.626Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot3-1920x1080-990b27bca397acbcd69e7baf76a2d4e5_Snapshot.png",
+      "md5": "81a6c8053234b0a11ccc9ef9782b6518",
+      "width": 150,
+      "height": 74,
+      "size": 5061,
+      "uploadedDate": "2024-05-11T19:47:22.833Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot5-1920x1080-ee66e24f39ba054e127b570ab377666c_Snapshot.png",
+      "md5": "6b51a48d50caee5a2ce51bfdef71fc4a",
+      "width": 150,
+      "height": 74,
+      "size": 5021,
+      "uploadedDate": "2024-05-11T19:47:23.055Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot6-1920x1080-a0b0ab1a2b4aac9fef9c8835e8156279_Snapshot.png",
+      "md5": "e944a3987aacad8876a338b5bae330d9",
+      "width": 150,
+      "height": 74,
+      "size": 4139,
+      "uploadedDate": "2024-05-11T19:47:23.168Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot1-1920x1080-83d2036f1ee2e28af62f8e0f28ed5706_Snapshot.png",
+      "md5": "a58af563c8df12fd512ad67972179267",
+      "width": 150,
+      "height": 74,
+      "size": 5133,
+      "uploadedDate": "2024-05-11T19:47:23.396Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2-1920x1080-16d5b2614e5cf94255999029c9d404fe_Snapshot.png",
+      "md5": "a60c338707658da19ed69734f52396e8",
+      "width": 150,
+      "height": 74,
+      "size": 4215,
+      "uploadedDate": "2024-05-11T19:47:23.619Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-05-18T15:20:50.513Z",
+  "lastModifiedDate": "2024-11-22T04:52:54.088Z",
+  "customAttributes": {},
+  "entitlementName": "9bdd7fff25b44d5880e5f5134535a84a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3adb2d4cfe484c9691dea70278ded831",
+      "appId": "PawnSwap9bdd7fff25b4V1",
+      "compatibleApps": [
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-11T00:00:00.000Z",
+      "releaseNote": "Added improved commenting/tutorial for handling replication on the save/load feature. Also minor tooltip improvements.",
+      "versionTitle": "Pawn Swapper 4.24"
+    }
+  ],
+  "developer": "Sean Dachtler",
+  "developerId": "o-5b3e61c1f64a79abf802cee6df7f61",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

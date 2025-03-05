@@ -1,0 +1,289 @@
+{
+  "id": "7c186e66d6ac419b9111f18b7086dacd",
+  "title": "Real-time Line Chart",
+  "description": "A high performance real-time UMG line chart",
+  "longDescription": "<p><strong>FAQ</strong>:</p><p>1. Q: Where are the demo samples?</p><p>A: All three demo maps are in the plugin&#39;s content folder /DlRealtimeLineChart/DlRlc/Demo/ . If you set your project&#39;s GameDefaultMap to /DlRealtimeLineChart/DlRlc/Demo/ShowCase_Style1.ShowCase_Style and build as Windows-Shipping, you can get an EXACTLY SAME result as <a href=\"https://drive.google.com/file/d/17ZSymxnrRTlFbV_k8AjghBGiEoFKfesd/view?usp&#61;sharing\" rel=\"nofollow\">Demo</a> .</p><p>2. Q: I have pushed the data, but the values in chart are not changed.</p><p>A: A usual mistake is that new values are emplaced to &#34;data&#34;, while they should be set (in cpp, use operator[]; in BP, use SetArrayElem). The length of &#34;Data&#34; parameter should always be the number of the shown lines, and NOT CHANGED (excepting you are reconfiguring the chart at runtime).</p><p><br /></p><p>---</p><p>Update (2023/06/16) Tested platforms include Mac and IOS since UE5.2. As UE starts to support Apple Silicons officially from version 5.2, now we have IDE to test this plugin on Mac and IOS; this plugin should also work on all legacy or other environments, but we do not have IDEs to test all of them.</p><p>---</p><p><br /></p><p>This plugin provides a high performance real-time line chart widget. It can show multiple data-streams (channels) in one widget, update data in every tick or more frequently. The widget can handle Delta-Time inconstancy, manage memory, regenerate paint coordinate value when widget geometry or configure changed. Its APIs are very simple. The only thing you need to do is pushing raw X(or time)-Y values into the widget.</p><p><br /></p><p>All logics is implemented in C&#43;&#43;, and is carefully optimized. The time complexity of updating-data is Θ(ChannelNum); the time complexity of zoom-in/zoom-out is Θ(ChannelNum * X_Resolution). It has been tested with 100 channels updating data at every tick with 200 points X-resolution; <a href=\"https://drive.google.com/file/d/17ZSymxnrRTlFbV_k8AjghBGiEoFKfesd/view?usp&#61;sharing\" rel=\"nofollow\">Demo</a> of physical based jumping ball maps are included. It is also highly configurable. More details can be found in its <a href=\"https://drive.google.com/file/d/1GkM1QI3ixryfE_b8uL9RhoazFwsW7gP5/view?usp&#61;sharing\" rel=\"nofollow\">manual</a>.</p><p><br /></p><p>This line chart is perfect for <strong>hardcore realistic financial/science/engineering games or numerical puzzle games. </strong>It can also be used for general proposes like<strong> real-time monitoring, debugging dynamic data, </strong>and so on.</p><p><br /></p><p>Support: dragonlisoftwarelimited&#64;outlook.com or directly ask questions here.</p><p><em>All support requests are promised to be replied within 24 hours. Suggestions and feedbacks are also welcomed.</em></p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Show many data-streams (channels) in one widget;</li><li>hide/unhide a special channel.</li><li>Update data in real time (every tick or even more frequently); automatically handle inconstancy of input Delta-Time.</li><li>Adjust visible Y-interval in real time.</li><li>Show exact number when touch/hover-mouse-on special points, also highlight these points.</li><li>Show latest data in texts in real time; </li><li>Limit texts&#39; updating frequency to keep texts readable for human.</li><li>Configurable background grid lines.</li><li>Refresh widget and clean data in one click.</li></ul><p>Code Modules:</p><ul><li>DlRealtimeLineChart [Runtime]</li></ul><p>Number of Blueprints: 7</p><p>Number of C&#43;&#43; Classes: 11</p><p>Network Replicated: (No)</p><p>Supported Development Platforms: All platforms.</p><p>Supported Platforms: It has been fully tested on Windows, Android, Mac, IOS and Linux; and it should work on all platforms since only standard APIs are used.</p><p>Documentation: <a href=\"https://drive.google.com/file/d/1GkM1QI3ixryfE_b8uL9RhoazFwsW7gP5/view?usp&#61;sharing\" rel=\"nofollow\">Manual</a></p><p>Example Project: <a href=\"https://drive.google.com/file/d/17ZSymxnrRTlFbV_k8AjghBGiEoFKfesd/view?usp&#61;sharing\" rel=\"nofollow\">Here</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Show0-1920x1080-e3c4c5a0770929051ba93f4dbc800061.png",
+      "md5": "e3c4c5a0770929051ba93f4dbc800061",
+      "width": 1920,
+      "height": 1080,
+      "size": 1468618,
+      "uploadedDate": "2022-10-27T08:27:06.384Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Show1-1920x1080-68f12e08dda6a87d32201ff29defc4d2.png",
+      "md5": "68f12e08dda6a87d32201ff29defc4d2",
+      "width": 1920,
+      "height": 1080,
+      "size": 1551760,
+      "uploadedDate": "2022-10-27T08:27:06.883Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Show2-1920x1080-97b8e01bc437d1bf8143b656680b731a.png",
+      "md5": "97b8e01bc437d1bf8143b656680b731a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1335856,
+      "uploadedDate": "2022-10-27T08:27:07.294Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pic30-1920x1080-d0a9348af10a3d2cf1e0c9d8a0f1645e.png",
+      "md5": "d0a9348af10a3d2cf1e0c9d8a0f1645e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1971858,
+      "uploadedDate": "2022-11-30T08:49:56.155Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Show3-1920x1080-0ff2a44b2deafa1ce3a6ef30efa93b08.png",
+      "md5": "0ff2a44b2deafa1ce3a6ef30efa93b08",
+      "width": 1920,
+      "height": 1080,
+      "size": 1829895,
+      "uploadedDate": "2022-10-27T08:27:07.808Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Show4-1920x1080-3c1f58a3adb0440789520aaeea3aeede.png",
+      "md5": "3c1f58a3adb0440789520aaeea3aeede",
+      "width": 1920,
+      "height": 1080,
+      "size": 1188835,
+      "uploadedDate": "2022-10-27T08:27:08.270Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Show5-1920x1080-475d33e3fe1d649ef5b0cffae3461d75.png",
+      "md5": "475d33e3fe1d649ef5b0cffae3461d75",
+      "width": 1920,
+      "height": 1080,
+      "size": 266936,
+      "uploadedDate": "2022-10-27T08:27:08.662Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RealtimeLineChart_thumb-284x284-225f67355dd8fac969c3cc2d203b9010.png",
+      "md5": "225f67355dd8fac969c3cc2d203b9010",
+      "width": 284,
+      "height": 284,
+      "size": 60271,
+      "uploadedDate": "2022-10-27T08:27:08.964Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RealtimeLineChart_featured-894x488-36fd5efc7c9357ba4751ee85e3fdf7ad.png",
+      "md5": "36fd5efc7c9357ba4751ee85e3fdf7ad",
+      "width": 894,
+      "height": 488,
+      "size": 484639,
+      "uploadedDate": "2022-10-27T08:27:09.104Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pic30-1920x1080-d0a9348af10a3d2cf1e0c9d8a0f1645e_Snapshot.png",
+      "md5": "3ff593fc63f74343013c1415dbbf24ed",
+      "width": 150,
+      "height": 74,
+      "size": 7167,
+      "uploadedDate": "2022-11-30T08:49:56.441Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Show0-1920x1080-e3c4c5a0770929051ba93f4dbc800061_Snapshot.png",
+      "md5": "46c43d78746bae737aeb3f4d822434a2",
+      "width": 150,
+      "height": 74,
+      "size": 7198,
+      "uploadedDate": "2022-10-27T08:27:06.750Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Show1-1920x1080-68f12e08dda6a87d32201ff29defc4d2_Snapshot.png",
+      "md5": "84f3132f12f713d4e05b0c14159bbe76",
+      "width": 150,
+      "height": 74,
+      "size": 5593,
+      "uploadedDate": "2022-10-27T08:27:07.146Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Show2-1920x1080-97b8e01bc437d1bf8143b656680b731a_Snapshot.png",
+      "md5": "cce9a7955e8e4a0e053a36a3a92f0764",
+      "width": 150,
+      "height": 74,
+      "size": 4952,
+      "uploadedDate": "2022-10-27T08:27:07.622Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Show3-1920x1080-0ff2a44b2deafa1ce3a6ef30efa93b08_Snapshot.png",
+      "md5": "86dd0d263a4ea96c54f3b131b845e8f1",
+      "width": 150,
+      "height": 74,
+      "size": 6775,
+      "uploadedDate": "2022-10-27T08:27:08.080Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Show4-1920x1080-3c1f58a3adb0440789520aaeea3aeede_Snapshot.png",
+      "md5": "0da4369212585368705b0b5723096107",
+      "width": 150,
+      "height": 74,
+      "size": 6536,
+      "uploadedDate": "2022-10-27T08:27:08.520Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Show5-1920x1080-475d33e3fe1d649ef5b0cffae3461d75_Snapshot.png",
+      "md5": "c98832f59ab6a679d40bc60a0941c117",
+      "width": 150,
+      "height": 74,
+      "size": 5314,
+      "uploadedDate": "2022-10-27T08:27:08.889Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-11-03T00:04:04.870Z",
+  "lastModifiedDate": "2025-01-02T07:21:26.189Z",
+  "customAttributes": {},
+  "entitlementName": "7c186e66d6ac419b9111f18b7086dacd",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "c838adc580bc4daf8609c645a6d11891",
+      "appId": "DlRealtimeLineChart_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2022-10-27T00:00:00.000Z",
+      "releaseNote": "No update, as UE4.26 version is not supported for update anymore.",
+      "versionTitle": "DlRlc426"
+    },
+    {
+      "id": "0e691ec6023448899dd42cfe8751af38",
+      "appId": "DlRealtimeLineChart_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Linux",
+        "Android",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2022-10-27T00:00:00.000Z",
+      "releaseNote": "Do not need update, add 5.2 only",
+      "versionTitle": "DlRlc427"
+    },
+    {
+      "id": "c4184a335ad84a2c99381b2230520b7d",
+      "appId": "DlRealtimeLineChart_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Linux",
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2022-10-27T00:00:00.000Z",
+      "releaseNote": "Do not need update, add 5.2 only",
+      "versionTitle": "DlRlc50"
+    },
+    {
+      "id": "eb32b261631e499ab085d84e45f518bf",
+      "appId": "DlRealtimeLineChart_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "Do not need update, add 5.2 only",
+      "versionTitle": "DlRlc51"
+    },
+    {
+      "id": "a41e191544da426d9c21f875af65266d",
+      "appId": "DlRealtimeLineChart_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2023-06-16T00:00:00.000Z",
+      "releaseNote": "Password for unzip, using 7z:\n7gAkAnwo8g8+RDLxSJiQGbEWzXH+9AzGAyTaw9RbIts=",
+      "versionTitle": "DlRlc5.2"
+    },
+    {
+      "id": "9cad5a66deaf41ae9f84ef0247d9672b",
+      "appId": "DlRealtimeLineChart_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2023-11-21T00:00:00.000Z",
+      "releaseNote": "Password for unzip:\nOIQxoG++QQ+v7zEqo7LAM1wNBHbLi0KtwXf8SYwM85o=",
+      "versionTitle": "DlRlc5.3"
+    },
+    {
+      "id": "c42ffa87afbd4a44963d2d5126cfb765",
+      "appId": "DlRealtimeLineChart_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Android",
+        "Mac",
+        "iOS"
+      ],
+      "dateAdded": "2024-05-06T00:00:00.000Z",
+      "releaseNote": "Password for unzip:\nE4AfKeGLBKWAMD6azwXnji673a76WLCda5DL3Ei73Yk=",
+      "versionTitle": "DlRlc5.4"
+    }
+  ],
+  "developer": "Dragon Li Software Ltd.",
+  "developerId": "o-edktbba55s76lfjx8nfrnve4sdcqxh",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

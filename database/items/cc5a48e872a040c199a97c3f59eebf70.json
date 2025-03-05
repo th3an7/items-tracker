@@ -1,0 +1,476 @@
+{
+  "id": "cc5a48e872a040c199a97c3f59eebf70",
+  "title": "Switch on Gameplay Tag Descendants",
+  "description": "Custom switch node that automatically generates out Exec pins from all descendants of a GameplayTag",
+  "longDescription": "<p><strong>Switch on Gameplay Tag Descendants</strong> is a custom switch node that automatically generates Out Execution pins from all descendants of a GameplayTag.</p><p><br /></p><p><a href=\"https://ubyte.dev/plugins/switch-on-gameplay-tag-descendants/\" rel=\"nofollow\">Official plugin page</a> (Contains a short video).</p><p><br /></p><p>This is particularly useful when your Gameplay Tag descendants represent a variety of gameplay options, and you want to add more cases down the road <strong>without updating your pins/branches constantly</strong>. &#x1f603;</p><p>You&#39;ll immediately see which case is not handled in your graph, as gameplay tag changes are reflected accordingly.</p><p><br /></p><p><br /></p><h2>Sequence evaluation</h2><p><br /></p><p>✔️ One major feature is the capability to evaluate each connected case like a sequence node! Normally, each switch statement immediately jumps to the next pin without considering the rest (which is okay for single values).</p><p><br /></p><p>⚡ <strong>Unconnected pins never influence runtime performance.</strong> Only connected pins are compiled.</p><p><br /></p><p>✔️ The node&#39;s hover tooltip explains what behavior is currently active, along with a small node title change.</p><p><br /></p><p><br /></p><h2>Huge maintenance benefit</h2><p><br /></p><p>✔️ <strong>You no longer need to use a lot of branches and HasTag nodes</strong>, which is a huge workflow improvement if you&#39;re using a lot of gameplay tags.</p><p><br /></p><p>✔️ It&#39;s easier than ever to add more &#39;gameplay options&#39; down your entire project and spot which cases have (not) been handled implementation-wise.</p><p><br /></p><p><br /></p><h2>Questions</h2><p><br /></p><p>If you have any questions, feel free to ask them!</p><p><br /></p><p><br /></p><h2>Changelog</h2><p><br /></p><ul><li>v1.2.1 - Added a warning when no valid Root Tag is selected &#43; minor adjustments.</li></ul>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li>Automatic pin generation.</li><li>Possibly evaluate and run every connected case like a sequence node.</li><li>Change whether tags should match <strong>exactly or partially</strong>.</li><li>Change the type of pins that are generated.</li></ul><p><br /></p><p><strong>Code Modules:</strong></p><ul><li> Gameplay Tag Switch Editor (UncookedOnly • Default Loading Phase)</li><li> Gameplay Tag Switch Runtime (Runtime • Default Loading Phase)</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 3</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64, Linux, Mac</p><p>Supported Target Build Platforms: Win64, Linux, Mac, Android, IOS</p><p>Documentation: <a href=\"https://ubyte.dev/plugins/switch-on-gameplay-tag-descendants/\" rel=\"nofollow\">https://ubyte.dev/plugins/switch-on-gameplay-tag-descendants/</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gameplay-tag-descendants-switchgallery-image-1-2-1920x1080-63589ac8b788cd54f39efd64b879607d.png",
+      "md5": "63589ac8b788cd54f39efd64b879607d",
+      "width": 1920,
+      "height": 1080,
+      "size": 3042276,
+      "uploadedDate": "2022-12-12T21:20:50.168Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/non-judgemental-3.0-1920x1080-112ac61efeb6bc0c07c6a8fd5d5fd910.png",
+      "md5": "112ac61efeb6bc0c07c6a8fd5d5fd910",
+      "width": 1920,
+      "height": 1080,
+      "size": 1692567,
+      "uploadedDate": "2022-12-12T07:44:44.884Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3-fix-2-1920x1080-7c283c7cd9898dc47feafb033f144ae3.png",
+      "md5": "7c283c7cd9898dc47feafb033f144ae3",
+      "width": 1920,
+      "height": 1080,
+      "size": 2542158,
+      "uploadedDate": "2022-12-01T18:02:07.066Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-28f0835fb12c671927efeb78d6c01dd4.png",
+      "md5": "28f0835fb12c671927efeb78d6c01dd4",
+      "width": 1920,
+      "height": 1080,
+      "size": 2560538,
+      "uploadedDate": "2022-11-28T00:34:41.938Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Example-44-1920x1080-6ccc3d993fcb5d131ad04839a38242d0.png",
+      "md5": "6ccc3d993fcb5d131ad04839a38242d0",
+      "width": 1920,
+      "height": 1080,
+      "size": 167192,
+      "uploadedDate": "2022-12-04T01:15:28.919Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Example-55-1920x1080-e8273e728db899d103527fe6953b2346.png",
+      "md5": "e8273e728db899d103527fe6953b2346",
+      "width": 1920,
+      "height": 1080,
+      "size": 286313,
+      "uploadedDate": "2022-12-04T01:15:29.332Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Example-66-fix-1920x1080-3d79fdf1703a2c0243f379075fa5f746.png",
+      "md5": "3d79fdf1703a2c0243f379075fa5f746",
+      "width": 1920,
+      "height": 1080,
+      "size": 321822,
+      "uploadedDate": "2022-12-04T12:17:48.827Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SwitchonGameplayTagDescendants_thumb-284x284-0c79eaa84f84134b82d9b77322b6d56e.png",
+      "md5": "0c79eaa84f84134b82d9b77322b6d56e",
+      "width": 284,
+      "height": 284,
+      "size": 13167,
+      "uploadedDate": "2022-11-28T00:34:42.987Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SwitchonGameplayTagDescendants_featured-894x488-687b52286d97b10818214169165ecb91.png",
+      "md5": "687b52286d97b10818214169165ecb91",
+      "width": 894,
+      "height": 488,
+      "size": 86411,
+      "uploadedDate": "2022-11-28T00:34:43.048Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gameplay-tag-descendants-switchgallery-image-1-2-1920x1080-63589ac8b788cd54f39efd64b879607d_Snapshot.png",
+      "md5": "85b7a9e5107258435e07e39191d56626",
+      "width": 150,
+      "height": 74,
+      "size": 4885,
+      "uploadedDate": "2022-12-12T21:20:50.582Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1-1920x1080-cae844feaaf83ef6698e2b782c355277_Snapshot.png",
+      "md5": "5065f33aefc406d27330c599c511aa4d",
+      "width": 150,
+      "height": 74,
+      "size": 4892,
+      "uploadedDate": "2022-12-12T21:17:28.169Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/non-judgemental-3.0-1920x1080-112ac61efeb6bc0c07c6a8fd5d5fd910_Snapshot.png",
+      "md5": "fe1b6872f617e0f5d2eb4ce735c5ffab",
+      "width": 150,
+      "height": 74,
+      "size": 4392,
+      "uploadedDate": "2022-12-12T07:44:45.231Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/before-after-1920x1080-a30808a06d861e0d6c248892520d1a2c_Snapshot.png",
+      "md5": "e9a1aca3345e66df38ae3ff6f3aa2b77",
+      "width": 150,
+      "height": 74,
+      "size": 4481,
+      "uploadedDate": "2022-12-05T12:44:54.708Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/non-judgemental-2.0-1920x1080-053460b556d70b009d22f3eaf2a52675_Snapshot.png",
+      "md5": "fb38e42bc56d01d1094e9295bdd7afab",
+      "width": 150,
+      "height": 74,
+      "size": 4475,
+      "uploadedDate": "2022-12-05T12:40:21.335Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/non judgemental-1920x1080-fc802361bd85e3462c74287a918da5a4_Snapshot.png",
+      "md5": "bb08cdb7c7a60ddabd8440f4b468502c",
+      "width": 150,
+      "height": 74,
+      "size": 4391,
+      "uploadedDate": "2022-12-05T12:28:20.431Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-66-fix-1920x1080-3d79fdf1703a2c0243f379075fa5f746_Snapshot.png",
+      "md5": "acbaac3b664a10ef287774976ad573c6",
+      "width": 150,
+      "height": 74,
+      "size": 4767,
+      "uploadedDate": "2022-12-04T12:17:49.128Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-44-1920x1080-6ccc3d993fcb5d131ad04839a38242d0_Snapshot.png",
+      "md5": "d587af2869958ae837c7d92c53a92cbc",
+      "width": 150,
+      "height": 74,
+      "size": 3783,
+      "uploadedDate": "2022-12-04T01:15:29.163Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-55-1920x1080-e8273e728db899d103527fe6953b2346_Snapshot.png",
+      "md5": "0c83a7309614f46a2c2bdc0a6a357ddd",
+      "width": 150,
+      "height": 74,
+      "size": 4333,
+      "uploadedDate": "2022-12-04T01:15:29.606Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-66-1920x1080-876065f36758551725195f98064ac107_Snapshot.png",
+      "md5": "ddeab7942feab941acf8df969617e5ee",
+      "width": 150,
+      "height": 74,
+      "size": 4764,
+      "uploadedDate": "2022-12-04T01:15:30.086Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-final-1234-1920x1080-3dcf29fb9cea6f3eac99997fab420ce7_Snapshot.png",
+      "md5": "76dac3afe8e41343dfdd37cef57b9707",
+      "width": 150,
+      "height": 74,
+      "size": 4237,
+      "uploadedDate": "2022-12-03T15:07:01.382Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-final-5-1920x1080-e4d4998a734f33c46012aec20ef4b112_Snapshot.png",
+      "md5": "a790632b1a1f9428922c0d00f5bf1aa2",
+      "width": 150,
+      "height": 74,
+      "size": 4624,
+      "uploadedDate": "2022-12-03T14:57:51.903Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-final-3-1920x1080-f7b428613055a027a4bd5e1d94a2eada_Snapshot.png",
+      "md5": "18c7d511a5950f8d3613e57c6e6039f5",
+      "width": 150,
+      "height": 74,
+      "size": 4679,
+      "uploadedDate": "2022-12-03T14:53:11.193Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gameplay-tag-descendants-switchgallery-image-seven-3-nogradient-1920x1080-b422189c0014131077d32d67d3899d8f_Snapshot.png",
+      "md5": "e823b88e3446659b35876747035ab64a",
+      "width": 150,
+      "height": 74,
+      "size": 4121,
+      "uploadedDate": "2022-12-03T14:42:24.632Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-final-1-1920x1080-43dbb9aff8fde5baf3cfa8b386e4bc76_Snapshot.png",
+      "md5": "feb108fe6e0d0e77d9578c71641b14d1",
+      "width": 150,
+      "height": 74,
+      "size": 3590,
+      "uploadedDate": "2022-12-03T14:36:08.029Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-final-2-1920x1080-8c00ae4b5682bf4bced6a048ab4ad254_Snapshot.png",
+      "md5": "a4f40e382a601f4eab29ddbc9b04ff55",
+      "width": 150,
+      "height": 74,
+      "size": 4161,
+      "uploadedDate": "2022-12-03T14:36:08.422Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-9f518bf64dfebf4e1ade3d9839a850b4_Snapshot.png",
+      "md5": "738961f104ad7d3e3a9bb48c21c0b591",
+      "width": 150,
+      "height": 74,
+      "size": 4222,
+      "uploadedDate": "2022-12-03T14:28:22.629Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-new-4-1920x1080-0d223b36636a64286c46985835e47c2b_Snapshot.png",
+      "md5": "7aadad94bb6faf9c0fde0d33e5fc7455",
+      "width": 150,
+      "height": 74,
+      "size": 3884,
+      "uploadedDate": "2022-12-03T14:27:20.070Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-new-5-1920x1080-70b28eba2c9e32da5da5e091908b582c_Snapshot.png",
+      "md5": "9ac5cfb2c7840949d63a874cabab7b3c",
+      "width": 150,
+      "height": 74,
+      "size": 4391,
+      "uploadedDate": "2022-12-03T14:27:20.468Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-4-1920x1080-68ac01508904c57e33bf0e5a516ed032_Snapshot.png",
+      "md5": "34863f097c4c0abd646a6a47f0c0bda7",
+      "width": 150,
+      "height": 74,
+      "size": 4131,
+      "uploadedDate": "2022-12-03T13:50:48.271Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-3-1920x1080-efad125dea80bfcb0f3c3ac27a1d278c_Snapshot.png",
+      "md5": "ece8af0650841068ba72f3ec4fb6d2c1",
+      "width": 150,
+      "height": 74,
+      "size": 4613,
+      "uploadedDate": "2022-12-03T13:50:48.709Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Example-2-1920x1080-fc6cc3c8dfb62d0999d25b75b777c8d6_Snapshot.png",
+      "md5": "fb464399be813e6865ae843eea63a7b4",
+      "width": 150,
+      "height": 74,
+      "size": 4323,
+      "uploadedDate": "2022-12-02T22:18:42.712Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Untitled-1-1920x1080-f254347dc5356f2c0067e39e2fa80dac_Snapshot.png",
+      "md5": "ce4d7cbc9a8576d21fb6a98836f6fdf7",
+      "width": 150,
+      "height": 74,
+      "size": 3839,
+      "uploadedDate": "2022-12-02T22:06:39.394Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-fix-2-1920x1080-7c283c7cd9898dc47feafb033f144ae3_Snapshot.png",
+      "md5": "c30282da704da538f5365528d688a75e",
+      "width": 150,
+      "height": 74,
+      "size": 4474,
+      "uploadedDate": "2022-12-01T18:02:07.516Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-bfe6aa6b67e44a9aa509f9a7bce7fd9c_Snapshot.png",
+      "md5": "0451a4e12de4ad6d673f2bd26f4e98b2",
+      "width": 150,
+      "height": 74,
+      "size": 4945,
+      "uploadedDate": "2022-11-28T00:34:40.459Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-9f518bf64dfebf4e1ade3d9839a850b4_Snapshot.png",
+      "md5": "738961f104ad7d3e3a9bb48c21c0b591",
+      "width": 150,
+      "height": 74,
+      "size": 4222,
+      "uploadedDate": "2022-11-28T00:34:41.032Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3-1920x1080-66aabce1df74a05e048a9df6cc73b1b1_Snapshot.png",
+      "md5": "5079460f3cd88685c735f4292f5e7ccf",
+      "width": 150,
+      "height": 74,
+      "size": 4459,
+      "uploadedDate": "2022-11-28T00:34:41.701Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-28f0835fb12c671927efeb78d6c01dd4_Snapshot.png",
+      "md5": "0220eb25fc7dac3ba7023c087e0c1c25",
+      "width": 150,
+      "height": 74,
+      "size": 4446,
+      "uploadedDate": "2022-11-28T00:34:42.393Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-7a802bb93147218705d78dca492fac8a_Snapshot.png",
+      "md5": "87bb9c6d6b23c03922a694cc16807931",
+      "width": 150,
+      "height": 74,
+      "size": 4884,
+      "uploadedDate": "2022-11-28T00:34:42.949Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-12-01T15:32:34.136Z",
+  "lastModifiedDate": "2025-01-07T09:09:36.144Z",
+  "customAttributes": {},
+  "entitlementName": "cc5a48e872a040c199a97c3f59eebf70",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "2fe8ab7cc64548a3b603dbac5f02e2e1",
+      "appId": "GameplayTagDescendantsSwitch_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-11-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27 - v1.2.1"
+    },
+    {
+      "id": "8269ba2f7faa4ef4a9ad18a8d58f7176",
+      "appId": "GameplayTagDescendantsSwitch_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2022-11-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0 - v1.2.1"
+    },
+    {
+      "id": "cc1786fe264646af8535fd2a93fcd8aa",
+      "appId": "GameplayTagDescendantsSwitch_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "iOS",
+        "Android",
+        "Mac"
+      ],
+      "dateAdded": "2022-11-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1 - v1.2.1"
+    },
+    {
+      "id": "1f3c5fa698ff4f608595763bdc59c43d",
+      "appId": "GameplayTagDescendantsSwitch_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2 - v1.2.1"
+    },
+    {
+      "id": "01738294493546d1914105c7abfda2cd",
+      "appId": "GameplayTagDescendantsSwitch_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2023-10-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3 - c1.2.1"
+    },
+    {
+      "id": "7f1616f3c026439c931ba4d28267f7a0",
+      "appId": "GameplayTagDescendantsSwitch_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "iOS",
+        "Linux",
+        "Android",
+        "Mac"
+      ],
+      "dateAdded": "2024-05-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4 - v1.2.1"
+    }
+  ],
+  "developer": "ubyte digital",
+  "developerId": "o-7hnhr6e5pqgnncsusw7jgmw3t5d9p7",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

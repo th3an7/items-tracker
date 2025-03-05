@@ -1,0 +1,650 @@
+{
+  "id": "d698344d28c34ebe98edd95a6c9d2c85",
+  "title": "PorismDIMsWorldGenerator",
+  "description": "A Voxel World Generator (Beta release)",
+  "longDescription": "<p>Do you want to create your own unique, terraformable map? We can help.</p><p><br /></p><p>Our Voxel World Generator, powered by the efficient FastNoise2 Framework (a high-performance, CPU SIMD-capable noise generator), can generate diverse landscapes quickly.</p><p><br /></p><p>Whether you&#39;re running, driving, or flying, this generator makes it possible.</p><p><br /></p><p>Thanks to its fast generation process and intelligent caching system, it can handle any terrain.</p><p>And you don’t need any C&#43;&#43; knowledge to use it. It’s straightforward and easy to handle.</p><p><br /></p><p>Create any shape, color, or size. From deserts to alien landscapes, from transparent materials to ore-rich grounds, from flat plains to the highest peaks and deepest valleys.</p><p><br /></p><p>With various modes, you can choose between classic block style and nearly rounded forms. Adjust performance settings to match your needs, including surface detail (LOD), CPU, and RAM usage.</p><p><br /></p><p>The built-in replication system also supports multiplayer.</p><p><br /></p><p>Want to learn more? Check out the <a href=\"https://github.com/EnginFirestorm/PorismDIMsWorldGenDoc/wiki\" rel=\"nofollow\">documentation </a>and try the <a href=\"https://www.unrealengine.com/marketplace/en-US/product/porismdimsworldgenerator-free-version\" rel=\"nofollow\">free-version</a>.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Noise calculation (With FastNoise2)</li><li>Integrated Blueprint Noise Editor (supports runtime changes)</li><li>Shape generation</li><li>Basic Instanced Static Mesh Support (Development ongoing)</li><li>Terraforming</li><li>Transparence Polygons</li><li>Multiple mesh shape calculation approaches</li><li>Material positioning</li><li>Biome configuration </li><li>Chunk sizes and viewing range configuration</li><li>Raytracing</li><li>Collisions</li><li>Cache and Save System</li><li>Replication</li><li>Fully multithreaded</li><li>Multi Actor Tracing (for the surface calculation radius)</li></ul><p><br /></p><p>Code Modules:</p><ul><li> PorismDIMsWorldGenerator</li></ul><p><br /></p><p>Example Blueprints: 40&#43;</p><p>Number of C&#43;&#43; .h Files: 10&#43;</p><p>Number of C&#43;&#43; .cpp Files: 10&#43;</p><p>Network Replicated: Yes</p><p><br /></p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Win64, Android, Linux, LinuxArm64</p><p><br /></p><p>Documentation: <a href=\"https://github.com/EnginFirestorm/PorismDIMsWorldGenDoc/wiki\" rel=\"nofollow\">https://github.com/EnginFirestorm/PorismDIMsWorldGenDoc/wiki</a></p><p>Example Project: <a href=\"https://drive.google.com/file/d/1reZ9F2mCz9TOu7Ep9da2YRVjYqP7DrNV/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/1reZ9F2mCz9TOu7Ep9da2YRVjYqP7DrNV/view?usp&#61;sharing</a></p><p>(Current examples can be found directly in the Plungin folder)</p><p>Discord: <a href=\"https://discord.gg/GfNJUjvGM9\" rel=\"nofollow\">https://discord.gg/GfNJUjvGM9</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WidePresentation-1920x1080-52e04eeeef38951c39c56b68d74cf567.jpg",
+      "md5": "52e04eeeef38951c39c56b68d74cf567",
+      "width": 1920,
+      "height": 1080,
+      "size": 658090,
+      "uploadedDate": "2024-09-20T17:26:35.620Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CoreNew-1920x1080-0730e3f1c75679e1061b37b3a088e9ae.jpg",
+      "md5": "0730e3f1c75679e1061b37b3a088e9ae",
+      "width": 1920,
+      "height": 1080,
+      "size": 2472116,
+      "uploadedDate": "2024-08-01T06:38:48.190Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt.PNG-1920x1080-26103dbde2fb9a846e0168e3c0d1d31e.jpg",
+      "md5": "26103dbde2fb9a846e0168e3c0d1d31e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1747490,
+      "uploadedDate": "2024-07-12T21:41:08.343Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HilllandVer2SideView-1920x1080-70002af0bee7a57883445a555133c9bb.jpg",
+      "md5": "70002af0bee7a57883445a555133c9bb",
+      "width": 1920,
+      "height": 1080,
+      "size": 1018033,
+      "uploadedDate": "2024-08-20T17:36:21.830Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ASoleHouseInTheWild-1920x1080-809314f6d44f7ad943ed86b2edcb9f9f.jpg",
+      "md5": "809314f6d44f7ad943ed86b2edcb9f9f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1245315,
+      "uploadedDate": "2024-09-20T17:26:37.481Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Strangemountains-1920x1080-69b7939d33c1133da7ca4364883080b9.jpg",
+      "md5": "69b7939d33c1133da7ca4364883080b9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1540979,
+      "uploadedDate": "2024-09-20T17:26:36.083Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt-1920x1080-91819c8004608a436bf8fe3f1183c5ab.jpg",
+      "md5": "91819c8004608a436bf8fe3f1183c5ab",
+      "width": 1920,
+      "height": 1080,
+      "size": 1971767,
+      "uploadedDate": "2024-08-01T06:38:47.580Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/THECube-1920x1080-77e1f046a2b8b567cbecfec5f9f99259.jpg",
+      "md5": "77e1f046a2b8b567cbecfec5f9f99259",
+      "width": 1920,
+      "height": 1080,
+      "size": 1231571,
+      "uploadedDate": "2024-09-20T17:26:36.636Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Structure-1920x1080-4177d09bc92df4cc2066a364adbdaaf6.jpg",
+      "md5": "4177d09bc92df4cc2066a364adbdaaf6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1075651,
+      "uploadedDate": "2024-06-07T19:36:41.680Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ShowRange-1920x1080-ccfe2dd54d5194176e526a20c8bb1474.jpg",
+      "md5": "ccfe2dd54d5194176e526a20c8bb1474",
+      "width": 1920,
+      "height": 1080,
+      "size": 1956772,
+      "uploadedDate": "2024-08-20T17:36:21.290Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenShot00025-1920x1080-6c38a76069d60b40d125ac79b3c3b043.jpg",
+      "md5": "6c38a76069d60b40d125ac79b3c3b043",
+      "width": 1920,
+      "height": 1080,
+      "size": 1398889,
+      "uploadedDate": "2024-06-27T20:24:39.325Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Horizon-1920x1080-b1b36dec5ef2805d40de3e8f4bd96cf6.jpg",
+      "md5": "b1b36dec5ef2805d40de3e8f4bd96cf6",
+      "width": 1920,
+      "height": 1080,
+      "size": 994801,
+      "uploadedDate": "2024-08-01T06:38:47.125Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ScreenShot00017-1920x1080-9672c04c1e811b3fc5218a244b0dd499.jpg",
+      "md5": "9672c04c1e811b3fc5218a244b0dd499",
+      "width": 1920,
+      "height": 1080,
+      "size": 1025951,
+      "uploadedDate": "2024-06-27T20:24:38.780Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/NoCrumpleYesBevelYesSoftY-1920x1080-439e222b5001564c4c69019d669e1205.jpg",
+      "md5": "439e222b5001564c4c69019d669e1205",
+      "width": 1920,
+      "height": 1080,
+      "size": 309909,
+      "uploadedDate": "2024-06-07T19:36:44.233Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Mountain-1920x1080-267365c369e2519eee4eb11464a31619.png",
+      "md5": "267365c369e2519eee4eb11464a31619",
+      "width": 1920,
+      "height": 1080,
+      "size": 576199,
+      "uploadedDate": "2024-07-12T21:41:08.775Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Biome-1920x1080-ce4e3b9743d61d1272f985860ef7cee7.jpg",
+      "md5": "ce4e3b9743d61d1272f985860ef7cee7",
+      "width": 1920,
+      "height": 1080,
+      "size": 180776,
+      "uploadedDate": "2024-06-07T19:36:49.787Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Chunk-1920x1080-e092c35d863af6568bbafb2a2f714ce5.jpg",
+      "md5": "e092c35d863af6568bbafb2a2f714ce5",
+      "width": 1920,
+      "height": 1080,
+      "size": 163352,
+      "uploadedDate": "2024-06-07T19:36:50.229Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MainConf-1920x1080-4db27f69e3cdedf1bd861cd9e5f156d2.jpg",
+      "md5": "4db27f69e3cdedf1bd861cd9e5f156d2",
+      "width": 1920,
+      "height": 1080,
+      "size": 116906,
+      "uploadedDate": "2024-06-07T19:36:50.888Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BaseConf-1920x1080-9f5d9be763c21d5e6528603ae3650846.jpg",
+      "md5": "9f5d9be763c21d5e6528603ae3650846",
+      "width": 1920,
+      "height": 1080,
+      "size": 87278,
+      "uploadedDate": "2024-06-07T19:36:49.366Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Terraform2-1920x1080-fd5eb51d60cff8f3ec7f30b6a12a8a24.jpg",
+      "md5": "fd5eb51d60cff8f3ec7f30b6a12a8a24",
+      "width": 1920,
+      "height": 1080,
+      "size": 251990,
+      "uploadedDate": "2024-06-07T19:36:48.217Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Terraform-1920x1080-7518095e7fefbf8cd172a05eea76be78.jpg",
+      "md5": "7518095e7fefbf8cd172a05eea76be78",
+      "width": 1920,
+      "height": 1080,
+      "size": 241363,
+      "uploadedDate": "2024-06-07T19:36:49.038Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BiomeList-1920x1080-20e32c2d8dc7abaf09bfc8ae6218ad41.png",
+      "md5": "20e32c2d8dc7abaf09bfc8ae6218ad41",
+      "width": 1920,
+      "height": 1080,
+      "size": 219812,
+      "uploadedDate": "2024-07-12T21:41:09.132Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WorldDefInputTrue-1920x1080-6e6f774fae1bba765936b58959ecf6da.png",
+      "md5": "6e6f774fae1bba765936b58959ecf6da",
+      "width": 1920,
+      "height": 1080,
+      "size": 155086,
+      "uploadedDate": "2024-07-12T21:41:09.514Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PorismDIMsWorldGenerator_thumb-284x284-f4b92d8e4d87f980330c741449a19639.png",
+      "md5": "f4b92d8e4d87f980330c741449a19639",
+      "width": 284,
+      "height": 284,
+      "size": 174956,
+      "uploadedDate": "2024-09-20T17:26:37.908Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PorismDIMsWorldGenerator_featured-894x488-e48cd3e353542c08ec81e706c5619ee7.png",
+      "md5": "e48cd3e353542c08ec81e706c5619ee7",
+      "width": 894,
+      "height": 488,
+      "size": 874828,
+      "uploadedDate": "2024-09-20T17:26:38.060Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WidePresentation-1920x1080-52e04eeeef38951c39c56b68d74cf567_Snapshot.jpg",
+      "md5": "0012e534ffd049710d3c8a0c201ec44b",
+      "width": 150,
+      "height": 74,
+      "size": 7406,
+      "uploadedDate": "2024-09-20T17:26:35.874Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Strangemountains-1920x1080-69b7939d33c1133da7ca4364883080b9_Snapshot.jpg",
+      "md5": "ab31d44ebe15ec1b37cb51ee8be0c446",
+      "width": 150,
+      "height": 74,
+      "size": 8299,
+      "uploadedDate": "2024-09-20T17:26:36.427Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/THECube-1920x1080-77e1f046a2b8b567cbecfec5f9f99259_Snapshot.jpg",
+      "md5": "bdaf3f7254255c3c35c3075f50abf292",
+      "width": 150,
+      "height": 74,
+      "size": 7608,
+      "uploadedDate": "2024-09-20T17:26:36.927Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ASoleHouseInTheWild-1920x1080-809314f6d44f7ad943ed86b2edcb9f9f_Snapshot.jpg",
+      "md5": "7213f3732dacbfe76f1cdb538e8a2623",
+      "width": 150,
+      "height": 74,
+      "size": 6800,
+      "uploadedDate": "2024-09-20T17:26:37.771Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShowRange-1920x1080-ccfe2dd54d5194176e526a20c8bb1474_Snapshot.jpg",
+      "md5": "70f68b54d6b0fc91a0c0ebeada448a49",
+      "width": 150,
+      "height": 74,
+      "size": 8469,
+      "uploadedDate": "2024-08-20T17:36:21.604Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HilllandVer2SideView-1920x1080-70002af0bee7a57883445a555133c9bb_Snapshot.jpg",
+      "md5": "dcf6f357b3602e6d1840eb78e6a67e3b",
+      "width": 150,
+      "height": 74,
+      "size": 5188,
+      "uploadedDate": "2024-08-20T17:36:22.120Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Horizon-1920x1080-b1b36dec5ef2805d40de3e8f4bd96cf6_Snapshot.jpg",
+      "md5": "215273ca9fb2b929ba9a8d3966b8a62d",
+      "width": 150,
+      "height": 74,
+      "size": 5115,
+      "uploadedDate": "2024-08-01T06:38:47.376Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt-1920x1080-91819c8004608a436bf8fe3f1183c5ab_Snapshot.jpg",
+      "md5": "dd088f024f75f838f134974dc2272c68",
+      "width": 150,
+      "height": 74,
+      "size": 9863,
+      "uploadedDate": "2024-08-01T06:38:47.936Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CoreNew-1920x1080-0730e3f1c75679e1061b37b3a088e9ae_Snapshot.jpg",
+      "md5": "a39de47a014d9e6d78f944fd1119c3e9",
+      "width": 150,
+      "height": 74,
+      "size": 10495,
+      "uploadedDate": "2024-08-01T06:38:48.552Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt.PNG-1920x1080-26103dbde2fb9a846e0168e3c0d1d31e_Snapshot.jpg",
+      "md5": "9c61f6b33304e461fff7ea8c74b04229",
+      "width": 150,
+      "height": 74,
+      "size": 6297,
+      "uploadedDate": "2024-07-12T21:41:08.633Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Mountain-1920x1080-267365c369e2519eee4eb11464a31619_Snapshot.png",
+      "md5": "d8a6a0790df5acbfa08864675e032846",
+      "width": 150,
+      "height": 74,
+      "size": 5404,
+      "uploadedDate": "2024-07-12T21:41:09.004Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BiomeList-1920x1080-20e32c2d8dc7abaf09bfc8ae6218ad41_Snapshot.png",
+      "md5": "f56b9d19dffcd4a906c0dc72a2b75d47",
+      "width": 150,
+      "height": 74,
+      "size": 3620,
+      "uploadedDate": "2024-07-12T21:41:09.354Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WorldDefInputTrue-1920x1080-6e6f774fae1bba765936b58959ecf6da_Snapshot.png",
+      "md5": "f03352e69eab62af13448616be8865c3",
+      "width": 150,
+      "height": 74,
+      "size": 3186,
+      "uploadedDate": "2024-07-12T21:41:09.728Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00013-1920x1080-ee4234e7035b3bfd43134e87d5aa8048_Snapshot.jpg",
+      "md5": "f79dee14460f5625e222ba7fd017bcfc",
+      "width": 150,
+      "height": 74,
+      "size": 7884,
+      "uploadedDate": "2024-06-27T20:24:38.605Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00017-1920x1080-9672c04c1e811b3fc5218a244b0dd499_Snapshot.jpg",
+      "md5": "2386b3a7e586431a4f8c7c480a731d4a",
+      "width": 150,
+      "height": 74,
+      "size": 5795,
+      "uploadedDate": "2024-06-27T20:24:39.054Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00025-1920x1080-6c38a76069d60b40d125ac79b3c3b043_Snapshot.jpg",
+      "md5": "45c4d5423a03fc30e3c66afe8de75d37",
+      "width": 150,
+      "height": 74,
+      "size": 7372,
+      "uploadedDate": "2024-06-27T20:24:39.607Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00049-1920x1080-ea5f7a1833dbcfe4590664915dd877af_Snapshot.jpg",
+      "md5": "1d5fab5def127d3f0b15b7c1706cf931",
+      "width": 150,
+      "height": 74,
+      "size": 7526,
+      "uploadedDate": "2024-06-27T20:24:40.069Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00093-1920x1080-49584f916df57badef832bffcfbdc3ce_Snapshot.jpg",
+      "md5": "a0db0809a8aac4667b299b52f9d2ef4a",
+      "width": 150,
+      "height": 74,
+      "size": 7634,
+      "uploadedDate": "2024-06-27T20:24:40.512Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ScreenShot00104-1920x1080-ed2215a77a4f5dd5d4782ba998fd953d_Snapshot.jpg",
+      "md5": "1613383934ff3c3693ccb0c5dc97e27d",
+      "width": 150,
+      "height": 74,
+      "size": 7203,
+      "uploadedDate": "2024-06-27T20:24:41.022Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Structure-1920x1080-4177d09bc92df4cc2066a364adbdaaf6_Snapshot.jpg",
+      "md5": "0f6ffa27ee86d6fac4ed90e3b36ea7d1",
+      "width": 150,
+      "height": 74,
+      "size": 10068,
+      "uploadedDate": "2024-06-07T19:36:41.993Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Exploration-1920x1080-b89ce4e621cbca085c96a00ea6945047_Snapshot.jpg",
+      "md5": "1fc58e3328e8559955ff8606e9ddd9ca",
+      "width": 150,
+      "height": 74,
+      "size": 7834,
+      "uploadedDate": "2024-06-07T19:36:42.461Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Mining-1920x1080-2e2b4d47e034c1a88d461f79fef6e277_Snapshot.jpg",
+      "md5": "fb9c987b5281331faf3384a4ab176d2d",
+      "width": 150,
+      "height": 74,
+      "size": 6006,
+      "uploadedDate": "2024-06-07T19:36:42.897Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NoCrumpleNoBevelNoSoftY-1920x1080-6728b5db428555031e1469c8e15267c6_Snapshot.jpg",
+      "md5": "166293fc927ed12e5810f15594d9fada",
+      "width": 150,
+      "height": 74,
+      "size": 6114,
+      "uploadedDate": "2024-06-07T19:36:43.226Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NoCrumpleNoBevelYesSoftY-1920x1080-a9387453ba40b72e6bb19c8495c7c5e1_Snapshot.jpg",
+      "md5": "06ee3d97fe951b96e3d89f96b74b0fd3",
+      "width": 150,
+      "height": 74,
+      "size": 6625,
+      "uploadedDate": "2024-06-07T19:36:43.623Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NoCrumpleYesBevelNoSoftY-1920x1080-522beaad8f9e6c61e6c2002692c166ae_Snapshot.jpg",
+      "md5": "e70e1dddc94becd3126c7160d051c58c",
+      "width": 150,
+      "height": 74,
+      "size": 6471,
+      "uploadedDate": "2024-06-07T19:36:44.023Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NoCrumpleYesBevelYesSoftY-1920x1080-439e222b5001564c4c69019d669e1205_Snapshot.jpg",
+      "md5": "8097426e90ac3b1a8194f6b752bbe836",
+      "width": 150,
+      "height": 74,
+      "size": 6532,
+      "uploadedDate": "2024-06-07T19:36:44.491Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/YesCrumpleNoBevelYesSoftY-1920x1080-c0b98d13dcd1b922c338732f4e6078f6_Snapshot.jpg",
+      "md5": "e177daee52e7ce084c96d59950613bab",
+      "width": 150,
+      "height": 74,
+      "size": 6690,
+      "uploadedDate": "2024-06-07T19:36:44.859Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/YesCrumpleYesBevelNoSoftY-1920x1080-0ba4fb93b5cecd35475da03abe978d0f_Snapshot.jpg",
+      "md5": "967b51db6784de0e630e31fc09108a49",
+      "width": 150,
+      "height": 74,
+      "size": 6681,
+      "uploadedDate": "2024-06-07T19:36:45.246Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/YesCrumpleYesBevelYesSoftY-1920x1080-d6b566cbe16cf0c3cdcd962554e8a265_Snapshot.jpg",
+      "md5": "252e5ea48b63897d7bd998e82f06cc1f",
+      "width": 150,
+      "height": 74,
+      "size": 6614,
+      "uploadedDate": "2024-06-07T19:36:45.626Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Idk-1920x1080-76bfdda48919a9616ea02420cc051894_Snapshot.jpg",
+      "md5": "78c618755c79680f23bb532670a9f81d",
+      "width": 150,
+      "height": 74,
+      "size": 9393,
+      "uploadedDate": "2024-06-07T19:36:46.132Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SmallHills-1920x1080-fdaf868ed3372c037eaa404581e616b3_Snapshot.jpg",
+      "md5": "0b7abae94028bec31b7cc1e5c093df60",
+      "width": 150,
+      "height": 74,
+      "size": 8676,
+      "uploadedDate": "2024-06-07T19:36:46.710Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Plated-1920x1080-9025325b74cff63318f5ace1cc226e42_Snapshot.jpg",
+      "md5": "ddf49c6cb75995840bf0cc240c35f0df",
+      "width": 150,
+      "height": 74,
+      "size": 8438,
+      "uploadedDate": "2024-06-07T19:36:47.176Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cubic-1920x1080-c016a636de6d51364cfce964aefb83a3_Snapshot.jpg",
+      "md5": "80842a951ae1ff62b20846f661db2a10",
+      "width": 150,
+      "height": 74,
+      "size": 9829,
+      "uploadedDate": "2024-06-07T19:36:47.622Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Normal-1920x1080-7d9977679f8bf32bf1b05ef185a94dbc_Snapshot.jpg",
+      "md5": "8e402d6420b416741dbbad6119e81d88",
+      "width": 150,
+      "height": 74,
+      "size": 7743,
+      "uploadedDate": "2024-06-07T19:36:48.051Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Terraform2-1920x1080-fd5eb51d60cff8f3ec7f30b6a12a8a24_Snapshot.jpg",
+      "md5": "6e64ce86433914544dd803d4f4f7dbca",
+      "width": 150,
+      "height": 74,
+      "size": 4287,
+      "uploadedDate": "2024-06-07T19:36:48.469Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BasicControlls-1920x1080-294b38f0149f76a5ba881fa0ea6d1b33_Snapshot.jpg",
+      "md5": "64f43d56374791925358878b8f2d2c1e",
+      "width": 150,
+      "height": 74,
+      "size": 3079,
+      "uploadedDate": "2024-06-07T19:36:48.896Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Terraform-1920x1080-7518095e7fefbf8cd172a05eea76be78_Snapshot.jpg",
+      "md5": "ab49622ed9e5eb35cefc6f464d45025b",
+      "width": 150,
+      "height": 74,
+      "size": 4764,
+      "uploadedDate": "2024-06-07T19:36:49.298Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BaseConf-1920x1080-9f5d9be763c21d5e6528603ae3650846_Snapshot.jpg",
+      "md5": "e5f5ff3c2bc37ae44b8e09baa49ebc51",
+      "width": 150,
+      "height": 74,
+      "size": 2247,
+      "uploadedDate": "2024-06-07T19:36:49.617Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Biome-1920x1080-ce4e3b9743d61d1272f985860ef7cee7_Snapshot.jpg",
+      "md5": "a89686c855f80ef67629307c1d90b05d",
+      "width": 150,
+      "height": 74,
+      "size": 3382,
+      "uploadedDate": "2024-06-07T19:36:50.003Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Chunk-1920x1080-e092c35d863af6568bbafb2a2f714ce5_Snapshot.jpg",
+      "md5": "d0caa285798332207bd25aa050d81fa5",
+      "width": 150,
+      "height": 74,
+      "size": 3323,
+      "uploadedDate": "2024-06-07T19:36:50.460Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ExtendConf-1920x1080-e6dc8d6b4e814c072c719609245be531_Snapshot.jpg",
+      "md5": "2f52494261d056a3a70feed02cfe60b4",
+      "width": 150,
+      "height": 74,
+      "size": 1404,
+      "uploadedDate": "2024-06-07T19:36:50.818Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MainConf-1920x1080-4db27f69e3cdedf1bd861cd9e5f156d2_Snapshot.jpg",
+      "md5": "a40437cf2cf26728aeb9b7cf53fd1f31",
+      "width": 150,
+      "height": 74,
+      "size": 3441,
+      "uploadedDate": "2024-06-07T19:36:51.107Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-06-15T06:40:18.532Z",
+  "lastModifiedDate": "2025-03-04T14:14:24.608Z",
+  "customAttributes": {},
+  "entitlementName": "d698344d28c34ebe98edd95a6c9d2c85",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "5a2597104e3d465aaec110de61dd725a",
+      "appId": "PDWorldGenerator_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Linux",
+        "Windows"
+      ],
+      "dateAdded": "2024-06-07T00:00:00.000Z",
+      "releaseNote": "Password: fdehrer2sr2346232",
+      "versionTitle": "0.6.7"
+    }
+  ],
+  "developer": "PorismDimensions",
+  "developerId": "o-y8lzbt3d97cfzz7rad9fucwg2erxhx",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

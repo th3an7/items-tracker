@@ -1,0 +1,326 @@
+{
+  "id": "7ca8fa4d2f1b4a8a87fe3035f1306a85",
+  "title": "SPB Sound-Occlusion",
+  "description": "'SPB Sound-Occlusion' is a plugin that generates real-time dynamic collisions for audio sources.",
+  "longDescription": "<p>SPB Sound-Occlusion is a plugin for Unreal Engine 4 that implements a complex sound occlusion function in C&#43;&#43; which generates real-time collisions from line traces to physical bodies then calculates volume and pitch variations to the audio source relative to the listener&#39;s position.</p><p>The function takes into consideration the physical material attached to the render material used by the shapes the audio source&#39;s traces hit as well as how much direct sound the listener receives to finally calculate the volume output an audio source should play.</p><p>Each audio source traces its own path to the listener and multiple collision channels can be traced at the same time.</p><p>Any kind of physical body is supported: Static meshes, dynamic meshes, characters, physics volumes and etc, all can be traced against an audio source depending on collision channel settings.</p><p>Many occlusion presets for physical materials are included to streamline workflow when creating occlusion effects; For wood, metal, plastic, concrete, so on and so forth.</p><p><br /></p><p>Preview: <a href=\"https://www.youtube.com/watch?v&#61;cFwthqyRyxk\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;cFwthqyRyxk</a></p><p><br /></p><p>[NOTE]:</p><ul><li>Updates are released for latest two versions or Unreal Engine only.</li><li>If you don&#39;t have latest Unreal Engine installed then you don&#39;t have latest Plugin version.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Dynamically control rendering of audio sources occluded in real-time by obstacles of varied shapes.</li><li>Physical Materials on obstacles affect in real-time the impact of LPF Filters.</li><li>Any kind of obstacles with collision shape are supported: static meshes, dynamic objects, characters, etc.</li><li>Audio sources can be occluded by tracing obstacles in real-time, calculated in C&#43;&#43;.</li><li>Audio sources can be occluded by UE4&#39;s Camera Occlusion Culling System, with a tick on a check-box.</li><li>&#39;Gating&#39; tool can generate unique propagation features, such as sound flowing through an air duct.</li><li>Built on top of existing Audio Engine, no custom spatialization setup needed.</li><li>No &#39;baking&#39; process and no use of external software.</li></ul><p><br /></p><p>Code Modules:</p><ul><li> SPBSO - Runtime Module.</li><li> SPBSOEditor - Editor Tools.</li></ul><p><br /></p><p>Number of C&#43;&#43; Classes: 3 Interfaces, 10 Classes.</p><p>Number of Blueprints: No Blueprints. Blueprints can be generated from C&#43;&#43; Classes on Asset Browser.</p><p>Supported Development Platforms: Source Code included supports all UE4 Platforms.</p><p>Supported Target Build Platforms: Source Code supports all UE4 Platforms. Default binaries are Desktop only.</p><p>Network Replicated: No.</p><p>Documentation: <a href=\"https://brunoxavierleite.wordpress.com/2018/01/04/ue4-spb-sound-occlusion-programming/\" rel=\"nofollow\">Quick How-To-Use Guide</a></p><p><br /></p><p>Example Project:</p><p><a href=\"https://www.dropbox.com/s/3zbbq4kc5g3mkxt/SPBOcclusion_1.3.2_UE5_Demo.zip?dl&#61;0\" rel=\"nofollow\">SPB Demo UE5.0</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SPB_Screenshot_2-1920x1080-a871b22daf4a4c94f196da422784f03e.png",
+      "md5": "a871b22daf4a4c94f196da422784f03e",
+      "width": 1920,
+      "height": 1080,
+      "size": 3098207,
+      "uploadedDate": "2018-01-05T07:16:21.436Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SPB_Screenshot_1-1920x1080-f0efec0226af9d6f2f5a672e62766d37.png",
+      "md5": "f0efec0226af9d6f2f5a672e62766d37",
+      "width": 1920,
+      "height": 1080,
+      "size": 3073342,
+      "uploadedDate": "2018-01-05T07:16:21.794Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SPB_Screenshot_3-1920x1080-cb70c8c4fc2abf2bf1ac9ed51aeef631.png",
+      "md5": "cb70c8c4fc2abf2bf1ac9ed51aeef631",
+      "width": 1920,
+      "height": 1080,
+      "size": 1170294,
+      "uploadedDate": "2018-01-05T07:16:22.074Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SPB_Screenshot_4-1920x1080-0b83fda8e004e3f00ff631ed79894af8.png",
+      "md5": "0b83fda8e004e3f00ff631ed79894af8",
+      "width": 1920,
+      "height": 1080,
+      "size": 1709345,
+      "uploadedDate": "2018-01-05T07:16:22.383Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SPB_Screenshot_5-1920x1080-3643d103a487ad4d193e8406495ce049.png",
+      "md5": "3643d103a487ad4d193e8406495ce049",
+      "width": 1920,
+      "height": 1080,
+      "size": 1072477,
+      "uploadedDate": "2018-01-05T07:16:22.566Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SPBSO-1920x1080-9b35eabf6d50fe5ad372213a32f28738.png",
+      "md5": "9b35eabf6d50fe5ad372213a32f28738",
+      "width": 1920,
+      "height": 1080,
+      "size": 357495,
+      "uploadedDate": "2018-01-31T14:27:17.053Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SPBSoundOcclusion_thumb-284x284-daae625984d5063ca44fe4000d2c96cc.png",
+      "md5": "daae625984d5063ca44fe4000d2c96cc",
+      "width": 284,
+      "height": 284,
+      "size": 59458,
+      "uploadedDate": "2018-01-05T07:16:22.714Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SPBSoundOcclusion_featured-894x488-64e39967c8082bac02f76e7f19796985.png",
+      "md5": "64e39967c8082bac02f76e7f19796985",
+      "width": 894,
+      "height": 488,
+      "size": 365437,
+      "uploadedDate": "2018-01-05T07:16:22.797Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-01-30T23:43:49.085Z",
+  "lastModifiedDate": "2024-11-20T00:04:25.001Z",
+  "customAttributes": {},
+  "entitlementName": "7ca8fa4d2f1b4a8a87fe3035f1306a85",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "a3ba73bcc1cc43eda656392648616f0a",
+      "appId": "SPBSoundOcclusion_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2018-01-29T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_4.18"
+    },
+    {
+      "id": "5d6e272098e840c6add27db26fa14de3",
+      "appId": "SPBSoundOcclusion_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2018-03-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_4.19"
+    },
+    {
+      "id": "e1115564648c4743b9aaf0ecc4d542ea",
+      "appId": "SPBSoundOcclusion_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2018-07-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SPBSO_4.20"
+    },
+    {
+      "id": "45a8cadb356b41e588fc1752b91f46f1",
+      "appId": "SPBSoundOcclusion_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SPBSO_4.21"
+    },
+    {
+      "id": "f3de4f63c81b480ea3cf88e0a66fc754",
+      "appId": "SPBSoundOcclusion_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SPBSO_4.22"
+    },
+    {
+      "id": "efd8bc53c5644ec6aedaf51f86024262",
+      "appId": "SPBSoundOcclusion_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2019-09-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SPBSO_4.23"
+    },
+    {
+      "id": "d77997a03bee4bdd90cc0a44497bff5c",
+      "appId": "SPBSoundOcclusion_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2019-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SPBSO_4.24"
+    },
+    {
+      "id": "2da3d93761e142209885fe1bc403c910",
+      "appId": "SPBSoundOcclusion_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2020-05-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SPBSO_4.25"
+    },
+    {
+      "id": "ad8138e44a0246fc93c7814be4870125",
+      "appId": "SPBSoundOcclusion_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SPBSO_4.26"
+    },
+    {
+      "id": "5460e4e93dca4ba682ea18dea8391217",
+      "appId": "SPBSoundOcclusion_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2021-08-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_4.27"
+    },
+    {
+      "id": "5c29ec84f1b94da59a1738e42b095a4f",
+      "appId": "SPBSoundOcclusion_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Nintendo Switch",
+        "PS4"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SPBSO_5.0"
+    },
+    {
+      "id": "dc8da975c55c49f499c665c267f7b71c",
+      "appId": "SPBSoundOcclusion_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Nintendo Switch",
+        "PS4"
+      ],
+      "dateAdded": "2022-11-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SPBSO_5.1"
+    },
+    {
+      "id": "2eeb7feb6a664611a688ba6c2b32e2dd",
+      "appId": "SPBSoundOcclusion_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Nintendo Switch",
+        "Linux",
+        "PS4"
+      ],
+      "dateAdded": "2023-06-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_5.2"
+    },
+    {
+      "id": "e0c84e04da1549548052c59c295a232d",
+      "appId": "SPBSoundOcclusion_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Nintendo Switch",
+        "PS4",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SPBSO_5.3"
+    },
+    {
+      "id": "32f1be094d024bb187a3b7a733f06e11",
+      "appId": "SPBSoundOcclusion_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Nintendo Switch",
+        "PS4"
+      ],
+      "dateAdded": "2024-05-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE_5.4"
+    }
+  ],
+  "developer": "Bruno Xavier L",
+  "developerId": "o-299f8b0439411aa863e2f0ade8f642",
+  "endOfSupport": false,
+  "unsearchable": false
+}

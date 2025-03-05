@@ -1,0 +1,228 @@
+{
+  "id": "1f7599793f3b411bac76055dc991d6ff",
+  "title": "Virtual Lighting (Advanced Stylized Shading)",
+  "description": "Completely custom plugin system to bring your material based stylized shaders to the next level!",
+  "longDescription": "<p><em>Warning: Some of the screenshots include assets not included in this Plugin. One of my examples is made by throwing this system onto a </em><a href=\"https://www.unrealengine.com/marketplace/en-US/item/e4d4867603a4445da2701246859ce387\" rel=\"nofollow\"><em>Modular Dungeon Pack</em></a><em>. Keep in mind that this is a system for custom lighting in the material editor, not an asset pack!</em></p><p><br /></p><p><a href=\"https://drive.google.com/file/d/1LS5oRuPltpRnynZqHQYqUv5WDkzRY1Jo/view?usp&#61;sharing\" rel=\"nofollow\">Walk around the packaged demo/showcase project on your own before deciding on whether you like it or not!</a></p><p>**Included all recently (v1.5) added features like virtual dynamic shadows, outlines &amp; stylized specular calculations. All recreatable without having to ever touch post processing at all**</p><p><br /></p><p><a href=\"https://youtu.be/m5cszD-k_Is\" rel=\"nofollow\">Short preview Video</a></p><p><a href=\"https://docs.google.com/document/d/1V89EvbbugLEA6Dc-FgmaCJXb3fPS2Rq_S92sRUv3h10/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;Ec43sTXkoaw\" rel=\"nofollow\">Quick setup video guide</a></p><p><a href=\"https://drive.google.com/file/d/1VJPTV05Fz6PPWezrcLwvgwpYHRXeJGZQ/view?usp&#61;sharing\" rel=\"nofollow\">Example Project</a></p><p><br /></p><p>_________________________________________________________________________________________________</p><p><br /></p><p>If for any reason during one of the later updates some of the materials have stopped working in earlier 5.X versions you can grab all of the nodes again here: <a href=\"https://blueprintue.com/blueprint/l90tdquu/\" rel=\"nofollow\">https://blueprintue.com/blueprint/l90tdquu/</a></p><p>This may have something to do with 5.3s new Strata Materials making them incompatible with the older versions.</p><p><br /></p><p>* 1.7 Changelog *</p><p>General/QOL</p><ul><li>Improved the editor UI Experience by making disabled fields invisible, using dropdowns instead of checkboxes and adding more tooltips and default settings</li><li>Added the &#34;On Begin Play&#34; dropdown option to both shadow and smooth normal calculations to eliminate the need to recalculate these for  static/immobile meshes</li></ul><p>Virtual Vertex Shadows:</p><ul><li>Smaller Bugfixes, added additional checks to minimize any potential crashes during multithreading</li><li>Added &#34;On Begin Play&#34; mode for virtual shadows which means the shadows are only calculated once at the start of the game or (if a max distance setting is maintained) whenever the player enters the specified distance. This makes the operation similar to baking lightmaps and will make it possible to use auto generated shadows on a huge number of meshed without significant performance impacts</li></ul><p>Outlines:</p><ul><li>Added a completely new function to bake smooth mesh normals into the vertex color RGB channels which enables smooth outlines even on low poly meshes &amp; sharp edges. Performance will have to be increased to make this game ready for skeletal meshes (on tick) but generating them once during the begin play event will work wonders for static mesh outlines</li></ul><p>__________________________________________________________________________________________________</p><p><br /></p><p>All things considered is a product primarily aimed at a very specific minority of Unreal Engine users.</p><p><br /></p><p>If you, just like me:</p><ul><li>Want to make (a) stylized or cel shaded game(s)</li><li>Tried everything to make desired your look work, including post processing cel shaders, material based cel shaders or even building your own custom engine shading model from source but for some reason couldn&#39;t get it to look just <em>right</em></li><li>Still ended up with results that either look uncanny, off or even outright too simple</li></ul><p><br /></p><p>Then this may be exactly the thing you&#39;ve been looking for.</p><p>In essence, my Virtual Lighting System is a Plugin that allows you to easily create beautiful, complex and dynamic Material based(!) cel shaders that are able to react to the outside influences of being currently lit/unlit, a potentially infinite amount of dynamic movable point lights with a potentially infinite amount of possible colors (within the RGB spectrum of UE ;)) all at the same time!</p><p>How do we do that? Simple, by attaching a custom Actor component to our cel shaded actors that&#39;ll take care of generating dynamic material instances at runtime and live update their unique parameters to ensure everything is handled smoothly for you.</p><p><br /></p><p>&#34;But why would I use material based cel shading when things like post processing already exist?!&#34;</p><p>There was one simple reason for me why using post processing (only) for my cel shading wasn&#39;t an option and that reason is visual clarity. Subjectively speaking post process based cel shading will always look a bit off, as it will always be based on physically &#34;accurate&#34; lighting information, which will never match the simply beautiful clarity of a basic unlit material, nor does it give me the creative freedom to precisely fine tune each object and characters shading the way I&#39;d want to.</p><p>If you&#39;re interested in objective reasons only, here&#39;s the list of benefits I&#39;ve found so far:</p><ul><li>Post processing based cel shading breaks when using volumetrics. The ScreenUV based texture coordinate of post processing simply doesn&#39;t allow this, which means they lose you the ability to use actual volumetrics in your game</li><li>Post processing cel shading does only allow for very janky implementations of colored lights. There are indeed workarounds that make things look somewhat right, but the result is never 100% accurate.</li><li>Post processing materials do have a large performance cost and simply making one or two characters who may not even be on screen at all times cel shaded you&#39;ll have to render out the full screen view and do, what you could call a cut out, afterwards</li><li>You have complete creative freedom over stylistic choices because your lighting system is not bound to any physical accuracy anymore. Want your Postprocess based outlines to be simple, but have extremely detailed shading visuals? Just do you shading calcs but don&#39;t actually use the normal map. Want your default shading to smooth and simple, but have extremely detailed shading when exposed to another external light source? No issue, just use different Normal-Solutions for the different lighting calculations.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li> Fully custom virtual lighting subsystem, with the main goal of creating goodies and functionality for material based cel shaders that do not need to rely post processing to achieve stunning results</li><li> Carefully prepared blueprint actors to make using the plugin as convenient as possible</li><li> A selection of material functions to be able to just plug right into Virtual Lighting without ever having to worry about the actual in depth implementation</li><li>A fully setup cel shading material to demonstrate how the material function library can be used to easily get stunning results from using Virtual Lighting</li><li>An easy to use actor component as the link between the system and your dynamically shaded actors</li></ul><p>Code Modules:</p><ul><li> VirtualLighting, Runtime Module</li></ul><p>Number of Blueprints: 2 (Default Directional Light that self registers &amp; a more user friendly Virtual Point Light Actor for you to use)</p><p>Number of C&#43;&#43; Classes: 3 (Subsystem, Actor Component &amp; Virtual Point Light)</p><p>Materials: 2</p><p>Material Functions: 6</p><p>Textures: 1 (Default Engine texture to not break materials)</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1V89EvbbugLEA6Dc-FgmaCJXb3fPS2Rq_S92sRUv3h10/edit?usp&#61;sharing\" rel=\"nofollow\">Link</a></p><p>Example Project: <a href=\"https://drive.google.com/file/d/1VJPTV05Fz6PPWezrcLwvgwpYHRXeJGZQ/view?usp&#61;sharing\" rel=\"nofollow\">Project Files</a> (~300MB zipped)</p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/dng4.PNG-1920x1080-27a4729be0a9197563033045e5195e7b.jpg",
+      "md5": "27a4729be0a9197563033045e5195e7b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1472005,
+      "uploadedDate": "2023-05-11T14:11:57.620Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VLdng3.PNG-1920x1080-948936bbf96fc0778c27c76104dd8d57.jpg",
+      "md5": "948936bbf96fc0778c27c76104dd8d57",
+      "width": 1920,
+      "height": 1080,
+      "size": 1288392,
+      "uploadedDate": "2023-05-11T14:11:58.217Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VLDng2.PNG-1920x1080-826ec4ba396d399f4c8b968124e6339c.jpg",
+      "md5": "826ec4ba396d399f4c8b968124e6339c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1134550,
+      "uploadedDate": "2023-05-11T14:11:58.758Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VLDUngeon.PNG-1920x1080-6b53c4e8b676357ff9bf801112236f08.jpg",
+      "md5": "6b53c4e8b676357ff9bf801112236f08",
+      "width": 1920,
+      "height": 1080,
+      "size": 1568140,
+      "uploadedDate": "2023-05-11T14:11:59.399Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt.PNG-1920x1080-e56a4470ca24a9ec671cc2f5e7620647.jpg",
+      "md5": "e56a4470ca24a9ec671cc2f5e7620647",
+      "width": 1920,
+      "height": 1080,
+      "size": 1348857,
+      "uploadedDate": "2023-05-11T20:42:25.726Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/VirtualLightingAdvancedCelShading_thumb-284x284-0e01200743660eacafdb7bf9e1c116d6.png",
+      "md5": "0e01200743660eacafdb7bf9e1c116d6",
+      "width": 284,
+      "height": 284,
+      "size": 12558,
+      "uploadedDate": "2023-05-11T09:44:39.529Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/VirtualLightingAdvancedStylizedShading_featured-894x488-d358200ea6679afcac9be3d26c5be423.png",
+      "md5": "d358200ea6679afcac9be3d26c5be423",
+      "width": 894,
+      "height": 488,
+      "size": 530859,
+      "uploadedDate": "2023-05-11T14:11:59.948Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt.PNG-1920x1080-e56a4470ca24a9ec671cc2f5e7620647_Snapshot.jpg",
+      "md5": "56feeab9f7b4278a2a9be87ff9a540ec",
+      "width": 150,
+      "height": 74,
+      "size": 4047,
+      "uploadedDate": "2023-05-11T20:42:26.125Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/dng4.PNG-1920x1080-27a4729be0a9197563033045e5195e7b_Snapshot.jpg",
+      "md5": "f281e864b1a5813eebc63febed57752e",
+      "width": 150,
+      "height": 74,
+      "size": 3802,
+      "uploadedDate": "2023-05-11T14:11:58.019Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VLdng3.PNG-1920x1080-948936bbf96fc0778c27c76104dd8d57_Snapshot.jpg",
+      "md5": "e4ce60cd7552e0843abd2cc25ddd57d7",
+      "width": 150,
+      "height": 74,
+      "size": 3529,
+      "uploadedDate": "2023-05-11T14:11:58.584Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VLDng2.PNG-1920x1080-826ec4ba396d399f4c8b968124e6339c_Snapshot.jpg",
+      "md5": "bb50c24fe1488ee3d62c5e6da99720e7",
+      "width": 150,
+      "height": 74,
+      "size": 3162,
+      "uploadedDate": "2023-05-11T14:11:59.137Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VLDUngeon.PNG-1920x1080-6b53c4e8b676357ff9bf801112236f08_Snapshot.jpg",
+      "md5": "2b98394ec4f87e68d6c9e5bbe8b3a73b",
+      "width": 150,
+      "height": 74,
+      "size": 4350,
+      "uploadedDate": "2023-05-11T14:11:59.810Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PPCelShaded-1920x1080-e6e1ce341ff4d45ce1b8f6ac00d64273_Snapshot.jpg",
+      "md5": "a58aade390ffeeeeb0d6eb58905dff9c",
+      "width": 150,
+      "height": 74,
+      "size": 7926,
+      "uploadedDate": "2023-05-11T09:44:39.467Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CharacterShaded-1920x1080-47fa9b6a9f11fa73b5235b8f41f8f80a_Snapshot.jpg",
+      "md5": "b601718d585c78618010767c18e52641",
+      "width": 150,
+      "height": 74,
+      "size": 4939,
+      "uploadedDate": "2023-05-08T21:12:30.645Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-05-22T14:57:01.996Z",
+  "lastModifiedDate": "2025-01-11T23:56:58.650Z",
+  "customAttributes": {},
+  "entitlementName": "1f7599793f3b411bac76055dc991d6ff",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "1e7ab56b4bb6437aa2f5bd5f00d66b0c",
+      "appId": "VirtualLighting_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-10-11T21:02:00.000Z",
+      "releaseNote": "PFA ADD",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "d6c0b48b7c2a4488bc9d3cdff3581952",
+      "appId": "VirtualLighting_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "bdfbc358d52b4e179a9aa39128af81aa",
+      "appId": "VirtualLighting_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "ef4ea4d460284619a06317fdd7b0ebb0",
+      "appId": "VirtualLighting_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2023-09-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "0d80ac8df47c44c4a4a004ddec931b28",
+      "appId": "VirtualLighting_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2024-04-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Flotto",
+  "developerId": "o-bvphajdlem3jwbg5upmgzqcf3m6mpn",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "ageGatings": {},
+  "applicationId": "",
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

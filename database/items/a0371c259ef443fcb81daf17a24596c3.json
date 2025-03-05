@@ -1,0 +1,117 @@
+{
+  "id": "a0371c259ef443fcb81daf17a24596c3",
+  "title": "RESTAPI Testing",
+  "description": "Testing your RESTful API server in UE_5.3+",
+  "longDescription": "<p>This plugin provides 3 methods for testing REST API functionality.</p><p><br /></p><h1>RESTAPI Tester Plugin Manual</h1><p><br /></p><h2>1. RESTAPI HJH Server Testing</h2><p>This method tests the RESTAPI using a default server provided by the plugin.</p><ol><li>Create a new Blueprint in the Content Browser.</li><li>In the Blueprint editor, search for the &#34;RESTAPI HJH Server Testing&#34; function when adding a node.</li><li>Add this node to the graph and connect the execution pin.</li><li>Input a float value as a parameter (this value is only output to the log and doesn&#39;t affect the server call).</li><li>Compile and save the Blueprint.</li><li>When you run the game or call the Blueprint in the editor, it will send a GET request to the default provided server (<a href=\"http://61.32.96.242:8000/howtotest/jjj\" rel=\"nofollow\">http://61.32.96.242:8000/howtotest/jjj</a>).</li></ol><p>Note: The default server is maintained to be available at all times, but there might be instances when it&#39;s unavailable.</p><p><br /></p><h2>2. Make REST API Call (Using a custom server)</h2><p>This method allows you to test the RESTAPI with a server address of your choice.</p><ol><li>Create a new Blueprint in the Content Browser.</li><li>In the Blueprint editor, search for the &#34;Make REST API Call&#34; function when adding a node.</li><li>Add this node to the graph and connect the execution pin.</li><li>Input two string parameters to the function:</li></ol><ul><li>Url: The full URL of the server you want to test (e.g., &#34;<a href=\"http://your-server.com/api/endpoint\" rel=\"nofollow\">http://your-server.com/api/endpoint</a>&#34;)</li><li>Verb: The HTTP method (&#34;GET&#34; or &#34;POST&#34;)</li></ul><ol><li>Compile and save the Blueprint.</li><li>When you run the game or call the Blueprint in the editor, it will send a request to the specified URL using the specified HTTP method.</li></ol><p><br /></p><h2>3. Send Message Async (Asynchronous POST request)</h2><p>This method allows you to send an asynchronous POST request to a specified server and receive the response. It is compatible with Epic Games&#39; JSON plugin on the market to convert JSON string from JSON Object.</p><ol><li>Create a new Blueprint in the Content Browser.</li><li>In the Blueprint editor, search for the &#34;Send Message Async&#34; function when adding a node.</li><li>Add this node to the graph and connect the execution pin.</li><li>Input two string parameters to the function:</li></ol><ul><li>BaseUrl: The base URL of the server you want to send the message to (e.g., &#34;<a href=\"http://your-server.com/api\" rel=\"nofollow\">http://your-server.com/api</a>&#34;)</li><li>Message: The message you want to send</li></ul><ol><li>Create a variable of type &#34;Message Response&#34; to store the output.</li><li>Connect the &#34;Out Response&#34; pin from the &#34;Send Message Async&#34; node to your &#34;Message Response&#34; variable.</li><li>Add a &#34;Delay&#34; node after the &#34;Send Message Async&#34; node to wait for the response (e.g., 1-2 seconds).</li><li>After the delay, you can access the response data from your &#34;Message Response&#34; variable.</li><li>Compile and save the Blueprint.</li></ol><p>Here&#39;s an example of how your Blueprint might look</p><p><br /></p><h2>Output and Logging</h2><p>All methods will output the server response to the log. In the output log, you can check the following information:</p><ul><li>HTTP response code</li><li>Response content type</li><li>Response body</li><li>If the response is JSON, the parsed JSON fields</li></ul><p>For the &#34;Send Message Async&#34; function, you can also access the response data directly in your Blueprint through the &#34;Message Response&#34; structure, which includes:</p><ul><li>Success: A boolean indicating if the request was successful</li><li>Message: A string containing a message about the response (e.g., &#34;JSON response received successfully&#34;)</li><li>JsonResponse: A structure containing the parsed JSON data as key-value pairs</li></ul><h1>This plugin is useful for quickly checking the status of RESTAPI servers and sending asynchronous requests. It can be particularly helpful when testing and debugging communication with servers during game development.</h1>",
+  "technicalDetails": "<p>Features:</p><ul><li>REST API call functionality supporting GET and POST methods</li><li>Customizable API server address</li><li>Simple interface accessible via Blueprints</li><li>HTTP request and response handling</li><li>Asynchronous request processing to minimize impact on game performance</li></ul><p>Code Modules:</p><ul><li>RESTAPI_Tester (Runtime Module): Runtime module providing REST API call functionality</li></ul><p>Number of Blueprints: 3</p><p>Number of C&#43;&#43; Classes: 3</p><p><br /></p><p>Network Replicated: No</p><p>Supported Development Platforms:</p><ul><li>Windows 64-bit</li></ul><p>Supported Target Build Platforms:</p><ul><li>Windows 64-bit</li></ul><p>Documentation: The plugin documentation can be found in the &#39;Documentation&#39; folder within the plugin directory. It includes usage instructions and API references.</p><p>Important/Additional Notes:</p><ul><li>This plugin is compatible with Unreal Engine 5.3 and above.</li><li>Currently supports Windows 64-bit platform only.</li><li>Use the MakeRestApiCall function to send GET or POST requests.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/how to test19201080-1920x1080-92f29c21f5e2c99a06b05b27461d36bc.png",
+      "md5": "92f29c21f5e2c99a06b05b27461d36bc",
+      "width": 1920,
+      "height": 1080,
+      "size": 134196,
+      "uploadedDate": "2024-08-08T13:53:51.214Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SendMessageAsyncwithEpicJSONPlugins19201080-1920x1080-e41c35d29ef61b7a4d153e83d0c9029a.png",
+      "md5": "e41c35d29ef61b7a4d153e83d0c9029a",
+      "width": 1920,
+      "height": 1080,
+      "size": 182158,
+      "uploadedDate": "2024-08-23T22:21:08.797Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RESTAPITesting_thumb-284x284-8041bc044e983c2975b53f78727216ed.png",
+      "md5": "8041bc044e983c2975b53f78727216ed",
+      "width": 284,
+      "height": 284,
+      "size": 117002,
+      "uploadedDate": "2024-08-08T13:53:51.389Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RESTAPITesting_featured-894x488-00d3a474f51f268b15ca0c99477407bc.png",
+      "md5": "00d3a474f51f268b15ca0c99477407bc",
+      "width": 894,
+      "height": 488,
+      "size": 150180,
+      "uploadedDate": "2024-08-08T13:53:51.518Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SendMessageAsyncwithEpicJSONPlugins19201080-1920x1080-e41c35d29ef61b7a4d153e83d0c9029a_Snapshot.png",
+      "md5": "919982d700c9575cc8ee2ccae589d12f",
+      "width": 150,
+      "height": 74,
+      "size": 4199,
+      "uploadedDate": "2024-08-23T22:21:08.867Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/how to test19201080-1920x1080-92f29c21f5e2c99a06b05b27461d36bc_Snapshot.png",
+      "md5": "0308682ab9d477aa986eafc00d05ee7c",
+      "width": 150,
+      "height": 74,
+      "size": 3191,
+      "uploadedDate": "2024-08-08T13:53:51.301Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-08-19T01:50:32.207Z",
+  "lastModifiedDate": "2024-12-13T02:38:25.316Z",
+  "customAttributes": {
+    "promotionalContent": {
+      "type": "STRING",
+      "value": "false"
+    }
+  },
+  "entitlementName": "a0371c259ef443fcb81daf17a24596c3",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "575bb3854a734d4398ab2eb67c121e5f",
+      "appId": "RESTAPITester_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-08-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "0.1245.3"
+    },
+    {
+      "id": "d9648cac9a764e22be784357212bf96e",
+      "appId": "RESTAPITester_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-08-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "0.1245.4"
+    }
+  ],
+  "developer": "C++Friends",
+  "developerId": "o-fm9ffv7ffmw3lftjkbcjqb2ud6ljj4",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

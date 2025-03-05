@@ -1,0 +1,368 @@
+{
+  "id": "252e85503e3f48d58180b90104d0207c",
+  "title": "Color Utilities",
+  "description": "A Blueprint Function Library that provides a variety of different functions related to color.",
+  "longDescription": "<p>A Blueprint Color Library extending the functionality of color within the engine to greater capabilities within BP/C&#43;&#43; rather than material graph.</p><p><br /></p><p>&#x1f4a0; Includes:</p><p>✨ An Example Project to show off the core features of the plugin</p><p>✨ 7 Color Lookup Tables such as HTML, LaTeX and NTC (You can import your own using the editor utility widget &amp; following the documentation).</p><p>✨ 21 Random Color Generators to start with (you can make your own using the framework provided).</p><p>✨ Settings Menu to Tweak certain aspects of the plugin.</p><p><br /></p><p>⚙ Features:</p><p>✔ Converting Between Color Spaces</p><p>✔ Converting Between Colors and Names of Color &amp; Vice Versa.</p><p>✔ Random Color Generators which you can customise &amp; add to.</p><p>✔ Color Adjustment Calculations</p><p>✔ Variety of Grayscale Conversions</p><p>✔ Color Deficiency Preview Mode (different from the one in Engine that changes everyhing)</p><p>✔ Color Deficiency Readability Gradings</p><p>✔ 3 Types of Delta E calculations</p><p>✔ 12 Different functions related to Color Harmonies.</p><p>✔ Read Pixel Color on Screen.</p><p><br /></p><p>Change Log:</p><p><strong>V1 - 13th May 2024: </strong>Initial Release (UE5.2 - UE5.4)</p>",
+  "technicalDetails": "<p>&#x1f4c3; <a href=\"https://www.dropbox.com/scl/fi/5x1kcxonr0ekw1cpz7bwe/ColorUtilitiesDocumentationV1.pdf?rlkey&#61;etgu5cq8w93qf1knc13bjx30i&amp;st&#61;9zr3fifu&amp;dl&#61;0\" rel=\"nofollow\">Documentation</a></p><p>&#x1f579; <a href=\"https://www.dropbox.com/scl/fi/s3yuuzv19pmqdlb419ct4/Color_Utilities_Example_Project.zip?rlkey&#61;6kjaoljv83zmp3hvc1j755g25&amp;st&#61;qm5cz5kb&amp;dl&#61;0\" rel=\"nofollow\">Example Project Download</a></p><p><br /></p><p>&#x1f7e6; Code Modules: </p><ul><li> Color Utilities (Runtime)</li></ul><p><br /></p><p>Number of Blueprints: 23 (21 RGCs (RandomColorGenerators), 1 AllNodes and 1 Editor Utility for the data tables).</p><p>Number of DataTables: 7</p><p>Number of C&#43;&#43; Classes: 9 (8 that are UObject derived, doesn&#39;t include module class)</p><p>Number of C&#43;&#43; Structs: 1</p><p>Number of C&#43;&#43; Enums: 7</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64 (Untested on others)</p><p>Supported Target Build Platforms: Win64 (Untested on others)</p><p><br /></p><p>❗ Important/Additional Notes: Read the documentation on how to setup the example project.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DisColorHarmonies2-1920x1080-e784fd1cdb9c869d5a95f3963c019e32.png",
+      "md5": "e784fd1cdb9c869d5a95f3963c019e32",
+      "width": 1920,
+      "height": 1080,
+      "size": 157016,
+      "uploadedDate": "2024-06-26T14:57:44.283Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DisColorDeficiency-1920x1080-a7daa02144705ea05e58571386756c0a.png",
+      "md5": "a7daa02144705ea05e58571386756c0a",
+      "width": 1920,
+      "height": 1080,
+      "size": 212451,
+      "uploadedDate": "2024-05-12T23:58:34.666Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DisColorIdentification1-1920x1080-6177ceb3f20c0df3e5ba400a8a7b1ee9.png",
+      "md5": "6177ceb3f20c0df3e5ba400a8a7b1ee9",
+      "width": 1920,
+      "height": 1080,
+      "size": 178754,
+      "uploadedDate": "2024-05-12T23:58:35.041Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DisColorIdentification2-1920x1080-ab69f11f1ee56fd242f7d8c7887e5603.png",
+      "md5": "ab69f11f1ee56fd242f7d8c7887e5603",
+      "width": 1920,
+      "height": 1080,
+      "size": 225478,
+      "uploadedDate": "2024-06-25T17:42:46.895Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DisRandom-1920x1080-ea228ba298f380929c353d04849026a3.png",
+      "md5": "ea228ba298f380929c353d04849026a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 117875,
+      "uploadedDate": "2024-05-12T23:58:36.083Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DisToGrayscale-1920x1080-707685bd3b610cf41bc6be9d5fed46bd.png",
+      "md5": "707685bd3b610cf41bc6be9d5fed46bd",
+      "width": 1920,
+      "height": 1080,
+      "size": 117392,
+      "uploadedDate": "2024-05-12T23:58:36.500Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DisColorIManipulation-1920x1080-8acd663a60fb8da5786ee7e0905508b0.png",
+      "md5": "8acd663a60fb8da5786ee7e0905508b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 263558,
+      "uploadedDate": "2024-05-12T23:58:35.733Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DisColorSpaces-1920x1080-f27568ecdeb56b7f8d2b25feae66c5ed.png",
+      "md5": "f27568ecdeb56b7f8d2b25feae66c5ed",
+      "width": 1920,
+      "height": 1080,
+      "size": 591080,
+      "uploadedDate": "2024-05-12T23:58:36.877Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Page1-1920x1080-37b0b35bf116e1a3e3fd171d565788c9.png",
+      "md5": "37b0b35bf116e1a3e3fd171d565788c9",
+      "width": 1920,
+      "height": 1080,
+      "size": 863691,
+      "uploadedDate": "2024-05-12T23:39:44.360Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Page2-1920x1080-a3d60d0529a11ca710ff7c32ea291e81.png",
+      "md5": "a3d60d0529a11ca710ff7c32ea291e81",
+      "width": 1920,
+      "height": 1080,
+      "size": 722887,
+      "uploadedDate": "2024-05-12T23:39:44.824Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Page3-1920x1080-fa9436b936b5d6d65c808df508d8550b.png",
+      "md5": "fa9436b936b5d6d65c808df508d8550b",
+      "width": 1920,
+      "height": 1080,
+      "size": 664331,
+      "uploadedDate": "2024-05-12T23:39:45.322Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Page4-1920x1080-2f10c472ebd67be7527eedbd5fdf7170.png",
+      "md5": "2f10c472ebd67be7527eedbd5fdf7170",
+      "width": 1920,
+      "height": 1080,
+      "size": 610491,
+      "uploadedDate": "2024-05-12T23:39:45.831Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Settings.PNG-1920x1080-9a9493d3d3d0793d352bbb31bed0ca34.jpg",
+      "md5": "9a9493d3d3d0793d352bbb31bed0ca34",
+      "width": 1920,
+      "height": 1080,
+      "size": 158842,
+      "uploadedDate": "2024-05-12T23:39:46.251Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ColorUtilities_thumb-284x284-11545c293d97ad59d9a94651ce6ef24e.png",
+      "md5": "11545c293d97ad59d9a94651ce6ef24e",
+      "width": 284,
+      "height": 284,
+      "size": 55469,
+      "uploadedDate": "2024-05-12T23:39:46.624Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ColorUtilities_featured-894x488-5cf4e2b2ca948772b12e781f7cdf2a26.png",
+      "md5": "5cf4e2b2ca948772b12e781f7cdf2a26",
+      "width": 894,
+      "height": 488,
+      "size": 197617,
+      "uploadedDate": "2024-05-12T23:39:46.717Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisColorHarmonies2-1920x1080-e784fd1cdb9c869d5a95f3963c019e32_Snapshot.png",
+      "md5": "0f599e78f7380c653aa3e323b3e7af56",
+      "width": 150,
+      "height": 74,
+      "size": 7648,
+      "uploadedDate": "2024-06-26T14:57:44.544Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisColorHarmonies-1920x1080-d97316b331ee0ae31aaf9a22aa491072_Snapshot.png",
+      "md5": "dcfe037f942f10f5aa6d976b17f4f5df",
+      "width": 150,
+      "height": 74,
+      "size": 7806,
+      "uploadedDate": "2024-06-25T17:42:46.736Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisColorIdentification2-1920x1080-ab69f11f1ee56fd242f7d8c7887e5603_Snapshot.png",
+      "md5": "8f3e88c988f103a2c17c46c7ec04899e",
+      "width": 150,
+      "height": 74,
+      "size": 7894,
+      "uploadedDate": "2024-06-25T17:42:47.151Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisColorHarmonies2-1920x1080-e8fa946b856b34967e90cd29ccb464c2_Snapshot.png",
+      "md5": "3d3642355150845c5eee749a4ec22753",
+      "width": 150,
+      "height": 74,
+      "size": 7260,
+      "uploadedDate": "2024-06-25T17:33:41.762Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisColorIdentification2-1920x1080-6b72f6721ea2d05e514b1aaabe31b726_Snapshot.png",
+      "md5": "75a9b9486fd2c743762cdd0cdfd03d9b",
+      "width": 150,
+      "height": 74,
+      "size": 7480,
+      "uploadedDate": "2024-06-25T17:26:12.877Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisColorHarmonies-1920x1080-d97316b331ee0ae31aaf9a22aa491072_Snapshot.png",
+      "md5": "dcfe037f942f10f5aa6d976b17f4f5df",
+      "width": 150,
+      "height": 74,
+      "size": 7806,
+      "uploadedDate": "2024-05-12T23:58:34.527Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisColorDeficiency-1920x1080-a7daa02144705ea05e58571386756c0a_Snapshot.png",
+      "md5": "5e30310bf07c4737e8afc7e1cce59f29",
+      "width": 150,
+      "height": 74,
+      "size": 7689,
+      "uploadedDate": "2024-05-12T23:58:34.929Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisColorIdentification1-1920x1080-6177ceb3f20c0df3e5ba400a8a7b1ee9_Snapshot.png",
+      "md5": "eb9827ef32e1784b689bf82538d2d1dd",
+      "width": 150,
+      "height": 74,
+      "size": 7007,
+      "uploadedDate": "2024-05-12T23:58:35.280Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisColorIdentification2-1920x1080-50cf665905c3b2563060aba9621eb7d8_Snapshot.png",
+      "md5": "c3e556953600609bf4cb4a94aaebd3d4",
+      "width": 150,
+      "height": 74,
+      "size": 7317,
+      "uploadedDate": "2024-05-12T23:58:35.635Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisColorIManipulation-1920x1080-8acd663a60fb8da5786ee7e0905508b0_Snapshot.png",
+      "md5": "59cb193be3f31e06513aff443ccf6e15",
+      "width": 150,
+      "height": 74,
+      "size": 8537,
+      "uploadedDate": "2024-05-12T23:58:36.007Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisRandom-1920x1080-ea228ba298f380929c353d04849026a3_Snapshot.png",
+      "md5": "fbdd474cdae78e7cb61191e3119e67f7",
+      "width": 150,
+      "height": 74,
+      "size": 8506,
+      "uploadedDate": "2024-05-12T23:58:36.384Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisToGrayscale-1920x1080-707685bd3b610cf41bc6be9d5fed46bd_Snapshot.png",
+      "md5": "c146a2dbc4823b63e949455e10fffb76",
+      "width": 150,
+      "height": 74,
+      "size": 5865,
+      "uploadedDate": "2024-05-12T23:58:36.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DisColorSpaces-1920x1080-f27568ecdeb56b7f8d2b25feae66c5ed_Snapshot.png",
+      "md5": "30c0ee7fee406fccb8b60c0d7c83516c",
+      "width": 150,
+      "height": 74,
+      "size": 5700,
+      "uploadedDate": "2024-05-12T23:58:37.146Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page1-1920x1080-37b0b35bf116e1a3e3fd171d565788c9_Snapshot.png",
+      "md5": "6bf300cac958d85b5e72fa3360adafdf",
+      "width": 150,
+      "height": 74,
+      "size": 6268,
+      "uploadedDate": "2024-05-12T23:39:44.675Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page2-1920x1080-a3d60d0529a11ca710ff7c32ea291e81_Snapshot.png",
+      "md5": "e7fe3918b5edb69bc16ea1c1b01b19b1",
+      "width": 150,
+      "height": 74,
+      "size": 5454,
+      "uploadedDate": "2024-05-12T23:39:45.137Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page3-1920x1080-fa9436b936b5d6d65c808df508d8550b_Snapshot.png",
+      "md5": "f5898f99f0243ec1b0cfa93242dbe963",
+      "width": 150,
+      "height": 74,
+      "size": 5769,
+      "uploadedDate": "2024-05-12T23:39:45.659Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Page4-1920x1080-2f10c472ebd67be7527eedbd5fdf7170_Snapshot.png",
+      "md5": "96ddeda2f8ffceafe3439246975e8c98",
+      "width": 150,
+      "height": 74,
+      "size": 5212,
+      "uploadedDate": "2024-05-12T23:39:46.148Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings.PNG-1920x1080-9a9493d3d3d0793d352bbb31bed0ca34_Snapshot.jpg",
+      "md5": "f0d8db30b4cfa680d1c8cb63b5018b1f",
+      "width": 150,
+      "height": 74,
+      "size": 4134,
+      "uploadedDate": "2024-05-12T23:39:46.532Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-05-17T09:18:08.238Z",
+  "lastModifiedDate": "2025-01-28T23:34:17.270Z",
+  "customAttributes": {},
+  "entitlementName": "252e85503e3f48d58180b90104d0207c",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b5ed8c9c5b5f4b038db1332aa42f31de",
+      "appId": "ColorUtilities_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Color Utilities 5.2 V1"
+    },
+    {
+      "id": "29aee363ab4d42a0ae4c0a3e53e02b58",
+      "appId": "ColorUtilities_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Color Utilities 5.3 V1"
+    },
+    {
+      "id": "6c13c6ecabe240748b439e6dca3d38a9",
+      "appId": "ColorUtilities_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Color Utilities 5.4 V1"
+    }
+  ],
+  "developer": "Cross Product Studios",
+  "developerId": "o-esewm3lwegxp6hzjyltpzfmd7ux4lt",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,594 @@
+{
+  "id": "29c2495d5fd74549912ac52aa3224a21",
+  "title": "Advanced Third Person Shooter Project",
+  "description": "An advanced third person cover shooter game with weapon handling logic/animations/weapon logic/easy weapon creation and much more. Oh, and uhm, it's now multiplayer ready",
+  "longDescription": "<p>Due some unknown changes to the shader math in UE5.3 the rifle crosshair in the 5.3 version of this project is broken, I have a fix for this in the support discord under &#34;bug fix&#34; channel. this fix will be added in future updates.</p><p><br /></p><p>A preview and a demo (<a href=\"https://drive.google.com/file/d/1BdAjRcykP81Se9TR2vsxp_qDFkdm7KB7/view?usp&#61;sharing\" rel=\"nofollow\">Google Drive</a>/<a href=\"https://pan.baidu.com/s/19aCfKf0ppOht2E_HM2XzqA?pwd&#61;abcd\" rel=\"nofollow\">BaiduDisk</a>)of v1.5.2, <a href=\"https://www.youtube.com/watch?v&#61;z9cZcO_-OEE&amp;t&#61;1s&amp;ab_channel&#61;DeanDomino\" rel=\"nofollow\">ATPS with a Smart Cover System</a>(Blueprint component and animations)</p><p><br /></p><p><em>*v1.5.2 fixes 2 small issues discovered since 1.5.1. These are very easy to fix(within minutes), no need to scrap your work. Search for &#34;v1.5.2&#34; in &#34;BP_TPSBaseChar&#34; and &#34;CR_FullBodyIK_UE4&#34; and &#34;CR_Mannequin_BasicFootIK&#34; for the changes</em></p><p><br /></p><p><em>* v1.5.1 is mostly a bug fix update, all known bugs are fixed since 1.5 release. I also added some cover related UIs.</em></p><ul><li><em>Fixed sprinting not replicated in some situation.</em></li><li><em>Fixed T-posing when wielding shield only</em></li><li><em>Fixed taking cover towards stairs, and IK overlapping when taking cover on stairs.</em></li><li><em>Added a layer for foot IK and cover IK which you can link into your main anim instance, thus fixes the issue that turn in cover montages are overriding IK adjustment.</em></li><li><em>Applied a simple fix for client side weapon attaching issue, this might see some extra updates in the future.</em></li><li><em>Added cover UIs and block fire Icon when in cover, to add these into your current project, search for &#34;1.5.1&#34; in both BP_ATPSPlayerController and BP_TPSBaseChar for the code you need to copy over</em></li></ul><p><em>&#xfeff;</em></p><p>Join the support <a href=\"https://discord.gg/Hdw27Ckjy9\" rel=\"nofollow\">Discord Server</a> if you need assistance.</p><p><br /></p><p><a href=\"https://drive.google.com/file/d/1jBHuP0ffiiOjjwmWxDkonvEnXkNtgxn8/view?usp&#61;sharing\" rel=\"nofollow\">Project Documentation</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;uIkFkYBt9xY&amp;t&#61;17s&amp;ab_channel&#61;DeanDomino\" rel=\"nofollow\">v1.4 The Gunslinger Edition preview</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;uIkFkYBt9xY&amp;t&#61;17s&amp;ab_channel&#61;DeanDomino\" rel=\"nofollow\">1.3.2&#43; (som</a><a href=\"https://youtu.be/owYzPTkVmOg\" rel=\"nofollow\">e features in next update)</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;AFJSbfD4y7M&amp;t&#61;127s&amp;ab_channel&#61;DeanDomino\" rel=\"nofollow\">1.3 update demo video</a> (multiplayer support)</p><p>Older <a href=\"https://www.youtube.com/watch?v&#61;fVIHy_XcqQo&amp;t&#61;300s\" rel=\"nofollow\">Demo Video</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;4roDLt1_QxE&amp;ab_channel&#61;DeanDomino\" rel=\"nofollow\">Quick Integration with ALSv4</a> (for single player only, require a few additional step since v1.3, contact me if you need assistance)</p><p>Added in 1.2:</p><p>Recurve Bow - <a href=\"https://www.youtube.com/watch?v&#61;eUC8UCDxPrM&amp;ab_channel&#61;DeanDomino\" rel=\"nofollow\">Youtube</a> or <a href=\"https://www.bilibili.com/video/BV1ih411i7b2\" rel=\"nofollow\">Bilibili</a></p><p><br /></p><p>Weapon handling:</p><ul><li>Pickup weapons, equip or holster them, switch between weapons, quickly switch to your side-arm, throw your current weapon away or replace it with a more desirable one.</li><li>Dual wield Pistols and shield</li><li>Reload animations include AR/Bolt-action/Pump-action shotgun/Machine pistol/Revolver/Sawed off shotgun and Bow, more to come.</li><li>Realistic Ammo management.</li><li>Toggle fire mode from auto to burst or semi-auto, customizable for each weapon.</li><li>Automatically adjust aim-down sight animations to fit weapons with different aiming baseline.</li><li>Multiple right hand and left hand grip pose to fit your weapon.</li></ul><p><br /></p><p><br /></p><p>Creating a weapon with easy:</p><ul><li>Create a customize weapon with easy, weapon logic supports automatic/burst-fire/semi-auto/single-shot(pump-action/lever-action/bolt-action/bow).</li><li>Give it some basic parameters, a skeletal mesh and some beginner level animations, then you got yourself a working realistic weapon.</li><li>Bullet-counted reload available for your classic shotguns/lever-action rifles and revolvers , load your weapon 1 round or several at a time, logic supports revolver speed loader and shotgun double/quad load(Animations available soon).</li><li>A wide range of customizable parameters including: muzzle velocity/RPM/chamber size/Mag size/fire mode/ammo type/rounds per load and recoil.</li></ul><p><br /></p><p>Third-Person Shooter Parallax Compensation:</p><ul><li>Automatically compensate parallax that comes with over-the-shoulder camera</li></ul><p><br /></p><p>Customizable Demo Level:</p><ul><li>An easily customizable CQB course that keeps track of your best score. Test out your new weapons and brush up your skills after a long day of dev work.</li><li>Battle against endlessly spawning enemy AI army, odds are against you, but at least you have an endless supply of weapons and ammo.</li></ul><p><br /></p><p>More contents will be added in future updates:</p><ul><li>Weapon and Character perks/skills</li><li>More weapon types and animations will be available soon, including<s> bow</s>/crossbow/flame thrower and laser</li><li>Attachment system include various grips/sights/muzzles/Stocks</li><li>Throwable weapon like grenades and throwing knives</li><li>Tactical gears like <s>riot-shield</s> and combat knife</li><li><s>dual-wield system</s></li><li>Full-height and half-height cover system</li><li><s>Switch shoulder and firing hand</s></li><li><s>Network replication</s></li></ul><p><br /></p><p><em>Update log</em></p><p><br /></p><p><em>v1.5 is a big update focusing on the newly added cover shooter feature, try the demo above for.</em></p><ul><li><em>2 handed weapons and bows can now be wielded and operated in the offhand, lots of cool new animations added for these deadly long weapons.</em></li><li><em>Simplified Anim BPs for better support-hand IK.</em></li><li><em>Added BP_SCSComponent, housing the majority of the cover system logic.</em></li><li><em>Added linked anim layers for all weapons long and short and all wield status.</em></li><li><em>Added automated clipping fix to reduce character mesh clipping into cover.</em></li><li><em>Dynamically support different cover height. </em></li><li><em>Easy to use in level design. No need for custom actor type, or custom collision/Object type, simply place a flat or reasonably curved mesh into your level, if it blocks the visibility channel, it can be used as cover.</em></li><li><em>Modified camera system allows much better in cover view.</em></li><li><em>Adjustable in cover exposure, for your own gameplay style.</em></li><li><em>Left and right cover to cover move is available now, more cover to cover moves will be added in future updates.</em></li><li><em>And as always, multiplayer ready.</em></li></ul><p><br /></p><p><em>v1.4.3 is only available for UE5 as I&#39;m considering moving on from older engine versions. (UE4 skeleton will always be supported though), if you do require an UE4 version of this project (4.25-4.27), please contact me directly. </em></p><ul><li><em>Added dual-wielding 2 handed compact weapon.</em></li><li><em>Reworked Anim BP with lots of improvements.</em></li><li><em>Remade some animations, for both UE4 and UE5 mannequin.</em></li><li><em>Fixed an issue with the bow&#39;s 3 pin reticle, now it indicates the correct distance for different screen size.</em></li><li><em>Arrows now stick to surface/character when hit. This is a start, will continue to improve this when I begin with bullet penetration.</em></li></ul><p><em>&#xfeff;</em></p><p><em>v1.4.2 The Gunslinger Edition:</em></p><p><em>Fixed a bug preventing AI to shoot a bow</em></p><p><em>v1.4.1 The Gunslinger Edition:</em></p><p><em>Added a feature allowing main-hand 1-handed weapons to be switched to off-hand</em></p><p><em>various bug fixes</em></p><p><br /></p>",
+  "technicalDetails": "<p>Features:</p><ul><li>A smart cover system, dynamically support different cover height, and curvy cover. Shoot from cover blindly or aiming down sight.</li><li>Realistic dual-wield system, mix and match different weapons including 1 handed/2 handed compact and shield.</li><li>Parallax compensation for over-the-shoulder camera</li><li>Parameter defined weapon blueprint for easy creation of unique weapons</li><li>Weapon handling animations: equip/holster/reload/switch to side-arm/throw</li><li>Procedural weapon recoil</li><li>Slide-lock/Bolt catch logic included for modern firearms</li><li>Bullet-counted reload system for shotguns and revolvers</li><li>Shotgun Combat load</li><li>Charge fire mode for weapons like a bow</li><li>Easily customizable demo levels with range targets and spawning points for weapons/ammo/enemy AIs</li><li>2 playable demo levels</li></ul><p>Number of Blueprints: 89</p><p>Number of Animations: 1556(Including animations on both UE4 and UE5 skeleton)</p><p>Input: (Keyboard and Mouse)</p><p>Network Replicated: (Yes)</p><p>Supported Development Platforms:</p><p>Windows: (Yes)</p><p>Mac: (No)</p><p>Documentation: Detailed comments available inside the project blueprints</p><p>Important/Additional Notes:</p><p>Support email: deandomino3314&#64;gmail.com</p><p><a href=\"https://discord.gg/PqaFMN6uD6\" rel=\"nofollow\">Discord Server</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ATPSv1.51v2-1920x1080-27e5577450adca5c939122e5d0ca1cb0.jpg",
+      "md5": "27e5577450adca5c939122e5d0ca1cb0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1115889,
+      "uploadedDate": "2023-10-19T00:54:45.514Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ATPSv1.52v2-1920x1080-b0dfd13ef36303667a5a7b176404beb9.jpg",
+      "md5": "b0dfd13ef36303667a5a7b176404beb9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1002850,
+      "uploadedDate": "2023-10-19T00:54:46.361Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/dual wield2-1920x1080-fe843af75de0e0c3d243c8d21d95ef7a.png",
+      "md5": "fe843af75de0e0c3d243c8d21d95ef7a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2556208,
+      "uploadedDate": "2023-01-10T11:16:27.464Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/retargeted-1920x1080-0e2273df718918147b9d12d7b294376a.png",
+      "md5": "0e2273df718918147b9d12d7b294376a",
+      "width": 1920,
+      "height": 1080,
+      "size": 2277779,
+      "uploadedDate": "2023-01-10T11:16:28.038Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ATPSV14ANOUNCEMENT3-1920x1080-5222fbda5d6c582a1b99646fcd75b7c0.png",
+      "md5": "5222fbda5d6c582a1b99646fcd75b7c0",
+      "width": 1920,
+      "height": 1080,
+      "size": 2055128,
+      "uploadedDate": "2022-08-30T03:11:25.569Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/retargeted2-1920x1080-e37134ae08f84070c80283a16920d928.png",
+      "md5": "e37134ae08f84070c80283a16920d928",
+      "width": 1920,
+      "height": 1080,
+      "size": 2613856,
+      "uploadedDate": "2023-01-10T11:16:30.525Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/dual wield-1920x1080-6fa19e12406a5ebc82455d1087f8dafc.png",
+      "md5": "6fa19e12406a5ebc82455d1087f8dafc",
+      "width": 1920,
+      "height": 1080,
+      "size": 2640107,
+      "uploadedDate": "2023-01-10T11:16:29.078Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/dual wield3-1920x1080-fae08c9369fa137feca4d0ce67305cd8.png",
+      "md5": "fae08c9369fa137feca4d0ce67305cd8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2483341,
+      "uploadedDate": "2023-01-10T11:16:28.499Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Arrowintheknee-1920x1080-e8ceaf05f4c34c53e735291b658ddb22.png",
+      "md5": "e8ceaf05f4c34c53e735291b658ddb22",
+      "width": 1920,
+      "height": 1080,
+      "size": 2493016,
+      "uploadedDate": "2023-01-10T11:16:29.895Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ATPS Multiplayer CoverEN-1920x1080-bf5824cf1157d534921c86c5839724ce.png",
+      "md5": "bf5824cf1157d534921c86c5839724ce",
+      "width": 1920,
+      "height": 1080,
+      "size": 1472749,
+      "uploadedDate": "2022-02-11T11:33:48.201Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/QuickSidearm-1920x1080-815767872844880bcc37b8f66e239023.png",
+      "md5": "815767872844880bcc37b8f66e239023",
+      "width": 1920,
+      "height": 1080,
+      "size": 1742184,
+      "uploadedDate": "2021-08-01T00:07:51.738Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Contact12OClock2ndFloor-1920x1080-2d50c60f8812ef231acda587d46d46ae.png",
+      "md5": "2d50c60f8812ef231acda587d46d46ae",
+      "width": 1920,
+      "height": 1080,
+      "size": 1443010,
+      "uploadedDate": "2021-08-01T00:07:50.265Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AdvancedThirdPersonShooterProject_thumb-284x284-9702224e1ea526c064ac9bea5564dc66.png",
+      "md5": "9702224e1ea526c064ac9bea5564dc66",
+      "width": 284,
+      "height": 284,
+      "size": 145847,
+      "uploadedDate": "2023-10-19T00:54:46.849Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AdvancedThirdPersonShooterProject_featured-894x488-022dfc688f08f9462893716def99007b.png",
+      "md5": "022dfc688f08f9462893716def99007b",
+      "width": 894,
+      "height": 488,
+      "size": 630031,
+      "uploadedDate": "2023-10-19T00:54:47.183Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ATPSv1.51v2-1920x1080-27e5577450adca5c939122e5d0ca1cb0_Snapshot.jpg",
+      "md5": "111dc9fb414f2e2728350a6974081c13",
+      "width": 150,
+      "height": 74,
+      "size": 6590,
+      "uploadedDate": "2023-10-19T00:54:45.895Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ATPSv1.52v2-1920x1080-b0dfd13ef36303667a5a7b176404beb9_Snapshot.jpg",
+      "md5": "c5ce27d71284184d50be9e0e1f3d633c",
+      "width": 150,
+      "height": 74,
+      "size": 6529,
+      "uploadedDate": "2023-10-19T00:54:46.761Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ATPSv1.52-1920x1080-29d162f6273e04adf5cb99f7b754754a_Snapshot.jpg",
+      "md5": "add5eff6fc04021403d75a0ee00b6349",
+      "width": 150,
+      "height": 74,
+      "size": 7213,
+      "uploadedDate": "2023-06-02T01:43:41.511Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ATPSv1.51-1920x1080-aa5c014a408c64fca5b27b092cf80053_Snapshot.jpg",
+      "md5": "9d69c1eb072125ce98ddc82fc3eb80f1",
+      "width": 150,
+      "height": 74,
+      "size": 7232,
+      "uploadedDate": "2023-06-02T01:43:42.102Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SCSATPS15 Preview2-1920x1080-8dfc4553f57604cd29a2f26560fcb4bd_Snapshot.png",
+      "md5": "a4f70fe400be5c12f4e37661f6db024d",
+      "width": 150,
+      "height": 74,
+      "size": 6947,
+      "uploadedDate": "2023-04-18T10:49:19.814Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Apr15-1920x1080-8d5e8fab8b09b2e0b13122b0d8b2e3b8_Snapshot.jpg",
+      "md5": "9daa1921a30a38468f60b3803fb9b62b",
+      "width": 150,
+      "height": 74,
+      "size": 7206,
+      "uploadedDate": "2023-04-18T10:49:20.415Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/dual wield2-1920x1080-fe843af75de0e0c3d243c8d21d95ef7a_Snapshot.png",
+      "md5": "54531dec7237e68654742f1c496b0888",
+      "width": 150,
+      "height": 74,
+      "size": 7318,
+      "uploadedDate": "2023-01-10T11:16:27.896Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/retargeted-1920x1080-0e2273df718918147b9d12d7b294376a_Snapshot.png",
+      "md5": "76cccc276c4bbdb18c2d6b1cc6efeac1",
+      "width": 150,
+      "height": 74,
+      "size": 6280,
+      "uploadedDate": "2023-01-10T11:16:28.340Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/dual wield3-1920x1080-fae08c9369fa137feca4d0ce67305cd8_Snapshot.png",
+      "md5": "9690cfdfc971afd209bedbe334d06b3d",
+      "width": 150,
+      "height": 74,
+      "size": 5510,
+      "uploadedDate": "2023-01-10T11:16:28.815Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/dual wield-1920x1080-6fa19e12406a5ebc82455d1087f8dafc_Snapshot.png",
+      "md5": "d3fcedf01535fb4f53e9df868390d7d4",
+      "width": 150,
+      "height": 74,
+      "size": 7735,
+      "uploadedDate": "2023-01-10T11:16:29.519Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Arrowintheknee-1920x1080-e8ceaf05f4c34c53e735291b658ddb22_Snapshot.png",
+      "md5": "dedb04f0d19de1b6afdaa353a3a3decb",
+      "width": 150,
+      "height": 74,
+      "size": 5611,
+      "uploadedDate": "2023-01-10T11:16:30.222Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/retargeted2-1920x1080-e37134ae08f84070c80283a16920d928_Snapshot.png",
+      "md5": "b15ed01c0f28c646fe064d7a03aaf3ad",
+      "width": 150,
+      "height": 74,
+      "size": 6486,
+      "uploadedDate": "2023-01-10T11:16:30.868Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ATPSV14ANOUNCEMENT3-1920x1080-5222fbda5d6c582a1b99646fcd75b7c0_Snapshot.png",
+      "md5": "7fb5ae456ec4394606e8a37c8d17a8c9",
+      "width": 150,
+      "height": 74,
+      "size": 6665,
+      "uploadedDate": "2022-08-30T03:11:25.868Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Multi-1920x1080-da053b396dfbff32e69e2e517ee36a82_Snapshot.png",
+      "md5": "d4706b6eb034b438ca5f0e3ce9a70cb0",
+      "width": 150,
+      "height": 74,
+      "size": 7198,
+      "uploadedDate": "2022-02-14T13:20:34.139Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GearedUp-1920x1080-3b0d06e338d5903780019f6233d5f9f4_Snapshot.png",
+      "md5": "96396093aaf5f9d9f2643df853903d57",
+      "width": 150,
+      "height": 74,
+      "size": 6842,
+      "uploadedDate": "2022-02-14T13:20:34.738Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ATPS Multiplayer CoverEN-1920x1080-bf5824cf1157d534921c86c5839724ce_Snapshot.png",
+      "md5": "9ad22f18cb104489cdc89c6b361bc5c4",
+      "width": 150,
+      "height": 74,
+      "size": 5820,
+      "uploadedDate": "2022-02-11T11:33:48.455Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bow099cover-1920x1080-2c195e60a0b0785bc3f735e037e54110_Snapshot.png",
+      "md5": "b0c731e862fdcdcd3b3b47b87634148a",
+      "width": 150,
+      "height": 74,
+      "size": 6680,
+      "uploadedDate": "2021-09-18T23:56:06.899Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BoltAction-1920x1080-367891c9a9f3bb00e71f56176c543ed8_Snapshot.png",
+      "md5": "a12484dde8a13c55cf1d39584078d5d4",
+      "width": 150,
+      "height": 74,
+      "size": 7261,
+      "uploadedDate": "2021-08-01T00:07:48.994Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CombatLoad-1920x1080-da3ef4b362fc60d3e0f633e878b67802_Snapshot.png",
+      "md5": "8bb6873ea405d0a81707f75f1f1c6503",
+      "width": 150,
+      "height": 74,
+      "size": 7384,
+      "uploadedDate": "2021-08-01T00:07:49.495Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CombatLoad2-1920x1080-9922de88506739dee548a7123cabe077_Snapshot.png",
+      "md5": "bb45376e8d7c7a57816c4136f7f7820a",
+      "width": 150,
+      "height": 74,
+      "size": 7356,
+      "uploadedDate": "2021-08-01T00:07:49.949Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Contact12OClock2ndFloor-1920x1080-2d50c60f8812ef231acda587d46d46ae_Snapshot.png",
+      "md5": "44e4d1fb9b7215168f9ac0499b34e665",
+      "width": 150,
+      "height": 74,
+      "size": 6128,
+      "uploadedDate": "2021-08-01T00:07:50.618Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HVTIdentified-1920x1080-04d559f460bb4cd6679b8834da1b6911_Snapshot.png",
+      "md5": "468d8f322e231bb942cefa6630055234",
+      "width": 150,
+      "height": 74,
+      "size": 7556,
+      "uploadedDate": "2021-08-01T00:07:51.051Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/OscarMike-1920x1080-2131d6d044033bb6ee94424f680b507d_Snapshot.png",
+      "md5": "abc32f17590136c322cb7bf52723d454",
+      "width": 150,
+      "height": 74,
+      "size": 6358,
+      "uploadedDate": "2021-08-01T00:07:51.589Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/QuickSidearm-1920x1080-815767872844880bcc37b8f66e239023_Snapshot.png",
+      "md5": "6f341049e4661569c0604bc19191a662",
+      "width": 150,
+      "height": 74,
+      "size": 6534,
+      "uploadedDate": "2021-08-01T00:07:52.009Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Revolver-1920x1080-67ea4e5c94824c572953ee4b4770ff0d_Snapshot.png",
+      "md5": "4029ad913e228b1230ad7fd70683630e",
+      "width": 150,
+      "height": 74,
+      "size": 7743,
+      "uploadedDate": "2021-08-01T00:07:52.426Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RevolverReload-1920x1080-4ccb2b582a719d2a89427362bf3c0260_Snapshot.png",
+      "md5": "6ffa4f1d486a55373a828b90d831116e",
+      "width": 150,
+      "height": 74,
+      "size": 6714,
+      "uploadedDate": "2021-08-01T00:07:52.861Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShotsFired-1920x1080-5d769a0cece601196db85f61846b5d6a_Snapshot.png",
+      "md5": "af61dd6a577c46f871c2107676656c5d",
+      "width": 150,
+      "height": 74,
+      "size": 7034,
+      "uploadedDate": "2021-08-01T00:07:53.555Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ShotsFired2-1920x1080-e58d7466df5c57d09ac1a9e55d1c9b31_Snapshot.png",
+      "md5": "2a92d0f58029753de312da54610454a6",
+      "width": 150,
+      "height": 74,
+      "size": 7549,
+      "uploadedDate": "2021-08-01T00:07:54.178Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VerticalGrip-1920x1080-bf7d04d7b969ed15d394fb307f5b88be_Snapshot.png",
+      "md5": "7a3b02011ad9fddca4a47342b51e1241",
+      "width": 150,
+      "height": 74,
+      "size": 5097,
+      "uploadedDate": "2021-08-01T00:07:54.621Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WeaponDisplay-1920x1080-f03792830a0f75e63ae255c98c8b62fe_Snapshot.png",
+      "md5": "1971f3dafc8ef0e3b5814b195dfe963b",
+      "width": 150,
+      "height": 74,
+      "size": 5720,
+      "uploadedDate": "2021-08-01T00:07:55.058Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/QuickSidearm-1920x1080-a67264c256b915341dd2bd42744db66c_Snapshot.png",
+      "md5": "a92d08083a94912bc57e866d50ba897d",
+      "width": 150,
+      "height": 74,
+      "size": 4581,
+      "uploadedDate": "2021-05-24T14:34:14.480Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-14-1920x1080-b101dede01bf59670719e76905d19e50_Snapshot.png",
+      "md5": "533cee63ad9472f055be3cff6ec3fd09",
+      "width": 150,
+      "height": 74,
+      "size": 5894,
+      "uploadedDate": "2021-05-24T14:34:15.035Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-19 Rhino Revolver-1920x1080-a4a8753d0bc85cbe35bdd82823cc7051_Snapshot.png",
+      "md5": "98624ddb1d0b20c1ac0bcbc1cd93d4a4",
+      "width": 150,
+      "height": 74,
+      "size": 2509,
+      "uploadedDate": "2021-05-24T14:34:15.402Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-19-shell-1920x1080-6ced37145210fe937468bb911dcfaa82_Snapshot.png",
+      "md5": "3be6f04cbf85ca2ffdaa23067446e0f3",
+      "width": 150,
+      "height": 74,
+      "size": 4608,
+      "uploadedDate": "2021-05-24T14:34:15.931Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-20 Revolver-1920x1080-f502b8e41791f9831f629ed6041920bd_Snapshot.png",
+      "md5": "a89d20cdc6300ff7cfb5fc90232a0657",
+      "width": 150,
+      "height": 74,
+      "size": 5904,
+      "uploadedDate": "2021-05-24T14:34:16.537Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-12s-1920x1080-cd7cd0d0ca4b459fbb78c2b782ef6395_Snapshot.png",
+      "md5": "cf214cc23f23beead49bf9bf1933c068",
+      "width": 150,
+      "height": 74,
+      "size": 6624,
+      "uploadedDate": "2021-05-24T14:34:17.016Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-12TPSDemolevel-1920x1080-1bb2e087c5657ffe0f395c7939160899_Snapshot.png",
+      "md5": "cf214cc23f23beead49bf9bf1933c068",
+      "width": 150,
+      "height": 74,
+      "size": 6624,
+      "uploadedDate": "2021-05-24T14:34:17.585Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TPS Project-1920x1080-f1b3c24ace138d8949e4f007f6e1582a_Snapshot.png",
+      "md5": "44bc9785cdc8d5fd5faa348e27399e48",
+      "width": 150,
+      "height": 74,
+      "size": 4028,
+      "uploadedDate": "2021-05-24T14:34:18.093Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TPS Projectaaaa-1920x1080-8c3308c77b237e9971a7062519f11470_Snapshot.png",
+      "md5": "e62c02921801184e095a0a9fdfe2d57a",
+      "width": 150,
+      "height": 74,
+      "size": 4585,
+      "uploadedDate": "2021-05-24T14:34:18.691Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-08-08T03:52:59.786Z",
+  "lastModifiedDate": "2024-10-03T04:26:42.348Z",
+  "customAttributes": {},
+  "entitlementName": "29c2495d5fd74549912ac52aa3224a21",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "c209c61b76804bdeb9d40193e85b7bd5",
+      "appId": "Advanced29c2495d5fd7V1",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-05-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ATPS_v1.4.2_4.25"
+    },
+    {
+      "id": "856842eda38a41cabffac61eb2864113",
+      "appId": "Advanced29c2495d5fd7V2",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-05-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ATPS_v1.4.2_4.26"
+    },
+    {
+      "id": "14c1b704b6cb46d7ba792251bebd6ff8",
+      "appId": "Advanced29c2495d5fd7V3",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-08-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ATPS_v1.4.2_4.27"
+    },
+    {
+      "id": "405571cf2ddf4192a1bcd8fffd4a1404",
+      "appId": "Advanced29c2495d5fd7V4",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2022-04-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ATPS_v1.4.3_5.0"
+    },
+    {
+      "id": "d5ddd3c4c7fb4d21a298b701e9b4724e",
+      "appId": "Advanced29c2495d5fd7V8",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2023-05-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ATPS_v1.5.2_5.1"
+    },
+    {
+      "id": "5b89b31c91f8405a9b7316026a77f91e",
+      "appId": "Advanced29c2495d5fd7V9",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ATPS_v1.5.2_5.4"
+    }
+  ],
+  "developer": "Roguish Scholar Studio",
+  "developerId": "o-7sm772r48ddre38dgu8697jlbfaw3c",
+  "endOfSupport": false,
+  "unsearchable": false
+}

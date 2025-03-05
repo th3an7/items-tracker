@@ -1,0 +1,370 @@
+{
+  "id": "c6a2e5864f0b414d9dd35c9bb844506d",
+  "title": "Dialogue System with Text Speed, Auto and Skip",
+  "description": "The dialogue system is a gameplay asset in 100% blueprint where it allow the user to use text speed/auto with playing audio+animation or in a sequencer like in most JRPG dialogue.",
+  "longDescription": "<p>The dialogue system is a gameplay asset in blueprint where the player can communicate between characters or objects. The dev can implement that dialogue system with functionality like text speed, skip scene, auto text. The dialogue can also be combined with audio&#43;animation or in a sequencer.</p><p><br /></p><p>Documentation ✍: <a href=\"https://pixiebellgames.com/documentation/dialogue-system/\" rel=\"nofollow\">Pixiebell Documentation Plugin Link</a></p><p>Demo Video &#x1f47e;: <a href=\"https://youtu.be/rprlxfu2ijo\" rel=\"nofollow\">Demo Video Link</a></p><p>Contact Email: marketplace&#64;pixiebellgames.com</p><p><br /></p><p><strong>Usage &#x1f380;: </strong></p><ul><li>Make dialogue interaction between NPC/Object and main character.</li><li>Enable text speed, auto text and skip dialogue.</li><li>Add option choice for user to select.</li><li>Combine text with voice and animation of the characters.</li><li>Can be used with a sequencer.</li><li>Every interactable NPC has their own data-table and events organised in their respective bp.</li><li>Make self dialogue trigger in your squad team(with non-interaction).</li></ul><p><br /></p><p><strong>Customise </strong>&#x1f4ab;<strong>:</strong></p><ul><li>User can add the ActorComponent Dialogue to their NPC parent(or make a new one).</li><li>User can customise their dialogue widget to match their game style.</li><li>Or use the included 3 template(1st template is the default apply).</li><li>Loading and saving user story dialogue progress need to be done in NPC bp with the appropriate events.</li><li>Add their own text, audio, animation in their data tables (some variables are in soft reference to save memory).</li></ul><p><br /></p><p><strong>Release Notes </strong>&#x1f4a1;<strong>:</strong></p><p>Version 1.0.5 -&gt; Updated on 8 May 2024</p><ul><li>Fix a bug where Skip will prevent dialogue from resuming only when Instant and Auto is activated.</li><li>Fix a bug in Sequencer jumping to the wrong marker index when using option.</li></ul><p><br /></p><p>Version 1.0.4 -&gt; Updated on 3 May 2024</p><ul><li>Add support for unreal engine 5.0, 5.1</li><li>Fix deprecated node &#34;GetMarkedFramed&#34; on unreal engine 5.4</li></ul><p><br /></p><p><strong>&#xfeff;</strong></p>",
+  "technicalDetails": "<p>Features &#x1f380;: <a href=\"https://pixiebellgames.com/documentation/dialogue-system/features\" rel=\"nofollow\">All Features Link</a></p><p>Number of Blueprints: 15</p><p>Number of CPP: 0</p><p>Asset Exclude: Decoration assets are not included(wall, chest, floor, shelf, counter)</p><p>Skeletal Mesh: x1 (Cobaye) use for demonstration</p><p>- x3 animations (idle, talk, hello)</p><p>- Skeleton not compatible with unreal mannequin (having different bones hierarchy)</p><p>Textures: All textures were made via Krita. You can access the krita file from the folder &#34;SourceAssets&#34;(from file explorer).</p><p>- DialogueBox Texture Size: 4096x1024</p><p>- DialogueButton Texture Size: 512x128</p><p>Voice sound wave were made from TTSMaker which is free to use.</p><p>Input &#x1f3ae;: Preconfigured input action for Movement Right &amp; Forward and Mouse is included, user will have add them or use their own. (visit the documentation link for setup)</p><p>GameInstance ⚡: &#34;GameInstanceDialogue&#34; that is used inside the widget dialogue to load it config, user will need to setup it to it own game instance. (visit the documentation link for setup)</p><p>Localisation &#x1f31f;: Yes</p><p>Required VS Studio for packaging: No, since it an asset pack 100% bp.</p><p>Supported Development Platforms</p><p>- Windows: Yes</p><p>Engine Version: 5.0 - 5.4</p><p>Documentation ✍: <a href=\"https://pixiebellgames.com/documentation/dialogue-system/\" rel=\"nofollow\">Pixiebell Documentation Plugin Link</a></p><p>Contact Email: marketplace&#64;pixiebellgames.com</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryMain-1920x1080-c40097f1ac118cba7fbd072303561835.png",
+      "md5": "c40097f1ac118cba7fbd072303561835",
+      "width": 1920,
+      "height": 1080,
+      "size": 1525660,
+      "uploadedDate": "2023-12-11T07:06:15.990Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryOption-1920x1080-ca709182f611a22fa60b0d36e2adc834.png",
+      "md5": "ca709182f611a22fa60b0d36e2adc834",
+      "width": 1920,
+      "height": 1080,
+      "size": 1918722,
+      "uploadedDate": "2023-12-11T07:06:16.647Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryModular-1920x1080-f2370c79dc827eb6454e52433a23a253.png",
+      "md5": "f2370c79dc827eb6454e52433a23a253",
+      "width": 1920,
+      "height": 1080,
+      "size": 292285,
+      "uploadedDate": "2023-12-11T18:13:37.354Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryEvents-1920x1080-d473248483284f91c1b0e22cd9a78c51.png",
+      "md5": "d473248483284f91c1b0e22cd9a78c51",
+      "width": 1920,
+      "height": 1080,
+      "size": 741825,
+      "uploadedDate": "2023-12-11T07:06:17.824Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryText-1920x1080-406bfd64ed309644efba7e2f050fba28.png",
+      "md5": "406bfd64ed309644efba7e2f050fba28",
+      "width": 1920,
+      "height": 1080,
+      "size": 538269,
+      "uploadedDate": "2023-12-11T07:06:17.298Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryAnim-1920x1080-e463db632ca0646eefe842fb1f44db7d.png",
+      "md5": "e463db632ca0646eefe842fb1f44db7d",
+      "width": 1920,
+      "height": 1080,
+      "size": 532939,
+      "uploadedDate": "2023-12-11T07:06:18.270Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGallerySeq-1920x1080-a76296cd90497c29c11271106fc35b92.png",
+      "md5": "a76296cd90497c29c11271106fc35b92",
+      "width": 1920,
+      "height": 1080,
+      "size": 869581,
+      "uploadedDate": "2023-12-11T07:06:18.787Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryLoadSave-1920x1080-9c4ce8889d2fb5a97500cffdb1ccb4f3.png",
+      "md5": "9c4ce8889d2fb5a97500cffdb1ccb4f3",
+      "width": 1920,
+      "height": 1080,
+      "size": 334709,
+      "uploadedDate": "2024-01-29T14:40:11.183Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryNonInteractive-1920x1080-3ff9b62f1a909b1bcc0ad9b4039ab97a.png",
+      "md5": "3ff9b62f1a909b1bcc0ad9b4039ab97a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1866340,
+      "uploadedDate": "2024-01-29T14:40:12.167Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryTextSpeed-1920x1080-d0d9d7bc0f182af98fc7b5a37d72f909.png",
+      "md5": "d0d9d7bc0f182af98fc7b5a37d72f909",
+      "width": 1920,
+      "height": 1080,
+      "size": 1658791,
+      "uploadedDate": "2024-01-29T14:40:11.571Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryConfig-1920x1080-da704221cc14710a73dc5ee06be37a20.png",
+      "md5": "da704221cc14710a73dc5ee06be37a20",
+      "width": 1920,
+      "height": 1080,
+      "size": 1012142,
+      "uploadedDate": "2023-12-11T07:06:19.415Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryDetails-1920x1080-a91be924f8bb6e061dc1cdb39e8612c5.png",
+      "md5": "a91be924f8bb6e061dc1cdb39e8612c5",
+      "width": 1920,
+      "height": 1080,
+      "size": 1576127,
+      "uploadedDate": "2024-01-29T14:40:12.751Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryComments-1920x1080-c19cac1faec9e2124760d489d0e39ab7.png",
+      "md5": "c19cac1faec9e2124760d489d0e39ab7",
+      "width": 1920,
+      "height": 1080,
+      "size": 382849,
+      "uploadedDate": "2023-12-11T18:13:37.806Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryTemplate2-1920x1080-7b5cbd7c3991773dec6071ae30d15224.png",
+      "md5": "7b5cbd7c3991773dec6071ae30d15224",
+      "width": 1920,
+      "height": 1080,
+      "size": 2135962,
+      "uploadedDate": "2023-12-11T07:06:19.973Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DialogueGalleryTemplate3-1920x1080-3600339f842cd51b119084db9cdb80fe.png",
+      "md5": "3600339f842cd51b119084db9cdb80fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 1931432,
+      "uploadedDate": "2023-12-11T07:06:20.630Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DialogueSystemwithTextSpeedAutoandSkip_thumb-284x284-fc94ead9c70a3cc748302df693c6920e.png",
+      "md5": "fc94ead9c70a3cc748302df693c6920e",
+      "width": 284,
+      "height": 284,
+      "size": 97956,
+      "uploadedDate": "2023-12-08T07:56:53.500Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DialogueSystemwithTextSpeedAutoandSkip_featured-894x488-25b145507d47d432fd60b41483d3cc16.png",
+      "md5": "25b145507d47d432fd60b41483d3cc16",
+      "width": 894,
+      "height": 488,
+      "size": 468222,
+      "uploadedDate": "2023-12-08T07:56:53.598Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryLoadSave-1920x1080-9c4ce8889d2fb5a97500cffdb1ccb4f3_Snapshot.png",
+      "md5": "5aa2f9814cda945e22cc0fb80fe2f5e7",
+      "width": 150,
+      "height": 74,
+      "size": 6877,
+      "uploadedDate": "2024-01-29T14:40:11.369Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryTextSpeed-1920x1080-d0d9d7bc0f182af98fc7b5a37d72f909_Snapshot.png",
+      "md5": "0a95c562edc98e76fe25eef378033c39",
+      "width": 150,
+      "height": 74,
+      "size": 8083,
+      "uploadedDate": "2024-01-29T14:40:11.836Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryNonInteractive-1920x1080-3ff9b62f1a909b1bcc0ad9b4039ab97a_Snapshot.png",
+      "md5": "6bd01ca9b7e5a368931850bc7dc10748",
+      "width": 150,
+      "height": 74,
+      "size": 8354,
+      "uploadedDate": "2024-01-29T14:40:12.513Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryDetails-1920x1080-a91be924f8bb6e061dc1cdb39e8612c5_Snapshot.png",
+      "md5": "e7ee9323d6983c2b2c75ce53d3466a6e",
+      "width": 150,
+      "height": 74,
+      "size": 8070,
+      "uploadedDate": "2024-01-29T14:40:13.125Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryModular-1920x1080-f2370c79dc827eb6454e52433a23a253_Snapshot.png",
+      "md5": "1dc73f8703d2add7923f84f7f0acc89f",
+      "width": 150,
+      "height": 74,
+      "size": 6867,
+      "uploadedDate": "2023-12-11T18:13:37.633Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryComments-1920x1080-c19cac1faec9e2124760d489d0e39ab7_Snapshot.png",
+      "md5": "fad25fc3f69bef73ed2dd5acf2cd08ec",
+      "width": 150,
+      "height": 74,
+      "size": 7018,
+      "uploadedDate": "2023-12-11T18:13:38.081Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryMain-1920x1080-c40097f1ac118cba7fbd072303561835_Snapshot.png",
+      "md5": "4a121c3e7f46f8e90d1caa97ecf4d2b3",
+      "width": 150,
+      "height": 74,
+      "size": 8655,
+      "uploadedDate": "2023-12-11T07:06:16.399Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryOption-1920x1080-ca709182f611a22fa60b0d36e2adc834_Snapshot.png",
+      "md5": "17887c7fc4deaa9cf678c0ff151216d6",
+      "width": 150,
+      "height": 74,
+      "size": 8183,
+      "uploadedDate": "2023-12-11T07:06:17.101Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryText-1920x1080-406bfd64ed309644efba7e2f050fba28_Snapshot.png",
+      "md5": "ffafdf58b753986c03db537e4d418f7a",
+      "width": 150,
+      "height": 74,
+      "size": 6453,
+      "uploadedDate": "2023-12-11T07:06:17.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryEvents-1920x1080-d473248483284f91c1b0e22cd9a78c51_Snapshot.png",
+      "md5": "8b1c6ef63abc51e75000d9c2a137f076",
+      "width": 150,
+      "height": 74,
+      "size": 6800,
+      "uploadedDate": "2023-12-11T07:06:18.132Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryAnim-1920x1080-e463db632ca0646eefe842fb1f44db7d_Snapshot.png",
+      "md5": "fd8ab06c43acd90fd3e1abb61fd41e68",
+      "width": 150,
+      "height": 74,
+      "size": 6681,
+      "uploadedDate": "2023-12-11T07:06:18.566Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGallerySeq-1920x1080-a76296cd90497c29c11271106fc35b92_Snapshot.png",
+      "md5": "666b0fc9adb390b29f9306eee66c9d73",
+      "width": 150,
+      "height": 74,
+      "size": 6712,
+      "uploadedDate": "2023-12-11T07:06:19.145Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryConfig-1920x1080-da704221cc14710a73dc5ee06be37a20_Snapshot.png",
+      "md5": "3b0ff587097827ee6dae91be2ec5fed0",
+      "width": 150,
+      "height": 74,
+      "size": 6904,
+      "uploadedDate": "2023-12-11T07:06:19.747Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryTemplate2-1920x1080-7b5cbd7c3991773dec6071ae30d15224_Snapshot.png",
+      "md5": "2737ede332530f6768686074d3dceaf7",
+      "width": 150,
+      "height": 74,
+      "size": 8011,
+      "uploadedDate": "2023-12-11T07:06:20.394Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryTemplate3-1920x1080-3600339f842cd51b119084db9cdb80fe_Snapshot.png",
+      "md5": "453d3d22db52b90eb48bad79faf1c38a",
+      "width": 150,
+      "height": 74,
+      "size": 8606,
+      "uploadedDate": "2023-12-11T07:06:21.087Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryMain-1920x1080-c40097f1ac118cba7fbd072303561835_Snapshot.png",
+      "md5": "4a121c3e7f46f8e90d1caa97ecf4d2b3",
+      "width": 150,
+      "height": 74,
+      "size": 8655,
+      "uploadedDate": "2023-12-08T07:56:52.673Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogueGalleryOption-1920x1080-ca709182f611a22fa60b0d36e2adc834_Snapshot.png",
+      "md5": "17887c7fc4deaa9cf678c0ff151216d6",
+      "width": 150,
+      "height": 74,
+      "size": 8183,
+      "uploadedDate": "2023-12-08T07:56:53.397Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-12-14T16:52:39.489Z",
+  "lastModifiedDate": "2025-03-01T14:27:43.790Z",
+  "customAttributes": {},
+  "entitlementName": "c6a2e5864f0b414d9dd35c9bb844506d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "8505102daf684f5da1f618769f732805",
+      "appId": "Dialoguec6a2e5864f0bV2",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-29T00:00:00.000Z",
+      "releaseNote": "Fix Skip button and replaced delay with function timer.",
+      "versionTitle": "DS_1.0.5 ue5.0-5.3"
+    },
+    {
+      "id": "f6a145af2a0f4bc6848399e0c6b7c81a",
+      "appId": "Dialoguec6a2e5864f0bV1",
+      "compatibleApps": [
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2023-12-08T00:00:00.000Z",
+      "releaseNote": "Fix Skip button and replaced delay with function timer.\n",
+      "versionTitle": "DS_1.0.5 ue5.4"
+    }
+  ],
+  "developer": "Pixiebell Games",
+  "developerId": "o-3lascpwsccm4lv68rr6wtjw54xuczw",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

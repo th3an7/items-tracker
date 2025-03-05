@@ -1,0 +1,325 @@
+{
+  "id": "baec411f23014b88b55fb3fe3f33d10e",
+  "title": "Stoch: Random Loot Tables",
+  "description": "Stoch offers optimized Loot Tables that can be easily modified in an editor and used to generate loot at runtime.",
+  "longDescription": "<p><a href=\"https://miraganicstudios.github.io/StochDocs/\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://drive.google.com/drive/folders/1u4_jkl-dFemaOtWlXLJhgWrZzCI7MC_S?usp&#61;sharing\" rel=\"nofollow\">Example Projects</a></p><p><a href=\"https://discord.gg/PpyeR3GF7P\" rel=\"nofollow\">Support</a></p><p><br /></p><p>Stoch offers comprehensive loot tables for generating random loot. You may define your templates using a convenient asset editor that points at data table rows. When your template is complete, spawn it directly or modify it at runtime for your desired loot tables. Generate loot from these tables to obtain the Data Table rows which were originally referenced. You can use loot tables for nearly anything which must be random: Items, Enchantments, Rarity, Spawning Random Actors, etc.</p><p><br /></p><p>You can also change the Loot Tables at runtime:</p><ul><li>Modify Weights: Want a boss’s loot to be more impactful? Increase chances for rare items by increasing their weights; weight changes are local to each Loot Table and don’t affect others.</li><li>Modify Counts: Want to limit the number of enchantments based on an item&#39;s rarity? Select which enchantments to modify and increase or decrease their counts.</li><li>Exclude Rows: Want to limit loot based on Item Level, Gameplay Tags, or any data in the table? Define your requirements in a blueprint and exclude any rows which don’t match.</li><li>Random Utilities: Want the random selection without using Loot Tables? All internal structs are fully accessible by blueprint. Stoch also includes various random utilities which improve on the engine&#39;s functions.</li></ul><p><br /></p><p>Loot Tables are implemented in C&#43;&#43; and heavily optimize the random selection process: perform hundreds of thousands of loot generations in milliseconds. Moreover, all of the functionality is accessible from Blueprints through an easy-to-use interface.</p><p><br /></p><p>Important Note: This Plugin does not include an Item System. Items in the example project and gallery images are for demonstration purposes only. However, it can integrate with nearly any Item System.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Generate random loot.</li><li>Define weights (probabilities) directly in Loot Tables.</li><li>Limit max drop count for any row.</li><li>Modify drop chances at runtime based on data in the Data Table (Item Level, Gameplay Tags, etc.).</li><li>Filter rows from Loot Tables at runtime.</li><li>Integrates seamlessly with Item Systems.</li><li>Implemented in C&#43;&#43; for speed. Generate loot hundreds of thousands of times in milliseconds.</li><li>All key functionality is accessible by blueprint; No C&#43;&#43; knowledge is needed.</li><li>Highly generalized. Can also be used for randomly spawning enemies, randomly adding enchantments, and more!</li></ul><p><br /></p><p>Code Modules:</p><ul><li>Stoch (Runtime)</li><li>StochEditor (Editor)</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 11</p><p>Network Replicated: No (Not needed; see documentation)</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>The example project and gallery images use icons from <a href=\"https://opengameart.org/content/armor-icons-by-equipment-slot\" rel=\"nofollow\">https://opengameart.org/content/armor-icons-by-equipment-slot</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryARPGItems-1920x1080-1c5a2c219e63dbdef146c38af63954e1.png",
+      "md5": "1c5a2c219e63dbdef146c38af63954e1",
+      "width": 1920,
+      "height": 1080,
+      "size": 1417956,
+      "uploadedDate": "2022-05-23T20:37:12.292Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryAssetEditor-1920x1080-bf9d68e7fd4b0fd8f013f562f5350de2.png",
+      "md5": "bf9d68e7fd4b0fd8f013f562f5350de2",
+      "width": 1920,
+      "height": 1080,
+      "size": 87778,
+      "uploadedDate": "2022-05-23T19:59:43.720Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryRefAndNest-1920x1080-9526df744d3e60f240685b0ae1e8e5ac.png",
+      "md5": "9526df744d3e60f240685b0ae1e8e5ac",
+      "width": 1920,
+      "height": 1080,
+      "size": 78977,
+      "uploadedDate": "2022-05-23T19:59:42.836Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryFilterItemLevel-1920x1080-066ae59d6d0b87a7752e2e8a768eda36.png",
+      "md5": "066ae59d6d0b87a7752e2e8a768eda36",
+      "width": 1920,
+      "height": 1080,
+      "size": 1439351,
+      "uploadedDate": "2022-05-23T19:59:43.325Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryMagicFind-1920x1080-4875f495fe39f105a4d5836e8bb8c818.png",
+      "md5": "4875f495fe39f105a4d5836e8bb8c818",
+      "width": 1920,
+      "height": 1080,
+      "size": 1400098,
+      "uploadedDate": "2022-05-23T20:37:12.580Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryAffixMods-1920x1080-14388ffcc645de20a1024de64aa05f12.png",
+      "md5": "14388ffcc645de20a1024de64aa05f12",
+      "width": 1920,
+      "height": 1080,
+      "size": 1422319,
+      "uploadedDate": "2022-05-23T20:37:12.858Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GallerySpawnActors-1920x1080-63e27ed5c8fe38ea26a9942a3fdd0ccc.png",
+      "md5": "63e27ed5c8fe38ea26a9942a3fdd0ccc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1597880,
+      "uploadedDate": "2022-05-23T19:59:42.414Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GallerySelectActors-1920x1080-bd321c56216f688f04fda58844881eb9.png",
+      "md5": "bd321c56216f688f04fda58844881eb9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1509860,
+      "uploadedDate": "2022-05-23T20:37:13.141Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryBPAccessible-1920x1080-1fbfb66084a1fd7b20cb08b639378831.png",
+      "md5": "1fbfb66084a1fd7b20cb08b639378831",
+      "width": 1920,
+      "height": 1080,
+      "size": 177185,
+      "uploadedDate": "2022-05-23T19:59:43.901Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Stoch_thumb-284x284-535cce66949867551484f7870248a8a6.png",
+      "md5": "535cce66949867551484f7870248a8a6",
+      "width": 284,
+      "height": 284,
+      "size": 17898,
+      "uploadedDate": "2022-05-23T19:55:44.831Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Stoch_featured-894x488-faa56c54ed5e98ce2d5996feafffcfeb.png",
+      "md5": "faa56c54ed5e98ce2d5996feafffcfeb",
+      "width": 894,
+      "height": 488,
+      "size": 38775,
+      "uploadedDate": "2022-05-23T19:55:44.905Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryARPGItems-1920x1080-1c5a2c219e63dbdef146c38af63954e1_Snapshot.png",
+      "md5": "ad95f9c6851aaf170e98a2ecc057b808",
+      "width": 150,
+      "height": 74,
+      "size": 3755,
+      "uploadedDate": "2022-05-23T20:37:12.406Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryMagicFind-1920x1080-4875f495fe39f105a4d5836e8bb8c818_Snapshot.png",
+      "md5": "de31d9e2e30c784eacbe7c18ebb05395",
+      "width": 150,
+      "height": 74,
+      "size": 3896,
+      "uploadedDate": "2022-05-23T20:37:12.704Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryAffixMods-1920x1080-14388ffcc645de20a1024de64aa05f12_Snapshot.png",
+      "md5": "f572189b8276604df2f3f557c55f1f57",
+      "width": 150,
+      "height": 74,
+      "size": 3730,
+      "uploadedDate": "2022-05-23T20:37:12.975Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GallerySelectActors-1920x1080-bd321c56216f688f04fda58844881eb9_Snapshot.png",
+      "md5": "f30961aab7efd431ad3bce26b901aa6c",
+      "width": 150,
+      "height": 74,
+      "size": 3312,
+      "uploadedDate": "2022-05-23T20:37:13.260Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GallerySpawnActors-1920x1080-63e27ed5c8fe38ea26a9942a3fdd0ccc_Snapshot.png",
+      "md5": "5c65b625842e28109b1f077c729b0a80",
+      "width": 150,
+      "height": 74,
+      "size": 3413,
+      "uploadedDate": "2022-05-23T19:59:42.527Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GallerySelectActors-1920x1080-1722969cfddcfc639c4b7804a34ff71d_Snapshot.png",
+      "md5": "382d7b3a37beb2c7f1e9f9168ce804f7",
+      "width": 150,
+      "height": 74,
+      "size": 3343,
+      "uploadedDate": "2022-05-23T19:59:42.789Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryRefAndNest-1920x1080-9526df744d3e60f240685b0ae1e8e5ac_Snapshot.png",
+      "md5": "d32a965636fe2bf6ae70ec1923381404",
+      "width": 150,
+      "height": 74,
+      "size": 3870,
+      "uploadedDate": "2022-05-23T19:59:42.908Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryMagicFind-1920x1080-a3d9f900be3a266fbce0fa5372d40bd2_Snapshot.png",
+      "md5": "a625729317fe4a74a9746cd19ade8a82",
+      "width": 150,
+      "height": 74,
+      "size": 3883,
+      "uploadedDate": "2022-05-23T19:59:43.187Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryFilterItemLevel-1920x1080-066ae59d6d0b87a7752e2e8a768eda36_Snapshot.png",
+      "md5": "7cc5fb9e1f51e95d8dd43a9fb5ec509c",
+      "width": 150,
+      "height": 74,
+      "size": 3770,
+      "uploadedDate": "2022-05-23T19:59:43.434Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryAffixMods-1920x1080-f771e99f72c5ad1ccd325676d93a8548_Snapshot.png",
+      "md5": "9e31266ecff2dd5dd80cf788776443cf",
+      "width": 150,
+      "height": 74,
+      "size": 3724,
+      "uploadedDate": "2022-05-23T19:59:43.664Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryAssetEditor-1920x1080-bf9d68e7fd4b0fd8f013f562f5350de2_Snapshot.png",
+      "md5": "5ee58270f1b3736c5cd4aab0ec7a0056",
+      "width": 150,
+      "height": 74,
+      "size": 4322,
+      "uploadedDate": "2022-05-23T19:59:43.788Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryBPAccessible-1920x1080-1fbfb66084a1fd7b20cb08b639378831_Snapshot.png",
+      "md5": "0ca4e261f36af43d01e92bdf076027bb",
+      "width": 150,
+      "height": 74,
+      "size": 6170,
+      "uploadedDate": "2022-05-23T19:59:43.994Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryARPGItems-1920x1080-41846db842d7398ebaacfcc13d856461_Snapshot.png",
+      "md5": "25fd6e34cf9bb019e6eea3339dba1145",
+      "width": 150,
+      "height": 74,
+      "size": 3807,
+      "uploadedDate": "2022-05-23T19:55:44.721Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-05-24T19:12:36.462Z",
+  "lastModifiedDate": "2024-11-16T15:13:01.423Z",
+  "customAttributes": {},
+  "entitlementName": "baec411f23014b88b55fb3fe3f33d10e",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "4f30b42a2145419f8959c7501839be8a",
+      "appId": "Stoch_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-05-23T00:00:00.000Z",
+      "releaseNote": "1.1.0+UE4.27",
+      "versionTitle": "1.1.0-UE4.27"
+    },
+    {
+      "id": "8f60ce33339b4708bd34ebf86a43afe4",
+      "appId": "Stoch_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-05-23T00:00:00.000Z",
+      "releaseNote": "1.3.1+UE5.0",
+      "versionTitle": "1.3.1-UE5.0"
+    },
+    {
+      "id": "408c773694084f58ac8ab6363789cd3a",
+      "appId": "Stoch_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-22T00:00:00.000Z",
+      "releaseNote": "1.4.2+UE5.1",
+      "versionTitle": "1.4.2-UE5.1"
+    },
+    {
+      "id": "5cce3a8ef1964f289557733226857688",
+      "appId": "Stoch_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-12T00:00:00.000Z",
+      "releaseNote": "1.4.2+UE5.2",
+      "versionTitle": "1.4.2-UE5.2"
+    },
+    {
+      "id": "38c5d260a4c647f2bd7f211094ffbccc",
+      "appId": "Stoch_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "1.4.2+UE5.3",
+      "versionTitle": "1.4.2-UE5.3"
+    },
+    {
+      "id": "5c9b8af185354a5f8b2c68823048c1ef",
+      "appId": "Stoch_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-01T00:00:00.000Z",
+      "releaseNote": "1.4.2+UE5.4",
+      "versionTitle": "1.4.2-UE5.4"
+    }
+  ],
+  "developer": "Miraganic Studios",
+  "developerId": "o-spewaeprrsauphkjrqq5gahfj89w8b",
+  "endOfSupport": false,
+  "unsearchable": false
+}

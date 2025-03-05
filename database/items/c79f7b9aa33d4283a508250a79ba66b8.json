@@ -1,0 +1,260 @@
+{
+  "id": "c79f7b9aa33d4283a508250a79ba66b8",
+  "title": "Client Authoritative Networked Characters",
+  "description": "Make Character movement ClientAuthoritative instead of ServerAuthoritative. Easily make custom replicated movement modes and eliminate lag from server corrections.",
+  "longDescription": "<p><a href=\"https://plastburk.github.io/ClientAuthoritativeCharacterDocs/\" rel=\"nofollow\">Documentation</a></p><h2>What is this?</h2><p>The built in networking solution in Unreal is generally geared towards giving the server full authority over everything; the biggest and most important aspect of this is of course the playable Character’s movement.</p><p>This plugin reverses that idea, giving each Client full authority over their own Character’s movement.</p><p><br /></p><h2>Why would I want this?</h2><p>There are several pros and cons of both approaches, and which one is most appropriate for your game depends a lot on what type of game you’re making.</p><p><br /></p><p><strong>No jarring corrections from the server</strong></p><p>In networked games, you will always have to live with a bit of lag, desyncs and poor synchronization. More so if your players have subpar internet connections. This leads to discrepancies in what a Client sees on their screen compared to what the Server sees, and it’s your job as the developer to hide this as well as possible.</p><p>So what happens when things don’t quite line up? Well, with Server Authoritative movement, the server will see that the Client has done something different, which it deems incorrect, and will then send a correction to the Client to get it back to the correct location. These corrections are very jarring for the player when they happen as you suddenly start teleporting to correct the error, which a user will see as significant lag.</p><p>These types of corrections are of course unavoidable in networked games. But if the Client is Authoritative over their own movement, they wont ever get any corrections, and what they see on the screen will be what actually happens for their character.</p><p>Instead, those corrections to your own character will only be seen by other players, which is significantly easier to hide with some smoothing. Additionally, since the other players that see your character wont be controlling it themselves, they likely wont even notice any discrepancies, as it can be very hard to tell the difference between what they saw happen and what the controlling Client saw.</p><p><br /></p><p><strong>Significantly easier to make custom movement modes</strong></p><p>Since we now basically just replicate position and velocity, creating custom movement modes is significantly easier.</p><p>Normally we’d have to make sure that the Server simulates the character exactly the same way the Client did, which is not a trivial task. It requires adding new data to replicate and save, as well as making sure that the new movement logic works with Unreal’s networking rewind and replay system, etc. All this requires deep knowledge about how Unreal’s C&#43;&#43; movement replication works, and even then it takes a lot of tinkering and iterating to get everything working smoothly. This is especially true for really unique and complex movement modes that are vastly different from the normal walking mode.</p><p>With a Client Authoritative approach, we can essentially modify the movement however we want, similar to how we could do it in a single player game. Anything from building custom MovementComponents, to just directly modifying the Character’s location and velocity in Blueprints will work perfectly, without having to consider complicated replication issues.</p><p><br /></p><p><strong>Cheating</strong></p><p>The drawback is of course that the Server is no longer Authoritative, which theoretically makes it a lot easier for Clients to cheat and develop teleportation hacks.</p><p>But this is only really a problem if you’re making a truly competitive game, in which case you probably shouldn’t be using this plugin.</p>",
+  "technicalDetails": "<p>[1.0.8]</p><ul><li>Fixed issue where Linear NetworkSmoothingMode wouldn&#39;t work properly.</li></ul><p>[1.0.7]</p><ul><li>Fixed issue where some types of RootMotion montages wouldn&#39;t work properly.</li></ul><p>[1.0.6]</p><ul><li>Fixed issue where some types of RootMotionSources wouldn&#39;t work properly.</li></ul><p>[1.0.5]</p><ul><li>Fixed regression from previous version that caused Crouching to stop working properly.</li></ul><p>[1.0.4]</p><ul><li>Fixed issue where a Client walking on a non-replicateable or Client-spawned component would cause the Server to see the Client at an invalid location.</li><li>Fixed issue where turning off replication during gameplay would cause odd behaviour.</li></ul><p>[1.0.3]</p><ul><li>To let the plugin be a true drop-in replacement, it now additionally replicates crouching if the character has it enabled.</li></ul><p><br /></p><p>Features:</p><ul><li>Makes Character movement replication Client Authoritative.</li><li>Easy to implement as it functions as drop-in replacements for the normal Character &amp; PlayerController classes.</li><li>Allows you to implement custom movement modes much simpler, without thinking about replication issues.</li><li>Includes (optional) helpers for creating custom RootMotionSources for custom Client Authoritative movement together with the Gameplay Ability System.</li></ul><p><br /></p><p>Code Modules:</p><ul><li> ClientAuthoritativeCharacterSystem (Runtime)</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 5</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Any</p><p>Supported Target Build Platforms: Any</p><p>Documentation: <a href=\"https://plastburk.github.io/ClientAuthoritativeCharacterDocs/\" rel=\"nofollow\">Link</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery1-1920x1080-74a430f520f81a5aa366d31d5b2a8511.png",
+      "md5": "74a430f520f81a5aa366d31d5b2a8511",
+      "width": 1920,
+      "height": 1080,
+      "size": 2030769,
+      "uploadedDate": "2023-02-18T21:36:01.469Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery2-1920x1080-f73daf7e9c519da852fa83207081c341.png",
+      "md5": "f73daf7e9c519da852fa83207081c341",
+      "width": 1920,
+      "height": 1080,
+      "size": 2023544,
+      "uploadedDate": "2023-02-18T21:36:01.953Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery3-1920x1080-2e037912512185c8dadaa66f9dfc117a.png",
+      "md5": "2e037912512185c8dadaa66f9dfc117a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1987112,
+      "uploadedDate": "2023-02-18T21:36:02.438Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery4-1920x1080-edefbec51c09c41eb24cacda91925479.png",
+      "md5": "edefbec51c09c41eb24cacda91925479",
+      "width": 1920,
+      "height": 1080,
+      "size": 1623502,
+      "uploadedDate": "2023-02-18T21:36:02.968Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ClientAuthoritativeNetworkedCharacters_thumb-284x284-36bd25dcb7e81162376505dee045ce0d.png",
+      "md5": "36bd25dcb7e81162376505dee045ce0d",
+      "width": 284,
+      "height": 284,
+      "size": 120200,
+      "uploadedDate": "2023-02-18T21:36:03.296Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ClientAuthoritativeNetworkedCharacters_featured-894x488-7f880691657f60ccd765517deb8e55cc.png",
+      "md5": "7f880691657f60ccd765517deb8e55cc",
+      "width": 894,
+      "height": 488,
+      "size": 537606,
+      "uploadedDate": "2023-02-18T21:36:03.404Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1-1920x1080-74a430f520f81a5aa366d31d5b2a8511_Snapshot.png",
+      "md5": "e465dc748b413412f80a1e765dff73f4",
+      "width": 150,
+      "height": 74,
+      "size": 8715,
+      "uploadedDate": "2023-02-18T21:36:01.796Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery2-1920x1080-f73daf7e9c519da852fa83207081c341_Snapshot.png",
+      "md5": "92a7e0df59b91b7dc4e090c7e75ae377",
+      "width": 150,
+      "height": 74,
+      "size": 9430,
+      "uploadedDate": "2023-02-18T21:36:02.265Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery3-1920x1080-2e037912512185c8dadaa66f9dfc117a_Snapshot.png",
+      "md5": "06c63ede8970b1936f69af316302885c",
+      "width": 150,
+      "height": 74,
+      "size": 8776,
+      "uploadedDate": "2023-02-18T21:36:02.725Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery4-1920x1080-edefbec51c09c41eb24cacda91925479_Snapshot.png",
+      "md5": "be5cf93399397271cd275541a1e2fe03",
+      "width": 150,
+      "height": 74,
+      "size": 9146,
+      "uploadedDate": "2023-02-18T21:36:03.242Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-02-22T18:33:49.671Z",
+  "lastModifiedDate": "2025-01-13T15:30:10.671Z",
+  "customAttributes": {},
+  "entitlementName": "c79f7b9aa33d4283a508250a79ba66b8",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "70edc7283ffd43eeacade8f618559a6f",
+      "appId": "ClientAuthoritativeCharacter_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-02-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "6f6ed5747190426ebe942259504c9ea7",
+      "appId": "ClientAuthoritativeCharacter_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Linux",
+        "iOS",
+        "Android",
+        "Win32"
+      ],
+      "dateAdded": "2023-02-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "c69b2686faa545beb518bbb7e3fd1526",
+      "appId": "ClientAuthoritativeCharacter_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2023-02-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "b6f665aaf4754e02acfaca5ce08c8926",
+      "appId": "ClientAuthoritativeCharacter_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-05-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "15842df2e69c4c9ab4939309558cba43",
+      "appId": "ClientAuthoritativeCharacter_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Win32",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "295abac289174be09bad01c3ff6b7ad4",
+      "appId": "ClientAuthoritativeCharacter_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Anton Hesselbom",
+  "developerId": "o-y2zk55d4jrq5ec2x2fgmnl8m4gyj4c",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

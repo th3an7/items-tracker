@@ -1,0 +1,619 @@
+{
+  "id": "ab6b8fbafbe2420b9568611e49675d2a",
+  "title": "Procedural Moss & Snow",
+  "description": "Procedural blueprint tool for generating high quality moss and snow meshes over the top of existing scene geometry.",
+  "longDescription": "<p>UPDATE V1.1.1 (5.1 Only):</p><p>Fix for bug when baking to static nanite mesh caused UV issues due to deprecated settings in geometry script node in 5.1.1.</p><ul><li>If porting tool from 5.0 to 5.1 open the &#34;Bake Mesh&#34; function in blueprint tool and find the &#34;Copy Mesh to Static Mesh&#34; node. Disconnect the &#34;Nanite&#34; bool variable from the &#34;DEPRECATED NANITE SETTINGS Enabled&#34; input and re-connect to the corresponding &#34;Options Nanite Settings Enabled&#34; bool input below.</li></ul><p><br /></p><p>UPDATE V1.1:</p><p>Added two new material examples (coins and alien).</p><ul><li>Be mindful that product currently uses box map UV projections on generated meshes. For textures like the alien example that use more obvious large information you may see seams in some cases. This can be mitigated partially by adjusting UV offset/scale values.</li></ul><p>Added &#34;preset&#34; asset examples for each of the four material types shown.</p><ul><li>Can be found under &#34;Preset&#34; folder.</li></ul><p>New coverage options.</p><ul><li>&#34;Random Vector&#34; placement was the original algorithm used for generating point placements on a mesh. Best for more organic/random placements like moss.</li><li>&#34;Cubic Grid&#34; placement was created specifically for things like snow where a more even distribution of coverage might be desired.</li></ul><p>New remesh options.</p><ul><li>Exposed &#34;Cell Grid&#34; options as an alternative to &#34;Cell Resolution&#34;. Maintains more consistent voxelized mesh resolution regardless of the size of coverage at the potential cost of longer generation times for larger meshes.</li></ul><p>Post displacement smoothing options.</p><ul><li>Allows for smoothing of mesh after height displacement.</li></ul><p>UV offsetting in addition to scaling.</p><ul><li>Useful when trying to hide seams present when displacing a texture with large details on a box mapped surface.</li></ul><p><br /></p><p>DESCRIPTION:</p><p>This blueprint tool uses dynamic mesh actors to generate high detail moss and snow meshes over the top of existing scene. Parametric controls are customizable based on the user&#39;s needs and can be utilized across a broad spectrum of content targets. Because of the high detail and reliance on Nanite this tool is explicitly built with non-runtime expectations and is only meant to create static meshes (Nanite or non-nanite).</p><p><br /></p><p>Product Video Demo:</p><p><a href=\"https://vimeo.com/791725072\" rel=\"nofollow\">Video Demo</a></p><p><br /></p><p>PRESENTATION IMAGES INCLUDE MEGASCANS ASSETS THAT ARE NOT INCLUDED IN PACKAGE.</p><p><br /></p><ul><li>BE SURE TO ACTIVATE &#34;GEOMETRY SCRIPT&#34; IN THE EDITOR BEFORE ADDING THIS TOOL TO YOUR PROJECT.</li><li>Uses new dynamic mesh actors along with tiling displacement information to generate complex geometry over existing scenes. Many times faster than generating custom content in external DCC&#39;s.</li><li>Fast, intuitive user controls.</li><li>Contains demo content, but can be used with custom authored textures &amp; materials as well as source content from popular services like Megascans.</li><li>In-engine documentation: Examples and demos of all blueprints and features inside package.</li></ul><p><br /></p><p>Features:</p><ul><li>Multiple scene sampling behaviors for different use cases and flexibility.</li><li>High degree of control over mesh fidelity to match any projects performance targets.</li><li>Able to &#34;bake&#34; dynamic geometry down to static mesh actors while maintaining non-destructive workflows.</li><li>Supports baking to Nanite meshes.</li><li>Allows for propagation of instance meshes over the surface of generated geometry for extra detail when desired.</li><li>Demo content for both moss and snow utilized with different kinds of actors.</li><li>Marketplace images use Megascans assets for demonstration purposes. Megascans meshes and textures NOT INCLUDED. Content can be found at https://quixel.com/megascans/.</li><li>Built in timer function that details construction times so users can understand the iteration implications for certain expensive operations.</li><li>Currently only applies to scene elements &amp; actors that are &#34;static&#34; as the meshes will not deform along with anything dynamic or skeletal in nature.</li></ul><p><br /></p><p>Special Notes:</p><ul><li>All examples in the example map have been baked down before packaging to reduce initial map opening times. Users will need to run the &#34;Unbake&#34; feature for any examples they will to adjust.</li><li>This blueprint requires projects have the &#34;Geometry Script&#34; plugin activated.</li><li>Does not currently work with landscape due to a lack of support from Epic&#39;s geometry script features.</li></ul>",
+  "technicalDetails": "<p>BE SURE TO ACTIVATE &#34;GEOMETRY SCRIPT&#34; IN THE EDITOR BEFORE ADDING THIS TOOL TO YOUR PROJECT.</p><p>Number of Blueprints:</p><ul><li>1 Main blueprint tool</li><li>1 Demo map billboard blueprint</li><li>2 Supporting blueprint actor types</li></ul><p><br /></p><p>Demo Textures: </p><ul><li>4 Tiling texture sets (Color, Normals, Roughness, Displacement, AO) 2048x2048</li><li>2 Atlas texture set (Colors, Normals, Roughness, Opacity,) 2048x2048</li></ul><p><br /></p><p>Demo Meshes:</p><ul><li>4 Moss Instance Mesh Cards</li></ul><p><br /></p><p>Maps:</p><ul><li>1 Info map</li><li>1 Examples map</li></ul><p><br /></p><p>MEGASCANS MESHES AND TEXTURES NOT INCLUDED IN PURCHASE.</p><p><br /></p><p>Performance Notes:</p><ul><li>Some of the heavier operations in this blueprint can take 1-10 seconds to complete. It is better for iteration to start with most features turned off and then turn them on one at a time.</li><li>The blueprint will output the total time taken to complete all operations each time it is run to give users a better sense of complexity per operation.</li><li>There are lots of controls for users to target the mesh fidelity that suits their needs. Be mindful of warnings in variable descriptions as they will call out particular settings that can be time consuming.</li><li>Subdivision and Displacement behaviors assume user will utilize Nanite technology to manage large mesh sizes.</li><li>Be sure to &#34;bake&#34; all dynamic mesh actors down to static meshes when satisfied with the visual results to minimize performance overhead of blueprints. Loading up a map with many non-baked assets can be slow as each asset runs once on map open due to how dynamic actors work (Similar to construction scripts). Non-destructive workflow for baking included in toolset.</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages01-1920x1080-120bce6910adce0de7f2ce13306b0b67.jpg",
+      "md5": "120bce6910adce0de7f2ce13306b0b67",
+      "width": 1920,
+      "height": 1080,
+      "size": 971789,
+      "uploadedDate": "2022-12-31T05:03:01.745Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages29-1920x1080-1b140b9324fc91b0ae1c8162c2721a8f.jpg",
+      "md5": "1b140b9324fc91b0ae1c8162c2721a8f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1181429,
+      "uploadedDate": "2023-02-26T20:45:23.283Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages02-1920x1080-2a7b5a4c4173d50799ab27f8fa793cd1.jpg",
+      "md5": "2a7b5a4c4173d50799ab27f8fa793cd1",
+      "width": 1920,
+      "height": 1080,
+      "size": 974083,
+      "uploadedDate": "2022-12-31T05:03:02.635Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages03-1920x1080-a8c909a097a9ccc5e789eb1fa68bc04c.jpg",
+      "md5": "a8c909a097a9ccc5e789eb1fa68bc04c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1863165,
+      "uploadedDate": "2022-12-31T05:03:03.579Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages04-1920x1080-58e0cae795b6f573a3398998f815ea07.jpg",
+      "md5": "58e0cae795b6f573a3398998f815ea07",
+      "width": 1920,
+      "height": 1080,
+      "size": 651979,
+      "uploadedDate": "2022-12-31T05:03:04.500Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages05-1920x1080-3220ec51c342ffa3d93901518cfa1a25.jpg",
+      "md5": "3220ec51c342ffa3d93901518cfa1a25",
+      "width": 1920,
+      "height": 1080,
+      "size": 1026925,
+      "uploadedDate": "2022-12-31T05:03:05.383Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages06-1920x1080-74159edbaa293e628876f9c850f3b12e.jpg",
+      "md5": "74159edbaa293e628876f9c850f3b12e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1017170,
+      "uploadedDate": "2022-12-31T05:03:06.288Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages07-1920x1080-d299b7f276c53a87900b6bd816401d7c.jpg",
+      "md5": "d299b7f276c53a87900b6bd816401d7c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1109875,
+      "uploadedDate": "2022-12-31T05:03:07.188Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages08-1920x1080-222e78825f19e48bf667d76c6b18e3ea.jpg",
+      "md5": "222e78825f19e48bf667d76c6b18e3ea",
+      "width": 1920,
+      "height": 1080,
+      "size": 1167497,
+      "uploadedDate": "2022-12-31T05:03:08.087Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages09-1920x1080-d37299ea25b10791297d7a2777db3425.jpg",
+      "md5": "d37299ea25b10791297d7a2777db3425",
+      "width": 1920,
+      "height": 1080,
+      "size": 808346,
+      "uploadedDate": "2022-12-31T05:03:08.995Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages11-1920x1080-43840bbac4d8414194114d83bda6f723.jpg",
+      "md5": "43840bbac4d8414194114d83bda6f723",
+      "width": 1920,
+      "height": 1080,
+      "size": 919800,
+      "uploadedDate": "2022-12-31T05:03:10.845Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages12-1920x1080-a4498865542901045b0374bc23e36626.jpg",
+      "md5": "a4498865542901045b0374bc23e36626",
+      "width": 1920,
+      "height": 1080,
+      "size": 952084,
+      "uploadedDate": "2022-12-31T05:03:11.745Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages14-1920x1080-18f5784069241cfcd203715d1bdd6ddc.jpg",
+      "md5": "18f5784069241cfcd203715d1bdd6ddc",
+      "width": 1920,
+      "height": 1080,
+      "size": 757354,
+      "uploadedDate": "2022-12-31T05:03:13.556Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages15-1920x1080-d9807abd9be6dfcdd33d6aca17fb1b43.jpg",
+      "md5": "d9807abd9be6dfcdd33d6aca17fb1b43",
+      "width": 1920,
+      "height": 1080,
+      "size": 922130,
+      "uploadedDate": "2022-12-31T05:03:14.443Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages17-1920x1080-66a65fefcc71cb514948ffc05ddbbfa8.jpg",
+      "md5": "66a65fefcc71cb514948ffc05ddbbfa8",
+      "width": 1920,
+      "height": 1080,
+      "size": 933403,
+      "uploadedDate": "2022-12-31T05:03:16.406Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages18-1920x1080-ce5f132329d27b1a0f2ca54a551de3e0.jpg",
+      "md5": "ce5f132329d27b1a0f2ca54a551de3e0",
+      "width": 1920,
+      "height": 1080,
+      "size": 759511,
+      "uploadedDate": "2022-12-31T05:03:17.290Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages28-1920x1080-d4f7bfd4afc447ad21de828c0c29e7c2.jpg",
+      "md5": "d4f7bfd4afc447ad21de828c0c29e7c2",
+      "width": 1920,
+      "height": 1080,
+      "size": 1241293,
+      "uploadedDate": "2023-02-26T04:38:01.037Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages19-1920x1080-8031c26bb9228121122934fb5867be27.jpg",
+      "md5": "8031c26bb9228121122934fb5867be27",
+      "width": 1920,
+      "height": 1080,
+      "size": 389087,
+      "uploadedDate": "2023-02-26T20:43:59.577Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages20-1920x1080-5894a5387dfabbe149afb4a60f712357.jpg",
+      "md5": "5894a5387dfabbe149afb4a60f712357",
+      "width": 1920,
+      "height": 1080,
+      "size": 747439,
+      "uploadedDate": "2023-01-08T19:46:17.218Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages21-1920x1080-2f4321f5c19f8939679318c46fd5c871.jpg",
+      "md5": "2f4321f5c19f8939679318c46fd5c871",
+      "width": 1920,
+      "height": 1080,
+      "size": 889185,
+      "uploadedDate": "2023-01-08T19:46:18.198Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages22-1920x1080-31191e36b52b404e4f22cdcda4b9fde7.jpg",
+      "md5": "31191e36b52b404e4f22cdcda4b9fde7",
+      "width": 1920,
+      "height": 1080,
+      "size": 733952,
+      "uploadedDate": "2023-01-08T19:46:19.081Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages23-1920x1080-f7a0ca962f0284d86021d72cc47e2cd4.jpg",
+      "md5": "f7a0ca962f0284d86021d72cc47e2cd4",
+      "width": 1920,
+      "height": 1080,
+      "size": 889209,
+      "uploadedDate": "2023-01-08T19:46:19.939Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages24-1920x1080-9a6c041c20076ef92b5b1b4acd19dc29.jpg",
+      "md5": "9a6c041c20076ef92b5b1b4acd19dc29",
+      "width": 1920,
+      "height": 1080,
+      "size": 819028,
+      "uploadedDate": "2023-01-08T19:46:20.840Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages25-1920x1080-ea3c2d16f0b73c88a95554cb910b6561.jpg",
+      "md5": "ea3c2d16f0b73c88a95554cb910b6561",
+      "width": 1920,
+      "height": 1080,
+      "size": 871057,
+      "uploadedDate": "2023-01-08T19:46:21.801Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryImages26-1920x1080-fc120b929d47adaa01ac124d7b790fdc.jpg",
+      "md5": "fc120b929d47adaa01ac124d7b790fdc",
+      "width": 1920,
+      "height": 1080,
+      "size": 598643,
+      "uploadedDate": "2023-01-08T19:53:26.385Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ProceduralMossSnow_thumb-284x284-bcbf5c3920e908f870e514ef1051edbe.png",
+      "md5": "bcbf5c3920e908f870e514ef1051edbe",
+      "width": 284,
+      "height": 284,
+      "size": 156422,
+      "uploadedDate": "2022-12-31T05:03:20.391Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ProceduralMossSnow_featured-894x488-4c929d460b613bf239c45dd6646d40b9.png",
+      "md5": "4c929d460b613bf239c45dd6646d40b9",
+      "width": 894,
+      "height": 488,
+      "size": 578891,
+      "uploadedDate": "2022-12-31T05:03:20.515Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages29-1920x1080-1b140b9324fc91b0ae1c8162c2721a8f_Snapshot.jpg",
+      "md5": "1233523ae62438c12202c41515beba26",
+      "width": 150,
+      "height": 74,
+      "size": 7095,
+      "uploadedDate": "2023-02-26T20:45:23.846Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages29-1920x1080-fdfcd2146af2a76f829fb8e4275bd5c4_Snapshot.jpg",
+      "md5": "a741138bcd045e7670dba6bd6e1eeb14",
+      "width": 150,
+      "height": 74,
+      "size": 7625,
+      "uploadedDate": "2023-02-26T20:43:59.311Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages19-1920x1080-8031c26bb9228121122934fb5867be27_Snapshot.jpg",
+      "md5": "0ff6ddab220a12613078d842abf7ad06",
+      "width": 150,
+      "height": 74,
+      "size": 4898,
+      "uploadedDate": "2023-02-26T20:44:00.077Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages28-1920x1080-d4f7bfd4afc447ad21de828c0c29e7c2_Snapshot.jpg",
+      "md5": "8dd4d1185d43f33a5bf98239863d715f",
+      "width": 150,
+      "height": 74,
+      "size": 7958,
+      "uploadedDate": "2023-02-26T04:38:01.639Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages26-1920x1080-fc120b929d47adaa01ac124d7b790fdc_Snapshot.jpg",
+      "md5": "d6689ac3b545a2c44c39c1148325c8fe",
+      "width": 150,
+      "height": 74,
+      "size": 3997,
+      "uploadedDate": "2023-01-08T19:53:26.956Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages20-1920x1080-5894a5387dfabbe149afb4a60f712357_Snapshot.jpg",
+      "md5": "757caac3d53f21f5c600a2289f7fd9ef",
+      "width": 150,
+      "height": 74,
+      "size": 5478,
+      "uploadedDate": "2023-01-08T19:46:17.887Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages21-1920x1080-2f4321f5c19f8939679318c46fd5c871_Snapshot.jpg",
+      "md5": "b868b1fa237c36869454c42941b7729b",
+      "width": 150,
+      "height": 74,
+      "size": 6123,
+      "uploadedDate": "2023-01-08T19:46:18.777Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages22-1920x1080-31191e36b52b404e4f22cdcda4b9fde7_Snapshot.jpg",
+      "md5": "b6ceff1a43d9de41d45925aafbedb7d3",
+      "width": 150,
+      "height": 74,
+      "size": 5691,
+      "uploadedDate": "2023-01-08T19:46:19.650Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages23-1920x1080-f7a0ca962f0284d86021d72cc47e2cd4_Snapshot.jpg",
+      "md5": "a6f921de2f81cd29f254a041988287e8",
+      "width": 150,
+      "height": 74,
+      "size": 5526,
+      "uploadedDate": "2023-01-08T19:46:20.545Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages24-1920x1080-9a6c041c20076ef92b5b1b4acd19dc29_Snapshot.jpg",
+      "md5": "aeb31b1c1e315c6fcc2d071746e91399",
+      "width": 150,
+      "height": 74,
+      "size": 5682,
+      "uploadedDate": "2023-01-08T19:46:21.414Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages25-1920x1080-ea3c2d16f0b73c88a95554cb910b6561_Snapshot.jpg",
+      "md5": "4f1286ae097dc7618a01d6e58122c085",
+      "width": 150,
+      "height": 74,
+      "size": 5757,
+      "uploadedDate": "2023-01-08T19:46:22.379Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages01-1920x1080-120bce6910adce0de7f2ce13306b0b67_Snapshot.jpg",
+      "md5": "6fe7c51175c20b93086a7d8f5a0e784e",
+      "width": 150,
+      "height": 74,
+      "size": 5474,
+      "uploadedDate": "2022-12-31T05:03:02.320Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages02-1920x1080-2a7b5a4c4173d50799ab27f8fa793cd1_Snapshot.jpg",
+      "md5": "35eafc1d313fc17ca146fe20549401ec",
+      "width": 150,
+      "height": 74,
+      "size": 6349,
+      "uploadedDate": "2022-12-31T05:03:03.213Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages03-1920x1080-a8c909a097a9ccc5e789eb1fa68bc04c_Snapshot.jpg",
+      "md5": "6cf5012f69428fc6b68a7f9a6a245d89",
+      "width": 150,
+      "height": 74,
+      "size": 7561,
+      "uploadedDate": "2022-12-31T05:03:04.200Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages04-1920x1080-58e0cae795b6f573a3398998f815ea07_Snapshot.jpg",
+      "md5": "9e6260ef816a0891cc9afa08a0fc4b7f",
+      "width": 150,
+      "height": 74,
+      "size": 5560,
+      "uploadedDate": "2022-12-31T05:03:05.061Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages05-1920x1080-3220ec51c342ffa3d93901518cfa1a25_Snapshot.jpg",
+      "md5": "62e1fc3ff8928f9ff6825cf979332dd2",
+      "width": 150,
+      "height": 74,
+      "size": 5711,
+      "uploadedDate": "2022-12-31T05:03:05.972Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages06-1920x1080-74159edbaa293e628876f9c850f3b12e_Snapshot.jpg",
+      "md5": "52b2c1fcc275a8416ce63fb71deadd2d",
+      "width": 150,
+      "height": 74,
+      "size": 6188,
+      "uploadedDate": "2022-12-31T05:03:06.872Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages07-1920x1080-d299b7f276c53a87900b6bd816401d7c_Snapshot.jpg",
+      "md5": "2bd6873ff9a38111989174398fe3176e",
+      "width": 150,
+      "height": 74,
+      "size": 6945,
+      "uploadedDate": "2022-12-31T05:03:07.775Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages08-1920x1080-222e78825f19e48bf667d76c6b18e3ea_Snapshot.jpg",
+      "md5": "1ef3279de2c0ffdee449984ec20a87a8",
+      "width": 150,
+      "height": 74,
+      "size": 6467,
+      "uploadedDate": "2022-12-31T05:03:08.683Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages09-1920x1080-d37299ea25b10791297d7a2777db3425_Snapshot.jpg",
+      "md5": "8a57fbd5b7f7f7d954f6454b64118263",
+      "width": 150,
+      "height": 74,
+      "size": 6493,
+      "uploadedDate": "2022-12-31T05:03:09.568Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages10-1920x1080-718aaf515322bf6f7c923db1ed987ee8_Snapshot.jpg",
+      "md5": "271586597b29a45404aee1c6c6a0400d",
+      "width": 150,
+      "height": 74,
+      "size": 5611,
+      "uploadedDate": "2022-12-31T05:03:10.519Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages11-1920x1080-43840bbac4d8414194114d83bda6f723_Snapshot.jpg",
+      "md5": "b3e94ab12eca2116931c723d44ce9aad",
+      "width": 150,
+      "height": 74,
+      "size": 6575,
+      "uploadedDate": "2022-12-31T05:03:11.420Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages12-1920x1080-a4498865542901045b0374bc23e36626_Snapshot.jpg",
+      "md5": "f08c8fd7def27e680f7dee56a1184d3c",
+      "width": 150,
+      "height": 74,
+      "size": 5934,
+      "uploadedDate": "2022-12-31T05:03:12.325Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages13-1920x1080-1ee2380bcd63c4f939d75b3e40393ff1_Snapshot.jpg",
+      "md5": "36bceaee45548a804ef1ac08906def97",
+      "width": 150,
+      "height": 74,
+      "size": 6343,
+      "uploadedDate": "2022-12-31T05:03:13.238Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages14-1920x1080-18f5784069241cfcd203715d1bdd6ddc_Snapshot.jpg",
+      "md5": "78729e366905dab0b3ee0d0be5a2ea21",
+      "width": 150,
+      "height": 74,
+      "size": 6037,
+      "uploadedDate": "2022-12-31T05:03:14.117Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages15-1920x1080-d9807abd9be6dfcdd33d6aca17fb1b43_Snapshot.jpg",
+      "md5": "9d9fc0ba5bb6a16d2343a111a743b949",
+      "width": 150,
+      "height": 74,
+      "size": 6561,
+      "uploadedDate": "2022-12-31T05:03:15.074Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages16-1920x1080-c54b64be7ae3fab0923eaa01b21eb6b3_Snapshot.jpg",
+      "md5": "6f3c4f231faf240b325ab8d49ece12c0",
+      "width": 150,
+      "height": 74,
+      "size": 5894,
+      "uploadedDate": "2022-12-31T05:03:16.080Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages17-1920x1080-66a65fefcc71cb514948ffc05ddbbfa8_Snapshot.jpg",
+      "md5": "a84fa6f0f65a66d9372bff61d0f8f1a4",
+      "width": 150,
+      "height": 74,
+      "size": 6569,
+      "uploadedDate": "2022-12-31T05:03:16.974Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages18-1920x1080-ce5f132329d27b1a0f2ca54a551de3e0_Snapshot.jpg",
+      "md5": "dc5fbba3d870cb2e4ff54284c2c51bf7",
+      "width": 150,
+      "height": 74,
+      "size": 5811,
+      "uploadedDate": "2022-12-31T05:03:17.855Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages19-1920x1080-a4e8b5b4eb99c1c40430b528bb653a47_Snapshot.jpg",
+      "md5": "5a98bd7cafd6651b672bd0866471a271",
+      "width": 150,
+      "height": 74,
+      "size": 3438,
+      "uploadedDate": "2022-12-31T05:03:18.687Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages20-1920x1080-36c0c1d4a528388bd2e318e0802b7976_Snapshot.jpg",
+      "md5": "13d47bb57fbe147cc1c1cbe4feef5d27",
+      "width": 150,
+      "height": 74,
+      "size": 3103,
+      "uploadedDate": "2022-12-31T05:03:19.512Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryImages21-1920x1080-ab977891bfd1fb22cd839faa1e0f7806_Snapshot.jpg",
+      "md5": "bb242c1bb9c69e9ca8e4621c1d93cf75",
+      "width": 150,
+      "height": 74,
+      "size": 4256,
+      "uploadedDate": "2022-12-31T05:03:20.246Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-01-20T15:50:50.582Z",
+  "lastModifiedDate": "2025-02-23T07:01:24.612Z",
+  "customAttributes": {},
+  "entitlementName": "ab6b8fbafbe2420b9568611e49675d2a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "40c78cbe777441f39ff34178f12a5481",
+      "appId": "Procedurab6b8fbafbe2V1",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2022-12-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Moss And Snow Generator V1.1"
+    },
+    {
+      "id": "cb1fce6814f0486180d2f6df7bf09e68",
+      "appId": "Procedurab6b8fbafbe2V2",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-03-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Moss And Snow Generator V1.1.1"
+    }
+  ],
+  "developer": "NoahThompson",
+  "developerId": "o-4eak2d6qcaz4ht774eblrakttwzeah",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

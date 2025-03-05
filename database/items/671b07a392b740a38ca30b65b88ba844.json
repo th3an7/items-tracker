@@ -1,0 +1,223 @@
+{
+  "id": "671b07a392b740a38ca30b65b88ba844",
+  "title": "Advanced RTS Camera (ARTSC)",
+  "description": "A flexible dynamic RTS camera",
+  "longDescription": "<p>Tutorial Videos (Coming Soon) | <a href=\"https://drive.google.com/file/d/1fgPsxJQ0xpI133k9N1cS2w3SGFZF8kpj/view?usp&#61;sharing\" rel=\"nofollow\">Demo</a> | <a href=\"https://drive.google.com/file/d/1uC1VpS2kQvJ6rD4q3Zk4OAdyQ80A3GKO/view?usp&#61;drive_link\" rel=\"nofollow\">Documentation</a> | <a href=\"https://discord.gg/BSmsEWp\" rel=\"nofollow\">Discord</a></p><p><br /></p><p>The Advanced RTS Camera (ARTSC) is a highly flexible third-person style camera system that can be used in both games and industrial projects (such as ArchViz).</p><p><br /></p><p>This camera runs directly out of the box (but should be optimized for your needs) and can be used in RTS, third-person, and racing (as a track camera) games. Several features for customization can be mixed and matched to create a unique experience.</p><p><br /></p><p><strong>Now with a menu system, including key bind remapping!</strong></p><p><br /></p><p><strong>Do not hesitate to reach out with any questions, feedback, or for support. I can be reached at the Discord Link provided above or at Support&#64;twoneuronsstudio.com.</strong></p><p><br /></p><p><strong>Updates</strong></p><p><strong>V2.1 (5.1&#43; only)</strong></p><ul><li> New feature: new method (ForceBreakTracking) added to allow users to stop camera tracking (useful on BasicMovement() and prevents CloseTrack() from being called unless camera is tracking)</li><li> Created new getters for tracking – GetIsAttaching() will confirm if the camera is attaching (moving) to a tracked object, and GetIsTracking() will confirm if the camera is tracking</li><li> All new functions (from version 2.0 and 2.1) now in the demo camera (BP_RTSCamera) with comments</li><li> Renamed bDisableEdgeScroll (in BP this showed up as “Disable Edge Scroll”) to bDynamicallyDisableEdgeScroll (in BP this shows up as “Dynamically Disable Edge Scroll”)</li><li> Added new variable bAlwaysDisableEdgeScroll (in BP this shows up as “Always Disable Edge Scroll”)</li><li> Added checks to prevent edge scroll from happening when users do not want edge scroll to ever happen.</li><li> Updated features for those not using the follow terrain height, so that the camera pawn height can be more easily adjusted (set “Desired Camera Height” and this will automatically take place now, without any additional nodes being used on BeginPlay)</li><li> Fixed issue for those not using follow terrain height where the camera’s height would not return to the desired height after tracking an actor</li><li> Pan, Zoom, and Tracking will no longer enable edge scroll if edge scroll is permanently disabled</li><li> Fixed a typo on SetMovementSpeed category</li></ul><p><br /></p><p><strong>V2</strong></p><ul><li>Updated for Unreal5.3</li><li>New feature: Advanced Collision Test that smoothly changes the length of the spring arm when an object is between the camera and pawn root. This replaces the standard collision test provide by the base spring arm class.</li><li>Removed all kismet functions (except Gameplay Statics and text library) to further optimize the code</li><li>New Feature (5.1 and newer only): Added a menu to allow users to remap controls</li><li>New Feature (5.1 and newer only): Added a menu to allow users to modify camera speed and camera panning speed</li><li>New Feature (5.1 and newer only): Added a menu to allow users to modify sound settings</li><li>New Feature (5.1 and newer only): Added a menu to allow users to change visual scalability.</li><li>New Feature (5.1 and newer only): Added a game instance (can be derived, or code can be copied) for a user’s setting save system for personalized settings (speed/pan sensitivity) and for audio settings and in UE5.1 and UE5.2 to save remapped inputs (note: for UE5.3 both remapping and visual scalability use the built-in user settings and do not need to be saved with this approach)</li><li>New interfaces included to allow for interaction between menus and pawn.</li><li>New Material Function/Feature: A new camera fade material has been added, this one uses a dither node to break fade out part of the object under the camera. This material function can be applied to any material using the masked domain and does not need the interface applied either. Giving designers and developers more options and easier way to apply the camera fade without worrying about loss of material attributes (e.g., base color)</li><li>Created a custom spring arm class for the Advanced Collision Tests (further updates to this class are planned for later versions of this plugin).</li><li>Updated header files to explicitly list the “_implementation” methods, so that developers can more easily navigate between the header and implementation files, and to avoid ordering issues when using an IDE’s (like VS2022) quick actions/refactoring tools.</li><li>Added further options for tracking (the camera can begin attached to an actor to track)</li></ul><p><br /></p><p><br /></p><p><strong>v1.1</strong></p><ul><li>Cleaned up for 5.2</li><li>Fixed timers to be more performant (on tracking actors)</li><li>Added new zoom features.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li><strong>New! Menu system with key binding/remapping, and saves for other settings</strong></li><li><strong>New! Custom Spring Arm component</strong></li><li>Basic forward/backward and right/left movement &amp; Edge scroll/mouse scroll</li><li>Dynamic movement speeds and adjustments</li><li>Dynamic zoom (including change camera distance, change in field of view, and rotation)</li><li>Rotate/pan around pivot</li><li>Follow/track target/actor</li><li>Fade materials under camera</li><li>Ability to quick (dis)enable features at run time</li><li>Multiple approaches to handling zoom events</li><li>Features can be turned on/off in editor</li><li>Additional feature settings</li><li>Override <strong>all</strong> of the functions to implement your own logic</li><li><strong>All use-related variables </strong>exposed to BP (edit defaults - most have setter/getter methods for dynamic use).</li><li><strong>All methods camera </strong>exposed to BP and can be overridden </li></ul><p>Code Modules:</p><ul><li> RunTime</li></ul><p>Number of Blueprints: 1 Pawn, 3 Curve Graphs, 4 Materials, 1 Actor, 13 input data assets, 14 widgets, 1 game instance, 4 sound classes &amp; 1 sound class mix</p><p>Number of C&#43;&#43; Classes: Camera 4, 6 interfaces, 20 menus, 1 Save Object, 1 Game Instance</p><p>Network Replicated: Yes*</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation: <a href=\"https://drive.google.com/file/d/1uC1VpS2kQvJ6rD4q3Zk4OAdyQ80A3GKO/view?usp&#61;drive_link\" rel=\"nofollow\">Documentation</a></p><p>Example Project: <a href=\"https://drive.google.com/file/d/12XnxAZRd5Gf0U0vfr3-15w_UyDifw3Pv/view?usp&#61;drive_link\" rel=\"nofollow\">Demo</a></p><p>Important/Additional Notes: None</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Ad05-1920x1080-28bd8c33c5f38c6c4943a11771b61ccc.png",
+      "md5": "28bd8c33c5f38c6c4943a11771b61ccc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1360707,
+      "uploadedDate": "2022-11-28T15:31:35.777Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Ad00-1920x1080-0341091fa795c8e0ffba8136da00c214.jpg",
+      "md5": "0341091fa795c8e0ffba8136da00c214",
+      "width": 1920,
+      "height": 1080,
+      "size": 538375,
+      "uploadedDate": "2022-11-28T15:31:36.263Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Ad03-1920x1080-2ad5cd28ba0f1b87ab7d4acdefd97ce8.png",
+      "md5": "2ad5cd28ba0f1b87ab7d4acdefd97ce8",
+      "width": 1920,
+      "height": 1080,
+      "size": 1628950,
+      "uploadedDate": "2022-11-28T15:31:36.711Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Ad04-1920x1080-a3a5b4d6b3aa35c5c010627a5e562ddd.png",
+      "md5": "a3a5b4d6b3aa35c5c010627a5e562ddd",
+      "width": 1920,
+      "height": 1080,
+      "size": 1679285,
+      "uploadedDate": "2022-11-28T15:31:37.267Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Ad02-1920x1080-e20dabd450ccd335fdc76324d7268e73.png",
+      "md5": "e20dabd450ccd335fdc76324d7268e73",
+      "width": 1920,
+      "height": 1080,
+      "size": 772127,
+      "uploadedDate": "2022-11-28T15:31:37.774Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Ad01-1920x1080-3a33a1d3b187f7bcbec6536cc25f5255.png",
+      "md5": "3a33a1d3b187f7bcbec6536cc25f5255",
+      "width": 1920,
+      "height": 1080,
+      "size": 491463,
+      "uploadedDate": "2022-11-28T15:31:38.303Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AdvancedRTSCameraARTSC_thumb-284x284-2f4f0bb51d603345bd334f429eff77a6.png",
+      "md5": "2f4f0bb51d603345bd334f429eff77a6",
+      "width": 284,
+      "height": 284,
+      "size": 103088,
+      "uploadedDate": "2022-11-28T15:31:38.660Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AdvancedRTSCameraARTSC_featured-894x488-98765c506d5a0545180c91df358b9192.png",
+      "md5": "98765c506d5a0545180c91df358b9192",
+      "width": 894,
+      "height": 488,
+      "size": 380907,
+      "uploadedDate": "2022-11-28T15:31:38.783Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Ad05-1920x1080-28bd8c33c5f38c6c4943a11771b61ccc_Snapshot.png",
+      "md5": "82f3333e73374ece1f5d621dc5c87853",
+      "width": 150,
+      "height": 74,
+      "size": 8325,
+      "uploadedDate": "2022-11-28T15:31:36.135Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Ad00-1920x1080-0341091fa795c8e0ffba8136da00c214_Snapshot.jpg",
+      "md5": "5f83e9478f6a976d6985db3876ef034e",
+      "width": 150,
+      "height": 74,
+      "size": 6015,
+      "uploadedDate": "2022-11-28T15:31:36.500Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Ad03-1920x1080-2ad5cd28ba0f1b87ab7d4acdefd97ce8_Snapshot.png",
+      "md5": "8623f8a5c7a321467ab86bf53713ac29",
+      "width": 150,
+      "height": 74,
+      "size": 6032,
+      "uploadedDate": "2022-11-28T15:31:37.069Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Ad04-1920x1080-a3a5b4d6b3aa35c5c010627a5e562ddd_Snapshot.png",
+      "md5": "d6ff86ceab63bc5e127bcead73d18497",
+      "width": 150,
+      "height": 74,
+      "size": 5199,
+      "uploadedDate": "2022-11-28T15:31:37.600Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Ad02-1920x1080-e20dabd450ccd335fdc76324d7268e73_Snapshot.png",
+      "md5": "cbf55d609fdab95e14108e1e0854cb54",
+      "width": 150,
+      "height": 74,
+      "size": 7591,
+      "uploadedDate": "2022-11-28T15:31:38.139Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Ad01-1920x1080-3a33a1d3b187f7bcbec6536cc25f5255_Snapshot.png",
+      "md5": "c1d57729e6623cd782fe9ae90ce83f38",
+      "width": 150,
+      "height": 74,
+      "size": 6219,
+      "uploadedDate": "2022-11-28T15:31:38.621Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2022-12-09T02:02:02.391Z",
+  "lastModifiedDate": "2024-12-09T14:05:00.768Z",
+  "customAttributes": {},
+  "entitlementName": "671b07a392b740a38ca30b65b88ba844",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "abcc431313b644198e2fb76e6b0d9d14",
+      "appId": "AdvancedRTSCamera_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.7 V1"
+    },
+    {
+      "id": "e8f8bb3a415f49b59139029d5369b959",
+      "appId": "AdvancedRTSCamera_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0 V1.1"
+    },
+    {
+      "id": "4dd9cd65bc3d4e008db3fb4eb2df1aff",
+      "appId": "AdvancedRTSCamera_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1 V2.1"
+    },
+    {
+      "id": "7cde221b3c0d4e45b0ece41f28152b32",
+      "appId": "AdvancedRTSCamera_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-07-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2 V2.1"
+    },
+    {
+      "id": "7d78ed139fcf4b758379d5493bddee44",
+      "appId": "Advanced671b07a392b7V6",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3 V2.1"
+    }
+  ],
+  "developer": "Two Neurons Studio",
+  "developerId": "o-d4ufptrwhyljzhz9htbtdhhvba7xty",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

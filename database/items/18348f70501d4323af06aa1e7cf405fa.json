@@ -1,0 +1,515 @@
+{
+  "id": "18348f70501d4323af06aa1e7cf405fa",
+  "title": "Gameplay Blueprint Attributes",
+  "description": "Blueprint Attributes is a plugin extension for GAS (Gameplay Ability System), fully exposing Gameplay Attributes and Attribute Sets to Blueprints.",
+  "longDescription": "<p><a href=\"https://blueprintattributes.github.io/\" rel=\"nofollow\">Documentation</a> (<a href=\"https://blueprintattributes.github.io/slides/\" rel=\"nofollow\">Slides</a>) • <a href=\"https://discord.gg/d4rs4vcX6t\" rel=\"nofollow\">Discord Server</a> • <a href=\"https://github.com/BlueprintAttributes/GBA_ContentExamples\" rel=\"nofollow\">Example Project</a> • <a href=\"https://youtube.com/playlist?list&#61;PLjp4WC0U307TzznACc64kAallrAHT_tbJ&amp;si&#61;pGMQlW_xUaKlpFaw\" rel=\"nofollow\">Videos</a></p><p><br /></p><p>Blueprint Attributes is a plugin extension for the Gameplay Ability System (GAS). It addresses a fundamental limitation, making AttributeSet Blueprintable and fully exposing Gameplay Attributes and Attribute Sets to Blueprints.</p><p><br /></p><p>By default, Unreal Engine and its GAS plugin requires Gameplay Attributes and Attribute Sets to be created exclusively in native code, rendering Blueprint creation impossible. This limitation can be restrictive for Game Designers and Blueprint Developers, hindering their ability to iterate swiftly on Attribute design.</p><p><br /></p><p>This plugin tries to alleviate this issue and enables a workflow 100% within the Editor and Blueprints for Attribute Sets and Gameplay Attributes.</p><p><br /></p><p>It is important to note that it doesn&#39;t change the way GAS works and integrates fully with existing GAS workflows (BP defined Attribute Set are still <em>UAttributeSet</em>).</p><p><br /></p><p><br /></p><h2><strong>Features</strong></h2><p><br /></p><p>This plugin, Blueprint Attributes, seek to enhance the overall experience of creating and managing Attributes and Attribute Sets, entirely in the Editor.</p><p><br /></p><p>Its main noticeable features include:</p><ul><li><a href=\"https://blueprintattributes.github.io/docs/blueprint-attributes-editor\" rel=\"nofollow\">Define Attributes in Blueprints</a></li><li><a href=\"https://blueprintattributes.github.io/docs/attribute-sets/interactions-with-gameplay-effects\" rel=\"nofollow\">Interactions with Gameplay Effects</a></li><li><a href=\"https://blueprintattributes.github.io/docs/attribute-sets/built-in-clamping\" rel=\"nofollow\">Built-in Clamping</a></li><li><a href=\"https://blueprintattributes.github.io/docs/mmc\" rel=\"nofollow\">MMC (Magnitude Modifier Calculation)</a> and <a href=\"https://blueprintattributes.github.io/docs/exec-calc\" rel=\"nofollow\">Exec Classes (Gameplay Effect Execution Calculation)</a>, implementable in Blueprint</li><li><a href=\"https://blueprintattributes.github.io/docs/save-game\" rel=\"nofollow\">Save Game support and Serialization</a></li><li><a href=\"https://blueprintattributes.github.io/docs/attribute-sets/replication\" rel=\"nofollow\">Replication and Multiplayer support</a></li><li>Standalone / No dependencies (Other than GameplayAbilities plugin itself)</li><li>Compatible with Lyra and integrates nicely with GAS Companion, or your own GAS backend.</li></ul><p><br /></p><p>It was developed as one solution to break free from the constraints of native code when working with GAS Attributes and Attribute Sets in Unreal Engine. By offering a user-friendly and versatile approach to attribute management, it empowers developers, accelerates iteration cycles, and seamlessly integrates with existing GAS workflows.</p><p><br /></p><h2><strong>Scaling your project shouldn&#39;t be so difficult</strong></h2><p><br /></p><p>By default, and without the Blueprint Attributes plugin, Attributes and Attribute Sets must be created in native code; they cannot be created in Blueprints. Blueprint Attributes aims to alleviate that issue and empower Game Designers and Blueprint Developers to quickly iterate on their Attribute design.</p><p><br /></p><p>As your project grows, it inevitably slows down—especially if the team has limited C&#43;&#43; resources or few/no C&#43;&#43; developers. Tasks like defining new Attribute Sets, adding, renaming, or removing Gameplay Attributes begin to consume time and create bottlenecks for C&#43;&#43; engineers.</p><p><br /></p><p>This plugin seeks to improve that.</p><p><br /></p><p>It comes with nearly 70 C&#43;&#43; classes to provide the best developer experience and remain faithful to the Gameplay Abilities ecosystem and workflow. These include a runtime module with UAttributeSet to inherit from, custom UBlueprint and FBlueprintEditor, editor modules, multiple Details Customizations classes, and Slate widgets.</p><p>Additionally, it includes a scaffolding module, or &#34;Attribute Wizard,&#34; to aid in transitioning from Attributes defined in Blueprints to C&#43;&#43; classes once the prototype phase is complete (Note: this is optional). The wizard uses the AttributeSet created in Blueprint and the Attributes it defines to generate the appropriate C&#43;&#43; class. You can then choose to either inherit from it (Attribute properties defined in Blueprints would now be defined in native code, as before), or eliminate the previous Blueprint implementation and update all Gameplay Attribute references (in Gameplay Effects, K2 Nodes, etc.) to their new native counterparts.</p><p><br /></p><p><br /></p><h2><strong>Credits</strong></h2><p><br /></p><p>Special thanks to Metaseven, MighteeMouse, Drakynfly, Kite and OneSilverLeaf on Discord for feedback and testing.</p><p>To Epic to keep improving GAS release after release, and making it more accessible (to Blueprint developers and in general).</p>",
+  "technicalDetails": "<p><strong>Features</strong></p><ul><li>Define Gameplay Attributes in Blueprint</li><li>UAttributeSet API exposed to Blueprints (PostGameplayEffectExecute, Pre/PostAttributeChange, ...)</li><li>Built-in Clamping</li><li>Customized Blueprint Editor (Toolbar, Data Validation, Details Customizations)</li><li>Replication</li><li>MMC and Exec Classes support (implementable in Blueprints)</li><li>Save Game support (save / load Gameplay Attributes)</li></ul><p><br /></p><p><strong>Miscellaneous</strong></p><ul><li>Wizard to port Blueprint defined Attributes to C&#43;&#43; (Note: This is optional)</li><li>Referencer Handlers (when an Attribute is renamed in the Blueprint Editor, replaces previous references in Gameplay Effects, to the new Attribute name)</li></ul><p><br /></p><p><strong>Code Modules</strong></p><ul><li>BlueprintAttributes (Runtime) - Main runtime module</li><li>BlueprintAttributesEditor (Editor) - Main editor module</li><li>BlueprintAttributesDeveloper (UncookedOnly) - Uncooked only implementing custom K2 Nodes</li><li>BlueprintAttributesScaffold (Editor) - Editor module for C&#43;&#43; generation / scaffolding</li><li>BlueprintAttributesEditorCommon (Editor) - Editor module with shared common code and utilities</li></ul><p><br /></p><p><strong>Plugin Dependencies</strong></p><ul><li>GameplayAbilities (engine plugin)</li><li>RigVM (engine plugin, for engine 5.3 and higher)</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: ~70 (67 header files)</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Windows, Linux, MacOS</p><p>Supported Target Build Platforms: Windows, Linux, MacOS</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GBA1stImage-1920x1080-2d33af594d7b20a415714484d7b94e6d.png",
+      "md5": "2d33af594d7b20a415714484d7b94e6d",
+      "width": 1920,
+      "height": 1080,
+      "size": 611274,
+      "uploadedDate": "2024-03-29T22:37:35.593Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223040-1920x1080-cd36341fa45915cb7e7bed6f6e4299f3.png",
+      "md5": "cd36341fa45915cb7e7bed6f6e4299f3",
+      "width": 1920,
+      "height": 1080,
+      "size": 219360,
+      "uploadedDate": "2024-03-10T16:31:36.995Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223103-1920x1080-c40be278f43342a4980c787b20012b34.png",
+      "md5": "c40be278f43342a4980c787b20012b34",
+      "width": 1920,
+      "height": 1080,
+      "size": 234670,
+      "uploadedDate": "2024-03-10T16:31:37.390Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223111-1920x1080-c3820d6beba43705007fd02d9b50f8dd.png",
+      "md5": "c3820d6beba43705007fd02d9b50f8dd",
+      "width": 1920,
+      "height": 1080,
+      "size": 290563,
+      "uploadedDate": "2024-03-10T16:31:37.891Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223121-1920x1080-c82255b13fd3bdcabbb01670ce83e9f1.png",
+      "md5": "c82255b13fd3bdcabbb01670ce83e9f1",
+      "width": 1920,
+      "height": 1080,
+      "size": 595839,
+      "uploadedDate": "2024-03-10T16:31:38.340Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223130-1920x1080-0f3945d69512cc4607f1ac74f1724a17.png",
+      "md5": "0f3945d69512cc4607f1ac74f1724a17",
+      "width": 1920,
+      "height": 1080,
+      "size": 301022,
+      "uploadedDate": "2024-03-10T16:31:38.782Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223137-1920x1080-e6dbf84166d766cb464e5396470ca250.png",
+      "md5": "e6dbf84166d766cb464e5396470ca250",
+      "width": 1920,
+      "height": 1080,
+      "size": 189900,
+      "uploadedDate": "2024-03-10T16:31:39.213Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223145-1920x1080-a395dbdf89befcecf983cf33225960db.png",
+      "md5": "a395dbdf89befcecf983cf33225960db",
+      "width": 1920,
+      "height": 1080,
+      "size": 339574,
+      "uploadedDate": "2024-03-10T16:31:39.654Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223153-1920x1080-4b86cff8b75a85eb0e741a21d15a7d50.png",
+      "md5": "4b86cff8b75a85eb0e741a21d15a7d50",
+      "width": 1920,
+      "height": 1080,
+      "size": 317138,
+      "uploadedDate": "2024-03-10T16:31:40.018Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223242-1920x1080-901d77b0a4875d261398cca58f6ccf70.png",
+      "md5": "901d77b0a4875d261398cca58f6ccf70",
+      "width": 1920,
+      "height": 1080,
+      "size": 302921,
+      "uploadedDate": "2024-03-10T16:31:41.033Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223256-1920x1080-23a14f889055cf2fa32ecb7c8b64c25e.png",
+      "md5": "23a14f889055cf2fa32ecb7c8b64c25e",
+      "width": 1920,
+      "height": 1080,
+      "size": 158112,
+      "uploadedDate": "2024-03-10T16:31:41.395Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223304-1920x1080-fe144873973af41692595c8592678ec5.png",
+      "md5": "fe144873973af41692595c8592678ec5",
+      "width": 1920,
+      "height": 1080,
+      "size": 506021,
+      "uploadedDate": "2024-03-10T16:31:41.742Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223312-1920x1080-e35f46606c2e9d319c2ebad1b0be7775.png",
+      "md5": "e35f46606c2e9d319c2ebad1b0be7775",
+      "width": 1920,
+      "height": 1080,
+      "size": 639691,
+      "uploadedDate": "2024-03-10T16:31:42.220Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223321-1920x1080-b1f30939c5b808001a40ec1dd3de8a29.png",
+      "md5": "b1f30939c5b808001a40ec1dd3de8a29",
+      "width": 1920,
+      "height": 1080,
+      "size": 215527,
+      "uploadedDate": "2024-03-10T16:31:42.664Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223333-1920x1080-78fd68ed97512ac78ad2fc50eec41696.png",
+      "md5": "78fd68ed97512ac78ad2fc50eec41696",
+      "width": 1920,
+      "height": 1080,
+      "size": 538452,
+      "uploadedDate": "2024-03-10T16:31:43.047Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223404-1920x1080-4da97f7856faafe18788f16a24a07f6f.png",
+      "md5": "4da97f7856faafe18788f16a24a07f6f",
+      "width": 1920,
+      "height": 1080,
+      "size": 432685,
+      "uploadedDate": "2024-03-10T16:31:43.451Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223413-1920x1080-32b3f84e0507a958cadbd448a9674f2d.png",
+      "md5": "32b3f84e0507a958cadbd448a9674f2d",
+      "width": 1920,
+      "height": 1080,
+      "size": 276230,
+      "uploadedDate": "2024-03-10T16:31:43.882Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223427-1920x1080-010909a770268c6ddf675f9653ce97b7.png",
+      "md5": "010909a770268c6ddf675f9653ce97b7",
+      "width": 1920,
+      "height": 1080,
+      "size": 256759,
+      "uploadedDate": "2024-03-10T16:31:44.243Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Pasted image 20240309223434-1920x1080-a149531e1d57d066d80cc08cf38505d9.png",
+      "md5": "a149531e1d57d066d80cc08cf38505d9",
+      "width": 1920,
+      "height": 1080,
+      "size": 430695,
+      "uploadedDate": "2024-03-10T16:31:44.632Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Capture dcran 2024-04-02 183804-1920x1080-c5293a7d4283908e55151f3ae1323ace.png",
+      "md5": "c5293a7d4283908e55151f3ae1323ace",
+      "width": 1920,
+      "height": 1080,
+      "size": 339389,
+      "uploadedDate": "2024-04-02T16:41:45.179Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Capture dcran 2024-04-02 183738-1920x1080-2ee5dd679ce10c937e3b6d7c1b583e31.png",
+      "md5": "2ee5dd679ce10c937e3b6d7c1b583e31",
+      "width": 1920,
+      "height": 1080,
+      "size": 158579,
+      "uploadedDate": "2024-04-02T16:41:45.551Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/GameplayBlueprintAttributes_thumb-284x284-0ee88e7751013030b77175f191104f91.png",
+      "md5": "0ee88e7751013030b77175f191104f91",
+      "width": 284,
+      "height": 284,
+      "size": 38674,
+      "uploadedDate": "2024-03-10T21:31:11.457Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/GameplayBlueprintAttributes_featured-894x488-f8cf9c38501d6f0647bd0389587a6cef.png",
+      "md5": "f8cf9c38501d6f0647bd0389587a6cef",
+      "width": 894,
+      "height": 488,
+      "size": 236075,
+      "uploadedDate": "2024-03-29T22:44:43.513Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Capture dcran 2024-04-02 183804-1920x1080-c5293a7d4283908e55151f3ae1323ace_Snapshot.png",
+      "md5": "e7162964a9d95f4c8e0b5326ac77e151",
+      "width": 150,
+      "height": 74,
+      "size": 5054,
+      "uploadedDate": "2024-04-02T16:41:45.416Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Capture dcran 2024-04-02 183738-1920x1080-2ee5dd679ce10c937e3b6d7c1b583e31_Snapshot.png",
+      "md5": "940a239b3096ee97932dfb7b52b21360",
+      "width": 150,
+      "height": 74,
+      "size": 3052,
+      "uploadedDate": "2024-04-02T16:41:45.843Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GBA1stImage-1920x1080-2d33af594d7b20a415714484d7b94e6d_Snapshot.png",
+      "md5": "ee71ec0b4e9e7f9f15b3be59b3b766e6",
+      "width": 150,
+      "height": 74,
+      "size": 5632,
+      "uploadedDate": "2024-03-29T22:37:35.820Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223040-1920x1080-cd36341fa45915cb7e7bed6f6e4299f3_Snapshot.png",
+      "md5": "d760c97439c202112e199b68454c3daf",
+      "width": 150,
+      "height": 74,
+      "size": 4634,
+      "uploadedDate": "2024-03-10T16:31:37.234Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223103-1920x1080-c40be278f43342a4980c787b20012b34_Snapshot.png",
+      "md5": "ae41a1a5a43b870329f5e88c17daa4be",
+      "width": 150,
+      "height": 74,
+      "size": 3539,
+      "uploadedDate": "2024-03-10T16:31:37.707Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223111-1920x1080-c3820d6beba43705007fd02d9b50f8dd_Snapshot.png",
+      "md5": "7dfa079be7625974cef9173da35a95b2",
+      "width": 150,
+      "height": 74,
+      "size": 4347,
+      "uploadedDate": "2024-03-10T16:31:38.150Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223121-1920x1080-c82255b13fd3bdcabbb01670ce83e9f1_Snapshot.png",
+      "md5": "d812f1b3a9ce1a99a090f84ce7a3e463",
+      "width": 150,
+      "height": 74,
+      "size": 5522,
+      "uploadedDate": "2024-03-10T16:31:38.656Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223130-1920x1080-0f3945d69512cc4607f1ac74f1724a17_Snapshot.png",
+      "md5": "c35bc0d56e8e504953806feec95d0d40",
+      "width": 150,
+      "height": 74,
+      "size": 4501,
+      "uploadedDate": "2024-03-10T16:31:39.024Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223137-1920x1080-e6dbf84166d766cb464e5396470ca250_Snapshot.png",
+      "md5": "a1c6ad267c98cf677e470489bc907f05",
+      "width": 150,
+      "height": 74,
+      "size": 4168,
+      "uploadedDate": "2024-03-10T16:31:39.434Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223145-1920x1080-a395dbdf89befcecf983cf33225960db_Snapshot.png",
+      "md5": "da38c411be3fc6dbb3cb0a2df97638d0",
+      "width": 150,
+      "height": 74,
+      "size": 5160,
+      "uploadedDate": "2024-03-10T16:31:39.877Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223153-1920x1080-4b86cff8b75a85eb0e741a21d15a7d50_Snapshot.png",
+      "md5": "8a19311f4b4550fe648c80ae2b29bfd4",
+      "width": 150,
+      "height": 74,
+      "size": 4790,
+      "uploadedDate": "2024-03-10T16:31:40.256Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223212-1920x1080-65cd3a8470b9f97a5bb02b0bd1e331ef_Snapshot.png",
+      "md5": "5c0fc09b283f196d1bedc9e8380afa42",
+      "width": 150,
+      "height": 74,
+      "size": 5186,
+      "uploadedDate": "2024-03-10T16:31:40.608Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223232-1920x1080-c89b4ca675651bb760ceb0118b446086_Snapshot.png",
+      "md5": "71bcda11ad21a8d311688457fc4f8c33",
+      "width": 150,
+      "height": 74,
+      "size": 5097,
+      "uploadedDate": "2024-03-10T16:31:40.900Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223242-1920x1080-901d77b0a4875d261398cca58f6ccf70_Snapshot.png",
+      "md5": "b392ec62cd8a82ee99d120110e480689",
+      "width": 150,
+      "height": 74,
+      "size": 4758,
+      "uploadedDate": "2024-03-10T16:31:41.255Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223256-1920x1080-23a14f889055cf2fa32ecb7c8b64c25e_Snapshot.png",
+      "md5": "b53ba2631266bb9927f36d3dd2da415f",
+      "width": 150,
+      "height": 74,
+      "size": 4108,
+      "uploadedDate": "2024-03-10T16:31:41.617Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223304-1920x1080-fe144873973af41692595c8592678ec5_Snapshot.png",
+      "md5": "0b89a0d4ff21002e231e32aea2d46e9b",
+      "width": 150,
+      "height": 74,
+      "size": 5673,
+      "uploadedDate": "2024-03-10T16:31:42.048Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223312-1920x1080-e35f46606c2e9d319c2ebad1b0be7775_Snapshot.png",
+      "md5": "c6945edc300b82496e171ac69bcf8ddc",
+      "width": 150,
+      "height": 74,
+      "size": 5441,
+      "uploadedDate": "2024-03-10T16:31:42.536Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223321-1920x1080-b1f30939c5b808001a40ec1dd3de8a29_Snapshot.png",
+      "md5": "e92a1146e2835ac3b5316dfaf58f5e27",
+      "width": 150,
+      "height": 74,
+      "size": 3354,
+      "uploadedDate": "2024-03-10T16:31:42.910Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223333-1920x1080-78fd68ed97512ac78ad2fc50eec41696_Snapshot.png",
+      "md5": "2595d41c134d0cf21a4d62634577b495",
+      "width": 150,
+      "height": 74,
+      "size": 5663,
+      "uploadedDate": "2024-03-10T16:31:43.278Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223404-1920x1080-4da97f7856faafe18788f16a24a07f6f_Snapshot.png",
+      "md5": "324fe0f59ac36308705eb810f2e61d8a",
+      "width": 150,
+      "height": 74,
+      "size": 5455,
+      "uploadedDate": "2024-03-10T16:31:43.744Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223413-1920x1080-32b3f84e0507a958cadbd448a9674f2d_Snapshot.png",
+      "md5": "56b3dd8f5fb88fd6b2cc6d379922b857",
+      "width": 150,
+      "height": 74,
+      "size": 4732,
+      "uploadedDate": "2024-03-10T16:31:44.106Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223427-1920x1080-010909a770268c6ddf675f9653ce97b7_Snapshot.png",
+      "md5": "5df661961e403a0ecaf690bceaba6e3e",
+      "width": 150,
+      "height": 74,
+      "size": 4517,
+      "uploadedDate": "2024-03-10T16:31:44.480Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223434-1920x1080-a149531e1d57d066d80cc08cf38505d9_Snapshot.png",
+      "md5": "d6dd0e0b0eb706ea6a60615f4ba21487",
+      "width": 150,
+      "height": 74,
+      "size": 5194,
+      "uploadedDate": "2024-03-10T16:31:44.901Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Pasted image 20240309223445-1920x1080-ca2fe2320cff5891140e5f8e6ea1d7f1_Snapshot.png",
+      "md5": "9d3c3e603460c9db42ad90b0944253b6",
+      "width": 150,
+      "height": 74,
+      "size": 3229,
+      "uploadedDate": "2024-03-10T16:31:45.260Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-04-02T15:52:16.074Z",
+  "lastModifiedDate": "2025-01-18T11:48:24.748Z",
+  "customAttributes": {},
+  "entitlementName": "18348f70501d4323af06aa1e7cf405fa",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "ee5e9536fa2c4025b184ff5a1bc9adac",
+      "appId": "BlueprintAttributes_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-03-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.2-5.1"
+    },
+    {
+      "id": "d38b716d27ad4e628912921e24097570",
+      "appId": "BlueprintAttributes_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-03-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.3-5.2"
+    },
+    {
+      "id": "c7807db848234991874045a9280aa87c",
+      "appId": "BlueprintAttributes_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-03-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.3-5.3"
+    },
+    {
+      "id": "32eef832b96b4d9a84e9e969198ab097",
+      "appId": "BlueprintAttributes_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0.3-5.4"
+    }
+  ],
+  "developer": "mklabs",
+  "developerId": "o-wb6e67ez838gnwv5286l3l9f74lmfj",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

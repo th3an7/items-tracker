@@ -1,0 +1,493 @@
+{
+  "id": "5a3d68bc608f4b05958e6adec532962a",
+  "title": "Real Time Import/Export",
+  "description": "Real-time import of sound (wav,ogg), image (png,bmp,jpg) and meshes (obj,fbx,stl) files in a compiled/packed game. Since version 1.6 you can also export things. Export TextureRenderTarget2d in bytes (png,bmp,jpg).",
+  "longDescription": "<p>Please check the <a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/\" rel=\"nofollow\">Documentation</a> for up-to-date examples of the functions.  </p><p><br /></p><p>It is possible to import sound files (WAV, OGG) and image files (PNG,JPG,BMP) with this plugin. It is also possible to import meshes (OBJ, FBX, STL)*<sup>2</sup>. The import works in realtime and without the editor. So in a running game. Textures and sounds are cached in RAM. Export functions have also been added via updates. In the latest version it is possible to export TextureRenderTarget2d to bytes (BMP,PNG,JPEG) and procedural meshes in OBJ files. This plugin does <u>not use a third party library</u>. This means that there are n<u>o problems with installations or licenses</u>.  <strong>Android and IOS support since version 2.0.</strong></p><p>No special deals. Buy the plugin if you need it. My prices are low all year round. </p><p>Nativization in UE4 may cause problems and should be disabled in BPs that use this plugin.</p><p><br /></p><p><strong>Demo </strong><a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/stuff/RealTimeImport_DemoWin64_v33.zip\" rel=\"nofollow\">Download </a>(Windows 64 .exe. ~230MB) and <a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/stuff/video1.jsp\" rel=\"nofollow\">Videos</a></p><p><a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/stuff/RealTimeImport_Demo418.zip\" rel=\"nofollow\">Demo Project 4.18</a> , <a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/stuff/RealTimeImport_Demo424.zip\" rel=\"nofollow\">4.24 or higher</a> <sub>(Requires this and Webcommunication Plugin.)</sub></p><p><a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/stuff/RealTimeImport_Demo423_noWEB.zip\" rel=\"nofollow\">Demo Project 4.23</a> , <a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/stuff/RealTimeImport_Demo424_22_27_noWEB.zip\" rel=\"nofollow\">4.24 or higher</a> (Requires this Plugin in Version &gt;&#61;2.7), <a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/stuff/RealTimeImport_Demo425_24_33_noWEB.zip\" rel=\"nofollow\">4.25 or higher</a> (Requires this Plugin in Version &gt;&#61;3.3), <a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/stuff/RealTimeImport_Demo426_27_315_noWEB.zip\" rel=\"nofollow\">4.26 or higher</a>, <a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/stuff/RealTimeImport_Demo500_30_315_noWEB.zip\" rel=\"nofollow\">5.0 or higher</a> , <a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/stuff/RealTimeImport_DemoUE510_Demo33_Plugin349_noWEB.zip\" rel=\"nofollow\">5.1 or higher</a> (Requires this Plugin in Version &gt;&#61;3.49)</p><p>I offer <a href=\"https://www.unrealengine.com/marketplace/profile/Socke\" rel=\"nofollow\">here</a> many other plugins to download files in-game (Webserver, FTP, TCP).</p><p><br /></p><p>Here you can see what has changed last in the plugin and the upload date. Usually Epic releases the updates within two days. But after a new engine release it can take weeks. </p><p><br /></p><p><strong><u>Changelog</u> </strong>(5.2, 5.3, 5.4)</p><ul><li><strong>(09/08/2024) Version 3.50: </strong>FBX compatibility improved.</li><li><strong>(09/08/2024) Version 3.49: </strong>The Load Mesh Async function now shows the loading progress. </li><li><strong>(08/28/2024) Version 3.48: </strong>Bugfix: Images with a bit depth greater than 32bit have led to a crash. A crash will no longer occur, but the textures are displayed incorrectly. Please use a maximum of 32 bit.</li><li><strong>(07/03/2024) Version 3.47: </strong>New function &#34;cancelLoadMeshFile&#34; added. FBX and OBJ import slightly improved.</li><li><strong>(05/13/2024) Version 3.46: </strong>Bugfix: FBX export from the latest Blender version has led to incorrect normals when importing via the plugin. </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(5.1, 5.2, 5.3)</p><ul><li><strong>(04/20/2024) Version 3.45: </strong>An FBX file with faulty UV values could lead to a crash.</li><li><strong>(04/19/2024) Version 3.44: </strong>OBJ files with vertex colors can now be imported.</li><li><strong>(04/11/2024) Version 3.43: </strong>OBJ compatibility increased.</li><li><strong>(04/07/2024) Version 3.42: </strong>Mesh export texture was missing.</li><li><strong>(04/03/2024) Version 3.41: </strong>Bugfix in the function: stopAllSounds.</li><li><strong>(02/26/2024) Version 3.40: </strong>It is now also possible to export meshes in OBJ format. Textures can also be exported. Currently only diffuse and normal. This function may still be buggy and will be improved in the future. </li><li><strong>(01/23/2024) Version 3.33: </strong>&#34;ModelID&#34;, &#34;Parent ModelID&#34; and other parameters added with which it is possible to represent a model/mesh hierarchy stored in FBX files. This means that relative positions and sizes work better. &#34;Groups&#34; are now also output as &#34;Model Struct&#34;.</li><li><strong>(09/27/2023) Version 3.32: </strong>Epic&#39;s &#34;Calculate Tangents&#34; function copied into the plugin and optimized. Minutes have become milliseconds. </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(5.0, 5.1, 5.2)</p><ul><li><strong>(07/10/2023) Version 3.30: </strong>Added color depth check for image import. Unreal 5 needs at least 8bit images otherwise it crashes. </li><li><strong>(06/10/2023) Version 3.29: </strong>Bugfix: SRGB is now only applied to Diffuse textures. Has led to errors with normal maps. Small demo update. </li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.27, 5.0, 5.1)</p><ul><li><strong>(04/07/2023) Version 3.27: </strong>Bugfix: FBX Roation was read incorrectly.</li><li><strong>(04/03/2023) Version 3.26: </strong>New parameter &#34;EventID&#34; added to the Texture Async Node function. New parameter &#34;Cache Texture&#34; added to the texture and mesh import functions. Optimizations of the Asyn functions. </li><li><strong>(03/18/2023) Version 3.25: </strong>Optimized the flow of the async functions. They now work without problems behind loops. The delay when deleting textures can now be configured.</li><li><strong>(02/19/2023) Version 3.24: </strong>Ram consumption reduced on mipmap creation. Textures are now deleted with a 10 second delay for stability reasons. </li><li><strong>(02/13/2023) Version 3.23: </strong>Closed a memory leak.</li><li><strong>(02/06/2023) Version 3.22: </strong>New: FBX can be loaded with inverted UVs . Added a UTexture2D to UTexture2DDynamic function. The RGB format of the images can be chosen.</li><li><strong>(12/14/2022) Version 3.21: </strong>Bugfix: UV&#39;s were read out incorrectly or not at all with certain FBX types.</li></ul><p><br /></p><p><strong><u>Changelog</u> </strong>(4.26, 4.27, 5.0)</p><ul><li><strong>(11/07/2022) Version 3.20: </strong>Memory leaks closed. Mainly for the mesh import function.</li><li><strong>(09/26/2022) Version 3.16: </strong>Bugfix: Textures with transparency now create correct MipMaps. Cross compiling should work now.</li><li><strong>(09/12/2022) Version 3.15: </strong>Bugfix: FBX meshes without textures were not loaded. For right-handed FBX meshes, the local position and rotation were not adjusted.</li><li><strong>(09/10/2022) Version 3.14: </strong>When importing meshes, there is now the option &#34;Left-hand, Right-hand&#34;. Since depending on the export the meshes were horizontally mirrored. FBX textures are now searched in the FBX directory if they were exported incorrectly.</li><li><strong>(09/31/2022) Version 3.13:</strong> Many functions got an &#34;asynchronous node&#34; version. These are easier to implement asynchronous functions. There is also one for the meshes. Meshes are now divided into models in the first step. So you can load multiple models from one FBX file including location, scale and rotation.</li><li><strong>(07/17/2022) Version 3.12: </strong>Bugfix: The function &#34;Load Mesh File&#34; has always returned &#34;false&#34; for FBX files since version 3.9</li><li><strong>(07/14/2022) Version 3.11: </strong>OBJ Bugfix</li><li><strong>(07/08/2022) Version 3.10: </strong>OBJ optimizations</li><li><strong>(06/30/2022) Version 3.9: </strong>FBX import is now faster for very large files with many meshes. </li><li><strong>(06/28/2022) Version 3.8: </strong>FBX Import bug fixes: Model name, geometry name and material name are now read. For some FBX files the UV coordinates were read incorrectly.</li></ul>",
+  "technicalDetails": "<p><sup>Epic only allows updates for the newest three engine versions. There might be features missing in older engine versions. Contact me if you are unsure.</sup></p><ul><li>Import and Play WAV and OGG Files. Stream WAV Files*<sup>1</sup></li><li>Import PNG<sup> </sup>,JPG and BMP Files as Texture2D (Optional with MipMaps)</li><li>Import OBJ, FBX and STL Files*<sup>2</sup></li><li>Export TextureRenderTarget2D and Texture2D to Bytes (BMP,PNG,JPEG)<sup>*3</sup></li><li>Export Procedural Meshes in OBJ Files<sup>*3</sup></li><li>Different directory and file <a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/stuff/fileFunctions.png\" rel=\"nofollow\">blueprint nodes</a></li><li>Include C&#43;&#43; Source for C&#43;&#43; Projects</li><li><a href=\"https://www.virtualbird.de/ue4Doku/RealTimeImport/\" rel=\"nofollow\">Documentation</a></li><li>Support: <a href=\"mailto:unrealmarketplace&#64;virtualbird.de\" rel=\"nofollow\">unrealmarketplace&#64;virtualbird.de</a> (ENG,GER)</li></ul><p><br /></p><p>*1   16 Bit wav only. Ogg Vorbis only.</p><p>*2  OBJ (min 4.22). FBX, STL (min 4.25 ). FBX binary in version 7.4, 7.5, 7.6, 7.7 possible. No skeleton import and therefore no animations.</p><p>*3  Texture2D Export works only with UE4. Tested on Windows. Other platforms may not work. Use as an alternative the TextureRenderTarget2D Export. OBJ export is in beta status.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt2-1920x1080-e38430cfbdd75c7b192b58881af95a7a.png",
+      "md5": "e38430cfbdd75c7b192b58881af95a7a",
+      "width": 1920,
+      "height": 1080,
+      "size": 312318,
+      "uploadedDate": "2022-09-01T18:06:06.466Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt-1920x1080-6eb7a829c967d2f8f3257837f30d7bf5.png",
+      "md5": "6eb7a829c967d2f8f3257837f30d7bf5",
+      "width": 1920,
+      "height": 1080,
+      "size": 275573,
+      "uploadedDate": "2022-09-01T18:06:06.242Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt5-1920x1080-d7c864dbe05a1b59e38c7e64c19d4652.png",
+      "md5": "d7c864dbe05a1b59e38c7e64c19d4652",
+      "width": 1920,
+      "height": 1080,
+      "size": 285873,
+      "uploadedDate": "2022-09-01T23:40:56.787Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt4-1920x1080-c18bbebec9b730833583820f92dd40bc.png",
+      "md5": "c18bbebec9b730833583820f92dd40bc",
+      "width": 1920,
+      "height": 1080,
+      "size": 120964,
+      "uploadedDate": "2022-09-01T23:40:56.629Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt3-1920x1080-317b552e662547e90ee4e2bae084cd11.png",
+      "md5": "317b552e662547e90ee4e2bae084cd11",
+      "width": 1920,
+      "height": 1080,
+      "size": 186959,
+      "uploadedDate": "2022-09-01T23:40:56.501Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RealtimePluginProduct4-1920x1080-645c316b153585ebe05f1a9634fddcc2.png",
+      "md5": "645c316b153585ebe05f1a9634fddcc2",
+      "width": 1920,
+      "height": 1080,
+      "size": 163704,
+      "uploadedDate": "2020-06-08T16:18:20.243Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RealTimeImportExport_thumb-284x284-7c7d12d5e514f20da3aa6d48b3f227ca.png",
+      "md5": "7c7d12d5e514f20da3aa6d48b3f227ca",
+      "width": 284,
+      "height": 284,
+      "size": 14269,
+      "uploadedDate": "2022-02-24T20:12:28.787Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RealTimeImportExport_featured-894x488-70d89b32530bd7c93db9d03db4beb365.png",
+      "md5": "70d89b32530bd7c93db9d03db4beb365",
+      "width": 894,
+      "height": 488,
+      "size": 73101,
+      "uploadedDate": "2022-02-24T20:12:28.827Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt3-1920x1080-317b552e662547e90ee4e2bae084cd11_Snapshot.png",
+      "md5": "1e874860d8a3e6b9d6961c348aa34801",
+      "width": 150,
+      "height": 74,
+      "size": 5610,
+      "uploadedDate": "2022-09-01T23:40:56.572Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt4-1920x1080-c18bbebec9b730833583820f92dd40bc_Snapshot.png",
+      "md5": "e0cadb3f5fd0a96049773550885b5d47",
+      "width": 150,
+      "height": 74,
+      "size": 4513,
+      "uploadedDate": "2022-09-01T23:40:56.699Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt5-1920x1080-d7c864dbe05a1b59e38c7e64c19d4652_Snapshot.png",
+      "md5": "513c6282d71f682222f4f1f6ad6fa6a0",
+      "width": 150,
+      "height": 74,
+      "size": 6463,
+      "uploadedDate": "2022-09-01T23:40:56.884Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt-1920x1080-6eb7a829c967d2f8f3257837f30d7bf5_Snapshot.png",
+      "md5": "f04d9b346bde081110bf68fc5beaca10",
+      "width": 150,
+      "height": 74,
+      "size": 5285,
+      "uploadedDate": "2022-09-01T18:06:06.372Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt2-1920x1080-e38430cfbdd75c7b192b58881af95a7a_Snapshot.png",
+      "md5": "8b3e93773bfd9c6819e029eddad2fd60",
+      "width": 150,
+      "height": 74,
+      "size": 5741,
+      "uploadedDate": "2022-09-01T18:06:06.555Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RealtimePluginProduct5-1920x1080-5217bd6e678b6f14397f323db8eab791_Snapshot.png",
+      "md5": "ae98d557cde1284863056504d79812ae",
+      "width": 150,
+      "height": 74,
+      "size": 5262,
+      "uploadedDate": "2020-06-08T16:18:18.794Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RealtimePluginProduct6-1920x1080-41da90ca36fe4395801d7321cd12f11a_Snapshot.png",
+      "md5": "d4f5dee0766b2d3602a28d2a139caa0c",
+      "width": 150,
+      "height": 74,
+      "size": 5078,
+      "uploadedDate": "2020-06-08T16:18:19.218Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RealtimePluginProduct1-1920x1080-1838f9e25c19e3a120c4c99270e182cf_Snapshot.png",
+      "md5": "2684ea3a09a528bf7e8ee9b94ce272ac",
+      "width": 150,
+      "height": 74,
+      "size": 5384,
+      "uploadedDate": "2020-06-08T16:18:19.558Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RealtimePluginProduct2-1920x1080-77816fe8919f5e0e546c0de13e3f32ba_Snapshot.png",
+      "md5": "0ebe08964968b1019338e271d972de97",
+      "width": 150,
+      "height": 74,
+      "size": 4116,
+      "uploadedDate": "2020-06-08T16:18:19.861Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RealtimePluginProduct3-1920x1080-ca8bdfa54f25ca39aa84fbe3cb6d9174_Snapshot.png",
+      "md5": "7b2f963ef0638b5740703278e443c74f",
+      "width": 150,
+      "height": 74,
+      "size": 5916,
+      "uploadedDate": "2020-06-08T16:18:20.166Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RealtimePluginProduct4-1920x1080-645c316b153585ebe05f1a9634fddcc2_Snapshot.png",
+      "md5": "d807c3b123bd494a8f4965e96abccb8b",
+      "width": 150,
+      "height": 74,
+      "size": 3800,
+      "uploadedDate": "2020-06-08T16:18:20.442Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/example1-1920x1080-57ce8335bf97a0b64f537831a8346127_Snapshot.png",
+      "md5": "b41985975d79fc4e7e08fb0378d677fc",
+      "width": 150,
+      "height": 74,
+      "size": 8629,
+      "uploadedDate": "2018-08-11T17:39:01.700Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/example6-1920x1080-61a755f27058434d959d89b35f0b7cf5_Snapshot.png",
+      "md5": "ceb4c3d0da8afe2986212f6a287c2f8b",
+      "width": 150,
+      "height": 74,
+      "size": 7295,
+      "uploadedDate": "2018-08-11T17:39:02.001Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rti-1920x1080-27a4520cca0a60e9d99a74f658c458be_Snapshot.png",
+      "md5": "531b333df6c4ded70c6c231409efbdef",
+      "width": 150,
+      "height": 74,
+      "size": 3965,
+      "uploadedDate": "2018-08-06T14:42:44.442Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wip-1920x1080-7385a23ef3b49dd2b8c0fb228c986518_Snapshot.png",
+      "md5": "347ea7ec8df0566743361e23132b337f",
+      "width": 150,
+      "height": 74,
+      "size": 1193,
+      "uploadedDate": "2018-07-30T20:09:58.275Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-08-14T14:07:11.775Z",
+  "lastModifiedDate": "2025-02-28T06:52:53.768Z",
+  "customAttributes": {},
+  "entitlementName": "5a3d68bc608f4b05958e6adec532962a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3155833b669e4f8cb43784b599e1146f",
+      "appId": "RealTimeImport_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "Win32"
+      ],
+      "dateAdded": "2018-08-06T00:00:00.000Z",
+      "releaseNote": "Fix a crash.",
+      "versionTitle": "RealTimeImport12418"
+    },
+    {
+      "id": "c21a5d20eec449d7827d589395a25872",
+      "appId": "RealTimeImport_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2018-08-06T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "RealTimeImport13419"
+    },
+    {
+      "id": "e8014b44865646338e9f587caca62559",
+      "appId": "RealTimeImport_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2018-07-30T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "RealTimeImport13420"
+    },
+    {
+      "id": "d651803603874750b9133ddf06eff2b5",
+      "appId": "RealTimeImport_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2018-11-08T00:00:00.000Z",
+      "releaseNote": "You can now adjust the start time of wav files again.",
+      "versionTitle": "RealTimeImport14421"
+    },
+    {
+      "id": "5c7a11407ee34d3fa7078d8dcb77a691",
+      "appId": "RealTimeImport_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Linux",
+        "Mac",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "RenderTarget export to Image.",
+      "versionTitle": "RealTimeImport16422"
+    },
+    {
+      "id": "5f5427ad8d6843bf9965f209ded03109",
+      "appId": "RealTimeImport_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Mac",
+        "Linux",
+        "Win32",
+        "Windows",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2019-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RealTimeImport23423"
+    },
+    {
+      "id": "a03456509c4f43df94b5d026d75a312e",
+      "appId": "RealTimeImport_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2019-12-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RealTimeImport28424"
+    },
+    {
+      "id": "e950855443c24822bf52955e03babf3e",
+      "appId": "RealTimeImport_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2020-05-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RealTimeImport34425"
+    },
+    {
+      "id": "10acdd9aeec444a58de721700316055c",
+      "appId": "RealTimeImport_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RealTimeImport_320_426"
+    },
+    {
+      "id": "451254cf41554ae0a100f2c06368ae32",
+      "appId": "RealTimeImport_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RealTimeImport_327_427"
+    },
+    {
+      "id": "9ef0c28597ae4ea0a51a4d9fec190f24",
+      "appId": "RealTimeImport_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RealTimeImport_331_500"
+    },
+    {
+      "id": "3d209b9fff074b808a458c8f31c206a2",
+      "appId": "RealTimeImport_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2022-11-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RealTimeImport_345_510"
+    },
+    {
+      "id": "326a6e34c5b1429caa075baef89304cf",
+      "appId": "RealTimeImport_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RealTimeImport_350_520"
+    },
+    {
+      "id": "e483a702c75a4b5cbbb25e339d3e011f",
+      "appId": "RealTimeImport_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RealTimeImport_350_530"
+    },
+    {
+      "id": "1de8c618c87a49d5a920950ae37d281b",
+      "appId": "RealTimeImport_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RealTimeImport_350_540"
+    }
+  ],
+  "developer": "Virtualbird UG",
+  "developerId": "o-5bc5ba8cdd4200a6e086d8c602bbf7",
+  "endOfSupport": false,
+  "unsearchable": false
+}

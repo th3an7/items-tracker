@@ -1,0 +1,194 @@
+{
+  "id": "cd3577a4f5904660b81fdc7d4693dad3",
+  "title": "Animated Texture Atlas",
+  "description": "Animated Texture Atlas adds support for adobe animate's Texture atlas exported objects, allowing for creation of beautiful and smooth 2D animations, including full filters and masking support.",
+  "longDescription": "<p>Animated Texture Atlas adds support for importing Animations made in adobe animate and exported as Texture Atlas option for movieclips and graphics objects. you can layer entire scenes to create fully animated menus, or even entire 2D games, all fully integrated into UMG. This plugin has full support for every filter, masking, and color tinting options from adobe animate, and includes a custom editor to add convex hull collision to the atlas&#39;s shape, allowing for buttons to be placed on a per object basis, as well as getting feedback for exactly which part of the animation is being clicked on.</p><p><br /></p><p><br /></p><p><br /></p><h1>What&#39;s included</h1><p>Adds a new widget to add to UMG scenes called &#39;AAtlasWidget&#39;, you can set the imported source animation in this widget and it will be drawn at the stage location of the exported object by default, if you wish to set the object independently you can set the &#39;NoStageTransform&#39; flag on the widget and it will ignore the stage transformation. the objects bounds consider the entire object&#39;s lifetime of animations, so from frame to frame basis it may be much larger than any individual frame.</p><p><br /></p><p>the widget can also have full scene filters applied, either added in editor, or driven by code(included is a blueprint function library for creating any of the adobe filters that are usable), as well as per- symbol instance filters can be applied. the widget can also enable or disable layers of the primary symbol only(sub-symbols can not turn on/off layers programmatically through the widget).</p><p><br /></p><p>The asset editor by default only shows the atlas&#39;s individual atlas tiles, letting you build a convex collision around each atlas object. Right clicking anywhere on the atlas will add new points(up to a max of 16, and pressing delete/backspace will remove them). You can also open a details pane under the window menu to manually edit various settings, or inspect the spritemap itself(note: on large animations the details panel may introduce a fair bit of lag while open).</p><p><br /></p><p><br /></p><p><br /></p><h1>Considerations</h1><ul><li>Filters are not a perfect 1:1 match with adobe animate due to both performance considerations for supporting real time animations, and no documentation on exactly how the filters are implemented. as such blurs may not look precisely the same, and the adjustment node will produce slightly different results then that in animate.</li><li>Gradient filters only support a max of 4 colors as well.</li><li>Filters and masks require post processing effects which adds to the footprint of how much rendering needs to be done, so if performance noticeably degrades, you can quickly disable masks and filters by setting the widgets flags for No Mask/No Filters.</li><li>Adobe animate does not export the blending information selected for objects, as such unfortunately all blending options are not supported by this plugin until the setting is included for export in a future version.</li><li>Atlas Tiles can have their collision fully disabled by going into the details pane of the asset editor and setting the &#39;NoInteraction&#39; flag for the desired atlas to turn off.</li><li>The atlas widget&#39;s mouse collision system does not consider overlapping widgets, or any masking that&#39;s happening to it, as such be careful with how things are placed.</li><li>Adobe Animate 2022 was used for development, some features may not be available in older adobe animate versions.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li> Full support for adobe animate&#39;s Texture Atlas exported option.</li><li> Asset Editor for adobe animated textures</li><li> UMG Widget for drawing the entire animated object.</li><li>Full support of all Adobe Animate Filters, Masking, and Color tinting options.</li><li>Blueprint library to drive custom filters on a per-object or per-sub object instance.</li><li>Animation system and callbacks with widget for looping/playing animations on demand and be driven by code.</li></ul><p><br /></p><p>Code Modules:</p><ul><li> AnimateAtlas [Runtime]</li><li> AnimateAtlasEd [Editor]</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 9</p><p>Network Replicated: No</p><p>Documentation: https://neonlightgames.com/Documentation</p><p>Supported Development Platforms: Windows, Android, iOS, Mac, Linux</p><p>Supported Target Build Platforms: Windows, Android, iOS, Mac, Linux</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot0-1920x1080-49985a63a194c3f71936ced49a115832.png",
+      "md5": "49985a63a194c3f71936ced49a115832",
+      "width": 1920,
+      "height": 1080,
+      "size": 736948,
+      "uploadedDate": "2023-03-20T23:40:50.613Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot1-1920x1080-7e43bcb4e34b7c56fef4a76411db2907.png",
+      "md5": "7e43bcb4e34b7c56fef4a76411db2907",
+      "width": 1920,
+      "height": 1080,
+      "size": 167941,
+      "uploadedDate": "2023-03-20T23:40:51.025Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2-1920x1080-1f9fdade9a538470fa129e50fe01dbae.png",
+      "md5": "1f9fdade9a538470fa129e50fe01dbae",
+      "width": 1920,
+      "height": 1080,
+      "size": 616646,
+      "uploadedDate": "2023-03-20T23:40:51.454Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AnimatedTextureAtlas_thumb-284x284-5322968121261d858c42e328bb2d5dd2.png",
+      "md5": "5322968121261d858c42e328bb2d5dd2",
+      "width": 284,
+      "height": 284,
+      "size": 29953,
+      "uploadedDate": "2023-03-22T16:52:31.459Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AnimatedTextureAtlas_featured-894x488-4aff4e34af7f509732d326ed0972ccb1.png",
+      "md5": "4aff4e34af7f509732d326ed0972ccb1",
+      "width": 894,
+      "height": 488,
+      "size": 111060,
+      "uploadedDate": "2023-03-22T16:52:31.518Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot0-1920x1080-49985a63a194c3f71936ced49a115832_Snapshot.png",
+      "md5": "1ed04b86b3db58b2bcf30bc11fb343b3",
+      "width": 150,
+      "height": 74,
+      "size": 7845,
+      "uploadedDate": "2023-03-20T23:40:50.938Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot1-1920x1080-7e43bcb4e34b7c56fef4a76411db2907_Snapshot.png",
+      "md5": "a11adff7c1e316f20391471613f46d9b",
+      "width": 150,
+      "height": 74,
+      "size": 4180,
+      "uploadedDate": "2023-03-20T23:40:51.277Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2-1920x1080-1f9fdade9a538470fa129e50fe01dbae_Snapshot.png",
+      "md5": "0f2d69d2634b415070afb98213027c83",
+      "width": 150,
+      "height": 74,
+      "size": 6856,
+      "uploadedDate": "2023-03-20T23:40:51.739Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-03-25T23:53:14.795Z",
+  "lastModifiedDate": "2024-10-15T07:13:53.773Z",
+  "customAttributes": {},
+  "entitlementName": "cd3577a4f5904660b81fdc7d4693dad3",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "200c7a2b2bb5491f87d259740bb92fd3",
+      "appId": "AnimateAtlas_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2023-03-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AdobeAnimatedAtlas_5_0"
+    },
+    {
+      "id": "9d1bb26cc47447f789fc41afb6a7dd77",
+      "appId": "AnimateAtlas_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-03-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AdobeAnimatedAtlas_5_1"
+    },
+    {
+      "id": "88ca0b2b747e4c0f9d49feae74c891e5",
+      "appId": "AnimateAtlas_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AdobeAnimatedAtlas_5_2"
+    },
+    {
+      "id": "04cf8d29310c4dc382e29f9488a46b6c",
+      "appId": "AnimateAtlas_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Mac",
+        "Android",
+        "Windows",
+        "iOS",
+        "Linux",
+        "Win32"
+      ],
+      "dateAdded": "2024-04-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AdobeAnimatedAtlas_5_3"
+    },
+    {
+      "id": "e574f95e649f49129f31f954e60e1558",
+      "appId": "AnimateAtlas_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Android",
+        "Linux",
+        "iOS"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "AdobeAnimatedAtlas_5_4"
+    }
+  ],
+  "developer": "NeonLightGames",
+  "developerId": "o-eketv6tpzq5aqtjcjxxbc9m85d7j9p",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

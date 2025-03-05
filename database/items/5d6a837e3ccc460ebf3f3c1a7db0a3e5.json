@@ -1,0 +1,162 @@
+{
+  "id": "5d6a837e3ccc460ebf3f3c1a7db0a3e5",
+  "title": "PMB - Quickly Cave Generator",
+  "description": "This programmatic cave modeling tool can greatly improve the efficiency of your cave modeling, and the non-destructive workflow allows you to quickly modify your cave model, which you will definitely need if your project involves cave levels.",
+  "longDescription": "<p>Matters of use:</p><p>1, Need to open &#34;Geometry Script&#34; plugin, and then import this asset file into your project!</p><p>2, during the construction process, please do not use Ctrl&#43;Z undo function, it may cause a flash back. (Most 3D software build plugins have the same problem.)</p><p>3. To carve caves, open the plugin &#34;Modeling Tools Editor Mode&#34;.</p><p><br /></p><p>Video&#xff1a;<a href=\"https://youtu.be/3alBk9xC0os\" rel=\"nofollow\">https://youtu.be/3alBk9xC0os</a></p><p>Video&#xff08;chinese&#xff09;&#xff1a;<a href=\"https://www.bilibili.com/video/BV1jiH4eSEEa/\" rel=\"nofollow\">https://www.bilibili.com/video/BV1jiH4eSEEa/</a></p><p><br /></p><p>What is PMB-Cave Generator</p><p>Cave Generator is a set of blueprint system that allows you to quickly generate caves, it contains arbitrarily adjustable spline cave passages, adjustable shape size and connect multiple passages CaveRoom, cave modeling etc BP. Simply place your CaveRoom in the desired position and adjust the shape, select multiple CaveRooms and click the Generate button to automatically generate CavePassage and adsorb it. Along the way you can visually adjust the position and shape of your CaveRoom and CavePassage to build and adjust your level ideas. Then click the Create button to instantly create a complete cave model.</p><p><br /></p><p>Why use Cave Generator:</p><p><br /></p><p>1, high efficiency and controllability: carefully designed workflow, so that the cave network model that used to take days to make, now only takes a few hours to complete the creation, and the modification and adjustment is also very fast.</p><p><br /></p><p>2, non-destructive workflow: during the construction process you can repeatedly adjust your cave design scheme, and then generate a one-click model that allows the character to run on it, which is powerful for level design, especially in the case of multiple people. You can imagine how much time it would take for a modeler to build a large network of caves and then receive requests to add or subtract CaveRoom locations and move CaveRoom locations.</p><p><br /></p><p>3 the final formation of a cave wall with only one face: During the synthesis of the cave, as long as the adsorption positions are checked correctly, the final generated static mesh cave has only one face, and the vertices at the link of CaveRoom and CavePassage will be automatically welded and perfectly fused. This means that you can use the functions in the engine to sculpt the resulting static mesh body, add or subtract surfaces, and sculpt various shapes without breaking surfaces.</p><p><br /></p><p>Workflow of using cave generator:</p><p>1, Create CaveRoom: Drag CaveRoomBP into the &#34;Cave Synthesizer BP&#34; range of the scene, adjust the shape and position, for example, initial hall CaveRoom, dungeon CaveRoom, BossCaveRoom.</p><p><br /></p><p>2. Create and connect CavePassage: Select the CaveRoom to be connected and click the link button to generate CavePassage. CavePassage can adjust the shape through splines or optimize the shape through sampler.</p><p><br /></p><p>3, Check the connection: Check whether the link between CavePassage and CaveRoom is successful, either by observing whether the indicating arrow on CavePassage is green, or by using the &#34;Go to Adsorption surface Position&#34; of the &#34;Cave Builder Assistant&#34; editor tool.</p><p><br /></p><p>4, synthetic cave: after the successful inspection, click the &#34;cave synthesizer BP&#34; to generate the cave button, you can synthesize a complete cave dynamic grid model, at this time you can run the map above for level testing, check whether there is a broken surface, and then adjust CaveRoomBP and CavePassageBP. The static mesh body can then be derived.</p><p><br /></p><p>5. Optimize the cave model: Drag the static mesh body into the scene, use the modeling tool of the engine to carve the optimized model shape.</p><p><br /></p><p>6, use CavePassage spline data (optional) : The cave synthesizer BP has already collected all CavePassage spline data during the synthesis process. If your scene needs to create CavePassage data such as rail, you can create a subBP of the cave level BP and then set the main cave static mesh parameters to the previously generated cave mesh. The relevant data collected by the &#34;cave synthesizer BP&#34; in the scene is then copied to obtain all CavePassage spline data in the cave level subBP. Then use the &#34;Level Spline Tool BP&#34; &#34;Copy Add Level Spline point&#34; function to create a link to CavePassage spline BP, you can create for example a track spline mesh</p><p><br /></p><p>Adsorption function: CavePassage can be automatically adsorbed on the CaveRoom. This can be checked by observing the indicating arrow or by using the &#34;Go to Adsorption Surface error&#34; in the editor tool &#34;Cave Builder Assistant&#34;.</p><p>Hole function: Additional protrusions can be created on either side of the CavePassage, and you can adjust the position to protrude this out of the terrain to match the terrain.</p><p><br /></p><p>Skip adsorption point function: Click skip adsorption button, you can quickly switch the hole to other default adsorption points near the set CaveRoomBP.</p><p><br /></p><p>CaveInteriorTool introduction: CaveInteriorTool is the BP that adds the main shape to the inside of the cave, which can have two forms, one is the road form and the other is the lofting form. The road shape can be generated along the main path, and the lofting is based on the closed platform spline shape, and the longitudinal lofting shape according to the cross-section spline, and the lofting can generate a special-shaped platform, stone columns in the cave, etc.</p><p>Volume scattering tool BP: This is a BP that can quickly adsorb a static grid on the top and bottom of the BOX, up or down, similar to the principle of PCG, with a spline that can mask the placement.</p><p><br /></p><p>Cave Synthesizer: The Cave Synthesizer is a tool for combining CaveRoom, CavePassage, and CaveInteriorTool, combining them into a complete dynamic mesh, and exporting a static mesh for sculpting and editing using modeling modes. The biggest advantage of the combined cave system is that the entire cave wall has only one face, and the vertices are connected. In this way, the cave can be reconstructed and wired and the shape of the cave wall can be carved.</p><p>Cave level tool BP: The Cave level tool is used to store the generated cave static mesh tool, which can automatically generate CavePassage splines.</p><p><br /></p><p>Cave level spline tool BP: This tool is used for lofting or placing items along the spline, such as lofting tracks, roads, and placing tunnel lights.</p><p>And more...</p>",
+  "technicalDetails": "<p><br /></p><p>Number of Blueprints: 10</p><p>Input: Gamepad, Keyboard, Mouse</p><p>Network Replicated: Yes</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Yes</p><p>Documentation:<a href=\"https://docs.google.com/document/d/1rlVK8QRItERhewoFHeYChu7Z8c_AjFD3EbfolrIHM-k/edit?usp&#61;sharing\" rel=\"nofollow\">DOC</a></p><p>Important/Additional Notes:</p><p>1, Need to open &#34;Geometry Script&#34; plugin, and then import this asset file into your project!</p><p>2, during the construction process, please do not use Ctrl&#43;Z undo function, it may cause a flash back. (Most 3D software build plugins have the same problem.)</p><p>3. To carve caves, open the plugin &#34;Modeling Tools Editor Mode&#34;.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cave1-1920x1080-e85a772c8e0f843adc009b500265bf63.png",
+      "md5": "e85a772c8e0f843adc009b500265bf63",
+      "width": 1920,
+      "height": 1080,
+      "size": 1624520,
+      "uploadedDate": "2024-09-04T07:44:40.855Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cave2-1920x1080-87e67324d03a795e123904a6cf3a981d.png",
+      "md5": "87e67324d03a795e123904a6cf3a981d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1944282,
+      "uploadedDate": "2024-09-04T07:44:41.533Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cave3-1920x1080-38c83f777238dbf99093d4ea639d13e7.png",
+      "md5": "38c83f777238dbf99093d4ea639d13e7",
+      "width": 1920,
+      "height": 1080,
+      "size": 2173603,
+      "uploadedDate": "2024-09-04T07:44:42.303Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Cave5-1920x1080-3e8fa72cb352ab504ee70da024a11431.png",
+      "md5": "3e8fa72cb352ab504ee70da024a11431",
+      "width": 1920,
+      "height": 1080,
+      "size": 3100910,
+      "uploadedDate": "2024-09-04T07:44:43.072Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/cave41-1920x1080-1e04c9453d31cebba4b6aeda1b285c0b.png",
+      "md5": "1e04c9453d31cebba4b6aeda1b285c0b",
+      "width": 1920,
+      "height": 1080,
+      "size": 2960088,
+      "uploadedDate": "2024-09-04T07:44:44.021Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PMBQuicklyCaveGenerator_thumb-284x284-a74d7526af83815d4fa1a467650a5bbf.png",
+      "md5": "a74d7526af83815d4fa1a467650a5bbf",
+      "width": 284,
+      "height": 284,
+      "size": 136040,
+      "uploadedDate": "2024-09-08T06:11:02.945Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PMBQuicklyCaveGenerator_featured-894x488-31f2b4b379170a1d8b6689d71b468248.png",
+      "md5": "31f2b4b379170a1d8b6689d71b468248",
+      "width": 894,
+      "height": 488,
+      "size": 701129,
+      "uploadedDate": "2024-09-04T07:44:44.791Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cave1-1920x1080-e85a772c8e0f843adc009b500265bf63_Snapshot.png",
+      "md5": "b15ebc421ae8ad754e0f4132d3ea95e3",
+      "width": 150,
+      "height": 74,
+      "size": 6617,
+      "uploadedDate": "2024-09-04T07:44:41.297Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cave2-1920x1080-87e67324d03a795e123904a6cf3a981d_Snapshot.png",
+      "md5": "ef86488977a79160993e932503eda1e3",
+      "width": 150,
+      "height": 74,
+      "size": 8088,
+      "uploadedDate": "2024-09-04T07:44:42.026Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cave3-1920x1080-38c83f777238dbf99093d4ea639d13e7_Snapshot.png",
+      "md5": "2a14bfd142340ea5684907211f670c43",
+      "width": 150,
+      "height": 74,
+      "size": 8235,
+      "uploadedDate": "2024-09-04T07:44:42.779Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Cave5-1920x1080-3e8fa72cb352ab504ee70da024a11431_Snapshot.png",
+      "md5": "11e1ddb85e39ebacf572c9a8fdc5d9cf",
+      "width": 150,
+      "height": 74,
+      "size": 8126,
+      "uploadedDate": "2024-09-04T07:44:43.569Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/cave41-1920x1080-1e04c9453d31cebba4b6aeda1b285c0b_Snapshot.png",
+      "md5": "2fd555db3665e5352bf51ed6a9a71556",
+      "width": 150,
+      "height": 74,
+      "size": 8896,
+      "uploadedDate": "2024-09-04T07:44:44.486Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-09-08T06:11:03.499Z",
+  "lastModifiedDate": "2025-01-27T17:25:44.324Z",
+  "customAttributes": {
+    "promotionalContent": {
+      "type": "STRING",
+      "value": "false"
+    }
+  },
+  "entitlementName": "5d6a837e3ccc460ebf3f3c1a7db0a3e5",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "812c8ed52a104ef593e0fabbcd46a264",
+      "appId": "PMBQuick5d6a837e3cccV1",
+      "compatibleApps": [
+        "UE_5.3",
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-09-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.0 9.6"
+    }
+  ],
+  "developer": "Archimedes Game",
+  "developerId": "o-85twjzdbumvzcmbt5gj5ur82vhb5f7",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

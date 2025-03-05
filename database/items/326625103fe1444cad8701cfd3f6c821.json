@@ -1,0 +1,293 @@
+{
+  "id": "326625103fe1444cad8701cfd3f6c821",
+  "title": "Blueprint Node Template",
+  "description": "BlueprintNodeTemplate is a template K2_Node for creating your own nodes, including asynchronous, inside the UE4 editor, without c++.",
+  "longDescription": "<p><strong>BlueprintNodeTemplate</strong> is a template for <strong>K2_Node</strong> for creating your own nodes, including asynchronous, inside the UE4 editor, without c&#43;&#43;. </p><p>Quite often, developers have questions: - “how to create your own latent (asynchronous) nodes?”, Similar to AIMoveTo , etc. but the templates provided by UE4 are not intended to be flexible and work exclusively in blueprints, and are severely limited in functionality. And writing your own K2_Nodes confuses many developers because of the undocumented API of the blueprint graph module.</p><p>Initially, the plugin was developed as a template for custom asynchronous tasks for AI, but the final design allows you to customize arbitrary creation of any UObjects in blueprints with the functionality of expanding creation nodes. Which is pretty helpful.</p><p>BlueprintNodeTemplate is very easy to use for creating tasks: </p><ul><li>create blueprint class from base class.</li><li>declare public functions, variables, delegates in it, define the class task,</li><li>that&#39;s it! the node is available in blueprints to call and use anywhere in your code. <a href=\"https://youtu.be/AxD-Onupok0\" rel=\"nofollow\"><strong>video</strong></a></li></ul><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Alexander&#43;UE4\" rel=\"nofollow\"><strong>MyOtherMarketplaceProducts</strong></a></p>",
+  "technicalDetails": "<p><strong>Features</strong>:</p><ul><li>Allows you to create a class of asynchronous and regular functions in blueprints</li><li>Expose delegates of the created object as function parameters with an optional connection.</li><li>Expose the input of Exec parameters from the functions of the object</li><li>Expose the output of the Exec parameters from the delegates of the object</li><li>Expose functions that are automatically called after the creation of the. One of the frequent questions of developers is “overriding the constructor of objects for blueprints”, when after creating an object it needs to be initialized. Automatic functions are called immediately after the object is created, with the parameters being expanded in the constructor node</li><li>Spawn templates AActor, UObject, UUserWidget, work the same as standard spawn nodes &#43; node extension functionality</li><li>Blueprintable class UBlueprintTaskTemplate for arbitrary functions, or tasks not related to the AI</li><li>Blueprintable class UBlueprintAITaskTemplate for AI Task</li><li>All created nodes can be configured individually at their call</li></ul><p><strong>Code Modules</strong>: Runtime, Editor</p><p><strong>Number of Blueprints</strong>: 0</p><p><strong>Number of C&#43;&#43; Classes</strong>: 15, Runtime: abstract Blueprintable - 4, BlueprintFunctionLibrary - 1</p><p><strong>Network Replicated</strong>: No</p><p><strong>Supported Development Platforms</strong>: Win64, Win32, Mac, Linux</p><p><strong>Supported Target Build Platforms</strong>: All</p><p><a href=\"https://drive.google.com/drive/folders/1qPzO-rcXZi_m399yXHiU9XtUVQz6_PAq?usp&#61;sharing\" rel=\"nofollow\"><strong>Documentation</strong></a></p><p><a href=\"https://discord.gg/2m5DCzC\" rel=\"nofollow\"><strong>Discord</strong></a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BNTimg-1920x1080-48cdab42211ef851eb610efe62965c4f.png",
+      "md5": "48cdab42211ef851eb610efe62965c4f",
+      "width": 1920,
+      "height": 1080,
+      "size": 354491,
+      "uploadedDate": "2020-11-16T08:32:17.921Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BNTimg2-1920x1080-e62bbf024463ca95036e1070c4aa1740.png",
+      "md5": "e62bbf024463ca95036e1070c4aa1740",
+      "width": 1920,
+      "height": 1080,
+      "size": 339023,
+      "uploadedDate": "2020-11-16T08:32:18.295Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BNTimg3-1920x1080-466a404cc8008f59af6344791967c6f8.png",
+      "md5": "466a404cc8008f59af6344791967c6f8",
+      "width": 1920,
+      "height": 1080,
+      "size": 353409,
+      "uploadedDate": "2020-11-16T08:33:13.531Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BlueprintNodeTemplate_thumb-284x284-08913a4dbf512669b83236568b5f3ea1.png",
+      "md5": "08913a4dbf512669b83236568b5f3ea1",
+      "width": 284,
+      "height": 284,
+      "size": 13275,
+      "uploadedDate": "2020-11-10T11:48:44.869Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/BlueprintNodeTemplate_featured-894x488-5c6dfd99a3760f6c2e848cc0b457a939.png",
+      "md5": "5c6dfd99a3760f6c2e848cc0b457a939",
+      "width": 894,
+      "height": 488,
+      "size": 174819,
+      "uploadedDate": "2020-11-10T11:48:44.951Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BNTimg3-1920x1080-466a404cc8008f59af6344791967c6f8_Snapshot.png",
+      "md5": "dd057c344a0d21a37525696d74c6def8",
+      "width": 150,
+      "height": 74,
+      "size": 5079,
+      "uploadedDate": "2020-11-16T08:33:13.783Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BNTimg-1920x1080-48cdab42211ef851eb610efe62965c4f_Snapshot.png",
+      "md5": "915afe6d26ed0b34b6ddc229082fdea9",
+      "width": 150,
+      "height": 74,
+      "size": 4479,
+      "uploadedDate": "2020-11-16T08:32:18.144Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BNTimg2-1920x1080-e62bbf024463ca95036e1070c4aa1740_Snapshot.png",
+      "md5": "129af5bc7628cbe589dcf7121fe813b4",
+      "width": 150,
+      "height": 74,
+      "size": 4950,
+      "uploadedDate": "2020-11-16T08:32:18.537Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BNTPFullHD1-1920x1080-466a404cc8008f59af6344791967c6f8_Snapshot.png",
+      "md5": "dd057c344a0d21a37525696d74c6def8",
+      "width": 150,
+      "height": 74,
+      "size": 5079,
+      "uploadedDate": "2020-11-10T11:48:44.831Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2020-11-23T08:04:01.201Z",
+  "lastModifiedDate": "2023-12-30T06:23:35.207Z",
+  "entitlementName": "326625103fe1444cad8701cfd3f6c821",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "1b5c25f7a4f642d79a428e6fdef2b2fb",
+      "appId": "BlueprintNodeTemp_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-11-10T00:00:00.000Z",
+      "releaseNote": "bnt ue4.25 v1.02 bugfix5",
+      "versionTitle": "BNT_ue4.25"
+    },
+    {
+      "id": "dfd039dad82742af82fd4428ee0a5a51",
+      "appId": "BlueprintNodeTemp_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "bnt ue4.25 v1.02 bugfix5",
+      "versionTitle": "BNT_ue4.26"
+    },
+    {
+      "id": "29d8cde9ec6a4a55995bc86c7f6dd95f",
+      "appId": "BlueprintNodeTemp_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "bnt ue4.27 V1.06",
+      "versionTitle": "BNT_ue4.27"
+    },
+    {
+      "id": "e4584bb102eb40efbb885e2ce5757545",
+      "appId": "BlueprintNodeTemp_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-06-23T00:00:00.000Z",
+      "releaseNote": "bnt ue5.02 V1.06",
+      "versionTitle": "BNT_ue5.02"
+    },
+    {
+      "id": "b0b89884acea4597bcbe27e81c62ea85",
+      "appId": "BlueprintNodeTemp_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Gear VR",
+        "Android",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-12-05T00:00:00.000Z",
+      "releaseNote": "bnt ue5.1 V1.06 bugfix",
+      "versionTitle": "BNT_ue5.1"
+    },
+    {
+      "id": "10723925ca29476ea25c5219c7b478aa",
+      "appId": "BlueprintNodeTemp_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-05-29T00:00:00.000Z",
+      "releaseNote": "ue5.2",
+      "versionTitle": "BNT_ue5.2"
+    },
+    {
+      "id": "3cafa9c3840b4421a4a1ba9861acd86d",
+      "appId": "BlueprintNodeTemp_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-10-13T00:00:00.000Z",
+      "releaseNote": "bnt ue5.31",
+      "versionTitle": "BNT_ue5.3"
+    }
+  ],
+  "developer": "Alexander UE4",
+  "developerId": "o-ek3pdmbmj7vdgwd9dkvkj7qr4vkvak",
+  "endOfSupport": false,
+  "unsearchable": false
+}

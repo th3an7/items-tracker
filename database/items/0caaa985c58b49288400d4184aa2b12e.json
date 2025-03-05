@@ -1,0 +1,523 @@
+{
+  "id": "0caaa985c58b49288400d4184aa2b12e",
+  "title": "Ultimate Movement System",
+  "description": "Replicated Movement System With Dynamic Transitions, Distance Matching And More..",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;2rLRCYqnPao\" rel=\"nofollow\">Devlog</a> | <a href=\"https://youtu.be/tKsiI6bye40\" rel=\"nofollow\">Swimming Movement</a> | <a href=\"https://www.youtube.com/watch?v&#61;PiO-YASNlAc\" rel=\"nofollow\">Traversal Mechanics</a> | <a href=\"https://drive.google.com/file/d/1Uph1ozpC84rW607oNYFOkdhWl0RoV46L/view?usp&#61;share_link\" rel=\"nofollow\">Playable Demo</a> | <a href=\"https://www.youtube.com/watch?v&#61;mXwfn776ykU\" rel=\"nofollow\">MetaHuman Example</a></p><p><em>It&#39;s highly recommended to have at least the basic knowledge of blueprints to use this asset. This is not a plug-and-play system. Otherwise, it might be confusing to work with it.</em></p><p><strong><em>Update</em></strong></p><ul><li><strong>The Swimming Movement Type Is Available</strong></li><li><strong>Example AI Is Available</strong></li></ul><p><strong><em>Update 2</em></strong></p><ul><li><strong>Basic Traversal Mechanics Added For 5.3</strong></li></ul><p><strong>-</strong> Known Issues: Wall Running is <strong>not replicated.\t</strong></p><p><br /></p><p><strong>Ultimate Movement System </strong>is a replicated character movement constructor. You can create and modify your own movement types with a single component. Completely<strong> Game-driven</strong> and adapted animations with distance matching, orientation warping, and IK.</p><p>You can easily create new movement types, movement models, overlay states, stances, poses, and different gait profiles according to your game needs. All can have specific speeds, acceleration, deceleration, friction, and rotation rates (Check out the last image).</p><p><br /></p><p>The goal of this asset is to have a good-looking movement system with limited resources. The example content uses only 2 animations for Forward and Backward locomotion and still, 8-way locomotion is possible with orientation warping. Different movement types will be added to further updates.</p>",
+  "technicalDetails": "<p><strong>Features: </strong></p><ul><li>Distance Matching</li><li>Orientation Warping (Using Only 2 Animations For Strafe Movement)</li><li>Stride Warping</li><li>Slope Warping</li><li>Motion Warping</li><li>Overlay States (Masculine, Injured, etc.)</li><li>Poses (Neutral, Aiming, etc.)</li><li>Gait Profiles (Low, Mid, High Profile)</li><li>Stances (Neutral, Crouch)</li><li>Dynamic Stop Transitions With Feet Correction</li><li>Dynamic Stance Transitions With Feet Correction</li><li>Foot Locking And IK</li><li>Full Control Of Movement Dynamics</li><li>Easy To Expand</li></ul><p><br /></p><p><strong>Input: Gamepad </strong>and <strong>Keyboard</strong></p><p><strong>Network Replicated: Yes</strong></p><p><strong>Supported Development Platforms: All</strong></p><p><a href=\"https://docs.google.com/document/d/17z4Gwg0N6e7w0ZJ6bspXl18Pbb5HacuinQOq-pH3xGg/edit?usp&#61;sharing\" rel=\"nofollow\"><strong>Documentation</strong></a></p><p><strong>Important/Additional Notes: The old Root Motion Controller Framework is available for 4.26 and 4.27. The new version is available for 5.1 and 5.2. Traversal mechanics will be available for 5.3.</strong></p><p><strong>Vault and Mantle animations are not included that are showcased in the Video.</strong></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/OverlayStates-1920x1080-4fc0f723a62e2a3e706ffd4b8968c1a1.jpg",
+      "md5": "4fc0f723a62e2a3e706ffd4b8968c1a1",
+      "width": 1920,
+      "height": 1080,
+      "size": 859725,
+      "uploadedDate": "2023-09-07T14:42:57.794Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TraversalActions-1920x1080-5d62be8e0d6e12113f482eb2b1291ee4.jpg",
+      "md5": "5d62be8e0d6e12113f482eb2b1291ee4",
+      "width": 1920,
+      "height": 1080,
+      "size": 851305,
+      "uploadedDate": "2023-09-07T14:42:58.241Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SlopeWarping-1920x1080-658b6f4e11c3ec9ae20e5854e9ab419c.jpg",
+      "md5": "658b6f4e11c3ec9ae20e5854e9ab419c",
+      "width": 1920,
+      "height": 1080,
+      "size": 865560,
+      "uploadedDate": "2023-09-07T14:42:58.743Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/WallRun-1920x1080-e60883764e634e9a4aaa8d59eff6aba3.jpg",
+      "md5": "e60883764e634e9a4aaa8d59eff6aba3",
+      "width": 1920,
+      "height": 1080,
+      "size": 878312,
+      "uploadedDate": "2023-09-07T14:42:59.160Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AimOffset-1920x1080-25f074291008c68fd7601d3f87611ad2.jpg",
+      "md5": "25f074291008c68fd7601d3f87611ad2",
+      "width": 1920,
+      "height": 1080,
+      "size": 995716,
+      "uploadedDate": "2023-09-07T14:42:59.619Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MovementModels-1920x1080-c63ddec8af758f5f815f3e32f707a2e4.jpg",
+      "md5": "c63ddec8af758f5f815f3e32f707a2e4",
+      "width": 1920,
+      "height": 1080,
+      "size": 722875,
+      "uploadedDate": "2023-09-07T14:43:00.153Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Profiles-1920x1080-8559553ddb0ff14269743c81f0c41cf4.jpg",
+      "md5": "8559553ddb0ff14269743c81f0c41cf4",
+      "width": 1920,
+      "height": 1080,
+      "size": 779327,
+      "uploadedDate": "2023-09-07T14:43:00.671Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Stances-1920x1080-7df2f03bf626ab5cf9a945fdb2453e12.jpg",
+      "md5": "7df2f03bf626ab5cf9a945fdb2453e12",
+      "width": 1920,
+      "height": 1080,
+      "size": 781730,
+      "uploadedDate": "2023-09-07T14:43:01.119Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Swimming-1920x1080-bf6d8cc2231df5968361d61841e86085.jpg",
+      "md5": "bf6d8cc2231df5968361d61841e86085",
+      "width": 1920,
+      "height": 1080,
+      "size": 1025089,
+      "uploadedDate": "2023-09-07T14:43:01.555Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MovementComponent-1920x1080-e2c4a8a55ff23745caf5e2e542b98ace.jpg",
+      "md5": "e2c4a8a55ff23745caf5e2e542b98ace",
+      "width": 1920,
+      "height": 1080,
+      "size": 412747,
+      "uploadedDate": "2022-11-29T16:46:06.923Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Commented-1920x1080-a2364318a60024f585ce97cc73e8f744.jpg",
+      "md5": "a2364318a60024f585ce97cc73e8f744",
+      "width": 1920,
+      "height": 1080,
+      "size": 406779,
+      "uploadedDate": "2022-11-29T16:46:07.419Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MovementTypes-1920x1080-6e798af7f0a4905bf5d19d6e332f91fc.jpg",
+      "md5": "6e798af7f0a4905bf5d19d6e332f91fc",
+      "width": 1920,
+      "height": 1080,
+      "size": 486946,
+      "uploadedDate": "2022-11-29T16:46:07.897Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Features-1920x1080-ca71c34e9d1e2ac2e2208cdb19f41ae6.jpg",
+      "md5": "ca71c34e9d1e2ac2e2208cdb19f41ae6",
+      "width": 1920,
+      "height": 1080,
+      "size": 231094,
+      "uploadedDate": "2022-11-29T16:46:08.366Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/UltimateMovementSystem_thumb-284x284-037876251f5552347bcfc06591c23c38.png",
+      "md5": "037876251f5552347bcfc06591c23c38",
+      "width": 284,
+      "height": 284,
+      "size": 76677,
+      "uploadedDate": "2023-09-07T13:57:46.743Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/UltimateMovementSystem_featured-894x488-74327308a29d6596d480587ffa18990c.png",
+      "md5": "74327308a29d6596d480587ffa18990c",
+      "width": 894,
+      "height": 488,
+      "size": 621358,
+      "uploadedDate": "2023-09-09T09:54:35.281Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/OverlayStates-1920x1080-4fc0f723a62e2a3e706ffd4b8968c1a1_Snapshot.jpg",
+      "md5": "6db46506dd95b07dd5cfa7a79d28b0f0",
+      "width": 150,
+      "height": 74,
+      "size": 5428,
+      "uploadedDate": "2023-09-07T14:42:58.107Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TraversalActions-1920x1080-5d62be8e0d6e12113f482eb2b1291ee4_Snapshot.jpg",
+      "md5": "943459b27a25d72953ed78f2244f6062",
+      "width": 150,
+      "height": 74,
+      "size": 5377,
+      "uploadedDate": "2023-09-07T14:42:58.545Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SlopeWarping-1920x1080-658b6f4e11c3ec9ae20e5854e9ab419c_Snapshot.jpg",
+      "md5": "c02fa27620d0b4a284905304d909dd54",
+      "width": 150,
+      "height": 74,
+      "size": 5419,
+      "uploadedDate": "2023-09-07T14:42:59.019Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/WallRun-1920x1080-e60883764e634e9a4aaa8d59eff6aba3_Snapshot.jpg",
+      "md5": "d9cda3c6a518c5bbd6627748769693dd",
+      "width": 150,
+      "height": 74,
+      "size": 5557,
+      "uploadedDate": "2023-09-07T14:42:59.446Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AimOffset-1920x1080-25f074291008c68fd7601d3f87611ad2_Snapshot.jpg",
+      "md5": "6071e9c914a2431adda1b4832cdeb723",
+      "width": 150,
+      "height": 74,
+      "size": 6313,
+      "uploadedDate": "2023-09-07T14:43:00.015Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MovementModels-1920x1080-c63ddec8af758f5f815f3e32f707a2e4_Snapshot.jpg",
+      "md5": "8b75294fc66b40bd6a2b22a3232fa327",
+      "width": 150,
+      "height": 74,
+      "size": 5099,
+      "uploadedDate": "2023-09-07T14:43:00.416Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Profiles-1920x1080-8559553ddb0ff14269743c81f0c41cf4_Snapshot.jpg",
+      "md5": "7f0f972f3e7d15b1dade50c3c93190eb",
+      "width": 150,
+      "height": 74,
+      "size": 5296,
+      "uploadedDate": "2023-09-07T14:43:00.940Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Stances-1920x1080-7df2f03bf626ab5cf9a945fdb2453e12_Snapshot.jpg",
+      "md5": "93611b53721f20c5a6a2060242cacd53",
+      "width": 150,
+      "height": 74,
+      "size": 5340,
+      "uploadedDate": "2023-09-07T14:43:01.412Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Swimming-1920x1080-bf6d8cc2231df5968361d61841e86085_Snapshot.jpg",
+      "md5": "2810c3f6941e0382cc4d7e6d305358ce",
+      "width": 150,
+      "height": 74,
+      "size": 5139,
+      "uploadedDate": "2023-09-07T14:43:01.852Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/OverlayStates-1920x1080-94ba7b4b63ff968629edc7266396fed8_Snapshot.jpg",
+      "md5": "88677cc3561bf4ac70e7172d74fbb68f",
+      "width": 150,
+      "height": 74,
+      "size": 4882,
+      "uploadedDate": "2022-11-29T16:46:03.931Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Stances-1920x1080-f17d5015d461140c07c396646ce157c3_Snapshot.jpg",
+      "md5": "753201f67920e5de476c8c6df10cb601",
+      "width": 150,
+      "height": 74,
+      "size": 4597,
+      "uploadedDate": "2022-11-29T16:46:04.522Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Profiles-1920x1080-d7af0317b62f52fab4f0063cc7ee42bc_Snapshot.jpg",
+      "md5": "c15b7fdf0cf6024d8cec5057d8c446c8",
+      "width": 150,
+      "height": 74,
+      "size": 5006,
+      "uploadedDate": "2022-11-29T16:46:05.112Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MovementModels-1920x1080-65c4f399de80454231c786971f5f0e06_Snapshot.jpg",
+      "md5": "be604f90ec00b2b098a9e23824fe470d",
+      "width": 150,
+      "height": 74,
+      "size": 4748,
+      "uploadedDate": "2022-11-29T16:46:05.579Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SlopeWarping-1920x1080-321264915aea1d36fd9a8c97a51ee940_Snapshot.jpg",
+      "md5": "eb31ad8e64ee7781faa752f86db9dc5f",
+      "width": 150,
+      "height": 74,
+      "size": 4624,
+      "uploadedDate": "2022-11-29T16:46:06.086Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AimOffset-1920x1080-d67920297d6e58307748c8281420c95a_Snapshot.jpg",
+      "md5": "f797bc817e639f39adac9ff73c05772d",
+      "width": 150,
+      "height": 74,
+      "size": 4914,
+      "uploadedDate": "2022-11-29T16:46:06.661Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MovementComponent-1920x1080-e2c4a8a55ff23745caf5e2e542b98ace_Snapshot.jpg",
+      "md5": "f4087972c107e2ee031e6be83234096b",
+      "width": 150,
+      "height": 74,
+      "size": 6099,
+      "uploadedDate": "2022-11-29T16:46:07.250Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Commented-1920x1080-a2364318a60024f585ce97cc73e8f744_Snapshot.jpg",
+      "md5": "75d359dcfa8d4060cf5ef4b73b7b0f4a",
+      "width": 150,
+      "height": 74,
+      "size": 5128,
+      "uploadedDate": "2022-11-29T16:46:07.721Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MovementTypes-1920x1080-6e798af7f0a4905bf5d19d6e332f91fc_Snapshot.jpg",
+      "md5": "1f4ee24f7f33b22a53aa4e16250cad53",
+      "width": 150,
+      "height": 74,
+      "size": 5766,
+      "uploadedDate": "2022-11-29T16:46:08.207Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Features-1920x1080-ca71c34e9d1e2ac2e2208cdb19f41ae6_Snapshot.jpg",
+      "md5": "0716ef6a6d559a88e0992df3cea55df9",
+      "width": 150,
+      "height": 74,
+      "size": 4135,
+      "uploadedDate": "2022-11-29T16:46:08.673Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Main-1920x1080-18da57f5bde6e40788e3a0057b7a1ab5_Snapshot.png",
+      "md5": "39837836e701951ef561a22b2a85e2fb",
+      "width": 150,
+      "height": 74,
+      "size": 1940,
+      "uploadedDate": "2019-05-13T20:46:13.514Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Showcase7-1920x1080-bbaf81d517b8ce57dbd9e4c4260fefee_Snapshot.png",
+      "md5": "afca316686801904f5819204e12fdcc0",
+      "width": 150,
+      "height": 74,
+      "size": 15291,
+      "uploadedDate": "2019-05-13T20:46:13.912Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Showcase2-1920x1080-e09b2d9969a92594c9bfa14231f2f9fa_Snapshot.png",
+      "md5": "0128348bbe4ca3c34231bcb046727a3a",
+      "width": 150,
+      "height": 74,
+      "size": 23465,
+      "uploadedDate": "2019-05-13T20:46:14.366Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Showcase9-1920x1080-9940d4df7721aff2c9f88fc87c3eef98_Snapshot.png",
+      "md5": "85bac54e452e144e029dc063a999a478",
+      "width": 150,
+      "height": 74,
+      "size": 13899,
+      "uploadedDate": "2019-05-13T20:46:14.776Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Showcase5-1920x1080-e3fa341529a2f83e549eb4ba93f1c68f_Snapshot.png",
+      "md5": "dee2e71160dc6fb9946a8663f2149a85",
+      "width": 150,
+      "height": 74,
+      "size": 17843,
+      "uploadedDate": "2019-05-13T20:46:15.143Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Showcase6-1920x1080-600a63f80d9b32f0bc5f58e844f69c49_Snapshot.png",
+      "md5": "ef581e3b53a008b59ca73bc972014fa3",
+      "width": 150,
+      "height": 74,
+      "size": 19972,
+      "uploadedDate": "2019-05-13T20:46:15.553Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Showcase3-1920x1080-1dc38b9d803680d11023c873e269e666_Snapshot.png",
+      "md5": "4ca8f2eabb36f335c75e23ad110ae83e",
+      "width": 150,
+      "height": 74,
+      "size": 19768,
+      "uploadedDate": "2019-05-13T20:46:16.022Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Showcase1-1920x1080-4351b4e6fe1f902b3be4d46141eb6e2d_Snapshot.png",
+      "md5": "fcfd87fbf182faaa4f7e6c1417394566",
+      "width": 150,
+      "height": 74,
+      "size": 18821,
+      "uploadedDate": "2019-05-13T20:46:16.490Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Showcase4-1920x1080-fd934a677f6e9789958e075b6dcac0f8_Snapshot.png",
+      "md5": "6ef48507d7552798124a876faf172270",
+      "width": 150,
+      "height": 74,
+      "size": 20109,
+      "uploadedDate": "2019-05-13T20:46:16.907Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Showcase8-1920x1080-f0656a82ea6a52a69033c6a8499098f8_Snapshot.png",
+      "md5": "047012c0a358859156d70b6331a6f3b7",
+      "width": 150,
+      "height": 74,
+      "size": 18857,
+      "uploadedDate": "2019-05-13T20:46:17.357Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/rmc3-1920x1080-bdb6814a75378edd0e8ff16b207aa46e_Snapshot.png",
+      "md5": "b7078c157287df4df21babd2150c0c44",
+      "width": 150,
+      "height": 74,
+      "size": 12232,
+      "uploadedDate": "2019-05-08T02:39:40.438Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RMCBP1-1920x1080-20f4507ee9107a8cd69d2fde93fa1612_Snapshot.png",
+      "md5": "d7dd6ef3f6f1354c96c5614815650c25",
+      "width": 150,
+      "height": 74,
+      "size": 9205,
+      "uploadedDate": "2019-05-08T02:39:40.830Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RMCBP2-1920x1080-2ad7253bd46fbed04497327f9701d28f_Snapshot.png",
+      "md5": "2437544a9ddd1fa2389c968a42da0336",
+      "width": 150,
+      "height": 74,
+      "size": 8355,
+      "uploadedDate": "2019-05-08T02:39:41.338Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RMCBP3-1920x1080-cf85efc174c5e65a2e8ddd7cbb5990f9_Snapshot.png",
+      "md5": "b0f61188ad862b409f44e7f58a1695f2",
+      "width": 150,
+      "height": 74,
+      "size": 7887,
+      "uploadedDate": "2019-05-08T02:39:41.616Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RMCBP4-1920x1080-b7544d00678267888f0cbd4174f56932_Snapshot.png",
+      "md5": "2807e12b8937044bf9c86ef8b5e26e2f",
+      "width": 150,
+      "height": 74,
+      "size": 2258,
+      "uploadedDate": "2019-05-08T02:39:41.814Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-06-06T15:55:09.652Z",
+  "lastModifiedDate": "2024-09-18T14:21:26.907Z",
+  "customAttributes": {},
+  "entitlementName": "0caaa985c58b49288400d4184aa2b12e",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b03b6ced11db4e06b38553816e4bdc0f",
+      "appId": "RootMoti0caaa985c58bV1",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2019-05-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "RMCv1.5.0.1"
+    },
+    {
+      "id": "e9bd11ed95cf4320887202ce46af51d0",
+      "appId": "Ultimate0caaa985c58bV2",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2022-12-02T00:00:00.000Z",
+      "releaseNote": "The 1.1 version was replaced with the 1.0 version. It's for the swimming movement type update\n\n- Hotfix",
+      "versionTitle": "MovementSys1.1"
+    },
+    {
+      "id": "2b39f93c1f584d2e82895250629eb5fa",
+      "appId": "Ultimate0caaa985c58bV3",
+      "compatibleApps": [
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "Traversal Update",
+      "versionTitle": "MovementSys1.5"
+    }
+  ],
+  "developer": "Tala Esenlikler",
+  "developerId": "o-2qg2ns5am8dlmzqm3xd23erfrtpcye",
+  "endOfSupport": false,
+  "unsearchable": false
+}

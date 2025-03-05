@@ -1,0 +1,331 @@
+{
+  "id": "f7fff6bf901c4d138112ea777d13345c",
+  "title": "Procedural Level Generator from Perlin Noise and Curve Heightmap",
+  "description": "100% Blueprint tool that allows you to generate different type of levels based on Perlin noise, curves parameters and various settings. Nature locations, props spaw, dungeon room, villiage - everything is possible! Works both in runtime and editor",
+  "longDescription": "<p>This Blueprint allows you to generate different types of levels based on Perlin noise, heightmap creation from curve/noise and advanced meshes spawn system. How it works?</p><ol><li>Generating heightmap with Perlin noise or from curve (you can combine different layers of settings to receive various heightmaps)</li><li>You can add some additional interpolation to heightmap values using curve parameter</li><li>Generating landscape (from procedural mesh) with material you want (landscape generation can be disabled)</li><li>Spawning meshes based on height map values (can be spawned on different height or on the surface)</li><li>Advanced settings for meshes placement</li></ol><ul><li>Height range to spawn mesh</li><li>Additional random transform offsets</li><li>Different density</li><li>Placement probability</li><li>Advanced collision check between HISM (you can specify with which meshes current mesh should check collision)</li><li>and more</li></ul><p>Using this BP you can setup various types of procedural generation, which can include foliage spawning, props, landscape generation with procedural mesh and much more. Using heightmap generation settings and float curves you can generate mountains, valleys, nature environment. City with houses placement, village, nature with plants, desert location, rocky mountains, caves or dungeon room/rooms - any type of generation is possible, all you need to do - is setup settings and meshes you want. Detailed documentation included.</p><p><strong>Interested? Then check demo video</strong></p><p><a href=\"https://youtu.be/FZaKIp8sirA\" rel=\"nofollow\">https://youtu.be/FZaKIp8sirA</a></p><p><strong>Tutorial:</strong></p><p><a href=\"https://www.youtube.com/watch?v&#61;2a_gNRA55xs\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;2a_gNRA55xs</a></p>",
+  "technicalDetails": "<p><strong>Features: </strong></p><ul><li> Procedural meshes placement with various settings based on generated heightmap</li><li> Heightmap generation from Perlin noise and curve</li><li> Heightmap layers system: combine heightmaps from noise and curves into one heightmap</li><li>Collision check system between different instances (works like collision channels)</li><li>Random or custom seed for each type of mesh, noise / curve generation layer</li><li>Blueprint can restore your generated level in construction script - it will help you prepage generation in editor and decrease level loading time in game</li><li>Works both at runtime and in editor</li></ul><p><strong>Supported Development Platforms</strong>: tested on Windows, but should work with any</p><p><strong>Supported Target Build Platforms:</strong> tested on Windows, but should work with any</p><p><strong>Documentation: </strong><a href=\"https://drive.google.com/file/d/12xvdPMwSE_dZRi8QZi_rcbwQG8QNLpgy/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/12xvdPMwSE_dZRi8QZi_rcbwQG8QNLpgy/view?usp&#61;sharing</a></p><p><strong>Important/Additional Notes:</strong></p><ul><li>All meshes used in generation actors presented on Example map taken from free Epic Games packs. You can easily replace this meshes with your own</li><li>Be carefull with SizeX, SizeY and SubCellsIteration variables in BP_NoiseGenerator. Setting this variables to high can result in serious performance issues</li><li>Information about working with construction script of this generator can be found at page 16 of documentation (I recommend you to read this page before start work)</li><li>Few tips about this generation and description of snow village generation setup can be found at page 17</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/01-min-1920x1080-8f61eb81d0d6d745574198f0fd4273ec.png",
+      "md5": "8f61eb81d0d6d745574198f0fd4273ec",
+      "width": 1920,
+      "height": 1080,
+      "size": 1398513,
+      "uploadedDate": "2019-11-09T19:56:57.563Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/02-min-1920x1080-2b97072b232839a6ac67762179879dd6.png",
+      "md5": "2b97072b232839a6ac67762179879dd6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1528809,
+      "uploadedDate": "2019-11-09T19:56:57.844Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/03-min-1920x1080-e541674618cbf413e167ec25bc26cf47.png",
+      "md5": "e541674618cbf413e167ec25bc26cf47",
+      "width": 1920,
+      "height": 1080,
+      "size": 994457,
+      "uploadedDate": "2019-11-09T19:56:58.100Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/04-min-1920x1080-8b9cda3468ac1fc6be3a0191470d2396.png",
+      "md5": "8b9cda3468ac1fc6be3a0191470d2396",
+      "width": 1920,
+      "height": 1080,
+      "size": 674183,
+      "uploadedDate": "2019-11-09T19:56:58.279Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/05-min-1920x1080-b43970ab35e1aa19cec778abe023ff21.png",
+      "md5": "b43970ab35e1aa19cec778abe023ff21",
+      "width": 1920,
+      "height": 1080,
+      "size": 957740,
+      "uploadedDate": "2019-11-09T19:56:58.574Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/06-min-1920x1080-6b27900e0cdb5a30724f659ee44387f2.png",
+      "md5": "6b27900e0cdb5a30724f659ee44387f2",
+      "width": 1920,
+      "height": 1080,
+      "size": 1106277,
+      "uploadedDate": "2019-11-09T19:56:58.794Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/07-min-1920x1080-7520966548d5e3b4a66d2cbaa8cae44c.png",
+      "md5": "7520966548d5e3b4a66d2cbaa8cae44c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1135480,
+      "uploadedDate": "2019-11-09T19:56:59.037Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/08-min-1920x1080-fa239e36e1c2b28f51c85330a1471a39.png",
+      "md5": "fa239e36e1c2b28f51c85330a1471a39",
+      "width": 1920,
+      "height": 1080,
+      "size": 1132363,
+      "uploadedDate": "2019-11-09T19:56:59.286Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/09-min-1920x1080-d17ddd475288d5f8df47bf43cb7af849.png",
+      "md5": "d17ddd475288d5f8df47bf43cb7af849",
+      "width": 1920,
+      "height": 1080,
+      "size": 1145544,
+      "uploadedDate": "2019-11-09T19:56:59.672Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/10-min-1920x1080-4b5623d2da1a7645cb37f39e89b99352.png",
+      "md5": "4b5623d2da1a7645cb37f39e89b99352",
+      "width": 1920,
+      "height": 1080,
+      "size": 1263229,
+      "uploadedDate": "2019-11-09T19:56:59.872Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/11-min-1920x1080-e87fe83d7e5ab1bc5bb7104053120051.png",
+      "md5": "e87fe83d7e5ab1bc5bb7104053120051",
+      "width": 1920,
+      "height": 1080,
+      "size": 916370,
+      "uploadedDate": "2019-11-09T19:57:00.422Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/12-min-1920x1080-186597d0da42fab364db5bbe71c2d7dd.png",
+      "md5": "186597d0da42fab364db5bbe71c2d7dd",
+      "width": 1920,
+      "height": 1080,
+      "size": 458103,
+      "uploadedDate": "2019-11-09T19:57:00.754Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/13-min-1920x1080-e38b0d97c2f893db7dbb882c9257c4a5.png",
+      "md5": "e38b0d97c2f893db7dbb882c9257c4a5",
+      "width": 1920,
+      "height": 1080,
+      "size": 599921,
+      "uploadedDate": "2019-11-09T19:57:00.976Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/14-min-1920x1080-83dc9ccafde0d954e2e1ea6ffae700c6.png",
+      "md5": "83dc9ccafde0d954e2e1ea6ffae700c6",
+      "width": 1920,
+      "height": 1080,
+      "size": 505943,
+      "uploadedDate": "2019-11-09T19:57:02.153Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ProcedurallevelgeneratorfromPerlinnoiseandcurveheightmap_thumb-284x284-e7bc6c60607363e77ab20fe95648a0c8.png",
+      "md5": "e7bc6c60607363e77ab20fe95648a0c8",
+      "width": 284,
+      "height": 284,
+      "size": 227903,
+      "uploadedDate": "2019-11-09T19:57:02.299Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ProcedurallevelgeneratorfromPerlinnoiseandcurveheightmap_featured-894x488-8414f33c972a7d9ebf1f82795ffa7172.png",
+      "md5": "8414f33c972a7d9ebf1f82795ffa7172",
+      "width": 894,
+      "height": 488,
+      "size": 964355,
+      "uploadedDate": "2019-11-09T19:57:02.426Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01-min-1920x1080-8f61eb81d0d6d745574198f0fd4273ec_Snapshot.png",
+      "md5": "b6f1ba6b3039b55866ddc1ed4e94d2e2",
+      "width": 150,
+      "height": 74,
+      "size": 9312,
+      "uploadedDate": "2019-11-09T19:56:57.700Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/02-min-1920x1080-2b97072b232839a6ac67762179879dd6_Snapshot.png",
+      "md5": "d3e2ff34dcd5232867618dc80a0469c3",
+      "width": 150,
+      "height": 74,
+      "size": 10027,
+      "uploadedDate": "2019-11-09T19:56:57.991Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/03-min-1920x1080-e541674618cbf413e167ec25bc26cf47_Snapshot.png",
+      "md5": "5f12f96fc6402fb0dcecd66d94cb8980",
+      "width": 150,
+      "height": 74,
+      "size": 5911,
+      "uploadedDate": "2019-11-09T19:56:58.191Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/04-min-1920x1080-8b9cda3468ac1fc6be3a0191470d2396_Snapshot.png",
+      "md5": "45635eaa2de1057028fb9567ffa7bb35",
+      "width": 150,
+      "height": 74,
+      "size": 6454,
+      "uploadedDate": "2019-11-09T19:56:58.376Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/05-min-1920x1080-b43970ab35e1aa19cec778abe023ff21_Snapshot.png",
+      "md5": "eb7cd865f4f87b62d5eb3ec64a56daec",
+      "width": 150,
+      "height": 74,
+      "size": 7228,
+      "uploadedDate": "2019-11-09T19:56:58.677Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/06-min-1920x1080-6b27900e0cdb5a30724f659ee44387f2_Snapshot.png",
+      "md5": "deac5132bfbd8dcf43579a80154c4586",
+      "width": 150,
+      "height": 74,
+      "size": 7110,
+      "uploadedDate": "2019-11-09T19:56:58.917Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/07-min-1920x1080-7520966548d5e3b4a66d2cbaa8cae44c_Snapshot.png",
+      "md5": "54bbbc2e271cd9f58917ba237ac89489",
+      "width": 150,
+      "height": 74,
+      "size": 6186,
+      "uploadedDate": "2019-11-09T19:56:59.152Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/08-min-1920x1080-fa239e36e1c2b28f51c85330a1471a39_Snapshot.png",
+      "md5": "af30633ba718d58cf3cc8eb8d6cf874e",
+      "width": 150,
+      "height": 74,
+      "size": 8021,
+      "uploadedDate": "2019-11-09T19:56:59.405Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/09-min-1920x1080-d17ddd475288d5f8df47bf43cb7af849_Snapshot.png",
+      "md5": "b4e0d60254d2a11af6a6ab4ea9bfa72c",
+      "width": 150,
+      "height": 74,
+      "size": 7221,
+      "uploadedDate": "2019-11-09T19:56:59.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10-min-1920x1080-4b5623d2da1a7645cb37f39e89b99352_Snapshot.png",
+      "md5": "170d7e77b8a30cc07da5f6e9e205a9f2",
+      "width": 150,
+      "height": 74,
+      "size": 8463,
+      "uploadedDate": "2019-11-09T19:57:00.243Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11-min-1920x1080-e87fe83d7e5ab1bc5bb7104053120051_Snapshot.png",
+      "md5": "8f6549f3b83f7eed1743083490510d88",
+      "width": 150,
+      "height": 74,
+      "size": 6889,
+      "uploadedDate": "2019-11-09T19:57:00.540Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/12-min-1920x1080-186597d0da42fab364db5bbe71c2d7dd_Snapshot.png",
+      "md5": "c6a5263ce4e795bbc747a7554d338a12",
+      "width": 150,
+      "height": 74,
+      "size": 4655,
+      "uploadedDate": "2019-11-09T19:57:00.834Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/13-min-1920x1080-e38b0d97c2f893db7dbb882c9257c4a5_Snapshot.png",
+      "md5": "ecd8381a9d0bb086d99367b5b65db983",
+      "width": 150,
+      "height": 74,
+      "size": 4938,
+      "uploadedDate": "2019-11-09T19:57:02.052Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/14-min-1920x1080-83dc9ccafde0d954e2e1ea6ffae700c6_Snapshot.png",
+      "md5": "fb235c6d7646784255643ae2d3f27a02",
+      "width": 150,
+      "height": 74,
+      "size": 4849,
+      "uploadedDate": "2019-11-09T19:57:02.232Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-11-26T20:30:40.271Z",
+  "lastModifiedDate": "2025-01-08T20:12:14.838Z",
+  "customAttributes": {},
+  "entitlementName": "f7fff6bf901c4d138112ea777d13345c",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "915b8f01f1e94c00a6a04fd0b7e5d645",
+      "appId": "Procedurf7fff6bf901cV1",
+      "compatibleApps": [
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus"
+      ],
+      "dateAdded": "2019-11-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "LevelGenerator"
+    }
+  ],
+  "developer": "GregTDev",
+  "developerId": "o-u843huht8hran5ed3k7ed7xeteqjax",
+  "endOfSupport": false,
+  "unsearchable": false
+}

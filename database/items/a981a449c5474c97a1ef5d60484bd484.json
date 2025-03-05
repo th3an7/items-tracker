@@ -1,0 +1,505 @@
+{
+  "id": "a981a449c5474c97a1ef5d60484bd484",
+  "title": "Loading Screen With Load Percentage",
+  "description": "This is a plugin that converts UMG into a slate widget, displays a loading screen, and displays the loading percentage with a progress bar and text.",
+  "longDescription": "<p>This is a plugin that converts UMG into a slate widget, displays a loading screen, and displays the loading percentage with a progress bar and text.</p><p><br /></p><p>Get the package load percentage and use FInterpTo to smoothly update the progress bar and text.</p><p>You can also uncheck the &#34;UseF Interp to Movement&#34; variable in the function to avoid using FInterpTo.</p><p><br /></p><p>This plugin is very easy to use and uses only a few functions.</p><p><br /></p><p><strong>If you would like to request a refund, please request a refund via </strong><a href=\"https://marketplacehelp.epicgames.com/s/markeplace-case-form\" rel=\"nofollow\"><strong>https://marketplacehelp.epicgames.com/s/markeplace-case-form.</strong></a></p><p><br /></p><p><a href=\"https://youtu.be/PbietvmW3VI\" rel=\"nofollow\">Youtube_Demo(ver1.24)</a></p><p><a href=\"https://youtu.be/jiK6FFqifMg\" rel=\"nofollow\">Youtube_How to Use</a></p><p><br /></p><p>Please refer to the documentation for detailed instructions.</p><p><a href=\"https://sites.google.com/view/roy00227unrealengine/home/document_ueplugin_loadingscreenwithloadpercentage\" rel=\"nofollow\">Document</a></p><p><br /></p><p><strong>Here is how it works.</strong></p><ol><li>Convert and set up UMG to Slate widget.</li><li>Find the progress bar and the text with %.</li><li>Find the Package from the Object Path and start asynchronous loading.</li><li>Display the slate widget.</li><li>Get percentage of packages loaded and update progress bar and text.</li><li>When loading is complete and the minimum display time has been exceeded, open the level.</li><li>While the level is open, the loading screen you set up will play.</li><li>Hides the slate widget after checking the level transition.</li></ol><p><br /></p><p><strong>Update</strong></p><p>2023/11/01_ver1.1</p><ul><li>Implemented fade in and fade out.(<a href=\"https://youtu.be/Y7bW-vhYnME\" rel=\"nofollow\">Youtube</a>)</li><li>Now also works standalone.</li></ul><p>2023/11/04_ver1.11</p><ul><li>Add Sectors loading effect material.(<a href=\"https://youtu.be/sF1q1pKGBtg\" rel=\"nofollow\">Youtube</a>)</li></ul><p>2024/02/25_ver1.2</p><ul><li>Now get percentages from BP, Now use Circle Progress Bar.(<a href=\"https://youtu.be/MXgFBUpDyVY\" rel=\"nofollow\">Youtube</a>)</li><li>Migrate FadeIn and FadeOut settings to separate functions.</li></ul><p>2024/03/01_ver1.21</p><ul><li>Now avoid errors when loading for the first time.</li></ul><p>2024/03/07_ver1.22</p><ul><li>Add Background Material.(<a href=\"https://youtu.be/wc6JTE1AP_0\" rel=\"nofollow\">Youtube</a>)</li></ul><p>2024/03/09_ver1.23</p><ul><li>Fixed an issue where the setup loading screen would momentarily turn black.</li></ul><p>2024/03/20_ver1.24</p><ul><li>Supports sublevels.</li><li>Deprecation of function “BeginLoadingScreenSimple”.</li></ul><p>2024/04/09_ver1.25</p><ul><li>Added interp type to FadeIn and FadeOut.</li></ul>",
+  "technicalDetails": "<p>Features: </p><ul><li>Loading screen</li><li>Simple progress bar material</li><li>Sectors loading effect material</li><li>Circle Progress Bar material</li><li>Background Material</li></ul><p><br /></p><p>Code Modules: </p><ul><li> UMGToSlateLoadingScreen[Runtime] </li></ul><p><br /></p><p>Number of Blueprints: 2</p><p>Number of C&#43;&#43; Classes: 3</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64, Mac, IOS, Android, Linux, LinuxArm64,\tTVOS</p><p>Tested Target Build Platforms: Win64</p><p>Documentation: <a href=\"https://sites.google.com/view/roy00227unrealengine/home/document_ueplugin_loadingscreenwithloadpercentage\" rel=\"nofollow\">Link the documentation</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Loading Screen With Load Percentage1920x1080-1920x1080-cd9b7ea29fcd21e896e2539b37ae6c2f.png",
+      "md5": "cd9b7ea29fcd21e896e2539b37ae6c2f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1019940,
+      "uploadedDate": "2023-10-11T00:30:41.942Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/youtube1920x1080-1920x1080-f66a16a46f3ab34eef11e22ebed8535f.png",
+      "md5": "f66a16a46f3ab34eef11e22ebed8535f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1322381,
+      "uploadedDate": "2023-10-11T00:30:42.487Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1920x10808-1920x1080-aa38f8d79f5518b06e540aa03ee2544d.png",
+      "md5": "aa38f8d79f5518b06e540aa03ee2544d",
+      "width": 1920,
+      "height": 1080,
+      "size": 318731,
+      "uploadedDate": "2023-10-31T23:21:18.909Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ex1-1920x1080-d8936983fc1df7eefaee75f085d55f8d.png",
+      "md5": "d8936983fc1df7eefaee75f085d55f8d",
+      "width": 1920,
+      "height": 1080,
+      "size": 362876,
+      "uploadedDate": "2024-04-08T19:58:45.777Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ex2-1920x1080-c63012c1cd7d3d00ebd28750a4e7de03.png",
+      "md5": "c63012c1cd7d3d00ebd28750a4e7de03",
+      "width": 1920,
+      "height": 1080,
+      "size": 371948,
+      "uploadedDate": "2024-04-08T19:58:46.137Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ver1.11sectors-1920x1080-4fd406a88279bf60996cb3a566f788b5.png",
+      "md5": "4fd406a88279bf60996cb3a566f788b5",
+      "width": 1920,
+      "height": 1080,
+      "size": 168196,
+      "uploadedDate": "2024-04-07T03:20:12.111Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ver1.2circle-1920x1080-97f6831e1536614dba65edd5c74af977.png",
+      "md5": "97f6831e1536614dba65edd5c74af977",
+      "width": 1920,
+      "height": 1080,
+      "size": 1135205,
+      "uploadedDate": "2024-04-07T03:23:29.858Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1.22background-1920x1080-ee88c4aa40afa5ebcc78b0062c26bd59.png",
+      "md5": "ee88c4aa40afa5ebcc78b0062c26bd59",
+      "width": 1920,
+      "height": 1080,
+      "size": 1047978,
+      "uploadedDate": "2024-04-07T03:01:16.906Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ver1.24 supports sublevels-1920x1080-c8f3a01ba75d18365e67e95db4c9648c.png",
+      "md5": "c8f3a01ba75d18365e67e95db4c9648c",
+      "width": 1920,
+      "height": 1080,
+      "size": 637221,
+      "uploadedDate": "2024-04-07T03:01:17.446Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1.25-1920x1080-09b467a6b255b64248ed274877ca18cc.png",
+      "md5": "09b467a6b255b64248ed274877ca18cc",
+      "width": 1920,
+      "height": 1080,
+      "size": 295693,
+      "uploadedDate": "2024-04-08T19:53:43.324Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/LoadingScreenWithLoadPercentage_thumb-284x284-046129618f28345fd920a049894822dd.png",
+      "md5": "046129618f28345fd920a049894822dd",
+      "width": 284,
+      "height": 284,
+      "size": 101763,
+      "uploadedDate": "2023-10-11T00:30:42.922Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/LoadingScreenWithLoadPercentage_featured-894x488-b9905810c37974f047ea86b32e4127a0.png",
+      "md5": "b9905810c37974f047ea86b32e4127a0",
+      "width": 894,
+      "height": 488,
+      "size": 374807,
+      "uploadedDate": "2023-10-11T00:30:43.177Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ex1-1920x1080-d8936983fc1df7eefaee75f085d55f8d_Snapshot.png",
+      "md5": "f5b5e2925b60991469de9db28ccd7aac",
+      "width": 150,
+      "height": 74,
+      "size": 5693,
+      "uploadedDate": "2024-04-08T19:58:46.009Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ex2-1920x1080-c63012c1cd7d3d00ebd28750a4e7de03_Snapshot.png",
+      "md5": "d8dc45805c11c0ad91b2d4ac7aa68ed1",
+      "width": 150,
+      "height": 74,
+      "size": 5667,
+      "uploadedDate": "2024-04-08T19:58:46.327Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1.25-1920x1080-09b467a6b255b64248ed274877ca18cc_Snapshot.png",
+      "md5": "40e469fb293332969cd01da589a72db9",
+      "width": 150,
+      "height": 74,
+      "size": 5459,
+      "uploadedDate": "2024-04-08T19:53:43.673Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2024-04-07 165435-1920x1080-3b3c9bffeff935e259f467023399405f_Snapshot.png",
+      "md5": "44dcbcfded59a936977c28d2aca1b6d1",
+      "width": 150,
+      "height": 74,
+      "size": 5950,
+      "uploadedDate": "2024-04-07T07:55:18.439Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/pseudo pause-1920x1080-373380c1e7f69144e772a6968f5892f9_Snapshot.png",
+      "md5": "3e451145097b081a017c2a406db79479",
+      "width": 150,
+      "height": 74,
+      "size": 5604,
+      "uploadedDate": "2024-04-07T07:25:48.265Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ex1-1920x1080-4714fa04c8e08c0fd378c0037f9af791_Snapshot.png",
+      "md5": "6c59b68048205d0fdf0ff761184c7e80",
+      "width": 150,
+      "height": 74,
+      "size": 5980,
+      "uploadedDate": "2024-04-07T04:19:47.898Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ex1-1920x1080-f83d9eb627a0307d0d7ebc859b38e03c_Snapshot.png",
+      "md5": "bd53cb707de9553c7a4c35084d3bf8b4",
+      "width": 150,
+      "height": 74,
+      "size": 5324,
+      "uploadedDate": "2024-04-07T03:58:44.739Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ex1-1920x1080-aca4d84943ee4ca830c5fc9f5b113ae6_Snapshot.png",
+      "md5": "fcbbb74b74bdd281f7a3fec804b71c7a",
+      "width": 150,
+      "height": 74,
+      "size": 5737,
+      "uploadedDate": "2024-04-07T03:54:23.178Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ver1.2circle-1920x1080-97f6831e1536614dba65edd5c74af977_Snapshot.png",
+      "md5": "d77aae02b3671197c543a389da728fd6",
+      "width": 150,
+      "height": 74,
+      "size": 6785,
+      "uploadedDate": "2024-04-07T03:23:30.225Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ver1.11sectors-1920x1080-4fd406a88279bf60996cb3a566f788b5_Snapshot.png",
+      "md5": "9f37f7d5e50fb165235aded63fe4c258",
+      "width": 150,
+      "height": 74,
+      "size": 5612,
+      "uploadedDate": "2024-04-07T03:20:12.388Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ver1.2circle-1920x1080-41d806603039039aec83762e14fff588_Snapshot.png",
+      "md5": "c20f27a9c7ee203d4604e0f1d85de2d0",
+      "width": 150,
+      "height": 74,
+      "size": 6667,
+      "uploadedDate": "2024-04-07T03:20:12.946Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1.22background-1920x1080-ee88c4aa40afa5ebcc78b0062c26bd59_Snapshot.png",
+      "md5": "9eeba28c93e2634f75d0453787625492",
+      "width": 150,
+      "height": 74,
+      "size": 6447,
+      "uploadedDate": "2024-04-07T03:01:17.273Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ver1.24 supports sublevels-1920x1080-c8f3a01ba75d18365e67e95db4c9648c_Snapshot.png",
+      "md5": "1a292594286d6ef6da273e4c27bace3e",
+      "width": 150,
+      "height": 74,
+      "size": 5377,
+      "uploadedDate": "2024-04-07T03:01:17.763Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ver1.24 supports sublevels-1920x1080-6e261b88ecb32ab6664d74ba3448464c_Snapshot.png",
+      "md5": "00590447c28641f8186b909fda223e2b",
+      "width": 150,
+      "height": 74,
+      "size": 5555,
+      "uploadedDate": "2024-04-07T02:55:36.481Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Background-1920x1080-5b9558f2508f6c814d95fd3f5e8326d0_Snapshot.png",
+      "md5": "fcccc3648e3cc7d3fd0959b2480c75a3",
+      "width": 150,
+      "height": 74,
+      "size": 6631,
+      "uploadedDate": "2024-03-06T01:28:52.540Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BackGroundMaterial-1920x1080-abf1e07837593edd4577ac2bacbaf1c3_Snapshot.png",
+      "md5": "3fdb49dbd87b2698933f26b1860bc03b",
+      "width": 150,
+      "height": 74,
+      "size": 6633,
+      "uploadedDate": "2024-03-06T01:07:21.637Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2024-03-01 131145 1-1920x1080-769f71fdc51a2be16d4e98f3e3496544_Snapshot.png",
+      "md5": "ee622ac45880dd7cb1448ee3d84ccd15",
+      "width": 150,
+      "height": 74,
+      "size": 1573,
+      "uploadedDate": "2024-03-01T04:18:39.514Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AddMI-1920x1080-61b7f636e11ae21dbb2a58c6557e755e_Snapshot.png",
+      "md5": "fa08b897da73e92a1aa84a77ec88deb4",
+      "width": 150,
+      "height": 74,
+      "size": 3614,
+      "uploadedDate": "2024-02-26T01:41:44.257Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x1080FadeIn and FadeOut-1920x1080-4d709e7318adc6c32d5a1638e7d15a0a_Snapshot.png",
+      "md5": "11d1df0138eb18e66bde6f8aac66138f",
+      "width": 150,
+      "height": 74,
+      "size": 3560,
+      "uploadedDate": "2024-02-24T23:02:40.785Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x1080CircleBar-1920x1080-a3c6de5c7c59e978dd006c602714026e_Snapshot.png",
+      "md5": "d7d8d96584d493a0dceda41cfe1d4f71",
+      "width": 150,
+      "height": 74,
+      "size": 4464,
+      "uploadedDate": "2024-02-24T23:02:41.143Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-11-03 151617-1920x1080-57de534bfdceffffb328ce0d048fa17d_Snapshot.png",
+      "md5": "ab83c3c98038c5a1e733c138202476d7",
+      "width": 150,
+      "height": 74,
+      "size": 4220,
+      "uploadedDate": "2023-11-03T06:17:58.405Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x1080SectorsLoadingEffect-1920x1080-89891979eaa2297acbf06e6661f3cec7_Snapshot.png",
+      "md5": "3e99d81676db25555da266e2b220a764",
+      "width": 150,
+      "height": 74,
+      "size": 4164,
+      "uploadedDate": "2023-11-03T06:08:58.267Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x1080SectorsLoadingEffect-1920x1080-03147da08feebc005ac55b7da6a39581_Snapshot.png",
+      "md5": "6fbe87362119ebbc34b8d2d293ad161a",
+      "width": 150,
+      "height": 74,
+      "size": 3543,
+      "uploadedDate": "2023-11-03T03:36:44.381Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x1080SectorsLoadingEffect-1920x1080-b85194e46fba79d032409905fabce26b_Snapshot.png",
+      "md5": "3fdd536c5b3bd0743becdc87d86c37eb",
+      "width": 150,
+      "height": 74,
+      "size": 3366,
+      "uploadedDate": "2023-11-03T02:40:01.569Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x10808-1920x1080-aa38f8d79f5518b06e540aa03ee2544d_Snapshot.png",
+      "md5": "4b056328e953cc77eed193c4c5c4ac8d",
+      "width": 150,
+      "height": 74,
+      "size": 3367,
+      "uploadedDate": "2023-10-31T23:21:19.091Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x10806-1920x1080-95f9575634f8c602f7111fbfb497ddbf_Snapshot.png",
+      "md5": "e7cf8f91f5db8f26255dc334258e6efa",
+      "width": 150,
+      "height": 74,
+      "size": 5363,
+      "uploadedDate": "2023-10-31T23:21:19.425Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x10807-1920x1080-b781bf81d28bce86d563dca9a77c2879_Snapshot.png",
+      "md5": "63baf0691282f8cd7b8930d4e1ecedd5",
+      "width": 150,
+      "height": 74,
+      "size": 3236,
+      "uploadedDate": "2023-10-31T23:21:19.697Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x10804-1920x1080-d6656abd70ff37d8e792c4f936036a81_Snapshot.png",
+      "md5": "89335637bb01a230dfb8644d45353e46",
+      "width": 150,
+      "height": 74,
+      "size": 5351,
+      "uploadedDate": "2023-10-18T07:41:09.114Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x10804-1920x1080-30a8771c7e3893d044e155c845e6236e_Snapshot.png",
+      "md5": "2856ca238dd758e24d6d3de647515f06",
+      "width": 150,
+      "height": 74,
+      "size": 3546,
+      "uploadedDate": "2023-10-18T07:38:15.983Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x10804-1920x1080-bfb6d355cfce4d80e2351de5ab6a3b02_Snapshot.png",
+      "md5": "065af02e27833d8fdacd33e4cb6dfaf9",
+      "width": 150,
+      "height": 74,
+      "size": 5589,
+      "uploadedDate": "2023-10-15T11:08:59.347Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920x1080 2023-10-11 093631-1920x1080-1b65530139078f5451baa1a2dbe02a59_Snapshot.png",
+      "md5": "3404fb1ca2804014d01007ee73bafa51",
+      "width": 150,
+      "height": 74,
+      "size": 4203,
+      "uploadedDate": "2023-10-11T00:38:00.317Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Loading Screen With Load Percentage1920x1080-1920x1080-cd9b7ea29fcd21e896e2539b37ae6c2f_Snapshot.png",
+      "md5": "4a93c3866054b24e8a870e8a2ae35387",
+      "width": 150,
+      "height": 74,
+      "size": 7176,
+      "uploadedDate": "2023-10-11T00:30:42.288Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/youtube1920x1080-1920x1080-f66a16a46f3ab34eef11e22ebed8535f_Snapshot.png",
+      "md5": "431e4501cdec5955b67fa0b6134c45eb",
+      "width": 150,
+      "height": 74,
+      "size": 5320,
+      "uploadedDate": "2023-10-11T00:30:42.819Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-10-15T11:09:00.105Z",
+  "lastModifiedDate": "2024-11-23T11:56:26.623Z",
+  "customAttributes": {},
+  "entitlementName": "a981a449c5474c97a1ef5d60484bd484",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b4ed4a45a3a24c9697cdf179dca7b12b",
+      "appId": "UMGToSlateLoadingScreen_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-12T00:00:00.000Z",
+      "releaseNote": "No problem with SizeBox",
+      "versionTitle": "5.1_1.25"
+    },
+    {
+      "id": "c54d49177240470980ce14f95bed5edb",
+      "appId": "UMGToSlateLoadingScreen_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2024-04-12T00:00:00.000Z",
+      "releaseNote": "No problem with SizeBox",
+      "versionTitle": "5.2_1.25"
+    },
+    {
+      "id": "a8f99e4c53264c87a1e2ab5dc3a0e4ea",
+      "appId": "UMGToSlateLoadingScreen_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2023-10-11T00:00:00.000Z",
+      "releaseNote": "edit bp",
+      "versionTitle": "5.3_1.25EditBp"
+    },
+    {
+      "id": "f86bf97c7ff64d6189f6c81f3d59d6ab",
+      "appId": "UMGToSlateLoadingScreen_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "edit bp",
+      "versionTitle": "1.25_5.4edit bp"
+    }
+  ],
+  "developer": "roy00227Games",
+  "developerId": "o-2d4edkggmpc7e2sewfcwujued4es5a",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

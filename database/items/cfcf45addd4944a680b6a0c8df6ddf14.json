@@ -1,0 +1,497 @@
+{
+  "id": "cfcf45addd4944a680b6a0c8df6ddf14",
+  "title": "Camera Smart Stick",
+  "description": "Camera Smart Stick is an actor component that controls camera movements and ensures their smoothness during various actor movements",
+  "longDescription": "<p><em>Camera Smart Stick</em> is an actor component that controls camera movements and ensures their smoothness during various actor movements. Being the analogue of the <em>Spring Arm</em> component, <em>Camera Smart Stick</em> has essential differences in its working principle allowing to eliminate some of the shortcomings of the <em>Spring Arm</em>.</p><p> </p><p>This project includes two types of smart sticks using two different models of camera movements - geometric and physical. The geometric model is simpler and more stable than the physical one, but the latter gives more natural camera movements and uses the <a href=\"https://en.wikipedia.org/wiki/Damping_ratio\" rel=\"nofollow\">damping ratio</a> parameter to control oscillatory behavior of camera movements.</p><p><br /></p><p>Although the both smart sticks can be used with non-physical actors most of the advantages of the smart sticks can be seen when used with physical actors moving with smooth changes in speed (in contrast, non-physical actors can have instantaneous changes in speed which is equivalent to infinitely large accelerations which are problematic for the physical smart stick because they may cause numerical errors and instability).</p><ul><li><a href=\"https://drive.google.com/drive/folders/1tmzzQH2KK1N9KMSCTrny6SRJK_P9yVvn?usp&#61;sharing\" rel=\"nofollow\">Try it</a></li><li><a href=\"https://youtu.be/C0qwBwr7a6o\" rel=\"nofollow\">Demonstration video</a></li><li><a href=\"https://youtu.be/YXAqbuBYOYA\" rel=\"nofollow\">Setup with a <strong>Third Person Character</strong></a></li><li><a href=\"https://youtu.be/G4LPzjyFYXg\" rel=\"nofollow\">Setup with a bumpy road</a></li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>There are no camera jerks with any target rotations (this issue of the <em>Spring Arm</em> is demonstrated <a href=\"https://youtu.be/_jTDhYQDB5Q?t&#61;384\" rel=\"nofollow\">here</a>)</li><li>With trace enabled checking whether the view of the target is obscured, camera will move with adjustable rate along the trace line</li><li>The time interval of this trace can be set, allowing to avoid tracing in every frame</li><li>Camera &#34;attached&#34; to the smart stick will always look at the specified target regardless of acceleration of the target</li><li>Positions of the smart stick can be saved during a game, and then the camera can move smoothly between saved positions</li></ul><p><br /></p><p>This submission also comprises C&#43;&#43; source code of the <em>UCameraSmartStickGeometric </em>and<em> UCameraSmartStickPhysical </em>classes (<a href=\"https://drive.google.com/drive/folders/1GBlDSlioi13WJpf9kw0s5__pOyCLfIKg?usp&#61;sharing\" rel=\"nofollow\">here are their header files</a>).</p><p>Main Blueprints:</p><ul><li><em>CameraSmartStick </em>and<em> CameraSmartStick_phys - </em>the geometric and physical smart stick, respectively</li><li><em>FlyingSaucer - </em>a pawn<strong> </strong>representing the spaceship used in the demonstration video</li></ul><p>Network Replicated: No</p><p>Input: Gamepad, Keyboard, Mouse</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick050-1920x1080-118821df24f7187830c47521957d9670.jpg",
+      "md5": "118821df24f7187830c47521957d9670",
+      "width": 1920,
+      "height": 1080,
+      "size": 332647,
+      "uploadedDate": "2020-06-18T17:52:17.269Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick053-1920x1080-c154edcf72c73efedd7c8c7ff95c9e1e.jpg",
+      "md5": "c154edcf72c73efedd7c8c7ff95c9e1e",
+      "width": 1920,
+      "height": 1080,
+      "size": 335457,
+      "uploadedDate": "2020-06-18T17:52:19.876Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick052-1920x1080-503cfe671e2481e43dbd96e7f8172b94.jpg",
+      "md5": "503cfe671e2481e43dbd96e7f8172b94",
+      "width": 1920,
+      "height": 1080,
+      "size": 438059,
+      "uploadedDate": "2020-06-18T17:52:18.935Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick057-1920x1080-554b2d1020ab3a4c55e003bbe5d9af44.jpg",
+      "md5": "554b2d1020ab3a4c55e003bbe5d9af44",
+      "width": 1920,
+      "height": 1080,
+      "size": 335296,
+      "uploadedDate": "2020-06-18T17:52:23.472Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick054-1920x1080-c273e3bc6778e7c2b580642f61caf467.jpg",
+      "md5": "c273e3bc6778e7c2b580642f61caf467",
+      "width": 1920,
+      "height": 1080,
+      "size": 292015,
+      "uploadedDate": "2020-06-18T17:52:20.719Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick051-1920x1080-721f0ec897a86660abe695151f6a3820.jpg",
+      "md5": "721f0ec897a86660abe695151f6a3820",
+      "width": 1920,
+      "height": 1080,
+      "size": 355662,
+      "uploadedDate": "2020-06-18T17:52:18.070Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick055-1920x1080-f58710a2201f8bb9d6d8716aca48ce6e.jpg",
+      "md5": "f58710a2201f8bb9d6d8716aca48ce6e",
+      "width": 1920,
+      "height": 1080,
+      "size": 251128,
+      "uploadedDate": "2020-06-18T17:52:21.655Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick056-1920x1080-de654106eb36ffa54d273bbd40bd2e35.jpg",
+      "md5": "de654106eb36ffa54d273bbd40bd2e35",
+      "width": 1920,
+      "height": 1080,
+      "size": 314076,
+      "uploadedDate": "2020-06-18T17:52:22.568Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick049-1920x1080-f9161b25cfc4ee8916b894c624fd4009.jpg",
+      "md5": "f9161b25cfc4ee8916b894c624fd4009",
+      "width": 1920,
+      "height": 1080,
+      "size": 335113,
+      "uploadedDate": "2020-06-18T17:52:16.418Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick042-1920x1080-145fc4558a9b37dfcecb486f51ce7a78.jpg",
+      "md5": "145fc4558a9b37dfcecb486f51ce7a78",
+      "width": 1920,
+      "height": 1080,
+      "size": 489018,
+      "uploadedDate": "2020-06-18T17:52:10.359Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick043-1920x1080-1a33fcc85abdea867ad7df065d8dd212.jpg",
+      "md5": "1a33fcc85abdea867ad7df065d8dd212",
+      "width": 1920,
+      "height": 1080,
+      "size": 467927,
+      "uploadedDate": "2020-06-18T17:52:11.171Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick045-1920x1080-281ca7c3853eacdf8003dc666d5b67a6.jpg",
+      "md5": "281ca7c3853eacdf8003dc666d5b67a6",
+      "width": 1920,
+      "height": 1080,
+      "size": 447333,
+      "uploadedDate": "2020-06-18T17:52:12.901Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick046-1920x1080-dd2f1277cfc79c3e7dd8c06da131591a.jpg",
+      "md5": "dd2f1277cfc79c3e7dd8c06da131591a",
+      "width": 1920,
+      "height": 1080,
+      "size": 497282,
+      "uploadedDate": "2020-06-18T17:52:13.816Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick044-1920x1080-46bf74879fe5b7786ced85e514baa4fb.jpg",
+      "md5": "46bf74879fe5b7786ced85e514baa4fb",
+      "width": 1920,
+      "height": 1080,
+      "size": 552121,
+      "uploadedDate": "2020-06-18T17:52:12.060Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick047-1920x1080-a2e4737b7fb73088c87e02246ee58978.jpg",
+      "md5": "a2e4737b7fb73088c87e02246ee58978",
+      "width": 1920,
+      "height": 1080,
+      "size": 320004,
+      "uploadedDate": "2020-06-18T17:52:14.664Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick048-1920x1080-598361d7c1ddcf25994c132be5fd1c3d.jpg",
+      "md5": "598361d7c1ddcf25994c132be5fd1c3d",
+      "width": 1920,
+      "height": 1080,
+      "size": 330776,
+      "uploadedDate": "2020-06-18T17:52:15.565Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CameraSmartStick058-1920x1080-16a6e32bd8d54e2942120014921eb1ce.jpg",
+      "md5": "16a6e32bd8d54e2942120014921eb1ce",
+      "width": 1920,
+      "height": 1080,
+      "size": 542759,
+      "uploadedDate": "2020-06-18T17:52:24.331Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/CameraSmartStick_thumb-284x284-08245c50322cfc05547365ed20d72d18.png",
+      "md5": "08245c50322cfc05547365ed20d72d18",
+      "width": 284,
+      "height": 284,
+      "size": 93199,
+      "uploadedDate": "2020-06-18T17:59:20.777Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/CameraSmartStick_featured-894x488-e3a6561010d8d6b28912202700f00be0.png",
+      "md5": "e3a6561010d8d6b28912202700f00be0",
+      "width": 894,
+      "height": 488,
+      "size": 501924,
+      "uploadedDate": "2019-01-30T01:37:28.969Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick042-1920x1080-145fc4558a9b37dfcecb486f51ce7a78_Snapshot.jpg",
+      "md5": "6745afce87d8b9cbd3f32af0b55e9178",
+      "width": 150,
+      "height": 74,
+      "size": 5602,
+      "uploadedDate": "2020-06-18T17:52:10.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick043-1920x1080-1a33fcc85abdea867ad7df065d8dd212_Snapshot.jpg",
+      "md5": "302136a342bbcf773fc4c945b6b7452b",
+      "width": 150,
+      "height": 74,
+      "size": 5702,
+      "uploadedDate": "2020-06-18T17:52:11.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick044-1920x1080-46bf74879fe5b7786ced85e514baa4fb_Snapshot.jpg",
+      "md5": "9856a777e29ec2a7621ff78b1f704b53",
+      "width": 150,
+      "height": 74,
+      "size": 5836,
+      "uploadedDate": "2020-06-18T17:52:12.617Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick045-1920x1080-281ca7c3853eacdf8003dc666d5b67a6_Snapshot.jpg",
+      "md5": "5a486307bc6e7e4d7d66353f47e78afd",
+      "width": 150,
+      "height": 74,
+      "size": 5255,
+      "uploadedDate": "2020-06-18T17:52:13.458Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick046-1920x1080-dd2f1277cfc79c3e7dd8c06da131591a_Snapshot.jpg",
+      "md5": "7f4d66ba4851ebb24a78586055f64ccd",
+      "width": 150,
+      "height": 74,
+      "size": 5687,
+      "uploadedDate": "2020-06-18T17:52:14.394Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick047-1920x1080-a2e4737b7fb73088c87e02246ee58978_Snapshot.jpg",
+      "md5": "23d2db824e96ac5267727e7874b41d1b",
+      "width": 150,
+      "height": 74,
+      "size": 5585,
+      "uploadedDate": "2020-06-18T17:52:15.281Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick048-1920x1080-598361d7c1ddcf25994c132be5fd1c3d_Snapshot.jpg",
+      "md5": "bb1d708c7793f189dadb3f6c8ebdcbae",
+      "width": 150,
+      "height": 74,
+      "size": 5787,
+      "uploadedDate": "2020-06-18T17:52:16.125Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick049-1920x1080-f9161b25cfc4ee8916b894c624fd4009_Snapshot.jpg",
+      "md5": "e5eca14ccc8f4cbe6cdb120795cf4e91",
+      "width": 150,
+      "height": 74,
+      "size": 4517,
+      "uploadedDate": "2020-06-18T17:52:16.969Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick050-1920x1080-118821df24f7187830c47521957d9670_Snapshot.jpg",
+      "md5": "78843eb02cf06728b08614cfb46ed59b",
+      "width": 150,
+      "height": 74,
+      "size": 5050,
+      "uploadedDate": "2020-06-18T17:52:17.826Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick051-1920x1080-721f0ec897a86660abe695151f6a3820_Snapshot.jpg",
+      "md5": "532fb4e43d5d26427ec4223e70044eaa",
+      "width": 150,
+      "height": 74,
+      "size": 5554,
+      "uploadedDate": "2020-06-18T17:52:18.652Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick052-1920x1080-503cfe671e2481e43dbd96e7f8172b94_Snapshot.jpg",
+      "md5": "549db31fecd49d08e85740d1595b94be",
+      "width": 150,
+      "height": 74,
+      "size": 6948,
+      "uploadedDate": "2020-06-18T17:52:19.510Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick053-1920x1080-c154edcf72c73efedd7c8c7ff95c9e1e_Snapshot.jpg",
+      "md5": "f7cd7f2ff426e7fd8bd4ac499b7232b4",
+      "width": 150,
+      "height": 74,
+      "size": 5262,
+      "uploadedDate": "2020-06-18T17:52:20.430Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick054-1920x1080-c273e3bc6778e7c2b580642f61caf467_Snapshot.jpg",
+      "md5": "f0a9788bf0630dcd7cee43bea4485a9d",
+      "width": 150,
+      "height": 74,
+      "size": 4780,
+      "uploadedDate": "2020-06-18T17:52:21.401Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick055-1920x1080-f58710a2201f8bb9d6d8716aca48ce6e_Snapshot.jpg",
+      "md5": "5ae524895e147f9a0c2f1842d372ec45",
+      "width": 150,
+      "height": 74,
+      "size": 4202,
+      "uploadedDate": "2020-06-18T17:52:22.276Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick056-1920x1080-de654106eb36ffa54d273bbd40bd2e35_Snapshot.jpg",
+      "md5": "87c17d7e69c7c3344a018bb048926882",
+      "width": 150,
+      "height": 74,
+      "size": 4733,
+      "uploadedDate": "2020-06-18T17:52:23.142Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick057-1920x1080-554b2d1020ab3a4c55e003bbe5d9af44_Snapshot.jpg",
+      "md5": "0a811ffe1fd1cdf60224a1c6bcd3dc99",
+      "width": 150,
+      "height": 74,
+      "size": 4887,
+      "uploadedDate": "2020-06-18T17:52:24.020Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CameraSmartStick058-1920x1080-16a6e32bd8d54e2942120014921eb1ce_Snapshot.jpg",
+      "md5": "85977cd6c31cfe5a523582cb13f96da4",
+      "width": 150,
+      "height": 74,
+      "size": 6648,
+      "uploadedDate": "2020-06-18T17:52:24.920Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpScreen00-1920x1080-babccf401d1b338de07802f20b14e8ed_Snapshot.png",
+      "md5": "8c94f08472d0f469c2fd1d4467af716d",
+      "width": 150,
+      "height": 74,
+      "size": 10316,
+      "uploadedDate": "2019-03-21T22:50:26.954Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpScreen01-1920x1080-d4cfaa9bb137f1ebdc4b8e1b88432dc5_Snapshot.png",
+      "md5": "c25ca1b5da18a356a5608f80091161e7",
+      "width": 150,
+      "height": 74,
+      "size": 8212,
+      "uploadedDate": "2019-03-21T22:50:27.319Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpScreen02-1920x1080-f9f9ebc7345df0184f337414fc487f0d_Snapshot.png",
+      "md5": "af8ca04f7bb85a1563f4a42e09a4c2ca",
+      "width": 150,
+      "height": 74,
+      "size": 8174,
+      "uploadedDate": "2019-03-21T22:50:27.525Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpScreen03-1920x1080-c7f8e561cee67171ca84cb16a0f2fdcc_Snapshot.png",
+      "md5": "ba401e67d99456aa231beb2f89fb2377",
+      "width": 150,
+      "height": 74,
+      "size": 7892,
+      "uploadedDate": "2019-03-21T22:50:27.795Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bpScreen04-1920x1080-8c09f90c519c0dacec8d7cf36da1481c_Snapshot.png",
+      "md5": "07138edc17ba82f7340ef1d67996725f",
+      "width": 150,
+      "height": 74,
+      "size": 8741,
+      "uploadedDate": "2019-03-21T22:50:28.147Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Canyon01-1920x1080-41cc0ad860a0310f5e38dc411854c9ca_Snapshot.jpg",
+      "md5": "e50423722ed1fc635152e7265b3273a9",
+      "width": 150,
+      "height": 74,
+      "size": 3438,
+      "uploadedDate": "2019-01-30T01:37:21.497Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Canyon04-1920x1080-c772a21a0e54898936ff73216542c63f_Snapshot.jpg",
+      "md5": "00e216020634a72a09d3b44f19de427e",
+      "width": 150,
+      "height": 74,
+      "size": 3625,
+      "uploadedDate": "2019-01-30T01:37:22.764Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Canyon05-1920x1080-96f643b74a639dddddb18b6885290b33_Snapshot.jpg",
+      "md5": "f1307f6b2464a9c747a59ebeda5f0cfd",
+      "width": 150,
+      "height": 74,
+      "size": 3464,
+      "uploadedDate": "2019-01-30T01:37:23.985Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Canyon06-1920x1080-ce07fd7f3257fcc8fc5e9973ccd66626_Snapshot.jpg",
+      "md5": "5c1eb7c9990784d56870e654e3dbe79c",
+      "width": 150,
+      "height": 74,
+      "size": 3078,
+      "uploadedDate": "2019-01-30T01:37:25.212Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Canyon07-1920x1080-1a72f992a7307070062d6f29ee2e64e6_Snapshot.jpg",
+      "md5": "1be0e5b8ca719d55d5efd124a31f90cd",
+      "width": 150,
+      "height": 74,
+      "size": 2892,
+      "uploadedDate": "2019-01-30T01:37:26.441Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Canyon09a-1920x1080-a6bb89ad71cc7d300b78ca9fa8cfe353_Snapshot.jpg",
+      "md5": "bac2a2e250ce23abfbc99d5adaad7c2a",
+      "width": 150,
+      "height": 74,
+      "size": 2586,
+      "uploadedDate": "2019-01-30T01:37:27.641Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Canyon09c-1920x1080-c6c17c566b76be27f4420f8e1fcb56a7_Snapshot.jpg",
+      "md5": "b038af3c7e82dfc29bdc1f2a1588faee",
+      "width": 150,
+      "height": 74,
+      "size": 2855,
+      "uploadedDate": "2019-01-30T01:37:28.816Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-03-05T17:55:10.067Z",
+  "lastModifiedDate": "2024-09-22T15:22:55.234Z",
+  "customAttributes": {},
+  "entitlementName": "cfcf45addd4944a680b6a0c8df6ddf14",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "6303918c75f8403f92d0dc31858fa34b",
+      "appId": "CameraSmcfcf45addd49V1",
+      "compatibleApps": [
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-01-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SmartStick_bpConstructionFix"
+    },
+    {
+      "id": "c4cac5d748584fd38a4e6fb4be427a3e",
+      "appId": "CameraSmcfcf45addd49V2",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "SmartStick_03a"
+    }
+  ],
+  "developer": "zubetto",
+  "developerId": "o-ag9sga6xhbg4nypaemmh4fyuqy4gkt",
+  "endOfSupport": false,
+  "unsearchable": false
+}

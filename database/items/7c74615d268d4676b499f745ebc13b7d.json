@@ -1,0 +1,219 @@
+{
+  "id": "7c74615d268d4676b499f745ebc13b7d",
+  "title": "Blueprints Access To GConfig",
+  "description": "Access GConfig Functionality via Blueprints",
+  "longDescription": "<h1>What is this?</h1><p>This plugin provides access from blueprints to the data that lives in the Unreal Engine 4 .ini files.</p><h2><br /></h2><h2><strong>Why would you need this?</strong></h2><p>Whilst I was an engineer at Epic Games, I worked a lot on the Config Cache (The ini system). The Config Cache is a core part of the engine and is used by almost every module in one way or another. <em>E.g. To enable voice in your project, you would have had to make a config change to enable this.</em> <em>The Engine’s Online Voice interface would pick</em> it up like so:</p><p>GConfig-&gt;GetBool(TEXT(“OnlineSubsystem”), TEXT(“bHasVoiceEnabled”), bHasVoiceEnabled, GEngineIni)</p><p>In code this is easily accessibile through GConfig. A quick find in the 4.26 source shows that there are ~2700 references to this. However, as far as I can see, there has been no exposure of the common GConfig functionality to Blueprints. That is where this plugin comes in.</p><h2><br /></h2><h2><strong>Using the plugin…</strong></h2><p>Given that the GConfig system allows the developer to access important config information, I have exposed the most basic functionality via this plugin. These have been categorised into three categories: Getters, Setters, and Misc.</p>",
+  "technicalDetails": "<h1>Blueprints Access To GConfig</h1><p>Provides blueprint functionality for all common GConfig operations. Including:</p><p><br /></p><h2><strong>Getters</strong></h2><ul><li>GetString</li><li>GetText</li><li>GetBool</li><li>GetInt</li><li>GetFloat</li><li>GetArray</li><li>GetColor</li><li>GetVector2D</li><li>GetVector</li><li>GetVector4</li><li>GetRotator</li></ul><h2>Setters</h2><ul><li>SetString</li><li>SetText</li><li>SetBool</li><li>SetInt</li><li>SetFloat</li><li>SetArray</li><li>SetColor</li><li>SetVector2D</li><li>SetVector</li><li>SetVector4</li><li>SetRotator</li></ul><h2>Misc</h2><ul><li>Flush</li></ul><p><br /></p><p>Target configuration file (.ini) is available through each node&#39;s dropdown or via an EConfigIniFileNames node from your blueprints.</p><p><br /></p><p>Further information on this plugin, including documentation can be found at:</p><p>https://trifoliumdigitalblog.wordpress.com/2021/02/22/blueprint-access-to-gconfig-plugin/</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Getters-1920x1080-9f4d0d9d05053b67bccbfead62acbfbb.png",
+      "md5": "9f4d0d9d05053b67bccbfead62acbfbb",
+      "width": 1920,
+      "height": 1080,
+      "size": 236766,
+      "uploadedDate": "2021-02-18T16:49:40.118Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Setters-1920x1080-43c0147c9c12e7111669eea4ceb7228e.png",
+      "md5": "43c0147c9c12e7111669eea4ceb7228e",
+      "width": 1920,
+      "height": 1080,
+      "size": 240237,
+      "uploadedDate": "2021-02-18T16:49:40.762Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/SettersTooltips-1920x1080-535f256999407101479dd5d31466f9c7.png",
+      "md5": "535f256999407101479dd5d31466f9c7",
+      "width": 1920,
+      "height": 1080,
+      "size": 247870,
+      "uploadedDate": "2021-02-18T16:49:41.139Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MiscWithGettersContext-1920x1080-749b602ac4c10ce0c1df7e71c6ffea16.png",
+      "md5": "749b602ac4c10ce0c1df7e71c6ffea16",
+      "width": 1920,
+      "height": 1080,
+      "size": 154900,
+      "uploadedDate": "2021-02-18T16:49:41.563Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MiscWithMiscContext-1920x1080-77bf0c31875ec0cfc74a6e0fdbe2a031.png",
+      "md5": "77bf0c31875ec0cfc74a6e0fdbe2a031",
+      "width": 1920,
+      "height": 1080,
+      "size": 147407,
+      "uploadedDate": "2021-02-18T16:49:41.975Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MiscWithSettersContext-1920x1080-771330ce11afab227403388348b1c33c.png",
+      "md5": "771330ce11afab227403388348b1c33c",
+      "width": 1920,
+      "height": 1080,
+      "size": 157958,
+      "uploadedDate": "2021-02-18T16:49:42.444Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BlueprintsAccessToGConfig_thumb-284x284-b2f1f9fb8567d77edd62e7ce2fee3efb.png",
+      "md5": "b2f1f9fb8567d77edd62e7ce2fee3efb",
+      "width": 284,
+      "height": 284,
+      "size": 23216,
+      "uploadedDate": "2021-02-18T16:49:42.769Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/BlueprintsAccessToGConfig_featured-894x488-e32a40912059d2c8e6d62b3444641035.png",
+      "md5": "e32a40912059d2c8e6d62b3444641035",
+      "width": 894,
+      "height": 488,
+      "size": 250749,
+      "uploadedDate": "2021-02-18T16:49:42.896Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Getters-1920x1080-9f4d0d9d05053b67bccbfead62acbfbb_Snapshot.png",
+      "md5": "e5b1811fe73c2597890a2b2bd38e5d86",
+      "width": 150,
+      "height": 74,
+      "size": 4873,
+      "uploadedDate": "2021-02-18T16:49:40.436Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Setters-1920x1080-43c0147c9c12e7111669eea4ceb7228e_Snapshot.png",
+      "md5": "1d3163813b8d7460f2246dea38a11e5f",
+      "width": 150,
+      "height": 74,
+      "size": 5228,
+      "uploadedDate": "2021-02-18T16:49:41.023Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SettersTooltips-1920x1080-535f256999407101479dd5d31466f9c7_Snapshot.png",
+      "md5": "302dac160f2d567ea26ff05c63efb98a",
+      "width": 150,
+      "height": 74,
+      "size": 5374,
+      "uploadedDate": "2021-02-18T16:49:41.412Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MiscWithGettersContext-1920x1080-749b602ac4c10ce0c1df7e71c6ffea16_Snapshot.png",
+      "md5": "89d3089fcdfa01c0e29130857d170a80",
+      "width": 150,
+      "height": 74,
+      "size": 3598,
+      "uploadedDate": "2021-02-18T16:49:41.818Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MiscWithMiscContext-1920x1080-77bf0c31875ec0cfc74a6e0fdbe2a031_Snapshot.png",
+      "md5": "810d40ba24ad763d782ca147a1b57b7c",
+      "width": 150,
+      "height": 74,
+      "size": 3603,
+      "uploadedDate": "2021-02-18T16:49:42.228Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MiscWithSettersContext-1920x1080-771330ce11afab227403388348b1c33c_Snapshot.png",
+      "md5": "9780cdbf9ab49c0ac93c07213749ed89",
+      "width": 150,
+      "height": 74,
+      "size": 3664,
+      "uploadedDate": "2021-02-18T16:49:42.734Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-03-01T17:04:59.254Z",
+  "lastModifiedDate": "2024-10-15T05:57:24.692Z",
+  "entitlementName": "7c74615d268d4676b499f745ebc13b7d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "1fbab32a3d974f5bb593250922f4d18f",
+      "appId": "BlueprintsAccessToGConfig_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-02-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.25"
+    },
+    {
+      "id": "7bf1dc184ea0417e81cd41591280a3d7",
+      "appId": "BlueprintsAccessToGConfig_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "iOS",
+        "Linux",
+        "Win32",
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-02-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.26"
+    },
+    {
+      "id": "5f5f029719614289a4fea72c16f4b368",
+      "appId": "BlueprintsAccessToGConfig_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2021-11-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    }
+  ],
+  "developer": "TrifoliumDigital",
+  "developerId": "o-r2fj3wmbnj8gc74aze62qny6qj3clp",
+  "endOfSupport": false,
+  "unsearchable": false
+}

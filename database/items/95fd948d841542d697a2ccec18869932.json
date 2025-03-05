@@ -1,0 +1,394 @@
+{
+  "id": "95fd948d841542d697a2ccec18869932",
+  "title": "Distance Based Event Manager",
+  "description": "Trigger events based on distance to the Player Character",
+  "longDescription": "<p>Example video: <a href=\"https://youtu.be/woclju4Kk2k\" rel=\"nofollow\">Link</a></p><p><a href=\"https://drive.google.com/drive/folders/1rMsXdUY-nnAwAgfh8m1s-urm6Xouq7Z-?usp&#61;sharing\" rel=\"nofollow\">Demo</a></p><p><a href=\"https://docs.google.com/document/d/1Qv62yOrT-7gMYlZmvoeyhYMhg4CJ62Vz7HQAaZZWgx8/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p><br /></p><p><strong>Version 2: Logic now runs inside a Character Component. Fixed a bug related to the actors arrays.</strong></p><p><br /></p><p>Trigger events based on distance to the Player Character. A Blueprint Component triggers events on actors as they get close or far from the Character. The events are triggered only once: outside and inside the radius around the Character.</p><p><br /></p><ul><li><strong>Used in most cases to increase performance.</strong> As actors get far away you can change the tick interval or disable tick entirely.</li><li>You can create a New Actor, add the provided Interface with both events and run any logic as they get close or far from the Player Character.</li><li>Not Replicated. Single player projects.</li><li><strong>It doesn&#39;t run every Tick.</strong></li></ul><p><br /></p><p>---- Attribution ----</p><p><br /></p><p>The following assets are included in this product:</p><p><br /></p><ol><li>&#34;Balance&#34; (https://opengameart.org/content/balance-0) by Loyalty Freak Music is dedicated to the public domain under CC0</li><li>&#34;Footsteps On Cloth&#34; (https://freesound.org/people/MikeFozzy98/sounds/670108/) by MikeFozzy98 is dedicated to the public domain under CC0</li><li>&#34;Jump Landing Sound&#34; (https://opengameart.org/content/jump-landing-sound) by MentalSanityOff is dedicated to the public domain under CC0</li><li>&#34;UI Sound 2&#34; (https://opengameart.org/content/ui-sounds-0) by HaelDB is dedicated to the public domain under CC0</li></ol>",
+  "technicalDetails": "<p>Features:</p><ul><li> A Component handles the logic. Other actors implement an Interface so the events can be used.</li></ul><p><br /></p><p>Examples:</p><ul><li><strong>Enable or disable tick</strong> on actors outside or inside the radius.</li><li>Activate or deactivate Particles as they get far from the Player.</li><li>Change NPCs tick interval as they get close to the Player.</li><li>Change the tick interval on components based on distance to the Character, for instance making skeletal meshes tick less often as they get far from the Player Character.</li><li>Enabling or disabling physics simulation on actor components.</li><li>Hide actors as they get far away or change a Material Parameter.</li></ul><p><br /></p><p><br /></p><p><strong>Note: The project includes functionality so events are triggered as actors get close or far from the Player Character, with the goal of gaining performance from actors that are too far away from the Character. The logic that happens after the events are triggered inside other actors depends entirely on the user, although the project includes 9 examples.</strong></p><p><br /></p><p><br /></p><p>Number of Blueprints: 1 Blueprint Component, 9 Blueprint Examples, 1 Blueprint Interface</p><p>Input: Gamepad, Keyboard, Mouse</p><p>Network Replicated: Not Supported (recommended for Single Player projects only)</p><p>Supported Development Platforms: Logic should work with any platform but only tested on Windows 64</p><p>Windows: Yes</p><p>Mac: Not tested but should work</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1Qv62yOrT-7gMYlZmvoeyhYMhg4CJ62Vz7HQAaZZWgx8/edit?usp&#61;sharing\" rel=\"nofollow\">Link</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I4-1920x1080-89859e019c4979f3ca342be5300033c1.png",
+      "md5": "89859e019c4979f3ca342be5300033c1",
+      "width": 1920,
+      "height": 1080,
+      "size": 385168,
+      "uploadedDate": "2023-06-27T05:28:36.063Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I5-1920x1080-672fd27b50784eeb00983c4e7d660d07.png",
+      "md5": "672fd27b50784eeb00983c4e7d660d07",
+      "width": 1920,
+      "height": 1080,
+      "size": 369587,
+      "uploadedDate": "2023-06-27T05:28:36.545Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I3-1920x1080-8b31e90a98d11808c624e383b029a8e0.png",
+      "md5": "8b31e90a98d11808c624e383b029a8e0",
+      "width": 1920,
+      "height": 1080,
+      "size": 326338,
+      "uploadedDate": "2023-06-27T05:28:35.747Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I1-1920x1080-213906b60a5c4bbac8b1a8960459ee4f.png",
+      "md5": "213906b60a5c4bbac8b1a8960459ee4f",
+      "width": 1920,
+      "height": 1080,
+      "size": 348561,
+      "uploadedDate": "2023-06-27T05:28:36.905Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/I0-1920x1080-f04549b372cc3080bf11f1a0e1104d34.png",
+      "md5": "f04549b372cc3080bf11f1a0e1104d34",
+      "width": 1920,
+      "height": 1080,
+      "size": 344980,
+      "uploadedDate": "2023-06-27T05:28:36.232Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image0-1920x1080-ca2c10010f3a16a82d581abc8a28eb5a.png",
+      "md5": "ca2c10010f3a16a82d581abc8a28eb5a",
+      "width": 1920,
+      "height": 1080,
+      "size": 281163,
+      "uploadedDate": "2023-04-16T05:58:28.663Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DistanceBasedEventManager_thumb-284x284-0a7a55a1d0d0e3fd7e1ca58d3e8b74f4.png",
+      "md5": "0a7a55a1d0d0e3fd7e1ca58d3e8b74f4",
+      "width": 284,
+      "height": 284,
+      "size": 153485,
+      "uploadedDate": "2023-06-27T05:28:37.911Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DistanceBasedEventManager_featured-894x488-2da9cac75f3f9aed296bbed9380b35b3.png",
+      "md5": "2da9cac75f3f9aed296bbed9380b35b3",
+      "width": 894,
+      "height": 488,
+      "size": 811517,
+      "uploadedDate": "2023-06-27T05:28:38.056Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1920 X 1080-1920x1080-165ccf7a3897a794fa805a2526ccd90e_Snapshot.png",
+      "md5": "b7df523b9f1c64c93820e34a4a204788",
+      "width": 150,
+      "height": 74,
+      "size": 6156,
+      "uploadedDate": "2023-06-27T05:28:35.324Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I6-1920x1080-ff18b2a4d59724e1ae96a149d06f5f8d_Snapshot.png",
+      "md5": "0a512ca537755b78ea28137b4a500efe",
+      "width": 150,
+      "height": 74,
+      "size": 4112,
+      "uploadedDate": "2023-06-27T05:28:35.615Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I3-1920x1080-8b31e90a98d11808c624e383b029a8e0_Snapshot.png",
+      "md5": "9eedab7ec500e7bfeca328454084d4a8",
+      "width": 150,
+      "height": 74,
+      "size": 4375,
+      "uploadedDate": "2023-06-27T05:28:35.826Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I4-1920x1080-89859e019c4979f3ca342be5300033c1_Snapshot.png",
+      "md5": "1402a5f8c423e8a1971eaad34a16a51a",
+      "width": 150,
+      "height": 74,
+      "size": 4377,
+      "uploadedDate": "2023-06-27T05:28:36.143Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I0-1920x1080-f04549b372cc3080bf11f1a0e1104d34_Snapshot.png",
+      "md5": "44623a98fee4bc5d3f348405c06beade",
+      "width": 150,
+      "height": 74,
+      "size": 4598,
+      "uploadedDate": "2023-06-27T05:28:36.313Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I5-1920x1080-672fd27b50784eeb00983c4e7d660d07_Snapshot.png",
+      "md5": "38ad365fe682996a9673b34e7e339083",
+      "width": 150,
+      "height": 74,
+      "size": 4058,
+      "uploadedDate": "2023-06-27T05:28:36.672Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I1-1920x1080-213906b60a5c4bbac8b1a8960459ee4f_Snapshot.png",
+      "md5": "67099ae7f095a2225b896850fdda3761",
+      "width": 150,
+      "height": 74,
+      "size": 5214,
+      "uploadedDate": "2023-06-27T05:28:37.012Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/I2-1920x1080-17e6fab43139516db4fbd41b5d4769ba_Snapshot.jpg",
+      "md5": "0c64eba06a6231bb835fb2d5df10fa4e",
+      "width": 150,
+      "height": 74,
+      "size": 3289,
+      "uploadedDate": "2023-06-27T05:28:37.769Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NPC1-1920x1080-60bb601270a715a1a8ee0968bc968f09_Snapshot.png",
+      "md5": "66ffa01791a18d8e2003a9933aa65268",
+      "width": 150,
+      "height": 74,
+      "size": 3650,
+      "uploadedDate": "2023-04-30T18:44:18.956Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NPC2-1920x1080-b0f6c0b1cd3857ed6cd85ee784065bce_Snapshot.png",
+      "md5": "8e8ea28ba592197dcc2bd6f98f994c91",
+      "width": 150,
+      "height": 74,
+      "size": 4911,
+      "uploadedDate": "2023-04-30T18:44:19.490Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NPC3-1920x1080-180df8d7cdf646f90a1bb21808a04d11_Snapshot.png",
+      "md5": "70775d204358896dc51b9369cb7d93fe",
+      "width": 150,
+      "height": 74,
+      "size": 4511,
+      "uploadedDate": "2023-04-30T18:44:19.996Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NPC4-1920x1080-85fa63a7be0ed932d00e7c0f160c4853_Snapshot.png",
+      "md5": "24fe54356fd7b9bcb624d5dfadf7baf5",
+      "width": 150,
+      "height": 74,
+      "size": 4343,
+      "uploadedDate": "2023-04-30T18:44:20.511Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NPC5-1920x1080-25f8c332ab51d764d9cc080b5f0397bb_Snapshot.png",
+      "md5": "a945f6bf73e2d86e8557c28a55f0ff7e",
+      "width": 150,
+      "height": 74,
+      "size": 4879,
+      "uploadedDate": "2023-04-30T18:44:21.101Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NPC6-1920x1080-2f49c093c07cd8eaa5d7e67374f93545_Snapshot.png",
+      "md5": "98e4252fad34c5898e6c27e1a211188f",
+      "width": 150,
+      "height": 74,
+      "size": 3919,
+      "uploadedDate": "2023-04-30T18:44:21.622Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NPC7-1920x1080-42e7ecb3459cd1cfdf47e3db20920796_Snapshot.png",
+      "md5": "a87244b962c064edd93662cb8a6f5ae6",
+      "width": 150,
+      "height": 74,
+      "size": 4774,
+      "uploadedDate": "2023-04-30T18:44:22.154Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Front-1920x1080-9c9b968828c3b8f74c9ac19d63b13642_Snapshot.png",
+      "md5": "0aae6a6ec788fd02a55ce8d09cf29843",
+      "width": 150,
+      "height": 74,
+      "size": 5527,
+      "uploadedDate": "2023-04-18T16:48:58.394Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image7-1920x1080-b39083152cd3333c1be79b181ce09c5e_Snapshot.png",
+      "md5": "b64926ad73f8dfbd224be2c9346f0628",
+      "width": 150,
+      "height": 74,
+      "size": 4253,
+      "uploadedDate": "2023-04-16T06:33:00.837Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image6-1920x1080-6f3ddd65c5e3d300af8ef95daa39f242_Snapshot.png",
+      "md5": "31fe404ede80f6e159c8b6c572e456fa",
+      "width": 150,
+      "height": 74,
+      "size": 4036,
+      "uploadedDate": "2023-04-16T06:33:01.392Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image5-1920x1080-8a55bdaf2a65e41c62ee670aed5970c0_Snapshot.png",
+      "md5": "4ac106ab4523113c763a58dfb1668263",
+      "width": 150,
+      "height": 74,
+      "size": 3693,
+      "uploadedDate": "2023-04-16T06:33:01.934Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image3-1920x1080-64d267ef99409f46be15e0d89ebec86d_Snapshot.png",
+      "md5": "afa6548681c0f147780eb538483ff988",
+      "width": 150,
+      "height": 74,
+      "size": 3961,
+      "uploadedDate": "2023-04-16T06:19:23.665Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image4-1920x1080-28924bfa36909808b55fa946b4833c46_Snapshot.png",
+      "md5": "7a4b552effce8047b92a84501f83d470",
+      "width": 150,
+      "height": 74,
+      "size": 4112,
+      "uploadedDate": "2023-04-16T06:19:24.182Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image2-1920x1080-c16db49e9aeb77c640bf6a23c16ba16a_Snapshot.png",
+      "md5": "e815f3d3b25506e860952d35a5fe81ff",
+      "width": 150,
+      "height": 74,
+      "size": 4227,
+      "uploadedDate": "2023-04-16T06:19:24.721Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image1-1920x1080-b1df949b565e1e5306b803914429eb66_Snapshot.png",
+      "md5": "6e56da9de7c5324f40f09a946cf410b6",
+      "width": 150,
+      "height": 74,
+      "size": 4847,
+      "uploadedDate": "2023-04-16T05:58:28.494Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image0-1920x1080-ca2c10010f3a16a82d581abc8a28eb5a_Snapshot.png",
+      "md5": "f90bcde21c57fd5e12cc8e1fb8b68157",
+      "width": 150,
+      "height": 74,
+      "size": 4520,
+      "uploadedDate": "2023-04-16T05:58:28.897Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PreviewImage-1920x1080-f8de76d8cc06dfd04eef53a821fc9e25_Snapshot.png",
+      "md5": "12606cb12a567f4f9982f684ed999a03",
+      "width": 150,
+      "height": 74,
+      "size": 2428,
+      "uploadedDate": "2023-04-16T05:31:01.794Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-04-18T20:26:45.072Z",
+  "lastModifiedDate": "2024-04-24T21:09:00.780Z",
+  "customAttributes": {},
+  "entitlementName": "95fd948d841542d697a2ccec18869932",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "099d4e4f458e404991d5c2f18115b850",
+      "appId": "Distance95fd948d8415V1",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-04-16T00:00:00.000Z",
+      "releaseNote": "Added a Character Component",
+      "versionTitle": "4.27 Version 2"
+    },
+    {
+      "id": "a5de5e8dc5184a7faca1c882afa981d5",
+      "appId": "Distance95fd948d8415V2",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-04-16T00:00:00.000Z",
+      "releaseNote": "Added a Character Component",
+      "versionTitle": "5.1 Version 2"
+    },
+    {
+      "id": "f9ff9bb1a3094ab3a3c2937e74494776",
+      "appId": "Distance95fd948d8415V3",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-06-27T00:00:00.000Z",
+      "releaseNote": "Added a Character Component",
+      "versionTitle": "5.2 Version 2"
+    },
+    {
+      "id": "2295e4429bc542ab98427012d4b82033",
+      "appId": "Distance95fd948d8415V4",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-23T00:00:00.000Z",
+      "releaseNote": "Added a Character Component",
+      "versionTitle": "5.3 Version 2"
+    },
+    {
+      "id": "0be6261ac0194af8ad124423d41c765b",
+      "appId": "Distance95fd948d8415V5",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-23T00:00:00.000Z",
+      "releaseNote": "Added a Character Component",
+      "versionTitle": "5.4 Version 2"
+    }
+  ],
+  "developer": "Raul Jaramillo",
+  "developerId": "o-dwr98md8acanu8q2tsnlm66yglmjj4",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

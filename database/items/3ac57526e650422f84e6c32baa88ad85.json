@@ -1,0 +1,238 @@
+{
+  "id": "3ac57526e650422f84e6c32baa88ad85",
+  "title": "Kantan AutoJSON",
+  "description": "Automated single-node conversion between Blueprint types and JSON. Works with any Blueprint/class, struct, array, map or set.",
+  "longDescription": "<p>Kantan AutoJSON provides Blueprint nodes for converting data between UE4 types and JSON. It harnesses the UE4 property system to create mappings automatically so there is no need for direct JSON manipulation. Simply wire up any object, struct or container (array, map, set) to a single node and the plugin will map the data to, or import from, an equivalent JSON representation.</p><p><br /></p><p>Possible use cases:</p><ul><li>Initialization of data-driven systems (the JSON representation is very intuitive; to author data directly, simply ensure the JSON field keys match the UE4 variable names of your struct/class).</li><li>Runtime saving/loading of game state.</li><li>Custom networking code.</li><li>Design time editor scripting with Blutilities, such as asset generation and procedural level building.</li></ul><p><br /></p><p>LIMITATIONS AND NOTES:</p><ul><li>This plugin does not provide any low level JSON manipulation nodes, but converts to/from JSON text in a single operation. Any further composition/modification of the JSON would require another plugin or solution.</li><li>Since Blueprint is statically typed, it is assumed you always know in advance the structure of the JSON data you want to load. As such, dynamic creation of objects from JSON is not supported - you must have an existing object, which you plug into the Deserialize node, and will then be populated with the JSON data.</li><li>Recursive serialization of sub-object properties is currently not supported. For example, if serializing an actor, properties on its components will not be included (though you can of course explicitly serialize components yourself if needed).</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Two way conversion between Blueprint types and JSON text.</li><li>Custom nodes allow any compatible variable to be plugged in. The plugin works out the equivalent JSON format based on the wired in variable.</li><li>Can automatically serialize any object, struct, array, set, or map with a string/name key. Multiple layers of nesting is automatically handled, with the exception of instanced sub-objects.</li><li>Variables within a class/struct can optionally be filtered from serialization by use of the Transient/SaveGame flags.</li><li>Custom serializers can be added by the user (in C&#43;&#43;) if more control is needed.</li><li>Provides simple utility nodes for reading/writing text from/to file.</li></ul><p><br /></p><p>Code Modules:</p><p>AutoJson (Runtime)</p><p>AutoJsonCustomNodes (Developer)</p><p>AutoJsonEditor (Editor)</p><p><br /></p><p>Network Replicated: N/A</p><p><br /></p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows, Android</p><p><br /></p><p><a href=\"https://kamrann.github.io/AutoJson-Docs/NodeReference/index.html?linktarget&#61;_blank\" rel=\"nofollow\">Node Reference</a> | <a href=\"https://kamrann.github.io/AutoJson-Docs/UserGuide.pdf?linktarget&#61;_blank\" rel=\"nofollow\">User Guide</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KantanAutoJSONScreenshot1-1920x1080-43f5ee259963bdb906189ccaae75c45b.png",
+      "md5": "43f5ee259963bdb906189ccaae75c45b",
+      "width": 1920,
+      "height": 1080,
+      "size": 361243,
+      "uploadedDate": "2018-04-06T22:43:34.297Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KantanAutoJSONScreenshot2-1920x1080-c7c8354b80ef7033c30f9cedab44471e.png",
+      "md5": "c7c8354b80ef7033c30f9cedab44471e",
+      "width": 1920,
+      "height": 1080,
+      "size": 214682,
+      "uploadedDate": "2018-04-06T22:43:34.397Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KantanAutoJSONScreenshot3-1920x1080-e22c0d5338645f57cf056ec08fe11efd.png",
+      "md5": "e22c0d5338645f57cf056ec08fe11efd",
+      "width": 1920,
+      "height": 1080,
+      "size": 289605,
+      "uploadedDate": "2018-04-06T22:43:34.514Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/KantanAutoJSONScreenshot4-1920x1080-41cc5ca7dd9e1248aa5040f04f07a15f.png",
+      "md5": "41cc5ca7dd9e1248aa5040f04f07a15f",
+      "width": 1920,
+      "height": 1080,
+      "size": 197542,
+      "uploadedDate": "2018-05-09T22:22:48.852Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/KantanAutoJSON_thumb-284x284-75ecf3088a9b161b45fc9a3cb3307c84.png",
+      "md5": "75ecf3088a9b161b45fc9a3cb3307c84",
+      "width": 284,
+      "height": 284,
+      "size": 23560,
+      "uploadedDate": "2018-04-06T22:43:34.556Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/KantanAutoJSON_featured-894x488-a63a7a6bc2f9c576c24f304c91952cc9.png",
+      "md5": "a63a7a6bc2f9c576c24f304c91952cc9",
+      "width": 894,
+      "height": 488,
+      "size": 73693,
+      "uploadedDate": "2018-04-06T22:43:34.593Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2018-05-09T14:19:48.247Z",
+  "lastModifiedDate": "2024-11-10T04:00:02.586Z",
+  "entitlementName": "3ac57526e650422f84e6c32baa88ad85",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "56fc44b76a8d43f799277968ead3f352",
+      "appId": "KantanAutoJson_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2018-04-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "KantanAutoJSON_4.17"
+    },
+    {
+      "id": "8b50165bef47414287a737fe186970ff",
+      "appId": "KantanAutoJson_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2018-04-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "KantanAutoJSON_4.18"
+    },
+    {
+      "id": "5e68c6edef6f4856ab50a63622ec5ef7",
+      "appId": "KantanAutoJson_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2018-04-06T00:00:00.000Z",
+      "releaseNote": "Updated 3/3/2019",
+      "versionTitle": "KantanAutoJSON_4.19"
+    },
+    {
+      "id": "c1bed16557f54ac8a0dfec82632be34b",
+      "appId": "KantanAutoJson_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2018-07-19T00:00:00.000Z",
+      "releaseNote": "Updated 5/23/2019",
+      "versionTitle": "KantanAutoJSON_4.20"
+    },
+    {
+      "id": "48896dc2ca9841d7b569e09f642319ee",
+      "appId": "KantanAutoJson_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2018-11-19T00:00:00.000Z",
+      "releaseNote": "Updated 5/23/2019",
+      "versionTitle": "KantanAutoJSON_4.21"
+    },
+    {
+      "id": "d057168126da414a8ff09c8f7bef91dd",
+      "appId": "KantanAutoJson_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2019-04-14T00:00:00.000Z",
+      "releaseNote": "Updated 5/23/2019",
+      "versionTitle": "KantanAutoJSON_4.22"
+    },
+    {
+      "id": "3ae096a925f943bcbd49aad3bb059a59",
+      "appId": "KantanAutoJson_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2019-09-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "KantanAutoJSON_4.23"
+    },
+    {
+      "id": "0ce2b7cbfaa14539a6860b2403b902fb",
+      "appId": "KantanAutoJson_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2019-12-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "KantanAutoJSON_4.24"
+    },
+    {
+      "id": "5b93d28a57a245d19d42a50b1eecbf01",
+      "appId": "KantanAutoJson_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2020-05-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "KantanAutoJSON_4.25"
+    },
+    {
+      "id": "3eda7f16fa3844af9ea5511ca4b8d0f3",
+      "appId": "KantanAutoJson_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2020-12-06T00:00:00.000Z",
+      "releaseNote": "Updated 12/13/2020",
+      "versionTitle": "KantanAutoJSON_4.26"
+    },
+    {
+      "id": "6c04b6d72ee84f368f88e09e388393f6",
+      "appId": "KantanAutoJson_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2021-08-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "KantanAutoJSON_4.27"
+    }
+  ],
+  "developer": "Kantan Dev",
+  "developerId": "o-a82889148042e48acf4a28924f9854",
+  "endOfSupport": false,
+  "unsearchable": false
+}

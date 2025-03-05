@@ -1,0 +1,224 @@
+{
+  "id": "049de66ad88f4210ae80f6b3b00acbbc",
+  "title": "Tracing Plugin For Static Meshes",
+  "description": "Trace position of any static mesh and see what it collides with.",
+  "longDescription": "<p>-- 5.4 update pending --</p><p><br /></p><p>Damage System (MWDS) a.k.a. Static Mesh Tracing Plugin lets you trace the position of any static mesh component as it moves and see what it collides with. But isn&#39;t the default in engine collision enough? No it isn&#39;t. Non root components (attached to other objects) are never sweeped (traced), this means they do not move &#39;continuously&#39;, but teleport between locations. For this reason they will never trigger &#39;on hit&#39; (only sweeped can do this) and they will trigger &#39;on overlap&#39; unreliably (when it happens that component will teleport inside another object and not past it).</p><p>This plugin remedies this. Any component can be traced and you get robust collision info on each hit.</p><p>I’ve created it for my Hack and Slash game for white arms, but it can be used for just about any static mesh.</p><p><br /></p><p><br /></p><p><a href=\"https://youtu.be/YVOmtSqBWCA\" rel=\"nofollow\">Explanation Video For Plugin</a></p><p><a href=\"https://youtu.be/Aeh7uUocdA8\" rel=\"nofollow\">Trailer</a></p><p><a href=\"https://docs.google.com/document/d/1Z4kVpjLtathpTQfHB9szi3XT3r6fdfdfq0So06j3lHQ/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://docs.google.com/document/d/17vdnEhFqMYmB3M2ACD06lqodKEEcfZpn7UF_KtCsB8k/edit?usp&#61;share_link\" rel=\"nofollow\">Changelog and migration guide btwn versions</a></p><p><a href=\"https://youtu.be/bhYstplrK8Q\" rel=\"nofollow\">Example - Collision detection for boss battle like in Dark Souls</a></p><p><a href=\"https://youtu.be/Dxw9v6M8CR8\" rel=\"nofollow\">My Game</a></p><p>support: dawid.buj&#64;gmail.com</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Features</h2><p><br /></p><ul><li><strong>Simplicity - </strong>The plugin is realized through the Static Melee Weapon component. It is a subclass of native Static Mesh, with added functionality to trace positions of colliders every frame. This means there is very little overhead, you work with it like with regular static meshes. See quickstart.</li></ul><p><br /></p><ul><li><strong>Per collider precision - </strong>you not only know that collision took place, you also know which collider (by name) hit. This allows for unique behaviors. E.g. imagine a two sided spear where each end is infused with different element - fire on one side, ice on the other. In the static mesh editor you name colliders ‘fire’ and ‘ice’ respectively, then during collision you get information which one collided with the enemy so you can apply appropriate elemental damage.</li></ul><p><br /></p><ul><li><strong>Low FPS mode</strong> - on low FPS to improve precision, additional in between traces will be added, of course you get full control over it. See trailer.</li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Quick Start</h2><p><br /></p><ul><li><strong>Call Start/StopSweeping</strong> in response to your custom animation events, or add MeleeWeaponSwing anim notify to animation. MeleeWeaponSwing takes the skeletal mesh of your actor, and iterates over all child components of type StaticMeleeWeapon and calls Start/StopSweeping on them.</li></ul><p><br /></p><ul><li><strong>Bind event to OnWeaponHit </strong>on a StaticMeleeWeapon, when event triggers it gives you Collisions array with detailed description of all collisions that took place.</li></ul><p><br /></p><ul><li><strong>Implement IOnHitByMeleeWeapon </strong>interface on any object and override OnHitByMeleeWeapon to react for hits on this actor. Equivalently you can iterate over Collisions array and call your custom method on reported Actors.</li></ul><p><br /></p><ul><li><strong>To change the mesh</strong> to another one, just call SetStaticMesh.</li></ul>",
+  "technicalDetails": "<p>Code Modules: GGStateComponentPlugin (Runtime)</p><p>Number of Blueprints: 0</p><p>Number of Components: 1</p><p>Number of C&#43;&#43; Classes: 6</p><p>Network Replicated: No</p><p>Supported Development Platforms: Should work on all but tested only on Win64</p><p>Supported Target: Build Platforms: Should work on all but tested only on Win64</p><p>Additional Notes: This is code only plugin, no assets are included.</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1Z4kVpjLtathpTQfHB9szi3XT3r6fdfdfq0So06j3lHQ/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Weapons-1920x1080-01ee2f96b475d4b68248b5d918fb3054.jpg",
+      "md5": "01ee2f96b475d4b68248b5d918fb3054",
+      "width": 1920,
+      "height": 1080,
+      "size": 359151,
+      "uploadedDate": "2022-11-02T14:39:31.499Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Projectiles-1920x1080-aa147050b99d5cb454e8cab7dfd6dbb7.jpg",
+      "md5": "aa147050b99d5cb454e8cab7dfd6dbb7",
+      "width": 1920,
+      "height": 1080,
+      "size": 294841,
+      "uploadedDate": "2022-11-02T14:39:31.057Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Other-1920x1080-8969a42cd2e582f54b7d7c23a8e6f3a1.jpg",
+      "md5": "8969a42cd2e582f54b7d7c23a8e6f3a1",
+      "width": 1920,
+      "height": 1080,
+      "size": 286784,
+      "uploadedDate": "2022-11-02T14:39:30.693Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Name-1920x1080-52122fe32a732079567c127331be6b50.jpg",
+      "md5": "52122fe32a732079567c127331be6b50",
+      "width": 1920,
+      "height": 1080,
+      "size": 258501,
+      "uploadedDate": "2022-11-02T14:39:30.329Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/LowOff-1920x1080-6b3b262d72f903314188515fb1137227.jpg",
+      "md5": "6b3b262d72f903314188515fb1137227",
+      "width": 1920,
+      "height": 1080,
+      "size": 343156,
+      "uploadedDate": "2022-11-02T14:39:29.609Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/LowOn-1920x1080-6cfc74b1a74bf3c6eb7e3360fec7574b.jpg",
+      "md5": "6cfc74b1a74bf3c6eb7e3360fec7574b",
+      "width": 1920,
+      "height": 1080,
+      "size": 351982,
+      "uploadedDate": "2022-11-02T14:39:29.954Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/TracingPluginForStaticMeshes_thumb-284x284-8ee204ade9542534d58d16c9fe80d703.png",
+      "md5": "8ee204ade9542534d58d16c9fe80d703",
+      "width": 284,
+      "height": 284,
+      "size": 158089,
+      "uploadedDate": "2022-11-02T14:39:31.945Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/TracingPluginForStaticMeshes_featured-894x488-bcbab8b815342d398c5270f456318fc9.png",
+      "md5": "bcbab8b815342d398c5270f456318fc9",
+      "width": 894,
+      "height": 488,
+      "size": 816719,
+      "uploadedDate": "2022-11-02T14:39:32.043Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LowOff-1920x1080-6b3b262d72f903314188515fb1137227_Snapshot.jpg",
+      "md5": "58612e595bd4c31ff04c6a3f6ba57b28",
+      "width": 150,
+      "height": 74,
+      "size": 6778,
+      "uploadedDate": "2022-11-02T14:39:29.834Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LowOn-1920x1080-6cfc74b1a74bf3c6eb7e3360fec7574b_Snapshot.jpg",
+      "md5": "546422577365f51ad3b42a9fd5783bc3",
+      "width": 150,
+      "height": 74,
+      "size": 6879,
+      "uploadedDate": "2022-11-02T14:39:30.188Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Name-1920x1080-52122fe32a732079567c127331be6b50_Snapshot.jpg",
+      "md5": "66ac3b781eba07a4598b949a7a5211d3",
+      "width": 150,
+      "height": 74,
+      "size": 6303,
+      "uploadedDate": "2022-11-02T14:39:30.551Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Other-1920x1080-8969a42cd2e582f54b7d7c23a8e6f3a1_Snapshot.jpg",
+      "md5": "bec0d61c51a84fa1501cff4aa3be7641",
+      "width": 150,
+      "height": 74,
+      "size": 6143,
+      "uploadedDate": "2022-11-02T14:39:30.913Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Projectiles-1920x1080-aa147050b99d5cb454e8cab7dfd6dbb7_Snapshot.jpg",
+      "md5": "aa9fdc3077feaae729264f0c1c4f3e65",
+      "width": 150,
+      "height": 74,
+      "size": 5981,
+      "uploadedDate": "2022-11-02T14:39:31.353Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Weapons-1920x1080-01ee2f96b475d4b68248b5d918fb3054_Snapshot.jpg",
+      "md5": "e0354b0f5f7b10f4e79b1bbbc29fa28b",
+      "width": 150,
+      "height": 74,
+      "size": 7016,
+      "uploadedDate": "2022-11-02T14:39:31.776Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-11-25T08:34:51.898Z",
+  "lastModifiedDate": "2024-11-23T01:21:48.819Z",
+  "customAttributes": {},
+  "entitlementName": "049de66ad88f4210ae80f6b3b00acbbc",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "836763be3bd84303905ffd6e363ecaf9",
+      "appId": "MeleeWeaponDamageSystem_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2022-11-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "7a8c1ae8e05c4869a34696339886d096",
+      "appId": "MeleeWeaponDamageSystem_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "b5b73397b3314d6282379981366da0d3",
+      "appId": "MeleeWeaponDamageSystem_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "96702628ae604f8bb28e4855dad50901",
+      "appId": "MeleeWeaponDamageSystem_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "87a0f7ea32754163b0b620530079a959",
+      "appId": "MeleeWeaponDamageSystem_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "Dawid Bujak",
+  "developerId": "o-7lcqpmd4txmvbdnh9d42kqpgp7bly5",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,484 @@
+{
+  "id": "a2bfb717423d4849b73aab5f5f859d29",
+  "title": "MultiDraw",
+  "description": "This plugin uses UnrealEngine's MeshDraw framework to achieve a multi-Pass effect looks like Unity's, with no post-processing required to achieve strokes and cutoff.",
+  "longDescription": "<p>This plugin uses UnrealEngine&#39;s MeshDraw framework to achieve a multi-Pass effect looks like Unity&#39;s, with no post-processing required to achieve strokes and cutoff.</p><p><br /></p><p>Notice:<strong>**Because UE5.4 changed the marking of UStaticMeshComponent&#39;s virtual function GetUsedMaterials to final, it caused the plugin not to work properly. In order to avoid the crash problem, the functions of OutlineStaticMeshComponent, MultiDrawStaticMeshComponent are deactivated. It can be solved temporarily by adding another StaticMeshComponent and giving it Outline materials.**</strong></p><p><br /></p><p>Update Log</p><p>2023.03.29</p><ol><li>MultiDraw can control drawing according to the specified material id.</li></ol><p>2022.12.19</p><ol><li>Update UE5.1 version.</li><li>Support UE5.1 OverlayMaterial.</li><li>Outline and MultiDraw now support Translucent material.</li></ol><p>2022.10.30</p><ol><li>Add real-time material change function.</li></ol>",
+  "technicalDetails": "<p>Features:</p><ul><li>control culling mode for model rendering,</li><li>specialised Outline components</li><li>allowing an object to render both Lit and Unlit materials</li><li>allowing an object to render material and wireframe material.</li></ul><p>The effects achieved in the case level are as follows.</p><ul><li>Outline effect</li><li>Cutoff effect</li></ul><p>Code Modules:</p><ul><li> MultiDraw[Runtime]</li></ul><p>Number of Components: 4</p><p>Platforms Tested: Windows</p><p>Documentation: <a href=\"http://www.blueroses.top/2022/05/02/multidraw-document/\" rel=\"nofollow\">http://www.blueroses.top/2022/05/02/multidraw-document/</a></p><p>Outline Effect Showcase Video:</p><ul><li> <a href=\"https://www.youtube.com/watch?v&#61;fn-SOmNiYaA\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;fn-SOmNiYaA</a></li><li><a href=\"https://youtu.be/fn-SOmNiYaA\" rel=\"nofollow\">https://youtu.be/fn-SOmNiYaA</a></li></ul><p>Outline Quick Start Video: <a href=\"https://youtu.be/wcIocKPmz-0\" rel=\"nofollow\">https://youtu.be/wcIocKPmz-0</a></p><p>Discord Support: <a href=\"https://discord.gg/y4fWqYsf4U\" rel=\"nofollow\">https://discord.gg/y4fWqYsf4U</a></p><p>UE5.0 Example Project: <a href=\"https://drive.google.com/file/d/1ujCuMT7eCSmC0vuHGspUeaX7eIDBOlmR/view?usp&#61;sharing\" rel=\"nofollow\">MultiDraw ExampleProject</a></p><p>UE5.1 And Newer Version Example Project: <a href=\"https://drive.google.com/file/d/16xHBuP5XAAmtInEehBAxgzVjIGN_7trA/view?usp&#61;sharing\" rel=\"nofollow\">MultiDraw ExampleProject</a></p><p>Usage:Download this project,and put MultiDraw plugin into plugins folder.</p><p>Notice:This project only UE5.0 and higher can run.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00002-1920x1080-b935ebb40d182b5e8da3718a59fec1f7.png",
+      "md5": "b935ebb40d182b5e8da3718a59fec1f7",
+      "width": 1920,
+      "height": 1080,
+      "size": 3129822,
+      "uploadedDate": "2022-06-05T08:12:50.007Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00003-1920x1080-cde594c228632754b494e53262b71a8d.png",
+      "md5": "cde594c228632754b494e53262b71a8d",
+      "width": 1920,
+      "height": 1080,
+      "size": 2669710,
+      "uploadedDate": "2022-06-05T08:12:50.790Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00004-1920x1080-e3fb4fde4a9434d225ad967223dba5a1.png",
+      "md5": "e3fb4fde4a9434d225ad967223dba5a1",
+      "width": 1920,
+      "height": 1080,
+      "size": 2799038,
+      "uploadedDate": "2022-06-05T08:12:51.457Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00006-1920x1080-e0651cdb974f05886c7639f0f54a0d09.png",
+      "md5": "e0651cdb974f05886c7639f0f54a0d09",
+      "width": 1920,
+      "height": 1080,
+      "size": 2642164,
+      "uploadedDate": "2022-06-05T08:12:52.118Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00007-1920x1080-4bfa57c40cb5f2cc460be077123f655c.png",
+      "md5": "4bfa57c40cb5f2cc460be077123f655c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2774953,
+      "uploadedDate": "2022-06-05T08:12:52.806Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00008-1920x1080-20548d8101a16bf42e8ef37177ecfeca.png",
+      "md5": "20548d8101a16bf42e8ef37177ecfeca",
+      "width": 1920,
+      "height": 1080,
+      "size": 2741514,
+      "uploadedDate": "2022-06-05T08:12:53.484Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00011-1920x1080-87d5329594d947c18bbed2421fed7a5b.png",
+      "md5": "87d5329594d947c18bbed2421fed7a5b",
+      "width": 1920,
+      "height": 1080,
+      "size": 2828758,
+      "uploadedDate": "2022-06-05T08:12:54.178Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00012-1920x1080-149ce0e49f16587c48d446dd84fd962e.png",
+      "md5": "149ce0e49f16587c48d446dd84fd962e",
+      "width": 1920,
+      "height": 1080,
+      "size": 2710452,
+      "uploadedDate": "2022-06-05T08:12:54.873Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MultiDrawPC-1920x1080-17bd3e6d1f4673cb755c7b76de3b8bda.png",
+      "md5": "17bd3e6d1f4673cb755c7b76de3b8bda",
+      "width": 1920,
+      "height": 1080,
+      "size": 1088231,
+      "uploadedDate": "2022-05-22T04:02:05.628Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MultiDrawios-1920x1080-8be5ccb7eb6d97a6d61ea979cda41a6e.png",
+      "md5": "8be5ccb7eb6d97a6d61ea979cda41a6e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1002654,
+      "uploadedDate": "2022-05-22T04:02:05.127Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MultiDrawAndroid-1920x1080-875533fc7995d077731c9cf52c00d5e9.png",
+      "md5": "875533fc7995d077731c9cf52c00d5e9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1002819,
+      "uploadedDate": "2022-05-22T04:02:04.506Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MultiDraw_thumb-284x284-a6eca24a5fc62af1b200c27b554a30bf.png",
+      "md5": "a6eca24a5fc62af1b200c27b554a30bf",
+      "width": 284,
+      "height": 284,
+      "size": 134210,
+      "uploadedDate": "2022-06-05T08:12:55.373Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MultiDraw_featured-894x488-43e3aade4b3de51ad5addfc41128d126.png",
+      "md5": "43e3aade4b3de51ad5addfc41128d126",
+      "width": 894,
+      "height": 488,
+      "size": 679497,
+      "uploadedDate": "2022-06-05T08:12:55.492Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-b935ebb40d182b5e8da3718a59fec1f7_Snapshot.png",
+      "md5": "6fea28eec0faa0ef3b017557f3639a12",
+      "width": 150,
+      "height": 74,
+      "size": 6093,
+      "uploadedDate": "2022-06-05T08:12:50.495Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00003-1920x1080-cde594c228632754b494e53262b71a8d_Snapshot.png",
+      "md5": "c97ab8efb54eb0960e4c3921294ac478",
+      "width": 150,
+      "height": 74,
+      "size": 5133,
+      "uploadedDate": "2022-06-05T08:12:51.216Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00004-1920x1080-e3fb4fde4a9434d225ad967223dba5a1_Snapshot.png",
+      "md5": "98b7cbeebc7d60fa94ddc9a01651cad6",
+      "width": 150,
+      "height": 74,
+      "size": 5608,
+      "uploadedDate": "2022-06-05T08:12:51.907Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00006-1920x1080-e0651cdb974f05886c7639f0f54a0d09_Snapshot.png",
+      "md5": "960073995ff99cc296d239cc7051bb67",
+      "width": 150,
+      "height": 74,
+      "size": 5379,
+      "uploadedDate": "2022-06-05T08:12:52.544Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00007-1920x1080-4bfa57c40cb5f2cc460be077123f655c_Snapshot.png",
+      "md5": "24dc34ac15a1a1627c5bd54ef623aca7",
+      "width": 150,
+      "height": 74,
+      "size": 5959,
+      "uploadedDate": "2022-06-05T08:12:53.233Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00008-1920x1080-20548d8101a16bf42e8ef37177ecfeca_Snapshot.png",
+      "md5": "eb26d42830b0fb32c964058b28e2b03f",
+      "width": 150,
+      "height": 74,
+      "size": 5591,
+      "uploadedDate": "2022-06-05T08:12:53.936Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00011-1920x1080-87d5329594d947c18bbed2421fed7a5b_Snapshot.png",
+      "md5": "76112720c261f696ccbfc4a02231f920",
+      "width": 150,
+      "height": 74,
+      "size": 5316,
+      "uploadedDate": "2022-06-05T08:12:54.597Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00012-1920x1080-149ce0e49f16587c48d446dd84fd962e_Snapshot.png",
+      "md5": "5d4ef7fd4a54994991eae96b2b301977",
+      "width": 150,
+      "height": 74,
+      "size": 5531,
+      "uploadedDate": "2022-06-05T08:12:55.308Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00000-1920x1080-e333b4e67ec61dc7574f69f5c61fedac_Snapshot.png",
+      "md5": "872995656a393527a336a5abb90e2f36",
+      "width": 150,
+      "height": 74,
+      "size": 6455,
+      "uploadedDate": "2022-05-22T04:02:00.771Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-9137d2c56394aebb36b3f6d696ab0d4c_Snapshot.png",
+      "md5": "84490f6c814587c64c8041f3a762298e",
+      "width": 150,
+      "height": 74,
+      "size": 6477,
+      "uploadedDate": "2022-05-22T04:02:01.415Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-a7997740bc8384b4aed9fbc28fa4b5ac_Snapshot.png",
+      "md5": "7bf1e5bf3546e39bd12dfeba357a8601",
+      "width": 150,
+      "height": 74,
+      "size": 6605,
+      "uploadedDate": "2022-05-22T04:02:01.989Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00003-1920x1080-b3b09060d0e55ffb1c20ef2ec0e310c8_Snapshot.png",
+      "md5": "73a89ccba3ead7e38c2b0eb751e15be5",
+      "width": 150,
+      "height": 74,
+      "size": 7103,
+      "uploadedDate": "2022-05-22T04:02:02.551Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00004-1920x1080-d47c2b8e420fd730c964553c6be989a7_Snapshot.png",
+      "md5": "d2a9bd8cdf8a37648177703c45fe6fe9",
+      "width": 150,
+      "height": 74,
+      "size": 5864,
+      "uploadedDate": "2022-05-22T04:02:03.104Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00005-1920x1080-c1ae59e044b273af3565d4d4b18bf7aa_Snapshot.png",
+      "md5": "a5227e35ef08b82bf8e2859d703597d3",
+      "width": 150,
+      "height": 74,
+      "size": 6515,
+      "uploadedDate": "2022-05-22T04:02:03.657Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot003210-1920x1080-ccf96e2d99519696e0da91032f6a02dc_Snapshot.png",
+      "md5": "67f7097041f52490152136fed5c7d6bc",
+      "width": 150,
+      "height": 74,
+      "size": 6879,
+      "uploadedDate": "2022-05-22T04:02:04.337Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MultiDrawAndroid-1920x1080-875533fc7995d077731c9cf52c00d5e9_Snapshot.png",
+      "md5": "3470a4af28ab842e90cbdd48f01458e0",
+      "width": 150,
+      "height": 74,
+      "size": 5929,
+      "uploadedDate": "2022-05-22T04:02:04.836Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MultiDrawios-1920x1080-8be5ccb7eb6d97a6d61ea979cda41a6e_Snapshot.png",
+      "md5": "10e26fde6259b852815b4a493ccaac8a",
+      "width": 150,
+      "height": 74,
+      "size": 5917,
+      "uploadedDate": "2022-05-22T04:02:05.462Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MultiDrawPC-1920x1080-17bd3e6d1f4673cb755c7b76de3b8bda_Snapshot.png",
+      "md5": "a78030bbb1cb4dc7c1a1581b2c92c2a1",
+      "width": 150,
+      "height": 74,
+      "size": 5601,
+      "uploadedDate": "2022-05-22T04:02:05.903Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-05-30T02:00:26.043Z",
+  "lastModifiedDate": "2024-11-18T15:42:51.429Z",
+  "customAttributes": {},
+  "entitlementName": "a2bfb717423d4849b73aab5f5f859d29",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "057dacac708e482882e8b281926cfcdb",
+      "appId": "MultiDraw_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Windows",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Win32",
+        "Xbox One",
+        "Oculus",
+        "Gear VR",
+        "HoloLens 2",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2022-06-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MultiDraw_4.26"
+    },
+    {
+      "id": "9be6396d6ffd47949cda3934771c5851",
+      "appId": "MultiDraw_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Windows",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Win32",
+        "Xbox One",
+        "Gear VR",
+        "HoloLens 2",
+        "Oculus",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2022-06-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MultiDraw_4.27"
+    },
+    {
+      "id": "31aec0db7f324d1ba0f345a982c377bf",
+      "appId": "MultiDraw_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "iOS",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Xbox One",
+        "Gear VR",
+        "HoloLens 2",
+        "Linux"
+      ],
+      "dateAdded": "2022-05-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MultiDraw_5.0"
+    },
+    {
+      "id": "a21c3605651146c2a59670e475593c7b",
+      "appId": "MultiDraw_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "Gear VR"
+      ],
+      "dateAdded": "2022-11-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MultiDraw_5.1"
+    },
+    {
+      "id": "4897293ae64f41318ce2c577b41f9638",
+      "appId": "MultiDraw_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Gear VR",
+        "Android",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "Nintendo Switch",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2023-05-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MultiDraw_5.2"
+    },
+    {
+      "id": "4cc19bed4b3f45fb8ddd6a64f958a9ad",
+      "appId": "MultiDraw_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Android"
+      ],
+      "dateAdded": "2023-10-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MultiDraw_5.3"
+    },
+    {
+      "id": "f3d0ef6c0e984bb3937adc77e312738a",
+      "appId": "MultiDraw_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2024-04-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MultiDraw_5.4"
+    }
+  ],
+  "developer": "BlueRose",
+  "developerId": "o-gcl89jmcmdsyf8svabam3akzqeh6wu",
+  "endOfSupport": false,
+  "unsearchable": false
+}

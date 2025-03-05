@@ -1,0 +1,404 @@
+{
+  "id": "7b6b0ac950c84b6e973efd7db97d4a07",
+  "title": "Vertex Poser and Animator",
+  "description": "A shader which allows you to make simple and cheap character animations for crowds.",
+  "longDescription": "<p>Bug reports or feature suggestion: erosa3d&#64;gmail.com</p><p><br /></p><p>Youtube preview: https://youtu.be/ZoYOfPDA1mI</p><p><br /></p><p>Materials and material functions that allow you to pose and animate any Static Mesh object, having full optimization controls over it (such as LODs) while keeping a good performance in-game. As the animations can&#39;t be too complex (they mainly rely on limbs rotation and body movements), it&#39;s mostly ideal for crowds where thousands of characters will be shown at the same time.</p><p>There is also a &#34;simplier version&#34; where you can create animations based on Rotation, Scale and Movement. Suggestion for this variation are: Turntable meshes, industrial objects (with a single moving piece. Example: a Fan).</p><p>The movements can be randomized (to break sync from each other) using a Blueprint, for Static Meshes in a scene or inside an Actor, and they are automatically random when used as Foliage.</p><p><br /></p><p>Some advantages:</p><ul><li>You can put THOUSANDS of animated characters in a scene without major loses on performance;</li><li>Shader complexity is really low if used as instructed;</li><li>Just a few parameters need to be changed to apply the same animation to a completly different character or object.</li></ul><p><br /></p><p>Known limitation: When using the Z axis rotation in combination with the others, the mesh might deform weirdly, so when rotating with the shader, try always to avoid combining X and/or Y with Z (Z alone works fine; X and Y don&#39;t conflict with each other in any way).</p>",
+  "technicalDetails": "<p>Features:</p><p>Humanoid Shader:</p><ul><li>Pre-pose a Static Mesh humanoid character;</li><li>Animate the Static Mesh humanoid character (all limbs rotation and body movement);</li><li>Setup LODs on the meshes, without messing with the animations;</li></ul><p><br /></p><p>Simple Poser shader:</p><ul><li>Animate Position, Rotation and Scale;</li><li>The movement can be isolated by a Mask;</li></ul><p><br /></p><p>Present on both:</p><ul><li>Normals correction, to avoid bad shading on the animated/posed meshes;</li><li>Animation&#39;s position randomized for Foliage meshes, to break Sync from each other.</li></ul><p><br /></p><p><strong>The project also includes:</strong></p><ul><li>A blueprint with different setups (commented) to randomize in different ways Static Meshes&#39; animation position in the scene, to break Sync from each other;</li><li>Custom Blueprint function to randomize a referenced Static Mesh component;</li><li>Instructions on how to setup both shaders as well as a Showroom level showing all the different possibilities.</li></ul><p><br /></p><ul><li><strong>No C&#43;&#43;, only nodes used.</strong></li></ul><p><br /></p><p><br /></p><p>Number of Unique Materials and Material Instances: 2 materials, 30 material instances.</p><p>Number of Textures: 21</p><p>Texture Resolutions: 32x32 to 4096x4096</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: Yes</p><p>Documentation: Link (or a description of where users can find) the documentation</p><p>Important/Additional Notes: When using the shaders&#39; Z axis rotation in combination with the others, the mesh might deform weirdly, so when rotating with the shader, try always to avoid combining X and/or Y with Z (Z alone works fine; X and Y don&#39;t conflict with each other in any way).</p><p><br /></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2dfdd8cc0b1035b9f214ca9c84bab699-1920x1080-85096d7c98b2e963db12999fe7b3790c.jpg",
+      "md5": "85096d7c98b2e963db12999fe7b3790c",
+      "width": 1920,
+      "height": 1080,
+      "size": 304400,
+      "uploadedDate": "2020-11-04T12:16:20.882Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/c72f9f68f59db94a0d12e5df581f7296-1920x1080-294db80814dd176c3d2bd8a53536a6b0.jpg",
+      "md5": "294db80814dd176c3d2bd8a53536a6b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 526729,
+      "uploadedDate": "2020-11-04T12:16:21.230Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00000-1920x1080-524ac0ab9e6a3a3de31236abe7593147.jpg",
+      "md5": "524ac0ab9e6a3a3de31236abe7593147",
+      "width": 1920,
+      "height": 1080,
+      "size": 327873,
+      "uploadedDate": "2020-11-04T12:16:21.623Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00003-1920x1080-f9f7432c4ee7d886a1c4e4fc4592e79b.jpg",
+      "md5": "f9f7432c4ee7d886a1c4e4fc4592e79b",
+      "width": 1920,
+      "height": 1080,
+      "size": 331764,
+      "uploadedDate": "2020-11-04T12:16:23.056Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00004-1920x1080-aa73a8f7d5e16dba7c757ccc76b2625b.jpg",
+      "md5": "aa73a8f7d5e16dba7c757ccc76b2625b",
+      "width": 1920,
+      "height": 1080,
+      "size": 370896,
+      "uploadedDate": "2020-11-04T12:16:23.408Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00006-1920x1080-e82963bdb34c2a23a99b64b57101d3c2.jpg",
+      "md5": "e82963bdb34c2a23a99b64b57101d3c2",
+      "width": 1920,
+      "height": 1080,
+      "size": 262061,
+      "uploadedDate": "2020-11-04T12:16:24.233Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00007-1920x1080-9b178320259f9f728179bba2f7255668.jpg",
+      "md5": "9b178320259f9f728179bba2f7255668",
+      "width": 1920,
+      "height": 1080,
+      "size": 263379,
+      "uploadedDate": "2020-11-04T12:16:24.583Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00010-1920x1080-f1a2e0dd22d95f87cc81c2359de5fa5a.jpg",
+      "md5": "f1a2e0dd22d95f87cc81c2359de5fa5a",
+      "width": 1920,
+      "height": 1080,
+      "size": 287950,
+      "uploadedDate": "2020-11-04T12:16:25.656Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00011-1920x1080-31583913cc5575c552f2b5da5f407f68.jpg",
+      "md5": "31583913cc5575c552f2b5da5f407f68",
+      "width": 1920,
+      "height": 1080,
+      "size": 176628,
+      "uploadedDate": "2020-11-04T12:16:26.192Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00012-1920x1080-bf78fb9ff26a548cb8f3ce0d87deb889.png",
+      "md5": "bf78fb9ff26a548cb8f3ce0d87deb889",
+      "width": 1920,
+      "height": 1080,
+      "size": 3051271,
+      "uploadedDate": "2020-11-05T01:43:59.370Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00013-1920x1080-ce3e00eb0538a92400e092512f78a313.png",
+      "md5": "ce3e00eb0538a92400e092512f78a313",
+      "width": 1920,
+      "height": 1080,
+      "size": 3093568,
+      "uploadedDate": "2020-11-05T01:43:59.926Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00011-1920x1080-102ec88e1a0caea4c6928804ad7ff884.png",
+      "md5": "102ec88e1a0caea4c6928804ad7ff884",
+      "width": 1920,
+      "height": 1080,
+      "size": 2990724,
+      "uploadedDate": "2020-11-05T01:44:00.485Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/img2-1920x1080-3e81587863788ddd94d98aa05a957e2a.png",
+      "md5": "3e81587863788ddd94d98aa05a957e2a",
+      "width": 1920,
+      "height": 1080,
+      "size": 3015705,
+      "uploadedDate": "2020-11-05T01:44:01.083Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/img-1920x1080-b4899633e26132dc3a4bf325ea844d48.png",
+      "md5": "b4899633e26132dc3a4bf325ea844d48",
+      "width": 1920,
+      "height": 1080,
+      "size": 2994060,
+      "uploadedDate": "2020-11-05T01:44:01.659Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/VertexPoserandAnimator_thumb-284x284-48238873d925995df60dc374200cde26.png",
+      "md5": "48238873d925995df60dc374200cde26",
+      "width": 284,
+      "height": 284,
+      "size": 83969,
+      "uploadedDate": "2020-11-04T12:16:26.468Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/VertexPoserandAnimator_featured-894x488-804d9ea26edbf2cb115fb99fe1707070.png",
+      "md5": "804d9ea26edbf2cb115fb99fe1707070",
+      "width": 894,
+      "height": 488,
+      "size": 332815,
+      "uploadedDate": "2020-11-04T12:16:26.719Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00012-1920x1080-bf78fb9ff26a548cb8f3ce0d87deb889_Snapshot.png",
+      "md5": "26c612b5d0ba8338de9eac2add023764",
+      "width": 150,
+      "height": 74,
+      "size": 6012,
+      "uploadedDate": "2020-11-05T01:43:59.723Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00013-1920x1080-ce3e00eb0538a92400e092512f78a313_Snapshot.png",
+      "md5": "099a405e7245da82d19acc9277cc81ac",
+      "width": 150,
+      "height": 74,
+      "size": 6523,
+      "uploadedDate": "2020-11-05T01:44:00.272Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00011-1920x1080-102ec88e1a0caea4c6928804ad7ff884_Snapshot.png",
+      "md5": "0d229996acd199fc72e4d1b98d8093fc",
+      "width": 150,
+      "height": 74,
+      "size": 5701,
+      "uploadedDate": "2020-11-05T01:44:00.841Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img2-1920x1080-3e81587863788ddd94d98aa05a957e2a_Snapshot.png",
+      "md5": "ff249a90dc32abdfe2e7eb933f0a337d",
+      "width": 150,
+      "height": 74,
+      "size": 6563,
+      "uploadedDate": "2020-11-05T01:44:01.457Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/img-1920x1080-b4899633e26132dc3a4bf325ea844d48_Snapshot.png",
+      "md5": "edfcb185d2ac593306e01c90372edd38",
+      "width": 150,
+      "height": 74,
+      "size": 5768,
+      "uploadedDate": "2020-11-05T01:44:02.067Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2dfdd8cc0b1035b9f214ca9c84bab699-1920x1080-85096d7c98b2e963db12999fe7b3790c_Snapshot.jpg",
+      "md5": "3ad8266ed4206454bfedc4f09dba1fb7",
+      "width": 150,
+      "height": 74,
+      "size": 5730,
+      "uploadedDate": "2020-11-04T12:16:21.093Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/c72f9f68f59db94a0d12e5df581f7296-1920x1080-294db80814dd176c3d2bd8a53536a6b0_Snapshot.jpg",
+      "md5": "cedbd6e1e7592941606552471812270a",
+      "width": 150,
+      "height": 74,
+      "size": 6825,
+      "uploadedDate": "2020-11-04T12:16:21.461Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00000-1920x1080-524ac0ab9e6a3a3de31236abe7593147_Snapshot.jpg",
+      "md5": "51d4a62550e9c38fcc7eea8f857e9933",
+      "width": 150,
+      "height": 74,
+      "size": 6142,
+      "uploadedDate": "2020-11-04T12:16:21.838Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-474c44cd5b66ba5e20c5543879b4c808_Snapshot.jpg",
+      "md5": "4a6ad9cf920712ac1ec561ce4ccbb3eb",
+      "width": 150,
+      "height": 74,
+      "size": 6317,
+      "uploadedDate": "2020-11-04T12:16:22.240Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-efd6d07f32bf3890b9e11598e544d9cd_Snapshot.jpg",
+      "md5": "7fb1511b7151a4b75bf06c475dd8d7da",
+      "width": 150,
+      "height": 74,
+      "size": 6598,
+      "uploadedDate": "2020-11-04T12:16:22.926Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00003-1920x1080-f9f7432c4ee7d886a1c4e4fc4592e79b_Snapshot.jpg",
+      "md5": "7136544912bcaaefc40498b64a8cb0ec",
+      "width": 150,
+      "height": 74,
+      "size": 6643,
+      "uploadedDate": "2020-11-04T12:16:23.273Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00004-1920x1080-aa73a8f7d5e16dba7c757ccc76b2625b_Snapshot.jpg",
+      "md5": "8f794e01491df3120227bc979cab26cf",
+      "width": 150,
+      "height": 74,
+      "size": 6916,
+      "uploadedDate": "2020-11-04T12:16:23.703Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00005-1920x1080-5fc9681480fb42f44b7563934e115c34_Snapshot.jpg",
+      "md5": "61fe5d0f121376b11cd76fe88673abd1",
+      "width": 150,
+      "height": 74,
+      "size": 5877,
+      "uploadedDate": "2020-11-04T12:16:24.109Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00006-1920x1080-e82963bdb34c2a23a99b64b57101d3c2_Snapshot.jpg",
+      "md5": "28855bfe966bb6c89ce0974fb30a0c64",
+      "width": 150,
+      "height": 74,
+      "size": 6232,
+      "uploadedDate": "2020-11-04T12:16:24.455Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00007-1920x1080-9b178320259f9f728179bba2f7255668_Snapshot.jpg",
+      "md5": "020cba1b2fce610e52ce7f12f710c8d2",
+      "width": 150,
+      "height": 74,
+      "size": 6165,
+      "uploadedDate": "2020-11-04T12:16:24.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00008-1920x1080-d15c67ac782e5f0e4f13a9363c61a9cb_Snapshot.jpg",
+      "md5": "ce2a1c296708b487d5fb03bc0ee071c5",
+      "width": 150,
+      "height": 74,
+      "size": 6300,
+      "uploadedDate": "2020-11-04T12:16:25.226Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00009-1920x1080-1e59a5647bb8f1edbebfc196b119316e_Snapshot.jpg",
+      "md5": "ca093a388bf602da8d659edc8928e67a",
+      "width": 150,
+      "height": 74,
+      "size": 5807,
+      "uploadedDate": "2020-11-04T12:16:25.582Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00010-1920x1080-f1a2e0dd22d95f87cc81c2359de5fa5a_Snapshot.jpg",
+      "md5": "895013e50515f2259e392ca3d82990c8",
+      "width": 150,
+      "height": 74,
+      "size": 5615,
+      "uploadedDate": "2020-11-04T12:16:25.898Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00011-1920x1080-31583913cc5575c552f2b5da5f407f68_Snapshot.jpg",
+      "md5": "5d4e41a4bd5237ecd82f0f9c11e6e197",
+      "width": 150,
+      "height": 74,
+      "size": 3401,
+      "uploadedDate": "2020-11-04T12:16:26.407Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/materials"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-11-08T10:57:01.376Z",
+  "lastModifiedDate": "2024-09-24T18:27:08.508Z",
+  "customAttributes": {},
+  "entitlementName": "7b6b0ac950c84b6e973efd7db97d4a07",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "df7a5dcd0ae34ebcb6237c742ed47e13",
+      "appId": "VertexPo7b6b0ac950c8V1",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-11-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE4.24"
+    },
+    {
+      "id": "1122262404254ba8a1bc7e14a872c927",
+      "appId": "VertexPo7b6b0ac950c8V2",
+      "compatibleApps": [
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-11-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "UE4.25"
+    }
+  ],
+  "developer": "Emerson Rosa",
+  "developerId": "o-b7zqrnx32sksmb4ep7kperqu6tyu8y",
+  "endOfSupport": false,
+  "unsearchable": false
+}

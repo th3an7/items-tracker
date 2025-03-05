@@ -1,0 +1,309 @@
+{
+  "id": "915c0192612e4806a36b3328d6df2094",
+  "title": "Ultimate Dice Mechanic",
+  "description": "A fully featured dice system, including procedural dice, roll system, and a value reader.",
+  "longDescription": "<h1>Ultimate Dice Mechanic</h1><p><br /></p><p>This asset is for those looking for more than just a dice model, or a dice-throwing system. The ultimate dice mechanic includes procedural dice generation, dice rolling/throwing, reading dice values, and auto rethrow. All while being the easiest to customize!</p><p><br /></p><p><strong>IMPORTANT [Read to Get Started]: </strong> <a href=\"https://github.com/rohithateappple/UltimateDiceMechanic/blob/main/README.md\" rel=\"nofollow\"><strong>UltimateDiceMechanic/README.md at main · rohithateappple/UltimateDiceMechanic (github.com)</strong></a></p><p><br /></p><p><strong>Documentation: </strong><a href=\"https://drive.google.com/file/d/1Lq5H3exkEd90Y1o6m4JelzUB4V7ydQvY/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/1Lq5H3exkEd90Y1o6m4JelzUB4V7ydQvY/view?usp&#61;sharing</a></p><p><br /></p><p><strong>Trailer</strong>: <a href=\"https://www.youtube.com/watch?v&#61;2WiRyu8FTmc\" rel=\"nofollow\">Ultimate Dice Mechanic | Unreal Marketplace (youtube.com)</a></p><p><br /></p><p><strong>Why procedural dice?</strong></p><p>Traditionally a dice game only has 6 values to play around with (numbers 1 - 6). Each face of the die is guaranteed to have unique values (i.e., no two faces have the same value). Thus, there&#39;s only ever a need for one dice model. But what if your game has more than just 6 values and on top of that what if the face values aren&#39;t unique? Well, now you&#39;ll need to model many variations to account for all those unique combinations.</p><p>Having the traditional 6 values per face, you&#39;ll need to manually create this many 3D models: <strong>6^6/24 &#61; 1944.</strong></p><p>As the number of values increases, the number of possibilities also increases. That&#39;s where the procedural system comes into play. You just need to map all available values to their respective materials and the system puts together a dice with 6 random values. The result? Eventually, you&#39;ll have covered every possible die variation!</p><p><br /></p><p><strong>Regular Dice</strong></p><p>Not all devs require procedural dice. And for that reason, this mechanic also comes with a regular die. Changing values is the same as the procedural, this time there&#39;s no need for materials as the user already has a model. Simply change values corresponding to each collider in the data table.</p><p><br /></p><p><strong>Spawning and Throwing</strong></p><p>The BP_DiceManager handles the spawning and throwing of dice. Press &#39;<strong>SpaceBar&#39;</strong> to spawn and throw at the same time. By default, the spawn mode is set to <em>spawn in the area.</em></p><p><br /></p><p><strong>Shooting Dice from Actor</strong></p><p>The BP_DiceManager can also shoot dice from a specified actor. It shoots the dice in the forward direction with an offset to its world location. This avoids clipping artifacts.</p><p><br /></p><p><strong>Shooting Dice from Player</strong></p><p>Want to shoot the dice like a gun? You can do that! Simply tick the &#39;<strong>Shoot from Player</strong>&#39; checkbox, and now you can attack your enemies with... dice?</p><p><br /></p><p><strong>Customizing the Die</strong></p><p>There are two different methods to customize your die:</p><ol><li>Procedural Customization.</li><li>Regular Customization.</li></ol><p><br /></p><p>For <strong>Procedural Customization</strong> you&#39;ll need the following:</p><ul><li>Materials that correspond to each value in your game.</li><li>*Optional: A custom frame mesh.</li><li>*Optional: A custom face mesh.</li></ul><p>*Custom frame and face are only required when opting for the custom body procedural die.</p><p>You can then use the pre-provided <strong><em>procedural data tables</em></strong> to assign each material to its value. Once assigned, use that data table as the <em>procedural </em>source in the BP_DiceManager.</p><p><br /></p><p>For <strong>Regular Customization </strong>you&#39;ll need the following:</p><ul><li>*Optional: A custom die mesh.</li></ul><p>*Custom mesh is only required when opting to change the default die mesh.</p><p>You can then use the pre-provided <strong><em>regular data tables</em></strong> to assign each collider to its value. Once assigned, use that data table as the <em>regular </em>source in the BP_DiceManager.</p>",
+  "technicalDetails": "<p><strong>Features</strong>:</p><ul><li>Two base dice classes - BP_RegularDie and BP_ProceduralDie</li><li>BP_ProceduralDie - Generate every possible face-value combination, from the user-defined data table.</li><li>BP_RegularDie - Use your <em>own </em>dice mesh and set face values in the data table.</li><li>BP_DiceManager - To spawn, throw, and read values of dice.</li><li>Side Landing Check - Checks if a dice has landed on any of its sides, to avoid bad line traces.</li><li>Auto Rethrow - Rethrow an individual dice, if the side landing check is on and the dice hasn&#39;t landed.</li><li>Easy changing of values in the data table means good scalability across multiple spawns.</li><li>Easy roll physics tweaks like impulse, impulse radius, etc.</li><li>Automatically read values when a dice has stopped rolling.</li></ul><p><br /></p><p>Number of Blueprints: 8</p><p>Input: Keyboard</p><p><strong>Input Commands:</strong></p><ol><li>Space Bar - Spawn/Throw Dice</li><li>H - Activate/Deactivate Spawn/Throw at the cursor location.</li></ol><p><br /></p><p>Network Replicated: No</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: No</p><p><strong>Documentation</strong>: <a href=\"https://drive.google.com/file/d/1Lq5H3exkEd90Y1o6m4JelzUB4V7ydQvY/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/1Lq5H3exkEd90Y1o6m4JelzUB4V7ydQvY/view?usp&#61;sharing</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1 - choose between types-1920x1080-2990ff135f81c1fdf8569a210734d79b.png",
+      "md5": "2990ff135f81c1fdf8569a210734d79b",
+      "width": 1920,
+      "height": 1080,
+      "size": 2103382,
+      "uploadedDate": "2024-06-23T08:47:46.443Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2 - procedurally generate-1920x1080-3a790a9997f6a7229124f4f3ff736302.png",
+      "md5": "3a790a9997f6a7229124f4f3ff736302",
+      "width": 1920,
+      "height": 1080,
+      "size": 2265387,
+      "uploadedDate": "2024-06-23T08:47:46.999Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3 - choose from 3 bodies-1920x1080-702abd3cd9d74343829657f84e6fff9c.png",
+      "md5": "702abd3cd9d74343829657f84e6fff9c",
+      "width": 1920,
+      "height": 1080,
+      "size": 2020156,
+      "uploadedDate": "2024-06-23T08:47:47.677Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4 - Custom Body-1920x1080-24a471699c26a96aa3d04fdeac807ebf.png",
+      "md5": "24a471699c26a96aa3d04fdeac807ebf",
+      "width": 1920,
+      "height": 1080,
+      "size": 1995099,
+      "uploadedDate": "2024-06-23T08:47:48.294Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5 - regular die-1920x1080-844248c3cfd91e7d3db140bb31409794.png",
+      "md5": "844248c3cfd91e7d3db140bb31409794",
+      "width": 1920,
+      "height": 1080,
+      "size": 1197115,
+      "uploadedDate": "2024-06-23T08:47:48.870Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6 - easily change procedural values-1920x1080-caad30e9cf3713293919b20a7f153215.png",
+      "md5": "caad30e9cf3713293919b20a7f153215",
+      "width": 1920,
+      "height": 1080,
+      "size": 1460118,
+      "uploadedDate": "2024-06-23T08:47:49.467Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7 - easily change regular values-1920x1080-487823d038ba8bbc750d87a74aba0d90.png",
+      "md5": "487823d038ba8bbc750d87a74aba0d90",
+      "width": 1920,
+      "height": 1080,
+      "size": 1390409,
+      "uploadedDate": "2024-06-23T08:47:50.035Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8 - dice manager-1920x1080-fdef2f6204fd876d6b484f614a730e4c.png",
+      "md5": "fdef2f6204fd876d6b484f614a730e4c",
+      "width": 1920,
+      "height": 1080,
+      "size": 294221,
+      "uploadedDate": "2024-06-23T08:47:50.567Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/9 - throw dice in area-1920x1080-fe5798939aad53790490f866b5b7dade.png",
+      "md5": "fe5798939aad53790490f866b5b7dade",
+      "width": 1920,
+      "height": 1080,
+      "size": 1447362,
+      "uploadedDate": "2024-06-23T08:47:51.054Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/10 - throw dice from actor-1920x1080-954a053fd04407d1ae2ed689d4344345.png",
+      "md5": "954a053fd04407d1ae2ed689d4344345",
+      "width": 1920,
+      "height": 1080,
+      "size": 1659252,
+      "uploadedDate": "2024-06-23T08:47:51.625Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/11 - shoot die from player-1920x1080-3d30a985adf9af223ec691a3ab9d7c89.png",
+      "md5": "3d30a985adf9af223ec691a3ab9d7c89",
+      "width": 1920,
+      "height": 1080,
+      "size": 1807780,
+      "uploadedDate": "2024-06-23T08:47:52.279Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/12 - read values-1920x1080-7c5c03e96f08a4e39a40dea3686373cc.png",
+      "md5": "7c5c03e96f08a4e39a40dea3686373cc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1876096,
+      "uploadedDate": "2024-06-23T08:47:53.021Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/13 - auto rethrow-1920x1080-e08d4d642f638c11f8e7de799d6e36a0.png",
+      "md5": "e08d4d642f638c11f8e7de799d6e36a0",
+      "width": 1920,
+      "height": 1080,
+      "size": 2020950,
+      "uploadedDate": "2024-06-23T08:47:53.660Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/UltimateDiceMechanic_thumb-284x284-096b9bf5bcb6e1ef29d9e4ea9024ce2f.png",
+      "md5": "096b9bf5bcb6e1ef29d9e4ea9024ce2f",
+      "width": 284,
+      "height": 284,
+      "size": 127492,
+      "uploadedDate": "2024-06-23T08:45:36.422Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/UltimateDiceMechanic_featured-894x488-c2f52eda9d9a960335c0d0cc3093b436.png",
+      "md5": "c2f52eda9d9a960335c0d0cc3093b436",
+      "width": 894,
+      "height": 488,
+      "size": 464646,
+      "uploadedDate": "2024-06-23T08:45:14.952Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1 - choose between types-1920x1080-2990ff135f81c1fdf8569a210734d79b_Snapshot.png",
+      "md5": "58aaf8967d2a9988f8ed9bfe34a2b7cd",
+      "width": 150,
+      "height": 74,
+      "size": 7447,
+      "uploadedDate": "2024-06-23T08:47:46.821Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2 - procedurally generate-1920x1080-3a790a9997f6a7229124f4f3ff736302_Snapshot.png",
+      "md5": "ef47f81abc109e6252e63a5976dc9673",
+      "width": 150,
+      "height": 74,
+      "size": 9219,
+      "uploadedDate": "2024-06-23T08:47:47.429Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3 - choose from 3 bodies-1920x1080-702abd3cd9d74343829657f84e6fff9c_Snapshot.png",
+      "md5": "4b87024544027155490557faf9ca8a44",
+      "width": 150,
+      "height": 74,
+      "size": 8048,
+      "uploadedDate": "2024-06-23T08:47:48.095Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4 - Custom Body-1920x1080-24a471699c26a96aa3d04fdeac807ebf_Snapshot.png",
+      "md5": "3c0d65607f6564fdf79580c912560e62",
+      "width": 150,
+      "height": 74,
+      "size": 7738,
+      "uploadedDate": "2024-06-23T08:47:48.668Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5 - regular die-1920x1080-844248c3cfd91e7d3db140bb31409794_Snapshot.png",
+      "md5": "04a6b54ada023104c08eb200be0e1cdc",
+      "width": 150,
+      "height": 74,
+      "size": 6436,
+      "uploadedDate": "2024-06-23T08:47:49.240Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6 - easily change procedural values-1920x1080-caad30e9cf3713293919b20a7f153215_Snapshot.png",
+      "md5": "97c43189ae0b5e65fa08860b9a0f39c5",
+      "width": 150,
+      "height": 74,
+      "size": 7558,
+      "uploadedDate": "2024-06-23T08:47:49.843Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7 - easily change regular values-1920x1080-487823d038ba8bbc750d87a74aba0d90_Snapshot.png",
+      "md5": "5b0a9eb25419d671577fc157ca3b04b3",
+      "width": 150,
+      "height": 74,
+      "size": 6599,
+      "uploadedDate": "2024-06-23T08:47:50.382Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8 - dice manager-1920x1080-fdef2f6204fd876d6b484f614a730e4c_Snapshot.png",
+      "md5": "7694abf5b20e5db97e178c31a48ebd0a",
+      "width": 150,
+      "height": 74,
+      "size": 4211,
+      "uploadedDate": "2024-06-23T08:47:50.871Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9 - throw dice in area-1920x1080-fe5798939aad53790490f866b5b7dade_Snapshot.png",
+      "md5": "629e4edafa3bcac784a1558a761ba5f1",
+      "width": 150,
+      "height": 74,
+      "size": 9741,
+      "uploadedDate": "2024-06-23T08:47:51.409Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10 - throw dice from actor-1920x1080-954a053fd04407d1ae2ed689d4344345_Snapshot.png",
+      "md5": "e4571f4b96a05d5c9ed8438952a61aff",
+      "width": 150,
+      "height": 74,
+      "size": 9892,
+      "uploadedDate": "2024-06-23T08:47:52.045Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11 - shoot die from player-1920x1080-3d30a985adf9af223ec691a3ab9d7c89_Snapshot.png",
+      "md5": "a2d7303a1f9b4027b4f90e8801e1f0dd",
+      "width": 150,
+      "height": 74,
+      "size": 8001,
+      "uploadedDate": "2024-06-23T08:47:52.728Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/12 - read values-1920x1080-7c5c03e96f08a4e39a40dea3686373cc_Snapshot.png",
+      "md5": "40f45931815900278bf1e0b7a0040d0d",
+      "width": 150,
+      "height": 74,
+      "size": 8706,
+      "uploadedDate": "2024-06-23T08:47:53.449Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/13 - auto rethrow-1920x1080-e08d4d642f638c11f8e7de799d6e36a0_Snapshot.png",
+      "md5": "841e38174e999a888a64ad6314b3ec9a",
+      "width": 150,
+      "height": 74,
+      "size": 9297,
+      "uploadedDate": "2024-06-23T08:47:54.034Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3 - choose from 3 bodies-1920x1080-702abd3cd9d74343829657f84e6fff9c_Snapshot.png",
+      "md5": "4b87024544027155490557faf9ca8a44",
+      "width": 150,
+      "height": 74,
+      "size": 8048,
+      "uploadedDate": "2024-06-23T08:42:54.712Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-06-25T08:44:07.503Z",
+  "lastModifiedDate": "2024-11-21T19:02:39.361Z",
+  "customAttributes": {},
+  "entitlementName": "915c0192612e4806a36b3328d6df2094",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "8eef97bd0dc34b3d8a7a341b0211cfba",
+      "appId": "UDM915c0192612eV1",
+      "compatibleApps": [
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2024-06-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Ultimate Dice 1.0"
+    }
+  ],
+  "developer": "Two Bit Studios",
+  "developerId": "o-v4568brzvvyebffbsxz9k3uvukh4gt",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

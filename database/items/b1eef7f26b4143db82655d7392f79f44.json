@@ -1,0 +1,429 @@
+{
+  "id": "b1eef7f26b4143db82655d7392f79f44",
+  "title": "Stylized Rendering System (Cel-Shader)",
+  "description": "A feature-rich, highly customizable, post-process-based cel-shading solution for your stylized projects! Easy to add with no engine modifications required. Now supports UE5!",
+  "longDescription": "<h2><a href=\"https://www.youtube.com/watch?v&#61;yE4pm4EyDU0\" rel=\"nofollow\">[TRAILER VIDEO]</a></h2><p><br /></p><p>Quickly and easily cel-shade your characters, objects, and visual effects and add up to 25 different customizable styles of outlines to your scene!</p><p>SRS allows you to create a variety of different, dynamic art styles for your projects, mimicking the art style found in anime, cartoons or manga. Little to no technical knowledge is required!</p><ul><li><strong>Simple:</strong> SRS was made to be easy to use. You do not have to understand materials, shaders or UE4&#39;s post-process system to create your desired art-style.</li><li><strong>Easy:</strong> Cel-Shading can be set-up in a matter of minutes by dragging the SRS actor into your scene, and enabling custom-depth on selected objects.</li><li><strong>Customizable: </strong>More than 100 different parameters in structured categories allow control over every system of SRS</li><li><strong>Dynamic:</strong> The post-process based approach of SRS allows cel-shaded objects to dynamically react to shadows and light sources</li><li><strong>Adaptable:</strong> SRS provides options to disable unneeded features to improve performance on lower-end devices</li></ul><p><br /></p><p>Are you looking for a cel-shader that works on mobile, supports refraction and features material-level control of nearly every cel-shading parameter?</p><p>Take a look at the Mobile Version of SRS: <a href=\"https://www.unrealengine.com/marketplace/en-US/product/3857621d6a4d49cd9618d957350ddfbb\" rel=\"nofollow\">Stylized Rendering System for Mobile/VR (Cel-Shader)</a>!</p><p><br /></p><p><strong><u>Patch Log: Stylized Rendering System Version 2.1</u></strong></p><p>15th November, 2023</p><p>This minor patch fixes some bugs and provides additional warning messages to guide users while using SRS.</p><p>- Warning Message: SRS now displays a warning message when attempting to use Secondary Bounds with the &#39;Effects&#39; Quality Setting not set to Epic. A similar warning is shown when attempting to use the Fog Actor with the same quality setting.</p><p>- Automatic Lighting Adaptation now automatically disables itself if the SRS Actor is added to a scene/refreshed, when there is no SkyAtmosphere in the scene. It needs to be manually enabled again in this case.</p><p>- Fixed &#39;Blendable Priority (Read Only)&#39; not updating correctly and generating an error message in the SRS Actor.</p><p>- The Demo Room Character now uses Material Based Outlines to show how those could be used in your project</p><p>- The Demo Room Character now has hard-coded controls so it is controllable even in projects that do not have the same keybinds setup.</p><p><br /></p><p><strong><u>Patch Log: Stylized Rendering System Version 2</u></strong></p><p>6th July, 2023</p><p>With this brand new update to Stylized Rendering System (UE5.0&#43;), you can expect many brand new features - such as reflections, fog, shadow biasing - as well as many improvements and code-overhauls.</p><p><strong>NOTE:</strong> Some new features require the scalability setting &#39;Effects&#39; to be at &#39;Epic&#39; or &#39;Cinematic&#39;. Lower settings currently break these features, as well as the cel-shading. I&#39;m looking into adding an option to disable these features, so that lower &#39;Effects&#39; settings can still be used, without breaking the cel-shading.</p><p><br /></p><p><strong>New Features</strong></p><p><br /></p><p>- Fog Actor: Easily add SRS-compatible exponential height fog to your scene. Can also serve as a basis for creating custom srs-compatible fog materials.</p><p>- Reflection Actor: Add cubemapped reflections to your scene and control the strength and blur through SRS&#39;s material properties.</p><p>- Opaque and Translucent Outlines: Material-based outlines, that are more robust and performant than the standard post-process outlines.</p><p>- Color Based Outlines: Add strokes to the &#34;inside&#34; of surfaces along color transitions</p><p><br /></p><p>- Rimshadow: A rimlight, but in shadows on non-metallic objects. Adds detail that is especially useful when character is fully in shadow.</p><p>- Shadow Biasing: Force or hide shadows from within materials using textures.</p><p>- Dark Shadow: Mask out areas that should have a darker shadow - only if SRS draws a shadow to that area. Allows you to add dynamic detail to shadowed surfaces</p><p><br /></p><p>- Secondary Bounds: Allows you to limit where SRS actor take affect to be able to use multiple SRS actors simultaneously!</p><p>- Auto Apply Custom Depth: Tool within SRS actor to automatically enable custom depth on meshes that use an SRS compatible material.</p><p><br /></p><p><strong>Improvements</strong></p><p><br /></p><p>- Cel-Shader:</p><p>- Highlight and Rimlight color can now be modified individually.</p><p>- Light direction can now be overwritten in the SRS actor</p><p>- Maximum cel-shading distance for masking out sky can now be overwritten from within SRS actor settings</p><p>- Atmosphere parameters are now taken into consideration to better match the lighting automatically (requires atmosphere)</p><p>- Cel-Shader Feature Control vastly expanded</p><p>- Cel-Shader material instance features check-box to use pattern input for brightness input instead. (Make sure to set min and max thickness to 1)</p><p><br /></p><p>- Post-process outlines:</p><p>- Directly control the amount of samples to increase outline quality at the cost of performance.</p><p>- Select whether to draw inside or outside of meshes</p><p>- Select whether to draw in front of or behind translucent meshes</p><p>- Now features setting to scale all outline types at once</p><p>- Outline scale at distance is now more consistent with less tweaking required</p><p><br /></p><p>- Daytime Controls:</p><p>- changing of active directional light in SRS no longer requires modifying the light components. Instead the sun should be marked with a</p><p>AtmosphereSunLightIndex of 0 - a moon with a 1.</p><p>- Highlight/Rimlight opacity and color can now be controlled independently</p><p><br /></p><p>- Bounds renamed to primary bounds that can now be feathered.</p><p><br /></p><p>- Updated Icons to match UE5&#39;s icon style</p><p><br /></p><p><strong>Bug Fixes:</strong></p><p><br /></p><p>- Fixed updating of daytime refreshing cel-shader correctly while playing</p><p><br /></p><p><br /></p><p><strong><u>Update II: Patch Notes</u></strong></p><p>With the Update II for UE5 and up, you&#39;ll see bugfixes, slight code cleanup and the new &#39;Screen Percentage&#39; input.</p><ul><li>Added &#39;Screen Percentage&#39; input variable in SRS Actor under General&gt;Advanced. This input can be used to inform SRS of your current viewport screen percentage, so that SRS will adjust the thickness of outlines accordingly. This fixes issues where outlines would grow with lower screen percentages, and shrink with screen percentages higher than 100%</li></ul><p><br /></p><p><u>Bugfixes:</u></p><ul><li>Fixed highlights, rimlights and shadows appearing slightly jagged on translucent objects on low-poly meshes</li><li>Fixed Custom Depth Stencil masking of the cel-shader not working when &#39;Only on Custom Depth&#39; is disabled</li><li>Fixed updating of daytime not updating cel-shader automatically</li><li>Fixed some outline types appearing in front of translucent objects</li></ul><p><br /></p><p><strong><u>Major Content Update I: Patch Notes</u></strong></p><p><br /></p><p>The Major Content Update I is a <strong>free update</strong> for all owners of SRS. It is available for UE4.27 and higher versions.</p><ul><li>Added the &#34;Anisotropic Highlight&#34; and &#34;Anisotropic Direction&#34; Parameter to materials to allow switching between <strong>different highlight shapes</strong>.</li><li>Added the option to choose between the <strong>&#34;Overwrite&#34; or &#34;Blend&#34; mode</strong> for the Shadow Color or Highlight Color.</li><li><strong>Overwrite</strong>: The specified Shadow/Highlight Color directly gets applied to the shadows/highlights. The object&#39;s base color does not affect the final color of the shadows/highlights.</li><li><strong>Blend</strong>: Default mode, where the Shadow/Highlight color gets multiplied by the base color to determine the final color</li><li>Added options to control various different settings regarding color, highlights, shadows depending on the <strong>time of day</strong>, which can be specified in the SRS actor</li><li>Added option to switch between 2 different &#34;Directional Light Actors&#34;, so highlights and rimlights can react to both <strong>moon and sun</strong>, depending on the time day</li><li>Added the option to <strong>tint all cel-shaded objects</strong> to make them better fit into your scenes.</li><li>Decreased maximum highlight size to allow for more precise editing</li></ul>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li>Stylized Rendering System Actor, a post process volume for general control of cel-shading and outline system</li><li>Standard, Metallic, Translucent and Hair Shading</li><li>7 pattern textures for control over patterns in shadows and highlights of objects</li><li>7 gradient textures for control over transition from shadows to no shadow and highlight to no highlight</li><li>10 curve assets for Daytime based shading changes</li><li>2 Master Materials for normal and translucent</li><li>15 demo material instances</li><li>8 demo textures</li><li>3 Material Functions for setting up compatibility in your materials with SRS</li><li>18 other utility material functions</li><li>Light Manager Component to manage light colors for cel-shaded lights mode</li></ul><p><strong>Number of Blueprints:</strong> 3 (&#43; 4 Demo Blueprints)</p><p><strong>Performance:</strong> No noticable performance decrease when playing in editor with SRS and one outline type enabled. (Tested on AMD Ryzen 5 3500X, Radeon RX 570, 8GB of RAM)</p><p><strong>Known Compatibility Issues</strong>: Ultra Dynamic Sky</p><p><strong>Replication:</strong> Local</p><p><strong>Supported Development Platforms:</strong> All</p><p><strong>Windows:</strong> Yes</p><p><strong>Mac:</strong> Yes(Set the D3D11 Tesselation Mode in the master material to No Tesselation to improve performance)</p><p><strong>Documentation:</strong> <a href=\"https://youtube.com/playlist?list&#61;PLpIWPOvOOnOw4Jo4IL7rNGjcxSMoa5AJ7\" rel=\"nofollow\">[TUTORIAL SERIES ON YOUTUBE]</a></p><p><strong>Important/Additional Notes: All Styles shown in the trailer and in the product images were created using SRS, however not all shown styles are shipped with SRS. SRS is simply a tool for creating cel-shaded styles.</strong></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/updateimagev3-1920x1080-a662d66b85e0a583d1900568a865983e.png",
+      "md5": "a662d66b85e0a583d1900568a865983e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1758878,
+      "uploadedDate": "2023-07-06T20:23:58.049Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/galleryoverview1-1920x1080-a1288fd302fb35d9aa77557fe91bf6e3.png",
+      "md5": "a1288fd302fb35d9aa77557fe91bf6e3",
+      "width": 1920,
+      "height": 1080,
+      "size": 2563715,
+      "uploadedDate": "2021-10-23T20:45:03.672Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/charactergallery2-1920x1080-dc4a7ff131fe16e70f5fb3eeb8375297.png",
+      "md5": "dc4a7ff131fe16e70f5fb3eeb8375297",
+      "width": 1920,
+      "height": 1080,
+      "size": 2415014,
+      "uploadedDate": "2021-11-04T19:24:11.153Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/light colors-1920x1080-be18a06d2e975b974c595d9ce76cb734.png",
+      "md5": "be18a06d2e975b974c595d9ce76cb734",
+      "width": 1920,
+      "height": 1080,
+      "size": 2193045,
+      "uploadedDate": "2021-11-01T18:40:24.963Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/translucent2-1920x1080-07a5c85fc7ce698cccc9fdcfd95dd676.png",
+      "md5": "07a5c85fc7ce698cccc9fdcfd95dd676",
+      "width": 1920,
+      "height": 1080,
+      "size": 2029009,
+      "uploadedDate": "2021-11-02T21:36:02.496Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/outlines-1920x1080-b2f6205a34426f6f22eea21736cc76e3.png",
+      "md5": "b2f6205a34426f6f22eea21736cc76e3",
+      "width": 1920,
+      "height": 1080,
+      "size": 2250531,
+      "uploadedDate": "2021-11-01T18:40:25.472Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/shadows2disclaimer-1920x1080-7de6086ed697c08f9eb7535b25f1ec20.png",
+      "md5": "7de6086ed697c08f9eb7535b25f1ec20",
+      "width": 1920,
+      "height": 1080,
+      "size": 1791413,
+      "uploadedDate": "2022-01-04T13:46:38.954Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/anisotropic-1920x1080-dbed5db140255b043a548af97ceb4e98.jpeg",
+      "md5": "dbed5db140255b043a548af97ceb4e98",
+      "width": 1920,
+      "height": 1080,
+      "size": 183394,
+      "uploadedDate": "2022-06-01T18:07:35.416Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/customizablesize2-1920x1080-57d88527cdad0249ade828b4dda75276.png",
+      "md5": "57d88527cdad0249ade828b4dda75276",
+      "width": 1920,
+      "height": 1080,
+      "size": 1512402,
+      "uploadedDate": "2021-11-21T00:39:36.760Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/pattern2-1920x1080-5a08aac1000b4ea4a0ffeda38fbfb72c.png",
+      "md5": "5a08aac1000b4ea4a0ffeda38fbfb72c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1825187,
+      "uploadedDate": "2021-11-21T00:39:37.691Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/emissive-1920x1080-61636c9917343ecd0bb007b512e84e00.png",
+      "md5": "61636c9917343ecd0bb007b512e84e00",
+      "width": 1920,
+      "height": 1080,
+      "size": 1708172,
+      "uploadedDate": "2021-11-04T17:57:56.827Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/daynight-1920x1080-c190e0ac5297ea5ece6f3e28e2b60711.jpeg",
+      "md5": "c190e0ac5297ea5ece6f3e28e2b60711",
+      "width": 1920,
+      "height": 1080,
+      "size": 247973,
+      "uploadedDate": "2022-06-01T18:07:35.755Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/patchnotes-1920x1080-28baea6c7f8822a86c4a24959f43d8c1.jpeg",
+      "md5": "28baea6c7f8822a86c4a24959f43d8c1",
+      "width": 1920,
+      "height": 1080,
+      "size": 307110,
+      "uploadedDate": "2022-06-01T18:07:35.071Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/StylizedRenderingSystemCelShader_thumb-284x284-6ce254194a708d0b29360cf8a878fe09.png",
+      "md5": "6ce254194a708d0b29360cf8a878fe09",
+      "width": 284,
+      "height": 284,
+      "size": 91251,
+      "uploadedDate": "2023-07-06T20:23:58.451Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/StylizedRenderingSystemCelShader_featured-894x488-51165b97010d3a438d62e5210ef95a68.png",
+      "md5": "51165b97010d3a438d62e5210ef95a68",
+      "width": 894,
+      "height": 488,
+      "size": 566495,
+      "uploadedDate": "2022-02-06T16:19:11.541Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/updateimagev3-1920x1080-a662d66b85e0a583d1900568a865983e_Snapshot.png",
+      "md5": "1624f3932caaca95cb562af3a3b1e8ad",
+      "width": 150,
+      "height": 74,
+      "size": 8863,
+      "uploadedDate": "2023-07-06T20:23:58.410Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/patchnotes-1920x1080-28baea6c7f8822a86c4a24959f43d8c1_Snapshot.jpeg",
+      "md5": "3ebdd9e6350ecff66f657a05e1ea0255",
+      "width": 150,
+      "height": 74,
+      "size": 8413,
+      "uploadedDate": "2022-06-01T18:07:35.339Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/anisotropic-1920x1080-dbed5db140255b043a548af97ceb4e98_Snapshot.jpeg",
+      "md5": "296a3cf1e861ad21d3b7c25cd4d3bb8a",
+      "width": 150,
+      "height": 74,
+      "size": 6182,
+      "uploadedDate": "2022-06-01T18:07:35.640Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/daynight-1920x1080-c190e0ac5297ea5ece6f3e28e2b60711_Snapshot.jpeg",
+      "md5": "cf033055a9c7fd97e8e554342eafc1ae",
+      "width": 150,
+      "height": 74,
+      "size": 7185,
+      "uploadedDate": "2022-06-01T18:07:36.007Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shadows2disclaimer-1920x1080-7de6086ed697c08f9eb7535b25f1ec20_Snapshot.png",
+      "md5": "bd3b80b40b423ad0ff45544401c03fd4",
+      "width": 150,
+      "height": 74,
+      "size": 7374,
+      "uploadedDate": "2022-01-04T13:46:39.269Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/customizablesize2-1920x1080-57d88527cdad0249ade828b4dda75276_Snapshot.png",
+      "md5": "9be92e5942de67ebd1ddb26d65b7232a",
+      "width": 150,
+      "height": 74,
+      "size": 8298,
+      "uploadedDate": "2021-11-21T00:39:37.287Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/pattern2-1920x1080-5a08aac1000b4ea4a0ffeda38fbfb72c_Snapshot.png",
+      "md5": "bed7bdc504608f156e4c7c5f5f2dec3d",
+      "width": 150,
+      "height": 74,
+      "size": 7832,
+      "uploadedDate": "2021-11-21T00:39:38.055Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/charactergallery2-1920x1080-dc4a7ff131fe16e70f5fb3eeb8375297_Snapshot.png",
+      "md5": "f979209d555747108a62f0d1cc72e0a7",
+      "width": 150,
+      "height": 74,
+      "size": 8307,
+      "uploadedDate": "2021-11-04T19:24:11.486Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/emissive-1920x1080-61636c9917343ecd0bb007b512e84e00_Snapshot.png",
+      "md5": "37d6429e3e35f294fbd186b42c1a2fb7",
+      "width": 150,
+      "height": 74,
+      "size": 8714,
+      "uploadedDate": "2021-11-04T17:57:57.135Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shadows2-1920x1080-cd24c012df215c48736284911120f342_Snapshot.png",
+      "md5": "a5af0b9512567f3fb84f684892681cc0",
+      "width": 150,
+      "height": 74,
+      "size": 7352,
+      "uploadedDate": "2021-11-03T23:25:14.582Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shadows2-1920x1080-4043902cf90cad1898ee77e59b6115af_Snapshot.png",
+      "md5": "52fb5ba9320e54a247627c791557c5ca",
+      "width": 150,
+      "height": 74,
+      "size": 7380,
+      "uploadedDate": "2021-11-03T23:18:55.076Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shadows2-1920x1080-4043902cf90cad1898ee77e59b6115af_Snapshot.png",
+      "md5": "52fb5ba9320e54a247627c791557c5ca",
+      "width": 150,
+      "height": 74,
+      "size": 7380,
+      "uploadedDate": "2021-11-03T23:08:03.658Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/translucent2-1920x1080-07a5c85fc7ce698cccc9fdcfd95dd676_Snapshot.png",
+      "md5": "4e3ce7e392931c7d505696dc549d8a87",
+      "width": 150,
+      "height": 74,
+      "size": 7977,
+      "uploadedDate": "2021-11-02T21:36:02.812Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/translucent2-1920x1080-c5a441e707271da0f4f974f0b84c0d24_Snapshot.png",
+      "md5": "4412c198506ae4192dfc0230236f9ebd",
+      "width": 150,
+      "height": 74,
+      "size": 7886,
+      "uploadedDate": "2021-11-02T21:13:47.133Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/light colors-1920x1080-be18a06d2e975b974c595d9ce76cb734_Snapshot.png",
+      "md5": "6f98a289777b00c376406b20eed85b3d",
+      "width": 150,
+      "height": 74,
+      "size": 7683,
+      "uploadedDate": "2021-11-01T18:40:25.298Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/outlines-1920x1080-b2f6205a34426f6f22eea21736cc76e3_Snapshot.png",
+      "md5": "1ba63d0b9707b660cc1f9789630e66b2",
+      "width": 150,
+      "height": 74,
+      "size": 7730,
+      "uploadedDate": "2021-11-01T18:40:25.881Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shadows-1920x1080-3b5b9c56ac83f6eb90095bb0073804e1_Snapshot.png",
+      "md5": "b447379201e5941021359152f5c20136",
+      "width": 150,
+      "height": 74,
+      "size": 6423,
+      "uploadedDate": "2021-11-01T18:40:26.390Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/pattern-1920x1080-253b9225895129dc1f4b3cfd2172c650_Snapshot.png",
+      "md5": "33575354a7ae58522cbd25d43dcff77a",
+      "width": 150,
+      "height": 74,
+      "size": 6609,
+      "uploadedDate": "2021-11-01T15:21:54.981Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/translucent-1920x1080-b4fc0aafa7aed4531e11a86fdac29f7a_Snapshot.png",
+      "md5": "81d884e8c529c9c4281127d73edaa0cd",
+      "width": 150,
+      "height": 74,
+      "size": 7491,
+      "uploadedDate": "2021-10-24T14:34:13.682Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/customizablesize-1920x1080-97c29a0f4eb3fbbc5b60e007fc0d5db3_Snapshot.png",
+      "md5": "a282c3d4c32744d2c708c35865ea3d8e",
+      "width": 150,
+      "height": 74,
+      "size": 7276,
+      "uploadedDate": "2021-10-24T00:56:32.089Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryoverview1-1920x1080-a1288fd302fb35d9aa77557fe91bf6e3_Snapshot.png",
+      "md5": "610c3a349062ea85a9f33f1a51445052",
+      "width": 150,
+      "height": 74,
+      "size": 9960,
+      "uploadedDate": "2021-10-23T20:45:04.017Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryoverview2-1920x1080-427f1d369c1bf388fa600f9faa8b351e_Snapshot.png",
+      "md5": "7d7278abdb92e31f627d438f7995ec77",
+      "width": 150,
+      "height": 74,
+      "size": 7755,
+      "uploadedDate": "2021-10-16T01:33:50.827Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryoverview1-1920x1080-3f4958640ff20c8de6bd90aa7afeef11_Snapshot.png",
+      "md5": "912ad88260aebacd595721d37b1ad853",
+      "width": 150,
+      "height": 74,
+      "size": 9844,
+      "uploadedDate": "2021-10-15T12:55:52.712Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-01-04T14:16:06.181Z",
+  "lastModifiedDate": "2025-01-11T01:53:24.849Z",
+  "customAttributes": {},
+  "entitlementName": "b1eef7f26b4143db82655d7392f79f44",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "e9cf1e3cc2f34268b63bdabc0397c09a",
+      "appId": "Stylizedb1eef7f26b41V1",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-10-15T00:00:00.000Z",
+      "releaseNote": "Legacy Version, left online for compatibility reasons",
+      "versionTitle": "1.0"
+    },
+    {
+      "id": "e71edcebffb5439d938eaab1bd0d616b",
+      "appId": "Stylizedb1eef7f26b41V3",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "PS4",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-05-31T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1 - Major Content Update 1"
+    },
+    {
+      "id": "746a429f906143c2be131c409faec7e4",
+      "appId": "Stylizedb1eef7f26b41V2",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Xbox One",
+        "PS4"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.1"
+    }
+  ],
+  "developer": "yeaulianStore",
+  "developerId": "o-62tddxpzkkkrdbxtzrqz37cnqm5w9d",
+  "endOfSupport": false,
+  "unsearchable": false
+}

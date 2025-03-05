@@ -1,0 +1,304 @@
+{
+  "id": "6bda7dab48324d6bbe4f6a52afbe1bfe",
+  "title": "Generic Movement System",
+  "description": "Powerful and advanced movement control and locomotion(animation)system designed for enhanced flexibility, seamless integration, user-friendly experience, and effortless expandability.",
+  "longDescription": "<p>The Generic Movement System (GMS) is a comprehensive movement control and animation system composed of two main parts: the Movement Control System and the Animation System.</p><p><br /></p><p>Movement Control System: The movement control logic for characters is encapsulated in a component, providing flexible movement/rotation control functionality. You can use it without modifying your character&#39;s parent or current movement components.</p><p><br /></p><p>Animation(locomotion) System: Built using Animation Blueprint Template (ABPT) and Animation Layer Interface (ALI) technologies, this system provides a framework for animating characters. Most animation assets are configured using data-driven methods (DataAsset), eliminating the need for complex animation blueprint settings. Advanced users can still follow this framework and expand their complex animation systems.</p><p><br /></p><p>Trailer: <a href=\"https://youtu.be/6_JJ6oytEKM?si&#61;8fyN4IG5pnj0mTnq\" rel=\"nofollow\">Youtube</a> <a href=\"https://www.bilibili.com/video/BV1uPW2ecEM5\" rel=\"nofollow\">中文</a></p><p>PlayableDemo: <a href=\"https://drive.google.com/drive/folders/1rHTLX4LO9Zy9TP-8XbTECExX5sAH3XoV?usp&#61;drive_link\" rel=\"nofollow\">GoogleDrive</a> <a href=\"https://pan.baidu.com/s/1Zi18M2CQg17e_GpF1uqBBA?pwd&#61;ggfd\" rel=\"nofollow\">百度网盘</a></p><p>Documentation: <a href=\"https://k12oekrxfs.larksuite.com/wiki/BtYNwb500irN4nkRbTEu5lMPsKf\" rel=\"nofollow\">English</a> <a href=\"https://yuewudev.feishu.cn/wiki/KZq9wx9Ini7TGAkLjw4cmGxnnYc\" rel=\"nofollow\">中文</a></p><p>Support: <a href=\"https://discord.com/invite/xMRXAB2\" rel=\"nofollow\">Discord</a> QQ群:64842100</p><p>Videos: <a href=\"https://www.youtube.com/watch?v&#61;AWYHNvXS5Ts\" rel=\"nofollow\">Demo walkthrough</a></p><p>Video Tutorials: <a href=\"https://www.youtube.com/playlist?list&#61;PLABYMC_pyM2RNt4E38ZBu7x8OnxRfqr1D\" rel=\"nofollow\">Youtube</a> <a href=\"https://space.bilibili.com/8222525/channel/collectiondetail?sid&#61;3846116&amp;ctype&#61;0\" rel=\"nofollow\">哔哩哔哩</a></p><p><br /></p><p>GMS is not a monolithic and chaotic system; it leverages built-in UE functionality to create a flexible, modular, user-friendly, and extensible movement system. It serves as a framework that can accelerate your project&#39;s progress and provide valuable knowledge of best practices.</p><p><br /></p><p>Before purchasing, I strongly recommend carefully reading the system&#39;s documentation to understand what it offers and how it can benefit you. GMS is not for absolutely beginner, you need to have a basic understanding of GameplayTags and blueprint to use it.</p><p><br /></p><p>----------------------------------------------------------------------------------</p><p><a href=\"https://k12oekrxfs.larksuite.com/wiki/ULsGweGwwiYB2akwbdLuFZ2RsPd\" rel=\"nofollow\">Development Roadmap</a></p><p>⁠<strong>Integration:</strong></p><ol><li><strong>Experimental Motion Matching integration</strong> is available in this update. Check <a href=\"https://youtu.be/1g1tYV2E_vw?si&#61;bGlnVKTe9D5IklTY\" rel=\"nofollow\">this </a>and <a href=\"https://youtube.com/shorts/Q5dU7mBlW7g?si&#61;xo_z8T9g0_D8vWRF\" rel=\"nofollow\">this</a> video.</li><li>GMS contains full animation integration for <a href=\"https://www.unrealengine.com/marketplace/en-US/profile/space.bar.anim\" rel=\"nofollow\">space.bar.anim</a>(Great Sword coming in next update) If you own these anim packs, you can import them and it&#39;s already setup with movement definition.</li></ol><p>----------------------------------------------------------------------------------</p><p><br /></p><p><strong>Please note</strong>:</p><p>This is a code plugin. Only the code is distributed through the marketplace.</p><p>After purchase, you need to <a href=\"https://k12oekrxfs.larksuite.com/wiki/V7uwwjeNWif1SKk562xun4oGsne?fromScene&#61;spaceOverview#share-G4SDd8Y0romMApxu2XDuullcsjc\" rel=\"nofollow\">be verified</a> to access the provided content assets.</p><p>You can easily migrate core assets to different project.(<a href=\"https://k12oekrxfs.larksuite.com/wiki/V7uwwjeNWif1SKk562xun4oGsne#share-Dsxtda9n8o9vZBxrg5juDmEbsmg\" rel=\"nofollow\">Migration Docs</a> <a href=\"https://www.youtube.com/watch?v&#61;eAbw6tYFjes&amp;list&#61;PLABYMC_pyM2RNt4E38ZBu7x8OnxRfqr1D\" rel=\"nofollow\">Migration Video</a>)</p><p><br /></p><p>请注意&#xff1a;这是一个代码插件&#xff0c;<strong>只有代码</strong>通过市场发布。购买后&#xff0c;您需要经过<a href=\"https://yuewudev.feishu.cn/wiki/MXi4wobMPiSQDakg9QDcng6DnHh#share-De59d3kLmoj4cuxd2fEcCCSUncg\" rel=\"nofollow\">验证</a>才能获取提供的内容资产。</p><p><br /></p><p><br /></p><h2>Features:</h2><ul><li>Easy Integration: Integrating with just one component and one animation blueprint. Non-intrusive integration eliminates the need to modify your existing character parent class or movement component.</li><li>User-Friendly: All movement control and animation settings are centralized and configured using data assets. Dynamic swapping of &#34;movement control logic and animation assets&#34; can be done during runtime through simple api calls.</li><li>Extensibility: GMS uses the Animation Layer Interface, allowing you to customize animation layers and layer layer settings by using Blueprint/C&#43;&#43;, with seamless runtime replacement.</li><li>High Adaptability: GMS uses Animation Blueprint Templates, making it compatible with any skeleton, including quadrupeds. It has a flexible data configuration structure, allowing direct use of animation packs from the marketplace, and even creating animations non-existent in anim pack via overlaying system. Each new character animation pack is just a new data asset.</li><li>Flexible Control: GMS offers a rich set of movement/rotation control systems, allowing different speeds/accelerations/decelerations and orientation modes (velocity-based, input-based, view-based or TurningCircle) for different movement states and rotation modes.</li><li>Simple API: Based on your game logic, you can switch between movement definitions, movement sets, movement states, rotation modes, and overlay modes to control/animate your characters. The combinations can be diverse and tailored to your specific needs.</li><li>Multiplayer Support: All features of this system support network synchronization and will continuously be optimized and improved in this regard. (Yes, challenges and difficulties never stop.)</li><li>Stacked (Layered) Animation Overlay System: This system allows you to play different animations simultaneously on multiple body parts. You can selectively play animations based on the activation state of animation nodes and perform GameplayTags queries specific to the Actor. It enables you to create dynamic and varied animation effects. In GMS, it is just one implementation of the OverlayLayer.</li><li>Pose-based Animation Overlay System: Similar to the ALS Layering system but more independent, intuitive, and user-friendly. In GMS, it is just one implementation of the OverlayLayer.</li><li>Robust Framework Design: For the same functionality, I have put a lot of thought, experimentation, and iterations into the design. I believe GMS now has a solid framework design that can easily support my future development plans.</li><li>High-performance Code and Balanced Blueprint/C&#43;&#43;: GMS leverages C&#43;&#43; and animation multithreading to minimize CPU consumption. You don&#39;t need to know C&#43;&#43; to use this system. For developers, it supports extension through both Blueprint and C&#43;&#43;.</li><li>Full utilization of UE5&#39;s Distance Matching, Orientation Warping, and Stride Warping systems for smooth movement effects.</li><li>VFX/SFX: Play different VFX/SFX dynamically on different physical material surfaces based on context (GameplayTags). Automated footstep VFX/SFX setup without including a bunch of hard asset references in animation sequences.</li><li>GAS Friendly: GMS prefers GameplayTags over enums and works well with projects using GAS. I have a combat system based on GAS that works perfectly with GMS. (GAS can provide GameplayTags to GMS.)</li></ul><p><br /></p><p><a href=\"https://orbital-market.com/product/generic-movement-system\" rel=\"nofollow\"><strong>Orbital Market</strong> <strong>Link</strong></a></p><p>(Orbital Market is a fast search engine for the Unreal marketplace)</p>",
+  "technicalDetails": "<h2>Core Modules:</h2><ul><li>GenericMovementSystem (Runtime): Contains the main code of the system.</li><li>GenericEffectsSystem (Runtime): Contains code for dynamic SFX/VFX play, such as footstep effects.</li><li>GenericMovementEditor (Editor): Contains code for custom animation graph nodes and animation modifiers.</li></ul><p><br /></p><p>Number of Blueprints: 100&#43; (including core assets, extra content, and demo)</p><p>Number of C&#43;&#43; Classes: 38</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Win64, Android, Linux</p><p>Important/Additional Notes: more about my product <a href=\"https://k12oekrxfs.larksuite.com/wiki/NHl8wXcC6iXQDlkAMKiuE2GIsJh\" rel=\"nofollow\">here.</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSScreenshot-1920x1080-3e874e880a457ff728839a577ef07376.png",
+      "md5": "3e874e880a457ff728839a577ef07376",
+      "width": 1920,
+      "height": 1080,
+      "size": 2607223,
+      "uploadedDate": "2024-08-14T04:58:02.972Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSMain2-1920x1080-0648a912a33e2eee99cfb2b6610029f5.png",
+      "md5": "0648a912a33e2eee99cfb2b6610029f5",
+      "width": 1920,
+      "height": 1080,
+      "size": 2127314,
+      "uploadedDate": "2024-08-14T04:58:03.520Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSNetworkSupport-1920x1080-439996f778a21e439b92debe8de57e7b.png",
+      "md5": "439996f778a21e439b92debe8de57e7b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1197003,
+      "uploadedDate": "2024-08-14T04:58:04.056Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSMS-1920x1080-296498afe20de29c8f251766f1662252.png",
+      "md5": "296498afe20de29c8f251766f1662252",
+      "width": 1920,
+      "height": 1080,
+      "size": 259583,
+      "uploadedDate": "2024-08-14T04:58:04.402Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSStackOverlay-1920x1080-cd20576a9c6241e06582ef657023bbca.png",
+      "md5": "cd20576a9c6241e06582ef657023bbca",
+      "width": 1920,
+      "height": 1080,
+      "size": 320481,
+      "uploadedDate": "2024-08-14T04:58:04.749Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSPoseOverlay-1920x1080-fc729a6be32a77d56f68b456a8b88e77.jpg",
+      "md5": "fc729a6be32a77d56f68b456a8b88e77",
+      "width": 1920,
+      "height": 1080,
+      "size": 598016,
+      "uploadedDate": "2024-09-16T02:20:37.734Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSControlSetting-1920x1080-8faaf3a0ab09d45e858eab8b0bbf479d.png",
+      "md5": "8faaf3a0ab09d45e858eab8b0bbf479d",
+      "width": 1920,
+      "height": 1080,
+      "size": 358196,
+      "uploadedDate": "2024-08-14T04:58:05.114Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSAPI-1920x1080-406a3b323ecb206addf6cec50c52fdd5.png",
+      "md5": "406a3b323ecb206addf6cec50c52fdd5",
+      "width": 1920,
+      "height": 1080,
+      "size": 545535,
+      "uploadedDate": "2024-08-14T04:58:05.448Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSGraphExtension-1920x1080-afddf3a08a45034230aee6458afbb07d.png",
+      "md5": "afddf3a08a45034230aee6458afbb07d",
+      "width": 1920,
+      "height": 1080,
+      "size": 635030,
+      "uploadedDate": "2024-08-14T04:58:05.832Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSArch-1920x1080-464ca4a1d43714fc8a1a7077b8162712.png",
+      "md5": "464ca4a1d43714fc8a1a7077b8162712",
+      "width": 1920,
+      "height": 1080,
+      "size": 308569,
+      "uploadedDate": "2024-08-14T04:58:06.219Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSVideoTutorials-1920x1080-51f9b0a2b772686593bf1ff9581b139b.jpg",
+      "md5": "51f9b0a2b772686593bf1ff9581b139b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1514746,
+      "uploadedDate": "2024-09-16T02:20:38.205Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GMSDocsV2-1920x1080-18ed9fbba4712e1cd9cf089c2fc1d0f3.jpg",
+      "md5": "18ed9fbba4712e1cd9cf089c2fc1d0f3",
+      "width": 1920,
+      "height": 1080,
+      "size": 1338321,
+      "uploadedDate": "2024-09-16T02:20:38.670Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/GenericMovementSystem_thumb-284x284-881dff26e3b4ffbb8b0e9a5edf2241ca.png",
+      "md5": "881dff26e3b4ffbb8b0e9a5edf2241ca",
+      "width": 284,
+      "height": 284,
+      "size": 143955,
+      "uploadedDate": "2024-08-14T04:58:06.927Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/GenericMovementSystem_featured-894x488-3cb7227a4454d59fe1acf4e39fcfdf99.png",
+      "md5": "3cb7227a4454d59fe1acf4e39fcfdf99",
+      "width": 894,
+      "height": 488,
+      "size": 623902,
+      "uploadedDate": "2024-08-14T03:19:18.568Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSPoseOverlay-1920x1080-fc729a6be32a77d56f68b456a8b88e77_Snapshot.jpg",
+      "md5": "6798be7a4d6621865e098c048908c859",
+      "width": 150,
+      "height": 74,
+      "size": 5657,
+      "uploadedDate": "2024-09-16T02:20:37.929Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSVideoTutorials-1920x1080-51f9b0a2b772686593bf1ff9581b139b_Snapshot.jpg",
+      "md5": "f1b6438d7f0eed79718dfbbea9aa8979",
+      "width": 150,
+      "height": 74,
+      "size": 8930,
+      "uploadedDate": "2024-09-16T02:20:38.515Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSDocsV2-1920x1080-18ed9fbba4712e1cd9cf089c2fc1d0f3_Snapshot.jpg",
+      "md5": "3a51332a195bbb7e7206430a8d9c8857",
+      "width": 150,
+      "height": 74,
+      "size": 6865,
+      "uploadedDate": "2024-09-16T02:20:38.881Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSScreenshot-1920x1080-3e874e880a457ff728839a577ef07376_Snapshot.png",
+      "md5": "1d560883f72a5883e67517355cfc59e8",
+      "width": 150,
+      "height": 74,
+      "size": 8035,
+      "uploadedDate": "2024-08-14T04:58:03.352Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSMain2-1920x1080-0648a912a33e2eee99cfb2b6610029f5_Snapshot.png",
+      "md5": "2515885d6487f510ed2d85b702550e9e",
+      "width": 150,
+      "height": 74,
+      "size": 7349,
+      "uploadedDate": "2024-08-14T04:58:03.837Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSNetworkSupport-1920x1080-439996f778a21e439b92debe8de57e7b_Snapshot.png",
+      "md5": "54ff64a2cfed996a02d01e6e0eaf430c",
+      "width": 150,
+      "height": 74,
+      "size": 7613,
+      "uploadedDate": "2024-08-14T04:58:04.321Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSMS-1920x1080-296498afe20de29c8f251766f1662252_Snapshot.png",
+      "md5": "23570f04fa05a2b20fc3c335ee1f72cc",
+      "width": 150,
+      "height": 74,
+      "size": 4166,
+      "uploadedDate": "2024-08-14T04:58:04.620Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSStackOverlay-1920x1080-cd20576a9c6241e06582ef657023bbca_Snapshot.png",
+      "md5": "93bcac04029809cdacbb9da933aeb226",
+      "width": 150,
+      "height": 74,
+      "size": 4122,
+      "uploadedDate": "2024-08-14T04:58:04.998Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSControlSetting-1920x1080-8faaf3a0ab09d45e858eab8b0bbf479d_Snapshot.png",
+      "md5": "7cad6f4f03546b4b7186a6da59e7afed",
+      "width": 150,
+      "height": 74,
+      "size": 5470,
+      "uploadedDate": "2024-08-14T04:58:05.338Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSAPI-1920x1080-406a3b323ecb206addf6cec50c52fdd5_Snapshot.png",
+      "md5": "b792c0bb0de3483e11738dd602425585",
+      "width": 150,
+      "height": 74,
+      "size": 5403,
+      "uploadedDate": "2024-08-14T04:58:05.682Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSGraphExtension-1920x1080-afddf3a08a45034230aee6458afbb07d_Snapshot.png",
+      "md5": "bd56651423c7b6b3d37949e201f156aa",
+      "width": 150,
+      "height": 74,
+      "size": 6716,
+      "uploadedDate": "2024-08-14T04:58:06.068Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSArch-1920x1080-464ca4a1d43714fc8a1a7077b8162712_Snapshot.png",
+      "md5": "124cce3642d4892936cbce4b86c5c5d8",
+      "width": 150,
+      "height": 74,
+      "size": 4851,
+      "uploadedDate": "2024-08-14T04:58:06.451Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GMSDocs-1920x1080-562513d1bb5798e803c50596f723b005_Snapshot.png",
+      "md5": "25520fcb7d2ef1915e5660b54fa1f39e",
+      "width": 150,
+      "height": 74,
+      "size": 6620,
+      "uploadedDate": "2024-08-14T04:58:06.839Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-93d2237cb20c05b0ad06eef4df2f592f_Snapshot.png",
+      "md5": "fa68a795c7c40b1bbd8c2d13f410a98b",
+      "width": 150,
+      "height": 74,
+      "size": 6875,
+      "uploadedDate": "2024-08-07T08:54:14.478Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-08-26T02:11:08.647Z",
+  "lastModifiedDate": "2025-02-18T12:48:57.326Z",
+  "customAttributes": {
+    "promotionalContent": {
+      "type": "STRING",
+      "value": "false"
+    }
+  },
+  "entitlementName": "6bda7dab48324d6bbe4f6a52afbe1bfe",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "ca9cfdaae1d145f88358e693660f4bd1",
+      "appId": "GenericMovementSystem_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Android"
+      ],
+      "dateAdded": "2024-08-07T00:00:00.000Z",
+      "releaseNote": "This is 1.1 version of GMS for UE5.4",
+      "versionTitle": "1.1"
+    }
+  ],
+  "developer": "YuewuDev",
+  "developerId": "o-5da7ae6c8442648e61c31896182910",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

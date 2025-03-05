@@ -1,0 +1,161 @@
+{
+  "id": "195d43485dcd4262b0f4c69af8d99780",
+  "title": "Beat Em Up Template",
+  "description": "A fighting game template with animations, controls and AI",
+  "longDescription": "<p>The fighting styles are American Kickboxing (with a few moves added) and Taekwondo. The pedantic among you would notice the low heel sweep is actually from Hapkido which is a very similar style.</p><p><br /></p><p>Click <a href=\"https://youtu.be/kW0_7ODJgII\" rel=\"nofollow\">here</a> for a demonstration video</p><p>Click <a href=\"https://www.youtube.com/watch?v&#61;LOij2q8Uujk\" rel=\"nofollow\">here</a> to see how the button sequences and interrupt based combos are implemented.</p><p>Click <a href=\"https://www.youtube.com/watch?v&#61;oZM3qvmL-0c\" rel=\"nofollow\">here</a> to see how throws are added.</p><p><br /></p><p><br /></p><p>This package is ideal for your traditional beat em up. You can use this pack to add hand to hand combat to a third person game but it will take some work.</p><p>You can put in your own animations using the &#34;moves&#34; arrays and set several variables including a launch vector for the aggressor and the opponent.</p><p><br /></p><p>This template is a traditional beat em up. The sample project is 3d, but 2d in principle. It even has interrupt based combos that take precise timing and sequences to execute moves. For example back back right face button will perform a hook kick in the Tae Kwon do style. The Kickboxing style comes with a throw, so you can pick your opponent up by the neck and slam their head into the ground. In the Taekwondo you can run up your opponents leg and kick them in the face.</p><p><br /></p><p>The moves are stored in the &#34;H2H&#34; component. It contains all the moves and runs the main functionality such as sphere trace for strikes, stun and animations. The easiest way to use it is to modify the &#34;SideViewCharacter&#34; for your own purposes.</p><p><br /></p><p>The sample project is fully operational but doesn&#39;t have any sound. It comes with three play modes. 2 player, Player vs AI and AI vs AI. The moves display widget will automatically display moves and combos in the H2H component.</p><p><br /></p><p>***Bugs &amp; Solutions***</p><p>Will be repaired in the next update</p><p><br /></p><p>SideViewCharacter fails WHEN SPAWNED.</p><p>Collision becomes intermittent and Unreal gives you error warnings. Also AI character will sprint instead of walking.</p><p>Solution for sprinting AI: Make a custom event near &#34;begin play&#34; in side view character, connect it to the same wire so it does the same job as begin play. This way it will set the walking speed ect. Trigger the event when spawning SideViewCharacter.</p><p><br /></p><p>Solution for Intermittent collision: Create a new collision channel that ignores everything but overlaps itself. Use it in the sphere traces in &#34;Striker&#34; function (in functions folder) and the &#34;Throw collisions&#34; array (in H2H).</p>",
+  "technicalDetails": "<p>Features:</p><p><br /></p><ul><li> 3 H2H components. The H2H components contain animations and settings that program the character with a fiighting style. The &#34;H2H&#34; is the parent so you can make a child of it to create your own style. This pack includes Taekwondo and American Kickboxing.</li><li> Enemy AI</li><li>Sample Arena (so you can copy/ add to it to make your own levels)</li><li>168 animations with unaltered versions (z height has been adjusted to match third person character anims)</li><li>Sample character BP</li></ul><p><br /></p><p><br /></p><p>Number of Blueprints: 34 (including interfaces, structs, enums maps HUD ect)</p><p><br /></p><p>Input: Gamepad &amp; Keyboard</p><p><br /></p><p>Network Replicated: (No)</p><p><br /></p><p>Supported Development Platforms:</p><p><br /></p><p>Windows: (Yes)</p><p><br /></p><p>Mac: (Yes)</p><p><br /></p><p>Documentation: https://youtu.be/LOij2q8Uujk</p><p><br /></p><p>Important/Additional Notes: Sound is not included.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryPic0-1920x1080-5ee6d03bc4f0f259fcef879879ea5d81.png",
+      "md5": "5ee6d03bc4f0f259fcef879879ea5d81",
+      "width": 1920,
+      "height": 1080,
+      "size": 1516183,
+      "uploadedDate": "2021-06-01T17:34:28.875Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryPic1-1920x1080-e496386e2926fe85549d51f15d2b4ee7.png",
+      "md5": "e496386e2926fe85549d51f15d2b4ee7",
+      "width": 1920,
+      "height": 1080,
+      "size": 998352,
+      "uploadedDate": "2021-06-01T17:34:29.444Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryPic2-1920x1080-4b6534a98f3b2a20eec106579557996e.png",
+      "md5": "4b6534a98f3b2a20eec106579557996e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1129662,
+      "uploadedDate": "2021-06-01T17:34:29.988Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryPic3-1920x1080-d3e65a0262d84eb4f2c0604d46cbff99.png",
+      "md5": "d3e65a0262d84eb4f2c0604d46cbff99",
+      "width": 1920,
+      "height": 1080,
+      "size": 823905,
+      "uploadedDate": "2021-06-01T17:34:30.559Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GalleryPic4-1920x1080-ddf10f9ebf76949909c89557365bb267.png",
+      "md5": "ddf10f9ebf76949909c89557365bb267",
+      "width": 1920,
+      "height": 1080,
+      "size": 1359558,
+      "uploadedDate": "2021-06-01T17:34:31.115Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BeatEmUpTemplate_thumb-284x284-fddc88650c782bd9a32cc16a24d5ee95.png",
+      "md5": "fddc88650c782bd9a32cc16a24d5ee95",
+      "width": 284,
+      "height": 284,
+      "size": 81026,
+      "uploadedDate": "2024-06-08T09:18:20.876Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/BeatEmUpTemplate_featured-894x488-57ff64f6538cf39191e3bcb97e4eefd0.png",
+      "md5": "57ff64f6538cf39191e3bcb97e4eefd0",
+      "width": 894,
+      "height": 488,
+      "size": 360432,
+      "uploadedDate": "2024-06-08T09:18:20.993Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryPic0-1920x1080-5ee6d03bc4f0f259fcef879879ea5d81_Snapshot.png",
+      "md5": "a050f45939ec6505b862e4b69b7cefd4",
+      "width": 150,
+      "height": 74,
+      "size": 6132,
+      "uploadedDate": "2021-06-01T17:34:29.263Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryPic1-1920x1080-e496386e2926fe85549d51f15d2b4ee7_Snapshot.png",
+      "md5": "ae8214e7a6ed21bb111eb2b30525f1e6",
+      "width": 150,
+      "height": 74,
+      "size": 5207,
+      "uploadedDate": "2021-06-01T17:34:29.822Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryPic2-1920x1080-4b6534a98f3b2a20eec106579557996e_Snapshot.png",
+      "md5": "74f8aa82efb466f689fd562db59f8c0a",
+      "width": 150,
+      "height": 74,
+      "size": 5100,
+      "uploadedDate": "2021-06-01T17:34:30.355Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryPic3-1920x1080-d3e65a0262d84eb4f2c0604d46cbff99_Snapshot.png",
+      "md5": "2575d2eff203499ff5ba5e6aacbc26cb",
+      "width": 150,
+      "height": 74,
+      "size": 6754,
+      "uploadedDate": "2021-06-01T17:34:30.905Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryPic4-1920x1080-ddf10f9ebf76949909c89557365bb267_Snapshot.png",
+      "md5": "ac49701c1de58dedea463203be5f56bc",
+      "width": 150,
+      "height": 74,
+      "size": 5825,
+      "uploadedDate": "2021-06-01T17:34:31.483Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-06-01T21:11:09.677Z",
+  "lastModifiedDate": "2024-06-12T16:44:04.076Z",
+  "customAttributes": {},
+  "entitlementName": "195d43485dcd4262b0f4c69af8d99780",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3a2e9cab4feb45afb5879e24ad279a99",
+      "appId": "BeatEmUp195d43485dcdV1",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2021-06-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "BeatEmUp_KickBoxing4.26"
+    }
+  ],
+  "developer": "ReubenStern",
+  "developerId": "o-pmr4m22hjges8elquq6w94q69xp8rf",
+  "endOfSupport": false,
+  "unsearchable": false
+}

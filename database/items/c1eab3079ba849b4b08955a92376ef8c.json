@@ -1,0 +1,530 @@
+{
+  "id": "c1eab3079ba849b4b08955a92376ef8c",
+  "title": "Level Streaming Assistant Plugin",
+  "description": "Setup level streaming for your game in a few minutes and edit them with an easy and strong editor.",
+  "longDescription": "<p><a href=\"https://docs.google.com/document/d/1s7CFD0_kkJYWEoDf9M5JPHVa-Bco8AXKSrSTRE2pVGE/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;TWYUYkrg-iA\" rel=\"nofollow\">Video tutorial v1.0</a></p><p><a href=\"https://drive.google.com/file/d/13xhdHE6YwQ_mGse6z0xmYbBiq18PL87o/view?usp&#61;sharing\" rel=\"nofollow\">Example Project 4.24</a></p><p><a href=\"https://discord.gg/k6PV5dJG88\" rel=\"nofollow\">Discord Support Channel</a></p><p><a href=\"https://heliumantis.com/releasenotes/\" rel=\"nofollow\">Release Notes</a></p><p><br /></p><p>UE5 Note: For Open World games use the World Partition system built in UE5. for Linear games how ever, level streaming volumes/triggers can give more control over what levels need to be streamed. Note that World Partition can not be used with level streaming volumes or level streaming triggers.</p><p><br /></p><p>With this plugin, you can easily and quickly set up level streaming for your games. Two lists show how each actor streams each level. Actors and levels can be grouped into colored folders for a more organized view.</p><p><br /></p><p>It&#39;s much easier to work with Level Streaming Volumes using this plugin. there is a tool to auto-generate level streaming volumes for your levels.</p><p><br /></p><p>Level Streaming Trigger is provided for trigger-based level streaming that works very well for buildings.</p><p><br /></p><p>You can also extend the plugin to make it work with your custom level streaming actors just using blueprints.</p><p><br /></p><p>There is also a box selection tool that can be used to quickly select multiple actors and move them into sub levels.</p>",
+  "technicalDetails": "<p>Update 1.2.5</p><ul><li>Improvements on level highlighting feature</li></ul><p><br /></p><p>Update 1.2.3</p><ul><li>Extend the plugin to work with custom level streaming actors in Blueprint</li></ul><p><br /></p><p>Update 1.2:</p><ul><li>Tree view for levels and actors</li><li>Customization Folder structure for levels and level streaming actors</li><li>New UI Improvements</li><li>added new box selection tool which users could move the actors to sub-levels quickly</li></ul><p><br /></p><p>Features:</p><ul><li>Auto-generate level streaming volumes for each sub-level</li><li>Level streaming Triggers (Gates)</li><li>Change what levels will be streamed in/out by which actor</li><li>Preview disk/memory size of streamed levels</li><li>Highlights in the viewport for streamed levels</li><li>Show only related levels</li><li>Automatically focus on streamed levels.</li><li>Quick access to toggle level coloration</li><li>Can be extended to work with custom level streaming actors (via Blueprint or C&#43;&#43;)</li></ul><p><br /></p><p>Code Modules:</p><ul><li> LevelStreamAssistant (Editor)</li><li> LevelStreamAssistantTriggerEditor (Editor)</li><li> LevelStreamAssistantTrigger (Runtime)</li></ul><p><br /></p><p>Number of C&#43;&#43; Classes: 79</p><p>Number of Blueprints: 2 Examples</p><p>Supported Development Platforms: Win</p><p>Supported Target Build Platforms: Win</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/shot04-1920x1080-f79b71f47060958ae88b699e2b19bfcd.jpg",
+      "md5": "f79b71f47060958ae88b699e2b19bfcd",
+      "width": 1920,
+      "height": 1080,
+      "size": 341986,
+      "uploadedDate": "2020-11-25T01:52:10.829Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/shot03-1920x1080-a9a943cafda935cf7f579b804858a129.jpg",
+      "md5": "a9a943cafda935cf7f579b804858a129",
+      "width": 1920,
+      "height": 1080,
+      "size": 369186,
+      "uploadedDate": "2020-11-25T01:53:33.263Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/shot08-1920x1080-5445d7268288b5068e41daa366fca55d.jpg",
+      "md5": "5445d7268288b5068e41daa366fca55d",
+      "width": 1920,
+      "height": 1080,
+      "size": 439872,
+      "uploadedDate": "2020-11-25T01:54:09.235Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/shot06-1920x1080-4a7fddb1d97dc18a22de42a34a4a6a64.jpg",
+      "md5": "4a7fddb1d97dc18a22de42a34a4a6a64",
+      "width": 1920,
+      "height": 1080,
+      "size": 632279,
+      "uploadedDate": "2020-11-25T01:55:44.084Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/shot07-1920x1080-88e48aa6d7c828fd2b8f07255a749b9f.jpg",
+      "md5": "88e48aa6d7c828fd2b8f07255a749b9f",
+      "width": 1920,
+      "height": 1080,
+      "size": 402696,
+      "uploadedDate": "2020-11-25T01:56:35.426Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/shot05-1920x1080-bc62c0ec73b333300986d7a8428e8332.jpg",
+      "md5": "bc62c0ec73b333300986d7a8428e8332",
+      "width": 1920,
+      "height": 1080,
+      "size": 294223,
+      "uploadedDate": "2020-11-25T01:57:12.586Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/shot01-1920x1080-9d7f08539e1211a94937c252e5bf4692.jpg",
+      "md5": "9d7f08539e1211a94937c252e5bf4692",
+      "width": 1920,
+      "height": 1080,
+      "size": 328720,
+      "uploadedDate": "2020-11-25T01:57:45.441Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/shot02-1920x1080-39fc6bf7209e552232363f2ef8929bb3.jpg",
+      "md5": "39fc6bf7209e552232363f2ef8929bb3",
+      "width": 1920,
+      "height": 1080,
+      "size": 294048,
+      "uploadedDate": "2020-11-25T01:58:08.636Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/LevelStreamingAssistantPlugin_thumb-284x284-67f4e57736ea8983ff8228d8f8e7c696.png",
+      "md5": "67f4e57736ea8983ff8228d8f8e7c696",
+      "width": 284,
+      "height": 284,
+      "size": 103308,
+      "uploadedDate": "2021-09-09T21:07:35.445Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/LevelStreamingAssistantPlugin_featured-894x488-a3cee61ef7eeb2433e0593e5e7e32c84.png",
+      "md5": "a3cee61ef7eeb2433e0593e5e7e32c84",
+      "width": 894,
+      "height": 488,
+      "size": 176283,
+      "uploadedDate": "2021-09-09T22:57:02.632Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot02-1920x1080-39fc6bf7209e552232363f2ef8929bb3_Snapshot.jpg",
+      "md5": "9b355dca905009289e10b68a50fe6ac5",
+      "width": 150,
+      "height": 74,
+      "size": 5052,
+      "uploadedDate": "2020-11-25T01:58:08.861Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot01-1920x1080-9d7f08539e1211a94937c252e5bf4692_Snapshot.jpg",
+      "md5": "5f69b66e80e5aa0f0b5f765e0dd823f4",
+      "width": 150,
+      "height": 74,
+      "size": 5284,
+      "uploadedDate": "2020-11-25T01:57:45.694Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot05-1920x1080-bc62c0ec73b333300986d7a8428e8332_Snapshot.jpg",
+      "md5": "d8206685aaab3b4b425aad8c93a17296",
+      "width": 150,
+      "height": 74,
+      "size": 5104,
+      "uploadedDate": "2020-11-25T01:57:12.847Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot07-1920x1080-88e48aa6d7c828fd2b8f07255a749b9f_Snapshot.jpg",
+      "md5": "c23bda226333071167023cf6580bb57c",
+      "width": 150,
+      "height": 74,
+      "size": 5912,
+      "uploadedDate": "2020-11-25T01:56:35.665Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot06-1920x1080-4a7fddb1d97dc18a22de42a34a4a6a64_Snapshot.jpg",
+      "md5": "6668b3425df2fbbc5f567769b343f9c0",
+      "width": 150,
+      "height": 74,
+      "size": 7094,
+      "uploadedDate": "2020-11-25T01:55:44.362Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot08-1920x1080-5445d7268288b5068e41daa366fca55d_Snapshot.jpg",
+      "md5": "972dc4db37344c7608683e90833450c0",
+      "width": 150,
+      "height": 74,
+      "size": 6154,
+      "uploadedDate": "2020-11-25T01:54:09.471Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot03-1920x1080-a9a943cafda935cf7f579b804858a129_Snapshot.jpg",
+      "md5": "b71c85eb30e9c9c08a56f53393309a99",
+      "width": 150,
+      "height": 74,
+      "size": 6103,
+      "uploadedDate": "2020-11-25T01:53:33.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot04-1920x1080-f79b71f47060958ae88b699e2b19bfcd_Snapshot.jpg",
+      "md5": "10485272317b43e67aacb5fcdbdf1e72",
+      "width": 150,
+      "height": 74,
+      "size": 5959,
+      "uploadedDate": "2020-11-25T01:52:11.096Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot02-1920x1080-39fc6bf7209e552232363f2ef8929bb3_Snapshot.jpg",
+      "md5": "9b355dca905009289e10b68a50fe6ac5",
+      "width": 150,
+      "height": 74,
+      "size": 5052,
+      "uploadedDate": "2020-11-25T01:49:47.448Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot01-1920x1080-9d7f08539e1211a94937c252e5bf4692_Snapshot.jpg",
+      "md5": "5f69b66e80e5aa0f0b5f765e0dd823f4",
+      "width": 150,
+      "height": 74,
+      "size": 5284,
+      "uploadedDate": "2020-11-25T01:49:00.749Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot07-1920x1080-88e48aa6d7c828fd2b8f07255a749b9f_Snapshot.jpg",
+      "md5": "c23bda226333071167023cf6580bb57c",
+      "width": 150,
+      "height": 74,
+      "size": 5912,
+      "uploadedDate": "2020-11-25T01:48:07.593Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot06-1920x1080-4a7fddb1d97dc18a22de42a34a4a6a64_Snapshot.jpg",
+      "md5": "6668b3425df2fbbc5f567769b343f9c0",
+      "width": 150,
+      "height": 74,
+      "size": 7094,
+      "uploadedDate": "2020-11-25T01:45:48.725Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot08-1920x1080-5445d7268288b5068e41daa366fca55d_Snapshot.jpg",
+      "md5": "972dc4db37344c7608683e90833450c0",
+      "width": 150,
+      "height": 74,
+      "size": 6154,
+      "uploadedDate": "2020-11-25T01:44:30.218Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot03-1920x1080-a9a943cafda935cf7f579b804858a129_Snapshot.jpg",
+      "md5": "b71c85eb30e9c9c08a56f53393309a99",
+      "width": 150,
+      "height": 74,
+      "size": 6103,
+      "uploadedDate": "2020-11-25T01:43:07.461Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot04-1920x1080-f79b71f47060958ae88b699e2b19bfcd_Snapshot.jpg",
+      "md5": "10485272317b43e67aacb5fcdbdf1e72",
+      "width": 150,
+      "height": 74,
+      "size": 5959,
+      "uploadedDate": "2020-11-25T01:41:49.964Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot01-1920x1080-9d7f08539e1211a94937c252e5bf4692_Snapshot.jpg",
+      "md5": "5f69b66e80e5aa0f0b5f765e0dd823f4",
+      "width": 150,
+      "height": 74,
+      "size": 5284,
+      "uploadedDate": "2020-11-24T20:59:24.482Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot02-1920x1080-39fc6bf7209e552232363f2ef8929bb3_Snapshot.jpg",
+      "md5": "9b355dca905009289e10b68a50fe6ac5",
+      "width": 150,
+      "height": 74,
+      "size": 5052,
+      "uploadedDate": "2020-11-24T20:59:24.823Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot03-1920x1080-a9a943cafda935cf7f579b804858a129_Snapshot.jpg",
+      "md5": "b71c85eb30e9c9c08a56f53393309a99",
+      "width": 150,
+      "height": 74,
+      "size": 6103,
+      "uploadedDate": "2020-11-24T20:59:25.416Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot04-1920x1080-f79b71f47060958ae88b699e2b19bfcd_Snapshot.jpg",
+      "md5": "10485272317b43e67aacb5fcdbdf1e72",
+      "width": 150,
+      "height": 74,
+      "size": 5959,
+      "uploadedDate": "2020-11-24T20:59:25.764Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot05-1920x1080-bc62c0ec73b333300986d7a8428e8332_Snapshot.jpg",
+      "md5": "d8206685aaab3b4b425aad8c93a17296",
+      "width": 150,
+      "height": 74,
+      "size": 5104,
+      "uploadedDate": "2020-11-24T20:59:26.108Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot06-1920x1080-4a7fddb1d97dc18a22de42a34a4a6a64_Snapshot.jpg",
+      "md5": "6668b3425df2fbbc5f567769b343f9c0",
+      "width": 150,
+      "height": 74,
+      "size": 7094,
+      "uploadedDate": "2020-11-24T20:57:54.806Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot07-1920x1080-88e48aa6d7c828fd2b8f07255a749b9f_Snapshot.jpg",
+      "md5": "c23bda226333071167023cf6580bb57c",
+      "width": 150,
+      "height": 74,
+      "size": 5912,
+      "uploadedDate": "2020-11-24T20:57:55.203Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot08-1920x1080-5445d7268288b5068e41daa366fca55d_Snapshot.jpg",
+      "md5": "972dc4db37344c7608683e90833450c0",
+      "width": 150,
+      "height": 74,
+      "size": 6154,
+      "uploadedDate": "2020-11-24T20:57:55.582Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot04-1920x1080-4889a096e4556f80c3d38e0a15a09fe4_Snapshot.jpg",
+      "md5": "3a80ff9372c0aa02fd489c2c76d7b0e3",
+      "width": 150,
+      "height": 74,
+      "size": 5348,
+      "uploadedDate": "2020-08-01T11:21:34.800Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot03-1920x1080-e2e38053631f0047a732e3b0560ed39e_Snapshot.jpg",
+      "md5": "52522a89d99039a4dd5ad789c8a154ac",
+      "width": 150,
+      "height": 74,
+      "size": 5662,
+      "uploadedDate": "2020-08-01T11:21:35.344Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot02-1920x1080-a912df0151c348907af575fe18d1aebb_Snapshot.jpg",
+      "md5": "e1cee0a78cf6f73b15bd1dc52c62d9b3",
+      "width": 150,
+      "height": 74,
+      "size": 4731,
+      "uploadedDate": "2020-07-24T15:35:07.853Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot05-1920x1080-d22d28edbfb49c47db856e47778ce235_Snapshot.jpg",
+      "md5": "ed983b5f0221e05597360dbedd8b7016",
+      "width": 150,
+      "height": 74,
+      "size": 5556,
+      "uploadedDate": "2020-07-24T15:35:08.286Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot04-1920x1080-4a43a8b1e94fa7ba595364c86093d405_Snapshot.jpg",
+      "md5": "6d1ba59f2de2c3dfd30be437ca9db0f1",
+      "width": 150,
+      "height": 74,
+      "size": 4917,
+      "uploadedDate": "2020-07-24T15:35:08.738Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot01-1920x1080-990cc2b6cdc44770503d0dffb9204a45_Snapshot.jpg",
+      "md5": "3e5fd17e01f473e50c079d5070663652",
+      "width": 150,
+      "height": 74,
+      "size": 6570,
+      "uploadedDate": "2020-07-24T15:35:09.077Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/shot03-1920x1080-44e9afa6ec2b37f8f5f57fcdf6bdd8ae_Snapshot.jpg",
+      "md5": "a9b2f4a26a4980204c848bff41ea80ee",
+      "width": 150,
+      "height": 74,
+      "size": 5403,
+      "uploadedDate": "2020-07-24T15:35:09.365Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-08-04T21:34:26.051Z",
+  "lastModifiedDate": "2024-12-18T01:15:25.262Z",
+  "customAttributes": {},
+  "entitlementName": "c1eab3079ba849b4b08955a92376ef8c",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "c6a92c4566fc40568a7cc0fa02dcb348",
+      "appId": "LevelStreamAssistant_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Level Streaming Assistant 4.23"
+    },
+    {
+      "id": "4d35060e712a440eb187a4f6bd616576",
+      "appId": "LevelStreamAssistant_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android"
+      ],
+      "dateAdded": "2020-08-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Level Streaming Assistant 4.24"
+    },
+    {
+      "id": "8b08a11a72bc4c3c89022f9177969b74",
+      "appId": "LevelStreamAssistant_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android"
+      ],
+      "dateAdded": "2020-07-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Level Streaming Assistant 4.25"
+    },
+    {
+      "id": "7e038a6586cf4ee0a8580ca24e3f4025",
+      "appId": "LevelStreamAssistant_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Android"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Level Streaming Assistant 4.26"
+    },
+    {
+      "id": "b95d5e0a62c34e768f5ea9657b6d6ec2",
+      "appId": "LevelStreamAssistant_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2021-08-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Level Streaming Assistant 4.27"
+    },
+    {
+      "id": "2c7c7bc0cbd74643bc86b367d507c4b9",
+      "appId": "LevelStreamAssistant_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-04-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Level Streaming Assistant 5.0"
+    },
+    {
+      "id": "3aea56c12ffd4544b848268bd06d2143",
+      "appId": "LevelStreamAssistant_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Level Streaming Assistant 5.1"
+    },
+    {
+      "id": "7902a0a05cf94a52aa52ef3cab9e2074",
+      "appId": "LevelStreamAssistant_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Level Streaming Assistant 5.2"
+    },
+    {
+      "id": "29fb3b125afe4857abf6b3aaa8094924",
+      "appId": "LevelStreamAssistant_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Level Streaming Assistant 5.3"
+    },
+    {
+      "id": "221470bb38054e89b60f84e3ad4c87a3",
+      "appId": "LevelStreamAssistant_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Level Streaming Assistant 5.4"
+    }
+  ],
+  "developer": "Heliumantis",
+  "developerId": "o-upd6eqbdjqhfmeqcepqr637zf442le",
+  "endOfSupport": false,
+  "unsearchable": false
+}

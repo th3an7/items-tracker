@@ -1,0 +1,340 @@
+{
+  "id": "c377f9d0aff5444ba5d4b38c3fd899b9",
+  "title": "Semi-Permanent Blood Droplets",
+  "description": "Generate ten's of thousands of instanced mesh decals while maintaining performance.",
+  "longDescription": "<h2><a href=\"https://yarrawah.market/Trailer-DropletsFX\" rel=\"nofollow\">Trailer</a></h2><h2><a href=\"https://yarrawah.chat/discord\" rel=\"nofollow\">Discord</a></h2><p><strong>CPU Documentation:</strong> <a href=\"https://yarrawah.market/CPUCollisionDocu\" rel=\"nofollow\">Video</a></p><p><strong>GPU Documentation:</strong> <a href=\"https://yarrawah.market/GPUCollisionDocumentation\" rel=\"nofollow\">Video</a></p><p><br /></p><p><em>Are you tired of games where the aftermath of the battle disappears before the battle is even over? Do you want to give your players a sense of permanence and satisfaction as they look around at the mess their battle created?</em></p><p><em>Look no further! This particle system is designed to provide you with flexible, realistic blood droplets. It leverages the power of instanced mesh decals and randomization to give your battles a unique and bloody feel. Make each hit count and get that extra bit of oomph with gore that has impact.</em></p><p><br /></p><p><em>The particles are lightweight and leverage expressions and curvature control to give each droplet impact.</em></p><p><br /></p><p><strong><em>Main Features</em></strong></p><ul><li>Spawn hundreds of thousand of droplet decals that can persist for as long as you like</li><li>Lightweight blueprint actor easily allows you to spawn different systems with direct access to 14 exposed parameters with no extra setup</li><li>Works on angled surfaces</li><li>GPU or CPU (GPU has more limitations but can do more effects like streaking)</li><li>Track down wounded players</li><li>Enemy AI example, with bone-attachment examples and a line-trace blood pool spawning example</li><li>Updated and maintained, UE5 friendly.</li></ul><p><br /></p><p><strong>FAQ</strong></p><p><strong><em>Why are there floating decals?</em></strong></p><p>Your collision layers/filtering has not been set up.</p><p>See this video for a quick walkthrough: <a href=\"https://yarrawah.market/CPUCollisionDocu\" rel=\"nofollow\">Video</a> (only needs to be done once)</p><p><br /></p><p><strong><em>I&#39;ve set my custom collision layer, but it&#39;s still not colliding?</em></strong></p><p>You need to make sure you set the User Parameter inside the Niagara System for the collision channel</p><p>See this video for a quick walkthrough: <a href=\"https://yarrawah.market/CPUCollisionDocu\" rel=\"nofollow\">Video</a> (only needs to be done once)</p><p><br /></p><p><strong>I want to change the color of the blood, why is the particle color not affecting the decal?</strong></p><p>Make a new material instance and set the blood colors here. Assign the new material instance to the desired systems. Particle color is not used as the blood material uses some tricks for more convincing droplet effects.</p><p><br /></p><p><strong>How come my GPU collision is not working?</strong></p><p>Ensure you have distant fields enabled in your project, and use the global distant field visualizer to ensure there is enough resolution for the collision to function</p><p>See this video for a quick walkthrough: <a href=\"https://yarrawah.market/GPUCollisionDocumentation\" rel=\"nofollow\">Video</a> (only needs to be done once)</p><p><br /></p><h2><strong><u>Update 4.0 Changelog</u></strong></h2><p>Due to some changes in the folder structure of materials, I recommend reinstalling this update from scratch.</p><ul><li><strong>4.0.1 - Content - </strong>Added new blueprint inside Blueprints-&gt;Debug which allows you to modify the particles live in the editor with construction script. This was originally removed from BP_Droplets as it caused memory bloating due to the number of references, but has been added back to easily preview parameter changes.</li><li><strong>4.0.1 - Bug - </strong>Fixed some material parameter settings that caused the default splash to spawn black</li><li><strong>4.0.1 - Bug - </strong>Repaired Legacy particle references and updated to support dynamic material parameters</li><li><strong>4.0.1 - Bug - </strong>Fixed some material parameter settings that caused the default splash to spawn red</li><li><strong>4.0.0 - Bug - </strong>Fixed some small issues with the emitters occasionally not spawning decals</li><li><strong>4.0.0 - Content - </strong>Complete overhaul of the particle material system</li><li><strong>4.0.0 - Content - </strong>Particles upgraded to support dynamic material parameters</li><li><strong>4.0.0</strong>- <strong>Documentation </strong>- New documentation added</li><li><strong>4.0.0 - Feature -</strong> Droplet color can now be set by the particle</li><li><strong>4.0.0 - Feature - </strong>Emissive strength can now be controlled by the particle, fading intensity over time. This allows you to create interesting effects, like lava dripping, acidic alien blood etc.</li><li><strong>4.0.0 - Feature -</strong> Roughness can now be adjusted over time, based on decal age, making fresh blood droplets wet and shiny, and old droplets being rough and dried out.</li><li><strong>4.0.0 - Feature -</strong> These features can all be enabled/disabled inside the new material instances.</li></ul><p><br /></p><h2><strong><u>Update 3.0 Changelog</u></strong></h2><p><a href=\"https://yarrawah.market/Overview-UpdatedBlood\" rel=\"nofollow\"><strong>Update Overview Video</strong></a></p><ul><li><strong>3.0.1 - BP_Droplets rewrite - </strong>BP_Droplets completely rewritten to use asynchronous loading of particles using soft references, drastically reducing initial load time when spawning the particles for the first time.</li><li><strong>3.0.1 - BP_Droplets </strong>reduced blueprint reference size by 100x (300mb to 300kb). This drastically reduces the cost of spawning new droplet systems by using soft references to handle particle system selection.</li><li><strong>3.0.1 - Bug Fix</strong> - Initial &#34;pause&#34; experienced when spawning particles for the first time should be resolved. All particles now have set bounds of -1000 to &#43;1000 X/Y/Z instead of being infinite</li><li><strong>3.0.2 - BP_FirstPerson_Modified - </strong>Added a brand new level (&#34;DemoMap_AIExample&#34;), where you can shoot and kill AI targets. This map is a starting point to teach you how to attach particles to bones, as well as using the linetrace function to spawn blood pools. The first-person content is modified to damage and spawn the emitters attached to the bones of the enemies.</li><li><strong>3.0.2 - BP_EnemyExample - </strong>Charges at the player, can be damaged and killed. Spawns a blood pool particle on death using a line trace to find the ground position.</li><li><strong>3.0.2 - Textures - </strong>Albedo noise tiling modified, normal and roughness maps added for more realistic blood droplets.</li><li><strong>3.0.3 - Housekeeping: </strong>Removed redundant parameters, increased default normal size, and renamed original particles to legacy for clarity</li><li><strong>3.0.4 - Bug - </strong>Fixed issue with streaks not working on GPU particles</li><li><strong>3.0.4 - Bug - </strong>Fixed an input issue for the FPS demo controller</li><li><strong>3.0.4 - Bug - </strong>Fixed a material reference issue</li><li><strong>3.0.4 </strong>- <strong>Documentation </strong>- New documentation added</li></ul><p><br /></p><h2><strong><u>Update 2.0</u></strong></h2><ul><li><strong>Angle-based CPU collisions - </strong>advanced Niagara module scripts now calculate the collision normal allowing decals to spawn on any surface or wall! You are no longer limited to flat surfaces!</li><li><strong>Collision filtering in 4.25 and 4.26 -</strong> You can now assign the particles to a custom collision channel making it one simple step to disable collision between the blood droplets and your enemies!</li><li><strong>Bonus GPU particle variation - </strong>A new particle type was added to 4.26, these particles use distant fields to calculate the collision and come with advanced streaking effects. These particles have limitations at long distances. See the documentation video for more information before purchasing.</li></ul><p><br /></p><p><strong>Limitations</strong></p><p>GPU particles only work with distant fields and the streaks will only appear on angles &lt;90 degrees due to how collision validated is calculated. The GPU particle variants are only suitable for close-range or indoor situations. Long-range and accurate decals can be generated using the CPU particles and require less scene setup for a good result.</p><p><br /></p><p><strong>Disclaimer(VR users): Works in VR for 4.26&#43; projects only. Niagara Particles incorrectly render for Stereoscopic VR in 4.24 and 4.25 More info: </strong><a href=\"https://issues.unrealengine.com/issue/UE-78764\" rel=\"nofollow\">https://issues.unrealengine.com/issue/UE-78764</a></p>",
+  "technicalDetails": "<p><strong>Included Assets</strong></p><p>This pack includes 16 CPU Niagara systems with 4 unique Niagara emitters and 6 Niagara module scripts. 4.26 includes 14 bonus GPU Niagara systems with 1 unique Niagara emitter. The Niagara Effect Type is configured, so these particles are ready for your game and require no additional setup. No fluid simulations are used. Each droplet is 24 tris, and each decal is 4 tris. The particle systems and 14 exposed parameters are controlled by the BP_Droplets blueprint.</p><p><br /></p><p><strong>Features:</strong></p><ul><li>&lt;35mb install size</li><li>16 Niagara Systems</li><li>Aortic Spurt</li><li>Blood Pool</li><li>Punch Wound</li><li>Puncture/Stab Wound</li><li>Entrance Wound - Pistol</li><li>Entrance Wound - Rifle</li><li>Entrance Wound - Shotgun</li><li>Exit Wound - Pistol</li><li>Exit Wound - Rifle</li><li>Exit Wound - Shotgun</li><li>Loop - Bleeding</li><li>Loop - Excessive Dismembered Spurt</li><li>Loop - Mild Dismembered Spurt</li><li>Timed - Bleeding (useful for bleeding debuffs)</li><li>Timed - Excessive Dismembered Spurt</li><li>Timed - Mild Dismembered Spurt</li><li>4 Unique Niagara Emitters</li><li>2 Unique Static Mesh</li><li>3 Textures (Splash texture from UE4 content)</li><li>1 Droplet Blueprint that controls 15 exposed Niagara parameters and allows you to easily spawn and clean up particle systems.</li></ul><p>Type of Emitters: (CPU,GPU)</p><p>LODs: (Yes, Niagara Effect Type included)</p><p>No. of Materials: 4 Master, 4 Instances</p><p>No. of Textures: 3</p><p>No. of Blueprints: 1</p><p>No. of Unique Meshes: 2</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot08-1920x1080-b7e6d8b6ebfab26cae410f57a458166b.jpg",
+      "md5": "b7e6d8b6ebfab26cae410f57a458166b",
+      "width": 1920,
+      "height": 1080,
+      "size": 842374,
+      "uploadedDate": "2020-12-07T15:16:59.143Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot09-1920x1080-e23232877c9e0d812e314017aec52504.jpg",
+      "md5": "e23232877c9e0d812e314017aec52504",
+      "width": 1920,
+      "height": 1080,
+      "size": 715547,
+      "uploadedDate": "2020-12-07T15:16:59.533Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/screenshot10-1920x1080-9834d9e9485b28f017b765c6b765398a.jpg",
+      "md5": "9834d9e9485b28f017b765c6b765398a",
+      "width": 1920,
+      "height": 1080,
+      "size": 805096,
+      "uploadedDate": "2020-12-07T15:16:59.947Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tScreenshot01-1920x1080-85f326fb25e3f9f602d4229117199290.jpg",
+      "md5": "85f326fb25e3f9f602d4229117199290",
+      "width": 1920,
+      "height": 1080,
+      "size": 221152,
+      "uploadedDate": "2020-12-07T16:36:53.635Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tScreenshot02-1920x1080-bdc663e219b0e2986e09b8b35489818c.jpg",
+      "md5": "bdc663e219b0e2986e09b8b35489818c",
+      "width": 1920,
+      "height": 1080,
+      "size": 253376,
+      "uploadedDate": "2020-12-07T16:36:53.992Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tScreenshot03-1920x1080-63ffbc2730522a354f82f3c67756c391.jpg",
+      "md5": "63ffbc2730522a354f82f3c67756c391",
+      "width": 1920,
+      "height": 1080,
+      "size": 278610,
+      "uploadedDate": "2020-12-07T16:36:54.376Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tScreenshot04-1920x1080-cfe1c4df70564a8a4813d220abf064c5.jpg",
+      "md5": "cfe1c4df70564a8a4813d220abf064c5",
+      "width": 1920,
+      "height": 1080,
+      "size": 193804,
+      "uploadedDate": "2020-12-07T16:36:54.910Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/tScreenshot05-1920x1080-e4c2beb0fbc90734fea34309f274f235.jpg",
+      "md5": "e4c2beb0fbc90734fea34309f274f235",
+      "width": 1920,
+      "height": 1080,
+      "size": 290595,
+      "uploadedDate": "2020-12-07T16:36:55.282Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00006-1920x1080-66e12ec962f809c3553991609ab70c31.jpg",
+      "md5": "66e12ec962f809c3553991609ab70c31",
+      "width": 1920,
+      "height": 1080,
+      "size": 312375,
+      "uploadedDate": "2021-03-19T04:07:51.363Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00007-1920x1080-ea9e38259f19f2141e7b7834c72d3a72.jpg",
+      "md5": "ea9e38259f19f2141e7b7834c72d3a72",
+      "width": 1920,
+      "height": 1080,
+      "size": 211374,
+      "uploadedDate": "2021-03-19T04:07:51.745Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SemiPermanentBloodDroplets_thumb-284x284-304054e59fe1333806ab7867c9923d6d.png",
+      "md5": "304054e59fe1333806ab7867c9923d6d",
+      "width": 284,
+      "height": 284,
+      "size": 139631,
+      "uploadedDate": "2021-11-04T07:17:31.052Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/NiagaraRealisticBloodDroplets_featured-894x488-d92a1153e896bc3c58e6f72df1cfe1d1.png",
+      "md5": "d92a1153e896bc3c58e6f72df1cfe1d1",
+      "width": 894,
+      "height": 488,
+      "size": 142649,
+      "uploadedDate": "2020-12-01T06:50:53.419Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00006-1920x1080-66e12ec962f809c3553991609ab70c31_Snapshot.jpg",
+      "md5": "e25c1d26cfcf0d7b9b8ac7aaf466a318",
+      "width": 150,
+      "height": 74,
+      "size": 8270,
+      "uploadedDate": "2021-03-19T04:07:51.624Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00007-1920x1080-ea9e38259f19f2141e7b7834c72d3a72_Snapshot.jpg",
+      "md5": "6efbccdc405872a97d2aa47b00037fe3",
+      "width": 150,
+      "height": 74,
+      "size": 8561,
+      "uploadedDate": "2021-03-19T04:07:52.026Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tScreenshot01-1920x1080-85f326fb25e3f9f602d4229117199290_Snapshot.jpg",
+      "md5": "2dd70067b7b271a10e479cab6b9ea76c",
+      "width": 150,
+      "height": 74,
+      "size": 2365,
+      "uploadedDate": "2020-12-07T16:36:53.876Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tScreenshot02-1920x1080-bdc663e219b0e2986e09b8b35489818c_Snapshot.jpg",
+      "md5": "1a85a66ca773d5d08da129b0f906b174",
+      "width": 150,
+      "height": 74,
+      "size": 2871,
+      "uploadedDate": "2020-12-07T16:36:54.232Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tScreenshot03-1920x1080-63ffbc2730522a354f82f3c67756c391_Snapshot.jpg",
+      "md5": "58ef7bacef8ed2d0665f8165d832ad24",
+      "width": 150,
+      "height": 74,
+      "size": 2978,
+      "uploadedDate": "2020-12-07T16:36:54.646Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tScreenshot04-1920x1080-cfe1c4df70564a8a4813d220abf064c5_Snapshot.jpg",
+      "md5": "545c1392a02f33fe1dc7dea4e1fc4623",
+      "width": 150,
+      "height": 74,
+      "size": 1889,
+      "uploadedDate": "2020-12-07T16:36:55.150Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/tScreenshot05-1920x1080-e4c2beb0fbc90734fea34309f274f235_Snapshot.jpg",
+      "md5": "02218a1b494566eba0824b6f1f969403",
+      "width": 150,
+      "height": 74,
+      "size": 3287,
+      "uploadedDate": "2020-12-07T16:36:55.527Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot08-1920x1080-b7e6d8b6ebfab26cae410f57a458166b_Snapshot.jpg",
+      "md5": "c26f373481c1e8ed3c44d35614ab66fd",
+      "width": 150,
+      "height": 74,
+      "size": 5749,
+      "uploadedDate": "2020-12-07T15:16:59.403Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot09-1920x1080-e23232877c9e0d812e314017aec52504_Snapshot.jpg",
+      "md5": "854fa99e7eea3fc98db39f775ae52a13",
+      "width": 150,
+      "height": 74,
+      "size": 7097,
+      "uploadedDate": "2020-12-07T15:16:59.817Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screenshot10-1920x1080-9834d9e9485b28f017b765c6b765398a_Snapshot.jpg",
+      "md5": "492f0ca86c28babe0d6417894bbb99c3",
+      "width": 150,
+      "height": 74,
+      "size": 6162,
+      "uploadedDate": "2020-12-07T15:17:00.233Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot06-1920x1080-7e63eb60674f72a29668ef750cb9907e_Snapshot.jpg",
+      "md5": "92df1e6d85feabebb7b938dc36b3df34",
+      "width": 150,
+      "height": 74,
+      "size": 4155,
+      "uploadedDate": "2020-12-01T11:05:27.040Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot04-1920x1080-cfe1c4df70564a8a4813d220abf064c5_Snapshot.jpg",
+      "md5": "545c1392a02f33fe1dc7dea4e1fc4623",
+      "width": 150,
+      "height": 74,
+      "size": 1889,
+      "uploadedDate": "2020-12-01T06:50:51.171Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot03-1920x1080-63ffbc2730522a354f82f3c67756c391_Snapshot.jpg",
+      "md5": "58ef7bacef8ed2d0665f8165d832ad24",
+      "width": 150,
+      "height": 74,
+      "size": 2978,
+      "uploadedDate": "2020-12-01T06:50:51.538Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot01-1920x1080-85f326fb25e3f9f602d4229117199290_Snapshot.jpg",
+      "md5": "2dd70067b7b271a10e479cab6b9ea76c",
+      "width": 150,
+      "height": 74,
+      "size": 2365,
+      "uploadedDate": "2020-12-01T06:50:51.922Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot02-1920x1080-bdc663e219b0e2986e09b8b35489818c_Snapshot.jpg",
+      "md5": "1a85a66ca773d5d08da129b0f906b174",
+      "width": 150,
+      "height": 74,
+      "size": 2871,
+      "uploadedDate": "2020-12-01T06:50:52.293Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot06-1920x1080-7e63eb60674f72a29668ef750cb9907e_Snapshot.jpg",
+      "md5": "92df1e6d85feabebb7b938dc36b3df34",
+      "width": 150,
+      "height": 74,
+      "size": 4155,
+      "uploadedDate": "2020-12-01T06:50:52.752Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot05-1920x1080-e4c2beb0fbc90734fea34309f274f235_Snapshot.jpg",
+      "md5": "02218a1b494566eba0824b6f1f969403",
+      "width": 150,
+      "height": 74,
+      "size": 3287,
+      "uploadedDate": "2020-12-01T06:50:53.215Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/fx"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2020-12-09T02:35:21.464Z",
+  "lastModifiedDate": "2024-11-25T20:17:26.984Z",
+  "customAttributes": {},
+  "entitlementName": "c377f9d0aff5444ba5d4b38c3fd899b9",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "06ff041ad5854b1690609cfe97d1844c",
+      "appId": "SemiPermc377f9d0aff5V1",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Mac",
+        "Linux",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2020-12-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.25- 4.0 - unique to 4.25"
+    },
+    {
+      "id": "dae53fabf5474daab7420a19fb240e4a",
+      "appId": "SemiPermc377f9d0aff5V2",
+      "compatibleApps": [
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Mac",
+        "Linux",
+        "Oculus",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2020-12-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.26-4.27 -4.0"
+    }
+  ],
+  "developer": "Yarrawah Interactive",
+  "developerId": "o-f2855qy2fsbr3dtrkpn88zh4vy4yb7",
+  "endOfSupport": false,
+  "unsearchable": false
+}

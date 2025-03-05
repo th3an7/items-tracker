@@ -1,0 +1,124 @@
+{
+  "id": "d8d9cbcc359f43088da74f23f8a315bf",
+  "title": "Fixed Camera Template",
+  "description": "Fixed/tracking cameras. Basic character movement and object interaction. Lightweight template.",
+  "longDescription": "<p><a href=\"https://youtu.be/2w9KUob0IuA\" rel=\"nofollow\">Demonstration</a> // <a href=\"https://youtu.be/kPIpHCP3Suo\" rel=\"nofollow\">Example Setup</a></p><p><br /></p><p><strong>Cameras:</strong></p><p>This template provides one camera Blueprint that supports multiple kinds of fixed/tracking cameras.</p><p><br /></p><p>Variables on the FixedCamera Blueprint change the camera&#39;s behaviour.</p><p>A ChangeCameraTrigger Blueprint manages changing between cameras. Use this blueprint to hard cut or blend to a new camera over time when player enters the TriggerVolume.</p><p><br /></p><p>Cameras can be completely fixed, or can be set to track the player character. One variable controls interpolation speed for tracking the player.</p><p>Cameras that track the player can be free to rotate in any direction or limited to panning / tilting only. Cameras can have individual limits for left/right rotation.</p><p>Cameras can allow the player to nudge the view slightly left/right/up/down. Player can use either mouse or gamepad to nudge the view.</p><p><br /></p><p>Cameras can be attached to rails and will try to keep at a certain distance from the player. A maximum speed variables tries to keep movement along rails smooth.</p><p>Cameras on rails can follow or lead player - player runs away from or towards screen.</p><p><br /></p><p>v2.0 Changes to Cameras:</p><p>FixedCamera&#39;s have SpringArm components allowing them to orbit around their origin when tracking the player.</p><p>A variable on the FixedCamera Blueprint can swap the active Camera for a CineCamera.</p><p>CameraShake can be added to FixedCameras - Starts/Stops when the camera is Enabled/Disabled.</p><p><br /></p><p><strong>Player Input:</strong></p><p>Uses Unreal&#39;s Enhanced Input.</p><p>Variables on the player controller control input processing / character movement and support multiple kinds of gameplay.</p><p><br /></p><p>WASD/Left thumbstick will always move the player relative to camera.</p><p>AllowCursorOnscreen variable - supports point and click style movement. Player tries to move to the position under the cursor or tries to interact with the object under the cursor.</p><p>AllowGamepadAsCursor variable - supports the player using their gamepad&#39;s right analog stick to move the cursor around the screen.</p><p>AllowCursorOnscreen (True)/AllowGamepadAsCursor (False) - supports point and click input only when using the mouse. Cursor disabled when gamepad activated.</p><p><br /></p><p>v2.0 Changes to Player Input:</p><p>A variable on the FixedCameraController Blueprint makes movement relative to a previously activated camera, just after switching cameras and while the player continues to move, optional. Immediately switching to the new camera as a frame of reference for movement can feel more natural to some players and to some gameplay styles. This is used in the Platformer example map. </p><p>If the variable &#34;AllowMovementRelativeToPreviousCamera?&#34; is set to True, a reference is saved to the previous camera when switching to new cameras. The player moves relative to the last camera they were using when they began their movement. When they stop moving, the current camera will then be used to determine movement. This can feel more natural to some players and to some gameplay styles as the player does not need to change movement directions if the camera angle changes. This is used in the ActionHorror/Interactive example maps.</p><p><br /></p><p>It is also now possible to switch in and out of standard Third Person gameplay. This is used on startup if no FixedCamera Blueprint in the level has &#34;IsFirstCameraInLevel?&#34; set to True. The player can also enter a ChangeCameraTrigger with the NewCamera variable left unset to switch to ThirdPerson. This is used in the ActionHorror/Platformer example maps.</p><p>New events - ConstrainMovement/FreeMovement - on the FixedCameraController Blueprint that when triggered make it possible to switch in and out of 2D/2.5D Side-Scroller style gameplay. This is used in the Platformer example map.</p><p><br /></p><p><strong>UI:</strong></p><p>Post-Process Material to highlight interactable objects - supports whole object shading, highlighting the outline of the object or both.</p><p>Recognise if mouse or gamepad currently in use and display appropriate interaction prompt.</p><p><br /></p><p><strong>Example Maps:&#xfeff;</strong></p><p>Overview: Documentation and explanation / demonstration of various features and Blueprint variables.</p><p>ActionHorror: No cursor. WASD/Left thumbstick only. Cameras limited to tilting up/down only.</p><p>Interactive: Cursor / point and click to move / interact. Various cameras. Some on rails. Player can nudge cameras.</p><p>Platformer: No cursor. Fast player movement. Some cameras on rails. Blending between cameras.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Fixed/tracking cameras</li><li> Configured to use Enhanced Input</li><li> Post-Process Material to highlight objects the player can interact with</li><li>Widget Blueprint to display button prompts when interaction possible</li><li>Overview map with text explanations / demonstrations of various features</li><li>Three example maps in different gameplay styles</li></ul><p><br /></p><p>Number of Blueprints:</p><p>Total: 20, including Child Blueprint Player Characters/Player Controllers/GameModes for example maps</p><p>Necessary Blueprints for project to work: 8</p><p><br /></p><p>Number of Materials:</p><p>1 Master Material and 3 Material Instances for object highlighting</p><p><br /></p><p>Input:</p><p>Gamepad and Keyboard / Mouse supported with Enhanced Input.</p><p><br /></p><p>Network Replicated:</p><p>(No)</p><p><br /></p><p>Supported Development Platforms:</p><p>   Windows: (Yes)</p><p>   Mac: (Yes)</p><p><br /></p><p>Documentation:</p><p>Overview map provides a short tour of key product features.</p><p><br /></p><p>Additional Notes:</p><p>Number of Controller Icons: 6</p><p>By default uses public domain controller prompts from <a href=\"https://thoseawesomeguys.com/prompts/\" rel=\"nofollow\">Xelu&#39;s FREE Controller Prompts</a>.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/fixed-1920x1080-52bc96a6c2bbda5abae97d78d9e5ad55.png",
+      "md5": "52bc96a6c2bbda5abae97d78d9e5ad55",
+      "width": 1920,
+      "height": 1080,
+      "size": 1838475,
+      "uploadedDate": "2024-04-16T16:02:05.210Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/FixedCameraTemplate_thumb-284x284-5b15fe5fe70a46e70e9affb04ae97d5d.png",
+      "md5": "5b15fe5fe70a46e70e9affb04ae97d5d",
+      "width": 284,
+      "height": 284,
+      "size": 107405,
+      "uploadedDate": "2024-04-21T07:51:18.306Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/FixedCameraTemplate_featured-894x488-66a274f9b982b58c4bdd04fa855108b2.png",
+      "md5": "66a274f9b982b58c4bdd04fa855108b2",
+      "width": 894,
+      "height": 488,
+      "size": 475763,
+      "uploadedDate": "2024-04-16T16:02:05.859Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/fixed-1920x1080-52bc96a6c2bbda5abae97d78d9e5ad55_Snapshot.png",
+      "md5": "924922e4d67af793db0b5bf5375a834b",
+      "width": 150,
+      "height": 74,
+      "size": 6555,
+      "uploadedDate": "2024-04-16T16:02:05.650Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/fixed-1920x1080-55574dd9d669e70b3998d3fd1986f7bd_Snapshot.png",
+      "md5": "55bd63f31efa2ebb8c319e9622f08124",
+      "width": 150,
+      "height": 74,
+      "size": 6805,
+      "uploadedDate": "2024-04-10T14:44:33.855Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/input-1920x1080-0fe682f318d07a750ccab4a7821e1801_Snapshot.png",
+      "md5": "0e9113683597d5fd3552f811d01dfa31",
+      "width": 150,
+      "height": 74,
+      "size": 6440,
+      "uploadedDate": "2024-04-10T14:44:34.489Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/material-1920x1080-163ea386b90236ccde880138a75d567c_Snapshot.png",
+      "md5": "3ee550e4dbd156b76864cf7e11e53fd1",
+      "width": 150,
+      "height": 74,
+      "size": 6348,
+      "uploadedDate": "2024-04-10T14:44:35.076Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-04-21T15:41:42.127Z",
+  "lastModifiedDate": "2025-01-27T18:14:27.055Z",
+  "customAttributes": {
+    "promotionalContent": {
+      "type": "STRING",
+      "value": "false"
+    }
+  },
+  "entitlementName": "d8d9cbcc359f43088da74f23f8a315bf",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "1019645cd272440499e9b1961e663cae",
+      "appId": "FixedCamd8d9cbcc359fV2",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-04-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "3.0"
+    }
+  ],
+  "developer": "holdthecows",
+  "developerId": "o-ttuyv62an52ww8c2ss5lg9xla26hn3",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

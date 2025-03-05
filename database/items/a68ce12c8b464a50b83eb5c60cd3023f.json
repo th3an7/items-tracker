@@ -1,0 +1,669 @@
+{
+  "id": "a68ce12c8b464a50b83eb5c60cd3023f",
+  "title": "Quest Editor Plugin",
+  "description": "A plugin to manage and create quests and dialogs for NPCs, with very dynamic and customizable features.",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;ucIPK-E0omM&amp;t\" rel=\"nofollow\">Preview</a></p><p><a href=\"https://drive.google.com/file/d/1ygAWGMWdSXsBy9MCcTRnbxIitC1NEgge/view\" rel=\"nofollow\">Documentation</a></p><p><a href=\"https://www.youtube.com/channel/UCkQVJmcV-szXTIySHz4CILw?\" rel=\"nofollow\">YouTube</a></p><p><a href=\"https://discord.gg/WmQ3pDR\" rel=\"nofollow\">Discord</a></p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Quest and dialogs system.</li><li>Simultaneous quests.</li><li>Complete, fail and abandon quests.</li><li>Multiple starts and ends for quests or dialogs.</li><li>Multiple NPCs per quest supported.</li><li>Supports non-linear quests and dialogs, with multiple paths.</li><li>Can have timers inside quests. (Timer task.)</li><li>Conditional tasks and branching.</li><li>Customizable tasks objects. Create any task you need for your game.</li><li>Premade tasks. System tasks and conditions. Reach location. Timers and delays.</li><li>Rewards system.</li><li>Heavily exposed to blueprints.</li><li>Multiplayer.</li><li>System savegame for player progress.</li><li>Quest editor widget, for creating and managing quests, dialogs and npcs.</li><li>Highly customizable to adapt to your own tasks and workflow.</li><li>In-editor and real time debugging and visualization.</li><li>Supports localization.</li><li>Includes examples of Quests, Dialogs, Blueprints, Datatables, Game UI and Tasks, for easier setup and understanding of the system.</li><li>And more...</li></ul><p><br /></p><p>Code Modules:</p><ul><li> QuestEditor [Runtime]</li><li> QuestEditorDev [Editor]</li></ul><p>Number of Blueprints: 100&#43;</p><p>Number of C&#43;&#43; Classes: 45&#43;</p><p>Network Replicated: Yes</p><p>Supported Target Build Platforms: Windows</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2Spyders-1920x1080-3b6842bd5d1ae705842cb4c78c3aac60.png",
+      "md5": "3b6842bd5d1ae705842cb4c78c3aac60",
+      "width": 1920,
+      "height": 1080,
+      "size": 274011,
+      "uploadedDate": "2021-01-06T14:39:05.765Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1Infestation-1920x1080-acd9e86dccd7a18457ff122d23a6770f.png",
+      "md5": "acd9e86dccd7a18457ff122d23a6770f",
+      "width": 1920,
+      "height": 1080,
+      "size": 189148,
+      "uploadedDate": "2021-01-06T14:39:06.106Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3Courier-1920x1080-b22df3a3cb3a7a37027ec17df21911a2.png",
+      "md5": "b22df3a3cb3a7a37027ec17df21911a2",
+      "width": 1920,
+      "height": 1080,
+      "size": 290074,
+      "uploadedDate": "2021-01-06T14:39:06.484Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4Complications-1920x1080-10f983c72c0f7e69d97274a3a2cdc070.png",
+      "md5": "10f983c72c0f7e69d97274a3a2cdc070",
+      "width": 1920,
+      "height": 1080,
+      "size": 308721,
+      "uploadedDate": "2021-01-06T14:39:06.852Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5AlfIntro-1920x1080-28e566db74764a3b5df98c65d9e290fd.png",
+      "md5": "28e566db74764a3b5df98c65d9e290fd",
+      "width": 1920,
+      "height": 1080,
+      "size": 233322,
+      "uploadedDate": "2021-01-06T14:39:07.159Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6OldMageDialog-1920x1080-a914a85296a734f9849be0c80855e98e.png",
+      "md5": "a914a85296a734f9849be0c80855e98e",
+      "width": 1920,
+      "height": 1080,
+      "size": 219648,
+      "uploadedDate": "2021-01-06T14:39:07.437Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7SSdialog-1920x1080-753e68f5ebc4500ba97ffc4b6ccbd5da.png",
+      "md5": "753e68f5ebc4500ba97ffc4b6ccbd5da",
+      "width": 1920,
+      "height": 1080,
+      "size": 157462,
+      "uploadedDate": "2021-01-06T14:39:07.703Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8Hierarchy-1920x1080-c0f7245bfb821b281c827edcf413e152.png",
+      "md5": "c0f7245bfb821b281c827edcf413e152",
+      "width": 1920,
+      "height": 1080,
+      "size": 129238,
+      "uploadedDate": "2021-01-06T14:39:07.984Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/9npctab-1920x1080-ee874e77822a12cd2193f0eec9db92fb.png",
+      "md5": "ee874e77822a12cd2193f0eec9db92fb",
+      "width": 1920,
+      "height": 1080,
+      "size": 2421623,
+      "uploadedDate": "2021-01-06T14:40:40.978Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/10journal-1920x1080-64b98fcd06a1aee51c04d9772e18cbf8.png",
+      "md5": "64b98fcd06a1aee51c04d9772e18cbf8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2008559,
+      "uploadedDate": "2021-01-06T14:40:41.518Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/QuestEditorPlugin_thumb-284x284-49f9f3f3805b68c1e3cc933b04c9a145.png",
+      "md5": "49f9f3f3805b68c1e3cc933b04c9a145",
+      "width": 284,
+      "height": 284,
+      "size": 23246,
+      "uploadedDate": "2020-12-05T01:04:10.454Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/QuestEditorPlugin_featured-894x488-961932231df706ec8d2d65a97a48c37e.png",
+      "md5": "961932231df706ec8d2d65a97a48c37e",
+      "width": 894,
+      "height": 488,
+      "size": 100247,
+      "uploadedDate": "2020-12-05T01:04:10.518Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/9npctab-1920x1080-ee874e77822a12cd2193f0eec9db92fb_Snapshot.png",
+      "md5": "0fbbef931f39a3a4ac2f11d7ac544689",
+      "width": 150,
+      "height": 74,
+      "size": 3838,
+      "uploadedDate": "2021-01-06T14:40:41.333Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/10journal-1920x1080-64b98fcd06a1aee51c04d9772e18cbf8_Snapshot.png",
+      "md5": "4f2f2fd9fd4bd10f3f86f2d930e226e1",
+      "width": 150,
+      "height": 74,
+      "size": 4300,
+      "uploadedDate": "2021-01-06T14:40:41.836Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2Spyders-1920x1080-3b6842bd5d1ae705842cb4c78c3aac60_Snapshot.png",
+      "md5": "e6a82ec48510a5da54e84293aac756b6",
+      "width": 150,
+      "height": 74,
+      "size": 3951,
+      "uploadedDate": "2021-01-06T14:39:05.973Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1Infestation-1920x1080-acd9e86dccd7a18457ff122d23a6770f_Snapshot.png",
+      "md5": "3b88c0960620945f27905395989a92e1",
+      "width": 150,
+      "height": 74,
+      "size": 3896,
+      "uploadedDate": "2021-01-06T14:39:06.311Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3Courier-1920x1080-b22df3a3cb3a7a37027ec17df21911a2_Snapshot.png",
+      "md5": "c2310d3c440003faad743ecdaca492fb",
+      "width": 150,
+      "height": 74,
+      "size": 4959,
+      "uploadedDate": "2021-01-06T14:39:06.731Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4Complications-1920x1080-10f983c72c0f7e69d97274a3a2cdc070_Snapshot.png",
+      "md5": "9e30b5b05e9efd7511c65d35ba01ff1d",
+      "width": 150,
+      "height": 74,
+      "size": 5575,
+      "uploadedDate": "2021-01-06T14:39:07.060Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5AlfIntro-1920x1080-28e566db74764a3b5df98c65d9e290fd_Snapshot.png",
+      "md5": "211ba6686b2453f29c1ef454d256e283",
+      "width": 150,
+      "height": 74,
+      "size": 3923,
+      "uploadedDate": "2021-01-06T14:39:07.368Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6OldMageDialog-1920x1080-a914a85296a734f9849be0c80855e98e_Snapshot.png",
+      "md5": "49b6be84b91de4797de0ce5b176096ac",
+      "width": 150,
+      "height": 74,
+      "size": 3820,
+      "uploadedDate": "2021-01-06T14:39:07.642Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7SSdialog-1920x1080-753e68f5ebc4500ba97ffc4b6ccbd5da_Snapshot.png",
+      "md5": "0d2abc31fcf3b0938ca35cff969eed34",
+      "width": 150,
+      "height": 74,
+      "size": 3594,
+      "uploadedDate": "2021-01-06T14:39:07.898Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8Hierarchy-1920x1080-c0f7245bfb821b281c827edcf413e152_Snapshot.png",
+      "md5": "896e7dd21d4c8dff695ea1dedf40e836",
+      "width": 150,
+      "height": 74,
+      "size": 3127,
+      "uploadedDate": "2021-01-06T14:39:08.215Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8journal-1920x1080-64b98fcd06a1aee51c04d9772e18cbf8_Snapshot.png",
+      "md5": "4f2f2fd9fd4bd10f3f86f2d930e226e1",
+      "width": 150,
+      "height": 74,
+      "size": 4300,
+      "uploadedDate": "2020-12-07T14:26:14.880Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7npctab-1920x1080-ee874e77822a12cd2193f0eec9db92fb_Snapshot.png",
+      "md5": "0fbbef931f39a3a4ac2f11d7ac544689",
+      "width": 150,
+      "height": 74,
+      "size": 3838,
+      "uploadedDate": "2020-12-07T14:25:49.432Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7Hierarchy1-1920x1080-fa9fc68b0d0aa83335d9295372c50958_Snapshot.png",
+      "md5": "b9d6626fe7a1c04c1010a05fc18316bb",
+      "width": 150,
+      "height": 74,
+      "size": 2547,
+      "uploadedDate": "2020-12-07T14:25:20.147Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7Hierarchy1-1920x1080-fa9fc68b0d0aa83335d9295372c50958_Snapshot.png",
+      "md5": "b9d6626fe7a1c04c1010a05fc18316bb",
+      "width": 150,
+      "height": 74,
+      "size": 2547,
+      "uploadedDate": "2020-12-05T12:57:56.755Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1QuestInfestation-1920x1080-20614c8055c947942642532d7a5e939b_Snapshot.png",
+      "md5": "bd43423bb297441cf005e8a89143008a",
+      "width": 150,
+      "height": 74,
+      "size": 3953,
+      "uploadedDate": "2020-12-05T12:57:57.053Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2QuestSpyders-1920x1080-cd694a7a600acf9c803a8b9b9981a8a2_Snapshot.png",
+      "md5": "00ea38f19d9517d80597e676fa82f382",
+      "width": 150,
+      "height": 74,
+      "size": 4244,
+      "uploadedDate": "2020-12-05T12:57:57.425Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3QuestCourier-1920x1080-223f561a9a21b7cbc44db02b03ee284f_Snapshot.png",
+      "md5": "f3d6c03a5bffb3f581be4ac4fda90154",
+      "width": 150,
+      "height": 74,
+      "size": 4894,
+      "uploadedDate": "2020-12-05T12:57:57.752Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4QuestComplications-1920x1080-67bf2290be389763e2485ff830c38764_Snapshot.png",
+      "md5": "319bff176c33fa9dbdf1816b32034973",
+      "width": 150,
+      "height": 74,
+      "size": 5687,
+      "uploadedDate": "2020-12-05T12:57:58.161Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5DialogAlfIntro-1920x1080-c330be1c3d773f5227812e08157135c1_Snapshot.png",
+      "md5": "9c9eeabdcad467f827042fc64133608a",
+      "width": 150,
+      "height": 74,
+      "size": 3904,
+      "uploadedDate": "2020-12-05T12:57:58.529Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6DialogSingleSentence-1920x1080-3ba361cadce0fb7230258e20c093907d_Snapshot.png",
+      "md5": "d5a20c1e595a65774275ed9bb6bd4147",
+      "width": 150,
+      "height": 74,
+      "size": 3584,
+      "uploadedDate": "2020-12-05T12:57:58.829Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1QuestComplications-1920x1080-af793525d268ddb9a8a07be4a31ec3e8_Snapshot.png",
+      "md5": "5e1ba8fd3484b8b98f0074d191a34fa4",
+      "width": 150,
+      "height": 74,
+      "size": 4310,
+      "uploadedDate": "2020-12-05T01:04:08.358Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2QuestCourier-1920x1080-ca8c89cbcf98b460a22cc1a4f997a7f0_Snapshot.png",
+      "md5": "f42407061e9bb1b403afdbf49de14b7d",
+      "width": 150,
+      "height": 74,
+      "size": 4424,
+      "uploadedDate": "2020-12-05T01:04:08.663Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3QuestInfestation-1920x1080-7e2ebe3c506ea4196c4de2ae0f03f278_Snapshot.png",
+      "md5": "c74778097e30cef8b1772a266e9f85ff",
+      "width": 150,
+      "height": 74,
+      "size": 3784,
+      "uploadedDate": "2020-12-05T01:04:09.008Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4QuestSpyders-1920x1080-7646f5abb6e5ebecd42fd5aedf8570c6_Snapshot.png",
+      "md5": "bb9946b7885afc2bae532fffd5c5e943",
+      "width": 150,
+      "height": 74,
+      "size": 4420,
+      "uploadedDate": "2020-12-05T01:04:09.386Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5DialogAlfIntro-1920x1080-c330be1c3d773f5227812e08157135c1_Snapshot.png",
+      "md5": "9c9eeabdcad467f827042fc64133608a",
+      "width": 150,
+      "height": 74,
+      "size": 3904,
+      "uploadedDate": "2020-12-05T01:04:09.795Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6DialogSingleSentence-1920x1080-3ba361cadce0fb7230258e20c093907d_Snapshot.png",
+      "md5": "d5a20c1e595a65774275ed9bb6bd4147",
+      "width": 150,
+      "height": 74,
+      "size": 3584,
+      "uploadedDate": "2020-12-05T01:04:10.095Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7Hierarchy1-1920x1080-fa9fc68b0d0aa83335d9295372c50958_Snapshot.png",
+      "md5": "b9d6626fe7a1c04c1010a05fc18316bb",
+      "width": 150,
+      "height": 74,
+      "size": 2547,
+      "uploadedDate": "2020-12-05T01:04:10.408Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DialogTalk-1920x1080-6b89a2625f77c0de0bcb0f898a5ef402_Snapshot.png",
+      "md5": "a7d37a040c39293fbb89de1a9be6206a",
+      "width": 150,
+      "height": 74,
+      "size": 3515,
+      "uploadedDate": "2020-08-13T17:10:10.442Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/QuestSS-1920x1080-04fba476c6c4f341543d6e82db899df7_Snapshot.png",
+      "md5": "27e420b2575e41f0c4c6f4bd1aecebab",
+      "width": 150,
+      "height": 74,
+      "size": 3936,
+      "uploadedDate": "2020-08-13T17:10:10.709Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CustomTasks1Ready2-1920x1080-d6c1cb0470d36f0b775eb9d3cb68f230_Snapshot.png",
+      "md5": "cd8e54d6dcd95e84e647338c8f38516d",
+      "width": 150,
+      "height": 74,
+      "size": 7173,
+      "uploadedDate": "2020-07-23T13:25:34.763Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CustomTasks2Ready2-1920x1080-cffd271bd0e4657561bf5f0633d53e48_Snapshot.png",
+      "md5": "70ed8d2c29f47e8afb5eaef1ba1e9d2c",
+      "width": 150,
+      "height": 74,
+      "size": 5034,
+      "uploadedDate": "2020-07-23T13:25:35.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CustomTasks3Ready-1920x1080-09bf9639afcaf4ec64398f9e863b9455_Snapshot.png",
+      "md5": "6b888410ccf2f10f258cd6fe1a554ab1",
+      "width": 150,
+      "height": 74,
+      "size": 5839,
+      "uploadedDate": "2020-07-23T13:25:36.166Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CustomTasks4Ready-1920x1080-8f93709cbabc258f8df3ccf07b0e3e8a_Snapshot.png",
+      "md5": "e7160a06e14eeb7add5f0cd4a42eb199",
+      "width": 150,
+      "height": 74,
+      "size": 4854,
+      "uploadedDate": "2020-07-23T13:25:36.735Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CustomTasks1Ready-1920x1080-7ab2cb269ccdedde761ea7fab7532acd_Snapshot.png",
+      "md5": "67600509eaf8d76ae6c5cc009ecc06c4",
+      "width": 150,
+      "height": 74,
+      "size": 7317,
+      "uploadedDate": "2020-07-23T13:06:05.508Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CustomTasks2Ready-1920x1080-6861e54924c98682be913f55ff35b194_Snapshot.png",
+      "md5": "eaa7bdd9dcdc9a7520115a037c3f5251",
+      "width": 150,
+      "height": 74,
+      "size": 4646,
+      "uploadedDate": "2020-07-23T13:06:06.253Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CustomTasks3Ready-1920x1080-09bf9639afcaf4ec64398f9e863b9455_Snapshot.png",
+      "md5": "6b888410ccf2f10f258cd6fe1a554ab1",
+      "width": 150,
+      "height": 74,
+      "size": 5839,
+      "uploadedDate": "2020-07-23T13:06:06.854Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CustomTasks4Ready-1920x1080-8f93709cbabc258f8df3ccf07b0e3e8a_Snapshot.png",
+      "md5": "e7160a06e14eeb7add5f0cd4a42eb199",
+      "width": 150,
+      "height": 74,
+      "size": 4854,
+      "uploadedDate": "2020-07-23T13:06:07.458Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Hierarchy1Ready-1920x1080-cbdea99650b1971ef259456deabb01b0_Snapshot.png",
+      "md5": "dc23dc39db5236312a264b1102c0ac0d",
+      "width": 150,
+      "height": 74,
+      "size": 2644,
+      "uploadedDate": "2020-07-23T13:06:08.314Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Hierarchy2Ready-1920x1080-729612392b754f2f38f76afc8c5d834b_Snapshot.png",
+      "md5": "51ba0aacf53b0fe266fa8acd949b5a84",
+      "width": 150,
+      "height": 74,
+      "size": 2618,
+      "uploadedDate": "2020-07-23T13:06:09.119Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1QEQuest11980-1920x1080-00c18a863f458c206bcf50da7bda8054_Snapshot.png",
+      "md5": "529ba5a5918e0d90edab4f8557859189",
+      "width": 150,
+      "height": 74,
+      "size": 3303,
+      "uploadedDate": "2020-07-02T19:05:45.661Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2QEQuest1EditingNode1980-1920x1080-3ccc459b6a370bf924e3b74a13ab5968_Snapshot.png",
+      "md5": "095fd4c6b7987df3a4a0b1fc12126491",
+      "width": 150,
+      "height": 74,
+      "size": 3443,
+      "uploadedDate": "2020-07-02T19:05:46.078Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3QEQuest2TaskTimer1980-1920x1080-d647ceefe2fd63310f0fffb01a68aa04_Snapshot.png",
+      "md5": "82ca2d01792c64a60b71fe2083dc2872",
+      "width": 150,
+      "height": 74,
+      "size": 3461,
+      "uploadedDate": "2020-07-02T19:05:46.431Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4QEDialog11980-1920x1080-5aaeb14ebaae40438f02e360b681b40a_Snapshot.png",
+      "md5": "40b5d7df450e30d0db47e813c6d9c3de",
+      "width": 150,
+      "height": 74,
+      "size": 3928,
+      "uploadedDate": "2020-07-02T19:05:46.837Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5QEDialog21980-1920x1080-486bd7d9d460e0a940cc551109a3c39d_Snapshot.png",
+      "md5": "b5c487e9d051f8e48e10f8a1b7decc8f",
+      "width": 150,
+      "height": 74,
+      "size": 2725,
+      "uploadedDate": "2020-07-02T19:05:47.279Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6QENPCEditing1980-1920x1080-651ee9555db3f382dda1f4c2b352ebd6_Snapshot.png",
+      "md5": "cfa73d7e071ed3d473b59879306b20e7",
+      "width": 150,
+      "height": 74,
+      "size": 2142,
+      "uploadedDate": "2020-07-02T19:05:47.664Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7QEUINPC1980-1920x1080-ee874e77822a12cd2193f0eec9db92fb_Snapshot.png",
+      "md5": "0fbbef931f39a3a4ac2f11d7ac544689",
+      "width": 150,
+      "height": 74,
+      "size": 3838,
+      "uploadedDate": "2020-07-02T19:05:48.545Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8QEUIJournal1980-1920x1080-64b98fcd06a1aee51c04d9772e18cbf8_Snapshot.png",
+      "md5": "4f2f2fd9fd4bd10f3f86f2d930e226e1",
+      "width": 150,
+      "height": 74,
+      "size": 4300,
+      "uploadedDate": "2020-07-02T19:05:49.023Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-07-04T12:45:54.964Z",
+  "lastModifiedDate": "2024-11-23T02:27:43.913Z",
+  "customAttributes": {},
+  "entitlementName": "a68ce12c8b464a50b83eb5c60cd3023f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "6bc75065ef10436da8e688ccc8e2ce84",
+      "appId": "QuestEditor_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2020-07-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "QuestEditor 4.25"
+    },
+    {
+      "id": "f3fdc0849dac48ce9255645235b9e50f",
+      "appId": "QuestEditor_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2020-12-09T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "QuestEditor 4.26"
+    },
+    {
+      "id": "9b509ac5f5fa4adfa83ae64d0c3a768d",
+      "appId": "QuestEditor_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "QuestEditor 4.27"
+    },
+    {
+      "id": "839a205fd82049feb80921108bc89176",
+      "appId": "QuestEditor_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "QuestEditor 5"
+    },
+    {
+      "id": "070b40ba8031461d9531cacea251cbd2",
+      "appId": "QuestEditor_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "QuestEditor 5.1"
+    },
+    {
+      "id": "2a0d9d768c6c43c1b0c6b080183c3f85",
+      "appId": "QuestEditor_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-13T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "QuestEditor 5.2"
+    },
+    {
+      "id": "03efd78b20fc49f2adb56ec67f364261",
+      "appId": "QuestEditor_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "QuestEditor 5.3"
+    },
+    {
+      "id": "5041f272e50a4b668572200a51bcfbae",
+      "appId": "QuestEditor_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-26T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "QuestEditor 5.4"
+    }
+  ],
+  "developer": "Alf",
+  "developerId": "o-q8jkwxhtfb83cmgb4d3naqvzjexjcq",
+  "endOfSupport": false,
+  "unsearchable": false
+}

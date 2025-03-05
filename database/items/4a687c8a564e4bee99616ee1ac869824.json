@@ -1,0 +1,525 @@
+{
+  "id": "4a687c8a564e4bee99616ee1ac869824",
+  "title": "VR Controls",
+  "description": "This plugin provides VR controls, including teleportation, thumbstick motion and VR pointers to remotely grab or interact with objects. It also provides fully compatible mouse and keyboard controls.",
+  "longDescription": "<p>This plugin allows you to add VR controls to any existing project while maintaining the ability to use keyboard and mouse controls. On top of ensuring both VR and non-VR support to your game, this is also extremely useful to reduce development time because you don&#39;t need to put your VR headset on and off all the time.</p><p><br /></p><p><a href=\"https://drive.google.com/file/d/1mnwd8Fe38eYRWxZ8n8oBzcgtMkmFhYmt/view?usp&#61;sharing\" rel=\"nofollow\">Demo video</a></p><p><a href=\"https://docs.google.com/presentation/d/1M09Wyau6d_4Xli9ZoBlZvLF3S0ZeLDbCMMCM4XEaZBs/edit?usp&#61;sharing\" rel=\"nofollow\">Tutorial</a> (temporarily broken due to a Google docs bug, sorry for the inconvenience)</p><p><br /></p><p>With minimal configuration, you will be able to :</p><p><br /></p><p>1. walk around in VR, see your motion controllers, and see a <strong>red dot</strong> where you point your right pointer and a <strong>green dot</strong> where you point your left pointer.</p><p>2. <strong>rotate</strong> your VR space with the thumbstick on your left controller, and <strong>move</strong> it with the thumbstick on your right controller. These motions are discontinuous to reduce motion sickness.</p><p>3. <strong>teleport</strong> to pointed location.</p><p>4. see your <strong>animated hands.</strong></p><p>5. <strong>grab</strong> the object pointed by your Motion Controller, remotely.</p><p>6. <strong>grab </strong>objects with your VR hands: get close until your motion controller disappears, leaving your VR hand empty, then close your hand.</p><p>7. <strong>drop</strong> hold objects by opening your hand. This way, you can also throw objects naturally. (Some controllers have a button on the side for grabbing. In this case, release this button to drop objects).</p><p>8. <strong>interact</strong> with the object pointed by your Motion Controller. The object needs to implement &#34;InteractableInterface&#34; provided by this plugin for this to do anything. You can also define EnterFocus/LeaveFocus events.</p><p>9. c<strong>ollisions and navigation </strong>are supported. Blocking objects and volumes block movement and teleportation. You can use a NavMesh for more control over allowed areas. The screen also fades to black when your point of view goes inside a blocking object (you can customize this behavior by overriding LeaveGame/ReturnToGame functions in Blueprint).</p><p>10. use your keyboard and mouse, or other non-VR controllers, to <strong>rotate</strong>, <strong>move</strong>, <strong>interact</strong>, etc using the same functions as for the VR mode.</p><p>11. Customize every single bit as you wish. The main Blueprint is kept very simple, you can adjust the behaviour of any input mapping, use your custom meshes or materials, etc. Beside the event graph, there are a few configuration variables in the &#34;VR space&#34; category.</p><p><br /></p><p>In VR, unlike with a keyboard, you don&#39;t have access to many buttons. The unified interaction interface makes it possible to implement many different kinds of interactions and easily choose which one to use both in VR and with the keyboard and mouse. In VR, just hold the trigger and point toward the desired interaction icon before releasing the trigger. With the mouse, scroll to select the desired icon, then click.</p><p>Moreover, both types of controls use, as much as possible, the same code, minimizing the opportunities for bugs and inconsistencies.</p>",
+  "technicalDetails": "<p>Main features:</p><p>* A VrSpace pawn class (C&#43;&#43;) handles the VR headset and motion controllers. It provides Move/Rotate functions that you can directly bind to input events.</p><p>* A simple InteractableInterface, that other classes can implement in Blueprint or C&#43;&#43;, handles interaction events. These events can be triggered by the VR controls provided by this plugin, keyboard and mouse controls, or any Blueprint or C&#43;&#43; code that implement the InteractorInterface.</p><p>* A VrPointerComponent class (C&#43;&#43;) keeps track of what object it is pointing to and handles grabbing, interaction with interactable objects, teleporting things to the pointed location (such as the player or other objects).</p><p>* A BP_VrSpace pawn class (Blueprint) links input events (both from motion controllers and from mouse/keyboard) to the above classes, so that all the above features are ready to use immediately.</p><p>* BP_VrPlayerController and BP_VrGameMode blueprints.</p><p>* Interaction icons assets.</p><p>* SteamVR animated hands assets.</p><p><br /></p><p>Code Modules:</p><p>* VrControls (Runtime)</p><p>* InteractableInterface (Runtime)</p><p><br /></p><p>Number of Blueprints: 5</p><p>Number of C&#43;&#43; Classes: 8</p><p>Network Replicated: Not tested</p><p>Supported Development Platforms: Windows 10 (Should also work for other platforms)</p><p>Supported Target Build Platforms: Windows 10 (Should also work for other platforms)</p><p>Tested Hardware: Valve Index, Oculus Quest 2 (Should also work for other platforms)</p><p>Documentation: See the tutorial link above.</p><p><br /></p><p>Example Project: https://drive.google.com/file/d/1Sl6iKS6MDFmg7blcADIqMpQZAsPOiSL1/view?usp&#61;sharing</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/00start-1920x1080-007ab9ecd87a2f5d3efec7cff6f129b3.png",
+      "md5": "007ab9ecd87a2f5d3efec7cff6f129b3",
+      "width": 1920,
+      "height": 1080,
+      "size": 2509564,
+      "uploadedDate": "2022-02-10T18:31:43.253Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/teleportwithtext-1920x1080-a6719aa75a5f3c7c6eb16ce27800d366.png",
+      "md5": "a6719aa75a5f3c7c6eb16ce27800d366",
+      "width": 1920,
+      "height": 1080,
+      "size": 1986545,
+      "uploadedDate": "2022-02-10T22:08:25.988Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Grabwithtext-1920x1080-d244f6e09d04dc4c2366e6d8e2806cb4.png",
+      "md5": "d244f6e09d04dc4c2366e6d8e2806cb4",
+      "width": 1920,
+      "height": 1080,
+      "size": 1653843,
+      "uploadedDate": "2022-02-10T22:08:26.601Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/grabbedwithtext-1920x1080-ffb40decb26089ad2517d77e55be80d9.png",
+      "md5": "ffb40decb26089ad2517d77e55be80d9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1787441,
+      "uploadedDate": "2022-02-10T22:08:27.223Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/handgrabwithtext-1920x1080-72afc482e641e08733f6c814ed8f5437.png",
+      "md5": "72afc482e641e08733f6c814ed8f5437",
+      "width": 1920,
+      "height": 1080,
+      "size": 1682001,
+      "uploadedDate": "2022-02-10T22:08:27.941Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/handgrabbedwithtext-1920x1080-672c0df45b75d33c90823e5bbdb27824.png",
+      "md5": "672c0df45b75d33c90823e5bbdb27824",
+      "width": 1920,
+      "height": 1080,
+      "size": 1799271,
+      "uploadedDate": "2022-02-10T22:08:28.960Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/interactwithtext-1920x1080-ebe18af748411fa80c85466dbef3cc58.png",
+      "md5": "ebe18af748411fa80c85466dbef3cc58",
+      "width": 1920,
+      "height": 1080,
+      "size": 1660441,
+      "uploadedDate": "2022-02-10T22:08:29.734Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/interactedwithtext-1920x1080-25d320cbdef166547aeff6c91459089f.png",
+      "md5": "25d320cbdef166547aeff6c91459089f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1709866,
+      "uploadedDate": "2022-02-10T22:08:30.338Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00017-1920x1080-3715beb8840291213bb05a437d49e0f8.png",
+      "md5": "3715beb8840291213bb05a437d49e0f8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2263954,
+      "uploadedDate": "2021-05-25T13:24:05.973Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/VRControls_thumb-284x284-e6133ec7f8b80b0e056b89251c673157.png",
+      "md5": "e6133ec7f8b80b0e056b89251c673157",
+      "width": 284,
+      "height": 284,
+      "size": 23779,
+      "uploadedDate": "2022-02-10T21:46:40.771Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/VRControls_featured-894x488-4b42ae429c0a03b86253dbd8e9aa048b.png",
+      "md5": "4b42ae429c0a03b86253dbd8e9aa048b",
+      "width": 894,
+      "height": 488,
+      "size": 447350,
+      "uploadedDate": "2022-02-10T18:31:47.703Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/teleportwithtext-1920x1080-a6719aa75a5f3c7c6eb16ce27800d366_Snapshot.png",
+      "md5": "527799f24a79fcce0cb481966a02d567",
+      "width": 150,
+      "height": 74,
+      "size": 5565,
+      "uploadedDate": "2022-02-10T22:08:26.391Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Grabwithtext-1920x1080-d244f6e09d04dc4c2366e6d8e2806cb4_Snapshot.png",
+      "md5": "df6dd8fc5ddc439e7911379fb82791a6",
+      "width": 150,
+      "height": 74,
+      "size": 5417,
+      "uploadedDate": "2022-02-10T22:08:26.958Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/grabbedwithtext-1920x1080-ffb40decb26089ad2517d77e55be80d9_Snapshot.png",
+      "md5": "e199d11979e049f73626d885be2d9c9f",
+      "width": 150,
+      "height": 74,
+      "size": 5341,
+      "uploadedDate": "2022-02-10T22:08:27.691Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/handgrabwithtext-1920x1080-72afc482e641e08733f6c814ed8f5437_Snapshot.png",
+      "md5": "234ba136c047ccaa1c44110491d57b2d",
+      "width": 150,
+      "height": 74,
+      "size": 5082,
+      "uploadedDate": "2022-02-10T22:08:28.706Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/handgrabbedwithtext-1920x1080-672c0df45b75d33c90823e5bbdb27824_Snapshot.png",
+      "md5": "e7aef0781e55f93703193dfc7fe4a587",
+      "width": 150,
+      "height": 74,
+      "size": 5628,
+      "uploadedDate": "2022-02-10T22:08:29.557Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/interactwithtext-1920x1080-ebe18af748411fa80c85466dbef3cc58_Snapshot.png",
+      "md5": "759374fe44a39fe8a867ce0d0ec5d83e",
+      "width": 150,
+      "height": 74,
+      "size": 5784,
+      "uploadedDate": "2022-02-10T22:08:30.088Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/interactedwithtext-1920x1080-25d320cbdef166547aeff6c91459089f_Snapshot.png",
+      "md5": "cfc2bc1cd0a7c00dee1fc8a95ae52150",
+      "width": 150,
+      "height": 74,
+      "size": 5276,
+      "uploadedDate": "2022-02-10T22:08:30.710Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/00start-1920x1080-007ab9ecd87a2f5d3efec7cff6f129b3_Snapshot.png",
+      "md5": "38938ce5547b73ed9f22bee07035b30d",
+      "width": 150,
+      "height": 74,
+      "size": 5258,
+      "uploadedDate": "2022-02-10T18:31:43.681Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/teleportwithtext-1920x1080-b4eef57c48ac8c35de543cf8e0bdcc37_Snapshot.png",
+      "md5": "8677ee3933a697709b0fc333708be12f",
+      "width": 150,
+      "height": 74,
+      "size": 5501,
+      "uploadedDate": "2022-02-10T18:31:44.244Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Grabwithtext-1920x1080-f8f6cc7d32e58680df6b18b5c4298060_Snapshot.png",
+      "md5": "54ef17755cd38d5e593e6fe66d346f66",
+      "width": 150,
+      "height": 74,
+      "size": 5380,
+      "uploadedDate": "2022-02-10T18:31:44.806Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/grabbedwithtext-1920x1080-439d00f52926de4b1284291ca05085b3_Snapshot.png",
+      "md5": "150bffcaff4887b54fcfa444dccb805d",
+      "width": 150,
+      "height": 74,
+      "size": 5322,
+      "uploadedDate": "2022-02-10T18:31:45.423Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/handgrabwithtext-1920x1080-30ea34fa13a46ae7d9b25a9d7dd9b9c0_Snapshot.png",
+      "md5": "c5cca4f8855eafe6b2f61ae9b978f50a",
+      "width": 150,
+      "height": 74,
+      "size": 5106,
+      "uploadedDate": "2022-02-10T18:31:45.929Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/handgrabbedwithtext-1920x1080-ad11d589da40defa60f8f25f8bb4cfcb_Snapshot.png",
+      "md5": "0527b0a1f66a336dd838728321895dc1",
+      "width": 150,
+      "height": 74,
+      "size": 5595,
+      "uploadedDate": "2022-02-10T18:31:46.486Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/interactwithtext-1920x1080-8b10d396aba23b09022e23e62cebf2aa_Snapshot.png",
+      "md5": "229c0209aba3b873255d9d5ea1334f5b",
+      "width": 150,
+      "height": 74,
+      "size": 5682,
+      "uploadedDate": "2022-02-10T18:31:47.066Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/interactedwithtext-1920x1080-d10f43c0cae052d35d2ef9b1086b5fe5_Snapshot.png",
+      "md5": "6dd9c7279813468e6821c94ffda51d1a",
+      "width": 150,
+      "height": 74,
+      "size": 5270,
+      "uploadedDate": "2022-02-10T18:31:47.638Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002withtext-1920x1080-b4eef57c48ac8c35de543cf8e0bdcc37_Snapshot.png",
+      "md5": "8677ee3933a697709b0fc333708be12f",
+      "width": 150,
+      "height": 74,
+      "size": 5501,
+      "uploadedDate": "2021-05-25T13:24:03.625Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00010withtext-1920x1080-170eb8c4ed72853e5e607c1d93c674d9_Snapshot.png",
+      "md5": "8a63baf9ee765ef382c0345263e6e91a",
+      "width": 150,
+      "height": 74,
+      "size": 5289,
+      "uploadedDate": "2021-05-25T13:24:04.116Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00011withtext-1920x1080-19324578e7bcebe471b09bbef8de5a74_Snapshot.png",
+      "md5": "dac4ba6ee527a9d0964f0c2723f9d3e9",
+      "width": 150,
+      "height": 74,
+      "size": 5374,
+      "uploadedDate": "2021-05-25T13:24:04.692Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00012withtext-1920x1080-c272b6f677cb875d15889ddf1f62b8cb_Snapshot.png",
+      "md5": "c5527c5fc61be3d45616711759088130",
+      "width": 150,
+      "height": 74,
+      "size": 5621,
+      "uploadedDate": "2021-05-25T13:24:05.221Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00013withtext-1920x1080-c0db06dbfae8b3942eacd600e68d4ab5_Snapshot.png",
+      "md5": "e87bd83f205c3eaf69384b3a8dee3a0c",
+      "width": 150,
+      "height": 74,
+      "size": 5459,
+      "uploadedDate": "2021-05-25T13:24:05.801Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00017-1920x1080-3715beb8840291213bb05a437d49e0f8_Snapshot.png",
+      "md5": "d281f2fd44128820f3226cfd7c61d1ff",
+      "width": 150,
+      "height": 74,
+      "size": 5912,
+      "uploadedDate": "2021-05-25T13:24:06.351Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-c6ff58640fe4b37a0b47a1e044168015_Snapshot.png",
+      "md5": "92ad75472bf0ce4d72385b198973f997",
+      "width": 150,
+      "height": 74,
+      "size": 5454,
+      "uploadedDate": "2021-04-13T15:04:54.692Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-ede341d4811a125484a37538313a2839_Snapshot.png",
+      "md5": "ed1316b5f28261a6f7d9eaa1e0677577",
+      "width": 150,
+      "height": 74,
+      "size": 4543,
+      "uploadedDate": "2021-04-13T15:04:55.337Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00010-1920x1080-dbf4fc44f30466b259ef53a93511939c_Snapshot.png",
+      "md5": "5923b932cd15bffb2bd62256af2782c0",
+      "width": 150,
+      "height": 74,
+      "size": 4572,
+      "uploadedDate": "2021-04-13T15:04:55.899Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00011-1920x1080-44d71eb0bddebcf9d97eec331a531763_Snapshot.png",
+      "md5": "52b29eeb44bfb8c5e051a8f9346974ff",
+      "width": 150,
+      "height": 74,
+      "size": 4844,
+      "uploadedDate": "2021-04-13T15:04:56.597Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00012-1920x1080-b545e96bb04b14293d40f4a306a65665_Snapshot.png",
+      "md5": "aca8451d8dfd45bf35b16fd74c148bc6",
+      "width": 150,
+      "height": 74,
+      "size": 4678,
+      "uploadedDate": "2021-04-13T15:04:57.427Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00013-1920x1080-f8a9e9bcf887578955c4d8b2b8402e3b_Snapshot.png",
+      "md5": "22e8ca3bc04517c102a919b8660f2ef7",
+      "width": 150,
+      "height": 74,
+      "size": 4734,
+      "uploadedDate": "2021-04-13T15:04:58.060Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00017-1920x1080-3715beb8840291213bb05a437d49e0f8_Snapshot.png",
+      "md5": "d281f2fd44128820f3226cfd7c61d1ff",
+      "width": 150,
+      "height": 74,
+      "size": 5912,
+      "uploadedDate": "2021-04-13T15:04:58.658Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-ede341d4811a125484a37538313a2839_Snapshot.png",
+      "md5": "ed1316b5f28261a6f7d9eaa1e0677577",
+      "width": 150,
+      "height": 74,
+      "size": 4543,
+      "uploadedDate": "2021-04-12T22:11:29.605Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00003-1920x1080-ef14e28581bda4cc2b92f005a4b6a676_Snapshot.png",
+      "md5": "09a7933daffa85c10742f8468a58851e",
+      "width": 150,
+      "height": 74,
+      "size": 4299,
+      "uploadedDate": "2021-04-12T22:11:30.239Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00004-1920x1080-7a212e324aede9a6a24dbb797e36d9b3_Snapshot.png",
+      "md5": "0ad177828a2f6a4ff61af164455e85e7",
+      "width": 150,
+      "height": 74,
+      "size": 4613,
+      "uploadedDate": "2021-04-12T22:11:30.910Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00005-1920x1080-ae43ee768d39974ab451f249c6b8b6cc_Snapshot.png",
+      "md5": "1865cd8e61462d8e4f025e74b57efc18",
+      "width": 150,
+      "height": 74,
+      "size": 4396,
+      "uploadedDate": "2021-04-12T22:11:31.542Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00006-1920x1080-62174ef00db91855ee2ca0baf8087442_Snapshot.png",
+      "md5": "1d5d8d1e29833ad2ef9e5f6342a1fa09",
+      "width": 150,
+      "height": 74,
+      "size": 4398,
+      "uploadedDate": "2021-04-12T22:11:32.162Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-04-27T19:23:24.090Z",
+  "lastModifiedDate": "2024-12-18T01:26:44.265Z",
+  "customAttributes": {},
+  "entitlementName": "4a687c8a564e4bee99616ee1ac869824",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b9230410eb304716b6f6d10ae95665f1",
+      "appId": "VrControls_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "Windows"
+      ],
+      "dateAdded": "2021-04-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.3_ue4.26"
+    },
+    {
+      "id": "fdaa9139776a4e8e9f16d8e1efa8be51",
+      "appId": "VrControls_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2021-08-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.5_ue4.27"
+    },
+    {
+      "id": "b030341168f04c81995bdb69dcdb2f1e",
+      "appId": "VrControls_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2022-04-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.7_ue5.0"
+    },
+    {
+      "id": "9df49f44412c4c8ba9c3a03f72ffccd5",
+      "appId": "VrControls_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "Windows"
+      ],
+      "dateAdded": "2022-12-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0_ue5.1"
+    },
+    {
+      "id": "f45a77d92b5340609bb989e7cc975c78",
+      "appId": "VrControls_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2023-06-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0_ue5.2"
+    },
+    {
+      "id": "c9113277a94442f1aff543156248fee7",
+      "appId": "VrControls_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "SteamVR / HTC Vive"
+      ],
+      "dateAdded": "2023-10-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0_ue5.3"
+    },
+    {
+      "id": "bc19ea190ef4451bbea59b89b282d9da",
+      "appId": "VrControls_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "SteamVR / HTC Vive",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "2.0_ue5.4"
+    }
+  ],
+  "developer": "GodeffroyValet",
+  "developerId": "o-ghr2f6qwdpw7374q2yw8kfj4kg3zyc",
+  "endOfSupport": false,
+  "unsearchable": false
+}

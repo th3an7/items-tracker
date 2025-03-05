@@ -1,0 +1,226 @@
+{
+  "id": "2863d90f9db84bd591185b80bbd07260",
+  "title": "Object Creation System",
+  "description": "The Object Creation System is a framework designed to make it easier to implement UObjects and their containers in both blueprint and C++, for both singleplayer and multiplayer.",
+  "longDescription": "<p>This framework will allow you to create <strong>UObjects </strong>and their <strong>Containers</strong> in both <strong>C&#43;&#43;</strong> and <strong>Blueprint. Replication </strong>and <strong>memory management</strong> is handled for you.</p><p>A <strong>Container </strong>is where you store your <strong>UObjects. </strong>Its a custom actor component, so you can add it to any actor of your choice.</p><p>A <strong>Container </strong>can even support replicated <strong>TMap</strong>.</p><p>The <strong>UObjects</strong> inherit the World belonging to the actor their container is added to, so you can call all world functions from the <strong>UObject</strong> itself. For example SpawnActor or LineTracing.</p><p><br /></p><p>Systems created with the framework and some additional features to make your work easier are included.</p><p><strong>Documented</strong> in both C&#43;&#43; and blueprint.</p><p><br /></p><blockquote><a href=\"https://youtu.be/5nRSKdXx0qk\" rel=\"nofollow\">[Video] ExampleLevel</a></blockquote><blockquote><a href=\"https://youtu.be/YedOFAJ3CHg\" rel=\"nofollow\">[Video] Tutorial: Multiplayer inventory system with TMap replication</a></blockquote><blockquote><a href=\"https://youtu.be/OnSvTTJ5Z1M\" rel=\"nofollow\">[Video] Tutorial: All Features</a></blockquote><blockquote><a href=\"https://discord.gg/azWURcymGY\" rel=\"nofollow\">Discord</a></blockquote><blockquote><a href=\"https://docs.google.com/document/d/e/2PACX-1vQgSux1NW3k-KGqS1GtteYPwJHe4gUO5GvwypoZ5wA9zBiZ1USkAtPChK7mMbEUomPfOG9B-sKkoHrV/pub\" rel=\"nofollow\">Documentation</a></blockquote><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h1><em>What does this plugin offer?</em></h1><p><br /></p><ul><li><strong>A framework:</strong> for creating and managing <strong>UObjects </strong>and their <strong>Containers</strong> in both <strong>Blueprint </strong>and <strong>C&#43;&#43;</strong>. Replication and memory management handled for you.</li><li><strong>Systems created with the framework (</strong>All Multiplayer Ready, Events &amp; Setter/Getters<strong>) See below.</strong></li><li><strong>A waypoint system</strong>. UserWidgets that act as in-game markers, with the option to always be on screen. A must have for a mission system. Can be created from anywhere in your world. (WorldSubsystem)</li><li><strong>Tag to text interface </strong>This feature allows you to identify Textblocks with tags, eliminating the need to remember variable names. You can use tags that can be reused for multiple textblocks. For example, you can create tags like UI.Header and UI.Description and bind them to a Textblock, then set the text using the tag. A Custom UserWidget is included that uses the interface.</li><li><strong>A system to listen for float value changes</strong>. Register a GameplayTag with a float value and assign delegates to be called when the value updates. This functionality can be used from anywhere in your world (WorldSubsystem)</li><li><strong>An Example level containing everything above!</strong></li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h1><em>Systems: Singleplayer &amp; Multiplayer Ready.</em></h1><p>* &#61; Uses Replicated TMap in the background.</p><p><br /></p><ul><li><strong>Achievement System: </strong>Create achievement as separate files that use a unique FString identifier. Supports Progress tracking, different states(Hidden,Unlocked,InProgress,Locked) . *</li><li><strong>Mission System: </strong>Create missions as separate files that supports different states(Started,Failed,Completed and much more), Parent/children hierarchy, Timed missions and GameplayTag identifier.</li><li><strong>Item System: </strong>A Simple inventory system with GameplayTag Identifier and Amount tracking. *</li><li><strong>Currency System: </strong>Create your own currency where a GameplayTag act as a Identifier for the main currency(Example: Coin) and its Units(Example: Gold,silver,copper) , supports units Conversion rates. *</li><li><strong>ExperiencePoint System: </strong>An advanced Level and XP system with exponential growth, requiring more and more XP to level up. It&#39;s fully customizable and includes helper functions to work with XP and levels. *</li></ul>",
+  "technicalDetails": "<p>Code Modules:</p><ul><li> ObjectCreationSystem, Runtime</li></ul><p><br /></p><p>Number of Blueprints: 26</p><p>Number of C&#43;&#43; Classes: 23</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Windows, Mac, Linux, IOS, Android. (Only Windows tested, should work on other platforms)</p><p>Supported Target Build Platforms: Windows, Mac, Linux, IOS, Android. (Only Windows tested, should work on other platforms)</p><p>Documentation:<a href=\"https://docs.google.com/document/d/e/2PACX-1vQgSux1NW3k-KGqS1GtteYPwJHe4gUO5GvwypoZ5wA9zBiZ1USkAtPChK7mMbEUomPfOG9B-sKkoHrV/pub\" rel=\"nofollow\">https://docs.google.com/document/d/e/2PACX-1vQgSux1NW3k-KGqS1GtteYPwJHe4gUO5GvwypoZ5wA9zBiZ1USkAtPChK7mMbEUomPfOG9B-sKkoHrV/pub</a></p><p><strong>Example Project</strong>: <em><u>Engine-&gt;Plugins-&gt;ObjectCreationSystem-&gt;OCS_Tutorial</u></em></p><p>Important/Additional Notes:</p><p>You can contact me here: <a href=\"https://discord.gg/azWURcymGY\" rel=\"nofollow\">https://discord.gg/azWURcymGY</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Flexibility-1920x1080-e6427a4b31bdb725bdf78258b6c771be.jpg",
+      "md5": "e6427a4b31bdb725bdf78258b6c771be",
+      "width": 1920,
+      "height": 1080,
+      "size": 360610,
+      "uploadedDate": "2023-08-23T20:16:31.638Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FullSystems-1920x1080-2305c20c44b6e13aa5c2358268efa7b4.jpg",
+      "md5": "2305c20c44b6e13aa5c2358268efa7b4",
+      "width": 1920,
+      "height": 1080,
+      "size": 249316,
+      "uploadedDate": "2023-08-23T20:16:32.649Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Replication-1920x1080-1fe9954fcf37a424b119f4fc077c8cb6.jpg",
+      "md5": "1fe9954fcf37a424b119f4fc077c8cb6",
+      "width": 1920,
+      "height": 1080,
+      "size": 330658,
+      "uploadedDate": "2023-08-23T20:16:35.667Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Integration-1920x1080-cb089f3ef063e4a10d5c82b4b938a019.jpg",
+      "md5": "cb089f3ef063e4a10d5c82b4b938a019",
+      "width": 1920,
+      "height": 1080,
+      "size": 269030,
+      "uploadedDate": "2023-08-23T20:16:33.658Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MemoryManagement-1920x1080-3af8ccd481afcf84dd736b2ed74899c3.jpg",
+      "md5": "3af8ccd481afcf84dd736b2ed74899c3",
+      "width": 1920,
+      "height": 1080,
+      "size": 199109,
+      "uploadedDate": "2023-08-23T20:16:34.564Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/EventDriven-1920x1080-8432c9a1954e465d7174927e210b4268.jpg",
+      "md5": "8432c9a1954e465d7174927e210b4268",
+      "width": 1920,
+      "height": 1080,
+      "size": 246594,
+      "uploadedDate": "2023-08-23T20:16:30.603Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ObjectCreationSystem_thumb-284x284-51ca5f0957015c8d239785216ce59040.png",
+      "md5": "51ca5f0957015c8d239785216ce59040",
+      "width": 284,
+      "height": 284,
+      "size": 25634,
+      "uploadedDate": "2023-08-23T20:16:36.333Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ObjectCreationSystem_featured-894x488-aa58bf95fc352e80087407660abb4d2d.png",
+      "md5": "aa58bf95fc352e80087407660abb4d2d",
+      "width": 894,
+      "height": 488,
+      "size": 70932,
+      "uploadedDate": "2023-08-23T20:16:36.454Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/EventDriven-1920x1080-8432c9a1954e465d7174927e210b4268_Snapshot.jpg",
+      "md5": "48eb497f57c998e10dda43878b178a70",
+      "width": 150,
+      "height": 74,
+      "size": 5454,
+      "uploadedDate": "2023-08-23T20:16:31.292Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Flexibility-1920x1080-e6427a4b31bdb725bdf78258b6c771be_Snapshot.jpg",
+      "md5": "8b5d4f735fc855a98a446f09d1c91da6",
+      "width": 150,
+      "height": 74,
+      "size": 5868,
+      "uploadedDate": "2023-08-23T20:16:32.287Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FullSystems-1920x1080-2305c20c44b6e13aa5c2358268efa7b4_Snapshot.jpg",
+      "md5": "38f0142f9e5c527ed31f1f9f3015e245",
+      "width": 150,
+      "height": 74,
+      "size": 7040,
+      "uploadedDate": "2023-08-23T20:16:33.268Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Integration-1920x1080-cb089f3ef063e4a10d5c82b4b938a019_Snapshot.jpg",
+      "md5": "1a1e041395ceaf6609f6c27c2bb410b0",
+      "width": 150,
+      "height": 74,
+      "size": 6291,
+      "uploadedDate": "2023-08-23T20:16:34.272Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MemoryManagement-1920x1080-3af8ccd481afcf84dd736b2ed74899c3_Snapshot.jpg",
+      "md5": "0501c66b60e0eeda3735e43490d893a5",
+      "width": 150,
+      "height": 74,
+      "size": 6104,
+      "uploadedDate": "2023-08-23T20:16:35.188Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Replication-1920x1080-1fe9954fcf37a424b119f4fc077c8cb6_Snapshot.jpg",
+      "md5": "09c6c9b09a77d56794b5289a4020be25",
+      "width": 150,
+      "height": 74,
+      "size": 6183,
+      "uploadedDate": "2023-08-23T20:16:36.292Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-09-09T15:25:35.212Z",
+  "lastModifiedDate": "2024-12-11T04:34:25.740Z",
+  "customAttributes": {},
+  "entitlementName": "2863d90f9db84bd591185b80bbd07260",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "56c88b8834e34028a50c609a6cb9e351",
+      "appId": "ObjectCreationSystem_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Linux",
+        "iOS",
+        "Android",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2023-08-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.00 5.1"
+    },
+    {
+      "id": "430b5961e16643118528d4757593a482",
+      "appId": "ObjectCreationSystem_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2023-08-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.00 5.2"
+    },
+    {
+      "id": "22c3642c043248a7935f4a0bec752ca8",
+      "appId": "ObjectCreationSystem_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.00 5.3"
+    },
+    {
+      "id": "a70ac35610ea46dfac365914d52817a1",
+      "appId": "ObjectCreationSystem_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Linux",
+        "iOS",
+        "Android",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.00 5.4"
+    }
+  ],
+  "developer": "Sandwich Cake Studios",
+  "developerId": "o-wtglvqdzftwqqxvkgsqjadryx6kdnl",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

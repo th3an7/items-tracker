@@ -1,0 +1,401 @@
+{
+  "id": "1bfb244cddd74aa48a7fc3a3a89f25b5",
+  "title": "Easy Combat Softlock",
+  "description": "A Softlock Target System, that allows to search, rotate and move to a target with different search types. The system is ideally suited for close combat and is intended to prevent missing the target without using a hardlock.",
+  "longDescription": "<p><a href=\"https://youtu.be/FMzc39qZO8Y\" rel=\"nofollow\"><strong>Preview Video</strong></a></p><p><strong>&#xfeff;​</strong><a href=\"https://www.youtube.com/watch?v&#61;MXDsaES0N3M&amp;ab_channel&#61;DrunkenDwarfGames\" rel=\"nofollow\"><strong>Preview Video - Update 1</strong></a></p><p><a href=\"https://drive.google.com/file/d/1zBwo7FzPT34JmzSiMH3R4GF6XM-6e7qG/view?usp&#61;sharing\" rel=\"nofollow\"><strong>Test Project</strong></a> (Version 1.0)</p><p><br /></p><p>Join the <a href=\"https://discord.gg/3HQJ9rs8e9\" rel=\"nofollow\">discord </a>for support.</p><p><br /></p><p>The Easy Combat Softlock System, allows to search, rotate and move to a target with 5 different search types.</p><p><br /></p><p>In contrast to the well-known hardlock system, the Easy Combat Softlock System only locks the target for a short moment and turns / moves the actor to the target.</p><p><br /></p><p><strong>This allowes a dynamic combat against multiple opponents without being tied to a single target, but still allows precise combat. Of course, it also works for single targets.</strong></p><p><br /></p><p><br /></p><p>The system can be used via blueprints and also via animation notify. This allows you to search for your target in every animation for total control.</p><p><br /></p><p>The system has been created for easy handling and needs only 2 minutes to set up.</p><p>Despite the simple handling, many settings are possible to adapt your combat system to all circumstances.</p><p><br /></p><p>The double layer search system allows two search types to be actively used at the same time.</p><p>There are 5 search types:</p><p><br /></p><ol><li>Area</li><li>Actor look direction</li><li>Camera look direction</li><li>Input direction</li><li>Last target</li></ol><p><br /></p><p>More details are in the <a href=\"https://docs.google.com/document/d/1tmss8dzjj5XWLiv748nwA9hC56wG5LqtMVLzgvrPs-o/edit?usp&#61;sharing\" rel=\"nofollow\">documentation</a>.</p><p><br /></p><p><strong><u>Features:</u></strong></p><p><br /></p><ul><li><strong>(NEW)</strong> New Target Type &#34;Custom Target&#34;</li><li><strong>(NEW)</strong> Let your camera rotate to the target as well</li><li><strong>(NEW) </strong>Predict your possible target and mark it with an widget or anything else</li><li><strong>(NEW) </strong>Hardlock System that works hand in hand with all softlock settings and adds new settings to be flexible and easy to work with</li><li><strong>(NEW) </strong>Every variable needed variable has a tooltip for a perfect understanding</li><li>100% Blueprint</li><li>Easy setup and use</li><li> Search for targets with 5 different search types</li><li> Rotate the actor to the focused target</li><li> (Optional): Moves the actor to the focused target</li><li>Double layer search system allows to use a secound search type, if the first one fails</li><li>Usable via blueprints and via animation notify</li><li>Default settings can be overrided at runtime via blueprint <strong>and via animation notify</strong></li></ul><p><br /></p><p><br /></p><p><br /></p><h1>Changelog</h1><p><br /></p><p><strong><u>*** Update 4 (09.2024) ***</u></strong></p><p><br /></p><p><strong>[Added] New Target Type: Custom Target</strong></p><p><br /></p><ul><li>Allows to lock a softlock target, so that is fixed until you change it.</li><li>That also works well for AI, so that a target from the behavior tree or the focus target from the AI Controller can be used for the AI to softlock only to these targets and not calculate others that maybe a better target for that moment.</li><li>This target can be setted directly via a function or you can also use the softlock Interface to set the target to the system. The function is created in the interface already.</li></ul><p><br /></p><p><br /></p><p><strong>[Updated] Performance</strong></p><p><br /></p><ul><li>Rewrote tick usage. Now tick is always off and only is active if hardlock mode is active. This is nessesary to prevent a good hardlock experience. All other functions are moved to other locations to make more performant.</li><li>Convert heavy functions with multible output pins from pure to normal functions, because pure functions triggers for each used output pin again. So we prevent that.</li></ul><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><strong><u>*** Update 3 (07.2024) ***</u> (LAST UPDATE FOR VERSION 4.26!)</strong></p><p><br /></p><p><strong>[Added] Event Dispatcher</strong></p><p><br /></p><ul><li>Now allows the currently triggered target to be output via event dispatcher and the data to be processed better.</li></ul><p><br /></p><p><strong>[Added] Debug Prints</strong></p><p><br /></p><ul><li>For better visual recognition of which target the Softlock system has targeted</li></ul><p><br /></p><p><strong>(Fixed)</strong> An error that occurs when the softlock target is already destroyed</p><p><br /></p><p><strong><u>*** Update 2 (04.2022) ***</u></strong></p><p><br /></p><p><strong>[Added] </strong><u>Hardlock Target Switch</u></p><p><br /></p><ul><li>Now you can toggle your hardlock targets in different directions.</li></ul><p><br /></p><p><br /></p><p><strong>(Fixed</strong>] A widget error if your predicitve target is destroyed</p><p><br /></p><p><br /></p><p><strong><u>*** Update 1 ***</u></strong></p><p><br /></p><p><strong>[Added] </strong><u>Predicitve Targets</u></p><p><br /></p><ul><li>Show possible targets with the help of widgets based</li><li>Calculation based on the current Softlock-Settings in the component</li><li>Settings can easly changed at runtime</li></ul><p><br /></p><p><strong>[Added] </strong><u>Camera Rotation</u></p><p><br /></p><ul><li>Rotate the camera to the current Softlock-Target</li><li>Settings can easly changed at runtime</li><li>Supports changes in the animation notifys as well!</li></ul><p><br /></p><p><strong>[Added] </strong><u>Hardlock System</u></p><p><br /></p><ul><li>Lock on a specific target</li><li>Lock the camera and (optional) the character on the hardlock target</li><li>Mark the target with an widget / symbol to indentify the current target</li><li>Works hand in hand with the main softlock and its settings</li><li>Option to set the softlock target always to the hardlock target</li><li>Tolerance time for broken line of sight</li><li>Distance setting for disable the hardlock at a specific distance</li></ul><p><br /></p><p><br /></p><p><u>Better tooltips</u></p><p><br /></p><ul><li>Add new tooltips boxes</li><li>Add new tooltips to all needed variables</li><li>Add notifys to mostly all of the blueprint nodes</li></ul><p><br /></p><p><br /></p>",
+  "technicalDetails": "<p>Number of Blueprints: 5</p><ol><li>The Softlock component (BPC_Softlock)</li><li>The Interface for the targets (BPI_Softlock)</li><li>The Animation Notify (AN_Softlock)</li><li>The Test-Hud-Widget (WB_HudWidget)</li><li>The Selection Widget (WB_TargetSelection)</li></ol><p><br /></p><p>Network Replicated: No</p><p><br /></p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p><br /></p><p>Documentation: <a href=\"https://docs.google.com/document/d/1tmss8dzjj5XWLiv748nwA9hC56wG5LqtMVLzgvrPs-o/edit?usp&#61;sharing\" rel=\"nofollow\">Easy Combat Softlock Documentation</a></p><p><br /></p><p><br /></p><p>Important/Additional Notes:</p><p><br /></p><ul><li>This is no combat system! Its a target solution and should support you current combat system.</li><li>No animations included! The animations are only for demonstration!</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ThumbnailCombatMarketplaceUE5-1920x1080-a6a3de239f6f13446a953ec67d718470.png",
+      "md5": "a6a3de239f6f13446a953ec67d718470",
+      "width": 1920,
+      "height": 1080,
+      "size": 1464014,
+      "uploadedDate": "2021-06-13T12:31:23.985Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt.PNG-1920x1080-96a2bdd727a9a823cdcde19ae488e6e5.jpg",
+      "md5": "96a2bdd727a9a823cdcde19ae488e6e5",
+      "width": 1920,
+      "height": 1080,
+      "size": 212241,
+      "uploadedDate": "2021-06-01T19:01:12.914Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt10.PNG-1920x1080-be093886e745cdfdd87fcf6000704c8e.jpg",
+      "md5": "be093886e745cdfdd87fcf6000704c8e",
+      "width": 1920,
+      "height": 1080,
+      "size": 607659,
+      "uploadedDate": "2021-06-01T19:01:13.310Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt11.PNG-1920x1080-c2f5d70df1e36d5724d89748b0676e8b.jpg",
+      "md5": "c2f5d70df1e36d5724d89748b0676e8b",
+      "width": 1920,
+      "height": 1080,
+      "size": 500902,
+      "uploadedDate": "2021-06-01T19:01:13.854Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt2.PNG-1920x1080-c5b06b8bffc452484106e1f9e2b81b12.jpg",
+      "md5": "c5b06b8bffc452484106e1f9e2b81b12",
+      "width": 1920,
+      "height": 1080,
+      "size": 491702,
+      "uploadedDate": "2021-06-01T19:01:14.318Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt3.PNG-1920x1080-d1886e0bc2dd165640cd3ba74376f205.jpg",
+      "md5": "d1886e0bc2dd165640cd3ba74376f205",
+      "width": 1920,
+      "height": 1080,
+      "size": 520165,
+      "uploadedDate": "2021-06-01T19:01:14.785Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt4.PNG-1920x1080-f902b4458a7d7551ad11aa0f4f16d9af.jpg",
+      "md5": "f902b4458a7d7551ad11aa0f4f16d9af",
+      "width": 1920,
+      "height": 1080,
+      "size": 633907,
+      "uploadedDate": "2021-06-01T19:01:15.201Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt12.PNG-1920x1080-9e0a2cf0c5d5c30f3970fe04b4c0d8a6.jpg",
+      "md5": "9e0a2cf0c5d5c30f3970fe04b4c0d8a6",
+      "width": 1920,
+      "height": 1080,
+      "size": 561946,
+      "uploadedDate": "2021-06-02T13:52:23.124Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt00-1920x1080-0b07b29a61e269ee1b1c7837364c34a3.png",
+      "md5": "0b07b29a61e269ee1b1c7837364c34a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 1222433,
+      "uploadedDate": "2021-06-02T13:29:26.415Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt13.PNG-1920x1080-82515b85ba6149b360b4b39cf3b4210e.jpg",
+      "md5": "82515b85ba6149b360b4b39cf3b4210e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1092795,
+      "uploadedDate": "2021-06-04T15:20:15.497Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt14.PNG-1920x1080-70782aa86f3d7c25b90514414d1bcade.jpg",
+      "md5": "70782aa86f3d7c25b90514414d1bcade",
+      "width": 1920,
+      "height": 1080,
+      "size": 1122088,
+      "uploadedDate": "2021-06-04T15:20:16.059Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt5.PNG-1920x1080-e198c6c284ca777ec165dcc5b0b8d53b.jpg",
+      "md5": "e198c6c284ca777ec165dcc5b0b8d53b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1349950,
+      "uploadedDate": "2021-06-01T19:01:15.672Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt6.PNG-1920x1080-dee724c413e0ca16d6f9178fb4a66a6e.jpg",
+      "md5": "dee724c413e0ca16d6f9178fb4a66a6e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1176317,
+      "uploadedDate": "2021-06-01T19:01:16.248Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt7.PNG-1920x1080-407049159267adfe56ef0c6b6a8f8af5.jpg",
+      "md5": "407049159267adfe56ef0c6b6a8f8af5",
+      "width": 1920,
+      "height": 1080,
+      "size": 1192180,
+      "uploadedDate": "2021-06-01T19:01:16.781Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt8.PNG-1920x1080-c8a0e13c28bb4807c9c2ace3ae1544b9.jpg",
+      "md5": "c8a0e13c28bb4807c9c2ace3ae1544b9",
+      "width": 1920,
+      "height": 1080,
+      "size": 799890,
+      "uploadedDate": "2021-06-01T19:01:17.277Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Unbenannt9.PNG-1920x1080-9088ffaa2bded9e61157f53951e190e6.jpg",
+      "md5": "9088ffaa2bded9e61157f53951e190e6",
+      "width": 1920,
+      "height": 1080,
+      "size": 669060,
+      "uploadedDate": "2021-06-01T19:01:17.759Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/EasyCombatSoftlock_thumb-284x284-5c01207e70e0a09a0eafdeabe7fc462f.png",
+      "md5": "5c01207e70e0a09a0eafdeabe7fc462f",
+      "width": 284,
+      "height": 284,
+      "size": 97721,
+      "uploadedDate": "2021-06-13T12:31:24.353Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/EasyCombatSoftlock_featured-894x488-bb1aaa53ff401b9fad0e8254f8e774db.png",
+      "md5": "bb1aaa53ff401b9fad0e8254f8e774db",
+      "width": 894,
+      "height": 488,
+      "size": 375785,
+      "uploadedDate": "2021-06-13T12:31:24.458Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThumbnailCombatMarketplaceUE5-1920x1080-a6a3de239f6f13446a953ec67d718470_Snapshot.png",
+      "md5": "867ebd47b9a0e29d64eef0fbbf81d776",
+      "width": 150,
+      "height": 74,
+      "size": 7331,
+      "uploadedDate": "2021-06-13T12:31:24.313Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThumbnailCombatUE5-1920x1080-e7f9b9cedc843e3e87bc2ac9a4b23b7d_Snapshot.png",
+      "md5": "85bd324d217b6bc5ffb51f285c2c2832",
+      "width": 150,
+      "height": 74,
+      "size": 7560,
+      "uploadedDate": "2021-06-13T12:18:31.677Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt13.PNG-1920x1080-82515b85ba6149b360b4b39cf3b4210e_Snapshot.jpg",
+      "md5": "bf6f855d1326eed74f9144fddc1ac005",
+      "width": 150,
+      "height": 74,
+      "size": 4583,
+      "uploadedDate": "2021-06-04T15:20:15.865Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt14.PNG-1920x1080-70782aa86f3d7c25b90514414d1bcade_Snapshot.jpg",
+      "md5": "a7dae89affe5199db9adcce186e066ce",
+      "width": 150,
+      "height": 74,
+      "size": 5532,
+      "uploadedDate": "2021-06-04T15:20:16.387Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt12.PNG-1920x1080-9e0a2cf0c5d5c30f3970fe04b4c0d8a6_Snapshot.jpg",
+      "md5": "0b2781871eb7e63f761f22dcb749ba60",
+      "width": 150,
+      "height": 74,
+      "size": 5580,
+      "uploadedDate": "2021-06-02T13:52:23.472Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt00-1920x1080-0b07b29a61e269ee1b1c7837364c34a3_Snapshot.png",
+      "md5": "6690f6394ed583c6321b4a757039aa4f",
+      "width": 150,
+      "height": 74,
+      "size": 6702,
+      "uploadedDate": "2021-06-02T13:29:26.799Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt.PNG-1920x1080-96a2bdd727a9a823cdcde19ae488e6e5_Snapshot.jpg",
+      "md5": "802932089de807775d3ac4df8206a10a",
+      "width": 150,
+      "height": 74,
+      "size": 3979,
+      "uploadedDate": "2021-06-01T19:01:13.151Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt10.PNG-1920x1080-be093886e745cdfdd87fcf6000704c8e_Snapshot.jpg",
+      "md5": "6b2524f744ea8e8c86c743eefcc222d1",
+      "width": 150,
+      "height": 74,
+      "size": 5256,
+      "uploadedDate": "2021-06-01T19:01:13.702Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt11.PNG-1920x1080-c2f5d70df1e36d5724d89748b0676e8b_Snapshot.jpg",
+      "md5": "5dd597d0b1fd24fa5e97a985210a8aa8",
+      "width": 150,
+      "height": 74,
+      "size": 4213,
+      "uploadedDate": "2021-06-01T19:01:14.177Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt2.PNG-1920x1080-c5b06b8bffc452484106e1f9e2b81b12_Snapshot.jpg",
+      "md5": "a1f0a6b55a06c3c704e3f1951650095e",
+      "width": 150,
+      "height": 74,
+      "size": 4830,
+      "uploadedDate": "2021-06-01T19:01:14.612Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt3.PNG-1920x1080-d1886e0bc2dd165640cd3ba74376f205_Snapshot.jpg",
+      "md5": "543226ca859cb424792886ba8f792abd",
+      "width": 150,
+      "height": 74,
+      "size": 4906,
+      "uploadedDate": "2021-06-01T19:01:15.083Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt4.PNG-1920x1080-f902b4458a7d7551ad11aa0f4f16d9af_Snapshot.jpg",
+      "md5": "17bddf3829bc2fc2ce4e47d63bbfbca7",
+      "width": 150,
+      "height": 74,
+      "size": 5511,
+      "uploadedDate": "2021-06-01T19:01:15.507Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt5.PNG-1920x1080-e198c6c284ca777ec165dcc5b0b8d53b_Snapshot.jpg",
+      "md5": "7274cefb2d6d006c155a2e7208b6a305",
+      "width": 150,
+      "height": 74,
+      "size": 5729,
+      "uploadedDate": "2021-06-01T19:01:16.059Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt6.PNG-1920x1080-dee724c413e0ca16d6f9178fb4a66a6e_Snapshot.jpg",
+      "md5": "f88a082877334399c59d098606c702cb",
+      "width": 150,
+      "height": 74,
+      "size": 5494,
+      "uploadedDate": "2021-06-01T19:01:16.600Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt7.PNG-1920x1080-407049159267adfe56ef0c6b6a8f8af5_Snapshot.jpg",
+      "md5": "76dedc73fd795a18835812e8e5b0e218",
+      "width": 150,
+      "height": 74,
+      "size": 5895,
+      "uploadedDate": "2021-06-01T19:01:17.150Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt8.PNG-1920x1080-c8a0e13c28bb4807c9c2ace3ae1544b9_Snapshot.jpg",
+      "md5": "1fe950b619f47e0b5112a58ff1d59048",
+      "width": 150,
+      "height": 74,
+      "size": 6246,
+      "uploadedDate": "2021-06-01T19:01:17.588Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Unbenannt9.PNG-1920x1080-9088ffaa2bded9e61157f53951e190e6_Snapshot.jpg",
+      "md5": "19452e4b087cea7ba5b658fa0b57c9d4",
+      "width": 150,
+      "height": 74,
+      "size": 5029,
+      "uploadedDate": "2021-06-01T19:01:18.060Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ThumbnailCombatMarketplace-1920x1080-1a1997cc5d095acfb65a1e12349753ce_Snapshot.png",
+      "md5": "9e02700fc6736fa0cc343bd6a09e8265",
+      "width": 150,
+      "height": 74,
+      "size": 6359,
+      "uploadedDate": "2021-06-01T18:40:17.622Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-06-05T08:36:55.200Z",
+  "lastModifiedDate": "2024-12-11T23:24:39.267Z",
+  "customAttributes": {},
+  "entitlementName": "1bfb244cddd74aa48a7fc3a3a89f25b5",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "23ce8182c20d4fad8bed6cfafb730a36",
+      "appId": "EasyComb1bfb244cddd7V6",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-11-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Easy_Softlock_4.26_v1.3"
+    },
+    {
+      "id": "60dd45752f82464e821768286116523d",
+      "appId": "EasyComb1bfb244cddd7V5",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2021-08-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Easy_Softlock_4.27_v1.4"
+    },
+    {
+      "id": "b7855e434f6149d79995039179a81b9c",
+      "appId": "EasyComb1bfb244cddd7V7",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Easy_Softlock_5.00_v1.4"
+    }
+  ],
+  "developer": "DrunkenDwarfGames",
+  "developerId": "o-yw43wuvc645q3s3cz4ey5xhyevze56",
+  "endOfSupport": false,
+  "unsearchable": false
+}

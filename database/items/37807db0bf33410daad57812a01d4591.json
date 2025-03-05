@@ -1,0 +1,526 @@
+{
+  "id": "37807db0bf33410daad57812a01d4591",
+  "title": "Procedural Environment Generator (WFC)",
+  "description": "Wave Function Collapse algorithm for procedural environment generation",
+  "longDescription": "<p><em>Generate 3D or 2D environments (game levels, buildings, etc.) with </em><a href=\"https://github.com/mxgmn/WaveFunctionCollapse\" rel=\"nofollow\"><em>Wave Function Collapse</em></a><strong><em> </em></strong><em>algorithm. </em></p><p><br /></p><p>Set the cubic (or rectangular parallelepiped) nodes and connection rules for them inside the Blueprint preview window and press the <strong>Generate</strong> button to automatically form a level.</p><p><br /></p><p>Use one of many Blueprint functions like <strong>Generate Meshes Async</strong> to generate and spawn your static meshes or custom Blueprints in <strong>Runtime</strong>. You can set different constraints and <strong>append your level in runtime</strong> allowing you to create <strong>infinite levels</strong>.</p><p><a href=\"https://github.com/yvvan/ProceduralEnvironmentGenerator/blob/master/documentation.md\" rel=\"nofollow\"><strong>Documentation</strong></a></p><p><a href=\"https://www.youtube.com/playlist?list&#61;PLsrW-AKNS-U5YTcoE5yfGFMcC4f5kdJGS\" rel=\"nofollow\"><strong>Playlist with tutorials</strong></a><strong> </strong></p><p><a href=\"https://twitter.com/yvvan3\" rel=\"nofollow\">Twitter</a></p><p><a href=\"https://discord.com/invite/2jPCKAWPT9\" rel=\"nofollow\">Discord server</a></p><p><br /></p><p><strong>Buildings</strong> from the screenshots were generated with <a href=\"https://drive.google.com/file/d/1DMLZUmtDLUE0Anz53TOImB3OJuSRBcec\" rel=\"nofollow\">this example project</a>, to work it requires <a href=\"https://www.unrealengine.com/marketplace/en-US/product/modular-building-set\" rel=\"nofollow\">free modular building set</a>. The yellow stairs example could be found directly in the Content of this plugin.</p><p><br /></p><p>The latest features:</p><ul><li>(Full version) Big TIles support (tile for several slots with multiple connections)</li><li>(Full version) Reject not walkable paths after the generation is ready</li><li>(Full version) Show generation process in Editor</li><li>(Full version) Show placeholders and for the selected nodes: collapse/remove/add to fixed</li><li>(Full version) Walkable paths with more than 2 ends</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Optimized 3D <a href=\"https://github.com/mxgmn/WaveFunctionCollapse\" rel=\"nofollow\">WFC</a> generator with backtracking</li><li>Draw WFC components and their connections inside Blueprint preview window</li><li>Replace components with your custom Blueprints (allows to use multiple meshes for one voxel)</li><li>Show the <strong>Seed </strong>and allow to enter the custom seed to reproduce the previous generation</li><li>Export and Import the plugins settings</li><li>(Full version) Setting custom heights for different floors</li><li>(Full version) Auto-map components and custom Blueprints by name</li><li>(Full version) Generate actors at any time of the game (synchronously or asynchronously)</li><li>(Full version) Replication of the actors generated in game</li><li>(Full version) Spawn instanced static meshes instead of actors</li><li>(Full version) Continuously build level around the character with or without removing the old voxels</li><li>(Full version) Set constraints: <strong>symmetric levels</strong> (by X and/or Y axis), <strong>walkable paths</strong>, fixed components (single or range), components max count</li></ul><p>Code Modules:</p><ul><li> WfcEnvironmentGenerator - Runtime</li><li>WfcEnvironmentGeneratorEditor - Editor</li></ul><p>Number of Blueprints: 2</p><p>Number of C&#43;&#43; Classes: 5 UCLASS, 2 UENUM, 3 USTRUCT, 20 plain C&#43;&#43; classes/structs</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Win64, Win32, Linux, Mac</p><p>Supported Target Build Platforms: Win64, Win32, Linux, Mac</p><p>Documentation: <a href=\"https://github.com/yvvan/WfcEnvironmentGenerator/blob/master/README.md\" rel=\"nofollow\">Readme.md</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/buildings2-1920x1080-4771c586d34843c0c64dbc5a2ac3b729.png",
+      "md5": "4771c586d34843c0c64dbc5a2ac3b729",
+      "width": 1920,
+      "height": 1080,
+      "size": 1412662,
+      "uploadedDate": "2021-01-02T11:54:05.681Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/buildings1-1920x1080-3ccaf456e270175de41a0b4a4ed54b20.png",
+      "md5": "3ccaf456e270175de41a0b4a4ed54b20",
+      "width": 1920,
+      "height": 1080,
+      "size": 1464310,
+      "uploadedDate": "2021-01-02T11:54:06.107Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/wfcsettings3-1920x1080-279ede5737224118e9b0464e0ce664c4.png",
+      "md5": "279ede5737224118e9b0464e0ce664c4",
+      "width": 1920,
+      "height": 1080,
+      "size": 521076,
+      "uploadedDate": "2021-01-05T20:32:27.399Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/wfcsettings2-1920x1080-4468b8ab551d6e03317d58033e620db9.png",
+      "md5": "4468b8ab551d6e03317d58033e620db9",
+      "width": 1920,
+      "height": 1080,
+      "size": 932880,
+      "uploadedDate": "2021-01-05T20:32:27.785Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/wfcsettings1-1920x1080-407c07dcc672d87e98b98037463ae946.png",
+      "md5": "407c07dcc672d87e98b98037463ae946",
+      "width": 1920,
+      "height": 1080,
+      "size": 971743,
+      "uploadedDate": "2021-01-05T20:32:28.199Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/wfccharacter-1920x1080-6e769d4603b3dc7cdd56fd42cbab2b81.jpg",
+      "md5": "6e769d4603b3dc7cdd56fd42cbab2b81",
+      "width": 1920,
+      "height": 1080,
+      "size": 231414,
+      "uploadedDate": "2021-01-05T20:32:28.577Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ProceduralEnvironmentGeneratorWFC_thumb-284x284-ed93a407d40bd45fcb0a3543f7756e4f.png",
+      "md5": "ed93a407d40bd45fcb0a3543f7756e4f",
+      "width": 284,
+      "height": 284,
+      "size": 112691,
+      "uploadedDate": "2021-01-06T16:20:06.955Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ProceduralEnvironmentGenerator_featured-894x488-6846cc21a44c6cc34b9afc8681b7b31e.png",
+      "md5": "6846cc21a44c6cc34b9afc8681b7b31e",
+      "width": 894,
+      "height": 488,
+      "size": 429238,
+      "uploadedDate": "2020-02-01T14:16:43.924Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wfcsettings3-1920x1080-279ede5737224118e9b0464e0ce664c4_Snapshot.png",
+      "md5": "b5663197a9bf4e5e30b2b43f1d1559ec",
+      "width": 150,
+      "height": 74,
+      "size": 6652,
+      "uploadedDate": "2021-01-05T20:32:27.649Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wfcsettings2-1920x1080-4468b8ab551d6e03317d58033e620db9_Snapshot.png",
+      "md5": "200dff264cd5d204b386cf36a2900fea",
+      "width": 150,
+      "height": 74,
+      "size": 6991,
+      "uploadedDate": "2021-01-05T20:32:28.019Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wfcsettings1-1920x1080-407c07dcc672d87e98b98037463ae946_Snapshot.png",
+      "md5": "709c866763e71647f9b2d7a1df78b85a",
+      "width": 150,
+      "height": 74,
+      "size": 7188,
+      "uploadedDate": "2021-01-05T20:32:28.463Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wfccharacter-1920x1080-6e769d4603b3dc7cdd56fd42cbab2b81_Snapshot.jpg",
+      "md5": "75e4d8612cb655b8a981018129f4ddba",
+      "width": 150,
+      "height": 74,
+      "size": 6406,
+      "uploadedDate": "2021-01-05T20:32:28.801Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/buildings2-1920x1080-4771c586d34843c0c64dbc5a2ac3b729_Snapshot.png",
+      "md5": "d1e415e7f8bb377579d816ca2a060344",
+      "width": 150,
+      "height": 74,
+      "size": 4617,
+      "uploadedDate": "2021-01-02T11:54:05.956Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/buildings1-1920x1080-3ccaf456e270175de41a0b4a4ed54b20_Snapshot.png",
+      "md5": "506d43f7740593ebed4a0d3e18fea24d",
+      "width": 150,
+      "height": 74,
+      "size": 5075,
+      "uploadedDate": "2021-01-02T11:54:06.425Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/wfccharacter-1920x1080-8cdff5b8897ccc21096cd937b7b176ca_Snapshot.png",
+      "md5": "9bb385d4263d645bb996818b4b9ef3b2",
+      "width": 150,
+      "height": 74,
+      "size": 7012,
+      "uploadedDate": "2020-07-23T15:35:11.062Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc8-1920x1080-596eb31696ac0dd205d4fae5eb937469_Snapshot.png",
+      "md5": "9e3c63c0d37deba0f9146648b1406e3d",
+      "width": 150,
+      "height": 74,
+      "size": 5972,
+      "uploadedDate": "2020-02-21T20:57:21.807Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc2-1920x1080-bef50deaac8e8afcbfa0e3d1d3990297_Snapshot.png",
+      "md5": "2f3019bd3f2ab44f1db8835b9921d243",
+      "width": 150,
+      "height": 74,
+      "size": 8036,
+      "uploadedDate": "2020-02-01T14:16:41.982Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc1-1920x1080-f5f4b5d42aa74611286cb7abbf30eb0d_Snapshot.png",
+      "md5": "8a092716320228d97a3dffbef7a90251",
+      "width": 150,
+      "height": 74,
+      "size": 6901,
+      "uploadedDate": "2020-02-01T14:16:42.355Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc3-1920x1080-e3c5a11b679d16a9eb166bb620afb3ba_Snapshot.png",
+      "md5": "07bde8935feb101d0af4803a118dbee3",
+      "width": 150,
+      "height": 74,
+      "size": 6552,
+      "uploadedDate": "2020-02-01T14:16:42.772Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc7-1920x1080-c7a2da6f6abc1565ca151068aaa1c010_Snapshot.png",
+      "md5": "a537e6eba6f9577a37a7341ecbeed751",
+      "width": 150,
+      "height": 74,
+      "size": 6979,
+      "uploadedDate": "2020-02-01T14:16:43.162Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc6-1920x1080-595c63e49d39a42c49b2266709a32d87_Snapshot.png",
+      "md5": "fc582f9f2e5956ebe8fffaab15bffb85",
+      "width": 150,
+      "height": 74,
+      "size": 4546,
+      "uploadedDate": "2020-02-01T14:16:43.821Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc1-1920x1080-fdf27d0c91c626a5cc3b2289748c6bf2_Snapshot.png",
+      "md5": "1dee3657a9ce80c6db0ae79c9c5bf470",
+      "width": 150,
+      "height": 74,
+      "size": 7398,
+      "uploadedDate": "2020-01-29T11:20:29.287Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc2-1920x1080-e83fc4f5d07c7edc1f57d19c8ed99ec3_Snapshot.png",
+      "md5": "e4e96cbcde6c0c8719ed77305ea6ee32",
+      "width": 150,
+      "height": 74,
+      "size": 7842,
+      "uploadedDate": "2020-01-29T11:20:29.687Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc3-1920x1080-2dfbd1ff3be54aec9fa3e78c91a8ca2e_Snapshot.png",
+      "md5": "902a31a6187b2a62b1433aa09c499873",
+      "width": 150,
+      "height": 74,
+      "size": 6813,
+      "uploadedDate": "2020-01-29T11:20:30.062Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc6-1920x1080-942735710bb23dd2e4461ff6fe6feca1_Snapshot.png",
+      "md5": "5afe50a369c72f031443ec63eeef3cc7",
+      "width": 150,
+      "height": 74,
+      "size": 4749,
+      "uploadedDate": "2020-01-29T11:20:30.523Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc5-1920x1080-29a44d8141b4df9e4d726f85fd209085_Snapshot.png",
+      "md5": "a73f918ab8d0c31be2218acb969f3606",
+      "width": 150,
+      "height": 74,
+      "size": 7045,
+      "uploadedDate": "2020-01-29T11:20:30.908Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc1-1920x1080-b6c33e835674e9160df11b550bdf8c69_Snapshot.png",
+      "md5": "efab7111461f928e019b36d0528a5809",
+      "width": 150,
+      "height": 74,
+      "size": 6859,
+      "uploadedDate": "2020-01-15T21:23:21.091Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc2-1920x1080-347cc3b39c48f0b012776246d005c526_Snapshot.png",
+      "md5": "b25e3988144f377f94b3f223c92f8ead",
+      "width": 150,
+      "height": 74,
+      "size": 7549,
+      "uploadedDate": "2020-01-15T21:23:21.823Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc3-1920x1080-4f90c5dfead3c525315410065d29f6ba_Snapshot.png",
+      "md5": "572010a832b82df8da094760332531ef",
+      "width": 150,
+      "height": 74,
+      "size": 6645,
+      "uploadedDate": "2020-01-15T21:23:22.243Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc4-1920x1080-3714c768698f78c1a9242eca3cae4eb8_Snapshot.png",
+      "md5": "0b3d0dfef2b26fd0fcb7a04ef24b94a2",
+      "width": 150,
+      "height": 74,
+      "size": 5601,
+      "uploadedDate": "2020-01-15T21:23:22.790Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Wfc5-1920x1080-8e5405d9582b23356cfd0dd8dcaf4157_Snapshot.png",
+      "md5": "ba23195039e4041cc94588042ea43161",
+      "width": 150,
+      "height": 74,
+      "size": 6671,
+      "uploadedDate": "2020-01-15T21:23:23.237Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2020-02-03T18:23:42.270Z",
+  "lastModifiedDate": "2024-10-29T19:26:24.970Z",
+  "customAttributes": {},
+  "entitlementName": "37807db0bf33410daad57812a01d4591",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "5d038d354b61489b9220b31318986f18",
+      "appId": "WfcEnvironmentGenerator_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux",
+        "Mac",
+        "PS4",
+        "Xbox One",
+        "Android",
+        "iOS",
+        "SteamVR / HTC Vive",
+        "Gear VR",
+        "Oculus",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2020-01-15T00:00:00.000Z",
+      "releaseNote": "Button to add placeholders to fixed components list",
+      "versionTitle": "7.5"
+    },
+    {
+      "id": "417b11c61b26426f8d246fa0ba2294e4",
+      "appId": "WfcEnvironmentGenerator_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Linux",
+        "Gear VR",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2020-11-18T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "8.01"
+    },
+    {
+      "id": "60120b40866549a393112d1fff0b741c",
+      "appId": "WfcEnvironmentGenerator_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-12-08T00:00:00.000Z",
+      "releaseNote": "Allow to call some functions from Blueprints",
+      "versionTitle": "8.22"
+    },
+    {
+      "id": "e636b02268ce48278d03930e1f3ee7f9",
+      "appId": "WfcEnvironmentGenerator_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Gear VR",
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2021-08-22T00:00:00.000Z",
+      "releaseNote": "Fix update",
+      "versionTitle": "8.6"
+    },
+    {
+      "id": "318e35cec14f4a8589524b323d3c6167",
+      "appId": "WfcEnvironmentGenerator_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Gear VR",
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "Fix update",
+      "versionTitle": "8.61"
+    },
+    {
+      "id": "4571c242d6ae4c78bf9800e56d46e932",
+      "appId": "WfcEnvironmentGenerator_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2022-12-14T00:00:00.000Z",
+      "releaseNote": "Fix update",
+      "versionTitle": "8.62"
+    },
+    {
+      "id": "bf8e3c4967f143bfb30f13cf47afd193",
+      "appId": "WfcEnvironmentGenerator_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-06-22T00:00:00.000Z",
+      "releaseNote": "Build from the correct source branch",
+      "versionTitle": "8.63"
+    },
+    {
+      "id": "f3902424b4f44a719134970d4fe538be",
+      "appId": "WfcEnvironmentGenerator_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-01-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "8.64"
+    },
+    {
+      "id": "adba5644cb0144e7acb2c56d68118d1a",
+      "appId": "WfcEnvironmentGenerator_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Xbox One",
+        "Windows"
+      ],
+      "dateAdded": "2024-05-16T00:00:00.000Z",
+      "releaseNote": "Support new UE version",
+      "versionTitle": "8.65"
+    }
+  ],
+  "developer": "Ivan Donchevskii",
+  "developerId": "o-6sflyauelmyu6vr37gcblfrw6ysewk",
+  "endOfSupport": false,
+  "unsearchable": false
+}

@@ -1,0 +1,569 @@
+{
+  "id": "fe86c1275f1e412fa3f813f5b031eb47",
+  "title": "GAS Companion",
+  "description": "Ever wanted to use GAS without any C++ knowledge ? Leveraging the power of the Gameplay Ability System, this plugin provides a starting template and a robust foundation to speed up the creation and development of GAS based projects.",
+  "longDescription": "<p><a href=\"https://gascompanion.github.io/\" rel=\"nofollow\">Documentation</a> / <a href=\"https://discord.gg/d4rs4vcX6t\" rel=\"nofollow\">Discord Server</a> / <a href=\"https://github.com/GASCompanion/GASCompanionDemo/releases\" rel=\"nofollow\">Example Project</a> / <a href=\"https://gascompanion.github.io/changelog\" rel=\"nofollow\">Changelog</a></p><p><br /></p><p><strong><em>Last Update: </em>Jun 26, 2024<em> (6.1.0 for 5.2, 5.3, 5.4)</em></strong></p><p><br /></p><p>GAS Companion aims to be a general base for GAS powered projects without making any game design choices. The various parts of the system are intended to be subclassed and customized per project needs.</p><p><br /></p><p>It includes the necessary initial C&#43;&#43; setup, helpers and additional features to get started on a new project that aims to use Epic&#39;s GAS plugin (used namely in Fortnite and Paragon, and showcased in Action RPG project)</p><p><br /></p><p>It enables non C&#43;&#43; developers to work with GAS using only Blueprints. Even non BP friendly, c&#43;&#43; required parts of GAS like Gameplay Attributes can be handled with a custom C&#43;&#43; generation Wizard for Attribute Sets.</p><p><br /></p><p>Similarly, GAS Companion can help existing projects that are considering the use of GAS and accelerate the implementation, or provide guidance.</p><ul><li><strong>Support for Modular Gameplay and Game Features</strong> (5.0 / 4.27 only)</li><li><strong>Enhanced Input Integration</strong> (5.0 / 4.27 only)</li><li><strong>Provided as a Plugin</strong> to easily share code between projects</li><li><strong>Blueprint Friendly</strong>, no need to dive into the cpp side, you can implement Abilities right away</li><li><strong>C&#43;&#43; Friendly too!</strong> You can easily extend from the provided C&#43;&#43; class and / or modify the plugin source.</li><li><strong>Not Game Specific</strong> The plugin doesn&#39;t make any assumptions about your game design and decisions, and was built to be generic enough to be used in any kind of game.</li><li><strong>Flexible AttributeSet / Attributes framework </strong>Generate custom Attributes from the Editor with a hand-crafted AttributeSet Wizard.</li><li><strong>Ability Queue System</strong> (with a Debug Widget! more information below)</li><li><strong>Ignore Ability Cost</strong> feature (Possibility to &#34;loosely&#34; check cost for Abilities, more information <a href=\"https://gascompanion.github.io/ignore-ability-cost\" rel=\"nofollow\">here</a>)</li><li><strong>Melee Combo System </strong>Easy way to define melee abilities with combo capabilities</li><li><strong>Gameplay Ability / Effects Definitions</strong> Data Driven way to specify common parent GA / GE classes that are accessible through File Menu</li><li><strong>Straightforward UI framework </strong>with HUD UserWidget able to react to GAS related events (Support for custom attributes and events to listen for GameplayTags, GameplayEffects and CooldownStart / End)</li><li><strong>AttributeSet default setup</strong> with most commonly used Attributes (Health, Stamina, Mana)</li><li><strong>ASC on PlayerState</strong> (for Player characters) or on Pawns (for AI / NPC Characters)</li><li><strong>AI Tasks </strong>Activate Abilities by Tags or Class from Behavior Trees</li></ul><p><br /></p><p><strong>Features</strong></p><p><br /></p><p><strong>Ability Queue System</strong></p><ul><li>Store failed abilities and re-trigger when the previous running ability ends</li></ul><p><br /></p><p><strong>Custom AbilitySystemComponent and GameplayAbility</strong></p><ul><li>Support for startup Attributes, Effects and Abilities</li><li>Activate abilities by Class / Tags (and return the activated ability)</li><li>Abilities with onAbilityEnded delegate (useful for Behavior Tree Tasks)</li><li>Abilities with Gameplay Effect Containers (inspired by Action RPG project)</li></ul><p><br /></p><p><strong>Modular Gameplay Actors</strong></p><ul><li>Supports extension by Game Features and implements IAbilitySystemInterface</li></ul><p><br /></p><p><strong>Component based </strong>Most of the API is provided by Actor Components (Core / Combo / Ability Queue)</p><ul><li>Ability System helpers (Ability activation, Checking for GameplayTags, ...)</li><li>Ability, Attributes and Character lifecycle Events (OnAbilityActivated / Commit / Ended / Failed, OnAttributeChange, OnDamage, OnDeath, OnGameplayTagChange, OnGameplayEffectStackChange, OnCooldownStart / End, ...)</li></ul>",
+  "technicalDetails": "<p>Code Modules:</p><ul><li>GASCompanion (Runtime)</li><li>GASCompanionEditor (Editor)</li><li>GASCompanionDeveloper (UncookedOnly)</li></ul><p><br /></p><p>Number of Blueprints: 19</p><p>Number of C&#43;&#43; Classes: 103</p><p>Network Replicated: Yes</p><p>Version: <strong>6.1.0 </strong>(5.2, 5.3, 5.4) - <strong>6.0.0 </strong>(5.0 / 5.1)</p><ul><li>Supported Development Platforms: Windows, Mac, Linux</li><li>Supported Target Build Platforms: Windows, Mac, Linux</li></ul><p>Version: <strong>3.4.0 </strong>(4.27)<strong> </strong>/ <strong>2.1.1 </strong>(4.26)<strong> / 1.1.2 </strong>(4.24-4.25)</p><ul><li>Supported Development Platforms: Windows / Mac</li><li>Supported Target Build Platforms: Windows, Mac</li></ul><p><br /></p><p>Important/Additional Notes: Although it should support all the mentioned platforms above, this plugin has been tested exclusively on Windows.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/gallery01-1920x1080-25aa78ec0992b95d509a412e97219d72.png",
+      "md5": "25aa78ec0992b95d509a412e97219d72",
+      "width": 1920,
+      "height": 1080,
+      "size": 96941,
+      "uploadedDate": "2021-04-21T23:50:06.679Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/docs-1920x1080-defa12b1fdbd3b0f439bc15a470bff64.png",
+      "md5": "defa12b1fdbd3b0f439bc15a470bff64",
+      "width": 1920,
+      "height": 1080,
+      "size": 211891,
+      "uploadedDate": "2021-05-04T20:21:39.553Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/menuattributeswizard-1920x1080-876250de5f48aa482d0ff69afa579b89.png",
+      "md5": "876250de5f48aa482d0ff69afa579b89",
+      "width": 1920,
+      "height": 1080,
+      "size": 249114,
+      "uploadedDate": "2021-05-04T20:17:55.595Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/attributeswizard-1920x1080-741bc49f8c68e24087cfa2c6610d5c4a.png",
+      "md5": "741bc49f8c68e24087cfa2c6610d5c4a",
+      "width": 1920,
+      "height": 1080,
+      "size": 88032,
+      "uploadedDate": "2021-05-04T20:17:55.721Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/customhud-1920x1080-80fdbbb5e447bb4c00851db1e062d368.png",
+      "md5": "80fdbbb5e447bb4c00851db1e062d368",
+      "width": 1920,
+      "height": 1080,
+      "size": 565812,
+      "uploadedDate": "2021-08-03T11:42:47.363Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/combo02-1920x1080-d6b31434947a26b948c39ce57cc93301.png",
+      "md5": "d6b31434947a26b948c39ce57cc93301",
+      "width": 1920,
+      "height": 1080,
+      "size": 431094,
+      "uploadedDate": "2021-06-10T22:10:46.146Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/queuesystemdebug-1920x1080-423d150e79a6620b091ca8226f9bc296.png",
+      "md5": "423d150e79a6620b091ca8226f9bc296",
+      "width": 1920,
+      "height": 1080,
+      "size": 498544,
+      "uploadedDate": "2021-04-21T23:50:07.470Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/projectsettings-1920x1080-2dd925e3fc2b703169614e969edf65b0.png",
+      "md5": "2dd925e3fc2b703169614e969edf65b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 67730,
+      "uploadedDate": "2021-08-03T11:42:47.183Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/configge-1920x1080-dccbad8dfc394bf6092e1b807d601352.png",
+      "md5": "dccbad8dfc394bf6092e1b807d601352",
+      "width": 1920,
+      "height": 1080,
+      "size": 69080,
+      "uploadedDate": "2021-06-10T22:10:45.830Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/configga-1920x1080-335e36f3c18fdd7fbd5baff0ef5a1fb9.png",
+      "md5": "335e36f3c18fdd7fbd5baff0ef5a1fb9",
+      "width": 1920,
+      "height": 1080,
+      "size": 46853,
+      "uploadedDate": "2021-06-10T22:10:45.984Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/apicharacterbase-1920x1080-3816b97488cbfbed263b23e1e4d772c0.png",
+      "md5": "3816b97488cbfbed263b23e1e4d772c0",
+      "width": 1920,
+      "height": 1080,
+      "size": 197121,
+      "uploadedDate": "2021-04-21T23:50:07.012Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/attributeevents-1920x1080-0133bc0bd4b08c5e2125ce78068172b5.png",
+      "md5": "0133bc0bd4b08c5e2125ce78068172b5",
+      "width": 1920,
+      "height": 1080,
+      "size": 156425,
+      "uploadedDate": "2021-05-04T20:17:55.873Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/bt-1920x1080-caf32043651289daecd99aa44defd9c5.png",
+      "md5": "caf32043651289daecd99aa44defd9c5",
+      "width": 1920,
+      "height": 1080,
+      "size": 110165,
+      "uploadedDate": "2021-04-21T23:50:07.330Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/GASCompanionGameplayAbilitySystemTemplateandStarterKit_thumb-284x284-1da59b376441f889c4fb453c8e537758.png",
+      "md5": "1da59b376441f889c4fb453c8e537758",
+      "width": 284,
+      "height": 284,
+      "size": 24131,
+      "uploadedDate": "2021-04-21T12:38:04.800Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/GASCompanionGameplayAbilitySystemTemplateandStarterKit_featured-894x488-cf410b3537ccac9b4fe449df60e0b7f7.png",
+      "md5": "cf410b3537ccac9b4fe449df60e0b7f7",
+      "width": 894,
+      "height": 488,
+      "size": 59590,
+      "uploadedDate": "2021-04-21T13:05:19.475Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/launchpad-1920x1080-926dc3cfda4577bbb1aef68e4b9fac7d_Snapshot.png",
+      "md5": "2ee24df249ef7ede43cc9da3b6e500b6",
+      "width": 150,
+      "height": 74,
+      "size": 4051,
+      "uploadedDate": "2021-08-03T11:42:46.598Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/agrintegrationsample-1920x1080-a51a76817700f2a26ad0bcc105d9ce6d_Snapshot.png",
+      "md5": "0b5ce86e3160d9e53907a5c15a198aff",
+      "width": 150,
+      "height": 74,
+      "size": 5174,
+      "uploadedDate": "2021-08-03T11:42:46.815Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/alsintegration-1920x1080-41312491e203483dc34ce272e95e0d21_Snapshot.png",
+      "md5": "a65b601a71e1f6220cbdb4331e59c182",
+      "width": 150,
+      "height": 74,
+      "size": 5208,
+      "uploadedDate": "2021-08-03T11:42:47.068Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/projectsettings-1920x1080-2dd925e3fc2b703169614e969edf65b0_Snapshot.png",
+      "md5": "d24b8f2cd8f7a2c3402d63a85382b347",
+      "width": 150,
+      "height": 74,
+      "size": 2766,
+      "uploadedDate": "2021-08-03T11:42:47.250Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/customhud-1920x1080-80fdbbb5e447bb4c00851db1e062d368_Snapshot.png",
+      "md5": "4e7732a08bb12169242449f75ad84aa1",
+      "width": 150,
+      "height": 74,
+      "size": 6078,
+      "uploadedDate": "2021-08-03T11:42:47.458Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/launchpad-1920x1080-3662b21ce6e23244a1a1f4de5c8b3dd2_Snapshot.png",
+      "md5": "78c6a58431e082bcb300f754ecf29534",
+      "width": 150,
+      "height": 74,
+      "size": 3722,
+      "uploadedDate": "2021-06-10T22:10:45.745Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/configge-1920x1080-dccbad8dfc394bf6092e1b807d601352_Snapshot.png",
+      "md5": "88da37ffd5a2a04569c1b8b453c60a16",
+      "width": 150,
+      "height": 74,
+      "size": 3925,
+      "uploadedDate": "2021-06-10T22:10:45.896Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/configga-1920x1080-335e36f3c18fdd7fbd5baff0ef5a1fb9_Snapshot.png",
+      "md5": "0671c21ab56e95b6d3824901524133b0",
+      "width": 150,
+      "height": 74,
+      "size": 3000,
+      "uploadedDate": "2021-06-10T22:10:46.046Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/combo02-1920x1080-d6b31434947a26b948c39ce57cc93301_Snapshot.png",
+      "md5": "7de3866e6a061dde310a5d5b64f0a611",
+      "width": 150,
+      "height": 74,
+      "size": 5120,
+      "uploadedDate": "2021-06-10T22:10:46.221Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/docs-1920x1080-defa12b1fdbd3b0f439bc15a470bff64_Snapshot.png",
+      "md5": "2c96e405f1fc2a78b17ce600d0e32b2e",
+      "width": 150,
+      "height": 74,
+      "size": 3302,
+      "uploadedDate": "2021-05-04T20:21:39.678Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/menuattributeswizard-1920x1080-876250de5f48aa482d0ff69afa579b89_Snapshot.png",
+      "md5": "ccd173a2b92e5ce17fe7800d346e48e4",
+      "width": 150,
+      "height": 74,
+      "size": 5290,
+      "uploadedDate": "2021-05-04T20:17:55.671Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/attributeswizard-1920x1080-741bc49f8c68e24087cfa2c6610d5c4a_Snapshot.png",
+      "md5": "a4e20dadfa85cfc40a7b9264dded8b15",
+      "width": 150,
+      "height": 74,
+      "size": 4110,
+      "uploadedDate": "2021-05-04T20:17:55.788Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/attributeevents-1920x1080-0133bc0bd4b08c5e2125ce78068172b5_Snapshot.png",
+      "md5": "4f6393a320e0b3e6d8be85d82d736c1f",
+      "width": 150,
+      "height": 74,
+      "size": 4820,
+      "uploadedDate": "2021-05-04T20:17:55.959Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/config-1920x1080-7819b7cd2b5ea1e7a84846909b985015_Snapshot.png",
+      "md5": "cb230066601dcbf89a85306fa19a588c",
+      "width": 150,
+      "height": 74,
+      "size": 3647,
+      "uploadedDate": "2021-05-04T20:17:56.165Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery01-1920x1080-25aa78ec0992b95d509a412e97219d72_Snapshot.png",
+      "md5": "615a510bdb26a7bc8bb4c801019544f7",
+      "width": 150,
+      "height": 74,
+      "size": 4109,
+      "uploadedDate": "2021-04-21T23:50:06.752Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/docs-1920x1080-b41b0cc2496d6c1a88794229fa668bb9_Snapshot.png",
+      "md5": "75505b53951804cd6477d23b2ab92c8f",
+      "width": 150,
+      "height": 74,
+      "size": 3299,
+      "uploadedDate": "2021-04-21T23:50:06.935Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/apicharacterbase-1920x1080-3816b97488cbfbed263b23e1e4d772c0_Snapshot.png",
+      "md5": "94cd74235315271d0692f1446f153dc4",
+      "width": 150,
+      "height": 74,
+      "size": 6326,
+      "uploadedDate": "2021-04-21T23:50:07.160Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ascandbpfunctionlibrary-1920x1080-61fed8f9d57268504cc6a18384177266_Snapshot.png",
+      "md5": "f3f1c60ed52d5707fedaa6894ee61f91",
+      "width": 150,
+      "height": 74,
+      "size": 4588,
+      "uploadedDate": "2021-04-21T23:50:07.273Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bt-1920x1080-caf32043651289daecd99aa44defd9c5_Snapshot.png",
+      "md5": "ba65cd42c0a1b6329aa556065575c230",
+      "width": 150,
+      "height": 74,
+      "size": 4127,
+      "uploadedDate": "2021-04-21T23:50:07.412Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/queuesystemdebug-1920x1080-423d150e79a6620b091ca8226f9bc296_Snapshot.png",
+      "md5": "36cea83eb8c63a519b485d782765f45c",
+      "width": 150,
+      "height": 74,
+      "size": 4619,
+      "uploadedDate": "2021-04-21T23:50:07.566Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/galleryhudgrid-1920x1080-3e4e8bd4667c795146681d3aedc847d7_Snapshot.png",
+      "md5": "42d92a05c43dac25f249adbf2451c293",
+      "width": 150,
+      "height": 74,
+      "size": 5746,
+      "uploadedDate": "2021-04-21T23:50:07.735Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/settings-1920x1080-500dd66ae1cce6cf6102c03216549935_Snapshot.png",
+      "md5": "cdf6196a6ff3695cb43c3a9aaf6eb49b",
+      "width": 150,
+      "height": 74,
+      "size": 3955,
+      "uploadedDate": "2021-04-21T23:50:07.849Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/huddefault-1920x1080-2c4d8ed708a7a874979d737b282dab37_Snapshot.png",
+      "md5": "6808d1c3fa3eac1a81476f4ca7d5e252",
+      "width": 150,
+      "height": 74,
+      "size": 4079,
+      "uploadedDate": "2021-04-21T23:50:08.086Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/hudminimalist-1920x1080-ca1b98103e1405da9b8fc357be921aeb_Snapshot.png",
+      "md5": "23188c86483006796ddd7e5261552d4e",
+      "width": 150,
+      "height": 74,
+      "size": 4292,
+      "uploadedDate": "2021-04-21T23:50:08.269Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/hudtopleft-1920x1080-60599ed6b3e836cdaf2b5f8cabacb057_Snapshot.png",
+      "md5": "6bfd9efd5710a677f9e7963bdc9461c2",
+      "width": 150,
+      "height": 74,
+      "size": 4214,
+      "uploadedDate": "2021-04-21T23:50:08.470Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery03-1920x1080-da1e29e9cd1bfb7309a90091040f265e_Snapshot.png",
+      "md5": "4e06e9221ae8158c98756a0601617371",
+      "width": 150,
+      "height": 74,
+      "size": 3951,
+      "uploadedDate": "2021-04-21T13:20:59.897Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery01-1920x1080-673642017b85c74dcae96c3a84b41cef_Snapshot.png",
+      "md5": "47d35415ec22c50645b5bd8132f3b5aa",
+      "width": 150,
+      "height": 74,
+      "size": 4093,
+      "uploadedDate": "2021-04-21T13:05:19.433Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery01-1920x1080-62d93db3572a2c4eaebfe89880a8dad7_Snapshot.png",
+      "md5": "be7ad8aef87ce49bb51fab8724a72121",
+      "width": 150,
+      "height": 74,
+      "size": 2774,
+      "uploadedDate": "2021-04-16T13:08:10.054Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/gallery01-1920x1080-226f2ad2c4086bc217706398b1c171c9_Snapshot.png",
+      "md5": "2098048c98eb941db83e7b6471ddff77",
+      "width": 150,
+      "height": 74,
+      "size": 828,
+      "uploadedDate": "2021-04-15T18:45:07.030Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-04-23T18:54:05.002Z",
+  "lastModifiedDate": "2024-11-13T00:10:26.750Z",
+  "customAttributes": {},
+  "entitlementName": "fe86c1275f1e412fa3f813f5b031eb47",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3ab97af21d0442a2b9d4d44e6499c24a",
+      "appId": "GASCompanion_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-04-21T00:00:00.000Z",
+      "releaseNote": "Fix for UI when playing as Client - Plugin for 4.24\n\nSorry about the last minute changes, this should be the last fix before release.",
+      "versionTitle": "1.1.2-4.24"
+    },
+    {
+      "id": "9bbb21130f674015bef152e2fbd6d265",
+      "appId": "GASCompanion_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-04-21T00:00:00.000Z",
+      "releaseNote": "Fix for UI when playing as Client - Plugin for 4.25\n\nSorry about the last minute changes, this should be the last fixes before release.",
+      "versionTitle": "1.1.2-4.25"
+    },
+    {
+      "id": "c4d730c9d4474eb088aa94824fede78e",
+      "appId": "GASCompanion_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Xbox One",
+        "PS4",
+        "Mac"
+      ],
+      "dateAdded": "2021-04-15T00:00:00.000Z",
+      "releaseNote": "2.1.1 - New patch version",
+      "versionTitle": "2.1.1-4.26"
+    },
+    {
+      "id": "676d49e15fe94441ba433f426e8fe11c",
+      "appId": "GASCompanion_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "PS4",
+        "Mac"
+      ],
+      "dateAdded": "2021-09-09T00:00:00.000Z",
+      "releaseNote": "3.4.0 - Minor version (Changelog: https://gascompanion.github.io/changelog)",
+      "versionTitle": "3.4.0-4.27"
+    },
+    {
+      "id": "bb007630cb524c0db57871f2c9cf3fe9",
+      "appId": "GASCompanion_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2022-04-07T00:00:00.000Z",
+      "releaseNote": "6.0.0 - https://gascompanion-dev.netlify.app/changelog/#6.0.0-(2023-06-29)",
+      "versionTitle": "6.0.0-5.0"
+    },
+    {
+      "id": "0d05b152fb914a129431091c5bc2addc",
+      "appId": "GASCompanion_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "6.0.0 - https://gascompanion-dev.netlify.app/changelog/#6.0.0-(2023-06-29)",
+      "versionTitle": "6.0.0-5.1"
+    },
+    {
+      "id": "34c0e2a9b78d4adaadfd3a71198c2cae",
+      "appId": "GASCompanion_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac"
+      ],
+      "dateAdded": "2023-06-08T00:00:00.000Z",
+      "releaseNote": "6.1.0 - https://gascompanion.github.io/changelog/",
+      "versionTitle": "6.1.0-5.2"
+    },
+    {
+      "id": "3c88a6a9930b43449399671667525de1",
+      "appId": "GASCompanion_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "6.1.0 - https://gascompanion.github.io/changelog/",
+      "versionTitle": "6.1.0-5.3"
+    },
+    {
+      "id": "c9e6c88214c5462298068548f6712f0c",
+      "appId": "GASCompanion_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-04-23T00:00:00.000Z",
+      "releaseNote": "6.1.0 - https://gascompanion.github.io/changelog/",
+      "versionTitle": "6.1.0-5.4"
+    }
+  ],
+  "developer": "mklabs",
+  "developerId": "o-wb6e67ez838gnwv5286l3l9f74lmfj",
+  "endOfSupport": false,
+  "unsearchable": false
+}

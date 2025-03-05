@@ -1,0 +1,436 @@
+{
+  "id": "89754aa0ebbd44fbb396511c36e134a7",
+  "title": "Modular Animated Dryad",
+  "description": "Dryad - Modular animated customizable 3d character.",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;JfNh57UQupA\" rel=\"nofollow\">Technical Video (UE4)</a></p><p><br /></p><p>Dryad - Modular animated customizable 3d character for games. Customizable color for hair, eyes and flowers. Dryad&#39;s flowers and leafs can fall down (or up) and grow up on her body again. Branches on head and arms made with bones with small scale to hide it in body. Dryad have special tree transition, idle and cast animations which could be used for magic, life regen etc. Leafs grows up with morpheme, but it swaps to cloth simulation model leafs when it needs to fall. There are no particles.</p><p><br /></p><h2>Asset contains:</h2><p><br /></p><h2>Models:</h2><p><br /></p><p>SK_Dryad and SK_Dryad2 - 2 different full bodies with eyes and leafs (they differ in branches on the head) - have no hair or other additional models on it.</p><p><br /></p><h2>Separate models:</h2><ul><li>SK_Dryad_Body1 and SK_Dryad_Body2 - different separate bodies with eyes (differ in branches on the head)</li><li>SK_Dryad_Bow(have the same skeleton as Dryad)</li><li>SK_Dryad_Flower1 with growth morpheme (based on a separate skeleton to use it in multiple sockets)</li><li>SK_Dryad_Flower1_Falling_down - falling down petals (made with cloth simulation)</li><li>SK_Dryad_Flower1_Falling_up - falling up petals (made with cloth simulation)</li><li>SK_Dryad_Hair - hair on head (with cloth simulation)</li><li>SK_Dryad_Hair_Up - grasslike hair on head (grows up with negative gravity value in cloth simulation)</li><li>SK_Dryad_Leafs - leafs for 1st body with growth morphem</li><li>SK_Dryad_Leafs2 - leafs for 2nd body with growth morphem</li><li>SK_Dryad_Leafs_Fall_Down - leafs for 1st body with cloth simulation falls down</li><li>SK_Dryad_Leafs_Fall_Up - leafs for 1st body with cloth simulation falls up</li><li>SK_Dryad_Leafs2_Fall_Down - leafs for 2nd body with cloth simulation falls down</li><li>SK_Dryad_Leafs2_Fall_Up - leafs for 2nd body with cloth simulation falls up</li><li>SK_Dryad_Quiver</li><li>SK_Dryad_Skirt - uses quiver&#39;s and hair materials, have body morphing in belt part and cloth simulation on lower part</li><li>SM_Dryad_Arrow1 - static mesh</li><li>SM_Dryad_Pipe - static mesh</li></ul><h2>Materials:</h2><ul><li>7 different skins for body (4k textures)</li><li>6 skins for leafs - hazel, oak, birch, pine, sakura and maple (1024)</li><li>bow/quiver/pipe common material</li><li>eyes material</li><li>hair material</li></ul><h2>Animations:</h2><ol><li>Anim_Dryad_bow_damage</li><li>Anim_Dryad_bow_damage2</li><li>Anim_Dryad_bow_draw</li><li>Anim_Dryad_bow_hit1</li><li>Anim_Dryad_bow_idle</li><li>Anim_Dryad_bow_run</li><li>Anim_Dryad_bow_walk</li><li>Anim_Dryad_dance</li><li>Anim_Dryad_double_weapons_damage</li><li>Anim_Dryad_double_weapons_death</li><li>Anim_Dryad_double_weapons_draw</li><li>Anim_Dryad_double_weapons_hit1</li><li>Anim_Dryad_double_weapons_hit2</li><li>Anim_Dryad_double_weapons_hit3</li><li>Anim_Dryad_double_weapons_idle</li><li>Anim_Dryad_idle</li><li>Anim_Dryad_idle_fix_hair</li><li>Anim_Dryad_idle_look_around</li><li>Anim_Dryad_idle_obey_left</li><li>Anim_Dryad_idle_obey_left_start</li><li>Anim_Dryad_idle_obey_right</li><li>Anim_Dryad_idle_obey_right_start</li><li>Anim_Dryad_idle_tree1_damage</li><li>Anim_Dryad_idle_tree1_death</li><li>Anim_Dryad_idle_tree1_loop</li><li>Anim_Dryad_idle_tree1_start</li><li>Anim_Dryad_idle_tree2_damage</li><li>Anim_Dryad_idle_tree2_death</li><li>Anim_Dryad_idle_tree2_finish_cast</li><li>Anim_Dryad_idle_tree2_loop</li><li>Anim_Dryad_idle_tree2_start</li><li>Anim_Dryad_idle_tree3_damage</li><li>Anim_Dryad_idle_tree3_death</li><li>Anim_Dryad_idle_tree3_finish_cast</li><li>Anim_Dryad_idle_tree3_loop</li><li>Anim_Dryad_idle_tree3_start</li><li>Anim_Dryad_music_bow_loop1</li><li>Anim_Dryad_music_bow_start</li><li>Anim_Dryad_music_pipe_loop1</li><li>Anim_Dryad_music_pipe_loop2</li><li>Anim_Dryad_music_pipe_start</li><li>Anim_Dryad_pipe_damage</li><li>Anim_Dryad_pipe_hit1</li><li>Anim_Dryad_pipe_idle</li><li>Anim_Dryad_pipe_idle_finish</li><li>Anim_Dryad_run</li><li>Anim_Dryad_walk</li></ol><h2>Morphemes:</h2><p>Every Dryad body has basic morphemes:</p><ol><li>mouth_open</li><li>anger</li><li>sad</li><li>sleep</li><li>smile</li><li>Leafs_Off (for leafs growth)</li><li>old (for transform to old ugly kikimora :-))</li></ol><h2>Blueprint:</h2><p>BP_Dryad variables:</p><ul><li>HairColor</li><li>EyesColor</li><li>FlowersColor</li><li>Leafs_scale - regulates the final leafs size after growth (float)</li><li>Model2 - turn on the 2nd body and leafs (boolean)</li><li>Fall - turn on the fall possibility (usefull for deciduous Dryads but should be turn off for pine Dryad) (boolean)</li><li>Fall_up - turn on the upward fall possibility (boolean)</li><li>Flowers - shows and hide flowers(boolean)</li><li>Age - regulates the &#34;old&#34; morpheme on skirt, body and quiver meshes (float)</li></ul><h2>Additional bones:</h2><ul><li>88 bones for branches named Bone_Dryad_XXX (XXX is number of bone)</li><li>4 bones for bow: Bone_weapon_bow_01 -&gt; Bone_weapon_bow_04</li><li>Bone_weapon_R for pipe</li><li>Bone_weapon_bow_arrow for arrow and bow animations (in most animations scaled to 0,1% and hiden in right index finger)</li><li>Bone_eye_R and Bone_eye_L for eyes rotation</li></ul>",
+  "technicalDetails": "<p>Rigged: (Yes)</p><p>Rigged to Epic skeleton: (Yes)</p><p>If rigged to the Epic skeleton, IK bones are included: (Yes)</p><p>Animated: (Yes)</p><p>Number of Animations: 47</p><p>Animation types (In-place): 47</p><p>Number of characters: 2</p><p>Vertex counts of characters: 19825/18973</p><p>Number of Materials and Material Instances: 17</p><p>Number of Textures: 28</p><p>Texture Resolutions: 4k - body, 4k - hair, 2k - bow, 1k - leafs</p><p>Supported Development Platforms:</p><p>Windows: (Yes)</p><p>Mac: (Yes)</p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Dryadmodular3dcharacterUE4-1-1920x1080-21ba9ca1759c58fc46e751d1738d5448.jpg",
+      "md5": "21ba9ca1759c58fc46e751d1738d5448",
+      "width": 1920,
+      "height": 1080,
+      "size": 1414300,
+      "uploadedDate": "2023-04-02T22:09:32.439Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-16-14-1920x1080-9acd6573280715dcdcd7fea157460089.jpg",
+      "md5": "9acd6573280715dcdcd7fea157460089",
+      "width": 1920,
+      "height": 1080,
+      "size": 1182043,
+      "uploadedDate": "2023-04-02T22:09:33.338Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-26-00-1920x1080-0920d8d36c762c237e61ac926c9cd6bd.jpg",
+      "md5": "0920d8d36c762c237e61ac926c9cd6bd",
+      "width": 1920,
+      "height": 1080,
+      "size": 1116097,
+      "uploadedDate": "2023-04-02T22:09:34.246Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-21-07-1920x1080-bfb3f8ccccabec0ebb137a9f0ba8706e.jpg",
+      "md5": "bfb3f8ccccabec0ebb137a9f0ba8706e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1603791,
+      "uploadedDate": "2023-03-30T15:13:58.003Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-16-48-1920x1080-211a4e0d9c8d66c4c965e08da3c3a61a.jpg",
+      "md5": "211a4e0d9c8d66c4c965e08da3c3a61a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1257752,
+      "uploadedDate": "2023-04-02T22:09:35.123Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-21-44-1920x1080-ae4a8ed8bb91cc78a7b6948f23eb5085.jpg",
+      "md5": "ae4a8ed8bb91cc78a7b6948f23eb5085",
+      "width": 1920,
+      "height": 1080,
+      "size": 1526957,
+      "uploadedDate": "2023-04-02T22:09:36.115Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-17-05-1920x1080-96f33276582607f07fae0039fbbfb1a0.jpg",
+      "md5": "96f33276582607f07fae0039fbbfb1a0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1364507,
+      "uploadedDate": "2023-04-02T22:09:37.049Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-17-39-1920x1080-e98064e1d7e78949f6f3c7bbc129a5fc.jpg",
+      "md5": "e98064e1d7e78949f6f3c7bbc129a5fc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1453687,
+      "uploadedDate": "2023-04-02T22:09:37.992Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-18-36-1920x1080-882b5373193b41f9b832985d21e167f2.jpg",
+      "md5": "882b5373193b41f9b832985d21e167f2",
+      "width": 1920,
+      "height": 1080,
+      "size": 1443494,
+      "uploadedDate": "2023-04-02T22:09:38.958Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-18-00-1920x1080-c0bca57892f0fd1dae76e8909c755ae7.jpg",
+      "md5": "c0bca57892f0fd1dae76e8909c755ae7",
+      "width": 1920,
+      "height": 1080,
+      "size": 1128089,
+      "uploadedDate": "2023-04-02T22:09:40.036Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-18-19-1920x1080-f352a1fdf688fac4a9242827b97bd144.jpg",
+      "md5": "f352a1fdf688fac4a9242827b97bd144",
+      "width": 1920,
+      "height": 1080,
+      "size": 1093168,
+      "uploadedDate": "2023-04-02T22:09:40.925Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-16-00-1920x1080-18e65e302ce837e09fa30105916a8692.jpg",
+      "md5": "18e65e302ce837e09fa30105916a8692",
+      "width": 1920,
+      "height": 1080,
+      "size": 1200560,
+      "uploadedDate": "2023-04-02T22:09:41.810Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-19-25-1920x1080-e8bd6f73925dcbbadc443b2951a5a2c4.jpg",
+      "md5": "e8bd6f73925dcbbadc443b2951a5a2c4",
+      "width": 1920,
+      "height": 1080,
+      "size": 967655,
+      "uploadedDate": "2023-04-02T22:09:42.735Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-18-46-1920x1080-00978abc125525e56eada40ce9d8475f.jpg",
+      "md5": "00978abc125525e56eada40ce9d8475f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1060085,
+      "uploadedDate": "2023-04-02T22:09:43.634Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-19-39-1920x1080-8e539f7f81903b54b832406541a8f521.jpg",
+      "md5": "8e539f7f81903b54b832406541a8f521",
+      "width": 1920,
+      "height": 1080,
+      "size": 1612015,
+      "uploadedDate": "2023-04-02T22:09:44.582Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-20-17-1920x1080-69271ee82f08190bb34bdc68d828cdcc.jpg",
+      "md5": "69271ee82f08190bb34bdc68d828cdcc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1362747,
+      "uploadedDate": "2023-04-02T22:09:45.568Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-47-00-1920x1080-a54a4fac5b0be2c1cb404a0f0d952d62.jpg",
+      "md5": "a54a4fac5b0be2c1cb404a0f0d952d62",
+      "width": 1920,
+      "height": 1080,
+      "size": 884017,
+      "uploadedDate": "2023-04-02T22:09:46.481Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-47-08-1920x1080-cfbb32de6cfd7b6a94673d7929d6301a.jpg",
+      "md5": "cfbb32de6cfd7b6a94673d7929d6301a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1125232,
+      "uploadedDate": "2023-04-02T22:09:47.405Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot2023-03-2916-47-30-1920x1080-5613eb7ff5a61f3c511cf9ce15f2ee1a.jpg",
+      "md5": "5613eb7ff5a61f3c511cf9ce15f2ee1a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1128897,
+      "uploadedDate": "2023-04-02T22:09:48.286Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ModularAnimatedDryad_thumb-284x284-df578b0bc53c2c0e75b88a8294d28b90.png",
+      "md5": "df578b0bc53c2c0e75b88a8294d28b90",
+      "width": 284,
+      "height": 284,
+      "size": 122664,
+      "uploadedDate": "2023-04-03T08:46:46.085Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ModularAnimatedDryad_featured-894x488-8d041cc235075370f0e0f86330a9a96e.png",
+      "md5": "8d041cc235075370f0e0f86330a9a96e",
+      "width": 894,
+      "height": 488,
+      "size": 660621,
+      "uploadedDate": "2023-03-30T15:13:58.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Dryadmodular3dcharacterUE4-1-1920x1080-21ba9ca1759c58fc46e751d1738d5448_Snapshot.jpg",
+      "md5": "a3d6be5905c2db7bf4151f011f5570a1",
+      "width": 150,
+      "height": 74,
+      "size": 7103,
+      "uploadedDate": "2023-04-02T22:09:33.039Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-16-14-1920x1080-9acd6573280715dcdcd7fea157460089_Snapshot.jpg",
+      "md5": "387daa87bc6dd4b779d59e41f48e89d5",
+      "width": 150,
+      "height": 74,
+      "size": 6515,
+      "uploadedDate": "2023-04-02T22:09:33.936Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-26-00-1920x1080-0920d8d36c762c237e61ac926c9cd6bd_Snapshot.jpg",
+      "md5": "33af0263b5b7ac09e24d39bef205d23f",
+      "width": 150,
+      "height": 74,
+      "size": 6974,
+      "uploadedDate": "2023-04-02T22:09:34.802Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-16-48-1920x1080-211a4e0d9c8d66c4c965e08da3c3a61a_Snapshot.jpg",
+      "md5": "d2d4518b4ddde3df3823979ad920acd8",
+      "width": 150,
+      "height": 74,
+      "size": 6832,
+      "uploadedDate": "2023-04-02T22:09:35.768Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-21-44-1920x1080-ae4a8ed8bb91cc78a7b6948f23eb5085_Snapshot.jpg",
+      "md5": "0d1488b00b4ad94c7717b5a20a1a6af5",
+      "width": 150,
+      "height": 74,
+      "size": 7272,
+      "uploadedDate": "2023-04-02T22:09:36.724Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-17-05-1920x1080-96f33276582607f07fae0039fbbfb1a0_Snapshot.jpg",
+      "md5": "53e5e49fe301e0542904004031aa7fd4",
+      "width": 150,
+      "height": 74,
+      "size": 8377,
+      "uploadedDate": "2023-04-02T22:09:37.685Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-17-39-1920x1080-e98064e1d7e78949f6f3c7bbc129a5fc_Snapshot.jpg",
+      "md5": "ddb09a98401435fa11045dfe11214c01",
+      "width": 150,
+      "height": 74,
+      "size": 7844,
+      "uploadedDate": "2023-04-02T22:09:38.596Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-18-36-1920x1080-882b5373193b41f9b832985d21e167f2_Snapshot.jpg",
+      "md5": "02da5ca16a63303df856942de0711a00",
+      "width": 150,
+      "height": 74,
+      "size": 8219,
+      "uploadedDate": "2023-04-02T22:09:39.615Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-18-00-1920x1080-c0bca57892f0fd1dae76e8909c755ae7_Snapshot.jpg",
+      "md5": "119a68f6a63728efecc16a5dc9b055dd",
+      "width": 150,
+      "height": 74,
+      "size": 6736,
+      "uploadedDate": "2023-04-02T22:09:40.597Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-18-19-1920x1080-f352a1fdf688fac4a9242827b97bd144_Snapshot.jpg",
+      "md5": "4113a00e2aa8dce37796970ddce2773d",
+      "width": 150,
+      "height": 74,
+      "size": 6039,
+      "uploadedDate": "2023-04-02T22:09:41.510Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-16-00-1920x1080-18e65e302ce837e09fa30105916a8692_Snapshot.jpg",
+      "md5": "9732ba4a0685059b9b46e5c8549a9967",
+      "width": 150,
+      "height": 74,
+      "size": 6930,
+      "uploadedDate": "2023-04-02T22:09:42.383Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-19-25-1920x1080-e8bd6f73925dcbbadc443b2951a5a2c4_Snapshot.jpg",
+      "md5": "dedde69ccc1c8b0de8d69a2eac019db4",
+      "width": 150,
+      "height": 74,
+      "size": 6433,
+      "uploadedDate": "2023-04-02T22:09:43.290Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-18-46-1920x1080-00978abc125525e56eada40ce9d8475f_Snapshot.jpg",
+      "md5": "df9f94173ed4567e1da1f3890fd55eb6",
+      "width": 150,
+      "height": 74,
+      "size": 6495,
+      "uploadedDate": "2023-04-02T22:09:44.201Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-19-39-1920x1080-8e539f7f81903b54b832406541a8f521_Snapshot.jpg",
+      "md5": "44b8bacdec390055c10326afb991351c",
+      "width": 150,
+      "height": 74,
+      "size": 8577,
+      "uploadedDate": "2023-04-02T22:09:45.198Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-20-17-1920x1080-69271ee82f08190bb34bdc68d828cdcc_Snapshot.jpg",
+      "md5": "dab0a14007dca96604a527646c8f8b12",
+      "width": 150,
+      "height": 74,
+      "size": 7364,
+      "uploadedDate": "2023-04-02T22:09:46.163Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-47-00-1920x1080-a54a4fac5b0be2c1cb404a0f0d952d62_Snapshot.jpg",
+      "md5": "ba83a37d86fa01494e9aff524194c786",
+      "width": 150,
+      "height": 74,
+      "size": 5521,
+      "uploadedDate": "2023-04-02T22:09:47.025Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-47-08-1920x1080-cfbb32de6cfd7b6a94673d7929d6301a_Snapshot.jpg",
+      "md5": "2f7514b7b61540e397e8c8ec43c8a80a",
+      "width": 150,
+      "height": 74,
+      "size": 5567,
+      "uploadedDate": "2023-04-02T22:09:47.954Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-47-30-1920x1080-5613eb7ff5a61f3c511cf9ce15f2ee1a_Snapshot.jpg",
+      "md5": "c01730ff5c9e03865f0db96fca677969",
+      "width": 150,
+      "height": 74,
+      "size": 6244,
+      "uploadedDate": "2023-04-02T22:09:48.841Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot2023-03-2916-21-07-1920x1080-bfb3f8ccccabec0ebb137a9f0ba8706e_Snapshot.jpg",
+      "md5": "63c80457cdfd1a7c4da11c4d7db6e838",
+      "width": 150,
+      "height": 74,
+      "size": 7714,
+      "uploadedDate": "2023-03-30T15:13:58.617Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/characters"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-04-02T22:14:44.191Z",
+  "lastModifiedDate": "2024-10-24T09:50:24.790Z",
+  "customAttributes": {},
+  "entitlementName": "89754aa0ebbd44fbb396511c36e134a7",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "80b4cb2d182c4322bb4c0337bc7552b2",
+      "appId": "ModularA89754aa0ebbdV1",
+      "compatibleApps": [
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac"
+      ],
+      "dateAdded": "2023-03-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ue4"
+    },
+    {
+      "id": "025f213268174a8c8d4dd796e8cdd45b",
+      "appId": "ModularA89754aa0ebbdV2",
+      "compatibleApps": [
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac"
+      ],
+      "dateAdded": "2023-03-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ue5"
+    }
+  ],
+  "developer": "Pers3D",
+  "developerId": "o-wpc2yehgt86nrt6hffycad7by3b3u3",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,507 @@
+{
+  "id": "ccd4f29207794e108e25d5235b627102",
+  "title": "MultiPacker Redux",
+  "description": "MultiPacker Redux: Pack, Generate and Bake, Faster than ever.",
+  "longDescription": "<p>MultiPacker Redux is an Unreal Engine 4 Plugin editor for manipulating Textures and Baking Materials, Channel Packing or Generating SDF Masks; everything is done inside Unreal Engine.</p><p><br /></p><p>It&#39;s an evolution on the basis on MultiPacker, better global performance 4k, the ability to work with Textures from outside the project.</p><p><br /></p><p><strong>-Channel Pack:</strong> An standard to save memory usage on Textures.</p><p><strong>-SDF Masks:</strong> With a minimal texture footprint, gets incredible results.</p><p><strong>-Bake Material:</strong> From a Selected Property Material bake the result to a Texture.</p><p><strong>-Atlas Packing:</strong> Pack Multiple Textures on a Single Texture.</p><p><br /></p><p><strong>Why a new Plugin?</strong></p><ul><li>The old MultiPacker needed a complete rewrite on the code, many parts of the editor are hard to use; all the changes needed breaks the compatibility, for that reason was needed a new Plugin, not a version update.</li><li>The plugin are update to take advantage of the new Unreal Engine functions featured on newer versions (4.23&gt;), Editor Utility Widget, Subsystem, Global Shader...</li><li>Blueprints Functions accessible on Editor Utility Widget, it allows everyone to have a Editor specialized by the user.</li></ul><p><br /></p><p><strong>Future Plans for the Plugin: </strong><a href=\"https://bit.ly/2SkYla6\" rel=\"nofollow\">Google Docs</a></p>",
+  "technicalDetails": "<p><strong>Information about the next update:</strong></p><ul><li>The next updates will have minor changes, small fixes and update to 4.25.</li></ul><p><br /></p><p><strong>Features</strong>:</p><ul><li>Work with Textures <strong>without </strong>the need to be imported on the project.</li><li>Pack Channels, better performance on textures bigger than 2k.</li><li>Generate a SDF from a Mask.</li><li>Bake a Material from a Selected Property Material, and can get the Material from a Specific StaticMesh or SkeletalMesh.</li></ul><p><strong>Code Modules</strong>:</p><ul><li>MPRTabsEd [Editor]</li><li>MPRShader [Developer]</li><li>MPRRuntime[Runtime]</li></ul><p><strong>Number of Blueprints</strong>: 13</p><p><strong>Number of C&#43;&#43; Classes</strong>: 2 (Public)</p><p><strong>Network Replicated</strong>: Yes</p><p><strong>Supported Development Platforms</strong>: Win64, Win32.</p><p><strong>Supported Target Build Platforms</strong>: All</p><p><br /></p><p><strong>Project Example CustomEditor:</strong>\t<a href=\"https://bit.ly/3c5uf1F\" rel=\"nofollow\">CustomEditor</a>  Project made from BP  v2 (4.23&gt;)(Needs the Plugin installed)</p><p><strong>How To Use the Plugin Editors:</strong> <a href=\"https://bit.ly/2yYK0t7\" rel=\"nofollow\">Google Docs</a></p><p><strong>Documentation</strong>: <a href=\"https://bit.ly/3f6xOr6\" rel=\"nofollow\">Google Docs</a></p><p><strong>Roadmap:</strong> <a href=\"https://bit.ly/3cV6RVg\" rel=\"nofollow\">GoogleDocs</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPRTittlev7-1920x1080-1679836294e5f92269f6e68fe5819d5c.png",
+      "md5": "1679836294e5f92269f6e68fe5819d5c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1517705,
+      "uploadedDate": "2020-05-11T13:51:37.825Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPRChannelv6-1920x1080-c9578b3c089ffa902abd44d11e21f0c3.png",
+      "md5": "c9578b3c089ffa902abd44d11e21f0c3",
+      "width": 1920,
+      "height": 1080,
+      "size": 702117,
+      "uploadedDate": "2020-04-26T01:59:52.696Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPRMaterialBakerv6-1920x1080-87aaf06b863345862ca3478d1512e64d.png",
+      "md5": "87aaf06b863345862ca3478d1512e64d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1267407,
+      "uploadedDate": "2020-04-26T01:59:53.624Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPRSDFv6-1920x1080-c0e8b13ab76c2491999085092a09217b.png",
+      "md5": "c0e8b13ab76c2491999085092a09217b",
+      "width": 1920,
+      "height": 1080,
+      "size": 228254,
+      "uploadedDate": "2020-04-26T01:59:53.178Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPRPackerv6-1920x1080-88fa5c6e76fbf45c2b498a16545990fc.png",
+      "md5": "88fa5c6e76fbf45c2b498a16545990fc",
+      "width": 1920,
+      "height": 1080,
+      "size": 308200,
+      "uploadedDate": "2020-04-30T13:11:41.418Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPRMaterialNodev6-1920x1080-26b6adc132b7174969a39b896543314c.png",
+      "md5": "26b6adc132b7174969a39b896543314c",
+      "width": 1920,
+      "height": 1080,
+      "size": 485251,
+      "uploadedDate": "2020-04-30T13:11:41.880Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPRBlueprintsv4-1920x1080-f7020c31bb7f7b524cd8ce2d51c02277.png",
+      "md5": "f7020c31bb7f7b524cd8ce2d51c02277",
+      "width": 1920,
+      "height": 1080,
+      "size": 420794,
+      "uploadedDate": "2020-02-27T18:21:14.229Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPRCustomEditorv4-1920x1080-c8305e1e29607b05951cf4e52e47ee20.png",
+      "md5": "c8305e1e29607b05951cf4e52e47ee20",
+      "width": 1920,
+      "height": 1080,
+      "size": 404670,
+      "uploadedDate": "2020-02-27T18:21:14.823Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MultiPackerReduxSupportVersion_thumb-284x284-6aac1d9b0818a02e7d23bff19d2e8eae.png",
+      "md5": "6aac1d9b0818a02e7d23bff19d2e8eae",
+      "width": 284,
+      "height": 284,
+      "size": 51089,
+      "uploadedDate": "2020-02-26T20:47:10.801Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MultiPackerReduxSupportVersion_featured-894x488-b99fce40f3a81bb94748bc9c115421ab.png",
+      "md5": "b99fce40f3a81bb94748bc9c115421ab",
+      "width": 894,
+      "height": 488,
+      "size": 182857,
+      "uploadedDate": "2020-02-01T04:16:30.913Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRTittlev7-1920x1080-1679836294e5f92269f6e68fe5819d5c_Snapshot.png",
+      "md5": "b5fda8073772727f28e2b7c184bf2fc3",
+      "width": 150,
+      "height": 74,
+      "size": 9541,
+      "uploadedDate": "2020-05-11T13:51:38.234Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRTittlev6-1920x1080-b0b0dde83427ded59b07ec35753897da_Snapshot.png",
+      "md5": "1a5f212ffcff5be742014ef01262c5ce",
+      "width": 150,
+      "height": 74,
+      "size": 9559,
+      "uploadedDate": "2020-04-30T13:11:41.255Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRPackerv6-1920x1080-88fa5c6e76fbf45c2b498a16545990fc_Snapshot.png",
+      "md5": "e3ba111fc9361a8e73d4f512a5993f2f",
+      "width": 150,
+      "height": 74,
+      "size": 6472,
+      "uploadedDate": "2020-04-30T13:11:41.711Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRMaterialNodev6-1920x1080-26b6adc132b7174969a39b896543314c_Snapshot.png",
+      "md5": "2c8694b4f7adb0b711425237ff95b707",
+      "width": 150,
+      "height": 74,
+      "size": 6276,
+      "uploadedDate": "2020-04-30T13:11:42.175Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRTittlev6-1920x1080-c27ed7aafb9cf2d6e279eb400086153f_Snapshot.png",
+      "md5": "befce97ce8cb8af485fd9d8cbfb7ede2",
+      "width": 150,
+      "height": 74,
+      "size": 9528,
+      "uploadedDate": "2020-04-26T01:59:52.521Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRChannelv6-1920x1080-c9578b3c089ffa902abd44d11e21f0c3_Snapshot.png",
+      "md5": "418ee427a19f24e9a82575717b12e947",
+      "width": 150,
+      "height": 74,
+      "size": 7018,
+      "uploadedDate": "2020-04-26T01:59:53.039Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRSDFv6-1920x1080-c0e8b13ab76c2491999085092a09217b_Snapshot.png",
+      "md5": "623cbe097dc7428bd5395111c71ef112",
+      "width": 150,
+      "height": 74,
+      "size": 5683,
+      "uploadedDate": "2020-04-26T01:59:53.430Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRMaterialBakerv6-1920x1080-87aaf06b863345862ca3478d1512e64d_Snapshot.png",
+      "md5": "be340035a7f39027049d0f719160536e",
+      "width": 150,
+      "height": 74,
+      "size": 6315,
+      "uploadedDate": "2020-04-26T01:59:54.397Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRPackerv6-1920x1080-2b67f7fb3a70bf5089a75e13def5ce38_Snapshot.png",
+      "md5": "ca9b1ba81b5dcb2c057f88c983b7fe25",
+      "width": 150,
+      "height": 74,
+      "size": 6639,
+      "uploadedDate": "2020-04-26T01:59:54.911Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRSDFv5-1920x1080-cbecd9d3320339f2ea5ac3c89b6aa17d_Snapshot.png",
+      "md5": "c9ccdb61e4ec65baba020f3c0ec71355",
+      "width": 150,
+      "height": 74,
+      "size": 5544,
+      "uploadedDate": "2020-03-01T05:13:03.683Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRBlueprintsv4-1920x1080-f7020c31bb7f7b524cd8ce2d51c02277_Snapshot.png",
+      "md5": "760e2fa5b04e3461a393201f2acb0f90",
+      "width": 150,
+      "height": 74,
+      "size": 6206,
+      "uploadedDate": "2020-02-27T18:21:14.647Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRCustomEditorv4-1920x1080-c8305e1e29607b05951cf4e52e47ee20_Snapshot.png",
+      "md5": "bd894158eb8d3f3a1be45cdae341b24e",
+      "width": 150,
+      "height": 74,
+      "size": 6494,
+      "uploadedDate": "2020-02-27T18:21:15.119Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRTittlev4-1920x1080-05abdb79fb465589a6a6c1ade247dd5d_Snapshot.png",
+      "md5": "7f579de90cc02501329b7c7b114d3315",
+      "width": 150,
+      "height": 74,
+      "size": 9557,
+      "uploadedDate": "2020-02-26T20:47:08.497Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRMaterialBakerv4-1920x1080-e7c1015fb7b132d5c7e02e093d47da4b_Snapshot.png",
+      "md5": "3babd7e7c5b7171c3d44c8243fc80974",
+      "width": 150,
+      "height": 74,
+      "size": 5158,
+      "uploadedDate": "2020-02-26T20:47:09.245Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRChannelv4-1920x1080-3606de22dabbc2cbc587184e90fc3521_Snapshot.png",
+      "md5": "28fffffe11dd8f165f88b3b2e0fc2e8a",
+      "width": 150,
+      "height": 74,
+      "size": 7301,
+      "uploadedDate": "2020-02-26T20:47:09.850Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRSDFv4-1920x1080-b6d37c7450a263eec07f9550fcf0d93e_Snapshot.png",
+      "md5": "f65af0e06d1dd60645ea557f60543e87",
+      "width": 150,
+      "height": 74,
+      "size": 5062,
+      "uploadedDate": "2020-02-26T20:47:10.280Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRBlueprintsv4-1920x1080-6e9d6fb3d495c9d951ca26ca03628963_Snapshot.png",
+      "md5": "403bee17eb12cfd10a5f2ab24763526e",
+      "width": 150,
+      "height": 74,
+      "size": 5765,
+      "uploadedDate": "2020-02-26T20:47:10.748Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRMaterialBaker-1920x1080-a9be98afcb37a60f14c38b511cf8aac3_Snapshot.png",
+      "md5": "430737e918ebb019e9f60c13ff14f670",
+      "width": 150,
+      "height": 74,
+      "size": 5303,
+      "uploadedDate": "2020-02-20T21:56:04.986Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRTittle-1920x1080-eb5115a08e7f55a35d0df22a582b2e02_Snapshot.png",
+      "md5": "c751ea297d96a17e40542913d2d9f19e",
+      "width": 150,
+      "height": 74,
+      "size": 9661,
+      "uploadedDate": "2020-02-02T21:01:05.959Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRChannel-1920x1080-165d3a0b57e89d5d06eddbdb8617127f_Snapshot.png",
+      "md5": "20b45747a3988a7e177f9f8b27b2943a",
+      "width": 150,
+      "height": 74,
+      "size": 4673,
+      "uploadedDate": "2020-02-02T19:09:04.127Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRSDFl-1920x1080-8b5bd6a023536187fa51011ce3e39e59_Snapshot.png",
+      "md5": "75319505ab0e4984e1ee00f7c9a7aaa6",
+      "width": 150,
+      "height": 74,
+      "size": 5618,
+      "uploadedDate": "2020-02-02T19:09:04.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRMaterialSimple-1920x1080-4d5a0f582389a98aecc3bf187a21041b_Snapshot.png",
+      "md5": "5ddb29256ffff4921f5a3dc03ddf5f2c",
+      "width": 150,
+      "height": 74,
+      "size": 6901,
+      "uploadedDate": "2020-02-02T19:09:05.183Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRBlueprints-1920x1080-ff7e58ede7f75baf10db79bba959cd1a_Snapshot.png",
+      "md5": "7a6b8b4d8465603b6fe6f1dec82cd43c",
+      "width": 150,
+      "height": 74,
+      "size": 5694,
+      "uploadedDate": "2020-02-02T19:09:05.647Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRTittle-1920x1080-9eaf8fb0fe4d73f1f83132eaa1c16873_Snapshot.png",
+      "md5": "3aeae1058adc958c1a7b11dcf2cf566f",
+      "width": 150,
+      "height": 74,
+      "size": 5043,
+      "uploadedDate": "2020-02-01T04:16:29.233Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRChannel-1920x1080-ca6a6edc52751b4a21d842ea75e1033e_Snapshot.png",
+      "md5": "0b0e45accec6535eafc19c551a736f00",
+      "width": 150,
+      "height": 74,
+      "size": 5442,
+      "uploadedDate": "2020-02-01T04:16:29.902Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRSDFl-1920x1080-d30288822389ca59c75ecef9064b107d_Snapshot.png",
+      "md5": "2d2b0615d45beba668a6400a67c2f61d",
+      "width": 150,
+      "height": 74,
+      "size": 5087,
+      "uploadedDate": "2020-02-01T04:16:30.283Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRMaterialSimple-1920x1080-d2a2357a7e0690a24f4d5475858eeef6_Snapshot.png",
+      "md5": "2b3e3fb9bcc9fd50e0b6c4bf8aa17d1e",
+      "width": 150,
+      "height": 74,
+      "size": 5439,
+      "uploadedDate": "2020-02-01T04:16:30.712Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRTittle-1920x1080-88c4daa2039da0a97f9f1732df1ecbd2_Snapshot.png",
+      "md5": "2154610c84b3b386b3db1e6366584c97",
+      "width": 150,
+      "height": 74,
+      "size": 5575,
+      "uploadedDate": "2019-11-30T19:49:22.654Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRChannel-1920x1080-c4e2f9f04fbaa7038fd574e17060c7d0_Snapshot.png",
+      "md5": "6cff37b1e20f077fe6ae5ef3b0317fca",
+      "width": 150,
+      "height": 74,
+      "size": 5428,
+      "uploadedDate": "2019-11-30T19:49:23.082Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRMaterialSimple-1920x1080-4248e498ed83f46db7ee7cedcdb6967d_Snapshot.png",
+      "md5": "0499efb4c5f08c51d0a7bfca37720977",
+      "width": 150,
+      "height": 74,
+      "size": 5440,
+      "uploadedDate": "2019-11-30T19:49:23.521Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRSDFl-1920x1080-f7c72b560d5962c7458effa8afc36259_Snapshot.png",
+      "md5": "b0e24d8f6584aff1d2f4cbbadde50a48",
+      "width": 150,
+      "height": 74,
+      "size": 4857,
+      "uploadedDate": "2019-11-30T19:49:23.958Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRTittle-1920x1080-0ed2425ccca1ca087516c6168faeab86_Snapshot.png",
+      "md5": "6d88e35e58b6032195935242b78af566",
+      "width": 150,
+      "height": 74,
+      "size": 4770,
+      "uploadedDate": "2019-11-16T02:59:56.104Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRChannel-1920x1080-6ec7e676f22ad6a9693c400f7467377f_Snapshot.png",
+      "md5": "27e7b593da441c35d023e7ce377a3d3f",
+      "width": 150,
+      "height": 74,
+      "size": 4968,
+      "uploadedDate": "2019-11-16T02:59:56.649Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRMaterialSimple-1920x1080-3758e136a9a89eab0c3d0e1fdf347577_Snapshot.png",
+      "md5": "dfd03d4c5b711fbf8cf6028cbcf595e3",
+      "width": 150,
+      "height": 74,
+      "size": 4828,
+      "uploadedDate": "2019-11-16T02:59:57.132Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPRSDFl-1920x1080-266f85441f078f6b6b8181dbf3b90bd5_Snapshot.png",
+      "md5": "5cce00019f9073cab42665f18b684b11",
+      "width": 150,
+      "height": 74,
+      "size": 4783,
+      "uploadedDate": "2019-11-16T02:59:57.614Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Channel-1920x1080-081d5e88bba6b2e61b014dedd03add68_Snapshot.png",
+      "md5": "db0aa384d39e641b1676cdb9400cf7a5",
+      "width": 150,
+      "height": 74,
+      "size": 4557,
+      "uploadedDate": "2019-11-15T23:42:37.470Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MaterialDefault-1920x1080-830108ef3a70f39b6d970d9e5f303d6a_Snapshot.png",
+      "md5": "007e4d00eaa0360569053a1f3fa88555",
+      "width": 150,
+      "height": 74,
+      "size": 4341,
+      "uploadedDate": "2019-11-15T23:42:37.915Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/SDF-1920x1080-b38bae9cac12ebef49c7ac0cfd746a5e_Snapshot.png",
+      "md5": "f4edf0319c7f1f962fc7ff319082bf70",
+      "width": 150,
+      "height": 74,
+      "size": 4180,
+      "uploadedDate": "2019-11-15T23:42:38.409Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2019-12-04T18:47:34.113Z",
+  "lastModifiedDate": "2021-11-12T15:00:00.568Z",
+  "entitlementName": "ccd4f29207794e108e25d5235b627102",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "d294760c722140b39417796590165184",
+      "appId": "MultiPackerRedux_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2019-12-11T00:00:00.000Z",
+      "releaseNote": "Fix alpha blank fill",
+      "versionTitle": "Multipacker 4.24"
+    },
+    {
+      "id": "33d732a8daf14a85869ce92c8c0c230b",
+      "appId": "MultiPackerRedux_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2020-05-09T00:00:00.000Z",
+      "releaseNote": "Fix alpha blank fill",
+      "versionTitle": "Multipacker 4.25"
+    },
+    {
+      "id": "d9d31ff9888041479c44166ae39b223d",
+      "appId": "MultiPackerRedux_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2021-01-05T00:00:00.000Z",
+      "releaseNote": "Fix alpha blank fill",
+      "versionTitle": "Multipacker 4.26"
+    }
+  ],
+  "developer": "EstudioCheke",
+  "developerId": "o-ceddbcfe0f4ebcba0e313eb273564a",
+  "endOfSupport": false,
+  "unsearchable": false
+}

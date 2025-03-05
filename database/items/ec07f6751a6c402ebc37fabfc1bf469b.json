@@ -1,0 +1,351 @@
+{
+  "id": "ec07f6751a6c402ebc37fabfc1bf469b",
+  "title": "Projector",
+  "description": "Interactable Blueprint that simulates nowadays projectors utilizing dynamic light functions.",
+  "longDescription": "<p>With this Blueprint you can easily bring life to your projects. Project images or videos with sound in your game or archviz. Project contains an example setup of replicated interaction with the third person character.</p><p><br /></p><p><a href=\"https://docs.google.com/document/d/1xDLreXjhDhatFfMqRJy_yyhE9BEglN6tqUvzTc0dUWo/edit?usp&#61;sharing\" rel=\"nofollow\">DOCUMENTATION V2</a></p><p><a href=\"https://drive.google.com/file/d/1KJaegM14oss7H1JEDfy0Hw2AfqHRhz4P/view?usp&#61;sharing\" rel=\"nofollow\">PLAYABLE DEMO</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;NBXRmo6YPZg&amp;list&#61;PLlTZHlIbF3j5bH2xzF67z9oUopPbq8IJ1&amp;index&#61;1\" rel=\"nofollow\">Videos</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;XsBK0p9x2DU&amp;t&#61;12s\" rel=\"nofollow\">Multi-projection showcase</a></p><p><a href=\"https://youtu.be/uiWysV4Hg5I\" rel=\"nofollow\">Edge blending showcase</a></p><p><a href=\"https://www.youtube.com/watch?v&#61;KGGCF2ZQzvY\" rel=\"nofollow\">Sequencer</a></p><p><br /></p><p><strong>A NEW UPDATE IS HERE!!!</strong></p><p><strong>Update #10: (5.1 and higher)</strong></p><ul><li>Option to use a decal projection instead of default spotlights </li></ul><p><br /></p><p><strong>Update #9: (5.1 and higher)</strong></p><ul><li>Version 2 of the projector based of MediaPlate</li><li>all functionalities of MediaPlate actor</li><li>much easier sequencer integration (identical to MediaPlate)</li><li>more reliable media control</li><li>posibility to show a different media when the video is not playing</li></ul><p><br /></p><p><strong>Update #8: (5.1 and higher)</strong></p><ul><li>Completely new volumetric light effect</li><li>Shows light streaks matching the image color and intensity</li><li>Controllable volumetric shadows</li><li>Improved sequencer functionality with an example map</li><li>projection info tool</li><li>reflections work with Lumen, raytracing, pathtracing</li></ul><p><br /></p><p><strong>Update #7: (23 and higher)</strong></p><ul><li>Widgets - you can add any widget on top of the projected image which adds tons of new possibilities. These widgets are shown in realtime even in the editor!</li><li>Media controls - video can be played and paused directly in the editor from the details panel.</li><li>Sequencer - it is much easier to use the projector in sequencer by using media tracks. This way you have a realtime preview even in the editor &#43; the playback speed is always correct when rendering a sequence</li><li>A lot of small fixes and optimizations</li></ul><p><br /></p><p>KNOWN ISSUES</p><ul><li>Media player does not work on DX12 in <strong>UE5.0</strong> - this is an engine bug - you can use DX11 to play a video</li></ul><p>or enable <strong>Electra Player</strong> plugin instead of <strong>WMF Media Player</strong> plugin</p><p><strong>UE5.1</strong> - issue has been fixed</p><ul><li>Forward shading - projector cannot overlap any other shadow casting movable light</li></ul><p><br /></p><p><br /></p><p><strong>Update #6:</strong></p><p>Edge blending feature added.</p><p>Improved text features.</p><p>Media with alpha channel are now supported.</p><p><br /></p><p><strong>Update #5:</strong></p><p>A lot of code was refactored to optimize the performance. Every projector can now be linked to a different projector which acts as a media source.</p><p>This allows to have a big multi-projection made of many projectors while using the same amount of CPU power as if there was only one.</p><p>New events were added to control the media independently from the projector state.</p><p><br /></p><p><strong>Update #4:</strong></p><p>Horizontal lens shift added</p><p>Warm Up time variable added</p><p><strong>Multi-projector blending</strong> added - you can now use multiple projectors to project a single image.</p><p><br /></p><p><strong>Update #3: (4.22 and higher)</strong></p><p>The whole code was refactored. <strong>No shipping/edit mode anymore - it will just package as it should :)</strong></p><p><strong>Throw ratio</strong> is being used to control the image size.</p><p>You can choose <strong>light units</strong> in the details panel.</p><p>Text positions are defined as a <strong>percentage</strong> of the screen instead of direct values.</p><p><strong>Refresh rate</strong> has been added. This means you can control how often the image updates. For static images</p><p>you can set the value to 1 to save computing power.</p><p><br /></p><p><strong>Update #2:</strong></p><p>added a vertical lens shift to project up or down from the forward axis (the distortion has to be corrected with the keystone correction)</p><p>the Turn Off screen is now optional</p><p>the example map now includes a &#34;Live cam&#34; using a scene capture</p><p><br /></p><p><strong>Update #1:</strong></p><p>Keystone correction to project image on an angled surface</p><p>Automatic flipping of the image when the projector is upside down</p><p>Automatic color of the volumetric light effect</p><p><br /></p><p><strong>Important (old version only):</strong></p><p>If you are packaging via <strong>File &gt; Package Project</strong> then <strong>all projectors</strong> in <strong>all levels</strong> have to be set to <strong>shipping.</strong></p><p>That&#39;s because this command packages every level in your project regardless if it is being used or not. So set them to shipping also in the example map or you can delete that map if you want.</p><p><br /></p><p>A better and proper way is to package via <strong>Window &gt; Project Launcher</strong> where you can make a packaging profile and select only specific levels to package.</p>",
+  "technicalDetails": "<p><strong>Features:</strong></p><ul><li> supports images or videos (also scene captures)</li><li> plays video sound</li><li>multi-projector blending</li><li> dynamic light functions</li><li>volumetric light and shadow</li><li>automatic volumetric light color</li><li>customizable appearance</li><li>custom resolution</li><li>keystone correction</li><li>vertical and horizontal lens shift</li><li>image flipping when upside down</li><li>custom text overlay</li><li>actual date and time overlay</li><li>turn off screen</li><li>lamp warm up</li><li>network replicated example map</li><li>VR ready (For windows platform - tested on Rift and Vive)</li><li>includes a Kite Demo image, a streamable video link and 3rd person character for demo purpose</li></ul><p><br /></p><p><strong>Number of Blueprints: </strong>1</p><p><strong>Input</strong>: No</p><p><strong>Network Replicated:</strong> Yes (In the example map only. You need to write your own logic in your project)</p><p><strong>Supported Development Platforms</strong>: Windows</p><p><strong>Supported Target Build Platforms:</strong> Windows</p><p><strong>Documentation</strong>: <a href=\"https://youtu.be/NBXRmo6YPZg\" rel=\"nofollow\">Video</a></p><p><strong>Important/Additional Notes:</strong></p><p>For demo purpose the example project uses Blueprint interface and a few extra functions on the character for the interactions. Feel free to use your own logic. You can replace &#34;Event Interact&#34; with whatever suits you.</p><p><br /></p><p><strong>If you experience any problems or need help with something please write me an email and I will gladly fix it.</strong></p><p><strong>And please don&#39;t forget to rate the product.</strong></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Picture 1-1920x1080-1e1412c6ce999f75273cf6342541cb8b.jpg",
+      "md5": "1e1412c6ce999f75273cf6342541cb8b",
+      "width": 1920,
+      "height": 1080,
+      "size": 100955,
+      "uploadedDate": "2019-02-25T22:45:33.651Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DW-1920x1080-e31435f17245925e349b26d259a4a3e7.jpg",
+      "md5": "e31435f17245925e349b26d259a4a3e7",
+      "width": 1920,
+      "height": 1080,
+      "size": 810940,
+      "uploadedDate": "2023-04-05T06:28:33.860Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPB-1920x1080-1627eaed4525341485652674ed6290b7.jpg",
+      "md5": "1627eaed4525341485652674ed6290b7",
+      "width": 1920,
+      "height": 1080,
+      "size": 580868,
+      "uploadedDate": "2023-04-05T06:28:34.286Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MPO-1920x1080-c825a4e0078515f3f1421cfeac1dc30b.jpg",
+      "md5": "c825a4e0078515f3f1421cfeac1dc30b",
+      "width": 1920,
+      "height": 1080,
+      "size": 918148,
+      "uploadedDate": "2023-04-05T06:28:34.761Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Picture 5-1920x1080-82315194a270cc032792c7670e835d4d.jpg",
+      "md5": "82315194a270cc032792c7670e835d4d",
+      "width": 1920,
+      "height": 1080,
+      "size": 104272,
+      "uploadedDate": "2019-02-25T22:45:33.850Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Picture 6-1920x1080-9109d52bc0588287b71c7e1a41cbd5eb.jpg",
+      "md5": "9109d52bc0588287b71c7e1a41cbd5eb",
+      "width": 1920,
+      "height": 1080,
+      "size": 47003,
+      "uploadedDate": "2019-02-25T22:45:34.069Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Picture 7-1920x1080-ee8c6f0c636b8422eb596d67404040af.jpg",
+      "md5": "ee8c6f0c636b8422eb596d67404040af",
+      "width": 1920,
+      "height": 1080,
+      "size": 108727,
+      "uploadedDate": "2019-02-25T22:45:34.280Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Picture 9-1920x1080-1db8afc6668eeed4f1f8d4c777f674f2.jpg",
+      "md5": "1db8afc6668eeed4f1f8d4c777f674f2",
+      "width": 1920,
+      "height": 1080,
+      "size": 107996,
+      "uploadedDate": "2019-02-25T22:45:34.778Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Picture 2-1920x1080-5ce1f1cab831b25c1a4d88d85562b05d.JPG",
+      "md5": "5ce1f1cab831b25c1a4d88d85562b05d",
+      "width": 1920,
+      "height": 1080,
+      "size": 118547,
+      "uploadedDate": "2019-02-25T22:45:35.047Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Picture 3-1920x1080-75f43d36bf688e8857f84e0c11beb6fb.JPG",
+      "md5": "75f43d36bf688e8857f84e0c11beb6fb",
+      "width": 1920,
+      "height": 1080,
+      "size": 140687,
+      "uploadedDate": "2019-02-25T22:45:35.344Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Picture 4-1920x1080-3482437b9652e3fd50bddfe20e80bf65.JPG",
+      "md5": "3482437b9652e3fd50bddfe20e80bf65",
+      "width": 1920,
+      "height": 1080,
+      "size": 105391,
+      "uploadedDate": "2019-02-25T22:45:35.513Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ProjectionInfo-1920x1080-170d961c55964c09dd08ca5d49da4699.jpg",
+      "md5": "170d961c55964c09dd08ca5d49da4699",
+      "width": 1920,
+      "height": 1080,
+      "size": 274348,
+      "uploadedDate": "2023-09-01T14:51:05.414Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/Projector_thumb-284x284-211df6d46073aff2845290db3ec3d409.png",
+      "md5": "211df6d46073aff2845290db3ec3d409",
+      "width": 284,
+      "height": 284,
+      "size": 107878,
+      "uploadedDate": "2022-04-23T21:07:24.225Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/Projector_featured-894x488-1e3e00222b790dd90c38ef3d1ac40975.png",
+      "md5": "1e3e00222b790dd90c38ef3d1ac40975",
+      "width": 894,
+      "height": 488,
+      "size": 331345,
+      "uploadedDate": "2019-02-25T22:45:35.746Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ProjectionInfo-1920x1080-170d961c55964c09dd08ca5d49da4699_Snapshot.jpg",
+      "md5": "c1deb1fbcacfcd559fc76f75a7ad5335",
+      "width": 150,
+      "height": 74,
+      "size": 4068,
+      "uploadedDate": "2023-09-01T14:51:05.915Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DW-1920x1080-e31435f17245925e349b26d259a4a3e7_Snapshot.jpg",
+      "md5": "68240a87f4cfc8837164d740b1af1277",
+      "width": 150,
+      "height": 74,
+      "size": 4923,
+      "uploadedDate": "2023-04-05T06:28:34.113Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPB-1920x1080-1627eaed4525341485652674ed6290b7_Snapshot.jpg",
+      "md5": "0f2993c398d5a586cc76a0f03d843027",
+      "width": 150,
+      "height": 74,
+      "size": 3254,
+      "uploadedDate": "2023-04-05T06:28:34.526Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MPO-1920x1080-c825a4e0078515f3f1421cfeac1dc30b_Snapshot.jpg",
+      "md5": "a8ab743a51d7ce42eb37801b59486b38",
+      "width": 150,
+      "height": 74,
+      "size": 4839,
+      "uploadedDate": "2023-04-05T06:28:35.014Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Picture 1-1920x1080-1e1412c6ce999f75273cf6342541cb8b_Snapshot.jpg",
+      "md5": "1ac7073c17c45b643d6bef82f3fb6f26",
+      "width": 150,
+      "height": 74,
+      "size": 2176,
+      "uploadedDate": "2019-02-25T22:45:33.766Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Picture 5-1920x1080-82315194a270cc032792c7670e835d4d_Snapshot.jpg",
+      "md5": "759a84a34533d58ca43f788138a8848c",
+      "width": 150,
+      "height": 74,
+      "size": 2242,
+      "uploadedDate": "2019-02-25T22:45:33.958Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Picture 6-1920x1080-9109d52bc0588287b71c7e1a41cbd5eb_Snapshot.jpg",
+      "md5": "83fbefead6007b0c06a70cd41d730a90",
+      "width": 150,
+      "height": 74,
+      "size": 1571,
+      "uploadedDate": "2019-02-25T22:45:34.167Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Picture 7-1920x1080-ee8c6f0c636b8422eb596d67404040af_Snapshot.jpg",
+      "md5": "1eb4f9fe5002e89cb82fd8b2bfc763e1",
+      "width": 150,
+      "height": 74,
+      "size": 2147,
+      "uploadedDate": "2019-02-25T22:45:34.400Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Picture 8-1920x1080-8b30dc25f139514470506b75a4f71b55_Snapshot.jpg",
+      "md5": "56525af66866b56b06a1f896847a6e13",
+      "width": 150,
+      "height": 74,
+      "size": 2319,
+      "uploadedDate": "2019-02-25T22:45:34.603Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Picture 9-1920x1080-1db8afc6668eeed4f1f8d4c777f674f2_Snapshot.jpg",
+      "md5": "e2e1c05b4f0be27ac12032487a767d23",
+      "width": 150,
+      "height": 74,
+      "size": 2080,
+      "uploadedDate": "2019-02-25T22:45:34.878Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Picture 2-1920x1080-5ce1f1cab831b25c1a4d88d85562b05d_Snapshot.JPG",
+      "md5": "d6dd958bdae962eca7975990b641561b",
+      "width": 150,
+      "height": 74,
+      "size": 2690,
+      "uploadedDate": "2019-02-25T22:45:35.216Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Picture 3-1920x1080-75f43d36bf688e8857f84e0c11beb6fb_Snapshot.JPG",
+      "md5": "cb4be1f294a2ac1f5e45c96f4a1fd561",
+      "width": 150,
+      "height": 74,
+      "size": 2918,
+      "uploadedDate": "2019-02-25T22:45:35.450Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Picture 4-1920x1080-3482437b9652e3fd50bddfe20e80bf65_Snapshot.JPG",
+      "md5": "7ed6d040a47a6618f5cec8aa40d77f25",
+      "width": 150,
+      "height": 74,
+      "size": 2317,
+      "uploadedDate": "2019-02-25T22:45:35.611Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-03-26T07:08:26.386Z",
+  "lastModifiedDate": "2024-11-12T19:38:44.948Z",
+  "customAttributes": {},
+  "entitlementName": "ec07f6751a6c402ebc37fabfc1bf469b",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3c16ce1ae6c14785ba2eb5594754f36a",
+      "appId": "Projectoec07f6751a6cV1",
+      "compatibleApps": [
+        "UE_4.20",
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Oculus"
+      ],
+      "dateAdded": "2019-02-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Projector1.2"
+    },
+    {
+      "id": "2b16054bbc5140b095fa83251b8f4390",
+      "appId": "Projectoec07f6751a6cV2",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Oculus",
+        "Windows"
+      ],
+      "dateAdded": "2021-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Projector220205"
+    },
+    {
+      "id": "8a5f0eab5aca43d986611f05da511277",
+      "appId": "Projectoec07f6751a6cV3",
+      "compatibleApps": [
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Oculus"
+      ],
+      "dateAdded": "2022-04-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Projector23-220423"
+    },
+    {
+      "id": "054ee0499d4540cdacc2931cee43984d",
+      "appId": "Projectoec07f6751a6cV4",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-08-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ProjectorUE5-220801"
+    },
+    {
+      "id": "8e42a37a6fc94a68a2995798ab9d6dcb",
+      "appId": "Projectoec07f6751a6cV5",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-02-10T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "ProjectorV2-UE5.1"
+    }
+  ],
+  "developer": "Caroo",
+  "developerId": "o-a133db975044e8a567723d37db63ed",
+  "endOfSupport": false,
+  "unsearchable": false
+}

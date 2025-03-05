@@ -1,0 +1,234 @@
+{
+  "id": "5970636b842142909c3419292bf4a7b1",
+  "title": "Simple VR Climbing Plugin",
+  "description": "An easy to use plugin for climbing in VR.",
+  "longDescription": "<p><a href=\"https://youtu.be/WVoYlZ6ioqc\" rel=\"nofollow\">Showcase</a></p><p>This plugin enables you to climb on different kind of surfaces.</p><p>This includes moving objects and animated skeletal meshes.</p><p><br /></p><p>Besides climbing this plugin also allows crawling and sliding down sloped angles.</p><p>To use the plugin, simply add it to your existing Character. Make sure your component hierarchy is as shown in the screenshot. You can have more components in your hierarchy but this is the basic hierarchy required for the Simple VR Climbing Component to work properly.</p><p><br /></p><p>In the &#34;Begin Play&#34; node, call the &#34;Setup VR Components&#34; node from the &#34;Simple VR Climbing Component&#34;. The minimum required inputs are the Collision Capsule Component, VROrigin (Scene Component), Camera Component, and the left and right Motion Controller Components. The Mesh Component is optional in case you are using a full IK mesh, instead of just Hand meshes.</p><p><br /></p><p>By setting the &#34;BodyZOffset&#34; variable, you can manually change the player&#39;s base height, e.g. for seated gameplay.</p><p><br /></p><p>Besides climbing, this component also handles slipping. A surface&#39;s slipperyness is determined by it&#39;s physical material&#39;s friction.</p><p>When no physical material is set, the default physical material will be used with a friction of 0.7.</p><p>A material&#39;s friction is clamped to a value between 0.0 and 1.0.</p><ul><li>0.0 means the surface is very slippery.</li><li>1.0 means the surface is not slippery at all.</li></ul><p>The slip speed is teremined by 3 things.</p><ul><li>Surface friction</li><li>Surface slope angle</li><li>World Gravity Z</li></ul><p>The physical material can also be overwritten in the &#34;Collision&#34; section of an object.</p><p>The friction of a surface pointing straight up is always 1.0, therefore even if a wall is slipery, if you make it to the top, you&#39;re safe.</p><p><br /></p><p>IMPROTANT: This component only works with Characters, not Pawns.</p><p><br /></p><p>Bonus: Besides climbing this component also handles smooth VR Camera Collisions.</p>",
+  "technicalDetails": "<p><a href=\"https://youtu.be/KB0irQLkFZ4\" rel=\"nofollow\">How To Setup</a></p><p>Features:</p><ul><li> VR Climbing</li><li> Slipping</li><li> Smooth VR Camera Collisions</li></ul><p>Code Modules:</p><ul><li> Simple VR Climbing (Actor Component), Type: Runtime</li></ul><p>Number of Blueprints: 1</p><p>Number of C&#43;&#43; Classes: 1</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Example Project: Included in the plugin content folder</p><p>Important/Additional Notes: This component only works with a Character, not with Pawns.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot10-1920x1080-c55a17957b2c6e7947cc32235b9092ff.png",
+      "md5": "c55a17957b2c6e7947cc32235b9092ff",
+      "width": 1920,
+      "height": 1080,
+      "size": 1346442,
+      "uploadedDate": "2024-09-26T17:01:10.190Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot01-1920x1080-107c75cbfdc6aaf6d62d651e27d2c3e0.png",
+      "md5": "107c75cbfdc6aaf6d62d651e27d2c3e0",
+      "width": 1920,
+      "height": 1080,
+      "size": 807128,
+      "uploadedDate": "2024-09-19T21:23:11.028Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot06-1920x1080-5a5cf1fa433d9d66f54ff65396d52b20.png",
+      "md5": "5a5cf1fa433d9d66f54ff65396d52b20",
+      "width": 1920,
+      "height": 1080,
+      "size": 797440,
+      "uploadedDate": "2024-09-21T10:08:26.527Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot05-1920x1080-840b1c0b175ca2931041ba45314aebc0.png",
+      "md5": "840b1c0b175ca2931041ba45314aebc0",
+      "width": 1920,
+      "height": 1080,
+      "size": 809169,
+      "uploadedDate": "2024-09-21T10:08:26.971Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot08-1920x1080-3ac5f4333f09f4a1ddd2b7eec7fd4e54.png",
+      "md5": "3ac5f4333f09f4a1ddd2b7eec7fd4e54",
+      "width": 1920,
+      "height": 1080,
+      "size": 493349,
+      "uploadedDate": "2024-09-26T17:01:10.768Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot09-1920x1080-f7161f5c9bff92d3932d87ad73058e9f.png",
+      "md5": "f7161f5c9bff92d3932d87ad73058e9f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1265176,
+      "uploadedDate": "2024-09-26T17:01:11.342Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot02-1920x1080-e2032190f4650d505105aa05f78b38a4.png",
+      "md5": "e2032190f4650d505105aa05f78b38a4",
+      "width": 1920,
+      "height": 1080,
+      "size": 1089162,
+      "uploadedDate": "2024-09-19T21:23:11.599Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot03-1920x1080-a028c56e8cf2ab34fb37a166548ab1eb.png",
+      "md5": "a028c56e8cf2ab34fb37a166548ab1eb",
+      "width": 1920,
+      "height": 1080,
+      "size": 1237456,
+      "uploadedDate": "2024-09-19T21:23:12.123Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot04-1920x1080-90185caf7c0ebf3c1f6161a04d154a1c.png",
+      "md5": "90185caf7c0ebf3c1f6161a04d154a1c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1150669,
+      "uploadedDate": "2024-09-19T21:23:12.837Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SimpleVRClimbingPlugin_thumb-284x284-97dca4bfacd1f9de40e2e8766d8802fd.png",
+      "md5": "97dca4bfacd1f9de40e2e8766d8802fd",
+      "width": 284,
+      "height": 284,
+      "size": 39750,
+      "uploadedDate": "2024-09-19T21:23:13.279Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SimpleVRClimbingPlugin_featured-894x488-be07349f1dacdd214ee05ba4e6f4c057.png",
+      "md5": "be07349f1dacdd214ee05ba4e6f4c057",
+      "width": 894,
+      "height": 488,
+      "size": 467564,
+      "uploadedDate": "2024-09-26T17:22:25.944Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot10-1920x1080-c55a17957b2c6e7947cc32235b9092ff_Snapshot.png",
+      "md5": "50cf1825db935ae30c551543e0d6b742",
+      "width": 150,
+      "height": 74,
+      "size": 5301,
+      "uploadedDate": "2024-09-26T17:01:10.572Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot08-1920x1080-3ac5f4333f09f4a1ddd2b7eec7fd4e54_Snapshot.png",
+      "md5": "2575cc90fe7d9f5096c6f60e960e1254",
+      "width": 150,
+      "height": 74,
+      "size": 4835,
+      "uploadedDate": "2024-09-26T17:01:11.094Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot09-1920x1080-f7161f5c9bff92d3932d87ad73058e9f_Snapshot.png",
+      "md5": "6ca4fd2dba6b475d29276b461139438d",
+      "width": 150,
+      "height": 74,
+      "size": 5948,
+      "uploadedDate": "2024-09-26T17:01:11.738Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot06-1920x1080-5a5cf1fa433d9d66f54ff65396d52b20_Snapshot.png",
+      "md5": "2fd3430ac36443361e1e7e0d3e291947",
+      "width": 150,
+      "height": 74,
+      "size": 4679,
+      "uploadedDate": "2024-09-21T10:08:26.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot05-1920x1080-840b1c0b175ca2931041ba45314aebc0_Snapshot.png",
+      "md5": "74eef265b84a70555a8e6d350b7fc25f",
+      "width": 150,
+      "height": 74,
+      "size": 4305,
+      "uploadedDate": "2024-09-21T10:08:27.218Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot07-1920x1080-5ff5c4a54a3521adbd98a7563bfce4a9_Snapshot.png",
+      "md5": "7193425400e4c6fefc9fff8d790cfe93",
+      "width": 150,
+      "height": 74,
+      "size": 1574,
+      "uploadedDate": "2024-09-21T10:08:27.482Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot01-1920x1080-107c75cbfdc6aaf6d62d651e27d2c3e0_Snapshot.png",
+      "md5": "e5d0bdf04fe9e4157b57e49d4585044b",
+      "width": 150,
+      "height": 74,
+      "size": 5599,
+      "uploadedDate": "2024-09-19T21:23:11.376Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot02-1920x1080-e2032190f4650d505105aa05f78b38a4_Snapshot.png",
+      "md5": "a6e3b3296352900ef422f33d2cc17bb0",
+      "width": 150,
+      "height": 74,
+      "size": 5387,
+      "uploadedDate": "2024-09-19T21:23:11.970Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot03-1920x1080-a028c56e8cf2ab34fb37a166548ab1eb_Snapshot.png",
+      "md5": "1e26b70a49f5a06c4291a9eaf4ccb6fc",
+      "width": 150,
+      "height": 74,
+      "size": 5338,
+      "uploadedDate": "2024-09-19T21:23:12.572Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot04-1920x1080-90185caf7c0ebf3c1f6161a04d154a1c_Snapshot.png",
+      "md5": "cde2b85ee2c53da78c08a97679d56885",
+      "width": 150,
+      "height": 74,
+      "size": 5512,
+      "uploadedDate": "2024-09-19T21:23:13.222Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-09-22T15:44:45.564Z",
+  "lastModifiedDate": "2024-12-05T17:08:07.750Z",
+  "customAttributes": {},
+  "entitlementName": "5970636b842142909c3419292bf4a7b1",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3055b510b27749f2a1d3ed147ceb9520",
+      "appId": "VRClimbingPlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-09-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1"
+    }
+  ],
+  "developer": "Slightly Ambitious Games",
+  "developerId": "o-57f60036dc48c880344ad2892058c5",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

@@ -1,0 +1,357 @@
+{
+  "id": "1711661bb45d4cda8984e7b6a5c71f03",
+  "title": "Project Acoustics for Unreal Audio",
+  "description": "Project Acoustics for Unreal Audio is a wave acoustics engine for adding accurate acoustics to your 3D environments.",
+  "longDescription": "<p>This announcement is to inform you that Project Acoustics will be discontinued on July 1st, 2024. This means that after this date, we will no longer offer the ability to download versions of Project Acoustics from Microsoft’s Download Center or Epic Games’ Unreal Marketplace. If you have previously downloaded Project Acoustics, you can continue to use it according to the EULA. The github repository used for reporting issues will be archived and placed in a read-only state for 12-months following the download removal.</p><p>We thank you for your support and interest in Project Acoustics.</p><p>If you have any questions or concerns, please reach out to our team at <a href=\"mailto:acousticsinquire&#64;microsoft.com\" rel=\"nofollow\">acousticsinquire&#64;microsoft.com</a></p><p>Thank you,</p><p>Project Acoustics Team</p><p><br /></p><p>----------------------------------------------</p><p><br /></p><p>Project Acoustics is a wave acoustics engine that can provide accurate acoustics for your 3D scenes. It models wave effects like occlusion, portaling, and reverberation effects in complex scenes without requiring manual zone markup or CPU intensive raytracing. Project Acoustics&#39; philosophy is similar to static lighting: bake detailed physics offline to provide a physical baseline and use a lightweight runtime with expressive design controls to meet your artistic goals for the acoustics of your virtual world.</p><p><br /></p><p>Learn more about Project Acoustics here: <a href=\"https://docs.microsoft.com/en-us/gaming/acoustics/what-is-acoustics\" rel=\"nofollow\">aka.ms/acoustics</a></p><p>Report any questions or issues here: <a href=\"https://github.com/microsoft/ProjectAcoustics/issues\" rel=\"nofollow\">Issues · microsoft/ProjectAcoustics (github.com)</a></p><p><br /></p><p>Project Acoustics for Unreal Audio is a free offering available on the UE marketplace that gives you the power of Project Acoustics without leaving Unreal Audio Engine. Audio can be rendered completely within Unreal Audio Engine, without the dependency on external audio middleware. It allows you to mix and match your favorite spatialization, occlusion, and reverberation plugins along with Project Acoustics.</p><p><br /></p><p>Project Acoustics for Unreal Audio utilizes the Source Data Override Interface newly developed for UE5. This allows the Project Acoustics plugin to directly modify sound source properties within the Unreal Audio Engine.</p><p><br /></p><p>The Project Acoustics baking workflow is as follows:</p><ol><li>Mark up your scene geometry</li><li>Assign acoustic materials</li><li>Compute voxels and evaluate listener probe positions</li><li>Simulate acoustics in Azure or locally on your PC</li></ol><p><br /></p><p>Once the acoustic simulation is complete, the acoustic data file with all the acoustic parameters needs to be added to your scene, and you are ready to listen to how your scene sounds with accurate acoustics. Further changes can be made to the acoustic parameters via designer controls.</p><p><br /></p><p>The effects that are modelled with Project Acoustics for Unreal Audio are:</p><ul><li>Geometry-aware arrival direction - Project Acoustics will modify the arrival direction of a sound source based on the geometry. This modified arrival direction is then passed onto the selected spatialization technique.</li><li>Occlusion - Project Acoustics will directly drive Unreal&#39;s built-in occlusion attenuation based on the simulated acoustic parameters.</li><li>Reverb - Project Acoustics will generate reverb effects by using a bank of UE convolution reverbs and the simulated acoustic parameters.</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Perform acoustic simulations of 3D scenes. Simulations can be computed using Azure Batch via built-in integration. Or simulations can be performed locally on your computer using separately downloaded tools.</li><li>Drive arrival direction of sound source from pre-computed acoustic parameters</li><li>Drive occlusion attenuation of sound source from pre-computed acoustic parameters</li><li>Drive convolution reverb of sound source from pre-computed acoustic parameters</li><li>Design-time controls of acoustic parameters</li><li>New for 5.1 plugin: Render per-source spatial reverberation using any spatialization plugin</li><li>New for 5.1 plugin: Drive MetaSounds graphs from pre-computed acoustics parameters</li><li>New for 5.0/5.1 plugin: Render spatialized sound sources using a highly-optimized, scalable-quality, HRTF-based spatialization engine</li></ul><p>Code Modules:</p><ul><li> ProjectAcoustics (Runtime)</li><li> ProjectAcousticsBakeUI (UncookedOnly)</li><li> ProjectAcousticsNative (Runtime)</li><li>ProjectAcousticsNativeEditor(UncookedOnly)</li><li>ProjectAcousticsSpatializer (Runtime)</li><li>ProjectAcousticsSpatializerEditor (UncookedOnly)</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 57</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation: aka.ms/acoustics</p><p>Example Project: <a href=\"https://www.microsoft.com/en-us/download/details.aspx?id&#61;104115\" rel=\"nofollow\">Download Project Acoustics Sample for Unreal Engine 5 from Official Microsoft Download Center</a></p><p>Important/Additional Notes:</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/lyra-with-voxels-1920x1080-4b17efe3332cf58d73a9e77419ecf227.jpg",
+      "md5": "4b17efe3332cf58d73a9e77419ecf227",
+      "width": 1920,
+      "height": 1080,
+      "size": 719600,
+      "uploadedDate": "2022-06-15T21:40:20.494Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/LyraInGameProbesVoxels-1920x1080-d70cb88472767c5f03b7086503dff924.jpg",
+      "md5": "d70cb88472767c5f03b7086503dff924",
+      "width": 1920,
+      "height": 1080,
+      "size": 1143451,
+      "uploadedDate": "2022-06-15T21:40:20.896Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/LyraPortalVoxelized-1920x1080-e1ea80d45cc841de76bdad06db8a71fb.jpg",
+      "md5": "e1ea80d45cc841de76bdad06db8a71fb",
+      "width": 1920,
+      "height": 1080,
+      "size": 1017512,
+      "uploadedDate": "2022-06-15T21:40:21.572Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AcousticEffects-1920x1080-b67889587dc8372e65dd147f85326499.png",
+      "md5": "b67889587dc8372e65dd147f85326499",
+      "width": 1920,
+      "height": 1080,
+      "size": 694401,
+      "uploadedDate": "2022-06-15T21:40:22.453Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ObjectsTabAnnotated-1920x1080-a4f3ab668d39be00b0503b66735e3818.jpg",
+      "md5": "a4f3ab668d39be00b0503b66735e3818",
+      "width": 1920,
+      "height": 1080,
+      "size": 453824,
+      "uploadedDate": "2022-06-15T21:40:23.037Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MaterialsTabAnnotated-1920x1080-7e6a3c0eeef4392297fade5a2a1cf927.jpg",
+      "md5": "7e6a3c0eeef4392297fade5a2a1cf927",
+      "width": 1920,
+      "height": 1080,
+      "size": 353938,
+      "uploadedDate": "2022-06-15T21:40:24.038Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ProbesTabAnnotated-1920x1080-25039560badb983ca2ee4216a6f37c38.jpg",
+      "md5": "25039560badb983ca2ee4216a6f37c38",
+      "width": 1920,
+      "height": 1080,
+      "size": 559058,
+      "uploadedDate": "2022-06-15T21:40:25.029Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BakeTabAnnotated-1920x1080-e28bea76234272476f28d7bc1b2548b1.jpg",
+      "md5": "e28bea76234272476f28d7bc1b2548b1",
+      "width": 1920,
+      "height": 1080,
+      "size": 578939,
+      "uploadedDate": "2022-06-15T21:40:26.044Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/DesignControlsAnnotated-1920x1080-b910d01f1c814ce6ddce35b4d97bfc12.jpg",
+      "md5": "b910d01f1c814ce6ddce35b4d97bfc12",
+      "width": 1920,
+      "height": 1080,
+      "size": 92616,
+      "uploadedDate": "2022-06-15T21:40:26.971Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ProjectAcousticsforUnrealAudio_thumb-284x284-e9d9ee87b0560157354939485831633a.png",
+      "md5": "e9d9ee87b0560157354939485831633a",
+      "width": 284,
+      "height": 284,
+      "size": 77425,
+      "uploadedDate": "2022-05-06T18:05:56.641Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ProjectAcoustics_featured-894x488-ecc7b4bf056c23a06d4c7339bbef17cc.png",
+      "md5": "ecc7b4bf056c23a06d4c7339bbef17cc",
+      "width": 894,
+      "height": 488,
+      "size": 917059,
+      "uploadedDate": "2022-05-05T23:43:21.995Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/lyra-with-voxels-1920x1080-4b17efe3332cf58d73a9e77419ecf227_Snapshot.jpg",
+      "md5": "32b5bb94c01fe82b815d193700d7429f",
+      "width": 150,
+      "height": 74,
+      "size": 7837,
+      "uploadedDate": "2022-06-15T21:40:20.738Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LyraInGameProbesVoxels-1920x1080-d70cb88472767c5f03b7086503dff924_Snapshot.jpg",
+      "md5": "69912407e8978af1a29fdb1fc878664b",
+      "width": 150,
+      "height": 74,
+      "size": 7800,
+      "uploadedDate": "2022-06-15T21:40:21.152Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LyraPortalVoxelized-1920x1080-e1ea80d45cc841de76bdad06db8a71fb_Snapshot.jpg",
+      "md5": "4e419f6eea6fc97b2c150c802f369c5a",
+      "width": 150,
+      "height": 74,
+      "size": 7768,
+      "uploadedDate": "2022-06-15T21:40:22.351Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AcousticEffects-1920x1080-b67889587dc8372e65dd147f85326499_Snapshot.png",
+      "md5": "8ec995030ac7cca6f114f8cad266198f",
+      "width": 150,
+      "height": 74,
+      "size": 5332,
+      "uploadedDate": "2022-06-15T21:40:22.692Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ObjectsTabAnnotated-1920x1080-a4f3ab668d39be00b0503b66735e3818_Snapshot.jpg",
+      "md5": "e59ae88483bf8fb24f76cb60d58378f2",
+      "width": 150,
+      "height": 74,
+      "size": 6736,
+      "uploadedDate": "2022-06-15T21:40:23.675Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MaterialsTabAnnotated-1920x1080-7e6a3c0eeef4392297fade5a2a1cf927_Snapshot.jpg",
+      "md5": "34636b2d30a85c7a7dfe7dd2d23f7b1e",
+      "width": 150,
+      "height": 74,
+      "size": 7163,
+      "uploadedDate": "2022-06-15T21:40:24.663Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ProbesTabAnnotated-1920x1080-25039560badb983ca2ee4216a6f37c38_Snapshot.jpg",
+      "md5": "6e98e7b51b25ea90ecc24980c7beeb0d",
+      "width": 150,
+      "height": 74,
+      "size": 6700,
+      "uploadedDate": "2022-06-15T21:40:25.681Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BakeTabAnnotated-1920x1080-e28bea76234272476f28d7bc1b2548b1_Snapshot.jpg",
+      "md5": "83714bc4494a19a49b62973026eefad9",
+      "width": 150,
+      "height": 74,
+      "size": 7093,
+      "uploadedDate": "2022-06-15T21:40:26.724Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DesignControlsAnnotated-1920x1080-b910d01f1c814ce6ddce35b4d97bfc12_Snapshot.jpg",
+      "md5": "bc9d5b0a53c619dd3a3d3ae4f8f349a2",
+      "width": 150,
+      "height": 74,
+      "size": 2697,
+      "uploadedDate": "2022-06-15T21:40:27.512Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LyraInGameProbesVoxels-1920x1080-7474644686d99ea4620694c3b92b3250_Snapshot.jpg",
+      "md5": "c33b04fdfd6f665e3110d3b6d8e3308e",
+      "width": 150,
+      "height": 74,
+      "size": 7895,
+      "uploadedDate": "2022-05-06T19:14:15.713Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/LyraPortalVoxelized-1920x1080-e1ea80d45cc841de76bdad06db8a71fb_Snapshot.jpg",
+      "md5": "4e419f6eea6fc97b2c150c802f369c5a",
+      "width": 150,
+      "height": 74,
+      "size": 7768,
+      "uploadedDate": "2022-05-06T19:14:16.898Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AcousticEffects-1920x1080-b67889587dc8372e65dd147f85326499_Snapshot.png",
+      "md5": "8ec995030ac7cca6f114f8cad266198f",
+      "width": 150,
+      "height": 74,
+      "size": 5332,
+      "uploadedDate": "2022-05-06T19:14:17.312Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DesignControlsAnnotated-1920x1080-b910d01f1c814ce6ddce35b4d97bfc12_Snapshot.jpg",
+      "md5": "bc9d5b0a53c619dd3a3d3ae4f8f349a2",
+      "width": 150,
+      "height": 74,
+      "size": 2697,
+      "uploadedDate": "2022-05-06T19:14:18.114Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BakeTabAnnotated-1920x1080-e28bea76234272476f28d7bc1b2548b1_Snapshot.jpg",
+      "md5": "83714bc4494a19a49b62973026eefad9",
+      "width": 150,
+      "height": 74,
+      "size": 7093,
+      "uploadedDate": "2022-05-06T19:14:19.181Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ProbesTabAnnotated-1920x1080-25039560badb983ca2ee4216a6f37c38_Snapshot.jpg",
+      "md5": "6e98e7b51b25ea90ecc24980c7beeb0d",
+      "width": 150,
+      "height": 74,
+      "size": 6700,
+      "uploadedDate": "2022-05-06T19:14:20.284Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ObjectsTabAnnotated-1920x1080-a4f3ab668d39be00b0503b66735e3818_Snapshot.jpg",
+      "md5": "e59ae88483bf8fb24f76cb60d58378f2",
+      "width": 150,
+      "height": 74,
+      "size": 6736,
+      "uploadedDate": "2022-05-06T19:14:21.392Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MaterialsTabAnnotated-1920x1080-7e6a3c0eeef4392297fade5a2a1cf927_Snapshot.jpg",
+      "md5": "34636b2d30a85c7a7dfe7dd2d23f7b1e",
+      "width": 150,
+      "height": 74,
+      "size": 7163,
+      "uploadedDate": "2022-05-06T19:14:22.333Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ObjectsTabAnnotated-1920x1080-eb0371e8fc200284517634a1244df8ce_Snapshot.jpg",
+      "md5": "b2ccd3d33953ad71f32569299506de70",
+      "width": 150,
+      "height": 74,
+      "size": 6791,
+      "uploadedDate": "2022-05-06T18:36:50.741Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/lyra-with-voxels-1920x1080-4b17efe3332cf58d73a9e77419ecf227_Snapshot.jpg",
+      "md5": "32b5bb94c01fe82b815d193700d7429f",
+      "width": 150,
+      "height": 74,
+      "size": 7837,
+      "uploadedDate": "2022-05-05T23:43:21.792Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2022-05-18T00:22:59.549Z",
+  "lastModifiedDate": "2024-07-01T16:27:49.775Z",
+  "customAttributes": {},
+  "entitlementName": "1711661bb45d4cda8984e7b6a5c71f03",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "85d5b00e7fd14880a11e3bca7f715999",
+      "appId": "ProjectAcousticsNative_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-05-05T00:00:00.000Z",
+      "releaseNote": "Project Acoustics for Unreal Audio - 2022.1 fall release - patch update (2022.1.423) - 5.0 plugin",
+      "versionTitle": "ProjectAcoustics-2022.1.6-5.0"
+    },
+    {
+      "id": "17ec59810979455aa8270afe36e08513",
+      "appId": "ProjectAcousticsNative_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "Project Acoustisc for Unreal Audio - 2022.1 fall release - patch update (2022.1.423) - 5.1 plugin",
+      "versionTitle": "ProjectAcoustics-2022.1.6-5.1"
+    },
+    {
+      "id": "78f11b64e0b84d69b250e1e89c639c18",
+      "appId": "ProjectAcousticsNative_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2023-06-22T00:00:00.000Z",
+      "releaseNote": "Project Acoustics for Unreal Audio - 2022.1 fall release - patch update (2022.1.423) - 5.2 plugin",
+      "versionTitle": "ProjectAcoustics-2022.1.6-5.2"
+    },
+    {
+      "id": "1a29b11089c940b2b20234b61665d43c",
+      "appId": "ProjectAcousticsNative_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Android"
+      ],
+      "dateAdded": "2023-09-22T00:00:00.000Z",
+      "releaseNote": "Project Acoustics for Unreal Audio - 2022.1 fall release - patch update (2022.1.426) - 5.3 plugin",
+      "versionTitle": "ProjectAcoustics-2022.1.6-5.3"
+    }
+  ],
+  "developer": "Microsoft Corp",
+  "developerId": "o-q422h4dnjykmtqh9thkkbdmejwxxwz",
+  "endOfSupport": false,
+  "unsearchable": false
+}

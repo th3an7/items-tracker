@@ -1,0 +1,384 @@
+{
+  "id": "60ae441eeb1e46e5a2d15fdf117f33a7",
+  "title": "Savable Day Night Cycle System",
+  "description": "Actors that provides a way to make a smooth day-night transition through the use of a sky sphere, atmospheric fog, exponential height fog and skylight wrapped in an intuitive and easy way.Save and load functions are included both as sync and async methods",
+  "longDescription": "<p><a href=\"https://youtu.be/MiLD62hlQJo\" rel=\"nofollow\">Usage video</a></p><p><a href=\"https://youtu.be/xtgr1fvTIvQ\" rel=\"nofollow\">Showcase video</a></p><p><br /></p><p>Update 1.2 (Only from UE 5.2&#43;):</p><p>Replaced deprecated lights components from UE4 with the new UE5 components that the lighting system use.</p><p>Exposed the default assets used to the project settings. These are the assets used when you create a blueprint of one of the classes the system use.</p><p>Added a world subsystem that help interacting with the day cycle system without the need of keeping a reference to the day cycle updater actor.</p><p>Added additional event for climate change.</p><p>Added a new parameter &#39;Atmospheric color multiplier&#39; that help changing the whole atmosphere color. This should hopefully simplify the process of creating particular atmospheres as well as improve night lighting results.</p><p>Code improvements.</p><p><br /></p><p>Update 1.1:</p><p>Fixed a compile error when trying to compile the engine that has the plugin installed.</p><p>Now interpolations are run in parallel and in a separated thread to avoid blocking the main game thread.</p><p>Since now the interpolations use a different thread, timing for interpolations are a bit different.</p><p>You might need to change interpolation speeds if you already found your sweet spot values.</p><p><br /></p><p>A set of actors that can be used to simulate a day/night cycle with different weathers blending into each other.</p><p>Make use of ue4 components such as height fog, exponential fog, sky light, etc. but pack them into a small numbers of actors to make things more manageable and intuitive.</p><p><br /></p><p>The parameters to set a sky condition are split between two structures (Day and Night) held inside a data table. The data table row entry defines the weather condition.</p><p>The weather can be changed by simply providing the row entry name to a blueprint function and the sky will naturally blend to the new weather condition at the speed you define inside the properties panel.</p><p><br /></p><p>Multiple data tables can be added (at the moment is not possible to switch them at runtime but if anyone is interested I will update the code).</p><p><br /></p><p>In the plugin there are two data tables examples:</p><p>the first one, aims to be realistic but a bit excessive in his colors, the second one is an alien planets with green atmosphere.</p><p><br /></p><p>Finding the correct values to set into the data table is easier thanks to the editor button to switch between current data table night and day conditions, so you can set the values you like in the editor and copy them into the data table.</p><p><br /></p><p>The object has functions to save and load everything about the day cycle system and can be done both sync and async. A structure is returned from the save function and can be saved in blueprints, the same structure is taken as input in the load function to restore the sky state.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Multi threaded.</li><li>Day/Night seamless transition.</li><li>Every parameter used to make the transitions is customizable for both day and night from a simple data table.</li><li>Different weather support, every data table entry is categorized by a weather condition so different values can be used for both day and night for each weather condition you add.</li><li>Since everything is done through c&#43;&#43;, several useful blueprint functions have been provided to give you full control over the logic.</li><li>Async and synchronous save/load built in functions.</li><li>Pausable support.</li><li>Ease of use. A toggle day/night button accessible through the editor give you the opportunity to setup a day scene, set the value you have chosen inside the data table for the day, toggle the scene to the night lighting e repeat the process.</li><li>No use of post process. Since the cycle is procedural and does not use any post process, you have even more control on how the scene should look.</li><li>Godrays from sun and other directional lights interact with the atmosphere, fog, clouds and dynamic objects.</li><li>Events on sunset and sunrise. A simple example scene is setup where a cube will turn the light up at sunset and turn off the light on sunrise.</li></ul><p>Number of Blueprints: 6-8</p><p>Number of C&#43;&#43; Classes: 11-13</p><p>Network Replicated: (No)</p><p>Supported Development Platforms:</p><p>Windows: (Yes)</p><p>Documentation: https://drive.google.com/file/d/1ge5OoL5iE1weH44Bz2hZNprAAt1rBrcv/view?usp&#61;sharing</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/datatable-1920x1080-c7de21148e8ff4b0d8c77f4bff6aed07.png",
+      "md5": "c7de21148e8ff4b0d8c77f4bff6aed07",
+      "width": 1920,
+      "height": 1080,
+      "size": 122400,
+      "uploadedDate": "2021-03-28T00:08:12.694Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/bp2-1920x1080-4fcd8746213f5d795696a562020f597a.png",
+      "md5": "4fcd8746213f5d795696a562020f597a",
+      "width": 1920,
+      "height": 1080,
+      "size": 572016,
+      "uploadedDate": "2021-03-28T00:08:13.045Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/bp1-1920x1080-1679bff5ed193183b3009a52dc42b70d.png",
+      "md5": "1679bff5ed193183b3009a52dc42b70d",
+      "width": 1920,
+      "height": 1080,
+      "size": 376434,
+      "uploadedDate": "2021-03-28T00:08:13.513Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/properties-1920x1080-4bcb7b12111f84986b4077b5b4f9efc9.png",
+      "md5": "4bcb7b12111f84986b4077b5b4f9efc9",
+      "width": 1920,
+      "height": 1080,
+      "size": 72799,
+      "uploadedDate": "2021-03-28T00:08:13.813Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image-1920x1080-5b83da8bafcd947262d48193b31fb5c8.png",
+      "md5": "5b83da8bafcd947262d48193b31fb5c8",
+      "width": 1920,
+      "height": 1080,
+      "size": 1462543,
+      "uploadedDate": "2021-03-28T00:08:14.220Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image2-1920x1080-398a9f281369a02884788fb4f90c5dee.png",
+      "md5": "398a9f281369a02884788fb4f90c5dee",
+      "width": 1920,
+      "height": 1080,
+      "size": 1392172,
+      "uploadedDate": "2021-03-28T00:08:14.611Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image3-1920x1080-fede68216b4927704e87e7d8612372ca.png",
+      "md5": "fede68216b4927704e87e7d8612372ca",
+      "width": 1920,
+      "height": 1080,
+      "size": 1437283,
+      "uploadedDate": "2021-03-28T00:08:15.037Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image4-1920x1080-d29b4ee6709b745e0b52595d2dac6bee.png",
+      "md5": "d29b4ee6709b745e0b52595d2dac6bee",
+      "width": 1920,
+      "height": 1080,
+      "size": 1443831,
+      "uploadedDate": "2021-03-28T00:08:15.500Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image5-1920x1080-3f83ef451f9fb45c34df9698d0442d73.png",
+      "md5": "3f83ef451f9fb45c34df9698d0442d73",
+      "width": 1920,
+      "height": 1080,
+      "size": 1498707,
+      "uploadedDate": "2021-03-28T00:08:15.898Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image6-1920x1080-51f24aa6d28d19a433550fdc0471b8e7.png",
+      "md5": "51f24aa6d28d19a433550fdc0471b8e7",
+      "width": 1920,
+      "height": 1080,
+      "size": 1503924,
+      "uploadedDate": "2021-03-28T00:08:16.348Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image7-1920x1080-8f1618a79714ef40278d97dafe7f14ee.png",
+      "md5": "8f1618a79714ef40278d97dafe7f14ee",
+      "width": 1920,
+      "height": 1080,
+      "size": 1631328,
+      "uploadedDate": "2021-03-28T00:08:16.816Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image8-1920x1080-b0f7be960cb5eef2b2e0ab8fdc2bf959.png",
+      "md5": "b0f7be960cb5eef2b2e0ab8fdc2bf959",
+      "width": 1920,
+      "height": 1080,
+      "size": 1533453,
+      "uploadedDate": "2021-03-28T00:08:17.275Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image9-1920x1080-09824931bd754401f03b497fde5b9fde.png",
+      "md5": "09824931bd754401f03b497fde5b9fde",
+      "width": 1920,
+      "height": 1080,
+      "size": 1808416,
+      "uploadedDate": "2021-03-28T00:08:17.700Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Image10-1920x1080-6ea6195d81ccf8db7455ecaf2e7318ed.png",
+      "md5": "6ea6195d81ccf8db7455ecaf2e7318ed",
+      "width": 1920,
+      "height": 1080,
+      "size": 1333120,
+      "uploadedDate": "2021-03-29T17:28:43.246Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SavableDayNightCycleSystem_thumb-284x284-cc87e2c0b6a420bb44c6c590584a9aab.png",
+      "md5": "cc87e2c0b6a420bb44c6c590584a9aab",
+      "width": 284,
+      "height": 284,
+      "size": 62594,
+      "uploadedDate": "2021-03-28T00:08:18.466Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SavableDayNightCycleSystem_featured-894x488-0076cf57273cc01f49cce78334feed4e.png",
+      "md5": "0076cf57273cc01f49cce78334feed4e",
+      "width": 894,
+      "height": 488,
+      "size": 296836,
+      "uploadedDate": "2021-03-28T00:08:18.595Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image10-1920x1080-6ea6195d81ccf8db7455ecaf2e7318ed_Snapshot.png",
+      "md5": "64388106efeb2592a0576ecead7d759b",
+      "width": 150,
+      "height": 74,
+      "size": 3283,
+      "uploadedDate": "2021-03-29T17:28:43.501Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image10-1920x1080-6ea6195d81ccf8db7455ecaf2e7318ed_Snapshot.png",
+      "md5": "64388106efeb2592a0576ecead7d759b",
+      "width": 150,
+      "height": 74,
+      "size": 3283,
+      "uploadedDate": "2021-03-29T15:31:11.131Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/datatable-1920x1080-c7de21148e8ff4b0d8c77f4bff6aed07_Snapshot.png",
+      "md5": "b92e9c7fc2165064304dfd4e7e048959",
+      "width": 150,
+      "height": 74,
+      "size": 3214,
+      "uploadedDate": "2021-03-28T00:08:12.893Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bp2-1920x1080-4fcd8746213f5d795696a562020f597a_Snapshot.png",
+      "md5": "da9ec51d8730b8dfe3e1bff2eebc2d98",
+      "width": 150,
+      "height": 74,
+      "size": 4159,
+      "uploadedDate": "2021-03-28T00:08:13.346Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/bp1-1920x1080-1679bff5ed193183b3009a52dc42b70d_Snapshot.png",
+      "md5": "3d3cf2d39ac84a5086cfc07e10941011",
+      "width": 150,
+      "height": 74,
+      "size": 4466,
+      "uploadedDate": "2021-03-28T00:08:13.742Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/properties-1920x1080-4bcb7b12111f84986b4077b5b4f9efc9_Snapshot.png",
+      "md5": "d456a5102b8ec4c6ecafa8a9542bdfc8",
+      "width": 150,
+      "height": 74,
+      "size": 2066,
+      "uploadedDate": "2021-03-28T00:08:14.055Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image-1920x1080-5b83da8bafcd947262d48193b31fb5c8_Snapshot.png",
+      "md5": "3fe30f90e856a013ba71327c0c9ad4be",
+      "width": 150,
+      "height": 74,
+      "size": 3424,
+      "uploadedDate": "2021-03-28T00:08:14.488Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image2-1920x1080-398a9f281369a02884788fb4f90c5dee_Snapshot.png",
+      "md5": "ebd003ea8fa1253b62281924814369e9",
+      "width": 150,
+      "height": 74,
+      "size": 3749,
+      "uploadedDate": "2021-03-28T00:08:14.877Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image3-1920x1080-fede68216b4927704e87e7d8612372ca_Snapshot.png",
+      "md5": "5c1d6d976dbf13ebff43d5bbc987aaee",
+      "width": 150,
+      "height": 74,
+      "size": 4080,
+      "uploadedDate": "2021-03-28T00:08:15.301Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image4-1920x1080-d29b4ee6709b745e0b52595d2dac6bee_Snapshot.png",
+      "md5": "093ce216f13c0c7ac95dd03bb40c1075",
+      "width": 150,
+      "height": 74,
+      "size": 3562,
+      "uploadedDate": "2021-03-28T00:08:15.772Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image5-1920x1080-3f83ef451f9fb45c34df9698d0442d73_Snapshot.png",
+      "md5": "8eca60672c40ed132bb626e345ae60c0",
+      "width": 150,
+      "height": 74,
+      "size": 4286,
+      "uploadedDate": "2021-03-28T00:08:16.176Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image6-1920x1080-51f24aa6d28d19a433550fdc0471b8e7_Snapshot.png",
+      "md5": "79df91d714ec57c3d06540507736b7e2",
+      "width": 150,
+      "height": 74,
+      "size": 4103,
+      "uploadedDate": "2021-03-28T00:08:16.637Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image7-1920x1080-8f1618a79714ef40278d97dafe7f14ee_Snapshot.png",
+      "md5": "5faa9371766a734a465a571a04f391a7",
+      "width": 150,
+      "height": 74,
+      "size": 4255,
+      "uploadedDate": "2021-03-28T00:08:17.122Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image8-1920x1080-b0f7be960cb5eef2b2e0ab8fdc2bf959_Snapshot.png",
+      "md5": "3584f2f8daa8dede3279a79a502c95ae",
+      "width": 150,
+      "height": 74,
+      "size": 4051,
+      "uploadedDate": "2021-03-28T00:08:17.541Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image9-1920x1080-09824931bd754401f03b497fde5b9fde_Snapshot.png",
+      "md5": "1af75e5fe26aa1488c9e5592890aa001",
+      "width": 150,
+      "height": 74,
+      "size": 5121,
+      "uploadedDate": "2021-03-28T00:08:17.976Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Image10-1920x1080-6ea6195d81ccf8db7455ecaf2e7318ed_Snapshot.png",
+      "md5": "64388106efeb2592a0576ecead7d759b",
+      "width": 150,
+      "height": 74,
+      "size": 3283,
+      "uploadedDate": "2021-03-28T00:08:18.395Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-03-29T15:18:50.404Z",
+  "lastModifiedDate": "2024-09-28T15:59:01.315Z",
+  "customAttributes": {},
+  "entitlementName": "60ae441eeb1e46e5a2d15fdf117f33a7",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "c3887a3f1a6444d5a61862b6c7275b1e",
+      "appId": "DayCycleSystem_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-03-28T00:00:00.000Z",
+      "releaseNote": "Multi threading",
+      "versionTitle": "DayCycleSystemV1.1"
+    },
+    {
+      "id": "0f88fd4b6f0f428ea392db045d2808d6",
+      "appId": "DayCycleSystem_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-12-11T00:00:00.000Z",
+      "releaseNote": "Compiled with 4.27",
+      "versionTitle": "DayCycleSystem427"
+    },
+    {
+      "id": "07f6414eb5ca48f9ac81017dd32d4f48",
+      "appId": "DayCycleSystem_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-08-16T00:00:00.000Z",
+      "releaseNote": "Fixed packaging issues",
+      "versionTitle": "DayCycleSystem52"
+    },
+    {
+      "id": "717d095c871b40cb850631f095893871",
+      "appId": "DayCycleSystem_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-06T00:00:00.000Z",
+      "releaseNote": "Fixed compile issues",
+      "versionTitle": "DayCycleSystem53"
+    },
+    {
+      "id": "c632f848e56145198526107f065753b5",
+      "appId": "DayCycleSystem_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-05-28T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "DayCycleSystem_5.4"
+    }
+  ],
+  "developer": "defaltdobrasao",
+  "developerId": "o-qdn4p9xgqhvek6vzfwxr3w9cghyvam",
+  "endOfSupport": false,
+  "unsearchable": false
+}

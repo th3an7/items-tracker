@@ -1,0 +1,452 @@
+{
+  "id": "ca3e455764cb49c0a4e81a430d45fb25",
+  "title": "Roadmap Navigation",
+  "description": "A multi-threaded custom navigation tool for path finding in huge worlds through the roads (or any custom areas) plus a simple minimap.",
+  "longDescription": "<p><br /></p><blockquote><a href=\"https://youtu.be/mbqwognLf9M\" rel=\"nofollow\"><strong>Demonstration Video</strong></a><strong> </strong><em>(Watch the video to see what it&#39;s capable of)</em></blockquote><blockquote><a href=\"https://drive.google.com/file/d/19rfy1nqGJcA3BAZz_W-DUsZWAXLVZlGq/view?usp&#61;sharing\" rel=\"nofollow\"><strong>Documentation Link</strong></a></blockquote><blockquote><a href=\"https://drive.google.com/file/d/15OmxlccGvwucBl3Udd7vMRjb6qUz2axd/view?usp&#61;sharing\" rel=\"nofollow\"><strong>Playable Demo</strong></a></blockquote><blockquote><a href=\"https://youtu.be/Y0hh_yfz5kk\" rel=\"nofollow\"><strong>Quick Start Tutorial Video</strong></a> <em>(First time setup guide)</em></blockquote><blockquote><a href=\"https://drive.google.com/file/d/1_LrHt1xX4Oo0uQO1gaCILLdHklMrgM-A/view?usp&#61;sharing\" rel=\"nofollow\"><strong>Example Project</strong></a><strong> </strong><em>(You can try it after you bought the plugin)</em></blockquote><blockquote><a href=\"https://discord.gg/JVn8ZnVUGH\" rel=\"nofollow\"><strong>Discord</strong></a></blockquote><p><br /></p><p>Roadmap navigation is a multi-threaded tool used for path finding in very large worlds; mostly used for open-world games.</p><p>Road is just a metaphor here, it can be any specific area as long as you can detect that area by blueprints.</p><p>The path finding will execute on a custom navigation grid and it has nothing to do with UE4 built-in navigation system.</p><p><br /></p><p><strong>What can you use it for</strong></p><ul><li>Path finding within custom areas like roads</li><li>Path finding for AI agents</li><li>Find a path between 2 points in a huge world</li><li>Draw path on a map</li></ul><p><br /></p><p>Navigation only gets generated once and after that, it will be loaded from disk, the generated file will be store in project content so that the players don&#39;t need to generate it after they bought your game. (you can also disable saving/loading feature entirely)</p><p>The plugin is designed to fulfil any game&#39;s needs.</p><p>You can read the documentation before buying the plugin to see how it exactly works.</p><p>A simple minimap is also included with the plugin to show the found path.</p><p><br /></p><p>The plugin name could be &#34;Custom Navigation&#34; but I liked &#34;Roadmap Navigation&#34; more since it was based on roads in the beginning.</p><p><br /></p><p><strong>Performance Example:</strong></p><p>Navigation of a 10x10 square miles map (the 3rd gallery image) will get generated in 10 seconds and loaded in less than 1 seconds, approximate roads percentage is 10% of the entire map and the generated navigation file size will be 696kb, also all the paths will be found in up to 1 second.</p><p><strong>&lt;</strong> Above info is gathered by an AMD Ryzen 5 3600XT CPU <strong>&gt;</strong></p><p><br /></p><p>The plugin will receive updates since I&#39;m using it in my own game.</p><p><br /></p><p><strong>Example Project:</strong></p><p>This project contains 2 maps, one&#39;s massive, 10x10 square miles, and the other one is medium size.</p><p>It is highly recommended to try this project to see how the settings work and what settings are best for each map.</p><p><a href=\"https://drive.google.com/file/d/1_LrHt1xX4Oo0uQO1gaCILLdHklMrgM-A/view?usp&#61;sharing\" rel=\"nofollow\">Download Link</a></p><p><br /></p><p><strong>* IMPORTANT NOTE *</strong></p><p>Roads <strong><u>cannot</u></strong> cross each other in different heights, like highways. <em>[Not Supported]</em></p>",
+  "technicalDetails": "<p>The plugin will generate custom navigation data based on user settings then you can do path finding in the generated navigation.</p><p>Path finding runs <u>asynchronously</u> in general but you can do path finding on the game thread as well, There are 3 different path finding methods, check out the docs.</p><p>Performance was my number 1 priority!</p><p><br /></p><p>Features:</p><ul><li> Fast</li><li> Optimized</li><li> Flexible</li><li>Multi-threaded</li><li>Customizable</li><li>Stable</li><li>Modular</li></ul><p><br /></p><p>Code Modules:</p><ul><li> RoadmapNavigation (Runtime)</li></ul><p><br /></p><p>Number of Blueprints: 1</p><p>Number of Widget Blueprints: 3</p><p>Number of C&#43;&#43; Classes: 1</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64, Win32, MacOS, PS4, Xbox One, Android (Should also work for other platforms)</p><p>Supported Target Build Platforms: Win64, Win32, MacOS, PS4, Xbox One, Android (Should also work for other platforms)</p><p><br /></p><p>Keywords: Path, Road, Custom Navigation, Navigation Tool, Open World Navigation</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/NavBake-1920x1080-6e77bc86ebd30ab816ef971dc7818b59.png",
+      "md5": "6e77bc86ebd30ab816ef971dc7818b59",
+      "width": 1920,
+      "height": 1080,
+      "size": 1374215,
+      "uploadedDate": "2021-04-11T19:09:09.815Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Road3-1920x1080-53685d5af760be6be80ffbf47a5e27e7.png",
+      "md5": "53685d5af760be6be80ffbf47a5e27e7",
+      "width": 1920,
+      "height": 1080,
+      "size": 1121215,
+      "uploadedDate": "2021-04-11T19:09:10.346Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MassiveMap-1920x1080-fa9b2265e4ae6b4544fc1e05e5edc1e4.png",
+      "md5": "fa9b2265e4ae6b4544fc1e05e5edc1e4",
+      "width": 1920,
+      "height": 1080,
+      "size": 1418414,
+      "uploadedDate": "2021-04-11T19:09:10.911Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Minimaps-1920x1080-55e02d3417b458d060cb3692fb3ff8f7.png",
+      "md5": "55e02d3417b458d060cb3692fb3ff8f7",
+      "width": 1920,
+      "height": 1080,
+      "size": 637262,
+      "uploadedDate": "2021-04-11T19:09:11.430Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Road4-1920x1080-78713c026dab00c1c91410002e9de051.png",
+      "md5": "78713c026dab00c1c91410002e9de051",
+      "width": 1920,
+      "height": 1080,
+      "size": 1596114,
+      "uploadedDate": "2021-04-11T19:09:12.016Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Road-1920x1080-f7cc941935db5755ec2fe6aa148ed339.png",
+      "md5": "f7cc941935db5755ec2fe6aa148ed339",
+      "width": 1920,
+      "height": 1080,
+      "size": 1217334,
+      "uploadedDate": "2021-04-11T19:09:12.618Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ROads5-1920x1080-24d3b6255b2d7a215bd13145ba86c72a.png",
+      "md5": "24d3b6255b2d7a215bd13145ba86c72a",
+      "width": 1920,
+      "height": 1080,
+      "size": 1183723,
+      "uploadedDate": "2021-04-11T19:09:13.152Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Paths-1920x1080-436c7edca8ec41e2e4e658dcec1fa231.png",
+      "md5": "436c7edca8ec41e2e4e658dcec1fa231",
+      "width": 1920,
+      "height": 1080,
+      "size": 1621859,
+      "uploadedDate": "2021-04-11T19:09:13.757Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Road2-1920x1080-a87d93519a2b9a0699c31f7ffcbc28b0.png",
+      "md5": "a87d93519a2b9a0699c31f7ffcbc28b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1292868,
+      "uploadedDate": "2021-04-11T19:09:14.339Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Settings-1920x1080-b497b0feeaea9a10f3b710c81e46880c.png",
+      "md5": "b497b0feeaea9a10f3b710c81e46880c",
+      "width": 1920,
+      "height": 1080,
+      "size": 994357,
+      "uploadedDate": "2021-04-11T19:09:15.041Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Main-1920x1080-fca182c3ee49e0c3fa14e742fd972760.png",
+      "md5": "fca182c3ee49e0c3fa14e742fd972760",
+      "width": 1920,
+      "height": 1080,
+      "size": 671433,
+      "uploadedDate": "2021-04-11T19:09:15.452Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Main2-1920x1080-688f4221630cf45e19048c6f7a678eb6.png",
+      "md5": "688f4221630cf45e19048c6f7a678eb6",
+      "width": 1920,
+      "height": 1080,
+      "size": 860123,
+      "uploadedDate": "2021-04-11T19:09:15.823Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/minimap-1920x1080-e19ebee06ae73d57e8801e5f6dd68cc4.png",
+      "md5": "e19ebee06ae73d57e8801e5f6dd68cc4",
+      "width": 1920,
+      "height": 1080,
+      "size": 378424,
+      "uploadedDate": "2021-04-11T19:09:16.208Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RoadDetection-1920x1080-f0d6514819dd17f391d8e2992d788870.png",
+      "md5": "f0d6514819dd17f391d8e2992d788870",
+      "width": 1920,
+      "height": 1080,
+      "size": 749751,
+      "uploadedDate": "2021-04-11T19:09:16.612Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Hints-1920x1080-0d3fb68383bae3bd48da4807d2c8dab0.png",
+      "md5": "0d3fb68383bae3bd48da4807d2c8dab0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1452437,
+      "uploadedDate": "2021-04-11T19:09:17.016Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/RoadmapNavigation_thumb-284x284-6541d82d9a62bf47e1b85bdfaf6fd76d.png",
+      "md5": "6541d82d9a62bf47e1b85bdfaf6fd76d",
+      "width": 284,
+      "height": 284,
+      "size": 94830,
+      "uploadedDate": "2021-04-24T11:59:21.671Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/RoadmapNavigation_featured-894x488-b876e731b1ecaace738e1f91142b7655.png",
+      "md5": "b876e731b1ecaace738e1f91142b7655",
+      "width": 894,
+      "height": 488,
+      "size": 486700,
+      "uploadedDate": "2021-04-24T11:59:21.783Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NavBake-1920x1080-6e77bc86ebd30ab816ef971dc7818b59_Snapshot.png",
+      "md5": "79a9a9cc3a8030318a85c5147c7d8247",
+      "width": 150,
+      "height": 74,
+      "size": 7983,
+      "uploadedDate": "2021-04-11T19:09:10.152Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Road3-1920x1080-53685d5af760be6be80ffbf47a5e27e7_Snapshot.png",
+      "md5": "891f69ef029975f48fb6ccb984a67f63",
+      "width": 150,
+      "height": 74,
+      "size": 5072,
+      "uploadedDate": "2021-04-11T19:09:10.709Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MassiveMap-1920x1080-fa9b2265e4ae6b4544fc1e05e5edc1e4_Snapshot.png",
+      "md5": "193475e9695d1befcb90e3f05b9421d9",
+      "width": 150,
+      "height": 74,
+      "size": 7650,
+      "uploadedDate": "2021-04-11T19:09:11.284Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Minimaps-1920x1080-55e02d3417b458d060cb3692fb3ff8f7_Snapshot.png",
+      "md5": "500efa173a3c10c897b80bbc564f701b",
+      "width": 150,
+      "height": 74,
+      "size": 9165,
+      "uploadedDate": "2021-04-11T19:09:11.702Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Road4-1920x1080-78713c026dab00c1c91410002e9de051_Snapshot.png",
+      "md5": "a45dba3aaff1cf2fecc03e9c125a79ab",
+      "width": 150,
+      "height": 74,
+      "size": 8733,
+      "uploadedDate": "2021-04-11T19:09:12.417Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Road-1920x1080-f7cc941935db5755ec2fe6aa148ed339_Snapshot.png",
+      "md5": "638b0a545e5aaf91cab052367f5f98cc",
+      "width": 150,
+      "height": 74,
+      "size": 5751,
+      "uploadedDate": "2021-04-11T19:09:12.951Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ROads5-1920x1080-24d3b6255b2d7a215bd13145ba86c72a_Snapshot.png",
+      "md5": "8265dd09c2c09e9105cca7560b856cf8",
+      "width": 150,
+      "height": 74,
+      "size": 5256,
+      "uploadedDate": "2021-04-11T19:09:13.544Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Paths-1920x1080-436c7edca8ec41e2e4e658dcec1fa231_Snapshot.png",
+      "md5": "998b2a0ed4e5a0f6d53b81fe45f19f47",
+      "width": 150,
+      "height": 74,
+      "size": 7838,
+      "uploadedDate": "2021-04-11T19:09:14.154Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Road2-1920x1080-a87d93519a2b9a0699c31f7ffcbc28b0_Snapshot.png",
+      "md5": "2ea7667d4de3edcc9fe3118629358855",
+      "width": 150,
+      "height": 74,
+      "size": 5882,
+      "uploadedDate": "2021-04-11T19:09:14.675Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Settings-1920x1080-b497b0feeaea9a10f3b710c81e46880c_Snapshot.png",
+      "md5": "6b4c8b1dfee62e15f484334118fd41f8",
+      "width": 150,
+      "height": 74,
+      "size": 7397,
+      "uploadedDate": "2021-04-11T19:09:15.340Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Main-1920x1080-fca182c3ee49e0c3fa14e742fd972760_Snapshot.png",
+      "md5": "cb9cc95c2de2f70cd427c7c44ed7611c",
+      "width": 150,
+      "height": 74,
+      "size": 6302,
+      "uploadedDate": "2021-04-11T19:09:15.673Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Main2-1920x1080-688f4221630cf45e19048c6f7a678eb6_Snapshot.png",
+      "md5": "91581836b236a104a6386d92d697a8e3",
+      "width": 150,
+      "height": 74,
+      "size": 7169,
+      "uploadedDate": "2021-04-11T19:09:16.061Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/minimap-1920x1080-e19ebee06ae73d57e8801e5f6dd68cc4_Snapshot.png",
+      "md5": "3381a14819036dcfa44f231cc77321c5",
+      "width": 150,
+      "height": 74,
+      "size": 4805,
+      "uploadedDate": "2021-04-11T19:09:16.472Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RoadDetection-1920x1080-f0d6514819dd17f391d8e2992d788870_Snapshot.png",
+      "md5": "ce0370852e233562c9f7c588d709f293",
+      "width": 150,
+      "height": 74,
+      "size": 6640,
+      "uploadedDate": "2021-04-11T19:09:16.832Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Hints-1920x1080-0d3fb68383bae3bd48da4807d2c8dab0_Snapshot.png",
+      "md5": "c19c0e2fa6e984d50cb4fbf9631b7e66",
+      "width": 150,
+      "height": 74,
+      "size": 6100,
+      "uploadedDate": "2021-04-11T19:09:17.350Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-04-14T18:37:36.811Z",
+  "lastModifiedDate": "2024-11-18T20:20:32.915Z",
+  "customAttributes": {},
+  "entitlementName": "ca3e455764cb49c0a4e81a430d45fb25",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "a8238cdad7144df8a2b50075a35ce976",
+      "appId": "RoadmapNavigation_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Xbox One",
+        "Win32"
+      ],
+      "dateAdded": "2021-04-11T00:00:00.000Z",
+      "releaseNote": "Update reverted since it was causing all debugs helpers disappear!",
+      "versionTitle": "Roadmap Navigation 1.1.1"
+    },
+    {
+      "id": "75d81a410c33473e9b024170ffceebd6",
+      "appId": "RoadmapNavigation_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "PS4",
+        "Nintendo Switch",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-08-29T00:00:00.000Z",
+      "releaseNote": "New Engine Version Update",
+      "versionTitle": "1.1.1 4.27"
+    },
+    {
+      "id": "a57d3bf42f7b4d3b9c284185489853a5",
+      "appId": "RoadmapNavigation_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "PS4",
+        "Nintendo Switch",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.1.1 UE5 Unlocked"
+    },
+    {
+      "id": "9b9aac291bf14ff49d852b88f9bd7281",
+      "appId": "RoadmapNavigation_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "Updated",
+      "versionTitle": "UE5.1"
+    },
+    {
+      "id": "1db3de2aaa4b4c63a8d7a645707f972a",
+      "appId": "RoadmapNavigation_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "Win32",
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-05-14T00:00:00.000Z",
+      "releaseNote": "Next Gen Consoles Added to Platform List",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "f355d202c4bb4536a6f54e7807ed292d",
+      "appId": "RoadmapNavigation_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Nintendo Switch",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One",
+        "Mac"
+      ],
+      "dateAdded": "2023-09-10T00:00:00.000Z",
+      "releaseNote": "Next Gen Consoles Added to Platform List",
+      "versionTitle": "UE5.3"
+    },
+    {
+      "id": "a51ce07dd2dc4db0bd99b255fb5a39f6",
+      "appId": "RoadmapNavigation_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Xbox One",
+        "PS4",
+        "Android",
+        "Mac",
+        "Nintendo Switch",
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2024-04-23T00:00:00.000Z",
+      "releaseNote": "Next Gen Consoles Added to Platform List",
+      "versionTitle": "UE5.4"
+    }
+  ],
+  "developer": "Restricted Studio",
+  "developerId": "o-sdzqrj99uetnz5hsfynw8lljdanzjt",
+  "endOfSupport": false,
+  "unsearchable": false
+}

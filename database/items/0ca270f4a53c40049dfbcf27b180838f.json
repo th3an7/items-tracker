@@ -1,0 +1,210 @@
+{
+  "id": "0ca270f4a53c40049dfbcf27b180838f",
+  "title": "Item Manager",
+  "description": "ItemManager is the most simple way to manage your items",
+  "longDescription": "<p>The ItemManager plugin oofers a solution for managing items within your game environement. This versatile toolset simplifies the implementation of various item-related functionalities, including drop, collect, and switch, while providing developers with a suite of customization.</p><p><br /></p><p>The ItemManager component allows your actor to interact with the all ItemManager system. The component privides you customization such as :</p><ul><li>Loop switching</li><li>Add an empty item by default</li><li>Allows duplicates</li><li>Item limit.</li></ul><p>The component brings some functions to use the manager, add item, switch next/previous/index item, drop item, and use item.</p><p><br /></p><p>The ItemParent class allows you to create custom item that can be used by the ItemManager. The class provides you parameters :</p><ul><li>Skeletal mesh component</li><li>Friendly name</li><li>Attach socket</li><li>Detach socket</li><li>Time before item despawn</li><li>Time before item spawn</li><li>Is item dropable</li><li>Can use item</li><li>Can collect item</li><li>Can switch</li><li>Auto equipped when collected</li><li>Despawn item when switched</li></ul><p>The class also brings you a OnItemUsed and CannotUseItem event (both in blueprint and C&#43;&#43;). these functions need to be overrided if they are used in C&#43;&#43;.</p><p><br /></p><p>The ItemCollectable class needs to be placed in the world, its used to have a collectable item (only actor with the ItemManager component can collect those).</p><p>This class comes with a lot of customization :</p><ul><li>ItemParent subclass (item that is intended to be collected)</li><li>Custom Trigger box size</li><li>Item display</li><li>Grounded : Will snap your item to the nearest ground and attach the item to it.</li><li>Animated : Will activate an animation</li><li>Physics : Will activate physics on the item</li></ul><p>Grounded properties</p><ul><li>Ground rotation type ( keep ground rotation ; keep mesh rotation)</li><li>Adjusted rotation (allows you to add rotation to the mesh only)</li><li>Invert mesh rotation (allows you to add 180° to the mesh rotation)</li></ul><p><br /></p><p>Animation properties</p><ul><li>Height</li><li>Height speed</li><li>Rotation speed</li></ul><p><br /></p><ul><li>Enable collisions ( must have a physics asset in your skeletal mesh)</li><li>Enable transparency ( allows you to see items through walls)</li><li>Enable outline ( the outline will apear when actor (only with ItemManager Component) overlapped the trigger box)</li><li>Outline material (by default, the plugin has a outline material, but you can change it)</li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>Item Manager component : allows your actor to interact with all ItemManager plugin functionalities such as collect, drop, switch and use item.</li><li>Item Parent : Derived actors from this class will be used in the manager. This actor offers extensive customization options to adapt seamlessly to various situations.</li><li>Item Collectable : Actor to be positioned within the game world. Actor with ItemManager component will be allowed to interact with it. Can be overlapped and collected by the manager</li></ul><p>Code Modules:</p><ul><li> Runtime</li></ul><p>Number of Blueprints nodes : 34</p><p>Number of Blueprints events : 11</p><p>Number of C&#43;&#43; Classes: 6</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation: https://github.com/P0mmeDeTerre/ItemManager/wiki</p><p>Patch Notes : https://github.com/P0mmeDeTerre/ItemManager/</p><p>Demo : https://youtu.be/ydtDYSc7AGE</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ItemManagerGalery1-1920x1080-d0b50937964cb20c7ab5d0bb3c7a119d.png",
+      "md5": "d0b50937964cb20c7ab5d0bb3c7a119d",
+      "width": 1920,
+      "height": 1080,
+      "size": 18244,
+      "uploadedDate": "2024-03-04T10:56:54.852Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FinalItemManagerComponent-1920x1080-cc5fbf6a038333c784ef9ff814829a91.png",
+      "md5": "cc5fbf6a038333c784ef9ff814829a91",
+      "width": 1920,
+      "height": 1080,
+      "size": 83374,
+      "uploadedDate": "2024-03-07T14:51:24.104Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FinalItemManagerComponent2-1920x1080-1dbcdad8d47efb613e21863fbe0f27e8.png",
+      "md5": "1dbcdad8d47efb613e21863fbe0f27e8",
+      "width": 1920,
+      "height": 1080,
+      "size": 345554,
+      "uploadedDate": "2024-03-07T14:51:24.431Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FinalItemClass-1920x1080-799e7df455c68b61ec7384424017ebad.png",
+      "md5": "799e7df455c68b61ec7384424017ebad",
+      "width": 1920,
+      "height": 1080,
+      "size": 154906,
+      "uploadedDate": "2024-03-07T14:54:38.574Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FinalItemCollectable-1920x1080-47b6cb54faa61da6db9038d25e10af66.png",
+      "md5": "47b6cb54faa61da6db9038d25e10af66",
+      "width": 1920,
+      "height": 1080,
+      "size": 230337,
+      "uploadedDate": "2024-03-07T14:54:38.978Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ItemManager_thumb-284x284-77b60778b80b8d385778b61e801bf875.png",
+      "md5": "77b60778b80b8d385778b61e801bf875",
+      "width": 284,
+      "height": 284,
+      "size": 13095,
+      "uploadedDate": "2024-03-04T10:56:55.008Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ItemManager_featured-894x488-6bd53c67cd0643a0d1cbf43508cea583.png",
+      "md5": "6bd53c67cd0643a0d1cbf43508cea583",
+      "width": 894,
+      "height": 488,
+      "size": 41892,
+      "uploadedDate": "2024-03-04T10:56:55.063Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FinalItemClass-1920x1080-799e7df455c68b61ec7384424017ebad_Snapshot.png",
+      "md5": "1ba7a28893637bff441e98ec10001933",
+      "width": 150,
+      "height": 74,
+      "size": 3049,
+      "uploadedDate": "2024-03-07T14:54:38.812Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FinalItemCollectable-1920x1080-47b6cb54faa61da6db9038d25e10af66_Snapshot.png",
+      "md5": "200f0c5d1e2e892ed13cf9de35564de3",
+      "width": 150,
+      "height": 74,
+      "size": 3954,
+      "uploadedDate": "2024-03-07T14:54:39.208Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FinalItemManagerComponent-1920x1080-cc5fbf6a038333c784ef9ff814829a91_Snapshot.png",
+      "md5": "aa082556a15cf8061a662b6ce939807a",
+      "width": 150,
+      "height": 74,
+      "size": 2959,
+      "uploadedDate": "2024-03-07T14:51:24.318Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FinalItemManagerComponent2-1920x1080-1dbcdad8d47efb613e21863fbe0f27e8_Snapshot.png",
+      "md5": "139d8eb80b79b0ab9f7ea274c1fab64b",
+      "width": 150,
+      "height": 74,
+      "size": 4513,
+      "uploadedDate": "2024-03-07T14:51:24.656Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FinalItemClass-1920x1080-3a40c4950d211fba514ce14df9a92ee8_Snapshot.png",
+      "md5": "547d52ed3d8ec495c5224a94b6c1d21d",
+      "width": 150,
+      "height": 74,
+      "size": 3039,
+      "uploadedDate": "2024-03-07T14:51:25.097Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FinalItemCollectable-1920x1080-e8ee93c36d534a649b46d5acb4de6771_Snapshot.png",
+      "md5": "7b95d8e1dac3b1b1c265e610490925cc",
+      "width": 150,
+      "height": 74,
+      "size": 3949,
+      "uploadedDate": "2024-03-07T14:51:25.438Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ItemManagerGalery1-1920x1080-d0b50937964cb20c7ab5d0bb3c7a119d_Snapshot.png",
+      "md5": "a2ddb8f854ac717d35c16121e82c1bb7",
+      "width": 150,
+      "height": 74,
+      "size": 3007,
+      "uploadedDate": "2024-03-04T10:56:54.958Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-03-07T14:55:01.638Z",
+  "lastModifiedDate": "2024-11-30T14:52:02.285Z",
+  "customAttributes": {},
+  "entitlementName": "0ca270f4a53c40049dfbcf27b180838f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "263a197e67244086ae149122035b7495",
+      "appId": "ItemManager_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-03-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Item Manager 5.1"
+    },
+    {
+      "id": "3c47e39c4369402b9b64a7a8bc8b556f",
+      "appId": "ItemManager_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-03-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Item Manager 5.2"
+    },
+    {
+      "id": "f8e2f86e43434c269d7f561ded1ba684",
+      "appId": "ItemManager_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-03-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Item Manager 5.3"
+    },
+    {
+      "id": "ae052cd64188406e91f13b6c1b6c332d",
+      "appId": "ItemManager_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Item Manager 5.4"
+    }
+  ],
+  "developer": "P0mme",
+  "developerId": "o-s4ca7jnw8dyuut43m9w427xnfy7tcj",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

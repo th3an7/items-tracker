@@ -1,0 +1,169 @@
+{
+  "id": "e8ac0409cb9f4000a8988160ac82a836",
+  "title": "Open World NPC Optimization with network support",
+  "description": "Persistent Open World NPC optimization component for any character class. Compatible with behavior tree and any AI logic. Component runs on timer, instead of Tick for additional performance and supports Dispatchers and Events associated with it",
+  "longDescription": "<p><a href=\"https://youtu.be/qWkbQ-WnPKU\" rel=\"nofollow\">Preview video</a></p><p><a href=\"https://drive.google.com/file/d/1wGb56ugjelWB10E6gGY6AGYmkvTK2Z56/view?usp&#61;sharing\" rel=\"nofollow\">Download Demo project</a></p><p><a href=\"https://youtu.be/zO5xu0oScMY\" rel=\"nofollow\">Tutorial how to setup component</a></p><p><a href=\"https://docs.google.com/document/d/1uq-QjtvJWGoFiNzbCQD0wPxbYnYA-95hvkv8jUKPXFE/edit?usp&#61;sharing\" rel=\"nofollow\"><strong>Documentation</strong></a></p><p>This component provides performance boost by optimizing the NPC out of sight of the camera.</p><p>The component is completely autonomous — you just need to add it to the AI ​​(NPC) class.</p><p>The component works only with the class-Character class. If you have more skeletal meshes in your class (for example: another skeleton hand for a first person or a skeleton mesh for weapons or static meshes (for example, shields or weapons), the component will also work with them.</p><p>But component optimizes only the skeleton mesh and movement your NPCs, because this is what loads the system.</p><p>Everything else UE4 optimizes independently.</p><p>The NPCs outside of the camera&#39;s field of view (the view frustum) aren&#39;t visible, and can be culled. The rejected NPCs outside the truncated camera view are no longer displayed, leaving only a handful of NPCs within this view.</p><p>In online mode, the Component works with the client. All objects that are out of sight still remain in the game world, so if you use a dedicated server, other players will be able to see them. So you get the load on the system only those NPCs that are visible in the frame.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li><strong>The component automatically recognizes how it is used: for a dedicated server or a single mode</strong></li><li>Support <strong>Single mode</strong></li><li>Support <strong>Coop mode (Server - Client)</strong></li><li>Support <strong>Dedicated server</strong></li><li>The component <strong><u>not use Tick</u></strong> he work on a timer</li><li>Has a dispatchers and number of other settings</li><li>The component does not affect the amount of materials in your mannequin.</li><li>The component has Dispatchers and variables that will help to bind component to your logic.</li><li>The component does not affect the behavior of your NPC and is compatible with the behavior tree. There are also a number of settings and for your convenience they have descriptions.</li><li>The component can be added to the parent class and it will work for all children.</li><li>The component supports AnimNotify, but if you have the sound of steps in the animation it will only work in the near (close) radius. Or you can use a variable to force it on work, but first, why do you need the sound of steps on the other end of the map? And secondly, it will give you more load on the system.</li></ul><p><strong>Number of Blueprints</strong>: 4</p><p><strong>Number of Components</strong>: 1</p><p><strong>Input</strong>: demo uses keyboard and mouse inputs.</p><p><strong>Network Replicated</strong>: <strong><em><u>Yes.</u></em></strong></p><p><strong>Supported Development Platforms</strong>: (Windows, Mac)</p><p><strong>Supported Target Build Platforms</strong>: (Windows, Mac)</p><p><strong>Documentation</strong>: <a href=\"https://docs.google.com/document/d/1uq-QjtvJWGoFiNzbCQD0wPxbYnYA-95hvkv8jUKPXFE/edit?usp&#61;sharing\" rel=\"nofollow\">How add and setup component</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2019-03-2415-13-05-1920x1080-677201466c3926fc8940beb9debd1402.png",
+      "md5": "677201466c3926fc8940beb9debd1402",
+      "width": 1920,
+      "height": 1080,
+      "size": 2112338,
+      "uploadedDate": "2019-04-07T07:00:32.641Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2019-03-2414-43-38-1920x1080-558474b65256a2fd3a06495d1ca0e71f.png",
+      "md5": "558474b65256a2fd3a06495d1ca0e71f",
+      "width": 1920,
+      "height": 1080,
+      "size": 2131165,
+      "uploadedDate": "2019-04-07T07:00:33.018Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2019-03-2414-47-28-1920x1080-b5ace54d855563ed98c038ff889c0786.png",
+      "md5": "b5ace54d855563ed98c038ff889c0786",
+      "width": 1920,
+      "height": 1080,
+      "size": 2074248,
+      "uploadedDate": "2019-04-07T07:00:33.405Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2019-03-2414-49-35-1920x1080-1b38f1e6e5318c79410853dca9900cab.png",
+      "md5": "1b38f1e6e5318c79410853dca9900cab",
+      "width": 1920,
+      "height": 1080,
+      "size": 2178232,
+      "uploadedDate": "2019-04-07T07:00:33.894Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2019-03-2414-58-18-1920x1080-8d14a72c978d4c0522e3c34df46c72e5.png",
+      "md5": "8d14a72c978d4c0522e3c34df46c72e5",
+      "width": 1920,
+      "height": 1080,
+      "size": 2242798,
+      "uploadedDate": "2019-04-07T07:00:34.316Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/OpenWorldNPCOptimizationwithnetworksupport_thumb-284x284-143f817ca2a2870e8279fb9fb980f94f.png",
+      "md5": "143f817ca2a2870e8279fb9fb980f94f",
+      "width": 284,
+      "height": 284,
+      "size": 139239,
+      "uploadedDate": "2021-03-19T21:11:11.913Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/FPSBoostComponentwithNetworkSupport_featured-894x488-e9991174d5d655a52e0d4b3ca0b88025.png",
+      "md5": "e9991174d5d655a52e0d4b3ca0b88025",
+      "width": 894,
+      "height": 488,
+      "size": 427386,
+      "uploadedDate": "2019-04-25T22:04:55.426Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2019-03-2415-13-05-1920x1080-677201466c3926fc8940beb9debd1402_Snapshot.png",
+      "md5": "1441c6e099edd33cd4ce53d27129b25e",
+      "width": 150,
+      "height": 74,
+      "size": 9910,
+      "uploadedDate": "2019-04-07T07:00:32.876Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2019-03-2414-43-38-1920x1080-558474b65256a2fd3a06495d1ca0e71f_Snapshot.png",
+      "md5": "259836a1c4f4971d570fe700984165d3",
+      "width": 150,
+      "height": 74,
+      "size": 9475,
+      "uploadedDate": "2019-04-07T07:00:33.247Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2019-03-2414-47-28-1920x1080-b5ace54d855563ed98c038ff889c0786_Snapshot.png",
+      "md5": "395e6df3d3d99b9e9872d56681da737b",
+      "width": 150,
+      "height": 74,
+      "size": 9233,
+      "uploadedDate": "2019-04-07T07:00:33.705Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2019-03-2414-49-35-1920x1080-1b38f1e6e5318c79410853dca9900cab_Snapshot.png",
+      "md5": "3a40242e266529d461c92cc05a46c325",
+      "width": 150,
+      "height": 74,
+      "size": 10530,
+      "uploadedDate": "2019-04-07T07:00:34.172Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2019-03-2414-58-18-1920x1080-8d14a72c978d4c0522e3c34df46c72e5_Snapshot.png",
+      "md5": "f5fa301504a6d94b4e0c1bee0a0f6c40",
+      "width": 150,
+      "height": 74,
+      "size": 11349,
+      "uploadedDate": "2019-04-07T07:00:34.544Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2019-05-02T17:00:24.953Z",
+  "lastModifiedDate": "2024-02-23T13:23:42.048Z",
+  "customAttributes": {},
+  "entitlementName": "e8ac0409cb9f4000a8988160ac82a836",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "ef7efaecfacd4c738e110b1f4ea8da14",
+      "appId": "FPSBooste8ac0409cb9fV1",
+      "compatibleApps": [
+        "UE_4.16",
+        "UE_4.17",
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "PS4",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2019-04-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V3.1_Not be Update in launcher"
+    }
+  ],
+  "developer": "Sergio Cavalli",
+  "developerId": "o-45481a1e034356acea308ee8ba1933",
+  "endOfSupport": false,
+  "unsearchable": false
+}

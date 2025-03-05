@@ -1,0 +1,190 @@
+{
+  "id": "f1e22d9c26e04c92897ba95bef34dfd0",
+  "title": "Up Bulk Rename",
+  "description": "A fast and reliable bulk rename tool, resolving common Perforce issues with a unique set of hacks.",
+  "longDescription": "<p>When renaming assets with Perforce source control enabled, you may encounter two issues that can slow down your workflow.</p><p><br /></p><h3>The Slow Issues</h3><p>Renaming assets with Perforce takes a while to check out assets. Especially when you rename multiple assets simultaneously, it could <strong>FREEZE the whole editor</strong> for quite a long time.</p><p><br /></p><h3>The Loss of Asset History Issue</h3><p>When renaming assets with Perforce, the background operation is not a simple <strong>p4 move old_asset new_asset</strong>. Instead, it creates a redirector and then adds a new asset with the updated name. If you simply fix up the redirectors without taking care of the asset history, you&#39;ll lose the history for your previous edits.</p><p><br /></p><h3>This tool aims to solve these two issues when renaming assets with Perforce source control enabled.</h3><p><br /></p><p>The following steps happened when rename asset with perforce fix enabled:</p><ol><li>Disable Perforce source control</li><li>Mark assets as editable: Run <strong>p4 edit</strong> in the background for all related assets (including references and dependencies) to mark them as editable.</li><li>Rename assets in Unreal Engine: Rename assets using the Unreal Editor, which handles dependency issues automatically.</li><li>Change back original name<strong> </strong>outside of Unreal Engine.</li><li><strong>Run p4 move old_asset new_asset</strong></li><li><strong>Re-enable Perforce source control</strong></li></ol><p><br /></p><p>Compare the perforce fix when rename assets</p><p><a href=\"https://youtu.be/Z2rDadvbZ1o?si&#61;gqwV6B7ogyeSC7Od\" rel=\"nofollow\"><strong>DEMO VIDEO</strong></a><strong> </strong></p><p><a href=\"https://pufstudio.net/projects/up_bulk_rename\" rel=\"nofollow\"><strong>DOCUMENTATION</strong></a><strong> (still under construction)</strong></p><p>-------------------------------------------------------</p><p><br /></p><h2><strong>Nice bulk rename tool</strong></h2><p><br /></p><p>Even if you don&#39;t need the <strong>Perforce-related fix</strong>, this plugin still offers a robust nice rename tool with a user-friendly interface.</p><ol><li>Right click on selected assets / folder / actors to open bulk rename dialog.</li><li>Both operational and manual way to set new names.</li><li>Nice new name preview.</li></ol><p><br /></p><p>------------------------------------------------------</p><p><br /></p><h2>Open source</h2><p>This plugin is open sourced . You can access all the source code. You don&#39;t need to purchase it unless you want to <strong>sponsor</strong> me or simplify the installation process.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>bulk rename tool with special hack to fix perforce rename issues</li><li>rename assets or folders in content browser</li><li>rename level actors</li><li>both operation rename and direct rename</li><li>new name preview</li></ul><p><br /></p><p>Code Modules:</p><ul><li>UPBulkRename, Editor</li></ul><p><br /></p><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 10</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows, Linux</p><p>Supported Target Build Platforms: All</p><p>Documentation: https://pufstudio.net/projects/up_bulk_rename</p><p>Source Code: https://github.com/even311379/UpBulkRename</p><p><br /></p><p>Important/Additional Notes:</p><ul><li>This plugin is open sourced. You can access all the source code. You don&#39;t need to purchase it unless you want to <strong>sponsor</strong> me or simplify the installation process.</li><li>Issues for perforce fix hacks:</li></ul><ol><li>Ignore files: So far, this plugin did not include logic to check whether the assets you want to rename are marked as ignored.</li><li>Core assets: The perforce rename hacks may not work properly on assets which are required by c&#43;&#43; or config files.</li></ol>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery7-1920x1080-399c89d6656fab050a862ce4fe7fa5d4.png",
+      "md5": "399c89d6656fab050a862ce4fe7fa5d4",
+      "width": 1920,
+      "height": 1080,
+      "size": 886392,
+      "uploadedDate": "2024-09-15T04:10:33.095Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery5-1920x1080-37d68476d583b276b18e73b8ec1fea0b.png",
+      "md5": "37d68476d583b276b18e73b8ec1fea0b",
+      "width": 1920,
+      "height": 1080,
+      "size": 674963,
+      "uploadedDate": "2024-09-15T04:10:33.655Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery4-1920x1080-9740595866c7067de5529f0b9616ba57.png",
+      "md5": "9740595866c7067de5529f0b9616ba57",
+      "width": 1920,
+      "height": 1080,
+      "size": 978216,
+      "uploadedDate": "2024-09-15T04:10:34.193Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery3-1920x1080-211f9836c737e1af1df9778bb513764b.png",
+      "md5": "211f9836c737e1af1df9778bb513764b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1007520,
+      "uploadedDate": "2024-09-15T04:10:34.770Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery1-1920x1080-11c1f7e4016de60d1dd878612d8b1de6.png",
+      "md5": "11c1f7e4016de60d1dd878612d8b1de6",
+      "width": 1920,
+      "height": 1080,
+      "size": 1329694,
+      "uploadedDate": "2024-09-15T04:10:35.273Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery6-1920x1080-9139a9d386d409804fbd5a830de11f6e.png",
+      "md5": "9139a9d386d409804fbd5a830de11f6e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1244478,
+      "uploadedDate": "2024-09-15T04:10:35.949Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery2-1920x1080-e672e9f9c0f1682264e4628b76652bfb.png",
+      "md5": "e672e9f9c0f1682264e4628b76652bfb",
+      "width": 1920,
+      "height": 1080,
+      "size": 952059,
+      "uploadedDate": "2024-09-15T04:10:36.525Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/UpBulkRename_thumb-284x284-014ad9c678369e8edc7c06562ea1a5ee.png",
+      "md5": "014ad9c678369e8edc7c06562ea1a5ee",
+      "width": 284,
+      "height": 284,
+      "size": 183935,
+      "uploadedDate": "2024-09-15T04:10:37.103Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/UpBulkRename_featured-894x488-1b51f5e43fee5aadea86c2f587035204.png",
+      "md5": "1b51f5e43fee5aadea86c2f587035204",
+      "width": 894,
+      "height": 488,
+      "size": 873922,
+      "uploadedDate": "2024-09-15T04:10:37.272Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery7-1920x1080-399c89d6656fab050a862ce4fe7fa5d4_Snapshot.png",
+      "md5": "4ec5419a10b7e54b022baedf969bc6fe",
+      "width": 150,
+      "height": 74,
+      "size": 4644,
+      "uploadedDate": "2024-09-15T04:10:33.470Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery5-1920x1080-37d68476d583b276b18e73b8ec1fea0b_Snapshot.png",
+      "md5": "e64ff4e2869e2a965e7418019de0c078",
+      "width": 150,
+      "height": 74,
+      "size": 4501,
+      "uploadedDate": "2024-09-15T04:10:33.970Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery4-1920x1080-9740595866c7067de5529f0b9616ba57_Snapshot.png",
+      "md5": "52324c19b4c7ab3006d70c6ba5ecb716",
+      "width": 150,
+      "height": 74,
+      "size": 5624,
+      "uploadedDate": "2024-09-15T04:10:34.569Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery3-1920x1080-211f9836c737e1af1df9778bb513764b_Snapshot.png",
+      "md5": "813b971031c95bb45399452a5bf05562",
+      "width": 150,
+      "height": 74,
+      "size": 6151,
+      "uploadedDate": "2024-09-15T04:10:35.113Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1-1920x1080-11c1f7e4016de60d1dd878612d8b1de6_Snapshot.png",
+      "md5": "8a4e6d62bc5bff6139e48f8989baf6d3",
+      "width": 150,
+      "height": 74,
+      "size": 5420,
+      "uploadedDate": "2024-09-15T04:10:35.655Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery6-1920x1080-9139a9d386d409804fbd5a830de11f6e_Snapshot.png",
+      "md5": "4b0bb116a91f437c8d9698e49c42a5f3",
+      "width": 150,
+      "height": 74,
+      "size": 5807,
+      "uploadedDate": "2024-09-15T04:10:36.313Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery2-1920x1080-e672e9f9c0f1682264e4628b76652bfb_Snapshot.png",
+      "md5": "1d9a5868629028bea501df603d1af69a",
+      "width": 150,
+      "height": 74,
+      "size": 5735,
+      "uploadedDate": "2024-09-15T04:10:36.864Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-09-16T16:43:54.429Z",
+  "lastModifiedDate": "2024-11-25T23:54:27.575Z",
+  "customAttributes": {},
+  "entitlementName": "f1e22d9c26e04c92897ba95bef34dfd0",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "ed35c49983684adcaddd8e573c707e5b",
+      "appId": "UpBulkRename_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2024-09-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "V1.0"
+    }
+  ],
+  "developer": "Puf Studio",
+  "developerId": "o-3jbw28rsmtfa6hp82sx9fzg4blh8pc",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

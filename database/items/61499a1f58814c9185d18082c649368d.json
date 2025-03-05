@@ -1,0 +1,555 @@
+{
+  "id": "61499a1f58814c9185d18082c649368d",
+  "title": "Black Hole Volumetric",
+  "description": "This project takes an attempt to visualize in real time the effects related to special and general relativity.",
+  "longDescription": "<p>The simulation and visualization of relativistic effects in this project do not claim to be quantitatively accurate, but hopefully will give a correct qualitative idea of some relativistic phenomena.</p><p><br /></p><p>Materials (shaders) for rendering effects associated with black holes (or more precisely, with Schwarzschild black holes) are the main part of this project. All black hole shaders consist of three main shaders, namely the gravitational lensing shader, the volumetric accretion disk shader and the polyline tracer shader. </p><p><br /></p><p>Gravitational lensing is modeled by equations not related to general relativity, so it is not physically accurate. Gravitational lensing only distorts a background and the accretion disk, so to be realistic the objects in the scene should be relatively small compared to the sphere bounding the gravitational lensing distortions. </p><p><br /></p><p>There are several types of volumetric accretion disk shader, which differ from each other in what effects they simulate and what equations they use for a particular effect. The main volumetric shaders are implemented as <em>Post Process Materials</em> that blend well with opaque objects in the scene, but objects with translucent materials require special care, since the correctness of the final image depends on relative positions of volumetric shapes and translucent objects. In this project, the main post process materials are rendered before translucency and thus should be farther from the camera than translucent objects (see <a href=\"https://docs.unrealengine.com/4.26/en-US/RenderingAndGraphics/PostProcessEffects/PostProcessMaterials/#criticalsettingsforpostprocessmaterials\" rel=\"nofollow\">Blendable Location</a> if you want to change this rendering order). </p><p><br /></p><p>The two types of polyline tracer shader differ from each other in that ray tracing is performed either for a solid cylinder or a cylindrical shell.</p><p><br /></p><p><a href=\"https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/Materials/Functions/Overview/\" rel=\"nofollow\">Material Functions</a> are integral to this project as they are building blocks of most materials thereby providing modularity and great possibilities for customization. The purpose of some of them is specific to this project, while others are of a general purpose and can be useful in any work.</p><p><br /></p><p>Another essential part is the special blueprints intended to facilitate the setting of certain parameters of the volumetric materials and adding these materials to the scene. There are also blueprint actors that make the calculations necessary for some materials to render relativistic effects. How it all works together is shown in several scenes in the demo.</p><p><br /></p><p>Black hole materials are quite demanding on performance. Performance impact and visual quality can vary greatly depending on the material complexity and the number of samples. Moreover, the image quality depends on the distance that the camera rays travel within the volume, and therefore the quality can change noticeably depending on the position of the camera and the angle of view. Please, try the demo first to assess the balance between performance impact and visual quality and decide if this suits your needs (in the demo level press <em>Ctrl &#43; Num 1</em> to toggle the FPS counter and then try different visual settings which can be accessed by pressing the <em>M</em> key).</p><p><br /></p><p>In UE 5, <a href=\"https://docs.unrealengine.com/5.1/en-US/anti-aliasing-and-upscaling-in-unreal-engine/\" rel=\"nofollow\">TAA</a> may provide better image quality and performance compared to TSR. Please note that there is some trade-off in functionality between versions 5.0 and 5.1-5.4 (see technical details below).  </p><p><br /></p><ul><li><a href=\"https://drive.google.com/drive/folders/1b-nfWP_HAJrb_W_7qRzk5MUFp3eSXUiE?usp&#61;sharing\" rel=\"nofollow\">Demo and Docs</a></li><li><a href=\"https://youtu.be/qkZMHWQIkjo\" rel=\"nofollow\">Jumping Into The Future</a></li><li><a href=\"https://youtu.be/NBcecUHhCXQ\" rel=\"nofollow\">Doppler Beaming</a></li><li><a href=\"https://youtu.be/dggHQ5YIDMA\" rel=\"nofollow\">Large World Coordinates</a></li></ul><p><br /></p><p>Credits:</p><p><a href=\"https://skfb.ly/BGxq\" rel=\"nofollow\">&#34;Space Shuttle&#34;</a> by Microsoft is licensed under <a href=\"http://creativecommons.org/licenses/by/4.0/\" rel=\"nofollow\">Creative Commons Attribution</a>.</p><p><br /></p><p>Forum threads:</p><ul><li><a href=\"https://forums.unrealengine.com/t/ue5-double-precision-vector-parameter-in-post-process-materials/676001\" rel=\"nofollow\">UE 5.0 : the issue with LWC in post process materials</a></li><li><a href=\"https://forums.unrealengine.com/t/ue5-add-force-issue/529446\" rel=\"nofollow\">UE 5.0 : the issue with small accelerations</a></li></ul>",
+  "technicalDetails": "<p>Features:</p><ul><li>the main volumetric shaders are implemented as post process materials;</li><li>the main material functions use custom expressions;</li></ul><p><br /></p><p>Number of Main Volumetric Materials: 5</p><p>Number of Main Volumetric Material Instances: 8</p><p>Number of Unique Materials: 21</p><p>Number of Textures 2D: 8</p><p>Number of Textures 3D: 2</p><p>Texture Resolutions: from 512 to 4096x2048</p><p><br /></p><p>Supported Development Platforms:</p><ul><li>Windows: Yes</li><li>Mac: No</li></ul><p><br /></p><p>Documentation: <a href=\"https://drive.google.com/file/d/1w-SBrkCPze7riaupnZbbou6cHFR97Pev/view?usp&#61;sharing\" rel=\"nofollow\">Project Description</a></p><p><br /></p><p><strong>Important Notes</strong>: </p><ul><li>To correctly render the brightness of the post process materials in UE versions prior to 5, it might be necessary to disable <a href=\"https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/PostProcessEffects/AutomaticExposure/#pre-exposure\" rel=\"nofollow\">Pre-Exposure</a> in the project settings.</li><li>Materials not tested with Hardware Ray Tracing.</li><li>In UE 5.0, the old Screen Space Reflection effect is blended quite well with the reflections captured by the Sky Light, as you can see in the Large World Coordinates video and screenshots. In UE 5.1, the Sky Light reflections require enabling Lumen reflections which have certain distance limitations. On the other hand, in UE 5.1, the issue with LWC in post process materials and the issue with small accelerations were fixed (see links to related forum threads in the description above). </li><li><strong>Activating SM6 may reduce performance.</strong></li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric18-1920x1080-59bd5fdb5d91e2764823c9ceebfd25b0.jpg",
+      "md5": "59bd5fdb5d91e2764823c9ceebfd25b0",
+      "width": 1920,
+      "height": 1080,
+      "size": 829054,
+      "uploadedDate": "2022-08-21T19:00:20.260Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric19-1920x1080-8f72570f9b52d0f35b6465f521024180.jpg",
+      "md5": "8f72570f9b52d0f35b6465f521024180",
+      "width": 1920,
+      "height": 1080,
+      "size": 824014,
+      "uploadedDate": "2022-08-21T19:00:20.695Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric20-1920x1080-387af91a5d9c497eaef1089fcca1ed89.jpg",
+      "md5": "387af91a5d9c497eaef1089fcca1ed89",
+      "width": 1920,
+      "height": 1080,
+      "size": 733022,
+      "uploadedDate": "2022-08-21T19:00:21.173Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric21-1920x1080-4837b22094bafae7f1cfb76129c51a03.jpg",
+      "md5": "4837b22094bafae7f1cfb76129c51a03",
+      "width": 1920,
+      "height": 1080,
+      "size": 633983,
+      "uploadedDate": "2022-08-21T19:00:21.590Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric11-1920x1080-02ac11d8600215b23fb50d9773445816.jpg",
+      "md5": "02ac11d8600215b23fb50d9773445816",
+      "width": 1920,
+      "height": 1080,
+      "size": 892546,
+      "uploadedDate": "2022-08-21T19:00:22.009Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric24-1920x1080-c24b4ff715ef3b4473a941db96f5990c.jpg",
+      "md5": "c24b4ff715ef3b4473a941db96f5990c",
+      "width": 1920,
+      "height": 1080,
+      "size": 779482,
+      "uploadedDate": "2022-08-21T19:00:22.436Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric25-1920x1080-92c1ce06c50b6eaea782a35bfe2e7332.jpg",
+      "md5": "92c1ce06c50b6eaea782a35bfe2e7332",
+      "width": 1920,
+      "height": 1080,
+      "size": 743856,
+      "uploadedDate": "2022-08-21T19:00:22.863Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric02-1920x1080-0a8d21fe6e50680d50d86a0640dcbe49.jpg",
+      "md5": "0a8d21fe6e50680d50d86a0640dcbe49",
+      "width": 1920,
+      "height": 1080,
+      "size": 682224,
+      "uploadedDate": "2022-08-21T19:00:23.230Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric01-1920x1080-70511286b7f6e9a76fc3db9e3dc5d178.jpg",
+      "md5": "70511286b7f6e9a76fc3db9e3dc5d178",
+      "width": 1920,
+      "height": 1080,
+      "size": 693426,
+      "uploadedDate": "2022-08-21T19:00:23.621Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric12-1920x1080-8637108ced06211867f0078fd0b4915e.jpg",
+      "md5": "8637108ced06211867f0078fd0b4915e",
+      "width": 1920,
+      "height": 1080,
+      "size": 959761,
+      "uploadedDate": "2022-08-21T19:00:24.036Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric22-1920x1080-bde657716fa6ded41419a8a178015505.jpg",
+      "md5": "bde657716fa6ded41419a8a178015505",
+      "width": 1920,
+      "height": 1080,
+      "size": 713533,
+      "uploadedDate": "2022-08-21T19:00:24.430Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric23-1920x1080-7e43c9a75c2fb0ec679913e71a330b68.jpg",
+      "md5": "7e43c9a75c2fb0ec679913e71a330b68",
+      "width": 1920,
+      "height": 1080,
+      "size": 858271,
+      "uploadedDate": "2022-08-21T19:00:24.847Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric03-1920x1080-1ea892073b41de3e700a6658e87a785e.jpg",
+      "md5": "1ea892073b41de3e700a6658e87a785e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1266284,
+      "uploadedDate": "2022-08-21T19:00:25.291Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric04-1920x1080-f36766639651ffb36a15b209ea502272.jpg",
+      "md5": "f36766639651ffb36a15b209ea502272",
+      "width": 1920,
+      "height": 1080,
+      "size": 747976,
+      "uploadedDate": "2022-08-21T19:00:25.752Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric05-1920x1080-26b9a7440a51185b151035605ac20fe1.jpg",
+      "md5": "26b9a7440a51185b151035605ac20fe1",
+      "width": 1920,
+      "height": 1080,
+      "size": 1751773,
+      "uploadedDate": "2022-08-21T19:00:26.224Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric06-1920x1080-ffe10c4699f7fde1a88fc5f15e1fe790.jpg",
+      "md5": "ffe10c4699f7fde1a88fc5f15e1fe790",
+      "width": 1920,
+      "height": 1080,
+      "size": 1135144,
+      "uploadedDate": "2022-08-21T19:00:26.690Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric07-1920x1080-da7e258637aed4376574cd8fdba421d8.jpg",
+      "md5": "da7e258637aed4376574cd8fdba421d8",
+      "width": 1920,
+      "height": 1080,
+      "size": 702751,
+      "uploadedDate": "2022-08-21T19:00:27.123Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric08-1920x1080-814ae78ad8e298e14c3dcac3667bb938.jpg",
+      "md5": "814ae78ad8e298e14c3dcac3667bb938",
+      "width": 1920,
+      "height": 1080,
+      "size": 719532,
+      "uploadedDate": "2022-08-21T19:00:27.524Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric09-1920x1080-ace387bc4334bf57d969c6be46d07c7a.jpg",
+      "md5": "ace387bc4334bf57d969c6be46d07c7a",
+      "width": 1920,
+      "height": 1080,
+      "size": 798685,
+      "uploadedDate": "2022-08-21T19:00:27.971Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric10-1920x1080-d5d185e1ebbbea80d8f053ae09fa5c50.jpg",
+      "md5": "d5d185e1ebbbea80d8f053ae09fa5c50",
+      "width": 1920,
+      "height": 1080,
+      "size": 645343,
+      "uploadedDate": "2022-08-21T19:00:28.367Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric13-1920x1080-b6ec7a47bcbd244ba9dca63f2bcafe38.jpg",
+      "md5": "b6ec7a47bcbd244ba9dca63f2bcafe38",
+      "width": 1920,
+      "height": 1080,
+      "size": 811683,
+      "uploadedDate": "2022-08-21T19:00:29.252Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric14-1920x1080-f053103260d15e403ad1dfba924b306b.jpg",
+      "md5": "f053103260d15e403ad1dfba924b306b",
+      "width": 1920,
+      "height": 1080,
+      "size": 675102,
+      "uploadedDate": "2022-08-21T19:00:29.640Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric15-1920x1080-445e3f569dbad3edc7bda0eefe41a5dd.jpg",
+      "md5": "445e3f569dbad3edc7bda0eefe41a5dd",
+      "width": 1920,
+      "height": 1080,
+      "size": 867412,
+      "uploadedDate": "2022-08-21T19:00:30.063Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetric17-1920x1080-9e100ee8de2100fe09c6d996a5038ffc.jpg",
+      "md5": "9e100ee8de2100fe09c6d996a5038ffc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1973278,
+      "uploadedDate": "2022-08-21T19:00:28.800Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BlackHoleVolumetricLWC06-1920x1080-1c5d8c07ff6541431c579483b7f8861d.jpg",
+      "md5": "1c5d8c07ff6541431c579483b7f8861d",
+      "width": 1920,
+      "height": 1080,
+      "size": 1101582,
+      "uploadedDate": "2022-10-18T19:30:43.847Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BlackHoleVolumetric_thumb-284x284-6f028cbc3b3830675331063a6c483a62.png",
+      "md5": "6f028cbc3b3830675331063a6c483a62",
+      "width": 284,
+      "height": 284,
+      "size": 104059,
+      "uploadedDate": "2022-08-21T19:00:30.785Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/BlackHoleVolumetric_featured-894x488-efba5c73efb82f514d73a506fd7304a8.png",
+      "md5": "efba5c73efb82f514d73a506fd7304a8",
+      "width": 894,
+      "height": 488,
+      "size": 518893,
+      "uploadedDate": "2022-09-30T19:39:31.844Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetricLWC06-1920x1080-1c5d8c07ff6541431c579483b7f8861d_Snapshot.jpg",
+      "md5": "b85a460c59e12f480ab24af5e2e47edc",
+      "width": 150,
+      "height": 74,
+      "size": 5701,
+      "uploadedDate": "2022-10-18T19:30:44.126Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric18-1920x1080-59bd5fdb5d91e2764823c9ceebfd25b0_Snapshot.jpg",
+      "md5": "b7cd4cbe9f7405bc0b54978a6690b0e3",
+      "width": 150,
+      "height": 74,
+      "size": 5473,
+      "uploadedDate": "2022-08-21T19:00:20.531Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric19-1920x1080-8f72570f9b52d0f35b6465f521024180_Snapshot.jpg",
+      "md5": "206095cea83fcbe3ca941ecd43232608",
+      "width": 150,
+      "height": 74,
+      "size": 5557,
+      "uploadedDate": "2022-08-21T19:00:20.984Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric20-1920x1080-387af91a5d9c497eaef1089fcca1ed89_Snapshot.jpg",
+      "md5": "ab84e216ded31a6b986e349a37484315",
+      "width": 150,
+      "height": 74,
+      "size": 4867,
+      "uploadedDate": "2022-08-21T19:00:21.438Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric21-1920x1080-4837b22094bafae7f1cfb76129c51a03_Snapshot.jpg",
+      "md5": "5247d93b909582b35d91dff2503af03c",
+      "width": 150,
+      "height": 74,
+      "size": 3515,
+      "uploadedDate": "2022-08-21T19:00:21.866Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric11-1920x1080-02ac11d8600215b23fb50d9773445816_Snapshot.jpg",
+      "md5": "7bfcd2e4723cd6e9c1b800410e29da24",
+      "width": 150,
+      "height": 74,
+      "size": 5519,
+      "uploadedDate": "2022-08-21T19:00:22.285Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric24-1920x1080-c24b4ff715ef3b4473a941db96f5990c_Snapshot.jpg",
+      "md5": "6369ee7ba3a275410801d2150e774345",
+      "width": 150,
+      "height": 74,
+      "size": 4901,
+      "uploadedDate": "2022-08-21T19:00:22.702Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric25-1920x1080-92c1ce06c50b6eaea782a35bfe2e7332_Snapshot.jpg",
+      "md5": "9a48950ff8208bd7b8ebe9fac3b55862",
+      "width": 150,
+      "height": 74,
+      "size": 4601,
+      "uploadedDate": "2022-08-21T19:00:23.127Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric02-1920x1080-0a8d21fe6e50680d50d86a0640dcbe49_Snapshot.jpg",
+      "md5": "978cebb6b97658e973c616820d58d62f",
+      "width": 150,
+      "height": 74,
+      "size": 5343,
+      "uploadedDate": "2022-08-21T19:00:23.485Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric01-1920x1080-70511286b7f6e9a76fc3db9e3dc5d178_Snapshot.jpg",
+      "md5": "d42ba029150461bafe96f22ee73ad046",
+      "width": 150,
+      "height": 74,
+      "size": 5110,
+      "uploadedDate": "2022-08-21T19:00:23.884Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric12-1920x1080-8637108ced06211867f0078fd0b4915e_Snapshot.jpg",
+      "md5": "122783a314ed175df7db2fef0df057ef",
+      "width": 150,
+      "height": 74,
+      "size": 6267,
+      "uploadedDate": "2022-08-21T19:00:24.297Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric22-1920x1080-bde657716fa6ded41419a8a178015505_Snapshot.jpg",
+      "md5": "8498c5e14af1de74a783b0c57e942c00",
+      "width": 150,
+      "height": 74,
+      "size": 5364,
+      "uploadedDate": "2022-08-21T19:00:24.686Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric23-1920x1080-7e43c9a75c2fb0ec679913e71a330b68_Snapshot.jpg",
+      "md5": "f1fc5011da08bebb12344310a5e708a0",
+      "width": 150,
+      "height": 74,
+      "size": 5428,
+      "uploadedDate": "2022-08-21T19:00:25.108Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric03-1920x1080-1ea892073b41de3e700a6658e87a785e_Snapshot.jpg",
+      "md5": "ab7be3458300245a991eeb621069cbc5",
+      "width": 150,
+      "height": 74,
+      "size": 4413,
+      "uploadedDate": "2022-08-21T19:00:25.573Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric04-1920x1080-f36766639651ffb36a15b209ea502272_Snapshot.jpg",
+      "md5": "7955c581b635a341cb97604bbb24674b",
+      "width": 150,
+      "height": 74,
+      "size": 3994,
+      "uploadedDate": "2022-08-21T19:00:26.013Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric05-1920x1080-26b9a7440a51185b151035605ac20fe1_Snapshot.jpg",
+      "md5": "5fa286ce69cb0b348a5b3b20308c035f",
+      "width": 150,
+      "height": 74,
+      "size": 4828,
+      "uploadedDate": "2022-08-21T19:00:26.525Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric06-1920x1080-ffe10c4699f7fde1a88fc5f15e1fe790_Snapshot.jpg",
+      "md5": "b2e6fdb14f04931d4015f453a98d8864",
+      "width": 150,
+      "height": 74,
+      "size": 4409,
+      "uploadedDate": "2022-08-21T19:00:26.981Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric07-1920x1080-da7e258637aed4376574cd8fdba421d8_Snapshot.jpg",
+      "md5": "1c107772f3b7aa7c57089075e02cdbb1",
+      "width": 150,
+      "height": 74,
+      "size": 4289,
+      "uploadedDate": "2022-08-21T19:00:27.385Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric08-1920x1080-814ae78ad8e298e14c3dcac3667bb938_Snapshot.jpg",
+      "md5": "0a7e3f09285f4d0f1d29b4c5915cdebc",
+      "width": 150,
+      "height": 74,
+      "size": 4989,
+      "uploadedDate": "2022-08-21T19:00:27.817Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric09-1920x1080-ace387bc4334bf57d969c6be46d07c7a_Snapshot.jpg",
+      "md5": "83a191b723730e885a19209bb7fac8a5",
+      "width": 150,
+      "height": 74,
+      "size": 4775,
+      "uploadedDate": "2022-08-21T19:00:28.232Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric10-1920x1080-d5d185e1ebbbea80d8f053ae09fa5c50_Snapshot.jpg",
+      "md5": "94022b5ec8b4f6569fa6198e4a44d7c2",
+      "width": 150,
+      "height": 74,
+      "size": 4535,
+      "uploadedDate": "2022-08-21T19:00:28.622Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric17-1920x1080-9e100ee8de2100fe09c6d996a5038ffc_Snapshot.jpg",
+      "md5": "07656b86d1816b7391c23622aab2cf01",
+      "width": 150,
+      "height": 74,
+      "size": 9003,
+      "uploadedDate": "2022-08-21T19:00:29.111Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric13-1920x1080-b6ec7a47bcbd244ba9dca63f2bcafe38_Snapshot.jpg",
+      "md5": "28d1a0984077a3606728b23ae23ccb95",
+      "width": 150,
+      "height": 74,
+      "size": 5667,
+      "uploadedDate": "2022-08-21T19:00:29.508Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric14-1920x1080-f053103260d15e403ad1dfba924b306b_Snapshot.jpg",
+      "md5": "49a42597ae24a4c0c77465379453f3d5",
+      "width": 150,
+      "height": 74,
+      "size": 4128,
+      "uploadedDate": "2022-08-21T19:00:29.889Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric15-1920x1080-445e3f569dbad3edc7bda0eefe41a5dd_Snapshot.jpg",
+      "md5": "6b221ca78b145585daf8ca4d86dfca9d",
+      "width": 150,
+      "height": 74,
+      "size": 5559,
+      "uploadedDate": "2022-08-21T19:00:30.323Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BlackHoleVolumetric16-1920x1080-7eeaead30ce4d0fe7f3c52763f40312c_Snapshot.jpg",
+      "md5": "1d9f1702ee2dba2d5483c3cf70ab5b47",
+      "width": 150,
+      "height": 74,
+      "size": 4607,
+      "uploadedDate": "2022-08-21T19:00:30.727Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-08-24T14:06:50.069Z",
+  "lastModifiedDate": "2024-09-22T18:03:36.298Z",
+  "customAttributes": {},
+  "entitlementName": "61499a1f58814c9185d18082c649368d",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "da8676e02d474c10a4152edc0da385d1",
+      "appId": "BlackHol61499a1f5881V1",
+      "compatibleApps": [
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-08-21T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "BlackHoleVolumetric_04a"
+    },
+    {
+      "id": "e0b5582670404fbda3535113c2a5b0dc",
+      "appId": "BlackHol61499a1f5881V2",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-08-21T00:00:00.000Z",
+      "releaseNote": "Activation of SM6 does not cause compilation errors, but reduces performance",
+      "versionTitle": "BHVolumetric_05_SM6_UE500"
+    },
+    {
+      "id": "0bc6fb2a6da94828b17447a004158370",
+      "appId": "BlackHol61499a1f5881V3",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-12T00:00:00.000Z",
+      "releaseNote": "Activation of SM6 does not cause compilation errors, but reduces performance",
+      "versionTitle": "BHVolumetric_05_SM6_UE501"
+    }
+  ],
+  "developer": "zubetto",
+  "developerId": "o-ag9sga6xhbg4nypaemmh4fyuqy4gkt",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

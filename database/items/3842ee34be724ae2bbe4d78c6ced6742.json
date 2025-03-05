@@ -1,0 +1,265 @@
+{
+  "id": "3842ee34be724ae2bbe4d78c6ced6742",
+  "title": "3D Radar",
+  "description": "3D Radar is a Blueprint that can pick up and display desired actors in three dimensions using customizable meshes and Materials.",
+  "longDescription": "<p><a href=\"https://www.youtube.com/watch?v&#61;0Jq7k6rIsbY&amp;index&#61;23&amp;list&#61;PLAgvMMfMQH2O1-YfsKXSwcFK2bvVg7UrP\" rel=\"nofollow\">Demonstration Video</a></p><p><br /></p><p>3D Radar is is a package that consists of two main Blueprints. First, the 3D Radar actor itself that will search for other actors and then display them in its local 3d space. And second, the Radar Return component that is meant to be put onto actors that should be able to show up on the 3D Radar actor. The Radar Return component has options for what type of actor it is as well as what faction it is in, and also options for different meshes or Materials to be used for it depending on its faction stance from the point of view of the 3D Radar actor that is looking at it.</p><p>This means that one actor might show up as a blue friendly on one radar, and then show up as a red hostile on another, or perhaps on hostile radars it will show up as a supposedly friendly unit of a different appearance if you want to include electronic warfare and stuff in your game. You also have options for how this actor will be visible in regards to range multipliers so it might be easier to see from friendlies than for enemies.</p><p><br /></p><p>The 3D Radar actor itself also has large numbers of options to control at what ranges different types of returns might show up or if they even should show up, allowing for a variety of options to filter out various types of returns for a 3d Radar actor.</p><p><br /></p><p>All visuals are set as modifiable variables, so you can use any type of mesh or Material you want for your radar returns, or for the Radars own visuals such as the horizon or grid, allowing for a highly customizable appearance that can be relatively easily made to match the visual style or goals of your own project with minimal effort.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Returns can be customized in appearance, allowing full control of the mesh and Materials.</li><li>Large numbers of options to control what will be visible on any given radar actor, as well as to adjust the distances that different types of actors may be visible at.</li><li>Includes a couple of art assets and Textures used for demonstration purposes.</li><li>(Added 9/10/2018) Now includes support for radar returns materials to fade in/out at the edge of the display smoothly. See Updates at the end of documentation for details. Only works when radar is using spherical search dimensions, instead of cubic ones.</li></ul><p>Number of Blueprints: 7 (1 Actor, 1 Actor Component, 5 Demo Actors)</p><p>Number of Meshes: 12 Static Meshes</p><p>Number of Materials: 2 Materials, 11 Material Instances</p><p>Number of Textures: 5 Textures (4 2048*2048, 1 256*256)</p><p>Input: None</p><p>Network Replicated: Works in multiplayer.</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1_SN7Pt98dTxS3lMi8EJZwez1KOQcwVSPsLWDeb6qb-0/edit?usp&#61;sharing\" rel=\"nofollow\">https://docs.google.com/document/d/1_SN7Pt98dTxS3lMi8EJZwez1KOQcwVSPsLWDeb6qb-0/edit?usp&#61;sharing</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3DRadarScreenshot2-1920x1080-07441612af50beaacabf317cb8259691.png",
+      "md5": "07441612af50beaacabf317cb8259691",
+      "width": 1920,
+      "height": 1080,
+      "size": 1091492,
+      "uploadedDate": "2018-07-31T01:42:19.513Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3DRadarScreenshot3-1920x1080-fedf2fc549c1c9a65d8f5a8bd5e17785.png",
+      "md5": "fedf2fc549c1c9a65d8f5a8bd5e17785",
+      "width": 1920,
+      "height": 1080,
+      "size": 1018418,
+      "uploadedDate": "2018-07-31T01:42:19.922Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3DRadarScreenshot4-1920x1080-eff0887b64ea506bd1477d96466cefd9.png",
+      "md5": "eff0887b64ea506bd1477d96466cefd9",
+      "width": 1920,
+      "height": 1080,
+      "size": 733603,
+      "uploadedDate": "2018-07-31T01:42:20.270Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3DRadarScreenshot5-1920x1080-561cd462a108973c57012ab8d55c2655.png",
+      "md5": "561cd462a108973c57012ab8d55c2655",
+      "width": 1920,
+      "height": 1080,
+      "size": 977387,
+      "uploadedDate": "2018-07-31T01:42:20.599Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3DRadarScreenshot6-1920x1080-164b23168d9c360e93d4aefa3846ae80.png",
+      "md5": "164b23168d9c360e93d4aefa3846ae80",
+      "width": 1920,
+      "height": 1080,
+      "size": 172187,
+      "uploadedDate": "2018-07-31T01:42:20.861Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3DRadarScreenshot7-1920x1080-da97e479559881da74818975c77dcbb1.png",
+      "md5": "da97e479559881da74818975c77dcbb1",
+      "width": 1920,
+      "height": 1080,
+      "size": 440178,
+      "uploadedDate": "2018-07-31T01:42:21.149Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/3DRadarScreenshot1-1920x1080-0d86f796e3335ed2c6b784d8394ff641.png",
+      "md5": "0d86f796e3335ed2c6b784d8394ff641",
+      "width": 1920,
+      "height": 1080,
+      "size": 776109,
+      "uploadedDate": "2018-07-31T01:42:21.481Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/3DRadar_thumb-284x284-690a4c4b7d06e921161d10aa19e0f5fd.png",
+      "md5": "690a4c4b7d06e921161d10aa19e0f5fd",
+      "width": 284,
+      "height": 284,
+      "size": 78065,
+      "uploadedDate": "2018-07-31T00:53:46.909Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/3DRadar_featured-894x488-78039f413faf17243b3360fb2f16dc71.png",
+      "md5": "78039f413faf17243b3360fb2f16dc71",
+      "width": 894,
+      "height": 488,
+      "size": 305255,
+      "uploadedDate": "2018-07-31T00:53:46.990Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot2-1920x1080-07441612af50beaacabf317cb8259691_Snapshot.png",
+      "md5": "bf9ce67cc6b95ce4bd1177925c09d5b2",
+      "width": 150,
+      "height": 74,
+      "size": 15532,
+      "uploadedDate": "2018-07-31T01:42:19.718Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot3-1920x1080-fedf2fc549c1c9a65d8f5a8bd5e17785_Snapshot.png",
+      "md5": "e15097cb1ef9c90baff142cd8ffe5fea",
+      "width": 150,
+      "height": 74,
+      "size": 16957,
+      "uploadedDate": "2018-07-31T01:42:20.104Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot4-1920x1080-eff0887b64ea506bd1477d96466cefd9_Snapshot.png",
+      "md5": "834fed62a32893d5b687abf6bcb9cb49",
+      "width": 150,
+      "height": 74,
+      "size": 18409,
+      "uploadedDate": "2018-07-31T01:42:20.459Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot5-1920x1080-561cd462a108973c57012ab8d55c2655_Snapshot.png",
+      "md5": "95c9224ca4ddcd434610fa2f285889ef",
+      "width": 150,
+      "height": 74,
+      "size": 17880,
+      "uploadedDate": "2018-07-31T01:42:20.791Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot6-1920x1080-164b23168d9c360e93d4aefa3846ae80_Snapshot.png",
+      "md5": "681527650e36fab09cde5f34413eae1a",
+      "width": 150,
+      "height": 74,
+      "size": 5917,
+      "uploadedDate": "2018-07-31T01:42:21.020Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot7-1920x1080-da97e479559881da74818975c77dcbb1_Snapshot.png",
+      "md5": "3587a4898778a8de90925b6a59e02e77",
+      "width": 150,
+      "height": 74,
+      "size": 8961,
+      "uploadedDate": "2018-07-31T01:42:21.347Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot1-1920x1080-0d86f796e3335ed2c6b784d8394ff641_Snapshot.png",
+      "md5": "a358c7a9557e163cfc93c8ae6ea0f5dc",
+      "width": 150,
+      "height": 74,
+      "size": 12762,
+      "uploadedDate": "2018-07-31T01:42:21.674Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot1-1920x1080-4201d0a7b396a8adccaa1e32a0c741ea_Snapshot.png",
+      "md5": "a167e0bd6be634dd371293c825d61182",
+      "width": 150,
+      "height": 74,
+      "size": 5493,
+      "uploadedDate": "2018-07-31T00:53:45.510Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot2-1920x1080-709102f8f25fa161a884e2af8e18722c_Snapshot.png",
+      "md5": "5701eb009b92c6763b88f44677d68d33",
+      "width": 150,
+      "height": 74,
+      "size": 5311,
+      "uploadedDate": "2018-07-31T00:53:45.717Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot3-1920x1080-0c906aa157c0fd1fc4a5021fd4b465cc_Snapshot.png",
+      "md5": "2e62c9e02b4f0b3b1e79737fd7c4105c",
+      "width": 150,
+      "height": 74,
+      "size": 5736,
+      "uploadedDate": "2018-07-31T00:53:45.972Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot4-1920x1080-6dd2a26e8a11edaaf68097a3d2fcf164_Snapshot.png",
+      "md5": "e50817559f8294b2b99412084f15e746",
+      "width": 150,
+      "height": 74,
+      "size": 6177,
+      "uploadedDate": "2018-07-31T00:53:46.269Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot5-1920x1080-c5d20ba0ca9f406983ca499850bd0db5_Snapshot.png",
+      "md5": "15e9f1ad93e2d05471e81fb74a65dd34",
+      "width": 150,
+      "height": 74,
+      "size": 6240,
+      "uploadedDate": "2018-07-31T00:53:46.478Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot6-1920x1080-e615911f3f4325ada2cc651efb8705fc_Snapshot.png",
+      "md5": "7da9a72016e6372b27fcc1ca611463c6",
+      "width": 150,
+      "height": 74,
+      "size": 3928,
+      "uploadedDate": "2018-07-31T00:53:46.624Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/3DRadarScreenshot7-1920x1080-5c1b8a04eab4f34b5537c2a353f39d66_Snapshot.png",
+      "md5": "46ca6d32bd13224146a7c20bc8a1cb2a",
+      "width": 150,
+      "height": 74,
+      "size": 4408,
+      "uploadedDate": "2018-07-31T00:53:46.873Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-08-14T20:21:32.171Z",
+  "lastModifiedDate": "2025-02-23T01:03:40.328Z",
+  "customAttributes": {},
+  "entitlementName": "3842ee34be724ae2bbe4d78c6ced6742",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "41a14e94551d4e1cb75c35e4cdd1cfd1",
+      "appId": "3DRadar3842ee34be72V1",
+      "compatibleApps": [
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-07-30T00:00:00.000Z",
+      "releaseNote": "Fixed an incorrectly connected node for the \"Clear Return Arrays\" custom event.",
+      "versionTitle": "3D Radar 4.18"
+    }
+  ],
+  "developer": "Sean Dachtler",
+  "developerId": "o-5b3e61c1f64a79abf802cee6df7f61",
+  "endOfSupport": false,
+  "unsearchable": false
+}

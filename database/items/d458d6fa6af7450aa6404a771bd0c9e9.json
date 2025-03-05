@@ -1,0 +1,490 @@
+{
+  "id": "d458d6fa6af7450aa6404a771bd0c9e9",
+  "title": "JSONParser",
+  "description": "JSON parser. Easy way to read,create and manipulate JSON in Blueprints. File transfer is also possible. Save and read JSON (Harddisk).",
+  "longDescription": "<p>Easy way to read,create and manipulate JSON in Blueprints. <a href=\"https://www.unrealengine.com/marketplace/profile/Socke\" rel=\"nofollow\">It fits very well to my other plugins.</a> You can transfer files with JSON using the built-in Base64 functions.</p><p>I don&#39;t like special sales. My prices are low all year round. </p><p>Nativization may cause problems and should be disabled in BPs that use this plugin.</p><p><br /></p><p><strong><u>Changelog</u> </strong>(4.18, 4.19, 4.20)</p><ul><li>(09/25/2018) Version 1.7: Bugfix in Make Json Object. There was a bug when a value was an array.</li><li>(11/07/2018) Version 1.8: Bugfix: Old values were not deleted when used after an custom event.</li></ul><p><strong><u>Changelog</u> </strong>(4.25, 4.26, 4.27)</p><ul><li>(03/18/2021) Version 2.0: Struct to JSON, JSON to Struct.</li><li>(07/23/2021) Version 2.1: Bugfix: Self-created Enum&#39;s in Struct&#39;s were not recognized.</li><li>(09/11/2021) Version 2.2: Added bool (successful) to indicate if parsing worked.</li><li>(12/01/2021) Version 2.3: Bugfix: In packed Windows builds the variable names in the structures were changed which led to wrong names in JSON.</li><li>(12/08/2021) Version 2.4: Compression added. Zlib, LZ4 and Gzip (4.26 minimum).</li><li>(01/06/2022) Version 2.5: Bugfix: The same as version 2.3.</li><li>(03/28/2022) Version 2.6: Maps in structures are now saved as Json objects by default. Can be changed back to arrays with the function &#34;setStructJsonSettings&#34;. </li><li>(08/18/2022) Version 2.7: Four asynchronous functions added.</li><li>(11/27/2022) Version 2.8: Four file functions added.</li></ul>",
+  "technicalDetails": "<p><sup>Epic only allows updates for the newest three engine versions. There might be features missing in older engine versions. Contact me if you are unsure.</sup></p><p><br /></p><ul><li>Create JSON Strings</li><li>Read JSON Strings to Arrays and Maps</li><li>Manipulate JSON Strings</li><li>Struct to JSON, JSON to Struct<sup>*¹</sup></li><li>Easy to use. 4 Main Nodes and few optional Nodes.</li><li>Compatible with UE Maps, Variables and Arrays</li><li><a href=\"https://www.w3schools.com/js/js_json_datatypes.asp\" rel=\"nofollow\">Supported Types</a>: Bool, String, Number(double), Object, Arrays</li><li>File transfer. (Base64 encode/decode)</li><li>Compression*² (Zlib, Gzip, LZ4)</li><li>Save JSON to File and read JSON from File</li><li>Async Functions</li><li>Include C&#43;&#43; Source for C&#43;&#43; Projects</li><li><a href=\"https://www.virtualbird.de/ue4Doku/JSON/\" rel=\"nofollow\">Documentation </a></li><li>Support: <a href=\"mailto:unrealmarketplace&#64;virtualbird.de\" rel=\"nofollow\">unrealmarketplace&#64;virtualbird.de</a> (ENG,GER)</li></ul><p>*¹ Object references are not supported. See Documentation. At least UE version 4.25 required, Blueprint only</p><p>*² Compression of bytes/strings. This does not mean packing/unpacking of zip files.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Easy1-1920x1080-2a45c427e43be83d28eb231620b15f20.png",
+      "md5": "2a45c427e43be83d28eb231620b15f20",
+      "width": 1920,
+      "height": 1080,
+      "size": 252551,
+      "uploadedDate": "2017-10-24T16:04:08.814Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/struct1-1920x1080-d4fd5446b390c9ab71b44ddf2fa8f9f2.png",
+      "md5": "d4fd5446b390c9ab71b44ddf2fa8f9f2",
+      "width": 1920,
+      "height": 1080,
+      "size": 277288,
+      "uploadedDate": "2021-03-18T19:28:54.709Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/jsonAsync-1920x1080-4cc6383997e44d4258c89fcd9f853cf5.png",
+      "md5": "4cc6383997e44d4258c89fcd9f853cf5",
+      "width": 1920,
+      "height": 1080,
+      "size": 104263,
+      "uploadedDate": "2022-08-18T18:02:35.666Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Create1-1920x1080-86aa37a6e28c42cd9a197001843bb0c5.png",
+      "md5": "86aa37a6e28c42cd9a197001843bb0c5",
+      "width": 1920,
+      "height": 1080,
+      "size": 583343,
+      "uploadedDate": "2017-10-24T16:04:10.092Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Create2-1920x1080-ddc3c9222296bd9c1abce2cbf1606260.png",
+      "md5": "ddc3c9222296bd9c1abce2cbf1606260",
+      "width": 1920,
+      "height": 1080,
+      "size": 689794,
+      "uploadedDate": "2017-10-24T16:04:10.221Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Change1-1920x1080-6624a29ff2d1dbfec12e2fe09c4a8bb7.png",
+      "md5": "6624a29ff2d1dbfec12e2fe09c4a8bb7",
+      "width": 1920,
+      "height": 1080,
+      "size": 603185,
+      "uploadedDate": "2017-10-24T16:04:09.452Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/StringMap-1920x1080-be708ba1c9aaff8307c563ba6c56c701.png",
+      "md5": "be708ba1c9aaff8307c563ba6c56c701",
+      "width": 1920,
+      "height": 1080,
+      "size": 633860,
+      "uploadedDate": "2017-10-24T16:04:09.297Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/StringAndNumberMap-1920x1080-3bbfcf7e0e5a8c93cf542e7dd52b4af8.png",
+      "md5": "3bbfcf7e0e5a8c93cf542e7dd52b4af8",
+      "width": 1920,
+      "height": 1080,
+      "size": 635749,
+      "uploadedDate": "2017-10-24T16:04:08.904Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Complex-1920x1080-47d7798ae0f7c6c8b0567d15084a84d8.png",
+      "md5": "47d7798ae0f7c6c8b0567d15084a84d8",
+      "width": 1920,
+      "height": 1080,
+      "size": 580864,
+      "uploadedDate": "2017-10-24T16:04:09.736Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Create3-1920x1080-581f87d0d691a34fb52dbb2b92b82eaf.png",
+      "md5": "581f87d0d691a34fb52dbb2b92b82eaf",
+      "width": 1920,
+      "height": 1080,
+      "size": 710360,
+      "uploadedDate": "2017-10-24T16:04:10.362Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/StringArray-1920x1080-20ea038106b292f2b34f2009955e096f.png",
+      "md5": "20ea038106b292f2b34f2009955e096f",
+      "width": 1920,
+      "height": 1080,
+      "size": 575347,
+      "uploadedDate": "2017-11-10T10:56:01.499Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FileTransfer-1920x1080-98ab292f1df447182c9306394cd34895.png",
+      "md5": "98ab292f1df447182c9306394cd34895",
+      "width": 1920,
+      "height": 1080,
+      "size": 296816,
+      "uploadedDate": "2017-11-19T21:04:50.726Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Create4-1920x1080-e6ff14143386ded828a4255935cf871b.png",
+      "md5": "e6ff14143386ded828a4255935cf871b",
+      "width": 1920,
+      "height": 1080,
+      "size": 626328,
+      "uploadedDate": "2017-11-10T10:56:01.622Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GetArray-1920x1080-ed4a1f3a93a59b1c3b1aa069ce4a0faa.png",
+      "md5": "ed4a1f3a93a59b1c3b1aa069ce4a0faa",
+      "width": 1920,
+      "height": 1080,
+      "size": 623040,
+      "uploadedDate": "2017-11-10T10:58:06.453Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CreateMixedArray-1920x1080-276364d121c9e8399e1ff4bfda5f40c2.png",
+      "md5": "276364d121c9e8399e1ff4bfda5f40c2",
+      "width": 1920,
+      "height": 1080,
+      "size": 649694,
+      "uploadedDate": "2017-11-13T13:38:06.060Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/GetMixedArray-1920x1080-8a3378f6e3faa73a0435b02a77038d64.png",
+      "md5": "8a3378f6e3faa73a0435b02a77038d64",
+      "width": 1920,
+      "height": 1080,
+      "size": 792193,
+      "uploadedDate": "2017-11-13T13:38:06.224Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/JSONParser_thumb-284x284-f0eee7c0f849e430010cbcc877bec79a.png",
+      "md5": "f0eee7c0f849e430010cbcc877bec79a",
+      "width": 284,
+      "height": 284,
+      "size": 21673,
+      "uploadedDate": "2018-01-09T01:11:00.079Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/JSONParser_featured-894x488-131ae7ea7e01c0844abee0568db3ab4a.png",
+      "md5": "131ae7ea7e01c0844abee0568db3ab4a",
+      "width": 894,
+      "height": 488,
+      "size": 62541,
+      "uploadedDate": "2018-01-09T01:11:00.154Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/jsonAsync-1920x1080-4cc6383997e44d4258c89fcd9f853cf5_Snapshot.png",
+      "md5": "36d6e0dded3a34473f29999945e6ff57",
+      "width": 150,
+      "height": 74,
+      "size": 3273,
+      "uploadedDate": "2022-08-18T18:02:35.756Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/struct1-1920x1080-d4fd5446b390c9ab71b44ddf2fa8f9f2_Snapshot.png",
+      "md5": "d1b57b58bd56b5cb6585d24525ff0f25",
+      "width": 150,
+      "height": 74,
+      "size": 6491,
+      "uploadedDate": "2021-03-18T19:28:54.918Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2017-11-09T16:47:41.212Z",
+  "lastModifiedDate": "2025-01-04T14:15:24.806Z",
+  "customAttributes": {},
+  "entitlementName": "d458d6fa6af7450aa6404a771bd0c9e9",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "0e752f3884eb4483ab613843b9ab8ba5",
+      "appId": "JSONParser_4.17",
+      "compatibleApps": [
+        "UE_4.17"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2017-10-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json16417"
+    },
+    {
+      "id": "da4a0d2e86c04883adcdbf73c374fcd0",
+      "appId": "JSONParser_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2017-10-24T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "json18418"
+    },
+    {
+      "id": "57dc222548434ccc8964055e412662b4",
+      "appId": "JSONParser_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Mac",
+        "Linux",
+        "iOS"
+      ],
+      "dateAdded": "2018-03-23T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "json18419"
+    },
+    {
+      "id": "37a1fd66cd844a9f8e1f2e98fc1f9fc7",
+      "appId": "JSONParser_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2018-07-20T00:00:00.000Z",
+      "releaseNote": "Bugfix",
+      "versionTitle": "json18420"
+    },
+    {
+      "id": "f25a461477054dd1a4a07a44473ba197",
+      "appId": "JSONParser_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "iOS",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2018-11-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json18421"
+    },
+    {
+      "id": "84a8a5f39bc548979ef697acfcfc5601",
+      "appId": "JSONParser_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json18422"
+    },
+    {
+      "id": "8d8bebb588484d25b116aee55f93788e",
+      "appId": "JSONParser_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Android"
+      ],
+      "dateAdded": "2019-09-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json18423"
+    },
+    {
+      "id": "06e5ea7691874ba4996235b118c5c99d",
+      "appId": "JSONParser_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2019-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json110424"
+    },
+    {
+      "id": "dd0e19d844b242af8696db13e8ca67f2",
+      "appId": "JSONParser_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-05-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json206425"
+    },
+    {
+      "id": "c82f1aa684d74a45a4995dabcc9b1ef6",
+      "appId": "JSONParser_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-12-04T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json_207_426"
+    },
+    {
+      "id": "d5e2ed2d2fb447c1b0702450ec166a5b",
+      "appId": "JSONParser_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2021-08-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json_208_427"
+    },
+    {
+      "id": "15a14ece02594529bed13150d6b8baf9",
+      "appId": "JSONParser_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json_208_500"
+    },
+    {
+      "id": "7a65ed29c96c44ec8d737a94a41970c4",
+      "appId": "JSONParser_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2022-11-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json_208_510"
+    },
+    {
+      "id": "b9349d28ec354ea5a9128cceca7b8e1a",
+      "appId": "JSONParser_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Mac",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json_208_520"
+    },
+    {
+      "id": "fcdb5464431a480eacbe3f3d46ec0734",
+      "appId": "JSONParser_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Android",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-09-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json_208_530"
+    },
+    {
+      "id": "0b71529212de4968b4b0be983d48aec4",
+      "appId": "JSONParser_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "iOS",
+        "Android",
+        "Mac"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "json_208_540"
+    }
+  ],
+  "developer": "Virtualbird UG",
+  "developerId": "o-5bc5ba8cdd4200a6e086d8c602bbf7",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

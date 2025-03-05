@@ -1,0 +1,312 @@
+{
+  "id": "ce04147a91404283a3074289d1e8247c",
+  "title": "Prediction Shot Plugin",
+  "description": "This Plugin predicts the movement of the target and calculates the predicted shooting direction.",
+  "longDescription": "<p>This Plugin predicts the movement of the target and calculates the predicted shooting direction.</p><p>Also supports grenades, etc.</p><p><br /></p><p>Changelog</p><p>[Ver1.2]</p><ul><li>Optimized processing when the predicted position collides with a wall etc.</li><li>Add SetAccuracy Node (Ability to change Accuracy at runtime)</li></ul><p>[Ver 1.1]</p><ul><li>Add PredictPos function to calculate predicted position</li><li>Add HighArc option to shoot projectiles such as grenades at a higher angle</li><li>Improve accuracy of prediction calculation during circular movement</li><li>Fix prediction calculation during counterclockwise circular movement</li></ul>",
+  "technicalDetails": "<p>List of Features</p><ul><li>LinearFCS Component: Calculate the predicted shooting direction of the target moving in linear motion</li><li>CircularFCS Component: Calculate the predicted shooting direction of the target moving in circular motion</li><li>CharacterLinearFCS Component: Calculate the predicted shooting direction of the character actor moving in linear motion</li><li>CharacterCircularFCS Component: Calculate the predicted shooting direction of the character actor moving in circular motion (If the Character&#39;s AirControl value is fairly low, it will be a linear movement during the jump, so you may use CharacterLinearFCS during the jump)</li><li>{SMA, EMA}VelocityMeasurer Component: Measure speed and acceleration using {SMA, EMA} (Use with LinearFCS, CharacterLinearFCS)</li><li>{SMA, EMA}AngularMeasurer Component: Measure angular velocity, angular acceleration using {SMA, EMA} (Use with CircularFCS, CharacterCircularFCS)</li></ul><p>* (SMA &#61; Simple Moving Average, EMA &#61; Exponential Moving Average)</p><p><br /></p><p>Documentation: <a href=\"https://yukirin.github.io/PredictionShotPlugin/\" rel=\"nofollow\">Document</a></p><p>Number of C&#43;&#43; Classes: 20</p><p>List of Modules: PredictionShotPlugin[Runtime]</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PredictionShotPluginScreenshot01-1920x1080-d1be080c617500f7ce5c2e440a0df553.png",
+      "md5": "d1be080c617500f7ce5c2e440a0df553",
+      "width": 1920,
+      "height": 1080,
+      "size": 463525,
+      "uploadedDate": "2018-06-17T09:42:15.742Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PredictionShotPluginScreenshot02-1920x1080-12719d4e566df32da567109618012524.png",
+      "md5": "12719d4e566df32da567109618012524",
+      "width": 1920,
+      "height": 1080,
+      "size": 543375,
+      "uploadedDate": "2018-06-17T09:42:16.176Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PredictionShotPluginScreenshot03-1920x1080-1f084414087d013a7a2f22dd02ecc9e9.png",
+      "md5": "1f084414087d013a7a2f22dd02ecc9e9",
+      "width": 1920,
+      "height": 1080,
+      "size": 526469,
+      "uploadedDate": "2018-06-17T09:42:16.601Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PredictionShotPluginScreenshot04-1920x1080-c4d0125f29e6aded7b19df22d2e504c4.png",
+      "md5": "c4d0125f29e6aded7b19df22d2e504c4",
+      "width": 1920,
+      "height": 1080,
+      "size": 515697,
+      "uploadedDate": "2018-06-17T09:42:17.077Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PredictionShotPluginScreenshot05-1920x1080-e66a26355f78d61d77239d890f33363f.png",
+      "md5": "e66a26355f78d61d77239d890f33363f",
+      "width": 1920,
+      "height": 1080,
+      "size": 456822,
+      "uploadedDate": "2018-06-17T09:42:17.530Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PredictionShotPluginScreenshot06-1920x1080-84c753c8154a03eb89c2f863454eaaba.png",
+      "md5": "84c753c8154a03eb89c2f863454eaaba",
+      "width": 1920,
+      "height": 1080,
+      "size": 839008,
+      "uploadedDate": "2018-06-17T09:42:18.039Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PredictionShotPlugin_thumb-284x284-aeed9e2af74be01b594dbc98f92e7882.png",
+      "md5": "aeed9e2af74be01b594dbc98f92e7882",
+      "width": 284,
+      "height": 284,
+      "size": 156584,
+      "uploadedDate": "2018-06-17T09:42:19.001Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PredictionShotPlugin_featured-894x488-d834447df0d7b3b4dd166141c6291264.png",
+      "md5": "d834447df0d7b3b4dd166141c6291264",
+      "width": 894,
+      "height": 488,
+      "size": 338974,
+      "uploadedDate": "2018-06-17T09:42:19.086Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PredictionShotPluginScreenshot01-1920x1080-d1be080c617500f7ce5c2e440a0df553_Snapshot.png",
+      "md5": "fecbe15d9fca31e08cecfb0beedd21ae",
+      "width": 150,
+      "height": 74,
+      "size": 20659,
+      "uploadedDate": "2018-06-17T09:42:16.011Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PredictionShotPluginScreenshot02-1920x1080-12719d4e566df32da567109618012524_Snapshot.png",
+      "md5": "a5c112e77b35b6c7c8ae7ee3bf991bf3",
+      "width": 150,
+      "height": 74,
+      "size": 22825,
+      "uploadedDate": "2018-06-17T09:42:16.462Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PredictionShotPluginScreenshot03-1920x1080-1f084414087d013a7a2f22dd02ecc9e9_Snapshot.png",
+      "md5": "a2d9651cc3d5662192a2f0f43a6e061e",
+      "width": 150,
+      "height": 74,
+      "size": 22252,
+      "uploadedDate": "2018-06-17T09:42:16.899Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PredictionShotPluginScreenshot04-1920x1080-c4d0125f29e6aded7b19df22d2e504c4_Snapshot.png",
+      "md5": "8f2cc4d8ef3fe3e6f8a42ba990c51e7e",
+      "width": 150,
+      "height": 74,
+      "size": 22528,
+      "uploadedDate": "2018-06-17T09:42:17.362Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PredictionShotPluginScreenshot05-1920x1080-e66a26355f78d61d77239d890f33363f_Snapshot.png",
+      "md5": "6a80bdc1e5793e535bad410084eada75",
+      "width": 150,
+      "height": 74,
+      "size": 20981,
+      "uploadedDate": "2018-06-17T09:42:17.804Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PredictionShotPluginScreenshot06-1920x1080-84c753c8154a03eb89c2f863454eaaba_Snapshot.png",
+      "md5": "addc3fe4b1d903a549c09c1d0a43c1ef",
+      "width": 150,
+      "height": 74,
+      "size": 11710,
+      "uploadedDate": "2018-06-17T09:42:18.723Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2018-06-28T16:46:47.336Z",
+  "lastModifiedDate": "2023-10-13T14:51:55.825Z",
+  "entitlementName": "ce04147a91404283a3074289d1e8247c",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "2af28eff377e42d8865a0ecf119f8de6",
+      "appId": "PredictionShotPlugin_4.18",
+      "compatibleApps": [
+        "UE_4.18"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-06-29T00:00:00.000Z",
+      "releaseNote": "NewVer1.1\n* Add PredictPos function\n* Add HighArc option\n* BugFix prediction calculation during circular movement",
+      "versionTitle": "NewVer1.1_ue4.18"
+    },
+    {
+      "id": "219d1505197d4cda9628078afeb93214",
+      "appId": "PredictionShotPlugin_4.19",
+      "compatibleApps": [
+        "UE_4.19"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-06-20T00:00:00.000Z",
+      "releaseNote": "NewVer1.1\n* Add PredictPos function\n* Add HighArc option\n* BugFix prediction calculation during circular movement",
+      "versionTitle": "NewVer1.1_ue4.19"
+    },
+    {
+      "id": "a248a7ae3f4646bfa3a0c094f491dae7",
+      "appId": "PredictionShotPlugin_4.20",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-07-19T00:00:00.000Z",
+      "releaseNote": "Version 1.2\n-Optimized processing when the predicted position collides with a wall etc.\n-Add SetAccuracy Node (Ability to change Accuracy at runtime)",
+      "versionTitle": "NewVer1.2_ue4.20"
+    },
+    {
+      "id": "bfae5f816f1e45498eae6033da2c7d0a",
+      "appId": "PredictionShotPlugin_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-11-12T00:00:00.000Z",
+      "releaseNote": "Version 1.2\n-Optimized processing when the predicted position collides with a wall etc.\n-Add SetAccuracy Node (Ability to change Accuracy at runtime)",
+      "versionTitle": "NewVer1.2_ue4.21"
+    },
+    {
+      "id": "aa265f83a29f414f9580142e6748d351",
+      "appId": "PredictionShotPlugin_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-04-07T00:00:00.000Z",
+      "releaseNote": "Version 1.2\n-Optimized processing when the predicted position collides with a wall etc.\n-Add SetAccuracy Node (Ability to change Accuracy at runtime)",
+      "versionTitle": "NewVer1.2_ue4.22"
+    },
+    {
+      "id": "2f1ffb2c461842dd8b9c7214720775b4",
+      "appId": "PredictionShotPlugin_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-09-08T00:00:00.000Z",
+      "releaseNote": "Add support UE4.23",
+      "versionTitle": "Ver1.2_ue4.23"
+    },
+    {
+      "id": "727e7cc430ff4e9cade66f38b298044c",
+      "appId": "PredictionShotPlugin_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-12-23T00:00:00.000Z",
+      "releaseNote": "Add support UE4.24",
+      "versionTitle": "Ver1.2_ue4.24"
+    },
+    {
+      "id": "0b63952c8caf4215af9ed23c70dffb0d",
+      "appId": "PredictionShotPlugin_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-05-13T00:00:00.000Z",
+      "releaseNote": "Add support UE4.25",
+      "versionTitle": "Ver1.2_ue4.25"
+    },
+    {
+      "id": "ea1aa8d109664566814c80597a1feb23",
+      "appId": "PredictionShotPlugin_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-12-09T00:00:00.000Z",
+      "releaseNote": "UE4.26 support",
+      "versionTitle": "Ver1.2_ue4.26"
+    },
+    {
+      "id": "3ad344474d09447b9c95ecd8cb3f356e",
+      "appId": "PredictionShotPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2021-10-26T00:00:00.000Z",
+      "releaseNote": "Add support for ue4.27",
+      "versionTitle": "Ver1.2_ue4.27"
+    },
+    {
+      "id": "e108802f12354cc1b9115501877a7ef4",
+      "appId": "PredictionShotPlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-09-12T00:00:00.000Z",
+      "releaseNote": "add support ue5.0",
+      "versionTitle": "Ver1.2_ue5.0"
+    },
+    {
+      "id": "19959f615e0b43a78a2321bdde897638",
+      "appId": "PredictionShotPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-12-04T00:00:00.000Z",
+      "releaseNote": "add support ue5.1",
+      "versionTitle": "Ver1.2_ue5.1"
+    }
+  ],
+  "developer": "yukirin",
+  "developerId": "o-62fcb578404e8da9dbdacff96a2bae",
+  "endOfSupport": false,
+  "unsearchable": false
+}

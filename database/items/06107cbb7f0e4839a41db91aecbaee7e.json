@@ -1,0 +1,225 @@
+{
+  "id": "06107cbb7f0e4839a41db91aecbaee7e",
+  "title": "Movement Input Correction & Customization",
+  "description": "Fix directional movement inputs and add custom directional movement curves!",
+  "longDescription": "<p>Are you working on a project where a player can move? Then this asset pack is for you! These macros not only fix an inherent &#34;flaw&#34; in movement inputs, but they also allow you to implement custom directional movement curves that naturally replicate and work on both controller and keyboard. The controller versions allow for partial-pressure inputs.</p><p><br /></p><p><strong>Regarding UE 4 &amp; Earlier</strong>: Movement seems to have changed DRASTICALLY with the introduction of UE 5 and Enhanced Input. I tried for a while to get these equations working within UE 4, with some success, but learned something interesting in doing so: The input graphs don&#39;t match. I have some working in 4, but not all. So if you need anything for 4, ask first and if it&#39;s one of the solutions I have I shall happily provide it.</p><p><br /></p><p><strong>Future of this product</strong>: I am absolutely fascinated by human motion and I have a background in astrophysics. I will likely make this asset part of a larger adaptive motion system. No ETA on that, but it&#39;s the long-term intent.</p><p><br /></p><p><strong>VIDEO DEMO/INSTRUCTIONS</strong>: <a href=\"https://youtu.be/I0J30_WGO3w\" rel=\"nofollow\">YouTube Video</a></p><p><strong>Discord</strong>: <a href=\"https://discord.gg/dephoro\" rel=\"nofollow\">[dephoro] Discord</a> (Helpful Channels &amp; People)</p><p><strong>Website</strong>: <a href=\"https://dephoro.com/help-center/\" rel=\"nofollow\">[dephoro] Help Center</a> (Forums &amp; Help Tickets)</p><p><br /></p><p>This product contains an elegant fix for the movement input system, while also allowing you to implement any custom directional movement curve of your choosing. Here&#39;s what you get with this pack (DSM stands for Directional Speed Modifier, abbreviated for ease of use):</p><p>1x &#34;DSM - Keyboard - Circularization&#34; Macro</p><p>1x &#34;DSM - Controller - Circularization&#34; Macro</p><p>1x &#34;DSM - Keyboard - Cosine&#34; Macro</p><p>1x &#34;DSM - Controller - Cosine&#34; Macro</p><p>1x &#34;True Speed Calculation - Cosine&#34; Macro</p><p><br /></p><p>Here is what each product does:</p><p><strong>&#34;Directional Speed Modifier - Circularization&#34; Macro</strong></p><p>THIS ONE IS A MUST-HAVE AND NO THAT&#39;S NOT A SALES GIMMICK. It fixes an inherent &#34;flaw&#34; in the movement input system WITHOUT affecting anything beyond that fix. The rest of your in-place and already-built movement systems SHOULD be completely unaffected. What this input does is perfectly circularize all combinations of X&#43;Y movement inputs. At all input angles. And it is impressively light-weight and should fully replicate in multiplayer games because of how the problem was addressed.</p><p><br /></p><p><strong>&#34;Directional Speed Modifier - Cosine&#34; Macro</strong></p><p>This macro, instead of circularizing inputs to where a character has a steady speed in all directions, modifies directional movement along a (custom) cosine wave. When you move forward you move at full speed. When you move left or right you are moving at about 90% speed. When you move backwards, you are moving at about 70% speed. And the in-between values are a smooth gradient between those named values. This specific macro is what we, personally, use to somewhat mimic human directional movement; however, the point of our including it was so you can have a framework to make your own custom movement curves! Maybe your players control animals, or monsters, or anything... this should allow you to tailor a directional movement curve to each.</p><p><br /></p><p><strong>&#34;True Speed Calculation - Cosine&#34; Macro</strong></p><p>The True Speed calculation is used to reverse the effects of a specific modifier function, in this case the &#34;Cosine&#34; modifier macro above, for tracking purposes. Suppose you have a &#34;scroll to increase speed&#34; system. You will likely want to reference the character&#39;s speed as if they weren&#39;t slowed down so you can ensure they don&#39;t scroll-tick themselves above or below a certain threshold. With this, you can always use the player&#39;s actual, unaffected speed as a baseline. Either store it to a variable or use it as a macro!</p><p><br /></p><p>All of our macros are contained within the &#34;BML_P_MovementInputCC&#34; Blueprint Macro Library file, contained within the &#34;MovementInputCC&#34; folder. The macro comes with Pawn set as its parent class by default. Considering all of the functions are math-based, feel free to change this parent class to Player Controller or Character as you see fit. To use these macros in a pawn or character or player controller blueprint, simply search for the name of the macro you want to use in your right-click search pop-up. All of our macros are delightfully lightweight, mathematically-based, and there is more commenting than code to ensure you fully understand what is going on AND how to edit them to suit your own, individualized needs.</p><p><br /></p><p>This is the type of asset you can use in nearly every one of your projects!</p><p><br /></p><p>Speed Runners: Sorry in advance and we have nothing but respect for your craft.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Fixes directional movement inputs</li><li>Implement custom directional movement curves</li><li>Naturally Replicates</li><li>Extremely light-weight and efficient</li><li>Highly customizable</li><li>Diverse array of applications</li><li>5 Macros Included [Circularization, Cosine, and Cosine Reversal)</li></ul><p>Number of Blueprints: 1 (Macros are contained within a Blueprint Macro Library)</p><p>Input: Keyboard &amp; Controller</p><p>Network Replicated: Yes, Should Be. Tested In-Engine.</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Documentation: Comments in Macro // <a href=\"https://youtu.be/I0J30_WGO3w\" rel=\"nofollow\">YouTube</a> // <a href=\"https://dephoro.com/help-center/\" rel=\"nofollow\">Website</a> // <a href=\"https://discord.gg/dephoro\" rel=\"nofollow\">Discord</a></p><p>Important/Additional Notes:</p><p>For help creating your own custom directional movement speed formula, feel free to join the discord and send us a message!</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MICCG1-1920x1080-0b3990c1382a7f93c227c0868c32aacd.png",
+      "md5": "0b3990c1382a7f93c227c0868c32aacd",
+      "width": 1920,
+      "height": 1080,
+      "size": 847909,
+      "uploadedDate": "2023-03-03T11:13:29.961Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MICCG2-1920x1080-5a65e6eee4a0c568461402665e6954e1.png",
+      "md5": "5a65e6eee4a0c568461402665e6954e1",
+      "width": 1920,
+      "height": 1080,
+      "size": 1425669,
+      "uploadedDate": "2023-03-06T07:54:55.347Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MICCG3-1920x1080-9b32ff7083cbe7385a0fe46f24ac5ca8.png",
+      "md5": "9b32ff7083cbe7385a0fe46f24ac5ca8",
+      "width": 1920,
+      "height": 1080,
+      "size": 1238646,
+      "uploadedDate": "2023-03-06T07:54:55.929Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MICCG4-1920x1080-12262993bdd849a8467b79ea029d8aff.png",
+      "md5": "12262993bdd849a8467b79ea029d8aff",
+      "width": 1920,
+      "height": 1080,
+      "size": 902237,
+      "uploadedDate": "2023-03-06T07:54:56.477Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MICCG5V2-1920x1080-399ced9a52523ed3686d6f4d145b18f4.png",
+      "md5": "399ced9a52523ed3686d6f4d145b18f4",
+      "width": 1920,
+      "height": 1080,
+      "size": 349410,
+      "uploadedDate": "2023-04-09T06:20:17.263Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MICCG6V2-1920x1080-da6f7b91bd8c45c5b1e18cfd52f257c0.png",
+      "md5": "da6f7b91bd8c45c5b1e18cfd52f257c0",
+      "width": 1920,
+      "height": 1080,
+      "size": 84590,
+      "uploadedDate": "2023-04-09T06:20:17.600Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MovementInputCorrectionCustomization_thumb-284x284-66c3f091fa1b70a7a1a1d07b45cf5585.png",
+      "md5": "66c3f091fa1b70a7a1a1d07b45cf5585",
+      "width": 284,
+      "height": 284,
+      "size": 98075,
+      "uploadedDate": "2023-03-03T11:13:31.693Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MovementInputCorrectionCustomization_featured-894x488-04c16e6e9122c8cd8adf5eb371b25400.png",
+      "md5": "04c16e6e9122c8cd8adf5eb371b25400",
+      "width": 894,
+      "height": 488,
+      "size": 351986,
+      "uploadedDate": "2023-03-03T11:13:31.795Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MICCG5V2-1920x1080-399ced9a52523ed3686d6f4d145b18f4_Snapshot.png",
+      "md5": "91d75961c1615e17e81a15280475b747",
+      "width": 150,
+      "height": 74,
+      "size": 6210,
+      "uploadedDate": "2023-04-09T06:20:17.525Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MICCG6V2-1920x1080-da6f7b91bd8c45c5b1e18cfd52f257c0_Snapshot.png",
+      "md5": "d55412800c8b0b0d6aefe90d26bd6e16",
+      "width": 150,
+      "height": 74,
+      "size": 4241,
+      "uploadedDate": "2023-04-09T06:20:17.868Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MICCG2-1920x1080-5a65e6eee4a0c568461402665e6954e1_Snapshot.png",
+      "md5": "87440a43393602529b59e4603a31e740",
+      "width": 150,
+      "height": 74,
+      "size": 6469,
+      "uploadedDate": "2023-03-06T07:54:55.711Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MICCG3-1920x1080-9b32ff7083cbe7385a0fe46f24ac5ca8_Snapshot.png",
+      "md5": "cdd5535e2c0af803b662467254fc29b8",
+      "width": 150,
+      "height": 74,
+      "size": 6682,
+      "uploadedDate": "2023-03-06T07:54:56.293Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MICCG4-1920x1080-12262993bdd849a8467b79ea029d8aff_Snapshot.png",
+      "md5": "5e3600cd93675aee28d22da5e9aa715e",
+      "width": 150,
+      "height": 74,
+      "size": 5744,
+      "uploadedDate": "2023-03-06T07:54:56.796Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MICCG5-1920x1080-fa33b98f1ed73513998442411c5dd47a_Snapshot.png",
+      "md5": "7f26dfafd5ae7f86443cd00e6fdb1e83",
+      "width": 150,
+      "height": 74,
+      "size": 6341,
+      "uploadedDate": "2023-03-06T07:54:57.201Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MICCG6-1920x1080-2dff6e93edd201859749a3ddb00f29b9_Snapshot.png",
+      "md5": "6548654f25ac64639888df33b938ec07",
+      "width": 150,
+      "height": 74,
+      "size": 4225,
+      "uploadedDate": "2023-03-06T07:54:57.526Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MICCG1-1920x1080-0b3990c1382a7f93c227c0868c32aacd_Snapshot.png",
+      "md5": "51a41e5da1f4894e048d2f34c069a596",
+      "width": 150,
+      "height": 74,
+      "size": 6775,
+      "uploadedDate": "2023-03-03T11:13:30.247Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MICCG2-1920x1080-32d026d8dca209efafec34d1875102de_Snapshot.png",
+      "md5": "9418bdaf4cc6cf6a667ab8c23e5e446f",
+      "width": 150,
+      "height": 74,
+      "size": 5604,
+      "uploadedDate": "2023-03-03T11:13:30.751Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MICCG3-1920x1080-a0c56bb51852e2829efe97b15348a9b5_Snapshot.png",
+      "md5": "66d07a369617448fe830c279efbce524",
+      "width": 150,
+      "height": 74,
+      "size": 5517,
+      "uploadedDate": "2023-03-03T11:13:31.203Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MICCG4-1920x1080-c5f068637aad6859250643fcda5b808e_Snapshot.png",
+      "md5": "ec365612b4f93ffa270a144b93323951",
+      "width": 150,
+      "height": 74,
+      "size": 5893,
+      "uploadedDate": "2023-03-03T11:13:31.646Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-03-07T20:14:59.921Z",
+  "lastModifiedDate": "2025-02-18T15:48:11.126Z",
+  "customAttributes": {},
+  "entitlementName": "06107cbb7f0e4839a41db91aecbaee7e",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "b3e4cdd984fc4e1ebe9a81468dcc723c",
+      "appId": "Movement06107cbb7f0eV1",
+      "compatibleApps": [
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4",
+        "UE_5.5"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "PS4",
+        "Nintendo Switch",
+        "Linux"
+      ],
+      "dateAdded": "2023-03-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "MovementInputCC"
+    }
+  ],
+  "developer": "dephoro",
+  "developerId": "o-sltfgdrdx7uklgf6br2hkbwuqwlueh",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

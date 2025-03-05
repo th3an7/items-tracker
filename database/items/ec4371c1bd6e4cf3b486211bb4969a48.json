@@ -1,0 +1,227 @@
+{
+  "id": "ec4371c1bd6e4cf3b486211bb4969a48",
+  "title": "Volumetric Spotlight with Shadow",
+  "description": "Volumetric spotlight effect, or God rays - lightshafts, is physically caused by light reflecting of dust. You can look at it from any angle and even stand inside it. It adds a strong sense of mystique that defines the atmosphere of the entire scene.",
+  "longDescription": "Preview: <a href=\"https://vimeo.com/170536888\" rel=\"nofollow\">vimeo.com/170536888</a><br /><br />The volumetric spotlight effect visualizes the physical effect of light reflecting of dust particles, fog or damp in a spotlight. The illusion of a volume is created by filling the cone with a series of planes to make it &#34;volumetrical&#34;.<br /><br />The shape is controllable by setting parameters of its width and length and you can choose to have it square. The color can also be set.<br /><br />Since the volume is rendered by additive-transparant planes perpendicular to the spotlight (set by a parameter (default 512)), the render cost is very high, because really the entire volume has to be rendered, while 3D-rendering usually just renders surfaces. To prevent the worst case conditions, the number of planes are dynamically reduced depending on the distance to the camera. All performance settings are configurable. Please note that this effect will only render at a decent framerate (30FPS&#43;) on mid-end and high-end machines.<br /><br />The cool thing about this light is that it also supports (dynamic) masks. These work by just inserting a 2D mask at the correct position and transformation in the material shader that is rendered over the plane. So only 2D masks perpendicular to the lightray are supported, but simple geometry (Example a sphere) renders completely correct in 3D. This can make real convincing effects such as light through windows or panels, which makes the volumetric effect really strong and much cooler than the simple facing-plane god-rays.",
+  "technicalDetails": "1 base Blueprint to configure the spotlight (supports 1 shadow mask) <br />1 Blueprint child that supports up to 4 shadow masks and some more realistic light computation, but results in a much higher render cost. <br />2 Blueprints to easily configure the built in volumetrics of the Unreal Engine. (These just imitate volumetrics by rendering the surface of a spotlight volume) <br />2 Demo levels with a total of 10 examples of the spotlight. <br />3 props of spotlight casings <br />1 prop of a bunkerlamp <br />5 Materials of fans. <br />Bunker Demo contains 24 materials as a bonus <br />Butterfly Demo contains a nice ground and water material.<br /><br />NOTE: Due to the high render cost this effect is only suited for mid to high end machines (standing inside the spotlight is worst-case condition and FPS will drop from 50 to 20 FPS on a mid-range machine at 1920x1200 (Already with plane resolution reduction optimization with a factor 4, so on the expense of loosing some quality of the effect (the planes (edges) become slightly visible))). Rendering multiple spotlights and looking at them from a distance is not really a problem, since it is not so much about the amount of spotlights (tested with 4), but more about the screen fill-rate. If you want to have a dynamic shadow maks, it is best to only add 1 spotlight at a time on the screen, because for dynamic masking it is needed to update the materials of all (512) planes, which is very performance costly.",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/VolumetricSpotlight-01-BoilerRoom-1920x1080-b0bce16207d33becd8615dabe6d0cd8e.jpg",
+      "md5": "b0bce16207d33becd8615dabe6d0cd8e",
+      "width": 1920,
+      "height": 1080,
+      "size": 272862,
+      "uploadedDate": "2016-06-30T20:26:30.359Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/VolumetricSpotlight-02-Bunker-1920x1080-d7c3a1c6656afff9887024790936929d.jpg",
+      "md5": "d7c3a1c6656afff9887024790936929d",
+      "width": 1920,
+      "height": 1080,
+      "size": 170797,
+      "uploadedDate": "2016-06-30T20:26:28.783Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/VolumetricSpotlight-03-EngineHallway-1920x1080-446fef51735621ad1bb6b8a44851e09a.jpg",
+      "md5": "446fef51735621ad1bb6b8a44851e09a",
+      "width": 1920,
+      "height": 1080,
+      "size": 213107,
+      "uploadedDate": "2016-06-30T20:26:26.250Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/VolumetricSpotlight-05-Props-Examples-Materials-Collage4-1920x1080-0be31a7f65f240fb5cdcb213ed19f777.jpg",
+      "md5": "0be31a7f65f240fb5cdcb213ed19f777",
+      "width": 1920,
+      "height": 1080,
+      "size": 587315,
+      "uploadedDate": "2016-06-30T20:26:23.749Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/item/VolumetricSpotlight-06-Blueprint-1920x1080-d649a4ac47f416d1c00c095fef42061c.png",
+      "md5": "d649a4ac47f416d1c00c095fef42061c",
+      "width": 1920,
+      "height": 1080,
+      "size": 518544,
+      "uploadedDate": "2016-06-30T20:26:21.794Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/item/VolumetricSpotlight-01_Thumb-284x284-5194809fb37ddb3fd4b1100c1a62e56c.png",
+      "md5": "5194809fb37ddb3fd4b1100c1a62e56c",
+      "width": 284,
+      "height": 284,
+      "size": 75316,
+      "uploadedDate": "2016-06-30T20:26:18.245Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/item/VolumetricSpotlight-01_Featured-476x246-e094adc0cc487d445cf1f1e7afbeca00.png",
+      "md5": "e094adc0cc487d445cf1f1e7afbeca00",
+      "width": 476,
+      "height": 246,
+      "size": 160168,
+      "uploadedDate": "2016-06-30T20:26:33.199Z"
+    },
+    {
+      "type": "NewFeatured",
+      "url": "https://cdn1.epicgames.com/ue/item/VolumetricSpotlight-01_FeaturedNew-894x488-de39bc0008e9585c854aaa25bf79f1fe.png",
+      "md5": "de39bc0008e9585c854aaa25bf79f1fe",
+      "width": 894,
+      "height": 488,
+      "size": 519828,
+      "uploadedDate": "2016-06-30T20:26:31.918Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2016-06-30T20:26:47.181Z",
+  "lastModifiedDate": "2024-10-09T03:58:41.681Z",
+  "entitlementName": "ec4371c1bd6e4cf3b486211bb4969a48",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "ce5562cad7ee40bcbfb0fdc94df79fb6",
+      "appId": "VolumetricSpotlight",
+      "compatibleApps": [
+        "UE_4.11",
+        "UE_4.12"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "Xbox One"
+      ],
+      "dateAdded": "2016-06-30T00:00:00.000Z",
+      "versionTitle": "VolumetricSpotlight"
+    },
+    {
+      "id": "7dff8acbd2ad47b7805f3465afd31d03",
+      "appId": "VolumetricSpotlight413",
+      "compatibleApps": [
+        "UE_4.13",
+        "UE_4.14"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "iOS",
+        "Android",
+        "Xbox One"
+      ],
+      "dateAdded": "2016-09-27T00:00:00.000Z",
+      "versionTitle": "VolumetricSpotlight413"
+    },
+    {
+      "id": "2ac1105251e34e919e6eb64c1fc946dc",
+      "appId": "VolumetricSpotlight415",
+      "compatibleApps": [
+        "UE_4.15"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "iOS",
+        "Android",
+        "Xbox One"
+      ],
+      "dateAdded": "2017-03-01T00:00:00.000Z",
+      "versionTitle": "VolumetricSpotlight415"
+    },
+    {
+      "id": "98a8b526e7484332a363cd6b73b86d41",
+      "appId": "VolumetricSpotlight417",
+      "compatibleApps": [
+        "UE_4.17",
+        "UE_4.18",
+        "UE_4.19",
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "PS4",
+        "iOS",
+        "Android",
+        "Xbox One"
+      ],
+      "dateAdded": "2017-09-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VolumetricSpotlight417"
+    },
+    {
+      "id": "2e2bb8dbd337484f84e5bd6b96ea8717",
+      "appId": "Volumetrec4371c1bd6eV1",
+      "compatibleApps": [
+        "UE_4.21",
+        "UE_4.22"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "Windows",
+        "PS4",
+        "Xbox One"
+      ],
+      "dateAdded": "2018-12-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VolumetricSpotlight421"
+    },
+    {
+      "id": "ad3f4ab9fdd84e73ba193ada3838c2f6",
+      "appId": "Volumetrec4371c1bd6eV3",
+      "compatibleApps": [
+        "UE_4.27",
+        "UE_5.0"
+      ],
+      "platform": [
+        "PS4",
+        "Windows",
+        "Xbox One",
+        "Mac"
+      ],
+      "dateAdded": "2022-04-19T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VolumetricSpotlight427"
+    },
+    {
+      "id": "13592052351f43e3b74a51a6be746fc5",
+      "appId": "Volumetrec4371c1bd6eV4",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "PS4",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-11-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VolumetricSpotlight501"
+    }
+  ],
+  "developer": "Steven Verstoep",
+  "developerId": "o-e9532ceae54ba5bb768df84f9997cd",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "unsearchable": false
+}

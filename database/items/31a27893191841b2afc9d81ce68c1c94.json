@@ -1,0 +1,298 @@
+{
+  "id": "31a27893191841b2afc9d81ce68c1c94",
+  "title": "Neural Network Symbol Recognizer",
+  "description": "Neural Network symbol recognition system",
+  "longDescription": "<p><strong>The plugin is no longer supported.</strong></p><p><strong>Please, choose</strong><a href=\"https://www.unrealengine.com/marketplace/en-US/product/symbol-recognizer-vr\" rel=\"nofollow\"><strong> Symbol Recognizer VR</strong></a><strong> instead.</strong></p><p><br /></p><p><strong>Demo:</strong> <a href=\"https://youtu.be/Kuwrw0yr9_M\" rel=\"nofollow\">LINK</a> <strong>Tutorial:</strong> <a href=\"https://www.youtube.com/playlist?list&#61;PLG_MAloxEjJ6LCacj16ZYJvxLhVJH1j4d\" rel=\"nofollow\">LINK</a></p><p><br /></p><p>Plugin enables you to draw collections of Symbols/Patterns which can be recognized during gameplay by a Neural Network system.</p><p><strong>It can be used in different gameplay scenarios:</strong></p><ul><li>Cast a spell according to a mouse gesture</li><li>Paint a symbol on doors and unlock them if correct</li><li>Make a minigame that requires speed and precise drawing to pass</li></ul><p><strong>Basic functionality:</strong></p><ul><li>Draw different patterns (Symbols) in a plugin&#39;s window. It can be letters, digits or any abstract shape. Launch machine learning and save the result. Test drawing accuracy inside the plugin window. Then do a simple setup in Blueprints or code to be able to draw and test the drawing accuracy in a game.</li></ul><p><strong>Workflow for in game drawing and testing symbols accuracy:</strong></p><ul><li>Initialize drawing by calling a method BeginDrawing() on input PRESSED</li><li>Pass brush (cursor) location into Draw() method when moving your brush or in Tick</li><li>Call EndDrawing() to break current drawing line on input RELEASED</li><li>When a drawing is finished Test its accuracy by calling TestDrawing or GetMostAccurateSymbol</li><li>React somehow to the test result (either kill a player if failed of throw a blizzard of fireballs when succeeded)</li><li>Call ClearCanvas when current drawing is not needed and want to start new drawing.</li></ul><p><strong>Plugin contains 3 examples of In Game usage (SRTestLevel)</strong></p>",
+  "technicalDetails": "<p><strong>Features</strong>:</p><ul><li>Built-In tool for drawing and saving symbols.</li><li>Customizable parameters to modify Neural Network sensitivity.</li><li>Simple setup for in game use.</li><li>Example level with 3 mechanics (casting spells, drawing on mesh, minigame).</li><li>Step by step tutorial inside the plugin.</li><li>Drawing symbols is independent from size and position which makes it much easier to draw a correct symbol.</li><li>Two debug widgets to test drawing accuracy in game.</li><li>Possibility to create multiple symbol collections that can be set for recognition in gameplay.</li></ul><p><strong>Code Modules</strong>:</p><ul><li>SymbolRecognizerPlugin (Runtime)</li><li>SymbolRecognizerEditor (Editor)</li></ul><p><strong>Number of Blueprints</strong>: 8</p><p><strong>Number of C&#43;&#43; Classes</strong>: 20</p><p><strong>Network Replicated</strong>: No</p><p><strong>Supported Development Platforms</strong>: Win64/Win32</p><p><strong>Supported Target Build Platforms</strong>: Win64/Win32</p><p><strong>Documentation</strong>: &#39;ShowTutorial&#39; inside plugin or partly in <a href=\"https://www.youtube.com/playlist?list&#61;PLG_MAloxEjJ6LCacj16ZYJvxLhVJH1j4d\" rel=\"nofollow\">video tutorials</a></p><p><strong>Example Project</strong>: Inside plugin SRTestLevel (SymbolRecognizer/Resources/TestContent)</p><p><strong>Important/Additional Notes</strong>: Do not change default root plugin folder name. It must be &#39;SymbolRecognizerPlugin&#39;.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Img01-1920x1080-594ea8ce1996a99076ac12cd5237738d.png",
+      "md5": "594ea8ce1996a99076ac12cd5237738d",
+      "width": 1920,
+      "height": 1080,
+      "size": 680974,
+      "uploadedDate": "2019-04-26T19:04:09.091Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Img03-1920x1080-4605a44d5f73b3a32e0b25e122ddda34.png",
+      "md5": "4605a44d5f73b3a32e0b25e122ddda34",
+      "width": 1920,
+      "height": 1080,
+      "size": 544933,
+      "uploadedDate": "2019-04-26T19:04:09.400Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Img07-1920x1080-7f6a6b60521644ec1cf00456d3a018c7.png",
+      "md5": "7f6a6b60521644ec1cf00456d3a018c7",
+      "width": 1920,
+      "height": 1080,
+      "size": 1194488,
+      "uploadedDate": "2019-04-26T19:04:09.757Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Img08-1920x1080-f4b70363cacd962461369cdb3d16d876.png",
+      "md5": "f4b70363cacd962461369cdb3d16d876",
+      "width": 1920,
+      "height": 1080,
+      "size": 1275959,
+      "uploadedDate": "2019-04-26T19:04:10.135Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Img04-1920x1080-628b5148bc85665f6fc6818968596dd4.png",
+      "md5": "628b5148bc85665f6fc6818968596dd4",
+      "width": 1920,
+      "height": 1080,
+      "size": 1490134,
+      "uploadedDate": "2019-04-26T19:04:10.556Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/NeuralNetworkSymbolRecognizer_thumb-284x284-f52e974e00110775c158128802e2a07e.png",
+      "md5": "f52e974e00110775c158128802e2a07e",
+      "width": 284,
+      "height": 284,
+      "size": 93598,
+      "uploadedDate": "2019-04-26T19:04:10.845Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/NeuralNetworkSymbolRecognizer_featured-894x488-f52718e4cab2ebbc2dba1a63c73793c5.png",
+      "md5": "f52718e4cab2ebbc2dba1a63c73793c5",
+      "width": 894,
+      "height": 488,
+      "size": 488138,
+      "uploadedDate": "2019-04-26T19:04:10.920Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Img01-1920x1080-594ea8ce1996a99076ac12cd5237738d_Snapshot.png",
+      "md5": "4358768517fdee7b49c00ee6b9cbcab5",
+      "width": 150,
+      "height": 74,
+      "size": 9458,
+      "uploadedDate": "2019-04-26T19:04:09.256Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Img03-1920x1080-4605a44d5f73b3a32e0b25e122ddda34_Snapshot.png",
+      "md5": "0d8f000522ccac8845a57e66df26a6e8",
+      "width": 150,
+      "height": 74,
+      "size": 5658,
+      "uploadedDate": "2019-04-26T19:04:09.553Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Img07-1920x1080-7f6a6b60521644ec1cf00456d3a018c7_Snapshot.png",
+      "md5": "b9784b818cd1da1a145f153a413cb4b7",
+      "width": 150,
+      "height": 74,
+      "size": 23109,
+      "uploadedDate": "2019-04-26T19:04:09.970Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Img08-1920x1080-f4b70363cacd962461369cdb3d16d876_Snapshot.png",
+      "md5": "5203a2d803ea1f9d34f5528b1ef22c12",
+      "width": 150,
+      "height": 74,
+      "size": 16314,
+      "uploadedDate": "2019-04-26T19:04:10.379Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Img04-1920x1080-628b5148bc85665f6fc6818968596dd4_Snapshot.png",
+      "md5": "a1fde2c06f8c26e617c2c620e6326dbf",
+      "width": 150,
+      "height": 74,
+      "size": 18103,
+      "uploadedDate": "2019-04-26T19:04:10.786Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-05-21T16:05:58.792Z",
+  "lastModifiedDate": "2025-01-31T16:16:36.361Z",
+  "customAttributes": {},
+  "entitlementName": "31a27893191841b2afc9d81ce68c1c94",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "5d5efd6a59554e929ea0aadbbab4cf15",
+      "appId": "SymbolRecognizerPlugin_4.21",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2019-05-21T00:00:00.000Z",
+      "releaseNote": "21.3:\n- Automatically add trained profile to cooking list.\n21.2:\n- [Fix] Added missing Category tags to SRCanvasHandler",
+      "versionTitle": "21.3"
+    },
+    {
+      "id": "fbfc9ae96b654218b77b3ef81b1e69bd",
+      "appId": "SymbolRecognizerPlugin_4.22",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-04-26T00:00:00.000Z",
+      "releaseNote": "21.3:\n- Automatically add trained profile to cooking list.\n21.2:\n- [Fix] Added missing Category tags to SRCanvasHandler",
+      "versionTitle": "22.3"
+    },
+    {
+      "id": "998e8a69d13442a2a747089fc373dd8d",
+      "appId": "SymbolRecognizerPlugin_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2019-09-08T00:00:00.000Z",
+      "releaseNote": "Integrate with 4.23\n- Fix broken fonts in 4.23",
+      "versionTitle": "23.0"
+    },
+    {
+      "id": "ae0550af75524f19b8e69b9d5f4fdff2",
+      "appId": "SymbolRecognizerPlugin_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2019-12-15T00:00:00.000Z",
+      "releaseNote": "compatible with 4.24",
+      "versionTitle": "24.0"
+    },
+    {
+      "id": "fbccd7213bcf4474a68c7fa64d8264a7",
+      "appId": "SymbolRecognizerPlugin_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-05-24T00:00:00.000Z",
+      "releaseNote": "- Whitelisted Android platform (fix dependencies error on deploy)\n- Invert Y axis when drawing on Android by default (method 'SetFlipYAxisForAndroid')",
+      "versionTitle": "25.1"
+    },
+    {
+      "id": "64cd0408049f401db8107269424a3880",
+      "appId": "SymbolRecognizerPlugin_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2020-12-14T00:00:00.000Z",
+      "releaseNote": "4.26 compatibility",
+      "versionTitle": "26.0"
+    },
+    {
+      "id": "30709d809dde481496acf479d5bc2094",
+      "appId": "SymbolRecognizerPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2021-08-21T00:00:00.000Z",
+      "releaseNote": "- 4.27 integration\n- fix deprecated warning 'InvokeTab'",
+      "versionTitle": "27.0"
+    },
+    {
+      "id": "5e6d30ca8d134b4abf25b0a29a2ccf4e",
+      "appId": "SymbolRecognizerPlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2022-04-26T00:00:00.000Z",
+      "releaseNote": "Added support for UE5.01",
+      "versionTitle": "5.01"
+    },
+    {
+      "id": "dafa67b305184b83926fec55fa3f0c22",
+      "appId": "SymbolRecognizerPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2023-02-18T00:00:00.000Z",
+      "releaseNote": "5.1.1 conversion:\n- fix SavePackage and tollbar icon\n- remove EditorStyle and unused headers\n- add PulseIndicator img and NormalizeConfigPath",
+      "versionTitle": "5.1.1"
+    },
+    {
+      "id": "ec176582e0d540cb8b1700dab9efa2cd",
+      "appId": "SymbolRecognizerPlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2024-05-20T00:00:00.000Z",
+      "releaseNote": "5.3 update",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "2d5c6625a44746b9b8d4699010a03c6f",
+      "appId": "SymbolRecognizerPlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2024-05-21T00:00:00.000Z",
+      "releaseNote": "5.4 update \n- fix profile package issue",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "pmacharzewski",
+  "developerId": "o-x56bncbfm38jql72gspeehwpxrxy5s",
+  "endOfSupport": false,
+  "unsearchable": false
+}

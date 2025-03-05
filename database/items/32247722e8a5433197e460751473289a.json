@@ -1,0 +1,309 @@
+{
+  "id": "32247722e8a5433197e460751473289a",
+  "title": "Open World NPC Optimization",
+  "description": "Persistent Open World NPC optimization component for any character class. Compatible with behavior tree and any AI logic. Component runs on timer, instead of Tick for additional performance and supports Dispatchers and Events associated with it.",
+  "longDescription": "<p><a href=\"https://youtu.be/qWkbQ-WnPKU\" rel=\"nofollow\">Preview video</a></p><p><a href=\"https://drive.google.com/file/d/195fkNXBQEKRI8dWIgJIEsuCHAR9rFAaZ/view?usp&#61;sharing\" rel=\"nofollow\">Download Demo project (Win64) Build</a> has Update v5 - Packed from UE4</p><p><a href=\"https://drive.google.com/file/d/1ZK2v4gg7kwJk-KM9D_n3fvsOwRTC_mVg/view?usp&#61;share_link\" rel=\"nofollow\">Download Demo project (Win) Build</a> has old version - Packed from UE5</p><p><br /></p><p><a href=\"https://docs.google.com/document/d/1uq-QjtvJWGoFiNzbCQD0wPxbYnYA-95hvkv8jUKPXFE/edit?usp&#61;sharing\" rel=\"nofollow\"><strong>Documentation</strong></a></p><p><a href=\"https://discord.gg/p8NbUxPBxM\" rel=\"nofollow\">Discord Support</a> server Link</p><p>This component provides performance boost by optimizing the NPC out of sight of the camera.</p><p>The component is completely autonomous — you just need to add it to the AI ​​(NPC) class.</p><p>The component works only with the class - Character class. If you have more skeletal meshes in your class (for example: another skeleton hand for a first person or a skeleton mesh for weapons or static meshes (for example, shields or weapons), the component will also work with them.</p><p>But component optimizes only the skeleton mesh and movement your NPCs, because this is what loads the system.</p><p>Everything else UE optimizes independently.</p><p>The NPCs outside of the camera&#39;s field of view (the view frustum) aren&#39;t visible, and can be culled. The rejected NPCs outside the truncated camera view are no longer displayed, leaving only a handful of NPCs within this view.</p><p>In online mode, the Component works with the client. All objects that are out of sight still remain in the game world, so if you use a dedicated server, other players will be able to see them. So you get the load on the system only those NPCs that are visible in the frame.</p><p><br /></p><p>* The system for coloring NPCs in different colors is not included in the product, since the optimization folder is not associated with demo materials. You can do it yourself as shown in the <a href=\"https://docs.google.com/document/d/1uq-QjtvJWGoFiNzbCQD0wPxbYnYA-95hvkv8jUKPXFE/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a>.</p>",
+  "technicalDetails": "<p><strong>Features</strong>:</p><ul><li>The component <strong><u>not use Tick</u></strong> he work on a timer</li><li>Has a dispatchers and number of other settings</li><li>The component does not affect the amount of materials in your mannequin.</li><li>The component has Dispatchers and variables that will help to bind component to your logic.</li><li>The component does not affect the behavior of your NPC and is compatible with the behavior tree. There are also a number of settings and for your convenience they have descriptions.</li><li>The component can be added to the parent class and it will work for all children.</li><li>The component supports AnimNotify, but if you have the sound of steps in the animation it will only work in the near (close) radius. Or you can use a variable to force it on work, but first, why do you need the sound of steps on the other end of the map? And secondly, it will give you more load on the system.</li><li><strong>Important: For Packing your project in UE5 need Visual Studio 2022</strong> and extra <strong>.NET Core Desktop 3.1 Runtime include in packed for Development on Unreal Engine. Because i don&#39;t want have 1 stars if you don&#39;t read LOGs. And the component does not affect your build. And doesn&#39;t require C&#43;&#43;</strong></li></ul><p><br /></p><p><strong>Number of Blueprints</strong>: 4</p><p><strong>Number of Components</strong>: 1</p><p><strong>Full 100% Blueprint code</strong></p><p><strong>Input</strong>: default inputs.</p><p><strong>Network Replicated</strong>: (<strong><em><u>Not Working - Single only</u></em></strong>)</p><p><strong>Supported Development Platforms</strong>: (Windows, Mac)</p><p><strong>Supported Target Build Platforms</strong>: (Windows, Mac)</p><p><br /></p><p>The “<strong>ForCorrectWorkingDemoLevel</strong>” folder can be deleted if the demo level is not needed in your project.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2023-11-0818-02-08 2-1920x1080-e713395fa801aed5ecec3f97f2f6e0b9.png",
+      "md5": "e713395fa801aed5ecec3f97f2f6e0b9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1455301,
+      "uploadedDate": "2023-11-08T16:46:05.710Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2023-11-0818-01-36 2-1920x1080-220b3792c0f398e1bf63794f5b499ad5.png",
+      "md5": "220b3792c0f398e1bf63794f5b499ad5",
+      "width": 1920,
+      "height": 1080,
+      "size": 1547455,
+      "uploadedDate": "2023-11-08T16:46:05.342Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Update 5-1920x1080-e82a591ef3ef4d5e97a514bb54dea068.png",
+      "md5": "e82a591ef3ef4d5e97a514bb54dea068",
+      "width": 1920,
+      "height": 1080,
+      "size": 636462,
+      "uploadedDate": "2023-11-07T22:49:18.599Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00001-1920x1080-6a90b73b2535d102bd817dba12d60ce7.jpg",
+      "md5": "6a90b73b2535d102bd817dba12d60ce7",
+      "width": 1920,
+      "height": 1080,
+      "size": 631624,
+      "uploadedDate": "2023-11-08T16:46:07.225Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00004-1920x1080-491bfe965c2759fd85ed87a8e91fbd1d.jpg",
+      "md5": "491bfe965c2759fd85ed87a8e91fbd1d",
+      "width": 1920,
+      "height": 1080,
+      "size": 241228,
+      "uploadedDate": "2023-11-08T16:58:00.340Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00000-1920x1080-1ff84a357a34092a55dbcd4cc7f15d88.jpg",
+      "md5": "1ff84a357a34092a55dbcd4cc7f15d88",
+      "width": 1920,
+      "height": 1080,
+      "size": 463588,
+      "uploadedDate": "2023-11-08T16:07:03.478Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2023-11-0818-41-57-1920x1080-f6e1c75b6b5d60385fda4169f3cdf0dc.png",
+      "md5": "f6e1c75b6b5d60385fda4169f3cdf0dc",
+      "width": 1920,
+      "height": 1080,
+      "size": 1531051,
+      "uploadedDate": "2023-11-08T16:46:06.527Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/OpenWorldNPCOptimization_thumb-284x284-958027f8437ac4e69949c87e342aad14.png",
+      "md5": "958027f8437ac4e69949c87e342aad14",
+      "width": 284,
+      "height": 284,
+      "size": 136819,
+      "uploadedDate": "2021-03-19T20:55:38.721Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/FPSBoostComponent_featured-894x488-e9991174d5d655a52e0d4b3ca0b88025.png",
+      "md5": "e9991174d5d655a52e0d4b3ca0b88025",
+      "width": 894,
+      "height": 488,
+      "size": 427386,
+      "uploadedDate": "2019-04-25T04:50:20.993Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00004-1920x1080-491bfe965c2759fd85ed87a8e91fbd1d_Snapshot.jpg",
+      "md5": "67a0a62c5d1d36f66113735e5480857d",
+      "width": 150,
+      "height": 74,
+      "size": 7822,
+      "uploadedDate": "2023-11-08T16:58:00.512Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-11-0818-01-36 2-1920x1080-220b3792c0f398e1bf63794f5b499ad5_Snapshot.png",
+      "md5": "831217e9e0567ca3dd6e5acdf5fce7d6",
+      "width": 150,
+      "height": 74,
+      "size": 6947,
+      "uploadedDate": "2023-11-08T16:46:05.527Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-11-0818-02-08 2-1920x1080-e713395fa801aed5ecec3f97f2f6e0b9_Snapshot.png",
+      "md5": "445f201eda60d9977c685846b9d5d30f",
+      "width": 150,
+      "height": 74,
+      "size": 6658,
+      "uploadedDate": "2023-11-08T16:46:05.916Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-11-0818-34-02-1920x1080-79d85a78ebb3fe1e37dc53224d21c3b5_Snapshot.png",
+      "md5": "b105c7415a4c82a466611d6bc5e552e0",
+      "width": 150,
+      "height": 74,
+      "size": 4720,
+      "uploadedDate": "2023-11-08T16:46:06.300Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2023-11-0818-41-57-1920x1080-f6e1c75b6b5d60385fda4169f3cdf0dc_Snapshot.png",
+      "md5": "02705d6db0321bface61efb3e227caa3",
+      "width": 150,
+      "height": 74,
+      "size": 6392,
+      "uploadedDate": "2023-11-08T16:46:06.762Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-6a90b73b2535d102bd817dba12d60ce7_Snapshot.jpg",
+      "md5": "2225e813f52151236cbdea2dcd7d34d0",
+      "width": 150,
+      "height": 74,
+      "size": 5418,
+      "uploadedDate": "2023-11-08T16:46:07.882Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00000-1920x1080-1ff84a357a34092a55dbcd4cc7f15d88_Snapshot.jpg",
+      "md5": "9e3763842c537506975fc2cf4757478d",
+      "width": 150,
+      "height": 74,
+      "size": 4575,
+      "uploadedDate": "2023-11-08T16:07:04.119Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-a3b31478357d19aef53ddd5b463b7268_Snapshot.jpg",
+      "md5": "85407e069495f9b178b23f0b2f4de1b2",
+      "width": 150,
+      "height": 74,
+      "size": 4213,
+      "uploadedDate": "2023-11-08T16:07:05.271Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00004-1920x1080-278e360a76148f0e4627ba51e5644aff_Snapshot.jpg",
+      "md5": "6bb5623c1153d0a35721f4fea29ddf63",
+      "width": 150,
+      "height": 74,
+      "size": 6572,
+      "uploadedDate": "2023-11-08T16:07:06.401Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Update 5-1920x1080-e82a591ef3ef4d5e97a514bb54dea068_Snapshot.png",
+      "md5": "d0bc59dbd0b11113cfaccb740ea60a81",
+      "width": 150,
+      "height": 74,
+      "size": 7658,
+      "uploadedDate": "2023-11-07T22:49:18.844Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Update 5-1920x1080-7511bf7c93d0b6a7f7db61734ce34fbc_Snapshot.png",
+      "md5": "b4624953417e3d9bc6403c5f5221ff0a",
+      "width": 150,
+      "height": 74,
+      "size": 7739,
+      "uploadedDate": "2023-11-07T22:02:15.924Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2019-03-2415-13-05-1920x1080-677201466c3926fc8940beb9debd1402_Snapshot.png",
+      "md5": "1441c6e099edd33cd4ce53d27129b25e",
+      "width": 150,
+      "height": 74,
+      "size": 9910,
+      "uploadedDate": "2019-03-24T13:35:04.157Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2019-03-2414-43-38-1920x1080-558474b65256a2fd3a06495d1ca0e71f_Snapshot.png",
+      "md5": "259836a1c4f4971d570fe700984165d3",
+      "width": 150,
+      "height": 74,
+      "size": 9475,
+      "uploadedDate": "2019-03-24T13:35:04.616Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2019-03-2414-47-28-1920x1080-b5ace54d855563ed98c038ff889c0786_Snapshot.png",
+      "md5": "395e6df3d3d99b9e9872d56681da737b",
+      "width": 150,
+      "height": 74,
+      "size": 9233,
+      "uploadedDate": "2019-03-24T13:35:05.069Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2019-03-2414-49-35-1920x1080-1b38f1e6e5318c79410853dca9900cab_Snapshot.png",
+      "md5": "3a40242e266529d461c92cc05a46c325",
+      "width": 150,
+      "height": 74,
+      "size": 10530,
+      "uploadedDate": "2019-03-24T13:35:05.437Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2019-03-2414-58-18-1920x1080-8d14a72c978d4c0522e3c34df46c72e5_Snapshot.png",
+      "md5": "f5fa301504a6d94b4e0c1bee0a0f6c40",
+      "width": 150,
+      "height": 74,
+      "size": 11349,
+      "uploadedDate": "2019-03-24T13:35:05.847Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-05-02T14:58:18.983Z",
+  "lastModifiedDate": "2024-09-30T16:54:32.118Z",
+  "customAttributes": {},
+  "entitlementName": "32247722e8a5433197e460751473289a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "4c9edf3a15f44dbd9d0d5aa6058998ce",
+      "appId": "OpenWorl32247722e8a5V1",
+      "compatibleApps": [
+        "UE_4.16",
+        "UE_4.17",
+        "UE_4.18"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Mac",
+        "PS4",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2019-04-25T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Update4"
+    },
+    {
+      "id": "9de542c3655740e49209cbd1963fe825",
+      "appId": "OpenWorl32247722e8a5V2",
+      "compatibleApps": [
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21",
+        "UE_4.22",
+        "UE_4.23",
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1",
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Mac",
+        "PS4",
+        "Android",
+        "Linux",
+        "iOS",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2023-11-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Update 5 with 4.19 to 5.3"
+    }
+  ],
+  "developer": "Sergio Cavalli",
+  "developerId": "o-45481a1e034356acea308ee8ba1933",
+  "endOfSupport": false,
+  "unsearchable": false
+}

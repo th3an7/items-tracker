@@ -1,0 +1,99 @@
+{
+  "id": "5baffa7bca98466ebc0beecf92809a4e",
+  "title": "Animation Set System",
+  "description": "A system that simplify the process of working with big animation blueprints and large amount of animations",
+  "longDescription": "<p>Converting the default ThirdPersonTemplate to use Animation Sets: https://youtu.be/3lqfXAntthc</p><p><br /></p><p>System that is born to easy the process of working with large animation blueprints with many animation assets and different characters.</p><p><br /></p><p>When you create an animation blueprint you usually want to reuse it for other characters but use different animations. Unreal already provide a way to do this by overriding each individual animation sequence found in the animation blueprint, however this become very tedious and prone to errors one the animation blueprint grow.</p><p><br /></p><p>Animation Sets aim to solve this issue by splitting sets of animations (wow) into single assets that can be used inside animation blueprints.</p><p><br /></p><p>For instance an animation blueprint could implement several state machines (locomotion, in air, combat, etc), with animation sets you can create a set for each state machine and retrieve the animations inside the animation blueprint directly from the asset (please check the video or the documentation to see how).</p><p>This has various benefits:</p><ul><li>If you want to change how a particular character behave in the air, you just need to replace the animation set in the child animation blueprint, not each single sequence.</li><li>It is easier to find animations inside the animation blueprint without having to scroll through each graph.</li><li>You can preview each animation set in a custom editor window allowing you to get a better idea of each motion.</li></ul><p><br /></p><p>In my opinion this is a huge quality of life improvement when working on big projects with many animations, many time ive found myself scrolling through animation lists with many duplicates (that is unfortunate but if you did game development long enough you know that is unavoidable) not sure which one is actually being used in gameplay.</p><p>With animation sets i know exactly what&#39;s being used and is right on screen for previewing.</p><p><br /></p><p>Montages are also supported through a different asset called MontageSet which work exactly as the one for sequences and the plugin include blueprint functions to play montages directly using the sets.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Custom asset editor with a viewport for animation (sequences and montages) previews.</li><li> Play the animations from these assets instead of directly referencing animation assets.</li><li> Animations are only loaded when needed.</li><li>Manage multiple animations for a given &#34;entity&#34; in a single, easy to use asset with preview.</li></ul><p>Code Modules:</p><ul><li> AnimationSets</li><li> AnimationSetsAnimGraph</li><li> AnimationSetsEditor</li></ul><p>Number of Blueprints: Third Person Template only</p><p>Number of C&#43;&#43; Classes: 27</p><p>Network Replicated: Network agnostic</p><p>Supported Development Platforms: Win64</p><p>Documentation: https://drive.google.com/file/d/1yyT3Ud9aQyVbMON9Fo1060htjxKEann7/view?usp&#61;sharing</p><p>Important/Additional Notes:</p><p>If you want to try the default template map/project you need to add some gameplay tags before opening it, you can do so by opening your &#34;ProjectName/Configs/DefaultGameplayTags.ini&#34; and add the lines you can find in this file:</p><p>https://drive.google.com/file/d/1AWupuFEKVvz_ES5yOsak2rGvwFTnKWMm/view?usp&#61;sharing</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/FactoryContextMenu-1920x1080-23be6aef3cef6b72a7aa44d198a5efa4.png",
+      "md5": "23be6aef3cef6b72a7aa44d198a5efa4",
+      "width": 1920,
+      "height": 1080,
+      "size": 1013585,
+      "uploadedDate": "2024-09-28T21:30:45.249Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Full-1920x1080-574dbc3f45395f30ad2a9eb334a55e7e.png",
+      "md5": "574dbc3f45395f30ad2a9eb334a55e7e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1051483,
+      "uploadedDate": "2024-09-28T21:30:45.674Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AnimationSetSystem_thumb-284x284-678600844bfe178f3ad9295c13b122af.png",
+      "md5": "678600844bfe178f3ad9295c13b122af",
+      "width": 284,
+      "height": 284,
+      "size": 25711,
+      "uploadedDate": "2024-09-28T21:30:45.978Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AnimationSetSystem_featured-894x488-0064b3f5ff7e7cb131e08376dc0f3281.png",
+      "md5": "0064b3f5ff7e7cb131e08376dc0f3281",
+      "width": 894,
+      "height": 488,
+      "size": 310003,
+      "uploadedDate": "2024-09-28T21:30:46.074Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/FactoryContextMenu-1920x1080-23be6aef3cef6b72a7aa44d198a5efa4_Snapshot.png",
+      "md5": "31a81dab1e10fff3dfd78083b9a62bff",
+      "width": 150,
+      "height": 74,
+      "size": 6637,
+      "uploadedDate": "2024-09-28T21:30:45.501Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Full-1920x1080-574dbc3f45395f30ad2a9eb334a55e7e_Snapshot.png",
+      "md5": "dc869cf7a9befba2527a57c21c7e45fb",
+      "width": 150,
+      "height": 74,
+      "size": 5375,
+      "uploadedDate": "2024-09-28T21:30:45.942Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-10-01T12:41:17.895Z",
+  "lastModifiedDate": "2024-11-13T18:38:28.973Z",
+  "customAttributes": {},
+  "entitlementName": "5baffa7bca98466ebc0beecf92809a4e",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "1eb29ca6cd9d4ec2ab5f962e1207e56a",
+      "appId": "AnimationSets_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-09-28T00:00:00.000Z",
+      "releaseNote": "v1",
+      "versionTitle": "UE5.4"
+    }
+  ],
+  "developer": "defaltdobrasao",
+  "developerId": "o-qdn4p9xgqhvek6vzfwxr3w9cghyvam",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

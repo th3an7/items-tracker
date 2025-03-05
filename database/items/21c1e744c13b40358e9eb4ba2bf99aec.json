@@ -1,0 +1,330 @@
+{
+  "id": "21c1e744c13b40358e9eb4ba2bf99aec",
+  "title": "AGR PRO",
+  "description": "Set of c++ components to solve common gameplay problems and manage multiplayer features.",
+  "longDescription": "<p>AGR – AngeIV’s “Advanced Game Ready” components is a system born out of years of development experience, as a set of components and functions that contain a set of repeating elements of gameplay mechanics, multiplayer features, and solve common problems.</p><p>Created based on 6 years of experience with UE4, with a passionate and dedicated community of senior developers over discord.</p><p>The project is free and driven entirely by the voluntary support of patreons.</p><p>| INTRO VIDEO | <a href=\"https://discord.com/invite/K3GQ7hbguq\" rel=\"nofollow\">DISCORD</a> | <a href=\"https://forums.unrealengine.com/t/plugin-agr-pro/225568\" rel=\"nofollow\">FORUM SUPPORT</a> | <a href=\"https://www.youtube.com/playlist?list&#61;PLTztLWdi2XEE4-MQX2BQ3i6VICXCmd42W\" rel=\"nofollow\">TUTORIALS</a> | <a href=\"https://www.patreon.com/angeiv\" rel=\"nofollow\">PATREON</a> |</p><p> -----</p><p><strong>V 1.0</strong></p><p>AGR Animation System:</p><ul><li>AGR Anim Master – character component that completes the character movement component and manages the replication of states.</li><li>AGR Core Anim Instance – animation instance class that reads the value from character movement component as well as AGR Anim Master, and calculates most variables for locomotion you will ever need.</li><li>AGR Character – standard character class with AGR Anim Master and some default settings changed into what we believe should be the real defaults. Not a must for workflow with an animation system.</li></ul><p><strong>V 2.0</strong></p><p>AGR Sound System:</p><ul><li>AGR Sound Master – Component responsible for managing footstep sounds, volume, notifications, and particle effects. Can manage footsteps without notifications.</li><li>Footstep Config DataAsset - Stores configuration for a set of behaviour for footsteps.</li><li>AGR Footstep Notify - Triggers notifications for Sound Master Component.</li></ul><p><strong>V 3.0</strong></p><p>AGR Inventory System:</p><ul><li>AGR LIBRARY - blueprint function library to get components by class in an easy and fast manner.</li><li>AGR Inventory Manager – stores and manages references to item actors. Can be part of a character inventory or work as a container if attached to any other actor. Doesn&#39;t require an Equipment Manager to work.</li><li>AGR Equipment Manager - Manages the equip/unequip events and makes sure that items in use, are being properly processed. Works with Inventory manager.</li><li>AGR Item Component - Stores item values. Allows for the transformation of ANY actor class or type into an inventory item. Manages events: pickup, drop, use, and provides you with event dispatchers to handle even more events.</li><li>Added the animation debug widget. Now in project settings/plugins, you can find a configuration for showing a debugger widget that allows watching all variables and states of the animation system. Works in the editor only.</li><li>Code refactor and performance improvements. Fixed all known errors including packaging project errors.</li><li><strong><em>The inventory system works in multiplayer on both listen and dedicated servers. Has important variables serialized for savegame.</em></strong></li></ul><p><strong>V 4.0</strong></p><p>AGR Combat System:</p><ul><li>AGR Combat Manager – Component responsible for tracking actors active colliders for melee hit precise traces. Notifies the owner via event dispatchers.</li><li>AGR_Attack_Notify - Notification state that searches for owners combat manager and activates/deactivates tracing on attacks. Traces can be also activated and deactivated via events on the component.</li><li>5 types of traces - simple line trace, simple capsule trace, simple box trace. Advanced line, advanced box. All configurable for performance! Works well on super fast animations and time dilatation scaling.</li><li>Relies on animations and is net-independent - so as long as you run animations in proper replication (in example via GAS) - it will be server authoritative, and client predicting.</li></ul><p><br /></p><p>-----</p><p>Works very well with other systems. Doesn’t require to reparent your classes.</p><p>This pack will grow over time with new components added to the family. In plans for the near future are:</p><ul><li>Input buffer / Action manager</li><li>Combat Manager (combo manager)</li></ul><p>----- </p><p><strong>Important notice:</strong></p><p>The system is created mostly for intermediate and advanced users of unreal engine 4. 1 year of experience is advised. However, we&#39;re putting much effort to make the workflow easier for new users via the plugins. It can still be intimidating for someone who doesn’t have basic experience with the engine and its core elements.</p><p> -----</p><p> Special Thanks:</p><ul><li><strong><em>Karolina M. Kulikowska</em></strong> for supporting me for all the years when I was ready to give up :)</li><li>duxart – for creating the logo</li><li><strong>geno, OneSilverLeaf, Mhmd Rida, mklabs, Manne</strong> for transferring BP into elegant code</li><li>xLilGothBoo, Scorpius_29R, Doogymoogy, .WafferX – our community moderator team</li></ul><p>And all the supporters:</p><ul><li><strong>Michael Milne, DarkMoon, James Stanley, Doogymoogy</strong>,</li><li>Daquan Sease Thomas F. Anderson V Kum Bosse Erichsen Raymond Ostapowycz Ted Soper SuperMarine Games Mickael Daniel Yaki Studios alessandro agostini Maxime Moritz Naser Tim Lau Bence Kovacs jjskora thejobycat Auxeva Aleksandr Grigorjev mikey wilson Jacques Geldenhuys Joost Boelsma Chen Jason</li></ul><p>This project would not exist if not for those awesome people! Thank you!</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> AGR Anim Master</li><li>AGR Core Anim Instance</li><li>AGR Character</li><li>AGR Library</li><li>AGR Sound Manager</li><li>AGR Inventory Manager</li><li>AGR Equipment Manager</li><li>AGR Item</li><li>AGR Combat Component</li></ul><p>Code Modules:</p><ul><li> AGR PRO (Runtime)</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 12</p><p>Network Replicated: Yes</p><p>Supported Development Platforms: Windows (not tested on others)</p><p>Supported Target Build Platforms: Win64, Win32, Mac, IOS, Android, Linux</p><p>Documentation: <a href=\"https://www.youtube.com/playlist?list&#61;PLTztLWdi2XEE4-MQX2BQ3i6VICXCmd42W\" rel=\"nofollow\">YouTube Tutorials</a></p><p>Example Project: none</p><p>Important/Additional Notes: Newest version will support only the 2 newest versions of the engine.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/agrpro1-1920x1080-6bbc15a99c4cfa9145a8c523e7f6d491.png",
+      "md5": "6bbc15a99c4cfa9145a8c523e7f6d491",
+      "width": 1920,
+      "height": 1080,
+      "size": 188562,
+      "uploadedDate": "2021-04-22T18:13:37.016Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/agrpro2-1920x1080-ad4b250430accde5a7e3d30db951bac2.png",
+      "md5": "ad4b250430accde5a7e3d30db951bac2",
+      "width": 1920,
+      "height": 1080,
+      "size": 166840,
+      "uploadedDate": "2021-04-22T18:13:37.342Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AGR Equipment-1920x1080-c0217f16103f5a7efe4ed067412c6c53.png",
+      "md5": "c0217f16103f5a7efe4ed067412c6c53",
+      "width": 1920,
+      "height": 1080,
+      "size": 212177,
+      "uploadedDate": "2021-08-02T18:48:53.873Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AGR Inventory-1920x1080-fa93706bc0f2ee8dad4bab6a08da13a2.png",
+      "md5": "fa93706bc0f2ee8dad4bab6a08da13a2",
+      "width": 1920,
+      "height": 1080,
+      "size": 229109,
+      "uploadedDate": "2021-08-02T18:48:54.177Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AGR Item-1920x1080-e664d9296b6865457e000b6ba5b31d86.png",
+      "md5": "e664d9296b6865457e000b6ba5b31d86",
+      "width": 1920,
+      "height": 1080,
+      "size": 185501,
+      "uploadedDate": "2021-08-02T18:48:54.489Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AGR library-1920x1080-bd4f09f9ba7578f6d3c982329a7a74cd.png",
+      "md5": "bd4f09f9ba7578f6d3c982329a7a74cd",
+      "width": 1920,
+      "height": 1080,
+      "size": 148871,
+      "uploadedDate": "2021-08-02T18:48:54.797Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/AGR Sound-1920x1080-5bc730ecaafb76e0bf44642094cc0ccb.png",
+      "md5": "5bc730ecaafb76e0bf44642094cc0ccb",
+      "width": 1920,
+      "height": 1080,
+      "size": 221713,
+      "uploadedDate": "2021-08-02T18:48:55.091Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AGRPRO_thumb-284x284-08398520a262c058d1b6c818e484b976.png",
+      "md5": "08398520a262c058d1b6c818e484b976",
+      "width": 284,
+      "height": 284,
+      "size": 12808,
+      "uploadedDate": "2021-04-21T15:30:56.697Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AGRPRO_featured-894x488-4ba3c73b5857e88c2cdc3b38323d403b.png",
+      "md5": "4ba3c73b5857e88c2cdc3b38323d403b",
+      "width": 894,
+      "height": 488,
+      "size": 40011,
+      "uploadedDate": "2021-04-22T20:13:26.718Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AGR Equipment-1920x1080-c0217f16103f5a7efe4ed067412c6c53_Snapshot.png",
+      "md5": "40edf002d283d606f773b8e4e0c5c08c",
+      "width": 150,
+      "height": 74,
+      "size": 4006,
+      "uploadedDate": "2021-08-02T18:48:54.070Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AGR Inventory-1920x1080-fa93706bc0f2ee8dad4bab6a08da13a2_Snapshot.png",
+      "md5": "493379c6ab5cb754454e0b2c10aeb0b4",
+      "width": 150,
+      "height": 74,
+      "size": 3989,
+      "uploadedDate": "2021-08-02T18:48:54.375Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AGR Item-1920x1080-e664d9296b6865457e000b6ba5b31d86_Snapshot.png",
+      "md5": "694d079f0da5848a77e57f46bbc80dbe",
+      "width": 150,
+      "height": 74,
+      "size": 4002,
+      "uploadedDate": "2021-08-02T18:48:54.714Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AGR library-1920x1080-bd4f09f9ba7578f6d3c982329a7a74cd_Snapshot.png",
+      "md5": "b7c22158351301555cb5ae4922e7f509",
+      "width": 150,
+      "height": 74,
+      "size": 3429,
+      "uploadedDate": "2021-08-02T18:48:54.993Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AGR Sound-1920x1080-5bc730ecaafb76e0bf44642094cc0ccb_Snapshot.png",
+      "md5": "9f37ea683f44d67aa332133e3550e321",
+      "width": 150,
+      "height": 74,
+      "size": 4392,
+      "uploadedDate": "2021-08-02T18:48:55.285Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/AGR PRO 1080-1920x1080-d55ded15c38e398d99cfc918eaaa4016_Snapshot.png",
+      "md5": "486495db984b230c616820703b6903e1",
+      "width": 150,
+      "height": 74,
+      "size": 5866,
+      "uploadedDate": "2021-04-26T11:19:11.378Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/agrpro1-1920x1080-6bbc15a99c4cfa9145a8c523e7f6d491_Snapshot.png",
+      "md5": "0b544c6597bbd0b5b569608141c874be",
+      "width": 150,
+      "height": 74,
+      "size": 3543,
+      "uploadedDate": "2021-04-22T18:13:37.246Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/agrpro2-1920x1080-ad4b250430accde5a7e3d30db951bac2_Snapshot.png",
+      "md5": "b3708fc332aa4cbdf7c43e28213cd58f",
+      "width": 150,
+      "height": 74,
+      "size": 3226,
+      "uploadedDate": "2021-04-22T18:13:37.588Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/screen1.JPG-1920x1080-0391799506b7b8723d0355270cf077e7_Snapshot.jpg",
+      "md5": "718c00b107bd56984fae1a577082f876",
+      "width": 150,
+      "height": 74,
+      "size": 3891,
+      "uploadedDate": "2021-04-21T15:30:56.639Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-05-04T07:47:37.978Z",
+  "lastModifiedDate": "2024-10-15T13:39:50.661Z",
+  "entitlementName": "21c1e744c13b40358e9eb4ba2bf99aec",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "844821e2e47e459086b1cf58e0f8b394",
+      "appId": "AGRPRO_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-04-22T00:00:00.000Z",
+      "releaseNote": "version 21/04/2021",
+      "versionTitle": "2.1.1.25"
+    },
+    {
+      "id": "aa8012c1b7f7466da6583474d6631e91",
+      "appId": "AGRPRO_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "PS4",
+        "Nintendo Switch",
+        "Mac",
+        "Linux",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2021-04-21T00:00:00.000Z",
+      "releaseNote": "4.0.0",
+      "versionTitle": "4.0.0 26"
+    },
+    {
+      "id": "1717c8c7a7b3442f80d4fb0b5a007838",
+      "appId": "AGRPRO_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Windows",
+        "PS4",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-11-17T00:00:00.000Z",
+      "releaseNote": "4.2.1",
+      "versionTitle": "UE 4.27"
+    },
+    {
+      "id": "a13fe1b0c8c54cc0987b076121327ac4",
+      "appId": "AGRPRO_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Linux",
+        "Android",
+        "iOS",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2022-05-02T00:00:00.000Z",
+      "releaseNote": "4.2.1",
+      "versionTitle": "UE 5.0"
+    },
+    {
+      "id": "c807845606be4eb6b754fab14cb6f002",
+      "appId": "AGRPRO_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "PS4",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "4.2.1",
+      "versionTitle": "UE 5.1"
+    },
+    {
+      "id": "8df93a0f66d541a98c017fc5ec1c7208",
+      "appId": "AGRPRO_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Mac",
+        "Windows",
+        "Xbox One",
+        "Android",
+        "iOS",
+        "Linux",
+        "PS4",
+        "Nintendo Switch"
+      ],
+      "dateAdded": "2023-06-19T00:00:00.000Z",
+      "releaseNote": "4.2.1",
+      "versionTitle": "UE 5.2"
+    },
+    {
+      "id": "cab070ad03234f76a8b8ca1e95a61cf2",
+      "appId": "AGRPRO_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows",
+        "Nintendo Switch",
+        "PS4",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-09-12T00:00:00.000Z",
+      "releaseNote": "4.2.1",
+      "versionTitle": "UE 5.3"
+    }
+  ],
+  "developer": "AngeIV",
+  "developerId": "o-k6tqu85sjyqvhf8d8cd6e78fepnznu",
+  "endOfSupport": false,
+  "unsearchable": false
+}

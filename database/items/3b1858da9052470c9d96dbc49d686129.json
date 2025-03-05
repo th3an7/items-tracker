@@ -1,0 +1,647 @@
+{
+  "id": "3b1858da9052470c9d96dbc49d686129",
+  "title": "Line Of Sight. Dynamic mesh.",
+  "description": "Create Line Of Sight (Field of vision) for object detection or use in postprocess.",
+  "longDescription": "<p>The component creates a field of view (Field of vision) and allows you to detect objects. It can also be used in postprocess for a pseudo lighting and fog of war effect.</p><p>Easy use in blueprint.</p><p><br /></p><ul><li>2 geometric types: arch and line.</li><li>Creates 2 arches.</li><li>Rotate along X, Y, Z. Not only Z (Top-Down games).</li><li>High performance, the component is written in C &#43;&#43;.</li><li>Can be used in 3D and 2D games.</li><li>Can be used for pseudo lighting (example in the screenshot).</li><li>Easy to use in blueprint. For minimal functionality, only two functions need to be called.</li><li>Additional functions for interpolation of angles, radius, rotation. Watch the video preview.</li><li>Can be executed on a server in a multiplayer game.</li><li>Detection of enemies occurs even if the mesh is invisible.</li></ul><p><br /></p><p>The only &#34;Line Of Sight&#34; plugin on the market with support for two arches, two types of geometric shapes (line and arch), reverse arch, texture support and the fastest.</p><p><br /></p><p><br /></p><p>Video preview: <a href=\"https://youtu.be/803IAr-3VzI\" rel=\"nofollow\">YouTube</a></p><p><strong>Full documentation: </strong><a href=\"https://docs.google.com/document/d/10GsUARoJgJQuQD7FKA7VgaBIgitTfm6BXFc8lMrOlG4/edit?usp&#61;sharing\" rel=\"nofollow\"><strong>Here</strong></a><strong> and </strong><a href=\"https://docs.google.com/document/d/e/2PACX-1vTx_3b2BMY87ZWbWkyLohPbaEPUm9TSmAU4R-XFDabbSNylJfphBWZ-NnDsLVrGFXy7qJIY-DOti9_-/pub\" rel=\"nofollow\"><strong>Here</strong></a></p><p>Video tutorial on Youtube: <a href=\"https://www.youtube.com/watch?v&#61;mc9eZHbbu30\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;mc9eZHbbu30</a> basic functions</p><p>Manual - creating pseudo lighting (Text): <a href=\"https://docs.google.com/document/d/1oZvAVpdmxvXw5y4_ei0yQbWKQ4Wz0GT0hzSh8do_tsE/edit?usp&#61;sharing\" rel=\"nofollow\">Here</a></p><p>Create pseudo lighting (Youtube): <a href=\"https://www.youtube.com/watch?v&#61;Kxlvvz5_GJs\" rel=\"nofollow\">Here</a></p><p>Forum Thread (Support): <a href=\"https://forums.unrealengine.com/t/line-of-sight-dynamic-mesh/158312\" rel=\"nofollow\">Here</a></p>",
+  "technicalDetails": "<p>Code Modules: LineOfSight (Runtime).</p><p>Number of C&#43;&#43; Classes: 1</p><p>Network Replicated: No (The component can be run on the client and on the server. To notify other players, create a Custom Event with replication -&gt; Multicast).</p><p>Supported Development Platforms: Any (Windows, Mac, Linux)</p><p>Supported Target Build Platforms: Any (Tested on Windows 10 and Android 7)</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UnrealEditorgnRCgAcis0-1920x1080-4a57772e6f620c595358857ef2c1130c.jpg",
+      "md5": "4a57772e6f620c595358857ef2c1130c",
+      "width": 1920,
+      "height": 1080,
+      "size": 369584,
+      "uploadedDate": "2023-04-23T13:56:06.089Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UE4EditorhQxNAfOYSl222-1920x1080-bd5cc691407429354f0272a70931e946.png",
+      "md5": "bd5cc691407429354f0272a70931e946",
+      "width": 1920,
+      "height": 1080,
+      "size": 1583007,
+      "uploadedDate": "2021-03-23T20:54:16.532Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UE4EditorHmvvbJmhd2C-1920x1080-2437a0acd87a05d2df76adb22d435f63.png",
+      "md5": "2437a0acd87a05d2df76adb22d435f63",
+      "width": 1920,
+      "height": 1080,
+      "size": 1141170,
+      "uploadedDate": "2021-03-23T20:54:17.007Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UE4EditorjHgvzo4CPY2-1920x1080-fa910dab0a48b3803f38666b4a0316a7.png",
+      "md5": "fa910dab0a48b3803f38666b4a0316a7",
+      "width": 1920,
+      "height": 1080,
+      "size": 1092825,
+      "uploadedDate": "2021-03-23T20:54:17.398Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UE4EditorwdM5BMxJn92-1920x1080-7f633771ff33d8d6930d129a7f61527e.png",
+      "md5": "7f633771ff33d8d6930d129a7f61527e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1130061,
+      "uploadedDate": "2021-11-10T22:59:09.503Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UnrealEditorVarGW7YbAU2-1920x1080-067c9d5a2ac29932ffd1f72f6390475d.jpg",
+      "md5": "067c9d5a2ac29932ffd1f72f6390475d",
+      "width": 1920,
+      "height": 1080,
+      "size": 281442,
+      "uploadedDate": "2023-04-23T13:56:05.754Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UE4EditoruOJUZm4yp1-1920x1080-1a84e8a937d77c3d6ca2e3e8bf79b9fe.png",
+      "md5": "1a84e8a937d77c3d6ca2e3e8bf79b9fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 1150045,
+      "uploadedDate": "2021-03-23T20:54:17.777Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UE4EditoryVClp2tNDc-1920x1080-2794dea84269a3ec035df5d60afd78eb.png",
+      "md5": "2794dea84269a3ec035df5d60afd78eb",
+      "width": 1920,
+      "height": 1080,
+      "size": 1319617,
+      "uploadedDate": "2021-03-23T20:54:18.284Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UE4EditorsDb3KeJwz72-1920x1080-a6cd0c4758d7e3091c2ca7cf549a7505.png",
+      "md5": "a6cd0c4758d7e3091c2ca7cf549a7505",
+      "width": 1920,
+      "height": 1080,
+      "size": 234268,
+      "uploadedDate": "2021-03-23T20:54:18.656Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UE4EditorBRv8usYNFS2-1920x1080-d6894f3f141b8b8250196a7c7010153a.png",
+      "md5": "d6894f3f141b8b8250196a7c7010153a",
+      "width": 1920,
+      "height": 1080,
+      "size": 238817,
+      "uploadedDate": "2021-03-23T20:54:18.947Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UnrealEditor30kKExSk2X-1920x1080-41df8f3b65c5283300d298c02ca354c3.jpg",
+      "md5": "41df8f3b65c5283300d298c02ca354c3",
+      "width": 1920,
+      "height": 1080,
+      "size": 123783,
+      "uploadedDate": "2022-11-25T18:19:27.488Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/UE4Editoraceo9HvsT32-1920x1080-fab70a683ff295768507d97c3e0dc33b.png",
+      "md5": "fab70a683ff295768507d97c3e0dc33b",
+      "width": 1920,
+      "height": 1080,
+      "size": 1114582,
+      "uploadedDate": "2023-05-23T01:52:32.417Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/LineOfSightDynamicmesh_thumb-284x284-45cc0bd84a28b18e0f597ece93a8e1fa.png",
+      "md5": "45cc0bd84a28b18e0f597ece93a8e1fa",
+      "width": 284,
+      "height": 284,
+      "size": 57498,
+      "uploadedDate": "2023-10-12T14:44:44.236Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/LineOfSight_featured-894x488-9e6e72cf90241b5367353aac313bbbcb.png",
+      "md5": "9e6e72cf90241b5367353aac313bbbcb",
+      "width": 894,
+      "height": 488,
+      "size": 249492,
+      "uploadedDate": "2021-03-22T17:00:30.587Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4Editoraceo9HvsT32-1920x1080-fab70a683ff295768507d97c3e0dc33b_Snapshot.png",
+      "md5": "26683a38a5412338341f6c11bea13a15",
+      "width": 150,
+      "height": 74,
+      "size": 3014,
+      "uploadedDate": "2023-05-23T01:52:32.690Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UnrealEditorVarGW7YbAU2-1920x1080-067c9d5a2ac29932ffd1f72f6390475d_Snapshot.jpg",
+      "md5": "94046d081322e8962cb2a8d4b06facd1",
+      "width": 150,
+      "height": 74,
+      "size": 7437,
+      "uploadedDate": "2023-04-23T13:56:05.981Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UnrealEditorgnRCgAcis0-1920x1080-4a57772e6f620c595358857ef2c1130c_Snapshot.jpg",
+      "md5": "ba269776134780016c689e30fa2948fd",
+      "width": 150,
+      "height": 74,
+      "size": 6605,
+      "uploadedDate": "2023-04-23T13:56:06.338Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UnrealEditoriG1U95y9Wq2-1920x1080-abc3badaebd0baadc506fc25edebde0b_Snapshot.jpg",
+      "md5": "9ff83007e3fdd92bcfdceed4edcc0346",
+      "width": 150,
+      "height": 74,
+      "size": 7346,
+      "uploadedDate": "2023-04-23T13:52:43.726Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UnrealEditorfoNkxiW3Eq-1920x1080-1d2c57d748d8a82363cf255211eb3b1d_Snapshot.jpg",
+      "md5": "74ca9c9d4c2e9e3a51c0137a234f83f7",
+      "width": 150,
+      "height": 74,
+      "size": 6767,
+      "uploadedDate": "2023-04-23T13:40:26.195Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UnrealEditorUB8lOBnJC0 4-1920x1080-4eaff7d99853bf2fa98de1b002692c6e_Snapshot.jpg",
+      "md5": "294adad63275ecd7016ea505078fefa0",
+      "width": 150,
+      "height": 74,
+      "size": 5648,
+      "uploadedDate": "2022-11-25T18:23:25.267Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UnrealEditorUB8lOBnJC0 3-1920x1080-4ef15bb92db8c8e57a413d5cb6df117f_Snapshot.jpg",
+      "md5": "9e690245d26952bdfe195546d1ad5cc7",
+      "width": 150,
+      "height": 74,
+      "size": 5618,
+      "uploadedDate": "2022-11-25T18:21:30.825Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UnrealEditor30kKExSk2X-1920x1080-41df8f3b65c5283300d298c02ca354c3_Snapshot.jpg",
+      "md5": "e593b055357295e43b8ca932b3b80598",
+      "width": 150,
+      "height": 74,
+      "size": 5049,
+      "uploadedDate": "2022-11-25T18:19:27.695Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UnrealEditorC5KI5Q1jfy 2-1920x1080-142e1a383d4e4d9a40b4f5f8316eede5_Snapshot.jpg",
+      "md5": "e9bbc3976849aca93c4e86113aee331a",
+      "width": 150,
+      "height": 74,
+      "size": 5222,
+      "uploadedDate": "2022-11-25T18:02:55.736Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorwdM5BMxJn92-1920x1080-7f633771ff33d8d6930d129a7f61527e_Snapshot.png",
+      "md5": "36a8b0a33fd816d1384abc816d7f7167",
+      "width": 150,
+      "height": 74,
+      "size": 2456,
+      "uploadedDate": "2021-11-10T22:59:09.760Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditoryX0RRP3XLU2-1920x1080-7851d8ae6f74badbaaac421366d0600d_Snapshot.png",
+      "md5": "284c4e1bb058d6c600cc38c991e96fe2",
+      "width": 150,
+      "height": 74,
+      "size": 2139,
+      "uploadedDate": "2021-11-10T22:50:53.572Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditoryX0RRP3XLU2-1920x1080-a3e86ca76abd387711bf060d7d6816f2_Snapshot.png",
+      "md5": "511af78f80a82d464033f7f5750ac0c9",
+      "width": 150,
+      "height": 74,
+      "size": 2156,
+      "uploadedDate": "2021-11-10T22:32:45.159Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4Editoraceo9HvsT3-1920x1080-ea25c1d0ec2b39ae2032a4b531dee5f9_Snapshot.png",
+      "md5": "291203a4ed51cc415a4c6bd6f3e43ea6",
+      "width": 150,
+      "height": 74,
+      "size": 3044,
+      "uploadedDate": "2021-04-17T10:08:29.540Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4Editorh3ylI8u28D2-1920x1080-a43dab1a7228b8678cd0f846763aa868_Snapshot.png",
+      "md5": "ac76faf3f8d6a2e5742c77558fb2c109",
+      "width": 150,
+      "height": 74,
+      "size": 3129,
+      "uploadedDate": "2021-03-24T17:44:36.543Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorzGolsyJUz92-1920x1080-41e945bd1b1a8342793b7ebb4f70dd11_Snapshot.png",
+      "md5": "5a8e2a9aa6447b1b5f3a0760aee7fb0e",
+      "width": 150,
+      "height": 74,
+      "size": 3359,
+      "uploadedDate": "2021-03-23T20:54:16.359Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorhQxNAfOYSl222-1920x1080-bd5cc691407429354f0272a70931e946_Snapshot.png",
+      "md5": "76c9f0c9bb9f2c5c899290d9eca8278d",
+      "width": 150,
+      "height": 74,
+      "size": 3258,
+      "uploadedDate": "2021-03-23T20:54:16.846Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorHmvvbJmhd2C-1920x1080-2437a0acd87a05d2df76adb22d435f63_Snapshot.png",
+      "md5": "21ca7ac2993b9ce08c6e68ad0dc0d806",
+      "width": 150,
+      "height": 74,
+      "size": 2711,
+      "uploadedDate": "2021-03-23T20:54:17.249Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorjHgvzo4CPY2-1920x1080-fa910dab0a48b3803f38666b4a0316a7_Snapshot.png",
+      "md5": "b8981de729c0dd512c0adbb45203f57b",
+      "width": 150,
+      "height": 74,
+      "size": 2689,
+      "uploadedDate": "2021-03-23T20:54:17.634Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditoruOJUZm4yp1-1920x1080-1a84e8a937d77c3d6ca2e3e8bf79b9fe_Snapshot.png",
+      "md5": "ba929943365fa6f39b3cd7f50da93b5f",
+      "width": 150,
+      "height": 74,
+      "size": 3004,
+      "uploadedDate": "2021-03-23T20:54:18.056Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditoryVClp2tNDc-1920x1080-2794dea84269a3ec035df5d60afd78eb_Snapshot.png",
+      "md5": "9edd72ffcc1d19042d39fce59a2bb233",
+      "width": 150,
+      "height": 74,
+      "size": 3861,
+      "uploadedDate": "2021-03-23T20:54:18.533Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorsDb3KeJwz72-1920x1080-a6cd0c4758d7e3091c2ca7cf549a7505_Snapshot.png",
+      "md5": "17bf27f8f4e1369ab6273756da8a0c4b",
+      "width": 150,
+      "height": 74,
+      "size": 4303,
+      "uploadedDate": "2021-03-23T20:54:18.851Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorBRv8usYNFS2-1920x1080-d6894f3f141b8b8250196a7c7010153a_Snapshot.png",
+      "md5": "bd6297a9171395622f55ebbb3c1870b9",
+      "width": 150,
+      "height": 74,
+      "size": 4038,
+      "uploadedDate": "2021-03-23T20:54:19.144Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorzGolsyJUz92-1920x1080-41e945bd1b1a8342793b7ebb4f70dd11_Snapshot.png",
+      "md5": "5a8e2a9aa6447b1b5f3a0760aee7fb0e",
+      "width": 150,
+      "height": 74,
+      "size": 3359,
+      "uploadedDate": "2021-03-23T19:45:34.228Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorhQxNAfOYSl222-1920x1080-bd5cc691407429354f0272a70931e946_Snapshot.png",
+      "md5": "76c9f0c9bb9f2c5c899290d9eca8278d",
+      "width": 150,
+      "height": 74,
+      "size": 3258,
+      "uploadedDate": "2021-03-23T19:45:34.730Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorHmvvbJmhd2C-1920x1080-2437a0acd87a05d2df76adb22d435f63_Snapshot.png",
+      "md5": "21ca7ac2993b9ce08c6e68ad0dc0d806",
+      "width": 150,
+      "height": 74,
+      "size": 2711,
+      "uploadedDate": "2021-03-23T19:45:35.259Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorjHgvzo4CPY2-1920x1080-fa910dab0a48b3803f38666b4a0316a7_Snapshot.png",
+      "md5": "b8981de729c0dd512c0adbb45203f57b",
+      "width": 150,
+      "height": 74,
+      "size": 2689,
+      "uploadedDate": "2021-03-23T19:45:35.634Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditoruOJUZm4yp1-1920x1080-1a84e8a937d77c3d6ca2e3e8bf79b9fe_Snapshot.png",
+      "md5": "ba929943365fa6f39b3cd7f50da93b5f",
+      "width": 150,
+      "height": 74,
+      "size": 3004,
+      "uploadedDate": "2021-03-23T19:45:36.069Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditoryVClp2tNDc-1920x1080-2794dea84269a3ec035df5d60afd78eb_Snapshot.png",
+      "md5": "9edd72ffcc1d19042d39fce59a2bb233",
+      "width": 150,
+      "height": 74,
+      "size": 3861,
+      "uploadedDate": "2021-03-23T19:45:36.511Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorsDb3KeJwz72-1920x1080-a6cd0c4758d7e3091c2ca7cf549a7505_Snapshot.png",
+      "md5": "17bf27f8f4e1369ab6273756da8a0c4b",
+      "width": 150,
+      "height": 74,
+      "size": 4303,
+      "uploadedDate": "2021-03-23T19:45:36.808Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorBRv8usYNFS2-1920x1080-adc7a2ef7c70df35cf5a59427ac5913e_Snapshot.png",
+      "md5": "0114bf3a11c6fd3db657198c375a6b3c",
+      "width": 150,
+      "height": 74,
+      "size": 4086,
+      "uploadedDate": "2021-03-23T19:45:37.181Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorzGolsyJUz92-1920x1080-41e945bd1b1a8342793b7ebb4f70dd11_Snapshot.png",
+      "md5": "5a8e2a9aa6447b1b5f3a0760aee7fb0e",
+      "width": 150,
+      "height": 74,
+      "size": 3359,
+      "uploadedDate": "2021-03-22T17:00:28.277Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorHmvvbJmhd2C-1920x1080-2437a0acd87a05d2df76adb22d435f63_Snapshot.png",
+      "md5": "21ca7ac2993b9ce08c6e68ad0dc0d806",
+      "width": 150,
+      "height": 74,
+      "size": 2711,
+      "uploadedDate": "2021-03-22T17:00:28.770Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditoruOJUZm4yp1-1920x1080-1a84e8a937d77c3d6ca2e3e8bf79b9fe_Snapshot.png",
+      "md5": "ba929943365fa6f39b3cd7f50da93b5f",
+      "width": 150,
+      "height": 74,
+      "size": 3004,
+      "uploadedDate": "2021-03-22T17:00:29.211Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditoryVClp2tNDc-1920x1080-2794dea84269a3ec035df5d60afd78eb_Snapshot.png",
+      "md5": "9edd72ffcc1d19042d39fce59a2bb233",
+      "width": 150,
+      "height": 74,
+      "size": 3861,
+      "uploadedDate": "2021-03-22T17:00:29.642Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorBRv8usYNFS2-1920x1080-adc7a2ef7c70df35cf5a59427ac5913e_Snapshot.png",
+      "md5": "0114bf3a11c6fd3db657198c375a6b3c",
+      "width": 150,
+      "height": 74,
+      "size": 4086,
+      "uploadedDate": "2021-03-22T17:00:29.965Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/UE4EditorsDb3KeJwz72-1920x1080-a6cd0c4758d7e3091c2ca7cf549a7505_Snapshot.png",
+      "md5": "17bf27f8f4e1369ab6273756da8a0c4b",
+      "width": 150,
+      "height": 74,
+      "size": 4303,
+      "uploadedDate": "2021-03-22T17:00:30.322Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-03-23T20:07:15.946Z",
+  "lastModifiedDate": "2024-11-30T23:50:25.001Z",
+  "customAttributes": {},
+  "entitlementName": "3b1858da9052470c9d96dbc49d686129",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "eae8093790454affb50f3a9f680c2d67",
+      "appId": "LineOfSight_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-04-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.25"
+    },
+    {
+      "id": "f7cb2413f92741aeaf9abbc163dd363f",
+      "appId": "LineOfSight_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Android",
+        "Mac",
+        "Windows",
+        "Oculus",
+        "Nintendo Switch",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Linux",
+        "iOS",
+        "HTML5",
+        "HoloLens 2",
+        "Gear VR",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-03-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.26"
+    },
+    {
+      "id": "90010b0601dd489db34dbf773675e80e",
+      "appId": "LineOfSight_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Win32",
+        "SteamVR / HTC Vive",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-08-22T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.27"
+    },
+    {
+      "id": "430a8b3cc3af4df09320b0068d5dd2b3",
+      "appId": "LineOfSight_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Windows",
+        "Mac"
+      ],
+      "dateAdded": "2022-04-06T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.0"
+    },
+    {
+      "id": "c7f90770295d44fa9c19ef3ad6fbf8bb",
+      "appId": "LineOfSight_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac",
+        "iOS",
+        "Android",
+        "HoloLens 2"
+      ],
+      "dateAdded": "2022-11-16T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.1"
+    },
+    {
+      "id": "183a9c0c925c446ab7327aec1551e798",
+      "appId": "LineOfSight_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Mac",
+        "Android",
+        "Windows",
+        "HoloLens 2",
+        "iOS",
+        "Linux"
+      ],
+      "dateAdded": "2023-05-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "bb4601b265eb4c9598ac7e6e71a51362",
+      "appId": "LineOfSight_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2023-09-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "9bd153ee28994268bc11f6c6510b60d5",
+      "appId": "LineOfSight_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "iOS",
+        "Android",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-04-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "BarushColi",
+  "developerId": "o-b7fd048491491cbdb6189950b6af1b",
+  "endOfSupport": false,
+  "unsearchable": false
+}

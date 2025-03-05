@@ -1,0 +1,885 @@
+{
+  "id": "715190f6b56c4a2fa1a01be75f6d6f83",
+  "title": "Panoramic Render Pass",
+  "description": "A Panoramic Render plugin that utilizes MovieRenderQueue for output and supports rotation and stereoscopic effects.",
+  "longDescription": "<p>The panoramic render plugin is a powerful tool that can be used in Unreal Engine. This plugin supports panoramic output, capable of generating realistic panoramic images that make users feel like they are actually there.</p><p>this plugin offers users a convenient and high-quality rendering solution, helping them effortlessly create astonishing virtual reality experiences.</p><p><br /></p><p><strong>How Convert 180° to &#34;Fish-eye&#34;</strong>:</p><ul><li> <a href=\"https://docs.google.com/document/d/15MlEtiqdibbHjH0NLgp_R_a3aHHZT-Dh/edit?usp&#61;drive_link&amp;ouid&#61;105830703479073051947&amp;rtpof&#61;true&amp;sd&#61;true\" rel=\"nofollow\">180°_To_FishEye&lt;English&gt;</a> </li><li> <a href=\"https://docs.google.com/document/d/11-zLY7RoqsvIWBHyqs57Cc7TAo5ef_Lq/edit?usp&#61;drive_link&amp;ouid&#61;105830703479073051947&amp;rtpof&#61;true&amp;sd&#61;true\" rel=\"nofollow\">180°_To_FishEye&lt;chinese&gt;</a></li></ul><p>Demo Video:</p><p>YouTube :</p><ul><li><a href=\"https://www.youtube.com/watch?v&#61;47scGrzhjog\" rel=\"nofollow\">UE5.2 Panoramic ElectricDreams</a></li><li><a href=\"https://www.youtube.com/watch?v&#61;lLl8d2qrASg\" rel=\"nofollow\">Unreal Engine 360 Video Rural Australia</a></li><li><a href=\"https://www.youtube.com/watch?v&#61;VoNXph7iTbA\" rel=\"nofollow\">Unreal Engine SpaceShip2</a></li><li><a href=\"https://www.youtube.com/watch?v&#61;beIqfILtQTI\" rel=\"nofollow\">Panoramic Render Pass (UE5/4K) IthrisCemetery (youtube.com)</a></li></ul><p>BiliBili :</p><ul><li><a href=\"https://www.bilibili.com/video/BV1Gu411b7PH/?vd_source&#61;20735680781bdd796c1567748f08a12f\" rel=\"nofollow\">UE5.2 全景输出ElectricDreams</a></li><li><a href=\"https://www.bilibili.com/video/BV19z4y1J7Vt/?vd_source&#61;20735680781bdd796c1567748f08a12f\" rel=\"nofollow\">UE5澳大利亚风光全景</a></li><li><a href=\"https://www.bilibili.com/video/BV1M5411q7E6/\" rel=\"nofollow\">Panoramic Render Pass 插件渲染 Ithris Cemetery&#xff08;无运动模糊</a>)</li></ul><p>Stereo Video :</p><ul><li><a href=\"https://1drv.ms/v/s!Ap9FBT4jwv0kgSyBEM-GHfHl1CED?e&#61;P0GJab\" rel=\"nofollow\">StereoVideo.mp4</a></li></ul><p><strong>Updata:2.03</strong></p><ol><li>Add &#34;Bi_Cubic&#34; Sampling Method.</li></ol><p><strong>Updata:2.04</strong></p><ol><li>Fix &#34;Path Tracing &#34; Denoiser was no working.</li></ol><p><strong>Updata:2.07</strong></p><ol><li>Fix some &#34;Stereo&#34; Mode Bug.</li></ol><p><strong>Updata:3.00</strong></p><ol><li>Optimize blender algorithm</li><li>Reduce memory consumption</li><li>Improve output quality</li><li><strong>Remove &#34;Nvidia Stitcher&#34; Mode</strong></li></ol>",
+  "technicalDetails": "<p>Features:</p><ul><li> Supports Panoramic Output</li><li>Support Lumen</li><li>Support Anti-aliasing ( Spatial/Temporal Sample)</li></ul><p>Code Modules:</p><ul><li>MoviePipelinePanoramicRenderPass [Editor]</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 8</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64</p><p>Supported Target Build Platforms: Win64</p><p>Documentation:</p><ul><li>GoogleDrive&#xff1a;<a href=\"https://drive.google.com/file/d/1RoaSG-r_5eVTF-y-1y5Bp7Td8tFwF8zg/view?usp&#61;drive_link\" rel=\"nofollow\">Movie Render Queue Panoramic Render Pass1.20.pdf</a></li><li>OneDrive: <a href=\"https://1drv.ms/w/s!Ap9FBT4jwv0kgS66B94IOg968Yyh?e&#61;PofglQ\" rel=\"nofollow\">Movie Render Queue Panoramic Render Pass1.20.docx</a></li></ul><p><br /></p><p>Important/Additional Notes:</p><ul><li>This plug-in needs to have high hardware requirements</li><li>Output 4k video sequence at least 4GB video memory, 16GB memory (Exclude Stereo Panorama)</li><li>Output 8k video sequence at least 8GB video memory, 32GB memory</li></ul>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRenderPostProcess-1920x1080-03a5bd3407890fc3100f96f92c0b1f93.png",
+      "md5": "03a5bd3407890fc3100f96f92c0b1f93",
+      "width": 1920,
+      "height": 1080,
+      "size": 271290,
+      "uploadedDate": "2024-07-15T02:52:16.411Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRender180-1920x1080-767a8849c56a0555802f97f0fa27fe94.png",
+      "md5": "767a8849c56a0555802f97f0fa27fe94",
+      "width": 1920,
+      "height": 1080,
+      "size": 940252,
+      "uploadedDate": "2024-07-15T02:52:16.844Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/StereoPanoramicRenderSetup2.0-1920x1080-0d0025e90dcca606bdaf4db1aa77202d.png",
+      "md5": "0d0025e90dcca606bdaf4db1aa77202d",
+      "width": 1920,
+      "height": 1080,
+      "size": 245027,
+      "uploadedDate": "2024-04-23T06:18:16.956Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRenderPostProcess-1920x1080-769f55f9a4ab2075e904c41b34e87c6f.png",
+      "md5": "769f55f9a4ab2075e904c41b34e87c6f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1192040,
+      "uploadedDate": "2024-04-23T06:18:16.620Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRenderActorLayers-1920x1080-30778b05868c11fc97a6844e279ebf5b.png",
+      "md5": "30778b05868c11fc97a6844e279ebf5b",
+      "width": 1920,
+      "height": 1080,
+      "size": 893325,
+      "uploadedDate": "2024-04-23T06:18:15.681Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRenderExrFile-1920x1080-5ebb0cae69a9b3f4385269ecb30d6c1a.png",
+      "md5": "5ebb0cae69a9b3f4385269ecb30d6c1a",
+      "width": 1920,
+      "height": 1080,
+      "size": 789121,
+      "uploadedDate": "2024-04-23T06:18:16.135Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/StereoPanoramicRenderSetpu-1920x1080-5afc1a334b5c59332064e39ed5212554.png",
+      "md5": "5afc1a334b5c59332064e39ed5212554",
+      "width": 1920,
+      "height": 1080,
+      "size": 186358,
+      "uploadedDate": "2024-04-24T02:22:56.324Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRender20-1920x1080-caa89c233f163b6d4fc6021942ecb591.png",
+      "md5": "caa89c233f163b6d4fc6021942ecb591",
+      "width": 1920,
+      "height": 1080,
+      "size": 305867,
+      "uploadedDate": "2023-12-05T05:08:51.284Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRenderRuntime-1920x1080-a7dc6bbdbd83cf4eb0c8dc840bcb1176.png",
+      "md5": "a7dc6bbdbd83cf4eb0c8dc840bcb1176",
+      "width": 1920,
+      "height": 1080,
+      "size": 690324,
+      "uploadedDate": "2023-12-05T05:08:50.658Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/RunTimeBluePrint-1920x1080-067f17e08e68864af5c98d2eb171abc6.png",
+      "md5": "067f17e08e68864af5c98d2eb171abc6",
+      "width": 1920,
+      "height": 1080,
+      "size": 848518,
+      "uploadedDate": "2023-12-05T10:18:51.591Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ActiveAndCancel-1920x1080-e0da4fa3928baa108e9e0922d2dc61e2.png",
+      "md5": "e0da4fa3928baa108e9e0922d2dc61e2",
+      "width": 1920,
+      "height": 1080,
+      "size": 559722,
+      "uploadedDate": "2023-12-05T10:18:51.249Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRender8 -1920x1080-89005a95b1de91601ae5de0ba0099ea4.jpg",
+      "md5": "89005a95b1de91601ae5de0ba0099ea4",
+      "width": 1920,
+      "height": 1080,
+      "size": 419094,
+      "uploadedDate": "2023-11-11T07:10:47.274Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Path Tracer-1920x1080-6a6b9cb6042d92692c96493877a2dc2f.jpg",
+      "md5": "6a6b9cb6042d92692c96493877a2dc2f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1378117,
+      "uploadedDate": "2023-11-11T07:10:49.767Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Path Tracer2-1920x1080-e90ad45f63dcb9a7af128bab53f16bb0.jpg",
+      "md5": "e90ad45f63dcb9a7af128bab53f16bb0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1990794,
+      "uploadedDate": "2023-11-11T07:26:55.705Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/QaulityImprovement -1920x1080-0319da6255d912289394e7519ca615d1.jpg",
+      "md5": "0319da6255d912289394e7519ca615d1",
+      "width": 1920,
+      "height": 1080,
+      "size": 1983801,
+      "uploadedDate": "2023-11-11T07:10:49.106Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/QaulityImprovement200-1920x1080-0a6a9e72451086c2f99095a69375e3c1.jpg",
+      "md5": "0a6a9e72451086c2f99095a69375e3c1",
+      "width": 1920,
+      "height": 1080,
+      "size": 1274407,
+      "uploadedDate": "2023-11-11T07:10:48.433Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRenderStereo-1920x1080-cd81ccde6a95b2c91da94f25000f0401.jpg",
+      "md5": "cd81ccde6a95b2c91da94f25000f0401",
+      "width": 1920,
+      "height": 1080,
+      "size": 1418863,
+      "uploadedDate": "2023-11-11T07:20:17.224Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRendering04-1920x1080-d0cd7a28bda85cef2c2991caea800464.png",
+      "md5": "d0cd7a28bda85cef2c2991caea800464",
+      "width": 1920,
+      "height": 1080,
+      "size": 135450,
+      "uploadedDate": "2023-08-18T12:04:23.748Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRendering01-1920x1080-1a0932cb548dc52acb71acba81a43c89.png",
+      "md5": "1a0932cb548dc52acb71acba81a43c89",
+      "width": 1920,
+      "height": 1080,
+      "size": 580981,
+      "uploadedDate": "2023-08-05T10:56:13.665Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRendering07-1920x1080-738fc8fb0b4bad1c808953e45462ed16.png",
+      "md5": "738fc8fb0b4bad1c808953e45462ed16",
+      "width": 1920,
+      "height": 1080,
+      "size": 1231215,
+      "uploadedDate": "2023-08-05T10:51:42.552Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/PanoramicRendering08-1920x1080-628d64bec925a942694a103f66d28df1.png",
+      "md5": "628d64bec925a942694a103f66d28df1",
+      "width": 1920,
+      "height": 1080,
+      "size": 320535,
+      "uploadedDate": "2023-08-18T12:00:22.362Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ReflectionRender-1920x1080-67af87e59fc493ccaeeff73e564b159f.png",
+      "md5": "67af87e59fc493ccaeeff73e564b159f",
+      "width": 1920,
+      "height": 1080,
+      "size": 2324785,
+      "uploadedDate": "2023-09-10T02:11:37.854Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/VolmuetricLight -1920x1080-79a4768a657e012068bf28503193c2f0.jpg",
+      "md5": "79a4768a657e012068bf28503193c2f0",
+      "width": 1920,
+      "height": 1080,
+      "size": 1963274,
+      "uploadedDate": "2023-09-10T04:56:25.011Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MyLevelSequnce.2098-1920x1080-a888240910ba506cf5c084b2ed7abc45.jpg",
+      "md5": "a888240910ba506cf5c084b2ed7abc45",
+      "width": 1920,
+      "height": 1080,
+      "size": 373384,
+      "uploadedDate": "2023-07-04T23:25:46.561Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PanoramicRenderingPass_thumb-284x284-22a9decaf3b8a9c17f0485173588b83c.png",
+      "md5": "22a9decaf3b8a9c17f0485173588b83c",
+      "width": 284,
+      "height": 284,
+      "size": 129412,
+      "uploadedDate": "2023-07-17T12:01:41.098Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PanoramicRenderingPass_featured-894x488-9ee20cafa57652447643b4aeb65fb666.png",
+      "md5": "9ee20cafa57652447643b4aeb65fb666",
+      "width": 894,
+      "height": 488,
+      "size": 434917,
+      "uploadedDate": "2023-09-10T07:21:53.604Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRenderPostProcess-1920x1080-03a5bd3407890fc3100f96f92c0b1f93_Snapshot.png",
+      "md5": "f5a59597e681302615ccb3a74cc4a612",
+      "width": 150,
+      "height": 74,
+      "size": 3670,
+      "uploadedDate": "2024-07-15T02:52:16.666Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRender180-1920x1080-767a8849c56a0555802f97f0fa27fe94_Snapshot.png",
+      "md5": "227e3286d2dec42d32dffd9d43a7a727",
+      "width": 150,
+      "height": 74,
+      "size": 5464,
+      "uploadedDate": "2024-07-15T02:52:17.180Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRenderSetpu-1920x1080-5afc1a334b5c59332064e39ed5212554_Snapshot.png",
+      "md5": "35dbb6cad4a2d341ebafd9db00e05f42",
+      "width": 150,
+      "height": 74,
+      "size": 3635,
+      "uploadedDate": "2024-04-24T02:22:56.585Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRenderActorLayers-1920x1080-30778b05868c11fc97a6844e279ebf5b_Snapshot.png",
+      "md5": "625b6e7c037e461f1e000dcf21e643ee",
+      "width": 150,
+      "height": 74,
+      "size": 4506,
+      "uploadedDate": "2024-04-23T06:18:15.944Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRenderExrFile-1920x1080-5ebb0cae69a9b3f4385269ecb30d6c1a_Snapshot.png",
+      "md5": "22ed8452a967cc6247716d1f9b8566a6",
+      "width": 150,
+      "height": 74,
+      "size": 5354,
+      "uploadedDate": "2024-04-23T06:18:16.457Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRenderPostProcess-1920x1080-769f55f9a4ab2075e904c41b34e87c6f_Snapshot.png",
+      "md5": "9f46c83986b7dc473bd5b52d0e6180f0",
+      "width": 150,
+      "height": 74,
+      "size": 7203,
+      "uploadedDate": "2024-04-23T06:18:16.877Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRenderSetup2.0-1920x1080-0d0025e90dcca606bdaf4db1aa77202d_Snapshot.png",
+      "md5": "b2de0a111509734f2083bf1fe5847f39",
+      "width": 150,
+      "height": 74,
+      "size": 3714,
+      "uploadedDate": "2024-04-23T06:18:17.186Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRenderSetpu -1920x1080-494bfbd0e220a3b4badcea5a1793112f_Snapshot.png",
+      "md5": "428aea0b7c0ccf7288d4544eac62f261",
+      "width": 150,
+      "height": 74,
+      "size": 3568,
+      "uploadedDate": "2024-04-14T15:24:45.824Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRender1.25-1920x1080-5afc1a334b5c59332064e39ed5212554_Snapshot.png",
+      "md5": "35dbb6cad4a2d341ebafd9db00e05f42",
+      "width": 150,
+      "height": 74,
+      "size": 3635,
+      "uploadedDate": "2024-04-04T07:33:21.283Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ActiveAndCancel-1920x1080-e0da4fa3928baa108e9e0922d2dc61e2_Snapshot.png",
+      "md5": "da9e867989070d8c7f15694c97b5fdb8",
+      "width": 150,
+      "height": 74,
+      "size": 4173,
+      "uploadedDate": "2023-12-05T10:18:51.479Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RunTimeBluePrint-1920x1080-067f17e08e68864af5c98d2eb171abc6_Snapshot.png",
+      "md5": "565be9b7f6ac2fd304853a28946d2923",
+      "width": 150,
+      "height": 74,
+      "size": 4641,
+      "uploadedDate": "2023-12-05T10:18:51.815Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ActiveAndCancel-1920x1080-62231bc6e46f57afa12cd909e870dc7b_Snapshot.png",
+      "md5": "eaaff805157e7a8204bf6a7061f3d858",
+      "width": 150,
+      "height": 74,
+      "size": 4184,
+      "uploadedDate": "2023-12-05T10:16:42.401Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/RunTimeBluePrint-1920x1080-0239424ba44c0b62af6289475879cd62_Snapshot.png",
+      "md5": "eb566478b5b318f91eb5d23ccf6d1d46",
+      "width": 150,
+      "height": 74,
+      "size": 4649,
+      "uploadedDate": "2023-12-05T10:16:42.826Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRenderRuntime-1920x1080-a7dc6bbdbd83cf4eb0c8dc840bcb1176_Snapshot.png",
+      "md5": "36fefce9ba449a3795feda4e15029558",
+      "width": 150,
+      "height": 74,
+      "size": 5493,
+      "uploadedDate": "2023-12-05T05:08:51.033Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRender20-1920x1080-caa89c233f163b6d4fc6021942ecb591_Snapshot.png",
+      "md5": "b3702a72fe105f8b8822e863065d5a92",
+      "width": 150,
+      "height": 74,
+      "size": 4937,
+      "uploadedDate": "2023-12-05T05:08:51.582Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Path Tracer2-1920x1080-e90ad45f63dcb9a7af128bab53f16bb0_Snapshot.jpg",
+      "md5": "366acd6049ae1a0ceafcdac4f71780fc",
+      "width": 150,
+      "height": 74,
+      "size": 7197,
+      "uploadedDate": "2023-11-11T07:26:56.189Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRenderStereo-1920x1080-cd81ccde6a95b2c91da94f25000f0401_Snapshot.jpg",
+      "md5": "eeccc9d007dc7b75f3c45f44954eb4da",
+      "width": 150,
+      "height": 74,
+      "size": 7205,
+      "uploadedDate": "2023-11-11T07:20:17.589Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRender8 -1920x1080-89005a95b1de91601ae5de0ba0099ea4_Snapshot.jpg",
+      "md5": "f5d5e476639e58194e3c0fbe9ef2f99b",
+      "width": 150,
+      "height": 74,
+      "size": 4959,
+      "uploadedDate": "2023-11-11T07:10:47.603Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRenderStereo-1920x1080-763ded5900d5ecce772664d58ab62478_Snapshot.jpg",
+      "md5": "035f1145ec12c9a638d8564ad031c701",
+      "width": 150,
+      "height": 74,
+      "size": 7209,
+      "uploadedDate": "2023-11-11T07:10:48.220Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/QaulityImprovement200-1920x1080-0a6a9e72451086c2f99095a69375e3c1_Snapshot.jpg",
+      "md5": "6221ed6342f011d70ef71ae6bc0f608c",
+      "width": 150,
+      "height": 74,
+      "size": 8688,
+      "uploadedDate": "2023-11-11T07:10:48.860Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/QaulityImprovement -1920x1080-0319da6255d912289394e7519ca615d1_Snapshot.jpg",
+      "md5": "05d532cbdf2705607bc42979deb45604",
+      "width": 150,
+      "height": 74,
+      "size": 7518,
+      "uploadedDate": "2023-11-11T07:10:49.522Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Path Tracer-1920x1080-6a6b9cb6042d92692c96493877a2dc2f_Snapshot.jpg",
+      "md5": "ef1cb1a03835635f592359af9382680e",
+      "width": 150,
+      "height": 74,
+      "size": 8703,
+      "uploadedDate": "2023-11-11T07:10:50.181Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Nvidia-1920x1080-26440966efd3c6132cfa3f5a16d04891_Snapshot.png",
+      "md5": "67b3bd2345c20b01fe100bd1e23d6d91",
+      "width": 150,
+      "height": 74,
+      "size": 5001,
+      "uploadedDate": "2023-10-02T02:27:40.847Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Nvidia-1920x1080-71268a40add90e570c375bd8036d9aa5_Snapshot.png",
+      "md5": "cd16768399fa9a730f878e882ae48172",
+      "width": 150,
+      "height": 74,
+      "size": 5112,
+      "uploadedDate": "2023-10-02T02:25:15.079Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VolmuetricLight -1920x1080-79a4768a657e012068bf28503193c2f0_Snapshot.jpg",
+      "md5": "50f0883138d416e9277e005af5e2db16",
+      "width": 150,
+      "height": 74,
+      "size": 7484,
+      "uploadedDate": "2023-09-10T04:56:25.331Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/VolmuetricLight 2-1920x1080-f02ee4d869da07187da065fb1be2ef4a_Snapshot.png",
+      "md5": "877a422bfbd965817cc47b327889dabb",
+      "width": 150,
+      "height": 74,
+      "size": 6747,
+      "uploadedDate": "2023-09-10T03:37:01.790Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ReflectionRender-1920x1080-67af87e59fc493ccaeeff73e564b159f_Snapshot.png",
+      "md5": "dfb05d9d066af42486aac8d554af040d",
+      "width": 150,
+      "height": 74,
+      "size": 4764,
+      "uploadedDate": "2023-09-10T02:11:38.145Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering04-1920x1080-d0cd7a28bda85cef2c2991caea800464_Snapshot.png",
+      "md5": "516caa9f213d87a15e2f996c89a99153",
+      "width": 150,
+      "height": 74,
+      "size": 3216,
+      "uploadedDate": "2023-08-18T12:04:23.962Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering06-1920x1080-1605685712529b0cceeaef3ef4b42618_Snapshot.png",
+      "md5": "e5cdf0e15c2cb4d8512d1d54ee93bd7b",
+      "width": 150,
+      "height": 74,
+      "size": 5522,
+      "uploadedDate": "2023-08-18T12:00:22.215Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering08-1920x1080-628d64bec925a942694a103f66d28df1_Snapshot.png",
+      "md5": "e7242d28d67fbca3eaf0a4ea870832f7",
+      "width": 150,
+      "height": 74,
+      "size": 4860,
+      "uploadedDate": "2023-08-18T12:00:22.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering09-1920x1080-529196206f5dd941558f11fe559a93d7_Snapshot.png",
+      "md5": "dba175b1f8bc99dbbe27aabd91ee3de4",
+      "width": 150,
+      "height": 74,
+      "size": 7466,
+      "uploadedDate": "2023-08-18T12:00:23.161Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering01-1920x1080-1a0932cb548dc52acb71acba81a43c89_Snapshot.png",
+      "md5": "19a377229e99dc07ced8fa19498aefcf",
+      "width": 150,
+      "height": 74,
+      "size": 4689,
+      "uploadedDate": "2023-08-05T10:56:13.977Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering07-1920x1080-738fc8fb0b4bad1c808953e45462ed16_Snapshot.png",
+      "md5": "5219da2493dd1693f12d0fb38fb2f097",
+      "width": 150,
+      "height": 74,
+      "size": 5960,
+      "uploadedDate": "2023-08-05T10:51:42.923Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering06-1920x1080-19476ff02da8a99a5a3055a491af304b_Snapshot.png",
+      "md5": "ee8476263613f2766b6cdf4c739ff940",
+      "width": 150,
+      "height": 74,
+      "size": 5670,
+      "uploadedDate": "2023-08-05T08:53:46.342Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering03-1920x1080-8bb5782c6efd6d6a3aa4831c1e6c65b7_Snapshot.png",
+      "md5": "f9a28a56cf7d5cd61dde5227e79f8126",
+      "width": 150,
+      "height": 74,
+      "size": 6804,
+      "uploadedDate": "2023-08-05T06:53:09.087Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering03-1920x1080-307b4bb9583b1915f8ccc55c0619e980_Snapshot.png",
+      "md5": "2b4c0e68de9801adefad593da6b9115b",
+      "width": 150,
+      "height": 74,
+      "size": 5264,
+      "uploadedDate": "2023-08-05T06:39:03.173Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering04-1920x1080-df4d740b83bd556ecb6f2921a0a1b477_Snapshot.png",
+      "md5": "c5bf81d940134198dfc659996b5115a9",
+      "width": 150,
+      "height": 74,
+      "size": 3420,
+      "uploadedDate": "2023-08-05T06:03:43.959Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering01-1920x1080-6325edd73d679939d4cf6fd6a988a9ba_Snapshot.png",
+      "md5": "5b1092ac970da26ba4a055072e552d8e",
+      "width": 150,
+      "height": 74,
+      "size": 4691,
+      "uploadedDate": "2023-08-05T06:03:44.487Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering03-1920x1080-f9c118aeac9e5e3f017167f273bd1aa7_Snapshot.png",
+      "md5": "0b076b9de34787b58017d3e0952c925a",
+      "width": 150,
+      "height": 74,
+      "size": 5260,
+      "uploadedDate": "2023-08-05T06:03:44.983Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering03-1920x1080-121459795ad2349cd05085f01c720649_Snapshot.png",
+      "md5": "9426e6930dca2cf11b8ad30d1bb6b35d",
+      "width": 150,
+      "height": 74,
+      "size": 4392,
+      "uploadedDate": "2023-08-04T09:16:35.514Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering04-1920x1080-c263a7b1123eb15814902ce6632bfcf5_Snapshot.png",
+      "md5": "11ed262cedfab0c412c77ae610696015",
+      "width": 150,
+      "height": 74,
+      "size": 3469,
+      "uploadedDate": "2023-08-04T09:08:41.842Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/PanoramicRendering03-1920x1080-d0e56c618de61e45736216fd74101c33_Snapshot.png",
+      "md5": "466b14c5fe172b70cc7e379fd9620b91",
+      "width": 150,
+      "height": 74,
+      "size": 3588,
+      "uploadedDate": "2023-08-04T09:08:42.276Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NewLevelSequence1.0478-1920x1080-ce1521677371b7737c21c790ab160225_Snapshot.png",
+      "md5": "592445ef42087f790440a0b98c8a94cc",
+      "width": 150,
+      "height": 74,
+      "size": 7073,
+      "uploadedDate": "2023-07-15T13:19:32.566Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRenderSetup-1920x1080-9eacde06ffd00158c8a3ebc3e140a878_Snapshot.png",
+      "md5": "39a2f45e4735d4784b341c092307841b",
+      "width": 150,
+      "height": 74,
+      "size": 3514,
+      "uploadedDate": "2023-07-09T07:10:20.045Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRenderSetup-1920x1080-cceb0123a092c7530b786e01ca221e49_Snapshot.png",
+      "md5": "f8f188fb5172fb601f63e629e8b22aff",
+      "width": 150,
+      "height": 74,
+      "size": 3434,
+      "uploadedDate": "2023-07-09T07:09:00.975Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRenderSetup-1920x1080-554fb30425424a03405f7d5a09ec082a_Snapshot.png",
+      "md5": "fbe3ce46f1ae88d83251f6bcd08b161c",
+      "width": 150,
+      "height": 74,
+      "size": 3431,
+      "uploadedDate": "2023-07-09T07:06:46.713Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRenderAnti-1920x1080-0aaeee43a8d80a5325408ef91bf8f1d2_Snapshot.png",
+      "md5": "c1a5e8eced1274302cee0e6816b5600d",
+      "width": 150,
+      "height": 74,
+      "size": 5907,
+      "uploadedDate": "2023-07-09T07:06:47.243Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/overlappaddedoptimzation-1920x1080-8a318023f542f1b89b470de2f0353ec5_Snapshot.png",
+      "md5": "cf2b205bb0889a25056eae61f1171f4d",
+      "width": 150,
+      "height": 74,
+      "size": 4937,
+      "uploadedDate": "2023-07-09T07:06:47.787Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRenderAnti-1920x1080-8e53a1ff20393ea12661c3a984deda2e_Snapshot.png",
+      "md5": "ad55111aed80a5f45f5d630e9c54f335",
+      "width": 150,
+      "height": 74,
+      "size": 5944,
+      "uploadedDate": "2023-07-09T06:49:49.968Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRenderAnti-1920x1080-c1ccb9059dffe142d63d0373bc0a16d1_Snapshot.png",
+      "md5": "e9adfee1add87daa886370e3826da621",
+      "width": 150,
+      "height": 74,
+      "size": 5800,
+      "uploadedDate": "2023-07-09T06:46:09.912Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRender-1920x1080-0e595378b8acb070bc69202b8b837cd2_Snapshot.png",
+      "md5": "165c1e2cbe7ea76dc70b3e3414b6af39",
+      "width": 150,
+      "height": 74,
+      "size": 4648,
+      "uploadedDate": "2023-07-05T15:23:47.753Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/overlappaddedoptimzation-1920x1080-689e324478b93e312d0e6bd8fc709924_Snapshot.png",
+      "md5": "c6074b4e16015556236c2903b7348fa7",
+      "width": 150,
+      "height": 74,
+      "size": 4933,
+      "uploadedDate": "2023-07-05T15:05:02.916Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StereoPanoramicRender-1920x1080-2fe2139bc2c30ed794455df40d654f27_Snapshot.png",
+      "md5": "eb31e659800e48291ed68e5574266afe",
+      "width": 150,
+      "height": 74,
+      "size": 4620,
+      "uploadedDate": "2023-07-05T15:05:03.452Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MyLevelSequnce.2098-1920x1080-a888240910ba506cf5c084b2ed7abc45_Snapshot.jpg",
+      "md5": "88c2bad4e635c0679f142c8413cfa5de",
+      "width": 150,
+      "height": 74,
+      "size": 7423,
+      "uploadedDate": "2023-07-04T23:25:46.790Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/DroneFlyoverSequence.1619-1920x1080-668650bf15d16d3e3fa0ccee101969d4_Snapshot.jpg",
+      "md5": "7d21283b20464f5036a393148191d066",
+      "width": 150,
+      "height": 74,
+      "size": 8412,
+      "uploadedDate": "2023-07-04T23:25:47.205Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Linearinterpolationoptimization-1920x1080-c7e767510c7220ba54d859062270c062_Snapshot.png",
+      "md5": "59d53b9d18e39023b91b29c43cd6a937",
+      "width": 150,
+      "height": 74,
+      "size": 4661,
+      "uploadedDate": "2023-07-04T12:08:30.743Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NewLevelSequence.0829-1920x1080-d06b5808382553a7ad7cc46060ecb2bb_Snapshot.jpeg",
+      "md5": "f35c3890bed622c0d9d23515727254f1",
+      "width": 150,
+      "height": 74,
+      "size": 8119,
+      "uploadedDate": "2023-06-19T00:32:25.485Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/-1-1920x1080-df82ef0fcdf9d695fc9e698bf9d11d79_Snapshot.png",
+      "md5": "e15b10ba82c849e3d55f3e44eb829143",
+      "width": 150,
+      "height": 74,
+      "size": 2896,
+      "uploadedDate": "2023-06-19T00:25:41.537Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/-2-1920x1080-3aad7f16336623b5db9f180a8aa1eca1_Snapshot.png",
+      "md5": "a31659ea0db35662f6aaaaa7558b2510",
+      "width": 150,
+      "height": 74,
+      "size": 2767,
+      "uploadedDate": "2023-06-11T10:52:45.014Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NewLevelSequence.0453-1920x1080-c382752cb47587409f9662234b96e976_Snapshot.jpg",
+      "md5": "fa23945ebfbf2cdf7add6cd17a6b982a",
+      "width": 150,
+      "height": 74,
+      "size": 8847,
+      "uploadedDate": "2023-06-11T10:52:45.374Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NewLevelSequence.0388-1920x1080-eca66d33f8ac09312393142900beeb8b_Snapshot.jpg",
+      "md5": "ed5aefd8347ad1bf1e4a4f4848f22612",
+      "width": 150,
+      "height": 74,
+      "size": 8893,
+      "uploadedDate": "2023-06-11T10:52:45.766Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NewLevelSequence.2074-1920x1080-81f506e986d0edaec09d5af0f2ad5e98_Snapshot.jpg",
+      "md5": "a01eb2535b946fcbda0c658bb50c024f",
+      "width": 150,
+      "height": 74,
+      "size": 4147,
+      "uploadedDate": "2023-06-11T10:52:46.055Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/NewLevelSequence.0170-1920x1080-f2042ae05cd15b3dc2768438cce9ee6c_Snapshot.jpg",
+      "md5": "df4094f90a4ea63089c6bf516f4cc8e9",
+      "width": 150,
+      "height": 74,
+      "size": 6739,
+      "uploadedDate": "2023-06-11T10:52:46.492Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-06-19T00:17:08.499Z",
+  "lastModifiedDate": "2025-01-15T19:59:48.683Z",
+  "customAttributes": {},
+  "entitlementName": "715190f6b56c4a2fa1a01be75f6d6f83",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "1bded87410cf4f05a7a598fb55cb5598",
+      "appId": "MoviePipelinePanoramicRenderPass_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-08-19T00:00:00.000Z",
+      "releaseNote": "V1.26b",
+      "versionTitle": "PanoramicRenderPass5.1"
+    },
+    {
+      "id": "6855621ad1684a01a0d97ffcc7b726dc",
+      "appId": "MoviePipelinePanoramicRenderPass_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-06-11T00:00:00.000Z",
+      "releaseNote": "V3.00",
+      "versionTitle": "PanoramicRenderPass5.2"
+    },
+    {
+      "id": "81d174161c764071a23c8aee2f0228a3",
+      "appId": "MoviePipelinePanoramicRenderPass_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-15T00:00:00.000Z",
+      "releaseNote": "v3.00",
+      "versionTitle": "PanoramicRenderPass5.3"
+    },
+    {
+      "id": "c64620a046e64907b2a3dbc906429f75",
+      "appId": "MoviePipelinePanoramicRenderPass_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "v3.00",
+      "versionTitle": "PanoramicRenderPass5.4"
+    }
+  ],
+  "developer": "MonsterGuoGuo",
+  "developerId": "o-7l84avn3dfaby2dfen8jlrksrs5gg6",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

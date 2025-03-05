@@ -1,0 +1,287 @@
+{
+  "id": "66718cf93c004673afe3ea06f327809e",
+  "title": "Level Instance Helper",
+  "description": "Aims to expose the C++ functionality of UE5's Level Instance to blueprints, filling in necessary features, including talk to level BP, transforms ...etc, and providing clear examples, as well as limited non-uniform scaling and other editor tools.",
+  "longDescription": "<h3>Key Features:</h3><ul><li>Blueprint Accessibility: Expose level instance functions to blueprints which are available only in C&#43;&#43; . Provides 30 common and 15&#43; (depends on engine version) bonus advanced blueprint nodes .</li><li>Runtime Control: Enable runtime control over Level Instances, including talking to level BP, talking to level actors inside, level transformations and more.</li><li>Clear Examples: Provide clear and annotated Blueprint examples for common use cases, eliminating the need for users unfamiliar with Level Instances to repeatedly test nodes. This helps users save time and avoids unnecessary experimentation due to insufficient official documentation.</li><li>Editor Tools:</li></ul><p>Tools designed to address some level workflow issues, including Blueprint deconstruction, setting Level Pivot, non-uniform scaling, and batch level saving.</p><p><br /></p><p>This plugin aims to make UE5&#39;s Level Instance more easy to use in blueprints. While UE5&#39;s Level Instance is a powerful tool for prefab-like level design, The <a href=\"https://docs.unrealengine.com/5.3/en-US/level-instancing-in-unreal-engine/\" rel=\"nofollow\">official documentation</a> primarily covers loading and editing, BP lacks runtime control nodes. This plugin addresses these shortcomings. Also suitable for beginners.</p><p><br /></p><h3>Focus Those Level Instance Behavior:</h3><p><br /></p><ul><li>(*)Async loading and Level ready events</li><li>(*)Async unloading</li><li>Communication with Level Blueprint</li><li>(*)Visibility control</li><li>Persistent Level Instance manager accessing actors within the level</li><li>Actors within the level accessing the Persistent Level Instance manager</li><li>Runtime transformation of the level</li></ul><p><br /></p><p>(*) symbols are with built-in BP nodes of UE, but you may find that they sometimes do not work as expected, leading to repetitive testing and struggles, just like me tried these first experience. Therefore, for the use cases mentioned above, there is a clean blueprint example with comprehensive annotations.</p><p><br /></p><p><br /></p><p><br /></p><h3>*bonus: </h3><p>There also are several &#34;advanced nodes&#34; with directly exposing C&#43;&#43; public methods as blueprint nodes. However, it lacks documentation and may require a practical understanding before usage to avoid unexpected behaviors. It is not recommended for beginners.</p><p><br /></p><p><br /></p><p><br /></p><h3>In addition, the plugin offers several editor tools:</h3><ul><li>Convert BP prefab back to static mesh actor:</li></ul><p>UE allows static mesh actors conversion to blueprints with &#34;Harvest Components,&#34; there might be a need to revert to individual static mesh actors. This feature provides a non-destructive way to transform static mesh components back into their respective actors in the level.</p><ul><li>Set Level Pivot Offset:</li></ul><p>In the persistent level editing and individual editing of Level Instances, the root positions mess up, causing incorrect positioning in the persistent level or at runtime. The issue arises from modified the Pivot offset during persistent level editing, and it can’t be set the Pivot offset during individual editing. This tool allows setting the Pivot offset during individual editing, addressing this problem.</p><ul><li>Tool for limited <a href=\"https://forums.unrealengine.com/t/parent-scale-does-not-account-for-child-rotation/293436\" rel=\"nofollow\">non-uniform scaling with relative rotation child</a>:</li></ul><p>When scaling the static mesh parent&#39;s X-axis, the child&#39;s X-axis also scales, not the relative rotated axis, hard to adjust size of the actors collection while maintaining the appearance. This tool addresses this need, also allowing parents or children to use negative scaling values. <strong><em>However, this tool has restrictions: regardless of nesting depth, the child actor&#39;s relative rotation to the scaling root must be in multiples of 90 degrees,In other words, have to parallel or perpendicular to the root&#39;s XYZ axes. And this tool just scale mesh directly, does not handle any about UV or Distance Fields.</em></strong></p><ul><li>Batch open and save map assets:</li></ul><p>Certain tools or plugins may require automatic updates of map assets, necessitating the reopening of the map in the editor. If you have dozens of maps, this task can be tedious. This feature automates the process for you.</p><p><br /></p><p><br /></p>",
+  "technicalDetails": "<p>Code Modules: 1 Runtime</p><p>Number of Blueprints: 10</p><p>Number of C&#43;&#43; Classes: 4</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1evw7we0kDVuuNZZZAm5zHWpdf_5Qw1z0KDlQQr3n1dY/edit?usp&#61;sharing\" rel=\"nofollow\">Link</a></p><p>Example Project: in plugin content</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1709570819192-1920x1080-e3c07d10bdc62c62c8e8304546c25d64.jpg",
+      "md5": "e3c07d10bdc62c62c8e8304546c25d64",
+      "width": 1920,
+      "height": 1080,
+      "size": 675604,
+      "uploadedDate": "2024-03-04T17:30:26.058Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1709570833210-1920x1080-f9dd2818276f9ee6ef605ed84e7188a3.jpg",
+      "md5": "f9dd2818276f9ee6ef605ed84e7188a3",
+      "width": 1920,
+      "height": 1080,
+      "size": 663442,
+      "uploadedDate": "2024-03-04T17:30:25.658Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1709570896858-1920x1080-110fc9445a486b10e6815ba78cd02a37.jpg",
+      "md5": "110fc9445a486b10e6815ba78cd02a37",
+      "width": 1920,
+      "height": 1080,
+      "size": 705079,
+      "uploadedDate": "2024-03-04T17:30:25.234Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1709570933925-1920x1080-6f41d08e7e9e5174e58992ff4e2aa26f.jpg",
+      "md5": "6f41d08e7e9e5174e58992ff4e2aa26f",
+      "width": 1920,
+      "height": 1080,
+      "size": 840132,
+      "uploadedDate": "2024-03-04T17:30:24.787Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1709570619799-1920x1080-862da2e859e50279400b67f844017d19.jpg",
+      "md5": "862da2e859e50279400b67f844017d19",
+      "width": 1920,
+      "height": 1080,
+      "size": 715668,
+      "uploadedDate": "2024-03-10T16:44:42.121Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1709570725843-1920x1080-a1d2742b8900fc2ba92b7e7f35caffc9.jpg",
+      "md5": "a1d2742b8900fc2ba92b7e7f35caffc9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1065557,
+      "uploadedDate": "2024-03-10T16:44:43.006Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1709570695311-1920x1080-0ab753828dc70cd22148d7b5b54febc9.jpg",
+      "md5": "0ab753828dc70cd22148d7b5b54febc9",
+      "width": 1920,
+      "height": 1080,
+      "size": 1095316,
+      "uploadedDate": "2024-03-10T16:44:43.375Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1709570102363-1920x1080-f3963440c0f18f2b3ae9a5ae37c93e04.png",
+      "md5": "f3963440c0f18f2b3ae9a5ae37c93e04",
+      "width": 1920,
+      "height": 1080,
+      "size": 2336247,
+      "uploadedDate": "2024-03-10T16:44:42.538Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/LevelInstanceHelper_thumb-284x284-1337fac4f50963c59eaf818f946c2326.png",
+      "md5": "1337fac4f50963c59eaf818f946c2326",
+      "width": 284,
+      "height": 284,
+      "size": 96331,
+      "uploadedDate": "2024-03-03T07:35:32.730Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/LevelInstanceHelper_featured-894x488-12a3711c71a8cce8eef71931a7eaeb83.png",
+      "md5": "12a3711c71a8cce8eef71931a7eaeb83",
+      "width": 894,
+      "height": 488,
+      "size": 231913,
+      "uploadedDate": "2024-03-04T17:30:26.475Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570619799-1920x1080-862da2e859e50279400b67f844017d19_Snapshot.jpg",
+      "md5": "c0b6f6da747c19d68d5919eace4808b9",
+      "width": 150,
+      "height": 74,
+      "size": 6547,
+      "uploadedDate": "2024-03-10T16:44:42.305Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570102363-1920x1080-f3963440c0f18f2b3ae9a5ae37c93e04_Snapshot.png",
+      "md5": "1d45a3a69da2db06d7c8de89eca06576",
+      "width": 150,
+      "height": 74,
+      "size": 7823,
+      "uploadedDate": "2024-03-10T16:44:42.852Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570725843-1920x1080-a1d2742b8900fc2ba92b7e7f35caffc9_Snapshot.jpg",
+      "md5": "afc3ca11da2c4be7a5c5dbbdd3da65f0",
+      "width": 150,
+      "height": 74,
+      "size": 6377,
+      "uploadedDate": "2024-03-10T16:44:43.213Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570695311-1920x1080-0ab753828dc70cd22148d7b5b54febc9_Snapshot.jpg",
+      "md5": "e4d334d108a18384278cb1649a888845",
+      "width": 150,
+      "height": 74,
+      "size": 6286,
+      "uploadedDate": "2024-03-10T16:44:43.564Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570619799-1920x1080-cc89ee1627904625432238905195d6fe_Snapshot.jpg",
+      "md5": "67ac186087d06fd99ffd8986dfc1fecf",
+      "width": 150,
+      "height": 74,
+      "size": 6732,
+      "uploadedDate": "2024-03-04T19:48:36.321Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570102363-1920x1080-dce3f6176f73d3c03aa52f57b37aefa6_Snapshot.png",
+      "md5": "ea5ea4b5c8e63f06da0e3def8c54a9f6",
+      "width": 150,
+      "height": 74,
+      "size": 7704,
+      "uploadedDate": "2024-03-04T17:30:23.163Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570619799-1920x1080-990f583ca483160077d564fe95da3e69_Snapshot.jpg",
+      "md5": "86f3ac07a8b9052a7fb824af3bc846c7",
+      "width": 150,
+      "height": 74,
+      "size": 6587,
+      "uploadedDate": "2024-03-04T17:30:23.668Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570725843-1920x1080-ed157dcca0392a1a974de9a7bf8b8600_Snapshot.jpg",
+      "md5": "fb6d23163ccd931961cf0c5901c3b6af",
+      "width": 150,
+      "height": 74,
+      "size": 6983,
+      "uploadedDate": "2024-03-04T17:30:24.132Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570695311-1920x1080-4f137a98c0442dc28fca70e15114257a_Snapshot.jpg",
+      "md5": "1fa94c6d111ba026f984a79bc39efe7e",
+      "width": 150,
+      "height": 74,
+      "size": 7007,
+      "uploadedDate": "2024-03-04T17:30:24.604Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570933925-1920x1080-6f41d08e7e9e5174e58992ff4e2aa26f_Snapshot.jpg",
+      "md5": "7bebb801f01b1208f629d6b81ed959eb",
+      "width": 150,
+      "height": 74,
+      "size": 6297,
+      "uploadedDate": "2024-03-04T17:30:25.084Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570896858-1920x1080-110fc9445a486b10e6815ba78cd02a37_Snapshot.jpg",
+      "md5": "46814983723a330f9dc31c3f78b84ffd",
+      "width": 150,
+      "height": 74,
+      "size": 5155,
+      "uploadedDate": "2024-03-04T17:30:25.509Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570833210-1920x1080-f9dd2818276f9ee6ef605ed84e7188a3_Snapshot.jpg",
+      "md5": "c9662230c668e58621544e75c8f36a50",
+      "width": 150,
+      "height": 74,
+      "size": 4745,
+      "uploadedDate": "2024-03-04T17:30:25.920Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1709570819192-1920x1080-e3c07d10bdc62c62c8e8304546c25d64_Snapshot.jpg",
+      "md5": "e26fa94cdd975fd0df524ef9bb98368f",
+      "width": 150,
+      "height": 74,
+      "size": 4742,
+      "uploadedDate": "2024-03-04T17:30:26.312Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/656167-1920x1080-eecc4e448b0d021702227cb6e675db83_Snapshot.jpg",
+      "md5": "40db22d9195fdbb4a3d25e78899348b1",
+      "width": 150,
+      "height": 74,
+      "size": 8699,
+      "uploadedDate": "2024-03-02T18:39:07.274Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-03-13T15:41:18.854Z",
+  "lastModifiedDate": "2024-05-16T17:35:57.568Z",
+  "customAttributes": {},
+  "entitlementName": "66718cf93c004673afe3ea06f327809e",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "546b13b373854260b6d2b0ecdd3e3624",
+      "appId": "LevelInstanceHelper_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-03-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.2"
+    },
+    {
+      "id": "e3f3c4e8e0d74310a0b74a20ef0710a4",
+      "appId": "LevelInstanceHelper_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-03-08T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.3"
+    },
+    {
+      "id": "8b1d5c8734744ada84a6fd21bc2b83ab",
+      "appId": "LevelInstanceHelper_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "5.4"
+    }
+  ],
+  "developer": "pppauxdev",
+  "developerId": "o-kggmly2mujp9cc5zmkzfgsq7jpepdj",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

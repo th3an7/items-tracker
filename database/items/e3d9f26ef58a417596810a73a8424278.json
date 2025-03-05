@@ -1,0 +1,462 @@
+{
+  "id": "e3d9f26ef58a417596810a73a8424278",
+  "title": "EasySynth",
+  "description": "Easy to use plugin that enables generation of ground truth depth, normal, optical flow and semantic images.",
+  "longDescription": "<p>EasySynth is an Unreal Engine plugin for the easy creation of image datasets from a moving multi-camera rig, requiring no C&#43;&#43; or Blueprint knowledge. It leverages native Unreal Engine components to create compelling machine learning datasets, without relying on 3rd party tools.</p><p><br /></p><p>The plugin provides a simple interface for semantic labeling of actors present in the scene and works by automatically starting the rendering of a user-defined level sequence, with different camera post-process settings. Outputs that can be created are the following:</p><ul><li>CSV file with camera poses, including position, rotation, and calibration parameters</li><li>JSON file with camera rig description</li><li>Color images rendered by default</li><li>Depth grayscale images</li><li>Pixel normal images</li><li>Optical flow images between frames</li><li>Images with actor&#39; semantic labels</li></ul><p><br /></p><p>Check out this <a href=\"https://vimeo.com/655432464\" rel=\"nofollow\">workflow timelapse</a> for a detailed usage walk-though. Also, check out the latest code on the <a href=\"https://github.com/ydrive/EasySynth\" rel=\"nofollow\">GitHub repo</a> as well as the installation and the in-depth usage description.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Enables definition of semantic classes through the UI widget, and their permanent saving</li><li>Enables semantic labeling of each actor in the scene, and labels&#39; permanent saving</li><li>Enables toggling between original and semantic scene color</li><li>Enables rendering and exporting of the image types described above, by utilizing level sequences and the Movie render queue plugin</li><li>Enables exporting camera poses and calibration as a CSV file</li><li>Enables recording from multiple cameras bundled inside a camera rig</li></ul><p>Code Modules:</p><ul><li> Editor-only EasySynth module containing all needed content</li></ul><p>Number of Blueprints: 6</p><p>Number of C&#43;&#43; Classes: 18</p><p>Network Replicated: No</p><p>Supported Development Platforms: Linux, Windows</p><p>Supported Target Build Platforms: Intended for editor-only usage</p><p>Documentation: Consult the <a href=\"https://github.com/ydrive/EasySynth\" rel=\"nofollow\">GitHub repo</a></p><p>Example Project: <a href=\"https://github.com/ydrive/EasySynth/releases/download/v1.1.0/EasySynth-v1.1.0-UE4.27-Demo.zip\" rel=\"nofollow\">EasySynthDemo</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 1-1920x1080-b043c4ab58b35b5c44c10a5863590d47.jpg",
+      "md5": "b043c4ab58b35b5c44c10a5863590d47",
+      "width": 1920,
+      "height": 1080,
+      "size": 400369,
+      "uploadedDate": "2022-01-17T13:20:10.031Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 2-1920x1080-9525e88137dc6a4b17dab9f83e0c5185.jpg",
+      "md5": "9525e88137dc6a4b17dab9f83e0c5185",
+      "width": 1920,
+      "height": 1080,
+      "size": 401843,
+      "uploadedDate": "2022-01-17T13:20:10.419Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 3-1920x1080-6576180e91aeeeacdd056b08d61e707a.jpg",
+      "md5": "6576180e91aeeeacdd056b08d61e707a",
+      "width": 1920,
+      "height": 1080,
+      "size": 372106,
+      "uploadedDate": "2022-01-17T13:20:10.795Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 4-1920x1080-88600d7c9973cfb9ddbb650411ff6873.jpg",
+      "md5": "88600d7c9973cfb9ddbb650411ff6873",
+      "width": 1920,
+      "height": 1080,
+      "size": 380556,
+      "uploadedDate": "2022-01-17T13:20:11.163Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 5-1920x1080-7292bf64043fdb2eac507a7e2e9295f4.jpg",
+      "md5": "7292bf64043fdb2eac507a7e2e9295f4",
+      "width": 1920,
+      "height": 1080,
+      "size": 509894,
+      "uploadedDate": "2022-01-17T13:20:11.469Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 6-1920x1080-f411e591dfe20944fcbccf394b1f9525.jpg",
+      "md5": "f411e591dfe20944fcbccf394b1f9525",
+      "width": 1920,
+      "height": 1080,
+      "size": 408936,
+      "uploadedDate": "2022-01-17T13:20:11.844Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 7-1920x1080-1e1209f710652dac37365a1a5369b71d.jpg",
+      "md5": "1e1209f710652dac37365a1a5369b71d",
+      "width": 1920,
+      "height": 1080,
+      "size": 423373,
+      "uploadedDate": "2022-01-17T13:20:12.245Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 8-1920x1080-da09fc33faf2c8c9a1a729e78ecc3508.jpg",
+      "md5": "da09fc33faf2c8c9a1a729e78ecc3508",
+      "width": 1920,
+      "height": 1080,
+      "size": 421177,
+      "uploadedDate": "2022-01-17T13:20:12.648Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 9-1920x1080-322ae397ea2bd42861ee209f2de08f1c.jpg",
+      "md5": "322ae397ea2bd42861ee209f2de08f1c",
+      "width": 1920,
+      "height": 1080,
+      "size": 436354,
+      "uploadedDate": "2022-01-17T13:20:12.993Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 10-1920x1080-11f33a4e7aded0b662f7be1cdf52d910.jpg",
+      "md5": "11f33a4e7aded0b662f7be1cdf52d910",
+      "width": 1920,
+      "height": 1080,
+      "size": 485032,
+      "uploadedDate": "2022-01-17T13:20:13.366Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 11-1920x1080-45976a7996fee716a8614be9e1475fd4.jpg",
+      "md5": "45976a7996fee716a8614be9e1475fd4",
+      "width": 1920,
+      "height": 1080,
+      "size": 437139,
+      "uploadedDate": "2022-01-17T13:20:13.703Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 12-1920x1080-3adcf5dc98482b9483b46a9022a6bc1f.jpg",
+      "md5": "3adcf5dc98482b9483b46a9022a6bc1f",
+      "width": 1920,
+      "height": 1080,
+      "size": 313393,
+      "uploadedDate": "2022-01-17T13:20:14.114Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 13-1920x1080-bab7975b1d48277eef1d06dd38165882.jpg",
+      "md5": "bab7975b1d48277eef1d06dd38165882",
+      "width": 1920,
+      "height": 1080,
+      "size": 257972,
+      "uploadedDate": "2022-01-17T13:20:14.536Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 14-1920x1080-874394ed65bab61fdb06325d321727d1.jpg",
+      "md5": "874394ed65bab61fdb06325d321727d1",
+      "width": 1920,
+      "height": 1080,
+      "size": 459612,
+      "uploadedDate": "2022-01-17T13:20:14.919Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 15-1920x1080-357c0284808ceb6b1f0c9728f270beb0.jpg",
+      "md5": "357c0284808ceb6b1f0c9728f270beb0",
+      "width": 1920,
+      "height": 1080,
+      "size": 318640,
+      "uploadedDate": "2022-01-17T13:20:15.243Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 16-1920x1080-d049eb6730bb3252a02bc3d3b2d1717f.jpg",
+      "md5": "d049eb6730bb3252a02bc3d3b2d1717f",
+      "width": 1920,
+      "height": 1080,
+      "size": 253880,
+      "uploadedDate": "2022-01-17T13:20:15.617Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 17-1920x1080-d0765518d01b7c4a9af2c700700e9afd.jpg",
+      "md5": "d0765518d01b7c4a9af2c700700e9afd",
+      "width": 1920,
+      "height": 1080,
+      "size": 543730,
+      "uploadedDate": "2022-01-17T13:20:16.362Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 18-1920x1080-ec7977ecca8dd167b76eccbb83cbb24f.jpg",
+      "md5": "ec7977ecca8dd167b76eccbb83cbb24f",
+      "width": 1920,
+      "height": 1080,
+      "size": 533500,
+      "uploadedDate": "2022-01-17T13:20:17.382Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot from ESDemo.mp4 - 19-1920x1080-8ebcdf532d0237263002f0633ae72846.jpg",
+      "md5": "8ebcdf532d0237263002f0633ae72846",
+      "width": 1920,
+      "height": 1080,
+      "size": 510956,
+      "uploadedDate": "2022-01-17T13:20:18.596Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/EasySynth_thumb-284x284-fedf673bfed1d5dc294d2914a21d5f63.png",
+      "md5": "fedf673bfed1d5dc294d2914a21d5f63",
+      "width": 284,
+      "height": 284,
+      "size": 48123,
+      "uploadedDate": "2022-01-17T13:20:19.330Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/EasySynth_featured-894x488-2b1d11149492666a78a232d0571a0cec.png",
+      "md5": "2b1d11149492666a78a232d0571a0cec",
+      "width": 894,
+      "height": 488,
+      "size": 520870,
+      "uploadedDate": "2022-01-17T13:20:19.414Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 1-1920x1080-b043c4ab58b35b5c44c10a5863590d47_Snapshot.jpg",
+      "md5": "9a37a43679098f5c17742dd3e4499b9b",
+      "width": 150,
+      "height": 74,
+      "size": 6791,
+      "uploadedDate": "2022-01-17T13:20:10.243Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 2-1920x1080-9525e88137dc6a4b17dab9f83e0c5185_Snapshot.jpg",
+      "md5": "e06b4f071114751fba715372d4d5049e",
+      "width": 150,
+      "height": 74,
+      "size": 7047,
+      "uploadedDate": "2022-01-17T13:20:10.634Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 3-1920x1080-6576180e91aeeeacdd056b08d61e707a_Snapshot.jpg",
+      "md5": "e3826613ebba6e129d03ee761df2a2ab",
+      "width": 150,
+      "height": 74,
+      "size": 7049,
+      "uploadedDate": "2022-01-17T13:20:11.009Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 4-1920x1080-88600d7c9973cfb9ddbb650411ff6873_Snapshot.jpg",
+      "md5": "3537993c5d0110ce9ceec03919816106",
+      "width": 150,
+      "height": 74,
+      "size": 7449,
+      "uploadedDate": "2022-01-17T13:20:11.383Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 5-1920x1080-7292bf64043fdb2eac507a7e2e9295f4_Snapshot.jpg",
+      "md5": "0e3eda1ccd7222ab9578292c7ff885d0",
+      "width": 150,
+      "height": 74,
+      "size": 7953,
+      "uploadedDate": "2022-01-17T13:20:11.691Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 6-1920x1080-f411e591dfe20944fcbccf394b1f9525_Snapshot.jpg",
+      "md5": "024d5b518b08797982e87174f6278897",
+      "width": 150,
+      "height": 74,
+      "size": 7794,
+      "uploadedDate": "2022-01-17T13:20:12.063Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 7-1920x1080-1e1209f710652dac37365a1a5369b71d_Snapshot.jpg",
+      "md5": "3c6d7225846fa645cf7dc7c6f98c9ed5",
+      "width": 150,
+      "height": 74,
+      "size": 7851,
+      "uploadedDate": "2022-01-17T13:20:12.467Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 8-1920x1080-da09fc33faf2c8c9a1a729e78ecc3508_Snapshot.jpg",
+      "md5": "3eed96f2ea2cf68305146c95211bffed",
+      "width": 150,
+      "height": 74,
+      "size": 7689,
+      "uploadedDate": "2022-01-17T13:20:12.866Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 9-1920x1080-322ae397ea2bd42861ee209f2de08f1c_Snapshot.jpg",
+      "md5": "798e925abb442f95cbe1908cae53445b",
+      "width": 150,
+      "height": 74,
+      "size": 7402,
+      "uploadedDate": "2022-01-17T13:20:13.240Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 10-1920x1080-11f33a4e7aded0b662f7be1cdf52d910_Snapshot.jpg",
+      "md5": "f0f97bb34de568571f5a854bad8019a3",
+      "width": 150,
+      "height": 74,
+      "size": 7756,
+      "uploadedDate": "2022-01-17T13:20:13.588Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 11-1920x1080-45976a7996fee716a8614be9e1475fd4_Snapshot.jpg",
+      "md5": "5d244555a7df5258e632106a7260ea6c",
+      "width": 150,
+      "height": 74,
+      "size": 7867,
+      "uploadedDate": "2022-01-17T13:20:13.936Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 12-1920x1080-3adcf5dc98482b9483b46a9022a6bc1f_Snapshot.jpg",
+      "md5": "c5bd11678c705d57906012d386cf3e18",
+      "width": 150,
+      "height": 74,
+      "size": 6179,
+      "uploadedDate": "2022-01-17T13:20:14.382Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 13-1920x1080-bab7975b1d48277eef1d06dd38165882_Snapshot.jpg",
+      "md5": "8f1a179e99c20c547022b2d0281a5533",
+      "width": 150,
+      "height": 74,
+      "size": 5662,
+      "uploadedDate": "2022-01-17T13:20:14.758Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 14-1920x1080-874394ed65bab61fdb06325d321727d1_Snapshot.jpg",
+      "md5": "4071759111f6ed3ac165d3cfae608162",
+      "width": 150,
+      "height": 74,
+      "size": 6792,
+      "uploadedDate": "2022-01-17T13:20:15.168Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 15-1920x1080-357c0284808ceb6b1f0c9728f270beb0_Snapshot.jpg",
+      "md5": "1a343d58b51ba322592f85ec64816a1b",
+      "width": 150,
+      "height": 74,
+      "size": 6645,
+      "uploadedDate": "2022-01-17T13:20:15.452Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 16-1920x1080-d049eb6730bb3252a02bc3d3b2d1717f_Snapshot.jpg",
+      "md5": "e8d4ab52ac7f166d1869f209021162e1",
+      "width": 150,
+      "height": 74,
+      "size": 5649,
+      "uploadedDate": "2022-01-17T13:20:15.826Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 17-1920x1080-d0765518d01b7c4a9af2c700700e9afd_Snapshot.jpg",
+      "md5": "a0718c667991d86122a6e17b97efab33",
+      "width": 150,
+      "height": 74,
+      "size": 7166,
+      "uploadedDate": "2022-01-17T13:20:17.025Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 18-1920x1080-ec7977ecca8dd167b76eccbb83cbb24f_Snapshot.jpg",
+      "md5": "a7930d756287072632cb097e8b1941d3",
+      "width": 150,
+      "height": 74,
+      "size": 6656,
+      "uploadedDate": "2022-01-17T13:20:18.067Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot from ESDemo.mp4 - 19-1920x1080-8ebcdf532d0237263002f0633ae72846_Snapshot.jpg",
+      "md5": "2f7008766d578136617a0682144aea21",
+      "width": 150,
+      "height": 74,
+      "size": 6768,
+      "uploadedDate": "2022-01-17T13:20:19.276Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-01-24T08:56:40.706Z",
+  "lastModifiedDate": "2024-10-15T06:58:24.941Z",
+  "entitlementName": "e3d9f26ef58a417596810a73a8424278",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "612c4a47c1604e0a84978aa3692b18f8",
+      "appId": "EasySynth_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-01-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.2.0"
+    },
+    {
+      "id": "47b3a5fc8e8b4af6808c2da1414cf540",
+      "appId": "EasySynth_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Win32",
+        "Windows"
+      ],
+      "dateAdded": "2022-12-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v2.0.0"
+    },
+    {
+      "id": "3f8001f11cf14282a787b6653a1f289e",
+      "appId": "EasySynth_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2022-12-20T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v3.0.0"
+    },
+    {
+      "id": "6e1ff2cec4914a6b9b025991ef6aaff5",
+      "appId": "EasySynth_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2023-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v4.0.0"
+    },
+    {
+      "id": "0b6e1f9623384a70bdd679eba87fc5e4",
+      "appId": "EasySynth_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Win32"
+      ],
+      "dateAdded": "2023-12-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v4.0.1"
+    }
+  ],
+  "developer": "Ydrive",
+  "developerId": "o-uaaqz56a59pt7gjaa5n5ut4n8ldjys",
+  "endOfSupport": false,
+  "unsearchable": false
+}

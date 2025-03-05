@@ -1,0 +1,263 @@
+{
+  "id": "02c49c05c4424a0695d91aa41825ff64",
+  "title": "Beefy Bats (Niagara Bat System)",
+  "description": "An advanced Niagara flocking blueprint system with 5 stylized bats + animations.",
+  "longDescription": "<p><strong>Preview:</strong> <a href=\"https://youtu.be/kx73cq8K6VU?si&#61;3vHRm5KAnYT-VZGv\" rel=\"nofollow\">Youtube</a></p><p><strong>Unreal 5.2: </strong><a href=\"https://docs.google.com/document/d/1dqBrZVpUxuXHOA8tIZK_QjaPslbyqTmuZVpSx8jSBZY/edit?usp&#61;sharing\" rel=\"nofollow\">Readme</a></p><p><strong>Discord: </strong><a href=\"https://discord.gg/JwQY7nQUww\" rel=\"nofollow\">Link</a></p><p><br /></p><p><em>*** I recommend opening the Map_NiagaraFlockExample level to see how these Blueprints are used. Thanks! ***</em></p><p><br /></p><p>This pack features <strong>5 unique bat meshes </strong>with highly customizable material animation and color parameters - including low poly shading, and fresnel highlights. Easily create material instances for more variations! Each mesh has around 900 triangles.</p><p><br /></p><p>** NOTE: All animations use material WorldPositionOffset, offering lightweight performance and extra control over all animation parameters. <strong>Ray-Traced shadows do not work with Niagara &#43; WPO.</strong></p><p><br /></p><p><br /></p><p><br /></p><p>The BP_Takeoff <strong>flocking blueprint system</strong> allows you to quickly add bat flocks to your level with different flight behavior and functionality. Meshes can be change directly in the Actor. The flight mode is determined by the InitialFlightType enum variable:</p><p><br /></p><ul><li>Perch: Bats fly to nearby Perch actor locations. (Perches are detected by the collision component, so no reference variable needs to be set.)</li><li>Free roam: Bats remain idle until approached, and swim only to avoid Players/intruders.</li><li>SplinePath: Bats flocking along a path (make sure to set the PathActor reference variable to a nearby Path BP)</li><li>FlockingPoint: Bats flocking randomly within a box. (You can set up a BoundaryBox tool BP or use a Flight Path BP.)</li><li>Follow Intruder: Bats fly toward the nearest intruder.</li></ul><p><br /></p><p>The Niagara system also has <strong>modules for flocking, raytraced collision detection, spline flightpaths, idle animation sequences, and more!</strong></p>",
+  "technicalDetails": "<p><strong>Features: </strong></p><p><br /></p><ul><li>Niagara blueprint system with flocking and various flight modes. (CPU System, max # particles ~500)</li><li>Perch &#43; Spline Path Blueprint Actors that can be placed in a scene, and referenced by the Particle system.</li><li>5 Bat species, 5 meshes total (customize colors and animations)</li><li>15 Material instances (3 MI for each b: eg. MI_SpottedBat, MI_SpottedBat_Flying, MI_SpottedBat_FlightPose)</li><li>1 Master bat material with full color, shading, and animation customization - including a lightweight and reusable function library</li></ul><p><br /></p><p><strong>Number of Blueprints:</strong> 5 Master Blueprints, 5 Child Actors</p><p><strong>Network Replicated:</strong> Yes</p><p><strong>Supported Development Platforms: </strong>Mobile Shading ES 3.1 or better</p><p><strong>Windows:</strong> Yes</p><p><strong>Mac:</strong> Yes</p><p><br /></p><p><strong>Documentation:</strong> <a href=\"https://docs.google.com/document/d/1dqBrZVpUxuXHOA8tIZK_QjaPslbyqTmuZVpSx8jSBZY/edit?usp&#61;sharing\" rel=\"nofollow\">Readme</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00060-1920x1080-fd82a4218e589de23d51128522383339.png",
+      "md5": "fd82a4218e589de23d51128522383339",
+      "width": 1920,
+      "height": 1080,
+      "size": 2542329,
+      "uploadedDate": "2023-10-20T09:46:35.380Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00066-1920x1080-9115ace3d8f3a778e2eda6857ca66f30.png",
+      "md5": "9115ace3d8f3a778e2eda6857ca66f30",
+      "width": 1920,
+      "height": 1080,
+      "size": 2415329,
+      "uploadedDate": "2023-10-25T21:58:10.296Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00080-1920x1080-7e1537767b8009133ac261147ea59aa7.png",
+      "md5": "7e1537767b8009133ac261147ea59aa7",
+      "width": 1920,
+      "height": 1080,
+      "size": 2354777,
+      "uploadedDate": "2023-10-25T21:58:09.634Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00064-1920x1080-65f3bec7947d37bc4d08d442524e1246.png",
+      "md5": "65f3bec7947d37bc4d08d442524e1246",
+      "width": 1920,
+      "height": 1080,
+      "size": 2478168,
+      "uploadedDate": "2023-10-20T09:46:36.013Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00051-1920x1080-6941f1a556853554f3583c1fd4b21eb9.png",
+      "md5": "6941f1a556853554f3583c1fd4b21eb9",
+      "width": 1920,
+      "height": 1080,
+      "size": 2241235,
+      "uploadedDate": "2023-10-17T19:38:22.576Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00045-1920x1080-2356a5829ca316cd72b9745791fa47f6.png",
+      "md5": "2356a5829ca316cd72b9745791fa47f6",
+      "width": 1920,
+      "height": 1080,
+      "size": 2496123,
+      "uploadedDate": "2023-10-17T18:54:31.465Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00032-1920x1080-7c4abfc1c64171090627da9b35fd3e94.png",
+      "md5": "7c4abfc1c64171090627da9b35fd3e94",
+      "width": 1920,
+      "height": 1080,
+      "size": 2318784,
+      "uploadedDate": "2023-10-20T09:46:36.632Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BeefyBats_thumb-284x284-8f30a64e826caf2ecd969cc1984a9c07.png",
+      "md5": "8f30a64e826caf2ecd969cc1984a9c07",
+      "width": 284,
+      "height": 284,
+      "size": 90959,
+      "uploadedDate": "2023-10-25T20:06:52.797Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/BeefyBats_featured-894x488-96da462be065846fe534a1d850f6c58b.png",
+      "md5": "96da462be065846fe534a1d850f6c58b",
+      "width": 894,
+      "height": 488,
+      "size": 386757,
+      "uploadedDate": "2023-10-25T22:10:19.218Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00080-1920x1080-7e1537767b8009133ac261147ea59aa7_Snapshot.png",
+      "md5": "ff8b85748ef5d7dbff651d0cbb3d6d42",
+      "width": 150,
+      "height": 74,
+      "size": 5750,
+      "uploadedDate": "2023-10-25T21:58:10.046Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00066-1920x1080-9115ace3d8f3a778e2eda6857ca66f30_Snapshot.png",
+      "md5": "97c0aff0681fba8212864ed92f74821e",
+      "width": 150,
+      "height": 74,
+      "size": 5569,
+      "uploadedDate": "2023-10-25T21:58:10.768Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00060-1920x1080-fd82a4218e589de23d51128522383339_Snapshot.png",
+      "md5": "ad756129ad4a933779ee110c6cf8a1ef",
+      "width": 150,
+      "height": 74,
+      "size": 5851,
+      "uploadedDate": "2023-10-20T09:46:35.802Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00064-1920x1080-65f3bec7947d37bc4d08d442524e1246_Snapshot.png",
+      "md5": "92e7f64d9eda708826e4b556ecb9fb37",
+      "width": 150,
+      "height": 74,
+      "size": 5738,
+      "uploadedDate": "2023-10-20T09:46:36.402Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00032-1920x1080-7c4abfc1c64171090627da9b35fd3e94_Snapshot.png",
+      "md5": "9ad296e0c856027060e61fd1c42510a7",
+      "width": 150,
+      "height": 74,
+      "size": 7021,
+      "uploadedDate": "2023-10-20T09:46:37.074Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00051-1920x1080-6941f1a556853554f3583c1fd4b21eb9_Snapshot.png",
+      "md5": "0a43e9c9c58ebb32358fbc19c01b3147",
+      "width": 150,
+      "height": 74,
+      "size": 5130,
+      "uploadedDate": "2023-10-17T19:38:22.980Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00047-1920x1080-dc85bd31bbf7e9a73e05a131af6271cf_Snapshot.png",
+      "md5": "277f4dc00cd40c875e3bf57ad8c6661a",
+      "width": 150,
+      "height": 74,
+      "size": 5656,
+      "uploadedDate": "2023-10-17T19:38:23.751Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00045-1920x1080-2356a5829ca316cd72b9745791fa47f6_Snapshot.png",
+      "md5": "9ae44cd089a3118e7d748c906aa6db51",
+      "width": 150,
+      "height": 74,
+      "size": 5279,
+      "uploadedDate": "2023-10-17T18:54:31.929Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00044-1920x1080-d8d5a9b3fa95f5db23670ecce6375abf_Snapshot.png",
+      "md5": "6f533ffa4fb530ef47c593eb7b002f95",
+      "width": 150,
+      "height": 74,
+      "size": 4906,
+      "uploadedDate": "2023-10-17T18:54:32.608Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00043-1920x1080-6dcdb99049b29de41694ac8c14deb94e_Snapshot.png",
+      "md5": "d9eb439bd9f43de806ad5ba09fae21ac",
+      "width": 150,
+      "height": 74,
+      "size": 4312,
+      "uploadedDate": "2023-10-17T18:54:33.171Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00042-1920x1080-9410d49e9c85583ded7319418dcf5311_Snapshot.png",
+      "md5": "d1b553acd2b42bdda56f6f81ea9d2cc2",
+      "width": 150,
+      "height": 74,
+      "size": 4693,
+      "uploadedDate": "2023-10-17T18:54:33.906Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00039-1920x1080-838708d9275b25750a59e720cf9dd00a_Snapshot.png",
+      "md5": "4684b826713704a022df85af8a79e990",
+      "width": 150,
+      "height": 74,
+      "size": 5193,
+      "uploadedDate": "2023-10-17T18:54:34.621Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00035-1920x1080-59bc64bd30ae150402dc1bef92dd956d_Snapshot.png",
+      "md5": "8f335c943f1efc06d1c555b72c4930e3",
+      "width": 150,
+      "height": 74,
+      "size": 4267,
+      "uploadedDate": "2023-10-16T17:55:43.409Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00032-1920x1080-7c4abfc1c64171090627da9b35fd3e94_Snapshot.png",
+      "md5": "9ad296e0c856027060e61fd1c42510a7",
+      "width": 150,
+      "height": 74,
+      "size": 7021,
+      "uploadedDate": "2023-10-16T17:38:30.764Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets/blueprints"
+    },
+    {
+      "path": "assets"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-10-25T22:11:43.321Z",
+  "lastModifiedDate": "2024-10-08T21:11:15.782Z",
+  "customAttributes": {},
+  "entitlementName": "02c49c05c4424a0695d91aa41825ff64",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "99e8069bebd64d7e85d05f7481e764e7",
+      "appId": "BeefyBat02c49c05c442V1",
+      "compatibleApps": [
+        "UE_5.2",
+        "UE_5.3",
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Xbox One",
+        "Win32",
+        "PS4",
+        "Oculus",
+        "Nintendo Switch",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2023-10-16T00:00:00.000Z",
+      "releaseNote": "Hotfix #2 - skeletal mesh flag disabled, FlockingPointToPerch fix\nHotfix - perch error warnings",
+      "versionTitle": "Beefy Bats 520"
+    }
+  ],
+  "developer": "MWallace3D",
+  "developerId": "o-wspfycd856348muwzrh42kjsusqq87",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

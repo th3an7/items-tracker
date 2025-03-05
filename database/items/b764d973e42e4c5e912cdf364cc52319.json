@@ -1,0 +1,253 @@
+{
+  "id": "b764d973e42e4c5e912cdf364cc52319",
+  "title": "Anamorphic CineCamera",
+  "description": "Advanced post processing plugin for Anamorphic Depth of Field effect",
+  "longDescription": "<p>Anamorphic CineCamera provides an anamorphic squeeze factor to the depth of field effect in the post processing domain. The plugin provides an alternative to the Unreal Engine regular DiaphragmDOF.</p><p><br /></p><p>Plugin creates a Scene View Extension and disables in-engine DOF for selected views. As the first step before other post processing effects, it renders the depth of field effect to the SceneColor buffer.</p><p><br /></p><p>It utilizes several passes, and is based on the engine DOF method to maintain interchangeability with the engine method.</p><p><br /></p><p>In planning for the future updates are different DOF methods and the possibility to use a custom depth texture instead of SceneDepth</p><p><br /></p><p>Marketplace asset features only to the code plugin and necessary shaderfiles. All preview images are for demonstration purposes </p><p><br /></p><p>Instructions to use:</p><p>- For easy project conversion, all CineCamera components can be set to use AnamorphicDOF in project plugin settings or with console variable r.Anamorphic.CineCamera</p><p>- A dedicated AnamorphicCineCamera component can be used to have the AnamorphicDOF enabled only in selected cameras</p><p>- DiaphraghmDOF console variables can be used for other finetuning of the effect</p><p><br /></p><p>Feature and a preview video: <a href=\"https://youtu.be/Ul441Y19jmk\" rel=\"nofollow\">https://youtu.be/Ul441Y19jmk</a></p><p><br /></p><p>Product page photos include rendered scenes and direct viewport screen captures from the UE5 CitySample project, UE 4.27 ICVFXProductionTest and UE 4.26 Infiltrator Scene with Anamorphic CineCamera plugin enabled and without any external post processing effects applied.</p><p><br /></p><p>Notes:</p><p><br /></p><p>- Squeeze ratio project setting and console variable r.Anamorphic.CineCamera.Ratio affect only the global squeeze settings (regular CineCameras). AnamorphicCineCamera squeeze ratio is changed within the component </p><p>- Separate Transluency as it is in the engine post processing chain is not supported. Projects that rely on that might not work as inteded</p><p>- Image scaling and super sampling techniques are known to cause artifacts to the DOF rendering, refer to the scaling documentation for possible advice on how to reduce artifacts from those</p><p><br /></p><p>Documentation and notes on use: https://docs.google.com/document/d/e/2PACX-1vQCnaZVIWAimV-P6cXuWddYsm00AG9l7iHCJpymzfrFRnHctFtSAob6ZJu1bU9fyju6fAUe4P2s_gmy/pub</p>",
+  "technicalDetails": "<p>Features: (Please include a full, comprehensive list of the features of the product)</p><ul><li> Anamorphic CineCamera Actor</li><li> Engine DOF override with plugin / console variable settings</li><li> Custom SceneViewExtension to apply a multiple pass HLSL shader depth of field effect to SceneView</li></ul><p>Code Modules: (Please include a full list of each Plugin module and their module type (Runtime, Editor etc.))</p><ul><li> AnamorphicCineCamera</li><li> AnamorphicSceneExtension</li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 10</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: https://docs.google.com/document/d/e/2PACX-1vQCnaZVIWAimV-P6cXuWddYsm00AG9l7iHCJpymzfrFRnHctFtSAob6ZJu1bU9fyju6fAUe4P2s_gmy/pub</p><p>Showcase video: <a href=\"https://youtu.be/Ul441Y19jmk\" rel=\"nofollow\">https://youtu.be/Ul441Y19jmk</a></p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/preview00-1920x1080-d9a3b6b1e1d9d72b9a9ea1fdd17a93b8.png",
+      "md5": "d9a3b6b1e1d9d72b9a9ea1fdd17a93b8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2086370,
+      "uploadedDate": "2022-09-07T19:58:55.365Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/preview01-1920x1080-2b9f76c7336c7faf20b6cc3f80178349.png",
+      "md5": "2b9f76c7336c7faf20b6cc3f80178349",
+      "width": 1920,
+      "height": 1080,
+      "size": 1762279,
+      "uploadedDate": "2022-09-07T19:58:56.099Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/preview02-1920x1080-1c119a606e31dd36a756f49bd049a2bb.png",
+      "md5": "1c119a606e31dd36a756f49bd049a2bb",
+      "width": 1920,
+      "height": 1080,
+      "size": 1757759,
+      "uploadedDate": "2022-09-07T19:58:56.763Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/preview03-1920x1080-6124b95fe52b66461db9c8ae412ee951.png",
+      "md5": "6124b95fe52b66461db9c8ae412ee951",
+      "width": 1920,
+      "height": 1080,
+      "size": 802531,
+      "uploadedDate": "2022-09-07T19:58:57.403Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/preview04-1920x1080-6678409a16ed8097820f948add4a671c.png",
+      "md5": "6678409a16ed8097820f948add4a671c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1156785,
+      "uploadedDate": "2022-09-07T19:58:57.909Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/preview05-1920x1080-196a6345bc6a9377f8f5564236996304.png",
+      "md5": "196a6345bc6a9377f8f5564236996304",
+      "width": 1920,
+      "height": 1080,
+      "size": 2054421,
+      "uploadedDate": "2022-09-07T19:58:58.439Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/preview06-1920x1080-cbf6bac87bd1d9e889874cba9315078a.png",
+      "md5": "cbf6bac87bd1d9e889874cba9315078a",
+      "width": 1920,
+      "height": 1080,
+      "size": 526472,
+      "uploadedDate": "2022-09-07T19:58:58.934Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/preview07-1920x1080-2071848611cc913268e0a2ee177fbd5f.png",
+      "md5": "2071848611cc913268e0a2ee177fbd5f",
+      "width": 1920,
+      "height": 1080,
+      "size": 1079644,
+      "uploadedDate": "2022-09-07T19:58:59.351Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/preview08-1920x1080-f71da0e350864b99b573b4510bc41f2d.png",
+      "md5": "f71da0e350864b99b573b4510bc41f2d",
+      "width": 1920,
+      "height": 1080,
+      "size": 761257,
+      "uploadedDate": "2022-09-07T19:58:59.906Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/AnamorphicCineCamera_thumb-284x284-25d79c5f9226750fda05a5d1ada12f2b.png",
+      "md5": "25d79c5f9226750fda05a5d1ada12f2b",
+      "width": 284,
+      "height": 284,
+      "size": 155260,
+      "uploadedDate": "2022-09-07T19:59:00.377Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/AnamorphicCineCamera_featured-894x488-0709c38c58ebfe02c4b6feb798c49503.png",
+      "md5": "0709c38c58ebfe02c4b6feb798c49503",
+      "width": 894,
+      "height": 488,
+      "size": 589475,
+      "uploadedDate": "2022-09-07T19:59:00.459Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/preview00-1920x1080-d9a3b6b1e1d9d72b9a9ea1fdd17a93b8_Snapshot.png",
+      "md5": "c4dbd2d931ded7e8d8e41f32e0dad882",
+      "width": 150,
+      "height": 74,
+      "size": 7722,
+      "uploadedDate": "2022-09-07T19:58:55.765Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/preview01-1920x1080-2b9f76c7336c7faf20b6cc3f80178349_Snapshot.png",
+      "md5": "608e94a193a03852a891b144bc65f8ac",
+      "width": 150,
+      "height": 74,
+      "size": 5515,
+      "uploadedDate": "2022-09-07T19:58:56.535Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/preview02-1920x1080-1c119a606e31dd36a756f49bd049a2bb_Snapshot.png",
+      "md5": "872d2cdeb3f79239099c4d047dd2e155",
+      "width": 150,
+      "height": 74,
+      "size": 5539,
+      "uploadedDate": "2022-09-07T19:58:57.168Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/preview03-1920x1080-6124b95fe52b66461db9c8ae412ee951_Snapshot.png",
+      "md5": "a42f1ca3afe3a15fff336fdf0c0fc03d",
+      "width": 150,
+      "height": 74,
+      "size": 4554,
+      "uploadedDate": "2022-09-07T19:58:57.733Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/preview04-1920x1080-6678409a16ed8097820f948add4a671c_Snapshot.png",
+      "md5": "6317835ec99f233ce598f16f9fa95045",
+      "width": 150,
+      "height": 74,
+      "size": 4561,
+      "uploadedDate": "2022-09-07T19:58:58.270Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/preview05-1920x1080-196a6345bc6a9377f8f5564236996304_Snapshot.png",
+      "md5": "6b7899e7bb770f546b1c7366a12d50a0",
+      "width": 150,
+      "height": 74,
+      "size": 3446,
+      "uploadedDate": "2022-09-07T19:58:58.786Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/preview06-1920x1080-cbf6bac87bd1d9e889874cba9315078a_Snapshot.png",
+      "md5": "b966c6ea0d48fdf04af80dfb58b0beca",
+      "width": 150,
+      "height": 74,
+      "size": 4185,
+      "uploadedDate": "2022-09-07T19:58:59.193Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/preview07-1920x1080-2071848611cc913268e0a2ee177fbd5f_Snapshot.png",
+      "md5": "840e372ca5a0db607147d2b2c0142265",
+      "width": 150,
+      "height": 74,
+      "size": 5611,
+      "uploadedDate": "2022-09-07T19:58:59.733Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/preview08-1920x1080-f71da0e350864b99b573b4510bc41f2d_Snapshot.png",
+      "md5": "a6d491b4d70d80431b7848e6654b9859",
+      "width": 150,
+      "height": 74,
+      "size": 4595,
+      "uploadedDate": "2022-09-07T19:59:00.285Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2022-09-18T17:13:41.823Z",
+  "lastModifiedDate": "2024-09-26T20:11:16.527Z",
+  "customAttributes": {},
+  "entitlementName": "b764d973e42e4c5e912cdf364cc52319",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "2e6db41cbcc8469c9366bf55f5358e34",
+      "appId": "AnamorphicCineCamera_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-06-08T16:50:00.000Z",
+      "versionTitle": "AnamorphicCineCamera_4.26"
+    },
+    {
+      "id": "9033da00ae874154a93acc6ffd7dfc00",
+      "appId": "AnamorphicCineCamera_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-09-15T00:00:00.000Z",
+      "releaseNote": "1.0",
+      "versionTitle": "ACC4.27 v1.0d"
+    },
+    {
+      "id": "4dca57c989314151a67d5f3b3c703399",
+      "appId": "AnamorphicCineCamera_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2022-09-15T00:00:00.000Z",
+      "releaseNote": "1.0",
+      "versionTitle": "ACC5.00 v1.0d"
+    }
+  ],
+  "developer": "Ossi Luoto",
+  "developerId": "o-fycc2ag4f8l2m59urkrun9uzpznbxh",
+  "eulaIds": [],
+  "endOfSupport": false,
+  "ageGatings": {},
+  "applicationId": "",
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

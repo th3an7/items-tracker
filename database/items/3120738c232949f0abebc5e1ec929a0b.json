@@ -1,0 +1,291 @@
+{
+  "id": "3120738c232949f0abebc5e1ec929a0b",
+  "title": "Surface Trails",
+  "description": "Surface trails system allows you to capture trails from objects on a surface. As main usage example there is snow landscape demo with character and physics objects leaving deformation trails after them.",
+  "longDescription": "<p><strong>***Monthly Unreal Engine Sponsored Content product for October 2021***</strong></p><p><br /></p><p><strong>Check out RomanSmirnov&#39;s other products here: </strong><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/RomanSmirnov?count&#61;20&amp;sortBy&#61;effectiveDate&amp;sortDir&#61;DESC&amp;start&#61;0\" rel=\"nofollow\"><strong>RomanSmirnov Content </strong></a></p><p><br /></p><p>Video: <a href=\"https://youtu.be/q66uIcjD8gI\" rel=\"nofollow\">https://youtu.be/q66uIcjD8gI</a></p><p>Tutorial: <a href=\"https://youtu.be/hHZwvYIkuwg\" rel=\"nofollow\">https://youtu.be/hHZwvYIkuwg</a></p><p><br /></p><p>Surface trails system allows you to capture trails from characters or any other objects on a surface by attaching spherical components to them. As main usage example there is snow landscape demo with walking character and physics objects leaving deformation trails after them. 100% Blueprints.</p><p><br /></p><p><strong>Features: </strong></p><ul><li>Trails are captured and stored in some area (configurable) around player&#39;s camera, so this system is independent from map size.</li><li>Attenuation of old trails can be configured (can be set to zero so the trails stay forever inside defined area around camera).</li><li>Trail shape is defined by spherical components with configurable hardness. So for definition of a box, for example, you need to attach several components to it (components count depends on required accuracity, in example scene there are 8 components per box and 2 components per character foot).</li><li>Actors are marked as trails receivers by applying special Tag to them.</li><li>System can be used for big variety of cases (trails on water, grass crumpling, any other surface VFX) by draging one material function into material.</li><li>Snow landscape example includes photogrammetry based dirt material appearing under the snow.</li></ul>",
+  "technicalDetails": "<p><strong>Performance notes:</strong></p><p>System uses rendering to render targets, so it will affect GPU performance. This can be optimized for low performance platforms by decreasing render target resolution. By default resolution is 2048x2048 and all render targets will cost 24 MB of GPU memory.</p><p>If you are going to use snow deformation from example for your project, make sure that landscape tessellation also fits your performance budget.</p><p><br /></p><p><strong>Multiplayer note:</strong></p><p>The system works in multiplayer independently for each player because it depends of player camera. It will produce similar results for different players as long as their cameras are closer to each other then the parameter MaxDistance in BP_TrailsManager. When testing in multiplayer be sure that game instances DON&#39;T use single editor process. Uncheck checkbox &#39;Use single process&#39; in &#39;Advanced Settings...&#39; under the Play button. (<a href=\"https://docs.unrealengine.com/en-US/Gameplay/HowTo/Networking/TestMultiplayer/index.html#advancedsettings\" rel=\"nofollow\">UE4 documentation page</a>)</p><p><br /></p><p>Number of Blueprints: 6</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows</p><p>Supported Target Build Platforms: Windows</p><p>Documentation: ExampleMap and tutorial video</p><p>Additional information: Asset is distributed as a complete project (because of necessity to handle user input for demo purpose), however system itself doesn&#39;t require any additional project configuration and can be easily migrated.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/01535647739372-1920x1080-f5b86030fed22af9e59511fce3b689fe.jpg",
+      "md5": "f5b86030fed22af9e59511fce3b689fe",
+      "width": 1920,
+      "height": 1080,
+      "size": 897110,
+      "uploadedDate": "2018-08-30T18:19:40.767Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/11535647714876-1920x1080-8c14f017353a776c223982837e18ae2f.jpg",
+      "md5": "8c14f017353a776c223982837e18ae2f",
+      "width": 1920,
+      "height": 1080,
+      "size": 971725,
+      "uploadedDate": "2018-08-30T18:19:41.258Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/21535646083603-1920x1080-88160c6be0bacb8d39bbd600f376fb37.jpg",
+      "md5": "88160c6be0bacb8d39bbd600f376fb37",
+      "width": 1920,
+      "height": 1080,
+      "size": 1001862,
+      "uploadedDate": "2018-08-30T18:19:41.719Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/31535646272816-1920x1080-78181742f045a288c40abc7ddb707452.jpg",
+      "md5": "78181742f045a288c40abc7ddb707452",
+      "width": 1920,
+      "height": 1080,
+      "size": 1062549,
+      "uploadedDate": "2018-08-30T18:19:42.232Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/41535647111477-1920x1080-da3a8a28b993f8acbcdcd8693eb20977.jpg",
+      "md5": "da3a8a28b993f8acbcdcd8693eb20977",
+      "width": 1920,
+      "height": 1080,
+      "size": 971884,
+      "uploadedDate": "2018-08-30T18:19:42.836Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/51535647551157-1920x1080-e92f773c69551065e0672b9ba2950150.jpg",
+      "md5": "e92f773c69551065e0672b9ba2950150",
+      "width": 1920,
+      "height": 1080,
+      "size": 1003072,
+      "uploadedDate": "2018-08-30T18:19:43.360Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/61535646063900-1920x1080-c230fbe1551f0f01377fe6167832613e.jpg",
+      "md5": "c230fbe1551f0f01377fe6167832613e",
+      "width": 1920,
+      "height": 1080,
+      "size": 1245422,
+      "uploadedDate": "2018-08-30T18:19:43.975Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/71535645769368-1920x1080-2401a9506186b8772c21c23c09881504.jpg",
+      "md5": "2401a9506186b8772c21c23c09881504",
+      "width": 1920,
+      "height": 1080,
+      "size": 839686,
+      "uploadedDate": "2018-08-30T18:19:44.439Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/81535646536085-1920x1080-7685bb5dc10b47554430b5ff30482e96.jpg",
+      "md5": "7685bb5dc10b47554430b5ff30482e96",
+      "width": 1920,
+      "height": 1080,
+      "size": 1167751,
+      "uploadedDate": "2018-08-30T18:19:44.944Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/91535645295751-1920x1080-3b2bb21d53c605c6c6192e6d5ea69b3c.jpg",
+      "md5": "3b2bb21d53c605c6c6192e6d5ea69b3c",
+      "width": 1920,
+      "height": 1080,
+      "size": 1112510,
+      "uploadedDate": "2018-08-30T18:19:45.454Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/101535645638975-1920x1080-4379fa28adcb26da5eec2aedd956f3a9.jpg",
+      "md5": "4379fa28adcb26da5eec2aedd956f3a9",
+      "width": 1920,
+      "height": 1080,
+      "size": 974755,
+      "uploadedDate": "2018-08-30T18:19:45.965Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/SurfaceTrailswithSnowDeformationexample_thumb-284x284-d948d290e68e32b20b08df952616a44b.png",
+      "md5": "d948d290e68e32b20b08df952616a44b",
+      "width": 284,
+      "height": 284,
+      "size": 159154,
+      "uploadedDate": "2018-08-30T18:19:46.338Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/SurfaceTrailswithSnowDeformationexample_featured-894x488-bbc95d06a6a4551e8fce7016620d2df7.png",
+      "md5": "bbc95d06a6a4551e8fce7016620d2df7",
+      "width": 894,
+      "height": 488,
+      "size": 898276,
+      "uploadedDate": "2018-08-30T18:19:46.448Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/01535647739372-1920x1080-f5b86030fed22af9e59511fce3b689fe_Snapshot.jpg",
+      "md5": "4842c4dab21433168764c6938c40dcf9",
+      "width": 150,
+      "height": 74,
+      "size": 2734,
+      "uploadedDate": "2018-08-30T18:19:41.076Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/11535647714876-1920x1080-8c14f017353a776c223982837e18ae2f_Snapshot.jpg",
+      "md5": "4a4e135c818b464250a5f7ebcc9886a6",
+      "width": 150,
+      "height": 74,
+      "size": 2874,
+      "uploadedDate": "2018-08-30T18:19:41.569Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/21535646083603-1920x1080-88160c6be0bacb8d39bbd600f376fb37_Snapshot.jpg",
+      "md5": "a6f10d2848918398e006f2b2ca232aa9",
+      "width": 150,
+      "height": 74,
+      "size": 2992,
+      "uploadedDate": "2018-08-30T18:19:42.032Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/31535646272816-1920x1080-78181742f045a288c40abc7ddb707452_Snapshot.jpg",
+      "md5": "67d3442006f2bea6c2e107afffd10a68",
+      "width": 150,
+      "height": 74,
+      "size": 3016,
+      "uploadedDate": "2018-08-30T18:19:42.624Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/41535647111477-1920x1080-da3a8a28b993f8acbcdcd8693eb20977_Snapshot.jpg",
+      "md5": "0355f98c12825393d6417933eb1f3543",
+      "width": 150,
+      "height": 74,
+      "size": 2913,
+      "uploadedDate": "2018-08-30T18:19:43.143Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/51535647551157-1920x1080-e92f773c69551065e0672b9ba2950150_Snapshot.jpg",
+      "md5": "2019bebd9f56f74ce19ccc22fc5280e5",
+      "width": 150,
+      "height": 74,
+      "size": 3031,
+      "uploadedDate": "2018-08-30T18:19:43.682Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/61535646063900-1920x1080-c230fbe1551f0f01377fe6167832613e_Snapshot.jpg",
+      "md5": "33cc1582582190f258768a52037c92d3",
+      "width": 150,
+      "height": 74,
+      "size": 3386,
+      "uploadedDate": "2018-08-30T18:19:44.307Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/71535645769368-1920x1080-2401a9506186b8772c21c23c09881504_Snapshot.jpg",
+      "md5": "77d23ece683bffd82017900220468288",
+      "width": 150,
+      "height": 74,
+      "size": 3074,
+      "uploadedDate": "2018-08-30T18:19:44.749Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/81535646536085-1920x1080-7685bb5dc10b47554430b5ff30482e96_Snapshot.jpg",
+      "md5": "f9aec21c718ef99a22af157a1adf6bd9",
+      "width": 150,
+      "height": 74,
+      "size": 3365,
+      "uploadedDate": "2018-08-30T18:19:45.288Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/91535645295751-1920x1080-3b2bb21d53c605c6c6192e6d5ea69b3c_Snapshot.jpg",
+      "md5": "277f2d5b131583ebc54167ae0c8ddc7b",
+      "width": 150,
+      "height": 74,
+      "size": 2657,
+      "uploadedDate": "2018-08-30T18:19:45.780Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/101535645638975-1920x1080-4379fa28adcb26da5eec2aedd956f3a9_Snapshot.jpg",
+      "md5": "8701047f2880faef259c239bc5d5d828",
+      "width": 150,
+      "height": 74,
+      "size": 2594,
+      "uploadedDate": "2018-08-30T18:19:46.281Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2018-09-11T18:17:03.908Z",
+  "lastModifiedDate": "2024-10-09T09:10:18.603Z",
+  "entitlementName": "3120738c232949f0abebc5e1ec929a0b",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "cef8c37f09164e84a0ec8fc1a8a8de1f",
+      "appId": "SurfaceT3120738c2329V1",
+      "compatibleApps": [
+        "UE_4.19",
+        "UE_4.20",
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2018-08-30T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "Version01"
+    },
+    {
+      "id": "952d18991ce247648e88d12037b7fb22",
+      "appId": "SurfaceT3120738c2329V2",
+      "compatibleApps": [
+        "UE_4.22",
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-04-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VersionFor422"
+    },
+    {
+      "id": "b3d21a46ae314a0ab70966a063ed4f1e",
+      "appId": "SurfaceT3120738c2329V3",
+      "compatibleApps": [
+        "UE_4.24",
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-12-11T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "VersionFor424"
+    }
+  ],
+  "developer": "RomanSmirnov",
+  "developerId": "o-c8pxpd4j3u7vtrn29bklxjrchphe66",
+  "endOfSupport": false,
+  "unsearchable": false
+}

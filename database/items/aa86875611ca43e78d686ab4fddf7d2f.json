@@ -1,0 +1,147 @@
+{
+  "id": "aa86875611ca43e78d686ab4fddf7d2f",
+  "title": "MathVM",
+  "description": "Math Expressions (parallel) evaluation and plotting",
+  "longDescription": "<p>MathVM exposes a simple framework (both C&#43;&#43; and Blueprint) for running user-defined math expressions:</p><blockquote>y &#61; sin(x) * 2</blockquote><p>This expression will compute the sin of x and multiply it by 2. The result will be put in y.</p><p><br /></p><p>The two symbols (x and y), can be <strong><em>local </em></strong>variables or <strong><em>globals </em></strong>(more on this below) and, in the case of x, it can be a <strong><em>constant</em></strong>.</p><p><br /></p><p>There is a very important difference between local and global: MathVM supports running expressions in parallel (read: on multiple threads) but while accessing local variables is fully thread-safe and lock-free (each thread works on a different copy of them), global variables are shared between parallel evaluations.</p><p><br /></p><p>For global variables a locking is required to avoid race conditions (see below). Constants are shared and lock-free (but obviously you cannot change them).</p><p><br /></p><p>The native data type is double and multiple statements can be specified by using the ; separator:</p><blockquote>y &#61; tan(x * 2); y &#61; y &#43; (3 * sin(z)); final &#61; y &#43; x;</blockquote><p>If there are parts of your expressions that works over global variables (or resources, see below), and you want to avoid race conditions you can &#34;surround&#34; critical sections with curly brackets (braces):</p><blockquote>y &#61; sin(z); {x &#61; x &#43; 1;}</blockquote><p>Here the x increment (assuming x is a global variable) will be under lock.</p><p><br /></p><p>Note: the compiler will automatically detect deadlocks</p><p><br /></p><p>A plotter is included for drawing simple lines/points based graphs.</p><p><br /></p><p>The plugin is open source under the MIT license. This marketplace version is meant for supporting the development of the project.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li> Runtime evaluation of Math Expressions</li><li> Parallel evaluation</li><li> Plotting of results</li></ul><p><br /></p><p>Code Modules: </p><ul><li> MathVM (Runtime)</li></ul><p><br /></p><p>Number of Blueprints: 1</p><p>Number of C&#43;&#43; Classes: 10</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows, Linux, Mac</p><p>Supported Target Build Platforms: Windows, Linux, Mac, Android, iOS</p><p>Documentation: https://github.com/rdeioris/MathVM/blob/master/README.md</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MathVMScreenShot2-1920x1080-d85ac47ce23d1cc27301714ad0cc0ace.png",
+      "md5": "d85ac47ce23d1cc27301714ad0cc0ace",
+      "width": 1920,
+      "height": 1080,
+      "size": 290400,
+      "uploadedDate": "2024-02-19T08:17:12.017Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MathVMScreenShot1-1920x1080-ae117686da7a6ff1d26f874ffc130455.png",
+      "md5": "ae117686da7a6ff1d26f874ffc130455",
+      "width": 1920,
+      "height": 1080,
+      "size": 270742,
+      "uploadedDate": "2024-02-19T08:17:12.443Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/MathVMScreenShot3-1920x1080-0b8431e24ebb025f1cdf60569b5b0c70.png",
+      "md5": "0b8431e24ebb025f1cdf60569b5b0c70",
+      "width": 1920,
+      "height": 1080,
+      "size": 382956,
+      "uploadedDate": "2024-02-19T08:17:11.575Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/MathVM_thumb-284x284-db515bb24a71da12765d664c6e3f4fec.png",
+      "md5": "db515bb24a71da12765d664c6e3f4fec",
+      "width": 284,
+      "height": 284,
+      "size": 16514,
+      "uploadedDate": "2024-02-17T10:24:36.399Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/MathVM_featured-894x488-ddd48ce602c5395932e80a6ae77e3d11.png",
+      "md5": "ddd48ce602c5395932e80a6ae77e3d11",
+      "width": 894,
+      "height": 488,
+      "size": 83459,
+      "uploadedDate": "2024-02-17T10:24:36.463Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MathVMScreenShot3-1920x1080-0b8431e24ebb025f1cdf60569b5b0c70_Snapshot.png",
+      "md5": "f23245934ab75ac5a3d0e50bb6cd0328",
+      "width": 150,
+      "height": 74,
+      "size": 3681,
+      "uploadedDate": "2024-02-19T08:17:11.848Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MathVMScreenShot2-1920x1080-d85ac47ce23d1cc27301714ad0cc0ace_Snapshot.png",
+      "md5": "6d618e20bf743d1d7ce441cf56bbe45d",
+      "width": 150,
+      "height": 74,
+      "size": 4506,
+      "uploadedDate": "2024-02-19T08:17:12.296Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MathVMScreenShot1-1920x1080-ae117686da7a6ff1d26f874ffc130455_Snapshot.png",
+      "md5": "e65bc91b3c2c5d5480ca8b698da6aace",
+      "width": 150,
+      "height": 74,
+      "size": 4466,
+      "uploadedDate": "2024-02-19T08:17:12.730Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/MathVMScreenShot0-1920x1080-55be63abe1e102839e32ff36b93975df_Snapshot.png",
+      "md5": "8aeb9e079c36b8635455279943ba4805",
+      "width": 150,
+      "height": 74,
+      "size": 4402,
+      "uploadedDate": "2024-02-17T10:24:36.334Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-02-21T06:25:01.159Z",
+  "lastModifiedDate": "2024-11-14T00:38:49.285Z",
+  "customAttributes": {},
+  "entitlementName": "aa86875611ca43e78d686ab4fddf7d2f",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "0cb2ed9ad65f49669dbafa7ec80abfab",
+      "appId": "MathVM_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Windows"
+      ],
+      "dateAdded": "2024-02-17T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "20240219"
+    },
+    {
+      "id": "a08ab96f3c954e6691ebd98b78ed5140",
+      "appId": "MathVM_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2024-04-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "20240227_54"
+    }
+  ],
+  "developer": "Roberto De Ioris",
+  "developerId": "o-c8b5pdpdwej65hzs73cxr7dm4jszrb",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

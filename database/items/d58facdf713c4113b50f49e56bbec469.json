@@ -1,0 +1,370 @@
+{
+  "id": "d58facdf713c4113b50f49e56bbec469",
+  "title": "Actor Pool Manager Plugin",
+  "description": "Actor Pool Manager for C++ and Blueprints",
+  "longDescription": "<p>Discord Q&amp;A and support: <a href=\"https://discord.gg/tu6ZNgwAb9\" rel=\"nofollow\">https://discord.gg/tu6ZNgwAb9</a></p><p><br /></p><p><strong>Actor Pool Manager Plugin </strong></p><p>Spawning alot of actors can hurt your performance of your application. Spawning and destroying the same actor classes will require unnessary memory allocations, constructor calls and will even consume more power if you load other resources like materials, animations or particle effects in your BeginPlay methods.</p><p><br /></p><p>This plugin is designed to optimize and simplify your actor spawning. Gain more performance and stable framerates while respawning alot of actors by code in C&#43;&#43; or from Blueprints.</p><p><br /></p><p><strong>Easy Implementation</strong></p><p>The Actor Pool Manager Plugin provides an Interface that can extend your C&#43;&#43; Actors and your Blueprint Actors. That way, it is very easy to implement actor pooling in your existing code. It can be used on every C&#43;&#43; or Blueprint class that is an Actor, even Pawns or Characters.</p><p><br /></p><p>The Interface implementation allows you to use the plugin on complex actor hierarchies without touching the underlying code base. Inheritances cannot be changed in most cases, for example the APawn class. It is not possible to change the base Actor class. With the <em>PoolActorInterface</em> it is possible to extend the default APawn class with the actor pooling feature. All you need to do is to create your own, empty Pawn class which extends from the default Pawn and add the PoolActorInterface.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Spawning and releasing actors without calling constructors and BeginPlay each time</li><li>Re-use frequently spawned actors like projectiles</li><li>Easy implementation by Interface for all actor classes in pure C&#43;&#43;, pure Blueprints or mixture of both</li><li>Hook PoolBegin and PoolEnd events from C&#43;&#43; and/or Blueprints for lightweight initialization</li><li>Demo-Level and pure Blueprint sample included</li><li><strong>Update 1.2</strong>: Blueprint spawn on Server with network replicated actors</li></ul><p><br /></p><p>Code Modules:</p><ul><li> PoolManager Runtime</li></ul><p><br /></p><p>Number of Blueprints: <strong>4</strong></p><p>Number of C&#43;&#43; Classes: <strong>2</strong></p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows 32-bit, Windows 64-bit, Android, Gear VR, HoloLens 2, HTML5, iOS, Linux, MacOS, Nintendo Switch, Oculus, PlayStation 4, Steam VR, Xbox One</p><p>Supported Target Build Platforms: Windows 32-bit, Windows 64-bit, Android, Gear VR, HoloLens 2, HTML5, iOS, Linux, MacOS, Nintendo Switch, Oculus, PlayStation 4, Steam VR, Xbox One</p><p>Documentation: <a href=\"https://drive.google.com/file/d/15vyKyTF2eP2lGnSUlWj-t_fXK2djUlGU/view?usp&#61;sharing\" rel=\"nofollow\">https://drive.google.com/file/d/15vyKyTF2eP2lGnSUlWj-t_fXK2djUlGU/view?usp&#61;sharing</a></p><p>Example Project: Sample level, code class and sample blueprint included</p><p><br /></p><p>I will support you with additional features and implementations.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot-PoolManager3-1920x1080-3db352fa78cac2260e618f07d788c4dd.png",
+      "md5": "3db352fa78cac2260e618f07d788c4dd",
+      "width": 1920,
+      "height": 1080,
+      "size": 770005,
+      "uploadedDate": "2021-06-09T20:22:13.043Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot-PoolManager7-1920x1080-e2a8bbab6b135b11484df42dd1ba6a31.png",
+      "md5": "e2a8bbab6b135b11484df42dd1ba6a31",
+      "width": 1920,
+      "height": 1080,
+      "size": 940341,
+      "uploadedDate": "2021-06-17T19:47:21.858Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot-PoolManager2-1920x1080-d95d0f90f31bdcbc187c8a6ffaf0d6c8.png",
+      "md5": "d95d0f90f31bdcbc187c8a6ffaf0d6c8",
+      "width": 1920,
+      "height": 1080,
+      "size": 655436,
+      "uploadedDate": "2021-06-08T01:29:11.599Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot-PoolManager1-1920x1080-315a78a92b9502da4918c8b48884331f.png",
+      "md5": "315a78a92b9502da4918c8b48884331f",
+      "width": 1920,
+      "height": 1080,
+      "size": 505578,
+      "uploadedDate": "2021-06-08T01:29:12.083Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot-PoolManager5-1920x1080-d55cf9cb9f7cbcf3d2f8a628ccdcdc05.png",
+      "md5": "d55cf9cb9f7cbcf3d2f8a628ccdcdc05",
+      "width": 1920,
+      "height": 1080,
+      "size": 402855,
+      "uploadedDate": "2021-06-08T01:29:10.169Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot-PoolManager4-1920x1080-5f14230652d7d9392c35064f1f2dbdc2.png",
+      "md5": "5f14230652d7d9392c35064f1f2dbdc2",
+      "width": 1920,
+      "height": 1080,
+      "size": 393568,
+      "uploadedDate": "2021-06-08T01:29:10.703Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ActorPoolManagerPlugin_thumb-284x284-8ad697516d9b119866e455e2cb0be754.png",
+      "md5": "8ad697516d9b119866e455e2cb0be754",
+      "width": 284,
+      "height": 284,
+      "size": 28957,
+      "uploadedDate": "2021-06-08T01:29:12.459Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ActorPoolManagerPlugin_featured-894x488-c825025d73954958ff68dcf5ed9c3429.png",
+      "md5": "c825025d73954958ff68dcf5ed9c3429",
+      "width": 894,
+      "height": 488,
+      "size": 473483,
+      "uploadedDate": "2021-06-08T01:29:12.578Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot-PoolManager7-1920x1080-e2a8bbab6b135b11484df42dd1ba6a31_Snapshot.png",
+      "md5": "3371d863780852489ec13802cc2352fa",
+      "width": 150,
+      "height": 74,
+      "size": 5365,
+      "uploadedDate": "2021-06-17T19:47:22.150Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot-PoolManager3-1920x1080-3db352fa78cac2260e618f07d788c4dd_Snapshot.png",
+      "md5": "518457fcdec15cf69a7377fc8a2b83ba",
+      "width": 150,
+      "height": 74,
+      "size": 4776,
+      "uploadedDate": "2021-06-09T20:22:13.344Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot-PoolManager5-1920x1080-d55cf9cb9f7cbcf3d2f8a628ccdcdc05_Snapshot.png",
+      "md5": "87da02474763c9638f067fb4420ec76a",
+      "width": 150,
+      "height": 74,
+      "size": 2919,
+      "uploadedDate": "2021-06-08T01:29:10.546Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot-PoolManager4-1920x1080-5f14230652d7d9392c35064f1f2dbdc2_Snapshot.png",
+      "md5": "ec430a3a70fab381a56db39c0366a5ec",
+      "width": 150,
+      "height": 74,
+      "size": 3079,
+      "uploadedDate": "2021-06-08T01:29:10.969Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot-PoolManager3-1920x1080-3db352fa78cac2260e618f07d788c4dd_Snapshot.png",
+      "md5": "518457fcdec15cf69a7377fc8a2b83ba",
+      "width": 150,
+      "height": 74,
+      "size": 4776,
+      "uploadedDate": "2021-06-08T01:29:11.479Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot-PoolManager2-1920x1080-d95d0f90f31bdcbc187c8a6ffaf0d6c8_Snapshot.png",
+      "md5": "d4930cfec1fe9f71f606b109d82defb5",
+      "width": 150,
+      "height": 74,
+      "size": 5288,
+      "uploadedDate": "2021-06-08T01:29:11.892Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Screenshot-PoolManager1-1920x1080-315a78a92b9502da4918c8b48884331f_Snapshot.png",
+      "md5": "c8ada5e61fb7bd54ba6feada038fe6c1",
+      "width": 150,
+      "height": 74,
+      "size": 4557,
+      "uploadedDate": "2021-06-08T01:29:12.368Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2021-06-10T18:33:51.190Z",
+  "lastModifiedDate": "2024-09-17T17:25:56.774Z",
+  "customAttributes": {},
+  "entitlementName": "d58facdf713c4113b50f49e56bbec469",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "d8b5b179d4114fe5b6d2bddc2a3a9ec4",
+      "appId": "PoolManager_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Nintendo Switch",
+        "Mac",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-06-14T00:00:00.000Z",
+      "releaseNote": "Plugin Version 1.2, UE 4.25, All Platforms Support, New Server-Client replication demo level and Blueprints",
+      "versionTitle": "Pool Manager Plugin UE425 1.2"
+    },
+    {
+      "id": "36b6d31801ab447db317691fc47d5795",
+      "appId": "PoolManager_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-06-08T00:00:00.000Z",
+      "releaseNote": "Plugin Version 1.2, UE 4.26, All Platforms Support, New Server-Client replication demo level and Blueprints",
+      "versionTitle": "Pool Manager Plugin"
+    },
+    {
+      "id": "151bcf2251db44e7bdbc195f3e068066",
+      "appId": "PoolManager_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "Linux",
+        "iOS",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2021-09-06T00:00:00.000Z",
+      "releaseNote": "Plugin Version 1.2, UE 4.27, All Platforms Support, New Server-Client replication demo level and Blueprints",
+      "versionTitle": "Pool Manager Plugin UE427 1.2"
+    },
+    {
+      "id": "e65241c8c0794a0982cb3d7a82ddb844",
+      "appId": "PoolManager_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "HTML5",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-04-12T00:00:00.000Z",
+      "releaseNote": "Plugin Version 1.2, UE 5.00, All Platforms Support, New Server-Client replication demo level and Blueprints",
+      "versionTitle": "Pool Manager Plugin UE500 1.2"
+    },
+    {
+      "id": "5c18aa233dc54e9b8410b42698c351b5",
+      "appId": "PoolManager_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "Linux",
+        "iOS",
+        "Mac",
+        "Oculus",
+        "Nintendo Switch",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2022-12-22T00:00:00.000Z",
+      "releaseNote": "1.7",
+      "versionTitle": "Pool Manager Plugin UE501"
+    },
+    {
+      "id": "c42c77d94b4f45e99e7f04fe6498886d",
+      "appId": "PoolManager_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "Linux",
+        "iOS",
+        "Mac",
+        "Oculus",
+        "Nintendo Switch",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-10-16T00:00:00.000Z",
+      "releaseNote": "1.7",
+      "versionTitle": "Pool Manager Plugin UE502"
+    },
+    {
+      "id": "880be7e88a204059a68dd0c4ea35a0c0",
+      "appId": "PoolManager_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2023-10-16T00:00:00.000Z",
+      "releaseNote": "1.7",
+      "versionTitle": "Pool Manager Plugin UE503"
+    },
+    {
+      "id": "ca0b1940532d4365b9ce556ca6714b81",
+      "appId": "PoolManager_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Android",
+        "Gear VR",
+        "HoloLens 2",
+        "iOS",
+        "Linux",
+        "Mac",
+        "Nintendo Switch",
+        "Oculus",
+        "PS4",
+        "SteamVR / HTC Vive",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2024-04-30T00:00:00.000Z",
+      "releaseNote": "1.7",
+      "versionTitle": "Pool Manager Plugin UE504"
+    }
+  ],
+  "developer": "Thomas Schneider",
+  "developerId": "o-jsg85b24y6aprfzf6fux7m7w6cq6bd",
+  "endOfSupport": false,
+  "unsearchable": false
+}

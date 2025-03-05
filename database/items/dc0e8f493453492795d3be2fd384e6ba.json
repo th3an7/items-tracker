@@ -1,0 +1,125 @@
+{
+  "id": "dc0e8f493453492795d3be2fd384e6ba",
+  "title": "Duke's Big Numbers",
+  "description": "Duke's Big Numbers enables calculation, storage, and formatting of VERY LARGE integer numbers with full precision.",
+  "longDescription": "<p>Hi, I&#39;m Duke, and I&#39;ve always been fascinated with math and especially with big numbers ever since I could count. I remember my joy when I received a mathematics encyclopedia as a gift and it taught me how to count into the vigintillions (10^63). We&#39;ve moved well past that number now...</p><p><br /></p><p>Games increasingly require calculations using very large and precise integers. This is especially true of incremental games, where numbers can range beyond 10^1,000 and need to be stored down to the last unit. Integer64 and Double just are not up to the task!</p><p><br /></p><p>Operations on numbers of this scale also need to be as fast as possible, leaving as much frame time as possible for other game concerns such as all of those crunchy graphics. Also, the calculations themselves are not trivial - operations like dividing two numbers of this scale or performing square roots require considerable grounding in algorithms and mathematics to implement.</p><p><br /></p><p>I&#39;ve spent many tireless hours implementing and testing all of this so that you don&#39;t have to. I present DBN as a solution to the challenges of calculating, storing, and formatting very large integers. DBN has the ability to represent integers far beyond the scale with which it is feasible to calculate with modern computing technology. With DBN in your plugin stack, all of your large math headaches will be solved quicker than a middle-school algebra equation.</p><p><br /></p><p><a href=\"https://www.youtube.com/watch?v&#61;D6xmbTDuC74\" rel=\"nofollow\">Check out DBN in action in the trailer.</a></p><p><br /></p><p>Join the 10^309 club by getting DBN for your project today!</p><p><br /></p><p>Limits (Suggested and Absolute):</p><ul><li>For a couple of O(n) complexity operations per frame (such as adds), practical limit is around 2^33,554,432, or around 10^10,000,000.</li><li>For a couple of O(n^2) complexity operations per frame (such as multiplies of numbers of similar length), practical limit is around 2^16384, or around 10^4,900.</li><li>Balance from there. If you want 10x more operations per frame, use limits 1/10th the size given for O(n) operations and roughly 1/3 the size given for O(n^2) operations.</li><li>Note: Exact limits will depend on MANY factors and can change over the life of your project as it grows in complexity. Be sure to test early and often using your desired maximum limits.</li><li>Absolute limit is 2^34,359,738,367-1, or roughly 10^10,356,025,143, though numbers of this scale occupy 8GB apiece and take many seconds to operate on, if enough contiguous blocks of memory that large can even be found!</li></ul><p><br /></p><p>I am using and developing this alongside my own incremental game prototype, so as that prototype advances, this plugin will continue to improve. I am always open to suggestions and feedback from customers as to how DBN can improve and better meet your needs. For a general sense of how DBN will evolve over time, see the <a href=\"https://smilingcatentertainment.com/api/docs/DukesBigNumbers/current/_roadmap.html\" rel=\"nofollow\">DBN roadmap</a>.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li>Store integers of arbitrary precision</li><li>Basic Arithmetic (&#43;, -, *, /, %)</li><li>Binary Logic (&amp;, |, ^, ~, !, &lt;&lt;, &gt;&gt;, Get/Set/Clear/Toggle Bit)</li><li>Conversions (to/from Bool, Byte, Int, UInt, Int64, UInt64, Float, Double, Byte Array)</li><li>Sign Manipulation (Negate, Abs, Nabs, Get/Set/Copy Sign)</li><li>Compares (3-way compares, all relational operators)</li><li>Range (Min, Max, Min Magnitude, Max Magnitude, Clamp, Select)</li><li>Pow</li><li>Square Root</li><li>Logarithms (Floor Log 2 &amp; 10; Log 2, 10, e, X)</li><li>GCD</li><li>Bit Counts (Prec, Nlz, Ntz, Pop)</li><li>Narrowing Checks (Int, UInt, Int64, UInt64, Float, Double)</li><li>Class Checks (Positive, Negative, Odd, Even, Power of 2)</li><li>Invariant Decimal and Hexadecimal Parser</li><li>Digit Sequencer (create interesting sequences of repeating/changing digits)</li><li>Customize String Formatting and Scaling Groups</li><li>Decimal String Formatters (Invariant, Culture-Aware, Scaled)</li><li>Invariant Hexadecimal String Formatter</li><li>Scaled Formats (Scientific, Engineering, Named, SI Units in Name or Symbol form)</li></ul><p>Code Modules:</p><ul><li> DukesBigNumbers (Runtime) </li></ul><p>Number of Blueprints:</p><p>Number of C&#43;&#43; Classes: 22</p><p>Network Replicated: No</p><p>Supported Development Platforms: Windows 64-bit (other platforms untested)</p><p>Supported Target Build Platforms: Windows 64-bit (other platforms untested)</p><p>Documentation: https://smilingcatentertainment.com/api/docs/DukesBigNumbers/current/index.html</p><p>Example Project: https://www.smilingcatentertainment.com/download/BigCalc-1.0.0.1-Project.zip</p><p>Important/Additional Notes: Unit tests included with 100% code coverage verified using OpenCppCoverage .</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BigCalcPreview-1920x1080-91226129bcf38f109223966a466dfe63.jpg",
+      "md5": "91226129bcf38f109223966a466dfe63",
+      "width": 1920,
+      "height": 1080,
+      "size": 489038,
+      "uploadedDate": "2023-05-03T18:59:39.396Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/TrailerTitle-1920x1080-36bf32716450df679a02636c45faecad.png",
+      "md5": "36bf32716450df679a02636c45faecad",
+      "width": 1920,
+      "height": 1080,
+      "size": 791031,
+      "uploadedDate": "2023-05-10T11:30:53.963Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/DukesBigNumbers_thumb-284x284-e01b845795ea9a08344cd208fd16142a.png",
+      "md5": "e01b845795ea9a08344cd208fd16142a",
+      "width": 284,
+      "height": 284,
+      "size": 133593,
+      "uploadedDate": "2023-05-03T18:59:39.673Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/DukesBigNumbers_featured-894x488-03e5ed51aeabc0995acde57e6e267df2.png",
+      "md5": "03e5ed51aeabc0995acde57e6e267df2",
+      "width": 894,
+      "height": 488,
+      "size": 787749,
+      "uploadedDate": "2023-05-03T18:59:39.804Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/TrailerTitle-1920x1080-36bf32716450df679a02636c45faecad_Snapshot.png",
+      "md5": "7e52b76be88569da3cbbdb6cf0454d93",
+      "width": 150,
+      "height": 74,
+      "size": 6157,
+      "uploadedDate": "2023-05-10T11:30:54.205Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BigCalcPreview-1920x1080-91226129bcf38f109223966a466dfe63_Snapshot.jpg",
+      "md5": "5a879300ccaa14595056490e5cb60fe7",
+      "width": 150,
+      "height": 74,
+      "size": 8502,
+      "uploadedDate": "2023-05-03T18:59:39.631Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2023-07-15T11:45:30.116Z",
+  "lastModifiedDate": "2024-10-15T10:24:28.286Z",
+  "customAttributes": {},
+  "entitlementName": "dc0e8f493453492795d3be2fd384e6ba",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "9134d2b668c14d6e9d6f24015a21b789",
+      "appId": "DukesBigNumbers_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-05-14T00:00:00.000Z",
+      "releaseNote": "share password is: U^r3@LNe3dzUp10aD\n(no username)",
+      "versionTitle": "1.0.1.6-5.2"
+    },
+    {
+      "id": "b34156ca47af4ee4904508b55b9d35c4",
+      "appId": "DukesBigNumbers_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2023-09-21T00:00:00.000Z",
+      "releaseNote": "share password is: U^r3@LNe3dzUp10aD\n(no username)",
+      "versionTitle": "1.0.1.6-5.3"
+    },
+    {
+      "id": "da26ab462a3e48d2b4bd1e3189992f2a",
+      "appId": "DukesBigNumbers_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-06-22T00:00:00.000Z",
+      "releaseNote": "share password is: U^r3@LNe3dzUp10aD\n(no username)",
+      "versionTitle": "1.0.1.6-5.4"
+    }
+  ],
+  "developer": "Duke's Workshop",
+  "developerId": "o-74wc4bmfg2cyj6bc9bd4spc8vbm4tx",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

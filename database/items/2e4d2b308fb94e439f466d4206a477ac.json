@@ -1,0 +1,259 @@
+{
+  "id": "2e4d2b308fb94e439f466d4206a477ac",
+  "title": "Third Person Homing Attack",
+  "description": "Curl up and shoot yourself towards the closest target!",
+  "longDescription": "<p><a href=\"https://drive.google.com/drive/folders/13flcdh64iE3IoCRKtb597x5M6I44gTyX?usp&#61;sharing\" rel=\"nofollow\">Demo</a></p><p><a href=\"https://youtu.be/e67W2qgWdAw\" rel=\"nofollow\">Example Video</a></p><p><a href=\"https://docs.google.com/document/d/1dY-Phq_6Kh-aihXBWWepW-HKk6-7JqcG7G2FQr4aC8U/edit?usp&#61;sharing\" rel=\"nofollow\">Documentation</a></p><p><br /></p><p><strong>05/23/24: Version 1.1 Update - Added the option to change Global Time Dilation on Hit. Follow this quick </strong><a href=\"https://docs.google.com/document/d/1Wgcpo2-W4QpcRpAOX_eshajju5Ayhsx5Ez0zhF9QiK4/edit?usp&#61;sharing\" rel=\"nofollow\"><strong>tutorial</strong></a><strong> on how to update from the previous version.</strong></p><p><br /></p><p><strong>* If there are any issues, questions or technical assistance, please let me know, I&#39;ll respond as soon as possible.</strong></p><p><br /></p><p>* Please read the documentation for more details and see if your project can incorporate the component.</p><p><br /></p><p>----</p><p><br /></p><p>While Falling, press the Jump button to launch a Homing Attack that zeroes in on the closest Target! Movement input is disabled while using the Homing Attack.</p><p><br /></p><p>Requirements:</p><p><br /></p><ul><li>A Third Person Character with a Character Movement component.</li><li>A Character Animation Blueprint that can play Montages.</li><li>A Custom Trace Channel used by the component and blocked by the Target Actors only.</li><li>A Blueprint Interface implemented by the Target Actors. It&#39;s the provided type of Blueprint communication used by the Component.</li><li>Few nodes need to be added inside your Character BP. They are used to communicate with the Homing Attack Component.</li></ul><p><br /></p><p>Limitations:</p><p><br /></p><p>1. Targets / enemies located directly above or bellow the Character won´t be selected.</p><p><br /></p><p>2. It won&#39;t work as intended if your Character uses a system that constantly updates it&#39;s Gravity and Velocity. Before initiating the Homing Attack, both Gravity and Velocity are set to 0. After it ends, the Gravity is returned to it&#39;s previous value. Depending on your project, any logic that constantly updates Gravity and Velocity should pause momentarily before using the Homing Attack and resume after it ends.</p><p><br /></p><p>3. Unreal Engine&#39;s Control Rig Foot IK solution will rotate incorrectly both Character&#39;s legs during the Homing Attack. To prevent that, we need to set the IK Alpha value to 0 during the Homing Attack and return it to 1 after it ends. The documentation provides more information on how to do it.</p><p><br /></p><p>4. The project provides a Demo Target that can be destroyed upon hit but it is up to the users to add new logic to the enemies they use in their projects. Please check the documentation for information about using the Interface to trigger events inside new enemy blueprints.</p><p><br /></p><p>5. Not replicated.</p><p><br /></p><p><br /></p><p>---- Attribution ----</p><p><br /></p><p>The following assets are included in this product: <a href=\"https://docs.google.com/document/d/1Fk8sYXNOk6AmJ_mDYlnXdHLc0vNM0Pw-60KJF_T6UqE/edit?usp&#61;sharing\" rel=\"nofollow\">Link</a></p>",
+  "technicalDetails": "<p><br /></p><p>Features:</p><p><br /></p><ul><li>A Homing Attack component handles all the logic (with a few nodes inside your Character BP).</li><li>The component only ticks while the Character is on air.</li><li>A Target Widget BP is used to show the reticle over the Targets.</li><li>All animations play using Montages only.</li></ul><p><br /></p><p>Number of Blueprints: 1 Blueprint Component, 1 Interface BP, 1 Target Widget BP, 1 Widget and 1 Camera Shake</p><p>Input: Gamepad, Keyboard and Mouse</p><p>Network Replicated: Not supported</p><p>Supported Development Platforms: Windows 64 bits</p><p>Windows: Yes</p><p>Mac: No</p><p>Documentation: <a href=\"https://docs.google.com/document/d/1dY-Phq_6Kh-aihXBWWepW-HKk6-7JqcG7G2FQr4aC8U/edit?usp&#61;sharing\" rel=\"nofollow\">Link</a></p><p>Important/Additional Notes: The project includes some demo SFX and Niagara system. They can be replaced directly in the component settings.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/2-1920x1080-31d28dd2e6b17d1749a7e29c04467461.png",
+      "md5": "31d28dd2e6b17d1749a7e29c04467461",
+      "width": 1920,
+      "height": 1080,
+      "size": 615418,
+      "uploadedDate": "2024-01-12T07:23:54.641Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/1-1920x1080-f98f529130359ba619bf7e10b4af034e.png",
+      "md5": "f98f529130359ba619bf7e10b4af034e",
+      "width": 1920,
+      "height": 1080,
+      "size": 583556,
+      "uploadedDate": "2024-01-12T07:23:54.911Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/21-1920x1080-b0e9b661384ce82a40b3b9923c7c6729.png",
+      "md5": "b0e9b661384ce82a40b3b9923c7c6729",
+      "width": 1920,
+      "height": 1080,
+      "size": 703468,
+      "uploadedDate": "2024-01-12T07:23:55.167Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/4-1920x1080-86ec6df2b3c858942d94fcad66149575.png",
+      "md5": "86ec6df2b3c858942d94fcad66149575",
+      "width": 1920,
+      "height": 1080,
+      "size": 704019,
+      "uploadedDate": "2024-01-12T07:23:55.426Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/5-1920x1080-7cc7d5e14d7ea8a26efb8a6c3c785715.png",
+      "md5": "7cc7d5e14d7ea8a26efb8a6c3c785715",
+      "width": 1920,
+      "height": 1080,
+      "size": 56222,
+      "uploadedDate": "2024-01-12T07:23:55.680Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/6-1920x1080-caf7472079dc6a2ded795caf490f9a34.png",
+      "md5": "caf7472079dc6a2ded795caf490f9a34",
+      "width": 1920,
+      "height": 1080,
+      "size": 79405,
+      "uploadedDate": "2024-01-12T07:23:55.894Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/7-1920x1080-8260afbc09c386a92ce9a2a0a78b2d0c.png",
+      "md5": "8260afbc09c386a92ce9a2a0a78b2d0c",
+      "width": 1920,
+      "height": 1080,
+      "size": 638748,
+      "uploadedDate": "2024-01-12T07:23:56.148Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/8-1920x1080-37306f71c39265ea2c09fecccfb31913.png",
+      "md5": "37306f71c39265ea2c09fecccfb31913",
+      "width": 1920,
+      "height": 1080,
+      "size": 612399,
+      "uploadedDate": "2024-01-12T07:23:56.468Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ThirdPersonHomingAttack_thumb-284x284-39e76c14a3c6b8c9b3a0f3f08b066ec5.png",
+      "md5": "39e76c14a3c6b8c9b3a0f3f08b066ec5",
+      "width": 284,
+      "height": 284,
+      "size": 111779,
+      "uploadedDate": "2024-01-24T16:25:36.963Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ThirdPersonHomingAttack_featured-894x488-883d584fe7b491bdf11e657c4c3c87f1.png",
+      "md5": "883d584fe7b491bdf11e657c4c3c87f1",
+      "width": 894,
+      "height": 488,
+      "size": 483768,
+      "uploadedDate": "2024-01-12T07:23:56.870Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/2-1920x1080-31d28dd2e6b17d1749a7e29c04467461_Snapshot.png",
+      "md5": "1e2b4b3d0e76cefff4c29bf274bdb9b7",
+      "width": 150,
+      "height": 74,
+      "size": 5378,
+      "uploadedDate": "2024-01-12T07:23:54.744Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/1-1920x1080-f98f529130359ba619bf7e10b4af034e_Snapshot.png",
+      "md5": "c05df84283a53c996bbe4ae4dbf5a85f",
+      "width": 150,
+      "height": 74,
+      "size": 6769,
+      "uploadedDate": "2024-01-12T07:23:55.028Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/21-1920x1080-b0e9b661384ce82a40b3b9923c7c6729_Snapshot.png",
+      "md5": "78b5d605abd94ca690d18c9c15fbe21c",
+      "width": 150,
+      "height": 74,
+      "size": 4855,
+      "uploadedDate": "2024-01-12T07:23:55.261Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/4-1920x1080-86ec6df2b3c858942d94fcad66149575_Snapshot.png",
+      "md5": "ad130fd60f1589de8e7714a2be4ccb61",
+      "width": 150,
+      "height": 74,
+      "size": 6078,
+      "uploadedDate": "2024-01-12T07:23:55.619Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/5-1920x1080-7cc7d5e14d7ea8a26efb8a6c3c785715_Snapshot.png",
+      "md5": "73711daa0f23b0fbbee7c5d3a4e318da",
+      "width": 150,
+      "height": 74,
+      "size": 3847,
+      "uploadedDate": "2024-01-12T07:23:55.781Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/6-1920x1080-caf7472079dc6a2ded795caf490f9a34_Snapshot.png",
+      "md5": "c3bc85dc46580ea7f7a2585ae0b3e131",
+      "width": 150,
+      "height": 74,
+      "size": 4476,
+      "uploadedDate": "2024-01-12T07:23:55.965Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/7-1920x1080-8260afbc09c386a92ce9a2a0a78b2d0c_Snapshot.png",
+      "md5": "de949036d05164fe5d855d0f8e4e83f0",
+      "width": 150,
+      "height": 74,
+      "size": 6188,
+      "uploadedDate": "2024-01-12T07:23:56.262Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/8-1920x1080-37306f71c39265ea2c09fecccfb31913_Snapshot.png",
+      "md5": "4ff581919cd5333239d18113b42599ca",
+      "width": 150,
+      "height": 74,
+      "size": 6003,
+      "uploadedDate": "2024-01-12T07:23:56.626Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-01-18T23:48:52.938Z",
+  "lastModifiedDate": "2024-12-21T08:24:34.703Z",
+  "customAttributes": {},
+  "entitlementName": "2e4d2b308fb94e439f466d4206a477ac",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "eb020b80e347485388712b6d86bf4bed",
+      "appId": "ThirdPer2e4d2b308fb9V1",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-01-12T00:00:00.000Z",
+      "releaseNote": "Added Global Time Dilation change on hit.",
+      "versionTitle": "4.27 Version 1.1"
+    },
+    {
+      "id": "0d1ecfde0543490083bc2758483d0079",
+      "appId": "ThirdPer2e4d2b308fb9V4",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-01-18T00:00:00.000Z",
+      "releaseNote": "Added Global Time Dilation change on hit.",
+      "versionTitle": "5.1 Version 1.1"
+    },
+    {
+      "id": "8b563b9764344706a5ce293372105b02",
+      "appId": "ThirdPer2e4d2b308fb9V2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-01-12T00:00:00.000Z",
+      "releaseNote": "Added Global Time Dilation change on hit.",
+      "versionTitle": "5.2 Version 1.1"
+    },
+    {
+      "id": "3cf2d26698c74c4dafb5c229b42f827f",
+      "appId": "ThirdPer2e4d2b308fb9V3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-01-12T00:00:00.000Z",
+      "releaseNote": "Added Global Time Dilation change on hit.",
+      "versionTitle": "5.3 Version 1.1"
+    },
+    {
+      "id": "d64ce2395d984d4b8632b696b3a381dd",
+      "appId": "ThirdPer2e4d2b308fb9V5",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2024-04-26T00:00:00.000Z",
+      "releaseNote": "Added Global Time Dilation change on hit.",
+      "versionTitle": "5.4 Version 1.1"
+    }
+  ],
+  "developer": "Raul Jaramillo",
+  "developerId": "o-dwr98md8acanu8q2tsnlm66yglmjj4",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

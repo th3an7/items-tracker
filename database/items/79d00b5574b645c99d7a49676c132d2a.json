@@ -1,0 +1,561 @@
+{
+  "id": "79d00b5574b645c99d7a49676c132d2a",
+  "title": "Beefy Grass (Landscape Grass and Foliage System)",
+  "description": "Set of stylized grass and foliage with player interaction, wind animation, and customizable material.",
+  "longDescription": "<p><strong>New promo video: </strong><a href=\"https://youtu.be/yUljSY6ny1I\" rel=\"nofollow\">Youtube</a></p><p><br /></p><p><strong>Three example landscapes</strong> featuring an interactive foliage system! Includes low poly grass, wheat, dandelions, and more! Designed and optimized for large open world environments - all meshes have LODs set, and a master material that can be customized for any game environment. Perfect for mobile and low-end systems.</p><p><br /></p><p><strong>Foliage Material Parameters (50&#43;):</strong></p><ul><li>Base color gradients / animated highlights.</li><li>Foliage interaction: squash and bend offsets (uses RenderTarget / Particle system)</li><li>Advanced wind animations with PivotPainter2.</li><li>Unified shading &#43; landscape normal blending.</li><li>Mesh alignment (vertical).</li><li>Natural scale variation based on noise-texture and slope information.</li><li>Mesh Distance Field culling - removes foliage automatically around rocks and other props.</li><li>Landscape color blending - using a material function, or Runtime Virtual Texturing.</li></ul><p><br /></p><p><strong>NEW ADDITIONS:</strong></p><ul><li>New foliage RenderTarget &#43; BP Component system for advanced movement &#43; interaction.</li><li>Custom FoliageInstanceStaticMeshComponent for cutting and harvesting (WIP).</li><li>New wind blueprint system with global parameters and wind displacement.</li><li>Simple stones and boulders.</li></ul>",
+  "technicalDetails": "<p><strong>**IMPORTANT**</strong></p><p>For the Map examples, it is recommended that you:</p><ul><li>enable &#39;SunPosition Calculator&#39; plugin.</li><li>enable Mesh Distance Fields.</li><li>enable CustomDepth Stencil-pass (Enable with Stencil).</li></ul><p><br /></p><p><strong>Full Features:</strong></p><ul><li>Complete material &#43; function library: including foliage, stones</li><li>3 Example maps with landscape heightmap, and 3 grass materials.</li><li>Foliage RenderTarget / Particle Blueprints and Component system.</li><li>Third-person mannequin character ready for grass-player interaction.</li><li>Post-Processing materials: Cel-Shader and Fog.</li><li>Wind Direction Actor BP to control wind animation and highlights.</li><li>Stones and boulders.</li></ul><p><br /></p><p><strong>Textures: </strong></p><ul><li>5x5-25x3: 25 textures (PivotPainter2: PivotPosition &#43; X-Extents)</li><li>128x128: 1 texture (T_DustParticle_D)</li></ul><p><br /></p><p><strong>Collision:</strong> Simple Collision</p><p><strong>Vertex Count: </strong>Meshes &#43; LODs all have between 6-3k vertices.</p><p><strong>LODs:</strong> 3-5 LODs each.</p><p><strong>Number of Meshes:</strong> 34 Plants &#43; Grasses.</p><p><strong>Number of Materials and Material Instances:</strong> 14 materials, 60 material instances total.</p><p><strong>Number of Textures:</strong> 33 textures.</p><p><strong>Supported Platforms:</strong> PC/Mac/Console/Mobile-ES3.1&#43;</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00006-1920x1080-edad4cdf8e94ab0719f41b2e3f58e7f8.png",
+      "md5": "edad4cdf8e94ab0719f41b2e3f58e7f8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2717659,
+      "uploadedDate": "2021-06-05T01:11:11.782Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00034-1920x1080-2fce74a6bd0c415427aac6e0035d9bd8.png",
+      "md5": "2fce74a6bd0c415427aac6e0035d9bd8",
+      "width": 1920,
+      "height": 1080,
+      "size": 2799855,
+      "uploadedDate": "2021-01-20T22:58:08.946Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00042-1920x1080-87db05d9389bcc8013fc194df2502a05.png",
+      "md5": "87db05d9389bcc8013fc194df2502a05",
+      "width": 1920,
+      "height": 1080,
+      "size": 2828185,
+      "uploadedDate": "2021-01-20T22:58:09.809Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BeefyGrassLandsWesternSlopes-1920x1080-2e75b629c7e18454ef6a44184bf4d0b7.png",
+      "md5": "2e75b629c7e18454ef6a44184bf4d0b7",
+      "width": 1920,
+      "height": 1080,
+      "size": 2936921,
+      "uploadedDate": "2021-01-21T07:22:29.587Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/HighresScreenshot00111-1920x1080-59dee39494940a18ce536e0915b84796.png",
+      "md5": "59dee39494940a18ce536e0915b84796",
+      "width": 1920,
+      "height": 1080,
+      "size": 2951654,
+      "uploadedDate": "2021-01-21T07:22:28.948Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BeefyGrassLandsQuadOverdraw-1920x1080-4fbfd03abdf73968d02d3e4fd6652c84.png",
+      "md5": "4fbfd03abdf73968d02d3e4fd6652c84",
+      "width": 1920,
+      "height": 1080,
+      "size": 520211,
+      "uploadedDate": "2021-01-21T07:22:30.129Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/BeefyGrassLandsShaderMobile-1920x1080-6c4a1c5d9eb75b70b4e7a1202c73e2fd.png",
+      "md5": "6c4a1c5d9eb75b70b4e7a1202c73e2fd",
+      "width": 1920,
+      "height": 1080,
+      "size": 101528,
+      "uploadedDate": "2021-01-21T07:22:30.441Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/BeefyGrassLands_thumb-284x284-02735fd293daf78fc733a82bc93d7a3b.png",
+      "md5": "02735fd293daf78fc733a82bc93d7a3b",
+      "width": 284,
+      "height": 284,
+      "size": 127805,
+      "uploadedDate": "2021-06-05T01:11:12.227Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/BeefyGrassLands_featured-894x488-32e6a2ea7a9cd7a59a4a6d9298f371e6.png",
+      "md5": "32e6a2ea7a9cd7a59a4a6d9298f371e6",
+      "width": 894,
+      "height": 488,
+      "size": 514835,
+      "uploadedDate": "2021-06-05T01:11:12.458Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00006-1920x1080-edad4cdf8e94ab0719f41b2e3f58e7f8_Snapshot.png",
+      "md5": "224170cc19ad2f88f42d85e87feb2727",
+      "width": 150,
+      "height": 74,
+      "size": 4878,
+      "uploadedDate": "2021-06-05T01:11:12.184Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00111-1920x1080-59dee39494940a18ce536e0915b84796_Snapshot.png",
+      "md5": "755f4b3cad43abe5e0b0c70e3aaf8f44",
+      "width": 150,
+      "height": 74,
+      "size": 4881,
+      "uploadedDate": "2021-01-21T07:22:29.351Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyGrassLandsWesternSlopes-1920x1080-2e75b629c7e18454ef6a44184bf4d0b7_Snapshot.png",
+      "md5": "2f653b2ec648f9cf2449dd7c9af78f72",
+      "width": 150,
+      "height": 74,
+      "size": 4761,
+      "uploadedDate": "2021-01-21T07:22:30.001Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyGrassLandsQuadOverdraw-1920x1080-4fbfd03abdf73968d02d3e4fd6652c84_Snapshot.png",
+      "md5": "59c6ccb04f5321f3fdd3d22a5ac1ceea",
+      "width": 150,
+      "height": 74,
+      "size": 7197,
+      "uploadedDate": "2021-01-21T07:22:30.376Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyGrassLandsShaderMobile-1920x1080-6c4a1c5d9eb75b70b4e7a1202c73e2fd_Snapshot.png",
+      "md5": "ce9ee167cd8c41d2b1de6c6807f53a82",
+      "width": 150,
+      "height": 74,
+      "size": 2584,
+      "uploadedDate": "2021-01-21T07:22:30.659Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00034-1920x1080-2fce74a6bd0c415427aac6e0035d9bd8_Snapshot.png",
+      "md5": "5f1e880eb615f0d033b039fcecb88f10",
+      "width": 150,
+      "height": 74,
+      "size": 5155,
+      "uploadedDate": "2021-01-20T22:58:09.353Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00042-1920x1080-87db05d9389bcc8013fc194df2502a05_Snapshot.png",
+      "md5": "a67fb198036a9963e88ef9b238661fcf",
+      "width": 150,
+      "height": 74,
+      "size": 5817,
+      "uploadedDate": "2021-01-20T22:58:10.243Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00037-1920x1080-6bd1de57bc0032e9cfe3d7ed37cf87c2_Snapshot.png",
+      "md5": "23dc52a07ac1c36d2c48490b4bb97525",
+      "width": 150,
+      "height": 74,
+      "size": 5172,
+      "uploadedDate": "2021-01-20T22:58:10.863Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StartingLevelWestern-1920x1080-18d765c52a0a8831b3a7a0bcd2be1ee9_Snapshot.png",
+      "md5": "24f6f4a15f4dfabfd621968872982acd",
+      "width": 150,
+      "height": 74,
+      "size": 5034,
+      "uploadedDate": "2020-03-04T19:45:13.103Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/StartingLevelArctic-1920x1080-71b613a0b61761feb5ed5f3f75dc7c6a_Snapshot.png",
+      "md5": "43c06e974ec92cdb211d94e1cec553e1",
+      "width": 150,
+      "height": 74,
+      "size": 4964,
+      "uploadedDate": "2020-03-04T19:45:13.818Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Parameters0-1920x1080-c19fd76e9b5dd41cb15ad1afa9d1c43a_Snapshot.png",
+      "md5": "28abc0f5303e668c6e807b35578ebca1",
+      "width": 150,
+      "height": 74,
+      "size": 4000,
+      "uploadedDate": "2020-01-05T21:51:58.312Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Parameters1-1920x1080-8d2a70a532cfb9485dcc64e24ed7ba94_Snapshot.png",
+      "md5": "94820faf88932140c69a6c5f04bf1ab6",
+      "width": 150,
+      "height": 74,
+      "size": 4073,
+      "uploadedDate": "2020-01-05T21:51:58.673Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyGrassLandsWesternStart-1920x1080-d35bf95861b40bdc524555fc903db0d4_Snapshot.png",
+      "md5": "08b70a1b98ac2554f23ca722884f5db4",
+      "width": 150,
+      "height": 74,
+      "size": 4726,
+      "uploadedDate": "2020-01-03T20:45:50.106Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyGrassLandsArctic01-1920x1080-e43ecf1a102ff4beb652182a0d30d863_Snapshot.png",
+      "md5": "ab9802f878f761e13168bec60c5321a3",
+      "width": 150,
+      "height": 74,
+      "size": 5127,
+      "uploadedDate": "2020-01-03T20:45:50.769Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyGrassLandsHills-1920x1080-34dc8c00303ccb0e80fcfc2620e6528a_Snapshot.png",
+      "md5": "fb23bb543c7a6449490c7c5fb3f85e5a",
+      "width": 150,
+      "height": 74,
+      "size": 4875,
+      "uploadedDate": "2020-01-03T20:45:51.447Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyGrassLandsWesternSlopes-1920x1080-2e75b629c7e18454ef6a44184bf4d0b7_Snapshot.png",
+      "md5": "2f653b2ec648f9cf2449dd7c9af78f72",
+      "width": 150,
+      "height": 74,
+      "size": 4761,
+      "uploadedDate": "2020-01-03T20:45:52.198Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyGrassLandsQuadOverdraw-1920x1080-4fbfd03abdf73968d02d3e4fd6652c84_Snapshot.png",
+      "md5": "59c6ccb04f5321f3fdd3d22a5ac1ceea",
+      "width": 150,
+      "height": 74,
+      "size": 7197,
+      "uploadedDate": "2020-01-03T20:45:52.626Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/BeefyGrassLandsShaderMobile-1920x1080-6c4a1c5d9eb75b70b4e7a1202c73e2fd_Snapshot.png",
+      "md5": "ce9ee167cd8c41d2b1de6c6807f53a82",
+      "width": 150,
+      "height": 74,
+      "size": 2584,
+      "uploadedDate": "2020-01-03T20:45:52.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00034-1920x1080-d1da03948e1a0f078e20848d5e0ead50_Snapshot.png",
+      "md5": "156a7f7fa9ffacb34e7d2e57b0814a4b",
+      "width": 150,
+      "height": 74,
+      "size": 5316,
+      "uploadedDate": "2019-11-22T02:03:57.414Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00035-1920x1080-3bba6699561a8b6b6cd765fa76bef825_Snapshot.png",
+      "md5": "450449a1ea812ba00a53c6177710f14f",
+      "width": 150,
+      "height": 74,
+      "size": 5061,
+      "uploadedDate": "2019-11-22T02:03:58.123Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00037-1920x1080-edaeb31ac2f4885d17d74ef83d0d106d_Snapshot.png",
+      "md5": "e216b0711a64e23659820f579f084b0b",
+      "width": 150,
+      "height": 74,
+      "size": 5135,
+      "uploadedDate": "2019-11-22T02:03:58.786Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00039-1920x1080-ba9f31878e586330f558e57a5bbfce4b_Snapshot.png",
+      "md5": "8b69729edbdd2fc6ca168f2d0d634744",
+      "width": 150,
+      "height": 74,
+      "size": 5547,
+      "uploadedDate": "2019-11-20T08:58:12.705Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00037-1920x1080-90127eed56c3c0f66bad28b43ad56788_Snapshot.png",
+      "md5": "15660acb32c130a3dbf8f0ecf5825ecb",
+      "width": 150,
+      "height": 74,
+      "size": 5252,
+      "uploadedDate": "2019-11-20T08:58:13.340Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00038-1920x1080-989dd8f5f3551227ef0c1668364a7f7f_Snapshot.png",
+      "md5": "6d4c9f041dd701e003f638a861283b58",
+      "width": 150,
+      "height": 74,
+      "size": 5204,
+      "uploadedDate": "2019-11-20T08:58:14.023Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00035-1920x1080-5fbe90ec043577e8b5343ab4608c07c0_Snapshot.png",
+      "md5": "61fabe973bc36fcc6198d463d8230b88",
+      "width": 150,
+      "height": 74,
+      "size": 6023,
+      "uploadedDate": "2019-11-20T08:58:14.678Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00034-1920x1080-00c4970ad0a9f284f810c232ff0a960c_Snapshot.png",
+      "md5": "28d793b45e5b32264c1204dc48c173d1",
+      "width": 150,
+      "height": 74,
+      "size": 3806,
+      "uploadedDate": "2019-11-20T08:58:15.050Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00033-1920x1080-2fe3a632cedf976aa155cb0816bfb2eb_Snapshot.png",
+      "md5": "7ed6ec5b95b9c5245e17d6b156371eca",
+      "width": 150,
+      "height": 74,
+      "size": 7399,
+      "uploadedDate": "2019-11-20T08:58:15.481Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00012-1920x1080-a81eca1108dfe627208573c74935d136_Snapshot.png",
+      "md5": "9ed6e24d0167bd5f49f6ccd84c59518a",
+      "width": 150,
+      "height": 74,
+      "size": 5741,
+      "uploadedDate": "2019-11-12T15:03:10.031Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-4bc2311f4863c03ed9df586b303f0a8d_Snapshot.png",
+      "md5": "68c6f1446e50f05ff2b7680325534b1f",
+      "width": 150,
+      "height": 74,
+      "size": 5042,
+      "uploadedDate": "2019-11-12T15:03:10.664Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00006-1920x1080-b7346c40fff3ed8543acc33c3e87164f_Snapshot.png",
+      "md5": "4c3d95700362039db0824bf5e747bbee",
+      "width": 150,
+      "height": 74,
+      "size": 7071,
+      "uploadedDate": "2019-11-12T15:03:11.097Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00007-1920x1080-47e56246c502d7319dfc4d6f4c86d468_Snapshot.png",
+      "md5": "88f34e9df5cf284e39581c0d7d7d4748",
+      "width": 150,
+      "height": 74,
+      "size": 4260,
+      "uploadedDate": "2019-11-12T15:03:11.385Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00000-1920x1080-a57548e2ba1a21a654012de5be59a8da_Snapshot.png",
+      "md5": "a0dca6ebbb78d10637389669478a4655",
+      "width": 150,
+      "height": 74,
+      "size": 5681,
+      "uploadedDate": "2019-11-11T02:31:43.313Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00005-1920x1080-6d80f47dadb50bb868d30934b89776f6_Snapshot.png",
+      "md5": "6f9ace6a40fe478ebef7cef63d1867ae",
+      "width": 150,
+      "height": 74,
+      "size": 5135,
+      "uploadedDate": "2019-11-11T02:31:43.956Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00009-1920x1080-869ac239d18d5f2343195dd7860b7968_Snapshot.png",
+      "md5": "00cc94ba3d0ff69749c1591def8c6c74",
+      "width": 150,
+      "height": 74,
+      "size": 5377,
+      "uploadedDate": "2019-11-11T02:31:44.581Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00008-1920x1080-49f3a4fd6cfc18a53c01044be6214b2a_Snapshot.png",
+      "md5": "411f5e166ef793ed37f2aef5d5d502ae",
+      "width": 150,
+      "height": 74,
+      "size": 5087,
+      "uploadedDate": "2019-11-11T02:31:45.289Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-9ba86c3a93ad631e46d01301199aeb27_Snapshot.png",
+      "md5": "cd698691360970618112bd80f4831e77",
+      "width": 150,
+      "height": 74,
+      "size": 4336,
+      "uploadedDate": "2019-11-11T02:31:45.639Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00003-1920x1080-7c8c72f4f7828ff50ceb097f3bfafff3_Snapshot.png",
+      "md5": "f4d102733a176b68984d23367c5cd9a8",
+      "width": 150,
+      "height": 74,
+      "size": 7195,
+      "uploadedDate": "2019-11-11T02:31:46.078Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00002-1920x1080-3fe686407a98e046e5609cd089044740-1920x1080-3fe686407a98e046e5609cd089044740_Snapshot.png",
+      "md5": "50bda2cf0b9aa6066f6aa6a2ec234ccc",
+      "width": 150,
+      "height": 74,
+      "size": 4192,
+      "uploadedDate": "2019-11-01T19:49:02.000Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00001-1920x1080-6395160cc1e524d8c1092f6a92cc3109-1920x1080-6395160cc1e524d8c1092f6a92cc3109_Snapshot.png",
+      "md5": "b71e1eeb2527020bd9dd83cf76b327c2",
+      "width": 150,
+      "height": 74,
+      "size": 5124,
+      "uploadedDate": "2019-11-01T19:49:02.661Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00003-1920x1080-be169f9b89041e822199847dc603377e-1920x1080-be169f9b89041e822199847dc603377e_Snapshot.png",
+      "md5": "e344fe69f59ab8fbb7a0702a0fc98b88",
+      "width": 150,
+      "height": 74,
+      "size": 4607,
+      "uploadedDate": "2019-11-01T19:49:03.039Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/HighresScreenshot00004-1920x1080-df2a94f84b4f3c9a8ec7b85cc8fe1ee7-1920x1080-df2a94f84b4f3c9a8ec7b85cc8fe1ee7_Snapshot.png",
+      "md5": "387312b67ef027a1587bbbc7ade31295",
+      "width": 150,
+      "height": 74,
+      "size": 6687,
+      "uploadedDate": "2019-11-01T19:49:03.482Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "assets"
+    },
+    {
+      "path": "assets/environments"
+    }
+  ],
+  "namespace": "ue",
+  "status": "SUNSET",
+  "creationDate": "2019-11-23T19:09:29.157Z",
+  "lastModifiedDate": "2022-12-02T10:23:01.871Z",
+  "entitlementName": "79d00b5574b645c99d7a49676c132d2a",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "127eac734dab4ae8a1495f5caf0e45da",
+      "appId": "BeefyGra79d00b5574b6V1",
+      "compatibleApps": [
+        "UE_4.21",
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows",
+        "Win32",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android",
+        "PS4",
+        "Xbox One"
+      ],
+      "dateAdded": "2019-11-01T00:00:00.000Z",
+      "releaseNote": "Mobile support,\nMesh Distance Fields,\nPivotPainter2,",
+      "versionTitle": "Version 3.0 - 4.21 / Mobile"
+    },
+    {
+      "id": "b31279fab9074fc69bc70fa1e91a9966",
+      "appId": "BeefyGra79d00b5574b6V2",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Win32",
+        "Windows",
+        "Mac",
+        "Linux",
+        "PS4",
+        "Xbox One"
+      ],
+      "dateAdded": "2019-11-01T00:00:00.000Z",
+      "releaseNote": "Runtime Virtual Texturing,\nMesh Distance Fields,\nPivotPainter2",
+      "versionTitle": "Version 3.0 - 4.23"
+    },
+    {
+      "id": "0a8de4828ca34b3a9738b23a86f38ce5",
+      "appId": "BeefyGra79d00b5574b6V3",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Xbox One",
+        "Windows",
+        "Win32",
+        "PS4",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2020-01-14T00:00:00.000Z",
+      "releaseNote": "Virtual Texturing Fix",
+      "versionTitle": "Version 3.0 - 4.24"
+    },
+    {
+      "id": "fc4b6b4b1a5d42aab4fa36ecaab49738",
+      "appId": "BeefyGra79d00b5574b6V4",
+      "compatibleApps": [
+        "UE_4.25",
+        "UE_4.26",
+        "UE_4.27",
+        "UE_5.0",
+        "UE_5.1"
+      ],
+      "platform": [
+        "Android",
+        "iOS",
+        "Linux",
+        "Mac",
+        "PS4",
+        "Win32",
+        "Windows",
+        "Xbox One"
+      ],
+      "dateAdded": "2020-06-13T00:00:00.000Z",
+      "releaseNote": "New content:\n- Improved foliage material + post processing\n- new foliage / landscape example,\n- rendertarget + wind BP\n- bird + butterfly sample",
+      "versionTitle": "GrassLands 4.0 "
+    }
+  ],
+  "developer": "MWallace3D",
+  "developerId": "o-wspfycd856348muwzrh42kjsusqq87",
+  "endOfSupport": false,
+  "unsearchable": false
+}

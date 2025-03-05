@@ -1,0 +1,180 @@
+{
+  "id": "2d5c8ae19cec49988f534aab76fd8850",
+  "title": "Procedural Dungeon 3D",
+  "description": "A tool that generates procedural dungeons. Comes with a medieval room.",
+  "longDescription": "<p>Generates a maze-like dungeon using one or more rooms. The only constraint is to give the room&#39;s size to the algorithm and the rooms you want to spawn. It means that all rooms must have the same overall size. Objects inside the room can be spawned randomly. You can choose the amount of objects/enemies you want to spawn in a room and their type. It means that you can give your rooms different shapes by adding walls inside of each room.</p><p><br /></p><p>For this build we use a medieval fantasy style with crates, barrels, and lanterns on the top of some of the crates. Rooms are currently separated from one another by grids that open when the player is near. Doors only spawn if 2 rooms are close from one another, otherwise a wall is created. Torches light up when the player enters a room. A &#34;boss room&#34; is generated to give the player a goal inside the dungeon.</p><p><br /></p><p>You can easily customize the rooms you want to spawn, what&#39;s inside of the rooms, and the size and shape of the dungeon. The tool can be used for 3D or 2D games, fantasy worlds, or futuristic space stations; whatever you imagine.</p><p><br /></p><p>The specificity of the tool is the realistic maze-like look of the end result that you can find here :</p><p><a href=\"https://www.youtube.com/watch?v&#61;Oc5RYXKuAVQ\" rel=\"nofollow\">https://www.youtube.com/watch?v&#61;Oc5RYXKuAVQ</a></p><p><br /></p><p><strong>The character Countess from Paragon and the torches from Unreal Starter Content are only used for demo purposes and the project does not contain all animations and skins for the character.</strong></p>",
+  "technicalDetails": "<p><strong>Features</strong>:</p><ul><li> A tool that generates a maze-like level.</li><li> Random generation of the inside of each room.</li><li> A room with medieval fantasy style.</li><li>Crates, barrels and lanterns.</li></ul><p>Generation is inside BP_Procedural_Generation.</p><p>Each room needs its own Blueprint to function.</p><p>BP_My_Camera is used during generation.</p><p><strong>Graph</strong>:</p><ul><li>Texture 2048*2048</li><li>Walls 36 Vertex</li><li>Barrel 360 Vertex</li><li>Grid 710 Vertex</li><li>Crate 180 Vertex</li><li>Torch 164 Vertex</li><li>Lantern 176 Vertex</li><li>0 LODs</li></ul><p><strong>How to use it</strong>:</p><p>The tool generates a dungeon based on the rooms you are using. Rooms will then be filled with objects randomly.</p><p>You can set the size of the grid and the amount of rooms by changing the values &#34;Size_Of_Grid&#34; and &#34;Number_Of_Lines&#34; inside BP_Procedural_Generation. For a better looking dungeon those values must be close to one another. For values higher than 50 the engine may lag. We recommend that you keep those values under 30 each.</p><p>You must set the value &#34;Size_Of_Room&#34; inside BP_Procedural_Generation to the size of the room you want to spawn. It means that all different rooms you want to spawn must have the same size. Advice : You can change the inside of each room later to make it look like you spawned smaller rooms.</p><p>You can change the meshes inside the blueprint &#34;BP_Room&#34;. Automatic door creation works with colliders placed in each direction. In order to work your rooms must have colliders placed in those positions and must be named &#34;Collider_North&#34;, East, West and South.</p><p>You can select which objects or enemies can be spawned in each room inside the construction script of &#34;BP_Room&#34;.</p><p>Press N to start the procedural generation.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery3-1920x1080-3c31bd200bb6ac9cdd157d1209c2b7a1.png",
+      "md5": "3c31bd200bb6ac9cdd157d1209c2b7a1",
+      "width": 1920,
+      "height": 1080,
+      "size": 2550253,
+      "uploadedDate": "2019-01-16T18:10:55.536Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery2-1920x1080-face2717c08b49920d87aebe408b74ab.png",
+      "md5": "face2717c08b49920d87aebe408b74ab",
+      "width": 1920,
+      "height": 1080,
+      "size": 238340,
+      "uploadedDate": "2019-01-16T18:10:55.934Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery1-1920x1080-4ce1a7c865cf5e025a793634189673ce.png",
+      "md5": "4ce1a7c865cf5e025a793634189673ce",
+      "width": 1920,
+      "height": 1080,
+      "size": 372091,
+      "uploadedDate": "2019-01-16T18:10:56.134Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ProceduralDungeon3D_thumb-284x284-96a3b7bc095fa14f66978c03a60bd01a.png",
+      "md5": "96a3b7bc095fa14f66978c03a60bd01a",
+      "width": 284,
+      "height": 284,
+      "size": 63275,
+      "uploadedDate": "2019-01-16T18:10:56.322Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/ProceduralDungeon3D_featured-894x488-1509f303835391c7fc5c02afd18a5db4.png",
+      "md5": "1509f303835391c7fc5c02afd18a5db4",
+      "width": 894,
+      "height": 488,
+      "size": 139400,
+      "uploadedDate": "2019-01-16T18:10:56.411Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery3-1920x1080-3c31bd200bb6ac9cdd157d1209c2b7a1_Snapshot.png",
+      "md5": "171b9c883db797e85745dd6d8b91ca9c",
+      "width": 150,
+      "height": 74,
+      "size": 22842,
+      "uploadedDate": "2019-01-16T18:10:55.870Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery2-1920x1080-face2717c08b49920d87aebe408b74ab_Snapshot.png",
+      "md5": "404c72be996404d86c547f91c85a7489",
+      "width": 150,
+      "height": 74,
+      "size": 6263,
+      "uploadedDate": "2019-01-16T18:10:56.025Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1-1920x1080-4ce1a7c865cf5e025a793634189673ce_Snapshot.png",
+      "md5": "27cba0b70d81e3e33d2b374ef40b2242",
+      "width": 150,
+      "height": 74,
+      "size": 9301,
+      "uploadedDate": "2019-01-16T18:10:56.244Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "projects"
+    },
+    {
+      "path": "projects/completeprojects"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-02-14T16:33:48.263Z",
+  "lastModifiedDate": "2024-10-15T19:39:24.598Z",
+  "entitlementName": "2d5c8ae19cec49988f534aab76fd8850",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "5c59cb62f8ec4219986553404c464e0d",
+      "appId": "Procedur2d5c8ae19cecV1",
+      "compatibleApps": [
+        "UE_4.20"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-02-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.20"
+    },
+    {
+      "id": "7e737d1fe4414368aa3ea1816d273bd0",
+      "appId": "Procedur2d5c8ae19cecV2",
+      "compatibleApps": [
+        "UE_4.21"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-02-12T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.21"
+    },
+    {
+      "id": "29dfdca3a95148b0b150da2df11f7bff",
+      "appId": "Procedur2d5c8ae19cecV3",
+      "compatibleApps": [
+        "UE_4.22"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2019-05-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.22"
+    },
+    {
+      "id": "cc341700faab409e9d9b40a5a78f3541",
+      "appId": "Procedur2d5c8ae19cecV4",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-02-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.23"
+    },
+    {
+      "id": "cf240ba316b14241af47610a4c106ffd",
+      "appId": "Procedur2d5c8ae19cecV5",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-02-27T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.24"
+    },
+    {
+      "id": "c3f7a07dc29646bbad5c3ee507d718d0",
+      "appId": "Procedur2d5c8ae19cecV6",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows"
+      ],
+      "dateAdded": "2020-08-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "4.25"
+    }
+  ],
+  "developer": "JulienLefebvre",
+  "developerId": "o-p8t7mjrjmclalte4mw4trg8c6bdam3",
+  "endOfSupport": false,
+  "unsearchable": false
+}

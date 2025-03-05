@@ -1,0 +1,335 @@
+{
+  "id": "7473c346d41f490786638584dedf7dd4",
+  "title": "Enhanced Input Sequence",
+  "description": "Enhanced Input Sequence allows user to manually setup Input Action Combos for action games",
+  "longDescription": "<h1>ENHANCED INPUT SEQUENCE</h1><p><br /></p><p><a href=\"https://youtu.be/wm4FjdBr4Fw\" rel=\"nofollow\">TUTORIAL</a></p><p><a href=\"https://github.com/klauth86/UE_Plugin_EnhancedInputSequence\" rel=\"nofollow\">EXAMPLE/SOURCE CODE</a></p><p><a href=\"https://www.paypal.com/paypalme/ArturKhairullin\" rel=\"nofollow\">DONATE&#x1f44d;</a></p><p><br /></p><p><strong>Enhanced Input Sequence</strong> allows user to manually setup Input Combos for action games. You can create all assets provided by this plugin via opening <em>Content Browser</em> context menu (with Right Mouse Button) and navigating to <em>Misc</em> category. See plugin Content folder to check Example project.</p><p><br /></p><p><strong>[IMPORTANT]</strong></p><blockquote>Recently we have published new plugin that allows user to automatically setup Input Combos for action games. Check it <a href=\"https://www.unrealengine.com/marketplace/product/53610412440c49ea8aca54bf94574bad\" rel=\"nofollow\">HERE</a></blockquote><p><br /></p><p><a href=\"https://discord.gg/TjxHxkwzRb\" rel=\"nofollow\">SUPPORT/FEEDBACK</a></p><p><a href=\"https://www.unrealengine.com/marketplace/en-US/profile/Pentangle&#43;St.\" rel=\"nofollow\">CHECK OTHER PLUGINS BY US:</a></p><p>_____________________________________________________________________________________________</p><p><br /></p><h2>TECHNICAL NOTES</h2><p><br /></p><p>1) INPUT SEQUENCE</p><p><br /></p><p><strong>Input Sequence</strong> - is main asset class which contains graph for setting up <strong>Input Action</strong> sequences. It is configured with <em>Graph Editor</em> to edit nodes and links between them and with <em>Property Editor</em> to edit asset and nodes properties. All basic operations for nodes and all basic operations for properties are supported and can be executed in a similar way as it goes with any other Blueprint Editor. By default <strong>Input Sequence</strong> always has <strong>Entry node</strong> which defines entry point for all <strong>Input Action</strong> sequences to process with this asset.</p><p><br /></p><p><strong>[IMPORTANT]</strong></p><blockquote>Dont forget to set World for <strong>Input Sequence</strong> asset (see <em>SetWorldContext</em> method). <strong>Input Sequence Events</strong> within each one of node&#39;s collections (Enter Events, Pass Events or Reset Events) will be using this context when operating with world contexted nodes like <em>Get Player Pawn</em>, etc.</blockquote><p><br /></p><p><u>PROPERTIES:</u></p><ul><li>[Reset Time] - Time interval after which any node will be reset (global, can be overriden on any node), zero value (0) means node will not be reset by time</li><li>[Step When Game Paused] - If true, active nodes will continue to step even if Game is paused (see <em>OnInput</em> method)</li><li>[Tick When Game Paused] - If true, active nodes will continue to tick even if Game is paused (see <em>OnInput</em> method)</li></ul><h2><br /></h2><p>2) NODES</p><p><br /></p><p>There are two classes of nodes:</p><ul><li>FLOW nodes used to define flow</li><li>INPUT nodes used to process input</li></ul><p>Nodes can be entered, passed and reset.</p><p><br /></p><p><strong>Entry node [</strong>FLOW node<strong>]</strong></p><p>Entry node defines entry point for all <strong>Input Action</strong> sequences to process with this asset. It is created by default and can not be copied, duplicated or removed. This node has no properties.</p><p><br /></p><p><strong>Hub node [</strong>FLOW node<strong>]</strong></p><p>Hub node transmits signal on input pin to all output pins, allowing to have many <strong>Input Action</strong> sequences to process in one <strong>Input Sequence</strong> asset. Output pins can be added via <strong>&#34;Plus&#34; button</strong> at the bottom of each node and can be removed with <strong>&#34;Cross&#34; button</strong> for each output pin added. This node has no properties.</p><p><br /></p><p><strong>Input node [</strong>INPUT node<strong>]</strong></p><p>Input node is used to configure list of <strong>Input Actions</strong> and <strong>Trigger Events</strong> for them to check. <strong>Input Action</strong> entries can be added via <strong>&#34;Plus&#34; button</strong> at the bottom of each node and can be removed with <strong>&#34;Cross&#34; button</strong> for each <strong>Input Action</strong> entry added.</p><p><br /></p><p><u>PROPERTIES:</u></p><ul><li>[Enter Events] - Collection of <strong>Input Sequence Events</strong> to execute when node is entered</li><li>[Pass Events] - Collection of <strong>Input Sequence Events</strong> to execute when node is passed</li><li>[Reset Events] - Collection of <strong>Input Sequence Events</strong> to execute when node is reset</li><li>[Request key] - Request Key (used to identify context in Event Requests and Reset Requests)</li><li>[Require Strong Match] - If true, node will be reset by any <strong>Input Action</strong> that is not listed</li><li>[Reset Time] - Time interval after which this node will be reset (overrides global value), zero value (0) means node will not be reset by time</li></ul><p><br /></p><p><strong>Reset node [Flow node]</strong></p><p>Reset node requests reset of all active nodes.</p><p><br /></p><p><u>PROPERTIES:</u></p><ul><li>[Request key] - Request Key (used to identify context in Event Requests and Reset Requests)</li></ul><h2><br /></h2><p>3) INPUT ACTION ENTRIES</p><p><br /></p><p><strong>Input Action</strong> entries can be added via <strong>&#34;Plus&#34; button</strong> at the bottom of each node and can be removed with <strong>&#34;Cross&#34; button</strong> for each <strong>Input Action</strong> entry added.</p><p><br /></p><p>Simple rules for entries:</p><ul><li>Node is passed if ALL entries on it are passed</li><li>Node can be reset if ANY entry on it is reset OR if node has [Require Strong Match] set to true and any <strong>Input Action</strong> that is not listed is met OR node is reset by [Reset Time]</li><li>Entry is passed if corresponding <strong>Input Action</strong> is met with corresponding <strong>Trigger Event</strong> and [Wait Time] condition is met</li><li>Entry can be reset if it is using <strong>Strong mode</strong> (~) or <strong>Precise mode</strong> (!) and required <strong>Trigger Event</strong> is not met or if [Wait Time] condition is not met</li><li>External Reset Request will reset all active nodes of <strong>Input Sequence</strong> (see <em>RequestReset</em> method)</li><li>Every Reset node will reset all active nodes of <strong>Input Sequence</strong> when it is entered</li></ul><p><br /></p><p>On each entry two main settings can be changed:</p><ul><li>[S T C] - selector to choose <strong>Trigger Event</strong>, that will be waited to pass this entry. Three values for it are - S (Started), T (Triggered), C (Completed). Active value is colored with green color. Along with simple switching between those values, clicking on active value more will give two special modes - <strong>Strong mode</strong> (~) and <strong>Precise mode</strong> (!). <strong>Strong mode</strong> (~) means that any other <strong>Trigger Event</strong> will reset this entry. <strong>Precise mode</strong> (!) means that any other <strong>Trigger Event</strong> or none of any will reset this entry</li><li>[Wait Time] - Time interval of continious check after which this entry can be passed</li></ul><p><br /></p><p>4) INPUT ACTION EVENTS</p><p><br /></p><p><strong>Input Sequence Event Base</strong> - is abstract blueprintable class that is supposed to be parent class for C&#43;&#43; or BP child classes. It should be used to configure custom logic when entering, passing and resetting nodes. The main process is like:</p><ul><li>Create child class and override <em>Execute</em> method to setup custom logic</li><li>Instanciate event of creatded child class within one of node&#39;s collections (Enter Events, Pass Events or Reset Events)</li><li>Setup properties on instanced event</li></ul><p><br /></p><p>5) INPUT ACTION REQUEST KEY</p><p><br /></p><p><strong>Input Action Request Key</strong> - is simple asset class without any properties. It should be used simply to identify context in Event and Reset Requests. For example, that can be useful when one of two Reset nodes was entered triggering reset and it is important to identify if that was first Reset node or other. The same usage goes with Input nodes.</p>",
+  "technicalDetails": "<p>Features:</p><ul><li><strong>Enhanced Input Sequence</strong> allows user to create <strong>Input Sequences</strong> (graph) and configure them for various reasons</li><li><strong>Enhanced Input Sequence</strong> allows user to create <strong>Input Sequence Events</strong> that are executed by <strong>Input Sequences</strong> when nodes are enetered, passed or reset</li><li><strong>Enhanced Input Sequence</strong> allows user to create <strong>Input Sequence Request Keys</strong> that can be used to pass context data from active node to events</li></ul><p>Code Modules:</p><ul><li> InputSequenceCore [Runtime]</li><li> InputSequenceCoreEditor [Editor] </li></ul><p>Number of Blueprints: 0</p><p>Number of C&#43;&#43; Classes: 42</p><p>Network Replicated: No</p><p>Supported Development Platforms: Win64, Linux, Mac</p><p>Supported Target Build Platforms: Win64, Linux, Mac</p><p>Documentation: see full description above</p><p>Example Project: see plugin Content folder</p><p>Important/Additional Notes: see full description above</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery01-1920x1080-817552103207fd3fe114b01ed54a29a5.png",
+      "md5": "817552103207fd3fe114b01ed54a29a5",
+      "width": 1920,
+      "height": 1080,
+      "size": 965156,
+      "uploadedDate": "2024-01-06T11:59:40.425Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery02-1920x1080-cd761512be594b7ec4154c4193af2983.png",
+      "md5": "cd761512be594b7ec4154c4193af2983",
+      "width": 1920,
+      "height": 1080,
+      "size": 1071287,
+      "uploadedDate": "2024-01-06T11:59:41.028Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery03-1920x1080-9d45dee633506d0c839c00908e6205df.png",
+      "md5": "9d45dee633506d0c839c00908e6205df",
+      "width": 1920,
+      "height": 1080,
+      "size": 335749,
+      "uploadedDate": "2024-01-06T11:59:41.611Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery04-1920x1080-2fd21718266ae5000a011661f0c1113f.png",
+      "md5": "2fd21718266ae5000a011661f0c1113f",
+      "width": 1920,
+      "height": 1080,
+      "size": 351640,
+      "uploadedDate": "2024-01-06T11:59:42.121Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery05-1920x1080-5488fdf026f26e0a8b75585cb5e33e82.png",
+      "md5": "5488fdf026f26e0a8b75585cb5e33e82",
+      "width": 1920,
+      "height": 1080,
+      "size": 387077,
+      "uploadedDate": "2024-01-06T11:59:42.581Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery06-1920x1080-072db99b3f73b5dc945962f13f2a5ce6.png",
+      "md5": "072db99b3f73b5dc945962f13f2a5ce6",
+      "width": 1920,
+      "height": 1080,
+      "size": 397907,
+      "uploadedDate": "2024-01-06T11:59:43.140Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery07-1920x1080-2a62dd601bf756689e39781376c9669b.png",
+      "md5": "2a62dd601bf756689e39781376c9669b",
+      "width": 1920,
+      "height": 1080,
+      "size": 250582,
+      "uploadedDate": "2024-01-04T08:14:14.747Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery08-1920x1080-9b41ed3cba4718b4e763dd822e771bc8.png",
+      "md5": "9b41ed3cba4718b4e763dd822e771bc8",
+      "width": 1920,
+      "height": 1080,
+      "size": 252308,
+      "uploadedDate": "2024-01-04T08:14:15.279Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery09-1920x1080-bb64a918a41442ebfd5a333149ee88b7.png",
+      "md5": "bb64a918a41442ebfd5a333149ee88b7",
+      "width": 1920,
+      "height": 1080,
+      "size": 247159,
+      "uploadedDate": "2024-01-04T08:14:15.731Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/EnhancedInputSequence_thumb-284x284-0d0b7c9c9a56b73d293919a3d749f4e9.png",
+      "md5": "0d0b7c9c9a56b73d293919a3d749f4e9",
+      "width": 284,
+      "height": 284,
+      "size": 93967,
+      "uploadedDate": "2024-01-03T18:25:35.843Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/EnhancedInputSequence_featured-894x488-2a01c0c580a531a787a2dc325b5f1d2c.png",
+      "md5": "2a01c0c580a531a787a2dc325b5f1d2c",
+      "width": 894,
+      "height": 488,
+      "size": 53071,
+      "uploadedDate": "2024-01-04T07:54:17.515Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery01-1920x1080-817552103207fd3fe114b01ed54a29a5_Snapshot.png",
+      "md5": "cb98dad70ff6d5afb127f2504cd3d167",
+      "width": 150,
+      "height": 74,
+      "size": 6287,
+      "uploadedDate": "2024-01-06T11:59:40.790Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery02-1920x1080-cd761512be594b7ec4154c4193af2983_Snapshot.png",
+      "md5": "9cfe08a22339a497cc53c199e0d8f4d0",
+      "width": 150,
+      "height": 74,
+      "size": 6327,
+      "uploadedDate": "2024-01-06T11:59:41.451Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery03-1920x1080-9d45dee633506d0c839c00908e6205df_Snapshot.png",
+      "md5": "a3404993d4a909a96e8fdc89bc0a7652",
+      "width": 150,
+      "height": 74,
+      "size": 4058,
+      "uploadedDate": "2024-01-06T11:59:41.918Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery04-1920x1080-2fd21718266ae5000a011661f0c1113f_Snapshot.png",
+      "md5": "c6901e332c510bb66353e7004a1d70a1",
+      "width": 150,
+      "height": 74,
+      "size": 4077,
+      "uploadedDate": "2024-01-06T11:59:42.435Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery05-1920x1080-5488fdf026f26e0a8b75585cb5e33e82_Snapshot.png",
+      "md5": "6009fb345bf93be718352cdb49545611",
+      "width": 150,
+      "height": 74,
+      "size": 4498,
+      "uploadedDate": "2024-01-06T11:59:42.978Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery06-1920x1080-072db99b3f73b5dc945962f13f2a5ce6_Snapshot.png",
+      "md5": "58abe8bb4ce7d9b14c51709c7cab1f39",
+      "width": 150,
+      "height": 74,
+      "size": 4365,
+      "uploadedDate": "2024-01-06T11:59:43.451Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery01-1920x1080-df80a03000ed49d4fa962278bbecb922_Snapshot.png",
+      "md5": "30c156e683bd45e35b13125fb671c7e3",
+      "width": 150,
+      "height": 74,
+      "size": 5013,
+      "uploadedDate": "2024-01-04T08:14:12.207Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery02-1920x1080-74672df219acfe1957ab789bd12fb4ff_Snapshot.png",
+      "md5": "135fd07b5f0f82bdf70544bce445e2d6",
+      "width": 150,
+      "height": 74,
+      "size": 5523,
+      "uploadedDate": "2024-01-04T08:14:12.742Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery03-1920x1080-53e6af2ae5f231cf0ed8af3b3e19340d_Snapshot.png",
+      "md5": "52e1c05bc2d66ce6d6d3be29d802d6de",
+      "width": 150,
+      "height": 74,
+      "size": 3783,
+      "uploadedDate": "2024-01-04T08:14:13.194Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery04-1920x1080-a4b4db558b055ef8b8e006d17f55402a_Snapshot.png",
+      "md5": "9427d01e1a7b0bc2e4c8af17bfbf98e0",
+      "width": 150,
+      "height": 74,
+      "size": 3994,
+      "uploadedDate": "2024-01-04T08:14:13.694Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery05-1920x1080-43d94bb4e026fedcfa9e3422aae6bdb0_Snapshot.png",
+      "md5": "50fd546a32f5ef99a6e310071d8f22ed",
+      "width": 150,
+      "height": 74,
+      "size": 4288,
+      "uploadedDate": "2024-01-04T08:14:14.111Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery06-1920x1080-c409eca4cb49edb40a5a1a575f1aa5c7_Snapshot.png",
+      "md5": "72801f53c9af0e35669e5bbd5d5a88f2",
+      "width": 150,
+      "height": 74,
+      "size": 3990,
+      "uploadedDate": "2024-01-04T08:14:14.586Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery07-1920x1080-2a62dd601bf756689e39781376c9669b_Snapshot.png",
+      "md5": "52aba0531a51db13a192699903d984ca",
+      "width": 150,
+      "height": 74,
+      "size": 3756,
+      "uploadedDate": "2024-01-04T08:14:15.014Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery08-1920x1080-9b41ed3cba4718b4e763dd822e771bc8_Snapshot.png",
+      "md5": "e9f7820952038bb2dc18488d794697ce",
+      "width": 150,
+      "height": 74,
+      "size": 3764,
+      "uploadedDate": "2024-01-04T08:14:15.572Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery09-1920x1080-bb64a918a41442ebfd5a333149ee88b7_Snapshot.png",
+      "md5": "7cee8261a698006dddd6fd09f2bff092",
+      "width": 150,
+      "height": 74,
+      "size": 3745,
+      "uploadedDate": "2024-01-04T08:14:16.023Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/GalleryMock-1920x1080-f624c017e48e79b97b0399e9f1d783eb_Snapshot.png",
+      "md5": "b90989a3659a663e012c03ff5a6fd540",
+      "width": 150,
+      "height": 74,
+      "size": 828,
+      "uploadedDate": "2024-01-03T06:51:26.635Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-01-07T08:23:41.290Z",
+  "lastModifiedDate": "2024-11-14T20:55:32.813Z",
+  "customAttributes": {},
+  "entitlementName": "7473c346d41f490786638584dedf7dd4",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "3e3811c6ccbf4b378c37598c10c1002f",
+      "appId": "EnhancedInputSequence_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-01-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.3_5.1"
+    },
+    {
+      "id": "a01f14c27ea94c368a72b8ab3e5b870c",
+      "appId": "EnhancedInputSequence_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-01-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.52_5.2"
+    },
+    {
+      "id": "689b9fb324f24effa08683343e5eef5c",
+      "appId": "EnhancedInputSequence_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-01-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.52_5.3"
+    },
+    {
+      "id": "43b130a026ff475d8241ea82c94bf8d2",
+      "appId": "EnhancedInputSequence_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2024-05-03T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "v1.52_5.4"
+    }
+  ],
+  "developer": "Pentangle St.",
+  "developerId": "o-uljepgj3r9qhqvt365cxemcuyqhawj",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}

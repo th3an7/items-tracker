@@ -1,0 +1,268 @@
+{
+  "id": "1bfd5dec47a6436099fdb7cd6539c5b0",
+  "title": "Pak Loader Plugin",
+  "description": "Exposes .pak file loading functions to Blueprints and provides functions to use assets from the pak file. Intended to be used in packaged builds.",
+  "longDescription": "<p>The Pak Loader enables you to load Unreal .pak files at runtime. This makes assets within that pak file available to be used at runtime. It does that by exposing Unreal&#39;s pak mounting functions to Blueprints and also in a more convenient way to C&#43;&#43;.</p><p>For example you could use it for modding purposes where players can download pak files containing levels/map assets and then load that during runtime. Or an ArchViz application where users can download additional meshes.</p><p>Paks can contain any type of assets. Once the pak file is loaded Unreal can access all of the assets in it. This includes levels as well.</p><p>Due to how Unreal Engine works, .pak files are only intended to be loaded in <strong>packaged (non editor)</strong> builds.</p><p><br /></p><p>You can find an example project and an example .pak file in the link below.</p><p><strong>Read the documentation to learn about mounting pak files. If you are a new to Unreal this plugin might not be suitable for you, as mounting pak files is a non trivial thing.</strong></p><p><br /></p><p>To create pak files you can also use <a href=\"https://www.unrealengine.com/marketplace/en-US/product/pak-creator-plugin\" rel=\"nofollow\">my other plugin PakCreator</a>.</p><p><br /></p><p><strong>Features</strong>:</p><ul><li>Mount/Unmount .pak files. </li><li>Register mount points to support references between pak assets.</li><li>Download (.pak) files via HTTP.</li><li>Load objects (all kind of assets).</li><li>Load classes (Blueprints).</li><li>Utility functions like GetMountedPakFilenames, GetFilesInPakDirectory, SHA1SUM, IsValidPakFile, etc. (see documentation)</li></ul><p><br /></p><p><strong>Limitations</strong>:</p><ul><li>Only tested on Windows x64. But works on other platforms as well (MacOS, Linux, Mobile)</li><li>IoStore is supported but note that this feature is mutual exclusive. Meaning either all of the pak files have IoStore or none.</li><li>Loading assets from mounted Pak files only works in packaged builds of your project. (Not in Editor)</li><li>You can&#39;t load unsigned Pak files if your game project has Pak signing enabled.</li><li>Loading pak files that have been created with a different engine version than your project might not load.</li></ul><p><br /></p><p><strong>Code Modules</strong>:</p><ul><li>Runtime Module: &#34;PakLoader&#34;</li><li>Classes: FPakLoader, UPakLoaderLibrary, UAsyncPakDownloader, FLogHelper</li></ul><p><br /></p><p><strong>Example Project</strong>:</p><p>UE 4.22 <a href=\"https://drive.google.com/open?id&#61;1W6jE9DGPuM9FtqWfjGqHSx5jiRkOrLIE\" rel=\"nofollow\">Download</a></p><p>UE 4.23 <a href=\"https://drive.google.com/open?id&#61;1UVHZvp5hIj3PFZPpLjMEy4W7WYsXCx0m\" rel=\"nofollow\">Download</a></p><p>UE 4.24 <a href=\"https://drive.google.com/file/d/1IXcLmmYlpl0P066JfCpOMDm8ghvbh5pK/view?usp&#61;sharing\" rel=\"nofollow\">Download</a></p><p>UE 4.25 <a href=\"https://drive.google.com/file/d/1bQfkv4MBAikMb2mF-mKACOTabYV5wI9I/view?usp&#61;sharing\" rel=\"nofollow\">Download</a></p><p>UE 4.26 <a href=\"https://drive.google.com/file/d/1LbXAwZ0-ChG6EWkvyoH1_nYBBGtht9aT/view?usp&#61;sharing\" rel=\"nofollow\">Download</a></p><p>UE 4.27 <a href=\"https://drive.google.com/file/d/1-GlXWNa489waFDDSB8KxiovfJsK_xpHn/view?usp&#61;sharing\" rel=\"nofollow\">Download</a></p><p>UE 5.0 <a href=\"https://drive.google.com/file/d/1aWC2HgpxhatUSy1chvSm03HazEYMTD7i/view?usp&#61;sharing\" rel=\"nofollow\">Download</a></p><p>UE 5.1 <a href=\"https://drive.google.com/file/d/1qr9LgwdYYKysMJwnb7XO5bCh7fFLpXv1/view?usp&#61;share_link\" rel=\"nofollow\">Download</a></p><p>UE 5.2 <a href=\"https://drive.google.com/file/d/1wLSrY4btoYRAcMf8qKTkVd1Iayyvy4v2/view?usp&#61;sharing\" rel=\"nofollow\">Download</a></p><p>UE 5.3 <a href=\"https://drive.google.com/file/d/1rwehVazdy5cDWd1dy2SjhqWrIKBR_2So/view?usp&#61;sharing\" rel=\"nofollow\">Download</a></p><p>UE 5.4 <a href=\"https://drive.google.com/file/d/12vDLiik3QmM-UQ40HeeajuxV9XQBjW1_/view?usp&#61;sharing\" rel=\"nofollow\">Download</a></p>",
+  "technicalDetails": "<p><strong>Number of Blueprints</strong>: 0</p><p><strong>Number of C&#43;&#43; Classes</strong>: 5</p><p><strong>Network Replicated</strong>: No</p><p><strong>Supported Development Platforms</strong>: Windows x64</p><p><strong>Supported Target Build Platforms</strong>: Windows x64</p><p><strong>Documentation: </strong><a href=\"https://drive.google.com/file/d/1zXasckO9Q9qDT02d3Dw0O--52Lsfc4Xj/view?usp&#61;sharing\" rel=\"nofollow\">Link to Google Drive</a></p><p><strong>Forum Support:</strong> <a href=\"https://forums.unrealengine.com/unreal-engine/marketplace/1659142-pak-file-loader-plugin\" rel=\"nofollow\">Link</a></p><p><br /></p><p>Feel free to ask on the questions page but please read the documentation first and be as precise as possible.</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery1-1920x1080-5f739d09fbe8f6172aaae452564bb406.png",
+      "md5": "5f739d09fbe8f6172aaae452564bb406",
+      "width": 1920,
+      "height": 1080,
+      "size": 488092,
+      "uploadedDate": "2019-08-23T13:07:47.620Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery2-1920x1080-2b222c45b94608a395abe880a4a79424.png",
+      "md5": "2b222c45b94608a395abe880a4a79424",
+      "width": 1920,
+      "height": 1080,
+      "size": 470492,
+      "uploadedDate": "2019-08-23T17:30:54.267Z"
+    },
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/Gallery3-1920x1080-802197b7495630ebe648e3e4a53ac52f.png",
+      "md5": "802197b7495630ebe648e3e4a53ac52f",
+      "width": 1920,
+      "height": 1080,
+      "size": 376515,
+      "uploadedDate": "2019-08-23T17:30:54.694Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/PakLoaderPlugin_thumb-284x284-57ec3f69ea2c03d466c80d53e6ef3a4d.png",
+      "md5": "57ec3f69ea2c03d466c80d53e6ef3a4d",
+      "width": 284,
+      "height": 284,
+      "size": 33383,
+      "uploadedDate": "2022-12-11T14:47:09.768Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/PakLoader_featured-894x488-c715d52fb41a49377b6caba8c9d690c6.png",
+      "md5": "c715d52fb41a49377b6caba8c9d690c6",
+      "width": 894,
+      "height": 488,
+      "size": 115879,
+      "uploadedDate": "2019-08-23T13:07:47.986Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery2-1920x1080-2b222c45b94608a395abe880a4a79424_Snapshot.png",
+      "md5": "4edc103dbe5706bff559fc5a17e05014",
+      "width": 150,
+      "height": 74,
+      "size": 4829,
+      "uploadedDate": "2019-08-23T17:30:54.588Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery3-1920x1080-802197b7495630ebe648e3e4a53ac52f_Snapshot.png",
+      "md5": "e7cd6454608a281fc4988097381a9356",
+      "width": 150,
+      "height": 74,
+      "size": 4488,
+      "uploadedDate": "2019-08-23T17:30:54.954Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/Gallery1-1920x1080-5f739d09fbe8f6172aaae452564bb406_Snapshot.png",
+      "md5": "90410b2273f412d6b684ec6d81ae82a4",
+      "width": 150,
+      "height": 74,
+      "size": 3803,
+      "uploadedDate": "2019-08-23T13:07:47.875Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2019-08-31T12:27:50.034Z",
+  "lastModifiedDate": "2024-12-08T10:18:39.024Z",
+  "customAttributes": {},
+  "entitlementName": "1bfd5dec47a6436099fdb7cd6539c5b0",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "4414a356327143c8b88dd7148da76b63",
+      "appId": "PakLoaderPlugin_4.23",
+      "compatibleApps": [
+        "UE_4.23"
+      ],
+      "platform": [
+        "Windows",
+        "Linux"
+      ],
+      "dateAdded": "2020-12-02T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.2_423"
+    },
+    {
+      "id": "b6fc2950283c44c6887554542c1c22dd",
+      "appId": "PakLoaderPlugin_4.24",
+      "compatibleApps": [
+        "UE_4.24"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux"
+      ],
+      "dateAdded": "2020-12-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.2_424"
+    },
+    {
+      "id": "56cdcfbf6a594a6c8f0f75a749e15ab4",
+      "appId": "PakLoaderPlugin_4.25",
+      "compatibleApps": [
+        "UE_4.25"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-12-01T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.2_425"
+    },
+    {
+      "id": "7cc81ac6b63c4d9c83606f1f7512e363",
+      "appId": "PakLoaderPlugin_4.26",
+      "compatibleApps": [
+        "UE_4.26"
+      ],
+      "platform": [
+        "Windows",
+        "Mac",
+        "Linux",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2020-12-15T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.3_426"
+    },
+    {
+      "id": "3df1a4dc782e4aaca1eb7c087e256c41",
+      "appId": "PakLoaderPlugin_4.27",
+      "compatibleApps": [
+        "UE_4.27"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac",
+        "iOS",
+        "Android"
+      ],
+      "dateAdded": "2021-08-24T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.4_427"
+    },
+    {
+      "id": "891af73c2e38416392937854d6a68c1a",
+      "appId": "PakLoaderPlugin_5.0",
+      "compatibleApps": [
+        "UE_5.0"
+      ],
+      "platform": [
+        "Linux",
+        "iOS",
+        "Mac",
+        "Android",
+        "Windows"
+      ],
+      "dateAdded": "2022-04-05T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.4_500"
+    },
+    {
+      "id": "7f27f8d6ae8f45c5b431f0fa3ee0da96",
+      "appId": "PakLoaderPlugin_5.1",
+      "compatibleApps": [
+        "UE_5.1"
+      ],
+      "platform": [
+        "Linux",
+        "Windows",
+        "Android",
+        "iOS",
+        "Mac"
+      ],
+      "dateAdded": "2022-11-18T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.6_501"
+    },
+    {
+      "id": "0581667cf4634e3c943088ac21f20fdb",
+      "appId": "PakLoaderPlugin_5.2",
+      "compatibleApps": [
+        "UE_5.2"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Mac",
+        "Android",
+        "iOS"
+      ],
+      "dateAdded": "2023-05-14T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.7_502"
+    },
+    {
+      "id": "0c0c829e939b47579db4f7cc41fed966",
+      "appId": "PakLoaderPlugin_5.3",
+      "compatibleApps": [
+        "UE_5.3"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Android",
+        "iOS",
+        "Mac"
+      ],
+      "dateAdded": "2023-09-07T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.7_503"
+    },
+    {
+      "id": "da06908f6cab4d688980e36e66c96ba5",
+      "appId": "PakLoaderPlugin_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Linux",
+        "Android",
+        "Mac",
+        "iOS"
+      ],
+      "dateAdded": "2024-04-23T00:00:00.000Z",
+      "releaseNote": "",
+      "versionTitle": "1.7_504"
+    }
+  ],
+  "developer": "Blue Mountains",
+  "developerId": "o-kqgbeqehctnf9cvasrryshybb6ep57",
+  "endOfSupport": false,
+  "unsearchable": false
+}

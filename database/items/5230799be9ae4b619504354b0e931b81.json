@@ -1,0 +1,83 @@
+{
+  "id": "5230799be9ae4b619504354b0e931b81",
+  "title": "Lightweight Spawning Tool",
+  "description": "The Lightweight Spawning Tool allows you to create spawn areas with no hassle. Creating team based spawns or simply spawning a bunch of stuff has never been easier!",
+  "longDescription": "<h1>Lightweight Spawning Tool for Unreal</h1><p><br /></p><p>The Lightweight Spawning Tool exists to make life easier - no more headaches trying to get spawn orders to work! Objects don&#39;t spawn inside each other thanks to a lightweight spawning algorithm, allowing the user to handle the rest based on their needs. Using the Lightweight Spawning Tool, the user can easily set up external code to spawn what they want in zones provided, allowing their attention to go to other systems the project may need.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Installation</h2><p><br /></p><p>.h and .cpp files go into the source file of the user’s Unreal project. Likewise .uassets go into the content folder.</p><p>As long as the user has generated a .vs project with the Unreal project file (May be hidden on Windows 11) and has the assets in the right place, Unreal should be able to correctly import the files into the project for use.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Quick Use Guide</h2><p><br /></p><p>To get any version of this tool working, simply place an amount of <strong>Spawn Zones</strong> into your desired level - remember to select a shape for your area -, drop a <strong>Spawn Manager</strong> into your level, then use the claim zones function to attach the areas to the manager. Then simply create a class inheriting from the <strong>Spawnable</strong> actor and have an array of them somewhere. After this, whenever you wish to spawn them, simply call the manager&#39;s <strong>Spawn Objects</strong> function with the array of the <strong>Spawnables</strong> and the number you wish to spawn.</p><p><br /></p><p>If you are having trouble locating the plugin, you may need to click the <strong>Settings Cog</strong> on the <strong>Content Browser.</strong> Select <strong>Show Engine Content.</strong> Navigate to the left pane and follow this path (alternatively copy the path and paste it into the <strong>Content Browser Search Bar</strong>): EngineData/Plugins/Classes_LightweightSpawningTool/LightweightSpawningTool/Public</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Tool Documentation</h2><h3>ASpawnActor</h3><p><br /></p><p>This actor class serves as the base <strong>Spawnable</strong> class for user classes to inherit in order to use it for this tool. The reason being is that the user&#39;s classes can then make use of the <strong>On Spawn</strong> and <strong>On Despawn</strong> virtual functions. For example, if a character should be assigned to a team, that logic can be put on the <strong>On Spawn</strong>. This actor also holds a reference to the manager that spawned it in, which helps keep your house tidy.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h3>FSpawnZone</h3><p><br /></p><p>This struct serves as the base struct for the <strong>Spawning Zones</strong>. Currently the types of zones are Sphere, Box and Cylinder.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h3>ESpawnZoneType</h3><p><br /></p><p>Sphere, Box and Cylinder</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h3>ASpawnZoneActor</h3><p><br /></p><p>This actor allows the user to simply drag and drop into the editor where they want <strong>Spawn Zones</strong> and assigning the type via the enum before a manager claims them.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h3>ASpawnManager</h3><p><br /></p><p>This actor manages an array of <strong>Spawn Zones</strong> by either adding to the arrays manually or using the <strong>Claim Actors</strong> editor function in order to claim all the spawn actors in the level. The spawning can be set to either <strong>Fill</strong> or <strong>Spread</strong> modes and can call <strong>Spawn Objects</strong> function, passing in an array of spawn objects to spawn from. Note that the objects get taken out of the array, so if you wish to return to that pool, you can do so in the <strong>On Despawn</strong> function. This function also takes in a number to spawn which gets updated so the value passed in will be 0 if all objects managed to spawn. Another value passed in is the assumed size of the object for the under the hood algorithms to use.</p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><h2>Future Plans</h2><p><br /></p><p>Easily addressable spawn timer Multi-threading optimisations Ease of Access.</p><p>Different draw colours to improve visibility</p><p><br /></p><p><br /></p><p><br /></p><h2>Reporting Issues</h2><p><br /></p><p>The tool has been tested with UE5.1.1 and up, using Windows 10 Home x64 Build 19045 - Windows 11 Pro x64 Build 22631 - Linux Ubuntu (Studio) 24.04 LTS x64 Kernel 5.4.0</p><p><br /></p><p>The tool is incredibly efficient and lightweight. The Lightweight Spawning Tool is very unlikely to have any compatibility issues but if you find something, we’d be more than happy to help. We’re open to any suggestions too. Feel free to ask a question on the Epic Games Marketplace (Do let us know which version and OS you&#39;re using).</p><p><br /></p><p><br /></p><h2>Change Log</h2><h3>1.1</h3><p><br /></p><p>- Refactored and modularised codebase (It runs smoother, quicker, and it&#39;s more versatile!)</p><p>- Support for Linux development and building for all you maniacs out there</p><p>--- Mac support is in progress, thought it&#39;s slow with no hardware given the relationship between Epic and Apple :/</p><p><br /></p><p><br /></p><h2>Credits</h2><p><br /></p><p>Martin Jones - Programmer &amp; Developer</p><p>John Montgomery - Producer</p>",
+  "technicalDetails": "<h2>Features:</h2><ul><li> A lightweight spawning algorithm (C&#43;&#43;) which keeps everything moving smoothly!</li><li> Split spawns based on teams or simply spawn a bunch of stuff at runtime!</li><li> Easily modifiable spawn areas to suit your needs!</li><li>Network Replication friendly architecture! (Works with multiplayer :) )</li></ul><p><br /></p><p><br /></p><p><br /></p><h2>Includes:</h2><ul><li>2 addressable blueprints which can easily be manipulated for your needs!</li><li>7 C&#43;&#43; classes to ensure the important stuff does its job efficiently!</li></ul><p><br /></p><p><br /></p><p><br /></p><h2>Supported Development Platforms:</h2><p>UE: 5.1 and up</p><p>Windows: 10 &amp; 11, x64 - May work on other versions</p><p>Linux: x64 - Tested with Ubuntu 24.04 Kernel 5.4.0</p><p><br /></p><p>Tested with UE5.1.1 and up on Windows 10 &amp; 11 x64</p><p>Tested with UE5.4.3 and up on Linux Ubuntu (Studio) 24.04 LTS x64 kernel 5.4.0</p>",
+  "keyImages": [
+    {
+      "type": "Screenshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Screenshot/CompiledImage-1920x1080-bc054b37a27490b3c64dfda7a62844d3.png",
+      "md5": "bc054b37a27490b3c64dfda7a62844d3",
+      "width": 1920,
+      "height": 1080,
+      "size": 1103258,
+      "uploadedDate": "2024-07-09T15:01:17.145Z"
+    },
+    {
+      "type": "Thumbnail",
+      "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/LightweightSpawningTool_thumb-284x284-f8ccbad7a5cd9050484cc4521b35991f.png",
+      "md5": "f8ccbad7a5cd9050484cc4521b35991f",
+      "width": 284,
+      "height": 284,
+      "size": 69065,
+      "uploadedDate": "2024-07-09T15:21:23.793Z"
+    },
+    {
+      "type": "Featured",
+      "url": "https://cdn1.epicgames.com/ue/product/Featured/LightweightSpawningTool_featured-894x488-789cb3d59e3bd2f67fc1aae4b8a250be.png",
+      "md5": "789cb3d59e3bd2f67fc1aae4b8a250be",
+      "width": 894,
+      "height": 488,
+      "size": 478875,
+      "uploadedDate": "2024-07-09T15:21:23.991Z"
+    },
+    {
+      "type": "Snapshot",
+      "url": "https://cdn1.epicgames.com/ue/product/Snapshot/CompiledImage-1920x1080-bc054b37a27490b3c64dfda7a62844d3_Snapshot.png",
+      "md5": "8b718dae25a5b1cfa3672fe53466ed10",
+      "width": 150,
+      "height": 74,
+      "size": 6144,
+      "uploadedDate": "2024-07-09T15:01:17.453Z"
+    }
+  ],
+  "categories": [
+    {
+      "path": "plugins/engine"
+    },
+    {
+      "path": "plugins"
+    }
+  ],
+  "namespace": "ue",
+  "status": "ACTIVE",
+  "creationDate": "2024-07-14T16:23:20.587Z",
+  "lastModifiedDate": "2025-02-01T16:52:24.877Z",
+  "customAttributes": {},
+  "entitlementName": "5230799be9ae4b619504354b0e931b81",
+  "entitlementType": "EXECUTABLE",
+  "itemType": "DURABLE",
+  "releaseInfo": [
+    {
+      "id": "453e7f32856c4229b9c1bde7aa8f95c1",
+      "appId": "LightweightSpawningTool_5.4",
+      "compatibleApps": [
+        "UE_5.4"
+      ],
+      "platform": [
+        "Windows",
+        "Android",
+        "Linux"
+      ],
+      "dateAdded": "2024-07-09T00:00:00.000Z",
+      "releaseNote": "Refactored & modularised codebase.\nLinux support.",
+      "versionTitle": "1.1"
+    }
+  ],
+  "developer": "Mythic Dawn Interactive",
+  "developerId": "o-e47meqcnn6fpab384qfnbwqpcptxu8",
+  "endOfSupport": false,
+  "requiresSecureAccount": false,
+  "unsearchable": false
+}
